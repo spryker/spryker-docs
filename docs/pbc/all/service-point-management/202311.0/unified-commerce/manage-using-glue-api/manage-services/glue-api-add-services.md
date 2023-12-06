@@ -73,7 +73,7 @@ This endpoint lets you add services.
             "key": "Demo"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6cec29eb-a835-561c-a821-f7a690538db7"
+            "self": "https://glue-backend.mysprykershop.com/services/6cec29eb-a835-561c-a821-f7a690538db7"
         }
     }
 }
@@ -105,7 +105,7 @@ This endpoint lets you add services.
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/5d1c9ed0-43b9-520b-931c-415557d9a633?include=service-types"
+            "self": "https://glue-backend.mysprykershop.com/services/5d1c9ed0-43b9-520b-931c-415557d9a633?include=service-types"
         }
     },
     "included": [
@@ -117,7 +117,7 @@ This endpoint lets you add services.
                 "key": "rp"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/30f29960-b357-53a7-8ad6-1ed93ffc4086?include=service-types"
+                "self": "https://glue-backend.mysprykershop.com/service-types/30f29960-b357-53a7-8ad6-1ed93ffc4086?include=service-types"
             }
         }
     ]
@@ -151,7 +151,7 @@ This endpoint lets you add services.
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/16007e04-72b4-5ac1-ad18-1ed75fef1639?include=service-points"
+            "self": "https://glue-backend.mysprykershop.com/services/16007e04-72b4-5ac1-ad18-1ed75fef1639?include=service-points"
         }
     },
     "included": [
@@ -178,7 +178,7 @@ This endpoint lets you add services.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-points"
+                "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-points"
             }
         }
     ]

@@ -23,7 +23,7 @@ This endpoint lets you add service points.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `POST https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points`
+Request sample: `POST https://glue-backend.mysprykershop.com/service-points`
 ```json
 {
     "data": {
@@ -65,7 +65,7 @@ Response sample:
             ]
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638"
+            "self": "https://glue-backend.mysprykershop.com/service-points/924ed48a-b4f0-516a-9921-5e9fd2149638"
         }
     }
 }

@@ -48,7 +48,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
                 "key": "pickup"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/2370ad95-4e9f-5ac3-913e-300c5805b181"
+                "self": "https://glue-backend.mysprykershop.com/service-types/2370ad95-4e9f-5ac3-913e-300c5805b181"
             }
         },
         {
@@ -59,12 +59,12 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
                 "key": "demo"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180"
+                "self": "https://glue-backend.mysprykershop.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types"
+        "self": "https://glue-backend.mysprykershop.com/service-types"
     }
 }
 ```
@@ -95,7 +95,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180
+Request sample: https://glue-backend.mysprykershop.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180
 
 ### Response
 
@@ -109,7 +109,7 @@ Request sample: https://glue-backend.de.b2c-marketplace.demo-spryker.com/service
             "key": "demo"
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180"
+            "self": "https://glue-backend.mysprykershop.com/service-types/7a263a50-12a3-5ef4-86f4-366f20783180"
         }
     }
 }

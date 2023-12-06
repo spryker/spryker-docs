@@ -9,7 +9,7 @@ This endpoint lets you retrieve shipment types.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
 
 ## Retrieve shipment types
 
@@ -48,7 +48,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
                 ]
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+                "self": "https://glue-backend.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
             }
         },
         {
@@ -64,19 +64,19 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
                 ]
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
+                "self": "https://glue-backend.mysprykershop.com/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types"
+        "self": "https://glue-backend.mysprykershop.com/shipment-types"
     }
 }
 ```
 
 
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 
 
 
@@ -89,7 +89,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{shipment_type_id}}***{% endraw %} | ID of a shipment type to retrieve. To get it, [add a shipment type](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) or [retrieve shipment types](#retrieve-shipment-types). |
+| {% raw %}***{{shipment_type_id}}***{% endraw %} | ID of a shipment type to retrieve. To get it, [add a shipment type](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html) or [retrieve shipment types](#retrieve-shipment-types). |
 
 
 ### Request
@@ -98,7 +98,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef`
+Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef`
 
 
 ### Response
@@ -120,13 +120,13 @@ Response sample:
             ]
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+            "self": "https://glue-backend.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
         }
     }
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 
 
 

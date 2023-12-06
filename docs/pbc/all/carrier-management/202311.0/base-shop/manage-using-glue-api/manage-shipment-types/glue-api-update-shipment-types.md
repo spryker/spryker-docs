@@ -9,7 +9,7 @@ This endpoint lets you update shipment types.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
 
 ## Update a shipment type
 
@@ -23,7 +23,7 @@ This endpoint lets you update shipment types.
 |-|-|-|-|
 | Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `PATCH https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d`
+Request sample: `PATCH https://glue-backend.mysprykershop.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d`
 ```json
 {
     "data": {
@@ -64,13 +64,13 @@ Response sample:
             ]
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d"
+            "self": "https://glue-backend.mysprykershop.com/shipment-types/fa575a58-5119-5407-a00b-d1aa01fec63d"
         }
     }
 }
 ```
 
-{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-types-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 
 
 ## Possible errors

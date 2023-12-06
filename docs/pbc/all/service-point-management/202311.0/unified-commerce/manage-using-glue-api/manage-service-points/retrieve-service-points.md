@@ -56,7 +56,7 @@ This endpoint lets you retrieve service points.
                 ]
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
             }
         },
         {
@@ -72,12 +72,12 @@ This endpoint lets you retrieve service points.
                 ]
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
+                "self": "https://glue-backend.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points"
+        "self": "https://glue-backend.mysprykershop.com/service-points"
     }
 }
 ```
@@ -113,7 +113,7 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
+                "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
             }
         },
         {
@@ -139,12 +139,12 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=services"
+                "self": "https://glue-backend.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=services"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points?include=services"
+        "self": "https://glue-backend.mysprykershop.com/service-points?include=services"
     },
     "included": [
         {
@@ -156,7 +156,7 @@ This endpoint lets you retrieve service points.
                 "key": "s1"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
+                "self": "https://glue-backend.mysprykershop.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
             }
         },
         {
@@ -168,7 +168,7 @@ This endpoint lets you retrieve service points.
                 "key": "s2"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=services"
+                "self": "https://glue-backend.mysprykershop.com/services/6358f60b-958b-53f9-9401-306c063b1282?include=services"
             }
         }
     ]
@@ -207,7 +207,7 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
+                "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
             }
         },
         {
@@ -233,12 +233,12 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-point-addresses"
+                "self": "https://glue-backend.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-point-addresses"
             }
         }
     ],
     "links": {
-        "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points?include=service-point-addresses"
+        "self": "https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses"
     },
     "included": [
         {
@@ -255,7 +255,7 @@ This endpoint lets you retrieve service points.
                 "zipCode": "10115"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
+                "self": "https://glue-backend.mysprykershop.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
             }
         },
         {
@@ -272,7 +272,7 @@ This endpoint lets you retrieve service points.
                 "zipCode": "10115"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/7a711afc-02ce-5f54-a08c-fadfaf5713c6?include=service-point-addresses"
+                "self": "https://glue-backend.mysprykershop.com/service-point-addresses/7a711afc-02ce-5f54-a08c-fadfaf5713c6?include=service-point-addresses"
             }
         }
     ]
@@ -314,9 +314,9 @@ This endpoint lets you retrieve service points.
 
 | REQUEST | USAGE |
 |-|-|
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Retrieve the service point with the specified ID. |
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Retrieve the service point with the specified ID. Include the information about its services. |
-| `GET https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Retrieve the service point with the specified ID. Include the information about its address. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Retrieve the service point with the specified ID. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Retrieve the service point with the specified ID. Include the information about its services. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Retrieve the service point with the specified ID. Include the information about its address. |
 
 
 ### Response
@@ -339,7 +339,7 @@ This endpoint lets you retrieve service points.
             ]
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+            "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
         }
     }
 }
@@ -375,7 +375,7 @@ This endpoint lets you retrieve service points.
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
+            "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
         }
     },
     "included": [
@@ -398,7 +398,7 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
+                "self": "https://glue-backend.mysprykershop.com/services/37ef89d3-7792-533c-951c-981c6b56312c?include=services"
             }
         },
         {
@@ -424,7 +424,7 @@ This endpoint lets you retrieve service points.
                 }
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
+                "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services"
             }
         }
     ]
@@ -462,7 +462,7 @@ This endpoint lets you retrieve service points.
             }
         },
         "links": {
-            "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
+            "self": "https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
         }
     },
     "included": [
@@ -480,7 +480,7 @@ This endpoint lets you retrieve service points.
                 "zipCode": "10115"
             },
             "links": {
-                "self": "https://glue-backend.de.b2c-marketplace.demo-spryker.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
+                "self": "https://glue-backend.mysprykershop.com/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54?include=service-point-addresses"
             }
         }
     ]

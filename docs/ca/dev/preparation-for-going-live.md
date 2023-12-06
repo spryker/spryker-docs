@@ -70,15 +70,15 @@ You must start working with data of realistic size and quality as early as possi
 {% endinfo_block %}
 
 - *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
-- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
+- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
 
 {% info_block warningBox "Email quota restrictions" %}
 
-PaaS production email service has the following quotas:
+SCCOS production email service has the following quotas:
 * Daily sending limit: 50.000 emails.
 * Sending limit messages per second: 14.
 
-PaaS non-production email service has the following quotas:
+SCCOS non-production email service has the following quotas:
 * Daily sending limit: 200 emails.
 * Sending limit messages per second: 1
 

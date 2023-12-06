@@ -13,7 +13,7 @@ Install the required features:
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer  | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/servcie-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                                 |
+| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
 
 ### 1) Install the required modules using Composer
 

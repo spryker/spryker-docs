@@ -6,16 +6,12 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-inventory-management-feature-integration
 originalArticleId: e7896d23-ba99-4d95-a3cc-654fbfaae463
 redirect_from:
-  - /2021080/docs/glue-api-inventory-management-feature-integration
-  - /2021080/docs/en/glue-api-inventory-management-feature-integration
-  - /docs/glue-api-inventory-management-feature-integration
-  - /docs/en/glue-api-inventory-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
   - title: Install the Inventory Management feature
-    link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieve concrete product availability

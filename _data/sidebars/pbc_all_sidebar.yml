@@ -1281,7 +1281,11 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
               - title: Manage customer authentication tokens
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
-              - title: Authenticating as a company user
+              - title: Authenticate as a Back Office user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
+                include_versions:
+                - "202311.0"
+              - title: Authenticate as a company user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
               - title: Manage company user authentication tokens
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
@@ -1824,7 +1828,7 @@ entries:
               - title: "Import file details: product_offer_service.csv"
                 url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
               - title: Create and edit product offers
-                url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html                    
+                url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html
 
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
@@ -3763,6 +3767,8 @@ entries:
                         - "202311.0"
                       - title: Disconnect Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
+                      - title: Troubleshooting Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
                       - title: Vertex FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
                         include_versions:
@@ -4004,7 +4010,28 @@ entries:
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-fulfill-orders.html
-
+              - title: Manage using Glue API
+                nested:
+                  - title: Authenticate as a warehouse user
+                    url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html
+                  - title: Manage warehouse user assignments
+                    nested:
+                      - title: Create warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html
+                      - title: Update warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-update-warehouse-user-assignments.html
+                      - title: Retrieve warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-retrieve-warehouse-user-assignments.html
+                      - title: Delete warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html
+                  - title: Manage picklists
+                    nested:
+                      - title: Retrieve picklists
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html
+                      - title: Start picking
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html
+                      - title: Pick picklist items
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html                                                                                                                              
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

@@ -1,19 +1,29 @@
 ---
-title: Developing an app
-Descriptions: Learn how to develop an app
+title: Developing an App
+Descriptions: Learn the step-by-step process of developing an app using Spryker's Mini-Framework
 template: howto-guide-template
 redirect_from:
 - /docs/acp/user/developing-an-app.html
 ---
 
-To develop an app, follow the instructions in this document.
+# Developing an App with Spryker Mini-Framework
+
+This guide will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
 
 ## Prerequisites
 
-- You have completed the [thought process](#thought-process) for your app.
-- You have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html#installation).
-- You have an empty GitHub repository.
-- You have a local project directory where you want to work, for example, `/www/my-app`.
+Before you begin, ensure that you have the following prerequisites in place:
+
+- Completed the [thought process](#thought-process) for your app.
+- An empty GitHub repository.
+- A local project directory for your app (e.g., `/www/my-app`).
+- [DockerSDK](https://github.com/spryker/docker-sdk) installed globally.
+
+Make sure you have Spryker Docker SDK, Git, and an empty repository for your app code.
+
+{% info_block infoBox "Info" %}
+Download the completed example from the Mini-Framework [here](https://github.com/spryker-projects/mini-framework).
+{% endinfo_block %}
  
 ## Thought process
 First, think about what your app should be capable of: what features it will bring, and what data will be exchanged, not only to you but also to those interested in your app functionality. For example, what messages could be of interest to others, and what API endpoints you should provide. 
@@ -28,130 +38,201 @@ You need to have a clear understanding of what your app API will provide to othe
 Before you start with the development, you should design your API schema files. Depending on your requirements, you can have an OpenAPI or an [Async API](#async-api) schema file. In this step, you define the [Sync API](#sync-api) endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
 
 {% info_block infoBox "Info" %}
-
 For more information about Async API schema design, see [Designing your APIs with Async API](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1). 
 
 For more information about OpenAPI schema design, see [Best practices in API design](https://swagger.io/resources/articles/best-practices-in-api-design/).
-
 {% endinfo_block %}
 
 You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use wizards provided by Spryker, which will be used by the [Spryker SDK workflow](/docs/sdk/dev/initialize-and-run-workflows.html).
+## Create an app
 
-## Build an app
-
-You can build a new app with the help of the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html). After you have [installed the Spryker SDK](/docs/sdk/dev/spryker-sdk.html#installation), you can run the following commands to start building the app.
-
-1. Ensure that you are in the correct working directory:
-
+Creating an app is straightforward. Execute the following commands:
 ```bash
-cd /www/my-app # The local project directory you created before
+mkdir my-app
+cd my-app
+git clone https://github.com/spryker-projects/mini-framework.git . --depth 1 && rm -rf .git && git init
+git add --all
+git commit -m "first commit"
 ```
-2. Initialize the project:
 
-```bash
-spryker-sdk sdk:init:project --workflow=app
-```
-3. Run the workflow:
+After these steps, you will have a new local repository that needs to be linked with your remote one.
 
-```bash
-spryker-sdk sdk:workflow:run
-```
+If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you created a new repository, GitHub shows you instructions on how to continue. You should follow the list below as you don’t need some of the first steps proposed by GitHub as we’ve already initialized git and we already have a `README.md` from the cloned repository.
 
 {% info_block infoBox "Info" %}
-
-You can skip through the prompts by hitting **Enter**.
-
+This step can also be done later
 {% endinfo_block %}
-
-Starting from [Spryker SDK](/docs/sdk/dev/spryker-sdk.html) version 0.3.0, you can use the following set of commands:
 
 ```bash
-cd /www/my-app # The local project directory you created before
-spryker-sdk sdk:workflow:run # and select the app workflow
+git branch -M main
+git remote add origin git@github.com:<organization>/<repository>.git
+git push -u origin main
 ```
-The workflow guides you as much as possible through the process of building an app. Whenever something needs manual interaction, the workflow stops with a message on what you need to do. After you completed the manual step, re-run the workflow with the `spryker-sdk sdk:workflow:run` command. This continues the previously paused workflow.
 
-### Workflow details
+Now you have done the groundwork that enables you to develop an App. You created a new repository that contains the boilerplate code for almost any App you’d like to build.
 
-The `spryker-sdk sdk:workflow:run` command guides you through the whole process of building an app. This command does the following.
+## Start local development environment
 
-#### 1. Downloads the boilerplate code and adds app definition files
+The Mini-Framework already comes with a predefined Docker configuration. Change the `deploy.dev.yml` and replace `glue-backend.de.spryker.local` with `my-app.de.spryker.local` and then run the following command in the root of your new repository.
 
-One of the first steps of the workflow is downloading a reduced Spryker project into the working directory. It already contains a lot of code that lets you start implementing your business logic.
-This step can take a few minutes to complete.
+### Boot and Up your environment
 
-{% info_block infoBox "Info" %}
+With this command, you will boot your application and start it
 
-At this point, no dependencies are installed. 
+```bash
+docker/sdk boot deploy.dev.yml
+docker/sdk up
+```
 
-{% endinfo_block %}
+After creating the development environment for you, you have several ways of using the App. The easiest one is to run the test suite.
 
-There are a couple of files that an app must have. The workflow guides you through creating them.
+```bash
+docker/sdk testing codecept run
+```
 
-##### Manifest files
-The manifest files define the details like title, category, and description of the app. The manifest files are also used to display information about the app on the App Catalog Page and the App Detail Page in the Back office.
+You will see now that your App boilerplate code is running.
 
-For more details on the manifest files, see [App manifest](/docs/acp/user/app-manifest.html).
+## Adding App manifest files
 
-{% info_block infoBox "Info" %}
+Before your App can be listed in the App Store Catalog you need to add the following files.
 
-You need to update the manifest file manually. The SDK only creates a boilerplate file.
+### Manifest
 
-{% endinfo_block %}
+The manifest file is the most important one for the App and contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/developing-an-app/code-snippets/manifest.html) and update it to your needs. Add this file to `config/app/manifest/en_US.json` of your App.
 
-##### Configuration file
-The configuration file defines the form that is displayed in the Back Office App Catalog after the App was connected and needed some configuration. 
+Manifest files have to have the local name as file name e.g. `en_US.json` and the file has to be placed inside the `config/app/manifest` directory.
 
-This file is created with the help of a wizard, but you can also add or update it manually.
+### Configuration
 
-For more details, see [App Configuration](/docs/acp/user/app-configuration.html).
+This file contains all necessary form fields for inputs required by the user of your App to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/developing-an-app/code-snippets/configuration.html) and update it to your needs. Add this file to `config/app/configuration.json` of your App.
 
-![acp-sdk-workflow-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-1.jpg)
+### Translation
 
-##### Translation file
-The translation file contains the keys and the translation values for each locale in which the app should be displayed. 
+This file contains all translations for the form fields you’ve previously defined. You can use the Hello World example translation file and update it to your needs. Add this file to `config/app/translation.json` of your App.
 
-This file is created with the help of a wizard, but you can also add or update it manually.
+## Adding the Registry code
 
-For more details, see [App Configuration Translation](/docs/acp/user/app-configuration-translation.html).
+Every App needs some default endpoints for the App Registry Service. This service is in between of the App Store Catalog and all Apps. Each App will be registered in the App Registry Service and to be able to configure your App needs the following endpoints for communication:
+ - Configure
+ - Disconnect
 
-#### 2. Creates app API
+To be able to use your Mini Framework as an App you need to add a new Spryker module:
+```bash
+docker/sdk cli composer require spryker/app-kernel spryker/message-broker-aws spryker/propel-encryption-behavior 
+```
+This `spryker/app-kernel` module will make the Mini-Framework an App. It provides SyncAPI schema and code for configuration and disconnection as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
+The `spryker/message-broker-aws` module installs the needed plugins which will be used to send and receive messages. In addition to installing the modules you need to configure them.
 
-The command defines Sync API and Async API.
+## Setup the Message Broker
 
-##### Sync API
-The Sync API defines the app's synchronous endpoints, or [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) endpoints. The workflow creates a boilerplate that you need to update with the required endpoints your app should have. See the [current OpenAPI specification](https://spec.openapis.org/oas/v3.1.0).
+The MessageBroker needs to be installed and configured. Follow the description on this page [Setup the MessageBroker](/docs/acp/user/developing-an-app/setting-up-message-broker.html).
 
-For more details about the Sync API with information specific to Spryker, see [Sync API](/docs/acp/user/sync-api.html).
+## Config
 
-##### Async API
+Every App needs an app identifier to be identifyable in the App Eco System. Add the following configuration to your `config/Shared/config_default.php`
 
-The Async API defines the app's asynchronous endpoints, also known as events and messaging. The workflow creates a boilerplate one that you need to update with the required endpoints your app should have. See the [current Async API specification](https://www.asyncapi.com/docs/reference).
+```php
+use Spryker\Shared\AppKernel\AppKernelConstants;
 
-For more details about the Async API with information specific to Spryker, see [Async API](/docs/acp/user/async-api.html).
+$config[AppKernelConstants::APP_IDENTIFIER] = getenv('APP_IDENTIFIER') ?: 'hello-world';
+```
 
-![acp-sdk-workflow-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-2.jpg)
+## Plugins
 
-#### 3. Runs code generators
-After the previous steps were executed and you updated the API schema files to your needs, the code generators are executed. The code generators load the schema files and create as much code, including tests, as possible.
+You need to add some Plugins to your App to enable certain functionality. 
 
-{% info_block warningBox "Warning" %}
+### AppRouteProviderPlugin
 
-Review the generated code carefully.
+Add the `\Spryker\Glue\App\Plugin\RouteProvider\AppRouteProviderPlugin` to the `\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getRouteProviderPlugins()` method. In case the method doesn’t exist add the complete method.
 
-{% endinfo_block %}
+```php
+<?php
 
-![acp-sdk-workflow-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-3.jpg)
+namespace Pyz\Glue\GlueBackendApiApplication;
 
-#### 4. Performs validation
+use Spryker\Glue\AppKernel\Plugin\RouteProvider\AppRouteProviderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
 
-The workflow executes some validations during the process. The workflow stops when some validations fail and displays a message that helps you to fix the issues.
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{   
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProviderPlugins(): array
+    {
+        return [
+            new AppRouteProviderPlugin(),
+        ];
+    }
+}
+```
 
-![acp-sdk-workflow-4](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-4.jpg)
+This enables the two required endpoints for the App Catalog Communication.
 
-## What's next
-With the executed workflow, you can develop with the code as you’re used to developing Spryker applications.
+## Building the Transfer Objects
+
+Transfer objects are used in many place and since we installed some modules we also need to run the console command to generate the transfers.
+
+```bash
+docker/sdk cli console transfer:generate
+```
+
+## Update the Database
+
+Transfer objects are used in many place and since we installed some modules we also need to run the console command to generate the transfers.
+
+```bash
+docker/sdk cli console propel:install
+```
+
+## Testing the endpoints
+
+You can now test the configure request with the following snippets. Run the cURL snippets from your host machine.
+
+### Testing the /private/configure endpoint
+
+```bash
+curl --location --request POST 'http://my-app.de.spryker.local/private/configure' \
+--header 'Content-Type: application/vnd.api+json' \
+--header 'Accept: application/vnd.api+json' \
+--header 'Accept-Language: en-US, en;q=0.9,*;q=0.5' \
+--header 'X-Tenant-Identifier: dev-US' \
+--data-raw '{
+    "data": {
+        "type": "configuration",
+        "attributes": {
+            "configuration": "{\"clientId\":\"clientId\",\"clientSecret\":\"clientSecret\",\"securityUri\":\"securityUri\",\"transactionCallsUri\":\"transactionCallsUri\",\"isActive\": false,\"isInvoicingEnabled\": false}"
+        }
+    }
+}'
+```
+
+You can check now your database if it contains the newly created configuration in the `spy_app_config` table.
+
+### Testing the /private/disconnect endpoint
+
+```bash
+curl --location --request POST 'http://my-app.de.spryker.local/private/disconnect' \
+--header 'Content-Type: application/vnd.api+json' \
+--header 'Accept: application/vnd.api+json' \
+--header 'Accept-Language: de-DE, en;q=0.9,*;q=0.5' \
+--header 'X-Tenant-Identifier: dev-US' \
+--data-raw ''
+```
+
+You can check now your database if previously created configuration in the spy_app_config table is removed.
+
+## Summary
+Your app is now ready to be used, although it doesn't contain any business logic yet. 
+Start implementing the business logic by Implementing a Synchronous API and/or Implementing an Asynchronous API.
+
+## Debug your app
+
+When you want to understand what is happening in the code you can [Debug your App](/docs/acp/user/developing-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;path=/;" \` to the above cURL request. We provided complete examples for running cURL with XDebug. 
+Entry points for setting breakpoints are:
+- `Spryker\Glue\App\Controller\AppConfigController`
+- `\Spryker\Glue\App\Controller\AppDisconnectController`
+

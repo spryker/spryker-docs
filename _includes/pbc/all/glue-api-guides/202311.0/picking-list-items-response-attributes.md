@@ -1,4 +1,4 @@
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | picking-list-items | quantity | Integer | Quantity of the item to pick. |
 | picking-list-items | numberOfPicked | Integer | Quantity of the item that was picked. |

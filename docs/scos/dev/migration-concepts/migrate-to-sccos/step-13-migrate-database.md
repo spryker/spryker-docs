@@ -1,14 +1,14 @@
 ---
 title: 'Step 13: Migrate database'
-description: To migrate to PaaS, one of the steps is migrating the database
+description: To migrate to SCCOS, one of the steps is migrating the database
 template: howto-guide-template
 ---
 
-After you have [chosen a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-paas/step-12-choose-a-multi-store-setup.html), your next step is migrating your data to the database. For the database, Spryker PaaS uses MariaDB. Therefore, you must migrate data in the MariaDB-compatible dump. 
+After you have [chosen a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html), your next step is migrating your data to the database. For the database, Spryker SCCOS uses MariaDB. Therefore, you must migrate data in the MariaDB-compatible dump. 
 
 ## Migrating MySQL or MariDB to MariaDB
 
-To migrate the MySQL or MariaDB database to MariaDB in PaaS, follow these steps.
+To migrate the MySQL or MariaDB database to MariaDB in SCCOS, follow these steps.
 
 1. Make sure the version of MySQL or MariaDB in the old system is compatible with the new Spryker Cloud system.
 2. Run the following queries against the source DB and save this data. You'll need them later to validate that the restoration went successfully:
@@ -43,9 +43,9 @@ For additional information about this step, see [Importing data from a MariaDB o
 
 Optional: For the Spryker Cloud environment, we recommend using a Scheduler instance for backup/restore purposes. Do the following
 * In AWS, go to **EC2 Dashboard → Instances → <env_name>-<[/d/w]*> → Connect via Session Manager**
-  ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/scheduler-container-example.png)
+  ![Scheduler Container example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-sccos/scheduler-container-example.png)
 * Copy the AWS credentials from here:
-  ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-paas/aws-s3-credentials.png)
+  ![AWS S3 credentials](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/migration-concepts/migrate-to-sccos/aws-s3-credentials.png)
 * Run the following command to copy the DB dump from S3 bucket to the Scheduler container:
       
 ```bash
@@ -99,4 +99,4 @@ ORDER BY rows_n DESC;
 ```
 
 ## Next step
-[Finalize the migration](/docs/scos/dev/migration-concepts/migrate-to-paas/step-14-finalize-the-migration.html)
+[Finalize the migration](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html)

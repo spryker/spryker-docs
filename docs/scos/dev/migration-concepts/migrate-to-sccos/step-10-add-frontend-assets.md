@@ -1,13 +1,13 @@
 ---
 title: 'Step 10: Add frontend assets'
-description: To migrate to PaaS, one of the steps, is adding the frontend assets.
+description: To migrate to SCCOS, one of the steps, is adding the frontend assets.
 template: howto-guide-template
 ---
 
 After you have implemented security and performance guidelines, add the frontend assets as described in this document.
 
-## 1. Host frontend assets in Spryker PaaS 
-The default Spryker approach for hosting frontend assets, such as images and videos, is based on a CDN that uses an S3 bucket. If you need to host frontend assets within the Spryker PaaS environment, submit a CDN creation request through your account on the [Spryker Support portal](https://support.spryker.com/). 
+## 1. Host frontend assets in SCCOS 
+The default Spryker approach for hosting frontend assets, such as images and videos, is based on a CDN that uses an S3 bucket. If you need to host frontend assets within the SCCOS environment, submit a CDN creation request through your account on the [Spryker Support portal](https://support.spryker.com/). 
 
 ## 2. Upload images to S3
 Once the S3 bucket has been established, you can manually upload asset files to the S3 bucket using the AWS user interface.
@@ -28,4 +28,4 @@ console publisher:trigger-events -r product_abstract_image,product_concrete_imag
 
 ## Next step
 
-[Wire custom services](/docs/scos/dev/migration-concepts/migrate-to-paas/step-11-wire-custom-services.html)
+[Wire custom services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html)

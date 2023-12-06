@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-protected-resources
 originalArticleId: 549c4614-f8b4-4fa5-9609-c92b6cbc0e89
 redirect_from:
-  - /2021080/docs/retrieving-protected-resources
-  - /2021080/docs/en/retrieving-protected-resources
-  - /docs/retrieving-protected-resources
-  - /docs/en/retrieving-protected-resources
   - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-protected-resources.html
 related:

@@ -239,7 +239,7 @@ The feature has the following functional constraints which are going to be resol
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
     * [Product options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)
     * [Product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
-    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/non-splittable-products-feature-overview.html)
+    * [Product quantity restrictions](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
@@ -259,9 +259,9 @@ The feature has the following functional constraints which are going to be resol
 | [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) | [ConfigurableBundleStorage migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html) |   |   |
 | [Product Lists + Catalog feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html)  | [ProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistgui-module.html) |   |   |
 | [Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)  | [MerchantRelationshipProductListGui migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html)  |   |   |
-| [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |   |   |   |
+| [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |   |   |   |
 | [Product Images + Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html)  |   |   |   |
 | [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html) |   |   |   |
 | [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html) |   |   |   |
 | [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |   |   |   |
-| [Glue API: Configurable Bundle + Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |   |   |   |
+| [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html) |   |   |   |

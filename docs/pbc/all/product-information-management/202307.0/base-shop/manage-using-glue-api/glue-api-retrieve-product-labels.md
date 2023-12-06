@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
 originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
-  - /2021080/docs/retrieving-product-labels
-  - /2021080/docs/en/retrieving-product-labels
-  - /docs/retrieving-product-labels
-  - /docs/en/retrieving-product-labels
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-product-labels.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
@@ -84,9 +79,9 @@ Request sample: retrieve a product label
 Apart from using this dedicated endpoint, you can retrieve product lables as an included resource as follows:
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
-* [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts)
-* [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)
+* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#retrieve-a-guest-cart)
+* [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts)
+* [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)
 * [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-wishlists)
 * [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html#retrieve-a-wishlist)
 

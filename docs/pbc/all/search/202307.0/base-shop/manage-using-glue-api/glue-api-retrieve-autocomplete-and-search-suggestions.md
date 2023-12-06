@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-autocomplete-and-search-suggestions
 originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
 redirect_from:
-  - /2021080/docs/retrieving-autocomplete-and-search-suggestions
-  - /2021080/docs/en/retrieving-autocomplete-and-search-suggestions
-  - /docs/retrieving-autocomplete-and-search-suggestions
-  - /docs/en/retrieving-autocomplete-and-search-suggestions
-  - /docs/scos/dev/glue-api-guides/202200.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/pbc/all/search/202307.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
 related:
@@ -42,13 +37,13 @@ To retrieve a search suggestion, send the request:
 
 | Request | Description |
 | --- | --- |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions | Retrieve suggestions for an empty search string. |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q= | Retrieve suggestions for an empty search string |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c** | Retrieve suggestions for one letter. |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co** | Retrieve suggestions for two letters. |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com** | Retrieve suggestions for three letters |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer** | Retrieve suggestions for the word `computer`. |
-| GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation** | Retrieve suggestions for the phrase `telecom&navigation`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**c**` | Retrieve suggestions for one letter. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**co**` | Retrieve suggestions for two letters. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**com**` | Retrieve suggestions for three letters |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**computer**` | Retrieve suggestions for the word `computer`. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=**telecom+%26+navigation**` | Retrieve suggestions for the phrase `telecom&navigation`. |
 
 ### Response
 

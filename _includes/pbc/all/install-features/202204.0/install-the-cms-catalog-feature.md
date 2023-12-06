@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the CMS + Catalog feature into a Spryker project.
+This document describes how to install the CMS + Catalog feature.
 
 ## Install feature core
 

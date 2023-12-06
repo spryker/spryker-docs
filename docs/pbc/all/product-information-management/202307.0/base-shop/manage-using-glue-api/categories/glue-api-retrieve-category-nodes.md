@@ -6,14 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-category-nodes
 originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
 redirect_from:
-  - /2021080/docs/retrieving-category-nodes
-  - /2021080/docs/en/retrieving-category-nodes
-  - /docs/retrieving-category-nodes
-  - /docs/en/retrieving-category-nodes
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/201903.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/201907.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:

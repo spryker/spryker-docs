@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Alternative Products + Discontinued Products into a Spryker project.
+This document describes how to install the Alternative Products + Discontinued Products.
 
 ## Install feature core
 

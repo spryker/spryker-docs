@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Marketplace Product feature integration"
+title: "Install the Marketplace Product Glue API"
 description: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:

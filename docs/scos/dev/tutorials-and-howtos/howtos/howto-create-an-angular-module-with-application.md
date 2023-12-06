@@ -83,7 +83,7 @@ export class SomeComponentComponent {}
 {% endblock %}
 
 {% block content %}
-    <web-some-component></web-some-component>
+    <web-mp-some-component></web-mp-some-component>
 {% block content %}
 
 {% block footerJs %}

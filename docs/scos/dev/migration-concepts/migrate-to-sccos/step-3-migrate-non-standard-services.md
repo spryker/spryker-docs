@@ -24,4 +24,4 @@ Consider that CTE queries or any other raw SQL queries or DB structure specific 
 
 ## Next step
 
-[Provision the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-spryker-sccos-environments.html)
+[Provision the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html)

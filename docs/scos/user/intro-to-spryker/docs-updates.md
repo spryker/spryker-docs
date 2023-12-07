@@ -81,7 +81,7 @@ In November 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [Vertex]: Learn how the Vertex app from the Spryker's App Composition Platform can help you manage taxes.
+- [Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html): Learn how the Vertex app from the Spryker's App Composition Platform can help you manage taxes.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn about the prerequisites for provisioning the Spryker Cloud Commerce OS environment.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 - [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html): Learn how to optimize the server-side execution time for a Spryker project.

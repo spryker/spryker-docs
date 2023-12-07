@@ -6,16 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/decimal-stock-concept
 originalArticleId: da336e52-e8e8-4849-9be3-e208cd42e273
 redirect_from:
-  - /2021080/docs/decimal-stock-concept
-  - /2021080/docs/en/decimal-stock-concept
-  - /docs/decimal-stock-concept
-  - /docs/en/decimal-stock-concept
-  - /v6/docs/decimal-stock-concept
-  - /v6/docs/en/decimal-stock-concept
-  - /v5/docs/decimal-stock-concept
-  - /v5/docs/en/decimal-stock-concept
-  - /v4/docs/decimal-stock-concept
-  - /v4/docs/en/decimal-stock-concept
   - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 related:
   - title: Packaging Units feature overview

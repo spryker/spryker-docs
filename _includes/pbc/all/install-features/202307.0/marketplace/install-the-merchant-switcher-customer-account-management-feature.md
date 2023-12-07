@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
+This document describes how to install the Merchant Switcher + Customer Account Management feature.
 
 ## Install feature frontend
 
@@ -10,10 +10,10 @@ Follow the steps below to install the Marketplace Order Management + Customer Ac
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | ------------------ | ----------- | ----------|
-| Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)|
-| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
+| Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 ### 1) Set up the transfer objects
 

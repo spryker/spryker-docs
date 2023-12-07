@@ -16,13 +16,27 @@ This document describes how to set up an environment for developing in the Oryx 
 
 ## Install Oryx with the boilerplate project
 
-1. Download the boilerplate project and install dependencies:
+1. Clone the boilerplate project and install dependencies.  
 
 ```shell
 git clone https://github.com/spryker/composable-frontend && \
 cd composable-frontend && \
 npm i
 ```
+
+
+2. Optional: To install [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{site.version}}/unified-commerce/fulfillment-app-feature-overview.html) instead of Composable Storefront, checkout the `fulfillment` branch from the boilerplate:
+
+```shell
+git checkout fulfillment
+```
+
+{% info_block infoBox "Fulfillment App" %}
+
+Fulfillment App is a PWA that comes with an additional build process for the service worker to support offline mode and background sync.
+
+{% endinfo_block %}
+
 
 2. Run the application:
 

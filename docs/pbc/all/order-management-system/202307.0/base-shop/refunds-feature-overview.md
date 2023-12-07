@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/refunds-feature-overview
 originalArticleId: c997df28-f136-4dac-b2c0-c411170fa22b
 redirect_from:
-  - /2021080/docs/refunds-feature-overview
-  - /2021080/docs/en/refunds-feature-overview
-  - /docs/refunds-feature-overview
-  - /docs/en/refunds-feature-overview
+  - /docs/scos/user/features/202108.0/refunds-feature-overview.html
   - /docs/scos/user/features/202200.0/refunds-feature-overview.html
   - /docs/scos/user/features/202307.0/refunds-feature-overview.html
 ---

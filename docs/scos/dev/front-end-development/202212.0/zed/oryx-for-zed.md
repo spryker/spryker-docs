@@ -25,19 +25,22 @@ redirect_from:
   - /front-end_developer_guide/zed/oryx/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed.htm
   - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
-related:
-  - title: Oryx builder overview and setup
-    link: docs/scos/dev/front-end-development/page.version/zed/oryx-builder-overview-and-setup.html
 ---
 
 ## Introduction
 
 `oryx-for-zed` is an extension of Oryx that performs a full build for Spryker Zed UI applications. It also provides access to Zed settings and Zed Webpack configuration, so you can extend/change the whole building process.
 
+{% info_block warningBox "Oryx framework" %}
+
+`Oryx` and `oryx-for-zed` should not be confused with the [Oryx frontend framework](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx.html) that is used to create composable frontend applications.
+
+{% endinfo_block %}
+
 ### Requirements
 
-* `Node.js` version >=12.0.0
-* `npm` version >=6.9.0
+- `Node.js` version >=12.0.0
+- `npm` version >=6.9.0
 
 ### Setup
 
@@ -51,7 +54,7 @@ yarn add @spryker/oryx-for-zed --dev
 
 {% info_block warningBox %}
 
-oryx-for-zed comes with a peer dependency: `oryx` version  >= 1.x.
+oryx-for-zed comes with a peer dependency: `oryx` version >= 1.x.
 
 {% endinfo_block %}
 
@@ -59,19 +62,19 @@ oryx-for-zed comes with a peer dependency: `oryx` version  >= 1.x.
 
 Once installed, you can:
 
-* call the builder directly from your scripts (simple builder)
-* extend/change the settings/webpack configuration for your custom Zed build
+- call the builder directly from your scripts (simple builder)
+- extend/change the settings/webpack configuration for your custom Zed build
 
 ### Simple builder
 
-The following section describes how to run `oryx-for-zed`. 
+The following section describes how to run `oryx-for-zed`.
 Add the following script to your `package.json`:
 
 ```json
 {
-    "scripts": {
-        "zed": "node ./node_modules/@spryker/oryx-for-zed/build"
-    }
+  "scripts": {
+    "zed": "node ./node_modules/@spryker/oryx-for-zed/build"
+  }
 }
 ```
 
@@ -93,14 +96,16 @@ The example below shows how to create a custom build:
 Create a `build.js` file in your project containing your custom settings and the logic needed to get the webpack configuration and run the builder:
 
 ```js
-const oryx = require('@spryker/oryx');
-const oryxForZed = require('@spryker/oryx-for-zed');
+const oryx = require("@spryker/oryx");
+const oryxForZed = require("@spryker/oryx-for-zed");
 
 const myCustomZedSettings = Object.assign({}, oryxForZed.settings, {
-    // your own settings
+  // your own settings
 });
 
-oryxForZed.getConfiguration(myCustomZedSettings).then(configuration => oryx.build(configuration));
+oryxForZed
+  .getConfiguration(myCustomZedSettings)
+  .then((configuration) => oryx.build(configuration));
 ```
 
 **Step 2:** `package.json`  
@@ -108,9 +113,9 @@ Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
-    "scripts": {
-        "build-zed": "node ./path/to/build"
-    }
+  "scripts": {
+    "build-zed": "node ./path/to/build"
+  }
 }
 ```
 
@@ -126,14 +131,16 @@ The example below shows how to create a custom build:
 Create a `webpack.config.js` file in your project containing your Webpack custom configuration:
 
 ```js
-const oryxForZed = require('@spryker/oryx-for-zed');
+const oryxForZed = require("@spryker/oryx-for-zed");
 
 async function myCustomZedConfiguration() {
-    const oryxConfiguration = await oryxForZed.getConfiguration(oryxForZed.settings);
+  const oryxConfiguration = await oryxForZed.getConfiguration(
+    oryxForZed.settings
+  );
 
-    return Object.assign({}, oryxConfiguration, {
-        // your own configuration
-    });
+  return Object.assign({}, oryxConfiguration, {
+    // your own configuration
+  });
 }
 ```
 
@@ -141,10 +148,10 @@ async function myCustomZedConfiguration() {
 Create a `build.js` file in your project containing your Webpack configuration and the logic needed to run the builder:
 
 ```js
-const oryx = require('@spryker/oryx');
-const myCustomZedConfiguration = require('./webpack.config.js');
+const oryx = require("@spryker/oryx");
+const myCustomZedConfiguration = require("./webpack.config.js");
 
-myCustomZedConfiguration().then(configuration => oryx.build(configuration));
+myCustomZedConfiguration().then((configuration) => oryx.build(configuration));
 ```
 
 **Step 3:** `package.json`  
@@ -152,9 +159,9 @@ Add a script into your `package.json` pointing to `build.js`:
 
 ```json
 {
-    "scripts": {
-        "build-zed": "node ./path/to/build"
-    }
+  "scripts": {
+    "build-zed": "node ./path/to/build"
+  }
 }
 ```
 
@@ -163,7 +170,7 @@ Add a script into your `package.json` pointing to `build.js`:
 ### Settings
 
 ```js
-oryxForZed.settings
+oryxForZed.settings;
 ```
 
 Contains all the basic settings used in the Webpack configuration. Go to the code for more details.
@@ -171,7 +178,7 @@ Contains all the basic settings used in the Webpack configuration. Go to the cod
 ### getConfiguration()
 
 ```js
-oryxForZed.getConfiguration(settings)
+oryxForZed.getConfiguration(settings);
 ```
 
 Returns a promise with the default Zed Webpack configuration, based on provided settings. Go to the code for more details.
@@ -192,16 +199,16 @@ Or embed them into the script section in `package.json`:
 
 ```json
 {
-    "scripts": {
-        "build-zed": "node ./node_modules/@spryker/oryx-for-zed/build --arg"
-    }
+  "scripts": {
+    "build-zed": "node ./node_modules/@spryker/oryx-for-zed/build --arg"
+  }
 }
 ```
 
 ### Args list
 
-* `--dev`: development mode; enable `webpack` watchers on the code
-* `--prod`: production mode; enable assets optimization/compression
-* `--boost`: boost mode (experimental); build assets using eval source maps
+- `--dev`: development mode; enable `webpack` watchers on the code
+- `--prod`: production mode; enable assets optimization/compression
+- `--boost`: boost mode (experimental); build assets using eval source maps
 
 If no arg is passed, development is activated but without watchers.

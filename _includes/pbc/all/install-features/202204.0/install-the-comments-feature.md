@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/comments-feature-overview.html) into a Spryker project.
+This document describes how to install the [Comments](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/comments-feature-overview.html).
 
 ## Install feature core
 
@@ -11,9 +11,9 @@ Follow the steps below to install the Comments feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 | Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -204,9 +204,9 @@ Follow the steps below to install the Comments feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 | Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer

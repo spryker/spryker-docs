@@ -10,7 +10,7 @@ related:
   - title: Sending the product for approval
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html#sending-the-product-for-approval
 ---
-The [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data in the marketplace, including merchants, products, and offers. To control those things in the marketplace, the approval mechanism is a key feature.
+The [marketplace operator](/docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data in the marketplace, including merchants, products, and offers. To control those things in the marketplace, the approval mechanism is a key feature.
 
 The *Marketplace Product Approval Process* allows marketplace owners to verify the products of merchants before showing them to customers.
 
@@ -55,7 +55,7 @@ If a [merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/m
 
 ## Marketplace Product Approval data import
 
-A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
+A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
 
 ## Related Business User documents
 
@@ -67,4 +67,4 @@ A marketplace owner can set a default approval status for marketplace products o
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------| --- |
-| [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html) |
+| [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |

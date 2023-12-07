@@ -1606,6 +1606,8 @@ entries:
           nested:
             - title: Set up
               url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
+            - title: Technology
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html              
             - title: Boilerplate
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
             - title: Packages

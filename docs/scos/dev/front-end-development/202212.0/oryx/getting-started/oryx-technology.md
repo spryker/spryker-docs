@@ -16,7 +16,7 @@ In terms of styling and layout rendering, Oryx adopts a CSS-first approach, cons
 The following technologies are employed in the development of Oryx:
 - [HTML](#html)
 - [CSS](#css)
-- [TS](#TS)
+- [TypeScript](#typescript)
 - [Web Components](#web-components)
 - [Lit](#lit)
 - [RxJS](#rxjs)
@@ -33,7 +33,7 @@ HTML is a markup language used to create web pages and applications. In Oryx, HT
 
 CSS is a style sheet language used to describe the visual presentation of a document written in HTML.
 
-Oryx uses standard CSS syntax. Because Oryx doesn't use a global CSS utility library, it doesn't use CSS preprocessors; instead, styles are isolated per component and global CSS utils are not loaded in them.
+Oryx uses standard CSS syntax, so CSS preprocessors are not used. Also Oryx doesn't use a global CSS utility library; instead, styles are isolated per component and global CSS utils are not loaded in them.
 
 Unlike some other CSS methodologies, like Block, Element, or Modifier, Oryx does not rely on a specific naming convention to structure its CSS classes.
 

@@ -189,7 +189,7 @@ This endpoint lets you add services.
 
 {% include pbc/all/glue-api-guides/{{page.version}}/services-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/{{page.version}}/service-types-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/service-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/services-response-attributes.md -->
 

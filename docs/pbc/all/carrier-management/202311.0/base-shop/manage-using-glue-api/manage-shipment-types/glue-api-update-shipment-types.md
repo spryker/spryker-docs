@@ -9,7 +9,7 @@ This endpoint lets you update shipment types.
 
 ## Installation
 
-[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-shipment-types.html)
+[Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 
 ## Update a shipment type
 

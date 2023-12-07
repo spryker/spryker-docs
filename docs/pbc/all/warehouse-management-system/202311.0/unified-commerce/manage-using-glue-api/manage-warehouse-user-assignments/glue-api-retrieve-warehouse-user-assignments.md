@@ -45,7 +45,7 @@ For detailed information about the modules that provide the API functionality an
 
 ### Response
 
-<details open>
+<details>
   <summary>Retrieve all warehouse user assignments</summary>
 
 ```json
@@ -108,7 +108,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve all warehouse user assignments with the information about authenticated user</summary>
 
 ```json
@@ -215,7 +215,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve warehouse user assignment of the user with the specified ID</summary>
 
 ```json
@@ -263,7 +263,7 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 
-<details open>
+<details>
   <summary>Retrieve the warehouse user assignment with the specified ID</summary>
 
 ```json
@@ -294,7 +294,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve inactive warehouse user assignments</summary>
 
 ```json
@@ -341,7 +341,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve warehouse user assignments with the warehouse with the specified ID.</summary>
 
 ```json
@@ -372,7 +372,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve inactive warehouse user assignments of the user with the specified ID.</summary>
 
 ```json
@@ -456,7 +456,7 @@ For detailed information about the modules that provide the API functionality an
 ### Response
 
 
-<details open>
+<details>
   <summary>Retrieve a warehouse user assignment</summary>
 
 ```json
@@ -482,7 +482,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve a warehouse user assignment with user information included</summary>
 
 ```json

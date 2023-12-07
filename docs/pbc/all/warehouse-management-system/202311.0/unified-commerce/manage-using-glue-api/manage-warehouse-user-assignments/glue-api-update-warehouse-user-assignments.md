@@ -58,7 +58,7 @@ Request sample:
 
 ### Response
 
-<details open>
+<details>
   <summary>Response sample: Update the warehouse user assignment.</summary>
 
 ```json
@@ -84,7 +84,7 @@ Request sample:
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: Update the warehouse user assignment. Include the user information in the response.</summary>
 
 ```json

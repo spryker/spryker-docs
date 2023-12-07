@@ -13,32 +13,34 @@ This endpoint lets you retrieve service points.
 
 ## Retrieve service points
 
----
+***
 `GET` **/service-points**
----
+***
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-| QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
+| QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
-| include | Adds resource relationships to the request. | services service-point-addresses |
+| include | Backend | Adds resource relationships to the request. | services service-point-addresses |
 
-| REQUEST | USAGE |
+| REQUEST | API TYPE | USAGE |
 |-|-|
-| `GET https://glue-backend.mysprykershop.com/service-points` | Retrieve all service points. |
-| `GET https://glue-backend.mysprykershop.com/service-points?include=services` | Retrieve service points with services included. |
-| `GET https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses` | Retrieve service points with addresses included. |
+| `GET https://glue-backend.mysprykershop.com/service-points` | Backend | Retrieve all service points. |
+| `GET https://glue-backend.mysprykershop.com/service-points?include=services` | Backend | Retrieve service points with services included. |
+| `GET https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses` | Backend | Retrieve service points with addresses included. |
+| `GET https://glue.mysprykershop.com/service-points` | Storefront | Retrieve all service points. |
+
 
 
 ### Response
 
 
-<details open>
-  <summary>Retrieve all service points</summary>
+<details>
+  <summary>Backend: Retrieve all service points</summary>
 
 ```json
 {
@@ -84,8 +86,8 @@ This endpoint lets you retrieve service points.
 
 </details>
 
-<details open>
-  <summary>Retrieve service points with services included</summary>
+<details>
+  <summary>Backend: Retrieve service points with services included</summary>
 
 ```json
 {
@@ -178,8 +180,8 @@ This endpoint lets you retrieve service points.
 </details>
 
 
-<details open>
-  <summary>Retrieve service points with addresses included</summary>
+<details>
+  <summary>Backend: Retrieve service points with addresses included</summary>
 
 ```json
 {
@@ -281,6 +283,43 @@ This endpoint lets you retrieve service points.
 
 </details>
 
+<details>
+  <summary>Storefront: Retrieve all service points</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "service-points",
+            "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+            "attributes": {
+                "name": "Spryker Main Store",
+                "key": "sp1"
+            },
+            "links": {
+                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+            }
+        },
+        {
+            "type": "service-points",
+            "id": "7e3b03e0-c53c-5298-9ece-968f4628b4f8",
+            "attributes": {
+                "name": "Spryker Berlin Store",
+                "key": "sp2"
+            },
+            "links": {
+                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points"
+    }
+}
+```
+
+</details>
+
 {% include pbc/all/glue-api-guides/{{page.version}}/service-points-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/service-points-response-attributes.md -->
 
 
@@ -293,9 +332,9 @@ This endpoint lets you retrieve service points.
 
 ## Retrieve a service point
 
----
+***
 `GET` {% raw %}**/service-points/*{{service_point_id}}***{% endraw %}
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -306,23 +345,24 @@ This endpoint lets you retrieve service points.
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
+| QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|
-| include | Adds resource relationships to the request. | services service-point-addresses |
+| include | Backend | Adds resource relationships to the request. | services service-point-addresses |
 
-| REQUEST | USAGE |
+| REQUEST | API TYPE | USAGE |
 |-|-|
-| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Retrieve the service point with the specified ID. |
-| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Retrieve the service point with the specified ID. Include the information about its services. |
-| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Retrieve the service point with the specified ID. Include the information about its address. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Backend |Retrieve the service point with the specified ID. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Backend |Retrieve the service point with the specified ID. Include the information about its services. |
+| `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Backend |Retrieve the service point with the specified ID. Include the information about its address. |
+| `GET https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Retrieve the service point with the specified ID. |
 
 
 ### Response
 
-<details open>
-  <summary>Retrieve the service point with the specified ID</summary>
+<details>
+  <summary>Backend: Retrieve the service point with the specified ID</summary>
 
 ```json
 {
@@ -347,8 +387,8 @@ This endpoint lets you retrieve service points.
 
 </details>
 
-<details open>
-  <summary>Retrieve the service point with the specified ID. Include information about its services</summary>
+<details>
+  <summary>Backend: Retrieve the service point with the specified ID. Include information about its services</summary>
 
 ```json
 {
@@ -434,8 +474,8 @@ This endpoint lets you retrieve service points.
 </details>
 
 
-<details open>
-  <summary>Retrieve the service point with the specified ID. Include information about its address</summary>
+<details>
+  <summary>Backend: Retrieve the service point with the specified ID. Include information about its address</summary>
 
 ```json
 {
@@ -484,6 +524,27 @@ This endpoint lets you retrieve service points.
             }
         }
     ]
+}
+```
+
+</details>
+
+<details>
+  <summary>Storefront: Retrieve the service point with the specified ID</summary>
+
+```json
+{
+    "data": {
+        "type": "service-points",
+        "id": "262feb9d-33a7-5c55-9b04-45b1fd22067e",
+        "attributes": {
+            "name": "Spryker Main Store",
+            "key": "sp1"
+        },
+        "links": {
+            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+        }
+    }
 }
 ```
 

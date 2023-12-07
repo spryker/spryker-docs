@@ -13,9 +13,9 @@ This endpoint lets you add service points.
 
 ## Add a service point
 
----
+***
 `POST` **/service-points**
----
+***
 
 ### Request
 

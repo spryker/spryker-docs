@@ -36,7 +36,7 @@ This endpoint lets you retrieve services.
 
 ### Response
 
-<details open>
+<details>
   <summary>Retrieve services</summary>
 
 ```json
@@ -75,7 +75,7 @@ This endpoint lets you retrieve services.
 
 
 
-<details open>
+<details>
   <summary>Retrieve services with service types included</summary>
 
 ```json
@@ -152,7 +152,7 @@ This endpoint lets you retrieve services.
 </details>
 
 
-<details open>
+<details>
   <summary>Retrieve services with service points included</summary>
 
 ```json
@@ -305,7 +305,7 @@ This endpoint lets you retrieve services.
 
 ### Response
 
-<details open>
+<details>
   <summary>Retrieve a service with the specified ID</summary>
 
 ```json
@@ -327,7 +327,7 @@ This endpoint lets you retrieve services.
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve a service with the specified ID. Include information about its service type</summary>
 
 ```json
@@ -373,7 +373,7 @@ This endpoint lets you retrieve services.
 </details>
 
 
-<details open>
+<details>
   <summary>Retrieve a service point with the specified ID. Include information about its service point</summary>
 
 ```json

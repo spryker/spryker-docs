@@ -13,9 +13,9 @@ This endpoint lets you retrieve service point addresses.
 
 ## Retrieve service points
 
----
+***
 `GET` {% raw %}**/service-points/*{{service-point-uuid}}*/service-point-addresses**{% endraw %}
----
+***
 
 
 | PATH PARAMETER | DESCRIPTION |

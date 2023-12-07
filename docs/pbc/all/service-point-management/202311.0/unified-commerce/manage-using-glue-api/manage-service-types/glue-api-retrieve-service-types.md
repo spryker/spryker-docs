@@ -34,7 +34,7 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 ### Response
 
 
-<details open>
+<details>
   <summary>Retrieve all service types</summary>
 
 ```json

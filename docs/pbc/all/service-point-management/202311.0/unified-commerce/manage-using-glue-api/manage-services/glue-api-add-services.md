@@ -59,7 +59,7 @@ This endpoint lets you add services.
 
 ### Response
 
-<details open>
+<details>
   <summary>Add a service</summary>
 
 ```json
@@ -81,7 +81,7 @@ This endpoint lets you add services.
 
 </details>
 
-<details open>
+<details>
   <summary>Add a service with service type information included</summary>
 
 ```json
@@ -126,7 +126,7 @@ This endpoint lets you add services.
 
 </details>
 
-<details open>
+<details>
   <summary>Add a service with service point information included</summary>
 
 

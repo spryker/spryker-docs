@@ -13,24 +13,29 @@ This endpoint lets you retrieve shipment types.
 
 ## Retrieve shipment types
 
----
+***
 `GET` **/shipment-types**
----
+***
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
+
+| REQUEST | API TYPE | USAGE |
+| --- | --- | --- |
+| `GET https://glue-backend.mysprykershop.com/shipment-types` | Backend | Retrieve all shipment types. |
+| `GET https://glue.mysprykershop.com/shipment-types` | Storefront | Retrieve all shipment types. |
+
 
 
 
 ### Response
 
-<details open>
-  <summary>Retrieve shipment types</summary>
+<details>
+  <summary>Backend: Retrieve shipment types</summary>
 
 ```json
 {
@@ -74,6 +79,44 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
 }
 ```
 
+<details>
+
+<details>
+  <summary>Storefront: Retrieve shipment types</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "shipment-types",
+            "id": "9e1bd563-3106-52d1-9717-18e8d491e3b3",
+            "attributes": {
+                "name": "Delivery",
+                "key": "delivery"
+            },
+            "links": {
+                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
+            }
+        },
+        {
+            "type": "shipment-types",
+            "id": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
+            "attributes": {
+                "name": "Pickup",
+                "key": "pickup"
+            },
+            "links": {
+                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types"
+    }
+}
+```
+
+</details>
 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
@@ -96,14 +139,20 @@ Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |-|-|-|-|
-| Authorization | string | &check; | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
+| Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
-Request sample: `GET https://glue-backend.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef`
+| REQUEST | API TYPE | USAGE |
+| --- | --- | --- |
+| `GET https://glue-backend.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef` | Backend | Retrieve a shipment type with the specified ID. |
+| `GET https://glue.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef` | Storefront | Retrieve a shipment type with the specified ID. |
+
 
 
 ### Response
 
-Response sample:
+
+<details>
+  <summary>Backend: Retrieve a shipment typed with the specified ID</summary>
 
 ```json
 {
@@ -125,6 +174,30 @@ Response sample:
     }
 }
 ```
+
+</details>
+
+<details>
+  <summary>Storefront: Retrieve a shipment typed with the specified ID</summary>
+
+```json
+{
+    "data": {
+        "type": "shipment-types",
+        "id": "174d9dc0-55ae-5c4b-a2f2-a419027029ef",
+        "attributes": {
+            "name": "Pickup",
+            "key": "pickup"
+        },
+        "links": {
+            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+        }
+    }
+}
+```
+
+</details>
+
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/shipment-types-response-attributes.md -->
 

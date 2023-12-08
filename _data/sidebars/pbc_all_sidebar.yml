@@ -34,14 +34,14 @@ entries:
                     url: /docs/pbc/all/back-office//unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
                     include_versions:
                     - "202311.0"
-            - title: Tutorials and HowTos
-              include_versions:
-              - "202311.0"
-              nested:
-                - title: "HowTo: Configure timezone in the Back Office"
-                  url: /docs/pbc/all/back-office/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
-                  include_versions:
-                  - "202311.0"
+          - title: Tutorials and HowTos
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: "HowTo: Configure timezone in the Back Office"
+                url: /docs/pbc/all/back-office/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
+                include_versions:
+                - "202311.0"
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

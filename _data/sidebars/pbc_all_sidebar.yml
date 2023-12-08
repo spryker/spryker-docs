@@ -40,6 +40,8 @@ entries:
               nested:
                 - title: "HowTo: Configure timezone in the Back Office"
                   url: /docs/pbc/all/back-office/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
+                  include_versions:
+                  - "202311.0"
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

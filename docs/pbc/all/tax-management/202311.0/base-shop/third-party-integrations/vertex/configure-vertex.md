@@ -26,7 +26,7 @@ To configure Vertex, do the following:
 5. To activate the app, select *Active*.
 6. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 7. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://hanes.ondemand.vertexinc.com/oseries-help/help/oseries/166223.htm) for details about how to obtain it.
+7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html) for details about how to obtain it.
 8. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
 9. Click **Save**.
 

@@ -28,6 +28,7 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 Review this preparatory checklist before initiating your go-live plan.  
 You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you do the following:
 
+- Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
 - Upgrade your project's code to match the latest demoshop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Update spryker/twig to version 3.15.2 or higher because this version and higher have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB if you are not already using it.
@@ -38,7 +39,7 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 - Use the option to [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
-- Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management). 
+- Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
 
 If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
@@ -69,15 +70,15 @@ You must start working with data of realistic size and quality as early as possi
 {% endinfo_block %}
 
 - *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
-- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
+- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
 
 {% info_block warningBox "Email quota restrictions" %}
 
-PaaS production email service has the following quotas:
+SCCOS production email service has the following quotas:
 * Daily sending limit: 50.000 emails.
 * Sending limit messages per second: 14.
 
-PaaS non-production email service has the following quotas:
+SCCOS non-production email service has the following quotas:
 * Daily sending limit: 200 emails.
 * Sending limit messages per second: 1
 
@@ -142,4 +143,4 @@ If your go-live date is close and you feel like you need help with any of the de
 
 - *Validate that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
-- *Validate BI and Analytics Integrations*. They should not be connected to your production database, but should be connected to the provided read replica. Make sure that no external system is working with your production database.
+- *Validate BI and analytics integrations*. They should not be connected to your production database, but should be connected to the provided read replica. Make sure no external system is interacting with your production database.

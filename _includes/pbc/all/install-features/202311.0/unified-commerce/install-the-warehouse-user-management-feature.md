@@ -490,7 +490,7 @@ Content-Length: 167
         "password": "{PASSWORD}"
      },
      "links": {
-        "self": "https://glue-backend.mysprykershop.com/access-tokens"
+        "self": "https://glue-backend.mysprykershop.com/token"
      }
   }
 }
@@ -530,7 +530,7 @@ Content-Length: 165
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueApplication\WarehouseUserAssignmentsBackendResourcePlugin;
+use Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication\WarehouseUserAssignmentsBackendResourcePlugin;
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {

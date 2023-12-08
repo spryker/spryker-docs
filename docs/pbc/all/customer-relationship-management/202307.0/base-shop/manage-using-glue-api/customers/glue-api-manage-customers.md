@@ -317,7 +317,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html).
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 

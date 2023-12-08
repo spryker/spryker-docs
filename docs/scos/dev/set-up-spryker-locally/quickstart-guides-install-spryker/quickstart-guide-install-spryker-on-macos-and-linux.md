@@ -9,13 +9,13 @@ redirect_from:
 
 This document describes how to quickly install Spryker on MacOS or Linux in Development mode. If you are installing Spryker for the first time or need detailed instructions, we recommend starting with [Install Spryker](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-spryker.html).
 
-To install Spryker on MacOS or Linux, follow these steps:
+To install Spryker on macOS or Linux, follow these steps:
 
 ## Prerequisites
 
-* Install [Docker](https://www.docker.com/).
+* Install [Docker](https://www.docker.com/) or [OrbStack](https://orbstack.dev/)(macOS only).
 
-* MacOS: Install or update Mutagen and Mutagen Compose:
+* macOS: Install or update Mutagen and Mutagen Compose:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
@@ -27,7 +27,7 @@ brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/
 - B2B Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202307.0 --single-branch ./b2b-demo-shop && \
+git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202311.0 --single-branch ./b2b-demo-shop && \
 cd b2b-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -36,7 +36,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202307.0 --single-branch ./b2c-demo-shop && \
+git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202311.0 --single-branch ./b2c-demo-shop && \
 cd b2c-demo-shop && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -45,7 +45,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2B Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202307.0 --single-branch ./b2b-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202311.0 --single-branch ./b2b-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
@@ -54,7 +54,7 @@ docker/sdk bootstrap deploy.dev.yml
 - B2C Marketplace Demo Shop:
 
 ```shell
-git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202307.0 --single-branch ./b2c-demo-marketplace && \
+git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202311.0 --single-branch ./b2c-demo-marketplace && \
 cd b2b-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml

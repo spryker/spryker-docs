@@ -1,7 +1,7 @@
-* @spryker/docs
+* @andriitserkovnyi @lenadoc
 
 /docs/scos/dev/front-end-development/*/oryx/* @andriitserkovnyi
-docs/scos/dev/front-end-development/*/oryx/building-applications/oryx-localization.md @andriitserkovnyi @tobi-or-not-tobi @tolerants
+/docs/scos/dev/front-end-development/*/oryx/building-applications/oryx-localization.md @andriitserkovnyi @tobi-or-not-tobi @tolerants
 /docs/scos/dev/front-end-development/*/oryx/feature-sets.md @tobi-or-not-tobi @andriitserkovnyi
 /docs/scos/dev/front-end-development/*/oryx/architecture/dependency-injection/* @dunqan @andriitserkovnyi
 /docs/scos/dev/front-end-development/*/oryx/building-applications/styling/* @tobi-or-not-tobi @andriitserkovnyi @tolerants
@@ -10,3 +10,6 @@ docs/scos/dev/front-end-development/*/oryx/building-applications/oryx-localizati
 /docs/scos/dev/set-up-spryker-locally/* @andriitserkovnyi
 /docs/pbc/all/dynamic-multistore/*/base-shop/dynamic-multistore-feature-overview.md @andriichekanov @a-sabaa
 /docs/pbc/all/warehouse-management-system/*/unified-commerce/ @andriispryker @andriitserkovnyi
+/docs/pbc/all/offer-management/*/unified-commerce/ @andriispryker @andriitserkovnyi
+/docs/pbc/all/carrier-management/*/unified-commerce/ @andriispryker @andriitserkovnyi
+/docs/pbc/all/service-point-management/ @andriispryker @andriitserkovnyi

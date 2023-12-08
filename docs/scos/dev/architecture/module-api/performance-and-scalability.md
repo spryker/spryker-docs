@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/performance-scalability
   - /v1/docs/performance-scalability
   - /v1/docs/en/performance-scalability
+  - /docs/scos/dev/setup/scalability.html
 related:
   - title: Semantic versioning - major vs. minor vs. patch release
     link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html

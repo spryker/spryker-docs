@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-feature-overview
 originalArticleId: 942e081b-6312-483d-bc93-761af98f1f44
 redirect_from:
-  - /2021080/docs/gift-cards-feature-overview
-  - /2021080/docs/en/gift-cards-feature-overview
-  - /docs/gift-cards-feature-overview
-  - /docs/en/gift-cards-feature-overview
+  - /docs/scos/user/features/202009.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202307.0/gift-cards-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202307.0/gift-cards-feature-walkthrough.html
@@ -89,7 +86,7 @@ Even though the Balance strategy is a bit more complicated than Replacement, it 
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html) |
-| [Enable gift cards](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/enable-gift-cards.html) |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html) |
-| | | [Retrieve gift cards in guest carts](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html) | |
-| | | [Retrieve gift cards in carts of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/retrieve-gift-cards-in-carts-of-registered-users.html) | |
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/install-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html) |
+| [Enable gift cards](/docs/pbc/all/gift-cards/{{site.version}}/install-and-upgrade/enable-gift-cards.html) |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html) |
+| | | [Retrieve gift cards in guest carts](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-retrieve-gift-cards-in-guest-carts.html) | |
+| | | [Retrieve gift cards in carts of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-retrieve-gift-cards-in-carts-of-registered-users.html) | |

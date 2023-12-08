@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/cms-product-lists-catalog-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html

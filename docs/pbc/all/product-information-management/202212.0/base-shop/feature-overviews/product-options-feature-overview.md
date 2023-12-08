@@ -75,7 +75,7 @@ The feature has the following functional constraints, which are going to be reso
 {% endinfo_block %}
 
 * Product options are available in all the stores where the corresponding concrete product is available.
-* Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
+* Unlike [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html), [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) does not support product options.
 * If you add a product with an option to a shopping list, the product option gets discarded.
 * You cannot define product option prices in a per-merchant manner.
 * If you create a product option, the price remains the same for all merchants.
@@ -92,6 +92,6 @@ The feature has the following functional constraints, which are going to be reso
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | DATA IMPORT |
 |---------|---------|---------|
-| [Shopping Lists + Product Options feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html)  | [ProductOption migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html)  |[File details: product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html) |
-| [Product options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html)  | | [File details: product_option_price.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/file-details-product-option-price.csv.html) |
+| [Shopping Lists + Product Options feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html)  | [ProductOption migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html)  |[File details: product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
+| [Install the Product options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html)  | | [File details: product_option_price.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html) |
 | [Glue API: Product Options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)  | | |

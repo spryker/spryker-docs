@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-wishlists
 originalArticleId: b4729aa0-f527-4fd0-bf46-6d8e62b3013e
 redirect_from:
-  - /2021080/docs/managing-wishlists
-  - /2021080/docs/en/managing-wishlists
-  - /docs/managing-wishlists
-  - /docs/en/managing-wishlists
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-wishlists/managing-wishlists.html  
   - /docs/pbc/all/shopping-list-and-wishlist/202307.0/manage-via-glue-api/manage-wishlists-via-glue-api.html
@@ -29,7 +25,7 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/sh
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
+* [Install the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 
@@ -115,10 +111,10 @@ To retrieve all wishlists of a customer, send the request:
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/wishlists | Retrieve all the wishlists of a customer. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items | Retrieve all the wishlists of a customer with wishlist items. |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products | Retrieve all the wishlists of a customer with wishlist items and respective concrete products.  |
-| GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels.  |
+| `GET https://glue.mysprykershop.com/wishlists` | Retrieve all the wishlists of a customer. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items` | Retrieve all the wishlists of a customer with wishlist items. |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products` | Retrieve all the wishlists of a customer with wishlist items and respective concrete products.  |
+| `GET https://glue.mysprykershop.com/wishlists?include=wishlist-items,concrete-products,product-labels` | Retrieve all the wishlists of a customer with wishlist items, respective concrete products, and their product labels.  |
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |

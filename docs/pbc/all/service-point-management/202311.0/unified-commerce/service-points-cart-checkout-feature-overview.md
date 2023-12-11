@@ -33,8 +33,8 @@ On the project level, you can extend this feature to support more complex scenar
 ## Current constraints
 
 * The example strategy does not support a use case where the same product SKU from the same merchant is added to the shopping cart as two separate cart line items. We recommend implementing the following logic on a project level if you intend to use the example strategy in production:
-* * When a product is added to the shopping cart, if the same product from the same merchant is already present, the quantity will be updated automatically, regardless of the specific product offer.
-* Currently, the example strategy supports only concrete products. We have not yet implemented support for bundles or configurable products.
+* When a product is added to the shopping cart, if the same product from the same merchant is already present, the quantity will be updated automatically, regardless of the specific product offer.
+* The example replacement strategy supports only concrete products. Product bundles and configurable products are not supported.
 
 ## Related Developer documents
 

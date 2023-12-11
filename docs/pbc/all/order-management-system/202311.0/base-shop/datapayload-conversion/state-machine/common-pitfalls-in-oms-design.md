@@ -179,4 +179,4 @@ Keeping both `onEnter` and `manual` commands can only be used for backup for the
 OMS processing uses order items level lock to prevent processing of the same items in parallel. The lock information is stored as an entry in the table *spy_oms_state_machine_lock*.
 Running this code inside a DB transaction will make the lock entries not accessible and thus may lead to processing of the same order items twice, or even to a DB deadlock in some rare cases.
 
-**Solution:** Create separate transitions: one with the `onEnter` command, the other with the `manual` command.
+**Solution:** Avoid transactions, when you have OMS processing calls.

@@ -10,6 +10,10 @@ This is a `translation.json` for the Hello World App. This file is used to trans
 
 This file has to be in `config/app/translation.json` of your App.
 
+{% info_block infoBox "Info" %}
+Additional info about the (configuration)[/docs/acp/user/app-configuration-translation.html]
+{% endinfo_block %}
+
 ```json
 {
   "configurations_fieldset_title": {

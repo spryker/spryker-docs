@@ -231,7 +231,7 @@ Start implementing the business logic by Implementing a Synchronous API and/or I
 
 ## Debug your app
 
-When you want to understand what is happening in the code you can [Debug your App](/docs/acp/user/developing-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;path=/;" \` to the above cURL request. We provided complete examples for running cURL with XDebug. 
+When you want to understand what is happening in the code you can [Debug your App](/docs/acp/user/developing-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;path=/;" \` to the above cURL request.
 Entry points for setting breakpoints are:
 - `Spryker\Glue\App\Controller\AppConfigController`
 - `\Spryker\Glue\App\Controller\AppDisconnectController`

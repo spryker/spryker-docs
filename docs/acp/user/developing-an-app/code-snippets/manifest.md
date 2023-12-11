@@ -10,6 +10,10 @@ This is an example manifest for the English version of the Hello World App.
 
 This file has to be placed in `config/app/manifest/en_US.json` in your App.
 
+{% info_block infoBox "Info" %}
+Additional info about the (configuration)[https://docs.spryker.com/docs/acp/user/app-manifest.html]
+{% endinfo_block %}
+
 ```json
 {
     "name": "Hello World App",

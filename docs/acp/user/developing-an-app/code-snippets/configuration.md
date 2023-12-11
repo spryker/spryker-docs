@@ -6,8 +6,13 @@ redirect_from:
 - /docs/acp/user/developing-an-app.html
 ---
 
-This is a `configuration.json` for the Hello World App. This is an example file where we assume the App needs a `clientId` and a `clientSecret` to be configured. On top of this, we can also enable/disable the App via the App Store Catalog.
-This file has to be in config/app/configuration.json of your App.
+This is a `configuration.json` for the Hello World App. 
+This is an example file where we assume the App needs a `clientId` and a `clientSecret` to be configured. On top of this, we can also enable/disable the App via the App Store Catalog.
+This file has to be in `config/app/configuration.json` of your App.
+
+{% info_block infoBox "Info" %}
+Additional info about the (configuration)[/docs/acp/user/app-configuration.html]
+{% endinfo_block %}
 
 ```json
 {

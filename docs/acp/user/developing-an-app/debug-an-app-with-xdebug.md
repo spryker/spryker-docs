@@ -18,7 +18,6 @@ To start a testing container with XDebug enabled (disabled in the default contai
 docker/sdk testing -x
 ```
 
-
 ### Configuring PHPStorm for XDebug
 
 1. Open PHPStorm and navigate to Preferences → PHP → Servers.

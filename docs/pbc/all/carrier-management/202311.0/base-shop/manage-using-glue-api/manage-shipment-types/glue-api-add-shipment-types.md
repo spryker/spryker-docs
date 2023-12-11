@@ -13,9 +13,9 @@ This endpoint lets you add shipment types.
 
 ## Add a shipment type point
 
----
+***
 `POST` **/service-types**
----
+***
 
 ### Request
 

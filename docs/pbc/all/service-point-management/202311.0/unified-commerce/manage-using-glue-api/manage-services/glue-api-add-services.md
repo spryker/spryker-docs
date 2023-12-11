@@ -13,9 +13,9 @@ This endpoint lets you add services.
 
 ## Add a service
 
----
+***
 `POST` **/services**
----
+***
 
 ### Request
 

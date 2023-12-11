@@ -13,9 +13,9 @@ This endpoint lets you update service points.
 
 ## Update a service point
 
----
+***
 `PATCH` **/services**
----
+***
 
 ### Request
 

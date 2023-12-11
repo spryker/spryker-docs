@@ -13,9 +13,9 @@ This endpoint lets you update shipment types.
 
 ## Update a shipment type
 
----
+***
 `PATCH` **/shipment-types**
----
+***
 
 ### Request
 

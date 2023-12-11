@@ -13,9 +13,9 @@ This endpoint lets you retrieve service types.
 
 ## Retrieve service types
 
----
+***
 `GET` **/service-types**
----
+***
 
 ### Request
 

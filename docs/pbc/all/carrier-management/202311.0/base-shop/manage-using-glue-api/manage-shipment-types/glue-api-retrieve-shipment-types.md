@@ -126,9 +126,9 @@ This endpoint lets you retrieve shipment types.
 
 ## Retrieve a shipment type
 
----
+***
 `GET` {% raw %}**/shipment-types/*{{shipment_type_id}}***{% endraw %}
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

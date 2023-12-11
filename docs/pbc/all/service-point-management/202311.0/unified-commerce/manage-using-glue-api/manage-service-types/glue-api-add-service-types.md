@@ -13,9 +13,9 @@ This endpoint lets you add service types.
 
 ## Add a service type
 
----
+***
 `POST` **/service-types**
----
+***
 
 ### Request
 

@@ -13,9 +13,9 @@ This endpoint lets you retrieve services.
 
 ## Retrieve services
 
----
+***
 `GET` **/services**
----
+***
 
 ### Request
 
@@ -277,9 +277,9 @@ This endpoint lets you retrieve services.
 
 ## Retrieve a service
 
----
+***
 `GET` {% raw %}**/services/*{{service_id}}***{% endraw %}
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

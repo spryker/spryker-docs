@@ -13,9 +13,9 @@ This endpoint lets you update service types.
 
 ## Update a service type
 
----
+***
 `PATCH` **/service-types**
----
+***
 
 ### Request
 

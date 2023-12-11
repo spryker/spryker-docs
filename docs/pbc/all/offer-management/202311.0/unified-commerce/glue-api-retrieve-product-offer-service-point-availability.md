@@ -138,13 +138,6 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
 
 
 
-
-
-
 ## Possible errors
-
-| CODE  | REASON |
-| --- | --- |
-| 5403 | The service point with the specified ID doesn't exist. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

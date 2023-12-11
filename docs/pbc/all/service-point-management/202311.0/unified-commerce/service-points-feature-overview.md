@@ -105,9 +105,9 @@ As a result, you will have the following user journey:
 
 | INSTALLATION GUIDES |
 | - |
-| [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-the-service-points-feature.html) |
-| [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-the-service-points-shipment-feature.html) |
-| [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-the-service-points-customer-account-management-feature.html) |
-| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-the-service-points-order-management-feature.html) |
-| [Install the Product Offer Shipment feature](docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-shipment-feature.html) |
+| [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html) |
+| [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html) |
+| [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html) |
+| [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html) |
+| [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html) |
 | [Install the Shipment + Customer Account Management feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html) |

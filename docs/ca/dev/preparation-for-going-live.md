@@ -57,7 +57,7 @@ Double check that you do not have any clear text passwords stored in config file
 
 ## Four weeks before go-live
 
-- *Make sure you are familiar with NewRelic APM*. If you have not requested NewRelic APM to be set up for you, do so. For more details about requesting changes, see [Platform change requests](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#platform-change-requests).
+- *Make sure you have an APM set up*. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
@@ -70,15 +70,15 @@ You must start working with data of realistic size and quality as early as possi
 {% endinfo_block %}
 
 - *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
-- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
+- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
 
 {% info_block warningBox "Email quota restrictions" %}
 
-PaaS production email service has the following quotas:
+SCCOS production email service has the following quotas:
 * Daily sending limit: 50.000 emails.
 * Sending limit messages per second: 14.
 
-PaaS non-production email service has the following quotas:
+SCCOS non-production email service has the following quotas:
 * Daily sending limit: 200 emails.
 * Sending limit messages per second: 1
 

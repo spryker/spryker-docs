@@ -71,13 +71,48 @@ After placing an order, the customer can see the selected service point on the O
 | [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) | [Create and edit product offers](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/unified-commerce-create-and-edit-product-offers.html) |
 
 
+
 ## Related Developer documents
 
-| INSTALLATION GUIDES |
-| - |
-| [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html) |
+| INSTALLATION GUIDES | GLUE API GUIDES   |
+| - | - |
+| [Install the Service Points feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html) |  |
 | [Install the Service Points + Shipment feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-shipment-feature.html) |
 | [Install the Service Points + Customer Account Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html) |
 | [Install the Service Points + Order Management feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-order-management-feature.html) |
 | [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html) |
 | [Install the Shipment + Customer Account Management feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html) |
+
+
+- title: Manage service points
+  nested:
+    - title: Add service points
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html
+    - title: Retrieve service points
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html
+    - title: Update service points
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-update-service-points.html
+- title: Manage service types
+  nested:
+    - title: Add service types
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html
+    - title: Retrieve service types
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html
+    - title: Update service types
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html
+- title: Manage service point addresses
+  nested:
+    - title: Add service point addresses
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html
+    - title: Retrieve service point addresses
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html
+    - title: Add service point addresses
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-update-service-point-addresses.html
+- title: Manage services
+  nested:
+    - title: Add services
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html
+    - title: Retrieve services
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
+    - title: Update services
+      url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html

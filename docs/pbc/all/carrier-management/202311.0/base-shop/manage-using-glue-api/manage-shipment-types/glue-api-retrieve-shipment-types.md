@@ -95,7 +95,7 @@ This endpoint lets you retrieve shipment types.
                 "key": "delivery"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
+                "self": "https://glue.mysprykershop.com/shipment-types/9e1bd563-3106-52d1-9717-18e8d491e3b3"
             }
         },
         {
@@ -106,12 +106,12 @@ This endpoint lets you retrieve shipment types.
                 "key": "pickup"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+                "self": "https://glue.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
             }
         }
     ],
     "links": {
-        "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types"
+        "self": "https://glue.mysprykershop.com/shipment-types"
     }
 }
 ```
@@ -190,7 +190,7 @@ This endpoint lets you retrieve shipment types.
             "key": "pickup"
         },
         "links": {
-            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
+            "self": "https://glue.mysprykershop.com/shipment-types/174d9dc0-55ae-5c4b-a2f2-a419027029ef"
         }
     }
 }

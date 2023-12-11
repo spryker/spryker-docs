@@ -117,7 +117,7 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
             ]
         },
         "links": {
-            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/product-offer-service-point-availabilities"
+            "self": "https://glue.mysprykershop.com/product-offer-service-point-availabilities"
         }
     }
 }

@@ -298,7 +298,7 @@ This endpoint lets you retrieve service points.
                 "key": "sp1"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+                "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
             }
         },
         {
@@ -309,12 +309,12 @@ This endpoint lets you retrieve service points.
                 "key": "sp2"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
+                "self": "https://glue.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8"
             }
         }
     ],
     "links": {
-        "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points"
+        "self": "https://glue.mysprykershop.com/service-points"
     }
 }
 ```
@@ -337,7 +337,7 @@ This endpoint lets you retrieve service points.
                 "key": "sp1"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
+                "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
             },
             "relationships": {
                 "service-point-addresses": {
@@ -358,7 +358,7 @@ This endpoint lets you retrieve service points.
                 "key": "sp2"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-point-addresses"
+                "self": "https://glue.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8?include=service-point-addresses"
             },
             "relationships": {
                 "service-point-addresses": {
@@ -373,7 +373,7 @@ This endpoint lets you retrieve service points.
         }
     ],
     "links": {
-        "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points?include=service-point-addresses"
+        "self": "https://glue.mysprykershop.com/service-points?include=service-point-addresses"
     },
     "included": [
         {
@@ -388,7 +388,7 @@ This endpoint lets you retrieve service points.
                 "city": "Berlin"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
+                "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
             }
         },
         {
@@ -403,7 +403,7 @@ This endpoint lets you retrieve service points.
                 "city": "Berlin"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8/service-point-addresses/7a711afc-02ce-5f54-a08c-fadfaf5713c6"
+                "self": "https://glue.mysprykershop.com/service-points/7e3b03e0-c53c-5298-9ece-968f4628b4f8/service-point-addresses/7a711afc-02ce-5f54-a08c-fadfaf5713c6"
             }
         }
     ]
@@ -637,7 +637,7 @@ This endpoint lets you retrieve service points.
             "key": "sp1"
         },
         "links": {
-            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
+            "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e"
         }
     }
 }
@@ -658,7 +658,7 @@ This endpoint lets you retrieve service points.
             "key": "sp1"
         },
         "links": {
-            "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
+            "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses"
         },
         "relationships": {
             "service-point-addresses": {
@@ -684,7 +684,7 @@ This endpoint lets you retrieve service points.
                 "city": "Berlin"
             },
             "links": {
-                "self": "https://glue.de.b2c-marketplace.demo-spryker.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
+                "self": "https://glue.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e/service-point-addresses/74768ee9-e7dd-5e3c-bafd-b654e7946c54"
             }
         }
     ]

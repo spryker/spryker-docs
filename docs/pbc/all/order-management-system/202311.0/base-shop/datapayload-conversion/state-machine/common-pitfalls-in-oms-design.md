@@ -171,3 +171,12 @@ Event does not appear as manual unless the previous command execution fails with
 Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
+
+## Calling OMS processing commands within a custom DB transaction
+
+**Issue:** On the project you decided to enclose complex processing, including OMS processing, in the transaction.
+
+OMS processing uses order items level lock to prevent processing of the same items in parallel. The lock information is stored as an entry in the table *spy_oms_state_machine_lock*.
+Running this code inside a DB transaction will make the lock entries not accessible and thus may lead to processing of the same order items twice, or even to a DB deadlock in some rare cases.
+
+**Solution:** Create separate transitions: one with the `onEnter` command, the other with the `manual` command.

@@ -11,8 +11,7 @@ If you need any additional support with this content, [contact our support](http
 
 ## Token validation issue
 
-Backend API access tokens are not validated. An attacker is able to request as many access tokens as he likes. Each requested token is valid and not expired.
-
+Glue Backend API has no expiration validation for access tokens. An attacker is able to request as many access tokens as he likes. Each requested token is valid and not expired.
 
 ### Affected modules
 

@@ -26,7 +26,7 @@ To configure Vertex, do the following:
 5. To activate the app, select *Active*.
 6. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 7. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://hanes.ondemand.vertexinc.com/oseries-help/help/oseries/166223.htm) for details about how to obtain it.
+7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html) for details about how to obtain it.
 8. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
 9. Click **Save**.
 
@@ -36,7 +36,7 @@ To configure Vertex, do the following:
 
 {% info_block infoBox "Company code" %}
 
-Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
+Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
 
 
 {% endinfo_block %}

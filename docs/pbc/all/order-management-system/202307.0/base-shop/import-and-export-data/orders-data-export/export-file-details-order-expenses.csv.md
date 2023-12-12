@@ -7,8 +7,8 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202307.0/base-shop/import-and-export-data/export-file-details-order-expenses.csv.html
 related:
   - title: Exporting data
-    link: docs/scos/dev/data-import/page.version/data-export.html
-  - title: Sales Data Export feature integration
+    link: docs/pbc/all/order-management-system/page.version/base-shop/import-and-export-data/orders-data-export/orders-data-export.html
+  - title: Install the Sales Data Export feature
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 

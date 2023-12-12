@@ -41,7 +41,7 @@ entries:
           - title: Integrating security releases
             url: /docs/scu/dev/integrating-code-releases/integrating-security-releases.html
           - title: Handling upgrade warnings
-            url: /docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html            
+            url: /docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html
 
       - title: Troubleshooting
         nested:
@@ -55,3 +55,5 @@ entries:
           url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
         - title: You have an unprocessed PR from a previous update
           url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
+        - title: A PHP extension is missing from your system
+          url: /docs/scu/dev/troubleshooting/a-php-extension-is-missing-from-your-system.html

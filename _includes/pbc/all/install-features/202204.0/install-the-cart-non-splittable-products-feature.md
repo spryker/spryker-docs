@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Cart + Non-splittable Products feature into a Spryker project.
+This document describes how to install the Cart + Non-splittable Products feature.
 
 ## Install feature core
 

@@ -1,4 +1,4 @@
-This document describes how to integrate the Spryker Core feature into a Spryker project.
+This document describes how to install the Spryker Core feature.
 
 {% info_block infoBox "Influded features" %}
 

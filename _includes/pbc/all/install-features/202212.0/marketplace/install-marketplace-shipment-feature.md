@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
+This document describes how to install the Marketplace Shipment feature.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
 | Merchant | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Shipment | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 
 
 ### 1) Install the required modules using Composer

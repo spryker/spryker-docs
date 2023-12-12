@@ -1,14 +1,15 @@
 ---
 title: Click and Collect feature Service Points domain walkthrough
 last_updated: Nov 02, 2023
-description: TODO
+description: |
+  Explore the Service Point domain of the Click and Collect feature, exploring the definition and functionality of service points. Learn how to install the Service Points feature and set up essential modules for seamless integration. Understand the significance of data setup and discover the available methods, including the Backend API and Data Import, to configure service points, addresses, stores, service types, and services.
+
 template: concept-topic-template
 ---
 
 # Service Points
 
-Service Point represents a physical location, such as a store or a post office, where customers can pick up their orders.
-Each service point can provide one or multiple unique services in it to the customers.
+A Service Point represents a physical location, such as a store, post office, or other designated areas, enabling customers to conveniently pick up their orders or access additional services like returns, exchanges, or customer support. Each service point has the capability to offer one or multiple unique services to customers.
 
 [Install the Service Points feature](/docs/pbc/all/install-features/{{page.version}}/install-the-service-points-feature.html)
 
@@ -31,8 +32,19 @@ Each service point can provide one or multiple unique services in it to the cust
 | ServicePointWidget        | vendor/spryker-shop/service-point-widget       |
 | ServicePointCartPage      | vendor/spryker-shop/service-point-cart-page    |
 
-## 2. Data set up
+## 2. Data Setup
 
-Spryker offers two ways to set up the service points, service point addresses, service point stores, service types and services:
-- Backend API (check `ServicePointsBackendApi` module)
-- Import (check `ServicePointDataImport` module)
+Spryker offers two methods for setting up service points, service point addresses, service point stores, service types, and services:
+
+- Backend API (check the `ServicePointsBackendApi` module)
+- Data Import (check the `ServicePointDataImport` module)
+
+## 3. Address Substitution during Checkout
+
+The `ServicePointWidget` module offers a mechanism to substitute the shipping address with the service point address during the checkout process in Yves.
+
+### Plugins
+
+The following plugin handles address substitution when the cart item has a service point selected and the shipment type is set to `pickup`:
+
+- **\SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin**

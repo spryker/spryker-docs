@@ -3,6 +3,11 @@ title: Warehouse Picking feature overview
 description: General overview of the Warehouse Picking feature
 last_updated: Oct 3, 2023
 template: concept-topic-template
+related:
+  - title: Fulfillment App overview
+    link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/fulfillment-app-overview.html
+  - title: Install the Warehouse Picking feature
+    link: docs/pbc/all/warehouse-management-system/page.version/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
 ---
 
 
@@ -26,9 +31,3 @@ You can extend this strategy or create custom strategies on the project level. E
 ## Fulfillment App OAuth
 
 Fulfillment App's early access OAuth supports the Authorization Code Grant flow. The flow is customized to meet the needs of Fulfillment App.
-
-## Related Developer documents
-
-| INSTALLATION GUIDES  |
-|---|
-| [Install the Warehouse Picking feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html) |

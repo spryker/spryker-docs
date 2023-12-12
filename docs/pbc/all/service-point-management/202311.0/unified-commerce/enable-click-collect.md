@@ -57,7 +57,7 @@ To import service types, see [Import file details: service.csv](/docs/pbc/all/se
 
 ## 4. Assign the service type to shipment type
 
-To import service to shipment type assignments, see [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/file-details-shipment-type-service-type.csv.html).
+To import service to shipment type assignments, see [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/file-details-shipment-type-service-type.csv.html).
 
 
 ## 5. Assign product offers to shipment types

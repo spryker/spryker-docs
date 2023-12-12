@@ -48,8 +48,9 @@ The boilerplate contains the following files, with the server side rendering (SS
 
 ```
 oryx-app/
-├── app.ts
-├── index.html
+├── src
+│   ├──app.ts
+│   └──index.html
 ├── package.json
 ├── server/ (optional)
 │   ├──render.ts
@@ -70,7 +71,8 @@ The bare minimum `package.json` includes the following dependencies:
 {
   ...
   "dependencies": {
-    "@spryker-oryx/oryx-presets": "^1.0.0"
+    "@spryker-oryx/presets": "^1.0.0",
+    "@spryker-oryx/themes": "^1.0.0"
   },
   "devDependencies": {
     "vite": "^4.0.0"
@@ -103,8 +105,8 @@ While `index.html` can have a few more details, the following is the required ba
 <html>
   <body>
     <root-app></root-app>
+    <script type="module" src="/app.ts"></script>
   </body>
-  <script type="module" src="/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application.ts"></script>
 </html>
 ```
 
@@ -115,12 +117,12 @@ Oryx can be installed and used next to other applications' code. You could there
 `app.ts` contains the bootstrap code of the application. The application can be bootstrapped with `appBuilder`, a function that configures the application. While the configuration of `appBuilder` can be fine-tuned to small details, the following is the bare minimum setup:
 
 ```ts
-import { appBuilder } from "@spryker-oryx/core";
-import { b2cFeatures } from "@spryker-oryx/oryx-presets";
-import { storefrontTheme } from "@spryker-oryx/themes";
+import { appBuilder } from '@spryker-oryx/application';
+import { storefrontFeatures } from '@spryker-oryx/presets/storefront';
+import { storefrontTheme } from '@spryker-oryx/themes';
 
 export const app = appBuilder()
-  .withFeature(b2cFeatures)
+  .withFeature(storefrontFeatures)
   .withTheme(storefrontTheme)
   .withEnvironment(import.meta.env)
   .create();

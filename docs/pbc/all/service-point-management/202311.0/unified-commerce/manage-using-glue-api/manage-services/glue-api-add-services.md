@@ -52,7 +52,7 @@ This endpoint lets you add services.
 | --- | --- | --- | --- |
 | isActive | Boolean | &check; | Defines if the service is to be active. Inactive services are not displayed on the Storefront. |
 | key | String | &check; | Unique identifier of the service. |
-| servicePointUuid | String | &check; | Unique identifier of the service point to assign this service to. To get it, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/retrieve-service-points.html). |
+| servicePointUuid | String | &check; | Unique identifier of the service point to assign this service to. To get it, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html). |
 | serviceTypeUuid | String | &check; | Unique identifier of the service type to add a service of. To get it, [retrieve service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html). |
 
 

@@ -52,12 +52,12 @@ Request sample: `POST https://glue.mysprykershop.com/product-offer-service-point
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| servicePointUuids | Object | &check; | The list of service points to retrieve the availability from. To get them, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/retrieve-service-points.html) |
+| servicePointUuids | Object | &check; | The list of service points to retrieve the availability from. To get them, [retrieve service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html) |
 | serviceTypeUuid | String | &check; | The service type to retrieve the product offer availability for. To get it, [retrieve service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html)|
 | productConcreteSku | String | &check; | The concrete product to retrieve the availability of. To get it, [retrieve concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)|
-| productOfferReference | String | &check; | The product offer to retrieve the availability of. To get it, [retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.md.html)|
+| productOfferReference | String | &check; | The product offer to retrieve the availability of. To get it, [retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)|
 | quantity | String | &check; | The quantity to retrieve the availability for. |
-| merchantReference | String | &check; | The merchant to retrieve the product offer availability of. To get it, retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.md.html)|
+| merchantReference | String | &check; | The merchant to retrieve the product offer availability of. To get it, retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)|
 | shipmentTypeUuid | String | &check; | The shipment type to check the product offer availability for. To get it, [retrieve shipment types](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html)|
 
 

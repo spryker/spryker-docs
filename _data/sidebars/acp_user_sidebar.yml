@@ -15,8 +15,16 @@ entries:
       - title: Developing an app
         url: /docs/acp/user/developing-an-app/developing-an-app.html
         nested:
-          - title: Create and app with AppKernel
-            url: /docs/acp/user/developing-an-app/create-an-app-with-appkernel.html
+          - title: Configuration code snippet
+            url: /docs/acp/user/developing-an-app/code-snippets/configuration.html
+          - title: Manifest code snippet
+            url: /docs/acp/user/developing-an-app/code-snippets/manifest.html
+          - title: Translation code snippet
+            url: /docs/acp/user/developing-an-app/code-snippets/translation.html
+      - title: Setting up message brocker
+        url: /docs/acp/user/developing-an-app/setting-up-message-broker.html
+      - title: Debug an app with xdebug
+        url: /docs/acp/user/developing-an-app/debug-an-app-with-xdebug.html
       - title: App manifest
         url: /docs/acp/user/app-manifest.html
       - title: App configuration

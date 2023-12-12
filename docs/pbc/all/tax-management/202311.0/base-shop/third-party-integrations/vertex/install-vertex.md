@@ -697,5 +697,22 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 | zipCode          | postalCode     |                                    |
 | country.iso2Code | country        |                                    |
 
+### 5. Add translations
+
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+cart.total.tax_total.calculated_at_checkout,an der Kasse berechnet,de_DE
+cart.total.tax_total.calculated_at_checkout,calculated at checkout,en_US
+```
+
+Run the following console command to import data:
+
+```yaml
+console data:import glossary
+```
+
 ## Next step
 [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)

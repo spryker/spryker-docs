@@ -172,11 +172,11 @@ Keeping both `onEnter` and `manual` commands can only be used for backup for the
 
 {% endinfo_block %}
 
-## Calling OMS processing commands within a custom DB transaction
+## Calling OMS processing functions within a custom DB transaction
 
-**Issue:** On the project you decided to enclose complex processing, including OMS processing, in the transaction.
+**Issue:** On the project you decided to enclose complex processing, including OMS processing functions, inside a transaction.
 
-OMS processing uses order items level lock to prevent processing of the same items in parallel. The lock information is stored as an entry in the table *spy_oms_state_machine_lock*.
-Running this code inside a DB transaction will make the lock entries not accessible and thus may lead to processing of the same order items twice, or even to a DB deadlock in some rare cases.
+OMS processing functions, like triggerEvent*, checkConditions and checkTimeouts, use lock on the order item level to prevent processing of the same item more than once at the same time. The lock information is stored as an entry in the table *spy_oms_state_machine_lock*.
+Running this code inside a DB transaction will make the lock entries not accessible and thus may lead to undetermined resulting state of the item, or even to a DB deadlock in some rare cases.
 
 **Solution:** Avoid DB transactions, when you have OMS processing calls.

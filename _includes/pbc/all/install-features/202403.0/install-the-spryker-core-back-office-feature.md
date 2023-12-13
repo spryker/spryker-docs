@@ -148,7 +148,26 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL] = 900;
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS] = 360;
 $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
+```
 
+***src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php***
+
+Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityGui;
+
+use Spryker\Zed\SecurityGui\SecurityGuiConfig as SprykerSecurityGuiConfig;
+
+class SecurityGuiConfig extends SprykerSecurityGuiConfig
+{
+    /**
+     * @var bool
+     */
+    protected const IS_BACKOFFICE_USER_SECURITY_BLOCKER_ENABLED = true;
+}
 ```
 
 ### Set up an authentication strategy

@@ -137,6 +137,26 @@ console propel:install
 console transfer:generate
 ```
 
+### 3) Set up the configuration
+
+**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
+
+Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
+
+```php
+namespace Pyz\Zed\SecurityMerchantPortalGui;
+
+use Spryker\Zed\SecurityMerchantPortalGui\SecurityMerchantPortalGuiConfig as SprykerSecurityMerchantPortalGui;
+
+class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGui
+{
+    /**
+     * @var bool
+     */
+    protected const MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED = true;
+}
+```
+
 ### 4) Set up behavior
 
 Set up behavior as follows:

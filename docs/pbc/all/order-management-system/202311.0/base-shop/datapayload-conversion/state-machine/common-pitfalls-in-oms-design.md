@@ -179,4 +179,4 @@ Keeping both `onEnter` and `manual` commands can only be used for backup for the
 OMS processing functions, like triggerEvent*, checkConditions and checkTimeouts, use lock on the order item level to prevent processing of the same item more than once at the same time. The lock information is stored as an entry in the table *spy_oms_state_machine_lock*.
 Running this code inside a DB transaction will make the lock entries not accessible and thus may lead to undetermined resulting state of the item, or even to a DB deadlock in some rare cases.
 
-**Solution:** Avoid DB transactions, when you have OMS processing function calls.
+**Solution:** Avoid OMS processing function calls inside DB transactions.

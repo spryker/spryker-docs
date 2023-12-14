@@ -124,7 +124,7 @@ To be able to use your Mini Framework as an App you need to add a new Spryker mo
 docker/sdk cli composer require spryker/app-kernel spryker/message-broker-aws spryker/propel-encryption-behavior 
 ```
 This `spryker/app-kernel` module will make the Mini-Framework an App. It provides SyncAPI schema and code for configuration and disconnection as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
-The `spryker/message-broker-aws` module installs the needed plugins which will be used to send and receive messages. In addition to installing the modules you need to configure them.
+The `spryker/message-broker-aws` module installs the needed plugins which will be used to send and receive messages. In addition to installing the modules you need to configure them. The configuration [example](https://github.com/spryker-projects/mini-framework/blob/examples/acp/hello-world/my-app-final/config/Shared/config_default.php#L28).
 
 ## Setup the Message Broker
 

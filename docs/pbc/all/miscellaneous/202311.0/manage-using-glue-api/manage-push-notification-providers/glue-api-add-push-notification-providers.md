@@ -29,7 +29,7 @@ This endpoint lets you add push notification providers to further subscribe to n
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
 
 Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers`
@@ -46,6 +46,7 @@ Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notifica
 ```
 
 
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md -->
 
 
 

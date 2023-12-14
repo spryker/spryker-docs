@@ -40,6 +40,10 @@ The following sequence diagram shows how sending and receiving push notification
 
 ## Related Developer documents
 
-|INSTALLATION GUIDES |
-|---------|
-| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |
+| INSTALLATION GUIDES | GLUE API GUIDES |
+|---------| - |
+| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |  [Add push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html)   |
+|      |  [Retrieve push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html)   |
+|      |  [Update push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html)   |
+|      |  [Delete push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html)   |
+|      |  [Add push notification subscription](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html)   |

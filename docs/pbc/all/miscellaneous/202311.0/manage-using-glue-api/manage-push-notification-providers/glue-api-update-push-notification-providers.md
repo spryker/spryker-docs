@@ -47,7 +47,7 @@ Request sample: `PATCH https://glue-backend.de.b2c.demo-spryker.com/push-notific
 ```
 
 
-
+{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-request-attributes.md -->
 
 
 ### Response

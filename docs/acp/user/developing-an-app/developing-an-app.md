@@ -35,7 +35,7 @@ You need to have a clear understanding of what your app API will provide to othe
 
 ### Schema-first
 
-Before you start with the development, you should design your API schema files. Depending on your requirements, you can have an OpenAPI or an [Async API](#async-api) schema file. In this step, you define the [Sync API](#sync-api) endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
+Before you start with the development, you should design your API schema files. Depending on your requirements, you can have an OpenAPI or an Async API schema file. In this step, you define the Sync API endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
 
 {% info_block infoBox "Info" %}
 For more information about Async API schema design, see [Designing your APIs with Async API](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1). 

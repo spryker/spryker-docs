@@ -3,16 +3,14 @@ title: Translation Json
 Descriptions: Translation Json code snippet
 template: howto-guide-template
 redirect_from:
-- /docs/acp/user/developing-an-app.html
+- /docs/acp/user/develop-an-app.html
 ---
 
-This is a `translation.json` for the Hello World App. This file is used to translate the form fields which are defined in the `configuration.json`.
+The `translation.json` file contains translations of the form files which are defined in the `configuration.json` file of your app [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html). Add this file to `config/app/translation.json`in your app.
 
-This file has to be in `config/app/translation.json` of your App.
+For more information about the app configuration translation, see [App configuration translation](/docs/acp/user/app-configuration-translation.html).
 
-{% info_block infoBox "Info" %}
-Additional info about the (configuration)[/docs/acp/user/app-configuration-translation.html]
-{% endinfo_block %}
+Here is the example `translation.json` file for the Hello World app.
 
 ```json
 {

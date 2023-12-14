@@ -3,7 +3,7 @@ title: Debugging Your App with Xdebug
 Descriptions: Learn how to use Xdebug
 template: howto-guide-template
 redirect_from:
-- /docs/acp/user/developing-an-app.html
+- /docs/acp/user/develop-an-app.html
 ---
 
 ## Introduction

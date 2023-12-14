@@ -1,9 +1,9 @@
 ---
-title: Setting Up the Message Broker
+title: Set up the message broker
 Descriptions: Learn how to develop an app
 template: howto-guide-template
 redirect_from:
-- /docs/acp/user/developing-an-app.html
+- /docs/acp/user/develop-an-app.html
 ---
 
 To enable the message broker functionality, you must install a special branch of the `spryker/message-broker` by running the following command:

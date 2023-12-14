@@ -3,16 +3,14 @@ title: Configuration Json
 Descriptions: Configuration Json code snippet
 template: howto-guide-template
 redirect_from:
-- /docs/acp/user/developing-an-app.html
+- /docs/acp/user/develop-an-app.html
 ---
+To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the App Store Catalog, the app needs to have the `configuration.json` file. This file contains all necessary form fields for inputs required by users of your app. Add this file to `config/app/configuration.json` in your app.
 
-This is a `configuration.json` for the Hello World App. 
-This is an example file where we assume the App needs a `clientId` and a `clientSecret` to be configured. On top of this, we can also enable/disable the App via the App Store Catalog.
-This file has to be in `config/app/configuration.json` of your App.
+For more information about the app configuration, see [App configuration](/docs/acp/user/app-configuration.html).
 
-{% info_block infoBox "Info" %}
-Additional info about the (configuration)[/docs/acp/user/app-configuration.html]
-{% endinfo_block %}
+Here is the example `configuration.json` file for the Hello World app. In this example, we assume the app needs a `clientId` and a `clientSecret` configured. Additionally, there should be an option to enable and disable the app via the App Store Catalog.
+
 
 ```json
 {

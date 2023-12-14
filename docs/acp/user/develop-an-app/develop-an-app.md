@@ -15,7 +15,7 @@ Before you begin, ensure that you have the following prerequisites in place:
 
 - Completed the [thought process](#thought-process) for your app.
 - An empty GitHub repository.
-- A local project directory for your app (e.g., `/www/my-app`).
+- A local project directory for your app (for example, `/www/my-app`).
 - [DockerSDK](https://github.com/spryker/docker-sdk) installed globally.
 
 Make sure you have the Spryker Docker SDK, Git, and an empty repository for your app code.
@@ -30,7 +30,7 @@ First, think about what your app should be capable of: what features it will bri
 ### API-first
 It's strongly recommended that apps follow the API-first approach. 
 API-first means that your app is centered on the API. It should be possible to perform every action via the scripting language, and every piece of functionality should be available for other systems to leverage. For more information on the API-first approach, see [this blog post](https://www.algolia.com/blog/product/the-5-principles-of-api-first-development-and-what-does-api-first-even-mean/).
-You need to have a clear understanding of what your app API will provide to others and always keep that in mind when designing your app.
+You need to have a clear understanding of what your app API will provide to others, and always keep that in mind when designing your app.
 
 ### Schema-first
 
@@ -60,7 +60,7 @@ git commit -m "first commit"
 
 After running these commands, you will have a new local repository that needs to be linked with your remote one.
 
-If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you created a new repository, GitHub shows you instructions on how to continue. You should follow the list below as you don’t need some of the first steps proposed by GitHub as we’ve already initialized Git and we already have the `README.md` file from the cloned repository.
+If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you created a new repository, GitHub shows you instructions on how to continue. Follow the list below, as you don’t need some of the first steps proposed by GitHub since you’ve already initialized Git and you already have the `README.md` file from the cloned repository.
 
 ```bash
 git branch -M main
@@ -102,17 +102,17 @@ Before your app can be listed in the App Store Catalog, you need to add the foll
 
 ### Manifest
 
-The manifest file is the most important one for the App. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
+The manifest file is the most important one for the app. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
 
 Manifest files must have the local name as the filename, for example, `en_US.json`, and should be placed inside the `config/app/manifest` directory.
 
 ### Configuration
 
-The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration.html) and update it to your needs. Add this file to `config/app/configuration.json` of your App.
+The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration.html) and update it to your needs. Add this file to `config/app/configuration.json` of your app.
 
 ### Translation
 
-The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation.html) and update it to your needs. Add this file to `config/app/translation.json` of your App.
+The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
 
 ## Add the registry (code)
 
@@ -242,4 +242,3 @@ If you want to understand what is happening in the code, you can [debug your app
 Entry points for setting breakpoints are the following:
 - `Spryker\Glue\App\Controller\AppConfigController`
 - `\Spryker\Glue\App\Controller\AppDisconnectController`
-

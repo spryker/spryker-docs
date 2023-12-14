@@ -2,10 +2,8 @@
 title: Manifest Json
 Descriptions: Manifest Json code snippet
 template: howto-guide-template
-redirect_from:
-- /docs/acp/user/develop-an-app.html
 ---
-To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the App Store Catalog,, the app needs to have the manifest file. Add this file has to `config/app/manifest/en_US.json` in your App.
+To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the App Store Catalog,, the app needs to have the manifest file. Add this file to `config/app/manifest/en_US.json` in your App.
 
 For more information about configuration of the manifest file, see [App manifest](https://docs.spryker.com/docs/acp/user/app-manifest.html).
 

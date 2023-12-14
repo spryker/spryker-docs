@@ -1,33 +1,33 @@
 ---
-title: Debugging Your App with Xdebug
-Descriptions: Learn how to use Xdebug
+title: Debug an app with Xdebug
+Descriptions: Learn how to use Xdebug for your app
 template: howto-guide-template
-redirect_from:
-- /docs/acp/user/develop-an-app.html
 ---
 
-## Introduction
+This document describes how to set up and use Xdebug to debug your app. 
 
-Debugging your application becomes a seamless process with the provided DockerSDK, which comes equipped with a configuration to effortlessly run your app with Xdebug. This guide will walk you through the steps to set up and use Xdebug for debugging purposes.
+Keep in mind that the steps described here may vary slightly depending on your specific development environment; however, they should still assist you in setting up XDebug for debugging in most scenarios.
 
-### Setting Up DockerSDK with XDebug
+## Set up DockerSDK with XDebug
 
-To start a testing container with XDebug enabled (disabled in the default container), execute the following command in your terminal:
+To start a testing container with Xdebug enabled (disabled in the default container), execute the following command:
 
 ```bash
 docker/sdk testing -x
 ```
 
-### Configuring PHPStorm for XDebug
+### Configure PHPStorm for XDebug
 
-1. Open PHPStorm and navigate to Preferences → PHP → Servers.
-2. Click the "+" sign to add a new configuration with the following details:
+To configure PHPStorm for XDebug, do the following:
+
+1. In PHPStorm, go to **Preferences → PHP → Servers**.
+2. Click the `+` sign to add a new configuration with the following details:
    - Name: spryker
    - Host: spryker.local
-3. Enable the Use path mappings option, selecting it based on whether the server is remote or if symlinks are used. For example, map the path from /path/to/root/of/the/app to /data.
+3. Enable the *Use path mappings* option, selecting it based on whether the server is remote or if symlinks are used. For example, map the path from `/path/to/root/of/the/app` to `/data`.
 4. Click `Apply` and then `OK` to save the configuration.
 
-Now, PHPStorm is ready to accept XDebug connections, and you can efficiently debug your application using Xdebug.
+PHPStorm is now ready to accept XDebug connections, allowing you to debug your app using XDebug.
 
-Remember that these steps may vary slightly depending on your specific development environment, but this general guide should help you set up Xdebug for debugging in most scenarios.
+
 

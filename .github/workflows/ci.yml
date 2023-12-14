@@ -28,7 +28,7 @@ jobs:
       - name: Pack artifacts
         run: tar -czf result.tar.gz _site
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: build-result
           path: result.tar.gz

@@ -7,6 +7,7 @@ originalArticleId: 340bd1d9-3055-488a-81e0-aad02e5c5220
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configure-cross-origin-resource-sharing-for-glue-api.html
+  - /docs/scos/dev/glue-api-guides/202311.0/configure-cross-origin-resource-sharing-for-glue-api.html
 ---
 
 By default, Glue REST API is configured to run using the [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy), which remains the recommended default security level for web applications. However, if requests to Glue API originate from touchpoints located across multiple domains, you can enable *Cross-Origin Resource Sharing* (CORS). When CORS is enabled, Glue API can accept requests from a list of allowed origins or any origin, depending on the configuration.

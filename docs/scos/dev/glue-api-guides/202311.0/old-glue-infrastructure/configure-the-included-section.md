@@ -6,6 +6,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/ht-configuring-visi
 originalArticleId: d6d74121-749a-4a8d-8f95-d3455b2db252
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html
+  - /docs/scos/dev/glue-api-guides/202311.0/configure-the-included-section.html
 ---
 
 Responses of Spryker Glue REST API can return the **included** and **relationships** sections. The sections contain additional information on the resource requested. Such information is presented in the form of related resources. For example, if you request information on products, the sections can include such additional related resources as image sets, prices, and availability information.

@@ -30,9 +30,9 @@ Create a GlueStorefrontApiApplication directory in the Plugin directory. It will
 
 Old resource plugin can be used as a reference.
 
-Abstract class must be changed from Spryker\Glue\Kernel\AbstractPlugin to Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin
+Abstract class must be changed from `Spryker\Glue\Kernel\AbstractPlugin` to `Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin`
 
-Interface MUST be changed from Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface to Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\JsonApiResourceInterface
+Interface MUST be changed from `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface` to `Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\JsonApiResourceInterface`
 
 getResourceType()method MUST be renamed to getType()
 

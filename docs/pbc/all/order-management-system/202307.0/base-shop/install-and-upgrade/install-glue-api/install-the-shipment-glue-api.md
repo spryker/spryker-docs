@@ -1,5 +1,5 @@
 ---
-title: Integrate the Shipment Glue API
+title: Install the Shipment Glue API
 last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 redirect_from:

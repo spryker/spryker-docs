@@ -1,12 +1,12 @@
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE |
-| :-------------------- | :------------------------- | :------- |
-| order-shipments       | itemUuids                  | String   |
-| order-shipments       | methodName                 | String   |
-| order-shipments       | carrierName                | String   |
-| order-shipments       | requestedDeliveryDate      | Date     |
-| order-shipments       | shippingAddress            | Object   |
-| order-shipments       | shippingAddress.salutation | String   |
-| order-shipments       | shippingAddress.firstName  | String   |
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| :-------------------- | :------------------------- | :------- | --- |
+| order-shipments       | itemUuids                  | String   |      |
+| order-shipments       | methodName                 | String   |       |
+| order-shipments       | carrierName                | String   |       |
+| order-shipments       | requestedDeliveryDate      | Date     |       |
+| order-shipments       | shippingAddress            | Object   |       |
+| order-shipments       | shippingAddress.salutation | String   |       |
+| order-shipments       | shippingAddress.firstName  | String   |       |
 | order-shipments | shippingAddress.middleName  | String | Customer's middle name.                 |
 | order-shipments | shippingAddress.lastName    | String | Customer's last name.                   |
 | order-shipments | shippingAddress.address1    | String | The 1st line of the customer's address. |

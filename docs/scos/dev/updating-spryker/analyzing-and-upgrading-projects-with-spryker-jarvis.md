@@ -15,6 +15,10 @@ redirect_from:
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
+{% info_block warningBox "Deprecated" %}
+Jarvis is not actively supported anymore.
+{% endinfo_block %}
+
 [Spryker Jarvis](https://github.com/spryker/jarvis) is the command-line tool that lets you analyze your Spryker-based project and eventually migrate it to the most up-to-date version of Spryker. The tool helps you quickly get answers to the following questions:
 
 * How outdated is your project compared to the latest Spryker product release?
@@ -31,7 +35,7 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 ## Prerequisites
 
 * [Install Spryker project locally](/docs/scos/dev/developer-getting-started-guide.html#install-spryker)
-* [Install Node.js](https://nodejs.org/en/download)  
+* [Install Node.js](https://nodejs.org/en/download)
 
 ## Install Spryker Jarvis
 

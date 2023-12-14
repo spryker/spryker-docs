@@ -182,7 +182,7 @@ docker/sdk cli console transfer:generate
 
 ## Update the Database
 
-Transfer objects are used in many place and since we installed some modules we also need to run the console command to generate the transfers.
+Generate the database entities and update the database.
 
 ```bash
 docker/sdk cli console propel:install

@@ -73,7 +73,7 @@ class DummyStoresApiProviderPlugin extends AbstractPlugin implements RouteProvid
     {
         $route = new Route(static::ROUTE_STORES_GET_LIST);
         $route->setMethods([static::METHOD_GET])
-            ->setController(StoresResourceController::class, static::ROUTE_STORES_GET_LIST_ACTION)
+            ->setDefault('_controller', [StoresResourceController::class, static::ROUTE_STORES_GET_LIST_ACTION])
             ->setDefault(static::STRATEGIES_AUTHORIZATION, [static::STRATEGY_AUTHORIZATION_API_KEY]);
         
         $routeCollection->add(

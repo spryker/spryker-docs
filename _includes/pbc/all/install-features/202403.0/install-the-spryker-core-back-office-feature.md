@@ -152,7 +152,7 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 ***src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php***
 
-Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
+Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `IS_BACKOFFICE_USER_SECURITY_BLOCKER_ENABLED` to `true;`
 
 ```php
 <?php

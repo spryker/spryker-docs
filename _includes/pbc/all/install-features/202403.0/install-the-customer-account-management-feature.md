@@ -861,7 +861,7 @@ By default, in Spryker, posting the login form (where SecurityBlocker makes its 
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 
-Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
+Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `CUSTOMER_SECURITY_BLOCKER_ENABLED` to `true;`
 
 ```php
 <?php

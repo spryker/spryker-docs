@@ -116,17 +116,17 @@ Ensure that the following changes have occurred in transfer objects:
 
 **Backend API plugins:**
 
-| PLUGIN | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
-| AccessTokenValidatorPlugin | Validates access token passed via authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin |
-| CustomerRequestBuilderPlugin | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid. | Spryker\\Glue\\OauthBackendApi\\Plugin |
-| OauthAuthenticationServerPlugin | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Zed\\AuthenticationOauth\\Communication\\Plugin |
-| OauthBackendTokenResource | Registers the `token` resource. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication |
+| PLUGIN | SPECIFICATION | NAMESPACE                                                          |
+| --- | --- |--------------------------------------------------------------------|
+| BackendApiAccessTokenValidatorPlugin | Validates access token passed via authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                           |
+| CustomerRequestBuilderPlugin | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid. | Spryker\\Glue\\OauthBackendApi\\Plugin                             |
+| OauthAuthenticationServerPlugin | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Zed\\AuthenticationOauth\\Communication\\Plugin           |
+| OauthBackendTokenResource | Registers the `token` resource. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication            |
 | OauthUserScopeInstallerPlugin | Installs Oauth user scope data. | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Installer |
-| UserOauthScopeProviderPlugin | Gets a list of customer scopes. | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth |
-| UserOauthUserProviderPlugin | Gets the user based on authorisation client. | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth |
-| UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth |
-| UserRequestValidatorPlugin | Validates if `GlueRequestTransfer.requestUser` is set in case if request has Authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication |
+| UserOauthScopeProviderPlugin | Gets a list of customer scopes. | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth     |
+| UserOauthUserProviderPlugin | Gets the user based on authorisation client. | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth     |
+| UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                  |
+| UserRequestValidatorPlugin | Validates if `GlueRequestTransfer.requestUser` is set in case if request has Authorisation header. | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication            |
 
 
 **src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
@@ -162,7 +162,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 namespace Pyz\Glue\GlueBackendApiApplication;
 
 use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-use Spryker\Glue\OauthBackendApi\Plugin\AccessTokenValidatorPlugin;
+use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\BackendApiAccessTokenValidatorPlugin;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\OauthBackendTokenResource;
 use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\UserRequestValidatorPlugin;
 use Spryker\Glue\OauthBackendApi\Plugin\UserRequestBuilderPlugin;
@@ -185,7 +185,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     protected function getRequestValidatorPlugins(): array
     {
         return [
-            new AccessTokenValidatorPlugin(),
+            new BackendApiAccessTokenValidatorPlugin(),
             new UserRequestValidatorPlugin(),
         ];
     }

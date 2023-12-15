@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202312.0
 description: Security release notes for 202312.0
-last_updated: Dec 5, 2023
+last_updated: Dec 18, 2023
 template: concept-topic-template
 ---
 
@@ -26,7 +26,7 @@ Affected applications: Back Office, Merchant Portal.
 
 ### Affected modules
 
-* `sspryker/customer`: 1.0.0 - 7.52.0
+* `spryker/customer`: 1.0.0 - 7.52.0
 * `spryker/security-gui`: 1.0.0 - 1.4.0
 * `spryker/security-merchant-portal-gui`: 1.0.0 - 2.1.0
 * `spryker/user-password-reset`: 1.0.0 - 1.4.0
@@ -210,23 +210,26 @@ composer require spryker-shop/company-page:"~2.24.0"
 composer show spryker-shop/company-page # Verify the version
 ```
 
-2. Define new data properties in `CompanyPage/Theme/default/views/role-update/role-update.twig`:
+In case your platform is based on PHP 8.0 you can use version 2.23.1 of the CompanyPage module:
 
 ```bash
-{% raw %}
+composer require spryker-shop/company-page:"~2.23.1"
+composer show spryker-shop/company-page # Verify the version
+```
+2. In the `CompanyPage/Theme/default/views/role-update/role-update.twig` template, define the data properties::
+
+```bash
 {% define data = {
     ...
     companyRolePermissionAssignFormCloner: _view.companyRolePermissionAssignFormCloner,
     companyRolePermissionUnassignFormCloner: _view.companyRolePermissionUnassignFormCloner,
     ...
 } %}
-{% endraw %}
 ```
 
-Add these properties to the data config of the `permission-table` molecule: 
+3. Add these properties to the data config of the `permission-table` molecule: 
 
 ```bash
-{% raw %}
 {% include molecule('permission-table', 'CompanyPage') with {
     data: {
         ...
@@ -235,27 +238,23 @@ Add these properties to the data config of the `permission-table` molecule:
         ...
     }
 } only %}
-{% endraw %}
 ```
 
-3. Define new data properties in `CompanyPage/Theme/default/components/molecules/permission-table/permission-table.twig`:
+4. In the `CompanyPage/Theme/default/components/molecules/permission-table/permission-table.twig` template, define the data properties::
 
 ```bash
-{% raw %}
 {% define data = {
     ...
     companyRolePermissionAssignFormCloner: null,
     companyRolePermissionUnassignFormCloner: null,
     ...
 } %}
-{% endraw %}
 ```
 
-Replace static `unassign / assign` links with Symfony forms: 
+5. Replace the static links that are used for assignment and unassignment of the company role permissions with the following Symfony forms: 
 
 ```bash
-{% raw %}
-// unassing 
+// Form that is used for the company role permission unassignment
 
 {% set companyRolePermissionUnassignForm = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
 {% set formAction = path('company/company-role-permission/unassign', {
@@ -267,12 +266,10 @@ Replace static `unassign / assign` links with Symfony forms:
 {{ form_start(companyRolePermissionUnassignForm, { action: formAction }) }}
     <button class="link" data-init-single-click>{{ linkText }}</button>
 {{ form_end(companyRolePermissionUnassignForm) }}
-{% endraw %}
 ```
 
 ```bash
-{% raw %}
-// assing
+// Form that is used for the company role permission assignment
 
 {% set companyRolePermissionAssignForm = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
 {% set formAction = path('company/company-role-permission/assign', {
@@ -284,13 +281,11 @@ Replace static `unassign / assign` links with Symfony forms:
 {{ form_start(companyRolePermissionAssignForm, { action: formAction }) }}
     <button class="link" data-init-single-click>{{ linkText }}</button>
 {{ form_end(companyRolePermissionAssignForm) }}
-{% endraw %}
 ```
 
-If you are using a standard `b2b/b2b-mp` demo-shop design, apply the following approach: 
+6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:  
 
 ```bash
-{% raw %}
 {% set formAssign = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
 {% set formUnassign = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
 {% set actionAssign = path('company/company-role-permission/assign', {
@@ -317,5 +312,227 @@ If you are using a standard `b2b/b2b-mp` demo-shop design, apply the following a
          },
     } only %}
 {{ form_end(form) }}
-{% endraw %}
+```
+
+## Cross-site scripting vulnerability in Zed
+
+It was possible to inject malicious code in the URL parameters of the drawing graph functionality, that would then be reflected to users being tricked to visit the malicious URL.
+
+### Affected modules
+
+* `spryker/error-handler`: 1.0.0 - 2.8.0
+
+### Introduced changes
+
+The cross-site scripting vulnerability was fixed for the messages presented in the error pages.
+
+### How to get the fix
+
+To implement a fix for this vulnerability, you need to update the spryker/error-handler module:
+
+```bash
+composer update spryker/error-handler
+```
+
+## Oauth Code flow uses the same token for different users
+
+In certain cases the same token was assigned to different users.
+
+### Affected modules
+
+* `spryker/oauth-code-flow`: <0.1.1
+
+### Introduced changes
+
+The vulnerability was fixed by generating a new token under any condition.
+
+### How to get the fix
+
+To implement a fix for this vulnerability, you need to update the spryker/oauth-code-flow module:
+
+```bash
+composer update spryker/oauth-code-flow
+```
+
+## Token validation issue
+
+Glue Backend API has no expiration validation for access tokens. There was no limitation on the number of tokens that could be requested by a certain user.  
+
+### Affected modules
+
+* `spryker/oauth-backend-api`: 0.1.0 - 1.4.0
+
+### Introduced changes
+
+All the security-related flaws in the access token functionality have been addressed. The token becomes invalid if it has not been used for a certain period of time.
+
+### How to get the fix
+
+1. Update `spryker/oauth-backend-api`.
+
+* If your version of `spryker/oauth-backend-api` is earlier than or equal to 1.4.0, update to version 1.5.0:
+
+```bash
+composer require spryker/oauth-backend-api:"~1.5.0"
+composer show spryker/oauth-backend-api # Verify the version
+```
+
+2. Register the plugin `Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\BackendApiAccessTokenValidatorPlugin` in `src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php`:
+
+{% info_block warningBox "Warning" %}
+
+If you already use the plugin  `Spryker\Glue\OauthBackendApi\Plugin\AccessTokenValidatorPlugin` in `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php` - get rid of it.
+
+{% endinfo_block %}
+
+```php
+namespace Pyz\Glue\GlueBackendApiApplication;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use Spryker\Glue\OauthBackendApi\Plugin\GlueApplication\BackendApiAccessTokenValidatorPlugin;
+
+class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
+{
+...
+    /**
+     * @return array<\Spryker\Glue\GlueBackendApiApplicationExtension\Dependency\Plugin\RequestValidatorPluginInterface>
+     */
+    protected function getRequestValidatorPlugins(): array
+    {
+        return [
+            ...
+            new BackendApiAccessTokenValidatorPlugin(),
+        ];
+    }
+...
+```
+
+## Vulnerability in Babel third-party dependency
+
+Babel third-party dependency was vulnerable to arbitrary code execution when compiling specifically crafted malicious code.
+
+### Affected modules
+
+* `spryker-shop/date-time-configurator-page-example`: 0.1.0 - 0.4.0
+
+### Introduced changes
+
+Babel third-party dependency was updated to a version that resolves this vulnerability.
+
+### How to get the fix
+
+To implement a fix for this vulnerability:
+
+1. If module `spryker-shop/date-time-configurator-page-example` exists in the system, upgrade it to version 0.4.1:
+
+```bash
+composer require spryker-shop/date-time-configurator-page-example:"~0.4.1"
+composer show spryker-shop/date-time-configurator-page-example # Verify the version
+```
+
+2. Run the npm vulnerabilities fixing command and the project build (if the Docker/sdk is used):
+
+```bash
+docker/sdk cli npm audit fix
+docker/sdk up --assets
+```
+
+or
+
+```bash
+npm audit fix && npm run yves && npm run zed
+npm run mp:build (optional, only for the Marketplace setup)
+```
+
+## Multiple vulnerabilities in npm third-party dependencies
+
+Outdated npm dependencies introduced security vulnerabilities that could potentially be exploited by attackers.
+
+### Affected modules
+
+* `spryker/chart`: 1.0.0 - 1.4.0
+
+### Introduced changes
+
+Affected third-party dependencies were updated to resolve the security vulnerabilities.
+
+### How to get the fix
+
+To implement a fix for this vulnerability:
+
+1. Upgrade the `spryker/chart` module (if it exists in the system) to version 1.5.0:
+
+```bash
+composer require spryker/chart:"^1.5.0"
+composer show spryker/chart # Verify the version
+```
+
+2. Upgrade the npm dependencies in the root `package.json` file to the following versions or newer:
+
+```bash
+"@spryker/oryx-for-zed": "^3.1.0",
+"webpack": "~5.88.2",
+```
+
+3. OPTIONAL (only for Marketplace setup): Upgrade the npm dependencies in the root `package.json` file to the following versions or newer:
+
+```bash
+"@angular-devkit/build-angular": "~15.2.9",
+```
+
+4. Install the npm dependencies and build the project (if Docker/sdk is used):
+
+```bash
+docker/sdk cli npm install
+docker/sdk up --assets
+```
+
+or 
+
+```bash
+npm install && npm run yves && npm run zed
+npm run mp:build (optional, only for Marketplace setup)
+```
+
+## Vulnerability in browserify-sign third-party dependency
+
+Browserify-sign upper bound check issue in `dsaVerify` leads to a signature forgery attack.
+
+### Affected modules
+
+* `spryker/chart`: 1.0.0 - 1.5.0
+
+### Introduced changes
+
+Affected third-party dependencies were updated to resolve the security vulnerabilities.
+
+### How to get the fix
+
+To implement a fix for this vulnerability:
+
+1. If the `spryker/chart` module exists in the system, upgrade it to version 1.6.1:
+
+```bash
+composer require spryker/chart:"^1.6.1"
+composer show spryker/chart # Verify the version
+```
+
+2. In the root `package.json`, upgrade the npm dependency to version 3.3.0 or higher:
+
+```bash
+"@spryker/oryx-for-zed": "^3.3.0"
+```
+
+3. Install the npm dependencies and build the project:
+
+```bash
+docker/sdk cli npm install
+docker/sdk up --assets
+```
+
+or
+
+```bash
+npm install && npm run yves && npm run zed
+npm run mp:build (optional, only for the Marketplace setup)
 ```

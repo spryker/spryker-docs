@@ -102,17 +102,17 @@ Before your app can be listed in the App Store Catalog, you need to add the foll
 
 ### Manifest
 
-The manifest file is the most important one for the app. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
+The manifest file is the most important one for the app. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
 
 Manifest files must have the local name as the filename, for example, `en_US.json`, and should be placed inside the `config/app/manifest` directory.
 
 ### Configuration
 
-The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration.html) and update it to your needs. Add this file to `config/app/configuration.json` of your app.
+The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html) and update it to your needs. Add this file to `config/app/configuration.json` of your app.
 
 ### Translation
 
-The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
+The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
 
 ## Add the registry (code)
 

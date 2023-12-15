@@ -1,5 +1,5 @@
 ---
-title: Manifest Json
+title: Manifest JSON file
 Descriptions: Manifest Json code snippet
 template: howto-guide-template
 ---

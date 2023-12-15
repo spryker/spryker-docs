@@ -1,5 +1,5 @@
 ---
-title: Translation Json
+title: Translation JSON file
 Descriptions: Translation Json code snippet
 template: howto-guide-template
 ---

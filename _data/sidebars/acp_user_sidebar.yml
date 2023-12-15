@@ -15,12 +15,12 @@ entries:
       - title: Develop an app
         url: /docs/acp/user/develop-an-app/develop-an-app.html
         nested:
-          - title: Configuration code snippet
-            url: /docs/acp/user/develop-an-app/code-snippets/configuration.html
-          - title: Manifest code snippet
-            url: /docs/acp/user/develop-an-app/code-snippets/manifest.html
-          - title: Translation code snippet
-            url: /docs/acp/user/develop-an-app/code-snippets/translation.html
+          - title: Configuration JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html
+          - title: Manifest JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html
+          - title: Translation JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html
       - title: Set up the message broker
         url: /docs/acp/user/develop-an-app/set-up-the-message-broker.html
       - title: Debug an app with xdebug

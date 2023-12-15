@@ -1,5 +1,5 @@
 ---
-title: Configuration Json
+title: Configuration JSON file
 Descriptions: Configuration Json code snippet
 template: howto-guide-template
 ---

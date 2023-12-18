@@ -5,8 +5,8 @@ template: howto-guide-template
 related:
   - title: App configuration
     link: docs/acp/user/app-configuration.html
-  - title: Developing an app
-    link: docs/acp/user/developing-an-app.html
+  - title: Develop an app
+    link: docs/acp/user/develop-an-app/develop-an-app.html
   - title: App manifest
     link: docs/acp/user/app-manifest.html
 ---

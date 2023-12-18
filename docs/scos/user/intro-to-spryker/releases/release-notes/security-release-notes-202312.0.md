@@ -232,6 +232,7 @@ composer show spryker-shop/company-page # Verify the version
 3. Add these properties to the data config of the `permission-table` molecule: 
 
 ```bash
+{% raw %}
 {% include molecule('permission-table', 'CompanyPage') with {
     data: {
         ...
@@ -240,6 +241,7 @@ composer show spryker-shop/company-page # Verify the version
         ...
     }
 } only %}
+{% endraw %}
 ```
 
 4. In the `CompanyPage/Theme/default/components/molecules/permission-table/permission-table.twig` template, define the data properties::

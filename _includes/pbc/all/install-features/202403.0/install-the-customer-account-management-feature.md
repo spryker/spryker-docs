@@ -109,7 +109,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-3. Optional: To enable the double opt-in for the customer registration, make `CustomerConfig::isDoubleOptInEnabled()` return `true`:
+3. Optional: To enable the double opt-in for the customer registration, adjust the `CustomerConfig::isDoubleOptInEnabled()` to return `true`:
 
 ```php
 <?php
@@ -136,7 +136,7 @@ Ensure that the double opt-in is enabled by registering a new customer and recei
 
 {% endinfo_block %}
 
-4. Optional: To control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Note that the value must contain the `%s` placeholder that the actual customer's token value is inserted to. You can set the configuration in the environment config:
+4. Optional: To control the customer account confirmation link sent in the registration confirmation email, use `CustomerConstants::REGISTRATION_CONFIRMATION_TOKEN_URL`. Keep in mind that the value must contain the `%s` placeholder that the actual customer's token value is inserted to. You can set the configuration in the environment config:
 
 **config/Shared/config_default.php**
 

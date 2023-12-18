@@ -36,19 +36,38 @@ Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notifica
 
 ```json
 {
-  "data": {
-    "type": "push-notificatoin-providers",
-    "attributes": {
-      "name": "Fulfillment App provider"
+    "data": {
+        "type": "push-notification-subscriptions",
+        "attributes": {
+            "providerName": "web-push-php",
+            "group": {
+                "name": "warehouse",
+                "identifier": "1"
+            },
+            "payload": {
+                "endpoint": "https://push-notifications.de.b2c.demo-spryker.com",
+                "publicKey": "3243-f234-3f34-d2334",
+                "authToken": "4o3ijfoi3j4f93j4d7fh4f34jf3d902kfh345g8jf903kdj23uf3"
+            },
+            "localeName": "en_US"
+        }
     }
-  }
 }
 ```
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| acceptedTerms | Boolean | &check; | Specifies whether the customer has accepted the terms of service. For a new customer to be created, this parameter needs to be set to true. |
-| confirmPassword | String | &check;  | Specifies a password confirmation for the account of the new customer. |
+| providerName | String | &check; | Name of the provider to subscribe to. To get it, [retrieve push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html) |
+| group | Object | &check;  | Defines the entity to subscribe to. |
+| group.name | String | &check;  | Defines the entity type to receive notifications about. |
+| group.identifier | String | &check;  | ID of the entity to receive notifications about. |
+| payload | Object | &check;  | The subscription details for establishing a communication channel between the server and the client. |
+| payload.endpoint | String | &check;  | The URL provided by the push service that is used to send a push message to the recipient’s device. |
+| payload.publicKey | String | &check;  | A client public key that is used to encrypt the push message so that only the intended recipient can read it. |
+| payload.authToken | String | &check;  | An authentication token that allows the server to send messages to the client’s endpoint. |
+| localeName | String | &check;  | Define the language in which the client is to receive notifications. |
+
+
 
 
 
@@ -57,22 +76,38 @@ Request sample: `POST https://glue-backend.de.b2c.demo-spryker.com/push-notifica
 Response sample:
 ```json
 {
-    "data": {
-        "type": "push-notification-providers",
-        "id": "ffb5875e-00d3-5436-ae67-08b7c9837f3e",
-        "attributes": {
-            "uuid": "ffb5875e-00d3-5436-ae67-08b7c9837f3e",
-            "name": "Fulfillment App provider"
-        },
-        "links": {
-            "self": "https://glue-backend.de.b2c.demo-spryker.com/push-notification-providers/ffb5875e-00d3-5436-ae67-08b7c9837f3e"
-        }
-    }
+   "data": {
+      "id": "96555531-c40a-516a-85d2-4f68a8f34f4b",
+      "type": "push-notification-subscriptions",
+      "attributes": {
+         "providerName": "web-push-php",
+         "payload": {
+            "endpoint": "https://push-notifications.de.b2c.demo-spryker.com",
+            "publicKey": "3243-f234-3f34-d2334",
+            "authToken": "4o3ijfoi3j4f93j4d7fh4f34jf3d902kfh345g8jf903kdj23uf3"
+         },
+         "localeName": "en_US",
+         "group": {
+            "name": "warehouse",
+            "identifier": "1"
+         }
+      },
+      "links": {
+         "self": "https:glue-backend.de.spryker.local/push-notification-subscriptions/96555531-c40a-516a-85d2-4f68a8f34f4b"
+      }
+   }
 }
 ```
 
-
-{% include pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/push-notification-providers-response-attributes.md -->
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+|-|-|-|-|
+| push-notification-subscriptions | providerName | String | The provider of push notifications.  |
+| push-notification-subscriptions | payload.endpoint | String | The URL provided by the push service that is used to send a push message to the recipient’s device. |
+| push-notification-subscriptions | payload.publicKey | String | A client public key that is used to encrypt the push message so that only the intended recipient can read it. |
+| push-notification-subscriptions | payload.authToken | String | An authentication token that allows the server to send messages to the client’s endpoint. |
+| push-notification-subscriptions | localeName | String |  |
+| push-notification-subscriptions | localeName | String |  |
+| push-notification-subscriptions | localeName | String |  |
 
 
 

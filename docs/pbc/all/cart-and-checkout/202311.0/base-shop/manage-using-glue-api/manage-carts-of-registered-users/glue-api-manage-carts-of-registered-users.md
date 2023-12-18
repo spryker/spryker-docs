@@ -112,33 +112,8 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 ```
 </details>
 
-**General cart information**
+{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| priceMode | String | The price mode that was active when the cart was created. |
-| currency | String | The currency that was selected when the cart was created. |
-| store | String | The store for which the cart was created. |
-| name | String | Specifies a cart name.<br>The field is only available in multi-cart environments. |
-| isDefault | Boolean | If true, the cart is the default one for the customer.<br>The field is only available in multi-cart environments.  |
-
-**Discount Information**
-
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| displayName | String | The name of the discount. |
-| amount | Integer | The discount amount applied to the cart.  |
-| code | String | The discount code applied to the cart. |
-
-**Totals**
-
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| expenseTotal | Integer | The total amount of expenses (including e.g. shipping costs). |
-| discountTotal | Integer | The total amount of discounts applied to the cart.  |
-| taxTotal | Integer | The total amount of taxes to be paid. |
-| subTotal | Integer | The subtotal of the cart.  |
-| grandTotal | Integer | The grand total of the cart.  |
 
 
 ## Retrieve registered user's carts
@@ -1711,20 +1686,15 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-<a name="retrieve-a-registered-users-carts-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-registered-users-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
 | promotional-items | sku | String | The SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| product-options | optionGroupName | String | The name of the group to which the option belongs. |
-| product-options | sku | String | The SKU of the product option. |
-| product-options | optionName | String | The Product option's name. |
-| product-options | price | Integer | The product option price in cents. |
-| product-options | currencyIsoCode | String | The ISO 4217 code of the currency in which the product option price is specified. |
 | vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
 | vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
 | vouchers, cart-rules | code | String | The code of the discount. |
@@ -3020,6 +2990,7 @@ Response sample:
 ```
 
 ## Delete a cart
+
 To delete a cart, send the request:
 
 ---

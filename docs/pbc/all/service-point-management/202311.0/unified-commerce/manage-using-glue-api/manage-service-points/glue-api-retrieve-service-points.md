@@ -24,11 +24,11 @@ This endpoint lets you retrieve service points.
 | Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
-|-|-|-|
+|-|-|-|-|
 | include | Backend | Adds resource relationships to the request. | services service-point-addresses |
 
 | REQUEST | API TYPE | USAGE |
-|-|-|
+|-|-|-|
 | `GET https://glue-backend.mysprykershop.com/service-points` | Backend | Retrieve all service points. |
 | `GET https://glue-backend.mysprykershop.com/service-points?include=services` | Backend | Retrieve service points with services included. |
 | `GET https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses` | Backend | Retrieve service points with addresses included. |

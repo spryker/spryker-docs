@@ -830,7 +830,7 @@ Ensure that the following modules were installed:
 
 ### 2) Set up configuration
 
-Optional: To enable double opt-in for customer registration, make `CustomerPageConfig::isDoubleOptInEnabled()` return `true`.
+Optional: To enable double opt-in for customer registration, adjust the `CustomerPageConfig::isDoubleOptInEnabled()` method to return `true`.
 
 ```php
 <?php
@@ -861,7 +861,7 @@ By default, in Spryker, posting the login form (where SecurityBlocker makes its 
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 
-Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `CUSTOMER_SECURITY_BLOCKER_ENABLED` to `true;`
+Optional: For security reasons, we recommend enabling the security blocker feature that will block recurring attempts of resetting a password by setting `CUSTOMER_SECURITY_BLOCKER_ENABLED` to `true;`
 
 ```php
 <?php

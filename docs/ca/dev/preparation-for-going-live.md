@@ -60,12 +60,13 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Testing 
 
-- [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
-- Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- *Test deployments*. [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
+- *Test All Payment options*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
 ### SEO ### 
 
-Make sure the SEO strategy and plan are defined. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
+- *Make sure the SEO strategy and plan are defined.*
+  - If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
 ## Four weeks before go-live
 
@@ -92,7 +93,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *Conduct load tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
 To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
-- Import real data on production.
+- *Import real data on production*.
 
 {% info_block warningBox "Data import" %}
 
@@ -110,7 +111,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 ## Two weeks before go-live ##
 
-- *Code freeze*. We recomment to have a code freeze at least two weeks before going live.
+- *Code freeze*. We recommend to have a code freeze at least two weeks before going live.
 - *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 - *Make sure that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - *Validate testing strategy.*
@@ -120,7 +121,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 - *Define the exact plan for the go-live day.*:
   - Define the time of deployment.
   - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
-- Make sure that DNS is set.
+- *Make sure that DNS is set*.
  
 
 {% info_block infoBox "Don't hesitate to contact us" %}

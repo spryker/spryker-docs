@@ -12,11 +12,19 @@ entries:
             url: /docs/acp/user/intro-to-acp/aop-security-assessment.html
       - title: Install ACP catalog
         url: /docs/acp/user/app-composition-platform-installation.html
-      - title: Developing an app
-        url: /docs/acp/user/developing-an-app/developing-an-app.html
+      - title: Develop an app
+        url: /docs/acp/user/develop-an-app/develop-an-app.html
         nested:
-          - title: Create and app with AppKernel
-            url: /docs/acp/user/developing-an-app/create-an-app with-appkernel.html
+          - title: Configuration JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html
+          - title: Manifest JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html
+          - title: Translation JSON file
+            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html
+      - title: Set up the message broker
+        url: /docs/acp/user/develop-an-app/set-up-the-message-broker.html
+      - title: Debug an app with xdebug
+        url: /docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html
       - title: App manifest
         url: /docs/acp/user/app-manifest.html
       - title: App configuration

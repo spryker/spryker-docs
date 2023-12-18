@@ -31,7 +31,7 @@ For detailed information about the modules that provide the API functionality an
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the Back Office user to send requests to protected resources. Get it by [authenticating as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html).  |
 
-Request sample: `https://glue-backend.mysprykershop.com/warehouse-user-assignments/4464f4d0-34ab-57bb-ac2b-77609bbacb2b`
+Request sample: `DELETE https://glue-backend.mysprykershop.com/warehouse-user-assignments/4464f4d0-34ab-57bb-ac2b-77609bbacb2b`
 
 ### Response
 

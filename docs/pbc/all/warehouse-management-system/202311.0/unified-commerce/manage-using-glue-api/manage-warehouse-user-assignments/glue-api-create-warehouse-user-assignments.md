@@ -63,7 +63,7 @@ Request sample:
 ### Response
 
 
-<details open>
+<details>
   <summary>Create a warehouse user assignment</summary>
 
 ```json
@@ -89,7 +89,7 @@ Request sample:
 
 </details>
 
-<details open>
+<details>
   <summary>Create a warehouse user assignment with user information included</summary>
 
 ```json

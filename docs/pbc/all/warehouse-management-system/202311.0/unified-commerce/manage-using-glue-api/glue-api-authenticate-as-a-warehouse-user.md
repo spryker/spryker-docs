@@ -15,6 +15,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ---
 `POST` **/warehouse-tokens**
+
 ---
 
 ### Request

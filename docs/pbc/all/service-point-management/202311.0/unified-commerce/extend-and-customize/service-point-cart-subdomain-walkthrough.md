@@ -1,8 +1,7 @@
 ---
 title: Click and Collect feature Service Point Cart subdomain walkthrough
 last_updated: Nov 02, 2023
-description: |
-  Explore the Service Point Cart subdomain in the Click and Collect feature, focusing on the validation of service points and the replacement of line items in a shopping cart. Learn how to install the essential modules and leverage the extension point for implementing custom item replacement strategies during the checkout process.
+description: Explore the Service Point Cart subdomain in the Click and Collect feature, focusing on the validation of service points and the replacement of line items in a shopping cart. Learn how to install the essential modules and leverage the extension point for implementing custom item replacement strategies during the checkout process.
 
 template: concept-topic-template
 ---

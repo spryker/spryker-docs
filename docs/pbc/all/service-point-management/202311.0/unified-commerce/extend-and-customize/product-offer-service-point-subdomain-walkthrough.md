@@ -1,19 +1,18 @@
 ---
 title: Click and Collect feature Product Offer Service Point subdomain walkthrough
 last_updated: Nov 02, 2023
-description: |
-  Explore the Product Offer Service Point subdomain in the Click and Collect feature. Understand the connection between product offers and service points, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering services assigned to product offers before publishing them to storage.
-
+description: Explore the Product Offer Service Point subdomain in the Click and Collect feature. Understand the connection between product offers and service points, and learn how to install and configure the necessary modules for seamless integration. Discover the significance of data setup and explore extension points for filtering services assigned to product offers before publishing them to storage.
 template: concept-topic-template
 ---
 
-# Product Offer Service Point
 
 The Product Offer Service Point subdomain refers to the connection between product offers and service points.
 
+## Installation
+
 [Install the Product Offer Service Points feature](/docs/pbc/all/install-features/{{page.version}}/install-the-product-offer-service-points-feature.html)
 
-## 1. Modules:
+## Modules
 
 | MODULE                                                         | EXPECTED DIRECTORY                                                                   |
 |----------------------------------------------------------------|--------------------------------------------------------------------------------------|
@@ -31,11 +30,11 @@ The Product Offer Service Point subdomain refers to the connection between produ
 | ProductOfferServicePointStorageExtension                       | vendor/spryker/product-offer-service-point-storage-extension                         |
 | ProductOfferServicePointAvailabilityWidget                     | vendor/spryker-shop/product-offer-service-point-availability-widget                  |
 
-## 2. Data Setup
+## Data setup
 
-Spryker offers an import functionality (check the `ProductOfferServicePointDataImport` module) to establish the connection between product offers and service points.
+The `ProductOfferServicePointDataImport` module lets you import the relationships between product offers and service points.
 
-## 3. Extension point for filtering services assigned to the product offers before publishing them to Storage
+## Extension point for filtering services assigned to the product offers before publishing them to Storage
 
 This extension point provides the ability to filter the Product Offer Service collection before publishing it to storage.
 

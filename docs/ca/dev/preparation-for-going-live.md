@@ -42,10 +42,6 @@ Ensure you have addressed all the items from the following checklists.
 
 After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
-We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
-
-Double check that you do not have any clear text passwords stored in config files or repositories.
-
 {% endinfo_block %}
 
 ### Application
@@ -79,15 +75,12 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 - *Make sure you have an APM set up*. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
-- *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
+- *The DNS names and strategy for your shop are clear*. 
+    - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS for your application.
+    - Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
+    - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 - *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name. See [Email service](/docs/ca/dev/email-service/email-service.html) for more information about the default email service and its restrictions.
-- Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
-
-### DNS setup
-
-See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS for your application.
 
 ### Application
 

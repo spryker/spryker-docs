@@ -1595,6 +1595,18 @@ entries:
             nested:
               - title: Retrieve store configuration using Glue API
                 url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+              - title: Manage push notification providers
+                nested:
+                  - title: Add push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html
+                  - title: Retrieve push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html
+                  - title: Update push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html
+                  - title: Delete push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html
+              - title: Add push notification subscriptions
+                url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
           - title: Third-party integrations
             nested:
               - title: Customer service

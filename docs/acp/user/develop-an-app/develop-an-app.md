@@ -21,7 +21,7 @@ Before you begin, ensure that you have the following prerequisites in place:
 Make sure you have the Spryker Docker SDK, Git, and an empty repository for your app code.
 
 {% info_block infoBox "Info" %}
-[Download the]((https://github.com/spryker-projects/mini-framework)) completed example from the Mini-Framework.
+[Download the](https://github.com/spryker-projects/mini-framework) completed example from the Mini-Framework.
 {% endinfo_block %}
  
 ## Thought process

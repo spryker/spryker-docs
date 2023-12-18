@@ -119,7 +119,6 @@ In October 2023, we have added and updated the following pages:
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
 - [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
-- [Create an app with AppKernel](/docs/acp/user/developing-an-app/create-an-app with-appkernel.html): Learn how to use AppKernel with Spryker’s Mini Framework to develop an app.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
 - [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
@@ -283,7 +282,7 @@ In June 2023, we have added and updated the following pages:
 ### New pages
 - [Security release notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
 - [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
-- [Service Points feature integration guide](/docs/pbc/all/service-points/202311.0/unified-commerce/install-the-service-points-feature.html).
+- [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
 - Documentation on shipment data import:
@@ -302,7 +301,7 @@ In June 2023, we have added and updated the following pages:
 - [Warehouse picking feature integration guide](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html).
-- [Service Points feature integration guide](/docs/pbc/all/service-points/202311.0/unified-commerce/install-the-service-points-feature.html).
+- [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
 - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
 - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.

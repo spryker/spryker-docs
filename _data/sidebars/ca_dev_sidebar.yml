@@ -28,6 +28,8 @@ entries:
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-route-53.html
           - title: Set up a custom domain name with a third-party DNS zone provider
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
+      - title: Set up DNS
+        url: /docs/ca/dev/set-up-dns.html
       - title: Setting up a custom SSL certificate
         url: /docs/ca/dev/setting-up-a-custom-ssl-certificate.html
       - title: Deploy in a staging environment
@@ -92,8 +94,13 @@ entries:
         url: /docs/ca/dev/create-and-restore-database-backups.html
       - title: Add variables in the Parameter Store
         url: /docs/ca/dev/add-variables-in-the-parameter-store.html
-      - title: Verify email addresses
-        url: /docs/ca/dev/verify-email-addresses.html
+      - title: Email service
+        url: /docs/ca/dev/email-service/email-service.html
+        nested:
+          - title: Email quota restrictions
+            url: /docs/ca/dev/email-service/email-quota-restrictions.html
+          - title: Verify email addresses
+            url: /docs/ca/dev/verify-email-addresses.html
       - title: Set up notifications for 5xx errors
         url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
       - title: Performance testing in staging environments

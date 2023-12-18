@@ -210,7 +210,7 @@ composer require spryker-shop/company-page:"~2.24.0"
 composer show spryker-shop/company-page # Verify the version
 ```
 
-In case your platform is based on PHP 8.0 you can use version 2.23.1 of the CompanyPage module:
+If your platform is based on PHP 8.0, you can use version 2.23.1 of the CompanyPage module:
 
 ```bash
 composer require spryker-shop/company-page:"~2.23.1"
@@ -219,12 +219,14 @@ composer show spryker-shop/company-page # Verify the version
 2. In the `CompanyPage/Theme/default/views/role-update/role-update.twig` template, define the data properties::
 
 ```bash
+{% raw %}
 {% define data = {
     ...
     companyRolePermissionAssignFormCloner: _view.companyRolePermissionAssignFormCloner,
     companyRolePermissionUnassignFormCloner: _view.companyRolePermissionUnassignFormCloner,
     ...
 } %}
+{% endraw %}
 ```
 
 3. Add these properties to the data config of the `permission-table` molecule: 
@@ -243,15 +245,17 @@ composer show spryker-shop/company-page # Verify the version
 4. In the `CompanyPage/Theme/default/components/molecules/permission-table/permission-table.twig` template, define the data properties::
 
 ```bash
+{% raw %}
 {% define data = {
     ...
     companyRolePermissionAssignFormCloner: null,
     companyRolePermissionUnassignFormCloner: null,
     ...
 } %}
+{% endraw %}
 ```
 
-5. Replace the static links that are used for assignment and unassignment of the company role permissions with the following Symfony forms: 
+5. Replace the static links currently used for assigning and unassigning company role permissions with the following Symfony forms: 
 
 ```bash
 // Form that is used for the company role permission unassignment
@@ -324,11 +328,11 @@ It was possible to inject malicious code in the URL parameters of the drawing gr
 
 ### Introduced changes
 
-The cross-site scripting vulnerability was fixed for the messages presented in the error pages.
+The cross-site scripting vulnerability has been fixed for the error page messages.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, you need to update the spryker/error-handler module:
+To implement the fix for this vulnerability, update the `spryker/error-handler` module:
 
 ```bash
 composer update spryker/error-handler
@@ -348,7 +352,7 @@ The vulnerability was fixed by generating a new token under any condition.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability, you need to update the spryker/oauth-code-flow module:
+To implement the fix for this vulnerability, update the `spryker/oauth-code-flow` module:
 
 ```bash
 composer update spryker/oauth-code-flow
@@ -364,9 +368,11 @@ Glue Backend API has no expiration validation for access tokens. There was no li
 
 ### Introduced changes
 
-All the security-related flaws in the access token functionality have been addressed. The token becomes invalid if it has not been used for a certain period of time.
+All the security-related flaws in the access token functionality have been addressed. The token becomes invalid if it hasn't been used for a certain period of time.
 
 ### How to get the fix
+
+To implement the fix for this vulnerability, do the following:
 
 1. Update `spryker/oauth-backend-api`.
 
@@ -417,11 +423,11 @@ Babel third-party dependency was vulnerable to arbitrary code execution when com
 
 ### Introduced changes
 
-Babel third-party dependency was updated to a version that resolves this vulnerability.
+Babel third-party dependency has been updated to a version that resolves this vulnerability.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability:
+To implement the fix for this vulnerability, do the following:
 
 1. If module `spryker-shop/date-time-configurator-page-example` exists in the system, upgrade it to version 0.4.1:
 
@@ -430,7 +436,7 @@ composer require spryker-shop/date-time-configurator-page-example:"~0.4.1"
 composer show spryker-shop/date-time-configurator-page-example # Verify the version
 ```
 
-2. Run the npm vulnerabilities fixing command and the project build (if the Docker/sdk is used):
+2. If Docker/sdk is used, run the npm vulnerabilities fixing command and the project build:
 
 ```bash
 docker/sdk cli npm audit fix
@@ -454,13 +460,13 @@ Outdated npm dependencies introduced security vulnerabilities that could potenti
 
 ### Introduced changes
 
-Affected third-party dependencies were updated to resolve the security vulnerabilities.
+Affected third-party dependencies have been updated to resolve the security vulnerabilities.
 
 ### How to get the fix
 
-To implement a fix for this vulnerability:
+To implement the fix for this vulnerability, do the following:
 
-1. Upgrade the `spryker/chart` module (if it exists in the system) to version 1.5.0:
+1. If module `spryker/chart` exists in the system, upgrade it to version 1.5.0:
 
 ```bash
 composer require spryker/chart:"^1.5.0"
@@ -474,13 +480,13 @@ composer show spryker/chart # Verify the version
 "webpack": "~5.88.2",
 ```
 
-3. OPTIONAL (only for Marketplace setup): Upgrade the npm dependencies in the root `package.json` file to the following versions or newer:
+3. Optional (only for the Marketplace setup): Upgrade the npm dependencies in the root `package.json` file to the following versions or newer:
 
 ```bash
 "@angular-devkit/build-angular": "~15.2.9",
 ```
 
-4. Install the npm dependencies and build the project (if Docker/sdk is used):
+4. If Docker/sdk is used, install the npm dependencies and build the project:
 
 ```bash
 docker/sdk cli npm install
@@ -508,7 +514,7 @@ Affected third-party dependencies were updated to resolve the security vulnerabi
 
 ### How to get the fix
 
-To implement a fix for this vulnerability:
+To implement the fix for this vulnerability, do the following:
 
 1. If the `spryker/chart` module exists in the system, upgrade it to version 1.6.1:
 

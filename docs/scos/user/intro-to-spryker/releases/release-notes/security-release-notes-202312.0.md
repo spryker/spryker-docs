@@ -260,6 +260,7 @@ composer show spryker-shop/company-page # Verify the version
 5. Replace the static links currently used for assigning and unassigning company role permissions with the following Symfony forms: 
 
 ```bash
+{% raw %}
 // Form that is used for the company role permission unassignment
 
 {% set companyRolePermissionUnassignForm = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
@@ -287,11 +288,13 @@ composer show spryker-shop/company-page # Verify the version
 {{ form_start(companyRolePermissionAssignForm, { action: formAction }) }}
     <button class="link" data-init-single-click>{{ linkText }}</button>
 {{ form_end(companyRolePermissionAssignForm) }}
+{% endraw %}
 ```
 
 6. Optional: If you are using the standard `b2b/b2b-mp` demo-shop design, apply the following approach:  
 
 ```bash
+{% raw %}
 {% set formAssign = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
 {% set formUnassign = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
 {% set actionAssign = path('company/company-role-permission/assign', {
@@ -318,6 +321,7 @@ composer show spryker-shop/company-page # Verify the version
          },
     } only %}
 {{ form_end(form) }}
+{% endraw %}
 ```
 
 ## Cross-site scripting vulnerability in Zed

@@ -24,7 +24,7 @@ The Product Offer Shipment Type subdomain establishes the connection between pro
 | ProductOfferShipmentTypeStorage                         | vendor/spryker/product-offer-shipment-type-storage                           |
 | ProductOfferShipmentTypeStorageExtension                | vendor/spryker/product-offer-shipment-type-storage-extension                 |
 
-## Data Setup
+## Data setup
 
 The `ProductOfferShipmentTypeDataImport` module lets you import the relationships between shipment types and product offers.
 

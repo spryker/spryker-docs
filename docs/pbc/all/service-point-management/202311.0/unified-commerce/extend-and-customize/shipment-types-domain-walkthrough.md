@@ -1,19 +1,17 @@
 ---
-title: Click and Collect feature Shipment Types domain walkthrough
+title: Shipment Types domain walkthrough
 last_updated: Nov 02, 2023
-description: |
-  Explore the Shipment Type domain in the Click and Collect feature, understanding the various options available to customers for receiving their orders. This guide provides comprehensive details on installing the Shipment feature, delving into the associated modules, and showcasing different data setup methods. Additionally, discover key extension points for customizing Shipment Types behavior during the checkout process.
-
+description: Discover the key extension points for customizing the behavior of shipment types during checkout.
 template: concept-topic-template
 ---
 
-# Shipment Types
+Shipment types offer different options for customers to receive their orders.
 
-Shipment types offer diverse options for customers to receive their orders.
+## Installation
 
 [Install the Shipment feature](/docs/pbc/all/install-features/{{page.version}}/install-the-shipment-feature.html)
 
-## 1. Modules
+## Modules
 
 | MODULE                                                    | EXPECTED DIRECTORY                                                               |
 |-----------------------------------------------------------|----------------------------------------------------------------------------------|
@@ -32,36 +30,35 @@ Shipment types offer diverse options for customers to receive their orders.
 | ShipmentTypeWidget                                        | vendor/spryker-shop/shipment-type-widget                                         |
 | SalesShipmentType                                         | vendor/spryker/sales-shipment-type                                               |
 
-## 2. Data Setup
+## Data setup
 
-Spryker offers two methods for setting up shipment types:
-- Backend API (check `ShipmentTypesBackendApi` module)
-- Data import (check `ShipmentTypeDataImport` module)
+The following options let you set up shipment types data:
 
-## 3. Extension point for filter shipment types for the quote during the checkout process
+| MODULE | IMPORT TYPE |
+| - | - |
+| `ShipmentTypesBackendApi` | Backend API |
+| `ShipmentTypeDataImport` | Data import |
 
-Filter shipment types for the quote during the checkout process with the following extension point:
+## Extension point for filter shipment types for the quote during checkout
+
+Filter shipment types for the quote during checkout with the following extension point:
 
 **\Spryker\Client\ShipmentTypeStorageExtension\Dependency\Plugin\AvailableShipmentTypeFilterPluginInterface**
 
-An example:
+Example of a plugin that filters out shipment types without a product offer shipment type relation:
 
 **\Spryker\Client\ClickAndCollectExample\Plugin\ShipmentTypeStorage\ShipmentTypeProductOfferAvailableShipmentTypeFilterPlugin**
 
-This plugin filters out shipment types without a product offer shipment type relation.
+## Extension point for expanding Shipment Type data before publishing to the Storage
 
-## 4. Extension point for expanding Shipment Type data before publishing to the Storage
-
-Expands shipment type storage collection with additional data before publishing to the Storage.
-Use the expanded data after retrieving Shipment Type data from the Storage.
+Expands shipment type storage collection with additional data before publishing to the Storage. Use the expanded data after retrieving Shipment Type data from the Storage.
 
 **\Spryker\Zed\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface**
 
-An example:
+Example of a plugin that expands shipment types with a service type:
 
 **\Spryker\Zed\ShipmentTypeServicePointStorage\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin**
 
-This plugin expands shipment types with a service type.
 
 ## 5. Extension point for expanding Shipment Type data after retrieving from the Storage
 
@@ -69,8 +66,6 @@ Expands shipment type storage collection with additional data after retrieving i
 
 **\Spryker\Client\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface**
 
-An example:
+Example of a plugin that expands shipment types with a service type:
 
 **\Spryker\Client\ShipmentTypeServicePointStorage\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin**
-
-This plugin expands shipment types with a service type.

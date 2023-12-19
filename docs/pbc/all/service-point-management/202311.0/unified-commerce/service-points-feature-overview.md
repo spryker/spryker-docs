@@ -70,30 +70,9 @@ After placing an order, the customer can see the selected service point on the O
 
 * Services can be configured only for product offers.
 * Product catalog can't be filtered by a service type or a service provided in a specific service point.
-* Product details page is not supported, meaning it will show all product offers created in the system for the product.
+* The product offer widget on the product details page is not supported. It doesn't show the differences between product offers based on the services assigned to them. As a result, differnt product offers are displayed as duplicates.
 * Customers can't add products with preselected service points to cart. They can select service points only during checkout.
 * If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
-
-
-Similar constraints apply to the *shipment type*. See [Shipment feature overview](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html).
-
-## Recommended customizations for the Click & Collect setup
-
-Since we do not yet support a product catalog or a product details page, the following project-level customizations are recommended on the Product Details Page:
-
-1. Implement the Default Product Offer Reference Strategy if you want a specific offer to be prioritized at the first position. For more details, see [Install the Marketplace Product Offer feature](https://docs.spryker.com/docs/pbc/all/offer-management/202307.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html#set-up-behavior). Ensure that only product offers are displayed on prodcut details page.
-
-2. To let customers filter the list of product offers displayed on the Product Details page, override the Merchant Product Offer Widget behavior. This filter should display product offers with an empty service and shipment type set to _empty_ or _Delivery_. When adding products to cart, the delivery shipment type applies by default, and customer can change it to pickup during checkout if needed. For more details, see Refer to the [](https://docs.spryker.com/docs/pbc/all/offer-management/202307.0/marketplace/render-merchant-product-offers-on-the-storefront.html).
-
-3. Add information about product availability in the service point locations by using the Service Point Widget. For instructions, see [Install the Service Points feature](https://docs.spryker.com/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
-
-As a result, you will have the following user journey:
-1. Customer goes to the Product Details Page.
-2. Customer sees that a product is available for delivery and for pickup.
-3. Customer adds the product to the shopping cart.
-4. Customer goes through checkout and selects a shipment type: *Pickup*.
-5. Customer observes product availability in the retail locations and selects one where it's available.
-6. Customer completes checkout by placing the order.
 
 
 ## Related Business User documents

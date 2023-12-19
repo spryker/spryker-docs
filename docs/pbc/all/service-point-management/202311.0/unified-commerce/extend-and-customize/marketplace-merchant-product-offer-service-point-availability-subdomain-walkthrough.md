@@ -1,11 +1,11 @@
 ---
 title: Click and Collect feature Marketplace Merchant Product Offer Service Point subdomain walkthrough
 last_updated: Nov 02, 2023
-description: Explore the Marketplace Merchant Product Offer Service Point Availability subdomain, which facilitates the calculation of merchant product availability at service points within the Click and Collect feature.
+description: The Marketplace Merchant Product Offer Service Point Availability subdomain facilitates the calculation of merchant product availability at service points.
 template: concept-topic-template
 ---
 
-The Marketplace Merchant Product Offer Service Point Availability subdomain refers to the calculation of merchant product availability at service points.
+The Marketplace Merchant Product Offer Service Point Availability subdomain is used to calculate merchant product availability at service points.
 
 ## Installation
 

@@ -2,7 +2,6 @@
 title: Click and Collect Feature Product Offer Shipment Type Availability Subdomain Walkthrough
 last_updated: Nov 02, 2023
 description:  The Product Offer Shipment Type Availability subdomain enables the availability calculation.
-
 template: concept-topic-template
 ---
 

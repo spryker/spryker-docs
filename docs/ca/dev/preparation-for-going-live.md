@@ -82,48 +82,12 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 - *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
-- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.
-
-{% info_block warningBox "Email quota restrictions" %}
-
-SCCOS production email service has the following quotas:
-* Daily sending limit: 50.000 emails.
-* Sending limit messages per second: 14.
-
-SCCOS non-production email service has the following quotas:
-* Daily sending limit: 200 emails.
-* Sending limit messages per second: 1
-
-Recipients of emails need to be individually [verified](/docs/ca/dev/verify-email-addresses.html) for non-production systems.
-
-Reach out to [Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-support.html) if these quotas are insufficient to support your use case.
-
-{% endinfo_block %}
-
+- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name. See [Email service](/docs/ca/dev/email-service/email-service.html) for more information about the default email service and its restrictions.
 - Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 
 ### DNS setup
 
-You normally add a CNAME record in your DNS Management for the domains you want to use for your application. This CNAME corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:
-- You add the endpoint you want to use in the appropriate `deploy.yml` file and send it to us using a support case, mentioning that you have added a new endpoint that you want to set up for DNS configuration.
-- We terraform this endpoint and send you back DNS entries for TLS verification (so that we can issue TLS certificates for your site).
-- You set these entries in your DNS management and let us know when you are done.
-- Terraforming can then be completed, and you receive the CNAME DNS records that you can then set in your DNS management to point your DNS names to the newly created endpoints.
-- After this is completed, your application becomes accessible through the new endpoints.
-
-{% info_block infoBox "Info" %}
-
-This process can take a full week to complete due to DNS propagation and the terraform work that needs to be done. To avoid double work, ensure the endpoint selection is final and tested.
-
-{% endinfo_block %}
-
-To use a root domain for your application (for example, spryker.com), use an IP address instead of the load balancer DNS name, as this is required for an ARECORD. In this case, let our team know so they can provide you with an IP instead of the load balancer address. Do not set load balancer IP addresses as an ARECORD. The IP addresses are subject to rotation.
-
-{% info_block infoBox "Info" %}
-
-We do not normally support full delegation of your DNS to us and, therefore, do not suggest that you change your domain’s NS records to ours.
-
-{% endinfo_block %}
+See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS for your application.
 
 ### Application
 

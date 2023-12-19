@@ -21,7 +21,7 @@ Before you begin, ensure that you have the following prerequisites in place:
 Make sure you have the Spryker Docker SDK, Git, and an empty repository for your app code.
 
 {% info_block infoBox "Info" %}
-[Download the]((https://github.com/spryker-projects/mini-framework)) completed example from the Mini-Framework.
+[Download the](https://github.com/spryker-projects/mini-framework) completed example from the Mini-Framework.
 {% endinfo_block %}
  
 ## Thought process
@@ -37,9 +37,11 @@ You need to have a clear understanding of what your app API will provide to othe
 Before you start with the development, you should design your API schema files. Depending on your requirements, you can have an OpenAPI or an Async API schema file. In this step, you define the Sync API endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
 
 {% info_block infoBox "Info" %}
-For more information about Async API schema design, see [Designing your APIs with Async API](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1). 
+
+For more information about Async API schema design, see [Designing your APIs with Async API](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1).
 
 For more information about OpenAPI schema design, see [Best practices in API design](https://swagger.io/resources/articles/best-practices-in-api-design/).
+
 {% endinfo_block %}
 
 You can use the following tools to design your APIs:

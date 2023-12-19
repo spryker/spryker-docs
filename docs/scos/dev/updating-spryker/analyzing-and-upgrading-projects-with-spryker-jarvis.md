@@ -15,8 +15,10 @@ redirect_from:
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
-{% info_block warningBox "Deprecated" %}
+{% info_block warningBox "Jarvis deprecatation" %}
+
 Jarvis is not actively supported anymore.
+
 {% endinfo_block %}
 
 [Spryker Jarvis](https://github.com/spryker/jarvis) is the command-line tool that lets you analyze your Spryker-based project and eventually migrate it to the most up-to-date version of Spryker. The tool helps you quickly get answers to the following questions:

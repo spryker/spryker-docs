@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
-{% info_block warningBox "Jarvis deprecatation" %}
+{% info_block warningBox "Jarvis deprecation" %}
 
 Jarvis is not actively supported anymore.
 

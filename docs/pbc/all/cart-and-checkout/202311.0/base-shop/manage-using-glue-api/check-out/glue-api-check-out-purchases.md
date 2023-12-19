@@ -336,7 +336,8 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/check-out-purchases-request-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/checkout-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-request-attributes.md -->
 
 
 ### Response

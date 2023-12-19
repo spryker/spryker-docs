@@ -1584,7 +1584,7 @@ entries:
           - title: Import and export data
             nested:
               - title: "Import file details: glossary.csv"
-                url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.ht
+                url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Add translations

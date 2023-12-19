@@ -1,4 +1,4 @@
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |
 | guest-cart-items, bundle-items, bundled-items | quantity | Integer | Quantity of the given product in the cart. |

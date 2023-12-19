@@ -27,3 +27,14 @@
 | carts | grandTotal | Integer | Grand total of the cart. |
 | carts | priceToPay | Integer | Total price of the cart to pay after discounts. |
 | carts | selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
+
+#### Thresholds
+
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+|-|-|-|-|
+| carts | threshold | Array | Thresholds applied. |
+| carts | type | String | Threshold type. |
+| carts | threshold | Integer | Threshold monetary amount. |
+| carts | fee | Integer | Fee to be paid if the threshold is not reached.  |
+| carts | deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
+| carts | message | String | Message shown to the customer if the threshold is not fulfilled. |

@@ -33,6 +33,7 @@
 | items | selectedProductOptions.optionName | String | Product option name. |
 | items | selectedProductOptions.price | Integer | Product option price in cents. |
 | items | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
+| items | threshold | Array | Thresholds applied. |
 | items | type | String | Threshold type. |
 | items | threshold | Integer | Threshold monetary amount. |
 | items | fee | Integer | Fee to be paid if the threshold is not reached.  |

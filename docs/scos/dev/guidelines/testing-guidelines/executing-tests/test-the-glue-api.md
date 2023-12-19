@@ -24,7 +24,7 @@ Make sure the following prerequisites are met:
   composer update spryker/testify:"^3.12.0"
   ```
 
-2. To validate the response body against OpenAPI schema, you need to generate the schema first. For details, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/document-glue-api-resources.md).
+2. To validate the response body against OpenAPI schema, you need to generate the schema first. For details, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.md).
 
 ## Testing the Glue API endpoint
 

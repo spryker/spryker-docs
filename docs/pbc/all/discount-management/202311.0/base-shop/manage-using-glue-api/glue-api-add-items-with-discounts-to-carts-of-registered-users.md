@@ -688,7 +688,9 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 For the attributes of the other included resources, see the docs:
 

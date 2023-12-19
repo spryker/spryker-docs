@@ -1688,21 +1688,19 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 {% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+
 {% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
 | promotional-items | sku | String | The SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
-| vouchers, cart-rules | code | String | The code of the discount. |
-| vouchers, cart-rules | discountType | String | The type of the discount. |
-| vouchers, cart-rules  | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 | shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
 | cart-permission-groups | name | String | The permission group's name. |
@@ -1712,7 +1710,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | company-users |  isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
 * [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)

@@ -8,7 +8,7 @@ This feature provides an example of a replacement strategy used by Click & Colle
 
 The default replacement strategy works as follows:
 * When a customer changes a shipment type, a service point, or both, the replacement strategy is triggered.
-* All available product offers are parsed based on the selected shipment type and service point.  or both to the product offers in the system. These are available for the selected product SKU and Merchant linked to the product offer.
+* All available product offers are parsed based on the product SKU, merchant of the original offer, the updated shipment type and service point.
 * If one or more product offers with the selected shipment type and service point are found, the product offer with the lowest price replaces the product offer in the cart. The offer must be active and have enough stock to fulfill the order.
 
 ## Example of a replacement strategy execution
@@ -32,8 +32,7 @@ On the project level, you can extend this feature to support more complex scenar
 
 ## Current constraints
 
-* The example strategy does not support a use case where the same product SKU from the same merchant is added to the shopping cart as two separate cart line items. We recommend implementing the following logic on a project level if you intend to use the example strategy in production:
-* When a product is added to the shopping cart, if the same product from the same merchant is already present, the quantity will be updated automatically, regardless of the specific product offer.
+* The example strategy does not support a use case where the same product SKU from the same merchant is added to the shopping cart as two separate cart line items. If you are going to use the example strategy in production, we recommend implementing the following logic: when a product is added to cart, if the same product from the same merchant is already in cart, the quantity is updated regardless of the specific product offer.
 * The example replacement strategy supports only concrete products. Product bundles and configurable products are not supported.
 
 ## Related Developer documents

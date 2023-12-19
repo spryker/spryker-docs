@@ -44,7 +44,7 @@ For detailed information about the modules that provide the API functionality an
 
 ### Response
 
-<details open>
+<details>
   <summary>Response sample: Start picking the picklist with the specified ID.</summary>
 
 ```json
@@ -66,7 +66,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: Start picking the picklist with the specified ID. Include information about the authenticated user.</summary>
 
 ```json
@@ -112,7 +112,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Pick an item in the picklist with the specified ID. Include information about the warehouse the order is fulfilled in.</summary>
 
 ```json

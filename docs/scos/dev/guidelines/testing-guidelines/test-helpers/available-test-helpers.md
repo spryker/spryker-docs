@@ -232,6 +232,35 @@ Calling in your test `$this->tester->setDependency(OmsDependencyProvider::FACADE
 
 Technically, in the `Oms` module, calling `$this->getProvidedDependency(OmsDependencyProvider::FACADE_SALES)` returns `$salesFacadeMock`.
 
+### Glue Helpers
+
+The Glue helpers can only be used for testing the Glue application.
+
+#### DependencyProviderHelper
+
+Lets you set dependencies to the module or mock existing ones.
+
+#### FactoryHelper
+
+Lets you mock factory methods and access the factory.
+
+#### OpenApi3
+
+Lets you match response of the API endpoints against the OpenApi3 schema.
+
+#### JsonPath
+
+Lets you navigate through the JSON response of the API endpoints.
+
+#### GlueRest
+
+Provides functionality to send requests to the Glue API endpoints and validate response data.
+
+#### GlueBackendApiJsonApiHelper
+
+Provides functionality to send requests to the Glue Backend API endpoints that implement JSON API convention and validate response data.
+
+
 ## PropelSchemaHelper
 
 Lets you create `SimpleXMLElement` based on the XML schema file and format the XML content.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-product-cms-blocks.html
+  
 ---
 title: Install product CMS blocks
 description: Learn how to install product CMS blocks into a Spryker project.

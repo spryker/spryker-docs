@@ -60,15 +60,16 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Make sure that, where applicable, you have implemented our [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
 - *Security guidelines are implemented and verified*:
   - Apply Spryker [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
-  - Double-check that you don't have any clear text passwords stored in config files or repositories.
+  - Double-check that you don't have any clear text passwords or API secrets stored in config files or repositories.
   - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
-- Make sure to comply with the latest laws. Consult your legal team. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
+- *Compliance and Legal Checks* - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
 
 ### Testing 
 
 - *Test deployments*. [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - *Test All Payment options*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- *User Acceptance Testing (UAT)*. Besides internal testsing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### SEO ### 
 
@@ -78,8 +79,10 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Training ### 
 
-- *Define a training plan for staff.*: 
-  - Team should know and understand on how to use the application.
+- *Training and Documentation for End-Users and Admins*: 
+  - Prepare role-specific enablement trainings for all internal users of the platform. These may include: backoffice administrators (incl. role specifics), support assistants and agents, marketplace operators, merchant portal users.
+  - Consider also external users, such as those interacting with the platform via APIs or 3rd party systems.
+  - And last but not least, your end customers should be aware of changes (if any) that the new platform may bring. Besides striving for good user experience and transparency, make sure to consult with your legal team about any obligations in that regard.
 
 ## Four weeks before go-live
 
@@ -89,7 +92,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 - *Make sure you have an APM set up*:
   - Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
-  - Make sure to configure alerting mechanisms.
+  - Establish robust post-launch monitoring plan, with the aim to watch system's performance and configuring alerting mechanisms.
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 - *The DNS names and strategy for your shop are clear*. 
@@ -101,6 +104,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 ### Application
 
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
+- *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting or similar. 
 
 ### Testing
 
@@ -108,7 +112,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
 To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
 - TO BE DISCUSSED *Perform security audits to identify and address vulnerabilities.* 
-- *Import real data on production*.
+- *Import real data on production*. After import is done, it is crucial double-checking the completeness and accuracy of migrated data, especially if transitioning from another platform.
 
 {% info_block warningBox "Data import" %}
 

@@ -54,9 +54,16 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
-- Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
-- Make sure you have applied the security guidelines. For details, see [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
-- Double-check that you don't have any clear text passwords stored in config files or repositories.
+- *Performance tips are implemented and verified*:
+  - Double-check that you implemented all the [performance guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
+  - Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
+  - Make sure that, where applicable, you have implemented our [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
+- *Security guidelines are implemented and verified*:
+  - Apply Spryker [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
+  - Double-check that you don't have any clear text passwords stored in config files or repositories.
+  - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
+  - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
+- Make sure to comply with the latest laws. Consult your legal team. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
 
 ### Testing 
 
@@ -66,7 +73,13 @@ After pointing the domain name to your Spryker project, some of your customers m
 ### SEO ### 
 
 - *Make sure the SEO strategy and plan are defined.*
-  - If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
+  - *Redirects*. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
+  - *Best practices*. Make sure that best practices are implemented. See [Basic SEO techniques to use in your project](/https://docs.spryker.com/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html)
+
+### Training ### 
+
+- *Define a training plan for staff.*: 
+  - Team should know and understand on how to use the application.
 
 ## Four weeks before go-live
 
@@ -74,7 +87,9 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Cloud 
 
-- *Make sure you have an APM set up*. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
+- *Make sure you have an APM set up*:
+  - Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
+  - Make sure to configure alerting mechanisms.
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 - *The DNS names and strategy for your shop are clear*. 
@@ -85,7 +100,6 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Application
 
-- *Performance tips are implemented and verified*. Double-check that you implemented all the [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 
 ### Testing
@@ -93,6 +107,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *Conduct load tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
 To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
+- TO BE DISCUSSED *Perform security audits to identify and address vulnerabilities.* 
 - *Import real data on production*.
 
 {% info_block warningBox "Data import" %}
@@ -101,7 +116,11 @@ You must start working with data of realistic size and quality as early as possi
 
 {% endinfo_block %}
 
-- Test payment.
+- *Validate Checkout/OMS process*
+  - Test general checkout steps.
+  - Test OMS.
+  - Test shipment.
+  - Test payment.
 
 {% info_block warningBox "Integration with payment providers" %}
 
@@ -109,19 +128,53 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 {% endinfo_block %}
 
+### SEO ### 
+
+- *Sitemap is generated*.
+- *Robots.txt is prepared*.
+- *All the content is prepared*. All the CMS pages and other content are prepared (including meta tags, internal and external links, etc).
+
+### Training ### 
+
+- *Make sure that training for staff is done.*:
+  - Team should know and understand on how to use the application.
+
 ## Two weeks before go-live ##
 
 - *Code freeze*. We recommend to have a code freeze at least two weeks before going live.
 - *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 - *Make sure that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
-- *Validate testing strategy.*
-- *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
-- *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
+- *Make sure that DNS is set*.
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
+- *Make sure that real data is set on production*
+  - Categories
+  - Product and all related data (prices, offers, attributes, images, stock, labels, reviews and ratings, cross and up selling etc.)
+  - Customers, Companies, Users, Merchants
+  - Taxes
+  - Discounts
+  - CMS pages (including homepage, CSM blocks, final terms & conditions check)
+  - Glossary (including all the needed languages)
+  - Custom data
+  - Other data
+- *Make sure that 3rd party systems are switched to "Production mode"*
+  - *Set up production configuration for all the 3rd party systems* (in environment variables). Make sure to not expose secrets in the codebase.
+  - *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
+- *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
 - *Define the exact plan for the go-live day.*:
   - Define the time of deployment.
   - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
-- *Make sure that DNS is set*.
+- *Go live*: 
+  - *Prepare a go live communication plan*. Develop a communication plan to inform stakeholders, customers, and support teams about the launch date and any changes or updates.
+  - Remove basic auth from the frontend part and deploy the change.
+
+### Testing ###
+- *Perform end-to-end testing.* Make sure to test customer journey with all the 3rd party systems switched to production mode.
+
+### SEO ### 
+
+- *Robots.txt is set up*.
+- *All the content is set*. All the CMS pages and other content are set (including meta tags, internal and external links, etc).
+- Optional: *Redirects are set up.*
  
 
 {% info_block infoBox "Don't hesitate to contact us" %}

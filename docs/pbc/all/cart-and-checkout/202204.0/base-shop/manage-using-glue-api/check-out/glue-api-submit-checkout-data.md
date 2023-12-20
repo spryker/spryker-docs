@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
+  
 ---
 title: Submit checkout data
 description: Submit checkout data and retrieve information needed for completing checkout.

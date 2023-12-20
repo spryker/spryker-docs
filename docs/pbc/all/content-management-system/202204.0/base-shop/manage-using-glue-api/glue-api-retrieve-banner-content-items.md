@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 ---
 title: "Glue API: Retrieve banner content items"
 description: Retrieve information about banner content items via Glue API.

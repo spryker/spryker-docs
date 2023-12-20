@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
 ---
 title: Manage CMS pages
 description: The guide provides instructions on how to preview, publish, update and activate or deactivate CMS pages in the Back Office.

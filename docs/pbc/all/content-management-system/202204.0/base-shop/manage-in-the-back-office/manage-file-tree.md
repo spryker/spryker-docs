@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-file-tree.html
 ---
 title: Manage file tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.

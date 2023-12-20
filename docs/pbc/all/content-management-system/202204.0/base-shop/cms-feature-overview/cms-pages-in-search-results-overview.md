@@ -1,3 +1,4 @@
+  
 ---
 title: CMS pages in search results overview
 description: The CMS Pages in Search Results feature lets you search not only for products but for CMS pages content as well.

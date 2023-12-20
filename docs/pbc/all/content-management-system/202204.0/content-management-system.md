@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/content-management-system.html
 ---
 title: Content Management System
 description: Build and manage an intuitive navigation for your Spryker shop.

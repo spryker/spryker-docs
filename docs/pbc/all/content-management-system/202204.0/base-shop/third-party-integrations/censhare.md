@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/censhare.html
 ---
 title: Censhare
 last_updated: Jun 16, 2021

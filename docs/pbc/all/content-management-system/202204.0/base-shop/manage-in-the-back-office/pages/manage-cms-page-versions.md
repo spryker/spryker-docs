@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---
 title: Manage CMS page versions
 description: The guide provides instructions on how to view CMS page versions, roll back to a specific version or view SEO information in the Back Office.

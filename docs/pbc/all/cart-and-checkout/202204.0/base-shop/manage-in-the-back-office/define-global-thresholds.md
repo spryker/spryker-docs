@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/define-global-thresholds.html
+  
 ---
 title: Define global thresholds
 description: Learn how to define global thresholds in the Back Office.

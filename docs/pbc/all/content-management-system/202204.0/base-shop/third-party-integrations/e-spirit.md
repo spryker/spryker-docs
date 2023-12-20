@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/e-spirit.html
 ---
 title: E-Spirit
 description: Help your Spryker project engage customers and increase revenue with personalized, content-rich digital experiences anytime, anywhere by integrating E-Spirit.

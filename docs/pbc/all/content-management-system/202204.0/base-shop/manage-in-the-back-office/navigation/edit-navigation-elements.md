@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-elements.html
 ---
 title: Edit navigation elements
 description: Learn how to edit navigation elements in the Back Office

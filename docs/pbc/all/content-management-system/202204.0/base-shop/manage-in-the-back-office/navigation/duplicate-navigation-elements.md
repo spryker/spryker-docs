@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/duplicate-navigation-elements.html
 ---
 title: Duplicate navigation elements
 description: Learn how to duplicate navigation elements in the Back Office.

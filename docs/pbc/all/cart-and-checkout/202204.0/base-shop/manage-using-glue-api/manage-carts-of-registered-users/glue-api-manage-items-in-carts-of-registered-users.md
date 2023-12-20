@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html
+  
 ---
 title: Manage items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource.

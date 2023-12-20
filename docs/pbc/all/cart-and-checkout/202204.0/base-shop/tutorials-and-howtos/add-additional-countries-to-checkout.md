@@ -1,4 +1,3 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html
 ---
 title: Add additional countries to checkout
 description: This HowTo explains how to add additional countries to the checout.

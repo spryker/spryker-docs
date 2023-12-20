@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-the-maximum-size-of-content-fields.html
 ---
 title: "HowTo: Define the maximum size of content fields"
 description: Use the guide to customize the content field size in the CMS module.

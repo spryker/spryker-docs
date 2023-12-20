@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/delete-navigation-nodes.html
 ---
 title: Delete navigation nodes
 description: Learn how to delete navigation nodes in the Back Office

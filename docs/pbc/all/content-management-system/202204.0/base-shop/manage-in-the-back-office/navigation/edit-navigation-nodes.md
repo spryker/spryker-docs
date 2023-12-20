@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/edit-navigation-nodes.html
 ---
 title: Edit navigation nodes
 description: Learn how to edit navigation nodes in the Back Office

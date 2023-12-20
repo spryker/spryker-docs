@@ -1,3 +1,4 @@
+  
 ---
 title: Install multi-store CMS blocks
 description: Learn how to install multi-store CMS blocks in a Spryker project

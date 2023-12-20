@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
+  
 ---
 title: Check out purchases
 description: Learn how to check out purchases via Glue API.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/define-if-carts-are-deleted-after-placing-an-order.html
+  
 ---
 title: Define if carts are deleted after placing an order
 last_updated: Jul 20, 2021

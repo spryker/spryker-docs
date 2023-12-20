@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-the-navigation-module.html
 ---
 title: Install the Navigation module
 description: The guide walks you through the process of installing the Navigation Module into your project.

@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Navigation Glue API
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.

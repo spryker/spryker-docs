@@ -1,3 +1,4 @@
+  
 ---
 title: Migration guide - FileManagerWidget
 description: Use the guide to update versions to the newer ones of the FileManagerWidget module.

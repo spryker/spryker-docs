@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-positions-for-category-cms-blocks.html
 ---
 title: Define positions of category CMS blocks
 description: Use the guide to customize the content field size in the CMS module.

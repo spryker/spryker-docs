@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
 ---
 title: "Glue API: Retrieve abstract product list content items"
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale

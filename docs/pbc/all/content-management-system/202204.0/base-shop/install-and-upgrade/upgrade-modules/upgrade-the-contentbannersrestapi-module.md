@@ -1,3 +1,4 @@
+  
 ---
 title: Upgrade the ContentBannersRestApi module
 last_updated: Jun 16, 2021

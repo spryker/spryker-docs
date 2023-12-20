@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-custom-content-item.html
 ---
 title: Create a custom content item
 description: If the content items shipped with Spryker do not fulfill your needs, the document shows how to create a new one.

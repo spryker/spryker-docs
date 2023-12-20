@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html
 ---
 title: "Glue API: Retrieve CMS pages"
 description: Retrieve details on CMS pages via the API.

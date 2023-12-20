@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/navigation-feature-overview.html
 ---
 title: Navigation feature overview
 description: Build and manage an intuitive navigation for your Spryker shop.

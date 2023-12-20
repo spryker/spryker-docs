@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
 ---
 title: Edit CMS blocks
 description: The guide provides procedures on how to view, update, activate and deactivate CMS blocks in the editor from the Back Office.

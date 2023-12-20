@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
+  
 ---
 title: "Tutorial: Checkout and step engine"
 description: Use the tutorial to understand how to work with Checkout and Step Engine and to extend Spryker core by adding a voucher step and a voucher form.

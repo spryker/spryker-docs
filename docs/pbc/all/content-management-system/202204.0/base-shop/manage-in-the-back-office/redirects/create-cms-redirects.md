@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html
 ---
 title: Create CMS redirects
 description: The guide provides instructions for shop owners on how to create CMS redirects in the Back Office.

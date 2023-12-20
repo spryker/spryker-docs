@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-cms-templates.html
 ---
 title: Create CMS templates
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.

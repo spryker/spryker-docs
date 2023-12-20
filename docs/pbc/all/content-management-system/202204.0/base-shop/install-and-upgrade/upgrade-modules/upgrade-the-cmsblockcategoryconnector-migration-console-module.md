@@ -1,3 +1,4 @@
+  
 ---
 title: Upgrade the CmsBlockCategoryConnector module
 description: Use the guide to update versions to the newer ones of the CMS Block Category Connector  module.

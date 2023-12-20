@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/styla.html
 ---
 title: Styla
 description: Design content and make it shoppable and inspiring customers to buy more by integrating  Styla into Spryker Commerce OS.

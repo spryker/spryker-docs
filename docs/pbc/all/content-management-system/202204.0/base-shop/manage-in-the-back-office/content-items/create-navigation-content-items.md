@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-navigation-content-items.html
 ---
 title: Create navigation content items
 description: Learn how to create navigation content items in the Back Office.

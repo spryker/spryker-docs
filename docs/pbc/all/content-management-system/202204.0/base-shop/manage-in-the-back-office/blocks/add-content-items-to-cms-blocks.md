@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/add-content-items-to-cms-blocks.html
 ---
 title: Add content items to CMS blocks
 description: Learn how to add content items to CMS pages in the Back Office

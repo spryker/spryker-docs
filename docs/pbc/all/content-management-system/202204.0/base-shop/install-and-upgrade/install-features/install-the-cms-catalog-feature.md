@@ -1,3 +1,4 @@
+  
 ---
 title: Install the CMS + Catalog feature
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.

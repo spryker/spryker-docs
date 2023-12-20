@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/coremedia.html
 ---
 title: Coremedia
 description: Take content to the next level with the CoreMedia Content Cloud that can be integrated in the Spryker Commerce OS.

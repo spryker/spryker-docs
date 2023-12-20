@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
 ---
 title: Create email CMS blocks
 description: Learn how to create email CMS blocks in the Back Office.

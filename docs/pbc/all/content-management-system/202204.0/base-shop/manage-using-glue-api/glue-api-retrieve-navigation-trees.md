@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 ---
 title: "Glue API: Retrieve navigation trees"
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.

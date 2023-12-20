@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
 ---
 title: Edit placeholders in CMS blocks
 description: Learn how to edit placeholders in CMS blocks in the Back Office.

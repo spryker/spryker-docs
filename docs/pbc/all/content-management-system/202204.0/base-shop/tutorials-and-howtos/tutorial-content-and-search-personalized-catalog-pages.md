@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
 ---
 title: "Tutorial: Content and search - personalized catalog pages"
 description: Use the tutorial to create a new CMS page with the personalized product catalog based on the user's session ID.

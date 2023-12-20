@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/file-manager-feature-overview.html
 ---
 title: File Manager feature overview
 description: Reduce your bounce rate and create an enhanced shopping experience by providing impactful visuals while maintaining fast response times.

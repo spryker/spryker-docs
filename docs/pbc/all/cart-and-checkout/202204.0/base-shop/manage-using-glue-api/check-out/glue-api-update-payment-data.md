@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
+  
 ---
 title: Update payment data
 description: Learn how to update payment data with the payload from a third-party payment provider via Glue API.

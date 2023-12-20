@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html
 ---
 title: Edit product sets
 description: Learn how to edit product sets in the Back Office.

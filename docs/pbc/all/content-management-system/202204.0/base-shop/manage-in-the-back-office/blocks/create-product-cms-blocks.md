@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-product-cms-blocks.html
 ---
 title: Create product CMS blocks
 description: Learn how to create product CMS blocks in the Back Office.

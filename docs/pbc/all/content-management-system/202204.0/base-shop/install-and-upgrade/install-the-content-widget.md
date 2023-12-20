@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-the-content-widget.html
 ---
 title: Install the content widget
 description: The guide walks you through the process of installing the Content Widget feature in the project.

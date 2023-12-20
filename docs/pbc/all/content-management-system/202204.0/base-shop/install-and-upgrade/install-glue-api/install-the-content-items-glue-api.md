@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Content Items Glue API
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.

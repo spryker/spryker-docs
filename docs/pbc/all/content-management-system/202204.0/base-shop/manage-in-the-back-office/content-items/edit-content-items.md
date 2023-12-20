@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/edit-content-items.html
 ---
 title: Edit content items
 description: The guide provides steps on how to update content items in the Back Office.

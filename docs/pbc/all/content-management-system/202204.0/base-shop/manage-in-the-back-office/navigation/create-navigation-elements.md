@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/navigation/create-navigation-elements.html
 ---
 title: Create navigation elements
 description: Learn how to create navigation elements in the Back Office.

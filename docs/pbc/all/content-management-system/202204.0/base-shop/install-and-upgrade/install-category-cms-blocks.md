@@ -1,3 +1,4 @@
+  
 ---
 title: Install category CMS blocks
 description: Learn how to install category CMS blocks into a Spryker project.

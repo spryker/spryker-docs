@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
 ---
 title: Create a visibility condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.

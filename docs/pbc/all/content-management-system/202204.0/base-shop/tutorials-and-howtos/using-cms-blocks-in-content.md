@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/using-cms-blocks-in-content.html
 ---
 title: Using CMS blocks in content
 last_updated: Jun 16, 2021

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-file-list-content-items.html
 ---
 title: Create file list content items
 description: Learn how to create file list content items in the Back Office.

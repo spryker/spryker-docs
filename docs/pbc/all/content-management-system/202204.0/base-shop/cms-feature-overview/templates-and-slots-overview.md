@@ -1,3 +1,4 @@
+  
 ---
 title: Templates and Slots overview
 description: Templates with slots is a powerful way to manage the content of your shop.

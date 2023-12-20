@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-file-list.html
 ---
 title: Manage file list
 description: Use the procedures to view, edit, and delete files from the system in the Back Office.

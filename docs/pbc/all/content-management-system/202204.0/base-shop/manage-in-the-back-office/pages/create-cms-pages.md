@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/create-cms-pages.html
 ---
 title: Create CMS pages
 description: The guide provides a procedure to create a CMS page, make it searchable per store in the Back Office.

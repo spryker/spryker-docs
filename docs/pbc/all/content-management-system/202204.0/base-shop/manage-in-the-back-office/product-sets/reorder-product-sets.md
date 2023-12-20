@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/reorder-product-sets.html
 ---
 title: Reorder product sets
 description: Learn how to reorder product sets in the Back Office.

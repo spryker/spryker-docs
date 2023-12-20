@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html
 ---
 title: Create product sets
 description: Learn how to create product sets in the Back Office

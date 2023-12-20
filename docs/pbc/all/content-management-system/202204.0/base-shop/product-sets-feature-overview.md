@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/product-sets-feature-overview.html
 ---
 title: Product Sets feature overview
 description: Learn about the modules that build up the Product Set feature

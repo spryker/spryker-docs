@@ -1,4 +1,4 @@
-  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
+  
 ---
 title: Retrieve customer carts
 description: Retrieve customer's carts via Glue API

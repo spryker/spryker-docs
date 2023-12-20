@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/magnolia.html
 ---
 title: Magnolia
 description: Connect content and Spryker Commerce OS by integrating Magnolia CMS.

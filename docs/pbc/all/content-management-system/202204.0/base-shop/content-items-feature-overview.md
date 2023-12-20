@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/content-items-feature-overview.html
 ---
 title: Content Items feature overview
 description: Content item is a preserved content piece that can be used in multiple pages.

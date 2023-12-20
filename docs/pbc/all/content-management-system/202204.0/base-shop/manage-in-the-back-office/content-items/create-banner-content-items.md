@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html
 ---
 title: Create banner content items
 description: Learn how to create banner content items in the Back Office.

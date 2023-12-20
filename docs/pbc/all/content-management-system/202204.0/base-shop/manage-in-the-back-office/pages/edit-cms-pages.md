@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
 ---
 title: Edit CMS pages
 description: The guide provides instructions on how to update page layout, SEO data and page content in the Back Office.

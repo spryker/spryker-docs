@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/redirects/manage-cms-redirects.html
 ---
 title: Manage CMS redirects
 description: The guide provides procedures on how to update or delete URL redirects in the Back Office.

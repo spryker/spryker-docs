@@ -1,3 +1,4 @@
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
 ---
 title: "Best practices: Add content to the Storefront pages using templates and slots"
 description: Templates with slots allows managing all the Storefront content in the Back Office.

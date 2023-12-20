@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-checkout-workflow.html
 ---
 title: Glue API Checkout workflow
 description: Checkout workflow of Glue API.

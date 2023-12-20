@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Quick Add to Cart + Shopping Lists feature
 description: Quick Add to Cart + Shopping Lists allow creating a shopping list to buy products. This guide describes how to integrate this feature into your project.

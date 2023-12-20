@@ -3,6 +3,8 @@ title: Import Cart and Checkout data
 description: Details about the data importers for Cart and Checkout
 last_updated: Jun 23, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/cart-and-checkout/202204.0/base-shop/import-and-export-data/import-cart-and-checkout-data.html
 ---
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Cart and Checkout PBC:
 

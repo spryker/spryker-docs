@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/tutorial-calculator-plugin.html
 ---
 title: "Tutorial: Calculator plugin"
 description: Use the guide to create and register a calculator plugin to the calculator plugin stack.

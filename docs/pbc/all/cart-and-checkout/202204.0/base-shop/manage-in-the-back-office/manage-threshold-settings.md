@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-in-the-back-office/manage-threshold-settings.html
 ---
 title: Manage threshold settings
 description: Learn how to select a tax set applied to threshold fees in the Back Office.

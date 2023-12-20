@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html
 ---
 title: Share company user carts
 description: Share company user carts via Glue API.

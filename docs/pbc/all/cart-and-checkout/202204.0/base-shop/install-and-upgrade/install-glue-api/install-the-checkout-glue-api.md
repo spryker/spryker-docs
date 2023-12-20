@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Checkout Glue API
 template: feature-integration-guide-template

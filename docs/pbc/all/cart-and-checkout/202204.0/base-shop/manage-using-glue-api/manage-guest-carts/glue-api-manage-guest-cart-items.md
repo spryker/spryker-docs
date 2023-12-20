@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
 ---
 title: Manage guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource.

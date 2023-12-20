@@ -1,3 +1,4 @@
+  
 ---
 title: Migration guide - QuickOrderPage
 last_updated: Jun 16, 2021
@@ -25,6 +26,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quickorderpage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quickorderpage.html
   - /module_migration_guides/mg-quick-order-page.htm
+  
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md -->

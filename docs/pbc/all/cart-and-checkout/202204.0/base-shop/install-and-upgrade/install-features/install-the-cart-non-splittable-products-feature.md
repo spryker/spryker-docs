@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Cart + Non-splittable Products feature
 description: The guide describes the process of installing the Cart and Non-splittable Products features into your project

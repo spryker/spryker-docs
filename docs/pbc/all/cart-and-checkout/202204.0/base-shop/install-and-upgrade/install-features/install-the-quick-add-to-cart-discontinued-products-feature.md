@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Quick Add to Cart + Discontinued Products feature
 description: Quick Add to Cart + Discontinued Products allow showing products in cart as discontinued. This guide describes how to integrate the feature into the project.

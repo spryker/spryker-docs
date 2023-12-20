@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Cart + Product Group feature
 description: Instructions to integrate the Cart + Product group feature into a Spryker project.

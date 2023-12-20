@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Checkout feature
 description: Learn how to integrate the Checkout feature into a Spryker project.

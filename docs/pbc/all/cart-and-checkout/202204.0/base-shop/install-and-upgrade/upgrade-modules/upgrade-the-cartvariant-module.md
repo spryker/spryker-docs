@@ -1,3 +1,4 @@
+  
 ---
 title: Upgrade the CartVariant module
 description: Use the guide to migrate to a new version of the CartVariant module.

@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Cart + Product Bundles feature
 description: Learn how to install the Cart + Product Bundles feature in a Spryker project

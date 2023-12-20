@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/cart-and-checkout.html
 ---
 title: "Cart and Checkout"
 description: Cart and Checkout capability enables customers to create multiple carts and check out with ease.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
 ---
 title: Retrieve cart permission groups
 description: Learn how to retrieve cart permission groups via Glue API.

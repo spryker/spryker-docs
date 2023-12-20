@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Quick Add to Cart feature
 description: Learn how to integrate the Quick Add to Cart feature into a Spryker project.

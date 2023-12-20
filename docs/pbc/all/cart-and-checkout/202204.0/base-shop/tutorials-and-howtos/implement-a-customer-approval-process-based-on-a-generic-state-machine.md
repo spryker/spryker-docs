@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
 ---
 title: Implement a customer approval process based on a generic state machine
 description: The guide describes the implementation flow of a customer approval process based on a state machine.

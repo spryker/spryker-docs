@@ -5,6 +5,7 @@ description: The Calculation module is used to calculate the cart totals display
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/cart-feature-walkthrough/calculation-3-0.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/calculation-3-0.html
 ---
 
 Spryker uses the `Calculation` module to calculate the cart totals that are displayed in the cart, during checkout, and when the order is placed.

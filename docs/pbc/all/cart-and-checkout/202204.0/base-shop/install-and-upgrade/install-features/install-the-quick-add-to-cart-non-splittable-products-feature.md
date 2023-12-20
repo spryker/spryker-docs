@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Quick Add to Cart + Non-splittable Products feature
 description: Install the Quick Add to Cart and Non-splittable Products features in your project.

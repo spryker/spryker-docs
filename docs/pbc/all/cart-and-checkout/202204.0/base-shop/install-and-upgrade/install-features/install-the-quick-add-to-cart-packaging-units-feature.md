@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Quick Add to Cart + Packaging Units feature
 description: Quick Add to Cart + Packaging Units allow buying products in different packaging units. This guide describes how to integrate this feature into your project.

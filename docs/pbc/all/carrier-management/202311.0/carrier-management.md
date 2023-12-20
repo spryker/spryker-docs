@@ -2,6 +2,8 @@
 title: Carrier Management
 description: The Carrier Management capability deals with delivery methods
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/carrier-management/202204.0/carrier-management.html
 ---
 
 Carrier Management lets you set up different deliver methods.

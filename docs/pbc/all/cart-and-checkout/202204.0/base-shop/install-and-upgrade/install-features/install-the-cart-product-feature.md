@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Cart + Product feature
 description: The guide walks you through the process of installing the Product and Cart features in your project.

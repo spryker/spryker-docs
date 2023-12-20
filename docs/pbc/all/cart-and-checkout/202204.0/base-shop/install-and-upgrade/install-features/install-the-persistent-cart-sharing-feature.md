@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Persistent Cart Sharing feature
 description: The guide describes the process of installing the Persistent Cart feature into your project.

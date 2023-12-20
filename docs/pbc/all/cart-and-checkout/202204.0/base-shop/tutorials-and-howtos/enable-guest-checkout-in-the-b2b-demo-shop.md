@@ -1,3 +1,4 @@
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
 ---
 title: Enable guest checkout in the B2B Demo Shop
 description: Learn how to enable guest checkout in B2B Demo Shop.

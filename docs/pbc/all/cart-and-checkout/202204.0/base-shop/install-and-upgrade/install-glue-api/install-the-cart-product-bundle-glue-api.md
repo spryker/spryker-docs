@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Cart + Product Bundle Glue API
 description: Learn how to install the the Cart + Product Bundle Glue API in a Spryker project.

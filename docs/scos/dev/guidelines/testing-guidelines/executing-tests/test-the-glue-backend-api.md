@@ -4,11 +4,11 @@ description: How to test the Glue Backend API
 template: howto-guide-template
 ---
 
-This document describes how to set up and run Glue Backend API end-to-end tests. All code references the `ModuleRestApi` module example and the `Pyz` project namespace. When you set up and run the tests for a different project namespace or module, adjust the names accordingly.
+This guide explains how to set up and run Glue Backend API end-to-end tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the names accordingly for different project namespaces or modules.
 
 ## Prerequisites
 
-Make sure the following prerequisites are met:
+Ensure the following prerequisites are met:
 
 1. Spryker Testify version 3.52.0 or later is installed.
 - To verify the installation status and version of Spryker Testify, run the following command:
@@ -268,4 +268,4 @@ Run the following command to execute the test:
 docker/sdk testing codecept run -c tests/PyzTest/Glue/ModuleBackend
 ```
 
-Once the testing process is complete, you get the result of each individual test.
+The result of each individual test will be displayed once the testing process is complete.

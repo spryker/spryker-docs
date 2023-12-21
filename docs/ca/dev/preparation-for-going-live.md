@@ -33,6 +33,10 @@ Ensure you have addressed all the items from the following checklists.
 
 ### Cloud
 
+- *3rd party connections are configured*. Check if there are any requirements from 3rd party systems to connect to production environment. As some examples it can be: 
+  - port configuration;
+  - IP whitelisting/blacklisting;
+  - etc.
 - *DDOS prevention or mitigation checked and implemented.*
     - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention Admin panel and Merchant portal. Add basic auth if applicable. For details, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)

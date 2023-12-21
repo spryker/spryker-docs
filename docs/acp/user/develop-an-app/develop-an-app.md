@@ -77,11 +77,24 @@ You can also execute this step later.
 
 Now, you have done the groundwork that enables you to develop an App. You created a new repository that contains the boilerplate code for almost any App you’d like to build.
 
+### Step validation
+
+- Make sure that project is cloned properly and it has no uncommited files.
+
+
 ## Start the local development environment
+
+### Update default local host name
 
 The Mini-Framework already comes with the predefined Docker configuration. Change the `deploy.dev.yml` by replacing `glue-backend.de.spryker.local` with `my-app.de.spryker.local`. After that, run the command provided in the next section at the root of your new repository.
 
 ### Boot and up your environment
+
+Clone spryker docker sdk in project directory:
+
+```bash
+git clone git@github.com:spryker/docker-sdk.git docker
+```
 
 Execute the following command to boot your application and start it:
 
@@ -98,6 +111,12 @@ docker/sdk testing codecept run
 
 You will now see that your app boilerplate code is up and running.
 
+### Step validation
+
+- Make sure that all the command are executed without errors and the tests are successfully passed.
+- Check that docker containers are started by using the `docker/sdk ps` command.
+- Make sure that you added `my-app.de.spryker.local` into yours `/etc/hosts`
+
 ## Add the app manifest files
 
 Before your app can be listed in the App Store Catalog, you need to add the following files.
@@ -106,7 +125,7 @@ Before your app can be listed in the App Store Catalog, you need to add the foll
 
 The manifest file is the most important one for the app. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
 
-Manifest files must have the local name as the filename, for example, `en_US.json`, and should be placed inside the `config/app/manifest` directory.
+Manifest files must have the locale name as the filename, for example, `en_US.json`, and should be placed inside the `config/app/manifest` directory.
 
 ### Configuration
 
@@ -115,6 +134,10 @@ The configuration file contains all necessary form fields for inputs required by
 ### Translation
 
 The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
+
+### Step validation
+
+- Make sure that all the needed configuration files are created and populated properly.
 
 ## Add the registry (code)
 
@@ -126,16 +149,23 @@ Every app requires default endpoints for the App Registry Service. This service 
 To be able to use your Mini Framework as an app, add a new Spryker module:
 
 ```bash
-docker/sdk cli composer require spryker/app-kernel spryker/message-broker-aws spryker/propel-encryption-behavior 
+docker/sdk cli composer require 'spryker/app-kernel:dev-feature/without-encryption\ as\ 0.1.0  spryker/message-broker-aws'
 ```
 
 The `spryker/app-kernel` module transforms the Mini-Framework into an app. It provides SyncAPI schema and code for configuration and disconnection, as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
 The `spryker/message-broker-aws` module installs the necessary plugins for sending and receiving messages. 
-After installing the modules, you need to configure them. See the [configuration example](https://github.com/spryker-projects/mini-framework/blob/examples/acp/hello-world/my-app-final/config/Shared/config_default.php#L28).
+
+### Step validation
+
+- Make sure that new packages are added in `composer.json` and composer command is executed without errors
 
 ## Set up the message broker
 
 Install and configure the message broker as described in [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html).
+
+### Step validation
+
+- Make sure that `spryker/message-broker` is installed and configured properly.
 
 ## Config
 
@@ -179,6 +209,10 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 This enables the two required endpoints for the App Catalog Communication.
 
+### Step validation
+
+- The new routes you can check in [Test the endpoints](#test-the-endpoints) step.
+
 ## Build the transfer objects
 
 Transfer objects are used in many places. Since you installed some modules, you also need to generate the transfers. To generate the transfers, run the following command:
@@ -217,7 +251,7 @@ curl --location --request POST 'http://my-app.de.spryker.local/private/configure
 }'
 ```
 
-Now, check if your database contains the newly created configuration in the `spy_app_config` table.
+Now, you can check if your database contains the newly created configuration in the `spy_app_config` table. The database credentials you can find in `deploy.dev.yml` file.
 
 ### Test the /private/disconnect endpoint
 
@@ -232,6 +266,10 @@ curl --location --request POST 'http://my-app.de.spryker.local/private/disconnec
 
 Now, check if the previously created configuration in the spy_app_config table has been removed from your database.
 
+### Step validation
+
+- Make sure that firstly the new record is created in `spy_app_config` table and after it's removed.
+
 ## Implement business logic
 
 Your app is now ready to use, although it doesn't contain any business logic yet. 
@@ -239,7 +277,7 @@ Start implementing the business logic by implementing a synchronous or asynchron
 
 ## Debug your app
 
-If you want to understand what is happening in the code, you can [debug your app](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;path=/;" \` to the above cURL request.
+If you want to understand what is happening in the code, you can [debug your app](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;" \` to the above cURL request.
 
 Entry points for setting breakpoints are the following:
 - `Spryker\Glue\App\Controller\AppConfigController`

@@ -163,7 +163,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 ### Testing ###
 
-- *Perform end-to-end testing*. Make sure to test customer journey with all the 3rd party systems switched to production mode. Make sure to cover all the parts of application, including:
+- *Perform end-to-end testing on production*. Make sure to test customer journey with all the 3rd party systems switched to production mode. Make sure to cover all the parts of application, including:
   - Customer registration, account.
   - Main E-commerce flow (search, checkout/OMS process).
   - User/Merchant flow.
@@ -191,6 +191,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 - Optional: *Redirects are set up.*
 
 ## Go-live ##
+- *Perform end-to-end testing on production*.
 - Remove basic auth from the frontend part and deploy the change.
 - Run Go-live communication plan.
 - Optional. Disable the destructive pipeline after successful go-live.

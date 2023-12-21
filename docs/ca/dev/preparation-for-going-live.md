@@ -64,7 +64,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
 - *Compliance and Legal Checks* - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
-- *Admin panel ACL set up and verification*. Ensure that the admin Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
+- *Admin panel ACL set up and verified*. Ensure that the admin Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
 
 ### Testing 
 

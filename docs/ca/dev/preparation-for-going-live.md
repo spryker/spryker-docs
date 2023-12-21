@@ -64,12 +64,13 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
 - *Compliance and Legal Checks* - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
+- *Admin panel ACL set up and verification*. Ensure that the admin Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
 
 ### Testing 
 
 - *Test deployments*. [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - *Test All Payment options*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
-- *User Acceptance Testing (UAT)*. Besides internal testsing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
+- *User Acceptance Testing (UAT)*. Besides internal testing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### SEO ### 
 
@@ -103,6 +104,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Application
 
+- *Prepare and communicate technical debt mitigation plan*. Develop a comprehensive plan to identify, address, and communicate strategies for managing technical debt before the system goes live.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 - *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting or similar. 
 
@@ -132,23 +134,43 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 {% endinfo_block %}
 
+### Data ### 
+
+- *Prepare a data migration plan*. Include all the data.
+
 ### SEO ### 
 
 - *Sitemap is generated*.
-- *Robots.txt is prepared*.
+- *File robots.txt is prepared*.
 - *All the content is prepared*. All the CMS pages and other content are prepared (including meta tags, internal and external links, etc).
-
-### Training ### 
-
-- *Make sure that training for staff is done.*:
-  - Team should know and understand on how to use the application.
+- *Favicon is set*.
 
 ## Two weeks before go-live ##
 
-- *Code freeze*. We recommend to have a code freeze at least two weeks before going live.
+- *Code freeze*. We recommend having a code freeze at least two weeks before going live.
 - *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
 - *Make sure that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
 - *Make sure that DNS is set*.
+- *Make sure that 3rd party systems are switched to "Production mode"*
+  - *Set up production configuration for all the 3rd party systems* (in environment variables). Make sure to not expose secrets in the codebase.
+  - *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
+- *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
+- *Define the exact plan for the go-live day.*:
+  - Define the time of deployment.
+  - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
+  - *Prepare a go live communication plan*. Develop a communication plan to inform stakeholders, customers, and support teams about the launch date and any changes or updates.
+
+
+### Testing ###
+
+- *Perform end-to-end testing*. Make sure to test customer journey with all the 3rd party systems switched to production mode. Make sure to cover all the parts of application, including:
+  - Customer registration, account.
+  - Main E-commerce flow (search, checkout/OMS process).
+  - User/Merchant flow.
+  - etc
+
+### Data ### 
+
 - *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
 - *Make sure that real data is set on production*
   - Categories
@@ -157,29 +179,21 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
   - Taxes
   - Discounts
   - CMS pages (including homepage, CSM blocks, final terms & conditions check)
-  - Glossary (including all the needed languages)
   - Custom data
   - Other data
-- *Make sure that 3rd party systems are switched to "Production mode"*
-  - *Set up production configuration for all the 3rd party systems* (in environment variables). Make sure to not expose secrets in the codebase.
-  - *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
-- *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
-- *Define the exact plan for the go-live day.*:
-  - Define the time of deployment.
-  - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
-- *Go live*: 
-  - *Prepare a go live communication plan*. Develop a communication plan to inform stakeholders, customers, and support teams about the launch date and any changes or updates.
-  - Remove basic auth from the frontend part and deploy the change.
-
-### Testing ###
-- *Perform end-to-end testing.* Make sure to test customer journey with all the 3rd party systems switched to production mode.
+- *Make sure that all the translations are provided*. Including all the needed languages.
+- *Make sure that all Emails are correct*. Including all the needed data and translations.
 
 ### SEO ### 
 
-- *Robots.txt is set up*.
+- *File robots.txt is set up*.
 - *All the content is set*. All the CMS pages and other content are set (including meta tags, internal and external links, etc).
 - Optional: *Redirects are set up.*
- 
+
+## Go-live ##
+- Remove basic auth from the frontend part and deploy the change.
+- Run Go-live communication plan.
+- Optional. Disable the destructive pipeline after successful go-live.
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 

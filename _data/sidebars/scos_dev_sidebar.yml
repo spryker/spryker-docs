@@ -1606,6 +1606,8 @@ entries:
           nested:
             - title: Set up
               url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
+            - title: Technology
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html              
             - title: Boilerplate
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
             - title: Packages
@@ -2002,6 +2004,37 @@ entries:
         nested:
           - title: Adjust Jenkins for a Docker environment
             url: /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+    - title: Migrate to SCCOS
+      url: /docs/scos/dev/migration-concepts/migrate-to-sccos/migrate-to-sccos.html
+      nested:
+      - title: "Step 1: Integrate the Docker SDK"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-1-integrate-the-docker-sdk.html
+      - title: "Step 2: Upgrade the PHP version"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html
+      - title: "Step 3: Migrate non-standard services"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html
+      - title: "Step 4: Provision the Spryker SCCOS environments"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html
+      - title: "Step 5: Define the deployment strategy"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html
+      - title: "Step 6: Define environment variables"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html
+      - title: "Step 7: Restore Elasticsearch and Redis"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html
+      - title: "Step 8: Adapt the file system-based features"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html
+      - title: "Step 9: Implement security and performance guidelines"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html
+      - title: "Step 10: Add frontend assets"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-10-add-frontend-assets.html
+      - title: "Step 11: Wire custom services"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html
+      - title: "Step 12: Choose a multi-store setup"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html
+      - title: "Step 13: Migrate database"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html
+      - title: "Step 14: Finilize the migration"
+        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

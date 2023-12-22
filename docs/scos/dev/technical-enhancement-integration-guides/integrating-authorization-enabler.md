@@ -130,7 +130,7 @@ use Spryker\Glue\GlueApplicationAuthorizationConnector\Plugin\GlueApplication\Au
 class GlueApplicationDependencyProvider extends SprykerAuthorizationDependencyProvider
 {
     /**
-     * @return @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestUserValidatorPluginInterface[]
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RestUserValidatorPluginInterface[]
      */
     protected function getRestUserValidatorPlugins(): array
     {

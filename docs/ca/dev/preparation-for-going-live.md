@@ -63,7 +63,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
   - Make sure that, where applicable, you have implemented our [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
 - *Security guidelines are implemented and verified*:
-  - Apply Spryker [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
+  - Apply Spryker [security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
   - Double-check that you don't have any clear text passwords or API secrets stored in config files or repositories.
   - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.

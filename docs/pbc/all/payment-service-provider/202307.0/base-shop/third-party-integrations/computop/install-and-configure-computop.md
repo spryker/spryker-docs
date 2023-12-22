@@ -60,7 +60,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 	...
     'www.computop-paygate.com', // A trusted Computop domain, required for redirects to third-party services.
 ];
-$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; // Allows to redirect customers from Computop back to the shop via a `POST` request.
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_NONE; // Allows to redirect customers from Computop back to the shop via a `POST` request. (https://developer.computop.com/display/EN/Third-party-cookies+-+Browser+cookies+and+session+handling)
 
 // Credantials
 $config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';

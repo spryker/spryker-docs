@@ -96,10 +96,6 @@ Also, you have to add payment methods to the State Machine (OMS), Domain Whiteli
      'test.adyen.com', // trusted Adyen domain for tests
  ]);
  ...
- // >>> SESSION FRONTEND
- ...
- $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none';
- ...
  $config[OmsConstants::PROCESS_LOCATION] = [
  ...
  APPLICATION_ROOT_DIR . '/vendor/spryker-eco/adyen/config/Zed/Oms',
@@ -129,6 +125,15 @@ Also, you have to add payment methods to the State Machine (OMS), Domain Whiteli
  AdyenConfig::ADYEN_WE_CHAT_PAY => 'AdyenWeChatPay01',
  ];
  ```
+
+Based on Adyen API version you have to configure Session Frontend:
+```php
+ // >>> SESSION FRONTEND
+ ...
+ $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_LAX; // Checkout API v67 and later (https://docs.adyen.com/online-payments/3d-secure/redirect-3ds2/web-drop-in/#handle-the-redirect)
+ $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_NONE; // Checkout API v66 and earlier. (https://docs.adyen.com/online-payments/3d-secure/redirect-3ds2/web-drop-in/#handle-the-redirect)
+ ...
+```
 
 ## Notifications
 

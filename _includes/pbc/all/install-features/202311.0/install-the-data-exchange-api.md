@@ -217,17 +217,17 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
           }
         ]
       },
-      "child_relations": [
+      "childRelations": [
         {
           "name": "countryTaxRates",
-          "is_editable": true,
-          "child_dynamic_entity_configuration": {
-            "table_name": "spy_tax_rate"
+          "isEditable": true,
+          "childDynamicEntityConfiguration": {
+            "tableAlias": "taxRates"
           },
-          "relation_field_mapping": [
+          "relationFieldMapping": [
             {
-              "child_field_name": "fk_country",
-              "parent_field_name": "id_country"
+              "childFieldName": "fk_country",
+              "parentFieldName": "id_country"
             }
            ]
         }
@@ -236,6 +236,24 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 ]
 ```
 </details>
+
+{% info_block infoBox "" %}
+
+
+| Name                                                      | Imported to                                                                     | Description                                                                                                                                                                                                                                                                                     |
+|-----------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| tableName                                                 | spy_dynamic_entity_configuration.table_name                                     | [Details](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| tableAlias                                                | spy_dynamic_entity_configuration.table_alias                                    | [Details](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| isActive                                                  | spy_dynamic_entity_configuration.is_active                                      | [Details](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| definition                                                | spy_dynamic_entity_configuration.definition                                     | [Details](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [here](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) |
+| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [here](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html)                                                      |
+| childRelations.isEditable                                 | spy_dynamic_entity_configuration_relation.is_editable                           | If set to `false` limits relation functionality to only GET requests, POST/PATCH/PUT requests are restricted.                                                                                                                                                                                   |
+| childRelations.childDynamicEntityConfiguration.tableAlias | spy_dynamic_entity_configuration_relation.fk_child_dynamic_entity_configuration | The alias of the child Data Exchange API configuration for the relation, parent configuration details are determined based on the configuration where the child relations added.                                                                                                                |
+| childRelations.relationFieldMapping                       | spy_dynamic_entity_configuration_relation_field_mapping                         | Details about how child and parent configuration of the relations are connected.                                                                                                                                                                                                                |
+
+{% endinfo_block %}
+
 2. Add the path to the configuration file, to `DynamicEntityConfig`:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**

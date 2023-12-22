@@ -101,6 +101,11 @@ Response sample:
 }
 ```
 To retrieve a collection of countries with relations, you need to send the `GET https://glue.mysprykershop.com/dynamic-entity/countries?include=countryTaxRates` request.
+`include` parameter allows to define a list of relations that we want to retrieve by the request together with the main entity,
+it has the following format `{mainEntity}?include={childRelationOfTheMainEntity.childRelationOfTheChildRelation},{secondRelationChain},{thirdRelationChain}`, where:
+- Include parameter can consist from one or several relation chains with `,` delimiter.
+- Each relation chain represents a list of relation names (See spy_dynamic_entity_configuration_relation.name) separated with `.` delimiter`.
+- Each relation in the relation chain is a connection between two `spy_dynamic_entity_configuration`, see `spy_dynamic_entity_configuration_relation` table structure.
 
 ```bash
 GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1

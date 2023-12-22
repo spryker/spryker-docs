@@ -1,5 +1,5 @@
 ---
-title: Integrate the Shipment Glue API
+title: Install the Shipment Glue API
 last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration

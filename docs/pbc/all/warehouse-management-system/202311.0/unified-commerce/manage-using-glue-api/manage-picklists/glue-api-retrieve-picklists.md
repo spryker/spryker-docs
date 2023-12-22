@@ -40,7 +40,7 @@ For detailed information about the modules that provide the API functionality an
 
 ### Response
 
-<details open>
+<details>
   <summary>Response sample: retrieve picklists</summary>
 
 ```json
@@ -91,7 +91,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: retrieve picklists with items included</summary>
 
 ```json
@@ -210,7 +210,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: retrieve picklists with information about the authenticated user</summary>
 
 ```json
@@ -273,7 +273,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: retrieve picklists with warehouses included</summary>
 
 ```json
@@ -384,7 +384,7 @@ For detailed information about the modules that provide the API functionality an
 ### Response
 
 
-<details open>
+<details>
   <summary>Response sample: Retrieve the picklist spcified with the ID</summary>
 
 ```json
@@ -407,7 +407,7 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 
-<details open>
+<details>
   <summary>Response sample: Retrieve the picklist spcified with the ID with picklist items included</summary>
 
 ```json
@@ -459,7 +459,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: Retrieve the picklist spcified with the ID. Include information about the authenticated user</summary>
 
 ```json
@@ -506,7 +506,7 @@ For detailed information about the modules that provide the API functionality an
 </details>  
 
 
-<details open>
+<details>
   <summary>Response sample: Retrieve the picklist spcified with the ID with warehouses included</summary>
 
 ```json

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
 ---
 title: Add volume prices to abstract products and product bundles
 last_updated: June 27, 2022

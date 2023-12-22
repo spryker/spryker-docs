@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/volume-prices-overview.html
 ---
 title: Volume Prices overview
 description: Volume pricing helps the merchants to gain the commitment of the customers. Providing volume discounts results in increasing the placement of large orders.

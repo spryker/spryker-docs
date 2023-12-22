@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Retrieve gift cards in guest carts"
 description: Learn how to retrieve gift cards in guest carts using Glue Api.

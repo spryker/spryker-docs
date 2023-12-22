@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
 ---
 title: Install the Prices feature
 description: The guide walks you through the process of installing the Volume Prices feature in your project.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/merchant-custom-prices-feature-overview.html
 ---
 title: Merchant Custom Prices feature overview
 description: This feature relates to prices set for individual merchant relations. Customers see only prices applying to them, based on their merchant relation.

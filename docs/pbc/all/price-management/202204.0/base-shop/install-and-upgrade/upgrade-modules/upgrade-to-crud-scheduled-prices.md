@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
 ---
 title: Upgrade to CRUD Scheduled Prices
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.

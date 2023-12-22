@@ -1,3 +1,4 @@
+  
 ---
 title: Configure basic .htaccess authentication
 description: Learn how to configure basic htaccess authentication for the Storefront and the Back Office.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/money-module-reference-information.html
 ---
 title: "Money module: reference information"
 last_updated: Aug 18, 2021

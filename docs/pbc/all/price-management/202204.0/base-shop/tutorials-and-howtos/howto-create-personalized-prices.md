@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
 ---
 title: Create personalized prices
 last_updated: Jun 16, 2021

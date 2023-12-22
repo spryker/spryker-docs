@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/scheduled-prices-feature-overview.html
 ---
 title: Scheduled Prices feature overview
 description: The document describes the Scheduled Prices feature, price types, time zones, and the way scheduled prices can be created.

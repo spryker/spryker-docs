@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 ---
 title: Multiple currencies per store configuration
 description: The article describes the configuration of multiple currencies per store.

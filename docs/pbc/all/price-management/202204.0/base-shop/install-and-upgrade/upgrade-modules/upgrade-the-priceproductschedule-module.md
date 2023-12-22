@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html
 ---
 title: Upgrade the PriceProductSchedule module
 description: Use the guide to update the PriceProductSchedule module to a newer version.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
 ---
 title: "Glue API: Retrieve abstract product prices"
 description: Retrieve details information about prices of abstract products.

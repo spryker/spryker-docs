@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
 ---
 title: "Glue API: Retrieve concrete product prices"
 description: Retrieve prices of concrete products.

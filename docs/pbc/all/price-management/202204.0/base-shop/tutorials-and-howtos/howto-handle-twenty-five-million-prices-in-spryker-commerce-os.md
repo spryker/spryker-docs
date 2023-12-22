@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
 ---
 title: Handle twenty five million prices in Spryker Commerce OS
 description: Learn how we enabled Spryker to handle 25 million of prices.

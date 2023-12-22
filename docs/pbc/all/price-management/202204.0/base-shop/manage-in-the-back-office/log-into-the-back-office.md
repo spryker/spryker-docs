@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
 ---
 title: Log into the Back Office
 description: Learn how to log into the Back Office.

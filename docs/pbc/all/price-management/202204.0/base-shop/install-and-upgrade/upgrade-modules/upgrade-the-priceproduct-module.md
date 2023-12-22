@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
 ---
 title: Upgrade the PriceProduct module
 description: Use the guide to migrate to a newer version of the PriceProduct module.

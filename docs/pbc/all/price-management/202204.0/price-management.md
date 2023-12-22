@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/price-management.html
 ---
 title: Price Management
 description: Capability for all kinds of prices.

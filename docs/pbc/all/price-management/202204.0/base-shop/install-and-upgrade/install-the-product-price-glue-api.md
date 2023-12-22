@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
 ---
 title: Integrate the Product Price Glue API
 last_updated: Jun 18, 2021

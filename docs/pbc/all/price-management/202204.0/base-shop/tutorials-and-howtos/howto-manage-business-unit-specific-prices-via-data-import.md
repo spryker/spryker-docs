@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
 ---
 title: Manage business unit specific prices via data import
 last_updated: Feb 04, 2022

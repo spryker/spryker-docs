@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html
 ---
 title: Configuration of price modes and types
 description: The article describes the net and gross prices management

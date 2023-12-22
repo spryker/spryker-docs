@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
 ---
 title: Manage scheduled prices
 last_updated: Sep 10, 2021

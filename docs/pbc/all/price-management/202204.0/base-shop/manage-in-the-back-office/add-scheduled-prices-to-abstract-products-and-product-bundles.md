@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
 ---
 title: Add scheduled prices to abstract products and product bundles
 description: Learn how to add scheduled prices to abstract products in the Back Office.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
 ---
 title: Upgrade the PriceCartConnector module
 description: Use the guide to learn how to update the PriceCartConnector module.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
 ---
 title: Upgrade to multi-currency
 description: Learn how to migrate your project to multi-currency.

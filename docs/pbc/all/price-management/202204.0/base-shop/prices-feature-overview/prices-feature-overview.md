@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/prices-feature-overview.html
 ---
 title: Prices feature overview
 description: In the article, you can find the price definition, its types, how the price is inherited and calculated.

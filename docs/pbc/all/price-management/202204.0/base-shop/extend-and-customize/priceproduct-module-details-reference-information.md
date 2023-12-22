@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
 ---
 title: "PriceProduct module details: reference information"
 last_updated: Aug 18, 2021

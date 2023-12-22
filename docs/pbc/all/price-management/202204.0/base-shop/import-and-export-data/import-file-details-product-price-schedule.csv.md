@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html
 ---
 title: "Import file details: product_price_schedule.csv"
 last_updated: Jun 16, 2021

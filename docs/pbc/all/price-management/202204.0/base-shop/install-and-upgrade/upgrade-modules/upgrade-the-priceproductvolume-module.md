@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
 ---
 title: Upgrade the PriceProductVolume module
 description: Use the guide to update the PriceProductVolume module to a newer version.

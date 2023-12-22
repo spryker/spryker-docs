@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
 ---
 title: Schedule cron job for scheduled prices
 Description: This document describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.

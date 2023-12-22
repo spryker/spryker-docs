@@ -1,3 +1,4 @@
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
 ---
 title: Upgrade the Currency module
 description: Use the guide to update versions to the newer ones of the Currency module.

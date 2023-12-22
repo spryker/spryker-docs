@@ -356,12 +356,12 @@ Make sure that the following changes have been applied by checking your database
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE                                                                |
 | --- | --- | --- |--------------------------------------------------------------------------|
-| SecurityApplicationPlugin | Extends Zed global container with required services for security functionality. | None | Spryker\Zed\Security\Communication\Plugin\Application                    |
+| ZedSecurityApplicationPlugin | Extends Zed global container with required services for security functionality. | None | Spryker\Zed\Security\Communication\Plugin\Application                    |
 | SessionHandlerFileProviderPlugin | Provides a file-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionFile\Communication\Plugin\Session                     |
 | SessionHandlerRedisLockingProviderPlugin | Provides a Redis-based session handler implementation with session locking for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | SessionHandlerRedisProviderPlugin	 | Provides a Redis-based session handler implementation for Zed sessions. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | StorageRedisPlugin | Provides a Redis-based storage implementation. | None | Spryker\Client\StorageRedis\Plugin                                       |
-| SystemUserSecurityPlugin | Sets security firewalls (rules, handlers) for system users (Yves access to Zed). | None | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
+| ZedSystemUserSecurityPlugin | Sets security firewalls (rules, handlers) for system users (Yves access to Zed). | None | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
 | ZedSessionRedisLockReleaserPlugin | Removes session lock from Redis by session id for Zed sessions. It's used when removing previously created locks by running the ```session:lock:remove``` console command. | None | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer user settings. | None | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
 
@@ -373,7 +373,7 @@ Make sure that the following changes have been applied by checking your database
 namespace Pyz\Zed\Application;
 
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
-use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicationPlugin;
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
@@ -383,7 +383,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     protected function getApplicationPlugins(): array
     {
         return [
-            new SecurityApplicationPlugin(),
+            new ZedSecurityApplicationPlugin(),
         ];
     }
 }
@@ -397,6 +397,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
+use Spryker\Zed\SecuritySystemUser\Communication\Plugin\Security\ZedSystemUserSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -406,7 +407,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new SystemUserSecurityPlugin(),
+            new ZedSystemUserSecurityPlugin(),
         ];
     }
 }

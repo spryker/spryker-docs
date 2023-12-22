@@ -3,7 +3,7 @@ title: Marketplace Merchant Portal Core feature overview
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
+  - /docs/marketplace/dev/feature-walkthroughs/202403.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as secure login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, and debug.
@@ -13,7 +13,7 @@ The Marketplace Merchant Portal Core enables server configuration and basic func
 To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
 
 
-Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `MerchantUserSecurityPlugin` for extending the Merchant Portal firewall.
+Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `ZedMerchantUserSecurityPlugin` for extending the Merchant Portal firewall.
 
 ## Module dependency graph
 

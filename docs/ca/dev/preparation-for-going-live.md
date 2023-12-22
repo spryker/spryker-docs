@@ -33,10 +33,6 @@ Ensure you have addressed all the items from the following checklists.
 
 ### Cloud
 
-- *3rd party connections are configured*. Check if there are any requirements from 3rd party systems to connect to production environment. As some examples it can be: 
-  - port configuration;
-  - IP whitelisting/blacklisting;
-  - etc.
 - *DDOS prevention or mitigation checked and implemented.*
     - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention Admin panel and Merchant portal. Add basic auth if applicable. For details, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
@@ -67,7 +63,8 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Double-check that you don't have any clear text passwords or API secrets stored in config files or repositories.
   - Make sure to install all the [security updates](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
-- *Compliance and Legal Checks* - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point. 
+- *Compliance and Legal Checks* 
+  - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point.
 - *Admin panel ACL set up and verified*. Ensure that the admin Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
 
 ### Testing 
@@ -110,7 +107,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 - *Prepare and communicate technical debt mitigation plan*. Develop a comprehensive plan to identify, address, and communicate strategies for managing technical debt before the system goes live.
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
-- *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting or similar. 
+- *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting, port configuration or similar. 
 
 ### Testing
 
@@ -198,7 +195,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 - *Perform end-to-end testing on production*.
 - Remove basic auth from the frontend part and deploy the change.
 - Run Go-live communication plan.
-- Optional. Disable the destructive pipeline after successful go-live.
+- Disable the destructive pipeline after successful go-live.
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 

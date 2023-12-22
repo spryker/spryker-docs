@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Retrieve discounts in customer carts"
 description: Learn how to retrieve cart rules, vouchers, and promotional items in customer carts via Glue API.

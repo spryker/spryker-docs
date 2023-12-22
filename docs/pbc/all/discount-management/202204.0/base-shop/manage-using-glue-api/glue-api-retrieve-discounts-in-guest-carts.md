@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Retrieve discounts in guest carts"
 description: Retrieve details about cart rules and vouchers in guest carts

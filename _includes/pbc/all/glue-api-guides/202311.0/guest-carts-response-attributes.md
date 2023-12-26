@@ -25,3 +25,14 @@
 | guest-carts | displayName | String | Discount name. |
 | guest-carts | code | String | Discount code applied to the cart. |
 | guest-carts | amount | Integer | Discount amount applied to the cart. |
+
+#### Thresholds
+
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+|-|-|-|-|
+| carts | threshold | Array | Thresholds applied. |
+| carts | type | String | Threshold type. |
+| carts | threshold | Integer | Threshold monetary amount. |
+| carts | fee | Integer | Fee to be paid if the threshold is not reached.  |
+| carts | deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
+| carts | message | String | Message shown to the customer if the threshold is not fulfilled. |

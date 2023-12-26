@@ -424,10 +424,12 @@ To retrieve all wishlists of a customer, send the request:
 | createdAt     | String  | Creation date of the wishlist.|
 | updatedAt     | String  | Date when the wishlist was updated.|
 
+
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+
 For attributes of the included resources, see:
 
 - [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html#add-an-item-to-a-wishlist)
-- [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 - [Retrieve a product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 
 ## Retrieve a wishlist

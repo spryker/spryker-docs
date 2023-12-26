@@ -31,7 +31,7 @@ Install the following features:
 
 ## 1. Add service points and their addresses
 
-To add service points and addresses using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service points and addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html).
 
 To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
 
@@ -41,7 +41,7 @@ To import service point addresses, see [Import file details: service_point_addre
 
 For Click & Collect, you most probably need the pickup service type.
 
-To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
 
 To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
 
@@ -50,12 +50,12 @@ To import service types, see [Import file details: service_type.csv](/docs/pbc/a
 
 You need to add services per service point based on the service types you've added.
 
-To add services using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
 
 To import service types, see [Import file details: service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
 
 
-## 4. Assign the service type to shipment type
+## 4. Assign service types to shipment types
 
 To import service to shipment type assignments, see [Import file details: shipment_type_service_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/file-details-shipment-type-service-type.csv.html).
 
@@ -68,18 +68,18 @@ To import offers to shipment type assignments, see [Import file details: product
 ## 6. Assign product offers to services
 
 
-To import offers to services assignments, see [Import file details: product_offer_service.csv](https://docs.spryker.com/docs/pbc/all/offer-management/202311.0/unified-commerce/import-file-details-product-offer-service.csv.html).
+To import offers to services assignments, see [Import file details: product_offer_service.csv](https://docs.spryker.com/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/import-file-details-product-offer-service.csv.html).
 
 
 ## Recommended customizations for Click & Collect
 
 Since the product catalog and the product details page (PDP) do not support Click & Collect, we recommend customizing the PDP as follows:
 
-1. To display a specific offer in the first position of the offers section, implement the Default Product Offer Reference Strategy. For more details, see [Install the Marketplace Product Offer feature](https://docs.spryker.com/docs/pbc/all/offer-management/202307.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html#set-up-behavior).
+1. To display a specific offer in the first position of the offers section, implement the Default Product Offer Reference Strategy. For more details, see [Install the Marketplace Product Offer feature](https://docs.spryker.com/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html#set-up-behavior).
 
-2. To show only one product offer in the offers section, override the Merchant Product Offer Widget behavior with a filter. This filter should display one product offer with an empty service and shipment type set to _empty_ or _Delivery_. When adding products to cart, the delivery shipment type applies by default, and the customer can change it to pickup during checkout if needed. For more details on the product offers widget, see [Render merchant product offers on the Storefront](/docs/pbc/all/offer-management/202307.0/marketplace/render-merchant-product-offers-on-the-storefront.html).
+2. To show only one product offer in the offers section, override the Merchant Product Offer Widget behavior with a filter. This filter should display one product offer with an empty service and shipment type set to _empty_ or _Delivery_. When adding products to cart, the delivery shipment type applies by default, and the customer can change it to pickup during checkout if needed. For more details on the product offers widget, see [Render merchant product offers on the Storefront](/docs/pbc/all/offer-management/{{page.version}}/marketplace/render-merchant-product-offers-on-the-storefront.html).
 
-3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](https://docs.spryker.com/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
+3. To show information about product availability in the service point locations, add the Service Point Widget to the PDP. For instructions, see [Install the Service Points feature](https://docs.spryker.com/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html).
 
 As a result, customers have the following user journey with Click & Collect:
 1. Go to the PDP.

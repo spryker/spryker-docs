@@ -5,7 +5,9 @@ description: The Shipment Type Service Point subdomain connects shipment types a
 template: concept-topic-template
 ---
 
-The Shipment Type Service Point subdomain establishes the connection between shipment types and service type.
+The Shipment Type Service Point subdomain establishes the connection between shipment types and service points.
+
+## Installation
 
 [Install the Shipment Service Points feature](/docs/pbc/all/install-features/{{page.version}}/install-the-shipment-service-points-feature.html)
 
@@ -24,14 +26,10 @@ Spryker provides import functionality through the `ShipmentTypeServicePointDataI
 
 ## Address substitution during checkout
 
-The `ShipmentTypeServicePointsRestApi` module offers a mechanism to substitute the shipping address with the service point address during checkout.
+The `ShipmentTypeServicePointsRestApi` module provides a mechanism for substituting the shipping address with the service point address during checkout.
 
 ### Plugins
 
-The following plugin handles address substitution when the shipment type is set to `pickup` and a service point is selected:
+The following plugin handles address substitution when the shipment type is set to `pickup` and a service point is selected: `\Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestExpanderPlugin`.
 
-**\Spryker\Glue\ShipmentTypeServicePointsRestApi\Plugin\CheckoutRestApi\ShipmentTypeServicePointCheckoutRequestExpanderPlugin**
-
-Additionally, you can redefine applicable shipment type keys supporting address substitution through module configuration:
-
-**\Spryker\Shared\ShipmentTypeServicePointsRestApi\ShipmentTypeServicePointsRestApiConfig::getApplicableShipmentTypeKeysForShippingAddress**
+Additionally, you can redefine applicable shipment type keys supporting address substitution through module configuration: `\Spryker\Shared\ShipmentTypeServicePointsRestApi\ShipmentTypeServicePointsRestApiConfig::getApplicableShipmentTypeKeysForShippingAddress`.

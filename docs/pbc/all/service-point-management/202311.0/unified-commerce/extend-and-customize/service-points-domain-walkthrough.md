@@ -1,7 +1,7 @@
 ---
-title: Click and Collect feature Service Points domain walkthrough
+title: Service Points domain walkthrough
 last_updated: Nov 02, 2023
-description: Explore the Service Point domain of the Click and Collect feature, exploring the definition and functionality of service points. Learn how to install the Service Points feature and set up essential modules for seamless integration. Understand the significance of data setup and discover the available methods, including the Backend API and Data Import, to configure service points, addresses, stores, service types, and services.
+description:     to configure service points, addresses, stores, service types, and services.
 template: concept-topic-template
 ---
 
@@ -43,6 +43,6 @@ The following options let you set up shipment types data:
 
 ## Address substitution during checkout
 
-The `ServicePointWidget` module offers a mechanism to substitute the shipping address with the service point address during checkout.
+The `ServicePointWidget` module provides a mechanism for substituting the shipping address with the service point address during checkout.
 
 The following plugin handles address substitution when the cart item has a service point selected and the shipment type is set to `pickup`: `\SprykerShop\Yves\ServicePointWidget\Plugin\CustomerPage\ServicePointAddressCheckoutAddressCollectionFormExpanderPlugin`.

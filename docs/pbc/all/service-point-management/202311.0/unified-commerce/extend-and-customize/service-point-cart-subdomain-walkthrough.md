@@ -32,9 +32,9 @@ At the project level, extend this capability to support more intricate scenarios
 1. Receiving information from external systems about the offer intended for replacement.
 2. Implementing diverse algorithms for cart item replacement based on information obtained from customers.
 
-### How to merge cart line items with different product offers but same SKU and merchant.
+### Merge cart line items with different product offers but the same SKU and merchant
 
-The demo replacement strategy works only if a product in the cart with same SKU and merchant are represented as a single cart line item.
+The demo replacement strategy works only if a product in cart with same SKU and merchant is represented as a single cart line item.
 To enable this behavior, follow the steps:
 
 1. From `\Pyz\Zed\Cart\CartDependencyProvider::getExpanderPlugins()`, disable the `\Spryker\Zed\ProductOffer\Communication\Plugin\Cart\ProductOfferGroupKeyItemExpanderPlugin` plugin.

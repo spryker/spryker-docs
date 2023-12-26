@@ -1,7 +1,7 @@
 ---
 title: Click and Collect feature Product Offer Service Point subdomain walkthrough
 last_updated: Nov 02, 2023
-description: The Product Offer Service Point subdomain establishes the connection between product offers and service points, uct offers before publishing them to storage.
+description: The Product Offer Service Point subdomain establishes the connection between product offers and service points.
 template: concept-topic-template
 ---
 
@@ -36,10 +36,6 @@ The `ProductOfferServicePointDataImport` module lets you import the relationship
 
 ## Extension point for filtering services assigned to the product offers before publishing them to Storage
 
-This extension point provides the ability to filter the Product Offer Service collection before publishing it to storage.
+This extension point provides the ability to filter the Product Offer Service collection before publishing it to storage: `\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface`.
 
-`\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface`
-
-The following example plugin filters the product offer services collection by active and approved merchants:
-
-`\Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceStorageFilterPlugin`
+The following example plugin filters the product offer services collection by active and approved merchants: `\Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceStorageFilterPlugin`.

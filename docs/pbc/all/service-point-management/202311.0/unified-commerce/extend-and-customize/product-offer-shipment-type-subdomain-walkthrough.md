@@ -30,12 +30,6 @@ The `ProductOfferShipmentTypeDataImport` module lets you import the relationship
 
 ## Extension point for filtering shipment types assigned to product offers before publishing them to the Storage
 
-This extension point provides the ability to filter the product offer shipment type collection before publishing it to storage.
+This extension point provides the ability to filter the product offer shipment type collection before publishing it to storage :`\Spryker\Zed\ProductOfferShipmentTypeStorageExtension\Dependency\Plugin\ProductOfferShipmentTypeStorageFilterPluginInterface`.
 
-**\Spryker\Zed\ProductOfferShipmentTypeStorageExtension\Dependency\Plugin\ProductOfferShipmentTypeStorageFilterPluginInterface**
-
-Example:
-
-**\Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferShipmentTypeStorage\MerchantProductOfferShipmentTypeStorageFilterPlugin**
-
-This plugin filters out `ProductOfferShipmentTypeCollectionTransfer.productOfferShipmentTypes` with product offers from inactive merchants.
+The following example plugin filters out `ProductOfferShipmentTypeCollectionTransfer.productOfferShipmentTypes` with product offers from inactive merchants: `\Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferShipmentTypeStorage\MerchantProductOfferShipmentTypeStorageFilterPlugin`.

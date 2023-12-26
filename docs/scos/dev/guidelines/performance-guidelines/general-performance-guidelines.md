@@ -6,22 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
 redirect_from:
-  - /2021080/docs/performance-guidelines
-  - /2021080/docs/en/performance-guidelines
-  - /docs/performance-guidelines
-  - /docs/en/performance-guidelines
-  - /v6/docs/performance-guidelines
-  - /v6/docs/en/performance-guidelines
-  - /v5/docs/performance-guidelines
-  - /v5/docs/en/performance-guidelines
-  - /v4/docs/performance-guidelines
-  - /v4/docs/en/performance-guidelines
-  - /v3/docs/performance-guidelines
-  - /v3/docs/en/performance-guidelines
-  - /v2/docs/performance-guidelines
-  - /v2/docs/en/performance-guidelines
-  - /v1/docs/performance-guidelines
-  - /v1/docs/en/performance-guidelines
   - /docs/scos/dev/guidelines/performance-guidelines.html
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
 related:
@@ -111,27 +95,24 @@ $config[\Spryker\Shared\Config\ConfigConstants::ENABLE_WEB_PROFILER] = false;
 
 ## Disable automatic queue creation
 
-During the Synchronization part of Publish&Sync 
-- each time the command `queue:task:start QUEUE-NAME` is started,
-- the RabbitMQ client tries to create all the configured queues and exchanges (`\Spryker\Client\RabbitMq\Model\Connection\Connection::__construct`),
-- it may take up to 25% of CPU time per run.
+During the synchronization part of Publish & Sync, each time the `queue:task:start QUEUE-NAME` command is started, the RabbitMQ client tries to create all the configured queues and exchanges: `\Spryker\Client\RabbitMq\Model\Connection\Connection::__construct`. It takes up to 25% of CPU time per run. The effect becomes more significant for multi-store setups with each additional store.
 
-The effect becomes more significant for multi-store setups with each additional store. 
-
-It is enabled by default (`RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` in the module configuration class - `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`) for backward compatibility reasons, but for production systems, it has to be disabled (set it to `false` in `config_default.php` or any other related config file).
+For backward compatibility reasons, `RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` is enabled by default in the module configuration class: `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`. For production environments, we recommend disabling it by setting it to `false` in `config_default.php` or another config file.
 
 Side effects:
-- after applying this solution, the system won’t try to re-create queues and exchanges “on the fly” while interacting with RabbitMQ, so in case some queue is deleted - there will be an exception in an attempt to access it
-- the only way to create queues and exchanges, to configure RabbitMQ, will be to run a CLI command `console queue:setup` (defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`) so be sure to **adjust your deploy scripts** accordingly.
+- The application doesn't try to recreate queues and exchanges “on the fly” while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
+- The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
 
 ## Disable INFO event logs
 
-Publish & Synchronise process can work slower and generate hundreds of megabytes of `INFO`-level logs, which is good for troubleshooting and debugging, but not appropriate setup for production systems. By default `INFO` logs are enabled and generate about ~60-100MB per each `queue:task:run ...` execution with 80-90% of CPU time only to write logs.
+Publish & Sync process can work slower and generate hundreds of megabytes of `INFO`-level logs, which is good for troubleshooting and debugging, but not appropriate for production environments. By default `INFO` logs are enabled and generate about 60 MB to 100 MB per each `queue:task:run ...` execution with 80-90% of CPU time only to write logs.
 
-There are two options: 
+There are two options to avoid this in production environments:
 
-1. no event logs at all (using `EventConstants::LOG_FILE_PATH` set to null or `EventConstants::LOGGER_ACTIVE` set to `false` in the appropriate configuration files, e.g. `config_default.php`)
-2. override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php) there
+* Disable event logs using one of the following:
+  * Set `EventConstants::LOG_FILE_PATH` to `null`.
+  * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
+* Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
 ## Activate Twig compiler
 
@@ -185,7 +166,7 @@ Twig files can be in many places. To avoid time-consuming searches, we recommend
 ## General Twig optimizations
 
 Twig, together with [Atomic Frontend](/docs/scos/dev/front-end-development/{{site.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there.
-For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow. 
+For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow.
 
 Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
 

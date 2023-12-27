@@ -1,13 +1,6 @@
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) Glue API.
 
-
-
-This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API.
-
-## Install feature core
-
-Follow the steps below to install Checkout feature API.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -16,12 +9,12 @@ Install the required features:
 | Glue API: Spryker Core                  | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                           |
 | Glue API: Cart                          | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
 | Glue API: Customer Account Management   | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Payments                      | {{page.version}} | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
-| Glue API: Shipment                      | {{page.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
+| Glue API: Payments                      | {{page.version}} | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                      |
+| Glue API: Shipment                      | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/checkout-rest-api:"3.10.0" spryker/order-payments-rest-api:"^1.0.1" spryker/sales-order-thresholds-rest-api:"^1.0.0" --update-with-dependencies
@@ -39,14 +32,14 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+## 2) Set up configuration
 
-1. Add the following configuration to your project:
+1. Add the following configuration:
 
 | CONFIGURATION                                                           | SPECIFICATION                                                                                                             | NAMESPACE                |
 |-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------|
 | CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins()     | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi  |
-| CheckoutRestApiConfig::isRecalculationEnabledForQuoteMapperPlugins()    | Defines if quote recalculation in a stack of `QuoteMapperPluginInterface` plugins will be enabled.                        | Pyz\Zed\CheckoutRestApi  |
+| CheckoutRestApiConfig::isRecalculationEnabledForQuoteMapperPlugins()    | Defines if quote recalculation in a stack of `QuoteMapperPluginInterface` plugins is to be enabled.                        | Pyz\Zed\CheckoutRestApi  |
 | CheckoutRestApiConfig::getRequiredCustomerRequestDataForGuestCheckout() | Returns the customer data fields required for checkout as a guest user.                                                   | Pyz\Glue\CheckoutRestApi |
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiConfig.php**
@@ -67,7 +60,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     {
         return false;
     }
-    
+
     /**
      * @return bool
      */
@@ -198,19 +191,20 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 ```
 </details>
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
+* If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
 
-Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
+* Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
+
+* For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
+
 
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-For the `checkout-data` endpoint to keep returning shipment methods, keep `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` set to true.
-
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the shipping method attributes are returned in the `shipmentMethods` after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns shipping methods in the `shipmentMethods` attribute.
 
 <details>
 <summary markdown='span'>Response sample</summary>
@@ -276,7 +270,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isShipmentMethodsMappedToAtt
 
 {% endinfo_block %}
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 For the `checkout-data` endpoint to keep returning payment methods, keep `CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` set to true.
 
@@ -284,7 +278,7 @@ For the `checkout-data` endpoint to keep returning payment methods, keep `Checko
 
 {% info_block warningBox "Verification" %}
 
-If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the payment methods attributes are returned in the `paymentProviders `attribute after sending the `POST https://glue.mysprykershop.com/checkout-data` request:
+If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAttributes()` is true, make sure the `checkout-data` endpoint returns payment methods in the `paymentProviders` attribute.
 
 <details>
 <summary markdown='span'>Response sample</summary>
@@ -333,7 +327,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Generate transfer changes:
 
@@ -395,11 +389,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+## 4) Set up behavior
 
 Set up the following behaviors.
 
-#### Enable resources and relationships
+### Enable resources and relationships
 
 Activate the following plugins:
 
@@ -473,20 +467,23 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugins are activated:
+Make sure that the following plugins have been activated:
 
 | PLUGIN                                                | TEST                                                                                                                                                                            |
 |-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                                                                   |
-| CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.                                                                        |
-| OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.                             |
+| CheckoutDataResourcePlugin                            | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout-data` request.                   
+| CheckoutResourcePlugin                                | Check if you get a valid response by sending the `POST https://glue.mysprykershop.com/checkout` request.         |
+| OrderRelationshipByOrderReferencePlugin               | Check if you get order information from the `orders` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=orders` request.       |
 | CartByRestCheckoutDataResourceRelationshipPlugin      | Check if you get cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request.        |
 | GuestCartByRestCheckoutDataResourceRelationshipPlugin | Check if you get guest cart data as a relationship from the `checkout-data` resource by sending the `POST https://glue.mysprykershop.com/checkout?include=guest-carts` request. |
 
-To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you get a valid response by sending the following request:
+{% endinfo_block %}
 
-**https://glue.mysprykershop.com/order-payments**
+{% info_block warningBox "Verification" %}
 
+To make sure that `OrderPaymentsResourceRoutePlugin` has been activated, check if you get a valid response by sending the following request:
+
+`POST https://glue.mysprykershop.com/order-payments`
 ```json
 {
     "data": {
@@ -499,15 +496,20 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 }
 ```
 
-To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly, do the following:
+{% endinfo_block %}
 
-1. Send a request with an authorization token to a `checkout-data` endpoint with `carts` relation—for example, send the `POST https://glue.mysprykershop.com/checkout-data?include=carts` request with the request body:
+{% info_block warningBox "Verification" %}
 
+Make sure `CartByRestCheckoutDataResourceRelationshipPlugin` has been activated:
+
+1. Send the request:
+
+`POST https://glue.mysprykershop.com/checkout-data?include=carts`
 ```json
-{"data":
-    {"type": "checkout-data",
-      "attributes":
-      {
+{
+  "data": {
+    "type": "checkout-data",
+      "attributes": {
         "idCart": "_cart_id",
         "shipment": {
           "idShipmentMethod": 1
@@ -553,9 +555,15 @@ To ensure that `CartByRestCheckoutDataResourceRelationshipPlugin` is set up corr
 }
 ```
 
-Ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up correctly:
+{% endinfo_block %}
 
-1. Send a request with an anonymous customer ID to a `checkout-data` endpoint with `guest-carts` relation—for example, send the `POST https://glue.mysprykershop.com/checkout-data?include=guest-carts` request with the request body:
+{% info_block warningBox "Verification" %}
+
+Make sure `GuestCartByRestCheckoutDataResourceRelationshipPlugin` has been activated:
+
+1. Send the following request with an anonymous customer ID:
+
+`POST https://glue.mysprykershop.com/checkout-data?include=guest-carts`
 
 ```json
 {"data":
@@ -609,17 +617,17 @@ Ensure that `GuestCartByRestCheckoutDataResourceRelationshipPlugin` is set up co
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html).
+For more details, see [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html).
 
-#### Configure mapping
+### Configure mapping
 
-Mappers must be configured on a project level to map the data from the request into `QuoteTransfer`:
+On the project level, configure the following mappers to map the data from the request to `QuoteTransfer`:
 
 
 | PLUGIN                    | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                                         |
 |---------------------------|--------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------|
-| CustomerQuoteMapperPlugin | Adds a mapper that maps customer information to `QuoteTransfer`.                     | None          | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
-| AddressQuoteMapperPlugin  | Adds a mapper that maps billing and shipping address information to `QuoteTransfer`. | None          | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
+| CustomerQuoteMapperPlugin | Adds a mapper that maps customer information to `QuoteTransfer`.                     |      | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
+| AddressQuoteMapperPlugin  | Adds a mapper that maps billing and shipping address information to `QuoteTransfer`. |           | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
 
 
 **src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -650,19 +658,19 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `CustomerQuoteMapperPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
+* To make sure `CustomerQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the customer information you have provided in the request.
 
-To make sure that `AddressQuoteMapperPlugin` is activated, send a `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
+* To make sure `AddressQuoteMapperPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the returned order information contains the billing and shipping address information you have provided in the request.
 
 {% endinfo_block %}
 
-#### Configure the single payment method validator plugin
+### Configure the single payment method validator plugin
 
 Activate the following plugins:
 
 | PLUGIN                                                | SPECIFICATION                                                          | PREREQUISITES | NAMESPACE                           |
 |-------------------------------------------------------|------------------------------------------------------------------------|---------------|-------------------------------------|
-| SinglePaymentCheckoutRequestAttributesValidatorPlugin | Validates that checkout request data contains only one payment method. | None          | Spryker\Glue\CheckoutRestApi\Plugin |
+| SinglePaymentCheckoutRequestAttributesValidatorPlugin | Validates if checkout request data contains only one payment method. |           | Spryker\Glue\CheckoutRestApi\Plugin |
 
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -694,7 +702,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is activated, check that the following error is returned by sending the `POST https://glue.mysprykershop.com/checkout` request.
+To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout` request and check that the following error is returned:
 
 ```json
 {
@@ -710,16 +718,16 @@ To make sure that `SinglePaymentCheckoutRequestAttributesValidatorPlugin` is act
 
 {% endinfo_block %}
 
-#### Configure minimum order value plugins
+### Configure minimum order value plugins
 
 Activate the following plugins:
 
 | PLUGIN                                             | SPECIFICATION                                                                                | PREREQUISITES | NAMESPACE                                                                    |
 |----------------------------------------------------|----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------|
-| SalesOrderThresholdRestCartAttributesMapperPlugin  | Maps `QuoteTransfer.salesOrderThresholdValues` to `RestCartsAttributesTransfer.thresholds`.  | None          | Spryker\Glue\SalesOrderThresholdsRestApi\Plugin\CartsRestApi                 |
-| SalesOrderThresholdCartTerminationPlugin           | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart                    |
-| SalesOrderThresholdQuoteExpanderPlugin             | Finds applicable thresholds and expands quote with sales order thresholds data.              | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CartsRestApi    |
-| SalesOrderThresholdReadCheckoutDataValidatorPlugin | Finds applicable thresholds and adds error messages if threshold conditions are not matched. | None          | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CheckoutRestApi |
+| SalesOrderThresholdRestCartAttributesMapperPlugin  | Maps `QuoteTransfer.salesOrderThresholdValues` to `RestCartsAttributesTransfer.thresholds`.  |           | Spryker\Glue\SalesOrderThresholdsRestApi\Plugin\CartsRestApi                 |
+| SalesOrderThresholdCartTerminationPlugin           | Finds applicable thresholds and expands quote with sales order thresholds data.              |           | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Cart                    |
+| SalesOrderThresholdQuoteExpanderPlugin             | Finds applicable thresholds and expands quote with sales order thresholds data.              |           | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CartsRestApi    |
+| SalesOrderThresholdReadCheckoutDataValidatorPlugin | Finds applicable thresholds and adds error messages if threshold conditions are not met. |           | Spryker\Zed\SalesOrderThresholdsRestApi\Communication\Plugin\CheckoutRestApi |
 
 
 **src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
@@ -826,9 +834,12 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Set up the Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
-2. Add a product to the cart with a price less minimum threshold value.
-3. Check that the following error is returned by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
+1. [Set up a minimum hard threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html#define-a-minimum-hard-threshold.html).
+2. Add a product to cart with a price lower than the threshold you've set.
+3. Send the request: `GET https://glue.mysprykershop.com/carts/{cart-uuid}`
+    Make sure the message about threshold conditions not being met is returned. Example:
+</details>
+  <summary>Response sample with threshold conditions not met</summary>
 
 ```json
 {
@@ -861,13 +872,15 @@ Ensure that the plugins work correctly:
       ]
     },
     "links": {
-      "self": "http://glue.de.spryker.local/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+      "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
     }
   }
 }
 ```
 
-4. Check that the following error is returned by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
+</details>
+
+4. Send the `POST https://glue.mysprykershop.com/checkout-data` request and check that the following error is returned.
 
 ```json
 {
@@ -881,9 +894,12 @@ Ensure that the plugins work correctly:
 }
 ```
 
-5. Add more products to cart to satisfy the minimum threshold value.
-6. Check the result by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
+5. Add more products to cart to satisfy the minimum threshold you've set.
+6. To check that the cart meets the threshold conditions, send the following request: `GET https://glue.mysprykershop.com/carts/{cart-uuid}`.
+    The threshold message shouldn't be displayed in the response:
 
+<details>
+    <summary>Response sample with threshold conditions met</summary>
 ```json
 {
   "data": {
@@ -907,13 +923,14 @@ Ensure that the plugins work correctly:
       "thresholds": []
     },
     "links": {
-      "self": "http://glue.de.spryker.local/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+      "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
     }
   }
 }
 ```
 
-7. Check the result by sending the `POST https://glue.mysprykershop.com/checkout-data` request.
+7. To check that the cart meets threshold conditions, send the following request: `POST https://glue.mysprykershop.com/checkout-data`.
+    You should get a regular response without any errors:
 
 ```json
 {
@@ -928,7 +945,7 @@ Ensure that the plugins work correctly:
       "selectedPaymentMethods": []
     },
     "links": {
-      "self": "http://glue.de.spryker.local/checkout-data"
+      "self": "https://glue.mysprykershop.com/checkout-data"
     }
   }
 }
@@ -938,9 +955,7 @@ Ensure that the plugins work correctly:
 
 ## Install related features
 
-Integrate the following related features.
-
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                      |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Shipment | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                     |
-| Glue API: Payments | ✓                                | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)      |
+| Glue API: Payments | ✓                                | [Install the Payments Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)      |

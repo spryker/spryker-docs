@@ -29,7 +29,7 @@ To register an endpoint for interacting with entities in the database, you need 
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
 
-Then, if needed, for relations you need to add a corresponding row to the `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables.
+We can create a relation by adding a new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. (Optional)
 The `spy_dynamic_entity_configuration_relation` contains the configuration of relations for dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION                                                                                   |

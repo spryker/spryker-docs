@@ -2,7 +2,7 @@
 title: App Composition Platform installation
 description: Learn how to install the App Orchestration Platform.
 template: concept-topic-template
-last_updated: Jul 11, 2023
+last_updated: Nov 15, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
 ---
@@ -56,9 +56,9 @@ To get your project ACP-ready, it is important to ensure that your project modul
 Starting with the Spryker product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.2.0` or later
-* `spryker/message-broker:^1.4.0` or later
-* `spryker/message-broker-aws:^1.3.2` or later
-* `spryker/session:^4.15.1` or later
+* `spryker/message-broker: ^1.4.0` or later
+* `spryker/message-broker-aws: ^1.3.2` or later
+* `spryker/session: ^4.15.1` or later
 
 #### App modules
 
@@ -248,7 +248,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 ```
 </details>
 
-1. In the `MessageBrokerConfig.php` file, adjust the following module config:
+4. In the `MessageBrokerConfig.php` file, adjust the following module config:
 
 **src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**:
 
@@ -285,7 +285,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 5. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
 
-In the MessageBrokerConfig.php, adjust the following module config:
+In the `MessageBrokerConfig.php`, adjust the following module config:
 
 <details>
 <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>

@@ -21,8 +21,8 @@ The fulfillment App includes the following features:
 - Backend API architecture: Better performance and improved scalability.
 - Powered by Spryker’s Oryx Framework: Make rapid frontend customizations by utilizing a rich library of components.
 
-**Business benefits**: 
-- Fulfill orders faster, easier, and smarter. 
+**Business benefits**:
+- Fulfill orders faster, easier, and smarter.
 - Rapidly customize and scale with a flexibly built app.
 
 ### Documentation
@@ -50,8 +50,12 @@ Click&Collect includes the following features:
 Enhanced Click&Collect facilitates immediate product availability, offering both B2B and B2C clients the convenience of bypassing wait times associated with shipping. This feature not only significantly reduces or eliminates shipping costs but also provides an opportunity for immediate product inspection, ensuring quality and specifications meet the client's standards. Moreover, it seamlessly blends the digital shopping experience with the tangible benefits of a physical store, fostering direct customer-business interactions and potentially driving additional in-store purchases.
 
 While pickup has its roots in B2C operations, its utility in B2B contexts is growing:
-- Automotive industry: Manufacturers and dealers can offer customers the convenience of ordering parts online with the option for on-site installation. 
+- Automotive industry: Manufacturers and dealers can offer customers the convenience of ordering parts online with the option for on-site installation.
 - Manufacturing sector: Streamline operations by letting clients directly retrieve bulk orders from warehouses, enhancing the efficiency of the procurement process.
+
+### Documentation
+
+[Service point management](/docs/pbc/all/service-point-management/202311.0/service-point-management.html)
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Data Exchange API <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -68,13 +72,13 @@ The key features of the Data Exchange API include the following:
 - Real-time updates: You can modify your API endpoints on the go. Our infrastructure allows you to make changes dynamically so you can adapt to evolving business needs without any downtime.
 
 
-**Business benefits**: 
+**Business benefits**:
 - Reduce time-to-market, speeding up faster integration
 - Cost savings, especially on maintenance
 
 ### Documentation
 
-- General information: 
+- General information:
     - [Data Exchange API](/docs/pbc/all/data-exchange/202311.0/data-exchange.html#data-importers-and-data-exporters)
     - [Data Exchange API FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html)
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html)
@@ -86,7 +90,7 @@ The key features of the Data Exchange API include the following:
 
 ## <span class="inline-img">![data](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/data.png)</span> Next Generation Middleware: Spryker Middleware powered by Alumio <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-The Spryker Middleware powered by Alumio solves the main challenges of data integrations in a flexible and customizable way and, therefore, greatly reduces the efforts for Spryker’s data exchange use cases. It is the foundation on which we build our Integration Apps. The Spryker Middleware powered by Alumio uses Alumio data integration technology. 
+The Spryker Middleware powered by Alumio solves the main challenges of data integrations in a flexible and customizable way and, therefore, greatly reduces the efforts for Spryker’s data exchange use cases. It is the foundation on which we build our Integration Apps. The Spryker Middleware powered by Alumio uses Alumio data integration technology.
 
 The Spryker Middleware powered by Alumio helps you to reach the following outcomes:
 
@@ -96,11 +100,11 @@ The Spryker Middleware powered by Alumio helps you to reach the following outcom
 - Gain higher conversion rate by reacting to customer demands and competitive challenges more quickly.
 
 **Business benefit**:<br>
-Faster time-to-value shortening setup times for integrations 
+Faster time-to-value shortening setup times for integrations
 
 ### Documentation
 - [Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html)
-- [Alumio: Integrate Spryker with any endpoint](https://www.alumio.com/platforms/spryker) 
+- [Alumio: Integrate Spryker with any endpoint](https://www.alumio.com/platforms/spryker)
 
 ### Technical prerequisites
 To connect Spryker Middleware powered by Alumio with Spryker Cloud Commerce OS, you need to install or deploy the [Data Exchange API feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api.html) in your environment.
@@ -123,29 +127,29 @@ Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new pro
 - [Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html)
 - [Configure the Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html)
 
-### Technical prerequisites 
+### Technical prerequisites
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.
-- The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models. 
+- The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models.
 
 ## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and Metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 We are delighted to announce our newest integration - Dynatrace with Log Forwarding and Metrics Streaming from Spryker PaaS+! This integration is a key step in our journey to support more monitoring platforms compatible with Open Telemetry.
 
-This integration significantly enhances our current monitoring capabilities by extending the coverage of metrics and logs across crucial services such as Amazon ECS, RDS, OpenSearch Service, ElastiCache (Redis), PHP Traces, and RabbitMQ. Previously, the scope of these services was more limited, but with this enhancement, a broader and more precise range of metrics for tracking, debugging, and optimization is achieved. These monitoring improvements will also be available in New Relic and CloudWatch at no additional cost. 
+This integration significantly enhances our current monitoring capabilities by extending the coverage of metrics and logs across crucial services such as Amazon ECS, RDS, OpenSearch Service, ElastiCache (Redis), PHP Traces, and RabbitMQ. Previously, the scope of these services was more limited, but with this enhancement, a broader and more precise range of metrics for tracking, debugging, and optimization is achieved. These monitoring improvements will also be available in New Relic and CloudWatch at no additional cost.
 
 This feature is ideal for customer DevOps/SREs seeking enhanced, flexible monitoring solutions.
 
 **Business benefits**:<br>
-Until now, New Relic was the sole option for aggregating logs and metrics. This integration offers customers the flexibility to connect and integrate their Dynatrace account to Spryker PaaS+, thus enhancing observability and cloud extensibility. 
+Until now, New Relic was the sole option for aggregating logs and metrics. This integration offers customers the flexibility to connect and integrate their Dynatrace account to Spryker PaaS+, thus enhancing observability and cloud extensibility.
 
 Key features of this integration include the following:
 
-- Log forwarding: Facilitates forwarding of logs from Spryker Cloud services to Dynatrace, covering services like Amazon RDS, ECS, Redis, RabbitMQ, and OpenSearch. 
+- Log forwarding: Facilitates forwarding of logs from Spryker Cloud services to Dynatrace, covering services like Amazon RDS, ECS, Redis, RabbitMQ, and OpenSearch.
 - Metric streaming: Streams performance metrics like CPU usage, memory, network latency, and error rates to Dynatrace, offering real-time insights.
 - Unified Observability Platform: Offers a centralized platform for all monitoring needs, compatible with various third-party platforms.
 - Efficient data processing: Ensures immediate forwarding of logs and metrics, with frequent data transmission for up-to-date monitoring.
 - Spryker support 24/7: Designed to work seamlessly with existing monitoring solutions, Spryker will keep watching over for you 24/7, regardless of the monitoring platform you use.
-- Scalability and adaptability: Can handle varying data volumes and peaks, with 24 hours of retention in case of unavailability. 
+- Scalability and adaptability: Can handle varying data volumes and peaks, with 24 hours of retention in case of unavailability.
 
 ### Technical prerequisites:
 - Only available for Spryker Cloud customers.
@@ -159,18 +163,18 @@ Adding 3rd party integrations via apps to your existing SCCOS solution has becom
 Simplified and faster enablement of ACP for SCCOS, as well as improved scalability, performance, and data security of the entire platform.
 
 ### Documentation
-[ACP overview](/docs/acp/user/intro-to-acp/acp-overview.html) 
+[ACP overview](/docs/acp/user/intro-to-acp/acp-overview.html)
 
 ### Technical prerequisites
 [Install the ACP catalog](/docs/acp/user/intro-to-acp/acp-overview.html#installing-the-acp-catalog)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Vertex app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
-Staying up-to-date with ever-changing tax rules and rates can require a lot of resources. Spryker, through the Vertex integration, offers a means for businesses to automate tax calculation and centralize sales taxes on their transactions. 
+Staying up-to-date with ever-changing tax rules and rates can require a lot of resources. Spryker, through the Vertex integration, offers a means for businesses to automate tax calculation and centralize sales taxes on their transactions.
 
-**Business benefits**: 
+**Business benefits**:
 - Comply with tax frameworks anywhere you do business. Let Vertex take care of tax management with a seamless and easy-to-use solution that meets the needs across Tax, IT, and Finance teams.
-- Free up valuable resources for other operations as it stays compliant and up to date with the tax regulations of your markets. 
-- Automate tax processes and improve business agility by easily validating business tax at check-out and issuing tax-compliant invoices at the point of sale. 
+- Free up valuable resources for other operations as it stays compliant and up to date with the tax regulations of your markets.
+- Automate tax processes and improve business agility by easily validating business tax at check-out and issuing tax-compliant invoices at the point of sale.
 
 ### Documentation
 [Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html)
@@ -184,8 +188,8 @@ Staying up-to-date with ever-changing tax rules and rates can require a lot of r
 Build an efficient path to purchase for your buyers with Algolia search, an innovative search and navigation solution that empowers your customers to quickly find the products they want. With our powerful and flexible implementation, headless or with search components on your storefront, you can easily integrate search capabilities into your storefront, streamlining the customer journey and increasing conversions.
 
 **Business benefits**:
-- Easily bring search into your storefront with our implementation, headless or with frontend search components, and enable customers to get to what matters faster. 
-- With the latest feature addition, you can now use the search components to display Algolia search results and support your users with search suggestions. 
+- Easily bring search into your storefront with our implementation, headless or with frontend search components, and enable customers to get to what matters faster.
+- With the latest feature addition, you can now use the search components to display Algolia search results and support your users with search suggestions.
 
 ### Documentation
 [Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/algolia.html)
@@ -198,7 +202,7 @@ Build an efficient path to purchase for your buyers with Algolia search, an inno
 In addition to updating Spryker packages in your repository, with this release, Spryker Code Upgrader starts integrating plugins, settinh configurations keys, and adding new translations and similar elements to your project code. Now engineers don’t have to figure out and manually apply code changes to activate new features.
 
 **Business benefit**:<br>
-Reduce the engineering time needed to integrate a Spryker module release into your project. 
+Reduce the engineering time needed to integrate a Spryker module release into your project.
 
 ### Documentation
 [Integrating code releases](/docs/scu/dev/integrating-code-releases/integrating-code-releases.html)
@@ -212,7 +216,7 @@ Receive security releases before any other releases offered by Spryker Code Upgr
 
 
 **Business benefit**:<br>
-Reduce the security risks from running outdated software by taking security updates before other updates. 
+Reduce the security risks from running outdated software by taking security updates before other updates.
 
 ### Documentation
 [Integrating security releases](/docs/scu/dev/integrating-code-releases/integrating-security-releases.html)
@@ -259,7 +263,7 @@ Additional features are being released for Spryker's new upgradeable, decoupled 
 For more information about this Early Access product, contact your Spryker representative.
 
 **Business benefit**:<br>
-Provides commonplace features out-of-the-box for future-proof, agile, scalable, and upgradeable solutions for digital commerce business models. 
+Provides commonplace features out-of-the-box for future-proof, agile, scalable, and upgradeable solutions for digital commerce business models.
 
 ### Learn more:
 Composable Storefront is part of the Oryx framework. Oryx provides the features, and the presets for the various applications that you can create with Oryx, such as a Composable Storefront or Fulfillment App.
@@ -268,5 +272,4 @@ Composable Storefront is part of the Oryx framework. Oryx provides the features,
 [Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/oryx.html)
 
 ### Technical prerequisites:
-Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. See Set up Oryx for more information on the installation. 
-
+Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. See Set up Oryx for more information on the installation.

@@ -14,7 +14,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
 
 ---
-This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}third-party-integrations/vertex/vertex.html) into a Spryker shop.
+This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
 
 ## Prerequisites
 
@@ -58,13 +58,13 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     // ...
-    
+
     'tax-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     // ...
-    
+
     'payment-tax-invoice-commands' => 'http',
 ];
 
@@ -98,20 +98,20 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
         $pluginStack = [
             // ...
-        
+
             # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
             # Suggested plugins order is shown.
-        
+
             new TaxTotalCalculatorPlugin(),
             new TaxAppCalculationPlugin(),
             new GrandTotalCalculatorPlugin(),
-        
+
             // ...
         ];
-        
+
         return $pluginStack;
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -121,14 +121,14 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
     {
         return [
             // ...
-        
+
             # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
             # Suggested plugins order is shown.
-        
+
             new TaxTotalCalculatorPlugin(),
             new TaxAppCalculationPlugin(),
             new GrandTotalCalculatorPlugin(),
-        
+
             // ...
         ];
     }
@@ -138,7 +138,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Performance improvement" %}
 
-Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax\base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
+Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
 
 in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
 
@@ -235,7 +235,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-### 5. (Optional) If you plan to send invoices to Vertex through OMS, configure your Payment OMS
+### 5. Optional: To send invoices to Vertex through OMS, configure your Payment OMS
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 
@@ -250,15 +250,15 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
     <process name="SomePaymentProcess" main="true">
 
         <!-- other configurations -->
-        
+
         <states>
 
             <!-- other states -->
-            
+
             <state name="tax invoice submitted" reserved="true" display="oms.state.paid"/>
 
             <!-- other states -->
-            
+
         </states>
 
         <transitions>
@@ -275,13 +275,13 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
 
             <transition happy="true">
                 <source>tax invoice submitted</source>
-                
+
                 <!-- Here are the contents of the target transition -->
-                
+
             </transition>
 
             <!-- other transitions -->
-            
+
         </transitions>
 
         <events>
@@ -291,11 +291,11 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
             <event name="submit tax invoice" onEnter="true" command="TaxApp/SubmitPaymentTaxInvoice"/>
 
             <!-- other events -->
-            
+
         </events>
-        
+
     </process>
-    
+
 </statemachine>
 ```
 
@@ -304,7 +304,7 @@ Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php
 // ...
-    
+
 use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoicePlugin;
 
 // ...
@@ -317,16 +317,16 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoiceP
     protected function extendCommandPlugins(Container $container): Container
     {
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-             
+
              // ...
-             
+
              $commandCollection->add(new SubmitPaymentTaxInvoicePlugin(), 'TaxApp/SubmitPaymentTaxInvoice');
 
              // ...
-            
+
              return $commandCollection;
         });
-        
+
         return $container;
     }
 
@@ -529,7 +529,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Use same Product Class Code" %}
 
-You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#1-configure-vertex-specific-metadata-transfers).
+You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
 
 {% endinfo_block %}
 
@@ -542,10 +542,10 @@ Configure the flexible files extension as in the following example:
 class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements CalculableObjectTaxAppExpanderPluginInterface
 {
     // ...
-    
+
     /**
      * @param \CalculableObjectTransfer $calculableObjectTransfer
-     * 
+     *
      * @return \CalculableObjectTransfer
      */
     public function expand(CalculableObjectTransfer $calculableObjectTransfer): CalculableObjectTransfer
@@ -593,7 +593,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     {
         return [       
             # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
-            
+
             // The following plugins are for Marketplace only.
             # This plugin is expanding CalculableObjectTransfer object with merchant address information.
             new MerchantProfileAddressCalculableObjectTaxAppExpanderPlugin(),
@@ -609,7 +609,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     {
         return [
             # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
-            
+
             // The following plugins are for Marketplace only.
             # This plugin is expanding OrderTransfer object with merchant address information.
             new MerchantProfileAddressOrderTaxAppExpanderPlugin(),

@@ -6,18 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/installing-docker-prerequisites-on-macos
 originalArticleId: 5794d7a0-7b64-4847-a32f-2c84f3c54c9b
 redirect_from:
-  - /2021080/docs/installing-docker-prerequisites-on-macos
-  - /2021080/docs/en/installing-docker-prerequisites-on-macos
-  - /docs/installing-docker-prerequisites-on-macos
-  - /docs/en/installing-docker-prerequisites-on-macos
-  - /v6/docs/installing-docker-prerequisites-on-macos
-  - /v6/docs/en/installing-docker-prerequisites-on-macos
-  - /v5/docs/docker-installation-prerequisites-macos
-  - /v5/docs/en/docker-installation-prerequisites-macos
-  - /v4/docs/docker-installation-prerequisites-macos
-  - /v4/docs/en/docker-installation-prerequisites-macos
-  - /v3/docs/docker-install-prerequisites-macos-201907
-  - /v3/docs/en/docker-install-prerequisites-macos-201907
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
   - /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html  
 related:
@@ -45,7 +33,12 @@ Review the system and software requirements in the table and configure them usin
 | Swap  | 2GB or more |
 
 
-## Install and configure the required software
+## Install and configure a Docker manager
+
+You can run Spryker in Docker using Docker Desktop or OrbStack. Docker Desktop is a free default tool, but OrbStack works faster with intel-based Macs. 
+
+
+### Install Docker Desktop
 
 1. Download and install [Docker Desktop (Mac)](https://docs.docker.com/desktop/mac/install/).
 
@@ -71,7 +64,18 @@ Signup for Docker Hub is not required.
     6. Select the desired **Disk image location**.
     7. Select **Apply & Restart**.
 
-5. [Development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
+### Install OrbStack
+
+Download and install [OrbStack](https://orbstack.dev/download).
+
+
+To migrate from Docker Desktop to OrbStack, see [Migrate from Docker to OrbStack](https://docs.orbstack.dev/install#docker-migration).
+To run Docker Desktop and OrbStack side-by-side and switch between them, see [Side-by-side
+](https://docs.orbstack.dev/install#docker-context).
+
+## Install Mutagen for development mode
+
+If you are going to run Spryker in [development mode](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode), install or update Mutagen and Mutagen Compose to the latest version:
 
 ```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start

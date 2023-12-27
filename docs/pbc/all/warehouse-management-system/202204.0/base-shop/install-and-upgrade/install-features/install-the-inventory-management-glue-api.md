@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
   - title: Install the Inventory Management feature
-    link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
   - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieve concrete product availability

@@ -1,5 +1,5 @@
 ---
-title: Multi-language setup
+title: "HowTo: Make a multi-language setup"
 description: This document exmplains multi-language setup details
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -17,6 +17,7 @@ redirect_from:
   - /v4/docs/multi-language-setup
   - /v4/docs/en/multi-language-setup
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
+  - /docs/pbc/all/order-management-system/202311.0/base-shop/datapayload-conversion/multi-language-setup.html
 ---
 
 All textual elements can be created in various languages to support content creation for multiple language setups—for example, for your international stores.
@@ -138,7 +139,7 @@ The CMS blocks and pages can render localized content through the use of placeho
 
 {% info_block infoBox %}
 
-For more details on CMS, see [Defining the maximum size of content fields](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html).
+For more details on CMS, see [Defining the maximum size of content fields](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html).
 
 {% endinfo_block %}
 

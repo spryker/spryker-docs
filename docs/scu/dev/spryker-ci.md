@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 {% info_block infoBox "Availability" %}
-Provided through PaaS+
+Provided through PaaS+ and in EU region.
 {% endinfo_block %}
 
 Spryker CI is powered by [Buddy](https://buddy.works/) and provides an intuitive UI for a seamless CI/CD experience. It enables Spryker Code Upgrader to deliver continuous upgrades to your project.

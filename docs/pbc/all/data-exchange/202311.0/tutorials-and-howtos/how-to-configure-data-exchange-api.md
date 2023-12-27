@@ -105,7 +105,7 @@ The following example shows a possible value of the `spy_dynamic_entity_configur
 
 {% info_block infoBox %}
 
-If you don't see the needed table, it may be [excluded from configuring](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api/install-the-data-exchange-api.html#exclude-database-schemas-from-configuring).
+If you don't see the needed table, it may be [excluded from configuring](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html#set-up-the-configuration).
 
 {% endinfo_block %}
 

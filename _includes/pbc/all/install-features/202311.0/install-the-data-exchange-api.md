@@ -158,6 +158,8 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 <details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
+##### Example:
+
 ```json
 [
   {
@@ -236,6 +238,8 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 ]
 ```
 </details>
+
+##### Structure:
 
 {% info_block infoBox "" %}
 

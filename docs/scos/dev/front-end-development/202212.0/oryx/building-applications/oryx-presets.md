@@ -87,11 +87,11 @@ As an application developer, you might want to create your own resources.
 import { ResourceGraphic } from '@spryker-oryx/experience';
 
 const myResources: Resources = {
-    logo: {
-        source: () => import('my-logo').then((m) => m.default),
-    },
-    otherImg: {
-        source: () => import('my-other-img').then((m) => m.default),
-    },
+  logo: {
+    source: () => import('my-logo').then((m) => m.default),
+  },
+  otherImg: {
+    source: () => import('my-other-img').then((m) => m.default),
+  },
 };
 ```

@@ -90,8 +90,8 @@ import { ResourceGraphic } from '@spryker-oryx/experience';
 const myResources: Resources = {
   logo: {
     source: () => import('my-logo').then((m) => m.default),
-  },
-    otherImg: {
+  }, 
+  otherImg: {
     source: () => import('my-other-img').then((m) => m.default),
   },
 };

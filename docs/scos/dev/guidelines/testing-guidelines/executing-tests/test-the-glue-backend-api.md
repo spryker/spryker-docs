@@ -103,6 +103,38 @@ Run the following Codeception build command:
 docker/sdk testing codecept build -c tests/PyzTest/Glue/ModuleBackend
 ```
 
+Adjust generated actor class so it extends `\SprykerTest\Glue\Testify\Tester\BackendApiEndToEndTester`:
+
+**tests/PyzTest/Glue/ModuleBackend/_support/ModuleBackendApiTester.php**
+
+```php
+<?php
+
+namespace PyzTest\Glue\ModuleBackend;
+
+use SprykerTest\Glue\Testify\Tester\BackendApiEndToEndTester;
+
+/**
+ * Inherited Methods
+ *
+ * @method void wantToTest($text)
+ * @method void wantTo($text)
+ * @method void execute($callable)
+ * @method void expectTo($prediction)
+ * @method void expect($prediction)
+ * @method void amGoingTo($argumentation)
+ * @method void am($role)
+ * @method void lookForwardTo($achieveValue)
+ * @method void comment($description)
+ * @method void pause()
+ */
+class ModuleBackendApiTester extends BackendApiEndToEndTester
+{
+    use _generated\ModuleBackendApiTesterActions;
+}
+
+```
+
 #### 3. Create fixtures
 
 1. Introduce the fixtures class which will generated all data required for tests

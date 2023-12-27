@@ -25,7 +25,6 @@ For instructions on installing Fulfillment App, see [Set up Oryx](/docs/scos/dev
 
 To connect Fulfillment App to your project using Glue API, set the URL of your Glue Backend API in the environment configuration:
 
-**.env**
 ```text
 ...
 SCOS_BASE_URL={GLUE_BACKEND_API_URL}

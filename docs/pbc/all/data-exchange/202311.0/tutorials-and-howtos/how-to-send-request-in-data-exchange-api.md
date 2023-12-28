@@ -155,6 +155,7 @@ it has the following format `{mainEntity}?include={childRelationOfTheMainEntity.
 - Include parameter can consist from one or several relation chains with `,` delimiter.
 - Each relation chain represents a list of relation names (See spy_dynamic_entity_configuration_relation.name) separated with `.` delimiter`.
 - Each relation in the relation chain is a connection between two `spy_dynamic_entity_configuration`, see `spy_dynamic_entity_configuration_relation` table structure.
+- Relation chain should contain only existing relation's names, in the correct sequence that matches the relation hierarchy, in order to be processed. Otherwise, an error will be returned, [see error codes](#error-codes).
 
 ```bash
 GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1
@@ -207,7 +208,7 @@ The response contains all the columns from the `spy_country` table and included 
 
 {% info_block infoBox %}
 
-Currently, filters do not work with `relations` and only used to filter the root entity results.
+Currently (as of 202403.0 version), filters do not work with `relations` and only used to filter the root entity results.
 
 {% endinfo_block %}
 

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/merchant-custom-prices-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/merchant-custom-prices-feature-walkthrough.html
   - /docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/merchant-custom-prices-feature-overview.html
 related:
   - title: HowTo - Manage business unit specific prices via data import
     link: docs/pbc/all/price-management/page.version/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html

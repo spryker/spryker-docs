@@ -1,5 +1,5 @@
 ---
-title: Shipment Type Service Point subdomain
+title: "Click & Collect: Shipment Type Service Point subdomain"
 last_updated: Nov 02, 2023
 description: The Shipment Type Service Point subdomain connects shipment types and service points.
 template: concept-topic-template

@@ -1,5 +1,5 @@
 ---
-title: Click & Collect: Domain model and relationships
+title: Click & Collect domains
 last_updated: Sep 26, 2023
 description: Learn about the domain model, database, and other technical details of Click & Collect.
 template: concept-topic-template

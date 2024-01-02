@@ -1,5 +1,5 @@
 ---
-title: Click and Collect feature Product Offer Shipment Type subdomain walkthrough
+title: "Click & Collect: Product Offer Shipment Type subdomain"
 last_updated: Nov 02, 2023
 description: The Product Offer Shipment Type subdomain establishes the connection between product offers and shipment types.
 

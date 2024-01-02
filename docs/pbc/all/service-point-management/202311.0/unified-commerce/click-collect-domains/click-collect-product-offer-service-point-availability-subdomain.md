@@ -1,5 +1,5 @@
 ---
-title: Product Offer Service Point Availability subdomain
+title: "Click & Collect: Product Offer Service Point Availability subdomain"
 last_updated: Nov 02, 2023
 description: The Product Offer Service Point Availability subdomain provides the extension points for calculating and filtering data related to the availability of a product offer at a service point.
 template: concept-topic-template

@@ -1,7 +1,7 @@
 ---
-title: Service Points domain walkthrough
+title: "Click & Collect: Service Points domain"
 last_updated: Nov 02, 2023
-description:     to configure service points, addresses, stores, service types, and services.
+description: Service Points domain is used to configure service points, addresses, stores, service types, and services.
 template: concept-topic-template
 ---
 

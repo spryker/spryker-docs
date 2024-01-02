@@ -56,7 +56,7 @@ const routes = [
   { path: '/example/:id', render: ({ id }) => html`<my-example-page id=${id}></my-example-page>` },
 ];
 
-appBuilder().withProviders(provideLitRoutes({ routes }));
+appBuilder().withProviders([provideLitRoutes({ routes })]);
 ```
 {% info_block infoBox %}
 

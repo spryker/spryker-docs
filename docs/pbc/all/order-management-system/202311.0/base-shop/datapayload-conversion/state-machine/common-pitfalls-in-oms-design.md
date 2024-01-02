@@ -183,6 +183,6 @@ This will ensure that OMS processing will instantly stop after order creation.
 Actual processing of the OMS will happen after the next execution of the `oms:check-condition` command.
 ![img](https://ibb.co/mhtDLDd"><img src="https://i.ibb.co/p4Z0t0N/oms-Slow-order-placement.png))
 
-**Advancedв Solution:** Implement aforementioned solution, and override method \Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine making it empty.
+**Advanced Solution:** Implement aforementioned solution, and override method \Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine making it empty.
 Since the OMS process starts with a no-command transition, it will be automatically executed by the `oms:check-condition` command.
 **Important** it's not allowed to add `reserved` flag to the `new` state.

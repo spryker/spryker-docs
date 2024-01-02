@@ -46,7 +46,7 @@ The relationships indicate how entities interact with each other. For example, a
 
 To show the introduced changes and extensions, new entities and relations are painted in green, and existing ones are painted in white.
 
-# Entity-relationship diagram
+## Entity-relationship diagram
 
 The entity-relationship diagram shows how domain entities are mapped to database tables.
 

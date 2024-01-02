@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/approval-process-feature-overview
   - /docs/scos/user/features/201811.0/approval-process-feature-overview.html  
   - /docs/scos/user/features/202204.0/approval-process-feature-overview.html  
+  - /docs/pbc/all/cart-and-checkout/202212.0/approval-process-feature-overview.html
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
@@ -35,11 +36,11 @@ When a company user requests approval for their cart, the cart gets locked, and 
 
 Definitions that are used throughout the feature:
 
-| DEFINITION | DESCRIPTION |
-| --- | --- |
-| Approver | A person or manager who is responsible for approving the purchase order. |
-| Buyer | A person who has created and submitted the order. |
-| Quote | An entity containing all the content of the Approval Request. |
+| DEFINITION | DESCRIPTION                                                              |
+| ---------- | ------------------------------------------------------------------------ |
+| Approver   | A person or manager who is responsible for approving the purchase order. |
+| Buyer      | A person who has created and submitted the order.                        |
+| Quote      | An entity containing all the content of the Approval Request.            |
 
 {% endinfo_block %}
 
@@ -104,12 +105,12 @@ Prerequisites:
 
 The company has the following company users:
 
-| PERSON | ROLE | DESCRIPTION |
-| --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote A with the cart total €400.<br>The *Send cart for approval* permission is enabled. |
-| Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
-| Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
-| Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
+| PERSON                 | ROLE     | DESCRIPTION                                                                                                                                                 |
+| ---------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Company Employee       | Buyer    | Has the *Buy up to grand total* permission set to €500 and submits quote A with the cart total €400.<br>The *Send cart for approval* permission is enabled. |
+| Manager                | Approver | Has the *Approve up to grand total* permission for €600.                                                                                                    |
+| Head of the department | Approver | Has the *Approve up to grand total* permission set to €1000.                                                                                                |
+| Head of the department | Buyer    | Has the *Buy up to grand total* permission set to €1000.                                                                                                    |
 
 The approval process is optional if the buyer submits a quote with cart total that does not exceed the amount set in the *Buy up to grand total* permission. Thus, the buyer can either finish the checkout or send the request for approval to let the approver know about the upcoming expenses, for example. If the buyer decides to send the approval request, they can't complete the checkout until the request is approved.
 
@@ -119,12 +120,12 @@ Prerequisites:
 
 The company has the following company users:
 
-| PERSON | ROLE | DESCRIPTION |
-| --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* permission set to €500 and submits quote B with the cart total €600.<br> The *Send cart for approval* permission is enabled. |
-| Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
-| Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
-| Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
+| PERSON                 | ROLE     | DESCRIPTION                                                                                                                                                  |
+| ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Company Employee       | Buyer    | Has the *Buy up to grand total* permission set to €500 and submits quote B with the cart total €600.<br> The *Send cart for approval* permission is enabled. |
+| Manager                | Approver | Has the *Approve up to grand total* permission set to €600.                                                                                                  |
+| Head of the department | Approver | Has the *Approve up to grand total* permission set to €1000.                                                                                                 |
+| Head of the department | Buyer    | Has the *Buy up to grand total* permission set to €1000.                                                                                                     |
 
 Submitting quote B triggers an approval process because the quote total exceeds the amount set in the *Buy up to grand total* permission. To approve that request, an employee asks for approval from either the manager or the head of the department using the Approval widget and waits until the quote gets the Approved status. Once the request is approved, the employee can complete the checkout.
 
@@ -134,11 +135,11 @@ Prerequisites:
 
 The company has the following company users:
 
-| PERSON | ROLE | DESCRIPTION |
-| --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote C with the cart total €900.<br>The *Send cart for approval permission* is enabled. |
-| Manager | Approver  | Has the *Approve up to grand total* permission set to €600. |
-| Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
+| PERSON                 | ROLE     | DESCRIPTION                                                                                                                                          |
+| ---------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Company Employee       | Buyer    | Has the *Buy up to grand total* €500 permission and submits quote C with the cart total €900.<br>The *Send cart for approval permission* is enabled. |
+| Manager                | Approver | Has the *Approve up to grand total* permission set to €600.                                                                                          |
+| Head of the department | Approver | Has the *Approve up to grand total* permission set to €1000.                                                                                         |
 
 Quote C needs approval that has to be provided by the head of the department because the manager's approval limit is lower than the quote grand total. After the request has been approved by the head of the department, the buyer can complete the checkout.
 
@@ -148,11 +149,11 @@ Prerequisites:
 
 The company has the following company users:
 
-| PERSON | ROLE | DESCRIPTION |
-| --- | --- | --- |
-| Company Employee | Buyer | Has the *Buy up to grand total* €500 permission and submits quote D with the cart total €1200.<br>The *Send cart for approval* permission is enabled. |
-| Manager | Approver  | Has the *Approve up to grand total* permission for €600. |
-| Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
+| PERSON                 | ROLE     | DESCRIPTION                                                                                                                                           |
+| ---------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Company Employee       | Buyer    | Has the *Buy up to grand total* €500 permission and submits quote D with the cart total €1200.<br>The *Send cart for approval* permission is enabled. |
+| Manager                | Approver | Has the *Approve up to grand total* permission for €600.                                                                                              |
+| Head of the department | Approver | Has the *Approve up to grand total* permission set to €1000.                                                                                          |
 
 Quote D can't be processed because the quote total is higher than any Approver permissions set for that company. In such case, the only workaround is to edit the quote (decrease the quantity of the items or remove some items from the cart), split the cart into several carts, or create a new Approver role with a greater *Approve up to* permission.
 
@@ -203,7 +204,7 @@ Company users can perform the following actions using the Approval Process featu
 
 ## Related Developer documents
 
-|INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
-|---------|---------|
-| [Approval Process feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Approval Process + Shipment feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html)  |   |
+| INSTALLATION GUIDES                                                                                                                                                                                                | TUTORIALS AND HOWTOS                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Approval Process feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html)                | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html) |
+| [Install the Approval Process + Shipment feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html) |                                                                                                                                                                                                                                            |

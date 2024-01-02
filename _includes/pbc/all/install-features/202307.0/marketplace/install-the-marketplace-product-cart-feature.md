@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product + Cart feature into a Spryker project.
+This document describes how to install the Marketplace Product + Cart feature.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE  |
 |-|-|-|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
-| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)|
+| Marketplace Product | {{page.version}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html)|
 | Cart | {{page.version}} | [Cart Feature Integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### 1) Set up transfer objects

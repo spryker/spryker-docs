@@ -15,6 +15,7 @@ The App Composition Platform (ACP) lets Spryker Cloud Commerce Operating System 
 
 The following apps are supported:
 
+- [Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html), a Tax Compliance Platform
 - [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia/integrate-algolia.html), a Search Engine
 - [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html), a Consent Management Platform (CMP)
@@ -32,7 +33,7 @@ The ACP has the following advantages:
 
 ## Installing the ACP catalog
 
-With the latest Spryker product release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
+With the Spryker product release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
 
 You can access the ACP catalog only if you are a SCCOS customer and have additionally been enabled for ACP, which means that your SCCOS is properly set up and registered with the ACP. Check [ACP installation](/docs/acp/user/app-composition-platform-installation.html) for details on how to install and enable the ACP catalog for your version of SCCOS.
 

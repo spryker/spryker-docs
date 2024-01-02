@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API.
 
 ## Install feature core
 
@@ -17,7 +17,7 @@ Install the required features:
 | Glue API: Cart                         | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                                                             |
 | Glue API: Customer Account Management  | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Payments                     | {{page.version}} | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html)                                         |
-| Glue API: Shipment                     | {{page.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                            |
+| Glue API: Shipment                     | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                            |
 
 ### 1) Install the required modules using Composer
 
@@ -868,5 +868,5 @@ Integrate the following related features.
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)  |
+| Glue API: Shipment  | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |

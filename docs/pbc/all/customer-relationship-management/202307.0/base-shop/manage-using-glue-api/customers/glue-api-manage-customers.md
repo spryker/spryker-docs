@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
-  - /2021080/docs/managing-customers-via-glue-api
-  - /2021080/docs/en/managing-customers-via-glue-api
-  - /docs/managing-customers-via-glue-api
-  - /docs/en/managing-customers-via-glue-api
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/managing-customers.html
@@ -321,7 +317,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html).
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 

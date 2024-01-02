@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -14,9 +14,9 @@ Install the required features:
 | NAME                 | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                |
 |----------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                      |
-| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)                                                     |
-| Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md)                                                |
-| Product              | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                       |
+| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                                                     |
+| Inventory Management | {{site.version}} | [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)     |
+| Product              | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                       |
 | Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
 ### 1) Install the required modules using Composer

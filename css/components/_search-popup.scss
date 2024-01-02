@@ -1,118 +1,118 @@
 .search-popup {
-    flex: 1 1 auto;
-    max-width: 612px;
-    margin: 0 auto;
+  flex: 1 1 auto;
+  max-width: 612px;
+  margin: 0 auto;
 
-    @include media("<desktop") {
-        background: $white;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 2002;
-        display: none;
-        max-width: 100%;
-    }
+  @include media("<desktop") {
+      background: $white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2002;
+      display: none;
+      max-width: 100%;
+  }
 
-    @include media(">=desktop") {
-        display: block !important;
-    }
+  @include media(">=desktop") {
+      display: block !important;
+  }
 
-    &__inner {
-        @include media("<desktop") {
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-    }
+  &__inner {
+      @include media("<desktop") {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+      }
+  }
 
-    &__close {
-        display: none;
+  &__close {
+      display: none;
 
-        &:hover {
-            text-decoration: none;
-        }
+      &:hover {
+          text-decoration: none;
+      }
 
-        @include media("<desktop") {
-            display: block;
-            position: absolute;
-            top: 13px;
-            left: 5px;
-            flex: none;
-            z-index: 5;
-            color: $grey;
-            font-size: 18px;
-            padding: 5px;
-        }
+      @include media("<desktop") {
+          display: block;
+          position: absolute;
+          top: 13px;
+          left: 5px;
+          flex: none;
+          z-index: 5;
+          color: $grey;
+          font-size: 18px;
+          padding: 5px;
+      }
 
-        [class*="icon-"] {
-            display: block;
-        }
-    }
+      [class*="icon-"] {
+          display: block;
+      }
+  }
 
-    &__footer {
-        display: none;
+  &__footer {
+      display: none;
 
-        @include media("<desktop") {
-            display: block;
-            border-top: 1px solid $grey-lighten;
-        }
-    }
+      @include media("<desktop") {
+          display: block;
+          border-top: 1px solid $grey-lighten;
+      }
+  }
 
-    &__content {
-        @include media("<desktop") {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            overflow: auto;
-        }
-    }
+  &__content {
+      @include media("<desktop") {
+          flex: 1 1 auto;
+          display: flex;
+          flex-direction: column;
+          overflow: auto;
+      }
+  }
 
-    &__more {
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 500;
-        display: none;
-        text-align: center;
-        padding: 15px;
-    }
+  &__more {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      display: none;
+      text-align: center;
+      padding: 15px;
+  }
 
-    .aa-dropdown-menu {
-        @include media("<desktop") {
-            position: static !important;
-            margin: 0;
-            border: 0;
-            box-shadow: none;
-            border-radius: 0;
-        }
-    }
+  .aa-dropdown-menu {
+      @include media("<desktop") {
+          position: static !important;
+          margin: 0;
+          border: 0;
+          box-shadow: none;
+          border-radius: 0;
+      }
+  }
 
-    .main-header__search,
-    .search-section__panel {
-        @include media("<desktop") {
-            width: 100%;
-            position: static !important;
-            max-width: 100%;
-        }
+  .main-header__search,
+  .search-section__panel {
+      @include media("<desktop") {
+          width: 100%;
+          position: static !important;
+          max-width: 100%;
+      }
 
-        &-icon {
-            @include media("<desktop") {
-                display: none;
-            }
-        }
+      &-icon {
+          @include media("<desktop") {
+              display: none;
+          }
+      }
 
-        .search-input.aa-input {
-            @include media("<desktop") {
-                position: sticky !important;
-                top: 0 !important;
-                left: 0;
-                width: 100%;
-                background: $white !important;
-                border-color: transparent;
-                border-bottom-color: $grey-3;
-                color: $grey-darker;
-            }
-        }
-    }
+      .search-input.aa-input {
+          @include media("<desktop") {
+              position: sticky !important;
+              top: 0 !important;
+              left: 0;
+              width: 100%;
+              background: $white !important;
+              border-color: transparent;
+              border-bottom-color: $grey-3;
+              color: $grey-darker;
+          }
+      }
+  }
 }

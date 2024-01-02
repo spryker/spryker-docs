@@ -12,7 +12,11 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
-        - title: Security elease notes 202309.0
+        - title: Security release notes 202312.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+        - title: Release notes 202311.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html
+        - title: Security release notes 202309.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
         - title: Release notes 202307.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html
@@ -110,7 +114,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
       - title: Back Office for Marketplace Operator
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
-      - title: Merchant onborading
+      - title: Merchant onboarding
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
       - title: Marketplace Storefront
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html

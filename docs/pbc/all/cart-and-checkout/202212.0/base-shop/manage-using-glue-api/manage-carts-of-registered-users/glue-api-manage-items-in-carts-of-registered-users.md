@@ -14,8 +14,8 @@ redirect_from:
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
-  - title: Manage gift cards of registered users
-    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+  - title: "Glue API: Manage gift cards of registered users"
+    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
 
 This endpoint allows you to manage items in the carts of registered users by adding, changing, and deleting them.
@@ -32,7 +32,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 * [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Install the Configurable Bundle + Product Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 

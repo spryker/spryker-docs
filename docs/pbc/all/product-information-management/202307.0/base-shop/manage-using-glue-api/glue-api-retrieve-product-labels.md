@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-labels
 originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
-  - /2021080/docs/retrieving-product-labels
-  - /2021080/docs/en/retrieving-product-labels
-  - /docs/retrieving-product-labels
-  - /docs/en/retrieving-product-labels
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-product-labels.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:

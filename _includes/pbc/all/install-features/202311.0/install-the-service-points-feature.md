@@ -151,6 +151,7 @@ Make sure the following changes have been applied in transfer objects:
 | ServicePointCollectionResponse            | class | created | src/Generated/Shared/Transfer/ServicePointCollectionResponseTransfer            |
 | ServicePointCriteria                      | class | created | src/Generated/Shared/Transfer/ServicePointCriteriaTransfer                      |
 | ServicePointConditions                    | class | created | src/Generated/Shared/Transfer/ServicePointConditionsTransfer                    |
+| ServicePointSearchConditions              | class | created | src/Generated/Shared/Transfer/ServicePointSearchConditions                      |
 | ServicePointsBackendApiAttributes         | class | created | src/Generated/Shared/Transfer/ServicePointsBackendApiAttributesTransfer         |
 | ServiceTypesBackendApiAttributes          | class | created | src/Generated/Shared/Transfer/ServiceTypesBackendApiAttributesTransfer          |
 | ServicesBackendApiAttributes              | class | created | src/Generated/Shared/Transfer/ServicesBackendApiAttributesTransfer              |
@@ -269,7 +270,7 @@ sp2,Spryker Berlin Store,1
 | name      | ✓ | string    | Spryker Main Store | Name of the service point.              |
 | is_active | ✓ | bool      | 0                  | Defines if the service point is active. |
 
-**data/import/common/{{store}}/service_point_store.csv**
+**data/import/common/{store}/service_point_store.csv**
 
 ```csv
 service_point_key,store_name
@@ -293,11 +294,11 @@ sp2,,DE,Julie-Wolfthorn-Straße,1,,Berlin,10115
 | COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|---------------------------|----------------------------------|
 | service_point_key | ✓ | string    | sp1                       | Unique key of the service point. |
-| region_iso2_code  | optional  | string    | DE-BE                     | Region ISO2 code.               |
+| region_iso2_code  |   | string    | DE-BE                     | Region ISO2 code.               |
 | country_iso2_code | ✓ | string    | DE                        | Country ISO2 code.                |
 | address1          | ✓ | string    | Caroline-Michaelis-Straße | First line of address.            |
 | address2          | ✓ | string    | 8a                        | Second line of address.           |
-| address3          | optional  | string    | 12/1                      | Third line of address.            |
+| address3          |   | string    | 12/1                      | Third line of address.            |
 | city              | ✓ | string    | Berlin                    | City.                             |
 | zip_code          | ✓ | string    | 10115                     | Zip code.                         |
 
@@ -336,7 +337,7 @@ s2,sp2,pickup,1
     - data_entity: service-point
       source: data/import/common/common/service_point.csv
     - data_entity: service-point-store
-      source: data/import/common/{{store}}/service_point_store.csv
+      source: data/import/common/{store}/service_point_store.csv
     - data_entity: service-point-address
       source: data/import/common/common/service_point_address.csv
     - data_entity: service-type
@@ -366,6 +367,8 @@ use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDepe
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointDataImportPlugin;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointStoreDataImportPlugin;
 use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServicePointAddressDataImportPlugin;
+use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServiceTypeDataImportPlugin;
+use Spryker\Zed\ServicePointDataImport\Communication\Plugin\DataImport\ServiceDataImportPlugin;
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
@@ -757,7 +760,9 @@ namespace Pyz\Client\ServicePointSearch;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\PaginatedServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\SortedServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\StoreServicePointSearchQueryExpanderPlugin;
+use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\Query\ServiceTypesServicePointSearchQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointSearchResultFormatterPlugin;
+use Spryker\Client\ServicePointSearch\Plugin\Elasticsearch\ResultFormatter\ServicePointAddressRelationExcludeServicePointQueryExpanderPlugin;
 use Spryker\Client\ServicePointSearch\ServicePointSearchDependencyProvider as SprykerServicePointSearchDependencyProvider;
 
 class ServicePointSearchDependencyProvider extends SprykerServicePointSearchDependencyProvider
@@ -1162,10 +1167,10 @@ Verify the `service-type` synchronization plugin works correctly:
 
 1. To enable the Backend API, register the plugins:
 
-| PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                                                            |
-|--------------------------------------------|---------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| ServicePointsBackendResourcePlugin         | Registers the `service-points` resource.          |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
-| ServicePointAddressesBackendResourcePlugin | Registers the `service-point-addresses` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplicationGlueJsonApiConventionConnector |
+| PLUGIN                                     | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                              |
+|--------------------------------------------|---------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ServicePointsBackendResourcePlugin         | Registers the `service-points` resource.          |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication |
+| ServicePointAddressesBackendResourcePlugin | Registers the `service-point-addresses` resource. |               | \Spryker\Glue\ServicePointsBackendApi\Plugin\GlueBackendApiApplication |
 
 **src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
 
@@ -1276,7 +1281,7 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
+* `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
     ```json
         {
             "data": {
@@ -1289,8 +1294,8 @@ Make sure that you can send the following requests:
     ```
 
 * `GET https://glue-backend.mysprykershop.com/service-points/`
-* `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}`
-* `POST https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+* `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+* `POST https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
    ```json
       {
           "data": {
@@ -1307,7 +1312,7 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses/{{service-point-address-uuid}}`
+* `PATCH https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses/{% raw %}{{service-point-address-uuid}}{% endraw %}`
   ```json
      {
          "data": {
@@ -1324,10 +1329,10 @@ Make sure that you can send the following requests:
      }
   ```
 
-* `GET https://glue-backend.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+* `GET https://glue-backend.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
 
 * `GET https://glue-backend.mysprykershop.com/service-types/`
-* `GET https://glue-backend.mysprykershop.com/service-types/{{service-type-uuid}}`
+* `GET https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
 * `POST https://glue-backend.mysprykershop.com/service-types/`
    ```json
       {
@@ -1341,7 +1346,7 @@ Make sure that you can send the following requests:
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/service-types/{{service-type-uuid}}`
+* `PATCH https://glue-backend.mysprykershop.com/service-types/{% raw %}{{service-type-uuid}}{% endraw %}`
   ```json
       {
           "data": {
@@ -1354,7 +1359,7 @@ Make sure that you can send the following requests:
   ```
 
 * `GET https://glue-backend.mysprykershop.com/services/`
-* `GET https://glue-backend.mysprykershop.com/services/{{service-uuid}}`
+* `GET https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
 * `POST https://glue-backend.mysprykershop.com/services/`
    ```json
       {
@@ -1363,14 +1368,14 @@ Make sure that you can send the following requests:
               "attributes": {
                   "isActive": false,
                   "key": 123,
-                  "servicePointUuid": "{{service-point-uuid}}",
-                  "serviceTypeUuid": "{{service-type-uuid}}"
+                  "servicePointUuid": "{% raw %}{{service-point-uuid}}{% endraw %}",
+                  "serviceTypeUuid": "{% raw %}{{service-type-uuid}}{% endraw %}"
               }
           }
       }
    ```
 
-* `PATCH https://glue-backend.mysprykershop.com/services/{{service-uuid}}`
+* `PATCH https://glue-backend.mysprykershop.com/services/{% raw %}{{service-uuid}}{% endraw %}`
   ```json
       {
           "data": {
@@ -1462,12 +1467,51 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure you can send the following requests:
 
 * `GET https://glue.mysprykershop.com/service-points`
-* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}`
-* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}/service-point-addresses`
+* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}`
+* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}/service-point-addresses`
 
 Make sure that you can include the `service-point-addresses` resource in the `service-points` resource requests.
 * `GET https://glue.mysprykershop.com/service-points?include=service-point-addresses`
-* `GET https://glue.mysprykershop.com/service-points/{{service-point-uuid}}?include=service-point-addresses`
+* `GET https://glue.mysprykershop.com/service-points/{% raw %}{{service-point-uuid}}{% endraw %}?include=service-point-addresses`
+
+{% endinfo_block %}
+
+### 8) Set up the reorder process
+
+1. To enable reorder to work with service points, register the following plugins:
+
+| PLUGIN                                     | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                              |
+|--------------------------------------------|---------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ServicePointReorderItemSanitizerPlugin         | Cleans up service point data during the reorder process.  |               | \SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget |
+
+**src/Pyz/Yves/CustomerReorderWidget/CustomerReorderWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\CustomerReorderWidget;
+
+use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
+use SprykerShop\Yves\SalesServicePointWidget\Plugin\CustomerReorderWidget\ServicePointReorderItemSanitizerPlugin;
+
+
+class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CustomerReorderWidgetExtension\Dependency\Plugin\ReorderItemSanitizerPluginInterface>
+     */
+    protected function getReorderItemSanitizerPlugins(): array
+    {
+        return [
+            new ServicePointReorderItemSanitizerPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure sales service points are empty for order items during the reorder process.
 
 {% endinfo_block %}
 

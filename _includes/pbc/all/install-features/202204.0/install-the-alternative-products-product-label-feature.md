@@ -1,7 +1,7 @@
-This document describes how to integrate the [Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html) feature into a Spryker project.
+This document describes how to install the [Product Labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html) feature.
 
 
-This document describes how to integrate the Alternative Products + Product Label feature into a Spryker project.
+This document describes how to install the Alternative Products + Product Label feature.
 
 ## Install feature core
 

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature into a Spryker project. 
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature. 
 
 {% info_block warningBox %}
 
@@ -23,7 +23,7 @@ Install the required features:
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Cart | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Checkout |  {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
-| Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 | Prices | {{page.version}}  | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 | Tax | {{page.version}} | |
 

@@ -171,3 +171,18 @@ Event does not appear as manual unless the previous command execution fails with
 Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
+
+## OnEnter from the New
+
+**Issue:** Slow order placement when launching OMS processing.
+
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png))
+
+**Solution:** Create one additional step, i.e. `processing` after `new` and add a transition without conditions and commands.
+This will ensure that OMS processing will instantly stop after order creation.
+Actual processing of the OMS will happen after the next execution of the `oms:check-condition` command.
+![img](https://ibb.co/mhtDLDd"><img src="https://i.ibb.co/p4Z0t0N/oms-Slow-order-placement.png))
+
+**Advancedв Solution:** Implement aforementioned solution, and override method \Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine making it empty.
+Since the OMS process starts with a no-command transition, it will be automatically executed by the `oms:check-condition` command.
+**Important** it's not allowed to add `reserved` flag to the `new` state.

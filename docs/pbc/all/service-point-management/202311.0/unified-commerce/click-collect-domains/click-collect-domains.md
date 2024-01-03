@@ -12,7 +12,9 @@ To implement this functionality effectively, retailers create product offers in 
 ## Service points
 
 * A *service point* is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, like a warehouse or a physical store. The definition of a service point ultimately depends on the services it provides.
+
 * A *Service point address* is the address of a location where customers can pick up their orders. For example, if a customer selects a locker as a service point to pick up their order, they will be given the address of a specific locker location to pick up their order from.
+
 * A *service type* is a classification of services that a business offers to its customers. Service types are determined by the nature of the business. Service type examples:
   * Pickup service
   * Return service
@@ -22,14 +24,13 @@ To implement this functionality effectively, retailers create product offers in 
 * A *service* represents a specific service type that is provided at a specific service point. For example, a pickup service at a retail location located at Julie-Wolfthorn-Straße 1, 10115, Berlin.
 
 
-# Shipment Type
+## Shipment type
 
-Shipment type refers to the different options available to customers for receiving their orders.
-Some common shipment types include:
-* Home Delivery: This option allows customers to get their order delivered to the address they filled in during checkout.
-* In-Store Pickup (or Click and Collect): This option allows customers to pick up their orders from a physical store or service point location, typically within a few hours to a day after the order is placed.
-  Shipment method, on the other hand, refers to how the product is physically transported from the seller to the customer. Examples of shipment methods are Next Day Delivery or Express Delivery.
-  Shipment type is a logical grouping of the shipment methods.
+A *shipment type* is a way in which a customer receives an order after placing it. Shipment type examples:
+* Home delivery: products are delivered to the customer's residence.
+* In-store pickup: customer places an order online and picks it up at a selected physical store.
+* Curbside pickup: customer places an order online and drives the the selected physical store. They park at a designated area, and the store's associate brings out the order directly to the car.
+* Locker pickup: customer places an order online and picks it up from a selected secure locker using a key or code provided by the store.
 
 ## Domain model
 

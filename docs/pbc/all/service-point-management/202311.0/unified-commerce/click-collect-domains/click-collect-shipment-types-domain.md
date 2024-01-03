@@ -52,7 +52,7 @@ Expands shipment type storage collection with additional data before publishing 
 The following example plugin expands shipment types with a service type: `\Spryker\Zed\ShipmentTypeServicePointStorage\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin`.
 
 
-## 5. Extension point for expanding Shipment Type data after retrieving from the Storage
+## Extension point for expanding Shipment Type data after retrieving from the Storage
 
 Expands shipment type storage collection with additional data after retrieving it from the Storage: `\Spryker\Client\ShipmentTypeStorageExtension\Dependency\Plugin\ShipmentTypeStorageExpanderPluginInterface`.
 

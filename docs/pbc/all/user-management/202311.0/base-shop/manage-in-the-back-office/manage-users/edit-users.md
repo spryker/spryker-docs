@@ -54,6 +54,6 @@ The following table describes the attributes you enter and select when editing u
 | LAST NAME | User's last name. |
 | ASSIGNED GROUPS | The user groups this user is assigned to. User groups define what areas and actions the user has access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) |
-| WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
+| WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-feature-overview.html). |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |
 | STATUS | Defines if the user can access the Back Office. |

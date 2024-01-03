@@ -25,7 +25,7 @@ npm i
 ```
 
 
-2. Optional: To install [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{site.version}}/unified-commerce/fulfillment-app-overview.html) instead of Composable Storefront, checkout the `fulfillment` branch from the boilerplate:
+2. Optional: To install [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{site.version}}/unified-commerce/fulfillment-app-feature-overview.html) instead of Composable Storefront, checkout the `fulfillment` branch from the boilerplate:
 
 ```shell
 git checkout fulfillment

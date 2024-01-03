@@ -1619,9 +1619,8 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 
-<a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

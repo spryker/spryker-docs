@@ -1569,10 +1569,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
-              - title: Import and export data
-                nested:
-                  - title: "Import file details: glossary.csv"
-                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -1585,14 +1581,32 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+          - title: Import and export data
+            nested:
+              - title: "Import file details: glossary.csv"
+                url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Add translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
-          - title: Retrieve store configuration using Glue API
-            url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve store configuration using Glue API
+                url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+              - title: Manage push notification providers
+                nested:
+                  - title: Add push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html
+                  - title: Retrieve push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html
+                  - title: Update push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html
+                  - title: Delete push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html
+              - title: Add push notification subscriptions
+                url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
           - title: Third-party integrations
             nested:
               - title: Customer service

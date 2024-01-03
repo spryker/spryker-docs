@@ -116,7 +116,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="retrieve-a-concrete-product-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
 

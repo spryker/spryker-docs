@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-contribution-guide
 originalArticleId: d5ded6f2-5bb9-4288-bc96-3fabf7e32c8f
 redirect_from:
-  - /2021080/docs/code-contribution-guide
-  - /2021080/docs/en/code-contribution-guide
-  - /docs/code-contribution-guide
-  - /docs/en/code-contribution-guide
-  - /v6/docs/code-contribution-guide
-  - /v6/docs/en/code-contribution-guide
-  - /v5/docs/code-contribution-guide
-  - /v5/docs/en/code-contribution-guide
+  - /docs/scos/dev/code-contribution-guide.html
 ---
 
 {% info_block infoBox %}
@@ -31,7 +24,7 @@ Spryker uses different licenses: our proprietary licenses and common open-source
 - [spryker-eco](https://github.com/spryker-eco)
 - [spryker-sdk](https://github.com/spryker-sdk)
 - [spryker-middleware](https://github.com/spryker-middleware)
- 
+
 Read `CONTRIBUTING.md` of a module before opening a PR.
 
 ## Opening pull requests

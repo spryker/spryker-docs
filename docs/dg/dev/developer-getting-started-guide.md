@@ -6,19 +6,9 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
-  - /v1/docs/en/about-the-development-guide
-  - /v4/docs/installation-guide-b2c
-  - /v4/docs/en/installation-guide-b2c
-  - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b  -
-  - /2021080/docs/installation-guide-b2c
-  - /2021080/docs/en/installation-guide-b2c
-  - /docs/installation-guide-b2c
-  - /docs/en/installation-guide-b2c
-  - /dev-getting-started.htm
-  - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
+  - /docs/scos/dev/developer-getting-started-guide.html
 ---
 
 This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).

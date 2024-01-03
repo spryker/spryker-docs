@@ -5,8 +5,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/code-generator
 originalArticleId: 67355fa9-f508-4c41-90a3-3e4d982b2923
 redirect_from:
-  - /v1/docs/code-generator
-  - /v1/docs/en/code-generator
   - /docs/scos/dev/sdk/201811.0/code-generator.html
   - /docs/scos/dev/sdk/201903.0/code-generator.html
   - /docs/scos/dev/sdk/201907.0/code-generator.html
@@ -14,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/code-generator.html
   - /docs/scos/dev/sdk/202009.0/code-generator.html
   - /docs/scos/dev/sdk/202108.0/code-generator.html
+  - /docs/scos/dev/code-generator.html
 related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html

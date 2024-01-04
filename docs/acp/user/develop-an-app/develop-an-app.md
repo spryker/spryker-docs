@@ -84,10 +84,6 @@ Now, you have done the groundwork that enables you to develop an App. You create
 
 ## Start the local development environment
 
-### Update default local host name
-
-The Mini-Framework already comes with the predefined Docker configuration. Change the `deploy.dev.yml` by replacing `glue-backend.de.spryker.local` with `my-app.de.spryker.local`. After that, run the command provided in the next section at the root of your new repository.
-
 ### Boot and up your environment
 
 Clone spryker docker sdk in project directory:
@@ -115,7 +111,7 @@ You will now see that your app boilerplate code is up and running.
 
 - Make sure that all the command are executed without errors and the tests are successfully passed.
 - Check that docker containers are started by using the `docker/sdk ps` command.
-- Make sure that you added `my-app.de.spryker.local` into yours `/etc/hosts`
+- Make sure that you added `my-app.spryker.local` into yours `/etc/hosts`
 
 ## Add the app manifest files
 
@@ -211,7 +207,7 @@ This enables the two required endpoints for the App Catalog Communication.
 
 ### Step validation
 
-- The new routes you can check in [Test the endpoints](#test-the-endpoints) step.
+- The new routes you can check in [Test the endpoints](#test-the-endpoints) after the next two steps.
 
 ## Build the transfer objects
 
@@ -236,7 +232,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 ### Test the /private/configure endpoint
 
 ```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/configure' \
+curl --location --request POST 'http://my-app.spryker.local/private/configure' \
 --header 'Content-Type: application/vnd.api+json' \
 --header 'Accept: application/vnd.api+json' \
 --header 'Accept-Language: en-US, en;q=0.9,*;q=0.5' \
@@ -256,7 +252,7 @@ Now, you can check if your database contains the newly created configuration in 
 ### Test the /private/disconnect endpoint
 
 ```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/disconnect' \
+curl --location --request POST 'http://my-app.spryker.local/private/disconnect' \
 --header 'Content-Type: application/vnd.api+json' \
 --header 'Accept: application/vnd.api+json' \
 --header 'Accept-Language: de-DE, en;q=0.9,*;q=0.5' \

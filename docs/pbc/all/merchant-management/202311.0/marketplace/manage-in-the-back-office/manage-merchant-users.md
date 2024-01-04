@@ -9,71 +9,43 @@ redirect_from:
 
 A merchant user is a user that performs tasks on behalf of the merchant in the Merchant Portal. Marketplace administrator can manage merchant users in the Back Office.
 
----
 
 ## Prerequisites
 
-To start managing merchant users, do the following:
+1. Go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
+2. Next to the merchant you want to create or edit a merchant user for, click **Edit**.
+    This opens the **Edit Merchant: {Merchant_ID}** page.
+3. Click the **Users** tab.    
 
-1. Navigate to the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
-2. Next to the merchant you want to create a merchant user for, click **Edit** in the **Actions** column. You are taken to the **Edit Merchant: [Merchant ID]** page.
+## Add merchant users
 
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
-
-## Creating a merchant user
-
-{% info_block infoBox "Info" %}
-
-To create a merchant user, create a merchant first.
-
-{% endinfo_block %}
-
-To create a merchant user, do the following:
-
-1. On the **Edit Merchant [Merchant ID]** page, go to the **Users** tab.
-
-2. Click **+Add New User**.
-
-3. Fill in the required information.
-
-4. Click **Create**.
+1. Click **Add Merchant User**.
+2. On the **CREATE MERCHANT USER** page, enter the following details:
+  * **E-MAIL**
+  * **FIRST NAME**
+  * **LAST NAME**  
+3. Click **Create**.
+    This opens the **Edit Merchant: {MERCHANT_ID}** page with a success message displayed. The merchant user is displayed in the list.
 
 By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 
-### Reference information: Creating a merchant user
-
-This section contains the attributes description you see when creating a merchant user.
-
-#### Users tab
-
-On the **Users** tab, you see a table with all the merchant users available for the merchant. The following information is included in the table:
-
-* Merchant user ID
-* Email
-* First Name
-* Last Name
-* Merchant user status
-* Actions
-
-![merchant-users-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/merchant-users-page.png)
-
-#### Create Merchant user page
-
-The following table describes the attributes you enter and select when creating merchant users.
-
 | ATTRIBUTE | DESCRIPTION | REQUIRED |
 |-|-|-|
-| Email | Text field where you specify the email address of the merchant user. The email with the reset password instructions will be sent to this email address.  | &check; |
-| First name | Text field where you specify the first name of the merchant user. | &check; |
-| Last name | Text field where you specify the last name of the merchant user. | &check; |
+| E-MAIL | This email address is used as a username to log into the Merchant Portal.  |
 
-## Editing the merchant user
+## Edit merchant users
 
-To edit a merchant user, do the following:
+1. Next to the merchant user you want to edit, click **Edit**.
 
-1. On the **Edit Merchant** page, on the **Users** tab, click **Edit** for a merchant user you want to edit.
+2. On the **Edit Merchant user** page, enter any of the following:
+  * **E-MAIL**
+  * **FIRST NAME**
+  * **LAST NAME**
+3. Select a **STATUS**.
+4. Click **Save**
+    This opens the **Edit Merchant: {MERCHANT_ID}** page with a success message displayed. The merchant user is displayed in the list.
 
-2. On the **Edit Merchant user** page, edit the merchant user details.
+    
 
 ### Reference information: Editing a merchant user
 
@@ -113,6 +85,8 @@ The merchant user gets automatically deactivated when the merchant gets denied.
 {% endinfo_block %}
 
 Once the merchant user is created and activated, they can log in to the Merchant Portal.
+
+
 
 ## Deleting merchant users
 

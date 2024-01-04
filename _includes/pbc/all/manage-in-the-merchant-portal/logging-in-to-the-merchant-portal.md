@@ -3,32 +3,13 @@ This document describes how to log into the Merchant portal.
 
 ## Prerequisites
 
-1. [Create a merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#creating-a-merchant-user)
-2. [Activate the merchant user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users).
-
-Each section in this guide contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+In the Back Office, create and activate a merchant account in **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**. For more details, see [Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)
 
 {% info_block warningBox %}
 
-A [marketplace administrator](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) cannot log in to Merchant Portal.
+[Marketplace administrators](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) can't log into Merchant Portal.
 
 {% endinfo_block %}
-
-## Creating a password
-
-Once the merchant user is [activated](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users), an email with the password reset link is sent. To reset the password:
-
-1. Click the link provided in the email. The **Reset Password** page opens.
-
-   ![Reset password page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Login+and+logout/set-password-for-merchant-portal.png)
-
-2. In the **Password** field, enter the new password.
-
-3. In **Repeat Password**, enter the new password again to confirm it.
-
-4. Click **Reset** to update the password.
-
-The password is reset and you can use it for login.
 
 ## Logging in
 
@@ -36,15 +17,6 @@ To log in to the Merchant Portal, on the login page, enter your email and passwo
 
 ![Merchant Portal login](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Login+and+logout/merchant-portal-login.png)
 
-
-### Reference information: Logging in to the Merchant Portal
-
-This section describes the attributes you enter when logging into the Merchant Portal.
-
-| ATTRIBUTE | DESCRIPTION  |
-| --------- | --------------- |
-| Email     | Email address associated with the merchant user. The Password Reset link is sent to this email. |
-| Password  | Password for the merchant user account.                      |
 
 ## Restoring the password
 

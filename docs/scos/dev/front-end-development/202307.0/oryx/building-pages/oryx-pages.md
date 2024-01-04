@@ -82,7 +82,7 @@ import { provideExperienceData } from "@spryker-oryx/experience";
 import { customPage } from "./custom/page";
 
 export const app = appBuilder()
-  .withProviders(provideExperienceData(customData))
+  .withProviders([provideExperienceData(customData)])
   .create();
 ```
 
@@ -132,7 +132,7 @@ import { appBuilder } from "@spryker-oryx/application";
 import { provideExperienceData } from "@spryker-oryx/experience";
 
 export const app = appBuilder()
-  .withProviders(
+  .withProviders([
     provideExperienceData({
       merge: {
         selector: "#home-page",
@@ -140,7 +140,7 @@ export const app = appBuilder()
       type: "oryx-content-text",
       content: { data: { text: "<h1>Home page</h1>" } },
     })
-  )
+  ])
   .create();
 ```
 
@@ -165,7 +165,7 @@ import { appBuilder } from "@spryker-oryx/application";
 import { provideExperienceData } from "@spryker-oryx/experience";
 
 export const app = appBuilder()
-  .withProviders(
+  .withProviders([
     provideExperienceData({
       merge: {
         selector: "site-logo",
@@ -179,7 +179,7 @@ export const app = appBuilder()
         },
       },
     })
-  )
+  ])
   .create();
 ```
 

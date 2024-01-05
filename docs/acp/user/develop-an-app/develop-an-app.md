@@ -86,7 +86,7 @@ Now, you have done the groundwork that enables you to develop an App. You create
 
 ### Boot and up your environment
 
-Clone spryker docker sdk in project directory:
+Clone Spryker Docker SDK in project directory:
 
 ```bash
 git clone git@github.com:spryker/docker-sdk.git docker
@@ -111,7 +111,7 @@ You will now see that your app boilerplate code is up and running.
 
 - Make sure that all the command are executed without errors and the tests are successfully passed.
 - Check that docker containers are started by using the `docker/sdk ps` command.
-- Make sure that you added `my-app.spryker.local` into yours `/etc/hosts`
+- Make sure that `my-app.spryker.local` domain is resolved by using `ping my-app.spryker.local` command
 
 ## Add the app manifest files
 
@@ -153,7 +153,7 @@ The `spryker/message-broker-aws` module installs the necessary plugins for sendi
 
 ### Step validation
 
-- Make sure that new packages are added in `composer.json` and composer command is executed without errors
+- Make sure that new packages are added in `composer.json` and composer command is executed without errors.
 
 ## Set up the message broker
 
@@ -247,7 +247,9 @@ curl --location --request POST 'http://my-app.spryker.local/private/configure' \
 }'
 ```
 
-Now, you can check if your database contains the newly created configuration in the `spy_app_config` table. The database credentials you can find in `deploy.dev.yml` file.
+### Step validation
+
+You can check if your database contains the newly created configuration in the `spy_app_config` table. The database credentials you can find in `deploy.dev.yml` file.
 
 ### Test the /private/disconnect endpoint
 
@@ -260,11 +262,9 @@ curl --location --request POST 'http://my-app.spryker.local/private/disconnect' 
 --data-raw ''
 ```
 
-Now, check if the previously created configuration in the spy_app_config table has been removed from your database.
-
 ### Step validation
 
-- Make sure that firstly the new record is created in `spy_app_config` table and after it's removed.
+- Now you can check if the previously created configuration in the spy_app_config table has been removed from your database.
 
 ## Implement business logic
 

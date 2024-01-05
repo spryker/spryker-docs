@@ -992,8 +992,6 @@ In case when shipping address is provided, the error message will be the followi
 
 {% endinfo_block %}
 
-Ensure that the plugins work correctly:
-
 ## Install related features
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                      |

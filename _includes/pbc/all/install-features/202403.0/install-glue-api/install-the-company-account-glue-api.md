@@ -12,15 +12,15 @@ This document describes how to install the Company Account feature API.
 
 To start the feature integration, overview and install the necessary features:
 
-| FEATURE OR GLUE API  | VERSION    | INSTALLATION GUIDE    |
-| ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| FEATURE OR GLUE API                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
+|---------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue API: Spryker Core                | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                    |
+| Company Account                       | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)   |
 | Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| UUID Generation Console               | {{page.version}}  |  |
-| Glue API: Shipment                    | {{page.version}}  | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) |
-| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                       |
+| UUID Generation Console               | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html)  |
+| Glue API: Shipment                    | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                              |
+| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)                                                  |
 
 
 
@@ -339,6 +339,16 @@ Activate the following plugins:
 | CompanyBusinessUnitAddressQuoteMapperPlugin                                 | Maps the REST request billing company business unit address information to quote.                                                                                                                                          |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi                                                                |
 | CompanyBusinessUnitAddressProviderStrategyPlugin                            | Based on the UUID provided in`RestAddressTransfer.idCompanyBusinessUnitAddress`, finds a company business unit address. If it was found,  returns `AddressTransfer` filled with company business unit address information. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\ShipmentsRestApi                                                               |
 | CompanyBusinessUnitUuidRestAddressResponseMapperPlugin                      | Maps `AddressTransfer.companyBusinessUnitUuid` to `RestAddressTransfer.idCompanyBusinessUnitAddress` if exists.                                                                                                            |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\ShipmentsRestApi                                                                            |
+| OauthPermissionStoragePlugin                                                | Reads permission collection from the authorization header.                                                                                                                                                                 |               | Spryker\Client\OauthPermission\Plugin\Permission                                                                                                    |
+| DefaultBillingAddressMapperPlugin                                           | Maps and replaces defaultBillingAddress id to uuid in the `RestCompanyBusinessUnitAttributesTransfer`.                                                                                                                     |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\CompanyBusinessUnitsRestApi                                                                 |
+| PermissionStoragePlugin                                                     | Reads permission collection from customer.                                                                                                                                                                                 |               | Spryker\Client\CompanyRole\Plugin                                                                                                                   |
+| CompanyRoleCreatePlugin                                                     | Creates company role permission relations.                                                                                                                                                                                 |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
+| PermissionCustomerExpanderPlugin                                            | Collects related to a company user permissions from all assigned roles and set it to customer.                                                                                                                             |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
+| PermissionStoragePlugin                                                     | Collects related to a company user permissions from all assigned roles.                                                                                                                                                    |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
+| AssignDefaultCompanyUserRolePlugin                                          | Assigns default role to company user after it was created.                                                                                                                                                                 |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| AssignRolesCompanyUserPostCreatePlugin                                      | Saves company user if it has at least one assigned company role.                                                                                                                                                           |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| AssignRolesCompanyUserPostSavePlugin                                        | Saves company user it has at least one assigned company role.                                                                                                                                                              |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| CompanyRoleCollectionHydratePlugin                                          | Hydrates company user transfer with its assigned company roles.                                                                                                                                                            |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
 
 
 
@@ -808,6 +818,198 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
     }
 }
 
+```
+
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Permission;
+
+use Spryker\Client\OauthPermission\Plugin\Permission\OauthPermissionStoragePlugin;
+use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+
+class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\PermissionExtension\Dependency\Plugin\PermissionStoragePluginInterface>
+     */
+    protected function getPermissionStoragePlugins(): array
+    {
+        return [
+            new OauthPermissionStoragePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/CompanyBusinessUnitsRestApi/CompanyBusinessUnitsRestApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\CompanyBusinessUnitsRestApi;
+
+use Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\CompanyBusinessUnitsRestApi\DefaultBillingAddressMapperPlugin;
+use Spryker\Glue\CompanyBusinessUnitsRestApi\CompanyBusinessUnitsRestApiDependencyProvider as SprykerCompanyBusinessUnitsRestApiDependencyProvider;
+
+class CompanyBusinessUnitsRestApiDependencyProvider extends SprykerCompanyBusinessUnitsRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\CompanyBusinessUnitsRestApiExtension\Dependency\Plugin\CompanyBusinessUnitMapperPluginInterface>
+     */
+    protected function getCompanyBusinessUnitMapperPlugins(): array
+    {
+        return [
+            new DefaultBillingAddressMapperPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Client/Permission/PermissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\Permission;
+
+use Spryker\Client\CompanyRole\Plugin\PermissionStoragePlugin;
+use Spryker\Client\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+
+class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\PermissionExtension\Dependency\Plugin\PermissionStoragePluginInterface>
+     */
+    protected function getPermissionStoragePlugins(): array
+    {
+        return [
+            new PermissionStoragePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Company/CompanyDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Company;
+
+use Spryker\Zed\Company\CompanyDependencyProvider as SprykerCompanyDependencyProvider;
+use Spryker\Zed\CompanyRole\Communication\Plugin\CompanyRoleCreatePlugin;
+
+class CompanyDependencyProvider extends SprykerCompanyDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyExtension\Dependency\Plugin\CompanyPostCreatePluginInterface>
+     */
+    protected function getCompanyPostCreatePlugins(): array
+    {
+        return [
+            new CompanyRoleCreatePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Customer;
+
+use Spryker\Zed\CompanyRole\Communication\Plugin\PermissionCustomerExpanderPlugin;
+use Spryker\Zed\Customer\CustomerDependencyProvider as SprykerCustomerDependencyProvider;
+
+class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\Customer\Dependency\Plugin\CustomerTransferExpanderPluginInterface>
+     */
+    protected function getCustomerTransferExpanderPlugins(): array
+    {
+        return [
+            new PermissionCustomerExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Permission;
+
+use Spryker\Zed\CompanyRole\Communication\Plugin\PermissionStoragePlugin;
+use Spryker\Zed\Permission\PermissionDependencyProvider as SprykerPermissionDependencyProvider;
+
+class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\PermissionExtension\Dependency\Plugin\PermissionStoragePluginInterface>
+     */
+    protected function getPermissionStoragePlugins(): array
+    {
+        return [
+            new PermissionStoragePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CompanyUser;
+
+use Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser\AssignDefaultCompanyUserRolePlugin;
+use Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser\AssignRolesCompanyUserPostCreatePlugin;
+use Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser\AssignRolesCompanyUserPostSavePlugin;
+use Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser\CompanyRoleCollectionHydratePlugin;
+use Spryker\Zed\CompanyUser\CompanyUserDependencyProvider as SprykerCompanyUserDependencyProvider;
+
+class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyUserExtension\Dependency\Plugin\CompanyUserHydrationPluginInterface>
+     */
+    protected function getCompanyUserHydrationPlugins(): array
+    {
+        return [
+            new CompanyRoleCollectionHydratePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\CompanyUserExtension\Dependency\Plugin\CompanyUserPostCreatePluginInterface>
+     */
+    protected function getCompanyUserPostCreatePlugins(): array
+    {
+        return [
+            new AssignRolesCompanyUserPostCreatePlugin(),
+            new AssignDefaultCompanyUserRolePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\CompanyUserExtension\Dependency\Plugin\CompanyUserPostSavePluginInterface>
+     */
+    protected function getCompanyUserPostSavePlugins(): array
+    {
+        return [
+            new AssignRolesCompanyUserPostSavePlugin(),
+        ];
+    }
+}
 ```
 
 

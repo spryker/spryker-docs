@@ -4,31 +4,30 @@ description: How to test the Glue Backend API
 template: howto-guide-template
 ---
 
-This guide explains how to set up and run Glue Backend API end-to-end tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the names accordingly for different project namespaces or modules.
+This document describes how to set up and run Glue Backend API end-to-end (E2E) tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the names according to your project namespaces and modules.
 
 ## Prerequisites
 
-Ensure the following prerequisites are met:
-
-1. Spryker Testify version 3.52.0 or later is installed.
-- To verify the installation status and version of Spryker Testify, run the following command:
+1. Install or update Spryker Testify to version 3.52.0 or higher:
+- Check the current installed version:
   ```bash
   composer info spryker/testify
   ```
-- To install Spryker Testify, run the following command:
+- Install Spryker Testify:
   ```bash
   composer require --dev spryker/testify:"^3.52.0"
   ```
-- To update Spryker Testify, run the following command:
+- Update Spryker Testify:
   ```bash
   composer update spryker/testify:"^3.52.0"
   ```
 
-2. To validate the response body against OpenAPI schema, you need to generate the schema first. For details, see [Document Glue API Endpoints](/docs/scos/dev/glue-api-guides/{{site.version}}/document-glue-api-endpoints.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
 
-## Testing the Glue Backend API endpoint
 
-### 1. Add required configuration to your project `config_default.php` file
+## Configure the project and set up test files
+
+1. Add the required configuration to the project:
 
 **config/Shared/config_default.php**
 
@@ -40,7 +39,7 @@ use Spryker\Shared\Testify\TestifyConstants;
 if (class_exists(TestifyConstants::class)) {
     $sprykerGlueBackendHost = getenv('SPRYKER_GLUE_BACKEND_HOST');
     $sprykerGlueBackendPort = (int)(getenv('SPRYKER_GLUE_BACKEND_PORT')) ?: 443;
-    
+
     $config[TestifyConstants::GLUE_BACKEND_API_DOMAIN] = sprintf(
         'https://%s%s',
         $sprykerGlueBackendHost,
@@ -49,11 +48,11 @@ if (class_exists(TestifyConstants::class)) {
 }
 ```
 
-### 2. Prepare a codeception test files
+2. Create `codeception.yml` with the configuration required for your E2E test:
 
-#### 1. Create the `codeception.yml` with configuration required for your E2E test:
 
-**tests/PyzTest/Glue/ModuleBackend/codeception.yml**
+<details>
+  <summary>tests/PyzTest/Glue/ModuleBackend/codeception.yml</summary>  
 
 ```yaml
 namespace: PyzTest\Glue\ModuleBackend
@@ -95,15 +94,15 @@ suites:
                     cleanup: false
 ```
 
-#### 2. Build Codeception
+</details>
 
-Run the following Codeception build command:
+3. Build Codeception:
 
 ```bash
 docker/sdk testing codecept build -c tests/PyzTest/Glue/ModuleBackend
 ```
 
-Adjust generated actor class so it extends `\SprykerTest\Glue\Testify\Tester\BackendApiEndToEndTester`:
+4. Adjust the generated actor class so it extends `\SprykerTest\Glue\Testify\Tester\BackendApiEndToEndTester`:
 
 **tests/PyzTest/Glue/ModuleBackend/_support/ModuleBackendApiTester.php**
 
@@ -135,11 +134,10 @@ class ModuleBackendApiTester extends BackendApiEndToEndTester
 
 ```
 
-#### 3. Create fixtures
+5. To create fixtures, introduce the fixtures class which generates the data required for tests:
 
-1. Introduce the fixtures class which will generated all data required for tests
-
-**tests/PyzTest/Glue/ModuleBackend/JsonApi/Fixtures/ModuleBackendJsonApiFixtures.php**
+<details>
+  <summary>tests/PyzTest/Glue/ModuleBackend/JsonApi/Fixtures/ModuleBackendJsonApiFixtures.php</summary>  
 
 ```php
 <?php
@@ -210,22 +208,25 @@ class ModuleBackendJsonApiFixtures implements FixturesBuilderInterface, Fixtures
             UserTransfer::PASSWORD => static::TEST_USER_PASSWORD,
             UserTransfer::USERNAME => static::TEST_USER_NAME,
         ]);
-        
+
         // Override encrypted password with plain password for further testing purposes.
         $this->userTransfer->setPassword(static::TEST_USER_PASSWORD);
     }
 }
 ```
 
-2. Run the following command to generate fixtures:
+</details>
+
+6. Generate fixtures:
 
 ```bash
 docker/sdk testing codecept fixtures
 ```
 
-#### 4. Create the test cest file
+7. Create the test cest file:
 
-**tests/PyzTest/Glue/ModuleBackend/JsonApi/ModuleBackendJsonApiCest.php**
+<details>
+  <summary>tests/PyzTest/Glue/ModuleBackend/JsonApi/ModuleBackendJsonApiCest.php</summary>
 
 ```php
 <?php
@@ -278,7 +279,7 @@ class ModuleBackendJsonApiCest
         // Arrange
         $oauthResponseTransfer = $I->haveAuthorizationToBackendAPI($this->fixtures->getUserTransfer());
         $I->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
-        
+
         // Act
         $I->sendGET(
             $I->formatUrl(ModuleRestApiConfig::RESOURCE_MODULE),
@@ -292,12 +293,14 @@ class ModuleBackendJsonApiCest
 }
 ```
 
-#### 5. Run the test
+</details>
 
-Run the following command to execute the test:
+## Run the test
+
+Execute the test:
 
 ```bash
 docker/sdk testing codecept run -c tests/PyzTest/Glue/ModuleBackend
 ```
 
-The result of each individual test will be displayed once the testing process is complete.
+Once the testing process is complete, the result of each test is reutrned.

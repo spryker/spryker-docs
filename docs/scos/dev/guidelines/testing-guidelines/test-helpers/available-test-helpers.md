@@ -6,16 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/available-test-helpers
 originalArticleId: 04ad76c7-5d63-4db8-aa96-7446cd8c0541
 redirect_from:
-  - /2021080/docs/available-test-helpers
-  - /2021080/docs/en/available-test-helpers
-  - /docs/available-test-helpers
-  - /docs/en/available-test-helpers
-  - /v6/docs/available-test-helpers
-  - /v6/docs/en/available-test-helpers
-  - /v5/docs/twig
-  - /v5/docs/en/twig
-  - /v5/docs/propel
-  - /v5/docs/en/propel
   - /docs/scos/dev/guidelines/testing/available-test-helpers.html
   - /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
 related:
@@ -238,7 +228,7 @@ The Glue helpers can only be used for testing the Glue application.
 
 #### DependencyProviderHelper
 
-Lets you set dependencies to the module or mock existing ones.
+Lets you set dependencies to a module or mock existing ones.
 
 #### FactoryHelper
 
@@ -246,7 +236,7 @@ Lets you mock factory methods and access the factory.
 
 #### OpenApi3
 
-Lets you match response of the API endpoints against the OpenApi3 schema.
+Lets you match the response of API endpoints against the OpenApi3 schema.
 
 #### JsonPath
 
@@ -273,5 +263,5 @@ Lets you create a table in the database and the `\Propel\Generator\Model\Table` 
 
 Lets you create Propel model files based on builders and tables.
 
-## Next step: 
+## Next step:
 [Enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).

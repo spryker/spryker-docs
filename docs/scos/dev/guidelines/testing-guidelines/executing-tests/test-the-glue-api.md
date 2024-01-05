@@ -1,34 +1,32 @@
 ---
 title: Test the Glue API
-description: How to test the Glue API
+description: Learn how to test the Glue API
 template: howto-guide-template
 ---
 
-This guide explains how to set up and run Glue API end-to-end tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the names accordingly for different project namespaces or modules.
+This guide explains how to set up and run Glue API end-to-end (E2E) tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the names according to your project namespaces and modules.
 
 ## Prerequisites
 
-Ensure the following prerequisites are met:
-
-1. Spryker Testify version 3.12.0 or later is installed.
-- To verify the installation status and version of Spryker Testify, run the following command:
+1. Install or update Spryker Testify to version 3.12.0 or higher:
+- Check the current installed version:
   ```bash
   composer info spryker/testify
   ```
-- To install Spryker Testify, run the following command:
+- Install Spryker Testify:
   ```bash
   composer require --dev spryker/testify:"^3.12.0"
   ```
-- To update Spryker Testify, run the following command:
+- Update Spryker Testify:
   ```bash
   composer update spryker/testify:"^3.12.0"
   ```
 
-2. To validate the response body against OpenAPI schema, you need to generate the schema first. For details, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.md).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
 
-## Testing the Glue API endpoint
+## Configure the project and set up test files
 
-### 1. Add required configuration to your project `config_default.php` file
+1. Add the required configuration to the project:
 
 **config/Shared/config_default.php**
 
@@ -49,11 +47,10 @@ if (class_exists(TestifyConstants::class)) {
 }
 ```
 
-### 2. Prepare a codeception test files
+2. Create `codeception.yml` with the configuration required for your E2E test:
 
-#### 1. Create the `codeception.yml` with configuration required for your E2E test:
-
-**tests/PyzTest/Glue/Wishlists/codeception.yml**
+<details>
+  <summary>tests/PyzTest/Glue/Wishlists/codeception.yml</summary>  
 
 ```yaml
 namespace: PyzTest\Glue\Wishlists
@@ -97,15 +94,15 @@ suites:
           cleanup: false
 ```
 
-#### 2. Build Codeception
+</details>
 
-Run the following Codeception build command:
+3. Build Codeception:
 
 ```bash
 docker/sdk testing codecept build -c tests/PyzTest/Glue/Wishlists
 ```
 
-Adjust generated actor class so it extends `\SprykerTest\Glue\Testify\Tester\ApiEndToEndTester`:
+4. Adjust the generated actor class so it extends `\SprykerTest\Glue\Testify\Tester\ApiEndToEndTester`:
 
 **tests/PyzTest/Glue/Wishlists/_support/WishlistsApiTester.php**
 
@@ -137,11 +134,11 @@ class WishlistsApiTester extends ApiEndToEndTester
 
 ```
 
-#### 3. Create fixtures
+5. To create fixtures, introduce the fixtures class which generates the data required for tests:
 
-Introduce the fixtures class which will generated all data required for tests
 
-**tests/PyzTest/Glue/Wishlists/RestApi/WishlistsRestApiFixtures.php**
+<details>
+  <summary>tests/PyzTest/Glue/Wishlists/RestApi/WishlistsRestApiFixtures.php</summary>
 
 ```php
 <?php
@@ -231,7 +228,7 @@ class WishlistsRestApiFixtures implements FixturesBuilderInterface, FixturesCont
 
         return $this;
     }
-    
+
     /**
      * @param \PyzTest\Glue\Wishlists\WishlistsApiTester $I
      *
@@ -241,7 +238,7 @@ class WishlistsRestApiFixtures implements FixturesBuilderInterface, FixturesCont
     {
         $this->productConcreteTransfer = $I->haveFullProduct();
     }
-    
+
     /**
      * @param \PyzTest\Glue\Wishlists\WishlistsApiTester $I
      *
@@ -281,9 +278,13 @@ class WishlistsRestApiFixtures implements FixturesBuilderInterface, FixturesCont
 }
 ```
 
-#### 4. Create the test cest file
+</details>
 
-**tests/PyzTest/Glue/Wishlists/RestApi/WishlistRestApiCest.php**
+6. Create the test cest file:
+
+
+<details>
+  <summary>tests/PyzTest/Glue/Wishlists/RestApi/WishlistRestApiCest.php</summary>
 
 ```php
 <?php
@@ -398,30 +399,26 @@ class WishlistRestApiCest
 }
 ```
 
-### 3. Run the test
+</details>
 
-#### 1. Build the fixtures
+## Run the test
 
-Run the following command to generate fixtures:
+1. Generate fixtures:
 
 ```bash
 docker/sdk testing codecept fixtures
 ```
 
-#### 2. Synchronize data
-
-Run the following command to synchronize the data to storage/search:
+2. Synchronize the data to storage and search:
 
 ```bash
 docker/sdk testing console queue:worker:start --stop-when-empty
 ```
 
-#### 3. Execute tests
-
-Run the following command to execute the tests:
+3. Execute tests:
 
 ```bash
 docker/sdk testing codecept run -c tests/PyzTest/Glue/Wishlists
 ```
 
-The result of each individual test will be displayed once the testing process is complete.
+Once the testing is complete, the result of each test is returned.

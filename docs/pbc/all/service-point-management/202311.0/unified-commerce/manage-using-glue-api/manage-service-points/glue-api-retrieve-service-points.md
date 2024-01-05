@@ -24,11 +24,11 @@ This endpoint lets you retrieve service points.
 | Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
-|-|-|-|
+|-|-|-|-|
 | include | Backend | Adds resource relationships to the request. | services service-point-addresses |
 
 | REQUEST | API TYPE | USAGE |
-|-|-|
+|-|-|-|
 | `GET https://glue-backend.mysprykershop.com/service-points` | Backend | Retrieve all service points. |
 | `GET https://glue-backend.mysprykershop.com/service-points?include=services` | Backend | Retrieve service points with services included. |
 | `GET https://glue-backend.mysprykershop.com/service-points?include=service-point-addresses` | Backend | Retrieve service points with addresses included. |
@@ -432,7 +432,7 @@ This endpoint lets you retrieve service points.
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{service_point_id}}***{% endraw %} | ID of a service point to retrieve. To get it, [add a service point] or [retrieve service points](#retrieve-service-points). |
+| {% raw %}***{{service_point_id}}***{% endraw %} | ID of a service point to retrieve. To get it, [add a service point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html) or [retrieve service points](#retrieve-service-points). |
 
 
 ### Request
@@ -442,11 +442,11 @@ This endpoint lets you retrieve service points.
 | Authorization | string | For backend API. | Alphanumeric string that authorizes the warehouse user to send requests to protected resources. Get it by [authenticating as a warehouse user](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html). |
 
 | QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
-|-|-|-|
+|-|-|-|-|
 | include | Backend | Adds resource relationships to the request. | services service-point-addresses |
 
 | REQUEST | API TYPE | USAGE |
-|-|-|
+|-|-|-|
 | `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e` | Backend | Retrieve the service point with the specified ID. |
 | `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=services` | Backend |Retrieve the service point with the specified ID. Include the information about its services. |
 | `GET https://glue-backend.mysprykershop.com/service-points/262feb9d-33a7-5c55-9b04-45b1fd22067e?include=service-point-addresses` | Backend |Retrieve the service point with the specified ID. Include the information about its address. |

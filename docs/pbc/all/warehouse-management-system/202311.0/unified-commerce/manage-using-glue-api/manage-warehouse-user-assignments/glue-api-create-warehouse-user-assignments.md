@@ -16,9 +16,9 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a warehouse user assignment
 
----
+***
 `POST` **/warehouse-user-assignments**
----
+***
 
 ### Request
 

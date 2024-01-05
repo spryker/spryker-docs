@@ -90,9 +90,9 @@ In this tab, all the fields are optional.
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| PUBLIC EMAIL | Business/public email address. |
-| PUBLIC PHONE | Business/public phone number. |
-| FAX NUMBER | Business/public fax number. |
+| PUBLIC EMAIL | Business or public email address. |
+| PUBLIC PHONE | Business or public phone number. |
+| FAX NUMBER | Business or public fax number. |
 | LOGO URL | URL of the logo to be displayed on the profile. |
 | DESCRIPTION | Description of the merchant. |
 | AVERAGE DELIVERY TIME | Time period during which customers can expect to receive orders after placing them.  |
@@ -132,15 +132,3 @@ In this tab, all the fields are optional.
 For instructions on managing merchant users, see the following documents:
 * [Create merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html)
 * [Edit merchant users]((/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html)
-
-## Add merchant users
-
-1. Click **Add Merchant User**.
-2. On the **CREATE MERCHANT USER** page, enter the following details:
-  * **E-MAIL**
-  * **FIRST NAME**
-  * **LAST NAME**  
-3. Click **Create**.
-    This opens the **Edit Merchant: {MERCHANT_ID}** page with a success message displayed. The merchant user is displayed in the list.
-
-By default, each merchant user obtains the role of Merchant Portal Administrator. To change it, [edit the user](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).

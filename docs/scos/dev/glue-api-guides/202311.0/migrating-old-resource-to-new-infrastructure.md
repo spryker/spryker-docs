@@ -6,9 +6,9 @@ template: glue-api-storefront-guide-template
 ---
 ## Manual migration of existing Legacy Glue API to the new infrastructure
 
-It’s possible to re-use existing resource code in most of the cases, by adjusting existing code and adding a few more classes from the new infrastructure. Those steps will be define below.
+It’s possible to re-use existing resource code in most of the cases, by adjusting existing code and adding a few more classes from the new infrastructure. Those steps will be defined below.
 
-The AvailabilityNotificationRestApi module was used as an example.
+The `AvailabilityNotificationRestApi` module was used as an example.
 
 For the sake of reducing complexity, the module will be updated instead of creating a new on top. 
 
@@ -26,25 +26,25 @@ Method names can be taken from the original controller due to the same naming pa
 
 ### Create a new resource plugin
 
-Create a GlueStorefrontApiApplication directory in the Plugin directory. It will be used to store new resource plugins.
+Create a `GlueStorefrontApiApplication` directory in the `Plugin` directory. It will be used to store new resource plugins.
 
 Old resource plugin can be used as a reference.
 
-Abstract class must be changed from `Spryker\Glue\Kernel\AbstractPlugin` to `Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin`
+Abstract class MUST be changed from `Spryker\Glue\Kernel\AbstractPlugin` to `Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin`
 
 Interface MUST be changed from `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface` to `Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\JsonApiResourceInterface`
 
-getResourceType()method MUST be renamed to getType()
+`getResourceType()` method MUST be renamed to `getType()`.
 
-getController() method return value MUST be changed from a regular string to FQCN of the new correspondent controller.
+`getController()` method return value MUST be changed from a regular string to FQCN (fully qualified class name) of the new correspondent controller.
 
 ### Adjust processor logic
 
-The main complexity in the migration of the regular legacy resources would be a old models or “processors“. Income and outcome classes are deprecated and not supported by the new API infrastructure.
+The main complexity in the migration of the regular legacy resources would be an old models or "processors". Income and outcome transfers are deprecated and not supported by the Glue API infrastructure.
 
-The code should be rather modified to use income transfers and prepare new outcome transfer or some additional mapper must be implemented to wrap old code execution.
+The code should be rather modified to use income transfers and prepare new outcome transfer or some additional mapper should be implemented to wrap old code execution.
 
-We are going to provide both examples below.
+We are going to provide first option as an example below.
 
 #### Adjusting the old code
 
@@ -259,5 +259,4 @@ class AvailabilityNotificationApiSubscriber implements AvailabilityNotificationA
 }
 
 ```
-
-We changed usage of RestResponse and RestRequest with usage of provided transfers. It will require some additional steps and not always easy like in provided example, so we can do it in a different way.
+By making this steps, we can make a  resource from Legacy Glue API available in Glue Storefront API.

@@ -12,7 +12,7 @@ redirect_from:
 New Glue projects can create API applications. This is what you need to do in order to create one.
 
 
-Because the backend and storefront APIs have different sets of configured services, they also have different settings in Docker and different containers. Ensure your `deploy.yml` file contains the correct setting for `application`. The available options are listed in the following table:
+Because the `Glue Backend API` and `Glue Storefront API` have different sets of configured services, they also have different settings in Docker and different containers. Ensure your `deploy.yml` file contains the correct setting for `application`. The available options are listed in the following table:
 
 | OPTION | MEANING                                                                                                                                          |
 | --- |--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -303,9 +303,9 @@ class GlueStorefrontApiApplication extends RequestFlowAwareApiApplication
 
 Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point in each of the steps.
 
-This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make use the most of the Spryker conventions and features that wire into the request flow.
+This application extends `\Spryker\Glue\GlueApplication\ApiApplication\Type\RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make use the most of the Spryker conventions and features that wire into the request flow.
 
-If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything—a separate set of application plugins, boot, and run methods—but not the request flow actions. The application that follows the `RequestFlowAgnosticApiApplication` extension is the Legacy Glue API application. It is request-agnostic and creates and follows its own request flow. Here is an example of the application:
+If your API uses its own workflow, you can opt for extending `\Spryker\Glue\GlueApplication\ApiApplication\Type\RequestFlowAgnosticApiApplication`. This kind of application has everything—a separate set of application plugins, boot, and run methods—but not the request flow actions. The application that follows the `\Spryker\Glue\GlueApplication\ApiApplication\Type\RequestFlowAgnosticApiApplication` extension is the Legacy Glue API application. It is request-agnostic and creates and follows its own request flow. Here is an example of the application:
 
 **src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php**
 

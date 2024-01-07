@@ -1,18 +1,18 @@
 ---
-title: Decoupled Glue API
+title: Spryker Glue API
 description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.
 last_updated: November 29, 2023
 template: glue-api-storefront-guide-template
 ---
 
-The Spryker Decoupled Glue API is a set of a few API applications like *Glue Storefront API* and *Glue Backend API* of the Spryker Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
+The Spryker Glue API is a set of a few API applications like *Glue Storefront API* and *Glue Backend API* of the Spryker Cloud Commerce OS. Those applications are built to be used as a contract for accessing Storefront or Backoffice functionality through API. Those applications know how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
 
 ## Existing Glue Applications
 
-Out of the box, Spryker Commerce OS provides three API applications:
-* Legacy Glue API application that can be used as a fallback.
-* New Glue Storefront API that is a replacement for the Legacy Glue and can be used for the same purpose.
-* Glue Backend API that can be used to provide API access for the Backoffice functionality directly without any additional RPC calls.
+Out of the box, Spryker Cloud Commerce OS provides three API applications:
+* Legacy Glue API application that can be used as a fallback if you have already a lot of resources implemented in it and don't want to migrate to the new infrastructure.
+* New Glue Storefront API that is a replacement for the Legacy Glue API application and can be used for the same purpose.
+* Glue Backend API that can be used to provide API access for the Backoffice functionality directly, by providing infrastructure to call facades directly instead of using [Client](/docs/scos/dev/back-end-development/client/client.html) layer that does a remote call to the Gateway application.
 
 ## Difference between Decoupled Glue Api and the Legacy Glue API
 
@@ -92,7 +92,7 @@ For more details about creating a resource, see these documents:
 
 ## Resource modules
 
-A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the Glue Storefront API `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed) through RPC calls. 
+A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the Glue Storefront API `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce Cloud OS (Zed) through Remote Procedure Calls (RPC) calls. 
 
 Glue Backend API resources can use direct facade access through the dependency provider and access the database directly. `Resource` modules must implement all logic related to processing a request. It is not recommended to have any of the Business Logic, or a part of it, in the GlueApplication or specific application Module. If you need to extend any of the built-in Glue functionality, extending the relevant `Resource` module is always safer than infrastructure.
 

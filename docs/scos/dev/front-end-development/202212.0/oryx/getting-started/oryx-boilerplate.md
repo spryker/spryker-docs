@@ -104,7 +104,7 @@ While `index.html` can have a few more details, the following is the required ba
 ```html
 <html>
   <body>
-    <root-app></root-app>
+    <oryx-app></oryx-app>
     <script type="module" src="/app.ts"></script>
   </body>
 </html>

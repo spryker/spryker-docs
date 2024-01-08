@@ -10,19 +10,13 @@ redirect_from:
 
 The *Push Notification* feature lets users subscribe to the web push notifications, which are sent from the server to all registered subscriptions.
 
-{% info_block infoBox "Note" %}
-
-The feature can be integrated into the non-Srpyker customer application only. Spryker features do not support push notifications.
-
-{% endinfo_block %}
-
 ## Key pair
 
 To set up the process, you need to generate a private and public key pair. These two keys are generated once for a website and are known as *Voluntary Application Server Identification for Web Push (VAPID)* keys. The private key must be hidden from the end user and must only be used on the server side to encrypt created notifications. The utilization of VAPID protection guarantees that only authorized servers are permitted to send notifications to clients.
 
 ## Subscribing to notifications
 
-To let users subscribe to the web push notifications, the site page needs a service worker with which the user is registered on the server and received messages are processed. The service worker is downloaded to the user’s platform in the background, which lets it be executed outside of the site page's context. 
+To let users subscribe to the web push notifications, the site page needs a service worker with which the user is registered on the server and received messages are processed. The service worker is downloaded to the user’s platform in the background, which lets it be executed outside of the site page's context.
 
 After a user subscribes to the service, the service worker is registered. The service worker requests all required information through the web push API and sends this through an HTTP request to the server. The server stores this information in its database to send notifications to the client.
 
@@ -46,7 +40,10 @@ The following sequence diagram shows how sending and receiving push notification
 
 ## Related Developer documents
 
-|INSTALLATION GUIDES | 
-|---------|
-| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |
- 
+| INSTALLATION GUIDES | GLUE API GUIDES |
+|---------| - |
+| [Install the Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-push-notification-feature.html) |  [Add push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html)   |
+|      |  [Retrieve push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html)   |
+|      |  [Update push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html)   |
+|      |  [Delete push notification providers](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html)   |
+|      |  [Add push notification subscription](/docs/pbc/all/miscellaneous/{{page.version}}/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html)   |

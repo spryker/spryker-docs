@@ -203,4 +203,4 @@ When used with Algolia PBC, Spryker facets configuration is ignored and Algolia 
 
 ![algolia-ranking](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-ranking.png)
 
-Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog. Spryker creates a **Popularity** index where you can use Product properties as ranking or sorting attributes. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
+Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).

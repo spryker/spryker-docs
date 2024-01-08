@@ -196,19 +196,8 @@ To retrieve prices of an abstract product, send the request:
 
 <a name="abstract-product-prices-response-attributes"></a>
 
-| FIELD | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| price | Integer | Price to pay for that product in cents. |
-| priceTypeName | String | Price type. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| currency.code | String | Currency code. |
-| currency.name | String | Currency name. |
-| currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| quantity | Integer | Number of items. |
+{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+
 
 ## Possible errors
 

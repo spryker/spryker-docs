@@ -7,8 +7,51 @@ template: feature-installation-guide-template
 <!-- This document is an installation guide template.
 All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner.
 
-
 Before you start, check out the formatting templates in [Formatting templates for feature integration guides](formatting-templates-for-feature-integration-guides.md).-->
+
+<!--Conventions
+
+--
+
+When "composer require" includes a "Spryker Feature" (github.com/spryker-feature), then it always needs to be "dev-master" version. For regular modules, use regular versions.
+
+--
+
+Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.
+
+--
+
+Only define those configs which have to be overridden / defined by the customer.
+
+Configs that are working out of the box, should not be listed.
+
+--
+
+The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.
+
+The "prerequisites" column can define behavioural requirements (fulfilled by any "specification" column).
+
+--
+
+The "specification" column has to describe what is the behaviour of the widget so that the customer can understand it.
+
+--
+
+The "specification" column has to describe what is the behaviour of the controller so that the customer can understand it.
+
+--
+
+The purpose of this element is to provide information for the customers so that they can implement the Javascript on their own while they get a high-level understanding of the purpose of the Javascript file.-->
 
 This document describes how to install the [Feature Name feature]({link to a respective feature overview}) feature.
 

@@ -81,13 +81,13 @@ The entity-relationship diagram shows how domain entities are mapped to database
 
 ## Domains and subdomains
 
-- [Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/service-points-domain-walkthrough.html)
-  - [Service Point Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/service-point-cart-subdomain-walkthrough.html)
-- [Shipment Type](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/shipment-types-domain-walkthrough.html)
-  - [Shipment Type Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/shipment-type-service-point-subdomain-walkthrough.html)
+- [Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-points-domain.html)
+  - [Service Point Cart](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html)
+- [Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html)
+  - [Shipment Type Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html)
 - [Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)
-  - [Product Offer Service Point](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-service-point-subdomain-walkthrough.html)
-    - [Product Offer Service Point Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-service-point-availability-subdomain-walkthrough.html)
-      - [Marketplace Merchant Product Offer Service Point Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/marketplace-merchant-product-offer-service-point-availability-subdomain-walkthrough.html)
-  - [Product Offer Shipment Type](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-shipment-type-subdomain-walkthrough.html)
-    - [Product Offer Shipment Type Availability](/docs/scos/dev/feature-walkthroughs/{{page.version}}/click-and-collect-feature-walkthrough/product-offer-shipment-type-availability-subdomain-walkthrough.html)
+  - [Product Offer Service Point](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html)
+    - [Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html)
+      - [Marketplace Merchant Product Offer Service Point Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html)
+  - [Product Offer Shipment Type](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html)
+    - [Product Offer Shipment Type Availability](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html)

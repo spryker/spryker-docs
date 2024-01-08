@@ -1,9 +1,9 @@
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| guest-cart-items, bundle-items, bundled-items | sku | String | SKU of the product. |
-| guest-cart-items, bundle-items, bundled-items | quantity | Integer | Quantity of the given product in the cart. |
-| guest-cart-items, bundle-items, bundled-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
-| guest-cart-items, bundle-items, bundled-items | abstractSku | String | Unique identifier of the abstract product that owns the concrete product. |
+| guest-cart-items | sku | String | SKU of the product. |
+| guest-cart-items | quantity | Integer | Quantity of the given product in the cart. |
+| guest-cart-items | groupKey | String | Unique item identifier. The value is generated based on product parameters. |
+| guest-cart-items | abstractSku | String | Unique identifier of the abstract product that owns the concrete product. |
 | guest-cart-items | amount | Integer | Amount of the products in the cart. |
 | guest-cart-items | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. |
 | guest-cart-items | sumPrice | Integer | Sum of all items prices calculated. |
@@ -33,11 +33,3 @@
 | guest-cart-items | selectedProductOptions.optionName | String | Product option name. |
 | guest-cart-items | selectedProductOptions.price | Integer | Product option price in cents. |
 | guest-cart-items | selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules  | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |

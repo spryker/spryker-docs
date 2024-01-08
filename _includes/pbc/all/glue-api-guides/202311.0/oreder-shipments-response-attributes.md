@@ -1,4 +1,4 @@
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | order-shipments | itemUuids | String | Unique identifier of the item in this shipment. |
 | order-shipments | methodName | String | Name of the shipment method selected. |

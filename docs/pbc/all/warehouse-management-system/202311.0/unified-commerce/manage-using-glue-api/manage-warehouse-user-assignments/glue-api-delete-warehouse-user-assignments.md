@@ -16,13 +16,13 @@ For detailed information about the modules that provide the API functionality an
 
 ## Delete a warehouse user assignment
 
----
+***
 `DELETE` **/warehouse-user-assignments/*{% raw %}{{warehouse_user_assignment_id}}{% endraw %}***
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
+| ***{% raw %}{{warehouse_user_assignment_id}}{% endraw %}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
 
 
 ### Request

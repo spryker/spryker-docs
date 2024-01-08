@@ -4,7 +4,7 @@ description: How to test the Glue Backend API
 template: howto-guide-template
 ---
 
-This document describes how to set up and run Glue Backend API end-to-end (E2E) tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the names according to your project namespaces and modules.
+This document describes how to set up and run Glue Backend API end-to-end (E2E) tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the module name according to your requirements.
 
 ## Prerequisites
 

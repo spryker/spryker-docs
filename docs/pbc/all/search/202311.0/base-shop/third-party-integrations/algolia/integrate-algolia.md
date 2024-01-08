@@ -55,22 +55,15 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
-    //...
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'product-events' => 'http',
-];
-
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
-    'product-events' => 'http',
+    'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
 ```
@@ -204,6 +197,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
+                new MerchantReferenceSearchHttpQueryExpanderPlugin(), (only for marketplace)
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
@@ -315,6 +309,7 @@ namespace Pyz\Client\SearchHttp;
 use Spryker\Client\Catalog\Plugin\ConfigTransferBuilder\CategoryFacetConfigTransferBuilderPlugin;
 use Spryker\Client\Catalog\Plugin\SearchHttp\CatalogSearchHttpConfigBuilderPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder\PriceFacetConfigTransferBuilderPlugin;
+use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantProductMerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\ProductLabelFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductReview\Plugin\RatingFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductSearchConfigStorage\Plugin\Config\ProductSearchConfigExpanderPlugin;
@@ -352,6 +347,7 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
+            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # for marketplace only
         ];
     }
 }
@@ -364,6 +360,7 @@ Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProv
 ```php
 //...
 
+use Spryker\Zed\Merchant\Communication\Plugin\MessageBroker\MerchantMessageHandlerPlugin;
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointAvailableMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemovedMessageHandlerPlugin;
@@ -383,6 +380,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           //...
           new ProductExportMessageHandlerPlugin(),
           new SearchEndpointMessageHandlerPlugin(),
+          new MerchantMessageHandlerPlugin(), # for marketplace only
       ];
   }
 

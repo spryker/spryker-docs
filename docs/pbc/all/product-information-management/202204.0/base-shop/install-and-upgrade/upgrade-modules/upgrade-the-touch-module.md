@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
+  
 ---
 title: Upgrade the Touch module
 description: Use the guide to learn how to update the Touch module to a newer version.

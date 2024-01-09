@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html
+  
 ---
 title: Upgrade the Stock module
 description: Use the guide to migrate to a new version of the Stock module.

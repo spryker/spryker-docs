@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html
+  
 ---
 title: Migration guide - ProductPackagingUnitStorage
 description: Use the guide to migrate to a newer version of the ProductPackagingUnitStorage module.

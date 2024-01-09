@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productreviewsearch-module.html
+  
 ---
 title: Migration guide - ProductReviewSearch
 last_updated: Jun 16, 2021

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationwidget-module.html
+  
 ---
 title: Migration guide - ProductConfigurationWidget
 description: Learn how to upgrade the ProductConfigurationWidget module to a newer version.

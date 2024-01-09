@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguratorgatewaypage-module.html
+  
 ---
 title: Migration guide - ProductConfiguratorGatewayPage
 description: Learn how to upgrade the ProductConfiguratorGatewayPage module to a newer version.

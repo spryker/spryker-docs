@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html
+  
 ---
 title: Migration guide - ProductConfigurationStorage
 description: Learn how to upgrade the ProductConfigurationStorage module to a newer version.

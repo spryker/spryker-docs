@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html
+  
 ---
 title: Migration guide - ProductManagement
 description: Use the guide to learn how to update the ProductManagement module to a newer version.

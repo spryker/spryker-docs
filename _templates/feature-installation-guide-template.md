@@ -7,8 +7,31 @@ template: feature-installation-guide-template
 <!-- This document is an installation guide template.
 All the described steps are optional. If you want to add a step that's not described in the template, contact Karoly Gerner.
 
-
 Before you start, check out the formatting templates in [Formatting templates for feature integration guides](formatting-templates-for-feature-integration-guides.md).-->
+
+<!--Conventions
+
+--
+
+* Only define those configs which have to be overridden / defined by the customer.
+* Configs that are working out of the box, should not be listed.
+
+--
+
+* The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.
+* The "prerequisites" column can define behavioural requirements (fulfilled by any "specification" column).
+
+--
+
+* The "specification" column has to describe what is the behaviour of the widget so that the customer can understand it.
+
+--
+
+* The "specification" column has to describe what is the behaviour of the controller so that the customer can understand it.
+
+--
+
+* The purpose of this element is to provide information for the customers so that they can implement the Javascript on their own while they get a high-level understanding of the purpose of the Javascript file.-->
 
 This document describes how to install the [Feature Name feature]({link to a respective feature overview}) feature.
 
@@ -28,6 +51,7 @@ Install the required features and Glue APIs:
 
 ### 1) Install the required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+<!--When "composer require" includes a "Spryker Feature" (github.com/spryker-feature), then it always needs to be "dev-master" version. For regular modules, use regular versions.-->
 
 ```bash
 {commands to install the required modules}
@@ -35,6 +59,17 @@ Install the required features and Glue APIs:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure the following modules have been installed:
 
@@ -82,6 +117,17 @@ console transfer:generate
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure the following changes have been applied by checking your database:
 
@@ -120,6 +166,17 @@ console transfer:generate
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure that following changes have been applied by checking your database:
 
@@ -139,6 +196,17 @@ console transfer:generate
 ---
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Ensure the following transfers have been created:
 
@@ -167,6 +235,17 @@ console data:import glossary
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
@@ -186,6 +265,17 @@ Configure tables to be published and synchronized to the Storage on create, edit
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
@@ -217,6 +307,17 @@ Configure tables to be published to the {table name} table and synchronized to t
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
@@ -248,6 +349,17 @@ Install the following plugins:
 ---
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Usually, it is technically impossible to verify the current step before the [Import data](#import-data) step. In such a case, move the verification of this step there. -->
 
@@ -286,6 +398,17 @@ Import data as follows:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure that the configured data has been added to the `{table_name}` table.
 
@@ -312,6 +435,17 @@ console setup:init-db
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly. Provide verification for "Configure Export to Redis and Elasticsearch".-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Ensure that the {entities} have been added to the `{table_name}` table.
 
@@ -332,6 +466,17 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 * [Configure Export to Redis and Elasticsearch](#configure-export-to-redis-and-elasticsearch)
 * [Configure Export to Elasticsearch](#configure-export-to-elasticsearch)
 * [Configure Export to Redis](#configure-export-to-redis)  -->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 ### Set up behavior
 <!--This is a comment, it will not be included -->
@@ -347,6 +492,17 @@ Enable the following behaviors by registering the plugins:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 ## Install feature frontend
 
@@ -373,6 +529,17 @@ Install the required modules:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure the following modules have been installed:
 
@@ -398,6 +565,17 @@ console data:import glossary
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
@@ -418,6 +596,17 @@ Register the following route providers on the Storefront:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each "step" needs verification to make sure that the customer did not skip anything unintentionally.
+
+The verification needs to cover the entire "step".
+
+The verification step often needs to use an example domain, please use
+
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+
+domains according to your requirements.-->
 
 ### Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->

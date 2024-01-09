@@ -678,7 +678,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
 
-### Additional information on Algolia integration
+## Additional information on Algolia integration
 
 When integrating Algolia, you should keep in mind some peculiarities of the SearchHTTP plugins setup and differences of the default facets.
 

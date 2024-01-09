@@ -17,15 +17,17 @@ This document explains the Datasource Dependable service in the Components Libra
 
 ## Overview
 
-Datasource Dependable is an Angular Service that resolves datasources for a component based on the value of a specific element. 
+Datasource Dependable is an Angular service that resolves datasources for a component based on the value of a specific element.
 
 Check out an example usage of the Datasource Dependable.
 
 Service configuration:
 
-- `type` — a datasource type.  
-- `id` — an ID of the depended element.  
-- `datasource` — the next datasource that runs based on the depended element value (e.g. [http](/docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html)).  
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+| type | A datasource type.  |
+| id | An ID of the dependent element |
+| datasource | The next datasource that runs based on the depended element value, like [http](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html). |  
 
 ```html
 <spy-datasource-dependable id="dependable-select">
@@ -48,7 +50,7 @@ Service configuration:
 </spy-select>
 ```
 
-The depended element (in our example it's a `SelectComponent`) must implement a `DatasourceDependableElement` abstract class (token) and return component value using `getValueChanges()` abstract method:   
+The dependent element, `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return component value using the  `getValueChanges()` abstract method:   
 
 ```ts
 @Component({
@@ -92,7 +94,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Dependable:
+Datasource dependable interfaces:
 
 ```ts
 import { DatasourceConfig } from '@spryker/datasource';

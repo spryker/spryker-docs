@@ -2951,10 +2951,6 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
         url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
-      - title: Test Glue API
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-glue-api.html
-      - title: Test Glue Backend API
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-glue-backend-api.html                
       - title: Test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:
@@ -2969,6 +2965,10 @@ entries:
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test Glue API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+          - title: Test Glue Backend API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
           - title: Test the asynchronous API
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process

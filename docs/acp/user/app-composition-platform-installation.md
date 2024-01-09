@@ -38,9 +38,11 @@ The actions and level of effort required to make your project ACP-ready may vary
 
 To make your project ACP-ready, different update steps are necessary depending on the template version on which your project was started:
 
-- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md) or newer: You can skip the configuration step described in this document.
+- BEFORE [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.md)  It's complicated and needs an assessment by devs/SA.
 
-- Older versions: To get the project ACP-ready, you should complete all steps described in this document.
+- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.md) Has basic ACP set up in place, all ACP modules (Apps & Platform) need updates.
+
+- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md) or newer: You can skip the configuration step described in this document.
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 

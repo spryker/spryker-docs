@@ -46,7 +46,7 @@ To make your project ACP-ready, different update steps are necessary depending o
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md), please [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.md), please [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 

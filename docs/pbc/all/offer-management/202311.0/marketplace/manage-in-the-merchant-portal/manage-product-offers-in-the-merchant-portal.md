@@ -1,6 +1,6 @@
 ---
 title: Manage product offers in the Merchant Portal
-description: Learn how to edit product offers in the Merchant Portal.
+description: Learn how log into the Merchant portal and manage product offers
 template: back-office-user-guide-template
 ---
 

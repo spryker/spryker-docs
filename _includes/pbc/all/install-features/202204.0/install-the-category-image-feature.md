@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Category Image feature into a Spryker project.
+This document describes how to install the Category Image feature.
 
 ## Install feature core
 
@@ -11,10 +11,10 @@ Follow the steps below to install the Category Image feature core.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -275,8 +275,8 @@ template_name,template_path
 
 | COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_name | mandatory | string | My category template | A human readable name of the category template. |
-| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | A category template path that is used to display a category page. |
+| template_name | ✓ | string | My category template | A human readable name of the category template. |
+| template_path | ✓ | string | @ModuleName/path/to/category/template.twig | A category template path that is used to display a category page. |
 
 Import data:
 
@@ -403,10 +403,10 @@ Follow the steps below to install the Category Image feature frontend.
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -460,7 +460,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

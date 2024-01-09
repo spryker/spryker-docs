@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html) feature API into a Spryker project.
+This document describes how to install the [Checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html) feature API.
 
 ## Install feature core
 
@@ -11,13 +11,13 @@ Follow the steps below to install Checkout feature API.
 
 Install the required features:
 
-| FEATURE                                | VERSION          | INTEGRATION GUIDE                                                                                                                                                                       |
+| FEATURE                                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |----------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Spryker Core                 | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                  |
+| Glue API: Spryker Core                 | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                  |
 | Glue API: Cart                         | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                             |
 | Glue API: Customer Account Management  | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | Glue API: Payments                     | {{page.version}} | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)          |
-| Glue API: Shipment                     | {{page.version}} | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
+| Glue API: Shipment                     | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                   |
 
 ### 1) Install the required modules using Composer
 
@@ -43,9 +43,10 @@ Make sure that the following modules have been installed:
 
 1. Add the following configuration to your project:
 
-| CONFIGURATION                                                       | SPECIFICATION                                                                                                             | NAMESPACE               |
-|---------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi |
+| CONFIGURATION                                                           | SPECIFICATION                                                                                                             | NAMESPACE                |
+|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------|
+| CheckoutRestApiConfig::shouldExecuteQuotePostRecalculationPlugins()     | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation. | Pyz\Zed\CheckoutRestApi  |
+| CheckoutRestApiConfig::getRequiredCustomerRequestDataForGuestCheckout() | Returns the customer data fields required for checkout as a guest user.                                             | Pyz\Glue\CheckoutRestApi |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
 
@@ -64,6 +65,31 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
     public function shouldExecuteQuotePostRecalculationPlugins(): bool
     {
         return false;
+    }
+}
+```
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Generated\Shared\Transfer\RestCustomerTransfer;
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiConfig as SprykerCheckoutRestApiConfig;
+
+class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getRequiredCustomerRequestDataForGuestCheckout(): array
+    {
+        return array_merge(parent::getRequiredCustomerRequestDataForGuestCheckout(), [
+            RestCustomerTransfer::FIRST_NAME,
+            RestCustomerTransfer::LAST_NAME,
+        ]);
     }
 }
 ```
@@ -899,11 +925,11 @@ Ensure that the plugins work correctly:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features.
 
-| FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                              |
+| FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                              |
 |--------------------|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Shipment | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                   |
+| Glue API: Shipment | ✓                                | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                   |
 | Glue API: Payments | ✓                                | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html) |

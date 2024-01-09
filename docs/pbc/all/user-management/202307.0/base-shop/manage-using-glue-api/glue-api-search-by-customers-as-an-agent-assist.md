@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
 redirect_from:
-  - /2021080/docs/searching-by-customers-as-an-agent-assist
-  - /2021080/docs/en/searching-by-customers-as-an-agent-assist
-  - /docs/searching-by-customers-as-an-agent-assist
-  - /docs/en/searching-by-customers-as-an-agent-assist
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
@@ -56,11 +52,11 @@ To search by customers, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/agent-customer-search | Return the list of all customers. |
-| GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5 | Return a list of 5 customer entries starting from the 6th entry. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com | Search for the customer with the `sonia@spryker.com` email address. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=spencor | Search for the customer with the `spencor` name. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5 | Search for the customer with the `DE--5` customer reference. |
+| `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the 6th entry. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
 
 ### Response
 

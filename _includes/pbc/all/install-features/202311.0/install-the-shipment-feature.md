@@ -3,9 +3,7 @@
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place.
-
-The current feature integration guide only adds the following functionalities:
+The following feature installation guide expects the basic feature to be in place. It only adds the following functionalities:
 * Shipment Back Office UI
 * Delivery method per store
 * Shipment data import
@@ -19,10 +17,10 @@ Follow the steps below to install the Shipment feature core.
 
 ### Prerequisites
 
-To start the feature integration, integrate the required features:
+Install the required features:
 
 
-| NAME             | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)                |
@@ -58,8 +56,8 @@ Make sure that the following modules have been installed:
 
 | CONFIGURATION                                                | SPECIFICATION                                                                                                                                                                         | NAMESPACE            |
 |--------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------|
-| ShipmentConfig::getShipmentHashFields()                      | Used to group items by shipment using shipment type uuid.                                                                                                                             | Pyz\Service\Shipment |
-| ShipmentConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if a stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation in `ShipmentFacade::expandQuoteWithShipmentGroups()` method. | Pyz\Zed\Shipment     |
+| ShipmentConfig::getShipmentHashFields()                      | Used to group items by shipment using the shipment type UUID.                                       | Pyz\Service\Shipment |
+| ShipmentConfig::shouldExecuteQuotePostRecalculationPlugins() | Defines if the stack of `QuotePostRecalculatePluginStrategyInterface` plugins should be executed after quote recalculation in the `ShipmentFacade::expandQuoteWithShipmentGroups()` method. | Pyz\Zed\Shipment     |
 
 **src/Pyz/Service/Shipment/ShipmentConfig.php**
 
@@ -139,8 +137,8 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 | ShipmentTypesByShipmentMethodsResourceRelationshipPlugin | Adds the `shipment-types` resources as a relationship to `shipment-methods` resources.                       |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\GlueApplication              |
 | SelectedShipmentTypesCheckoutDataResponseMapperPlugin    | Maps the selected shipment types to `RestCheckoutDataResponseAttributesTransfer.selectedShipmentTypes`.      |               | Spryker\Glue\ShipmentTypesRestApi\Plugin\CheckoutRestApi              |
 | ItemShipmentTypeQuoteMapperPlugin                        | Maps shipment types taken from shipment methods to `Quote.items.shipmentType`.                           |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
-| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeCheckoutDataValidatorPlugin                  | Validates whether the shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
+| ShipmentTypeReadCheckoutDataValidatorPlugin              | Validates whether the shipment type related to the shipment method is active and belongs to the quote store. |               | Spryker\Zed\ShipmentTypesRestApi\Communication\Plugin\CheckoutRestApi |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -166,7 +164,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     {
         new ShipmentTypesResourceRoutePlugin(),
     }
-    
+
     /**
      * {@inheritDoc}
      *
@@ -181,7 +179,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ShipmentsRestApiConfig::RESOURCE_SHIPMENT_METHODS,
             new ShipmentTypesByShipmentMethodsResourceRelationshipPlugin(),
         );
-        
+
         return $resourceRelationshipCollection;
     }
 }
@@ -398,7 +396,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-- Make sure you have the `selectedShipmentTypes` field in the response when you send a request with the single-shipment request structure.
+- Make sure you have the `selectedShipmentTypes` field in the response when you send a request with a single-shipment request structure.
 
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
@@ -524,7 +522,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new ItemShipmentTypeQuoteMapperPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataValidatorPluginInterface>
      */
@@ -534,7 +532,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
             new ShipmentTypeCheckoutDataValidatorPlugin(),
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\ReadCheckoutDataValidatorPluginInterface>
      */
@@ -549,7 +547,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Deactivate one of the shipment types and send a request with a corresponding shipment method: 
+Deactivate one of the shipment types and send a request with the corresponding shipment method:
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
   <summary markdown='span'>Request body example</summary>
@@ -621,10 +619,13 @@ Deactivate one of the shipment types and send a request with a corresponding shi
 
 1. Adjust the schema definition so entity changes trigger events.
 
-| AFFECTED ENTITY         | TRIGGERED EVENTS                                                                                                        |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| spy_shipment_type       | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
-| spy_shipment_type_store | Entity.spy_shipment_type_store.create<br>Entity.spy_shipment_type_store.update<br>Entity.spy_shipment_type_store.delete |
+| AFFECTED ENTITY           | TRIGGERED EVENTS                                                                                                        |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------|
+| spy_shipment_type         | Entity.spy_shipment_type.create<br>Entity.spy_shipment_type.update<br>Entity.spy_shipment_type.delete                   |
+| spy_shipment_type_store   | Entity.spy_shipment_type_store.create<br>Entity.spy_shipment_type_store.update<br>Entity.spy_shipment_type_store.delete |
+| spy_shipment_carrier      | Entity.spy_shipment_carrier.create<br>Entity.spy_shipment_carrier.update<br>Entity.spy_shipment_carrier.delete |
+| spy_shipment_method       | Entity.spy_shipment_method.create<br>Entity.spy_shipment_method.update<br>Entity.spy_shipment_method.delete |
+| spy_shipment_method_store | Entity.spy_shipment_method_store.create<br>Entity.spy_shipment_method_store.update<br>Entity.spy_shipment_method_store.delete |
 
 
 **src/Pyz/Zed/ShipmentType/Persistence/Propel/Schema/spy_shipment_type.schema.xml**
@@ -648,6 +649,35 @@ Deactivate one of the shipment types and send a request with a corresponding shi
 </database>
 ```
 
+**src/Pyz/Zed/Shipment/Persistence/Propel/Schema/spy_shipment.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" namespace="Orm\Zed\Shipment\Persistence" package="src.Orm.Zed.Shipment.Persistence" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd">
+
+    <table name="spy_shipment_carrier">
+        <behavior name="event">
+            <parameter name="spy_shipment_carrier_is_active" column="is_active"/>
+        </behavior>
+    </table>
+
+    <table name="spy_shipment_method">
+        <behavior name="event">
+            <parameter name="spy_shipment_method_is_active" column="is_active"/>
+            <parameter name="spy_shipment_method_fk_shipment_type" column="fk_shipment_type"/>
+            <parameter name="spy_shipment_method_fk_shipment_carrier" column="fk_shipment_carrier"/>
+        </behavior>
+    </table>
+
+    <table name="spy_shipment_method_store">
+        <behavior name="event">
+            <parameter name="spy_shipment_method_store_all" column="*"/>
+        </behavior>
+    </table>
+
+</database>
+```
+
 2. Apply database changes and generate entity and transfer changes:
 ```bash
 console propel:install
@@ -656,7 +686,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY                      | TYPE   | EVENT   |
 |--------------------------------------|--------|---------|
@@ -672,7 +702,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_shipment_method.uuid             | column | created |
 | spy_shipment_method_price.uuid       | column | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                | TYPE     | EVENT   | PATH                                                                     |
 |-----------------------------------------|----------|---------|--------------------------------------------------------------------------|
@@ -773,7 +803,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-2. Register the new queue message processor:
+2. Register the queue message processor:
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -830,11 +860,15 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 
 4. Set up publisher plugins:
 
-| PLUGIN                                 | SPECIFICATION                                                                                 | PREREQUISITES | NAMESPACE                                                                          |
-|----------------------------------------|-----------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
-| ShipmentTypeWriterPublisherPlugin      | Publishes shipment type data by `SpyShipmentType` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
-| ShipmentTypeStoreWriterPublisherPlugin | Publishes shipment type data by `SpyShipmentTypeStore` events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
-| ShipmentTypePublisherTriggerPlugin     | Allows populating shipment type storage table with data and triggering further export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
+| PLUGIN                                                 | SPECIFICATION                                                                                   | PREREQUISITES | NAMESPACE                                                                          |
+|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------|
+| ShipmentTypeWriterPublisherPlugin                      | Publishes shipment type data by `SpyShipmentType` entity events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType        |
+| ShipmentTypeStoreWriterPublisherPlugin                 | Publishes shipment type data by `SpyShipmentTypeStore` events.                                  |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore   |
+| ShipmentCarrierShipmentTypeWriterPublisherPlugin       | Publishes shipment type data by `SpyShipmentCarrier` entity events.                             |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentCarrier     |
+| ShipmentMethodPublishShipmentTypeWriterPublisherPlugin | Publishes shipment type data by `ShipmentMethod` publish events.                                |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
+| ShipmentMethodShipmentTypeWriterPublisherPlugin        | Publishes shipment type data by `SpyShipmentMethod` entity events.                              |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod      |
+| ShipmentMethodStoreShipmentTypeWriterPublisherPlugin   | Publishes shipment type data by `SpyShipmentMethodStore` entity events.                         |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore |
+| ShipmentTypePublisherTriggerPlugin                     | Enables populating the shipment type storage table with data and triggering the export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -844,6 +878,10 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentCarrier\ShipmentCarrierShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod\ShipmentMethodPublishShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethod\ShipmentMethodShipmentTypeWriterPublisherPlugin;
+use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore\ShipmentMethodStoreShipmentTypeWriterPublisherPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentType\ShipmentTypeWriterPublisherPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypePublisherTriggerPlugin;
 use Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentTypeStore\ShipmentTypeStoreWriterPublisherPlugin;
@@ -861,7 +899,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 
     /**
-     * @return lsit<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
+     * @return list<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
      */
     protected function getPublisherTriggerPlugins(): array
     {
@@ -878,6 +916,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new ShipmentTypeWriterPublisherPlugin(),
             new ShipmentTypeStoreWriterPublisherPlugin(),
+            new ShipmentCarrierShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodPublishShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodShipmentTypeWriterPublisherPlugin(),
+            new ShipmentMethodStoreShipmentTypeWriterPublisherPlugin(),
         ];
     }
 }
@@ -888,7 +930,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | PLUGIN                                              | SPECIFICATION                                                            | PREREQUISITES | NAMESPACE                                                            |
 |-----------------------------------------------------|--------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Allows synchronizing the shipment type storage table's content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
+| ShipmentTypeSynchronizationDataBulkRepositoryPlugin | Enables synchronizing the shipment type storage table's content into Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -966,12 +1008,12 @@ spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 free_pickup,Free Pickup,pickup,Tax Exempt
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION              |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Shipment method key.   |
-| name                | mandatory | string    | Standard                        | Shipment method name.  |
-| carrier             | mandatory | string    | Spryker Dummy Shipment          | Shipment carrier name. |
-| taxSetName          | mandatory | string    | Shipment Taxes                  | Tax set name.                 |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Shipment method key.   |
+| name                | ✓ | string    | Standard                        | Shipment method name.  |
+| carrier             | ✓ | string    | Spryker Dummy Shipment          | Shipment carrier name. |
+| taxSetName          | ✓ | string    | Shipment Taxes                  | Tax set name.                 |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_method_store.csv**
 ```yaml
@@ -996,10 +1038,10 @@ spryker_no_shipment,DE
 spryker_no_shipment,US
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
-| store               | mandatory | string    | DE                              | Existing store name.          |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | ✓ | string    | DE                              | Existing store name.          |
 
 **vendor/spryker/spryker/Bundles/ShipmentDataImport/data/import/shipment_price.csv**
 ```yaml
@@ -1046,11 +1088,11 @@ spryker_no_shipment,US,EUR,0,0
 spryker_no_shipment,US,CHF,0,0
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
-| store               | mandatory | string    | DE                              | Existing store name.          |
-| currency            | mandatory | string    | EUR                             | Existing currency name.       |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Existing shipping method key. |
+| store               | ✓ | string    | DE                              | Existing store name.          |
+| currency            | ✓ | string    | EUR                             | Existing currency name.       |
 | value_net           | optional  | integer   | 390                             | Net price, in coins.                 |
 | value_gross         | optional  | integer   | 490                             | Gross price, in coins.               |
 
@@ -1061,11 +1103,11 @@ pickup,Pickup,1
 delivery,Delivery,1
 ```
 
-| COLUMN    | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION             |
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION             |
 |-----------|-----------|-----------|--------------|------------------------------|
-| key       | mandatory | string    | pickup       | Key for the shipment type.   |
-| name      | mandatory | string    | Pickup       | Name for the shipment type.  |
-| is_active | mandatory | string    | 1            | Status of the shipment type. |
+| key       | ✓ | string    | pickup       | Key for the shipment type.   |
+| name      | ✓ | string    | Pickup       | Name for the shipment type.  |
+| is_active | ✓ | string    | 1            | Status of the shipment type. |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_type_store.csv**
 ```yaml
@@ -1078,10 +1120,10 @@ pickup,US
 delivery,US
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                  |
 |-------------------|-----------|-----------|--------------|-----------------------------------|
-| shipment_type_key | mandatory | string    | pickup       | Key of an existing shipping type. |
-| store_name        | mandatory | string    | DE           | Name of an existing store.        |
+| shipment_type_key | ✓ | string    | pickup       | Key of an existing shipping type. |
+| store_name        | ✓ | string    | DE           | Name of an existing store.        |
 
 **vendor/spryker/spryker/Bundles/ShipmentTypeDataImport/data/import/shipment_method_shipment_type.csv**
 ```yaml
@@ -1095,10 +1137,10 @@ spryker_no_shipment,delivery
 free_pickup,pickup
 ```
 
-| COLUMN              | REQUIRED? | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
+| COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| shipment_type_key   | mandatory | string    | delivery                        | Key of an existing shipping type.   |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
+| shipment_type_key   | ✓ | string    | delivery                        | Key of an existing shipping type.   |
 
 1. Register the following data import plugins:
 
@@ -1727,7 +1769,7 @@ Follow the steps below to install the feature frontend.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                            |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                            |
 |--------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                  |
 | Product      | {{page.version}} | [Isntall the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
@@ -1740,7 +1782,7 @@ composer require spryker-feature/shipment:"{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE             | EXPECTED DIRECTORY                       |
 |--------------------|------------------------------------------|
@@ -1749,7 +1791,73 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up Behavior
+### 2) Set up configuration
+
+Add the following configuration to your project:
+
+1. Disable shipment points to be selected for product bundles during checkout:
+
+| CONFIGURATION    | SPECIFICATION | NAMESPACE                   |
+|---------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|-----------------------------|
+| ShipmentTypeWidgetConfig::getNotApplicableServicePointAddressStepFormItemPropertiesForHydration() | Defines the list of properties in an `ItemTransfer` that are not intended for form hydration.            | Pyz\Yves\ShipmentTypeWidget |
+| ProductBundleConfig::getAllowedBundleItemFieldsToCopy()   | Defines the list of allowed fields to be copied from a source bundle item to destination bundled items. | Pyz\Zed\ProductBundle       |
+
+**src/Pyz/Yves/ShipmentTypeWidget/ShipmentTypeWidgetConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShipmentTypeWidget;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use SprykerShop\Yves\ShipmentTypeWidget\ShipmentTypeWidgetConfig as SprykerShipmentTypeWidgetConfig;
+
+class ShipmentTypeWidgetConfig extends SprykerShipmentTypeWidgetConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getNotApplicableShipmentTypeAddressStepFormItemPropertiesForHydration(): array
+    {
+        return [
+            ItemTransfer::BUNDLE_ITEM_IDENTIFIER,
+            ItemTransfer::RELATED_BUNDLE_ITEM_IDENTIFIER,
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductBundle/ProductBundleConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductBundle;
+
+use Generated\Shared\Transfer\ItemTransfer;
+use Spryker\Zed\ProductBundle\ProductBundleConfig as SprykerProductBundleConfig;
+
+class ProductBundleConfig extends SprykerProductBundleConfig
+{
+    /**
+     * @return list<string>
+     */
+    public function getAllowedBundleItemFieldsToCopy(): array
+    {
+        return [
+            ItemTransfer::SHIPMENT,
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure you can't select shipment points for product bundles on the address checkout step.
+
+{% endinfo_block %}
+
+### 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

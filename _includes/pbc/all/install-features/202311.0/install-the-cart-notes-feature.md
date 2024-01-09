@@ -11,9 +11,9 @@ The current feature integration guide adds the Cart Notes Backend API functional
 
 To start feature integration, integrate the required feature:
 
-| NAME             | VERSION          | INTEGRATE GUIDE                                                                                                                              |
+| NAME             | VERSION          | INSTALLATION GUIDE                                                                                                            |
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-feature.html) |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-feature.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -21,7 +21,7 @@ To start feature integration, integrate the required feature:
 composer require spryker-feature/cart-notes:"{{page.version}}" --update-with-dependencies
 ```
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                | EXPECTED DIRECTORY                      |
 |-----------------------|-----------------------------------------|

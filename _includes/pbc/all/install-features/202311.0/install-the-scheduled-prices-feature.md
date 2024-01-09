@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) into a Spryker project.
+This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html).
 
 ## Install feature core
 
@@ -11,7 +11,7 @@ Follow the steps below to install the Product Lists feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{page.version}}  | [Install the Spryker Сore feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{page.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
@@ -135,13 +135,13 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 | --- | --- | --- | --- | --- |
 |  abstract_sku | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
 |  concrete_sku | optional | string | 060_26027598 | Existing concrete product SKU of the scheduled price. |
-|  price_type | mandatory | string | DEFAULT | Name of a price type. By default, it's `DEFAULT`, but can be project specific (strike, sale, ...). |
-|  store | mandatory | string | DE | Store name of the scheduled price. |
-|  currency | mandatory | string | CHF | Currency ISO code. |
+|  price_type | ✓ | string | DEFAULT | Name of a price type. By default, it's `DEFAULT`, but can be project specific (strike, sale, ...). |
+|  store | ✓ | string | DE | Store name of the scheduled price. |
+|  currency | ✓ | string | CHF | Currency ISO code. |
 |  value_net | optional | integer | 9832 | Net price in cents. |
 |  value_gross | optional | integer | 10924 | Gross price in cents. |
-|  from_included | mandatory | datetime | 2019-01-01T00:00:00-00:00 | Start date of the scheduled price (should be less than `to_included`). |
-|  to_included | mandatory | datetime | 2019-12-31T23:59:59-00:00 | End date of the scheduled price. |
+|  from_included | ✓ | datetime | 2019-01-01T00:00:00-00:00 | Start date of the scheduled price (should be less than `to_included`). |
+|  to_included | ✓ | datetime | 2019-12-31T23:59:59-00:00 | End date of the scheduled price. |
 
 2. Register the following plugin to enable data import:
 

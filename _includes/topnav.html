@@ -27,7 +27,7 @@
                                 <div class="nav-popup__content">
                                     <div class="main-nav dropdown">
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <span class="main-nav__opener-label">Select Product</span>
+                                            <span class="main-nav__opener-label">Select a guide</span>
                                             <span class="main-nav__opener-text">
                                                 {% if page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
@@ -44,7 +44,7 @@
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
                                                 {% else %}
-                                                Select Product
+                                                Select a guide
                                                 {% endif %}
                                             </span>
                                             <i class="main-nav__opener-icon icon-arrow-down"></i>
@@ -110,14 +110,14 @@
                     </div>
 
 
-                    {% if page.url != "/index.html" and page.url != "/search/" %}
+                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
                         <div class="search-popup">
                             <div class="search-popup__inner">
                                 <div class="search-popup__content">
                                     <a href="#" class="search-popup__close js-search-popup-close" aria-label="search popup close"><i class="icon-arrow-left"></i></a>
                                     <div class="main-header__search">
                                         <i class="main-header__search-icon icon-search"></i>
-                                        {% include search/{{ site.search | default "default" }}_quicksearch.html %}
+                                        {% include search/{{ site.search | default "default" }}_deprecated-quicksearch.html %}
                                     </div>
                                 </div>
                                 <div class="search-popup__footer">
@@ -133,7 +133,7 @@
                         <a href="#" class="main-header__search-opener js-search-popup-opener" aria-label="search popup opener"><i class="icon-search"></i></a>
                     {% endif %}
 
-                    {% if page.url != "/index.html" and page.url != "/search/" %}
+                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
                         <div class="header-switcher">
                             {% if site.github_editme_path %}
                                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button main-header__button button--small header-switcher__sticky" role="button"><i class="icon-github"></i> Edit on GitHub</a>

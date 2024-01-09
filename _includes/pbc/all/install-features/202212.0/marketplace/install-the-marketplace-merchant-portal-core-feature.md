@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Merchant Portal Core feature into a Spryker project.
+This document describes how to install the Marketplace Merchant Portal Core feature.
 
 ## Install feature core
 
@@ -10,11 +10,11 @@ Follow the steps below to install the Merchant Portal Core feature core.
 
 Install the required features:
 
-| NAME | VERSION          | INTEGRATION GUIDE |
+| NAME | VERSION          | INSTALLATION GUIDE |
 | -------------------- |------------------| ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Spryker Core BO      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Acl                  | {{page.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                    |
 
 ###  1) Install the required modules using Composer
@@ -1235,10 +1235,10 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                  |
+| FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |

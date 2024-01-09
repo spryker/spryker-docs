@@ -387,38 +387,40 @@ Enable resources and relationships as follows:
 
 1. Activate the following plugins:
 
-| PLUGIN                                                  | SPECIFICATION                                                                                                                                                                                       | PREREQUISITES                                      | NAMESPACE                                                          |
-|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|--------------------------------------------------------------------|
-| SetCustomerBeforeActionPlugin                           | Adds customer data to the session.                                                                                                                                                                  | Expects the user field to be set in REST requests. | Spryker\Glue\CustomersRestApi\Plugin                               |
-| CustomersResourceRoutePlugin                            | Registers the `customers` resource.                                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| AddressesResourceRoutePlugin                            | Registers the `addresses` resource.                                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| CustomerForgottenPasswordResourceRoutePlugin            | Registers the `customer-forgotten-password` resource.                                                                                                                                               | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| CustomerRestorePasswordResourceRoutePlugin              | Registers the `customer-restore-password` resource.                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| CustomerPasswordResourceRoutePlugin                     | Registers the `customer-password` resource.                                                                                                                                                         | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| CustomersToAddressesRelationshipPlugin                  | Adds the `addresses` resource as a relationship to the customers resource.                                                                                                                          | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
-| AccessTokensResourceRoutePlugin                         | Registers the `access-token` resource.                                                                                                                                                              | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
-| RefreshTokensResourceRoutePlugin                        | Registers the `refresh-tokens` resource.                                                                                                                                                            | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
-| TokenResourceRoutePlugin                                | Registers the `token` resource.                                                                                                                                                                     | None                                               | Spryker\Glue\AuthRestApi\Plugin\GlueApplication                    |
-| CustomerConfirmationResourceRoutePlugin                 | Registers the `customer-confirmation` resource.                                                                                                                                                     | None                                               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication               |
-| AccessTokenRestRequestValidatorPlugin                   | Validates authentication tokens in the requests to protected resources.                                                                                                                             | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
-| FormatAuthenticationErrorResponseHeadersPlugin          | Adds an authentication error to the header of requests with an invalid authentication token.                                                                                                        | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
-| RestUserFinderByAccessTokenPlugin                       | Finds a REST user based on the provided REST request data.                                                                                                                                          | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
-| OauthClientInstallerPlugin                              | Populates the database with OAuth client data.                                                                                                                                                      | None                                               | Spryker\Zed\Oauth\Communication\Plugin\Installer                   |
-| OauthCustomerScopeInstallerPlugin                       | Installs OAuth customer scope data.                                                                                                                                                                 | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Installer  |
-| CustomerOauthUserProviderPlugin                         | Provides a customer OAuth user.                                                                                                                                                                     | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin            |
-| CustomerOauthScopeProviderPlugin                        | Provides a list of customer scopes.                                                                                                                                                                 | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin            |
-| OauthExpiredRefreshTokenRemoverPlugin                   | Removes expired refresh tokens based on the provided criteria transfer.                                                                                                                             | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokenCheckerPlugin                          | Checks if a refresh token is revoked.                                                                                                                                                               | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokenReaderPlugin                           | Finds a refresh token by the provided criteria transfer.                                                                                                                                            | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokenRevokerPlugin                          | Revokes a refresh token.                                                                                                                                                                            | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokenPersistencePlugin                      | Saves a refresh token.                                                                                                                                                                              | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokensReaderPlugin                          | Gets refresh tokens by the provided criteria.                                                                                                                                                       | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| OauthRefreshTokensRevokerPlugin                         | Revokes all refresh tokens.                                                                                                                                                                         | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
-| AddressByCheckoutDataResourceRelationshipPlugin         | Adds the `addresses` resource as a relationship.                                                                                                                                                    | None                                               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication               |
-| CustomerAddressSourceCheckerPlugin                      | Checks if a customer address ID is provided in the address attributes.                                                                                                                              | None                                               | Spryker\Glue\CustomersRestApi\Plugin\ShipmentsRestApi              |
-| CustomerAddressCheckoutDataValidatorPlugin              | Collects shipping address UUIDs from `checkoutDataTransfer.shipments`. If the authenticated customer does not own the provided customer address,  returns `CheckoutResponseTransfer` with an error. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi  |
-| CustomerAddressProviderStrategyPlugin                   | Finds a customer address based on the UUID provided in `RestAddressTransfer.id`. If the address was found, returns it.                                                                              | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\ShipmentsRestApi |
-| BillingAddressCheckoutRequestAttributesValidatorPlugin  | Validates `RestCheckoutRequestAttributesTransfer.billingAddress` mandatory fields.                                                                                                                  | None                                               | Spryker\Glue\CustomersRestApi\Plugin\CheckoutRestApi               |
+| PLUGIN                                                 | SPECIFICATION                                                                                                                                                                                       | PREREQUISITES                                      | NAMESPACE                                                          |
+|--------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|--------------------------------------------------------------------|
+| SetCustomerBeforeActionPlugin                          | Adds customer data to the session.                                                                                                                                                                  | Expects the user field to be set in REST requests. | Spryker\Glue\CustomersRestApi\Plugin                               |
+| CustomersResourceRoutePlugin                           | Registers the `customers` resource.                                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| AddressesResourceRoutePlugin                           | Registers the `addresses` resource.                                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| CustomerForgottenPasswordResourceRoutePlugin           | Registers the `customer-forgotten-password` resource.                                                                                                                                               | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| CustomerRestorePasswordResourceRoutePlugin             | Registers the `customer-restore-password` resource.                                                                                                                                                 | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| CustomerPasswordResourceRoutePlugin                    | Registers the `customer-password` resource.                                                                                                                                                         | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| CustomersToAddressesRelationshipPlugin                 | Adds the `addresses` resource as a relationship to the customers resource.                                                                                                                          | None                                               | Spryker\Glue\CustomersRestApi\Plugin                               |
+| AccessTokensResourceRoutePlugin                        | Registers the `access-token` resource.                                                                                                                                                              | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
+| RefreshTokensResourceRoutePlugin                       | Registers the `refresh-tokens` resource.                                                                                                                                                            | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
+| TokenResourceRoutePlugin                               | Registers the `token` resource.                                                                                                                                                                     | None                                               | Spryker\Glue\AuthRestApi\Plugin\GlueApplication                    |
+| CustomerConfirmationResourceRoutePlugin                | Registers the `customer-confirmation` resource.                                                                                                                                                     | None                                               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication               |
+| AccessTokenRestRequestValidatorPlugin                  | Validates authentication tokens in the requests to protected resources.                                                                                                                             | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
+| FormatAuthenticationErrorResponseHeadersPlugin         | Adds an authentication error to the header of requests with an invalid authentication token.                                                                                                        | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
+| RestUserFinderByAccessTokenPlugin                      | Finds a REST user based on the provided REST request data.                                                                                                                                          | None                                               | Spryker\Glue\AuthRestApi\Plugin                                    |
+| OauthClientInstallerPlugin                             | Populates the database with OAuth client data.                                                                                                                                                      | None                                               | Spryker\Zed\Oauth\Communication\Plugin\Installer                   |
+| OauthCustomerScopeInstallerPlugin                      | Installs OAuth customer scope data.                                                                                                                                                                 | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Installer  |
+| CustomerOauthUserProviderPlugin                        | Provides a customer OAuth user.                                                                                                                                                                     | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin            |
+| CustomerOauthScopeProviderPlugin                       | Provides a list of customer scopes.                                                                                                                                                                 | None                                               | Spryker\Zed\OauthCustomerConnector\Communication\Plugin            |
+| OauthExpiredRefreshTokenRemoverPlugin                  | Removes expired refresh tokens based on the provided criteria transfer.                                                                                                                             | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokenCheckerPlugin                         | Checks if a refresh token is revoked.                                                                                                                                                               | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokenReaderPlugin                          | Finds a refresh token by the provided criteria transfer.                                                                                                                                            | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokenRevokerPlugin                         | Revokes a refresh token.                                                                                                                                                                            | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokenPersistencePlugin                     | Saves a refresh token.                                                                                                                                                                              | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokensReaderPlugin                         | Gets refresh tokens by the provided criteria.                                                                                                                                                       | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| OauthRefreshTokensRevokerPlugin                        | Revokes all refresh tokens.                                                                                                                                                                         | None                                               | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                 |
+| AddressByCheckoutDataResourceRelationshipPlugin        | Adds the `addresses` resource as a relationship.                                                                                                                                                    | None                                               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication               |
+| CustomerAddressSourceCheckerPlugin                     | Checks if a customer address ID is provided in the address attributes.                                                                                                                              | None                                               | Spryker\Glue\CustomersRestApi\Plugin\ShipmentsRestApi              |
+| CustomerAddressCheckoutDataValidatorPlugin             | Collects shipping address UUIDs from `checkoutDataTransfer.shipments`. If the authenticated customer does not own the provided customer address,  returns `CheckoutResponseTransfer` with an error. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi  |
+| CustomerAddressProviderStrategyPlugin                  | Finds a customer address based on the UUID provided in `RestAddressTransfer.id`. If the address was found, returns it.                                                                              | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\ShipmentsRestApi |
+| BillingAddressCheckoutRequestAttributesValidatorPlugin | Validates `RestCheckoutRequestAttributesTransfer.billingAddress` mandatory fields.                                                                                                                  | None                                               | Spryker\Glue\CustomersRestApi\Plugin\CheckoutRestApi               |
+| OauthTokenConsole                                      | Remove expired refresh tokens from the database.                                                                                                                                                    | None                                               | Spryker\Zed\Oauth\Communication\Console                            |
+| ScopeCacheCollectorConsole                             | Create cache file for collect all existing scopes.                                                                                                                                                  | None                                               | Spryker\Zed\Oauth\Communication\Console                            |
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
@@ -809,6 +811,37 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Oauth\Communication\Console\OauthTokenConsole;
+use Spryker\Zed\Oauth\Communication\Console\ScopeCacheCollectorConsole;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [
+            new OauthTokenConsole(),
+            new ScopeCacheCollectorConsole(),
+        ];
+
+        return $commands;
+    }
+}
+```
+
 
 1. Set up the OAuth client:
 
@@ -1023,5 +1056,24 @@ Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
 {% info_block warningBox "Verification" %}
 
 To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+
+{% endinfo_block %}
+
+
+{% info_block warningBox "Verification" %}
+
+Ensure that console commands are available:
+
+- Run the following command to create a cache file for all existing scopes:
+
+```bash
+console oauth:scope-collection-file:generate
+```
+
+- Run the following command to remove expired refresh tokens from the database:
+
+```bash
+console oauth:refresh-token:remove-expired
+```
 
 {% endinfo_block %}

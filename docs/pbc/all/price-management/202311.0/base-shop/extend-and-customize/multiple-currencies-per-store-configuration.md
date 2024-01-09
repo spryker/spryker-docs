@@ -17,6 +17,7 @@ redirect_from:
   - /v4/docs/multiple-currencies-per-store-configuration
   - /v4/docs/en/multiple-currencies-per-store-configuration
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 related:
   - title: Net and gross prices management
     link: docs/pbc/all/price-management/page.version/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html

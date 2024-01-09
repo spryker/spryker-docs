@@ -5,6 +5,7 @@ last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-prices-when-retrieving-concrete-products.html
 ---
 
 This document describes how to retrieve prices when retrieving concrete products. To retrieve full information about concrete products, see [Retrieve concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html).

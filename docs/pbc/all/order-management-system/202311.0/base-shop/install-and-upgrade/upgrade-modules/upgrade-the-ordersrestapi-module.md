@@ -22,6 +22,7 @@ redirect_from:
   - /docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
   - /module_migration_guides/glue_api/ordersrestapi-migration-guide.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/upgrade-modules/upgrade-the-ordersrestapi-module.html
+  - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md -->

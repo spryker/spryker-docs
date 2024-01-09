@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
-last_updated: Sep 13, 2023
+last_updated: Jan 09, 2024
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
@@ -676,25 +676,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 ### Console command for receiving messages
 
-Receive messages from the channel:
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
 
-```bash
-console message-broker:consume
-```
-
-This command must be executed periodically. To achieve this, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-
-```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
-```
-
-## Additional information on Algolia integration
+### Additional information on Algolia integration
 
 When integrating Algolia, you should keep in mind some peculiarities of the SearchHTTP plugins setup and differences of the default facets.
 

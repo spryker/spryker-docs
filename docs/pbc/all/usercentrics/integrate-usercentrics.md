@@ -2,6 +2,7 @@
 title: Integrate Usercentrics
 description: Find out how you can integrate Usercentrics in your Spryker shop
 template: howto-guide-template
+last_updated: Jan 09, 2024
 ---
 
 To use Usercentrics, you need an account with Usercentrics. To create it, select a [Usercentrics pricing plan](https://usercentrics.com/pricing/) and create an account that lets you access the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
@@ -209,23 +210,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### Console command for receiving messages
 
-To receive messages from the Message Bus channel execute the following console command:
-
-```bash
-console message-broker:consume
-```
-
-This command must be executed periodically. To achieve this, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-
-```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
-```
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
 
 ## Next steps
 

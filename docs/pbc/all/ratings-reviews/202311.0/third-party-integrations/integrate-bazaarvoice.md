@@ -2,7 +2,7 @@
 title: Integrate Bazaarvoice
 description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template
-last_updated: Mar 3, 2023
+last_updated: Jan 09, 2024
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
 ---
@@ -313,23 +313,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### 5. Receive messages
 
-1. To receive messages from the channel, the following command is used:
-
-```bash
-console message-broker:consume
-```
-
-2. Because this command must be executed periodically, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-
-```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
-```
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
 
 ### 6. Configure OMS
 

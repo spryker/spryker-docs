@@ -55,10 +55,11 @@ To get your project ACP-ready, it is important to ensure that your project modul
 
 Starting with the Spryker product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
-* `spryker/app-catalog-gui: ^1.2.0` or later
-* `spryker/message-broker: ^1.4.0` or later
-* `spryker/message-broker-aws: ^1.3.2` or later
+* `spryker/app-catalog-gui: ^1.4.1` or later
+* `spryker/message-broker: ^1.9.0` or later
+* `spryker/message-broker-aws: ^1.5.0` or later
 * `spryker/session: ^4.15.1` or later
+* `spryker/oauth-client: ^1.4.0` or later
 
 #### App modules
 

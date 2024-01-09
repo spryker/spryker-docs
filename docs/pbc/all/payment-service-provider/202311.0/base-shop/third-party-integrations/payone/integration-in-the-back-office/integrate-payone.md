@@ -2,6 +2,7 @@
 title: Integrate Payone
 description: Learn how you can integrate the Payone app into your Spryker shop
 template: howto-guide-template
+last_updated: Jan 09, 2024
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
@@ -384,23 +385,7 @@ vendor/bin/console data:import glossary
 
 ### Console command for receiving messages
 
-To receive messages from the Message Bus channel execute the following console command:
-
-```bash
-console message-broker:consume
-```
-
-This command must be executed periodically. To achieve this, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-
-```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
-```
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
 
 ## Next steps
 

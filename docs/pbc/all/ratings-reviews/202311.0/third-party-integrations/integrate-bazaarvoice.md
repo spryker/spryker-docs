@@ -14,19 +14,19 @@ Before you can integrate Bazaarvoice, make sure that your project is ACP-enabled
 
 The Bazaarvoice app requires the following Spryker modules:
 
-* `spryker/asset: ^1.3.0`
-* `spryker/asset-storage: ^1.1.0`
+* `spryker/asset: ^1.6.0`
+* `spryker/asset-storage: ^1.2.1`
 * `spryker/merchant-profile: ^1.2.1` (Marketplace only)
-* `spryker/message-broker: ^1.3.0`
-* `spryker/message-broker-aws: ^1.4.1`
+* `spryker/message-broker: ^1.9.0`
+* `spryker/message-broker-aws: ^1.5.0`
 * `spryker/oms: ^11.25.0`
-* `spryker/product-review: ^2.10.0`
-* `spryker/product-review-gui: ^1.5.0`
+* `spryker/product-review: ^2.11.2`
+* `spryker/product-review-gui: ^1.6.0`
 * `spryker-shop/asset-widget: ^1.0.0`
-* `spryker-shop/cart-page: ^3.32.0`
-* `spryker-shop/product-detail-page: ^3.17.0`
-* `spryker-shop/product-category-widget: ^1.6.0`
-* `spryker-shop/shop-ui: ^1.62.0`
+* `spryker-shop/cart-page: ^3.38.0`
+* `spryker-shop/product-detail-page: ^3.19.1`
+* `spryker-shop/product-category-widget: ^1.7.0`
+* `spryker-shop/shop-ui: ^1.71.0`
 * `spryker-shop/checkout-page: ^3.23.0`
 * `spryker-shop/merchant-page: ^1.1.0` (Marketplace only)
 * `spryker-shop/merchant-profile-widget: ^1.1.0` (Marketplace only)
@@ -56,7 +56,7 @@ image:
     }'
 ```
 
-2. Update the `config/Shared/config_default.php` file:
+Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
@@ -97,6 +97,7 @@ Example:
     <meta itemprop="image" content="https://www.example.com/img/gallery/camera-pro-123.jpg">
     <div itemprop="brand" itemscope="" itemtype="https://schema.org/Brand">
         <meta itemprop="name" content="Xyz Brand">
+        <meta itemprop="identifier" content="123">
     </div>
     <meta itemprop="category" content="[{&quot;id&quot;:1,&quot;name&quot;:&quot;Cameras &amp; Camcorders&quot;},{&quot;id&quot;:4,&quot;name&quot;:&quot;Digital Cameras&quot;}]">
     <meta itemprop="inProductGroupWithID" content="6">
@@ -190,31 +191,36 @@ Example:
 
 ### 3. Configure a message broker
 
-Add the following configuration to `config/Shared/common/config_default.php`:
+Add the following configuration to `config/Shared/config_default.php`:
+
 ```php
 use \Generated\Shared\Transfer\AddReviewsTransfer;
 use \Generated\Shared\Transfer\OrderStatusChangedTransfer;
 use \Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
-
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    //...,
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    //...
+    AssetAddedTransfer::class => 'asset-commands',
+    AssetUpdatedTransfer::class => 'asset-commands',
+    AssetDeletedTransfer::class => 'asset-commands',
+    OrderStatusChangedTransfer::class => 'order-events',
     AddReviewsTransfer::class => 'product-review-commands',
-    OrderStatusChangedTransfer::class => 'order-events'
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    //...,
-    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    //...
+    'asset-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'product-review-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...,
-    'order-events' => 'http',
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+    //...
+    'order-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 ```
+
 #### Add a message handler
 
 Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
@@ -227,12 +233,85 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
  {
      return [
          //...,           
+         new AssetMessageHandlerPlugin(),
          new ProductReviewAddReviewsMessageHandlerPlugin(),
      ];
  }
 ```
 
-#### Receive messages
+### 4. Configure synchronization
+
+To configure Synchronization, follow these steps:
+
+#### Configure plugins in `Publisher`
+
+The following plugin must be added to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
+
+```php
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetDeletePublisherPlugin;
+use Spryker\Zed\AssetStorage\Communication\Plugin\Publisher\Asset\AssetWritePublisherPlugin;
+use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+  /**
+  * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+  */
+  protected function getAssetStoragePlugins(): array
+  {
+      return [
+          new AssetWritePublisherPlugin(),
+          new AssetDeletePublisherPlugin(),
+      ];
+  }
+}
+```
+
+#### Configure plugins in `Synchronization`
+
+The following plugin must be added to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
+
+```php
+namespace Pyz\Zed\Synchronization;
+
+use Spryker\Zed\AssetStorage\Communication\Plugin\Synchronization\AssetStorageSynchronizationDataPlugin;
+use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
+
+class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
+{
+  protected function getSynchronizationDataPlugins(): array
+  {
+      return [
+          new AssetStorageSynchronizationDataPlugin(),
+      ];
+  }
+}
+```
+
+#### Configure RabbitMq in `Client`
+
+The following plugin must be added to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
+
+```php
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+use Spryker\Shared\AssetStorage\AssetStorageConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{  
+  protected function getSynchronizationQueueConfiguration(): array
+  {
+      return [
+          AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE,
+      ];
+  }
+}
+```
+
+### 5. Receive messages
 
 1. To receive messages from the channel, the following command is used:
 
@@ -245,14 +324,14 @@ console message-broker:consume
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15',
+    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => $allStores,
 ];
 ```
 
-### 4. Configure OMS
+### 6. Configure OMS
 
 To configure OMS, follow these steps:
 
@@ -325,6 +404,41 @@ protected function getOrderHydrationPlugins(): array
         new MerchantDataOrderHydratePlugin(),
     ];
 }
+```
+
+### 7. Configure DataImport
+
+To configure DataImport, follow these steps:
+
+#### Extend csv files
+
+Add the following data to `data/import/common/common/product_abstract.csv`:
+
+```csv
+Add 2 columns, for example, attribute_key_7 and value_7 with UPCs, for example
+attribute_key_7 = upcs, value_7 = 12345678
+```
+
+Add the following data to `data/import/common/common/product_concrete.csv`:
+
+```csv
+Add UPCs into columns, for example 
+attribute_key_2 = upcs, value_2 = 12345678
+update UPC for an abstract product with the same abstract_sku
+```
+
+Add the following data to `data/import/common/common/product_attribute_key.csv`:
+
+```csv
+Add a new row with the data
+upcs,0 to enable support of UPC
+```
+
+Add the following data to `data/import/common/common/product_management_attribute.csv`:
+
+```csv
+Add a new row with the data
+upcs,select,yes,yes,,UPCs,UPCs,,
 ```
 
 ## Next steps

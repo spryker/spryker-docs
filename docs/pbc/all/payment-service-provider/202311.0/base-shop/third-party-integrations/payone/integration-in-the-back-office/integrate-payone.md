@@ -59,7 +59,7 @@ The Payone app requires the following Spryker modules:
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 
-## 3. Integrate Payone
+## 3. Manual Payone integration
 
 Follow these steps to integrate Payone.
 

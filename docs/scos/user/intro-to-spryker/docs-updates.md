@@ -6,6 +6,37 @@ last_updated: Oct 2, 2023
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
+## December 2023
+
+In December 2023, we have added and updated the following pages:
+
+### New pages 
+
+- [Glue API: Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202311.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html): Learn how to authenticate as a Back Office user using Glue API.
+- [Glue API: Authenticate as a warehouse user](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html): Learn how to authenticate as a warehouse user using Glue API.
+- [Glue API: Pick picklist items](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html): Learn how to pick picklist items using Glue API.
+- [Glue API: Retrieve picklists](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html): Learn how to retrieve picklists using Glue API.
+- [Glue API: Start picking](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html): Learn how to start picking using Glue API.
+- [Glue API: Create warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html): Learn how to create warehouse user assignments using Glue API.
+- [Glue API: Delete warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html): Learn how to activate and deactivate warehouse assignments using Glue API.
+- [Glue API: Retrieve warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-retrieve-warehouse-user-assignments.html): Learn how to retrieve warehouse user assignments using Glue API.
+- [Glue API: Update warehouse user assignments](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-update-warehouse-user-assignments.html): Learn how to update warehouse user assignments using Glue API.
+- [Glue API: Add shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html): Learn how to add shipment types using Glue API.
+- [Glue API: Retrieve shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html): Learn how to retrieve shipment types using Glue API.
+- [Glue API: Update shipment types](/docs/pbc/all/carrier-management/202311.0/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html): Learn how to update shipment types using Glue API.
+- [Glue API: Retrieve product offer service point availability](/docs/pbc/all/offer-management/202311.0/unified-commerce/glue-api-retrieve-product-offer-service-point-availability.html): Learn how to retrieve product offer service point availability using Glue API.
+- [Glue API: Add service point addresses](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html): Learn how to add service point addresses using Glue API.
+- [Glue API: Retrieve service point addresses](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html): Learn how to retrieve service point addresses using Glue API.
+- [Glue API: Update service point addresses](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-update-service-point-addresses.html):Learn how to update service point addresses using Glue API.
+- [Glue API: Add service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html): Learn how to add service points using Glue API.
+- [Glue API: Retrieve service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html): Learn how to retrieve service points using Glue API.
+- [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
+- [Glue API: Add service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
+- [Glue API: Retrieve service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html): Learn how to retrieve service types using Glue API.
+- [Glue API: Update service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html): Learn how to update service types using Glue API.
+- ;Glue API: Add services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
+- [Glue API: Retrieve services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html): Learn how to retrieve services using Glue API.
+- [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
 
 ## November 2023
 

@@ -1,6 +1,6 @@
 ---
-title: Test the Glue API
-description: Learn how to test the Glue API
+title: Test Glue API
+description: Learn how to test Glue API
 template: howto-guide-template
 ---
 

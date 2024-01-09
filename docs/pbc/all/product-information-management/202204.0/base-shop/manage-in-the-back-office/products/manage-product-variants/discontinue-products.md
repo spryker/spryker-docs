@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/discontinue-products.html
 ---
 title: Discontinuing products
 description: Use the guide to make the product variant discontinued in the Back Office.

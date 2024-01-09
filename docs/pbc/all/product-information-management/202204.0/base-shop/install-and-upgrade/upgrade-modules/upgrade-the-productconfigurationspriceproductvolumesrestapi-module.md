@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html
 ---
 title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
 description: Learn how to upgrade the ProductConfigurationsPriceProductVolumesRestApi module to a newer version.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html
 ---
 title: Migration guide - ProductQuantityDataImport
 description: Use the guide to learn how to update the ProductQuantityDataImport module.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/assign-product-attributes-to-product-variants.html
 ---
 title: Assign product attributes to product variants
 description: Learn how to assign product attributes to product variants in the Back Office

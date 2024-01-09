@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 ---
 title: Glue API - Alternative Products feature integration
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in the Spryker OS.

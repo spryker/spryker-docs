@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
 ---
 title: "HowTo: Integrate and use precise decimal numbers"
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects

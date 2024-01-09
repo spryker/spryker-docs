@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 ---
 title: "Glue API: Retrieving configurable bundle templates"
 description: Retrieve configurable bundle templates via Glue API

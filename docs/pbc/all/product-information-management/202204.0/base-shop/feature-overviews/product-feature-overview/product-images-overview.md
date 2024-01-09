@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
 title: Product Images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.

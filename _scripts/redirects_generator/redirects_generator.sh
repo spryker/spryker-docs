@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="C:/Dev/spryker-docs/docs/pbc/all/price-management/202204.0"
+folder_path="C:/Dev/spryker-docs/docs/pbc/all/product-information-management/202204.0"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

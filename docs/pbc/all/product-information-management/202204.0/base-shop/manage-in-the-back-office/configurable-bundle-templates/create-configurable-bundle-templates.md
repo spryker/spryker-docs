@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html
 ---
 title: Create configurable bundle templates
 description: Learn how to create configurable bundle templates in the Back Office.

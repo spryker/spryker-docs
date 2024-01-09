@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product.html
 ---
 title: "Tutorial: Product"
 last_updated: Jun 16, 2021

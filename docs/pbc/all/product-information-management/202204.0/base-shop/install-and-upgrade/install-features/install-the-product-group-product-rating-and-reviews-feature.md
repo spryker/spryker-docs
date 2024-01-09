@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html
 ---
 title: Product Group + Product Rating and Reviews feature integration
 description: Instructions to integrate the Product group + Product rating & reviews feature into a Spryker project.

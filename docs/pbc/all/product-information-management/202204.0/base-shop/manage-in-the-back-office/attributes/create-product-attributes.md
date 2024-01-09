@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html
 ---
 title: Create product attributes
 description: Learn how to create product attributes in the Back Office.

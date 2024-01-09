@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsearch-module.html
 ---
 title: Migration guide - ProductSearch
 description: Use the guide to learn how to update the ProductSearch module to a newer version.

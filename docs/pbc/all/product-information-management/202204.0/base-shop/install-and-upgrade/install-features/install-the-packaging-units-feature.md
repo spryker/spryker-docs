@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html
 ---
 title: Packaging Units feature integration
 last_updated: Jun 16, 2021

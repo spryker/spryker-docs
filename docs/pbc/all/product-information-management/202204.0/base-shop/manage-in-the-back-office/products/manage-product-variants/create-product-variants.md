@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
 ---
 title: Creating product variants
 description: Use the guide to configure a product variant, set a price and validity period, make it searchable on the website, and more

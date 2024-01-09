@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 ---
 title: Adding product alternatives
 description: The guide describes a procedure on how to add or remove alternatives to the products in the Back Office.

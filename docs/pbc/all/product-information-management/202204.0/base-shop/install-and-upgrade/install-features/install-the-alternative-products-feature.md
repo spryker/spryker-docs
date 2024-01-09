@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html
 ---
 title: Alternative Products feature integration
 description: This guide walks you through the process of installing the Alternative Products feature into your project.

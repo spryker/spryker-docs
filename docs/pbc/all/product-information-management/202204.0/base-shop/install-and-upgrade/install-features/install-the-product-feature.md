@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
 ---
 title: Install the Product feature
 description: The guide describes the process of installing the Product Concrete Search Widget feature in your project.

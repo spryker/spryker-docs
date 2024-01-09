@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-bundle-feature-overview.html
 ---
 title: Configurable Bundle feature overview
 description: A configurable bundle is a product bundle, that a customer can configure in the Storefront on the go by choosing the suggested concrete products.

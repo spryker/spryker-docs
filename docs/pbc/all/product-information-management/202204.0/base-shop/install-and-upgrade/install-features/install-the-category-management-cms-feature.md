@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-management-cms-feature.html
 ---
 title: Install the Category Management + CMS feature
 last_updated: Jun 23, 2021

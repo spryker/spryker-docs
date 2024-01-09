@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorypagesearch-module.html
 ---
 title: Migration guide - CategoryPageSearch
 last_updated: Jun 22, 2021

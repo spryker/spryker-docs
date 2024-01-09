@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html
 ---
 title: Assign and deassign products from categories
 description: Learn how to assign and deassign products from categories in the Back Office.

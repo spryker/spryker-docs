@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/alternative-products-feature-database-schema.html
 ---
 title: "Alternative Products feature: database schema"
 last_updated: Aug 11, 2021

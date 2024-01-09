@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 ---
 title: Install and configure Akeneo
 description: This article provides installation and configuration details for the Akeneo module in the Spryker-based project.

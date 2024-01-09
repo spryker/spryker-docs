@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/edit-product-labels.html
 ---
 title: Edit product labels
 description: Learn how to edit product labels in the Back Office

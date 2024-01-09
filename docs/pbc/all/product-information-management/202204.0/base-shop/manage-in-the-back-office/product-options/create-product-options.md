@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/create-product-options.html
 ---
 title: Create product options
 description: Learn how to create product options in the Back Office.

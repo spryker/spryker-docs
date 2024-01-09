@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/view-product-barcodes.html
 ---
 title: View product barcodes
 description: Use this section to review in the Back Office what barcodes have been generated for concrete products.

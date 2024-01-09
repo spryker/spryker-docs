@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html
 ---
 title: Glue API - Product Configuration feature integration
 description: Learn how to integrate the Product Configurator feature API into a Spryker project.

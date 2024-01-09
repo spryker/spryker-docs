@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-shipment-feature.html
 ---
 title: Integrate the Approval Process + Shipment feature
 description: This integration guide provides step-by-step instructions on integrating the Shipment and Approval Process connector in Spryker Commerce OS.

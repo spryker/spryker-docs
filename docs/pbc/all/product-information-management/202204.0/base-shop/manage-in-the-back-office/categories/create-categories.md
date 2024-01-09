@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/create-categories.html
 ---
 title: Create categories
 description: Learn how to create categories in the Back Office.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html
 ---
 title: Product Attributes overview
 last_updated: Jul 7, 2021

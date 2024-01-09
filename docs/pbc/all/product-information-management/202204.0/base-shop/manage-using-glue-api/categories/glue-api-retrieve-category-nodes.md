@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 ---
 title: "Glue API: Retrieving category nodes"
 description: Retrieve information about category nodes.

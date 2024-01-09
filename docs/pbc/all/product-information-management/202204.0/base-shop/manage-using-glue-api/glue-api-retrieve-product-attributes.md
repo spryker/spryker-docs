@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html
 ---
 title: "Glue API: Retrieving product attributes"
 description: The article explains how you can retrieve product attributes via the API

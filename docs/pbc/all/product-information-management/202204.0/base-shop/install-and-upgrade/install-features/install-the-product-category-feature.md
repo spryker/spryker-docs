@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-category-feature.html
 ---
 title: Product + Category feature integration
 last_updated: Jun 29, 2021

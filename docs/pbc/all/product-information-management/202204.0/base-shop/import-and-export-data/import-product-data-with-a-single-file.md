@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-product-data-with-a-single-file.html
 ---
 title: Import product data with a single file
 description: Learn how to import all main product data with a single file

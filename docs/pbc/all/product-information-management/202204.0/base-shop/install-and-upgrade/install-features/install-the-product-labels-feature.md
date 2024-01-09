@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 ---
 title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating

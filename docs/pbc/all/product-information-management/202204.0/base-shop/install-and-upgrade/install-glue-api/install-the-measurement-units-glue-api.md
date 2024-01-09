@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
 ---
 title: Glue API - Measurement Units feature integration
 description: The procedure of integrating Measurement Units Feature API into a Spryker project.

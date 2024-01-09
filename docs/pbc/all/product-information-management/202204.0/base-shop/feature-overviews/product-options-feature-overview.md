@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-options-feature-overview.html
 ---
 title: Product Options feature overview
 description: The document describes the creation process of product options and how it is managed in the Back Office

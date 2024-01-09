@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-lists-feature-overview.html
 ---
 title: Product Lists feature overview
 description: Product lists is a Spryker Commerce OS feature that lets you create product lists.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 title: Category Management feature overview
 description: The feature lets you keep your product catalog organized and comprehensible for the customers who can easily navigate the storefront and search products quicker

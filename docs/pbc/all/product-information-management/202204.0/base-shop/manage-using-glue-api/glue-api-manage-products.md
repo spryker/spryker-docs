@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-products.html
 ---
 title: "Glue API: Manage products"
 description: Describes the endpoints used to manage products

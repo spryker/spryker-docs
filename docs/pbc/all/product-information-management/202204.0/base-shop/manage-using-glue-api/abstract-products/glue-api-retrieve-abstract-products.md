@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
 ---
 title: "Glue API: Retrieve abstract products"
 description: Retrieve general information about abstract products and related resources.

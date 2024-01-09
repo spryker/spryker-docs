@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 title: "Glue API: Retrieving concrete products"
 description: Retrieve general information about concrete products.

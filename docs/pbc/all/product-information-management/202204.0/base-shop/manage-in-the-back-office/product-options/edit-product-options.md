@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/edit-product-options.html
 ---
 title: Edit product options
 description: Learn how to edit product options in the Back Office.

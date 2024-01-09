@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html
 ---
 title: Install the Configurable Bundle + Order Management feature
 description: This integration guide provides step-by-step instructions on installing Configurable Bundle + Order Management feature.

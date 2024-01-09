@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/delete-categories.html
 ---
 title: Delete categories
 description: Learn how to delete categories in the Back Office.

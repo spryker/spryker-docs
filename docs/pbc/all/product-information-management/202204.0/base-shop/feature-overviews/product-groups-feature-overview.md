@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-groups-feature-overview.html
 ---
 title: Product Groups feature overview
 description: Product Groups feature lets product catalog managers group products by attributes.

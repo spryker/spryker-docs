@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html
 ---
 title: Edit configurable bundle templates
 description: Learn how to manage configurable bundle templates in the Back Office.

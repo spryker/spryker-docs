@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html
 ---
 title: Glue API - Catalog feature integration
 description: Use the guide to install the Glue Catalog feature in your project.

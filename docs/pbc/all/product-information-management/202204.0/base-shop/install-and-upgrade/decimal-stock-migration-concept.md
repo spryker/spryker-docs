@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
 ---
 title: Decimal Stock migration concept
 description: The article provides instructions on how to install Decimal Stock on all modules affected in bulk and then individually.

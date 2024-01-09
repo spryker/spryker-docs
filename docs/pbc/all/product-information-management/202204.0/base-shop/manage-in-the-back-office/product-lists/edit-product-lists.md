@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-lists/edit-product-lists.html
 ---
 title: Edit product lists
 description: Learn how to edit product lists in the Back Office.

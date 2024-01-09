@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
 ---
 title: "HowTo: Import packaging units"
 description: Use this guide to learn how to import packaging unit information and its types using a CSV file.

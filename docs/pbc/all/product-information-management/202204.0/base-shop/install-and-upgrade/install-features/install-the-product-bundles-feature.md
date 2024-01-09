@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html
 ---
 title: Product Bundles feature integration
 description: Learn how to integrate the Product bundles feature into a Spryker project.

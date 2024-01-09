@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-catalog-order-management-feature.html
 ---
 title: Install the Catalog + Order Management feature
 description: Learn how to integrate the Catalog + Order Management feature connector into a Spryker project.

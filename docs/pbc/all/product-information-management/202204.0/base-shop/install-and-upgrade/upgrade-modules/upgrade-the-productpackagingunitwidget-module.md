@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html
 ---
 title: Migration guide - ProductPackagingUnitWidget
 description: Use the guide to migrate to a new version of the

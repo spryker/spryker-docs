@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/edit-product-variants.html
 ---
 title: Editing product variants
 description: The guide describes how to update the product variant in the Back Office.

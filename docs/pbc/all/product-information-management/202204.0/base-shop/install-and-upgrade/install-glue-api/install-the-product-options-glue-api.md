@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html
 ---
 title: Glue API - Product Options feature integration
 description: This guide provides step-by-step instruction on integrating Product Options API Feature into the Spryker based project.

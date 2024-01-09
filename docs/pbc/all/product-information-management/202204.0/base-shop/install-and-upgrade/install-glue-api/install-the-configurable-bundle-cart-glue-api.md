@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
 ---
 title: Glue API - Configurable Bundle + Cart feature integration
 description: Learn how to integrate the Glue API - Configurable Bundle + Cart feature into a Spryker project.

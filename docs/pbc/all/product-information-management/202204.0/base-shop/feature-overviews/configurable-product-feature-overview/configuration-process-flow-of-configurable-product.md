@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
 ---
 title: Configuration process flow of configurable products
 last_updated: Jun 2, 2022

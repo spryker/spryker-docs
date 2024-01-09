@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
 ---
 title: "Glue API: Retrieving image sets of concrete products"
 description: Retrieve image sets of concrete products.

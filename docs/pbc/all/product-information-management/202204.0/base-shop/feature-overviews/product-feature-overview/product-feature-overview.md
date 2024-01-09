@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html
 ---
 title: Product feature overview
 description: Detailed overview of the Product feature.

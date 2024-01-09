@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/float-stock-for-products-migration-concept.html
 ---
 title: Float stock for products migration concept
 last_updated: Jun 16, 2021

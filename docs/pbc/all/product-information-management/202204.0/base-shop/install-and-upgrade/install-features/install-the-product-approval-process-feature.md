@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
 ---
 title: Product Approval Process feature integration
 description: Learn how to integrate the Product Approval Process feature into a Spryker project.

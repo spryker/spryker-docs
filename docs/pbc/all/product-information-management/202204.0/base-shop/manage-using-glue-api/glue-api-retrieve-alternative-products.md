@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 ---
 title: "Glue API: Retrieve alternative products"
 description: Learn how to find alternatives for discontinued products with Glue API.

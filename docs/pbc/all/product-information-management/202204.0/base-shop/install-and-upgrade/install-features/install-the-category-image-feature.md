@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
 ---
 title: Category Image feature integration
 description: The guide walks you through the process of installing the Category Image feature in your project.

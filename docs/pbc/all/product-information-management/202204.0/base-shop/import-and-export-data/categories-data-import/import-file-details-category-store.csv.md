@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/categories-data-import/import-file-details-category-store.csv.html
 ---
 title: "Import file details: category_store.csv"
 description: Learn the description of the category_store.csv file to configure assignments of categories in your Spryker shop | Spryker

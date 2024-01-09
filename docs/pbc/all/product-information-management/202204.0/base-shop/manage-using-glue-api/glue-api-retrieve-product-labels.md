@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
 ---
 title: "Glue API: Retrieving product labels"
 description: Learn how to retrieve product labels via Glue API.

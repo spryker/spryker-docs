@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
 ---
 title: "HowTo: Manage a big number of categories"
 last_updated: Jun 16, 2021

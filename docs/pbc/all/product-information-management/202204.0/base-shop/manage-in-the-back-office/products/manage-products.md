@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-products.html
 ---
 title: Manage products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.

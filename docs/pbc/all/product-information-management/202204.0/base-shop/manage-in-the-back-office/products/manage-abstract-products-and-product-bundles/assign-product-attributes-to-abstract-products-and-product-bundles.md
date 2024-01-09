@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
 ---
 title: Assign product attributes to abstract products
 description: Learn how to assign product attributes to abstract products in the Back Office

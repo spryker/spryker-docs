@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html
 ---
 title: "Import file details: product_concrete_pre_configuration.csv"
 description: Description of the `product_concrete_pre_configuration.csv` import file.

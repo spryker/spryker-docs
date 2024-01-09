@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html
 ---
 title: "Glue API: Retrieving bundled products"
 last_updated: Jun 21, 2021

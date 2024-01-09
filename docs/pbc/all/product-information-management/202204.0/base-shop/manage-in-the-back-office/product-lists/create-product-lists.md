@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-lists/create-product-lists.html
 ---
 title: Create product lists
 description: Learn how to create product lists in the Back Office.

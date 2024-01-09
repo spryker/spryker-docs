@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 ---
 title: "Glue API: Retrieve measurement units"
 description: Retrieve details about measurement units and learn what else you can do with the resource.

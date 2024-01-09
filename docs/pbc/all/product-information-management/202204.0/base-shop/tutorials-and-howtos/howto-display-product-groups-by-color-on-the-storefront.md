@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
 ---
 title: "HowTo: Display product groups by color on the Storefront"
 description: Procedure to display a product group on Storefront.

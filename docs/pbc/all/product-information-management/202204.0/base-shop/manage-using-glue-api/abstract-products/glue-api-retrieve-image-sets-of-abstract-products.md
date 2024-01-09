@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html
 ---
 title: "Glue API: Retrieving image sets of abstract products"
 description: Retrieve image sets of abstract products.

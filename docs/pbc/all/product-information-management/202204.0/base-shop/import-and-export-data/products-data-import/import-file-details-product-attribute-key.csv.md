@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html
 ---
 title: "Import file details: product_attribute_key.csv"
 last_updated: Jul 7, 2021

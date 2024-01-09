@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 ---
 title: "HowTo: Make a product searchable and shown on the Storefront"
 description: Use the guide to learn about conditions need to be performed to make a product searchable in the online store.

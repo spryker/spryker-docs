@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
 ---
 title: Install the Measurement Units feature
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.

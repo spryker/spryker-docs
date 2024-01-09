@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/product-information-management.html
 ---
 title: Product Information Management
 description: The capability for managing product catalogs

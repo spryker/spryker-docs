@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
 ---
 title: Migration guide - ProductSetPageSearch
 last_updated: Jun 16, 2021

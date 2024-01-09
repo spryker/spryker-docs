@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/edit-categories.html
 ---
 title: Edit categories
 description: Learn how to edit categories in the Back Office.

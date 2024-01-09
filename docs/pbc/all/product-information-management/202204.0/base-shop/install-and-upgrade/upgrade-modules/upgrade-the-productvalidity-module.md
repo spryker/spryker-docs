@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
 ---
 title: Migration guide - ProductValidity
 description: Use the guide to learn how to update the ProductValidity module to a newer version.

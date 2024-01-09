@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
 title: "Glue API: Retrieving sales units"
 description: Retrieve sales units of concrete products.

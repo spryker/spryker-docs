@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-barcode-feature-overview.html
 ---
 title: Product Barcode feature overview
 description: The Barcode Generator can be used for any kind of entity, and by default, we provide a solution for products.

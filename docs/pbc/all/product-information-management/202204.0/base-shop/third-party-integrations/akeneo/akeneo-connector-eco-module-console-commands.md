@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
 ---
 title: "Akeneo: Console commands"
 description: This guide provides the console commands for the Akeneo module.

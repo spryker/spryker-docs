@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
 ---
 title: "Tutorial: Product challenge solution"
 last_updated: Jun 16, 2021

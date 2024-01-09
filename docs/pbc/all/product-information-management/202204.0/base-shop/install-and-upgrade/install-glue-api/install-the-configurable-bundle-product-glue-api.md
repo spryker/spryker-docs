@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
 ---
 title: Install the Configurable Bundle + Product Glue API
 description: Learn how to integrate the Glue API - Configurable Bundle + Product feature into a Spryker project.

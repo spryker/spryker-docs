@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/replace-the-codeitnow-with-the-barcodelaminas-module.html
 ---
 title: Replace the CodeItNow module with the BarcodeLaminas module
 description:

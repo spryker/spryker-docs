@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/measurement-units-feature-module-relations.html
 ---
 title: "Measurement Units feature: Module relations"
 last_updated: Aug 13, 2021

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
 ---
 title: Order products in categories
 description: Learn how to order products in categories in the Back Office.

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html
 ---
 title: Create product labels
 description: Learn how to create product labels in the Back Office

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/contentserv.html
 ---
 title: Contentserv
 last_updated: Jun 16, 2021

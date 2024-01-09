@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/create-service-offerings-best-practices.html
 ---
 title: "Creating service offerings: best practices"
 last_updated: Jun 16, 2021

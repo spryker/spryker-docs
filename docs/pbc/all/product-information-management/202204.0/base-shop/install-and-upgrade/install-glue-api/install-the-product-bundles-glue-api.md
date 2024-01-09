@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html
 ---
 title: Glue API - Product Bundles feature integration
 description: Learn how to integrate the Glue API - Product Bundles feature into a Spryker project.

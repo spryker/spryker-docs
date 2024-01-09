@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html
 ---
 title: Edit product attributes
 description: Learn how to edit product attributes in the Back Office.

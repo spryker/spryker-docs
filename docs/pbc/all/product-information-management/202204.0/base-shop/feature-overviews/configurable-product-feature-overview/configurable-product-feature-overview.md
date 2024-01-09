@@ -1,3 +1,4 @@
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html
 ---
 title: Configurable Product feature overview
 description: All the details about the Configurable Product feature of Spryker.

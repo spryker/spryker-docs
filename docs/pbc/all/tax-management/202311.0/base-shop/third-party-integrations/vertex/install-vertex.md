@@ -75,15 +75,15 @@ $config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT
 $config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
 ```
 
-### 2. Configure the Calculation dependency provider
+### 2. Configure the Calculation plugins stack
 
-Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
+Update `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php` as follows:
 
 ```php
 // ...
 
-use Spryker\Zed\Calculation\Communication\Plugin\Calculator\GrandTotalCalculatorPlugin;
-use Spryker\Zed\Calculation\Communication\Plugin\Calculator\TaxTotalCalculatorPlugin;
+use Spryker\Zed\Calculation\Communication\Plugin\Calculator\ItemDiscountAmountFullAggregatorPlugin;
+use Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceToPayAggregatorPlugin;
 use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 // ...
@@ -99,12 +99,13 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         $pluginStack = [
             // ...
 
-            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
             # Suggested plugins order is shown.
 
-            new TaxTotalCalculatorPlugin(),
+            new ItemDiscountAmountFullAggregatorPlugin(),
+
             new TaxAppCalculationPlugin(),
-            new GrandTotalCalculatorPlugin(),
+
+            new PriceToPayAggregatorPlugin(),
 
             // ...
         ];
@@ -122,12 +123,15 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
         return [
             // ...
 
-            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
             # Suggested plugins order is shown.
 
-            new TaxTotalCalculatorPlugin(),
+            new ItemDiscountAmountFullAggregatorPlugin(),
+
+            # This plugin is replacing other tax calculation plugins in the stack and will use them as a fallback.
+            # No other tax calculation plugins except for TaxTotalCalculatorPlugin should be present in the stack.
             new TaxAppCalculationPlugin(),
-            new GrandTotalCalculatorPlugin(),
+
+            new PriceToPayAggregatorPlugin(),
 
             // ...
         ];
@@ -136,25 +140,67 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 // ...
 ```
 
-{% info_block infoBox "Performance improvement" %}
+{% info_block infoBox "Updating from previous version" %}
 
-Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
+Please pay attention to the position of TaxAppCalculationPlugin in the list of plugins.
 
-in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
+{% endinfo_block %}
 
-- TaxAmountCalculatorPlugin
-- ItemTaxAmountFullAggregatorPlugin
-- TaxRateAverageAggregatorPlugin
-- TaxTotalCalculatorPlugin
+Update `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php` as follows:
 
-in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPluginStack()`:
+```php
+// ...
 
-- TaxAmountCalculatorPlugin
-- ItemTaxAmountFullAggregatorPlugin
-- TaxAmountAfterCancellationCalculatorPlugin
-- OrderTaxTotalCalculationPlugin
+use ;
 
-Disabling them will also disable Spryker Taxes feature. This means that in case Vertex is unresponsive or disabled, order taxes will not be calculated, and their amount will always be 0.
+// ...
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getFallbackQuoteCalculationPlugins(): array
+    {
+        return [
+            # These plugins will be called if TaxApp configuration is missing or TaxApp is disabled.
+            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it is required by TaxRateAverageAggregatorPlugin.
+            new TaxAmountCalculatorPlugin(),
+            new ItemTaxAmountFullAggregatorPlugin(),
+            new PriceToPayAggregatorPlugin(),
+            new TaxRateAverageAggregatorPlugin(),
+        ];
+    }
+
+    /**
+     * {@inheritDoc}
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getFallbackOrderCalculationPlugins(): array
+    {
+        return [
+            # These plugins will be called if TaxApp configuration is missing or TaxApp is disabled.
+            # Please note that this list includes PriceToPayAggregatorPlugin - this plugin isn't a part of tax calculation logic but it is required by TaxAmountAfterCancellationCalculatorPlugin.
+            new TaxAmountCalculatorPlugin(),
+            new ItemTaxAmountFullAggregatorPlugin(),
+            new PriceToPayAggregatorPlugin(),
+            new TaxAmountAfterCancellationCalculatorPlugin(),
+        ];
+    }
+    
+// ...
+```
+
+In general, `getFallback<Quote|Order>CalculationPlugins` methods should contain the tax calculation plugins and all required plugins which are replaced by TaxAppCalculationPlugin in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
+
+{% info_block infoBox "Fallback behavior" %}
+
+There are 3 different failure scenarios where TaxAppCalculationPlugin might need to use a fallback logic:
+
+1. TaxApp is not connected: fallback plugins defined in `getFallback<Quote|Order>CalculationPlugins` will be used.
+2. TaxApp is disabled: fallback plugins defined in `getFallback<Quote|Order>CalculationPlugins` will be used.
+3. TaxApp is not responding or is responding with an error: tax value will be set to zero and the customer will be able to proceed with the checkout.
 
 {% endinfo_block %}
 
@@ -235,7 +281,35 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-### 5. Optional: To send invoices to Vertex through OMS, configure your Payment OMS
+### 5. Configure the OMS dependency provider
+
+Add the following code to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
+
+```php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin;
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+// ...
+
+    /**
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsEventTriggeredListenerPlugin>
+     */
+    protected function getOmsEventTriggeredListenerPlugins(): array
+    {
+        return [
+            new OrderRefundedEventListenerPlugin(),
+        ];
+    }
+}
+
+```
+
+### 6. Optional: To send invoices to Vertex through OMS, configure your Payment OMS
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 

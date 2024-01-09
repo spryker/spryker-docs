@@ -1805,6 +1805,18 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/manage-merchant-product-offers.html
               - title: Manage product offers in the Merchant Portal
                 url: /docs/pbc/all/offer-management/marketplace/manage-product-offers.html
+                include_versions:
+                - "202212.0"
+                - "202307.0"
+              - title: Manage product offers in the Merchant Portal
+                url: /docs/pbc/all/offer-management/marketplace/manage-product-offers-in-the-merchant-portal/manage-product-offers-in-the-merchant-portal.html
+                include_versions:
+                - "202311.0"
+                nested:
+                  - title: Create product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
+                  - title: Edit product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
               - title: Retrieve product offers using Glue API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
               - title: Render merchant product offers on the Storefront

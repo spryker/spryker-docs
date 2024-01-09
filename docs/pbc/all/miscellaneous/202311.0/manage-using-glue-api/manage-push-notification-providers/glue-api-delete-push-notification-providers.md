@@ -14,7 +14,7 @@ This endpoint lets you delete push notification providers.
 ## Retrieve push notification providers
 
 ***
-`DELETE` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/*{% raw %}{{push_notification_provider_id}}{% endraw %}***
+`DELETE` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/*{% raw %}*{{push_notification_provider_id}}*{% endraw %}**
 ***
 
 

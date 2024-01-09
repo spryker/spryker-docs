@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/measurement-units-feature-overview.html
+  
 ---
 title: Measurement Units feature overview
 description: The Measurement Units feature lets you sell products by any unit of measure defined by a shop administrator.

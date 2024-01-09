@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html
+  
 ---
 title: Install the Category Management Glue API
 description: This guide will navigate you through the process of installing and configuring the Category API feature in Spryker OS.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
+  
 ---
 title: "Import file details: product_label_store.csv"
 description: Description of the product_label_store.csv import file used to import store relations of product labels.

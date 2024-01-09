@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-options/product-options-data-import.html
+  
 ---
 title: Product options data import
 last_updated: Jun 16, 2021

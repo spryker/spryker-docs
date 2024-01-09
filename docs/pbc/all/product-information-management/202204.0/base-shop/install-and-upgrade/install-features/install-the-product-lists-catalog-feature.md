@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
+  
 ---
 title: Product Lists + Catalog feature integration
 description: The guide walks you through the process of installing the Product Lists as a catalog feature in the project.

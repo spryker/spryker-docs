@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
+  
 ---
 title: Install the Product Glue API
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.

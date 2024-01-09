@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
+  
 ---
 title: Install the Alternative Products + Wishlist feature
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html
+  
 ---
 title: Product Groups feature integration
 description: The guide describes the process of installing the Product Group feature in your project.

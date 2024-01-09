@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
+  
 ---
 title: Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on installing the basic functionality for the Configurable Bundle feature in Spryker.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-catalog-category-management-feature.html
+  
 ---
 title: Install the Catalog + Category Management feature
 last_updated: Jul 6, 2021

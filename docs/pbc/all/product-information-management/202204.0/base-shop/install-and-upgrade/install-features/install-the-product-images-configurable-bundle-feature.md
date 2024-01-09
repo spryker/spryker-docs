@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
+  
 ---
 title: Product Images + Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.

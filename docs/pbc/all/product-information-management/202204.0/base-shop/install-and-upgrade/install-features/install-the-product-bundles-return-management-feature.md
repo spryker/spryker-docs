@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html
+  
 ---
 title: Product Bundles + Return Management feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Return Management feature into your project.

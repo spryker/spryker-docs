@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
+  
 ---
 title: Product Group + Cart feature integration
 description: Instructions to integrate the Product group + Cart feature into a Spryker project.

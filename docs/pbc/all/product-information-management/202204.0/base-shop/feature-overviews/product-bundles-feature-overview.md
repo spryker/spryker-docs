@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-bundles-feature-overview.html
+  
 ---
 title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package.

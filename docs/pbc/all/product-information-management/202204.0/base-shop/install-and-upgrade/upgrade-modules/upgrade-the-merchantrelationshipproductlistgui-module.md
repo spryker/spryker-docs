@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-merchantrelationshipproductlistgui-module.html
+  
 ---
 title: Migration guide - MerchantRelationshipProductListGui
 description: This guide provides migration steps to upgrade  MerchantRelationshipProductListGui to the newer major version.

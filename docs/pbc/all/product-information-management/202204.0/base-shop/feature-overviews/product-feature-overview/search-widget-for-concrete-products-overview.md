@@ -1,4 +1,3 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html
 ---
 title: Search widget for concrete products overview
 description: Search widget adds lets users easily search and add concrete products directly from shopping cart/list pages.

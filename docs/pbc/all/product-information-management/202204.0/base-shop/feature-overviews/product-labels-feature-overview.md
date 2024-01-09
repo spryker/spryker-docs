@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-labels-feature-overview.html
+  
 ---
 title: Product Labels feature overview
 last_updated: Jul 26, 2021

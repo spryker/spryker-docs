@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html
+  
 ---
 title: Install the Measurement Units + Quick Add to Cart feature
 description: Measurement Units + Quick Add to Cart allow selling products by any unit of measure with a click. This guide describes how to integrate this feature into your project.

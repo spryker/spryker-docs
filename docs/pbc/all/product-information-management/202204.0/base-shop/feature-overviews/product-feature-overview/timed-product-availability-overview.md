@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
+  
 ---
 title: Timed Product Availability overview
 description: Timed product availability, or product TTL (Time to Live) lets you define when your products are available online and when they are not.

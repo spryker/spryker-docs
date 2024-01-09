@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productcategoryfiltergui-module.html
+  
 ---
 title: Migration guide - ProductCategoryFilterGui
 description: Learn how to update the ProductCategoryFilterGui module.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html
+  
 ---
 title: Install the Product Bundles + Order Management feature
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.

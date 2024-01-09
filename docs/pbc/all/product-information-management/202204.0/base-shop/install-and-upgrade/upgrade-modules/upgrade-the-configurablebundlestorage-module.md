@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundlestorage-module.html
+  
 ---
 title: Migration guide - ConfigurableBundleStorage
 description: This migration guide contains instructions on upgrading ConfigurableBundleStorage to the newer major version.

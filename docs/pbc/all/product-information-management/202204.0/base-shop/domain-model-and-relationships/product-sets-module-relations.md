@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-sets-module-relations.html
+  
 ---
 title: "Product Sets feature: Domain model and relationships"
 last_updated: Aug 19, 2021

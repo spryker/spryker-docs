@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-feature-module-relations.html
+  
 ---
 title: "Product feature: Module relations"
 last_updated: Aug 19, 2021

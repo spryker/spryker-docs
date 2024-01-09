@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-approval-status.csv.html
+  
 ---
 title: "Import file details: product_abstract_approval_status.csv"
 description: This document contains content of the product_approval_status_default.csv file to configure products approval information about your Spryker Demo Shop.

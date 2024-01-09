@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html
+  
 ---
 title: "Import file details: product_management_attribute.csv"
 last_updated: Jun 16, 2021

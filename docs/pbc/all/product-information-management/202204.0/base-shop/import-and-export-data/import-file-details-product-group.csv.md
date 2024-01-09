@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-group.csv.html
+  
 ---
 title: "Import file details: product_group.csv"
 last_updated: Jun 16, 2021

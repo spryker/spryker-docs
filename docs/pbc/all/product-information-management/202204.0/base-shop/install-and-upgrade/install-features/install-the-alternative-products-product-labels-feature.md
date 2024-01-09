@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
+  
 ---
 title: Alternative Products + Product Labels feature integration
 description: The guide describes the procedure that you need to perform in order to integrate the Alternative Products + Product Label feature into your project.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-configurablebundle-module.html
+  
 ---
 title: Migration guide - ConfigurableBundle
 description: This guide contains module migration steps for the ConfigurableBundle module to the newer major version.

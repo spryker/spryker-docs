@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html
+  
 ---
 title: Migration guide - Category
 description: Use the guide to update versions to the newer ones of the Category module.

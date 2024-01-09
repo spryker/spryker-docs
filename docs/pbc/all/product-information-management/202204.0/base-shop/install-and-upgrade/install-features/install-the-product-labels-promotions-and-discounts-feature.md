@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
+  
 ---
 title: Product labels + Promotions and Discounts feature integration
 description: This guide provides step-by-step instructions on integrating Product Labels + Promotions & Discounts feature into a Spryker-based project.

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html
+  
 ---
 title: "Import file details: product_option_price.csv"
 last_updated: Jun 16, 2021

@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-management-promotions-and-discounts-feature.html
+  
 ---
 title: Category Management + Promotions and Discounts feature integration
 description: Add the category parameter to calculation and conditions queries in the Promotions & Discounts feature.

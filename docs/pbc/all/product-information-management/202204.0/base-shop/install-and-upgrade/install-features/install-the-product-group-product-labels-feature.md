@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
+  
 ---
 title: Product Group + Product Labels feature integration
 description: Instructions to integrate Product group + Product labels feature into a Spryker project.

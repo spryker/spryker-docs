@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html
+  
 ---
 title: Install the Product + Order Management feature
 description: This guide provides step-by-step instructions on integrating Product + Order Management feature into your project.

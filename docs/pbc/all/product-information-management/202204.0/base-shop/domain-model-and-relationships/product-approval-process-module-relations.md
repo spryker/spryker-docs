@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-approval-process-module-relations.html
+  
 ---
 title: "Product approval process: Module relations"
 last_updated: Dec 22, 2022

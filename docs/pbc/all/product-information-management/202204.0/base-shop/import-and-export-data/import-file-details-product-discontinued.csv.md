@@ -1,4 +1,4 @@
-  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html
+  
 ---
 title: "Import file details: product_discontinued.csv"
 last_updated: Jun 16, 2021

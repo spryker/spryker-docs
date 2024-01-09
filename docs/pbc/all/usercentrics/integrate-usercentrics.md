@@ -21,9 +21,6 @@ The UserCentrics app requires the following Spryker modules:
 
 * `spryker/asset: ^1.6.0`
 * `spryker/asset-storage: ^1.2.1`
-* `spryker/message-broker: ^1.9.0`
-* `spryker/message-broker-aws: ^1.5.0`
-* `spryker/message-broker-extension: ^1.1.0`
 * `spryker-shop/asset-widget: ^1.0.0`
 * `spryker-shop/shop-ui: ^1.71.0`
 

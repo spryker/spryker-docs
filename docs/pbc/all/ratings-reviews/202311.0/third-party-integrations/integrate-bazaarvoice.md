@@ -17,8 +17,6 @@ The Bazaarvoice app requires the following Spryker modules:
 * `spryker/asset: ^1.6.0`
 * `spryker/asset-storage: ^1.2.1`
 * `spryker/merchant-profile: ^1.2.1` (Marketplace only)
-* `spryker/message-broker: ^1.9.0`
-* `spryker/message-broker-aws: ^1.5.0`
 * `spryker/oms: ^11.25.0`
 * `spryker/product-review: ^2.11.2`
 * `spryker/product-review-gui: ^1.6.0`

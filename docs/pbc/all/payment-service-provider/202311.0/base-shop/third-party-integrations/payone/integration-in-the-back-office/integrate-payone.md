@@ -16,8 +16,6 @@ Before you can integrate Payone, make sure that your project is ACP-enabled. See
 
 The Payone app requires the following Spryker modules:
 
-* `spryker/message-broker: ^1.9.0`
-* `spryker/message-broker-aws: ^1.5.0`
 * `spryker/payment: ^5.15.0`
 * `spryker/sales: ^11.41.0`
 * `spryker/sales-return: ^1.5.0`

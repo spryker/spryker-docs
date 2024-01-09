@@ -370,7 +370,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 ```
 </details>
 
-#### Provide ACP-related SCCOS environment variables
+### Provide ACP-related SCCOS environment variables
 
 This section describes the variables that you must configure for use within your SCCOS AWS environment.
 
@@ -378,7 +378,7 @@ You need to define the environment variables in the `deploy.yml` file of *each* 
 
 General structure:
 
-```json
+```yaml
 ENVIRONMENT_VARIABLE_NAME_A: '{
   "CONFIGURATION_KEY_A":"SOME_VALUE_A",
   "CONFIGURATION_KEY_B":"SOME_VALUE_B"
@@ -387,7 +387,7 @@ ENVIRONMENT_VARIABLE_NAME_A: '{
 
 Data structure example for a demo environment connected to the Spryker ACP production:
 
-```json
+```yaml
 #AOP
 SPRYKER_TENANT_IDENTIFIER: "tenant-<<uuid>>"
 
@@ -409,17 +409,17 @@ SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://publish.mb.spryker
 SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://consume.mb.spryker.com/"
 ```
 
-### General configurations: SPRYKER_TENANT_IDENTIFIER variable
+#### General configurations: SPRYKER_TENANT_IDENTIFIER variable
 
 The tenant-identifier is manually created by prefixing a UUID with `tenant-`
 
 Example:
 
-```json
+```yaml
 SPRYKER_TENANT_IDENTIFIER: "tenant-3342063d-0920-4004-acb0-ce8c8bbae513"
 ```
 
-### General configurations: SPRYKER_AOP_AUTHENTICATION variable 
+#### General configurations: SPRYKER_AOP_AUTHENTICATION variable 
 
 The configuration key `SPRYKER_AOP_AUTHENTICATION` is a json which contains auth0 credentials.
 
@@ -431,13 +431,13 @@ For customers, the environment variables must be added to the AWS Parameter Stor
 
 {% endinfo_block %}
 
-### General configurations: SPRYKER_AOP_APPLICATION variable
+#### General configurations: SPRYKER_AOP_APPLICATION variable
 
 The configuration key `APP_CATALOG_SCRIPT_URL` is a URL for the App-Tenant-Registry-Service (ATRS) and the path to the JS script to load the ACP catalog.
 
 Example of the production ATRS_HOST and path:
 
-```json
+```yaml
 https://app-catalog.atrs.spryker.com/loader
 ```
 
@@ -451,20 +451,20 @@ The app domains are provided by Spryker OPS.
 
 Example of the app domain values:
 
-```json
+```yaml
 [
   "os.apps.aop.spryker.com",
   "*.bazaarvoice.com"
 ]
 ```
 
-### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL variable
+#### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL variable
 
 The configuration key `SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL` is a URL of Event Platform (EP) HTTP channel sender.
 
 The URL is different for each environment.
 
-### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL variable
+#### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL variable
 
 The configuration key `SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL` is a URL of Event Platform (EP) HTTP channel receiver.
 

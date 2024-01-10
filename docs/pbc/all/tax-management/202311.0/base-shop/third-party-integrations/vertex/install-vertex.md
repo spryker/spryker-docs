@@ -103,6 +103,8 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
             new ItemDiscountAmountFullAggregatorPlugin(),
 
+            # This plugin is replacing other tax calculation plugins in the stack and will use them as a fallback.
+            # No other tax calculation plugins except for TaxTotalCalculatorPlugin should be present in the stack.
             new TaxAppCalculationPlugin(),
 
             new PriceToPayAggregatorPlugin(),
@@ -143,6 +145,8 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 {% info_block infoBox "Updating from TaxApp module version <=0.2.3" %}
 
 Please pay attention to the position of `TaxAppCalculationPlugin` in the list of plugins: it should be placed after `ItemDiscountAmountFullAggregatorPlugin` and before `PriceToPayAggregatorPlugin`.
+
+Previously we have recommended to disable default tax calculation plugins; this is not required anymore as with the new implementation default tax plugins will be called only if Vertex is disconnected or disabled.
 
 {% endinfo_block %}
 
@@ -206,8 +210,8 @@ Tax calculation plugins moved:
 
 There are 3 different failure scenarios where `TaxAppCalculationPlugin` might need to use a fallback logic:
 
-1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used.
-2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used.
+1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
+2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
 3. Vertex App is not responding or is responding with an error: tax value will be set to zero and the customer will be able to proceed with the checkout.
 
 {% endinfo_block %}
@@ -398,7 +402,8 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
             new OrderRefundedEventListenerPlugin(),
         ];
     }
-
+    
+// ...
 ```
 
 This configuration of `getOmsEventTriggeredListenerPlugins` method is required to make sure that the correct tax amount will be used during refund process.
@@ -406,7 +411,6 @@ This configuration of `getOmsEventTriggeredListenerPlugins` method is required t
 {% info_block infoBox "OMS configuration requirement" %}
 
 The refund functionality will only work if the OMS event is called `refund`.
-Refund and invoice functionality 
 
 {% endinfo_block %}
 

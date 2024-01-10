@@ -142,7 +142,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Updating from TaxApp module version <=0.2.3" %}
 
-Please pay attention to the position of TaxAppCalculationPlugin in the list of plugins: it should be placed after `ItemDiscountAmountFullAggregatorPlugin` and before `PriceToPayAggregatorPlugin`.
+Please pay attention to the position of `TaxAppCalculationPlugin` in the list of plugins: it should be placed after `ItemDiscountAmountFullAggregatorPlugin` and before `PriceToPayAggregatorPlugin`.
 
 {% endinfo_block %}
 
@@ -196,7 +196,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
 // ...
 ```
 
-In general, `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` methods should contain the tax calculation plugins which are replaced by TaxAppCalculationPlugin in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
+In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins which are replaced by `TaxAppCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
 The code snipped above is an example fo such configuration based on Spryker default tax calculation plugins.
 Tax calculation plugins moved:
 - from `getQuoteCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxRateAverageAggregatorPlugin`
@@ -204,10 +204,10 @@ Tax calculation plugins moved:
 
 {% info_block infoBox "Fallback behavior" %}
 
-There are 3 different failure scenarios where TaxAppCalculationPlugin might need to use a fallback logic:
+There are 3 different failure scenarios where `TaxAppCalculationPlugin` might need to use a fallback logic:
 
-1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` will be used.
-2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` will be used.
+1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used.
+2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used.
 3. Vertex App is not responding or is responding with an error: tax value will be set to zero and the customer will be able to proceed with the checkout.
 
 {% endinfo_block %}
@@ -243,9 +243,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```
 
-If you have custom Yves templates or make your own Frontend, add ```CartSummaryHideTaxAmountWidget``` to your template. The core template is located at `SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig`.
+If you have custom Yves templates or make your own Frontend, add `CartSummaryHideTaxAmountWidget` to your template. The core template is located at `SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig`.
 
-Here is an example with ```CartSummaryHideTaxAmountWidget```:
+Here is an example with `CartSummaryHideTaxAmountWidget`:
 
 ```html
 {% raw %}

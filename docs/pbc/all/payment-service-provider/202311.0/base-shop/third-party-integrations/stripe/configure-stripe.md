@@ -8,7 +8,7 @@ related:
   - title: Stripe
     link: docs/pbc/all/payment-service-provider/page.version/stripe/stripe.html
 redirect_from:
-    - /docs/pbc/all/tax-management/202311.0/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202311.0/stripe/install-stripe.html
 
 ---
 This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.
@@ -45,30 +45,6 @@ Before integrating Stripe, ensure the following prerequisites are met:
 6. Click **Save**.
 
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. Activate Stripe by going to Back office, under **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**.
-
-## 3. Add Stripe domain to your allowlist
-
-To enable Stripe to redirect your customers to their 3D Secure page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
-
-In the `deploy.yml` file, introduce the required changes:
-
-```yml
-image:
-  environment:
-    SPRYKER_AOP_APPLICATION: '{
-      "APP_DOMAINS": [
-        "stripe.acp.spryker.com",
-        ...
-      ],
-      ...
-    }'
-```
-
-Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
-
-```php
-$config[KernelConstants::DOMAIN_WHITELIST][] = 'os.apps.aop.spryker.com';
-```
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: Datasource Trigger
-description: This document provides details about the Datasource Trigger service in the Components Library.
+description: Details about the Datasource Trigger service in the components library.
 template: concept-topic-template
 related:
   - title: Datasource Dependable
@@ -13,11 +13,11 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document explains the Datasource Trigger service in the Components Library.
+This document describes the Datasource Trigger service in the components library.
 
 ## Overview
 
-Datasource Trigger is an Angular Service that provides a flexible way to fetch data based on user-triggered events.
+Datasource Trigger is an Angular service that provides a flexible way to fetch data based on user-triggered events.
 
 ```html
 <spy-select
@@ -33,7 +33,7 @@ Datasource Trigger is an Angular Service that provides a flexible way to fetch d
 </spy-select>
 ```
 
-The trigger element (in our example it's a `SelectComponent`) must implement a `DatasourceTriggerElement` abstract class (token) and return component instance using `getTriggerElement()` abstract method:   
+The trigger element, `SelectComponent` in the example, must implement a `DatasourceTriggerElement` abstract class (token) and return a component instance using the `getTriggerElement()` abstract method:   
 
 ```ts
 @Component({
@@ -54,11 +54,11 @@ export class SelectComponent implements DatasourceTriggerElement {
 }
 ```
 
-## Main Service
+## Main service
 
-The main module provides an opportunity to register any `datasource.trigger` by key via static method `withEvents()`. It assigns the object of datasources to the `DatasourceEventTypesToken` under the hood.
+The main module lets you register any `datasource.trigger` by key using the `withEvents()` static method. It assigns the object of datasources to `DatasourceEventTypesToken` under the hood.
 
-`resolve()` method gets the trigger element using the `DatasourceTriggerElement` abstract class (token), finds specific service from the `DatasourceEventTypesToken` by `config.event` (from the argument) and returns observable with data (based on the data returned from trigger element) by `Datasource.resolve()`.
+The `resolve()` method gets the trigger element using the `DatasourceTriggerElement` abstract class (token), finds a specific service from `DatasourceEventTypesToken` by `config.event` (from the argument) and returns observable with data (based on the data returned from trigger element) by `Datasource.resolve()`.
 
 ## Datasource
 

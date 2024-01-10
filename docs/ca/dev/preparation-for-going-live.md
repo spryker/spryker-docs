@@ -95,7 +95,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 - *Make sure you have an APM set up*:
   - Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
-  - Establish robust post-launch monitoring plan, with the aim to watch system's performance and configuring alerting mechanisms.
+  - Establish robust post-launch monitoring plan, with the aim to watch system's performance and configuring alerting mechanisms.We highly recommend logs to be configured to be gathered in a centralised SIEM system, in order to ensure that effective investigation would be possible in case of security incidents.
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
 - *The DNS names and strategy for your shop are clear*. 
@@ -115,7 +115,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *Conduct load tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
 To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
-- TO BE DISCUSSED *Perform security audits to identify and address vulnerabilities.* 
+- We highly recommend performing a penetration test by an independent third-party provider and address the identified vulnerabilities. Before conducting a penetration test, Spryker should be informed at least two weeks in advance by completing the [form](https://docs.google.com/forms/d/e/1FAIpQLSfunn1HY-nsqueP6sRQSLmScUWlmmQyQJk9cscIVIP_5BmuOw/viewform?usp=sf_link).
 - *Import real data on production*. After import is done, it is crucial double-checking the completeness and accuracy of migrated data, especially if transitioning from another platform.
 
 {% info_block warningBox "Data import" %}

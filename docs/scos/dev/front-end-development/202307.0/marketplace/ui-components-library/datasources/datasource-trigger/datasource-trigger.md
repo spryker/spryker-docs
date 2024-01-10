@@ -62,7 +62,7 @@ The `resolve()` method gets the trigger element using the `DatasourceTriggerElem
 
 ## Datasource
 
-Datasource Trigger must implement a specific interface (DatasourceTriggerEvent) and then be registered to the Root Module via `DatasourceModule.withEvents()`.
+Datasource trigger must implement a specific interface (DatasourceTriggerEvent) and then be registered to the root module using `DatasourceModule.withEvents()`.
 
 ```ts
 // Module augmentation
@@ -108,7 +108,7 @@ The context within which Datasources operate is defined by the local injector wh
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Trigger configuration and types:  
+Interfaces for the Datasource Trigger configuration and types:  
 
 ```ts
 export interface DatasourceTriggerEventRegistry {}

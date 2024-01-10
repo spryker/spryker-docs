@@ -40,14 +40,11 @@ Before integrating Stripe, ensure the following prerequisites are met:
 1. Go to your store's Back Office, to the Stripe app details page.
 2. In the top right corner of the Stripe app details page, click **Configure**.
 3. On the Stripe app details page, fill in the account ID field in the **Configuration** section.
-   ![stripe-app-detais](https://fakeimg.pl/600x400?text=SCREENSHOT+HERE)
 4. Select **Stripe Environment Mode**.
 5. Enter your *Shop Name*. This name will be displayed on **Payment** page as a merchant label for whom to pay:
-   ![stripe-shop-name](https://fakeimg.pl/600x400?text=SCREENSHOT+HERE)
 6. Click **Save**.
 
-If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. Activate Stripe by going to Back office, under **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
-![stripe-credit-card](https://fakeimg.pl/600x400?text=SCREENSHOT+HERE).
+If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. Activate Stripe by going to Back office, under **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**.
 
 ## 3. Add Stripe domain to your allowlist
 

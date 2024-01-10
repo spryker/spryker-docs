@@ -17,17 +17,19 @@ This document explains the Datasource Trigger Change service in the Components L
 
 ## Overview
 
-Datasource Trigger Change is an Angular Service that extracts the value from the event trigger element and checks whether it meets certain criteria. If the value is valid, it emits an object containing the value.  
+Datasource Trigger Change is an Angular service that extracts the value from an event trigger element and checks whether it meets a certain criteria. If the value is valid, it emits an object containing the value.  
 
 Check out an example usage of the Datasource Trigger Change.
 
 Service configuration:
 
-- `type` — a datasource type.  
-- `event` — an event type triggered by element.  
-- `debounce` - delays the emission of values the next datasource (default is `300ms`).  
-- `minCharacters` - emits the trigger element value if the length is greater than or equal to the `minCharacters` property (default is `2`).  
-- `datasource` — the next datasource that runs based on the depended element value (e.g. [http](/docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html)).  
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+|type |  A datasource type. |
+|event |  An event type triggered by element. |
+|debounce |  Delays the emission of values the next datasource (default is `300ms`). |
+|minCharacters |  Emits the trigger element value if the length is greater than or equal to the `minCharacters` property. The default value is `2`. |
+|datasource |  the next datasource that runs based on the dependent element value, like [http](/docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html). |
 
 ```html
 <spy-select

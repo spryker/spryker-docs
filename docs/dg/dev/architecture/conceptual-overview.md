@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/conceptual-overview.html
 ---
 title: Conceptual overview
 description: Spryker is a Commerce Operating System composed of the following applications- Storefront (Yves), Backoffice (Zed), Storefront API (Glue).
@@ -7,32 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/conceptual-overview
 originalArticleId: 92a95e93-3608-4a70-93be-cf6aec4f9017
 redirect_from:
-  - /2021080/docs/conceptual-overview
-  - /2021080/docs/en/conceptual-overview
-  - /docs/conceptual-overview
-  - /docs/en/conceptual-overview
-  - /v6/docs/conceptual-overview
-  - /v6/docs/en/conceptual-overview
-  - /v5/docs/concept-overview
-  - /v5/docs/en/concept-overview
-  - /v4/docs/commerce-os-and-frontend-apps
-  - /v4/docs/en/commerce-os-and-frontend-apps
-  - /v4/docs/concept-overview
-  - /v4/docs/en/concept-overview
-  - /v3/docs/commerce-os-and-frontend-apps
-  - /v3/docs/en/commerce-os-and-frontend-apps
-  - /v3/docs/concept-overview
-  - /v3/docs/en/concept-overview
-  - /v2/docs/commerce-os-and-frontend-apps
-  - /v2/docs/en/commerce-os-and-frontend-apps
-  - /v2/docs/concept-overview
-  - /v2/docs/en/concept-overview
-  - /v1/docs/commerce-os-and-frontend-apps
-  - /v1/docs/en/commerce-os-and-frontend-apps
-  - /v1/docs/concept-overview
-  - /v1/docs/en/concept-overview
-  - /docs/concept-overview
-  - /docs/en/concept-overview
+  - /docs/scos/dev/architecture/conceptual-overview.html
 related:
   - title: Programming concepts
     link: docs/scos/dev/architecture/programming-concepts.html
@@ -91,7 +65,7 @@ Following the separation between frontend and backend, one of the main concepts 
 
 Frontend applications require de-normalized data in order to quickly be able to present them to the end users. By concept, the necessary data is pre-aggregated, de-normalized, and stored in key-value storage which can be quickly accessed by any Storefront application.
 
-Key-value storages work like a hash-tables where retrieval time is faster compared to the complicated joins and queries in a relational database. For example, to render a product detail page, the system needs several pieces of information like the product title, description, attributes, images, and prices. Instead of the execution of time-consuming queries in the SQL database, all the data is placed in a few entries in the storage and can be loaded by a single lookup. 
+Key-value storages work like a hash-tables where retrieval time is faster compared to the complicated joins and queries in a relational database. For example, to render a product detail page, the system needs several pieces of information like the product title, description, attributes, images, and prices. Instead of the execution of time-consuming queries in the SQL database, all the data is placed in a few entries in the storage and can be loaded by a single lookup.
 
 Redis is the default data storage in Spryker, but it can be easily replaced by other technologies, like MongoDB, Cassandra, or even a separate relational DB like PostgreSQL.
 
@@ -105,7 +79,7 @@ Spryker uses Elasticsearch by default, but you also can replace it with other se
 
 ## Synchronization
 
-With data separation comes the question: how to sync data between both applications and make sure that the Search and Storage are always up-to-date? Spryker Commerce OS comes with a very performant solution that solves this challenge internally and out of the box. It is called Publish & Sync. 
+With data separation comes the question: how to sync data between both applications and make sure that the Search and Storage are always up-to-date? Spryker Commerce OS comes with a very performant solution that solves this challenge internally and out of the box. It is called Publish & Sync.
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the frontend.
 

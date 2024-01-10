@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
 ---
 title: Configuration management
 description: Several files let you add the needed configuration for the exact use case you want.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuration-management
 originalArticleId: d0060038-0140-4763-824e-aaa264ac39fe
 redirect_from:
-  - /2021080/docs/configuration-management
-  - /2021080/docs/en/configuration-management
-  - /docs/configuration-management
-  - /docs/en/configuration-management
-  - /v6/docs/configuration-management
-  - /v6/docs/en/configuration-management
-  - /v5/docs/configuration-management
-  - /v5/docs/en/configuration-management
-  - /v4/docs/configuration-management
-  - /v4/docs/en/configuration-management
-  - /v3/docs/configuration-management
-  - /v3/docs/en/configuration-management
-  - /v2/docs/configuration-management
-  - /v2/docs/en/configuration-management
-  - /v1/docs/configuration-management
-  - /v1/docs/en/configuration-management
+  - /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
 ---
 
 A configuration file is a set of key-value pairs, properties, and methods that define how to manage and configure the settings. Spryker config is represented as a set of the files located in the `/project/config/` folder of your project.
@@ -184,4 +168,4 @@ You might use the following definitions to generate related code:
 * `console spryk:run AddGlueConfigMethod`: Adds a new method to the Glue module config.
 * `console spryk:run AddClientConfig`: Adds a new module config to the Client application.
 * `console spryk:run AddClientConfigMethod`: Adds a new method to the Client module config.
-* `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation 
+* `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation

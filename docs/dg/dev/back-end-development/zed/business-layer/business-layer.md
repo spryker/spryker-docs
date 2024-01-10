@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
 ---
 title: About the Business layer
 description: Zed's business layer is responsible for the entire business logic.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-layer
 originalArticleId: bdeffc0b-9e75-4fa0-b6ca-cc7e6513905e
 redirect_from:
-  - /2021080/docs/business-layer
-  - /2021080/docs/en/business-layer
-  - /docs/business-layer
-  - /docs/en/business-layer
-  - /v6/docs/business-layer
-  - /v6/docs/en/business-layer
-  - /v5/docs/business-layer
-  - /v5/docs/en/business-layer
-  - /v4/docs/business-layer
-  - /v4/docs/en/business-layer
-  - /v3/docs/business-layer
-  - /v3/docs/en/business-layer
-  - /v2/docs/business-layer
-  - /v2/docs/en/business-layer
-  - /v1/docs/business-layer
-  - /v1/docs/en/business-layer
+  - /docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
 related:
   - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html

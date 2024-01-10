@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 title: Test the prepayment implementation
 description: This document describes how to test the prepayment implementation.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-test
 originalArticleId: 3895c67a-c137-4474-9314-cd4cc814d8b4
 redirect_from:
-  - /2021080/docs/ht-prepayment-test
-  - /2021080/docs/en/ht-prepayment-test
-  - /docs/ht-prepayment-test
-  - /docs/en/ht-prepayment-test
-  - /v6/docs/ht-prepayment-test
-  - /v6/docs/en/ht-prepayment-test
-  - /v5/docs/ht-prepayment-test
-  - /v5/docs/en/ht-prepayment-test
-  - /v4/docs/ht-prepayment-test
-  - /v4/docs/en/ht-prepayment-test
-  - /v3/docs/ht-prepayment-test
-  - /v3/docs/en/ht-prepayment-test
-  - /v2/docs/ht-prepayment-test
-  - /v2/docs/en/ht-prepayment-test
-  - /v1/docs/ht-prepayment-test
-  - /v1/docs/en/ht-prepayment-test
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 related:
   - title: Implement prepayment

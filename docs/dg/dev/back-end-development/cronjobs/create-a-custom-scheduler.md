@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
 ---
 title: Create a custom scheduler
 description: This tutorial describes how to create a new custom scheduler.
@@ -7,17 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-create-a-new-custom-scheduler
 originalArticleId: 782c6672-6cf9-4295-9bb5-d6c5fe98891d
 redirect_from:
-  - /2021080/docs/ht-create-a-new-custom-scheduler
-  - /2021080/docs/en/ht-create-a-new-custom-scheduler
-  - /docs/ht-create-a-new-custom-scheduler
-  - /docs/en/ht-create-a-new-custom-scheduler
-  - /v6/docs/ht-create-a-new-custom-scheduler
-  - /v6/docs/en/ht-create-a-new-custom-scheduler
-  - /v5/docs/ht-create-a-new-custom-scheduler
-  - /v5/docs/en/ht-create-a-new-custom-scheduler
-  - /v4/docs/ht-create-a-new-custom-scheduler
-  - /v4/docs/en/ht-create-a-new-custom-scheduler
   - /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+  - /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html

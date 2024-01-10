@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
 ---
 title: Entity
 description: In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the Active record design pattern, so their usage is very simple.
@@ -7,31 +6,16 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/entity
 originalArticleId: 768b00eb-1182-4cf3-8c6c-1fbfb294a3b2
 redirect_from:
-  - /2021080/docs/entity
-  - /2021080/docs/en/entity
-  - /docs/entity
-  - /docs/en/entity
-  - /v6/docs/entity
-  - /v6/docs/en/entity
-  - /v5/docs/entity
-  - /v5/docs/en/entity
-  - /v4/docs/entity
-  - /v4/docs/en/entity
-  - /v3/docs/entity
-  - /v3/docs/en/entity
-  - /v2/docs/entity
-  - /v2/docs/en/entity
-  - /v1/docs/entity
-  - /v1/docs/en/entity
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
@@ -63,7 +47,7 @@ In general, Propel performs every `save` operation in a transaction. Sometimes, 
  <?php
  $connection = Propel::getConnection();
  $connection->beginTransaction();
- 
+
  $customerEntity->save();
  $customerAddressEntity->save();
  $salesOrderEntity->save();

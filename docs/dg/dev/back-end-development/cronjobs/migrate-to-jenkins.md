@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
 ---
 title: Migrate to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
@@ -6,6 +5,7 @@ template: howto-guide-template
 last_updated: Nov 1, 2021
 redirect_from:
   - /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+  - /docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
@@ -70,9 +70,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         ];
         ...
     }
-    
+
     ...
-   
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -88,7 +88,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
         return $applicationPlugins;
     }
-   
+
    ...
 
 }

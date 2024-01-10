@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/forms/forms.html
 ---
 title: Forms
 description: The document describes how to integrate and configure the Forms and Validator components of Spryker Commerce OS.
@@ -7,16 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/form-and-validator
 originalArticleId: 67d7349f-f667-4371-a0f4-e4632ff42567
 redirect_from:
-  - /2021080/docs/form-and-validator
-  - /2021080/docs/en/form-and-validator
-  - /docs/form-and-validator
-  - /docs/en/form-and-validator
-  - /v6/docs/form-and-validator
-  - /v6/docs/en/form-and-validator
-  - /v5/docs/form-and-validator
-  - /v5/docs/en/form-and-validator
-  - /v4/docs/form-and-validator
-  - /v4/docs/en/form-and-validator
+  - /docs/scos/dev/back-end-development/forms/forms.html
 related:
   - title: Creating forms
     link: docs/scos/dev/back-end-development/forms/creating-forms.html

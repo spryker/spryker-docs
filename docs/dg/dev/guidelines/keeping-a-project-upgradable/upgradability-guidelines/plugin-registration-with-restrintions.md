@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
 ---
 title: Plugin registration with restrictions
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
 ---
 
 Some plugins have dependencies from other plugins and should be used only before or after another plugin. The *Plugin registration with restrictions* check checks that dependencies between the plugins are described according to the specification.
@@ -12,7 +12,7 @@ Some plugins have dependencies from other plugins and should be used only before
 
 If plugins must be registered in a specific order, `after` and `before` annotations need to be provided in the documentation blocks before the plugin. They must also have specific syntax.
 
-1. Annotation to register plugin before another one: 
+1. Annotation to register plugin before another one:
 
 ```php
 /**

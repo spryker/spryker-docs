@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
 ---
 title: Open-source vulnerabilities checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
 ---
 
 Open-source vulnerabilities checker is a tool that checks if your PHP application depends on PHP packages with known security vulnerabilities.

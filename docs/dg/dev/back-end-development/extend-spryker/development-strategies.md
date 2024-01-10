@@ -1,10 +1,10 @@
-  - /docs/scos/dev/back-end-development/extend-spryker/development-strategies.html
 ---
 title: Development strategies
 description: Development strategies that you can use when building a Spryker project.
 last_updated: Jan 28, 2022
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/extend-spryker/development-strategies.html
 ---
 
 Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy the most complex project business requirements.

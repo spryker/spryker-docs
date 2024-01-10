@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/module-api/performance-and-scalability.html
 ---
 title: Performance and scalability
 description: Scalability, as an integral part of the core architecture, is achieved by separating the frontend (Yves) and backend (Zed) applications.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-scalability
 originalArticleId: bb8130db-dd39-4a30-9de1-7fdc13781bc8
 redirect_from:
-  - /2021080/docs/performance-scalability
-  - /2021080/docs/en/performance-scalability
-  - /docs/performance-scalability
-  - /docs/en/performance-scalability
-  - /v6/docs/performance-scalability
-  - /v6/docs/en/performance-scalability
-  - /v5/docs/performance-scalability
-  - /v5/docs/en/performance-scalability
-  - /v4/docs/performance-scalability
-  - /v4/docs/en/performance-scalability
-  - /v3/docs/performance-scalability
-  - /v3/docs/en/performance-scalability
-  - /v2/docs/performance-scalability
-  - /v2/docs/en/performance-scalability
-  - /v1/docs/performance-scalability
-  - /v1/docs/en/performance-scalability
+  - /docs/scos/dev/architecture/module-api/performance-and-scalability.html
   - /docs/scos/dev/setup/scalability.html
 related:
   - title: Semantic versioning - major vs. minor vs. patch release

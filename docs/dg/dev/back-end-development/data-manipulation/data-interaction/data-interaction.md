@@ -1,9 +1,9 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
 ---
 title: Data interaction
 description: how data interacts in the Spryker SCOS
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
 ---
 
 This section contains a collection of articles describing how data interaction happens in the Spryker SCOS. Topics include:

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/session-management.html
 ---
 title: Session management
 last_updated: Oct 4, 2021
@@ -6,22 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-management-201903
 originalArticleId: 53d2c060-c45d-45a8-8d00-d0f1b10c7dbb
 redirect_from:
-  - /2021080/docs/session-management-201903
-  - /2021080/docs/en/session-management-201903
-  - /docs/session-management-201903
-  - /docs/en/session-management-201903
-  - /v6/docs/session-management-201903
-  - /v6/docs/en/session-management-201903
-  - /v5/docs/session-management-201903
-  - /v5/docs/en/session-management-201903
-  - /v4/docs/session-management-201903
-  - /v4/docs/en/session-management-201903
-  - /v3/docs/session-management-201903
-  - /v3/docs/en/session-management-201903
-  - /v2/docs/session-management-201903
-  - /v2/docs/en/session-management-201903
-  - /v1/docs/session-management-201903
-  - /v1/docs/en/session-management-201903
+  - /docs/scos/dev/back-end-development/session-management.html
 related:
   - title: Session handlers
     link: docs/scos/dev/back-end-development/session-handlers.html

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
 ---
 title: Implement prepayment in backend
 description: This document describes how to implement prepayment in the backend.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
 originalArticleId: 2ee681bb-c2b1-4a78-93c7-2c6914fc6c64
 redirect_from:
-  - /2021080/docs/ht-prepayment-be
-  - /2021080/docs/en/ht-prepayment-be
-  - /docs/ht-prepayment-be
-  - /docs/en/ht-prepayment-be
-  - /v6/docs/ht-prepayment-be
-  - /v6/docs/en/ht-prepayment-be
-  - /v5/docs/ht-prepayment-be
-  - /v5/docs/en/ht-prepayment-be
-  - /v4/docs/ht-prepayment-be
-  - /v4/docs/en/ht-prepayment-be
-  - /v3/docs/ht-prepayment-be
-  - /v3/docs/en/ht-prepayment-be
-  - /v2/docs/ht-prepayment-be
-  - /v2/docs/en/ht-prepayment-be
-  - /v1/docs/ht-prepayment-be
-  - /v1/docs/en/ht-prepayment-be
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
 related:
   - title: Implement prepayment

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/forms/create-forms.html
 ---
 title: Create forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-working-forms
 originalArticleId: 8dba4520-ed55-4904-a84f-bc46c7ac3cfd
 redirect_from:
-  - /2021080/docs/t-working-forms
-  - /2021080/docs/en/t-working-forms
-  - /docs/t-working-forms
-  - /docs/en/t-working-forms
-  - /v6/docs/t-working-forms
-  - /v6/docs/en/t-working-forms
-  - /v5/docs/t-working-forms
-  - /v5/docs/en/t-working-forms
-  - /v4/docs/t-working-forms
-  - /v4/docs/en/t-working-forms
-  - /v3/docs/t-working-forms
-  - /v3/docs/en/t-working-forms
-  - /v2/docs/t-working-forms
-  - /v2/docs/en/t-working-forms
-  - /v1/docs/t-working-forms
-  - /v1/docs/en/t-working-forms
+  - /docs/scos/dev/back-end-development/forms/create-forms.html
   - docs/scos/dev/back-end-development/forms/creating-forms.html
 related:
   - title: Forms

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/console-commands/console-commands.html
 ---
 title: Console commands in Spryker
 description: The list of console commands contains the command names together with a short description of what the command does.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/console
 originalArticleId: d4062a3e-5dac-4905-afc7-105978e27432
 redirect_from:
-  - /2021080/docs/console
-  - /2021080/docs/en/console
-  - /docs/console
-  - /docs/en/console
-  - /v6/docs/console
-  - /v6/docs/en/console
-  - /v5/docs/console
-  - /v5/docs/en/console
-  - /v4/docs/console
-  - /v4/docs/en/console
-  - /v3/docs/console
-  - /v3/docs/en/console
-  - /v2/docs/console
-  - /v2/docs/en/console
-  - /v1/docs/console
-  - /v1/docs/en/console
+  - /docs/scos/dev/back-end-development/console-commands/console-commands.html
   - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html
   - /docs/scos/dev/back-end-development/202204.0/console-commandsconsole-commands-in-spryker.html
 related:

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 ---
 title: Using ~ Composer constraint for customized modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/using-composer-constraint
 originalArticleId: d7c068b1-d7bf-4404-96c5-0f568f061874
 redirect_from:
-  - /2021080/docs/using-composer-constraint
-  - /2021080/docs/en/using-composer-constraint
-  - /docs/using-composer-constraint
-  - /docs/en/using-composer-constraint
-  - /v6/docs/using-composer-constraint
-  - /v6/docs/en/using-composer-constraint
-  - /v5/docs/using-composer-constraint
-  - /v5/docs/en/using-composer-constraint
-  - /v4/docs/using-composer-constraint
-  - /v4/docs/en/using-composer-constraint
-  - /v3/docs/using-composer-constraint
-  - /v3/docs/en/using-composer-constraint
-  - /v2/docs/using-composer-constraint
-  - /v2/docs/en/using-composer-constraint
-  - /v1/docs/using-composer-constraint
-  - /v1/docs/en/using-composer-constraint
+  - /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 related:
   - title: Performance and scalability
     link: docs/scos/dev/architecture/module-api/performance-and-scalability.html

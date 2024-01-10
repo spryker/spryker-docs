@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
 ---
 title: Debug listeners
 last_updated: Jun 16, 2021
@@ -6,18 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-debug-listeners
 originalArticleId: 283a1100-8a5f-4c6d-8cdd-a8a093aea5a6
 redirect_from:
-  - /2021080/docs/ht-debug-listeners
-  - /2021080/docs/en/ht-debug-listeners
-  - /docs/ht-debug-listeners
-  - /docs/en/ht-debug-listeners
-  - /v6/docs/ht-debug-listeners
-  - /v6/docs/en/ht-debug-listeners
-  - /v5/docs/ht-debug-listeners
-  - /v5/docs/en/ht-debug-listeners
-  - /v4/docs/ht-debug-listeners
-  - /v4/docs/en/ht-debug-listeners
-  - /v2/docs/cronjob-scheduling-guide
-  - /v2/docs/en/cronjob-scheduling-guide
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
 related:
   - title: Publish and Synchronization

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/plugins/plugins.html
 ---
 title: Plugins
 description: Plugins are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin
 originalArticleId: b9d7fedb-07ef-4e7c-9a0a-5afea02701e4
 redirect_from:
-  - /2021080/docs/plugin
-  - /2021080/docs/en/plugin
-  - /docs/plugin
-  - /docs/en/plugin
-  - /v6/docs/plugin
-  - /v6/docs/en/plugin
-  - /v5/docs/plugin
-  - /v5/docs/en/plugin
-  - /v4/docs/plugin
-  - /v4/docs/en/plugin
-  - /v3/docs/plugin
-  - /v3/docs/en/plugin
-  - /v2/docs/plugin
-  - /v2/docs/en/plugin
-  - /v1/docs/plugin
-  - /v1/docs/en/plugin
+  - /docs/scos/dev/back-end-development/plugins/plugins.html
   - /docs/scos/dev/back-end-development/implementing-and-using-plugins.html
   - /docs/scos/dev/back-end-development/plugins/implementing-and-using-plugins.html
 related:
@@ -172,7 +156,7 @@ interface CalculatorPluginInterface
 }
 ```
 
-Then, you can provide the plugin or an array of plugins in the dependency provider, as in the following example. 
+Then, you can provide the plugin or an array of plugins in the dependency provider, as in the following example.
 
 An example of the dependency provider from the `Calculation` module:
 

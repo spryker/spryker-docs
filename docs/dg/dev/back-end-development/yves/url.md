@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/url.html
 ---
 title: URL
 description: The URL module handles dynamic URLs for entities that appear on the frontend (Yves)
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url
 originalArticleId: 0232750c-2ccb-4329-a2f9-62b330431c71
 redirect_from:
-  - /2021080/docs/url
-  - /2021080/docs/en/url
-  - /docs/url
-  - /docs/en/url
-  - /v6/docs/url
-  - /v6/docs/en/url
-  - /v5/docs/url
-  - /v5/docs/en/url
-  - /v4/docs/url
-  - /v4/docs/en/ur
-  - /v3/docs/url
-  - /v3/docs/en/url
-  - /v2/docs/url
-  - /v2/docs/en/ur
-  - /v1/docs/url
-  - /v1/docs/en/url
+  - /docs/scos/dev/back-end-development/yves/url.html
 ---
 
 The URL module handles dynamic URLs for entities that appear on the frontend (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.

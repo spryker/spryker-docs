@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 title: Create an Order Management System - Spryker Commerce OS
 description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop..
@@ -7,26 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-oms-and-state-machines-spryker-commerce-os
 originalArticleId: dc0c3c0d-c1af-4949-9645-762c67f03c8a
 redirect_from:
-  - /2021080/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /2021080/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /docs/t-oms-and-state-machines-spryker-commerce-os
-  - /docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v6/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v6/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v5/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v5/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v4/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v4/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v3/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v3/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v2/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v2/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /v1/docs/t-oms-and-state-machines-spryker-commerce-os
-  - /v1/docs/en/t-oms-and-state-machines-spryker-commerce-os
-  - /2021080/docs/oms-state-machine
-  - /2021080/docs/en/oms-state-machine
-  - /docs/oms-state-machine
-  - /docs/en/oms-state-machine
+  - /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
   - /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
 related:
   - title: Order management system multi-thread
@@ -97,12 +77,12 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 
 5. Check the state machine graph while building it.
    1. In the Backend Office, go to the **Administration&nbsp;<span aria-label="and then">></span> OMS**.
-   2. To see the graph that represents your XML file, in the **PROCESSES** section, click your state machine name **Demo01**. 
-	
+   2. To see the graph that represents your XML file, in the **PROCESSES** section, click your state machine name **Demo01**.
+
 	{% info_block infoBox %}
 
 	Whenever you change the skeleton in the XML file, refresh the page to see the new changes.
-	
+
 	{% endinfo_block %}
 
 6. Add the rest of the states to the state machine. Refresh the state machine graph after adding them.

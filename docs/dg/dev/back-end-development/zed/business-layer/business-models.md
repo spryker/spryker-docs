@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
 ---
 title: Business models
 description: This document explains what business models are
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-models
 originalArticleId: 951be56f-357e-46ac-895c-5171bbc5dc63
 redirect_from:
-  - /2021080/docs/business-models
-  - /2021080/docs/en/business-models
-  - /docs/business-models
-  - /docs/en/business-models
-  - /v6/docs/business-models
-  - /v6/docs/en/business-models
-  - /v5/docs/business-models
-  - /v5/docs/en/business-models
-  - /v4/docs/business-models
-  - /v4/docs/en/business-models
-  - /v3/docs/business-models
-  - /v3/docs/en/business-models
-  - /v2/docs/business-models
-  - /v2/docs/en/business-models
-  - /v1/docs/business-models
-  - /v1/docs/en/business-models
+  - /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
 related:
   - title: About the Business layer
     link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
@@ -49,12 +33,12 @@ class KeyManager implements KeyManagerInterface
      * @var GlossaryQueryContainerInterface
      */
     protected $queryContainer;
- 
+
     /**
      * @var KeySourceInterface
      */
     protected $keySource;
- 
+
     /**
      * @param KeySourceInterface $keySource
      * @param GlossaryQueryContainerInterface $queryContainer
@@ -67,7 +51,7 @@ class KeyManager implements KeyManagerInterface
 ...
 ```
 
-As you can see, the `KeyManager` class depends on two other classes, which are specified by their related interfaces. The constructor gets them injected and provides them as properties for the model's methods. 
+As you can see, the `KeyManager` class depends on two other classes, which are specified by their related interfaces. The constructor gets them injected and provides them as properties for the model's methods.
 
 {% info_block infoBox "Info" %}
 

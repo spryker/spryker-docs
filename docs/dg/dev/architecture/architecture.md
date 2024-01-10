@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/architecture.html
 ---
 title: About the Architecture Guide
 description: Spryker architecture is based on strict modularity and separation.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-the-architecture-guide
 originalArticleId: 926005b6-d8c9-4d6a-851a-f3a4f551d0d3
 redirect_from:
-  - /2021080/docs/about-the-architecture-guide
-  - /2021080/docs/en/about-the-architecture-guide
-  - /docs/about-the-architecture-guide
-  - /docs/en/about-the-architecture-guide
-  - /v6/docs/about-the-architecture-guide
-  - /v6/docs/en/about-the-architecture-guide
-  - /v5/docs/about-the-architecture-guide
-  - /v5/docs/en/about-the-architecture-guide
-  - /v4/docs/about-the-architecture-guide
-  - /v4/docs/en/about-the-architecture-guide
-  - /v3/docs/about-the-architecture-guide
-  - /v3/docs/en/about-the-architecture-guide
-  - /v2/docs/about-the-architecture-guide
-  - /v2/docs/en/about-the-architecture-guide
-  - /v1/docs/about-the-architecture-guide
-  - /v1/docs/en/about-the-architecture-guide
+  - /docs/scos/dev/architecture/architecture.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

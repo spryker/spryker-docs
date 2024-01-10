@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---
 title: Create, use, and extend the transfer objects
 description: The document provides information on the creation and usage of the Transfer objects.
@@ -7,19 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
 originalArticleId: f3c1c5d9-348c-4d02-9d4b-f0cede048566
 redirect_from:
-  - /2021080/docs/ht-use-transfer-objects
-  - /2021080/docs/en/ht-use-transfer-objects
-  - /docs/ht-use-transfer-objects
-  - /docs/en/ht-use-transfer-objects
-  - /v6/docs/ht-use-transfer-objects
-  - /v6/docs/en/ht-use-transfer-objects
-  - /v5/docs/ht-use-transfer-objects
-  - /v5/docs/en/ht-use-transfer-objects
-  - /v4/docs/ht-use-transfer-objects
-  - /v4/docs/en/ht-use-transfer-objects
-  - /v2/docs/ht-use-transfer-objects
-  - /v2/docs/en/ht-use-transfer-objects
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 related:
   - title: Extend the database schema
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html

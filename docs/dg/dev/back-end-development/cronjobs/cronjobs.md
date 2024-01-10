@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
 ---
 title: Cronjobs
 description: Spryker applications demand performing repetitive background operation—jobs. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store.
@@ -7,19 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide
 originalArticleId: 2027e1e4-d579-4ec6-aa6e-aff40955d76c
 redirect_from:
-  - /2021080/docs/cronjob-scheduling-guide
-  - /2021080/docs/en/cronjob-scheduling-guide
-  - /docs/cronjob-scheduling-guide
-  - /docs/en/cronjob-scheduling-guide
-  - /v6/docs/cronjob-scheduling-guide
-  - /v6/docs/en/cronjob-scheduling-guide
-  - /v5/docs/cronjob-scheduling-guide-201907
-  - /v5/docs/en/cronjob-scheduling-guide-201907
-  - /v4/docs/cronjob-scheduling-guide-201907
-  - /v4/docs/en/cronjob-scheduling-guide-201907
-  - /v3/docs/cronjob-scheduling-guide
-  - /v3/docs/en/cronjob-scheduling-guide
   - /docs/scos/dev/sdk/cronjob-scheduling.html
+  - /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
 related:
   - title: Create a custom scheduler
     link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html

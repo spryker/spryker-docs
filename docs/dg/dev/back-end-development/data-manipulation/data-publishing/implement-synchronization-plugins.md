@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
 ---
 title: Implement synchronization plugins
 description: Learn how to implement synchronization plugins.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-synchronization-plugins
 originalArticleId: e825266c-5435-4a02-adc7-3ef6cd60cb3f
 redirect_from:
-  - /2021080/docs/implementing-synchronization-plugins
-  - /2021080/docs/en/implementing-synchronization-plugins
-  - /docs/implementing-synchronization-plugins
-  - /docs/en/implementing-synchronization-plugins
-  - /v6/docs/implementing-synchronization-plugins
-  - /v6/docs/en/implementing-synchronization-plugins
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
 related:
   - title: Publish and Synchronization

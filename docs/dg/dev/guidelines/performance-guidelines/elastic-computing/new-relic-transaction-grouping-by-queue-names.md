@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
 ---
 title: New Relic transactions grouping by queue names
 description: Enhanced New Relic queue flow groups transactions by queue names.
@@ -11,8 +10,9 @@ related:
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
   - title: Storage caching for primary-replica database setups
     link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
-redirect_from: 
+redirect_from:
   - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
+  - /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
 ---
 
 By default, the `spryker/monitoring` module groups all New Relic transactions generated from a console command by the command’s name. For example, `ooms:check-timeout`.

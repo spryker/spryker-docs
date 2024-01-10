@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
 ---
 title: Facade use cases
 description: This document describes facade use cases.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/using-facade
 originalArticleId: 1a113ccd-7bdf-467b-84e0-d47b9a03d0cd
 redirect_from:
-  - /2021080/docs/using-facade
-  - /2021080/docs/en/using-facade
-  - /docs/using-facade
-  - /docs/en/using-facade
-  - /v6/docs/using-facade
-  - /v6/docs/en/using-facade
-  - /v5/docs/using-facade
-  - /v5/docs/en/using-facade
-  - /v4/docs/using-facade
-  - /v4/docs/en/using-facade
-  - /v3/docs/using-facade
-  - /v3/docs/en/using-facade
-  - /v2/docs/using-facade
-  - /v2/docs/en/using-facade
-  - /v1/docs/zed-facade-how-to-use
-  - /v1/docs/en/zed-facade-how-to-use
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
 related:
   - title: Facade
@@ -38,7 +22,7 @@ This document describes the use cases of a facade.
 ## The facade usage from a controller or plugin
 
 In Zed's `Communication` layer, the facade of the same module is available with the `getFacade()` method from all controllers and plugins.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Use+a+Facade/how-to-use-a-facade-from-the-same-bundle.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Use+a+Facade/how-to-use-a-facade-from-the-same-bundle.png)
 
 Typical usage from a controller is as follows. The controller retrieves data from a submitted form and calls a method of a facade to save it:
 
@@ -57,7 +41,7 @@ class FormController extends AbstractController
             $this->getFacade()->saveTranslation($translation);
         }
         // ...
-    } 
+    }
 ```
 
 ## The facade usage from another module

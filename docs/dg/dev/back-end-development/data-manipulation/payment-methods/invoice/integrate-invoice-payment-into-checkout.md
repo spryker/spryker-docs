@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
 ---
 title: Integrate invoice payment into checkout
 description: This document provides information on how to integrate the invoice payment into the checkout.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-checkout
 originalArticleId: bd5f3fce-d72c-45f2-9609-d6894b1c082c
 redirect_from:
-  - /2021080/docs/ht-invoice-payment-checkout
-  - /2021080/docs/en/ht-invoice-payment-checkout
-  - /docs/ht-invoice-payment-checkout
-  - /docs/en/ht-invoice-payment-checkout
-  - /v6/docs/ht-invoice-payment-checkout
-  - /v6/docs/en/ht-invoice-payment-checkout
-  - /v5/docs/ht-invoice-payment-checkout
-  - /v5/docs/en/ht-invoice-payment-checkout
-  - /v4/docs/ht-invoice-payment-checkout
-  - /v4/docs/en/ht-invoice-payment-checkout
-  - /v3/docs/ht-invoice-payment-checkout
-  - /v3/docs/en/ht-invoice-payment-checkout
-  - /v2/docs/ht-invoice-payment-checkout
-  - /v2/docs/en/ht-invoice-payment-checkout
-  - /v1/docs/ht-invoice-payment-checkout
-  - /v1/docs/en/ht-invoice-payment-checkout
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
 related:
   - title: Implement invoice payment

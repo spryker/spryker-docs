@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
 ---
 title: Implement invoice payment in frontend
 description: This document describes how to implement invoice payment in frontend.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe
 originalArticleId: 7fc7d2be-406d-4aef-abb0-4a38f25f8d97
 redirect_from:
-  - /2021080/docs/ht-invoice-payment-fe
-  - /2021080/docs/en/ht-invoice-payment-fe
-  - /docs/ht-invoice-payment-fe
-  - /docs/en/ht-invoice-payment-fe
-  - /v6/docs/ht-invoice-payment-fe
-  - /v6/docs/en/ht-invoice-payment-fe
-  - /v5/docs/ht-invoice-payment-fe
-  - /v5/docs/en/ht-invoice-payment-fe
-  - /v4/docs/ht-invoice-payment-fe
-  - /v4/docs/en/ht-invoice-payment-fe
-  - /v3/docs/ht-invoice-payment-fe
-  - /v3/docs/en/ht-invoice-payment-fe
-  - /v2/docs/ht-invoice-payment-fe
-  - /v2/docs/en/ht-invoice-payment-fe
-  - /v1/docs/ht-invoice-payment-fe
-  - /v1/docs/en/ht-invoice-payment-fe
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
 related:
   - title: Implement invoice payment

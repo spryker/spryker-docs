@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
 ---
 title: Implement a query container
 description: To create a new query container you can copy and paste the snippet from this document and replace Mymodule with your module name.
@@ -7,24 +6,9 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-a-query-container
 originalArticleId: 6b16783d-1196-48ca-84ae-eeda50fd446e
 redirect_from:
-  - /2021080/docs/implementing-a-query-container
-  - /2021080/docs/en/implementing-a-query-container
-  - /docs/implementing-a-query-container
-  - /docs/en/implementing-a-query-container
-  - /v6/docs/implementing-a-query-container
-  - /v6/docs/en/implementing-a-query-container
-  - /v5/docs/implementing-a-query-container
-  - /v5/docs/en/implementing-a-query-container
-  - /v4/docs/implementing-a-query-container
-  - /v4/docs/en/implementing-a-query-container
-  - /v3/docs/implementing-a-query-container
-  - /v3/docs/en/implementing-a-query-container
-  - /v2/docs/implementing-a-query-container
-  - /v2/docs/en/implementing-a-query-container
-  - /v1/docs/implementing-a-query-container
-  - /v1/docs/en/implementing-a-query-container
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
   - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
-related: 
+related:
   - title: About the query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Using a query container

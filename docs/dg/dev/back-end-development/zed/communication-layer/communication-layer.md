@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 ---
 title: About Communication layer
 description: Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to handover it to the presentation layer.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-controllers-actions
 originalArticleId: 32268e14-8a03-4576-a7fc-5290bb073767
 redirect_from:
-  - /2021080/docs/zed-controllers-actions
-  - /2021080/docs/en/zed-controllers-actions
-  - /docs/zed-controllers-actions
-  - /docs/en/zed-controllers-actions
-  - /v6/docs/zed-controllers-actions
-  - /v6/docs/en/zed-controllers-actions
-  - /v5/docs/zed-controllers-actions
-  - /v5/docs/en/zed-controllers-actions
-  - /v4/docs/zed-controllers-actions
-  - /v4/docs/en/zed-controllers-actions
-  - /v3/docs/zed-controllers-actions
-  - /v3/docs/en/zed-controllers-actions
-  - /v2/docs/zed-controllers-actions
-  - /v2/docs/en/zed-controllers-actions
-  - /v1/docs/zed-controllers-actions
-  - /v1/docs/en/zed-controllers-actions
+  - /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
 related:
   - title: Addi indexes to foreign key columns - index generator
     link: docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
@@ -42,17 +26,17 @@ The following controller provides two actions: `indexAction()` and `testAction()
 <?php
 
 namespace Namespace\Zed\Bundle\Communication\Controller;
- 
+
 use Spryker\Zed\Kernel\Communication\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 class IndexController extends AbstractController
 {
     public function indexAction()
     {
         return $this->viewResponse([]);
     }
- 
+
     public function testAction(Request $request)
     {
        return $this->viewResponse([]);
@@ -137,4 +121,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedCommunicationController`: Add Zed communication controller.
 * `vendor/bin/console spryk:run AddZedCommunicationControllerAction`: Add Zed communication controller method.
 
-For details, see the [Spryks](/docs/sdk/dev/spryks/spryks.html). 
+For details, see the [Spryks](/docs/sdk/dev/spryks/spryks.html).

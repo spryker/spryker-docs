@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
 ---
 title: Discouraged packages checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
 ---
 
 This checker checks if discouraged packages are installed.

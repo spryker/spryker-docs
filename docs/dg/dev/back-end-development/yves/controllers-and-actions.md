@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 ---
 title: Controllers and actions
 description: Controllers are placed inside the Controllers folder in Yves; they provide an entry point to the system for requests submitted by the frontend users.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-controllers-actions
 originalArticleId: 807eb310-336a-46d8-8cfc-bcafe4d3a324
 redirect_from:
-  - /2021080/docs/yves-controllers-actions
-  - /2021080/docs/en/yves-controllers-actions
-  - /docs/yves-controllers-actions
-  - /docs/en/yves-controllers-actions
-  - /v6/docs/yves-controllers-actions
-  - /v6/docs/en/yves-controllers-actions
-  - /v5/docs/yves-controllers-actions
-  - /v5/docs/en/yves-controllers-actions
-  - /v4/docs/yves-controllers-actions
-  - /v4/docs/en/yves-controllers-actions
-  - /v3/docs/yves-controllers-actions
-  - /v3/docs/en/yves-controllers-actions
-  - /v2/docs/yves-controllers-actions
-  - /v2/docs/en/yves-controllers-actions
-  - /v1/docs/yves-controllers-actions
-  - /v1/docs/en/yves-controllers-actions
+  - /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
@@ -52,14 +36,14 @@ namespace Namespace\Yves\Bundle\Controller;
 
 use Spryker\Yves\Kernel\Controller\AbstractController;
 
- 
+
 class IndexController extends AbstractController
 {
     public function indexAction()
     {
         return $this->viewResponse([]);
     }
- 
+
     public function testAction(Request $request)
     {
        return $this->viewResponse([]);

@@ -1,10 +1,10 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
 ---
 title: Data Manipulation
 description: This document explains how to work with data in the Spryker SCOS backend
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-%3Cspan%20class=
+  - /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
 
 ---
 

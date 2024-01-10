@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
 ---
 title: Implement Direct Debit in Yves
 description: Usually, the first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-fe-implementation
 originalArticleId: 880e1ada-7fdd-44e3-9909-32df91999cf6
 redirect_from:
-  - /2021080/docs/dd-fe-implementation
-  - /2021080/docs/en/dd-fe-implementation
-  - /docs/dd-fe-implementation
-  - /docs/en/dd-fe-implementation
-  - /v6/docs/dd-fe-implementation
-  - /v6/docs/en/dd-fe-implementation
-  - /v5/docs/dd-fe-implementation
-  - /v5/docs/en/dd-fe-implementation
-  - /v4/docs/dd-fe-implementation
-  - /v4/docs/en/dd-fe-implementation
-  - /v3/docs/dd-fe-implementation
-  - /v3/docs/en/dd-fe-implementation
-  - /v2/docs/dd-fe-implementation
-  - /v2/docs/en/dd-fe-implementation
-  - /v1/docs/dd-fe-implementation
-  - /v1/docs/en/dd-fe-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
 related:
   - title: Implement Direct Debit payment
@@ -40,7 +24,7 @@ related:
 The first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
 
 ## Prerequisites
-Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html). 
+Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
 
 Create a `Form` folder in the module.
 

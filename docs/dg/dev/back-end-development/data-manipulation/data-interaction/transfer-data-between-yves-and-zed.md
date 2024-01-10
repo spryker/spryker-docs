@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
 ---
 title: Transfer data between Yves and Zed
 description: This document shows how to set up communication between Yves and Zed.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
 originalArticleId: 92fb4df1-548a-44eb-aa4a-8ee1d8e70376
 redirect_from:
-  - /2021080/docs/t-transfer-data-yves-zed
-  - /2021080/docs/en/t-transfer-data-yves-zed
-  - /docs/t-transfer-data-yves-zed
-  - /docs/en/t-transfer-data-yves-zed
-  - /v6/docs/t-transfer-data-yves-zed
-  - /v6/docs/en/t-transfer-data-yves-zed
-  - /v5/docs/t-transfer-data-yves-zed
-  - /v5/docs/en/t-transfer-data-yves-zed
-  - /v4/docs/t-transfer-data-yves-zed
-  - /v4/docs/en/t-transfer-data-yves-zed
-  - /v3/docs/t-transfer-data-yves-zed
-  - /v3/docs/en/t-transfer-data-yves-zed
-  - /v2/docs/t-transfer-data-yves-zed
-  - /v2/docs/en/t-transfer-data-yves-zed
-  - /v1/docs/t-transfer-data-yves-zed
-  - /v1/docs/en/t-transfer-data-yves-zed
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
 ---
 

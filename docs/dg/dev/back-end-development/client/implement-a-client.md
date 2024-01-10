@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/client/implement-a-client.html
 ---
 title: Implement a client
 description: This document describes how to implement the Client part of the Spryker Yves application layer.
@@ -7,23 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-a-client
 originalArticleId: 91c42163-d2e5-4782-88ad-ee6702f86af4
 redirect_from:
-  - /2021080/docs/implementing-a-client
-  - /2021080/docs/en/implementing-a-client
-  - /docs/implementing-a-client
-  - /docs/en/implementing-a-client
-  - /v6/docs/implementing-a-client
-  - /v6/docs/en/implementing-a-client
-  - /v5/docs/implementing-a-client
-  - /v5/docs/en/implementing-a-client
-  - /v4/docs/implementing-a-client
-  - /v4/docs/en/implementing-a-client
-  - /v3/docs/implementing-a-client
-  - /v3/docs/en/implementing-a-client
-  - /v2/docs/implementing-a-client
-  - /v2/docs/en/implementing-a-client
-  - /v1/docs/implementing-a-client
-  - /v1/docs/en/implementing-a-client
-  - /docs/scos/dev/back-end-development/client/implementing-a-client.html
+  - /docs/scos/dev/back-end-development/client/implement-a-client.html
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html

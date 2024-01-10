@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
 ---
 title: Queue pool
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-pool
 originalArticleId: 44879d08-bebd-4028-80ff-13404057aaef
 redirect_from:
-  - /2021080/docs/queue-pool
-  - /2021080/docs/en/queue-pool
-  - /docs/queue-pool
-  - /docs/en/queue-pool
-  - /v6/docs/queue-pool
-  - /v6/docs/en/queue-pool
-  - /v5/docs/queue-pool
-  - /v5/docs/en/queue-pool
-  - /v4/docs/queue-pool
-  - /v4/docs/en/queue-pool
-  - /v3/docs/queue-pool
-  - /v3/docs/en/queue-pool
-  - /v2/docs/queue-pool
-  - /v2/docs/en/queue-pool
-  - /v1/docs/queue-pool
-  - /v1/docs/en/queue-pool
+  - /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
 related:
   - title: Queue
     link: docs/scos/dev/back-end-development/data-manipulation/queue/queue.html

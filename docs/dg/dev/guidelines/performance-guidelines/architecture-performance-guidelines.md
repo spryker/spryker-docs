@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 title: Architecture performance guidelines
 description: Learn about the bad and best architecture practices which can affect the performance of applications in the very end servers
 last_updated: Nov 26, 2021
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 related:
   - title: General performance guidelines
     link: docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html

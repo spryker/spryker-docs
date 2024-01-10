@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
 ---
 title: Database overview
 description: This document overviews the database in the ORM directory.
@@ -7,23 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-overview
 originalArticleId: bf0ed96e-17b1-46a7-b3e5-21919e46cf6b
 redirect_from:
-  - /2021080/docs/database-overview
-  - /2021080/docs/en/database-overview
-  - /docs/database-overview
-  - /docs/en/database-overview
-  - /v6/docs/database-overview
-  - /v6/docs/en/database-overview
-  - /v5/docs/database-overview
-  - /v5/docs/en/database-overview
-  - /v4/docs/database-overview
-  - /v4/docs/en/database-overview
-  - /v3/docs/database-overview
-  - /v3/docs/en/database-overview
-  - /v2/docs/database-overview
-  - /v2/docs/en/database-overview
-  - /v1/docs/database-overview
-  - /v1/docs/en/database-overview
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+related:
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
@@ -31,7 +15,7 @@ related:
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
 ---
 title: Extend the core
 description: There are three ways to extend classes from the core—replacement class, inheritance object, and composition.
@@ -7,24 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/core-extension
 originalArticleId: 8baa3c78-9795-426b-9df2-576290b2acb4
 redirect_from:
-  - /2021080/docs/core-extension
-  - /2021080/docs/en/core-extension
-  - /docs/core-extension
-  - /docs/en/core-extension
-  - /v6/docs/core-extension
-  - /v6/docs/en/core-extension
-  - /v5/docs/core-extension
-  - /v5/docs/en/core-extension
-  - /v4/docs/core-extension
-  - /v4/docs/en/core-extension
-  - /v3/docs/core-extension
-  - /v3/docs/en/core-extension
-  - /v3/docs/t-extend-spryker
-  - /v3/docs/en/t-extend-spryker
-  - /v2/docs/core-extension
-  - /v2/docs/en/core-extension
-  - /v1/docs/core-extension
-  - /v1/docs/en/core-extension
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
   - /docs/scos/dev/back-end-development/extend-spryker/extending-the-core.html
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-the-core.html
 related:

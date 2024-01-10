@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 title: Design by Contract (DBC) - Facade
 description: A contract is a formal and precise specification of a method (or other components) in a facade.
@@ -7,24 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/zed-facade-design-by-contract
 originalArticleId: 08727647-3f73-47be-ab06-5f698712aaf5
 redirect_from:
-  - /2021080/docs/zed-facade-design-by-contract
-  - /2021080/docs/en/zed-facade-design-by-contract
-  - /docs/zed-facade-design-by-contract
-  - /docs/en/zed-facade-design-by-contract
-  - /v6/docs/zed-facade-design-by-contract
-  - /v6/docs/en/zed-facade-design-by-contract
-  - /v5/docs/zed-facade-design-by-contract
-  - /v5/docs/en/zed-facade-design-by-contract
-  - /v4/docs/zed-facade-design-by-contract
-  - /v4/docs/en/zed-facade-design-by-contract
-  - /v3/docs/zed-facade-design-by-contract
-  - /v3/docs/en/zed-facade-design-by-contract
-  - /v2/docs/zed-facade-design-by-contract
-  - /v2/docs/en/zed-facade-design-by-contract
-  - /v1/docs/zed-facade-design-by-contract
-  - /v1/docs/en/zed-facade-design-by-contract
-  - /v1/docs/zed-facade-how-to-implement
-  - /v1/docs/en/zed-facade-how-to-implement
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 related:
   - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
@@ -52,7 +34,7 @@ Imagine a signature like this for the method `saveCustomer()`:
  *
  * @return void
  */
-public function saveCustomer($idCustomer, $email) 
+public function saveCustomer($idCustomer, $email)
 {
     ...
 }

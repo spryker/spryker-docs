@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 title: "Declaration of module APIs: Public and private"
 description: This document declares what public and private APIs are
@@ -7,23 +6,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/definition-api
 originalArticleId: d86471b1-719e-4ab5-b5eb-b5e915f0a837
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/definition-api
-  - /2021080/docs/en/definition-api
-  - /docs/definition-api
-  - /docs/en/definition-api
-  - /v6/docs/definition-api
-  - /v6/docs/en/definition-api
-  - /v5/docs/definition-api
-  - /v5/docs/en/definition-api
-  - /v4/docs/definition-api
-  - /v4/docs/en/definition-api
-  - /v3/docs/definition-api
-  - /v3/docs/en/definition-api
-  - /v2/docs/definition-api
-  - /v2/docs/en/definition-api
-  - /v1/docs/definition-api
-  - /v1/docs/en/definition-api
   - /docs/scos/dev/architecture/module-api/definition-of-module-api.html
+  - /docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 related:
   - title: Performance and scalability
     link: docs/scos/dev/architecture/module-api/performance-and-scalability.html

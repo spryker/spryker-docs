@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/programming-concepts.html
 ---
 title: Programming concepts
 description: This dociment explains the main software and coding concepts used in Spryker.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/programming-concepts
 originalArticleId: e72b4d76-638f-414d-8577-729b26de5909
 redirect_from:
-  - /2021080/docs/programming-concepts
-  - /2021080/docs/en/programming-concepts
-  - /docs/programming-concepts
-  - /docs/en/programming-concepts
-  - /v6/docs/programming-concepts
-  - /v6/docs/en/programming-concepts
-  - /v5/docs/programming-concepts
-  - /v5/docs/en/programming-concepts
-  - /v4/docs/programming-concepts
-  - /v4/docs/en/programming-concepts
-  - /v3/docs/programming-concepts
-  - /v3/docs/en/programming-concepts
-  - /v2/docs/programming-concepts
-  - /v2/docs/en/programming-concepts
-  - /v1/docs/programming-concepts
-  - /v1/docs/en/programming-concepts
+  - /docs/scos/dev/architecture/programming-concepts.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

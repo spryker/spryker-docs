@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/yves.html
 ---
 title: Yves overview
 last_updated: Jun 16, 2021
@@ -6,40 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-overview
 originalArticleId: 473f3418-acda-43ac-b9d2-70bfdb0bf048
 redirect_from:
-  - /2021080/docs/yves-overview
-  - /2021080/docs/en/yves-overview
-  - /docs/yves-overview
-  - /docs/en/yves-overview
-  - /v6/docs/yves-overview
-  - /v6/docs/en/yves-overview
-  - /v5/docs/about-yves
-  - /v5/docs/en/about-yves
-  - /v5/docs/yves
-  - /v5/docs/en/yves
-  - /2021080/docs/yves
-  - /2021080/docs/en/yves
-  - /docs/yves
-  - /docs/en/yves
-  - /v6/docs/yves
-  - /v6/docs/en/yves
-  - /v5/docs/yves
-  - /v5/docs/en/yves
-  - /v4/docs/about-yves
-  - /v4/docs/en/about-yves
-  - /v4/docs/yves
-  - /v4/docs/en/yves
-  - /v3/docs/about-yves
-  - /v3/docs/en/about-yves
-  - /v3/docs/yves
-  - /v3/docs/en/yves
-  - /v2/docs/about-yves
-  - /v2/docs/en/about-yves
-  - /v2/docs/yves
-  - /v2/docs/en/yves
-  - /v1/docs/about-yves
-  - /v1/docs/en/about-yves
-  - /v1/docs/yves
-  - /v1/docs/en/yves
+  - /docs/scos/dev/back-end-development/yves/yves.html
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
@@ -63,7 +29,7 @@ Yves is one of the application layers of the Spryker Commerce OS, providing the 
 
 {% info_block infoBox %}
 
-To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
+To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html)
 
 {% endinfo_block %}
 

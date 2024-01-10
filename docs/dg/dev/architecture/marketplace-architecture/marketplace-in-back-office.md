@@ -1,10 +1,10 @@
-  - /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
 ---
 title: Marketplace in the Back Office
 description: This document explains how Marketplace functionality is presented in the Back Office.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
+  - /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
 related:
   - title: Merchant Portal architecture overview
     link: docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html

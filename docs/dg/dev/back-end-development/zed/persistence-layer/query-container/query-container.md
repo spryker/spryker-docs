@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
 ---
 title: About the query container
 description: A query container holds all the database queries of the current module.
@@ -7,23 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/query-container
 originalArticleId: 04a14116-3380-4712-a840-3464a4177c84
 redirect_from:
-  - /2021080/docs/query-container
-  - /2021080/docs/en/query-container
-  - /docs/query-container
-  - /docs/en/query-container
-  - /v6/docs/query-container
-  - /v6/docs/en/query-container
-  - /v5/docs/query-container
-  - /v5/docs/en/query-container
-  - /v4/docs/query-container
-  - /v4/docs/en/query-container
-  - /v3/docs/query-container
-  - /v3/docs/en/query-container
-  - /v2/docs/query-container
-  - /v2/docs/en/query-container
-  - /v1/docs/query-container
-  - /v1/docs/en/query-container
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+related:
   - title: Implement a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
   - title: Using a query container

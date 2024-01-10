@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
 ---
 title: Implement Direct Debit in Zed
 description: This document provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the backend side.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-be-implementation
 originalArticleId: 1476be7c-4a01-4e23-8fec-c17c807e9dda
 redirect_from:
-  - /2021080/docs/dd-be-implementation
-  - /2021080/docs/en/dd-be-implementation
-  - /docs/dd-be-implementation
-  - /docs/en/dd-be-implementation
-  - /v6/docs/dd-be-implementation
-  - /v6/docs/en/dd-be-implementation
-  - /v5/docs/dd-be-implementation
-  - /v5/docs/en/dd-be-implementation
-  - /v4/docs/dd-be-implementation
-  - /v4/docs/en/dd-be-implementation
-  - /v3/docs/dd-be-implementation
-  - /v3/docs/en/dd-be-implementation
-  - /v2/docs/dd-be-implementation
-  - /v2/docs/en/dd-be-implementation
-  - /v1/docs/dd-be-implementation
-  - /v1/docs/en/dd-be-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
 related:
   - title: Implement Direct Debit payment
@@ -198,7 +182,7 @@ class DirectDebitReader
 </details>
 
 1. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This implements the logic for *saving* the Direct Debit payment details.
-2. 
+2.
 <details><summary>Code sample:</summary>
 
 ```php
@@ -248,7 +232,7 @@ class DirectDebitWriter
 
 </details>
 
-1. To get instances for these two classes, implement `PaymentMethodsBusinessFactory` 
+1. To get instances for these two classes, implement `PaymentMethodsBusinessFactory`
 
 **Code sample:**
 

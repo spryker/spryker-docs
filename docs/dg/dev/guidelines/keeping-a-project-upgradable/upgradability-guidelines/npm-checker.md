@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
 ---
 title: Npm checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
 ---
 
 This checker identifies and reports security vulnerabilities in npm dependencies.

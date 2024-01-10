@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
 ---
 title: Frontend performance guidelines
 description: Optimize your Spryker Frontend.
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
 originalArticleId: 1fbe7f78-9c86-4d16-8537-8de11f742f1c
 redirect_from:
-  - /2021080/docs/front-end-performance-guidelines
-  - /2021080/docs/en/front-end-performance-guidelines
-  - /docs/front-end-performance-guidelines
-  - /docs/en/front-end-performance-guidelines
-  - /v6/docs/front-end-performance-guidelines
-  - /v6/docs/en/front-end-performance-guidelines
+  - /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html#frontend-performance
 related:

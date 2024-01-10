@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
 ---
 title: Implement prepayment in shared layer
 description: This procedure will help us to identify the new payment type through some unique constants.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-shared
 originalArticleId: 2c67a631-daed-4aeb-871b-6a797a8452bb
 redirect_from:
-  - /2021080/docs/ht-prepayment-shared
-  - /2021080/docs/en/ht-prepayment-shared
-  - /docs/ht-prepayment-shared
-  - /docs/en/ht-prepayment-shared
-  - /v6/docs/ht-prepayment-shared
-  - /v6/docs/en/ht-prepayment-shared
-  - /v5/docs/ht-prepayment-shared
-  - /v5/docs/en/ht-prepayment-shared
-  - /v4/docs/ht-prepayment-shared
-  - /v4/docs/en/ht-prepayment-shared
-  - /v3/docs/ht-prepayment-shared
-  - /v3/docs/en/ht-prepayment-shared
-  - /v2/docs/ht-prepayment-shared
-  - /v2/docs/en/ht-prepayment-shared
-  - /v1/docs/ht-prepayment-shared
-  - /v1/docs/en/ht-prepayment-shared
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
 related:
   - title: Implement prepayment

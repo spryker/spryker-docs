@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
 ---
 title: Handling errors with ErrorHandler
 description: The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed error-Wrelated information. The ErrorHandler handles notices, warnings and other types of minor issues usually not thrown as exceptions as strict as more serious errors.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/error-handler
 originalArticleId: 6b2b8617-7839-4220-aa59-51bf3d5bbd7d
 redirect_from:
-  - /2021080/docs/error-handler
-  - /2021080/docs/en/error-handler
-  - /docs/error-handler
-  - /docs/en/error-handler
-  - /v6/docs/error-handler
-  - /v6/docs/en/error-handler
-  - /v5/docs/error-handler
-  - /v5/docs/en/error-handler
-  - /v4/docs/error-handler
-  - /v4/docs/en/error-handler
-  - /v3/docs/error-handler
-  - /v3/docs/en/error-handler
-  - /v2/docs/error-handler
-  - /v2/docs/en/error-handler
-  - /v1/docs/error-handler
-  - /v1/docs/en/error-handler
+  - /docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
 related:
   - title: Handling Internal Server messages
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
@@ -80,7 +64,7 @@ To change the path to another file, use the `ErrorHandlerConstants::ZED_ERROR_PA
 
 ## Exception message sanitizing
 
-Starting from ErrorHandler version [2.5.0](https://github.com/spryker/error-handler/releases/tag/2.5.0), you can sanitize exception messages. 
+Starting from ErrorHandler version [2.5.0](https://github.com/spryker/error-handler/releases/tag/2.5.0), you can sanitize exception messages.
 
 Usually, sensitive data is not used in exception messages. However, in some special cases, data is seen as sensitive data, and for these cases, you can manipulate exception messages.
 

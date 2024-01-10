@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 ---
 title: Extend the database schema
 description: this document shows how to add fields to the existing database tables
@@ -7,23 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-db-schema
 originalArticleId: 724041dd-a274-4835-8ef1-085fb4c686f9
 redirect_from:
-  - /2021080/docs/t-extend-db-schema
-  - /2021080/docs/en/t-extend-db-schema
-  - /docs/t-extend-db-schema
-  - /docs/en/t-extend-db-schema
-  - /v6/docs/t-extend-db-schema
-  - /v6/docs/en/t-extend-db-schema
-  - /v5/docs/t-extend-db-schema
-  - /v5/docs/en/t-extend-db-schema
-  - /v4/docs/t-extend-db-schema
-  - /v4/docs/en/t-extend-db-schema
-  - /v3/docs/t-extend-db-schema
-  - /v3/docs/en/t-extend-db-schema
-  - /v2/docs/t-extend-db-schema
-  - /v2/docs/en/t-extend-db-schema
-  - /v1/docs/t-extend-db-schema
-  - /v1/docs/en/t-extend-db-schema
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 related:
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html

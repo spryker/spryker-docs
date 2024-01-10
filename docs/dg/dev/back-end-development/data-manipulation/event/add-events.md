@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
 ---
 title: Add events
 description: This document shows how to add events
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-adding
 originalArticleId: 9136cc31-4264-4a7e-b7d8-2f1c966afa51
 redirect_from:
-  - /2021080/docs/event-adding
-  - /2021080/docs/en/event-adding
-  - /docs/event-adding
-  - /docs/en/event-adding
-  - /v6/docs/event-adding
-  - /v6/docs/en/event-adding
-  - /v5/docs/event-adding
-  - /v5/docs/en/event-adding
-  - /v4/docs/event-adding
-  - /v4/docs/en/event-adding
-  - /v3/docs/event-adding
-  - /v3/docs/en/event-adding
-  - /v2/docs/event-adding
-  - /v2/docs/en/event-adding
-  - /v1/docs/event-adding
-  - /v1/docs/en/event-adding
+  - /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
 related:
   - title: Event

@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
 ---
 title: Run the evaluator tool
 description: Instructions for running the evaluator tool
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
 ---
 
 This document outlines the process of using the evaluator tool to verify if your project code adheres to Spryker's standards.

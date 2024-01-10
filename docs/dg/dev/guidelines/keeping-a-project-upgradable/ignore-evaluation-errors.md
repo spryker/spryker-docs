@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
 ---
 title: Ignore evaluation errors
 description: Reference information for evaluator configuration file.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
 ---
 
 In some cases, the evaluator's rules may cause false positive errors. Then you can configure the evaluator to ignore some errors.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/modules-and-application-layers.html
 ---
 title: Modules and application layers
 description: Learn about the layers in the Spryker Commerce OS and how they are related with each other.
@@ -7,28 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/modules-and-layers
 originalArticleId: 2c4ec7d1-3056-4dc2-bc82-8865dfbc49de
 redirect_from:
-  - /2021080/docs/modules-and-layers
-  - /2021080/docs/en/modules-and-layers
-  - /docs/modules-and-layers
-  - /docs/en/modules-and-layers
-  - /v6/docs/modules-and-layers
-  - /v6/docs/en/modules-and-layers
-  - /v5/docs/modularity-and-shop-suite
-  - /v5/docs/en/modularity-and-shop-suite
-  - /v4/docs/modularity-and-shop-suite
-  - /v4/docs/en/modularity-and-shop-suite
-  - /v3/docs/modularity-and-shop-suite
-  - /v3/docs/en/modularity-and-shop-suite
-  - /v2/docs/modularity-and-shop-suite
-  - /v2/docs/en/modularity-and-shop-suite
-  - /v1/docs/modularity-and-shop-suite
-  - /v1/docs/en/modularity-and-shop-suite
-  - /docs/modularity-and-shop-suite
-  - /docs/en/modularity-and-shop-suite
-  - /2021080/docs/modularity-and-shop-suite
-  - /2021080/docs/en/modularity-and-shop-suite
-  - /module_guide/overview.htm
-  - /docs/scos/dev/architecture/modules-and-layers.html
+  - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

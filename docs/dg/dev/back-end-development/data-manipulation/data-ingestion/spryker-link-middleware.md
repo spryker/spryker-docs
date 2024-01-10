@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
 ---
 title: Spryker LINK Middleware
 description: Spryker LINK Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system.
@@ -7,23 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-middleware
 originalArticleId: b7dfbdc2-5647-4314-9bb3-5302f378ce2b
 redirect_from:
-  - /2021080/docs/spryker-middleware
-  - /2021080/docs/en/spryker-middleware
-  - /docs/spryker-middleware
-  - /docs/en/spryker-middleware
-  - /v6/docs/spryker-middleware
-  - /v6/docs/en/spryker-middleware
-  - /v5/docs/spryker-middleware
-  - /v5/docs/en/spryker-middleware
-  - /v4/docs/spryker-middleware
-  - /v4/docs/en/spryker-middleware
-  - /v3/docs/spryker-middleware
-  - /v3/docs/en/spryker-middleware
-  - /v2/docs/spryker-middleware
-  - /v2/docs/en/spryker-middleware
-  - /v1/docs/spryker-middleware
-  - /v1/docs/en/spryker-middleware
-  - /spryker-middleware.htm
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
 ---
 
@@ -1073,7 +1056,7 @@ As the parameter for `DataImportWriteStream`, use `CategoryDataImporterPlugin`. 
 
 ### Update process plugins
 
-1. Update process plugins as follows: 
+1. Update process plugins as follows:
 
 ```php
 	class MyModuleDependencyProvider {

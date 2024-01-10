@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
 ---
 title: Add navigation in the Back Office
 description: This document describes how to make your new controller action accessible in the navigation bar.
@@ -7,25 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-navigation-in-the-back-office
 originalArticleId: dcc2dc3b-5c24-4239-8c24-a49fc8e2351f
 redirect_from:
-  - /2021080/docs/adding-navigation-in-the-back-office
-  - /2021080/docs/en/adding-navigation-in-the-back-office
-  - /docs/adding-navigation-in-the-back-office
-  - /docs/en/adding-navigation-in-the-back-office
-  - /v6/docs/adding-navigation-in-the-back-office
-  - /v6/docs/en/adding-navigation-in-the-back-office
-  - /v5/docs/adding-navigation-in-the-back-office
-  - /v5/docs/en/adding-navigation-in-the-back-office
-  - /v4/docs/adding-navigation-in-zed
-  - /v4/docs/en/adding-navigation-in-zed
-  - /v3/docs/adding-navigation-in-zed
-  - /v3/docs/en/adding-navigation-in-zed
-  - /v2/docs/adding-navigation-in-zed
-  - /v2/docs/en/adding-navigation-in-zed
-  - /v1/docs/adding-navigation-in-zed
-  - /v1/docs/en/adding-navigation-in-zed
-  - /docs/scos/dev/back-end-development/extend-spryker/adding-navigation-in-the-back-office.html
-  - /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
-related: 
+  - /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
+related:
   - title: Zed overview
     link: docs/scos/dev/back-end-development/zed/zed.html
 ---

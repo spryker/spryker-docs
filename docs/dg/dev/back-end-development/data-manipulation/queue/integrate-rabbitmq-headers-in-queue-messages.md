@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
 ---
 title: Integrate RabbitMQ headers in queue messages
 description: This document shows the RabbitMQ message usage with demo headers.
@@ -7,16 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rabbitmq-headers-in-queue-messages
 originalArticleId: d07ebbe0-edea-4194-8875-d20c4cf39cc8
 redirect_from:
-  - /2021080/docs/rabbitmq-headers-in-queue-messages
-  - /2021080/docs/en/rabbitmq-headers-in-queue-messages
-  - /docs/rabbitmq-headers-in-queue-messages
-  - /docs/en/rabbitmq-headers-in-queue-messages
-  - /v6/docs/rabbitmq-headers-in-queue-messages
-  - /v6/docs/en/rabbitmq-headers-in-queue-messages
-  - /v5/docs/rabbitmq-headers-in-queue-messages
-  - /v5/docs/en/rabbitmq-headers-in-queue-messages
-  - /v4/docs/rabbitmq-headers-in-queue-messages
-  - /v4/docs/en/rabbitmq-headers-in-queue-messages
+  - /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
   - /docs/scos/dev/back-end-development/data-manipulation/queue/integrating-rabbitmq-headers-in-queue-messages.html
 related:
   - title: Queue

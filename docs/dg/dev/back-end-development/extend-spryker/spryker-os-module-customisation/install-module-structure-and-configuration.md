@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
 ---
 title: Install module structure and configuration
 description: Starting from version 1.0.0 the Install package has become a regular Spryker module that can be extended on the project level
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/install-module-structure-and-configuration
 originalArticleId: b3785d03-b408-47db-bf84-5c89dfdcbd11
 redirect_from:
-  - /2021080/docs/install-module-structure-and-configuration
-  - /2021080/docs/en/install-module-structure-and-configuration
-  - /docs/install-module-structure-and-configuration
-  - /docs/en/install-module-structure-and-configuration
-  - /v6/docs/install-module-structure-and-configuration
-  - /v6/docs/en/install-module-structure-and-configuration
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
   - /docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
 related:
   - title: Manage dependencies with Composer

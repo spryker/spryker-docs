@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
 ---
 title: Extend a core module that is used by another
 description: This document describes how to extend a core module that is used by another core module.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-extend-inuse-core
 originalArticleId: f157e550-cbc1-4224-9eb9-c48ea2a884a3
 redirect_from:
-  - /2021080/docs/ht-extend-inuse-core
-  - /2021080/docs/en/ht-extend-inuse-core
-  - /docs/ht-extend-inuse-core
-  - /docs/en/ht-extend-inuse-core
-  - /v6/docs/ht-extend-inuse-core
-  - /v6/docs/en/ht-extend-inuse-core
-  - /v5/docs/ht-extend-inuse-core
-  - /v5/docs/en/ht-extend-inuse-core
-  - /v4/docs/ht-extend-inuse-core
-  - /v4/docs/en/ht-extend-inuse-core
-  - /v3/docs/ht-extend-inuse-core
-  - /v3/docs/en/ht-extend-inuse-core
-  - /v2/docs/ht-extend-inuse-core
-  - /v2/docs/en/ht-extend-inuse-core
-  - /v1/docs/ht-extend-inuse-core
-  - /v1/docs/en/ht-extend-inuse-core
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extend-spryker/extending-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 related:

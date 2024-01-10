@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
 ---
 title: Implement a new console command
 description: This document describes how you can implement a new console command.
@@ -7,23 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/console-commands
 originalArticleId: d43d3867-747d-4323-978a-57b61082bef8
 redirect_from:
-  - /2021080/docs/console-commands
-  - /2021080/docs/en/console-commands
-  - /docs/console-commands
-  - /docs/en/console-commands
-  - /v6/docs/console-commands
-  - /v6/docs/en/console-commands
-  - /v5/docs/console-commands
-  - /v5/docs/en/console-commands
-  - /v4/docs/console-commands
-  - /v4/docs/en/console-commands
-  - /v3/docs/console-commands
-  - /v3/docs/en/console-commands
-  - /v2/docs/console-commands
-  - /v2/docs/en/console-commands
-  - /v1/docs/console-commands
-  - /v1/docs/en/console-commands
   - /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
+  - /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
 related:
   - title: Console commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html
@@ -43,18 +27,18 @@ To add a new console command, create a new class in `[Namespace]/Zed/(module)/Co
 * `configure()`—this method is used to set the name or description.
 * `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
 
-Symfony's console tool is quite powerful. Read the [official documentation](https://symfony.com/doc/current/components/console.html) before you implement your first console command. 
+Symfony's console tool is quite powerful. Read the [official documentation](https://symfony.com/doc/current/components/console.html) before you implement your first console command.
 
 To send messages and add options, you can use arguments.
 
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Communication\Console;
- 
+
 use Spryker\Zed\Kernel\Communication\Console\Console;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
- 
+
 class YourNewConsoleCommand extends Console
 {
     const COMMAND_NAME = 'my-bundle:my-task'; // e.g. 'catalog:import'
@@ -67,7 +51,7 @@ class YourNewConsoleCommand extends Console
         $this->setName(static::COMMAND_NAME);
         $this->setDescription('Lorem ipsum dolor sit amet.');
     }
- 
+
     /**
      * @param InputInterface $input
      * @param OutputInterface $output
@@ -78,7 +62,7 @@ class YourNewConsoleCommand extends Console
     {
         // your code here
     }
- 
+
 }
 ```
 
@@ -91,7 +75,7 @@ To see the command listed when running `vendor/bin/console`, provide it to the c
 namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -107,7 +91,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new YourNewConsoleCommand(),
             // ...
         ];
- 
+
         return $commands;
     }
 }
@@ -127,7 +111,7 @@ To add an event listener you need to create a class that implements `EventSubscr
 namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
- 
+
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
@@ -143,7 +127,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new YourEventListenerPlugin(),
             // ...
         ];
- 
+
         return $eventSubscriber;
     }
 }

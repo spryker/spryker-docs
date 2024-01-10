@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
 ---
 title: Handle data with Publish and Synchronization
 description: Use the tutorial to understand how Publish and Synchronization work and how to export data using a particular example.
@@ -7,14 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/handling-data-with-publish-and-synchronization
 originalArticleId: 67658ab1-da03-4cec-a059-2cd5d41c48df
 redirect_from:
-  - /2021080/docs/handling-data-with-publish-and-synchronization
-  - /2021080/docs/en/handling-data-with-publish-and-synchronization
-  - /docs/handling-data-with-publish-and-synchronization
-  - /docs/en/handling-data-with-publish-and-synchronization
-  - /v6/docs/handling-data-with-publish-and-synchronization
-  - /v6/docs/en/handling-data-with-publish-and-synchronization
-  - /docs/t-handling-data-publish-and-sync-scos
-  - /docs/en/t-handling-data-publish-and-sync-scos
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
 related:
   - title: Publish and Synchronization
@@ -72,7 +64,7 @@ Follow these steps to create the following:
     ```bash
     console propel:install
     ```
-    
+
     3. Create the `HelloWorldStorage` module by creating the `HelloWorldStorage` folder in Zed. The module is responsible for exporting data to Redis.
 
 {% info_block infoBox "Naming conventions" %}
@@ -1174,7 +1166,7 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
@@ -1191,7 +1183,7 @@ class HelloWorldStorageDependencyProvider extends AbstractDependencyProvider
 }
 ```
 
-5. To add an array of items that can be returned, update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml`: 
+5. To add an array of items that can be returned, update the transfer in `Pyz/Shared/HelloWorldStorage/Transfer/hello_world_storage.transfer.xml`:
 
 ```xml
 <?xml version="1.0"?>
@@ -1252,7 +1244,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
      * @var \Spryker\Service\Synchronization\SynchronizationServiceInterface
      */
     protected SynchronizationServiceInterface $synchronizationService;
-    
+
     /**
      * @var \Spryker\Client\Storage\StorageClientInterface
      */
@@ -1298,7 +1290,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
 ```php
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
-     * 
+     *
      * @return \Symfony\Component\HttpFoundation\JsonResponse
      */
     public function searchAction(Request $request): JsonResponse
@@ -1313,7 +1305,7 @@ class MessageStorageReader implements MessageStorageReaderInterface
     }
 ```
 
-Update the routes for the Back Office using the following command: 
+Update the routes for the Back Office using the following command:
 
 ```
 docker/sdk console router:cache:warm-up:backoffice

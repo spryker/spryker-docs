@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/session-handlers.html
 ---
 title: Session handlers
 description: We provide a number of session handlers to work with different storages- File, Couchbase, MySql, Redis, Redis (locking).
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/session-handlers
 originalArticleId: 68ebf87c-9ddd-4b0a-8f81-93a229271e09
 redirect_from:
-  - /2021080/docs/session-handlers
-  - /2021080/docs/en/session-handlers
-  - /docs/session-handlers
-  - /docs/en/session-handlers
-  - /v6/docs/session-handlers
-  - /v6/docs/en/session-handlers
-  - /v5/docs/session-handlers
-  - /v5/docs/en/session-handlers
-  - /v4/docs/session-handlers
-  - /v4/docs/en/session-handlers
-  - /v3/docs/session-handlers
-  - /v3/docs/en/session-handlers
-  - /v2/docs/session-handlers
-  - /v2/docs/en/session-handlers
-  - /v1/docs/session-handlers
-  - /v1/docs/en/session-handlers
+  - /docs/scos/dev/back-end-development/session-handlers.html
 related:
   - title: Session management
     link: docs/scos/dev/back-end-development/session-management.html

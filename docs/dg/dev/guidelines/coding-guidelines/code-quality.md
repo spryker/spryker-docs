@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
 ---
 title: Code Quality
 description: Spryker Commerce OS’s code base receives very high scores in terms of quality measures, indicating significantly higher code quality than many other ecommerce solutions.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-quality
 originalArticleId: d8ba81a7-6e66-438e-9656-b4fb17b31402
 redirect_from:
-  - /2021080/docs/code-quality
-  - /2021080/docs/en/code-quality
-  - /docs/code-quality
-  - /docs/en/code-quality
-  - /v6/docs/code-quality
-  - /v6/docs/en/code-quality
-  - /v5/docs/code-quality
-  - /v5/docs/en/code-quality
-  - /v4/docs/code-quality
-  - /v4/docs/en/code-quality
-  - /v3/docs/code-quality
-  - /v3/docs/en/code-quality
-  - /v2/docs/code-quality
-  - /v2/docs/en/code-quality
-  - /v1/docs/code-quality
-  - /v1/docs/en/code-quality
+  - /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
 related:
   - title: Code Architecture Guide
     link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html

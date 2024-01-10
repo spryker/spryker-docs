@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
 ---
 title: Query objects - creation and usage
 description: Query objects provide an object-oriented API for writing database queries which are used in query containers.
@@ -7,25 +6,10 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/query-objects
 originalArticleId: b8357f84-9f29-4386-ad69-01888d697556
 redirect_from:
-  - /2021080/docs/query-objects
-  - /2021080/docs/en/query-objects
-  - /docs/query-objects
-  - /docs/en/query-objects
-  - /v6/docs/query-objects
-  - /v6/docs/en/query-objects
-  - /v5/docs/query-objects
-  - /v5/docs/en/query-objects
-  - /v4/docs/query-objects
-  - /v4/docs/en/query-objects
-  - /v3/docs/query-objects
-  - /v3/docs/en/query-objects
-  - /v2/docs/query-objects
-  - /v2/docs/en/query-objects
-  - /v1/docs/query-objects
-  - /v1/docs/en/query-objects
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
@@ -33,7 +17,7 @@ related:
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Repository
     link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---

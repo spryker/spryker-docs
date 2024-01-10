@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/technology-stack.html
 ---
 title: Technology stack
 description: This document provides a general overview of the technologies used while developing Spryker Commerce OS.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/technology-stack
 originalArticleId: 336a8382-fffd-426f-b752-df2ad2a3820a
 redirect_from:
-  - /2021080/docs/technology-stack
-  - /2021080/docs/en/technology-stack
-  - /docs/technology-stack
-  - /docs/en/technology-stack
-  - /v6/docs/technology-stack
-  - /v6/docs/en/technology-stack
-  - /v5/docs/technology-stack
-  - /v5/docs/en/technology-stack
-  - /v4/docs/technology-stack
-  - /v4/docs/en/technology-stack
-  - /v3/docs/technology-stack
-  - /v3/docs/en/technology-stack
-  - /v2/docs/technology-stack
-  - /v2/docs/en/technology-stack
-  - /v1/docs/technology-stack
-  - /v1/docs/en/technology-stack
+  - /docs/scos/dev/architecture/technology-stack.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

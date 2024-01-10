@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 title: Repository
 description: It's possible to use a Repository class in your persistence layer. The repository implements the repository pattern, which means you have a clear separation between business and persistence layers.
@@ -7,25 +6,10 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/repository
 originalArticleId: 11453043-a810-40f9-84c1-774ed4dba854
 redirect_from:
-  - /2021080/docs/repository
-  - /2021080/docs/en/repository
-  - /docs/repository
-  - /docs/en/repository
-  - /v6/docs/repository
-  - /v6/docs/en/repository
-  - /v5/docs/repository
-  - /v5/docs/en/repository
-  - /v4/docs/repository
-  - /v4/docs/en/repository
-  - /v3/docs/repository
-  - /v3/docs/en/repository
-  - /v2/docs/repository
-  - /v2/docs/en/repository
-  - /v1/docs/repository
-  - /v1/docs/en/repository
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
@@ -33,7 +17,7 @@ related:
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
 ---
@@ -149,7 +133,7 @@ Those three queries share the same queries. For better reusability, it's recomme
                  ->createBlogQuery()
                  ->filterByName($name);
          }
-  
+
 ```
 
 

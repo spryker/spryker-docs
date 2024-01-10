@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
 ---
 title: Implement Direct Debit in the shared layer
 description: This document provides step-by-step instructions on how to identify the new payment type using some unique constants.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-shared-implementation
 originalArticleId: 106f7955-4143-4ed5-890b-f58b6ee24b9f
 redirect_from:
-  - /2021080/docs/dd-shared-implementation
-  - /2021080/docs/en/dd-shared-implementation
-  - /docs/dd-shared-implementation
-  - /docs/en/dd-shared-implementation
-  - /v6/docs/dd-shared-implementation
-  - /v6/docs/en/dd-shared-implementation
-  - /v5/docs/dd-shared-implementation
-  - /v5/docs/en/dd-shared-implementation
-  - /v4/docs/dd-shared-implementation
-  - /v4/docs/en/dd-shared-implementation
-  - /v3/docs/dd-shared-implementation
-  - /v3/docs/en/dd-shared-implementation
-  - /v2/docs/dd-shared-implementation
-  - /v2/docs/en/dd-shared-implementation
-  - /v1/docs/dd-shared-implementation
-  - /v1/docs/en/dd-shared-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
 related:
   - title: Implement Direct Debit payment

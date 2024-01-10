@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
 ---
 title: Publish and synchronize and multi-store shop systems
 description: This document describes a way to synchronize data between multiple stores.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/p-s-and-multi-store-shop-systems
 originalArticleId: 06d70e00-611d-4d96-835e-70a6490066f7
 redirect_from:
-  - /2021080/docs/p-s-and-multi-store-shop-systems
-  - /2021080/docs/en/p-s-and-multi-store-shop-systems
-  - /docs/p-s-and-multi-store-shop-systems
-  - /docs/en/p-s-and-multi-store-shop-systems
-  - /v6/docs/p-s-and-multi-store-shop-systems
-  - /v6/docs/en/p-s-and-multi-store-shop-systems
-  - /v5/docs/p-s-and-multi-store-shop-systems
-  - /v5/docs/en/p-s-and-multi-store-shop-systems
-  - /v4/docs/p-s-and-multi-store-shop-systems
-  - /v4/docs/en/p-s-and-multi-store-shop-systems
-  - /v3/docs/p-s-and-multi-store-shop-systems
-  - /v3/docs/en/p-s-and-multi-store-shop-systems
-  - /v2/docs/p-s-and-multi-store-shop-systems
-  - /v2/docs/en/p-s-and-multi-store-shop-systems
-  - /v1/docs/p-s-and-multi-store-shop-systems
-  - /v1/docs/en/p-s-and-multi-store-shop-systems
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -77,7 +61,7 @@ The following diagrams show:
 * Store aware and global entities: ProductAbstract and URL.
 * Routing sync messages based on Store or QueuePool.
 * Updating Redis based on Store\Enviorment.
-![Spryker entities and multi-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/Publish+and+Synchronize+and+Multi-Store+Shop+Systems/P%26S+with+multistore.png) 
+![Spryker entities and multi-store](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/Publish+and+Synchronize+and+Multi-Store+Shop+Systems/P%26S+with+multistore.png)
 
 ## How it Works
 

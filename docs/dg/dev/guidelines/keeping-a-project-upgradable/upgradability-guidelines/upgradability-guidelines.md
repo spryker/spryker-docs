@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
 ---
 title: Upgradability guidelines
 description: Find solutions to Evaluator violations
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
 ---
 
 The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with both Spryker's and industry coding standards.
@@ -43,5 +43,5 @@ Use one [PHP version](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-
 ## Avoid using outdated modules
 Avoid using [outdated](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html) feature and core modules.
 
-## Avoid multiple nesting in the plugin registration methods 
+## Avoid multiple nesting in the plugin registration methods
 Avoid using [multiple nesting](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html) within plugin registration methods in the dependency providers.

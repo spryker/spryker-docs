@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
 ---
 title: Publish and synchronize repeated export
 description: By following the steps from this document, you can regenerate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronize-repeated-export
 originalArticleId: f1d13f30-7763-4804-8674-e87edf95653f
 redirect_from:
-  - /2021080/docs/publish-and-synchronize-repeated-export
-  - /2021080/docs/en/publish-and-synchronize-repeated-export
-  - /docs/publish-and-synchronize-repeated-export
-  - /docs/en/publish-and-synchronize-repeated-export
-  - /v6/docs/publish-and-synchronize-repeated-export
-  - /v6/docs/en/publish-and-synchronize-repeated-export
-  - /v5/docs/publish-and-synchronize-repeated-export
-  - /v5/docs/en/publish-and-synchronize-repeated-export
-  - /v4/docs/publish-and-synchronize-repeated-export
-  - /v4/docs/en/publish-and-synchronize-repeated-export
-  - /v3/docs/publish-and-synchronize-repeated-export
-  - /v3/docs/en/publish-and-synchronize-repeated-export
-  - /v2/docs/publish-and-synchronize-repeated-export
-  - /v2/docs/en/publish-and-synchronize-repeated-export
-  - /v1/docs/publish-and-synchronize-repeated-export
-  - /v1/docs/en/publish-and-synchronize-repeated-export
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -74,7 +58,7 @@ For example, the command to re-sync data for `CMS Block` looks as follows:
 vendor/bin/console sync:data cms_block
 ```
 
-To trigger data re-sync for a resource, there must be a corresponding sync plugin created for this resource. To learn how to create it, see [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html) 
+To trigger data re-sync for a resource, there must be a corresponding sync plugin created for this resource. To learn how to create it, see [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html)
 ## Published data re-generation
 
 

@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
 ---
 title: Multidimensional array
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
 ---
 
 This check checks that project doesn't use the deeply nested multidimensional arrays in dependency providers, in order to not overload it with complicated logic.

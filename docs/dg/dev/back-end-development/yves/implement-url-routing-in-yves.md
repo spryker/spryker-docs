@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
 ---
 title: Implement URL routing in Yves
 description: URL routing lets you map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/yves-url-routing
 originalArticleId: cf881c42-2422-4c51-a9c8-557b101edb06
 redirect_from:
-  - /2021080/docs/yves-url-routing
-  - /2021080/docs/en/yves-url-routing
-  - /docs/yves-url-routing
-  - /docs/en/yves-url-routing
-  - /v6/docs/yves-url-routing
-  - /v6/docs/en/yves-url-routing
-  - /v5/docs/yves-url-routing
-  - /v5/docs/en/yves-url-routing
-  - /v4/docs/yves-url-routing
-  - /v4/docs/en/yves-url-routing
-  - /v3/docs/yves-url-routing
-  - /v3/docs/en/yves-url-routing
-  - /v2/docs/yves-url-routing
-  - /v2/docs/en/yves-url-routing
-  - /v1/docs/yves-url-routing
-  - /v1/docs/en/yves-url-routing
+  - /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
@@ -48,7 +32,7 @@ To implement URL Routing in Yves, follow these steps per scenario:
 
 To route the preceding request, follow these steps:
 
-1. Create a plugin that extends `AbstractRouteProviderPlugin` in the module where the controller is defined, under the `Plugin/Router` folder. `AbstractRouteProviderPlugin` enables setting up the HTTP method used (GET or POST) when setting up the new route. 
+1. Create a plugin that extends `AbstractRouteProviderPlugin` in the module where the controller is defined, under the `Plugin/Router` folder. `AbstractRouteProviderPlugin` enables setting up the HTTP method used (GET or POST) when setting up the new route.
 
 ```php
 <?php
@@ -66,19 +50,19 @@ use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
 class HelloRouteProviderPlugin extends AbstractRouteProviderPlugin
 {
     private const ROUTE_HELLO = 'hello';
-    
+
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
         $routeCollection = $this->addHelloRoute($routeCollection);
-        
+
         return $routeCollection;
     }
-    
+
     protected function addHelloRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/hello', 'Demo', 'Demo', 'helloAction');
         $routeCollection->add(static::ROUTE_HELLO, $route);
-    
+
         return $routeCollection;
     }
 }
@@ -96,7 +80,7 @@ protected function getRouteProvider(): array
 }
 ```
 
-4. To make a request using the newly configured route in your browser, open `http://mysprykershop.com/hello` 
+4. To make a request using the newly configured route in your browser, open `http://mysprykershop.com/hello`
 
 **Scenario 2:** You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
 
@@ -109,19 +93,19 @@ use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
 class HelloRouteProvider extends AbstractRouteProviderPlugin
 {
     private const ROUTE_HELLO = 'hello';
-    
+
     public function addRoutes(RouteCollection $routeCollection): RouteCollection
     {
         $routeCollection = $this->addHelloRoute($routeCollection);
-        
+
         return $routeCollection;
     }
-    
+
     protected function addHelloRoute(RouteCollection $routeCollection): RouteCollection
     {
         $route = $this->buildRoute('/hello/{name}', 'Demo', 'Demo', 'helloAction');
         $routeCollection->add(static::ROUTE_HELLO, $route);
-    
+
         return $routeCollection;
     }
 }

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
 ---
 title: Standard Filters Backend and Frontend Technical Details
 description: This document provides information about technical details for the frontend and backend development for the standard filters.
@@ -7,16 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-backend-and-frontend-technical-details
 originalArticleId: 91e05caf-ad96-4592-b8c8-7652b1f2ca4f
 redirect_from:
-  - /2021080/docs/standard-filters-backend-and-frontend-technical-details
-  - /2021080/docs/en/standard-filters-backend-and-frontend-technical-details
-  - /docs/standard-filters-backend-and-frontend-technical-details
-  - /docs/en/standard-filters-backend-and-frontend-technical-details
-  - /v6/docs/standard-filters-backend-and-frontend-technical-details
-  - /v6/docs/en/standard-filters-backend-and-frontend-technical-details
-  - /v5/docs/standard-filters-backend-and-frontend-technical-details
-  - /v5/docs/en/standard-filters-backend-and-frontend-technical-details
-  - /v4/docs/standard-filters-backend-and-frontend-technical-details
-  - /v4/docs/en/standard-filters-backend-and-frontend-technical-details
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
 related:
   - title: Category Filters feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html

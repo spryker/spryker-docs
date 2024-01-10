@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
 ---
 title: Add buttons to Zed tables
 description: The document describes how to add buttons to Zed tables.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-add-button-table
 originalArticleId: a4d8ebed-1c73-47d6-9dad-fc3672736cf6
 redirect_from:
-  - /2021080/docs/t-add-button-table
-  - /2021080/docs/en/t-add-button-table
-  - /docs/t-add-button-table
-  - /docs/en/t-add-button-table
-  - /v6/docs/t-add-button-table
-  - /v6/docs/en/t-add-button-table
-  - /v5/docs/t-add-button-table
-  - /v5/docs/en/t-add-button-table
-  - /v4/docs/t-add-button-table
-  - /v4/docs/en/t-add-button-table
-  - /v3/docs/t-add-button-table
-  - /v3/docs/en/t-add-button-table
-  - /v2/docs/t-add-button-table
-  - /v2/docs/en/t-add-button-table
-  - /v1/docs/t-add-button-table
-  - /v1/docs/en/t-add-button-table
+  - /docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
   - /docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 related:
   - title: Create and configure Zed tables

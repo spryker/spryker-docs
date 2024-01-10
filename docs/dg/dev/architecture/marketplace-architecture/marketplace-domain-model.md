@@ -1,10 +1,10 @@
-  - /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
 ---
 title: Marketplace domain model
 description: The following document describes the key domain objects that make a Spryker Shop a Marketplace.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
+  - /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
 related:
   - title: Marketplace Application composition
     link: docs/marketplace/dev/architecture-overview/marketplace-application-composition.html

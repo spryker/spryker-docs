@@ -1,10 +1,10 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
 ---
 title: Data ingestion
 description: This page lists documents inside the Data ingestion section
 last_updated: Sep 6, 2022
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
 ---
 
 The *Data ingestion* section includes the following documents:

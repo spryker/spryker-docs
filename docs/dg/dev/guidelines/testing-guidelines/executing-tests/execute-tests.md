@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
 ---
 title: Execute tests
 description: Lean what commands you can use to execute your tests.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/executing-tests
 originalArticleId: 640291c8-48bc-4684-8725-0c16b79c2589
 redirect_from:
-  - /2021080/docs/executing-tests
-  - /2021080/docs/en/executing-tests
-  - /docs/executing-tests
-  - /docs/en/executing-tests
-  - /v6/docs/executing-tests
-  - /v6/docs/en/executing-tests
-  - /v5/docs/executing-tests
-  - /v5/docs/en/executing-tests
+  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
   - /docs/scos/dev/guidelines/testing/executing-tests.html
 related:
   - title: Available test helpers

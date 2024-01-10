@@ -1,13 +1,13 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/data-publishing.html
 ---
 title: Data publishing
 description: This page lists documents inside the Data publishing section
 last_updated: Apr 25, 2023
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/data-publishing.html
 ---
 
-The *Data publishing* section describes the functionalities and processes related to data publishing. Here, you can learn how to add publish events for Publish and Synchronization, understand the debugging listeners, and implement event trigger publisher plugins. Additionally, you can explore the implementation of Publish and Synchronization in your code, synchronization plugins, and the synchronization process for multi-store shop systems. In this section also can find an explanation of how to perform repeated exports, regenerate published data, and enable multiple mappings to retrieve data without specifying the resource's ID. 
+The *Data publishing* section describes the functionalities and processes related to data publishing. Here, you can learn how to add publish events for Publish and Synchronization, understand the debugging listeners, and implement event trigger publisher plugins. Additionally, you can explore the implementation of Publish and Synchronization in your code, synchronization plugins, and the synchronization process for multi-store shop systems. In this section also can find an explanation of how to perform repeated exports, regenerate published data, and enable multiple mappings to retrieve data without specifying the resource's ID.
 
 In this section, you can find the following documents:
 * [Add publish events](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html)

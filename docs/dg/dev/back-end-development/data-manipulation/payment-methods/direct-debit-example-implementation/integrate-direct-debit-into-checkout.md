@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
 ---
 title: Integrate Direct Debit into checkout
 description: This document provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-checkout-implementation
 originalArticleId: 5a6dc963-80e4-4aca-b307-7752adbbc8e6
 redirect_from:
-  - /2021080/docs/dd-checkout-implementation
-  - /2021080/docs/en/dd-checkout-implementation
-  - /docs/dd-checkout-implementation
-  - /docs/en/dd-checkout-implementation
-  - /v6/docs/dd-checkout-implementation
-  - /v6/docs/en/dd-checkout-implementation
-  - /v5/docs/dd-checkout-implementation
-  - /v5/docs/en/dd-checkout-implementation
-  - /v4/docs/dd-checkout-implementation
-  - /v4/docs/en/dd-checkout-implementation
-  - /v3/docs/dd-checkout-implementation
-  - /v3/docs/en/dd-checkout-implementation
-  - /v2/docs/dd-checkout-implementation
-  - /v2/docs/en/dd-checkout-implementation
-  - /v1/docs/dd-checkout-implementation
-  - /v1/docs/en/dd-checkout-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
 related:
   - title: Implement Direct Debit payment
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html

@@ -1,28 +1,12 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
 ---
-title: Listen to events 
+title: Listen to events
 descritpion: This document shows how to listen to events with direct listeners or a subsriber
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-listen
 originalArticleId: 484a93ea-5e3c-4079-b682-6d2c7196b4b7
 redirect_from:
-  - /2021080/docs/event-listen
-  - /2021080/docs/en/event-listen
-  - /docs/event-listen
-  - /docs/en/event-listen
-  - /v6/docs/event-listen
-  - /v6/docs/en/event-listen
-  - /v5/docs/event-listen
-  - /v5/docs/en/event-listen
-  - /v4/docs/event-listen
-  - /v4/docs/en/event-listen
-  - /v3/docs/event-listen
-  - /v3/docs/en/event-listen
-  - /v2/docs/event-listen
-  - /v2/docs/en/event-listen
-  - /v1/docs/event-listen
-  - /v1/docs/en/event-listen
+  - /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
 related:
   - title: Event

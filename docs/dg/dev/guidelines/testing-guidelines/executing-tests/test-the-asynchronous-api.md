@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
 ---
 title: Test the asynchronous API
 description: How to test the Asynchronous API.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 ---
 
-This document describes how to set up and run AsyncAPI tests. 
+This document describes how to set up and run AsyncAPI tests.
 We use the *Hello World* example throughout this document. All code references the Hello World App and the `Pyz` project namespace. When you set up and run the tests for a different project namespace or module, adjust the names accordingly.
 
 ## Pre-requisites
@@ -38,8 +38,8 @@ We use the *Hello World* example throughout this document. All code references t
 
 Make sure the following prerequisites are met:
 
-1. Spryker Testify version 3.50.0 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually. 
-  - To verify the installation status and version of Spryker Testify, run the following command: 
+1. Spryker Testify version 3.50.0 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
+  - To verify the installation status and version of Spryker Testify, run the following command:
   ```bash
   composer info spryker/testify
   ```
@@ -52,7 +52,7 @@ Make sure the following prerequisites are met:
   composer update "spryker/testify:^3.50.0"
   ```
 2. Spryker Testify AsyncAPI version 0.1.1 or later is installed. The AsyncAPI SDK is required by this package, however, you don't need to install it manually.
-  - To verify the installation status and version of Spryker Testify AsyncAPI, run the following command: 
+  - To verify the installation status and version of Spryker Testify AsyncAPI, run the following command:
   ```bash
   composer info spryker/testify-async-api
   ```
@@ -64,8 +64,8 @@ Make sure the following prerequisites are met:
   ```bash
   composer update "spryker/testify-async-api:^0.1.1"
   ```
-3. Spryks version 0.5.2 or later is installed. 
-  - To verify the installation status and version of Spryks, run the following command: 
+3. Spryks version 0.5.2 or later is installed.
+  - To verify the installation status and version of Spryks, run the following command:
   ``` bash
   composer info spryker-sdk/spryk
   ```
@@ -127,7 +127,7 @@ Depending on your schema file, you need to add your specific handlers.  All hand
 
 When testing the asynchronous API, all messages must be sent to the local message broker transport. This should only happen when you test the API with automated tests.
 
-Add the following configuration to the `config/Shared/config_local.php` file: 
+Add the following configuration to the `config/Shared/config_local.php` file:
 
 ```
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
@@ -187,13 +187,13 @@ In the `Assert` section, you make assertions based on your business logic. For e
 
 The underlying `AsyncApiHelper` ensures the following inside the `runMessageReceiveTest` method:
 
-- The message handler can handle the message. 
-- The expected channel name exists in the schema file. 
-- The expected message name exists in the schema file. 
-- The message contains all required attributes defined in the schema file. 
+- The message handler can handle the message.
+- The expected channel name exists in the schema file.
+- The expected message name exists in the schema file.
+- The message contains all required attributes defined in the schema file.
 
 The `AsyncApiHelper` also executes the handler with the passed message. After the `runMessageReceiveTest` method execution, you need to make your assertions, such as verifying that a specific change was made in your database after processing the message.
-The only remaining tasks for you are to implement the business logic, update the tests according to your business logic, and then run the tests. 
+The only remaining tasks for you are to implement the business logic, update the tests according to your business logic, and then run the tests.
 To run the tests, use the following command:
 
 ```bash
@@ -226,6 +226,6 @@ In the `Assert` section, call the `assertMessageWasEmittedOnChannel` method with
 
 The underlying `AsyncApiHelper` ensures the following inside the `assertMessageWasEmittedOnChannel` method:
 
-- The expected channel name exists in the schema file. 
-- The expected message name exists in the schema file. 
+- The expected channel name exists in the schema file.
+- The expected message name exists in the schema file.
 - The message was sent with all required attributes defined in the schema file.

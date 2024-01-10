@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
 ---
 title: Flysystem
 description: The Flysystem module integrates Spryker with the thephpleague flysystem vendor package
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flysystem
 originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
 redirect_from:
-  - /2021080/docs/flysystem
-  - /2021080/docs/en/flysystem
-  - /docs/flysystem
-  - /docs/en/flysystem
-  - /v6/docs/flysystem
-  - /v6/docs/en/flysystem
-  - /v5/docs/flysystem
-  - /v5/docs/en/flysystem
-  - /v4/docs/flysystem
-  - /v4/docs/en/flysystem
-  - /v3/docs/flysystem
-  - /v3/docs/en/flysystem
-  - /v2/docs/flysystem
-  - /v2/docs/en/flysystem
-  - /v1/docs/flysystem
-  - /v1/docs/en/flysystem
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
 ---
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.

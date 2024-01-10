@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 ---
 title: Code style guide
 description: We follow the PSR-2 standards. To achieve a styled codebase, we integrated the well known PHP-CS Fixer and PHPCodeSniffer.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-style-guide
 originalArticleId: 973d3bf2-1dd0-4219-8f2c-faa86944bb95
 redirect_from:
-  - /2021080/docs/code-style-guide
-  - /2021080/docs/en/code-style-guide
-  - /docs/code-style-guide
-  - /docs/en/code-style-guide
-  - /v6/docs/code-style-guide
-  - /v6/docs/en/code-style-guide
-  - /v5/docs/code-style-guide
-  - /v5/docs/en/code-style-guide
-  - /v4/docs/code-style-guide
-  - /v4/docs/en/code-style-guide
-  - /v3/docs/code-style-guide
-  - /v3/docs/en/code-style-guide
-  - /v2/docs/code-style-guide
-  - /v2/docs/en/code-style-guide
-  - /v1/docs/code-style-guide
-  - /v1/docs/en/code-style-guide
+  - /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 related:
   - title: Code Architecture Guide
     link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html

@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
 ---
 title: Keeping a project upgradable
 description: Guidelines for keeping a project upgradable
 last_updated: Mar 24, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
 related:
   - title: Plugins registration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html

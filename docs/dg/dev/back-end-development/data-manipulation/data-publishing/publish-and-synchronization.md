@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
 ---
 title: Publish and Synchronization
 description: Publish and Synchronization process synchronizes all changes made on the backend need to be propagated to the client data stores.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization
 originalArticleId: 58721bca-2881-4583-a9fa-59d698e8b9bb
 redirect_from:
-  - /2021080/docs/publish-and-synchronization
-  - /2021080/docs/en/publish-and-synchronization
-  - /docs/publish-and-synchronization
-  - /docs/en/publish-and-synchronization
-  - /v6/docs/publish-and-synchronization
-  - /v6/docs/en/publish-and-synchronization
-  - /v5/docs/publish-and-synchronization
-  - /v5/docs/en/publish-and-synchronization
-  - /v4/docs/publish-and-synchronization
-  - /v4/docs/en/publish-and-synchronization
-  - /v3/docs/publish-and-synchronization
-  - /v3/docs/en/publish-and-synchronization
-  - /v2/docs/publish-and-synchronization
-  - /v2/docs/en/publish-and-synchronization
-  - /v1/docs/publish-and-synchronization
-  - /v1/docs/en/publish-and-synchronization
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
 related:
   - title: Implement Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
@@ -100,7 +84,7 @@ Manual even emitting is best suited when an entity passes several stages before 
 ### How Publish and Synchronize works
 
 Publish and Synchronize Process schema:
-![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png) 
+![How Publish and Synchronize works](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Publish+and+Synchronization/how-it-works.png)
 
 ### Publish
 

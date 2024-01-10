@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
 ---
 title: Custom exceptions
 description: When you need to throw an exception, you should define your own type of exception.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-exceptions
 originalArticleId: 1da05e1b-f198-45da-aa47-898835725a2d
 redirect_from:
-  - /2021080/docs/custom-exceptions
-  - /2021080/docs/en/custom-exceptions
-  - /docs/custom-exceptions
-  - /docs/en/custom-exceptions
-  - /v6/docs/custom-exceptions
-  - /v6/docs/en/custom-exceptions
-  - /v5/docs/custom-exceptions
-  - /v5/docs/en/custom-exception
-  - /v4/docs/custom-exceptions
-  - /v4/docs/en/custom-exceptions
-  - /v3/docs/custom-exceptions
-  - /v3/docs/en/custom-exceptions
-  - /v2/docs/custom-exceptions
-  - /v2/docs/en/custom-exceptions
-  - /v1/docs/custom-exceptions
-  - /v1/docs/en/custom-exceptions
+  - /docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
 related:
   - title: About the Business layer
     link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 ---
 title: Queue
 description: The document explains the Spryker Queue System- its work, benefits and configuration
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue
 originalArticleId: c9916ed4-acec-43d0-8a68-0e9805ce8c15
 redirect_from:
-  - /2021080/docs/queue
-  - /2021080/docs/en/queue
-  - /docs/queue
-  - /docs/en/queue
-  - /v6/docs/queue
-  - /v6/docs/en/queue
-  - /v5/docs/queue
-  - /v5/docs/en/queue
-  - /v4/docs/queue
-  - /v4/docs/en/queue
-  - /v3/docs/queue
-  - /v3/docs/en/queue
-  - /v2/docs/queue
-  - /v2/docs/en/queue
-  - /v1/docs/queue
-  - /v1/docs/en/queue
+  - /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
 related:
   - title: Queue pool
     link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html

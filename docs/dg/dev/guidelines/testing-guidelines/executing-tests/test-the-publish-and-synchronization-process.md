@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
 ---
 title: Test the Publish and Synchronization process
 description: Learn how you can test Publish and Synchronization
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-testing
 originalArticleId: 5691dcf2-a612-4cf9-bdff-8609f299ffec
 redirect_from:
-  - /2021080/docs/publish-and-synchronization-testing
-  - /2021080/docs/en/publish-and-synchronization-testing
-  - /docs/publish-and-synchronization-testing
-  - /docs/en/publish-and-synchronization-testing
-  - /v6/docs/publish-and-synchronization-testing
-  - /v6/docs/en/publish-and-synchronization-testing
+  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
   - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
   - /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
 related:

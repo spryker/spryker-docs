@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
 ---
 title: Facade
 description: The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/facade
 originalArticleId: 4bd6f125-5262-400e-8552-91d1406d5054
 redirect_from:
-  - /2021080/docs/facade
-  - /2021080/docs/en/facade
-  - /docs/facade
-  - /docs/en/facade
-  - /v6/docs/facade
-  - /v6/docs/en/facade
-  - /v5/docs/facade
-  - /v5/docs/en/facade
-  - /v4/docs/facade
-  - /v4/docs/en/facade
-  - /v3/docs/facade
-  - /v3/docs/en/facade
-  - /v2/docs/facade
-  - /v2/docs/en/facade
-  - /v1/docs/facade
-  - /v1/docs/en/facade
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
 related:
   - title: A facade implementation
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
@@ -39,4 +23,4 @@ Facades simply delegate calls to internal business models. Similar to a remote w
 Spryker's facades are an implementation of the [facade pattern](https://en.wikipedia.org/wiki/Facade_pattern).
 
 In Spryker, facades are the entry point into Zed's business layer. All the other models are behind the facade and must not be accessed directly.
-![Facade](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/Facade/facade-as-internal-api.png) 
+![Facade](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/Facade/facade-as-internal-api.png)

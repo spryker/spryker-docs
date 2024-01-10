@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 ---
 title: Handling Internal Server messages
 description: This document describes how to configure the behavior when an internal server error occurs.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/internal-server-error-handling
 originalArticleId: 768a7105-7a19-4067-837e-238177413911
 redirect_from:
-  - /2021080/docs/internal-server-error-handling
-  - /2021080/docs/en/internal-server-error-handling
-  - /docs/internal-server-error-handling
-  - /docs/en/internal-server-error-handling
-  - /v6/docs/internal-server-error-handling
-  - /v6/docs/en/internal-server-error-handling
-  - /v5/docs/internal-server-error-handling
-  - /v5/docs/en/internal-server-error-handling
-  - /v4/docs/internal-server-error-handling
-  - /v4/docs/en/internal-server-error-handling
-  - /v3/docs/internal-server-error-handling
-  - /v3/docs/en/internal-server-error-handling
-  - /v2/docs/internal-server-error-handling
-  - /v2/docs/en/internal-server-error-handling
-  - /v1/docs/internal-server-error-handling
-  - /v1/docs/en/internal-server-error-handling
+  - /docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 related:
   - title: Handling errors with ErrorHandler
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
@@ -100,8 +84,8 @@ protected function addError403Route(RouteCollection $routeCollection): RouteColl
 ```
 
  The route mapping can be registered in the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method, as in the following example:
- 
- 
+
+
 ```php
 <?php
 

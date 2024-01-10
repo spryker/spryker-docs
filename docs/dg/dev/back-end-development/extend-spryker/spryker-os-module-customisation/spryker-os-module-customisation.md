@@ -1,10 +1,10 @@
-  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
 ---
 title: Spryker OS module customisation
 description: This section lists documents inside the Spryker OS module customisation section.
 last_updated: Apr 26, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
 ---
 
 Learn to customize modules in Spryker OS to meet your specific needs by extending core modules and exploring different approaches. Understand the folder structure used in Spryker Commerce OS and install module structure for project-level customization.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 title: Test console commands
 description: How to test console commands.
@@ -30,6 +29,7 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
+  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
 Spryker supports several [test helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
@@ -88,7 +88,7 @@ public function testMyConsoleCommand(): void
     $commandTester->execute($input);
 
     $this->assertSame(MyConsoleCommand::CODE_SUCCESS, $commandTester->getStatusCode());
-    
+
     // When you expect some output from the console command you can assert it with:
     $this->assertStringContainsString('My console command output.', $commandTester->getDisplay());
 }

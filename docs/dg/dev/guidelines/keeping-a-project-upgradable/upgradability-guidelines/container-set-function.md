@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
 ---
 title: Container set function
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
 ---
 
 The *Container set function* check checks how plugins are registered in the dependency provider on the project level.

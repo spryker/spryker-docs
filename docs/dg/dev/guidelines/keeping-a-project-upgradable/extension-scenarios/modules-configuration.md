@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 ---
 title: Modules configuration
 description: Modules configuration extension scenario
@@ -13,6 +12,7 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+    - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
 ---
 
 
@@ -22,7 +22,7 @@ Manifests support all scalar types (bool, int, float, string), the compound type
 
 Manifests do not support compound type objects, or callable, iterable and special type resources.
 
-Manifest only add values to configuration files. Manifests *don't remove* values from project configuration. 
+Manifest only add values to configuration files. Manifests *don't remove* values from project configuration.
 
 ## Basic scalar values as the return
 
@@ -152,7 +152,7 @@ class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfigi
 
 ### Multidimensional array as the return
 
-Multidimensional associative arrays are supported up to two levels, but for their usage the wrapped functions *must* be used: 
+Multidimensional associative arrays are supported up to two levels, but for their usage the wrapped functions *must* be used:
 
 ```php
 use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
@@ -170,7 +170,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             $this->get(LogConstants::LOG_QUEUE_NAME),
         ];
     }
-    
+
     protected function getEventQueuePlugins(): array
     {
         return [
@@ -234,7 +234,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             $this->getSynchronizationQueueConfiguration(),
         );
     }
-    
+
     protected function getEventQueuePlugins(): array
     {
         return [

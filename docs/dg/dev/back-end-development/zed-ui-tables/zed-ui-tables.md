@@ -1,9 +1,9 @@
-  - /docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html
 ---
 title: Zed UI tables
 description: working with Zed UI tables in Spryker Commerce OS
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html
 related:
   - title: Create and configure Zed tables
     link: docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html

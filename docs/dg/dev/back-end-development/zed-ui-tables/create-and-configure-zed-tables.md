@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
 ---
 title: Create and configure Zed tables
 description: This document helps you get started on working with tables.
@@ -7,24 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
 originalArticleId: e8fc8c5a-88fa-41f8-8d2b-de028e7c4165
 redirect_from:
-  - /2021080/docs/creating-and-configuring-zed-tables
-  - /2021080/docs/en/creating-and-configuring-zed-tables
-  - /docs/creating-and-configuring-zed-tables
-  - /docs/en/creating-and-configuring-zed-tables
-  - /v6/docs/t-working-tables
-  - /v6/docs/en/t-working-tables
-  - /v5/docs/t-working-tables
-  - /v5/docs/en/t-working-tables
-  - /v4/docs/t-working-tables
-  - /v4/docs/en/t-working-tables
-  - /v3/docs/t-working-tables
-  - /v3/docs/en/t-working-tables
-  - /v2/docs/t-working-tables
-  - /v2/docs/en/t-working-tables
-  - /v1/docs/t-working-tables
-  - /v1/docs/en/t-working-tables
-  - /docs/t-working-tables
-  - /docs/en/t-working-tables
+  - /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
   - title: Add buttons to Zed tables
@@ -154,12 +136,12 @@ $config->setSearchableColumns([
 ```
 
 Search by columns initiates once searchable columns are enabled and the searchable terms are passed.
-In case two or more searchable columns are filled the searchable condition is getting stricter 
+In case two or more searchable columns are filled the searchable condition is getting stricter
 with the `AND` operator and searching for the results via all those fields.
 
-We recommend using search by columns for tables with large numbers of rows. 
-Measurable performance checks show the execution time got faster. 
-For example, getting the results using search by columns for tables with ~200k rows improved speed from 0,031s to 0,003s. 
+We recommend using search by columns for tables with large numbers of rows.
+Measurable performance checks show the execution time got faster.
+For example, getting the results using search by columns for tables with ~200k rows improved speed from 0,031s to 0,003s.
 
 
 ## 3. Prepare the data

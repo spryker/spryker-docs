@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/client/client.html
 ---
 title: Client
 description: This document provides general information about the client part of the Yves applications layer and describes how to use it.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/client
 originalArticleId: a959a1bf-affd-4959-8ed9-811583b5562f
 redirect_from:
-  - /2021080/docs/client
-  - /2021080/docs/en/client
-  - /docs/client
-  - /docs/en/client
-  - /v6/docs/client
-  - /v6/docs/en/client
-  - /v5/docs/client
-  - /v5/docs/en/client
-  - /v4/docs/client
-  - /v4/docs/en/client
-  - /v3/docs/client
-  - /v3/docs/en/client
-  - /v2/docs/client
-  - /v2/docs/en/client
-  - /v1/docs/client
-  - /v1/docs/en/client
+  - /docs/scos/dev/back-end-development/client/client.html
 related:
   - title: Implementing a client
     link: docs/scos/dev/back-end-development/client/implement-a-client.html
@@ -34,7 +18,7 @@ This document provides general information about the client part of the Yves app
 
 {% info_block infoBox %}
 
-To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
+To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html)
 
 {% endinfo_block %}
 

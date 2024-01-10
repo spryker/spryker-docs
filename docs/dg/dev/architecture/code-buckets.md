@@ -1,4 +1,3 @@
-  - /docs/scos/dev/architecture/code-buckets.html
 ---
 title: Code buckets
 description: Code buckets let projects define, implement, and execute different business logics based on different HTTP or console requests.
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-buckets
 originalArticleId: 8c24a5f6-f45a-4ff5-838f-b25712309bd0
 redirect_from:
-  - /2021080/docs/code-buckets
-  - /2021080/docs/en/code-buckets
-  - /docs/code-buckets
-  - /docs/en/code-buckets
-  - /v6/docs/code-buckets
-  - /v6/docs/en/code-buckets
+  - /docs/scos/dev/architecture/code-buckets.html
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html
@@ -42,7 +36,7 @@ Code inheritance consists of the following layers:
 * Core code: the base level located in `vendor/spryker/`.
   * *Default* code bucket on the project level. It's inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
   * *Custom* code bucket on the project level. It's inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
-    
+
 ![Code bucket inheritance](https://confluence-connect.gliffy.net/embed/image/bc410fba-1311-446a-90b2-9b8830ee8ebc.png?utm_medium=live&utm_source=custom)
 
 The inheritance concept applies on a per module basis. You can define a different code bucket for each module. When multiple modules implement the same code bucket, they are used accordingly during runtime. Also, you can implement multiple code buckets of the same module—for example:
@@ -50,7 +44,7 @@ The inheritance concept applies on a per module basis. You can define a differen
 * `Checkout`: default implementation.
 * `CheckoutFOO`: *FOO* code bucket implementation.
 * `CheckoutBAR` *BAR* code bucket implementation.
-    
+
 
 The inheritance concept consists of two parts: *physical* and *logical* inheritance.
 
@@ -87,7 +81,7 @@ The following table lists the classes that are automatically resolved per applic
 |Yves|<ul><li>Factory</li><li>DependencyProvider</li><li>Config</li></ul>|
 |Glue|<ul><li>Factory</li><li>DependencyProvider</li><li>Config</li></ul>|
 |Shared|<ul><li>Factory</li><li>Config</li></ul>|
-    
+
 {% info_block warningBox %}
 
 Only these types of classes are resolved automatically. To resolve another type of an extended class, extend the factory and replace the method that creates that class with the one that creates your extended class.

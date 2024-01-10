@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
 ---
 title: Integrate prepayment into checkout
 description: This document describes how to integrate prepayment into Checkout.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-checkout
 originalArticleId: 65a81e54-d406-4b80-a3fc-875d1301d2ac
 redirect_from:
-  - /2021080/docs/ht-prepayment-checkout
-  - /2021080/docs/en/ht-prepayment-checkout
-  - /docs/ht-prepayment-checkout
-  - /docs/en/ht-prepayment-checkout
-  - /v6/docs/ht-prepayment-checkout
-  - /v6/docs/en/ht-prepayment-checkout
-  - /v5/docs/ht-prepayment-checkout
-  - /v5/docs/en/ht-prepayment-checkout
-  - /v4/docs/ht-prepayment-checkout
-  - /v4/docs/en/ht-prepayment-checkout
-  - /v3/docs/ht-prepayment-checkout
-  - /v3/docs/en/ht-prepayment-checkout
-  - /v2/docs/ht-prepayment-checkout
-  - /v2/docs/en/ht-prepayment-checkout
-  - /v1/docs/ht-prepayment-checkout
-  - /v1/docs/en/ht-prepayment-checkout
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
 related:
   - title: Implement prepayment

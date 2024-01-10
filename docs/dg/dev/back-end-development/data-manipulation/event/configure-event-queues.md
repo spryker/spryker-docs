@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
 ---
 title: Configure event queues
 description: This document shows how to configure event queues
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
 originalArticleId: c4cf6639-48cd-4fb3-a595-09764433f7af
 redirect_from:
-  - /2021080/docs/event-configure-q
-  - /2021080/docs/en/event-configure-q
-  - /docs/event-configure-q
-  - /docs/en/event-configure-q
-  - /v6/docs/event-configure-q
-  - /v6/docs/en/event-configure-q
-  - /v5/docs/event-configure-q
-  - /v5/docs/en/event-configure-q
-  - /v4/docs/event-configure-q
-  - /v4/docs/en/event-configure-q
-  - /v3/docs/event-configure-q
-  - /v3/docs/en/event-configure-q
-  - /v2/docs/event-configure-q
-  - /v2/docs/en/event-configure-q
-  - /v1/docs/event-configure-q
-  - /v1/docs/en/event-configure-q
+  - /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
   - /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
 related:
   - title: Event

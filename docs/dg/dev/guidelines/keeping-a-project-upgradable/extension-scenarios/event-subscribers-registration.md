@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
 ---
 title: Event subscribers' registration
 description: Extension scenario for the registration of event subscribers
@@ -11,8 +10,9 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
   - title: Modules configuration
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
-redirect_from: 
+redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
 
 ---
 
@@ -31,10 +31,10 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     protected function getEventSubscriberCollection()
     {
         $collection = parent::getEventSubscriberCollection();
-    
+
         $collection->add(new AvailabilityStorageEventSubscriber());
         $collection->add(new UrlStorageEventSubscriber());
-    
+
         return $collection;
     }
 }
@@ -54,10 +54,10 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
     protected function getEventSubscriberCollection()
     {
         $collection = parent::getEventSubscriberCollection();
-    
+
         $collection->add(new AvailabilityStorageEventSubscriber())
             ->add(new UrlStorageEventSubscriber());
-    
+
         return $collection;
     }
 }

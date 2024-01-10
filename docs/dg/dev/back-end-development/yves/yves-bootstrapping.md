@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
 ---
 title: Yves bootstrapping
 description: Yves and Zed are both built upon the Silex micro-framework. So most concepts about modern web frameworks apply here as well.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-bootstrap
 originalArticleId: cc0ab207-b4ba-4537-96af-079e1524bd2b
 redirect_from:
-  - /2021080/docs/t-yves-bootstrap
-  - /2021080/docs/en/t-yves-bootstrap
-  - /docs/t-yves-bootstrap
-  - /docs/en/t-yves-bootstrap
-  - /v6/docs/t-yves-bootstrap
-  - /v6/docs/en/t-yves-bootstrap
-  - /v5/docs/t-yves-bootstrap
-  - /v5/docs/en/t-yves-bootstrap
-  - /v4/docs/t-yves-bootstrap
-  - /v4/docs/en/t-yves-bootstrap
-  - /v3/docs/t-yves-bootstrap
-  - /v3/docs/en/t-yves-bootstrap
-  - /v2/docs/t-yves-bootstrap
-  - /v2/docs/en/t-yves-bootstrap
-  - /v1/docs/t-yves-bootstrap
-  - /v1/docs/en/t-yves-bootstrap
+  - /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
@@ -84,6 +68,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
             // ...
         ];
     }
- 
+
 // ...
 ```

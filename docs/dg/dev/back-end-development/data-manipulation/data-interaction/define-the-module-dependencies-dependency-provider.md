@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
 ---
 title: Define module dependencies - Dependency Provider
 description: Each module ships with a DependencyProvider class, which explicitly defines services and external dependencies to other modules.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dependency-provider
 originalArticleId: a08f126e-9ccc-44ac-91b4-2c00b536ff25
 redirect_from:
-  - /2021080/docs/dependency-provider
-  - /2021080/docs/en/dependency-provider
-  - /docs/dependency-provider
-  - /docs/en/dependency-provider
-  - /v6/docs/dependency-provider
-  - /v6/docs/en/dependency-provider
-  - /v5/docs/dependency-provider
-  - /v5/docs/en/dependency-provider
-  - /v4/docs/dependency-provider
-  - /v4/docs/en/dependency-provider
-  - /v3/docs/dependency-provider
-  - /v3/docs/en/dependency-provider
-  - /v2/docs/dependency-provider
-  - /v2/docs/en/dependency-provider
-  - /v1/docs/dependency-provider
-  - /v1/docs/en/dependency-provider
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
 related:
   - title: Spryk

@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 ---
 title: Spryker dev packages checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 ---
 
 Spryker dev packages checker checks the project Spryker dependencies for the _dev-*_ constraints.
@@ -34,12 +34,12 @@ composer.json
 SPRYKER DEV PACKAGES CHECKER
 ============================
 
-Message: Spryker package "spryker/asset:dev-master" has forbidden "dev-*" version constraint 
+Message: Spryker package "spryker/asset:dev-master" has forbidden "dev-*" version constraint
  Target: spryker/storage-gui                                                                    
-                                                                                                
-Message: Spryker package "spryker/asset-storage:dev-some-branch" has forbidden "dev-*" version constraint 
+
+Message: Spryker package "spryker/asset-storage:dev-some-branch" has forbidden "dev-*" version constraint
  Target: spryker/uuid                                                                                                           
-                                                                                                                                
+
 
 Read more: https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 

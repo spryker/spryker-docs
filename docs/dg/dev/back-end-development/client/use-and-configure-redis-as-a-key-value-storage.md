@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 title: Use and configure Redis as a key-value storage
 description: This document describes how Redis is used within Spryker; the current functionality can be extended according to your needs.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/redis-as-kv
 originalArticleId: 79b15e84-6f65-43c2-9a87-94fac129ad5a
 redirect_from:
-  - /2021080/docs/redis-as-kv
-  - /2021080/docs/en/redis-as-kv
-  - /docs/redis-as-kv
-  - /docs/en/redis-as-kv
-  - /v6/docs/redis-as-kv
-  - /v6/docs/en/redis-as-kv
-  - /v5/docs/redis-as-kv
-  - /v5/docs/en/redis-as-kv
-  - /v4/docs/redis-as-kv
-  - /v4/docs/en/redis-as-kv
-  - /v3/docs/redis-as-kv
-  - /v3/docs/en/redis-as-kv
-  - /v2/docs/redis-as-kv
-  - /v2/docs/en/redis-as-kv
-  - /v1/docs/redis-as-kv
-  - /v1/docs/en/redis-as-kv
+  - /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
   - /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 related:
   - title: Client
@@ -75,7 +59,7 @@ Of course, the data stored in the SQL database is the subject of change; data ca
 
 For more information, see [Cronjob scheduling](/docs/scos/dev/sdk/cronjob-scheduling.html).
 
-Also, you need to find out which data has changed because you don't want to completely reload the content stored in Redis. The `Touch` module takes care of marking the items that were updated in the meantime. 
+Also, you need to find out which data has changed because you don't want to completely reload the content stored in Redis. The `Touch` module takes care of marking the items that were updated in the meantime.
 
 {% info_block warningBox "Warning" %}
 

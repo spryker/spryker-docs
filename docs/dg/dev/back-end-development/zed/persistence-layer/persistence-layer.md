@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 title: About the Persistence layer
 description: Zed's persistence layer is the owner of the schema, entities and queries. This layer knows the database structure and holds the connection to it.
@@ -7,25 +6,10 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/persistence-layer
 originalArticleId: 1633adeb-b9a2-4707-ba78-371dc80e03b0
 redirect_from:
-  - /2021080/docs/persistence-layer
-  - /2021080/docs/en/persistence-layer
-  - /docs/persistence-layer
-  - /docs/en/persistence-layer
-  - /v6/docs/persistence-layer
-  - /v6/docs/en/persistence-layer
-  - /v5/docs/persistence-layer
-  - /v5/docs/en/persistence-layer
-  - /v4/docs/persistence-layer
-  - /v4/docs/en/persistence-layer
-  - /v3/docs/persistence-layer
-  - /v3/docs/en/persistence-layer
-  - /v2/docs/persistence-layer
-  - /v2/docs/en/persistence-layer
-  - /v1/docs/persistence-layer
-  - /v1/docs/en/persistence-layer
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
@@ -33,7 +17,7 @@ related:
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository

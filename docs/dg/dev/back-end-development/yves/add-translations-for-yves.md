@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
 ---
 title: Add translations for Yves
 description: Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-translations
 originalArticleId: 55a7c265-b42c-4faf-a1d5-2be8e3b3d13f
 redirect_from:
-  - /2021080/docs/frontend-translations
-  - /2021080/docs/en/frontend-translations
-  - /docs/frontend-translations
-  - /docs/en/frontend-translations
-  - /v6/docs/frontend-translations
-  - /v6/docs/en/frontend-translations
-  - /v5/docs/frontend-translations
-  - /v5/docs/en/frontend-translations
-  - /v4/docs/frontend-translations
-  - /v4/docs/en/frontend-translations
-  - /v3/docs/frontend-translations
-  - /v3/docs/en/frontend-translations
-  - /v2/docs/frontend-translations
-  - /v2/docs/en/frontend-translations
-  - /v1/docs/frontend-translations
-  - /v1/docs/en/frontend-translations
+  - /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
 related:
   - title: How translations are managed

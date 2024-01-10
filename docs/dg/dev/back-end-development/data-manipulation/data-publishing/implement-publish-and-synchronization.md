@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
 ---
 title: Implement Publish and Synchronization
 description: To implement Publish and Synchronize in your code, you need to perform the following steps
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronization-reference
 originalArticleId: cdb95c33-1519-4323-9d27-7cba32a8ac82
 redirect_from:
-  - /2021080/docs/publish-and-synchronization-reference
-  - /2021080/docs/en/publish-and-synchronization-reference
-  - /docs/publish-and-synchronization-reference
-  - /docs/en/publish-and-synchronization-reference
-  - /v6/docs/publish-and-synchronization-reference
-  - /v6/docs/en/publish-and-synchronization-reference
-  - /v5/docs/publish-and-synchronization-reference
-  - /v5/docs/en/publish-and-synchronization-reference
-  - /v4/docs/publish-and-synchronization-reference
-  - /v4/docs/en/publish-and-synchronization-reference
-  - /v3/docs/publish-and-synchronization-reference
-  - /v3/docs/en/publish-and-synchronization-reference
-  - /v2/docs/publish-and-synchronization-reference
-  - /v2/docs/en/publish-and-synchronization-reference
-  - /v1/docs/publish-and-synchronization-reference
-  - /v1/docs/en/publish-and-synchronization-reference
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
 related:
   - title: Publish and Synchronization
@@ -122,7 +106,7 @@ As a naming convention, names of queues that synchronize data to Redis start wit
 
 {% endinfo_block %}
 
-It is also a good practice to create an error queue for your synchronization queues, where errors are posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`. 
+It is also a good practice to create an error queue for your synchronization queues, where errors are posted. The error queue must be registered in `RabbitMqConfig::getQueueOptions()`.
 
 **Example**:
 
@@ -306,7 +290,7 @@ class GlossaryWritePublisherPlugin extends AbstractPlugin implements PublisherPl
 }
 ```
 
-A listener class must implement `PublisherPluginInterface` and contain the `handleBulk` method. 
+A listener class must implement `PublisherPluginInterface` and contain the `handleBulk` method.
 
 The `handleBulk` method is called by the event queue for the defined events in the `getSubscribedEvents` method. The method accepts two parameters:
 * `$eventEntityTransfers`: specifies an array of event transfers that represent the events to consume;
@@ -369,7 +353,7 @@ For details about creating your non-publish and synchronize listener classes, se
 ## 7. Publish data
 After consuming a publish event, you must prepare the frontend data. For this purpose, your code needs to query the data relevant to the update and make changes to the corresponding `storage` or `search` database table. For this purpose, you need to implement the following methods: w`riteCollectionBy{TriggeredEvent}Events` for publishing an entity, and `deleteCollectionBy{TriggeredEvent}Events` for removing it.
 
-For the sample implementation see the [GlossaryStorage](https://github.com/spryker/glossary-storage) module. 
+For the sample implementation see the [GlossaryStorage](https://github.com/spryker/glossary-storage) module.
 
 For the full code, see `data/shop/development/current/vendor/spryker/glossary-storage/src/Spryker/Zed/GlossaryStorage/Communication/Plugin/Publisher/GlossaryTranslation/GlossaryWritePublisherPlugin.php`:
 
@@ -483,7 +467,7 @@ To see all listeners mapped for a certain event, press <kbd>Control</kbd> and cl
    ```
 
 ## Re-synchronize Storage and Search data to Redis or Elasticsearch
-There is no functionality for this purpose, but you can use the queue client to send data to sync queues. 
+There is no functionality for this purpose, but you can use the queue client to send data to sync queues.
 
 **Example:**
 
@@ -525,6 +509,6 @@ This process only updates the target entities that exist in persistence. You mus
 
 ### Disable events
 
-To disable all events, call `EventBehaviorConfig::disableEvent()`. 
+To disable all events, call `EventBehaviorConfig::disableEvent()`.
 
 To disable events of a specific entity, call `$glossaryTranslationEntity->disableEvent()`.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
 ---
 title: Entity manager
 description: It is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating and deleting data. Using the class, you can separate data from persistence details (Propel).
@@ -7,31 +6,16 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/entity-manager
 originalArticleId: 87716913-526e-429c-82e4-1fe32fc10d7b
 redirect_from:
-  - /2021080/docs/entity-manager
-  - /2021080/docs/en/entity-manager
-  - /docs/entity-manager
-  - /docs/en/entity-manager
-  - /v6/docs/entity-manager
-  - /v6/docs/en/entity-manager
-  - /v5/docs/entity-manager
-  - /v5/docs/en/entity-manager
-  - /v4/docs/entity-manager
-  - /v4/docs/en/entity-manager
-  - /v3/docs/entity-manager
-  - /v3/docs/en/entity-manager
-  - /v2/docs/entity-manager
-  - /v2/docs/en/entity-manager
-  - /v1/docs/entity-manager
-  - /v1/docs/en/entity-manager
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Database schema definition
     link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
   - title: Entity
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
@@ -46,7 +30,7 @@ As an example of using an entity manager, see the [Company module](https://githu
 
 ## Entity transfers
 
-With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables. `EntityTransfer` has all properties, and relations defined and holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping the entity as the data is persisted. 
+With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables. `EntityTransfer` has all properties, and relations defined and holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping the entity as the data is persisted.
 
 ## AbstractEntityManager class
 
@@ -119,7 +103,7 @@ class BlogBusinessFactory extends AbstractBusinessFactory
 {
   ../facade methods
 }
-    
+
 ```
 
 ## Transaction handling
@@ -152,7 +136,7 @@ class Blog
     });
   }
 }
-  
+
 ```
 
 ## Related Spryks

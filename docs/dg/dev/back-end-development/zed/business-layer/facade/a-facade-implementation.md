@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
 ---
 title: A facade implementation
 description: This document describes a facade implementation.
@@ -7,21 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
 originalArticleId: 7a2cbc0a-f4d6-422a-8481-b385e6bfaf4d
 redirect_from:
-  - /2021080/docs/implementing-facade
-  - /2021080/docs/en/implementing-facade
-  - /docs/implementing-facade
-  - /docs/en/implementing-facade
-  - /v6/docs/implementing-facade
-  - /v6/docs/en/implementing-facade
-  - /v5/docs/implementing-facade
-  - /v5/docs/en/implementing-facade
-  - /v4/docs/implementing-facade
-  - /v4/docs/en/implementing-facade
-  - /v3/docs/implementing-facade
-  - /v3/docs/en/implementing-facade
-  - /v2/docs/implementing-facade
-  - /v2/docs/en/implementing-facade
-  - /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
 related:
   - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
@@ -95,7 +80,7 @@ class GlossaryFacade extends AbstractFacade
 ## Encapsulation
 
 The idea of the `Business` layer is to present a facade to all clients and hide the internal details. This is the main requirement for future updates, and it keeps the bundles decoupled. So when you look at a module from another module, you only see the facade.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Implement+a+Facade/facade-as-internal-api.png)
 
 ## Related Spryks
 

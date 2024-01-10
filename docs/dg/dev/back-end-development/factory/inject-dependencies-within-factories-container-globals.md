@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
 ---
 title: "Inject dependencies within factories: Container globals"
 description: ContainerGlobals lets you inject dependencies available inside your factories.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/container-globals
 originalArticleId: 10d83649-13dc-43f2-833d-be3c6882069f
 redirect_from:
-  - /2021080/docs/container-globals
-  - /2021080/docs/en/container-globals
-  - /docs/container-globals
-  - /docs/en/container-globals
-  - /v6/docs/container-globals
-  - /v6/docs/en/container-globals
-  - /v5/docs/container-globals
-  - /v5/docs/en/container-globals
-  - /v4/docs/container-globals
-  - /v4/docs/en/container-globals
-  - /v3/docs/container-globals
-  - /v3/docs/en/container-globals
-  - /v2/docs/container-globals
-  - /v2/docs/en/container-globals
-  - /v1/docs/container-globals
-  - /v1/docs/en/container-globals
+  - /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 related:
   - title: Factory

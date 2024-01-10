@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
 ---
 title: Implement event trigger publisher plugins
 description: Learn how to implement event trigger publisher plugins.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-implement-event-trigger-publisher-plugins
 originalArticleId: 217a59d0-03ed-4b5b-9be2-01ed9878c9eb
 redirect_from:
-  - /2021080/docs/howto-implement-event-trigger-publisher-plugins
-  - /2021080/docs/en/howto-implement-event-trigger-publisher-plugins
-  - /docs/howto-implement-event-trigger-publisher-plugins
-  - /docs/en/howto-implement-event-trigger-publisher-plugins
-  - /v6/docs/howto-implement-event-trigger-publisher-plugins
-  - /v6/docs/en/howto-implement-event-trigger-publisher-plugins
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
 related:
   - title: Publish and Synchronization

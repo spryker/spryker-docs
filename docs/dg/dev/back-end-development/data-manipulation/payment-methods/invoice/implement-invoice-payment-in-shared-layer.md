@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
 ---
 title: Implement invoice payment in shared layer
 description: This procedure will help us to identify the new payment type through some unique constants.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe-be-shared
 originalArticleId: ddb4c3f0-4ea8-4cda-82a2-0ffd4fecac99
 redirect_from:
-  - /2021080/docs/ht-invoice-payment-fe-be-shared
-  - /2021080/docs/en/ht-invoice-payment-fe-be-shared
-  - /docs/ht-invoice-payment-fe-be-shared
-  - /docs/en/ht-invoice-payment-fe-be-shared
-  - /v6/docs/ht-invoice-payment-fe-be-shared
-  - /v6/docs/en/ht-invoice-payment-fe-be-shared
-  - /v5/docs/ht-invoice-payment-fe-be-shared
-  - /v5/docs/en/ht-invoice-payment-fe-be-shared
-  - /v4/docs/ht-invoice-payment-fe-be-shared
-  - /v4/docs/en/ht-invoice-payment-fe-be-shared
-  - /v3/docs/ht-invoice-payment-fe-be-shared
-  - /v3/docs/en/ht-invoice-payment-fe-be-shared
-  - /v2/docs/ht-invoice-payment-fe-be-shared
-  - /v2/docs/en/ht-invoice-payment-fe-be-shared
-  - /v1/docs/ht-invoice-payment-fe-be-shared
-  - /v1/docs/en/ht-invoice-payment-fe-be-shared
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
 related:
   - title: Implement invoice payment

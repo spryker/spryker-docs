@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 title: Test your Direct Debit implementation
 description: This document describes how to test the direct debit payment implementation.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-test-implementation
 originalArticleId: 99869c48-6a06-42b7-a110-d06efad2fcd5
 redirect_from:
-  - /2021080/docs/dd-test-implementation
-  - /2021080/docs/en/dd-test-implementation
-  - /docs/dd-test-implementation
-  - /docs/en/dd-test-implementation
-  - /v6/docs/dd-test-implementation
-  - /v6/docs/en/dd-test-implementation
-  - /v5/docs/dd-test-implementation
-  - /v5/docs/en/dd-test-implementation
-  - /v4/docs/dd-test-implementation
-  - /v4/docs/en/dd-test-implementation
-  - /v3/docs/dd-test-implementation
-  - /v3/docs/en/dd-test-implementation
-  - /v2/docs/dd-test-implementation
-  - /v2/docs/en/dd-test-implementation
-  - /v1/docs/dd-test-implementation
-  - /v1/docs/en/dd-test-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 related:
   - title: Implement Direct Debit payment

@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
 ---
 title: Spryker security checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
 redirect_from:
      - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html
+     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
 ---
 
 Security Update Checker is a tool that checks if security fixes exist for Spryker modules that are present in your project.

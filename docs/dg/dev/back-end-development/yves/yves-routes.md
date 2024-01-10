@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 title: Yves routes
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
 originalArticleId: 163c596a-1229-4345-b524-e404420531aa
 redirect_from:
-  - /2021080/docs/t-yves-routes
-  - /2021080/docs/en/t-yves-routes
-  - /docs/t-yves-routes
-  - /docs/en/t-yves-routes
-  - /v6/docs/t-yves-routes
-  - /v6/docs/en/t-yves-routes
-  - /v5/docs/t-yves-routes
-  - /v5/docs/en/t-yves-routes
-  - /v4/docs/t-yves-routes
-  - /v4/docs/en/t-yves-routes
-  - /v3/docs/t-yves-routes
-  - /v3/docs/en/t-yves-routes
-  - /v2/docs/t-yves-routes
-  - /v2/docs/en/t-yves-routes
-  - /v1/docs/t-yves-routes
-  - /v1/docs/en/t-yves-routes
+  - /docs/scos/dev/back-end-development/yves/yves-routes.html
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html

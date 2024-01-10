@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
 ---
 title: Add publish events
 description: Learn how to add publish events for Publish and Synchronization.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-publish-events
 originalArticleId: 6254b4c6-f147-4463-bc61-e9b3f7bf7e28
 redirect_from:
-  - /2021080/docs/adding-publish-events
-  - /2021080/docs/en/adding-publish-events
-  - /docs/adding-publish-events
-  - /docs/en/adding-publish-events
-  - /v6/docs/adding-publish-events
-  - /v6/docs/en/adding-publish-events
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
 related:
   - title: Publish and Synchronization

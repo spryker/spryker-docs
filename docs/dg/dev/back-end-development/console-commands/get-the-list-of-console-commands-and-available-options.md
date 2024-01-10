@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
 ---
 title: Get the list of console commands and available options
 description: The command-line Console tool lets you execute a great variety of commands, such as managing the Spryker Commerce OS installer, to run the OS in any environment.
@@ -7,24 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/getting-the-list-of-console-commands-and-available-options
 originalArticleId: e075ad9a-b328-43d4-bde1-e6d0f6e5f0bc
 redirect_from:
-  - /2021080/docs/getting-the-list-of-console-commands-and-available-options
-  - /2021080/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /docs/getting-the-list-of-console-commands-and-available-options
-  - /docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v6/docs/getting-the-list-of-console-commands-and-available-options
-  - /v6/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v5/docs/getting-the-list-of-console-commands-and-available-options
-  - /v5/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v4/docs/getting-the-list-of-console-commands-and-available-options
-  - /v4/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v3/docs/getting-the-list-of-console-commands-and-available-options
-  - /v3/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v2/docs/getting-the-list-of-console-commands-and-available-options
-  - /v2/docs/en/getting-the-list-of-console-commands-and-available-options
-  - /v1/docs/getting-the-list-of-console-commands-and-available-options
-  - /v1/docs/en/getting-the-list-of-console-commands-and-available-options
+  - /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
   - /docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
-
 related:
   - title: Console commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html
@@ -66,4 +49,4 @@ In the above example output, you can see that Spryker prints some meta-informati
 
 ##  Next steps
 
-For information about all commands, see [Console commands in spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html) 
+For information about all commands, see [Console commands in spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html)

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
 ---
 title: Plugins registration
 description: Plugins registration extension scenario
@@ -13,9 +12,10 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
 redirect_from:
     - /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+    - /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
 ---
 
-Manifests support plugins registration in the dependency provider and plugins registration in the configuration files. There are multiple ways how plugins can be registered inside of the project. 
+Manifests support plugins registration in the dependency provider and plugins registration in the configuration files. There are multiple ways how plugins can be registered inside of the project.
 
 ## Plugins registration in the configuration file
 
@@ -55,7 +55,7 @@ use Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeRe
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     ...
-    protected function getResultFormatterPlugin(): ResultFormatterPluginInterface 
+    protected function getResultFormatterPlugin(): ResultFormatterPluginInterface
     {
         return new CurrencyAwareSuggestionByTypeResultFormatter(
             new SuggestionByTypeResultFormatterPlugin()
@@ -74,11 +74,11 @@ use Spryker\Service\Kernel\AbstractBundleDependencyProvider;
 class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
 {
     ...
-    protected function getSystemReaderPlugin(): FileSystemReaderPluginInterface 
+    protected function getSystemReaderPlugin(): FileSystemReaderPluginInterface
     {
         return $this->getFileSystemReaderPlugin();
     }
-    
+
     protected function getFileSystemReaderPlugin(): FileSystemReaderPluginInterface
     {
         return new FileSystemReaderPlugin();
@@ -90,7 +90,7 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
 
 Manifests fully support multiple plugins registration in an indexed array. Manifests also support additional conditions for plugin registration and restrictions on the order of the plugins.
 
-Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`. 
+Restrictions on the order of the plugins can be done with special annotation keys `before` and `after`.
 
 If the plugin doesn’t contain any of these keys, it is added to the end of the plugin stack.
 
@@ -165,13 +165,13 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
         $plugins = [
             new ValidatorExtensionFormPlugin(),
         ];
-        
+
         $plugins[] = new CsrfFormPlugin();
-        
+
         if (class_exists(WebProfilerFormPlugin::class)) {
             $plugins[] = new WebProfilerFormPlugin();
         }
-        
+
         return $plugins;
     }
 }
@@ -252,11 +252,11 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     protected function getProcessorMessagePlugins(Container $container): array
     {
         $plugins = [];
-        
+
         $plugins['eventQueue'] = new EventQueueMessageProcessorPlugin();
         $plugins[EventConstants::EVENT_QUEUE_RETRY] = new EventRetryQueueMessageProcessorPlugin();
         $plugins[Config::get(LogConstants::LOG_QUEUE_NAME)] = new LogglyLoggerQueueMessageProcessorPlugin();
-        
+
         return $plugins;
     }
 }
@@ -264,7 +264,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 ### Plugins in multidimensional array
 
-Manifests have limited support of a multidimensional array. Only arrays that are added through the key are supported. Also, only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following are *not supported*: 
+Manifests have limited support of a multidimensional array. Only arrays that are added through the key are supported. Also, only multidimensional arrays with up to 2 levels of depth are supported. It means that structures like the following are *not supported*:
 
 ```php
 protected function getPlugins(): array
@@ -323,13 +323,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     protected function getGlossaryStoragePlugins(): array
     {
         $storagePlugins = [];
-        
+
         $storagePlugins[GlossaryStorageConfig::PUBLISH_TRANSLATION] = [
             new GlossaryKeyDeletePublisherPlugin(),
             new GlossaryKeyWriterPublisherPlugin(),
             new GlossaryTranslationWritePublisherPlugin(),
         ];
-        
+
         return $storagePlugins;
     }
 }
@@ -357,13 +357,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
     {
         $container->extend(static::PAYMENT_METHOD_HANDLER, function (StepHandlerPluginCollection $paymentMethodHandler) {
             $paymentMethodHandler->add(new NopaymentHandlerPlugin(), NopaymentConfig::PAYMENT_PROVIDER_NAME);
-      
+
             $paymentMethodHandler->add(new PayoneHandlerPlugin(), PaymentTransfer::PAYONE_CREDIT_CARD);
             $paymentMethodHandler->add(new PayoneHandlerPlugin(), PaymentTransfer::PAYONE_INSTANT_ONLINE_TRANSFER);
-            
+
             return $paymentMethodHandler;
         });
-    
+
         return $container;
     }
 }
@@ -410,7 +410,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new MerchantMerchantProductSearchWritePublisherPlugin(),
             new MerchantProductSearchWritePublisherPlugin(),
         ];
-        
+
         return array_merge(
             parent::getPublisherPlugins(),
             [
@@ -424,7 +424,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             ]
         );
     }
-    
+
     protected function getHealthCheckPublisherPlugins(): array
     {
         return [
@@ -432,7 +432,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new PublishAndSynchronizeHealthCheckSearchWritePublisherPlugin(),
         ];
     }
-    
+
     protected function getGlossaryStoragePlugins(): array
     {
         return [
@@ -442,7 +442,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             ],
         ];
     }
-    
+
     protected function getProductRelationStoragePlugins(): array
     {
         return [
@@ -450,7 +450,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductRelationWriteForPublishingPublisherPlugin(),
         ];
     }
-    
+
     protected function getMerchantStoragePlugin(): PublisherPluginInterface
     {
         return new MerchantCategoryStoragePublisherPlugin();

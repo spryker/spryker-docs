@@ -1,9 +1,9 @@
-  - /docs/scos/dev/back-end-development/back-end-development.html
 ---
 title: Back-end development
 description: Back-end development information for the Spryker Commerce OS
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/back-end-development/back-end-development.html
 ---
 
 This section contains overviews and instructions for back-end developing on the the Spryker Commerce OS. It includes the following components and topics:

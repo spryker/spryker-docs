@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
 ---
 title: Addi indexes to foreign key columns - index generator
 description: The index generator module adds the missing indexes for foreign key columns in Postgres.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/postgres-index-generator
 originalArticleId: 1eab644c-12b6-40c1-a69e-57614c314b52
 redirect_from:
-  - /2021080/docs/postgres-index-generator
-  - /2021080/docs/en/postgres-index-generator
-  - /docs/postgres-index-generator
-  - /docs/en/postgres-index-generator
-  - /v6/docs/postgres-index-generator
-  - /v6/docs/en/postgres-index-generator
-  - /v5/docs/postgres-index-generator
-  - /v5/docs/en/postgres-index-generator
-  - /v4/docs/postgres-index-generator
-  - /v4/docs/en/postgres-index-generator
-  - /v3/docs/postgres-index-generator
-  - /v3/docs/en/postgres-index-generator
-  - /v2/docs/postgres-index-generator
-  - /v2/docs/en/postgres-index-generator
-  - /v1/docs/postgres-index-generator
-  - /v1/docs/en/postgres-index-generator
+  - /docs/scos/dev/back-end-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
   - /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
 related:
   - title: About Communication layer
@@ -57,5 +41,3 @@ console propel:schema:copy
 ```
 
 Once the Propel setup is done, you get the indexes for all the foreign key columns where they are missing.
-
- 

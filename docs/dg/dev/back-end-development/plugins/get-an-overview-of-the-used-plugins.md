@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
 ---
 title: Get an overview of the used plugins
 description: Plugin Overview gives you several ways of displaying plugin usages.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin-overview
 originalArticleId: b0e9b971-1bd5-433c-973f-e989820adeb4
 redirect_from:
-  - /2021080/docs/plugin-overview
-  - /2021080/docs/en/plugin-overview
-  - /docs/plugin-overview
-  - /docs/en/plugin-overview
-  - /v6/docs/plugin-overview
-  - /v6/docs/en/plugin-overview
-  - /v5/docs/plugin-overview
-  - /v5/docs/en/plugin-overview
-  - /v4/docs/plugin-overview
-  - /v4/docs/en/plugin-overview
-  - /v3/docs/plugin-overview
-  - /v3/docs/en/plugin-overview
-  - /v2/docs/plugin-overview
-  - /v2/docs/en/plugin-overview
-  - /v1/docs/plugin-overview
-  - /v1/docs/en/plugin-overview
+  - /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
   - /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
 related:
   - title: Plugins
@@ -45,10 +29,10 @@ This searches for all `DependencyProvider` plugins in the project code and all u
 $ vendor/bin/console dev:plugin-usage:dump
 ...
 Pyz\Zed\User\UserDependencyProvider
-Spryker\Zed\Acl\Communication\Plugin\GroupPlugin 
+Spryker\Zed\Acl\Communication\Plugin\GroupPlugin
 Spryker\Zed\AgentGui\Communication\Plugin\UserAgentFormExpanderPlugin  
-Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin 
-Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin 
+Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin
+Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin
 ...
 ```
 
@@ -58,12 +42,12 @@ Another way of execution is to add the "module" option which can be used to shri
 
 ```
 $ vendor/bin/console dev:plugin-usage:dump User
- 
+
 Pyz\Zed\User\UserDependencyProvider  
-Spryker\Zed\Acl\Communication\Plugin\GroupPlugin 
+Spryker\Zed\Acl\Communication\Plugin\GroupPlugin
 Spryker\Zed\AgentGui\Communication\Plugin\UserAgentFormExpanderPlugin
-Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin 
-Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableDataExpanderPlugin 
+Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin
+Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableDataExpanderPlugin
 Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin
 ```
 
@@ -76,7 +60,7 @@ $ vendor/bin/console dev:plugin-usage:dump Pyz.Client.*
 Pyz\Zed\User\UserDependencyProvider
 Spryker\Zed\Acl\Communication\Plugin\GroupPlugin  
 Spryker\Zed\AgentGui\Communication\Plugin\UserAgentFormExpanderPlugin  
-Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin 
+Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableConfigExpanderPlugin
 Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableDataExpanderPlugin
 Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin
 ```

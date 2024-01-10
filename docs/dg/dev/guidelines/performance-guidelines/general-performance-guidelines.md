@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
 ---
 title: General performance guidelines
 description: This guideline explains how to optimize the server-side execution time.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-guidelines
 originalArticleId: 5feb83b8-5196-44f9-8f6a-ffb208a2c162
 redirect_from:
-  - /2021080/docs/performance-guidelines
-  - /2021080/docs/en/performance-guidelines
-  - /docs/performance-guidelines
-  - /docs/en/performance-guidelines
-  - /v6/docs/performance-guidelines
-  - /v6/docs/en/performance-guidelines
-  - /v5/docs/performance-guidelines
-  - /v5/docs/en/performance-guidelines
-  - /v4/docs/performance-guidelines
-  - /v4/docs/en/performance-guidelines
-  - /v3/docs/performance-guidelines
-  - /v3/docs/en/performance-guidelines
-  - /v2/docs/performance-guidelines
-  - /v2/docs/en/performance-guidelines
-  - /v1/docs/performance-guidelines
-  - /v1/docs/en/performance-guidelines
+  - /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
   - /docs/scos/dev/guidelines/performance-guidelines.html
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
 related:
@@ -162,7 +146,7 @@ Twig files can be in many places. To avoid time-consuming searches, we recommend
 ## General Twig optimizations
 
 Twig, together with [Atomic Frontend](/docs/scos/dev/front-end-development/{{site.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there.
-For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow. 
+For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow.
 
 Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
 

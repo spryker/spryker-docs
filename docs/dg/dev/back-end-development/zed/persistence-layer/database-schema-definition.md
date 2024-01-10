@@ -1,4 +1,3 @@
-  - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
 ---
 title: Database schema definition
 description: With Propel, a database schema is defined in an XML file. Each module carries it s own part of the big schema that is collected and merged.
@@ -7,31 +6,16 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-schema-definition
 originalArticleId: 49d1d709-2b32-486f-888f-484f0ad72319
 redirect_from:
-  - /2021080/docs/database-schema-definition
-  - /2021080/docs/en/database-schema-definition
-  - /docs/database-schema-definition
-  - /docs/en/database-schema-definition
-  - /v6/docs/database-schema-definition
-  - /v6/docs/en/database-schema-definition
-  - /v5/docs/database-schema-definition
-  - /v5/docs/en/database-schema-definition
-  - /v4/docs/database-schema-definition
-  - /v4/docs/en/database-schema-definition
-  - /v3/docs/database-schema-definition
-  - /v3/docs/en/database-schema-definition
-  - /v2/docs/database-schema-definition
-  - /v2/docs/en/database-schema-definition
-  - /v1/docs/database-schema-definition
-  - /v1/docs/en/database-schema-definition
-related: 
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+related:
   - title: Database overview
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
   - title: Entity
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
   - title: Entity manager
     link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
   - title: About the query container
-    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
   - title: Query objects - creation and usage
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
   - title: Repository
@@ -100,7 +84,7 @@ Sometimes it is useful to add columns to a table that belongs to another module.
 * A core module wants to inject a foreign key into a table from another core module. This happens when the dependency direction is in contrast to the direction of the relation.
 * A project module wants to add a column to a table from a core module.
 
-When you add a column to a core table, this column must not be mandatory. Otherwise, the core classes, not knowing the mandatory fields, become unusable and, thus, have to be overwritten. This makes updating more difficult. In most cases, you need to avoid adding a column to a core table, as it can cause compatibility problems in the future. 
+When you add a column to a core table, this column must not be mandatory. Otherwise, the core classes, not knowing the mandatory fields, become unusable and, thus, have to be overwritten. This makes updating more difficult. In most cases, you need to avoid adding a column to a core table, as it can cause compatibility problems in the future.
 
 What happens when the next release adds a column with the same name but another meaning? To avoid this problem, it is a good practice to add a new table and use a one-to-one relationship.
 

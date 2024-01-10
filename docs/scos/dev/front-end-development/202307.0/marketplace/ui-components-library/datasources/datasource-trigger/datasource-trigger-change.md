@@ -13,13 +13,11 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document explains the Datasource Trigger Change service in the Components Library.
+This document explains the Datasource Trigger Change service in the components library.
 
 ## Overview
 
 Datasource Trigger Change is an Angular service that extracts the value from an event trigger element and checks whether it meets a certain criteria. If the value is valid, it emits an object containing the value.  
-
-Check out an example usage of the Datasource Trigger Change.
 
 Service configuration:
 
@@ -30,6 +28,10 @@ Service configuration:
 |debounce |  Delays the emission of values the next datasource (default is `300ms`). |
 |minCharacters |  Emits the trigger element value if the length is greater than or equal to the `minCharacters` property. The default value is `2`. |
 |datasource |  the next datasource that runs based on the dependent element value, like [http](/docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html). |
+
+
+Usage example:
+
 
 ```html
 <spy-select
@@ -48,8 +50,6 @@ Service configuration:
 ```
 
 ## Service registration
-
-Register the service:
 
 ```ts
 declare module '@spryker/datasource' {
@@ -72,8 +72,6 @@ export class RootModule {}
 ```
 
 ## Interfaces
-
-Below you can find interfaces for the Datasource Trigger Change:  
 
 ```ts
 import { DatasourceTriggerConfig } from '@spryker/datasource.trigger';

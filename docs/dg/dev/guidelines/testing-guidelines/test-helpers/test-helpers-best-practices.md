@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
 ---
 title: Test helpers best practices
 description: Learn about the best practices for the Root helper and the Assert helper
 last_updated: Aug 29, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
 ---
 
 You should organize helpers according to their specific roles and intended use cases. These roles represent the following test stages:

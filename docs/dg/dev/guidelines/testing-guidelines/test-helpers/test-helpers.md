@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
 ---
 title: Test helpers
 description: Learn about the test helpers, how you can enable them, use, and create your own.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/test-helpers
 originalArticleId: 2704ed21-1ff3-4646-8d0b-67b8a1094a04
 redirect_from:
-  - /2021080/docs/test-helpers
-  - /2021080/docs/en/test-helpers
-  - /docs/test-helpers
-  - /docs/en/test-helpers
-  - /v6/docs/test-helpers
-  - /v6/docs/en/test-helpers
-  - /v5/docs/test-helper
-  - /v5/docs/en/test-helper
+  - /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
   - /docs/scos/dev/guidelines/testing/test-helpers.html
   - /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
 related:

@@ -134,7 +134,7 @@ export abstract class DatasourceTriggerElement {
 
 ## Datasource types
 
-There are a few common Datasources that are available in UI library as separate packages:  
+There are a few common Datasources that are available in the UI library as separate packages:  
 
 - [Change](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html) — allows passing data along with the configuration of the Datasource using `change` event.
 - [Input](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html) — allows passing data along with the configuration of the Datasource using `input` event.

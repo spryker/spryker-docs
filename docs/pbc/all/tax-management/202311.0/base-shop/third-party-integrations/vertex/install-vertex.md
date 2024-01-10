@@ -197,14 +197,17 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
 ```
 
 In general, `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` methods should contain the tax calculation plugins which are replaced by TaxAppCalculationPlugin in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
-The code snipped above is an example fo such configuration based on Spryker OOTB tax calculation plugins stack. If you are using any other tax-related plugins consider moving it into `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` methods correspondingly; otherwise they might get in conflict with TaxAppCalculationPlugin.
+The code snipped above is an example fo such configuration based on Spryker default tax calculation plugins.
+Tax calculation plugins moved:
+- from `getQuoteCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxRateAverageAggregatorPlugin`
+- from `getOrderCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxAmountAfterCancellationCalculatorPlugin`
 
 {% info_block infoBox "Fallback behavior" %}
 
 There are 3 different failure scenarios where TaxAppCalculationPlugin might need to use a fallback logic:
 
-1. Vertex App is not connected: fallback plugins defined in `getFallback<Quote|Order>CalculationPlugins` will be used.
-2. Vertex App is disabled: fallback plugins defined in `getFallback<Quote|Order>CalculationPlugins` will be used.
+1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` will be used.
+2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins` and `getFallbackOrderCalculationPlugins` will be used.
 3. Vertex App is not responding or is responding with an error: tax value will be set to zero and the customer will be able to proceed with the checkout.
 
 {% endinfo_block %}
@@ -232,7 +235,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
         return [
             // ...
 
-            # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
+            # This widget is replacing Spryker default tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
             CartSummaryHideTaxAmountWidget::class,
         ];
     }
@@ -286,45 +289,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-### 5. Configure the OMS dependency provider
-
-Add the following code to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
-
-```php
-
-namespace Pyz\Zed\Oms;
-
-use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
-use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin;
-
-class OmsDependencyProvider extends SprykerOmsDependencyProvider
-{
-// ...
-
-    /**
-     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsEventTriggeredListenerPlugin>
-     */
-    protected function getOmsEventTriggeredListenerPlugins(): array
-    {
-        return [
-            new OrderRefundedEventListenerPlugin(),
-        ];
-    }
-}
-
-```
-
-This configuration is required to make sure that the correct tax amount will be used during refund process. 
-
-{% info_block infoBox "OMS configuration requirement" %}
-
-This functionality will only work if the OMS event is called `refund`.
-
-{% endinfo_block %}
-
-
-
-### 6. Optional: To send invoices to Vertex through OMS, configure your Payment OMS
+### 5. Optional: Sending tax invoices to Vertex and handling refunds
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 
@@ -395,9 +360,11 @@ Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 // ...
 
 use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoicePlugin;
+use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin;
 
 // ...
 
+    # This configuration is necessary for Invoice functionality
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -418,8 +385,30 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoiceP
 
         return $container;
     }
+    
+// ...
+    
+    # This configuration is necessary for Refund functionality
+    /**
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsEventTriggeredListenerPlugin>
+     */
+    protected function getOmsEventTriggeredListenerPlugins(): array
+    {
+        return [
+            new OrderRefundedEventListenerPlugin(),
+        ];
+    }
 
 ```
+
+This configuration of `getOmsEventTriggeredListenerPlugins` method is required to make sure that the correct tax amount will be used during refund process.
+
+{% info_block infoBox "OMS configuration requirement" %}
+
+The refund functionality will only work if the OMS event is called `refund`.
+Refund and invoice functionality 
+
+{% endinfo_block %}
 
 ## 2. Integrate the Vertex app
 

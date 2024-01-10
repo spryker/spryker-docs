@@ -16,7 +16,7 @@ This document describes how to set up an environment for developing in the Oryx 
 
 ## Install Oryx with the boilerplate project
 
-1. Download the boilerplate project and install dependencies:
+1. Clone the boilerplate project and install dependencies.  
 
 ```shell
 git clone https://github.com/spryker/composable-frontend && \

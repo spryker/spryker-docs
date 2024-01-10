@@ -1,17 +1,13 @@
 
 
 
-This document describes how to integrate the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Shipment](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/shipment-feature-overview.html) + [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
-## Install feature core
+## Prerequisites
 
-Follow the steps below to install the Shipment + Customer Account Management feature.
+Install the required features:
 
-### Prerequisites
-
-To start feature integration, integrate the required features:
-
-| NAME                        | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                            |
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                            |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Shipment                    | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/install-and-upgrade/install-the-shipment-feature.html)                                                                      |
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
@@ -37,7 +33,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -47,9 +43,9 @@ Enable the following plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                  |
 |--------------------------------------------------------------|---------------------------------------------------------------------------|---------------|------------------------------------------------------------|
-| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands the checkout address form with the `ShipmentType` subform.                | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
-| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands the checkout multi-shipping address form `ShipmentType`. | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
-| ShipmentTypeAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of the `ShipmentTypeAddressFormWidget` widget.                  | None          | SprykerShop\Yves\ShipmentTypeWidget\Plugin\ShopApplication |
+| ShipmentTypeCheckoutAddressCollectionFormExpanderPlugin      | Expands the checkout address form with the `ShipmentType` subform.                |           | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeCheckoutMultiShippingAddressesFormExpanderPlugin | Expands the checkout multi-shipping address form `ShipmentType`. |           | SprykerShop\Yves\ShipmentTypeWidget\Plugin\CustomerPage    |
+| ShipmentTypeAddressFormWidgetCacheKeyGeneratorStrategyPlugin | Skips caching of the `ShipmentTypeAddressFormWidget` widget.                  |           | SprykerShop\Yves\ShipmentTypeWidget\Plugin\ShopApplication |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -116,7 +112,7 @@ Register the following plugins to enable widgets:
 
 | PLUGIN                        | SPECIFICATION                                                 | PREREQUISITES | NAMESPACE                                  |
 |-------------------------------|---------------------------------------------------------------|---------------|--------------------------------------------|
-| ShipmentTypeAddressFormWidget | Enables shipment type selection during the checkout address step. | None          | SprykerShop\Yves\ShipmentTypeWidget\Widget |
+| ShipmentTypeAddressFormWidget | Enables shipment type selection at the checkout address step. |           | SprykerShop\Yves\ShipmentTypeWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -142,17 +138,47 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-## 4) Set up the FE part
+## 4) Set up the frontend
 
 Adjust TWIG templates to display the shipment types:
 
-1. For a single shipment, to the `address` view of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
+1. In `/resources/form/form.twig` of the `ShopUi` module, adjust `choice_widget_expanded` and `checkbox_widget` blocks:
+
+```twig
+{% raw %}{% block choice_widget_expanded -%}
+    ...
+    {{- form_widget(child, {
+        parent_label_class: label_attr.class | default,
+        choices_attr: choices_attr | default({}),
+    }) -}}
+    ...
+{%- endblock choice_widget_expanded %}
+
+{%- block checkbox_widget -%}
+    ...
+    {%- set inputClass = attr.class | default ~ ' ' ~ choices_attr.class | default -%}
+
+    {% define attributes = {
+        ...
+        disabled: disabled ?: attr.disabled | default(false),
+        ...
+    } %}
+
+    {%- set modifiers = modifiers | merge([attributes.additionalModifier], choices_attr.modifiers | default([])) -%}
+    ...
+{%- endblock -%}{% endraw %}
+```
+
+2. For a single shipment, to the `address` view of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
 
 ```twig
 {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [data.form] with {
     data: {
         deliveryContainerClassName: deliveryContainerClassName,
-        billingSameAsShippingContainerClassName: embed.jsAddressClass ~ '__wrapper-billingSameAsShipping',
+        billingSameAsShippingContainerClassName: billingSameAsShippingContainerClassName,
+        shipmentTypesClassName: validatorTriggerClassName,
+        servicePointClassName: shippingValidationContainerClassName,
+        deliverySelectClassName: deliverySelectClassName,
     },
 } only %}
 {% endwidget %}{% endraw %}
@@ -161,13 +187,15 @@ Adjust TWIG templates to display the shipment types:
 {% info_block infoBox "Attribute description" %}
 
 * `deliveryContainerClassName`: class name of the container delivery form and address selector.
-* `embed.jsAddressClass ~ '__wrapper-billingSameAsShipping'`: container class name for the **Billing same as shipping** checkbox.
+* `billingSameAsShippingContainerClassName`: container class name for the **Billing same as shipping** checkbox.
+* `validatorTriggerClassName`: trigger class name for the `validate-next-checkout-step` molecule.
+* `shippingValidationContainerClassName`: container class name for the shipping validation.
+* `deliverySelectClassName`: class name of the address selector.
 
 {% endinfo_block %}
 
-2. (Optional) For a multi-shipment, follow these steps:
-    1. Add the `ShipmentTypeAddressFormWidget` widget, as described in step 1 (for the single shipment).
-    2. To the `address` view of the `CheckoutPage` module, add the `multiple-shipment-toggler` molecule:
+2. Optional: For a multi-shipment, adjust the `CheckoutPage` module by following these steps:
+    1. To the `address` view, add the `multiple-shipment-toggler` molecule:
 
          ```twig
          {% raw %}{% include molecule('multiple-shipment-toggler', 'CheckoutPage') with {
@@ -181,41 +209,56 @@ Adjust TWIG templates to display the shipment types:
          } only %}{% endraw %}
          ```
 
-   {% info_block infoBox "Attribute description" %}
+       {% info_block infoBox "Attribute description" %}
 
-    * `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
-    * `singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
-    * `deliverySelectClassName`: class name of the address selector.
+        * `isMultipleShipmentSelected`: flag that indicates if the multiple shipment is selected.
+        * `singleDeliveryContainerClassName`: class name of the container address selector and the `ShipmentTypeAddressFormWidget`.
+        * `deliverySelectClassName`: class name of the address selector.
 
-   {% endinfo_block %}
+       {% endinfo_block %}
 
-    3. To the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
+    2. To the `address-item-form-field-list` molecule of the `CheckoutPage` module, add `ShipmentTypeAddressFormWidget`:
 
-         ```twig
-         {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
-             data: {
-                 deliveryContainerClassName: deliveryContainerClassName,
-                 shipmentTypesClassName: data.validatorTriggerClassName,
-                 servicePointClassName: data.itemShippingClassName,
-             },
-         } only %}{% endwidget %}{% endraw %}
-         ```
+        ```twig
+        {% raw %}{% widget 'ShipmentTypeAddressFormWidget' args [item] with {
+            data: {
+                deliveryContainerClassName: deliveryContainerClassName,
+                shipmentTypesClassName: data.validatorTriggerClassName,
+                servicePointClassName: data.itemShippingClassName,
+            },
+        } only %}{% endwidget %}{% endraw %}
+        ```
 
-    4. In the `CheckoutPage` module, adjust the `address-item-form` molecule by adding the `extra-triggers-class-name` attribute property for the `validate-next-checkout-step` molecule to validate `pickup` shipment type:
+    3. Move the `is-next-checkout-step-enabled` and `validate-next-checkout-step` molecules from the `address-item-form-field-list` molecule to the `address` view. Put them before the `address-form-toggler` molecule.
 
-         ```twig
-         {% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
-             class: validatorClassName,
-             attributes: {
-                 'container-selector': '.' ~ itemShippingClassName,
-                 'target-selector': '.' ~ data.jsAddressClass ~ '__form-submit',
-                 'dropdown-trigger-selector': '.' ~ addressSelectClassName ~ ':not(.' ~ data.hiddenClassName ~ ')',
-                 'extra-triggers-class-name': validatorTriggerClassName,
-                 'parent-target-class-name': config.jsName ~ '__items',
-                 'is-enable': false,
-             },
-         } only %}{% endraw %}
-         ```
+    4. To validate the `pickup` shipment type, adjust the `address` view by adding the `extra-target-selector` attribute property for the `is-next-checkout-step-enabled` molecule:
+
+        ```twig
+        {% raw %}{% include molecule('is-next-checkout-step-enabled', 'CheckoutPage') with {
+            attributes: {
+                'trigger-selector': '.' ~ deliverySelectClassName,
+                'target-selector': '.' ~ multishipmentValidatorClassName,
+                'extra-target-selector': '.' ~ validatorClassName,
+            },
+        } only %}{% endraw %}
+        ```
+
+    5. To validate the `pickup` shipment type, adjust the `address` view by adding the `extra-container-selector` and `extra-triggers-class-name` attribute properties for the `validate-next-checkout-step` molecule :
+
+        ```twig
+        {% raw %}{% include molecule('validate-next-checkout-step', 'CheckoutPage') with {
+            class: validatorClassName,
+            attributes: {
+                'container-selector': '.' ~ shippingValidationContainerClassName,
+                'extra-container-selector': '.' ~ deliveryContainerClassName,
+                'target-selector': '.' ~ embed.formSubmitClassName,
+                'dropdown-trigger-selector': '.' ~ deliverySelectClassName ~ ':not(.' ~ hiddenClassName ~ ')',
+                'extra-triggers-class-name': validatorTriggerClassName,
+                'parent-target-class-name': singleDeliveryContainerClassName,
+                'is-enable': false,
+            },
+        } only %}{% endraw %}
+        ```
 
 3. Build assets:
 
@@ -225,10 +268,10 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widget has been registered:
 
-| MODULE                         | TEST                                                                            |
+| MODULE                         | VERIFICATION                                                                            |
 |--------------------------------|---------------------------------------------------------------------------------|
-| ShipmentTypeAddressFormWidget  | Go to **Address Checkout Step** and make sure that you can select shipment type. |
+| ShipmentTypeAddressFormWidget  | Go to **Address Checkout Step** and make sure that you can select a shipment type. |
 
 {% endinfo_block %}

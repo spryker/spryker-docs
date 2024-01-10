@@ -1,11 +1,11 @@
 ---
-title: Integrate the Shipment Glue API
+title: Install the Shipment Glue API
 last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-update/install-glue-api/install-the-shipment-glue-api.html
 related:
-  - title: Shipment feature integration
+  - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html

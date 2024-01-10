@@ -1,6 +1,6 @@
 ---
 title: Datasource Dependable
-description: This document provides details about the Datasource Dependable service in the Components Library.
+description: Details about the Datasource Dependable service in the components library.
 template: concept-topic-template
 related:
   - title: Datasource Trigger
@@ -13,21 +13,18 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document explains the Datasource Dependable service in the Components Library.
-
-## Overview
 
 Datasource Dependable is an Angular service that resolves datasources for a component based on the value of a specific element.
-
-Check out an example usage of the Datasource Dependable.
 
 Service configuration:
 
 | ATTRIBUTE | DESCRIPTION |
 | - | - |
 | type | A datasource type.  |
-| id | An ID of the dependent element |
+| id | An ID of the dependent element. |
 | datasource | The next datasource that runs based on the depended element value, like [http](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html). |  
+
+Usage example:
 
 ```html
 <spy-datasource-dependable id="dependable-select">
@@ -50,7 +47,7 @@ Service configuration:
 </spy-select>
 ```
 
-The dependent element, `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return component value using the  `getValueChanges()` abstract method:   
+The dependent element, `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return a component value using the  `getValueChanges()` abstract method:   
 
 ```ts
 @Component({
@@ -92,9 +89,9 @@ declare module '@spryker/datasource' {
 export class RootModule {}
 ```
 
-## Interfaces
+## Datasource Dependable interfaces
 
-Datasource dependable interfaces:
+Datasource Dependable interfaces:
 
 ```ts
 import { DatasourceConfig } from '@spryker/datasource';

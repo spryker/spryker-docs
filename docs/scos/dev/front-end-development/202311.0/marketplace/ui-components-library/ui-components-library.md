@@ -1,6 +1,6 @@
 ---
-title: UI Components Library
-description: This articles provides details about UI components library.
+title: UI components library
+description: UI components library contains Angular components.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/
@@ -17,11 +17,7 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
 ---
 
-This document provides details about the UI components library.
-
-## Introduction
-
-Separate from Spryker Core, there is a set of UI Angular Components that are distributed independently via npm Registry. Each package can be installed via npm or yarn commands:
+Separate from Spryker Core, there is a set of UI Angular components that are distributed independently via npm. Each package can be installed via npm or yarn commands:
 
 ```bash
 npm install @spryker/package_name
@@ -31,12 +27,13 @@ npm install @spryker/package_name
 yarn add @spryker/package_name
 ```
 
-Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see [Web Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html)).
-Many UI Components have extension points, and some of them must be configured on a project-level (e.g `Table`, `Datasource`).
+Under the hood, the components are built using Angular 9, rxjs and Ant Design. These components are used in the core modules of the Merchant Portal. You can use them in the Angular ecosystem as default Angular components, or you can transform them into web components and reuse them in Spryker Twig modules. For more details about web components in Twig modules, see [Web Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html).
 
-## UI Components List
+Many UI Components have extension points, and some of them must be configured on a project-level. For example, `Table` or `Datasource`.
 
-The following is a list of available UI components:
+## Available UI components
+
+The following UI components are available:
 
 - @spryker/actions ([npm](https://www.npmjs.com/package/@spryker/actions))
     - @spryker/actions.close-drawer ([npm](https://www.npmjs.com/package/@spryker/actions.close-drawer), [story](https://spy-storybook.web.app/?path=/story/closedraweractionhandlerservice--primary))

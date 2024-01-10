@@ -1,7 +1,7 @@
 ---
 title: Create a backend resource
 description: This guide shows how to create an API endpoint using a resource for the backend API application.
-last_updated: September 30, 2022
+last_updated: January 10, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-backend-resource.html
@@ -9,6 +9,10 @@ redirect_from:
 ---
 
 This guide shows how to create an API endpoint using a resource for the backend API application.
+
+{% info_block infoBox %}
+This guide is based on the fact that you have a working BackendAPI Glue infrastructure setup, like for example in [Demo shop](https://github.com/spryker-shop/b2c-demo-shop/).
+{% endinfo_block infoBox %}
 
 Let's say you have a module named `ModuleRestApi`, where you want to have a new endpoint `/module` with `GET` and `POST` methods. To create the endpoint, follow these steps:
 
@@ -105,7 +109,8 @@ class ModuleResource extends AbstractResourcePlugin implements ResourceInterface
             ->setGet(new GlueResourceMethodConfigurationTransfer())
             ->setPost(
                 (new GlueResourceMethodConfigurationTransfer())
-                    ->setAction('postAction')->setAttributes(ModuleRestAttributesTransfer::class),
+                    ->setAction('postAction')
+                    ->setAttributes(ModuleRestAttributesTransfer::class),
             );
     }
 }
@@ -133,6 +138,7 @@ use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyPr
 
 class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
 {
+    ...
     /**
      * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
      */
@@ -142,6 +148,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
             new ModuleResource(),
         ];
     }
+    ...
 }
 ```
 
@@ -167,7 +174,7 @@ There is a special command to debug all existing routes.
 
 The example below shows how to debug Backend routes.
 
-```shell
+```bash
 $ docker/sdk/cli
 ╭─/data | Store: DE | Env: docker.dev | Debug: (.) | Testing: (.)
 ╰─$ glue route:debug Backend -c

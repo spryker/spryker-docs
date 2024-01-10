@@ -34,9 +34,57 @@ In December 2023, we have added and updated the following pages:
 - [Glue API: Add service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html): Learn how to add service types using Glue API.
 - [Glue API: Retrieve service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html): Learn how to retrieve service types using Glue API.
 - [Glue API: Update service types](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html): Learn how to update service types using Glue API.
-- ;Glue API: Add services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
+- [Glue API: Add services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html): Learn how to add services using Glue API.
 - [Glue API: Retrieve services](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html): Learn how to retrieve services using Glue API.
 - [Glue API: Update service points](/docs/pbc/all/service-point-management/202311.0/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html): Learn how to update service points using Glue API.
+- [Click & Collect domains](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-domains.html): Learn about the domain model, database, and other technical details of Click & Collect:
+    - [Click & Collect: Marketplace Merchant Product Offer Service Point subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html).
+    - [Click & Collect: Product Offer Service Point Availability subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html).
+    - [Click & Collect: Product Offer Service Point subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html).
+    - [Click & Collect: Product Offer Shipment Type Availability subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html).
+    - [Click & Collect: Product Offer Shipment Type subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html).
+    - [Click & Collect: Service Point Cart subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html).
+    - [Click & Collect: Service Points domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-service-points-domain.html).
+    - [Click & Collect: Shipment Type Service Point subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html).
+    - [Click & Collect: Shipment Types domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html).
+- [Developing an app with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
+- [Configuration JSON file](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Manifest JSON file](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Translation JSON file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
+- [Debug an app with XDebug](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
+- [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html): to set up the message broker for your ACP app.
+- [Email service](/docs/ca/dev/email-service/email-service.html): Learn about the native mail service of the Spryker Cloud Commerce OS.
+- [Email quota restrictions](/docs/ca/dev/email-service/email-quota-restrictions.html): Learn the quotas of the Spryker Cloud Commerce OS email service.
+- [Set up DNS](/docs/ca/dev/set-up-dns.html): Learn how to set up DNS for your SCCOS project.
+- [ACP security tips](/docs/acp/user/intro-to-acp/acp-security-tips.html): Guidelines and tips on how to make your ACP apps secure.
+- [Glue API: Add push notification subscriptions](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html): Learn how to add push notification subscription using Glue API.
+- [Glue API: Add push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html): Learn how to add push notification providers using Glue API.
+- [Glue API: Delete push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html): Learn how to delete push notification providers using Glue API.
+- [Glue API: Retrieve push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html): Learn how to retrieve push notification providers using Glue API.
+- [Glue API: Update push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html): Learn how to update push notification providers using Glue API.
+- [Set up Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/set-up-fulfillment-app.html): Learn how to install and configure Fulfillment App.
+- [Warehouse User Management feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-user-management-feature-overview.html): General overview of the Warehouse User Management feature.
+- [Test Glue API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html): Learn how to test Glue API.
+- [Test Glue Backend API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html): Learn how to test Glue Backend API.
+- [Glue API: Search the product catalog](/docs/pbc/all/search/202403.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
+
+### Updated pages
+
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+- [Create Glue API authorization strategies](/docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
+- [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
+- [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
+- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html).
+- [Enable Click & Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html): Learn how to enable Click & Collect.
+- [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
+- [Service Points feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
+- [Set up Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/set-up-oryx.html): Learn how to set up Oryx using a boilerplate project.
+- [Oryx: Packages](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-packages.html): Learn how to use Oryx packages from npm to ensure easy upgrade to newer versions.
+- [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
+
+For more details about these and other updates to the Spryker docs in December 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
 ## November 2023
 

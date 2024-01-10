@@ -3578,6 +3578,27 @@ entries:
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-customer-account-management-feature-overview.html
               - title: Service Points + Order Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-order-management-feature.html
+              - title: Click & Collect domains
+                url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-domains.html
+                nested:
+                  - title: Marketplace Merchant Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html
+                  - title: Product Offer Shipment Type Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html
+                  - title: Product Offer Shipment Type subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html
+                  - title: Service Point Cart subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html
+                  - title: Service Points domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-points-domain.html
+                  - title: Shipment Type Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html
+                  - title: Shipment Types domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html
               - title: Enable Click & Collect
                 url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
               - title: Install features
@@ -4051,10 +4072,12 @@ entries:
             include_versions:
             - "202311.0"
             nested:
-              - title: Fulfillment App feature overview
-                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
+              - title: Fulfillment App overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-overview.html
               - title: Warehouse Picking feature overview
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html
+              - title: Warehouse User Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-user-management-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -4065,6 +4088,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
+              - title: Set up Fulfillment App
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html                  
               - title: "Back Office: Assign and deassign warehouses from warehouse users"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"

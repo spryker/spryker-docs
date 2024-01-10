@@ -49,6 +49,10 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 
+## Secure the Back Office application
+
+The Back Office application serves as an administration panel and as such we highly recommend adding an extra layer of security by introducing VPN, IP whitelisting or additional authentication. With this control in place, the Back Office application will be accessible only to authorised users, preventing it from being widely accessible externally to everyone with access on the internet.
+
 ## Security Headers
 
 Security headers are directives used by web applications to configure security defenses in web browsers.

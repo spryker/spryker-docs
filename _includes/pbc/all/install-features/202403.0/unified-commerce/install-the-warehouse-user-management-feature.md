@@ -628,7 +628,7 @@ Make sure you can send the following requests:
         "attributes": {
             "userUuid": {% raw %}{{{% endraw %}user-uuid{% raw %}}}{% endraw %},
             "warehouse": {
-                "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% end%}
+                "uuid": {% raw %}{{{% endraw %}warehouse-uuid{% raw %}}}{% endraw %},
             },
             "isActive": true
         }
@@ -713,8 +713,8 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
         "type": "token",
         "attributes": {
             "grant_type": "password",
-            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% end%}
-            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% end%}
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
         }
     }
 }

@@ -13,7 +13,8 @@ redirect_from:
 
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
-The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps because we won't be able to resolve the issues related to the steps not completed in time. Ensure that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
+Points mentioned here are critical for the success of your go live. 
+We strongly encourage that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
 
 {% endinfo_block %}
 
@@ -21,9 +22,6 @@ The preparation steps listed here are mandatory because they are critical to the
 This document describes how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 
 We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are completed one week before going live.
-
-To successfully deploy a project on Spryker Cloud Commerce OS, make sure you follow all the guidelines described in this document.
-
 
 ## Eight weeks before go-live
 

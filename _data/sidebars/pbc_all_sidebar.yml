@@ -1462,6 +1462,23 @@ entries:
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
+                - "202311.0"
+                nested:
+                  - title: Manage merchants
+                    nested:
+                      - title: Create merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
+                      - title: Edit merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
+                  - title: Manage merchant users
+                    nested:
+                      - title: Create merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
+                      - title: Edit merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html                        
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+                include_versions:
                 - "202212.0"
                 - "202307.0"
                 nested:

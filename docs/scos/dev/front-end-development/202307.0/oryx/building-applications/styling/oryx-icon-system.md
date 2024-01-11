@@ -89,6 +89,8 @@ When using Material Symbols, you can configure the adjustable variable font styl
 - grade
 - optical size
 
+Additionally, you can configure whether an icon contains a direction (see the section on directionality below).
+
 ### Global configuration
 
 You can provide the variable font styles globally using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html):

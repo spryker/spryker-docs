@@ -8,7 +8,7 @@ related:
   - title: Stripe
     link: docs/pbc/all/payment-service-provider/page.version/stripe/stripe.html
 redirect_from:
-    - /docs/pbc/all/tax-management/202311.0/stripe/install-stripe.html
+    - /docs/pbc/all/payment-service-provider/202311.0/stripe/install-stripe.html
 
 ---
 This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.

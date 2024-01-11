@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
 ---
 title: Adjust Jenkins for a Docker environment
 description: DevOPS guidelines for running Spryker in Docker.
@@ -7,18 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/additional-devops-guidelines
 originalArticleId: 9ffe0d4c-9910-46c8-97f2-e3b51c5a1e82
 redirect_from:
-  - /2021080/docs/additional-devops-guidelines
-  - /2021080/docs/en/additional-devops-guidelines
-  - /docs/additional-devops-guidelines
-  - /docs/en/additional-devops-guidelines
-  - v6/docs/additional-devops-guidelines
-  - v6/docs/en/additional-devops-guidelines
-  - v5/docs/additional-devops-guidelines
-  - v5/docs/en/additional-devops-guidelines
-  - v4/docs/additional-devops-guidelines
-  - v4/docs/en/additional-devops-guidelines
-  - /v3/docs/additional-devops-information-201907
-  - /v3/docs/en/additional-devops-information-201907
+  - /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
 related:
   - title: Configure Spryker after installing
     link: docs/scos/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing.html

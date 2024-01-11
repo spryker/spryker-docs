@@ -1,4 +1,3 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
 ---
 title: Configuring dynamic Yves-Zed tokens
 description: Improve security between Yves and Zed communication layers with dynamic tokens.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-dynamic-yves-zed-tokens
 originalArticleId: c0839fc5-7812-47d6-9dc5-fc06c6a71159
 redirect_from:
-  - /2021080/docs/configuring-dynamic-yves-zed-tokens
-  - /2021080/docs/en/configuring-dynamic-yves-zed-tokens
-  - /docs/configuring-dynamic-yves-zed-tokens
-  - /docs/en/configuring-dynamic-yves-zed-tokens
-  - /v6/docs/configuring-dynamic-yves-zed-tokens
-  - /v6/docs/en/configuring-dynamic-yves-zed-tokens
+  - /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
   - /docs/scos/dev/technical-enhancements/configuring-dynamic-yves-zed-tokens.html
 ---
 

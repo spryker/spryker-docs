@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migration-concepts.html
 ---
 title: About migration concepts
 description: The section provides instructions on how to install features in your project- Split Delivery, Silex Replacement, CRUD Scheduled Prices,  and Decimal Stock.
@@ -7,20 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-migration-concepts
 originalArticleId: d93af391-04fe-41c0-89dc-65dfff2c4da7
 redirect_from:
-  - /2021080/docs/about-migration-concepts
-  - /2021080/docs/en/about-migration-concepts
-  - /docs/about-migration-concepts
-  - /docs/en/about-migration-concepts
-  - /v6/docs/about-migration-concepts
-  - /v6/docs/en/about-migration-concepts
-  - /v5/docs/about-migration-concepts
-  - /v5/docs/en/about-migration-concepts
-  - /v4/docs/about-migration-concepts
-  - /v4/docs/en/about-migration-concepts
-  - /v3/docs/about-migration-concepts
-  - /v3/docs/en/about-migration-concepts
-  - /v2/docs/about-migration-concepts
-  - /v2/docs/en/about-migration-concepts
+- /docs/scos/dev/migration-concepts/migration-concepts.html
 ---
 
 This section explains how to handle migration when a new feature requires an extensive migration effort for modules, or some technical solution used in Spryker needs to be replaced with a new one.

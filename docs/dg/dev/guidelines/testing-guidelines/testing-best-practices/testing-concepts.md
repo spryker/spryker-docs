@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
 ---
 title: Testing concepts
 description: Testing your project is one of the best ways to ensure that your software functions as it is supposed to. The role of testing is to find bugs during the early stages of development to minimize risks.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-concepts
 originalArticleId: 4690680b-9b8f-4a7f-805c-1c8da2755279
 redirect_from:
-  - /2021080/docs/testing-concepts
-  - /2021080/docs/en/testing-concepts
-  - /docs/testing-concepts
-  - /docs/en/testing-concepts
-  - /v6/docs/testing-concepts
-  - /v6/docs/en/testing-concepts
-  - /v5/docs/testing-concepts
-  - /v5/docs/en/testing-concepts
-  - /v4/docs/testing-concepts
-  - /v4/docs/en/testing-concepts
-  - /v3/docs/testing-concepts
-  - /v3/docs/en/testing-concepts
-  - /v2/docs/testing-concepts
-  - /v2/docs/en/testing-concepts
-  - /v1/docs/testing-concepts
-  - /v1/docs/en/testing-concepts
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
   - /docs/scos/dev/guidelines/testing-concepts.html
   - /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
 related:

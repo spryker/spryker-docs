@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
 ---
 title: "Decoupled Glue infrastructure: Integrate Storefront and Backend Glue API applications"
 description: Integrate the Glue Storefront and Backend API applications into a Spryker project.
@@ -8,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-storefront-and-backend-api-applications-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-glue-storefront-and-backend-api-applications-integration.html
+  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
 ---
 
 This document describes how to integrate the Glue Storefront and Backend API applications into a Spryker project.

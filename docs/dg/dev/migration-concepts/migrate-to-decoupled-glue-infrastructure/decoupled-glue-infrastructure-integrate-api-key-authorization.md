@@ -1,10 +1,10 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
 ---
 title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
 description: Integration of the API Key authorization mechanism into a Spryker project.
 last_updated: October 10, 2023
 template: feature-integration-guide-template
 redirect_from:
+  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
 ---
 
 This document describes how to integrate the API Key authorization to Backend API applications in a Spryker project.

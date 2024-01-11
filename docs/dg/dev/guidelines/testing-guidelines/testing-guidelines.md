@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
 ---
 title: Testing guidelines
 description: This section lists documents inside the Testing guidelines section.
 last_updated: Apr 26, 2023
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
 ---
 
 Get comprehensive guidance for effective testing in Spryker projects. Discover a range of topics, including available test helpers, code coverage generation, data builders for creating transfer objects, executing tests, setting up efficient test organization, configuring and using the Codeception test framework, testing best practices and console commands, and more.

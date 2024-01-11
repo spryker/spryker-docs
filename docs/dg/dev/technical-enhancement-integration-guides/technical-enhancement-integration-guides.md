@@ -1,9 +1,9 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
 ---
 title: Technical enhancement integration guides
 description: guides for integrating technical enhancement tools with Spryker SCOS
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
 ---
 
 This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS:

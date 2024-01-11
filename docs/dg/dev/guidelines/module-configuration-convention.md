@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/module-configuration-convention.html
 ---
 title: Module configuration convention
 description: This article contains conventions on the module configuration.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/module-configuration-convention
 originalArticleId: 7231d6db-0a25-4468-b991-d7998998604c
 redirect_from:
-  - /2021080/docs/module-configuration-convention
-  - /2021080/docs/en/module-configuration-convention
-  - /docs/module-configuration-convention
-  - /docs/en/module-configuration-convention
-  - /v6/docs/module-configuration-convention
-  - /v6/docs/en/module-configuration-convention
-  - /v5/docs/module-configuration-convention
-  - /v5/docs/en/module-configuration-convention
-  - /v4/docs/module-configuration-convention
-  - /v4/docs/en/module-configuration-convention
-  - /v3/docs/module-configuration-convention
-  - /v3/docs/en/module-configuration-convention
-  - /v2/docs/module-configuration-convention
-  - /v2/docs/en/module-configuration-convention
-  - /v1/docs/module-configuration-convention
-  - /v1/docs/en/module-configuration-convention
+  - /docs/scos/dev/guidelines/module-configuration-convention.html
 related:
   - title: Data Processing Guidelines
     link: docs/scos/dev/guidelines/data-processing-guidelines.html

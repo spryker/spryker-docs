@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
 ---
 title: Migrate to Docker
 description: Learn how to convert an existing non-docker based project into a docker based one.
@@ -7,18 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/integrating-the-docker-sdk-into-existing-projects
 originalArticleId: 8b072734-58f9-4bcf-8545-676e9f37db7b
 redirect_from:
-  - /2021080/docs/integrating-the-docker-sdk-into-existing-projects
-  - /2021080/docs/en/integrating-the-docker-sdk-into-existing-projects
-  - /docs/integrating-the-docker-sdk-into-existing-projects
-  - /docs/en/integrating-the-docker-sdk-into-existing-projects
-  - /v6/docs/integrating-the-docker-sdk-into-existing-projects
-  - /v6/docs/en/integrating-the-docker-sdk-into-existing-projects
-  - /v5/docs/integrating-docker-into-existing-projects
-  - /v5/docs/en/integrating-docker-into-existing-projects
-  - /v4/docs/integrating-docker-into-existing-projects
-  - /v4/docs/en/integrating-docker-into-existing-projects
-  - /v3/docs/integrating-docker-into-an-existing-project-201907
-  - /v3/docs/en/integrating-docker-into-an-existing-project-201907
+  - /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
 ---
 
 This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).

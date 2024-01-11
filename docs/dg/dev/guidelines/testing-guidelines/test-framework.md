@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
 ---
 title: Test framework
 description: Spryker uses Codeception framework for running tests. Learn how to configure and use it in your project.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/test-framework
 originalArticleId: e48e759c-0e27-4cfa-82f7-e34f82b2b6ad
 redirect_from:
-  - /2021080/docs/test-framework
-  - /2021080/docs/en/test-framework
-  - /docs/test-framework
-  - /docs/en/test-framework
-  - /v6/docs/test-framework
-  - /v6/docs/en/test-framework
-  - /v5/docs/test-framework
-  - /v5/docs/en/test-framework
+  - /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
   - /docs/scos/dev/guidelines/testing/test-framework.html
 related:
   - title: Available test helpers

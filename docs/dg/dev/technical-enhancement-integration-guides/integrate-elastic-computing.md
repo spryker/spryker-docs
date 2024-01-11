@@ -1,10 +1,10 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
 ---
 title: Integrate elastic computing
 description: Learn how to integrate elastic computing.
 last_updated: Jan 23, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
 ---
 
 Spryker is shipped with several elastic computing features that let you to utilize computational resources more efficiently.

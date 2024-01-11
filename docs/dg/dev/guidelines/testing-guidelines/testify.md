@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/testify.html
 ---
 title: Testify
 description: On top of Codeception, Spryker built the Testify module, which provides many useful helpers
@@ -7,16 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testify
 originalArticleId: e764c9cf-03b9-4766-8ea0-188db29a6b2d
 redirect_from:
-  - /2021080/docs/testify
-  - /2021080/docs/en/testify
-  - /docs/testify
-  - /docs/en/testify
-  - /v6/docs/testify
-  - /v6/docs/en/testify
-  - /v5/docs/testify
-  - /v5/docs/en/testify
-  - /v5/docs/testify-1
-  - /v5/docs/en/testify-1
+  - /docs/scos/dev/guidelines/testing-guidelines/testify.html
   - /docs/scos/dev/guidelines/testing/testify.html
 related:
   - title: Available test helpers

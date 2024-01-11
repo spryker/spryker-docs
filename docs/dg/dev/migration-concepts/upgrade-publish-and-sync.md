@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/upgrade-publish-and-sync.html
 ---
 title: Upgrade Publish and Sync
 description: Use the guide to learn how to update the Publish and Synchronization module to a newer version.
@@ -15,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-publish-and-synchronization.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-publish-and-synchronization.html
   - /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/migration-concepts/upgrade-publish-and-sync.html
 ---
 
 

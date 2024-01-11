@@ -1,10 +1,10 @@
-  - /docs/scos/dev/migration-concepts/upgrade-to-angular-15.html
 ---
 title: Upgrade to Angular 15
 description: Use the guide to update versions of the Angular and related modules.
 last_updated: Mar 24, 2023
 template: module-migration-guide-template
 redirect_from:
+- /docs/scos/dev/migration-concepts/upgrade-to-angular-15.html
 ---
 
 ## Upgrading Angular from version 12.* to version 15.*

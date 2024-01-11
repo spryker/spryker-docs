@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
 ---
 title: Setting up tests
 description: Learn how to set up an efficient organization for your tests.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/setting-up-tests
 originalArticleId: c8894db9-1871-41a4-a1fc-2c57d8de84c2
 redirect_from:
-  - /2021080/docs/setting-up-tests
-  - /2021080/docs/en/setting-up-tests
-  - /docs/setting-up-tests
-  - /docs/en/setting-up-tests
-  - /v6/docs/setting-up-tests
-  - /v6/docs/en/setting-up-tests
-  - /v5/docs/setup-tests
-  - /v5/docs/en/setup-tests
+  - /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
   - /docs/scos/dev/guidelines/testing/setting-up-tests.html
 related:
   - title: Available test helpers

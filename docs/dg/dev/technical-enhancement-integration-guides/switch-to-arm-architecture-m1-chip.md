@@ -1,9 +1,9 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
 ---
 title: Switch to ARM architecture (M1 chip)
 description: Learn how to switch Docker based projects to ARM architecture.
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
 ---
 
 This document explains how to install Spryker in Docker on a device with an ARM chip using demo shops versions 202108.0 or earlier.

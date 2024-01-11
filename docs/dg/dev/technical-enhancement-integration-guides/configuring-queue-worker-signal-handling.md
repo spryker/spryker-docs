@@ -1,4 +1,3 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html
 ---
 title: Configuring queue worker signal handling
 description: Configure a graceful shutdown of queue worker.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/queue-worker-signal-handling
 originalArticleId: 832df2ee-dad1-40ac-bf54-1f9aa1bb1a48
 redirect_from:
-  - /2021080/docs/queue-worker-signal-handling
-  - /2021080/docs/en/queue-worker-signal-handling
-  - /docs/queue-worker-signal-handling
-  - /docs/en/queue-worker-signal-handling
-  - /v6/docs/queue-worker-signal-handling
-  - /v6/docs/en/queue-worker-signal-handling
+  - /docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html
   - /docs/scos/dev/technical-enhancements/queue-worker-signal-handling.html
 ---
 

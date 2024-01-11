@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
 ---
 title: Data builders
 description: Learn how to configure data builders for creating transfer objects for your tests.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-builders
 originalArticleId: 3737769e-2b8e-4756-857f-343009e09251
 redirect_from:
-  - /2021080/docs/data-builders
-  - /2021080/docs/en/data-builders
-  - /docs/data-builders
-  - /docs/en/data-builders
-  - /v6/docs/data-builders
-  - /v6/docs/en/data-builders
-  - /v5/docs/data-builder
-  - /v5/docs/en/data-builders
+  - /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
   - /docs/scos/dev/guidelines/testing/data-builders.html
 related:
   - title: Available test helpers

@@ -2,6 +2,8 @@
 title: Test Glue Backend API
 description: Learn how to test Glue Backend API
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
 ---
 
 This document describes how to set up and run Glue Backend API end-to-end (E2E) tests using the `ModuleBackendApi` module example and the `Pyz` project namespace. Adjust the module name according to your requirements.

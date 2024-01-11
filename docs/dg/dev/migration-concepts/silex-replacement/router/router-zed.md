@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 ---
 title: Router Zed
 description: The article provides instructions on how to install and configure Router in Zed.
@@ -7,18 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/router-zed
 originalArticleId: b38df44e-6ee0-446c-8fbc-fc4616ac85d5
 redirect_from:
-  - /2021080/docs/router-zed
-  - /2021080/docs/en/router-zed
-  - /docs/router-zed
-  - /docs/en/router-zed
-  - /v6/docs/router-zed
-  - /v6/docs/en/router-zed
-  - /v5/docs/router-zed
-  - /v5/docs/en/router-zed
-  - /v4/docs/router-zed
-  - /v4/docs/en/router-zed
-  - /v3/docs/router-zed-201907
-  - /v3/docs/en/router-zed-201907
+- /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 related:
   - title: Router Yves
     link: docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html

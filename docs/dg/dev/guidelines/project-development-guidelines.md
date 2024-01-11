@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 title: Project development guidelines
 description: This article describes the strategies a project team can take while building a Spryker-based project.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/project-development-guidelines
 originalArticleId: 3608265d-c19f-4415-83c1-4584d50e48b0
 redirect_from:
-  - /2021080/docs/project-development-guidelines
-  - /2021080/docs/en/project-development-guidelines
-  - /docs/project-development-guidelines
-  - /docs/en/project-development-guidelines
-  - /v6/docs/project-development-guidelines
-  - /v6/docs/en/project-development-guidelines
-  - /v5/docs/project-development-guidelines
-  - /v5/docs/en/project-development-guidelines
+  - /docs/scos/dev/guidelines/project-development-guidelines.html
 related:
   - title: Data Processing Guidelines
     link: docs/scos/dev/guidelines/data-processing-guidelines.html
@@ -59,7 +51,7 @@ For example, customize the names by adding the project name.
 Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker offers extension points that allow you to extend via the Public API and helps you to customize the application. We recommend to use the extension points instead of overriding Private API.
 
 ## Avoid using unsupported types
-Avoid using unsupported types as constructor arguments of a plugin. 
+Avoid using unsupported types as constructor arguments of a plugin.
 
 The [supported types](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
 

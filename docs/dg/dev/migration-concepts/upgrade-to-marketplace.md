@@ -1,10 +1,10 @@
-  - /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
 ---
 title: Upgrade to Marketplace
 description: This document provides details how to upgrade Spryker instance to the Marketplace.
 template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
+  - /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
 ---
 
 This document describes how to upgrade the existing instance of Spryker Shop to the Marketplace.

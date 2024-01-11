@@ -19,6 +19,10 @@ redirect_from:
   - /scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html  
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
   - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+  - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
+  - /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html  
 
 related:
   - title: Deploy File Reference - 1.0

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
 ---
 title: Best practices for effective testing
 description: The article describes how to write and organize your tests efficiently.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/testing-best-practices
 originalArticleId: 3bee0606-3660-4935-b990-33cc4adb6d0a
 redirect_from:
-  - /2021080/docs/testing-best-practices
-  - /2021080/docs/en/testing-best-practices
-  - /docs/testing-best-practices
-  - /docs/en/testing-best-practices
-  - /v6/docs/testing-best-practices
-  - /v6/docs/en/testing-best-practices
-  - /v5/docs/best-practices
-  - /v5/docs/en/best-practices
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
   - /docs/scos/dev/guidelines/testing/testing-best-practices.html
   - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
 related:

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/data-processing-guidelines.html
 ---
 title: Data Processing Guidelines
 description: The article describes the most important concepts and best practices that should be used during data processing.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/data-processing-guidelines
 originalArticleId: 5db3896c-3085-4056-870c-2c28cd0fe62b
 redirect_from:
-  - /2021080/docs/data-processing-guidelines
-  - /2021080/docs/en/data-processing-guidelines
-  - /docs/data-processing-guidelines
-  - /docs/en/data-processing-guidelines
-  - /v6/docs/data-processing-guidelines
-  - /v6/docs/en/data-processing-guidelines
-  - /v5/docs/data-processing-guidelines
-  - /v5/docs/en/data-processing-guidelines
+  - /docs/scos/dev/guidelines/data-processing-guidelines.html
 related:
   - title: Making your Spryker shop secure
     link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html

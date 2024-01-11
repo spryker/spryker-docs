@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
 title: Container
 description: The article contains information on how to use Container, to check if services are added, removed or extended. Troubleshooting information is included too
@@ -7,20 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/container
 originalArticleId: 4829662a-2b70-425c-8044-ae291d77c208
 redirect_from:
-  - /2021080/docs/container
-  - /2021080/docs/en/container
-  - /docs/container
-  - /docs/en/container
-  - /v6/docs/container
-  - /v6/docs/en/container
-  - /v5/docs/container
-  - /v5/docs/en/container
-  - /v4/docs/container-201903
-  - /v4/docs/en/container-201903
-  - /v3/docs/container-201903
-  - /v3/docs/en/container-201903
-  - /v2/docs/container-201903
-  - /v2/docs/en/container-201903
+- /docs/scos/dev/migration-concepts/silex-replacement/container.html
 related:
   - title: Silex replacement
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
@@ -28,7 +14,7 @@ related:
     link: docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
 
-A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the PSR-11 interface<!-- ](https://www.php-fig.org/psr/psr-11/) check if it works before restoring-->.
+A *container* is a class which holds one or more object collections or definitions. The Spryker container implements the [PSR-11 interface](https://www.php-fig.org/psr/psr-11/) check if it works before restoring.
 
 The container is used to add services and allow other application plugins access them. Services are integrations like Twig or Symfony components like Security or Form. To be able to configure or change the services easily, they are added to the applications as a part of [application plugins](/docs/scos/dev/migration-concepts/silex-replacement/application.html).
 

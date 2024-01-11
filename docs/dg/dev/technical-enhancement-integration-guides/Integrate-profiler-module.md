@@ -1,10 +1,10 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html
 ---
 title: Integrate profiler module
 description: Learn how to integrate profiler module
 last_updated: March 22, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html
 ---
 
 This document describes how to integrate profiler module into a Spryker project.
@@ -89,11 +89,11 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
         $plugins = [
             //...
         ];
-        
+
         if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
             $plugins[] = new ProfilerRequestEventDispatcherPlugin();
         }
-    
+
         return $plugins;
     }
 }
@@ -117,7 +117,7 @@ class WebProfilerWidgetDependencyProvider extends SprykerWebProfilerDependencyPr
         $plugins = [
             //...
         ];
-        
+
         if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
             $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
         }
@@ -153,7 +153,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
         $plugins = [
             //...
         ];
-        
+
         if (class_exists(ProfilerRequestEventDispatcherPlugin::class)) {
             $plugins[] = new ProfilerRequestEventDispatcherPlugin();
         }
@@ -181,7 +181,7 @@ class WebProfilerDependencyProvider extends SprykerWebProfilerDependencyProvider
         $plugins = [
             //...
         ];
-        
+
         if (class_exists(WebProfilerProfilerDataCollectorPlugin::class)) {
             $plugins[] = new WebProfilerProfilerDataCollectorPlugin();
         }

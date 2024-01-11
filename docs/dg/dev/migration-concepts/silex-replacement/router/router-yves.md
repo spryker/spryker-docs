@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
 ---
 title: Router Yves
 description: The article provides instructions on how to install the extension module along with the router and integrate it then in Yves.
@@ -7,18 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/router-yves
 originalArticleId: d8b857cc-0e43-4be9-891a-a57afdbe1d2b
 redirect_from:
-  - /2021080/docs/router-yves
-  - /2021080/docs/en/router-yves
-  - /docs/router-yves
-  - /docs/en/router-yves
-  - /v6/docs/router-yves
-  - /v6/docs/en/router-yves
-  - /v5/docs/router-yves
-  - /v5/docs/en/router-yves
-  - /v4/docs/router-yves
-  - /v4/docs/en/router-yves
-  - /v3/docs/router-yves-201907
-  - /v3/docs/en/router-yves-201907
+- /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
 related:
   - title: Router Zed
     link: docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html

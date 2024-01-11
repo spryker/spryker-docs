@@ -1,4 +1,3 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
 ---
 title: Install Combined Product Offer Import
 last_updated: Oct 12, 2021
@@ -8,6 +7,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202307.0/combined-product-offer-import-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202311.0/combined-product-offer-import-feature-integration.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
 ---
 
 This document describes how to install Combined Product Offer Import.

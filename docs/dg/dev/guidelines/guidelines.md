@@ -1,9 +1,9 @@
-  - /docs/scos/dev/guidelines/guidelines.html
 ---
 title: Guidelines
 description: Guidelines for developers working on Spryker Commerce OS
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/guidelines.html
 ---
 
 This section contains a collection of useful guidelines for developing on the Spryker Commerce OS:  

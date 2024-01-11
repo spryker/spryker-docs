@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 title: Silex replacement
 description: The article contains information on the Silex replacement, backward compatibility, steps to be taken, changes in the old procedure and the new procedure.
@@ -7,20 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/silex-replacement
 originalArticleId: 4ec167a5-a956-4a57-b940-d679b1a210aa
 redirect_from:
-  - /2021080/docs/silex-replacement
-  - /2021080/docs/en/silex-replacement
-  - /docs/silex-replacement
-  - /docs/en/silex-replacement
-  - /v6/docs/silex-replacement
-  - /v6/docs/en/silex-replacement
-  - /v5/docs/silex-replacement
-  - /v5/docs/en/silex-replacement
-  - /v4/docs/silex-replacement
-  - /v4/docs/en/silex-replacement
-  - /v3/docs/silex-replacement
-  - /v3/docs/en/silex-replacement
-  - /v2/docs/silex-replacement-201903
-  - /v2/docs/en/silex-replacement-201903
+- /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 related:
   - title: Application
     link: docs/scos/dev/migration-concepts/silex-replacement/application.html

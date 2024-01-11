@@ -1,10 +1,10 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
 ---
 title: Integrate multi-database logic
 description: Learn how to integrate multi-database logic
 last_updated: June 2, 2022
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
 ---
 
 This document describes how to switch from using a shared database to dedicated databases for stores. In the following instructions, DE and AT stores are used as examples. When following the instructions, adjust the configuration to your needs.

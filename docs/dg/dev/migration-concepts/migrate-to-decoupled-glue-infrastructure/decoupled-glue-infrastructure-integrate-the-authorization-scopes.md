@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
 ---
 title: "Decoupled Glue infrastructure: Integrate the authorization scopes"
 description: This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
@@ -7,6 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/authorization-scopes-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authorization-scopes-integration.html
+  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
 ---
 
 This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.

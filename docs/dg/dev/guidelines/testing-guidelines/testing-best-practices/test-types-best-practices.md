@@ -1,10 +1,10 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
 ---
 title: Test types best practices
 description: Learn when and how it is best to use different test types in your Spryker project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
 ---
 
 Different test types as unit, uunctional, ucceptance, and other tests, serve a specific purpose and implications in different aspects. For example, unit tests are usually very fast whereas acceptance tests are very slow. The following image shows the differences from different aspects:
@@ -22,7 +22,7 @@ These tests are cost-effective, robust, and fast. You can mock any dependencies 
 
 ## Integration tests
 
-There is a mixture of unit and integration tests in the Business and the Communication layer. Integration tests are typically performed using facade tests in the Business Layer and cover several parts of the system together. Spryker primarily uses integration tests and switches to unit tests when necessary. 
+There is a mixture of unit and integration tests in the Business and the Communication layer. Integration tests are typically performed using facade tests in the Business Layer and cover several parts of the system together. Spryker primarily uses integration tests and switches to unit tests when necessary.
 
 Integration tests can be slow, but they can also provide good code coverage and reduce the number of tests required.
 

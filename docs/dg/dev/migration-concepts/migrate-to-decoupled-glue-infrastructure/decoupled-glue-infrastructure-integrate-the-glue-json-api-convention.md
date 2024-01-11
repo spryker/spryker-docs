@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
 ---
 title: "Decoupled Glue infrastructure: Integrate the Glue JSON:API convention"
 description: Integrate the Glue JSON:API convention for Storefront API application into a Spryker project.
@@ -8,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html
+  - /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
 ---
 
 This document describes how to integrate the Glue JSON:API convention for Storefront API application into a Spryker project.

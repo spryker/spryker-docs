@@ -1,4 +1,3 @@
-  - /docs/scos/dev/migration-concepts/silex-replacement/application.html
 ---
 title: Application
 description: Spryker Application and its Application Plugins will be used to add global services. All Application Plugins are added with corresponding Dependency Providers.
@@ -7,20 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/application
 originalArticleId: e202f0ed-1278-473c-bfd1-1258f1195920
 redirect_from:
-  - /2021080/docs/application
-  - /2021080/docs/en/application
-  - /docs/application
-  - /docs/en/application
-  - /v6/docs/application
-  - /v6/docs/en/application
-  - /v5/docs/application
-  - /v5/docs/en/application
-  - /v4/docs/application
-  - /v4/docs/en/application
-  - /v3/docs/application
-  - /v3/docs/en/application
-  - /v2/docs/application
-  - /v2/docs/en/application
+- /docs/scos/dev/migration-concepts/silex-replacement/application.html
 related:
   - title: Silex replacement
     link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html

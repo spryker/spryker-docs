@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
 ---
 title: Code coverage
 description: Learn how to generate the code coverage report.
@@ -7,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-coverage
 originalArticleId: 630a5773-8205-4f00-a6ee-d1876e76d975
 redirect_from:
-  - /2021080/docs/code-coverage
-  - /2021080/docs/en/code-coverage
-  - /docs/code-coverage
-  - /docs/en/code-coverage
-  - /v6/docs/code-coverage
-  - /v6/docs/en/code-coverage
-  - /v5/docs/codecoverage
-  - /v5/docs/en/codecoverage
+  - /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
   - /docs/scos/dev/guidelines/testing/code-coverage.html
 related:
   - title: Available test helpers

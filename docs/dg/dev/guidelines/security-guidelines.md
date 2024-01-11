@@ -1,4 +1,3 @@
-  - /docs/scos/dev/guidelines/security-guidelines.html
 ---
 title: Security guidelines
 last_updated: Sep 15, 2023
@@ -6,16 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
 redirect_from:
-  - /2021080/docs/making-your-spryker-shop-secure
-  - /2021080/docs/en/making-your-spryker-shop-secure
-  - /docs/making-your-spryker-shop-secure
-  - /docs/en/making-your-spryker-shop-secure
-  - /v6/docs/making-your-spryker-shop-secure
-  - /v6/docs/en/making-your-spryker-shop-secure
-  - /v5/docs/making-your-spryker-shop-secure
-  - /v5/docs/en/making-your-spryker-shop-secure
-  - /v4/docs/making-your-spryker-shop-secure
-  - /v4/docs/en/making-your-spryker-shop-secure
+  - /docs/scos/dev/guidelines/security-guidelines.html
   - /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
 related:
   - title: Data Processing Guidelines

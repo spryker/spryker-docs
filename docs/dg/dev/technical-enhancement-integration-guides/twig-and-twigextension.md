@@ -1,4 +1,3 @@
-  - /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
 ---
 title: Twig and TwigExtension
 description: Learn how to install and configure the Twig and TwigExtension modules for Zed and Yves on the core and project levels.
@@ -16,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/202108.0/twig-and-twigextension.html
   - /docs/scos/dev/sdk/twig-and-twigextension.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
 related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html

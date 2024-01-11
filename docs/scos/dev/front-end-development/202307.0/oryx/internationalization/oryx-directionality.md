@@ -30,7 +30,7 @@ To enable directionality in Oryx, simply change the language to a locale like Ar
 
 {% info_block infoBox "Test RTL with labs package" %}
 
-To test RTL direction, the labs package have added a hardcoded "Arabic" locale.
+To test RTL direction, the [labs package](https://www.npmjs.com/package/@spryker-oryx/labs) have added a hardcoded "Arabic" locale.
 
 {% endinfo_block %}
 

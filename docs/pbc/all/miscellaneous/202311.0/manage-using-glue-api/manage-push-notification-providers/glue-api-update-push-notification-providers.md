@@ -14,7 +14,7 @@ This endpoint lets you update push notification providers.
 ## Retrieve push notification providers
 
 ***
-`PATCH` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/*{% raw %}{{push_notification_provider_id}}{% endraw %}***
+`PATCH` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/{% raw %}*{{push_notification_provider_id}}*{% endraw %}**
 ***
 
 

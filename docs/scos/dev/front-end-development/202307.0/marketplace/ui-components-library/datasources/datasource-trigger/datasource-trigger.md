@@ -13,11 +13,7 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document describes the Datasource Trigger service in the components library.
-
-## Overview
-
-Datasource Trigger is an Angular service that provides a flexible way to fetch data based on user-triggered events.
+Datasource Trigger is an Angular service in the components library that provides a flexible way to fetch data based on user-triggered events.
 
 ```html
 <spy-select
@@ -33,7 +29,7 @@ Datasource Trigger is an Angular service that provides a flexible way to fetch d
 </spy-select>
 ```
 
-The trigger element, `SelectComponent` in the example, must implement a `DatasourceTriggerElement` abstract class (token) and return a component instance using the `getTriggerElement()` abstract method:   
+The trigger element, being `SelectComponent` in the example, must implement a `DatasourceTriggerElement` abstract class (token) and return a component instance using the `getTriggerElement()` abstract method:   
 
 ```ts
 @Component({
@@ -61,11 +57,11 @@ The main module lets you register any `datasource.trigger` by key using the `wit
 The `resolve()` method does the following:
 1. Gets the trigger element using the `DatasourceTriggerElement` abstract class (token).
 2. Locates a specific service from `DatasourceEventTypesToken` by an argument from `config.event`.
-3. Based on the data returned from a trigger element, returns an observable with data  by `Datasource.resolve()`.
+3. Based on the data returned from a trigger element, returns an observable with data by `Datasource.resolve()`.
 
 ## Datasource
 
-Datasource trigger must implement a specific interface (DatasourceTriggerEvent) and then be registered to the root module using `DatasourceModule.withEvents()`.
+Datasource trigger must implement a specific interface (DatasourceTriggerEvent) and be registered to the root module using `DatasourceModule.withEvents()`.
 
 ```ts
 // Module augmentation
@@ -111,7 +107,7 @@ The context within which Datasources operate is defined by the local injector wh
 
 ## Interfaces
 
-Interfaces for the Datasource Trigger configuration and types:  
+Interfaces and types for the Datasource Trigger configuration:
 
 ```ts
 export interface DatasourceTriggerEventRegistry {}
@@ -135,9 +131,11 @@ export abstract class DatasourceTriggerElement {
 }
 ```
 
-## Datasource types
+## Available Datasources
 
-There are a few common Datasources that are available in the UI library as separate packages:  
+The following common Datasources are available in the UI library as separate packages:  
 
-- [Change](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html) — allows passing data along with the configuration of the Datasource using `change` event.
-- [Input](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html) — allows passing data along with the configuration of the Datasource using `input` event.
+| DATASOURCE | DESCRIPTION |
+|-|-|
+| [Change](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html) | Allows for passing data along with the configuration of the Datasource using the `change` event. |
+| [Input](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html) | Allows for passing data along with the configuration of the Datasource using the `input` event. |

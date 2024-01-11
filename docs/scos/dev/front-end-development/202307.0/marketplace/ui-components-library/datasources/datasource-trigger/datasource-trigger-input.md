@@ -1,6 +1,6 @@
 ---
 title: Datasource Trigger Input
-description: This document provides details about the Datasource Trigger Input service in the components library.
+description: Details about the Datasource Trigger Input service in the components library.
 template: concept-topic-template
 related:
   - title: Datasource Dependable
@@ -13,11 +13,9 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document describes the Datasource Trigger Input service in the components library.
+Datasource Trigger Input is an Angular service in the components library that extracts the value from an event trigger element and checks if it meets a certain criteria. If the value is valid, it emits an object containing the value.
 
-## Overview
-
-Datasource Trigger Input is an Angular Service that extracts the value from an event trigger element and checks whether it meets a certain criteria. If the value is valid, it emits an object containing the value.  
+## Usage
 
 Service configuration:
 
@@ -25,9 +23,11 @@ Service configuration:
 | - | - |
 | type | A datasource type.  |
 | event | An event type triggered by element.  |
-| debounce | Delays the emission of values the next datasource (default is `300ms`).  |
-| minCharacters | Emits the trigger element value if the length is greater than or equal to the `minCharacters` property (default is `2`).  |
+|debounce |  Delays the emission of values of the next datasource; by default, delays by `300ms`. |
+|minCharacters |  Emits the trigger element value if the length is greater than or equal to the `minCharacters` property. The default value is `2`. |
 | datasource | The next datasource that runs based on the depended element value (e.g. [http](/docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html).  |
+
+Usage example:
 
 ```html
 <spy-select
@@ -71,7 +71,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Trigger Input:  
+Interfaces for Datasource Trigger Input:  
 
 ```ts
 import { DatasourceTriggerConfig } from '@spryker/datasource.trigger';

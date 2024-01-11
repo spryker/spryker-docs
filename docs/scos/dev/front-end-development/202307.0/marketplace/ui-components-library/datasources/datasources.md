@@ -12,8 +12,7 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-Datasources are responsible for providing data to the system based on a given configuration.
-This lets backend systems control where data is coming from without changing the frontend. For example, table data or select options.
+Datasources are responsible for providing data to the system based on a given configuration. This lets backend systems control where data is coming from without changing the frontend. For example, table data or select options.
 
 Datasources are used in other components like Table, Select, Autocomplete.
 
@@ -104,7 +103,7 @@ export interface Datasource<D = unknown, C = unknown> {
 }
 ```
 
-## Available Datasource
+## Available Datasources
 
 The following common Datasources are available in the UI components library as separate packages:
 

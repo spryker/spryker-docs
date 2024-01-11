@@ -14,7 +14,9 @@ related:
 ---
 
 
-Datasource Dependable is an Angular service that resolves datasources for a component based on the value of a specific element.
+Datasource Dependable is an Angular service in the components library that resolves datasources for a component based on the value of a specific element.
+
+## Usage
 
 Service configuration:
 
@@ -47,7 +49,7 @@ Usage example:
 </spy-select>
 ```
 
-The dependent element, `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return a component value using the  `getValueChanges()` abstract method:   
+The dependent element, being `SelectComponent` in the example, must implement a `DatasourceDependableElement` abstract class (token) and return a component value using the  `getValueChanges()` abstract method:   
 
 ```ts
 @Component({

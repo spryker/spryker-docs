@@ -7,7 +7,7 @@ template: concept-topic-template
 
 The Spryker *core modules* provide generic, reusable functionality that benefits a wide range of use cases. These modules offer a foundation for customization and serve as versatile building blocks.
 
-*Example modules* in contrast, are designed for specific, one-off use-cases. Their functionality is tightly aligned with unique business requirements and isn't suitable for broad reuse. These modules serve as specialized, project-specific solutions.
+*Example modules* in contrast, are designed for specific, one-off use-cases. Their functionality is tightly aligned with unique business requirements and isn't suitable for broad reuse. These modules serve as specialized, project-specific solutions. See the [Product Warehouse Allocation Example](https://github.com/spryker/product-warehouse-allocation-example) module.
 
 ## Example module use-cases
 

@@ -18,10 +18,11 @@ This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-
 Before integrating Stripe, ensure the following prerequisites are met:
 
 - Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+- Make sure you have a Stripe connected account to Spryker platform, if you are unsure how to do it, please contact Spryker support.
 
 ## 1. Connect Stripe
 
-1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
+1. In your store's Back Office, go to **Apps**.
 2. Click **Stripe**.
    This takes you to the Stripe app details page.
 3. In the top right corner of the Stripe app details page, click **Connect app**.

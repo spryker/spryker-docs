@@ -24,7 +24,7 @@ Before integrating Stripe, ensure the following prerequisites are met:
 
 ## 1. Configure shared configs
 
-Add the following config to `config/Shared/config_default.php`:
+Your project likely already has this code from the beginning, if not, please add the following config to `config/Shared/config_default.php`:
 
 ```php
 // ...
@@ -86,7 +86,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ## 2. Configure the Message Broker dependency provider
 
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+Your project likely already has this code from the beginning, if not, please add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
 ```php
 
@@ -123,7 +123,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ## 3. Add Stripe domain to your allow list
 
-To enable Stripe to redirect your customers to their 3D Secure page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+To enable Stripe to redirect your customers to Stripe payment page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy-{your_environment}.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
 
 In the `deploy.yml` file, introduce the required changes:
 
@@ -146,7 +146,7 @@ $config[KernelConstants::DOMAIN_WHITELIST][] = 'stripe.acp.spryker.com';
 ```
 
 ## 4. Configure the Oms dependency provider
-Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
+Your project likely already has this code from the beginning, if not, please add the following code to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php
 // ...
@@ -181,7 +181,7 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
 ### Optional: Configure your Payment OMS
 
 A complete Payment OMS configuration is provided out of the box located in `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`, optionally you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
-This example demonstrates how to configure Payment Confirmation on the Order State transition from `new` to `payment authorization pending`.
+This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`.
 ```xml
 <?xml version="1.0"?>
 <statemachine
@@ -198,7 +198,7 @@ This example demonstrates how to configure Payment Confirmation on the Order Sta
 
             <!-- other states -->
 
-          <state name="payment authorization pending" display="oms.state.in-progress"/>
+          <state name="payment capture pending" display="oms.state.in-progress"/>
 
             <!-- other states -->
 
@@ -209,9 +209,9 @@ This example demonstrates how to configure Payment Confirmation on the Order Sta
             <!-- other transitions -->
 
             <transition happy="true">
-              <source>new</source>
-              <target>payment authorization pending</target>
-              <event>payment confirmation requested</event>
+              <source>ready for dispatch</source>
+              <target>payment capture pending</target>
+              <event>capture payment</event>
             </transition>
 
             <!-- other transitions -->
@@ -222,7 +222,7 @@ This example demonstrates how to configure Payment Confirmation on the Order Sta
 
             <!-- other events -->
 
-            <event name="payment confirmation requested" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
+            <event name="capture payment" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
 
             <!-- other events -->
 

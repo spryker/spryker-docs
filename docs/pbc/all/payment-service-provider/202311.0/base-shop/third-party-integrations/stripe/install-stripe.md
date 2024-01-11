@@ -174,6 +174,61 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
 
 ```
 
+### Optional: Configure your Payment OMS
+
+A complete Payment OMS configuration is provided out of the box located in `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`, optionally you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
+This example demonstrates how to configure Payment Confirmation on the Order State transition from `new` to `payment authorization pending`.
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="SomePaymentProcess" main="true">
+
+        <!-- other configurations -->
+
+        <states>
+
+            <!-- other states -->
+
+          <state name="payment authorization pending" display="oms.state.in-progress"/>
+
+            <!-- other states -->
+
+        </states>
+
+        <transitions>
+
+            <!-- other transitions -->
+
+            <transition happy="true">
+              <source>new</source>
+              <target>payment authorization pending</target>
+              <event>payment confirmation requested</event>
+            </transition>
+
+            <!-- other transitions -->
+
+        </transitions>
+
+        <events>
+
+            <!-- other events -->
+
+            <event name="payment confirmation requested" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
+
+            <!-- other events -->
+
+        </events>
+
+    </process>
+
+</statemachine>
+```
+
 
 ## Next step
 [Configure Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html)

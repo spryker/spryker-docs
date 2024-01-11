@@ -1,16 +1,12 @@
 ---
-title: Table Column Type Text
-description: This document provides details about the Table Column Type Text in the Components Library.
+title: Table Column Type Button Action
+description: This document provides details about the Table Column Type Button Action in the Components Library.
 template: concept-topic-template
-redirect_from:
-  - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-text.html
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
   - title: Table Column Type Autocomplete
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
-  - title: Table Column Type Button Action
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
   - title: Table Column Type Chip
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
   - title: Table Column Type Date
@@ -25,15 +21,17 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-list.html
   - title: Table Column Type Select
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-select.html
+  - title: Table Column Type Text
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-text.html
 ---
 
-This document explains the Table Column Type Text in the Components library.
+This document explains the Table Column Type Button Action in the Components library.
 
 ## Overview
 
-Table Column Text is an Angular Component that renders text.
+Table Column Button Action is an Angular Component that renders button using the `@spryker/button.action` component.
 
-Check out an example usage of the Table Column Text in the `@spryker/table` config:
+Check out an example usage of the Table Column Button Action in the `@spryker/table` config:
 
 ```html
 <spy-table
@@ -44,20 +42,13 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
             {
                 id: 'columnId',
                 title: 'Column Title',
-                type: 'text',
+                type: 'button-action',
                 typeOptions: {
-                    text: '${displayValue}',
-                },
-            },
-            {
-                id: 'columnId',
-                title: 'Column Title',
-                type: 'text',
-                typeOptions: {
-                    text: '${displayValue}',
-                },
-                typeOptionsMappings: {
-                    color: { col3: 'green' },
+                    text: 'text',
+                    action: {
+                        type: 'http',
+                        url: '/url',
+                    },
                 },
             },
             ...,
@@ -74,7 +65,7 @@ Register the component:
 ```ts
 declare module '@spryker/table' {
     interface TableColumnTypeRegistry {
-        text: TableColumnTextConfig;
+        'button-action': TableColumnButtonActionConfig;
     }
 }
 
@@ -82,9 +73,9 @@ declare module '@spryker/table' {
     imports: [
         TableModule.forRoot(),
         TableModule.withColumnComponents({
-            text: TableColumnTextComponent,
+            'button-action': TableColumnButtonActionComponent,
         }),
-        TableColumnTextModule,
+        TableColumnButtonActionModule,
     ],
 })
 export class RootModule {}
@@ -92,10 +83,25 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Table Column Text:
+Below you can find interfaces for the Table Column Button Action:
 
 ```ts
-interface TableColumnTextConfig {
+export type ButtonAttributes = Record<string, string>;
+export type ActionType = RegistryType<ActionsRegistry>;
+
+interface TableColumnButtonAction extends ActionConfig {
+    type: ActionType;
+    [k: string]: unknown;
+}
+
+interface TableColumnButtonActionConfig {
+    /** Bound to the @spryker/button-action inputs */
     text?: string;
+    action?: TableColumnButtonAction;
+    actionContext?: unknown;
+    variant?: ButtonVariant; // 'primary' - by default
+    shape?: ButtonShape; // 'default' - by default
+    size?: ButtonSize; // 'md' - by default
+    attrs?: ButtonAttributes; 
 }
 ```

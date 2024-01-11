@@ -5,6 +5,7 @@ description: This document describes how to edit merchant's profile details in t
 template: back-office-user-guide-template
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/profile/editing-merchants-profile-details.html
+  - /docs/pbc/all/merchant-management/202311.0/marketplace/edit-merchant-profiles.html
 related:
   - title: Marketplace Merchant feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html

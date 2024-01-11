@@ -12,3 +12,4 @@ template: back-office-user-guide-template
 
 * [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
 * [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
+* [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)

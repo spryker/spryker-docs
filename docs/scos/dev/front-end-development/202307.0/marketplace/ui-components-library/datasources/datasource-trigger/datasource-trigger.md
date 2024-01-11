@@ -58,7 +58,10 @@ export class SelectComponent implements DatasourceTriggerElement {
 
 The main module lets you register any `datasource.trigger` by key using the `withEvents()` static method. It assigns the object of datasources to `DatasourceEventTypesToken` under the hood.
 
-The `resolve()` method gets the trigger element using the `DatasourceTriggerElement` abstract class (token), finds a specific service from `DatasourceEventTypesToken` by `config.event` (from the argument) and returns observable with data (based on the data returned from trigger element) by `Datasource.resolve()`.
+The `resolve()` method does the following:
+1. Gets the trigger element using the `DatasourceTriggerElement` abstract class (token).
+2. Locates a specific service from `DatasourceEventTypesToken` by an argument from `config.event`.
+3. Based on the data returned from a trigger element, returns an observable with data  by `Datasource.resolve()`.
 
 ## Datasource
 

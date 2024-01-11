@@ -44,7 +44,7 @@ The following video explains how you can create an API key if it is not availabl
   </video>
 </figure>
 
-8. Optional: To track whether the products that have more UGC have a higher conversion rate than those without many ratings and reviews, in **sFTP Settings**, fill out the following fields:
+8. To send review request emails via Bazaarvoice to the customers who bought your products and to understand if the products with reviews lead to a higher conversion rate than those without many ratings and reviews, in **sFTP Settings**, fill out the following fields:
 
 | FIELD    |                    DESCRIPTION                     |
 |----------|:--------------------------------------------------:|

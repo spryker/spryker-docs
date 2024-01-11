@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-units
 originalArticleId: 4926546b-9757-4f24-91b1-05202d352c73
 redirect_from:
-  - /2021080/docs/retrieving-business-units
-  - /2021080/docs/en/retrieving-business-units
-  - /docs/retrieving-business-units
-  - /docs/en/retrieving-business-units
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/retrieving-business-units.html
@@ -67,10 +62,10 @@ To retrieve a business unit, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/company-business-units/mine | Retrieve business units of the current authenticated company user. |
-| GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
+| `GET http://glue.mysprykershop.com/company-business-units/mine` | Retrieve business units of the current authenticated company user. |
+| `GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
+| `GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
+| `GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
 
 #### Response
 

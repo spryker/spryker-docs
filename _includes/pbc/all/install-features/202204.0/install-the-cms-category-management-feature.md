@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the CMS + Category Management feature into a Spryker project.
+This document describes how to install the CMS + Category Management feature.
 
 ## Install feature core
 
@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | ---  |
-| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html)|
+| Category Management | {{page.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

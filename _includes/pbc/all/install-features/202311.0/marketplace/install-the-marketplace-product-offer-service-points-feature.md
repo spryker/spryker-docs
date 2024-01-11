@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Offer + Service Points feature into a Spryker project.
+This document describes how to install the Marketplace Product Offer + Service Points feature.
 
 ## Install feature core
 
@@ -12,8 +12,8 @@ Install the required features:
 
 | NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
 |------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Marketplace Product Offer    | {{page.version}} | [Marketplace Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
-| Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-product-offer-service-points-feature.html)                            |
+| Marketplace Product Offer    | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html) |
+| Product Offer + Service Points | {{page.version}} | [Install the Product Offer + Service Points feature](/docs/pbc/all/offer-management/{{page.version}}/unified-commerce/install-features/install-the-product-offer-service-points-feature.html)                            |
 
 ### 1) Set up behavior
 
@@ -21,27 +21,27 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                          | DESCRIPTION                                                                 | PREREQUISITES | NAMESPACE                                                                                    |
 |-------------------------------------------------|-----------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------|
-| MerchantProductOfferServiceStorageFilterPlugin  | Filters product offer services collection by active and approved merchants. |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage |
+| MerchantProductOfferServiceCollectionStorageFilterPlugin  | Filters product offer services collection by active and approved merchants. |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage |
 
-**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
+**src/Pyz/Zed/ProductOfferServicePointStorage/ProductOfferServicePointStorageDependencyProvider.php**
 
 ```php
 <?php
 
 namespace Pyz\Zed\ProductOfferServicePointStorage;
 
-use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceStorageFilterPlugin;
+use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferServicePointStorage\MerchantProductOfferServiceCollectionStorageFilterPlugin;
 use Spryker\Zed\ProductOfferServicePointStorage\ProductOfferServicePointStorageDependencyProvider as SprykerProductOfferServicePointStorageDependencyProvider;
 
 class ProductOfferServicePointStorageDependencyProvider extends SprykerProductOfferServicePointStorageDependencyProvider
 {
     /**
-     * @return list<\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependeency\Plugin\ProductOfferServiceStorageFilterPluginInterface>
+     * @return list<\Spryker\Zed\ProductOfferServicePointStorageExtension\Dependency\Plugin\ProductOfferServiceCollectionStorageFilterPluginInterface>
      */
-    protected function getProductOfferServiceStorageFilterPlugins(): array
+    protected function getProductOfferServiceCollectionStorageFilterPlugins(): array
     {
         return [
-            new MerchantProductOfferServiceStorageFilterPlugin(),
+            new MerchantProductOfferServiceCollectionStorageFilterPlugin(),
         ];
     }
 }

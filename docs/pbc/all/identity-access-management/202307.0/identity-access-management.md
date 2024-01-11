@@ -4,10 +4,6 @@ description:
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/logging-in-to-the-back-office
-  - /2021080/docs/en/logging-in-to-the-back-office
-  - /docs/logging-in-to-the-back-office
-  - /docs/en/logging-in-to-the-back-office
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html

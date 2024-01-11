@@ -15,7 +15,7 @@ Use-cases for example modules include showcasing functionality and demonstrating
 
 ### SCCOS: Showcase functionality
 
-SCCOS uses example modules to fill the gap with concrete example implementation for an abstract workflow, which is the delivery target. However, this concrete implementation is not intended for actual use by any specific customer or business use-case. Therefore, the core does not include the actual business logic, such as the React API example.
+SCCOS uses example modules to fill the gap with concrete example implementation for an abstract workflow, which is the delivery target. However, this concrete implementation is not intended for actual use by any specific customer or business use-case. Therefore, the core does not include the actual business logic.
 
 ### SCCOS: Unique business use-case
 
@@ -58,8 +58,8 @@ In contrast to Spryker SCCOS core modules, example modules do not adhere to stri
 * **Security:**
   Spryker ensures security for its production-grade core modules. While example modules might receive security updates, there is no urgency for fixes, as they are not intended for production use.
 * **Performance:**
-  * While we aim for good performance, optimizing example modules beyond existing best practices is not a priority.
+  While we aim for good performance, optimizing example modules beyond existing best practices is not a priority.
 * **Testability:**
-  * We might provide tests for example modules but they don't have high priority, as the modules aren't intended for production use or extension.
+  We might provide tests for example modules but they don't have high priority, as the modules aren't intended for production use or extension.
 
 In a nutshell, think of our example packages as a playground - they offer potential for fun and innovation, so explore them at your own pace.

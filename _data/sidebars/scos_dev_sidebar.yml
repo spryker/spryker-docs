@@ -1655,6 +1655,8 @@ entries:
                 include_versions:
                 - "202307.0"
                 - "202311.0"
+              - title: Favicon and PWA icons
+                url: /docs/scos/dev/front-end-development/oryx/building-applications/styling/oryx-favicon.html
 
         - title: Building pages
           nested:

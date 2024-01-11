@@ -23,31 +23,31 @@ To register an endpoint for interacting with entities in the database, you need 
 | --- | --- |
 | id_dynamic_entity_configuration | ID of the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
-| table_name | The name of the database table to operate on. |
+| table_name | Name of the database table to operate on. |
 | is_active | Defines if the endpoint can be interacted with. |
 | definition | A JSON-formatted string containing the configuration details for each field in the table. |
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
 
-We can create a relation by adding a new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. (Optional)
+You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. 
 The `spy_dynamic_entity_configuration_relation` contains the configuration of relations for dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION                                                                                   |
 | --- |-------------------------------------------------------------------------------------------------|
 | id_dynamic_entity_configuration_relation | ID of the configuration relation.                                                               |
-| fk_parent_dynamic_entity_configuration | The foreign key of the dynamic entity configuration for parent dynamic entity configuration ID. |
-| fk_child_dynamic_entity_configuration | The foreign key of the dynamic entity configuration for child dynamic entity configuration ID.  |
-| name | The name of the dynamic entity relation.                                                        |
+| fk_parent_dynamic_entity_configuration | Foreign key of the dynamic entity configuration for parent dynamic entity configuration ID. |
+| fk_child_dynamic_entity_configuration | Foreign key of the dynamic entity configuration for child dynamic entity configuration ID.  |
+| name | Name of the dynamic entity relation.                                                        |
 | is_editable | Defines if the endpoint can be editable.                                                        |
 
-The `spy_dynamic_entity_configuration_relation_field_mapping` contains the configuration of relation field mapping for dynamic entity endpoints and has the following columns:
+`spy_dynamic_entity_configuration_relation_field_mapping` contains the configuration of relation field mapping for dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION                                                                                              |
 | --- |------------------------------------------------------------------------------------------------------------|
 | id_dynamic_entity_configuration_relation_field_mapping | ID of the configuration relation field mapping.                                                            |
-| fk_dynamic_entity_configuration_relation | The foreign key of the dynamic entity configuration relation for dynamic entity configuration relation ID. |
-| child_field_name | The foreign field key name for the child data table.                                                       |
-| parent_field_name | The reference field name for the parent data table.                                                        |
+| fk_dynamic_entity_configuration_relation | Foreign key of the dynamic entity configuration relation for dynamic entity configuration relation ID. |
+| child_field_name | Foreign field key name for the child data table.                                                       |
+| parent_field_name | Reference field name for the parent data table.                                                        |
 
 The following example shows a possible value of the `spy_dynamic_entity_configuration.definition` field configured for the `spy_country` table:
 

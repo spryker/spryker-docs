@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Favicons"
 description: 
-last_updated: November 27, 2023
+last_updated: January 11, 2024
 template: concept-topic-template
 ---
 
@@ -68,3 +68,5 @@ export class CustomStorefrontMetaInitializer extends StorefrontMetaInitializer {
 }
 ```
 The `PageMetaService` is used for both global meta definitions as well as individual pages such as a meta tags (e.g. robots) or links (e.g. canonical URL). 
+
+You can of course neglect the page service implementation and add the meta tags in your custom index.html file. The main reason for Oryx to not do this, is that favicons, like anything in Oryx, can be provided dynamically. Favicons could be data driven, e.g. different per brand. 

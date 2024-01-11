@@ -80,7 +80,7 @@ Request sample: `GET https://glue-backend.de.b2c.demo-spryker.com/push-notificat
 
 
 ***
-`GET` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/*{% raw %}{{push_notification_provider_id}}{% endraw %}***
+`GET` **{% raw %}*{{backend_url}}*{% endraw %}/push-notification-providers/*{% raw %}*{{push_notification_provider_id}}{% endraw %}***
 ***
 
 

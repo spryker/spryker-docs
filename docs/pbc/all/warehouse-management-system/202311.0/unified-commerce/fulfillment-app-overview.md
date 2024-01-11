@@ -1,16 +1,16 @@
 ---
-title: Fulfillment App feature overview
+title: Fulfillment App overview
 description: Fulfillment App streamlines the process of fulfilling orders.
 last_updated: Oct 3, 2023
 template: concept-topic-template
 ---
 
-The *Fulfillment App* feature streamlines the process of fulfilling orders by introducing the Fulfillment App and the warehouse user.
+*Fulfillment App* streamlines the process of fulfilling orders.
 
 
 ## Warehouse user
 
-A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, they don't have access to the Back Office. Instead,  they are using the Fulfillment App.
+A *warehouse user* is a person that works in one or more warehouses to fulfill orders. They are a regular Back Office user. However, they don't have access to the Back Office. Instead, they are using Fulfillment App.
 
 In the Back Office, to create a warehouse user, you need to select a respective option when [creating](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html) or [editing](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html) a regular Back Office user.
 
@@ -43,7 +43,7 @@ Warehouse allocation shouldn't be confused with the reservation process, meaning
 
 ## Warehouse picklists
 
-A *warehouse picklist* is a document available in the Fulfillment App that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
+A *warehouse picklist* is a document available in Fulfillment App that contains a list of items to be picked and shipped to fulfill and order. It includes the following information:
 * Product name
 * Product image
 * Quantity to be picked
@@ -76,7 +76,7 @@ Picking is semi-automated and follows the steps:
 
 ## Fulfillment App state machine
 
-The feature is shipped with exemplary picking subprocesses for the state machine. You can check them in the Back Office&nbsp;<span aria-label="and then">></span>**Administration**&nbsp;<span aria-label="and then">></span>**OMS**.
+The Warehouse Picking feature is shipped with exemplary picking subprocesses for the state machine. You can check them in the Back Office&nbsp;<span aria-label="and then">></span>**Administration**&nbsp;<span aria-label="and then">></span>**OMS**.
 
 | Demo Shop | Subprocess |
 | - | - |
@@ -85,11 +85,11 @@ The feature is shipped with exemplary picking subprocesses for the state machine
 
 ## Push notifications
 
-The Fulfillment App supports push notifications. This lets warehouse users receive new picklists without having to refresh the application.
+Fulfillment App supports push notifications. This lets warehouse users receive new picklists without having to refresh the application.
 
 ## Offline mode
 
-To reduce costs and improve flexibility, Fulfillment App support offline mode. Warehouse users can perform picking tasks when regardless of internet connectivity. Any changes performed in offline mode are synchronized when you get online. This is relevant for warehouses in remote areas or big warehouses that do not have full network coverage.
+To reduce costs and improve flexibility, Fulfillment App support offline mode. Warehouse users can perform picking tasks even without internet connectivity. Any changes performed in offline mode are synchronized when they get online. This is relevant for warehouses in remote areas or big warehouses that do not have full network coverage.
 
 The offline mode is enabled by the [Push Notification](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html) feature.
 

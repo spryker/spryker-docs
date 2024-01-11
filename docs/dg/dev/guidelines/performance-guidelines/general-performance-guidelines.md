@@ -94,6 +94,27 @@ $config[\Spryker\Shared\Config\ConfigConstants::ENABLE_WEB_PROFILER] = false;
 
 ```
 
+## Disable automatic queue creation
+
+During the synchronization part of Publish & Sync, each time the `queue:task:start QUEUE-NAME` command is started, the RabbitMQ client tries to create all the configured queues and exchanges: `\Spryker\Client\RabbitMq\Model\Connection\Connection::__construct`. It takes up to 25% of CPU time per run. The effect becomes more significant for multi-store setups with each additional store.
+
+For backward compatibility reasons, `RabbitMqEnv::RABBITMQ_ENABLE_RUNTIME_SETTING_UP` is enabled by default in the module configuration class: `\Spryker\Client\RabbitMq\RabbitMqConfig::isRuntimeSettingUpEnabled`. For production environments, we recommend disabling it by setting it to `false` in `config_default.php` or another config file.
+
+Side effects:
+- The application doesn't try to recreate queues and exchanges “on the fly” while interacting with RabbitMQ. If a queue is deleted, and the application attempts to access it, there will be an exception.
+- The only way to create queues and exchanges to configure RabbitMQ is to run the `console queue:setup` CLI command defined in `\Spryker\Zed\RabbitMq\Communication\Console\QueueSetupConsole`. Make sure to *adjust your deploy scripts* accordingly.
+
+## Disable INFO event logs
+
+Publish & Sync process can work slower and generate hundreds of megabytes of `INFO`-level logs, which is good for troubleshooting and debugging, but not appropriate for production environments. By default `INFO` logs are enabled and generate about 60 MB to 100 MB per each `queue:task:run ...` execution with 80-90% of CPU time only to write logs.
+
+There are two options to avoid this in production environments:
+
+* Disable event logs using one of the following:
+  * Set `EventConstants::LOG_FILE_PATH` to `null`.
+  * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
+* Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+
 ## Activate Twig compiler
 
 Twig files can be precompiled into PHP classes to speed the performance up. This behavior can be activated in the configuration. We highly recommend using the `FORCE_BYTECODE_INVALIDATION` option. Otherwise, Opcache may contain outdated content, as the files are modified during runtime.

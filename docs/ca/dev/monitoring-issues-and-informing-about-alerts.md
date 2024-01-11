@@ -1,12 +1,12 @@
 ---
 title: Monitoring issues and informing about alerts
-DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on PaaS
+DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
 ---
 
-Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This document explains in details how monitoring and alerting works on Spryker PaaS.
+Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This document explains in details how monitoring and alerting works on Spryker Cloud Commerce OS.
 
 ## What is monitored?
 
@@ -106,4 +106,4 @@ To sum up, we proactively inform you about infrastructure issues where your coll
 
 ## Want more insights?
 
-We offer New Relic APM, so you can also monitor applications and configure alerts  and monitoring to fulfill your needs. If you want to use New Relic APM, [contact support](https://spryker.force.com/support/s/).
+We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. If you want to request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

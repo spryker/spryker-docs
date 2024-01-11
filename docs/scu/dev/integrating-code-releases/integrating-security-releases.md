@@ -28,6 +28,8 @@ The Upgrader creates PR for security releases in the same way it does for the re
 
 Automatic installation of security releases is only available for minor releases. The major releases require a manual installation.
 
+Major releases may come with backports to support backward compatibility. In such cases, they will be applied as replacements for major changes.
+
 ## Checking for available security fixes
 
 To check for available security fixes for your project, [run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).

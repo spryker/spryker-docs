@@ -2,7 +2,7 @@ name: Build changelog
 on:
   push:
     tags:
-      - "10.2023"
+      - "12.2023"
 
 jobs:
   release:
@@ -31,8 +31,8 @@ jobs:
                 }
               ]
             }'
-          fromTag: "09.2023"
-          toTag: "10.2023"
+          fromTag: "11.2023"
+          toTag: "12.2023"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

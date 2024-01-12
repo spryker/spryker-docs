@@ -1569,10 +1569,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
-              - title: Import and export data
-                nested:
-                  - title: "Import file details: glossary.csv"
-                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -1585,14 +1581,32 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+          - title: Import and export data
+            nested:
+              - title: "Import file details: glossary.csv"
+                url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Add translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
-          - title: Retrieve store configuration using Glue API
-            url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve store configuration using Glue API
+                url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+              - title: Manage push notification providers
+                nested:
+                  - title: Add push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html
+                  - title: Retrieve push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html
+                  - title: Update push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html
+                  - title: Delete push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html
+              - title: Add push notification subscriptions
+                url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
           - title: Third-party integrations
             nested:
               - title: Customer service
@@ -3535,6 +3549,27 @@ entries:
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-customer-account-management-feature-overview.html
               - title: Service Points + Order Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-order-management-feature.html
+              - title: Click & Collect domains
+                url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-domains.html
+                nested:
+                  - title: Marketplace Merchant Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html
+                  - title: Product Offer Shipment Type Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html
+                  - title: Product Offer Shipment Type subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html
+                  - title: Service Point Cart subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html
+                  - title: Service Points domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-points-domain.html
+                  - title: Shipment Type Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html
+                  - title: Shipment Types domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html
               - title: Enable Click & Collect
                 url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
               - title: Install features
@@ -4008,10 +4043,12 @@ entries:
             include_versions:
             - "202311.0"
             nested:
-              - title: Fulfillment App feature overview
-                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
+              - title: Fulfillment App overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-overview.html
               - title: Warehouse Picking feature overview
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html
+              - title: Warehouse User Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-user-management-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -4022,6 +4059,8 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
+              - title: Set up Fulfillment App
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html                  
               - title: "Back Office: Assign and deassign warehouses from warehouse users"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"

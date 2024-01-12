@@ -25,7 +25,7 @@ entries:
             url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html
       - title: Set up the message broker
         url: /docs/acp/user/develop-an-app/set-up-the-message-broker.html
-      - title: Debug an app with xdebug
+      - title: Debug an app with XDebug
         url: /docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html
       - title: App manifest
         url: /docs/acp/user/app-manifest.html

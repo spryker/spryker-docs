@@ -35,8 +35,9 @@ Make sure that the following modules have been installed:
 | MerchantSearch            | vendor/spryker/merchant-search              |
 | MerchantSearchExtension   | vendor/spryker/merchant-search-extension    |
 | MerchantUser              | vendor/spryker/merchant-user                |
-| MerchantUserGui           | 	vendor/spryker/merchant-user-gui           |
+| MerchantUserGui           | vendor/spryker/merchant-user-gui            |
 | MerchantStorage           | vendor/spryker/merchant-storage             |
+| OauthMerchantUser         | vendor/spryker/oauth-merchant-user          |
 
 {% endinfo_block %}
 
@@ -177,7 +178,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                               | DESCRIPTION                                                                                              | PREREQUISITES | NAMESPACE                                                            |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| MerchantProfileExpanderPlugin                        | Expands merchant with profile data.                                                                      |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
+| MerchantProfileMerchantBulkExpanderPlugin            | Expands merchants with profile data.                                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostCreatePlugin              | Creates merchant profile on merchant create action.                                                      |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostUpdatePlugin              | Updates merchant profile on merchant update action.m                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileContactPersonFormTabExpanderPlugin    | Adds an extra tab to merchant edit and create forms for editing and creating contact person data.        |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
@@ -198,7 +199,7 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Zed\Merchant;
 
 use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
-use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileExpanderPlugin;
+use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantBulkExpanderPlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantPostCreatePlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantPostUpdatePlugin;
   use Spryker\Zed\MerchantUser\Communication\Plugin\Merchant\SyncMerchantUsersStatusMerchantPostUpdatePlugin;
@@ -225,14 +226,14 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
             new SyncMerchantUsersStatusMerchantPostUpdatePlugin(),
         ];
     }
-
+   
     /**
-     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
+     * @return list<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantBulkExpanderPluginInterface>
      */
-    protected function getMerchantExpanderPlugins(): array
+    protected function getMerchantBulkExpanderPlugins(): array
     {
         return [
-            new MerchantProfileExpanderPlugin(),
+            new MerchantProfileMerchantBulkExpanderPlugin(),
         ];
     }
 }

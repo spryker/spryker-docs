@@ -9,6 +9,10 @@ redirect_from:
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
 
+## Guidlines
+Development guidelines for ACP APP contains general rules how to desigtn app and write code for it.
+ACP Apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework) that is based on the Spryker Framework as a result we recomend to follow the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+
 ## Prerequisites
 
 Before you begin, ensure that you have the following prerequisites in place:
@@ -201,36 +205,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/configure' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: en-US, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw '{
-    "data": {
-        "type": "configuration",
-        "attributes": {
-            "configuration": "{\"clientId\":\"clientId\",\"clientSecret\":\"clientSecret\",\"securityUri\":\"securityUri\",\"transactionCallsUri\":\"transactionCallsUri\",\"isActive\": false,\"isInvoicingEnabled\": false}"
-        }
-    }
-}'
-```
-
-Now, check if your database contains the newly created configuration in the `spy_app_config` table.
-
-### Test the /private/disconnect endpoint
-
-```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/disconnect' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: de-DE, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw ''
-```
-
-Now, check if the previously created configuration in the spy_app_config table has been removed from your database.
+Please follow [these steps](/docs/acp/user/app-connect.html#test-the-endpoints).
 
 ## Implement business logic
 

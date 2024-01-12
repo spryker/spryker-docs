@@ -44,9 +44,9 @@ The contact person is the only contact of the merchant with the Marketplace admi
 |-|-|-|
 | Role | Role in the company/organization the contact person performs. |   |
 | Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr).  |   |
-| First Name | First name of the contact person. The first name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Last Name | Last name of the contact person. The last name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
-| Email | Email address of the contact person. This email is taken from the [General tab of the Merchant Profile in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
+| First Name | First name of the contact person. | &check; |
+| Last Name | Last name of the contact person.  | &check; |
+| Email | Email address of the contact person. | &check; |
 | Phone Number | Phone number of the contact person. |   |
 
 #### Company

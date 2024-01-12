@@ -53,6 +53,6 @@ If a customer selects a link of the cart that's not available, the _This cart is
 |---|
 | [Install the Persistent Cart Sharing feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html) |
 | [Install the Persistent Cart Sharing + Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html) |
-| [Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| [Install the Customer Account Management feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
 | [Install the Resource Sharing feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-resource-sharing-feature.html) |
 | [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html) |

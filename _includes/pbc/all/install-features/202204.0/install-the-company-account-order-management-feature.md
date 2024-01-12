@@ -317,7 +317,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Customer Account Management | {{page.version}} | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 | Company Account | {{page.version}} | [Install the Company account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)
 
 Append glossary according to your configuration:

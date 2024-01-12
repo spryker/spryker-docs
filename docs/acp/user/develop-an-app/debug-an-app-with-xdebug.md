@@ -1,16 +1,16 @@
 ---
-title: Debug an app with Xdebug
-Descriptions: Learn how to use Xdebug for your app
+title: Debug an app with XDebug
+Descriptions: Learn how to use XDebug for your app
 template: howto-guide-template
 ---
 
-This document describes how to set up and use Xdebug to debug your app. 
+This document describes how to set up and use XDebug to debug your app. 
 
 Keep in mind that the steps described here may vary slightly depending on your specific development environment; however, they should still assist you in setting up XDebug for debugging in most scenarios.
 
 ## Set up DockerSDK with XDebug
 
-To start a testing container with Xdebug enabled (disabled in the default container), execute the following command:
+To start a testing container with XDebug enabled (disabled in the default container), execute the following command:
 
 ```bash
 docker/sdk testing -x

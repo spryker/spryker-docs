@@ -9,13 +9,11 @@ redirect_from:
 
 `AppFeature` is a higher level collection of lower-level primitives, such as the following:
 
-<!-- TODO: Link to components -->
-- Components
-<!-- TODO: Link to providers -->
-- Providers
+
+- Components <!-- TODO: Link to components -->
+- [Providers](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)
 - [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
-<!-- TODO: Link to resources -->
-- Resources
+- Resources <!-- TODO: Link to resources -->
 - [Feature options](#feature-options)
 - [Builder options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
 

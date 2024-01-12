@@ -1202,9 +1202,10 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | If true, the customer is redirected to an external URL. |
 
-{% include pbc/all/glue-api-guides/202311.0/oreder-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/oreder-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md -->
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
+{% include pbc/all/glue-api-guides/202311.0/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/orders-response-attributes.md -->
+
 
 ## Possible errors
 

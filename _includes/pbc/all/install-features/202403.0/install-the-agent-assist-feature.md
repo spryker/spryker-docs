@@ -382,8 +382,8 @@ Enable the following behaviors by registering the plugins:
 | SaveAgentSessionSecurityPlugin                                                | Extends security builder event dispatcher with save session agent listener.                               | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
 | ValidateAgentSessionSecurityPlugin                                            | Extends security service with agent session validator listener.                                           | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
 | SessionAgentValidationSecurityAuthenticationListenerFactoryTypeExpanderPlugin | Expands security authentication listener factory types list with agent's session validator factory type.  | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
-| SessionRedisSessionAgentSaverPlugin                                           | Saves agent's session data to Redis storage.                                                              | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
-| SessionRedisSessionAgentValidatorPlugin                                       | Validates agent's session data in Redis storage.                                                          | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionRedisSessionAgentSaverPlugin                                           | Saves agent's session data to the Redis storage.                                                              | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionRedisSessionAgentValidatorPlugin                                       | Validates agent's session data in the Redis storage.                                                          | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
 | SessionFileSessionAgentSaverPlugin                                            | Saves agent's session data to a file.                                                                     | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
 | SessionFileSessionAgentValidatorPlugin                                        | Validates agent's session data in a file.                                                                 | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
 
@@ -426,7 +426,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if session data is store in Redis.
+Apply the following changes only if session data is stored in Redis.
 
 {% endinfo_block %}
 
@@ -466,7 +466,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Ensure that the following Redis key exists and contains data:
+2. Ensure that the following Redis key exists and contains the following data:
    `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
 3. Changed the session data to an invalid value.
 4. Verify that the agent was logged out.
@@ -475,7 +475,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if session data is store in a file.
+Apply the following changes only if session data is stored in a file.
 
 {% endinfo_block %}
 
@@ -515,7 +515,7 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Ensure that a file in the following path exists and contains data:
+2. Ensure that a file in the following path exists and contains the following data:
    `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
 3. Changed the session data to an invalid value.
 4. Verify that the agent was logged out.

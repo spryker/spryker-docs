@@ -154,7 +154,7 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 ***src/Pyz/Zed/SecurityGui/SecurityGuiConfig.php***
 
-Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `IS_BACKOFFICE_USER_SECURITY_BLOCKER_ENABLED` to `true;`
+Optional: For security reasons, we recommend to enable the security blocker feature that will block recurring attempts of resetting a password by setting `IS_BACKOFFICE_USER_SECURITY_BLOCKER_ENABLED` to `true;`:
 
 ```php
 <?php
@@ -174,7 +174,7 @@ class SecurityGuiConfig extends SprykerSecurityGuiConfig
 
 ### Set up an authentication strategy
 
-Spryker offers two authentication strategies out of the box:
+By default, Spryker offers two authentication strategies:
 
 * `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it is created automatically based on the data from an external service.
 * `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: It accepts only existing users for authentication.

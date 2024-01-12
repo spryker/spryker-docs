@@ -8,8 +8,6 @@ redirect_from:
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as secure login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, and debug.
 
-
-
 To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
 
 
@@ -57,7 +55,7 @@ The following schema illustrates the Marketplace MerchantPortal Core domain mode
 
 ![Domain model](https://confluence-connect.gliffy.net/embed/image/2f5bae0d-8b37-45f5-ad08-06ca5c0c562d.png?utm_medium=live&utm_source=custom)
 
-## Gui Table
+## Gui table
 
 `GuiTable` is a Spryker infrastructure component, which displays data as tables and provides search, filtering, sorting, and various interactions with table rows.
 `GuiTable` components are widely used in the Marketplace Merchant Portal for displaying orders, offers, and products.

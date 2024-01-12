@@ -540,7 +540,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 ```
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
@@ -693,7 +693,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
@@ -1028,7 +1028,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that feature is set up correctly go throw the following steps:
+Verify the feature is set up correctly:
 
 1. [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html).
 
@@ -1042,38 +1042,46 @@ Check that the response contains all the necessary data.
 
 {% info_block warningBox "Verification" %}
 
-To verify that all the required data is provided in the access token, at [jwt.io](https://jwt.io/), decode the token and check that, in the `sub` property of the payload data, the required `customer_reference`, `id_customer`, `id_company_user`, and permissions are present.
+To verify that all the required data is provided in the access token, decode the token at [jwt.io](https://jwt.io/). The `sub` property of the payload data should contain the following:
+* `customer_reference`
+* `id_customer`
+* `id_company_user`
+* Permissions
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the permission data is filtered out based on the record in the spy_oauth_access_token table. To do so, run the following SQL query and check that the result doesn't have any `permissions-related` data from the `user_identifier` column.
+To verify that the permission data is filtered out based on the record in the `spy_oauth_access_token` table, run the following SQL query:
 
 ```sql
 SELECT * FROM spy_oauth_access_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
 
+The result shouldn't have any permissions-related data from the `user_identifier` column.
+
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the permission data is filtered out based on the record in the `spy_oauth_refresh_token` table. To do so, run the following SQL query and check that the result doesn't have any permissions-related data from the `user_identifier` column.
+To verify that the permission data is filtered out based on the record in the `spy_oauth_refresh_token` table, run the following SQL query:
 
 ```sql
 SELECT * FROM spy_oauth_refresh_token WHERE user_identifier LIKE '%{"id_company_user":"8da78283-e629-5667-9f84-e13207a7aef9"%';
 ```
 
+The result shouldn't have any permissions-related data from the `user_identifier` column.
+
 {% endinfo_block %}
 
 
 
 {% info_block warningBox "Verification" %}
 
-To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check that a non-company user can't access the resources listed in the `CompanyUsersRestApiConfig::COMPANY_USER_RESOURCES`, and the following error is returned:
+To verify that `CompanyUserRestUserValidatorPlugin` is set up correctly, try to access a resource listed in `CompanyUsersRestApiConfig::COMPANY_USER_RESOURCES` as a non-company user. The following error should be returned:
 
-```php
+```json
 {
     "errors": [
         {
@@ -1090,29 +1098,50 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
 {% info_block warningBox "Verification" %}
 
 - Send the `GET https://glue.mysprykershop.com/companies/mine` request. Make sure that the response contains a collection of resources with the companies your current company user belongs to.
+
 - Send the `GET https://glue.mysprykershop.com/companies/{% raw %}{{{% endraw %}company_uuid{% raw %}}}{% endraw %}` request. Make sure that the response contains only the company resource your current company user belongs to.
-- Send the `GET https://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses request`. Make sure that the response contains:
+
+- Send the `GET https://glue.mysprykershop.com/company-business-units/mine?include=companies,company-business-unit-addresses request`. Make sure that the response contains the following:
   - The collection of resources with the company business units your current company user belongs to.
   - `companies` and `addresses` relationships.
+
 - Send the `GET https://glue.mysprykershop.com/company-business-units/{% raw %}{{{% endraw %}company_business_unit_uuid{% raw %}}}{% endraw %}?include=companies,company-business-unit-addresses` request. Make sure that the response contains:
   - Only the company business unit resource that your current company user belongs to.
   - `companies` and `addresses` relationships.
-- Send the `GET https://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}` request. Make sure that response contains only the company business unit address of the business unit your current company user belongs to has.
-- Send the `GET https://glue.mysprykershop.com/company-roles/mine?include=companies` request. Make sure that the response contains:
+
+- Send the `GET https://glue.mysprykershop.com/company-business-unit-addresses/{% raw %}{{{% endraw %}company_business_unit_address_uuid{% raw %}}}{% endraw %}` request. Make sure that response contains only the company business unit address of the business unit your current company user belongs to.
+
+- Send the `GET https://glue.mysprykershop.com/company-roles/mine?include=companies` request. Make sure that the response contains the following:
   - All the company roles assigned to your current company user.
   - The `companies` relationship.
-- Send the `GET https://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies` request. Make sure that the response contains:
+
+- Send the `GET https://glue.mysprykershop.com/company-roles/{% raw %}{{{% endraw %}company_role_uuid{% raw %}}}{% endraw %}?include=companies` request. Make sure that the response contains the following:
   - Only the company role resource assigned to your current company user.
   - The `companies` relationship.
-- Send the `GET https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+
+- Send the `GET https://glue.mysprykershop.com/company-users?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
   - All the company users of the company your current company user belong to.
-  - The `company-roles`, `companies`, `company-business-units`, and `customers`relationships.
-- Send the `GET https://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+  - Relationships:
+    * `company-roles`
+    * `companies`
+    * `company-business-units`
+    * `customers`
+
+- Send the `GET https://glue.mysprykershop.com/company-users/mine?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
     - A collection of resources with all the company users that the current user can impersonate as.
-    - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships.
-- Send the `GET https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains:
+    - Relationships:
+      * `company-roles`
+      * `companies`
+      * `company-business-units`
+      * `customers`
+
+- Send the `GET https://glue.mysprykershop.com/company-users/{% raw %}{{{% endraw %}company_user_uuid{% raw %}}}{% endraw %}?include=company-roles,companies,company-business-units,customers` request. Make sure that the response contains the following:
     - One company user
-    - The `company-roles`, `companies`, `company-business-units`, and `customers` relationships
+    - Relationships:
+      * `company-roles`
+      * `companies`
+      * `company-business-units`
+      * `customers`
 
 {% endinfo_block %}
 
@@ -1120,13 +1149,14 @@ To make sure the `CompanyUserRestUserValidatorPlugin` is set up correctly, check
 
 Verify the following using merchant prices and merchant threshold:
 
-- Make sure the company account information is saved during order placement: send the `POST https://glue.mysprykershop.com/checkout` request with a company user access token and check the company-related restrictions are applied to your order.
-- Make sure the company account information is used during cart operations: send the `POST https://glue.mysprykershop.com/carts/:uuid/items` request with company user access token and make sure the company-related restrictions are applied to your cart.
+- To verify that the company account information is saved during order placement, send the `POST https://glue.mysprykershop.com/checkout` request with a company user access token. Make sure company-related restrictions are applied to the order.
+- To verify that the company account information is used during cart operations, send the `POST https://glue.mysprykershop.com/carts/:uuid/items` request with a company user access token. Make sure company-related restrictions are applied to the cart.
 
 {% endinfo_block %}
+
 {% info_block warningBox "Verification" %}
 
 
-To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request and check that the response contains the `company-business-unit-addresses` resource.
+To verify that `CompanyBusinessUnitAddressByCheckoutDataResourceRelationshipPlugin` is activated, send the `POST https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses` request. Make sure the response contains the `company-business-unit-addresses` resource.
 
 {% endinfo_block %}

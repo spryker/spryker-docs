@@ -43,8 +43,8 @@ Now you can run `npx nx run storefront:serve` to start the development server fo
 
 Useful commands:
 - Prettier: 
-  - check your code - `npm run format:check`
-  - fix your code - `npm run format:write`.
+  - Check the code - `npm run format:check`
+  - Fix the code - `npm run format:write`
 - Linters: 
   - Typescript - `npx nx run-many --target=lint --all --parallel=2` 
   - Styles - `npx nx run-many --target=stylelint --all --parallel=2`
@@ -56,5 +56,3 @@ Useful commands:
   - Open Cypress test runner - `npm run sf:e2e:open`  
 
 What's next - read about [Oryx packages structure](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-packages.html).
-
-

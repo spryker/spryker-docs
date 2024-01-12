@@ -145,7 +145,7 @@ Every app requires default endpoints for the App Registry Service. This service 
 To be able to use your Mini Framework as an app, add a new Spryker module:
 
 ```bash
-docker/sdk cli composer require 'spryker/app-kernel:dev-feature/without-encryption\ as\ 0.1.0  spryker/message-broker-aws'
+docker/sdk cli composer require 'spryker/app-kernel:^0.1.1  spryker/message-broker-aws'
 ```
 
 The `spryker/app-kernel` module transforms the Mini-Framework into an app. It provides SyncAPI schema and code for configuration and disconnection, as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 

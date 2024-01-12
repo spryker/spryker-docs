@@ -7,15 +7,15 @@ template: concept-topic-template
 
 The Spryker *core modules* provide generic, reusable functionality that benefits a wide range of use cases. These modules offer a foundation for customization and serve as versatile building blocks.
 
-*Example modules* in contrast, are designed for specific, one-off use-cases. Their functionality is tightly aligned with unique business requirements and isn't suitable for broad reuse. These modules serve as specialized, project-specific solutions. See the [Product Warehouse Allocation Example](https://github.com/spryker/product-warehouse-allocation-example) module.
+*Example modules*, in contrast, are designed for specific, one-off use cases. Their functionality is tightly aligned with unique business requirements and isn't suitable for broad reuse. These modules serve as specialized, project-specific solutions. See the [Product Warehouse Allocation Example](https://github.com/spryker/product-warehouse-allocation-example) module.
 
 ## Example module use-cases
 
-Use-cases for example modules include showcasing functionality and demonstrating specific use cases.
+Use cases for example modules include showcasing functionality and demonstrating specific use cases.
 
 ### SCCOS: Showcase functionality
 
-SCCOS uses example modules to fill the gap with concrete example implementation for an abstract workflow, which is the delivery target. However, this concrete implementation is not intended for actual use by any specific customer or business use-case. Therefore, the core does not include the actual business logic.
+SCCOS uses example modules to fill the gap with concrete example implementation for an abstract workflow, which is the delivery target. However, this concrete implementation is not intended for actual use by any specific customer or business use case. Therefore, the core does not include the actual business logic.
 
 ### SCCOS: Unique business use-case
 
@@ -24,7 +24,7 @@ SCCOS uses example modules to implement functionality that is tailored to specif
 ## What Spryker delivers
 
 * **Compliance:**
-  * All example modules will be part of the Spyker Example organization on Github.
+  * All example modules will be part of the Spyker Example organization on GitHub.
   * All example modules will be released as standalone modules.
   * All example modules will be released under the MIT license.
 * **Uniformity:**
@@ -60,6 +60,6 @@ In contrast to Spryker SCCOS core modules, example modules do not adhere to stri
 * **Performance:**
   While we aim for good performance, optimizing example modules beyond existing best practices is not a priority.
 * **Testability:**
-  We might provide tests for example modules but they don't have high priority, as the modules aren't intended for production use or extension.
+  We might provide tests for example modules, but they don't have high priority, as the modules aren't intended for production use or extension.
 
 In a nutshell, think of our example packages as a playground - they offer potential for fun and innovation, so explore them at your own pace.

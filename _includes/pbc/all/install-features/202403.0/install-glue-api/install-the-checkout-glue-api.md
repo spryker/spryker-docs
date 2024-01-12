@@ -959,10 +959,11 @@ Activate the following plugins:
 
 | PLUGIN                                | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                |
 |---------------------------------------|---------------------------------------------------------|---------------|----------------------------------------------------------|
-| CountriesCheckoutDataValidatorPlugin  | Verifies if countries can be found by countryIso2Codes. | None          | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi |
+| CountriesCheckoutDataValidatorPlugin  | Verifies if countries can be found by countryIso2Codes. |           | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi |
 
 {% info_block warningBox "Verification" %}
-To make sure that `CountriesCheckoutDataValidatorPlugin` has been activated, send the `POST https://glue.mysprykershop.com/checkout-data` request with dummy billing address country code and check that the following error is returned:
+
+* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid billing address country code. Make sure the following error is returned:
 
 ```json
 {
@@ -976,7 +977,7 @@ To make sure that `CountriesCheckoutDataValidatorPlugin` has been activated, sen
 }
 ```
 
-In case when shipping address is provided, the error message will be the following:
+* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid shipping address country code. Make sure the following error is returned:
 
 ```json
 {

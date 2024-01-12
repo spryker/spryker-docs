@@ -6,27 +6,27 @@ The following feature integration guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-This document describes how to install the Company Account feature API.
+This document describes how to install the Company Account Glue API.
 
 ## Prerequisites
 
-To start the feature integration, overview and install the necessary features:
+Install the following features:
 
 | FEATURE OR GLUE API                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                               |
 |---------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Glue API: Spryker Core                | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                                    |
-| Company Account                       | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)   |
-| Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
-| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                       |
+| Company Account                       | {{page.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)   |
+| Glue API: Customer Account Management | {{page.version}} | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html) |
+| Glue API: Glue Application            | {{page.version}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                       |
 | UUID Generation Console               | {{page.version}} | [Install the Uuid Generation Console feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-uuid-generation-console-feature.html)  |
 | Glue API: Shipment                    | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                              |
 | Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)                                                  |
 
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.2.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.2.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.2.0" --update-with-dependencies
@@ -34,7 +34,7 @@ composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-compa
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                              | EXPECTED DIRECTORY                                      |
 | ----------------------------------- | ------------------------------------------------------- |
@@ -52,9 +52,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up configuration
 
-### Configure the resources available for company users
-
-Add the following resource to the list of resources that are accessible only for company users:
+1. Add the following resource to the list of resources that are accessible only for company users:
 
 **src/Pyz/Glue/CompanyUsersRestApi/CompanyUsersRestApiConfig.php**
 
@@ -75,7 +73,7 @@ class CompanyUsersRestApiConfig extends SprykerCompanyUsersRestApiConfig
 }
 ```
 
-### Define a list of properties in a `RestAddressTransfer` that should trigger validation skipping for checkout requests
+2. Define a list of properties in a `RestAddressTransfer` that should trigger validation skipping for checkout requests:
 
 ```php
 <?php
@@ -198,7 +196,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -206,7 +204,7 @@ Make sure that in the database the configured data has been added to the `spy_gl
 
 Set up the following behaviors.
 
-### Generate UUIDs for the existing company records without UUIDs
+### Generate UUIDs company records
 
 Generate the `UUID` column values in the `spy_company` database table:
 
@@ -217,17 +215,19 @@ console uuid:generate Company spy_company
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the `spy_company` table, the `UUID` field has populated for all the records. To do so, run the following SQL query and check that the result contains 0 records:
+To verify that the `UUID` field in the `spy_company` table, has been populated for all the records, run the following SQL query:
 
 ```sql
 select count(*) from spy_company where uuid is NULL;
 ```
 
+The result should contain 0 records.
+
 {% endinfo_block %}
 
-### Generate UUIDs for the existing company business unit records without UUID
+### Generate UUIDs company business unit records
 
-Run the following command:
+Generate UUIDs for the existing company business unit records without UUID:
 
 ```bash
 console uuid:generate CompanyBusinessUnit spy_company_business_unit
@@ -236,17 +236,19 @@ console uuid:generate CompanyBusinessUnit spy_company_business_unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the `spy_company_business_unit` table, the `UUID` field has been populated for all the records. To do so, run the following SQL query and check that the result contains `0` records:
+To verify that the `UUID` field in the `spy_company_business_unit` table has been populated for all the records, run the following SQL query:
 
 ```sql
 select count(*) from spy_company_business_unit where uuid is NULL;
 ```
 
+The result should contain 0 records.
+
 {% endinfo_block %}
 
-### Generate UUIDs for the existing company role records without UUID
+### Generate UUIDs company role records
 
-Run the following command:
+Generate UUIDs for the existing company role records without UUID:
 
 ```bash
 console uuid:generate CompanyRole spy_company_role
@@ -255,17 +257,19 @@ console uuid:generate CompanyRole spy_company_role
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the `spy_company_role` table, the `UUID` field has been populated for all the records. To do so, run the following SQL query and check that the result contains `0` records:
+To verify that the `UUID` field in the `spy_company_role` table has been populated for all the records, run the following SQL query:
 
 ```sql
 select count(*) from spy_company_role where uuid is NULL;
 ```
 
+The result should be 0 records.
+
 {% endinfo_block %}
 
-### Generate UUIDs for the existing Company Business Unit Address records without UUID
+### Generate UUIDs company business unit address records
 
-Run the following command:
+Generate UUIDs for the existing company business unit address records without UUID:
 
 ```bash
 console uuid:generate CompanyUnitAddress spy_company_unit_address
@@ -273,17 +277,20 @@ console uuid:generate CompanyUnitAddress spy_company_unit_address
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the `spy_company_unit_address` table, the `UUID` field has been populated for all the records. To do so, run the following SQL query and check that the result contains `0` records:
+To verify that the `UUID` field in the `spy_company_unit_address` table has been populated for all the records, run the following SQL query:
 
 ```sql
 select count(*) from spy_company_unit_address where uuid is NULL;
 ```
 
+The result should be 0 records.
+
+
 {% endinfo_block %}
 
-### Generate UUIDs for the existing company user records without UUID:
+### Generate UUIDs for company user records
 
-Run the following command:
+Generate UUIDs for the existing company user records without UUID:
 
 ```bash
 console uuid:generate CompanyUser spy_company_user
@@ -292,11 +299,14 @@ console uuid:generate CompanyUser spy_company_user
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the `spy_company_user table`, the `UUID` field has been populated for all the records. To do so, run the following SQL query and check that the result contains `0` records:
+To verify that the `UUID` field in the `spy_company_user table` has been populated for all the records, run the following SQL query:
 
 ```sql
 select count(*) from spy_company_user where uuid is NULL;
 ```
+
+The result should be 0 records.
+
 
 {% endinfo_block %}
 
@@ -317,11 +327,11 @@ Activate the following plugins:
 | CompanyUserRestUserValidatorPlugin                                          | Checks that a REST user is a company user.                                                                                                                                                                                 |               | Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication                                                                                             |
 | CompanyByCompanyRoleResourceRelationshipPlugin                              | Adds the `companies` resource as a relationship to the resource that provides `CompanyRoleTransfer` as a payload.                                                                                                          |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyRoleResourceRelationshipPlugin                                                 |
 | CompanyByCompanyBusinessUnitResourceRelationshipPlugin                      | Adds the `companies` resource as a relationship to the resource that provides `CompanyBusinessUnitTransfer` as a payload.                                                                                                  |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyBusinessUnitResourceRelationshipPlugin                                         |
-| CompanyByCompanyUserResourceRelationshipPlugin                              | Adds the companies resource as a relationship to the resource that provides `CompanyUserTransfer` as a payload.                                                                                                            |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyUserResourceRelationshipPlugin                                                 |
+| CompanyByCompanyUserResourceRelationshipPlugin                              | Adds the `companies` resource as a relationship to the resource that provides `CompanyUserTransfer` as a payload.                                                                                                            |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication\CompanyByCompanyUserResourceRelationshipPlugin                                                 |
 | CompanyBusinessUnitAddressesByCompanyBusinessUnitResourceRelationshipPlugin | Adds the `company-business-unit-addresses` resource as a relationship to the `company-business-units` resource.                                                                                                            |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\GlueApplication\CompanyBusinessUnitAddressesByCompanyBusinessUnitResourceRelationshipPlugin |
-| CompanyBusinessUnitByCompanyUserResourceRelationshipPlugin                  | Adds the `company-business-units` resource as a relationship. Requires `CompanyUserTransfer` to be provided in the resource payload.                                                                                       |               | Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\GlueApplication                                                                                     |
-| CompanyRoleByCompanyUserResourceRelationshipPlugin                          | Adds the `companies` resource as a relationship. Requires the `CompanyUserTransfer` to be provided in the resource payload.                                                                                                |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication                                                                                                |
-| CustomerByCompanyUserResourceRelationshipPlugin                             | Adds the `customers` resource as a relationship when `CompanyUserTransfer` is provided as a payload.                                                                                                                       |               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication                                                                                                |
+| CompanyBusinessUnitByCompanyUserResourceRelationshipPlugin                  | Adds the `company-business-units` resource as a relationship to the resource that provides `CompanyUserTransfer` as a payload.                                                                                       |               | Spryker\Glue\CompanyBusinessUnitsRestApi\Plugin\GlueApplication                                                                                     |
+| CompanyRoleByCompanyUserResourceRelationshipPlugin                          | Adds the `companies` resource as a relationship to the resource that provides `CompanyUserTransfer` as a payload.                                                 |               | Spryker\Glue\CompaniesRestApi\Plugin\GlueApplication                                                                                                |
+| CustomerByCompanyUserResourceRelationshipPlugin                             | Adds the `customers` resource as a relationship to the resource that provides `CompanyUserTransfer` as a payload.                                                                                                                       |               | Spryker\Glue\CustomersRestApi\Plugin\GlueApplication                                                                                                |
 | CompanyUserOauthCustomerIdentifierExpanderPlugin                            | If a company user UUID is set up in `CustomerTransfer`, expands `CustomerIdentifierTransfer` with the UUID.                                                                                                                |               | Spryker\Zed\CompanyUsersRestApi\Communication\Plugin\OauthCustomerConnector                                                                         |
 | CompanyUserRestUserMapperPlugin                                             | Maps company user data to a REST user identifier.                                                                                                                                                                          |               | Spryker\Glue\CompanyUserAuthRestApi\Plugin\AuthRestApi                                                                                              |
 | OauthUserIdentifierFilterPermissionPlugin                                   | Filters the user identifier array to remove configured keys before persisting.                                                                                                                                             |               | Spryker\Zed\OauthPermission\Communication\Plugin\Filter                                                                                             |
@@ -337,18 +347,18 @@ Activate the following plugins:
 | CompanyBusinessUnitAddressCheckoutDataExpanderPlugin                        | Expands `RestCheckoutDataTransfer` with `CompanyBusinessUnitAddresses`.                                                                                                                                                    |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi                                                                |
 | CompanyBusinessUnitAddressCheckoutDataValidatorPlugin                       | Collects shipping address UUIDs from `checkoutDataTransfer.shipments`. If a company address UUID is provided for a non-company user, returns `CheckoutResponseTransfer`.                                                   |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi                                                                |
 | CompanyBusinessUnitAddressQuoteMapperPlugin                                 | Maps the REST request billing company business unit address information to quote.                                                                                                                                          |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\CheckoutRestApi                                                                |
-| CompanyBusinessUnitAddressProviderStrategyPlugin                            | Based on the UUID provided in`RestAddressTransfer.idCompanyBusinessUnitAddress`, finds a company business unit address. If it was found,  returns `AddressTransfer` filled with company business unit address information. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\ShipmentsRestApi                                                               |
+| CompanyBusinessUnitAddressProviderStrategyPlugin                            | Based on the UUID provided in`RestAddressTransfer.idCompanyBusinessUnitAddress`, finds a company business unit address. If found,  returns `AddressTransfer` filled with company business unit address information. |               | Spryker\Zed\CompanyBusinessUnitAddressesRestApi\Communication\Plugin\ShipmentsRestApi                                                               |
 | CompanyBusinessUnitUuidRestAddressResponseMapperPlugin                      | Maps `AddressTransfer.companyBusinessUnitUuid` to `RestAddressTransfer.idCompanyBusinessUnitAddress` if exists.                                                                                                            |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\ShipmentsRestApi                                                                            |
-| OauthPermissionStoragePlugin                                                | Reads permission collection from the authorization header.                                                                                                                                                                 |               | Spryker\Client\OauthPermission\Plugin\Permission                                                                                                    |
-| DefaultBillingAddressMapperPlugin                                           | Maps and replaces defaultBillingAddress id to uuid in the `RestCompanyBusinessUnitAttributesTransfer`.                                                                                                                     |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\CompanyBusinessUnitsRestApi                                                                 |
-| PermissionStoragePlugin                                                     | Reads permission collection from customer.                                                                                                                                                                                 |               | Spryker\Client\CompanyRole\Plugin                                                                                                                   |
+| OauthPermissionStoragePlugin                                                | Reads the permission collection from the authorization header.                                                                                                                                                                 |               | Spryker\Client\OauthPermission\Plugin\Permission                                                                                                    |
+| DefaultBillingAddressMapperPlugin                                           | Maps and replaces the ID of `defaultBillingAddress` with a UUID in  `RestCompanyBusinessUnitAttributesTransfer`.                                                                                                                     |               | Spryker\Glue\CompanyBusinessUnitAddressesRestApi\Plugin\CompanyBusinessUnitsRestApi                                                                 |
+| PermissionStoragePlugin                                                     | Reads the permissions collection from a customer.                                                                    |               | Spryker\Client\CompanyRole\Plugin                                                                                                                   |
 | CompanyRoleCreatePlugin                                                     | Creates company role permission relations.                                                                                                                                                                                 |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
-| PermissionCustomerExpanderPlugin                                            | Collects related to a company user permissions from all assigned roles and set it to customer.                                                                                                                             |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
-| PermissionStoragePlugin                                                     | Collects related to a company user permissions from all assigned roles.                                                                                                                                                    |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
-| AssignDefaultCompanyUserRolePlugin                                          | Assigns default role to company user after it was created.                                                                                                                                                                 |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
-| AssignRolesCompanyUserPostCreatePlugin                                      | Saves company user if it has at least one assigned company role.                                                                                                                                                           |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
-| AssignRolesCompanyUserPostSavePlugin                                        | Saves company user it has at least one assigned company role.                                                                                                                                                              |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
-| CompanyRoleCollectionHydratePlugin                                          | Hydrates company user transfer with its assigned company roles.                                                                                                                                                            |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| PermissionCustomerExpanderPlugin                                            | Collects the permissions related to a company user from all assigned roles and sets it for the customer.                          |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
+| PermissionStoragePlugin                                                     | Collects the permissions related to a company user from all assigned roles.                   |               | Spryker\Zed\CompanyRole\Communication\Plugin                                                                                                        |
+| AssignDefaultCompanyUserRolePlugin                                          | After a company user is created, assigns the default role to it.    |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| AssignRolesCompanyUserPostCreatePlugin                                      | Saves a company user if one or more company roles are assigned to it. |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| AssignRolesCompanyUserPostSavePlugin                                        | Saves a company user it has at least one assigned company role.              |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
+| CompanyRoleCollectionHydratePlugin                                          | Hydrates a company user transfer with its assigned company roles.                                                                                                                                                            |               | Spryker\Zed\CompanyRole\Communication\Plugin\CompanyUser                                                                                            |
 
 
 
@@ -964,7 +974,9 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php**
+<details>
+<summary markdown='span'>src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
+
 
 ```php
 <?php
@@ -1012,6 +1024,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 }
 ```
 
+</details>
 
 {% info_block warningBox "Verification" %}
 

@@ -39,7 +39,7 @@ How to send a pull request:
 ## Development Workflow
 
 After cloning the repository, run `npm install` in the repository root. This will install all dependencies for all packages.
-Now you can run `npx nx run storefront:serve` to start the development server for the Storefront. The server will automatically reload if you change any of the source files.
+Now you can run `npm run start` to start the development server for the Storefront. The server will automatically reload if you change any of the source files.
 
 Useful commands:
 - Prettier: 

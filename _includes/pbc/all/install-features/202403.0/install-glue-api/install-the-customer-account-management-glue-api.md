@@ -974,7 +974,7 @@ Verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin`:
+Verify that `OauthRefreshTokensReaderPlugin` and `OauthRefreshTokensRevokerPlugin` are set up:
 
 1. Prepare several refresh tokens.
 
@@ -993,11 +993,9 @@ Check that the `spy_oauth_refresh_token::revoked_at` values of all the records r
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
+To verify that `OauthRefreshTokenCheckerPlugin` is set up, send the following request with a revoked refresh token:
 
-1. Send the following request with a revoked refresh token:
-   `POST https://glue.mysprykershop.com/refresh-tokens`
-
+`POST https://glue.mysprykershop.com/refresh-tokens`
 ```json
 {
     "data": {
@@ -1009,7 +1007,7 @@ Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
 }
 ```
 
-2. Check that you get the following response:
+Make sure you get the following response:
 
 ```json
 {
@@ -1028,38 +1026,34 @@ Ensure that you’ve set up `OauthRefreshTokenCheckerPlugin`:
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve set up `OauthRefreshTokenRemoverPlugin`:
+To verify `OauthRefreshTokenRemoverPlugin` is set up, delete expired refresh tokens:
 
-1. Delete expired refresh tokens:
+```shell
+console oauth:refresh-token:remove-expired
+```
 
-   ```shell
-   console oauth:refresh-token:remove-expired
-   ```
-
-2. Check that all the expired refresh tokens older than defined by the removal interval you’ve configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` were deleted.
+Make sure all the expired refresh tokens older than defined by the removal interval you’ve configured in `Spryker\Shared\Oauth\OauthConfig::getRefreshTokenRetentionInterval()` have been deleted.
 
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you’ve activated `AddressByCheckoutDataResourceRelationshipPlugin`, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request and check that the response contains the information from the addresses resource.
+To verify `AddressByCheckoutDataResourceRelationshipPlugin` is set up, send the `POST https://glue.mysprykershop.com/checkout-data?include=addresses` request. Make sure the response contains the information from the `addresses` resource.
 
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
-Ensure that console commands are available:
+Make sure the following console commands are available:
 
-- Run the following command to create a cache file for all existing scopes:
-
+- Create a cache file for all existing scopes:
 ```bash
 console oauth:scope-collection-file:generate
 ```
 
-- Run the following command to remove expired refresh tokens from the database:
-
+- Remove expired refresh tokens from the database:
 ```bash
 console oauth:refresh-token:remove-expired
 ```

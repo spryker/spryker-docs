@@ -1,5 +1,5 @@
 ---
-title: Test the Publish and Synchronization process
+title: Testing the Publish and Synchronization process
 description: Learn how you can test Publish and Synchronization
 last_updated: Jun 16, 2021
 template: concept-topic-template

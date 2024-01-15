@@ -32,7 +32,7 @@ related:
 This document describes how to set up and run AsyncAPI tests.
 We use the *Hello World* example throughout this document. All code references the Hello World App and the `Pyz` project namespace. When you set up and run the tests for a different project namespace or module, adjust the names accordingly.
 
-## Pre-requisites
+## Prerequisites
 
 <!--Either you followed the instructions on how to Create an App or you have an already created App in place.-->
 

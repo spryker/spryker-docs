@@ -1,5 +1,5 @@
 ---
-title: Add buttons to Zed tables
+title: Adding buttons to Zed tables
 description: The document describes how to add buttons to Zed tables.
 last_updated: Jun 16, 2021
 template: howto-guide-template

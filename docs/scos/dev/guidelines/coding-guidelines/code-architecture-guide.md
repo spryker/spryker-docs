@@ -42,6 +42,7 @@ This document outlines Spryker recommendations for the code architecture.
   * Encourage the Business layer to depend on the Persistence layer, for example, a Repository, but not on ORM directly.
   * Avoid cross-module Business layer dependencies. Use injected Facades instead.
 * To identify all violations, you can run `docker/sdk cli vendor/bin/deptrac analyse` on the `./src` directory.
+* A Service could contain only reusable lightweight stateless business logic without using the database, storage connections, or global variables. All required data must be provided as an input.
 
 ## Dependency handling and business logic
 * Singleton instances should be provided from Dependency Provider classes, and avoid using `getInstance()` method outside the Dependency Provider.
@@ -60,6 +61,8 @@ This document outlines Spryker recommendations for the code architecture.
 * For the sake of the improved management, enhanced readability, and clearer code intent, avoid hard-coded strings and IDs with variables or constants.
 * Avoid unnecessary duplications from the core; consider using "parent" when applicable or exploring alternative development strategies such as plug-and-play.
 * Avoid suppressing PHPStan checks. These checks are there to improve the quality of the code base.
+* Eliminate unused features from the project to streamline upgrade processes and enhance overall project maintainability.
+* Address technical debt promptly to maintain code quality and maintainability. Search and resolve “**todo**”, “**fixme**” and “**workaround**” at the project level.
 
 ## Code testability and cleanup
 * Avoid mocking a service outside a test environment.

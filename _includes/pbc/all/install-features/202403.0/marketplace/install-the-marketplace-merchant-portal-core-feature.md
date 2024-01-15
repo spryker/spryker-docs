@@ -165,7 +165,7 @@ Set up behavior as follows:
 
 | PLUGIN                                                           | SPECIFICATION                                                                                                  | PREREQUISITES | NAMESPACE                                                                        |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| MerchantUserSecurityPlugin                                       | Sets security firewalls (rules, handlers) for Marketplace users.                                               |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
+| ZedMerchantUserSecurityPlugin                                    | Sets security firewalls (rules, handlers) for Marketplace users.                                               |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
 | BooleanToStringTwigPlugin                                        | Adds a new Twig function for converting Boolean to String.                                                     |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
 | ZedUiNavigationTwigPlugin                                        | Adds a new Twig function for rendering Navigation using web components.                                        |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
 | GuiTableApplicationPlugin                                        | Enables GuiTable infrastructure for Zed.                                                                       |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
@@ -240,7 +240,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\MerchantUserSecurityPlugin;
+use Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security\ZedMerchantUserSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -250,7 +250,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new MerchantUserSecurityPlugin(),
+            new ZedMerchantUserSecurityPlugin(),
         ];
     }
 }
@@ -465,7 +465,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 | FormApplicationPlugin                 | Adds `form.factory` service, `form.csrf_provider` service, global `FORM_FACTORY` service as an alias for `form.factory`.                    |               | Spryker\Zed\Form\Communication\Plugin\Application            |
 | ValidatorApplicationPlugin            | Adds `validator` service.                                                                                                                   |               | Spryker\Zed\Validator\Communication\Plugin\Application       |
 | GuiTableApplicationPlugin             | Enables the `GuiTable` infrastructure for Zed.                                                                                                    |               | Spryker\Zed\GuiTable\Communication\Plugin\Application        |
-| SecurityApplicationPlugin             | Adds security applications to `Application`.                                                                                              |               | Spryker\Zed\Security\Communication\Plugin\Application        |
+| ZedSecurityApplicationPlugin          | Adds security applications to `Application`.                                                                                              |               | Spryker\Zed\Security\Communication\Plugin\Application        |
 | ZedUiApplicationPlugin                | Adds `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
 | AclEntityApplicationPlugin            | Enables ACL for the whole `Application`.                                                                                                      |               | Spryker\Zed\AclEntity\Communication\Plugin\Application       |
 
@@ -487,7 +487,7 @@ use Spryker\Zed\MerchantPortalApplication\MerchantPortalApplicationDependencyPro
 use Spryker\Zed\Messenger\Communication\Plugin\Application\MessengerApplicationPlugin;
 use Spryker\Zed\Propel\Communication\Plugin\Application\PropelApplicationPlugin;
 use Spryker\Zed\Router\Communication\Plugin\Application\MerchantPortalRouterApplicationPlugin;
-use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicationPlugin;
 use Spryker\Zed\Session\Communication\Plugin\Application\SessionApplicationPlugin;
 use Spryker\Zed\Translator\Communication\Plugin\Application\TranslatorApplicationPlugin;
 use Spryker\Zed\Twig\Communication\Plugin\Application\TwigApplicationPlugin;
@@ -515,7 +515,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
             new FormApplicationPlugin(),
             new ValidatorApplicationPlugin(),
             new GuiTableApplicationPlugin(),
-            new SecurityApplicationPlugin(),
+            new ZedSecurityApplicationPlugin(),
             new ZedUiApplicationPlugin(),
             new AclEntityApplicationPlugin(),
         ];

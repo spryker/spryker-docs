@@ -18,7 +18,7 @@ We gave up the `Auth` module in favor of using `Symfony Security`. `Symfony Secu
 More details are listed below:
 
 * All public API for modules `Auth`, `AuthMailConnector`, `AuthMailConnectorExtension` is deprecated.
-* `AuthFacade::login()` and `AuthFacade::logout()` were replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. The Back Office authentication was implemented at `SecurityGui` module with `UserSecurityPlugin`.
+* `AuthFacade::login()` and `AuthFacade::logout()` were replaced with the implementation of `Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface`. The Back Office authentication was implemented at `SecurityGui` module with `ZedUserSecurityPlugin`.
 * `AuthFacade::isAuthenticated()`is replaced with `SecurityFacade::isUserLoggedIn()`.
 * `AuthFacade::requestPasswordReset()` is replaced with `UserPasswordResetFacade::requestPasswordReset()`.
 * `AuthFacade::isValidPasswordResetToken()` is replaced with `UserPasswordResetFacade::isValidPasswordResetToken()`.
@@ -231,7 +231,7 @@ composer require spryker-feature/spryker-core-back-office:dev-master
 
 1. Adjust `src/Pyz/Zed/Application/ApplicationDependencyProvider.php`.
 
-Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin` to `getApplicationPlugins()`.
+Add `Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicationPlugin` to `getApplicationPlugins()`.
 
 ```php
  /**
@@ -241,7 +241,7 @@ Add `Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPl
     {
         $plugins = [
             ...,
-            new SecurityApplicationPlugin(),
+            new ZedSecurityApplicationPlugin(),
         ];
 
         ...
@@ -293,9 +293,9 @@ Remove `RestorePasswordMailTypePlugin()` and add `UserPasswordResetMailTypePlugi
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\SecurityGui\Communication\Plugin\Security\UserSecurityPlugin;
-use Spryker\Zed\SecuritySystemUser\Communication\Plugin\Security\SystemUserSecurityPlugin;
-use Spryker\Zed\User\Communication\Plugin\Security\UserSessionHandlerSecurityPlugin;
+use Spryker\Zed\SecurityGui\Communication\Plugin\Security\ZedUserSecurityPlugin;
+use Spryker\Zed\SecuritySystemUser\Communication\Plugin\Security\ZedSystemUserSecurityPlugin;
+use Spryker\Zed\User\Communication\Plugin\Security\ZedUserSessionHandlerSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -305,9 +305,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new UserSessionHandlerSecurityPlugin(),
-            new SystemUserSecurityPlugin(),
-            new UserSecurityPlugin(),
+            new ZedUserSessionHandlerSecurityPlugin(),
+            new ZedSystemUserSecurityPlugin(),
+            new ZedUserSecurityPlugin(),
         ];
     }
 }

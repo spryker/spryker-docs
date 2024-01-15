@@ -969,11 +969,11 @@ Verify that `OauthRefreshTokenReaderPlugin` and `OauthRefreshTokenRevokerPlugin`
 1. Send the request: `DELETE https://glue.mysprykershop.com/refresh-tokens/{% raw %}{{{% endraw %}refresh_token}`[.](#)
 2. To check that the refresh token has been revoked, run the following SQL query:
 
-  ```sql
-   SELECT * FROM spy_oauth_refresh_token WHERE revoked_at IS NOT NULL;
-   ```
+```sql
+SELECT * FROM spy_oauth_refresh_token WHERE revoked_at IS NOT NULL;
+```
 
-Check that the `spy_oauth_refresh_token::revoked_at` database field is not empty.
+Make sure the `spy_oauth_refresh_token::revoked_at` database field is not empty.
 
 {% endinfo_block %}
 

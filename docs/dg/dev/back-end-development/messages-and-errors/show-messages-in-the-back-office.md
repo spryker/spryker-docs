@@ -1,6 +1,6 @@
 ---
-title: Showing messages in Zed
-description: This document describes how to show a message in the Zed GUI.
+title: Show messages in the Back Office
+description: This document describes how to show a message in the Back Office
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flash-messenger
@@ -14,9 +14,9 @@ related:
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 ---
 
-This document describes how to show a message in the Zed GUI.
+This document describes how to show a message in the Back Office.
 
-In the controller, you can use these shortcut methods to show a user message in the GUI. The messages are translated later when they are rendered.
+In the controller, you can use these shortcut methods to show a user message in the Back Office. The messages are translated later when they are rendered.
 
 ```php
 <?php
@@ -33,8 +33,10 @@ class IndexController extends AbstractController
 }
 ```
 
-## Show message from Zed's Business layer
+## Show message from the Business layer
+
 To show a message from a model, follow these steps:
+
 1. Declare this dependency in the module's dependency provider:
 
 ```php
@@ -61,7 +63,7 @@ class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-2. You can access it from the business factory and inject it into your model:
+2. Access it from the business factory and inject it into your model:
 
 ```php
 <?php

@@ -1,5 +1,5 @@
 ---
-title: Add translations for Yves
+title: Adding translations for Yves
 description: Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
 last_updated: Jun 16, 2021
 template: howto-guide-template

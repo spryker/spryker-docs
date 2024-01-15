@@ -1,6 +1,6 @@
 ---
 title: Get an overview of the used plugins
-description: Plugin Overview gives you several ways of displaying plugin usages.
+description: Plugin Overview gives you several ways of displaying used plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin-overview

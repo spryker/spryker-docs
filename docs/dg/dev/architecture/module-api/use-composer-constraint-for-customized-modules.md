@@ -1,5 +1,5 @@
 ---
-title: Using ~ Composer constraint for customized modules
+title: Use Composer constraint for customized modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
 last_updated: Jun 16, 2021
 template: concept-topic-template

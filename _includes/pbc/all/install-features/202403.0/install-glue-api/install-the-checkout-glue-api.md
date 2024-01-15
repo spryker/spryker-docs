@@ -953,6 +953,46 @@ Ensure that the plugins work correctly:
 
 {% endinfo_block %}
 
+### Enable validations
+
+Activate the following plugins:
+
+| PLUGIN                                | SPECIFICATION                                           | PREREQUISITES | NAMESPACE                                                |
+|---------------------------------------|---------------------------------------------------------|---------------|----------------------------------------------------------|
+| CountriesCheckoutDataValidatorPlugin  | Verifies if countries can be found by countryIso2Codes. |           | Spryker\Zed\Country\Communication\Plugin\CheckoutRestApi |
+
+{% info_block warningBox "Verification" %}
+
+* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid billing address country code. Make sure the following error is returned:
+
+```json
+{
+    "errors": [
+        {
+            "status": 422,
+            "code": "1102",
+            "detail": "Billing address country not found for country code: %code%."
+        }
+    ]
+}
+```
+
+* Send the `POST https://glue.mysprykershop.com/checkout-data` request with an invalid shipping address country code. Make sure the following error is returned:
+
+```json
+{
+    "errors": [
+        {
+            "status": 422,
+            "code": "1102",
+            "detail": "Shipping address country not found for country code: %code%."
+        }
+    ]
+}
+```
+
+{% endinfo_block %}
+
 ## Install related features
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                      |

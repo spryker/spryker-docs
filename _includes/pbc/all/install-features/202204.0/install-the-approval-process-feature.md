@@ -13,7 +13,7 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Company Account | {{page.version}}| [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
+| Company Account | {{page.version}}| [Install the Company account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} | [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
 | Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)|

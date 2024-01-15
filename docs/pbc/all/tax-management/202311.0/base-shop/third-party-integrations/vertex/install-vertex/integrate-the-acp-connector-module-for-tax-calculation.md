@@ -1,6 +1,6 @@
 ---
-title: Integrate ACP connector module for tax calculation
-description: Find out how to integrate connector module for tax calculation
+title: Integrate the ACP connector module for tax calculation
+description: Find out how to integrate the connector module for tax calculation
 draft: true
 last_updated: Jan 10, 2024
 template: howto-guide-template
@@ -10,11 +10,9 @@ related:
 
 ---
 
-This document describes how to integrate ACP connector module for tax calculation into a Spryker shop.
+To [install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
 
-To enable the Vertex integration, you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
-
-To integrate the connector module for the Vertex app, follow the steps below.
+To integrate the connector module for the Vertex app, follow these steps.
 
 ### 1. Configure shared configs
 
@@ -57,7 +55,7 @@ $config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT
 $config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
 ```
 
-### 2. Configure the Calculation plugins stack
+### 2. Configure the Calculation plugin stack
 
 Update `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php` as follows:
 
@@ -126,9 +124,9 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
 {% info_block infoBox "Updating from TaxApp module version <=0.2.3" %}
 
-Please pay attention to the position of `TaxAppCalculationPlugin` in the list of plugins: it should be placed after `ItemDiscountAmountFullAggregatorPlugin` and before `PriceToPayAggregatorPlugin`.
+Pay attention to the position of `TaxAppCalculationPlugin` in the list of plugins: it should be placed after `ItemDiscountAmountFullAggregatorPlugin` and before `PriceToPayAggregatorPlugin`.
 
-Previously we have recommended to disable default tax calculation plugins; this is not required anymore as with the new implementation default tax plugins will be called only if Vertex is disconnected or disabled.
+Previously, we recommended to disable the default tax calculation plugins. This is not required anymore, as with the new implementation, the default tax plugins are called only if Vertex is disconnected or disabled.
 
 {% endinfo_block %}
 
@@ -182,19 +180,19 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
 // ...
 ```
 
-In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins which are replaced by `TaxAppCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
-The code snipped above is an example fo such configuration based on Spryker default tax calculation plugins.
+In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins, which are replaced by `TaxAppCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
+The code snipped above is an example fo such configuration based on the Spryker default tax calculation plugins.
 Tax calculation plugins moved:
 - from `getQuoteCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxRateAverageAggregatorPlugin`
 - from `getOrderCalculatorPluginStack` method: `TaxAmountCalculatorPlugin`, `ItemTaxAmountFullAggregatorPlugin`, `PriceToPayAggregatorPlugin`, `TaxAmountAfterCancellationCalculatorPlugin`
 
 {% info_block infoBox "Fallback behavior" %}
 
-There are 3 different failure scenarios where `TaxAppCalculationPlugin` might need to use a fallback logic:
+There are three different failure scenarios where `TaxAppCalculationPlugin` might need to use a fallback logic:
 
-1. Vertex App is not connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
+1. Vertex App isn't connected: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
 2. Vertex App is disabled: fallback plugins defined in `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` will be used to calculate taxes.
-3. Vertex App is not responding or is responding with an error: tax value will be set to zero and the customer will be able to proceed with the checkout.
+3. Vertex App is not responding or is responding with an error: tax value will be set to zero, and the customer will be able to proceed with the checkout.
 
 {% endinfo_block %}
 
@@ -388,7 +386,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
 // ...
 ```
 
-This configuration of `getOmsEventTriggeredListenerPlugins` method is required to make sure that the correct tax amount will be used during refund process.
+This configuration of `getOmsEventTriggeredListenerPlugins` method is required to ensure that the correct tax amount will be used during the refund process.
 
 {% info_block infoBox "OMS configuration requirement" %}
 
@@ -398,4 +396,4 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 
 ## Next step
-[Integrate Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-vertex-app.html)
+[Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-the-vertex-app.html)

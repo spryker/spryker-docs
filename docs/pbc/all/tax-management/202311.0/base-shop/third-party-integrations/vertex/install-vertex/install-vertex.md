@@ -12,6 +12,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html
 
 ---
 This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
@@ -28,10 +29,9 @@ Ensure that your installation meets these requirements.
 - Make sure that your deployment pipeline executes database migrations.
 - You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it is assumed that businesses using the app are unable to determine GROSS prices.
 
-## Steps
+## Installation steps
 
-1. [Integrate ACP connector module for tax calculation](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-connector-module.html)
-2. [Integrate Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-vertex-app.html)
+To install Vertex, integrate the ACP connector module and the Vertex app:
 
-## Next step
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)
+1. [Integrate ACP connector module for tax calculation](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-the-acp-connector-module-for-tax-calculation.html)
+2. [Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate--the-vertex-app.html)

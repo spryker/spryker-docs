@@ -1,6 +1,6 @@
 ---
-title: Integrate Vertex app
-description: Find out how you can integrate Vertex app into your Spryker shop
+title: Integrate the Vertex app
+description: Find out how you can integrate the Vertex app into your Spryker shop
 draft: true
 last_updated: Jan 10, 2024
 template: howto-guide-template
@@ -10,13 +10,15 @@ related:
 
 ---
 
-## 2. Integrate the Vertex app
+After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
 
-Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to to add some missing information to the Quote object before sending a calculation request.
+Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
 
-The following diagram shows the data flow of the tax calculation request from Spryker Cart to the Vertex API.
+The following diagram shows the data flow of the tax calculation request from the Spryker Cart to the Vertex API.
 
 ![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
+
+To integrate Vertex, follow these steps.
 
 ### 1. Configure Vertex-specific metadata transfers
 
@@ -80,7 +82,7 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 ### 2. Implement Vertex-specific metadata extender plugins
 
 There are several types of expander plugins you have to introduce.
-As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins inside are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
+As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins in this module are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
 
 #### Configure the Customer Class Code Expander plugins
 
@@ -145,11 +147,11 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
 
 #### Configure the Customer Exemption Certificate Expander plugins
 
-Configure the Customer Exemption Certificate Expander plugin for order:
+- Configure the Customer Exemption Certificate Expander plugin for order:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexExemptionCertificateExpanderPlugin.php`
 
-Configure the Customer Exemption Certificate Expander plugin for quote:
+- Configure the Customer Exemption Certificate Expander plugin for quote:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php`
 
@@ -205,7 +207,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 }
 ```
 
-{% info_block infoBox "Use same Product Class Code" %}
+{% info_block infoBox "Use the same Product Class Code" %}
 
 You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
 
@@ -250,7 +252,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 
 ### 3. Configure the Tax App dependency provider
 
-After the Tax App dependency provider configuration, the plugin stack will look similar to this one:
+After the Tax App dependency provider configuration, the plugin stack should look similar to this one:
 
 ```php
 
@@ -301,7 +303,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 
 ### 4. Configure Product Offer Stock dependency provider (Marketplace only)
 
-After you configured the Product Offer Stock dependency provider for Marketplace, the plugin stack will look similar to this one:
+After you have configured the Product Offer Stock dependency provider for Marketplace, the plugin stack should look similar to this one:
 
 ```php
 

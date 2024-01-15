@@ -351,19 +351,20 @@ namespace Spryker\Yves\Security\Plugin\Validator;
 use Spryker\Service\Container\ContainerInterface;
 use Spryker\Shared\ValidatorExtension\Dependency\Plugin\ConstraintPluginInterface;
 use Spryker\Yves\Kernel\AbstractPlugin;
-use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
-use Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface;
-use Symfony\Component\Security\Core\Validator\Constraints\UserPasswordValidator;
 use Symfony\Component\Validator\ConstraintValidatorInterface;
 
-class UserPasswordValidatorConstraintPlugin extends AbstractPlugin implements ConstraintPluginInterface
+class YvesUserPasswordValidatorConstraintPlugin extends AbstractPlugin implements ConstraintPluginInterface
 {
+    /**
+     * @var string
+     */
     protected const CONSTRAINT_NAME = 'security.validator.user_password';
 
-    protected const SERVICE_SECURITY_TOKEN_STORAGE = 'security.token_storage';
-    protected const SERVICE_SECURITY_ENCODER_FACTORY = 'security.encoder_factory';
-
     /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
      * @return string
      */
     public function getName(): string
@@ -372,43 +373,16 @@ class UserPasswordValidatorConstraintPlugin extends AbstractPlugin implements Co
     }
 
     /**
+     * {@inheritDoc}
+     *
+     * @api
      * @param \Spryker\Service\Container\ContainerInterface $container
      *
      * @return \Symfony\Component\Validator\ConstraintValidatorInterface
      */
     public function getConstraintInstance(ContainerInterface $container): ConstraintValidatorInterface
     {
-        return $this->createUserPasswordValidator($container);
-    }
-
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Validator\ConstraintValidatorInterface
-     */
-    protected function createUserPasswordValidator(ContainerInterface $container): ConstraintValidatorInterface
-    {
-        return new UserPasswordValidator($this->getTokenStorage($container), $this->getEncoderStorage($container));
-    }
-
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface
-     */
-    protected function getTokenStorage(ContainerInterface $container): TokenStorageInterface
-    {
-        return $container->get(static::SERVICE_SECURITY_TOKEN_STORAGE);
-    }
-
-    /**
-     * @param \Spryker\Service\Container\ContainerInterface $container
-     *
-     * @return \Symfony\Component\Security\Core\Encoder\EncoderFactoryInterface
-     */
-    protected function getEncoderStorage(ContainerInterface $container): EncoderFactoryInterface
-    {
-        return $container->get(static::SERVICE_SECURITY_ENCODER_FACTORY);
+        return $this->getFactory()->createUserPasswordValidatorConstraint()->getConstraintInstance($container);
     }
 }
 ```
@@ -422,7 +396,7 @@ The constraint plugins should also be added to `ValidatorDependencyProvider` for
 
 namespace Pyz\Zed\Validator;
 
-use Spryker\Zed\Security\Communication\Plugin\Validator\UserPasswordValidatorConstraintPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Validator\ZedUserPasswordValidatorConstraintPlugin;
 use Spryker\Zed\Validator\ValidatorDependencyProvider as SprykerValidatorDependencyProvider;
 
 class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
@@ -433,9 +407,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
     protected function getConstraintPlugins(): array
     {
         return [
-            ...
-            new UserPasswordValidatorConstraintPlugin(),
-            ....
+            new ZedUserPasswordValidatorConstraintPlugin(),
         ];
     }
 }
@@ -448,7 +420,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
 
 namespace Pyz\Yves\Validator;
 
-use Spryker\Yves\Security\Plugin\Validator\UserPasswordValidatorConstraintPlugin;
+use Spryker\Yves\Security\Plugin\Validator\YvesUserPasswordValidatorConstraintPlugin;
 use Spryker\Yves\Validator\ValidatorDependencyProvider as SprykerValidatorDependencyProvider;
 
 class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
@@ -459,9 +431,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
     protected function getConstraintPlugins(): array
     {
         return [
-            ...
-            new UserPasswordValidatorConstraintPlugin(),
-            ...
+            new YvesUserPasswordValidatorConstraintPlugin(),
         ];
     }
 }

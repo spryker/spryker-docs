@@ -19,12 +19,11 @@ Before integrating Stripe, ensure the following prerequisites are met:
 
 - Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-- The Stripe app catalog page lists specific packages that must be installed or upgraded before you can use the Stripe app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Stripe**.
-  Ensure that your installation meets these requirements.
+- The Stripe app catalog page lists specific packages that must be installed or upgraded before you can use the Stripe app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Stripe**. Ensure that your installation meets these requirements.
 
 ## 1. Configure shared configs
 
-Your project likely already has this code from the beginning, if not, please add the following config to `config/Shared/config_default.php`:
+Your project probably already contains the following code in `config/Shared/config_default.php` already. If not, add it:
 
 ```php
 // ...
@@ -86,7 +85,7 @@ $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ## 2. Configure the Message Broker dependency provider
 
-Your project likely already has this code from the beginning, if not, please add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+Your project probably already contains the following code in `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php` already. If not, add it:
 
 ```php
 
@@ -121,9 +120,9 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-## 3. Add Stripe domain to your allow list
+## 3. Add Stripe domain to your allowlist
 
-To enable Stripe to redirect your customers to Stripe payment page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy-{your_environment}.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
+To enable Stripe to redirect your customers to the Stripe payment page and later to your payment success page, you must add the ACP domain inside your *Content Security Policy* allowlist. To do that, change your `deploy-{your_environment}.yml` file or your `config/Shared/config_default.php` file if changing the environment variable isn't possible.
 
 In the `deploy.yml` file, introduce the required changes:
 
@@ -139,14 +138,14 @@ image:
     }'
 ```
 
-Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
+Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, ignore this step.
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = 'stripe.acp.spryker.com';
 ```
 
-## 4. Configure the Oms dependency provider
-Your project likely already has this code from the beginning, if not, please add the following code to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
+## 4. Configure the OMS dependency provider
+Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
 
 ```php
 // ...
@@ -178,10 +177,10 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
 
 ```
 
-### Optional: Configure your Payment OMS
+### Optional: Configure your payment OMS
 
-A complete Payment OMS configuration is provided out of the box located in `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`, optionally you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
-This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`.
+The complete default payment OMS configuration is available at `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
+
 ```xml
 <?xml version="1.0"?>
 <statemachine

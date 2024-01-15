@@ -8,7 +8,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/stripe/install-stripe.html
 ---
 
-The Stripe App is a part of the App Composition Platform. This App is an integration of Stripe to Spryker and it is built to support the default Storefront Yves and Spryker GLUE APIs.
+The Spryker-Stripe integration is a part of the App Composition Platform. TThis integration is built with support for both the default Storefront as well as Spryker’s GLUE APIs. For more information about Stripe, see the [Stipe website](https://stripe.com/en-de).
 
 ## Next steps
 

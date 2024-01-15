@@ -106,4 +106,4 @@ To sum up, we proactively inform you about infrastructure issues where your coll
 
 ## Want more insights?
 
-We offer New Relic APM, so you can also monitor applications and configure alerts  and monitoring to fulfill your needs. If you want to use New Relic APM, [contact support](https://spryker.force.com/support/s/).
+We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. If you want to request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

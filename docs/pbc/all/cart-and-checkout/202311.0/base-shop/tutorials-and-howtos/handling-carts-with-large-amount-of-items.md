@@ -5,13 +5,11 @@ last_updated: Jan 09, 2024
 template: howto-guide-template
 ---
 
-When it comes to cart management in the complex world of e-commerce, Spryker offers robust and flexible solutions out of the box, covering small to medium-sized shopping carts, which satisfies a big majority of our customer needs. But sometimes, you encounter the need to deal with really large carts counting many hundreds and sometimes even thousands of line items. These aren't everyday cases, but they're important to tackle because they can really challenge your system's limits in terms of performance and user experience.
+Spryker's cart management easily covers small to medium-sized shopping carts, which satisfies the majority of use cases. However, you may have to deal with really large carts counting many hundreds and sometimes even thousands of line items. Handling such big carts usually means you have to go beyond the usual setup and customize on the project level. This document describes the challenges introduced by large carts and how you can effectively customize Spryker to deal with them.
 
-Handling these big carts usually means you have to go beyond the usual setup and dive into some custom work at the project level. In this guide, we're going to look at what makes large carts challenging and how you can effectively customize Spryker to deal with them.
+Because UI plays a crucial role while working with big carts, this document focuses on Storefront. If you're using Spryker in a headless way, you can focus on Glue and Backend strategies. However, we encourage you to consider if you can apply Storefront strategies to your third-party frontend solution.
 
-This document focuses on Storefront, as UI plays a crucial role while working with big carts. If you use Spryker in a headless way, focussing mainly on Glue API and underlying backend functionality - you can skip those, associated with purely Yves capability limitations. However it is always good to pay attention to them as well and evaluate, if your custom UI may fall into the same issues.
-
-## Challenges and Mitigation Strategies
+## Challenges and mitigation strategies
 
 The following table gives you a comprehensive view on possible challenges you need to consider. Use it as a guidance and evaluate, what challenges have the biggest impact on your project, and what mitigation strategies are best possible to implement given your business requirements and available resources.
 
@@ -23,15 +21,62 @@ In the **MITIGATION STRATEGY** column, the following optimization categories are
 
 Choose and apply the mitigation strategies that meet your requirements. Implementing them altogether might not be cost-efficient or even compatible. Consider implementing strategies in a “conditional“ mode, which enables the feature after achieving a certain cart size threshold. Despite having to maintain two solutions, it can give you good flexibility and a fallback tolerance.
 
-| Challenge                             | Description                     | Mitigation Strategy                                                        |
-|:--------------------------------------|:-----------------------------------------------------------------------------------------------------------------|:----------------------------|
-| Heavy rendering in atomic design.  | Atomic design leads to extensive rendering time for large carts, consuming a significant portion of display processing time.   | **Yves:** Rework the cart page to reduce reliance on atomic design, simplifying the UI components and the overall rendering process.</p>          |
-| Database-intensive cart calculation. | Price calculations and other cart checks, like actualizing prices and availability, involving database or third-party calls are done on the cart item level and performed on each cart change.| <p>**Backend:**</p><p>- Shift from item-by-item data extraction to batch processing before looping through items in the calculation stack.</p><p>- Implement caching strategies to avoid recalculating the entire cart each time, focusing especially on expensive calculation.</p><p>**Yves:**</p><p>- Consider extracting expensive operations, like price and availability updates, into dedicated async calls.</p><p>- Consider shifting from full-cart to partial lookups for operations like removing or updating a single cart item.</p><p>**Glue:**</p><p>- Implement dedicated “lightweight“ API endpoints for partial updates or expensive operations.</p> |
-| Slow session handling.               | While not every session request requires cart data, a large cart being part of a session leads to slow session lookup and update.                            | <p>**Yves:**</p><p>- Consider moving cart data to separate Redis entries, leaving only key reference in the session. This can significantly improve performance on the frontend.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| **Concurrency in Shared Carts**         | Sharing large carts among multiple users can lead to concurrency issues.                                                                                                                                                                   | <p>**Backend:**</p><p>- Consider implementing business-level limitations for working in a shared mode on large carts</p><p>- Implement locking mechanisms (focus on optimistic locking) to manage concurrent updates more efficiently.</p><p>- Implement versioning system for the cart where changes are tracked, and provide real-time feedback to users when conflicts occur.</p>                                                                                                                                                                                                                                                                                                     |
-| **UI Display Challenges**                 | Displaying a full cart in an overlay on each page, and managing cart pages with hundreds of items, poses significant UI challenges.                                                                                                        | <p>Rethink the cart UI design to better accommodate large numbers of items and enhance user experience. Consider:</p><p>**Backend:**</p><p>- Introduce search and sorting mechanisms for the cart</p><p>**Yves:**</p><p>- Generalised, “simple“ info in the cart overlay</p><p>- Pagination when viewing cart (order) items</p><p>- Asynchronous rendering</p><p>- Infinite scrolling</p><p>**Glue:**</p><p>- API endpoints that would support sorting, searching, pagination or asynchronous cart rendering</p>                                                                                                                                                                         |
-| **Placing Large Orders from Large Carts** | Converting large carts into orders results in orders with many items, complicating order management.                                                                                                                                       | <p>**Backend:**</p><p>- Plan the OMS design respectively, with a focus on bulk processing and asynchronous (background) operations. Exercise caution with features like “split order items” to avoid creating excessively large orders.</p><p>- If placing an order is inevitably complex and slow, consider making it asynchronously to not let your customer wait. Make sure to discover that option with the business: can stock overbooking be an issue? What should happen next, if placing an order fails?</p><p>**Yves:**</p><p>- Consider UI changes, similar to cart UI.</p><p>**Glue:**</p><p>- API endpoint that would support async order creation</p>                       |
-| **Complex Checkout Process**              | Handling split payments, shipping costs, and summarizing large carts during checkout can be challenging, given that the whole cart information is loaded.                                                                                  | <p>**Backend:**</p><p>- Make sure to reduce unnecessary backend checks between steps and excessive quote walk-throughs.</p><p>- Don’t load or involve full cart information on checkout steps, unless it’s really needed.</p><p>**Yves:**</p><p>- Redesign the checkout process to better manage large carts and enhance the user experience during checkout.</p><p>**Glue:**</p><p>- Preparing dedicated “lightweight“ checkout API endpoints targeting specific updates or re-calculations.</p><p>- Introduce pagination for checkout-data endpoint</p>                                                                                                                                |
+## Heavy rendering in atomic design
+
+Atomic design leads to extensive rendering time for large carts, consuming a significant portion of display processing time.
+
+Storefront: rework the cart page to reduce reliance on atomic design, simplifying the UI components and the overall rendering process.
+
+
+## Database-intensive cart calculation
+
+Price calculation and cart checks, like actualizing prices and availability, involving database or third-party calls are done on the cart item level and performed on each cart change.
+
+
+**Backend:**
+- Shift from item-by-item data extraction to batch processing before looping through items in the calculation stack.
+- Implement caching strategies to avoid recalculating the entire cart each time, focusing especially on expensive calculation.
+
+**Yves:**
+- Extracting expensive operations, like price and availability updates, into dedicated async calls.
+- Shift from full-cart to partial lookups for operations like removing or updating a single cart item.
+
+**Glue:** Implement dedicated “lightweight“ API endpoints for partial updates or expensive operations.
+
+
+| Slow session handling.               | While not every session request requires cart data, a large cart being part of a session leads to slow session lookup and update.                            | <p>**Yves:**</p><p>- Consider moving cart data to separate Redis entries, leaving only the key reference in the session</p>             |
+
+
+| Concurrency in shared carts     | Sharing large carts among multiple users can lead to concurrency issues.  | <p>**Backend:**</p><p>- Consider implementing business-level limitations for working in a shared mode with large carts.</p><p>- Implement locking mechanisms to manage concurrent updates more efficiently. Focus on optimistic locking.</p><p>- Implement a versioning system for carts where changes are tracked, and provide real-time feedback to users when conflicts occur.</p>                                                                                                                                                                                                                                                
+
+                                                     |
+| UI display challenges  | Displaying a full cart in an overlay on each page and managing cart pages with hundreds of items brings significant UI challenges.     | <p>Rethink the cart UI design to better accommodate large numbers of items and enhance UX. Consider introducing the following:</p><p>**Backend:**</p><p>- Search and sorting mechanisms for the cart.</p><p>**Yves:**</p><p>- Generalized or simplified info in the cart overlay.</p><p>- Pagination when viewing cart items.</p><p>- Asynchronous rendering.</p><p>- Infinite scrolling.</p><p>**Glue:**</p><p>- API endpoints that support sorting, searching, pagination, or asynchronous cart rendering.</p>  |
+
+
+## Placing large orders from large cart
+
+Converting large carts into orders results in orders with many items, complicating order management.   
+
+Backend:
+- Plan the OMS design with a focus on bulk processing and asynchronous (background) operations. Be cautious with functionalities like [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) to avoid creating too large orders.</p><p>- If placing an order is inevitably complex and slow, consider making it asynchronously to not let your customer wait. Make sure to cover the cases of overbooking and failed order placements. </p><p>
+
+Yves:- Consider UI changes, similar to the cart UI changes mentioned in the previous point.
+
+Glue:**</p><p>- Implement an API endpoint that supports async order creation.</p>                       |
+
+## Complex checkout process
+
+When the whole cart information is loaded, handling split payments, shipping costs, and summarizing large carts during checkout can be challenging.
+
+Backend:
+- Reduce unnecessary backend checks between steps and excessive quote walkthroughs.
+- Unless it’s really needed, don’t load or involve full cart information on checkout steps.
+
+Yves: Redesign the checkout process to better manage large carts and enhance the UX.
+
+Glue:
+- Prepare dedicated “lightweight“ checkout API endpoints for specific updates or recalculations.
+- Introduce pagination for the `checkout-data` endpoint.                                                                                                                                |
 
 ## Conclusion
 

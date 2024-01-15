@@ -3844,6 +3844,15 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                        nested:
+                          - title: Integrate the connector module
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+                            include_versions:
+                            - "202311.0"
+                          - title: Integrate Vertex
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                            include_versions:
+                            - "202311.0"
                       - title: Configure Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
                         include_versions:

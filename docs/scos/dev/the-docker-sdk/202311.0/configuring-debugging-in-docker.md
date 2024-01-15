@@ -216,3 +216,11 @@ The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) comman
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 ```
+
+{% info_block warningBox "Receiving no connection in PhpStorm or similar" %}
+In rare cases, docker containers running in debug mode stop XDebug connections after waking computer from a sleep mode.
+So if you don't get a banner 'Debug session was finished without being paused', please execute:
+```bash
+docker/sdk stop && docker/sdk run -x
+```
+{% endinfo_block %}

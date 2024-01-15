@@ -33,5 +33,5 @@ Ensure that your installation meets these requirements.
 
 To install Vertex, integrate the ACP connector module and the Vertex app:
 
-1. [Integrate ACP connector module for tax calculation](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-the-acp-connector-module-for-tax-calculation.html)
-2. [Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate--the-vertex-app.html)
+1. [Integrate ACP connector module for tax calculation](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html)
+2. [Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate--the-vertex-app.html)

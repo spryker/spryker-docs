@@ -396,4 +396,4 @@ The refund functionality will only work if the OMS event is called `refund`.
 
 
 ## Next step
-[Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/integrate-the-vertex-app.html)
+[Integrate the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html)

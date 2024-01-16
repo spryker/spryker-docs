@@ -1923,118 +1923,118 @@ entries:
       - "202307.0"
       - "202311.0"
   - title: Migration concepts
-    url: /docs/scos/dev/migration-concepts/migration-concepts.html
+    url: /docs/dg/dev/upgrade-and-migrate/migration-concepts.html
     nested:
     - title: Migrate to decoupled Glue infrastructure
       nested:
         - title: Integrate Storefront and Backend Glue API applications
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
         - title: Integrate the authentication
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
         - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
         - title: Integrate the authorization scopes
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
         - title: Integrate the documentation generator
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
         - title: Integrate the Glue JSON:API convention
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
         - title: Integrate the protected endpoints authorization
-          url: /docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
     - title: Migrate from Auth to SecurityGui module
-      url: /docs/scos/dev/migration-concepts/migrate-from-auth-to-securitygui-module.html
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
-      url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
+      url: /docs/dg/dev/upgrade-and-migrate/migrating-from-twig-v1-to-twig-v3.html
     - title: Silex Replacement
-      url: /docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
+      url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html
       nested:
       - title: Application
-        url: /docs/scos/dev/migration-concepts/silex-replacement/application.html
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html
       - title: Container
-        url: /docs/scos/dev/migration-concepts/silex-replacement/container.html
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/container.html
       - title: Router
-        url: /docs/scos/dev/migration-concepts/silex-replacement/router/router.html
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router.html
         nested:
         - title: Router Yves
-          url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
+          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html
         - title: Router Zed
-          url: /docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
+          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-zed.html
       - title: Migrate modules
         nested:
           - title: ErrorHandler
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html
           - title: EventDispatcher
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html
           - title: Form
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-form-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-form-module.html
           - title: HTTP
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-http-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-http-module.html
           - title: Locale
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-locale-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-locale-module.html
           - title: Messenger
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-messenger-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-messenger-module.html
           - title: Propel
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-propel-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-propel-module.html
           - title: Router
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-router-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-router-module.html
           - title: Security
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-security-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-security-module.html
           - title: Session
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-session-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-session-module.html
           - title: Store
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-store-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-store-module.html
           - title: Translator
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-translator-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-translator-module.html
           - title: Twig
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-twig-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-twig-module.html
           - title: Validator
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-validator-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-validator-module.html
           - title: WebProfiler
-            url: /docs/scos/dev/migration-concepts/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
       - title: Upgrade to Angular 12
-        url: /docs/scos/dev/migration-concepts/upgrade-to-angular-12.html
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
-        url: /docs/scos/dev/migration-concepts/upgrade-to-angular-15.html
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
       - title: Upgrade Publish and Sync
-        url: /docs/scos/dev/migration-concepts/upgrade-publish-and-sync.html
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
       - title: Upgrade to Marketplace
-        url: /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
       - title: Migrate to Docker
-        url: /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
         nested:
           - title: Adjust Jenkins for a Docker environment
-            url: /docs/scos/dev/migration-concepts/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+            url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
     - title: Migrate to SCCOS
-      url: /docs/scos/dev/migration-concepts/migrate-to-sccos/migrate-to-sccos.html
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/migrate-to-sccos.html
       nested:
       - title: "Step 1: Integrate the Docker SDK"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-1-integrate-the-docker-sdk.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-1-integrate-the-docker-sdk.html
       - title: "Step 2: Upgrade the PHP version"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-2-upgrade-the-php-version.html
       - title: "Step 3: Migrate non-standard services"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-3-migrate-non-standard-services.html
       - title: "Step 4: Provision the Spryker SCCOS environments"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-4-provision-the-sccos-environments.html
       - title: "Step 5: Define the deployment strategy"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-5-define-the-deployment-strategy.html
       - title: "Step 6: Define environment variables"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html
       - title: "Step 7: Restore Elasticsearch and Redis"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-7-restore-es-and-redis.html
       - title: "Step 8: Adapt the file system-based features"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html
       - title: "Step 9: Implement security and performance guidelines"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html
       - title: "Step 10: Add frontend assets"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-10-add-frontend-assets.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-10-add-frontend-assets.html
       - title: "Step 11: Wire custom services"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-11-wire-custom-services.html
       - title: "Step 12: Choose a multi-store setup"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-12-choose-a-multi-store-setup.html
       - title: "Step 13: Migrate database"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-13-migrate-database.html
       - title: "Step 14: Finilize the migration"
-        url: /docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-14-finalize-the-migration.html
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

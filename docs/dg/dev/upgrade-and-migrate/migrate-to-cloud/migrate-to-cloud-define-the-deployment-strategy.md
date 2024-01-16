@@ -6,7 +6,7 @@ redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html
 ---
 
-After you have [provisioned the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html), you have to define the deployment strategy.
+After you have [provisioned the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-4-provision-the-sccos-environments.html), you have to define the deployment strategy.
 
 The current Spryker Cloud Commerce OS solution doesn't support advanced rollout strategies like blue-green deployments and canary deployments. Therefore, it's necessary to conduct thorough testing before implementing changes in a production environment.
 
@@ -20,4 +20,4 @@ Within CodePipeline, there are several deployment types:
 For more information about deployment process and its states, see [Deployment in states](/docs/ca/dev/configure-deployment-pipelines/deployment-in-states.html).
 
 ## Next step
-[Define environment variables](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html)
+[Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html)

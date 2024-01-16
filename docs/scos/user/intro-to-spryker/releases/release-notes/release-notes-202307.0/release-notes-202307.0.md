@@ -297,7 +297,7 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 
 #### Documentation
 
-* [Upgrade to Angular v15](/docs/scos/dev/migration-concepts/upgrade-to-angular-15.html)
+* [Upgrade to Angular v15](/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html)
 * [Upgrade to Node.js v18](/docs/scos/dev/front-end-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html)
 
 ### [Composable Storefront] Early Access release

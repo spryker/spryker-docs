@@ -70,7 +70,7 @@ In December 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
 - [Create Glue API authorization strategies](/docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
@@ -136,21 +136,21 @@ In November 2023, we have added and updated the following pages:
     - [Configure the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html).
     - [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
 - [Vertex FAQ](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex-faq.html): FAQ about the the Vertex app from the Spryker's App Composition Platform.
-- [Migrate to SCCOS](/docs/scos/dev/migration-concepts/migrate-to-sccos/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
-    - [Step 1: Integrate the Docker SDK](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-1-integrate-the-docker-sdk.html).
-    - [Step 2: Upgrade the PHP version](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html).
-    - [Step 3: Migrate non-standard services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html).
-    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html).
-    - [Step 5: Define the deployment strategy](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html).
-    - [Step 6: Define environment variables](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html).
-    - [Step 7: Restore Elasticsearch and Redis](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html).
-    - [Step 8: Adapt the file system-based features](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html).
-    - [Step 9: Implement security and performance guidelines](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html).
-    - [Step 10: Add frontend assets](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-10-add-frontend-assets.html).
-    - [Step 11: Wire custom services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html).
-    - [Step 12: Choose a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html).
-    - [Step 13: Migrate database](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html).
-    - [Step 14: Finalize the migration](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html).
+- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
+    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-1-integrate-the-docker-sdk.html).
+    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-2-upgrade-the-php-version.html).
+    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-3-migrate-non-standard-services.html).
+    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-4-provision-the-sccos-environments.html).
+    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-5-define-the-deployment-strategy.html).
+    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html).
+    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-7-restore-es-and-redis.html).
+    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html).
+    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html).
+    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-10-add-frontend-assets.html).
+    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-11-wire-custom-services.html).
+    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-12-choose-a-multi-store-setup.html).
+    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-13-migrate-database.html).
+    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-14-finalize-the-migration.html).
 - [Backend API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
 - [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
@@ -196,7 +196,7 @@ In October 2023, we have added and updated the following pages:
 - [Oryx: Responsive design system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 - [Entity does not exist: Pyz prefix](/docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
-- [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
+- [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
@@ -308,7 +308,7 @@ In August 2023, we have added and updated the following pages:
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
 
 For more details about these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

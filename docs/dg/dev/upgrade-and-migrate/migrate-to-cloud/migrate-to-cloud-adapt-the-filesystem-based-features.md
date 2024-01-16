@@ -15,4 +15,4 @@ When migrating to SCCOS, make sure to consider these architectural peculiarities
 
 ## Next step
 
-[Implement Security and Performance guidelines](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html)
+[Implement Security and Performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html)

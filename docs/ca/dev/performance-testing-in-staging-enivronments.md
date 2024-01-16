@@ -59,7 +59,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 ### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
+With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
 
 {% info_block infoBox %}
 

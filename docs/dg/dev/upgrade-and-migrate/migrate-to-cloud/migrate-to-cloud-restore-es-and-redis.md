@@ -5,7 +5,7 @@ template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html
 ---
-After you have [defined the environment variables](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html), you must restore Elasticsearch and Redis.
+After you have [defined the environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html), you must restore Elasticsearch and Redis.
 
 Restoring Redis and Elasticsearch on a newly deployed infrastructure can be approached in two ways. These approaches involve using the `sync:data` and `publish:trigger-events` commands.
 We recommend using `sync:data`, because it directly synchronizes the database with Elasticsearch and Redis without additional steps. However, if there are memory issues or any other complications with `sync:data`, you can use the alternative `publish:trigger-events` command. Keep in mind, though, that this command does extra work while republishing data in `_storage` and `_search` tables.
@@ -30,4 +30,4 @@ An alternative method for accomplishing this restoration is by using the `vendor
 
 ## Next step
 
-[Adapt the file system-based features](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html)
+[Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html)

@@ -1,344 +1,24 @@
 ---
-title: Install Vertex
-description: Find out how you can install Vertex in your Spryker shop
+title: Integrate the Vertex app
+description: Find out how you can integrate the Vertex app into your Spryker shop
 draft: true
-last_updated: Sep 13, 2023
+last_updated: Jan 10, 2024
 template: howto-guide-template
 related:
   - title: Vertex
     link: docs/pbc/all/tax-management/page.version/vertex/vertex.html
-redirect_from:
-    - /docs/pbc/all/tax-management/202311.0/vertex/install-vertex.html
-    - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html
-    - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
-    - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
 
 ---
-This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
 
-## Prerequisites
+After you have [integrated the ACP connector module](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html) for tax calculation, you can integrate the Vertex app.
 
-Before integrating Vertex, ensure the following prerequisites are met:
+Spryker doesn't have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to add some missing information to the Quote object before sending a calculation request.
 
-- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+The following diagram shows the data flow of the tax calculation request from the Spryker Cart to the Vertex API.
 
-- The Vertex app catalog page lists specific packages that must be installed or upgraded before you can use the Vertex app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Vertex**.
-Ensure that your installation meets these requirements.
+![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
 
-- Make sure that your deployment pipeline executes database migrations.
-- You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it is assumed that businesses using the app are unable to determine GROSS prices.
-
-## 1. Integrate ACP connector module for tax calculation
-
-To enable the Vertex integration, you need to integrate the [spryker/tax-app](https://github.com/spryker/tax-app) ACP connector module first.
-
-To integrate the connector module for the Vertex app, follow the steps below.
-
-### 1. Configure shared configs
-
-Add the following config to `config/Shared/config_default.php`:
-
-```php
-// ...
-
-use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
-use Generated\Shared\Transfer\DeleteTaxAppTransfer;
-use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
-use Spryker\Shared\TaxApp\TaxAppConstants;
-use Spryker\Zed\OauthAuth0\OauthAuth0Config;
-
-// ...
-
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    // ...
-    ConfigureTaxAppTransfer::class => 'tax-commands',
-    DeleteTaxAppTransfer::class => 'tax-commands',
-    SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
-];
-
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // ...
-
-    'tax-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-];
-
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // ...
-
-    'payment-tax-invoice-commands' => 'http',
-];
-
-// ...
-
-$config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
-$config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
-$config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
-```
-
-### 2. Configure the Calculation dependency provider
-
-Add the following to `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php`:
-
-```php
-// ...
-
-use Spryker\Zed\Calculation\Communication\Plugin\Calculator\GrandTotalCalculatorPlugin;
-use Spryker\Zed\Calculation\Communication\Plugin\Calculator\TaxTotalCalculatorPlugin;
-use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
-
-// ...
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
-     */
-    protected function getQuoteCalculatorPluginStack(Container $container): array
-    {
-        /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
-        $pluginStack = [
-            // ...
-
-            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
-            # Suggested plugins order is shown.
-
-            new TaxTotalCalculatorPlugin(),
-            new TaxAppCalculationPlugin(),
-            new GrandTotalCalculatorPlugin(),
-
-            // ...
-        ];
-
-        return $pluginStack;
-    }
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
-     */
-    protected function getOrderCalculatorPluginStack(Container $container): array
-    {
-        return [
-            // ...
-
-            # This plugin should be put after other tax plugins, but before GrandTotalCalculatorPlugin.
-            # Suggested plugins order is shown.
-
-            new TaxTotalCalculatorPlugin(),
-            new TaxAppCalculationPlugin(),
-            new GrandTotalCalculatorPlugin(),
-
-            // ...
-        ];
-    }
-
-// ...
-```
-
-{% info_block infoBox "Performance improvement" %}
-
-Spryker has its own [Taxes](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) feature, which comes pre-installed in the Checkout through the Calculation module. To enhance performance when using an external Tax calculation provider, we recommend disabling the following plugins:
-
-in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getQuoteCalculatorPluginStack()`:
-
-- TaxAmountCalculatorPlugin
-- ItemTaxAmountFullAggregatorPlugin
-- TaxRateAverageAggregatorPlugin
-- TaxTotalCalculatorPlugin
-
-in `\Pyz\Zed\Calculation\CalculationDependencyProvider::getOrderCalculatorPluginStack()`:
-
-- TaxAmountCalculatorPlugin
-- ItemTaxAmountFullAggregatorPlugin
-- TaxAmountAfterCancellationCalculatorPlugin
-- OrderTaxTotalCalculationPlugin
-
-Disabling them will also disable Spryker Taxes feature. This means that in case Vertex is unresponsive or disabled, order taxes will not be calculated, and their amount will always be 0.
-
-{% endinfo_block %}
-
-### 3. Configure the Shop Application dependency provider
-
-Add the following code to `src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php`:
-
-```php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
-use SprykerShop\Yves\CartPage\Widget\CartSummaryHideTaxAmountWidget;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @phpstan-return array<class-string<\Spryker\Yves\Kernel\Widget\AbstractWidget>>
-     *
-     * @return array<string>
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [
-            // ...
-
-            # This widget is replacing Spryker OOTB tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
-            CartSummaryHideTaxAmountWidget::class,
-        ];
-    }
-}
-
-```
-
-If you have custom Yves templates or make your own Frontend, add ```CartSummaryHideTaxAmountWidget``` to your template. The core template is located at `SprykerShop/Yves/CartPage/Theme/default/components/molecules/cart-summary/cart-summary.twig`.
-
-Here is an example with ```CartSummaryHideTaxAmountWidget```:
-
-```html
-{% raw %}
-<li class="list__item spacing-y">
-    {{ 'cart.total.tax_total' | trans }}
-    {% widget 'CartSummaryHideTaxAmountWidget' args [data.cart] only %}
-    {% nowidget %}
-        <span class="float-right">{{ data.cart.totals.taxTotal.amount | money(true, data.cart.currency.code) }}</span>
-    {% endwidget %}
-</li>
-{% endraw %}
-```
-
-
-### 4. Configure the Message Broker dependency provider
-
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
-
-```php
-
-namespace Pyz\Zed\MessageBroker;
-
-use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\TaxApp\Communication\Plugin\MessageBroker\TaxAppMessageHandlerPlugin;
-
-class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageHandlerPluginInterface>
-     */
-    public function getMessageHandlerPlugins(): array
-    {
-        return [
-            // ...
-
-            # This plugin is handling messages sent from Vertex app to SCCOS.
-            new TaxAppMessageHandlerPlugin(),
-        ];
-    }
-}
-
-```
-
-### 5. Optional: To send invoices to Vertex through OMS, configure your Payment OMS
-
-Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
-
-```xml
-<?xml version="1.0"?>
-<statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
->
-
-    <process name="SomePaymentProcess" main="true">
-
-        <!-- other configurations -->
-
-        <states>
-
-            <!-- other states -->
-
-            <state name="tax invoice submitted" reserved="true" display="oms.state.paid"/>
-
-            <!-- other states -->
-
-        </states>
-
-        <transitions>
-
-            <!-- other transitions -->
-
-            <transition happy="true">
-                <source>paid</source> <!-- Suggested that paid transition should be the source, but it's up to you -->
-                <target>tax invoice submitted</target>
-                <event>submit tax invoice</event>
-            </transition>
-
-            <!-- other transitions -->
-
-            <transition happy="true">
-                <source>tax invoice submitted</source>
-
-                <!-- Here are the contents of the target transition -->
-
-            </transition>
-
-            <!-- other transitions -->
-
-        </transitions>
-
-        <events>
-
-            <!-- other events -->
-
-            <event name="submit tax invoice" onEnter="true" command="TaxApp/SubmitPaymentTaxInvoice"/>
-
-            <!-- other events -->
-
-        </events>
-
-    </process>
-
-</statemachine>
-```
-
-#### Configure the Oms dependency provider
-Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
-
-```php
-// ...
-
-use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoicePlugin;
-
-// ...
-
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    protected function extendCommandPlugins(Container $container): Container
-    {
-         $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-
-             // ...
-
-             $commandCollection->add(new SubmitPaymentTaxInvoicePlugin(), 'TaxApp/SubmitPaymentTaxInvoice');
-
-             // ...
-
-             return $commandCollection;
-        });
-
-        return $container;
-    }
-
-```
-
-## 2. Integrate the Vertex app
-
-Spryker does not have the same data model as Vertex, which is necessary for accurate tax calculations. Therefore, the integration requires project developers to to add some missing information to the Quote object before sending a calculation request.
-
-The following diagram shows the data flow of the tax calculation request from Spryker Cart to the Vertex API.
-
- ![tax-calculation-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/install-vertex/tax-calculation-requests.png)
+To integrate Vertex, follow these steps.
 
 ### 1. Configure Vertex-specific metadata transfers
 
@@ -402,7 +82,7 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 ### 2. Implement Vertex-specific metadata extender plugins
 
 There are several types of expander plugins you have to introduce.
-As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins inside are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
+As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins in this module are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
 
 #### Configure the Customer Class Code Expander plugins
 
@@ -467,11 +147,11 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
 
 #### Configure the Customer Exemption Certificate Expander plugins
 
-Configure the Customer Exemption Certificate Expander plugin for order:
+- Configure the Customer Exemption Certificate Expander plugin for order:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexExemptionCertificateExpanderPlugin.php`
 
-Configure the Customer Exemption Certificate Expander plugin for quote:
+- Configure the Customer Exemption Certificate Expander plugin for quote:
 
 `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php`
 
@@ -527,7 +207,7 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 }
 ```
 
-{% info_block infoBox "Use same Product Class Code" %}
+{% info_block infoBox "Use the same Product Class Code" %}
 
 You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
 
@@ -572,7 +252,7 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 
 ### 3. Configure the Tax App dependency provider
 
-After the Tax App dependency provider configuration, the plugin stack will look similar to this one:
+After the Tax App dependency provider configuration, the plugin stack should look similar to this one:
 
 ```php
 
@@ -623,7 +303,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 
 ### 4. Configure Product Offer Stock dependency provider (Marketplace only)
 
-After you configured the Product Offer Stock dependency provider for Marketplace, the plugin stack will look similar to this one:
+After you have configured the Product Offer Stock dependency provider for Marketplace, the plugin stack should look similar to this one:
 
 ```php
 
@@ -696,6 +376,7 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 | state            | mainDivision   | Should be either not empty or null |
 | zipCode          | postalCode     |                                    |
 | country.iso2Code | country        |                                    |
+
 
 ## Next step
 [Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)

@@ -341,7 +341,7 @@ oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,de_D
 ```
 Then run the data import for the glossary:
 
-```bash
+```php
 vendor/bin/console data:import glossary
 ```
 

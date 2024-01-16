@@ -6,9 +6,9 @@ last_updated: Jan 31, 2024
 template: howto-guide-template
 related:
   - title: Stripe
-    link: docs/pbc/all/payment-service-provider/page.version/stripe/stripe.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 redirect_from:
-    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
+- /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
 
 ---
 This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.

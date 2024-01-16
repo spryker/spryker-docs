@@ -13,4 +13,4 @@ To disconnect the Stripe app from your store, do the following:
 1. In your store's Back Office, go to **Apps**.
 2. Click **Stripe**.
 3. On the Stripe app details page, next to the **Configure** button, hold the pointer over <span class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png)</span> and click **Disconnect**.
-4. In the message that appears, click **Disconnect**. This removes the Stripe configurations from the Back Office and Storefront.
+4. In the message that appears, click **Disconnect**. This removes the Stripe configurations from the Back Office and from the Storefront.

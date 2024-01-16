@@ -71,7 +71,7 @@ Activate the following plugins:
 | AgentRestUserValidatorPlugin | Checks if the `RestRequest.restUser` is an Agent when an agent-only resource is accessed. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentAccessTokenRestUserFinderPlugin | Finds the Rest user for the `X-Agent-Authorization` header. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentAccessTokensResourceRoutePlugin | Provides the `/agent-access-tokens` resource route. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
-| AgentCustomerImpersonationAccessTokensResourceRoutePlugin | Provides the `/agent-customer-impersonation-access-tokens` resource route. | The Customer impersonation grant type must be configured. See the [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) for details. | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
+| AgentCustomerImpersonationAccessTokensResourceRoutePlugin | Provides the `/agent-customer-impersonation-access-tokens` resource route. | The Customer impersonation grant type must be configured. See the [Install the Customer Account Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) for details. | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 | AgentCustomerSearchResourceRoutePlugin | Provides the `/agent-customer-search` resource route. | None | Spryker\Glue\AgentAuthRestApi\Plugin\GlueApplication |
 
 <details>
@@ -196,5 +196,5 @@ Integrate the following related features:
 
 | FEATURE | INSTALLATION GUIDE |
 | --- | --- |
-| Customer account management | [Customer account management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Customer account management | [Install the Customer Account Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 | Customer account management + Agent assist | [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) |

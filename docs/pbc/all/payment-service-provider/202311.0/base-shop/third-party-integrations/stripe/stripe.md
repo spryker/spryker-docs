@@ -12,4 +12,4 @@ The Spryker-Stripe integration is a part of the App Composition Platform. TThis 
 
 ## Next steps
 
-[Install Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/stripe/install-stripe.html)
+[Install Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.)

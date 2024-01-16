@@ -327,7 +327,22 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 }
 
 ```
+### 5. Add translations
 
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+cart.total.tax_total.calculated_at_checkout,an der Kasse berechnet,de_DE
+cart.total.tax_total.calculated_at_checkout,calculated at checkout,en_US
+```
+
+To import data, run the following command:
+
+```yaml
+console data:import glossary
+```
 
 ---
 

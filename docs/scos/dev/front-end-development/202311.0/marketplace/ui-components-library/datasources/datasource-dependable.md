@@ -4,7 +4,7 @@ description: Details about the Datasource Dependable service in the components l
 template: concept-topic-template
 related:
   - title: Datasource Trigger
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger.html
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
   - title: Datasource Http
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table

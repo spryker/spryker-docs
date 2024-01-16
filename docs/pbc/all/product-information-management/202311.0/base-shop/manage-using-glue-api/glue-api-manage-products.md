@@ -4,6 +4,7 @@ description: Describes the endpoints used to manage products
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-manage-products.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-products.html
 ---
 
 This section contains the descriptions of the following endpoints used to manage products in Spryker Commerce OS:  

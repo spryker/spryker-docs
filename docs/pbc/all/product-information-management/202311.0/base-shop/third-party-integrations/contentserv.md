@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/contentserv
   - /docs/scos/user/technology-partners/202200.0/product-information-pimerp/contentserv.html
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/contentserv.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/contentserv.html
 ---
 
 ## Copyright and Disclaimer

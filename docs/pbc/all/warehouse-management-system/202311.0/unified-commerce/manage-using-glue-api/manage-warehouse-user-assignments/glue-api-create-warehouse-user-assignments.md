@@ -16,9 +16,9 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a warehouse user assignment
 
----
+***
 `POST` **/warehouse-user-assignments**
----
+***
 
 ### Request
 
@@ -63,7 +63,7 @@ Request sample:
 ### Response
 
 
-<details open>
+<details>
   <summary>Create a warehouse user assignment</summary>
 
 ```json
@@ -89,7 +89,7 @@ Request sample:
 
 </details>
 
-<details open>
+<details>
   <summary>Create a warehouse user assignment with user information included</summary>
 
 ```json

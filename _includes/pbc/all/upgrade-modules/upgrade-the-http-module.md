@@ -90,7 +90,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 namespace Pyz\Yves\Application;
 
 use Spryker\Yves\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
-use Spryker\Yves\Http\Plugin\Application\HttpApplicationPlugin;
+use Spryker\Yves\Http\Plugin\Application\YvesHttpApplicationPlugin;
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
@@ -103,7 +103,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 	{
 		return [
 			...
-			new HttpApplicationPlugin(),
+			new YvesHttpApplicationPlugin(),
    			...
 		];
 	}

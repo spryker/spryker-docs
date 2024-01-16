@@ -16,7 +16,7 @@ Install the required features:
 | Glue API: Spryker Core     | {{page.version}}  | [Install the Spryker Core Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Shipment                  | {{page.version}}  | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 | Glue API: Checkout         | {{page.version}}  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API: Glue Application      | {{page.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Glue Application      | {{page.version}}  | [Install the Glue Application Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 | Glue API: Order Management | {{page.version}}  | [Install the Order Management Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer

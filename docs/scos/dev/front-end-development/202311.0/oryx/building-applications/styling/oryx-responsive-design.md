@@ -1,7 +1,7 @@
 ---
 title: "Oryx: Responsive design system"
 description: Learn how to leverage Oryx's Responsive Design system to create stunning and user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
-last_updated: October 3rd, 2023
+last_updated: October 3, 2023
 template: concept-topic-template
 ---
 

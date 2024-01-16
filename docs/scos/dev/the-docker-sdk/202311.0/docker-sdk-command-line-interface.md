@@ -1,15 +1,8 @@
 ---
-title: Docker SDK quick start guide
-description: Get started with Spryker Docker SDK.
-last_updated: Jun 16, 2021
+title: Docker SDK command line interface guide
+description: How to use Docker SDK command line interface.
+last_updated: Jan 16, 2024
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
-originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
-redirect_from:
-  - /2021080/docs/docker-sdk-quick-start-guide
-  - /2021080/docs/en/docker-sdk-quick-start-guide
-  - /docs/docker-sdk-quick-start-guide
-  - /docs/en/docker-sdk-quick-start-guide
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -33,97 +26,45 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
-This document describes how you can quickly set up a local environment with the Docker SDK.
+This document describes how you can run console commands on your local environment with the Docker SDK.
 
-## Running the Docker SDK in a local environment
+## Running commands only on your local Spryker environment
 
-To run the Docker SDK in a local environment, follow the instructions below.
-
-### Installing Docker
-
-For Docker installation instructions, see one of the following:
-* [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-* [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
-* [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
-* [Installing Docker prerequisites on Windowswith WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
-
-### Setting up a project with the Docker SDK
-
-To set up a local project with the Docker SDK:
-
-1. Create the project directory and clone the source:
-
+In order to enter into the command line interface of your local instance, please run the following command:
+Non-debug mode:
 ```bash
-mkdir {project-name} && cd {project-name}
-git clone https://github.com/{project-url} ./
+docker/sdk cli
 ```
+![img](https://i.ibb.co/SBdtvX0/docker-sdk-cli-1.png))
 
-2. Clone the latest version of the Docker SDK:
-
+Debug mode:
 ```bash
-git clone git@github.com:spryker/docker-sdk.git docker
+docker/sdk cli -x
 ```
+![img](https://i.ibb.co/SNnyjyZ/docker-sdk-cli-2.png))
 
+From here, you can run any commands related to your projec, like: composer, console, glue, yves, etc..
 
-## Setting up a developer environment
+## Running a single of commands once on your local Spryker environment
 
-To set up a developer environment:
+Sometimes you don't want to enter into the CLI mode of your project.
+In this case, you may run the following command:
+```bach
+docker/sdk cli composer install
+```
+Execution of the **composer install** will happen inside a CLI container, but after completion, you will stay in your regular CLI.
 
-1. Bootstrap docker setup, build and start the instance:
-
+{% info_block infoBox "Complex commands hint" %}
+If you have to run a complex command, which requires quotes, please make sure to use double quote for the whole command and any allowed quotes inside it.
 ```bash
-docker/sdk boot deploy.dev.yml
-docker/sdk up
+docker/sdk cli "composer require 'spryker/kernel:master as 1.1.1-dev'"
 ```
+{% endinfo_block %}
 
-2. Switch to your project branch, re-build the application with assets and demo data from the new branch:
+## Running a set of commands once on your local Spryker environment
 
+Similar to the previous case, but you want to run several commands.
+Do the following:
 ```bash
-git checkout {your_branch}
-docker/sdk boot deploy.dev.yml
-docker/sdk up --build --assets --data
+docker/sdk cli "composer install && console transfer:generate && console propel:install"
 ```
-
-Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
-
-- `--build` - update composer, generate transfer objects, etc.
-- `--assets` - build assets
-- `--data` - fetch new demo data
-
-
-## Setting up a production-like environment
-
-To set up a production-like environment:
-
-1. Bootstrap docker setup, build and start the instance:
-
-```bash
-docker/sdk boot deploy.*.yml
-docker/sdk up
-```
-
-2. Switch to your project branch, re-build the application with assets and demo data from the new branch:
-
-```bash
-git checkout {your_branch_name}
-docker/sdk boot
-docker/sdk up --build --assets --data
-```
-
-Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
-
-- `--build` - update composer, generate transfer objects, etc.
-- `--assets` - build assets
-- `--data` - get new demo data
-
-
-## Troubleshooting
-
-For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html).
-
-
-## What documents should I use to start developing and configuring my project?
-
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)

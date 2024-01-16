@@ -66,7 +66,7 @@ The inheritance starts on the top level and, if a resolvable PHP class is not fo
 
 {% info_block infoBox %}
 
-If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html).
+If you customize the core code in your project by extending a resolvable class from the core, and your project namespaces are configured properly, because of the namespace precedence and the class resolving system, the project code is automatically wired and executed when necessary. Learn more about extending the core in [Core extension](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html).
 
 {% endinfo_block %}
 
@@ -156,7 +156,7 @@ Check out the configuration loading sequence in the diagram below to learn how t
 
 {% info_block infoBox %}
 
-To learn more about configuration management, see [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
+To learn more about configuration management, see [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 
 {% endinfo_block %}
 

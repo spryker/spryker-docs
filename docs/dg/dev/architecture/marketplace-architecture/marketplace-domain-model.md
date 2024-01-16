@@ -32,7 +32,7 @@ This model is intentionally simplified. Learn more about the core domain objects
 #### Merchant
 
 `Merchant` is a core Marketplace domain object. `Merchant` represents an entity of a third-party seller on a shop. In other setups, such as "big-box retail", a `Merchant` can represent a branch of a chain of stores.
-Merchants use [Merchant Portal](/docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html) to manage their profile, catalog, and sales.
+Merchants use [Merchant Portal](/docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html) to manage their profile, catalog, and sales.
 
 To learn more about the `Merchant` entity, see [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html).
 
@@ -56,6 +56,6 @@ To learn more about the Product Offer entity, see [Marketplace Product Offer fea
 
 #### MerchantOrder
 
-`MerchantOrder` is a Marketplace domain object. `MerchantOrder` is a composition of `OrderItem`, `OrderTotal`, `OrderShipment`, `OrderCustomer` objects, and other related to a particular merchant within one `Order`. `MerchantOrder` is the key entity that helps Merchants to fulfill `Order` objects. You can have different OMS flows for different `Merchant` objects so that each `Merchant` can process their `MerchantOrder` objects with the best flow. `Merchant` objects use the [Merchant Portal application](/docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html) to fulfill `MerchantOrder` objects.
+`MerchantOrder` is a Marketplace domain object. `MerchantOrder` is a composition of `OrderItem`, `OrderTotal`, `OrderShipment`, `OrderCustomer` objects, and other related to a particular merchant within one `Order`. `MerchantOrder` is the key entity that helps Merchants to fulfill `Order` objects. You can have different OMS flows for different `Merchant` objects so that each `Merchant` can process their `MerchantOrder` objects with the best flow. `Merchant` objects use the [Merchant Portal application](/docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html) to fulfill `MerchantOrder` objects.
 
 To learn more about the orders in the Marketplace, see [Marketplace Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html).

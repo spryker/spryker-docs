@@ -47,7 +47,7 @@ To format files, [Prettier](https://prettier.io/) is used.
 
 ## Installation
 
-For details about how to install Formatter for your project, see the [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html).
+For details about how to install Formatter for your project, see the [Formatter integration guide](/docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-formatter.html).
 
 ## Using Formatter
 

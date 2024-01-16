@@ -32,7 +32,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
-Spryker supports several [test helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
+Spryker supports several [test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
 
 To test console commands, do the following:
 
@@ -49,7 +49,7 @@ suites:
                 - ...
 ```
 
-For more information about the `codeception.yml` file, see [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
+For more information about the `codeception.yml` file, see [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html).
 
 2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
 3. Add the test class:

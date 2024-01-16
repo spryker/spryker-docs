@@ -42,7 +42,7 @@ Ensure you have addressed all the items from the following checklists.
 
 After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
-We highly recommend you to follow our [Security guidelines](/docs/scos/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
+We highly recommend you to follow our [Security guidelines](/docs/dg/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
 
 Double check that you do not have any clear text passwords stored in config files or repositories.
 
@@ -53,21 +53,21 @@ Double check that you do not have any clear text passwords stored in config file
 - Upgrade your project's code to match the latest Demo Shop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Update `spryker/twig` to version 3.15.2 or later because this version and the later ones have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB if you don't use it already.
-- Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) guide.
+- Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrating-separate-endpoint-bootstraps.html) guide.
 - Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 - Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
-- Make sure you have applied the security guidelines. For details, see [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/security-guidelines.html).
+- Make sure you have applied the security guidelines. For details, see [Security guidelines](https://docs.spryker.com/docs/dg/dev/guidelines/security-guidelines.html).
 - Double-check that you don't have any clear text passwords stored in config files or repositories.
 
-### Testing 
+### Testing
 
 - [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
-### SEO ### 
+### SEO
 
 Make sure the SEO strategy and plan are defined. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
@@ -75,7 +75,7 @@ Make sure the SEO strategy and plan are defined. If you are migrating from anoth
 
 Four weeks before your project goes live, ensure you addressed all the items from the following checklists.
 
-### Cloud 
+### Cloud
 
 - *Make sure you have an APM set up*. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
@@ -91,7 +91,7 @@ See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS 
 
 ### Application
 
-- *Performance tips are implemented and verified*. Double-check that you implemented all the [performance tips](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
+- *Performance tips are implemented and verified*. Double-check that you implemented all the [performance tips](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 
 ### Testing
@@ -128,7 +128,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
   - Define the time of deployment.
   - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
 - Make sure that DNS is set.
- 
+
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 

@@ -31,7 +31,7 @@ The file must have the following parameters:
 |-|-|-|-|-|
 | Order_reference |   |  Must be unique. | Identifier of the order in the system. |
 | order_item_reference | &check; | String | Must be unique. | Identifier of the  item in the order. |
-| order_item_event_oms | &check; | String |  OMS events depend on the  [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
+| order_item_event_oms | &check; | String |  OMS events depend on the  [state machine](/docs/dg/dev/backend-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html) configured. | Desired order item state. Only this parameter is updated in the database |
 
 ## Import file dependencies
 

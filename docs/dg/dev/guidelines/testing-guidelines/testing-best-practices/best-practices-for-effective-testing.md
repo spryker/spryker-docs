@@ -34,7 +34,7 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
-The rule of thumb for your [tests](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) should be:
+The rule of thumb for your [tests](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) should be:
 
 * Tests are treated as if they were the production code.
 * Tests are easy to read and easy to maintain.
@@ -76,7 +76,7 @@ These inline comments give the reader of your test method a clear understanding 
 
 There are several ways to make your test methods small, easy to read and understand. When your `Arrange` part becomes huge, you can use the tester class and helper classes. If you see too many code lines in this section, you can move the `Arrange` code into the generated `Tester` class.
 
-Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#using-another-helper-in-a-helper).
+Additionally, when you want to use the same code in different modules, you can use helpers as described in [Using Another Helper in a Helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#using-another-helper-in-a-helper).
 
 Take a look into [\SprykerTest\Shared\Customer\Helper\CustomerDataHelper](https://github.com/spryker/customer/blob/master/tests/SprykerTest/Shared/Customer/_support/Helper/CustomerDataHelper.php) - this one can be re-used in many modules to give you CustomerTransfer.
 
@@ -124,4 +124,4 @@ class ProjectLocatorHelper extends LocatorHelper
 
 ## Code coverage
 
-Running [code coverage generation](/docs/scos/dev/guidelines/testing-guidelines/code-coverage.html) with XDebug is very slow. For better performance, we recommend switching to [PCOV](https://github.com/krakjoe/pcov/blob/develop/INSTALL.md).
+Running [code coverage generation](/docs/dg/dev/guidelines/testing-guidelines/code-coverage.html) with XDebug is very slow. For better performance, we recommend switching to [PCOV](https://github.com/krakjoe/pcov/blob/develop/INSTALL.md).

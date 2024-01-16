@@ -15,4 +15,4 @@ To learn more about the feature and to find out how end users use it, see [Refun
 
 | MIGRATION GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Refund migration guide](/docs/scos/dev/module-migration-guides/migration-guide-refund.html) | [Refund process management](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html) |
+| [Refund migration guide](/docs/scos/dev/module-migration-guides/migration-guide-refund.html) | [Refund process management](/docs/dg/dev/backend-development/data-manipulation/datapayload-conversion/refund-process-management.html) |

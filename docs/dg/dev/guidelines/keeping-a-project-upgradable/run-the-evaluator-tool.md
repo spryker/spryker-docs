@@ -39,4 +39,4 @@ vendor/bin/evaluator evaluate --path=src/path_to_module
 
 ## Resolve upgradability issues
 
-If the report contains upgradability issues, see [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) to resolve them.
+If the report contains upgradability issues, see [Upgradability guidelines](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html) to resolve them.

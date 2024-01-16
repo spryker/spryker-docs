@@ -21,7 +21,7 @@ By default, we provide the following positions: "Top", "Middle", "Bottom". To de
 
 ## Prerequisites
 
-[Install category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html)
+[Install category CMS blocks](/docs/dg/dev/integrate-and-configure/integrate-category-cms-blocks.html)
 
 
 ## Configure custom block positions

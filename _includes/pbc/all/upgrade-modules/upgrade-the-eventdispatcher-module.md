@@ -2,7 +2,7 @@
 
 ## Upgrading to version 1.1.2
 
-Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-resolvable-class-names-cache).
+Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-resolvable-class-names-cache).
 
 To upgrade to the new version of the module, enable the following plugins:
 

@@ -87,4 +87,4 @@ The `itemscope` element in an HTML tag encloses information about the item. The 
  </details>
 
 ## Applying the basic SEO techniques in your project
-For details about applying the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html).
+For details about applying the basic SEO techniques in your project, see [Basic SEO techniques integration guide](/docs/dg/dev/integrate-and-configure/integrating-basic-seo-techniques.html).

@@ -30,10 +30,10 @@ The following diagram shows the conceptual parts of the application and their co
 
 The Spryker OS provides the following Application Layers:
 
-* [Yves](/docs/scos/dev/back-end-development/yves/yves.html)—provides frontend functionality with the light-weight data access.
-* [Zed](/docs/scos/dev/back-end-development/zed/zed.html)—provides back office/backend functionality with complicated calculations.
+* [Yves](/docs/dg/dev/backend-development/yves/yves.html)—provides frontend functionality with the light-weight data access.
+* [Zed](/docs/dg/dev/backend-development/zed/zed.html)—provides back office/backend functionality with complicated calculations.
 * [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-infrastructure.html)—provides infrastructure for API with the mixed data access.
-* [Client](/docs/scos/dev/back-end-development/client/client.html)—provides data access infrastructure.
+* [Client](/docs/dg/dev/backend-development/client/client.html)—provides data access infrastructure.
 * Shared—provides shared code abstractions to be used in other Application Layers of the same module.
 * Service—provides infrastructure for the stateless operations, usually utils.
 
@@ -41,7 +41,7 @@ Application Layers structure supports you in a better conceptual decoupling and 
 
 {% info_block infoBox %}
 
-See [Programming Concepts](/docs/scos/dev/architecture/programming-concepts.html) to learn about the Spryker building blocks contained in each of the Application Layers.
+See [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html) to learn about the Spryker building blocks contained in each of the Application Layers.
 
 {% endinfo_block %}
 
@@ -83,9 +83,9 @@ With data separation comes the question: how to sync data between both applicati
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the frontend.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+For more details on how Publish & Sync works, see [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Where to go from here?
 
-* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html).
-* To know more about the building blocks of Spryker, see [Programming Concepts](/docs/scos/dev/architecture/programming-concepts.html).
+* To know more about the application layers and how various functionality is encapsulated in modules, see [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html).
+* To know more about the building blocks of Spryker, see [Programming Concepts](/docs/dg/dev/architecture/programming-concepts.html).

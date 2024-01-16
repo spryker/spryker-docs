@@ -50,7 +50,7 @@ Propel `TransactionHelper` ensures that a connection to the database can be esta
 
 ## Testify helpers
 
-[Testify](/docs/scos/dev/guidelines/testing-guidelines/testify.html) offers many useful helpers that are especially helpful when setting up the infrastructure for your tests.
+[Testify](/docs/dg/dev/guidelines/testing-guidelines/testify.html) offers many useful helpers that are especially helpful when setting up the infrastructure for your tests.
 
 ### Shared helpers
 
@@ -88,7 +88,7 @@ There are also some `assert*()` methods that you can use to make assertions for 
 
 #### SearchHelper
 
-When you have this helper, an in-memory search adapter is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Search](https://github.com/spryker/search)—for example, when using it together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory search adapter is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Search](https://github.com/spryker/search)—for example, when using it together with the [Publish and Synchronization tests](/docs/dg/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
 
@@ -106,7 +106,7 @@ This helper has the following methods:
 
 #### StorageHelper
 
-When you have this helper, an in-memory storage plugin is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Storage](https://github.com/spryker/storage)—for example, when using it together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory storage plugin is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Storage](https://github.com/spryker/storage)—for example, when using it together with the [Publish and Synchronization tests](/docs/dg/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
 
@@ -124,7 +124,7 @@ This helper has the following methods:
 
 #### QueueHelper
 
-When you have this helper, an in-memory queue adapter is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Queue](https://github.com/spryker/queue)—for example, when using it together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+When you have this helper, an in-memory queue adapter is automatically used instead of the ones defined on the project side. This lets you synchronously work with [Queue](https://github.com/spryker/queue)—for example, when using it together with the [Publish and Synchronization tests](/docs/dg/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
 
@@ -154,7 +154,7 @@ You can use the Zed helpers only for testing the Zed application.
 
 #### PublishAndSynchronizeHelper
 
-`PublishAndSynchronizeHelper` is a helper wrapper that simplifies the implementation of the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+`PublishAndSynchronizeHelper` is a helper wrapper that simplifies the implementation of the [Publish and Synchronization tests](/docs/dg/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 This helper has the following methods:
 - `assertEntityIsPublished()`: Use this method after an entity you want to test has been saved.
@@ -176,7 +176,7 @@ assertions.
 
 #### EventBehaviorHelper
 
-This helper is useful for the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+This helper is useful for the [Publish and Synchronization tests](/docs/dg/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 This helper has the following methods:
 
@@ -265,4 +265,4 @@ Lets you create a table in the database and the `\Propel\Generator\Model\Table` 
 Lets you create Propel model files based on builders and tables.
 
 ## Next step:
-[Enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
+[Enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html).

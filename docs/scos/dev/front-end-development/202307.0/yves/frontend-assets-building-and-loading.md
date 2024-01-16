@@ -29,7 +29,7 @@ For the landing pages, there is the `page-critical-path` layout defining the ass
 
 The `page-critical-path` layout uses cookies to track whether it is the first session on the site. If it is the first session, the critical CSS and utils are loaded into the `<head>` tag at the start of the page loading. Only after the whole page is loaded, the `style-loader` component appends the non-critical CSS to the end of the `<head>` tag. Otherwise, the approach for the non-landing pages is used.
 
-The main purpose of the page-critical-path layout is to use the CSS Lazy Load only for the landing pages. To enable the CSS Lazy Load for your project, see [Frontend CSS Lazy Load integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-css-lazy-loading-for-the-front-end.html).
+The main purpose of the page-critical-path layout is to use the CSS Lazy Load only for the landing pages. To enable the CSS Lazy Load for your project, see [Frontend CSS Lazy Load integration](/docs/dg/dev/integrate-and-configure/integrating-css-lazy-loading-for-the-front-end.html).
 
 ## Building CSS and JS chunks
 

@@ -185,7 +185,7 @@ Clickjacking is when UI tweaked to force users to click on specific buttons or l
 
 ## Obsolete or outdated dependencies
 
-To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
+To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 
 ## Packages security vulnerabilities
 

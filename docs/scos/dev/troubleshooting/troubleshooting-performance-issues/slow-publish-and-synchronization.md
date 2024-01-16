@@ -25,7 +25,7 @@ There are two possible causes for the slow PUblish and Synchronization:
 
 ## Solution
 
-1. [Integrate multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
+1. [Integrate multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrating-multi-queue-publish-structure.html).
 The Publish action, in this case, can look like this:
 
 ![publish-action](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s/publish-action.png)

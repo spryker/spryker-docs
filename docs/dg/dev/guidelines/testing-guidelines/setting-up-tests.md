@@ -33,7 +33,7 @@ related:
     link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
-To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codeception.yml` files that contain the suite configuration. See [Configuration](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration) for details.
+To get all the things working, you need to prepare a proper organization for your tests. For this, you, first of all, have the root `codeception.yml` file . Its main responsibility is to include other `codeception.yml` files that contain the suite configuration. See [Configuration](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html#configuration) for details.
 
 ### Directory structure
 
@@ -59,9 +59,9 @@ tests/
 
 Check out the organization within the [tests/PyzTest/](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest) directory in Spryker Master Suite for example.
 
-Together with the [root configuration](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
+Together with the [root configuration](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html#configuration), you are now able to organize your tests in a way that each test suite can have its own helper applied and can be executed separately.
 
 ## Next steps
 
-* Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
-* [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
+* Learn about the [available test helpers](/docs/dg/dev/guidelines/testing-guidelines/available-test-helpers.html).
+* [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html).

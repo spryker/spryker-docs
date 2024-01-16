@@ -115,7 +115,7 @@ Use Klarna services to let your customers pay later for their purchases.
 
 Starting from this version, B2C and B2B Demo Shops are fully compatible with the industry and our own coding standards. The implemented fixes are based on the evaluation performed by the Evaluator tool.
 
-You can now evaluate your code and make sure it’s upgradable by following the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) guide. After a successful evaluation, headless projects can safely take minor and patch updates. For PaaS+ projects, if a project passes the evaluation, the updates are provided automatically.
+You can now evaluate your code and make sure it’s upgradable by following the [Keeping a project upgradable](/docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) guide. After a successful evaluation, headless projects can safely take minor and patch updates. For PaaS+ projects, if a project passes the evaluation, the updates are provided automatically.
 
 ## ACP (APP Composition Platform)
 
@@ -138,7 +138,7 @@ The developers, in their turn, can enable a business user to export a table view
 
 #### Documentation
 
-[Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
+[Create and configure Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
 ## PHP compatibility window
 
@@ -150,7 +150,7 @@ We have also made Symfony 5.4 compatible while preparing to support compatibilit
 With the knowledge of 6.0 changes, we can now make our code 5.4 compatible with minimal BC breaks while already planning future 6.0 support for the next year.
 
 #### Documentation
-[Integrating Symfony 5](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html)
+[Integrating Symfony 5](/docs/dg/dev/integrate-and-configure/integrating-symfony-5.html)
 
 ## Performance upgrades
 

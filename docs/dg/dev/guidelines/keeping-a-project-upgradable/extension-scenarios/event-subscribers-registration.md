@@ -16,7 +16,7 @@ redirect_from:
 
 ---
 
-[Manifests](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support registering event subscribers only in the dependency provider, a type of code class.
+[Manifests](/docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html#follow-the-upgradability-best-practices) support registering event subscribers only in the dependency provider, a type of code class.
 
 The following is an example of how to register event subscribers in collection with parent method call in a dependency provider:
 

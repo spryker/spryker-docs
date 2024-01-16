@@ -32,7 +32,7 @@ The approach works as follows:
 
 ## Integrate Storage caching for primary-replica database setups
 
-For instructions, see [Storage caching for primary-replica database setups](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-storage-caching-for-primary-replica-database-setups)
+For instructions, see [Storage caching for primary-replica database setups](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-storage-caching-for-primary-replica-database-setups)
 
 ## Implementation details
 

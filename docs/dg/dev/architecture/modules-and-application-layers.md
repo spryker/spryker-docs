@@ -53,8 +53,8 @@ On the _Presentation_ layer, the view-related content is implemented. To get the
 
 ## Next steps
 
-* To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html).
-* To learn about application layers, see [Concept overview](/docs/scos/dev/architecture/conceptual-overview.html).
+* To learn about the building blocks of Spryker, see [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html).
+* To learn about application layers, see [Concept overview](/docs/dg/dev/architecture/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).
 * To learn about the layered architecture pattern, see [Multitier architecture](https://en.wikipedia.org/wiki/Multitier_architecture).
 * To learn about packaging principles, see [Packaging principles](http://principles-wiki.net/collections:robert_c._martin_s_principle_collection).

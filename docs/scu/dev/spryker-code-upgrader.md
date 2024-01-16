@@ -25,7 +25,7 @@ The Spryker Code Upgrader addresses the challenges of an application's upgradabi
 
 ## Semi-automated upgrade process
 
-Based on the upgrade schedule (Usually once a week), the Upgrader tool checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a pull request. The pull request contains [minor and patch module versions](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
+Based on the upgrade schedule (Usually once a week), the Upgrader tool checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a pull request. The pull request contains [minor and patch module versions](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
 
 {% info_block infoBox "Upgrade schedule" %}
 

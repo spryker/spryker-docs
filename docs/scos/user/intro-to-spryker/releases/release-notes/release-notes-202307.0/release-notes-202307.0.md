@@ -23,22 +23,22 @@ Trace your request execution flow to find bottlenecks and optimize your code. Th
 
 #### Documentation
 
-[Integrate profiler module](/docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html#prerequisites)
+[Integrate profiler module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html#prerequisites)
 
 ### [Spryker Code Upgrader] Upgrader Compliance Evaluator <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Make sure your code is compliant and simple to upgrade with Spryker Code Upgrader. This tool allows your team to evaluate your project code and highlight potential issues. Fixing these issues simplifies your upgrading experience.
 
-* [Detecting dead code](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Reducing dead code is important for maintenance and upgrade because otherwise, your teams invest time in maintaining the code that is not used.
-* [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
-* [Minimal version check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Spryker Code Upgrader is available for customers from SCOS version 2022.04.
-* [PHP versions check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): We verify that you use the same version of PHP in composer.json, deploy*.yml, and your runtime to maintain consistency and prevent possible incompatibilities when installing dependencies. For instance, if you are using PHP 8.1 during development or upgrades, but your production system is running on PHP 7.4. Additionally, we check for the minimal PHP version, which is PHP 7.4. Keep in mind that the minimal version will be upgraded to 8.0 in the future, as 7.4 has reached its end of life.
+* [Detecting dead code](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Reducing dead code is important for maintenance and upgrade because otherwise, your teams invest time in maintaining the code that is not used.
+* [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
+* [Minimal version check](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Spryker Code Upgrader is available for customers from SCOS version 2022.04.
+* [PHP versions check](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): We verify that you use the same version of PHP in composer.json, deploy*.yml, and your runtime to maintain consistency and prevent possible incompatibilities when installing dependencies. For instance, if you are using PHP 8.1 during development or upgrades, but your production system is running on PHP 7.4. Additionally, we check for the minimal PHP version, which is PHP 7.4. Keep in mind that the minimal version will be upgraded to 8.0 in the future, as 7.4 has reached its end of life.
 
 These are the structural code validator of dependency providers:
 
-* [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): From an architectural standpoint, dependency providers must contain no business logic. Otherwise, the dependency providers are harder to maintain.
-* [Flatter arrays in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
-* [Simple plugin instantiation in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
+* [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): From an architectural standpoint, dependency providers must contain no business logic. Otherwise, the dependency providers are harder to maintain.
+* [Flatter arrays in dependency providers](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
+* [Simple plugin instantiation in dependency providers](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
 
 Example of the violation report:
 ```bash
@@ -54,8 +54,8 @@ Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 
 #### Documentation
 
-* [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html)
-* [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)
+* [Run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html)
+* [Upgradability guidelines](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)
 
 
 ### [ACP App] Algolia App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -172,7 +172,7 @@ Searching our tables in the back office can cause serious pain for business user
 
 #### Documentation
 
-[Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
+[Create and configure Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
 ### [Framework] Replace Swift Mailer / Swift Mailer library <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

@@ -32,4 +32,4 @@ Major releases may come with backports to support backward compatibility. In suc
 
 ## Checking for available security fixes
 
-To check for available security fixes for your project, [run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+To check for available security fixes for your project, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).

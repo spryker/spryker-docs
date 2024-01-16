@@ -18,7 +18,7 @@ related:
 
 Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy  complex business requirements.
 
-There are different strategies developers can use to develop projects. Before starting developing, choose a [development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) that meets your requirements. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, we recommend the following approaches:
+There are different strategies developers can use to develop projects. Before starting developing, choose a [development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html) that meets your requirements. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, we recommend the following approaches:
 - Configuration
 - Plug and play
 - Project modules
@@ -27,7 +27,7 @@ There are different strategies developers can use to develop projects. Before st
 It is essential to ensure that [Spryker is updated](https://docs.spryker.com/docs/scos/dev/updating-spryker/updating-spryker.html) to the latest stable version.
 
 ## Apply coding guidelines
-Starting from the first day of development, apply the [coding guidelines](/docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html).
+Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html).
 
 ## Use custom namespaces
 Instead of using the `Pyz` namespace, create your own namespace for project development. For example, use the project name as a namespace.
@@ -48,12 +48,12 @@ Use custom names for everything that is added on the project level, like the fol
 For example, customize the names by adding the project name.
 
 ## Avoid using, extending, and overriding Private API
-Instead of using, extending, and overriding [Private API](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker offers extension points that allow you to extend via the Public API and helps you to customize the application. We recommend to use the extension points instead of overriding Private API.
+Instead of using, extending, and overriding [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html), send a request about the missing endpoints to your Spryker account manager. Spryker offers extension points that allow you to extend via the Public API and helps you to customize the application. We recommend to use the extension points instead of overriding Private API.
 
 ## Avoid using unsupported types
 Avoid using unsupported types as constructor arguments of a plugin.
 
-The [supported types](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
+The [supported types](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html#problem-description) are: null, bool, integer, float, string and object.
 
 ## Keep modules up to date
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.

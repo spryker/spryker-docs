@@ -109,7 +109,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ### Resource modules
 
-A _Resource module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it is recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
+A _Resource module_ is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of _Request Objects_ and providing responses in the form of _Response Objects_. For this purpose, the module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed), however, it is recommended to avoid round trips to the database as much as possible as that can reduce API performance considerably.
 
 Resource modules must implement all logic related to processing a request. It is not recommended having any of the Business Logic, or a part of it, in the _GlueApplication Module_. In case you need to extend any of the built-in Glue functionality, it is always safer to extend the relevant _Resource module_ than infrastructure.
 

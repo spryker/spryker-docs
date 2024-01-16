@@ -42,7 +42,7 @@ A customer can cancel an order only within a defined time period. By default, th
 
 Also, they can cancel an order only if all the included items are in the states that are defined as cancellable. By default, the `payment pending` and `confirmed` states are cancellable. If at least one of the items in an order is in a different state, the buttons to cancel the order are not available.
 
-In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can configure different order states to be cancellable and change the cancellation time period.
+In the [state machine](/docs/dg/dev/backend-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can configure different order states to be cancellable and change the cancellation time period.
 
 {% info_block warningBox "State machine" %}
 

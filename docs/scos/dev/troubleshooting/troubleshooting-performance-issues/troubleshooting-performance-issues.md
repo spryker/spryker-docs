@@ -59,7 +59,7 @@ For example, if the problem is with “place-order“ with 25 product items, do 
   
 {% info_block infoBox "Issues with transaction grouping" %}
 
-If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
+If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](https://docs.spryker.com/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
 
 {% endinfo_block %} 
 
@@ -94,7 +94,7 @@ Blackfire groups some actions, so after each round of optimization, you will see
 
 
 1. Check that you have the latest [performance releases](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html).
-2. Check that you implemented the [performance recommendations](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
+2. Check that you implemented the [performance recommendations](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html).
 3. If your problem is still not solved, analyze profiling as follows:
   - Select the longest action under profiling. 
   - Optimize. 

@@ -1240,273 +1240,273 @@ entries:
       - "202311.0"
 
   - title: Back-end development
-    url: /docs/scos/dev/back-end-development/back-end-development.html
+    url: /docs/dg/dev/backend-development/back-end-development.html
     nested:
     - title: Client
-      url: /docs/scos/dev/back-end-development/client/client.html
+      url: /docs/dg/dev/backend-development/client/client.html
       nested:
       - title: Implement a client
-        url: /docs/scos/dev/back-end-development/client/implement-a-client.html
+        url: /docs/dg/dev/backend-development/client/implement-a-client.html
       - title: Use and configure Redis as a key-value storage
-        url: /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
+        url: /docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html
     - title: Yves
-      url: /docs/scos/dev/back-end-development/yves/yves.html
+      url: /docs/dg/dev/backend-development/yves/yves.html
       nested:
       - title: Modular frontend
-        url: /docs/scos/dev/back-end-development/yves/modular-frontend.html
+        url: /docs/dg/dev/backend-development/yves/modular-frontend.html
       - title: Controllers and actions
-        url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+        url: /docs/dg/dev/backend-development/yves/controllers-and-actions.html
       - title: CLI entry point for Yves
-        url: /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+        url: /docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
       - title: Add translations for Yves
-        url: /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
+        url: /docs/dg/dev/backend-development/yves/add-translations-for-yves.html
       - title: URL
-        url: /docs/scos/dev/back-end-development/yves/url.html
+        url: /docs/dg/dev/backend-development/yves/url.html
       - title: Implement URL routing in Yves
-        url: /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
+        url: /docs/dg/dev/backend-development/yves/implement-url-routing-in-yves.html
       - title: Yves bootstrapping
-        url: /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+        url: /docs/dg/dev/backend-development/yves/yves-bootstrapping.html
       - title: Yves routes
-        url: /docs/scos/dev/back-end-development/yves/yves-routes.html
+        url: /docs/dg/dev/backend-development/yves/yves-routes.html
     - title: Zed
-      url: /docs/scos/dev/back-end-development/zed/zed.html
+      url: /docs/dg/dev/backend-development/zed/zed.html
       nested:
       - title: Business layer
-        url: /docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+        url: /docs/dg/dev/backend-development/zed/business-layer/business-layer.html
         nested:
         - title: Facade
-          url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+          url: /docs/dg/dev/backend-development/zed/business-layer/facade/facade.html
           nested:
           - title: Facade use cases
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
+            url: /docs/dg/dev/backend-development/zed/business-layer/facade/facade-use-cases.html
           - title: Design by Contract (DBC) - Facade
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
+            url: /docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
           - title: A facade implementation
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
+            url: /docs/dg/dev/backend-development/zed/business-layer/facade/a-facade-implementation.html
         - title: Business models
-          url: /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
+          url: /docs/dg/dev/backend-development/zed/business-layer/business-models.html
         - title: Custom exceptions
-          url: /docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
+          url: /docs/dg/dev/backend-development/zed/business-layer/custom-exceptions.html
       - title: Communication layer
-        url: /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
+        url: /docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html
         nested:
         - title: Add indexes to foreign key columns - index generator
-          url: /docs/scos/dev/back-end-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
+          url: /docs/dg/dev/backend-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
       - title: Persistence layer
-        url: /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+        url: /docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
         nested:
         - title: Entity
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/entity.html
         - title: Entity manager
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/entity-manager.html
         - title: Repository
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/repository.html
         - title: Database schema definition
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/database-schema-definition.html
         - title: Database overview
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/database-overview.html
         - title: Query objects - creation and usage
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/query-objects-creation-and-usage.html
         - title: Query container
-          url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
+          url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/query-container.html
           nested:
           - title: Using a query container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
+            url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/using-a-query-container.html
           - title: Implement a query container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
+            url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
       - title: Add navigation in the Back Office
-        url: /docs/scos/dev/back-end-development/zed/add-navigation-in-the-back-office.html
+        url: /docs/dg/dev/backend-development/zed/add-navigation-in-the-back-office.html
     - title: Cronjobs
-      url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
+      url: /docs/dg/dev/backend-development/cronjobs/cronjobs.html
       nested:
       - title: Add and configure cronjobs
-        url: /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
+        url: /docs/dg/dev/backend-development/cronjobs/add-and-configure-cronjobs.html
       - title: Create a custom scheduler
-        url: /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+        url: /docs/dg/dev/backend-development/cronjobs/create-a-custom-scheduler.html
       - title: Migrate to Jenkins
-        url: /docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
+        url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
     - title: Forms
-      url: /docs/scos/dev/back-end-development/forms/forms.html
+      url: /docs/dg/dev/backend-development/forms/forms.html
       nested:
       - title: Create forms
-        url: /docs/scos/dev/back-end-development/forms/create-forms.html
+        url: /docs/dg/dev/backend-development/forms/create-forms.html
     - title: Plugins
-      url: /docs/scos/dev/back-end-development/plugins/plugins.html
+      url: /docs/dg/dev/backend-development/plugins/plugins.html
       nested:
       - title: Get an overview of the used plugins
-        url: /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
+        url: /docs/dg/dev/backend-development/plugins/get-an-overview-of-the-used-plugins.html
     - title: Session handlers
-      url: /docs/scos/dev/back-end-development/session-handlers.html
+      url: /docs/dg/dev/backend-development/session-handlers.html
     - title: Session management
-      url: /docs/scos/dev/back-end-development/session-management.html
+      url: /docs/dg/dev/backend-development/session-management.html
     - title: Running production
-      url: /docs/scos/dev/back-end-development/running-production.html
+      url: /docs/dg/dev/backend-development/running-production.html
     - title: Console commands
-      url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
+      url: /docs/dg/dev/backend-development/console-commands/console-commands.html
       nested:
       - title: Implement a new console command
-        url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
+        url: /docs/dg/dev/backend-development/console-commands/implement-a-new-console-command.html
       - title: Get the list of console commands and available options
-        url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
+        url: /docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
-      url: /docs/scos/dev/back-end-development/data-manipulation/data-manipulation.html
+      url: /docs/dg/dev/backend-development/data-manipulation/data-manipulation.html
       nested:
       - title: Run and revert a database migration
-        url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
+        url: /docs/dg/dev/backend-development/data-manipulation/run-and-revert-a-database-migration.html
       - title: Data publishing
-        url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/data-publishing.html
+        url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/data-publishing.html
         nested:
         - title: Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html
         - title: Implement Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
         - title: Publish and synchronize and multi-store shop systems
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
         - title: Add publish events
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/add-publish-events.html
         - title: Handle data with Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
         - title: Implement synchronization plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
         - title: Implement event trigger publisher plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
       - title: Configuration management
-        url: /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
+        url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html
       - title: Data interaction
-        url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/data-interaction.html
+        url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/data-interaction.html
         nested:
         - title: Standard filters - backend and frontend technical details
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/standard-filters-backend-and-frontend-technical-details.html
         - title: Transfer data between Yves and Zed
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
       - title: Create an Order Management System - Spryker Commerce OS
-        url: /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
+        url: /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
       - title: Queue
-        url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
+        url: /docs/dg/dev/backend-development/data-manipulation/queue/queue.html
         nested:
         - title: Queue pool
-          url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
+          url: /docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
         - title: Integrate RabbitMQ Headers in Queue Messages
-          url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
+          url: /docs/dg/dev/backend-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
       - title: Payment methods
-        url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/payment-methods.html
+        url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/payment-methods.html
         nested:
         - title: Direct Debit payment
-          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
+          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
           nested:
           - title: Implement Direct Debit in Yves
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
           - title: Integrate Direct Debit into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
           - title: Implement Direct Debit in Zed
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
           - title: Implement Direct Debit in the Shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
           - title: Test Your Direct Debit Implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
         - title: Prepayment
-          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
           nested:
           - title: Implement prepayment in frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
           - title: Integrate Prepayment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
           - title: Implement prepayment in backend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
           - title: Implement prepayment in Shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
           - title: Test the prepayment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
         - title: Invoice
-          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+          url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
           nested:
           - title: Implement invoice payment in frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
           - title: Integrate invoice payment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
           - title: Implement invoice payment in backend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
           - title: Implement invoice payment in Shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
           - title: Test the invoice payment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+            url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
       - title: Data ingestion
-        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
+        url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/structural-preparations.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/structural-preparations.html
           nested:
           - title: File System
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
           - title: Flysystem
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
           - title: Extend the database schema
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+            url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-link-middleware.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html
       - title: Event
-        url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
+        url: /docs/dg/dev/backend-development/data-manipulation/event/event.html
         nested:
         - title: Configure event queues
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
+          url: /docs/dg/dev/backend-development/data-manipulation/event/configure-event-queues.html
         - title: Listen to events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
+          url: /docs/dg/dev/backend-development/data-manipulation/event/listen-to-events.html
         - title: Add events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
+          url: /docs/dg/dev/backend-development/data-manipulation/event/add-events.html
     - title: Extend Spryker
-      url: /docs/scos/dev/back-end-development/extend-spryker/extend-spryker.html
+      url: /docs/dg/dev/backend-development/extend-spryker/extend-spryker.html
       nested:
       - title: Development strategies
-        url: /docs/scos/dev/back-end-development/extend-spryker/development-strategies.html
+        url: /docs/dg/dev/backend-development/extend-spryker/development-strategies.html
         nested:
         - title: Project modules
           nested:
           - title: Creae modules
-            url: /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
+            url: /docs/dg/dev/backend-development/extend-spryker/create-modules.html
         - title: Spryker OS module customization
-          url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
+          url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
           nested:
           - title: Extend a core module that is used by another
-            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
           - title: Extend the core
-            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality
-            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
           - title: Install module structure and configuration
-            url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
     - title: Zed UI tables
-      url: /docs/scos/dev/back-end-development/zed-ui-tables/zed-ui-tables.html
+      url: /docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html
       nested:
       - title: Create and configure Zed tables
-        url: /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
+        url: /docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html
       - title: Add buttons to Zed tables
-        url: /docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
+        url: /docs/dg/dev/backend-development/zed-ui-tables/add-buttons-to-zed-tables.html
     - title: Messages and errors
-      url: /docs/scos/dev/back-end-development/messages-and-errors/messages-and-errors.html
+      url: /docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html
       nested:
       - title: Showing messages in Zed
-        url: /docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
+        url: /docs/dg/dev/backend-development/messages-and-errors/showing-messages-in-zed.html
       - title: Registering a new service
-        url: /docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html
+        url: /docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html
       - title: Handling internal server messages
-        url: /docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
+        url: /docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html
       - title: Handling errors with ErrorHandler
-        url: /docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
+        url: /docs/dg/dev/backend-development/messages-and-errors/handling-errors-with-errorhandler.html
     - title: Factory
-      url: /docs/scos/dev/back-end-development/factory/factory.html
+      url: /docs/dg/dev/backend-development/factory/factory.html
       nested:
       - title: "Inject dependencies within factories: Container globals"
-        url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
+        url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     url: /docs/scos/dev/front-end-development/front-end-development.html
     include version:
@@ -2169,80 +2169,80 @@ entries:
       - "202311.0"
 
   - title: Technical enhancement integration guides
-    url: /docs/scos/dev/technical-enhancement-integration-guides/technical-enhancement-integration-guides.html
+    url: /docs/dg/dev/integrate-and-configure/technical-enhancement-integration-guides.html
     nested:
     - title: Integrate development tools
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-development-tools.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-development-tools.html
       nested:
       - title: "Glue API: Development tools"
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrate-the-development-tools-glue-api.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-formatter.html
       - title: Combined product offer import
-        url: /docs/scos/dev/technical-enhancement-integration-guides/install-combined-product-offer-import.html
+        url: /docs/dg/dev/integrate-and-configure/install-combined-product-offer-import.html
       - title: SCSS linter
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-scss-linter.html
       - title: TS linter
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-ts-linter.html
       - title: Web Profiler for Zed
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
-        url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
     - title: Integrate Zed API
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
       nested:
         - title: Integrate Zed API for merchant relationships
-          url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Authorization Enabler
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-authorization-enabler.html
     - title: Basic SEO techniques
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-basic-seo-techniques.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-basic-seo-techniques.html
     - title: Cache of unresolved entities for Zed
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-cache-of-unresolved-entities-for-zed.html
     - title: CSS lazy loading for the frontend
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-css-lazy-loading-for-the-front-end.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-css-lazy-loading-for-the-front-end.html
     - title: Chromium browser for tests
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cms-block-widgets.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-cms-block-widgets.html
     - title: CSS lazy loading for the frontend
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-authorization-enabler.html
     - title: Custom location for static assets
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-custom-location-for-static-assets.html
     - title: Dynamic Yves-Zed tokens
-      url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
+      url: /docs/dg/dev/integrate-and-configure/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-dynamic-propel-configuration.html
     - title: Elastic computing
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
     - title: Environment configuration enhancement
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-environment-configuration-enhancement.html
     - title: Health checks
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-health-checks.html
     - title: MariaDB database engine
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-mariadb-database-engine.html
     - title: Multi-database logic
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-multi-queue-publish-structure.html
     - title: Profiler module
-      url: /docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html
+      url: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
     - title: Propel clean command
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-propel-clean-command.html
     - title: Queue worker signal handling
-      url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-queue-worker-signal-handling.html
+      url: /docs/dg/dev/integrate-and-configure/configuring-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-separate-endpoint-bootstraps.html
     - title: Symfony 5
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-symfony-5.html
     - title: Symfony 6
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-6.html
+      url: /docs/dg/dev/integrate-and-configure/integrating-symfony-6.html
     - title: Twig and TwigExtension
-      url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
+      url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
-      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
+      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: Update environemnt configuration
-      url: /docs/scos/dev/technical-enhancement-integration-guides/update-environment-configuration.html
+      url: /docs/dg/dev/integrate-and-configure/update-environment-configuration.html
   - title: Zed API
     url: /docs/scos/dev/zed-api/zed-api.html
     nested:
@@ -2829,180 +2829,180 @@ entries:
             - title: Integrating Avalara Tax + Shipment
               url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
   - title: Architecture
-    url: /docs/scos/dev/architecture/architecture.html
+    url: /docs/dg/dev/architecture/architecture.html
     nested:
     - title: Technology stack
-      url: /docs/scos/dev/architecture/technology-stack.html
+      url: /docs/dg/dev/architecture/technology-stack.html
     - title: Conceptual overview
-      url: /docs/scos/dev/architecture/conceptual-overview.html
+      url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
-      url: /docs/scos/dev/architecture/modules-and-application-layers.html
+      url: /docs/dg/dev/architecture/modules-and-application-layers.html
     - title: Module API
-      url: /docs/scos/dev/architecture/module-api/module-api.html
+      url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
       - title: Using ~ Composer Constraint for Customized Modules
-        url: /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+        url: /docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
       - title: Performance and Scalability
-        url: /docs/scos/dev/architecture/module-api/performance-and-scalability.html
+        url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
       - title: "Declaration of module APIs: Public and private"
-        url: /docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
+        url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
       - title: Semantic Versioning- Major vs. Minor vs. Patch Release
-        url: /docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+        url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
     - title: Code buckets
-      url: /docs/scos/dev/architecture/code-buckets.html
+      url: /docs/dg/dev/architecture/code-buckets.html
     - title: Programming concepts
-      url: /docs/scos/dev/architecture/programming-concepts.html
+      url: /docs/dg/dev/architecture/programming-concepts.html
     - title: Marketplace architecture
-      url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-architecture.html
       nested:
         - title: Marketplace Application composition
-          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-application-composition.html
         - title: Marketplace domain model
-          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-domain-model.html
         - title: Merchant Portal architecture overview
-          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
         - title: Marketplace in the Back Office
-          url: /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
 
 
 
   - title: Guidelines
-    url: /docs/scos/dev/guidelines/guidelines.html
+    url: /docs/dg/dev/guidelines/guidelines.html
     nested:
     - title: Coding guidelines
-      url: /docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
+      url: /docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html
       nested:
       - title: Code quality
-        url: /docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+        url: /docs/dg/dev/guidelines/coding-guidelines/code-quality.html
       - title: Code architecture guide
-        url: /docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+        url: /docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
       - title: Secure coding practices
-        url: /docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
+        url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
       - title: Code style guide
-        url: /docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+        url: /docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
     - title: Keeping a project upgradable
-      url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+      url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
       - title: Extension scenarios
-        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/extenstion-scenarios.html
+        url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/extenstion-scenarios.html
         nested:
         - title: Event subscribers' registration
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
         - title: Plugins registration
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
       - title: Run the evaluator tool
-        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
+        url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
       - title: Upgradability guidelines
-        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+        url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
         nested:
         - title: Dead code checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html
         - title: Additional logic in dependency provider
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html
         - title: Container set function
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html
         - title: Discouraged packages checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
         - title: Minimum allowed shop version
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
         - title: Multidimensional array
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html
         - title: Npm checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html
         - title: Open-source vulnerabilities checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html
         - title: PHP version
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html
         - title: Plugin registration with restrictions
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
         - title: Security checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html
         - title: Single plugin argument
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
         - title: Spryker dev packages checker
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
       - title: Ignore evaluation errors
-        url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
+        url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
     - title: Performance guidelines
-      url: /docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html
+      url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
       - title: Elastic computing
         nested:
         - title: New Relic transactions grouping by queue names
-          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+          url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
         - title: RAM-aware batch processing
-          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+          url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
-          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+          url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
-        url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
+        url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
-        url: /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+        url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
       - title: Frontend performance guidelines
-        url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+        url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
     - title: Testing guidelines
-      url: /docs/scos/dev/guidelines/testing-guidelines/testing-guidelines.html
+      url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
       - title: Code coverage
-        url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/code-coverage.html
       - title: Test framework
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Test helpers
-        url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:
           - title: Available test helpers
-            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html
           - title: Test helpers best practices
-            url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
       - title: Executing tests
-        url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
         nested:
           - title: Execute tests
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
           - title: Test Glue API
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
           - title: Test Glue Backend API
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
           - title: Test the asynchronous API
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
-            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
       - title: Testify
-        url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/testify.html
       - title: Testing concepts
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
       - title: Data builders
-        url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/data-builders.html
       - title: Testing best practices
-        url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
+        url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html
         nested:
           - title: Testing concepts
-            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-concepts.html
           - title: Best practices for effective testing
-            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
           - title: Test types best practices
-            url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
     - title: Project development guidelines
-      url: /docs/scos/dev/guidelines/project-development-guidelines.html
+      url: /docs/dg/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines
-      url: /docs/scos/dev/guidelines/data-processing-guidelines.html
+      url: /docs/dg/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
-      url: /docs/scos/dev/guidelines/module-configuration-convention.html
+      url: /docs/dg/dev/guidelines/module-configuration-convention.html
     - title: Security guidelines
-      url: /docs/scos/dev/guidelines/security-guidelines.html
+      url: /docs/dg/dev/guidelines/security-guidelines.html
   - title: Best practices
-    url: /docs/scos/dev/best-practices/best-practices.html
+    url: /docs/dg/dev/best-practices/best-practices.html
     nested:
     - title: Basic SEO techniques to use in your project
-      url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
+      url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
-      url: /docs/scos/dev/best-practices/coding-best-practices.html
+      url: /docs/dg/dev/best-practices/coding-best-practices.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

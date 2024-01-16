@@ -57,7 +57,7 @@ This is a protection from consuming all memory and crushing the program.
 
 ## Integrate RAM-aware batch processing
 
-For instructions, see [Integrate RAM-aware batch processing](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-ram-aware-batch-processing).
+For instructions, see [Integrate RAM-aware batch processing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-ram-aware-batch-processing).
 
 ## Implementation details
 

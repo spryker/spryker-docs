@@ -115,7 +115,7 @@ For more information about improving data import performance, see [Data importer
 Features affected by the ORM approach:
 
 - [Data import](/docs/scos/dev/sdk/data-import.html)
-- [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html)
+- [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html)
 
 ### Database query optimization
 
@@ -148,7 +148,7 @@ This feature is one of the most important infrastructure parts in Spryker. There
 
 #### Multiple publisher queues
 
-Publishers use queues to propagate events and let workers consume them to provide necessary data for our frontend services. Since Spryker uses RabbitMQ as a default option, we recommend using multiple queues instead of one to spread loads between different queues. For more information about multiple publisher queues, see [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html).
+Publishers use queues to propagate events and let workers consume them to provide necessary data for our frontend services. Since Spryker uses RabbitMQ as a default option, we recommend using multiple queues instead of one to spread loads between different queues. For more information about multiple publisher queues, see [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrating-multi-queue-publish-structure.html).
 
 #### Workers
 
@@ -224,9 +224,9 @@ One can avoid using the unnecessary transitions by:
 
 Make sure to check the following articles on how to optimize the performance of your application:
 
-- [Performance guidelines](/docs/scos/dev/guidelines/performance-guidelines.html)
+- [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines.html)
 - [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html)
-- [Integrating multi-queue publish structure](/docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html)
+- [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrating-multi-queue-publish-structure.html)
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)
 
 ## Application performance and load tests

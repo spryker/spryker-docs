@@ -35,7 +35,7 @@ Sample payment state machine with `reserved` flags:
 
 ## AvailabilityStorage
 
-`AvailabilityStorage` publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+`AvailabilityStorage` publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Events are generated in the following cases:
 

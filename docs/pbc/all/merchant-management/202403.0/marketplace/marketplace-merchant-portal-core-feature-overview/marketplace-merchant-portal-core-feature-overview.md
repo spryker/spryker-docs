@@ -8,7 +8,7 @@ redirect_from:
 
 The Marketplace Merchant Portal Core enables server configuration and basic functions of the Merchant Portal application, such as secure login, GUI tables, and dashboards. Merchant Portal and Back Office are separate applications with different entry points, bootstraps, and possibilities to register application plugins, configure application base URLs, and debug.
 
-To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
+To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/dg/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
 
 
 Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `ZedMerchantUserSecurityPlugin` for extending the Merchant Portal firewall.

@@ -509,7 +509,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support]((/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 

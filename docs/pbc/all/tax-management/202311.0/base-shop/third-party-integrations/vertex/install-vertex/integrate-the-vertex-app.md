@@ -338,7 +338,7 @@ cart.total.tax_total.calculated_at_checkout,an der Kasse berechnet,de_DE
 cart.total.tax_total.calculated_at_checkout,calculated at checkout,en_US
 ```
 
-Run the following console command to import data:
+To import data, run the following command:
 
 ```yaml
 console data:import glossary

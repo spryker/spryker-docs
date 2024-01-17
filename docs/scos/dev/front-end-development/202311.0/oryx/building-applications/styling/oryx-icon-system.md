@@ -89,7 +89,7 @@ When using Material Symbols, you can configure the adjustable variable font styl
 - grade
 - optical size
 
-Additionally, you can configure whether an icon contains a direction (see the section on directionality below).)
+Additionally, you can configure the direction of icons. For more details, see [Configuring icons for right-to-left](#configuring-icons-for-right-to-left).
 
 ### Global configuration
 
@@ -149,11 +149,11 @@ export const app = appBuilder().withTheme({
 });
 ```
 
-### Configure icons for right-to-left
+### Configuring icons for right-to-left
 
-Icon libraries are typically created for left-to-right (LTR), but when they're used in right-to-left (RTL) some icons much flip to reflect the layout. This is affecting only icons that express a direction, such as arrow icons.
+Icon libraries are typically created for left-to-right (LTR), but when they're used in right-to-left (RTL), some icons much flip to reflect the layout. This only affects icons that express a direction, such as arrow icons.
 
-Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalisation/directionality.html) and to ensure that some icons will flip accordingly, the icon style must be set with the `direction: true` config. The following example shows how the forward icon is configured to flip in RTL mode.
+Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalisation/directionality.html). To ensure that icons flip accordingly, the icon style configuration needs to have `direction` set to `true`. The following example shows how the forward icon is configured to flip in the RTL mode.
 
 ```ts
 export const materialDesignIcons: IconMapper = {

@@ -1,5 +1,5 @@
 ---
-title: "Directionality in Oryx: Supporting RTL and LTR for Applications"
+title: "Directionality in Oryx: Supporting RTL and LTR for applications"
 description: Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
 last_updated: November 6, 2023
 template: concept-topic-template
@@ -9,7 +9,7 @@ Directionality refers to the writing direction of a language, which can be eithe
 
 The web platform supports directionality natively by using the following techniques:
 
-- HTML elements supports the `dir="rtl"` property, that can be applied on the root and inherits down on the page.
+- HTML elements supports the `dir="rtl"` property, which can be applied on the root and inherits down on the page.
 - CSS supports layout systems (flex and grid) that are designed to support both RTL and LTR. The alignment of these layouts are driven by using `start` and `end` rather than `left` and `right`.
 - CSS supports logical properties that are agnostic to the direction of the page. By using logical properties, such as `padding-inline-start: 10px` (instead of `padding-left: 10px`), components will consistently work in both directions.
 - CSS have started to [support a pseudo selector](https://caniuse.com/css-dir-pseudo) that can be used to change style rules based on the direction of the element.

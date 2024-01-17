@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
 ---
 title: Install the Product Rating and Reviews feature
 description: The guide walks you through the process of installing the Product Reviews feature in your project.

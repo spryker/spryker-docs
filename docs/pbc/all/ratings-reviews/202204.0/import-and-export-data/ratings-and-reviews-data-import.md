@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html
 ---
 title: Ratings and Reviews data import
 description: Details about data import files for the Ratings and Reviews PBC

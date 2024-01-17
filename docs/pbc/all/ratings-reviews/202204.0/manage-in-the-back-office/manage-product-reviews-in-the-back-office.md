@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
 ---
 title: Manage product reviews in the Back Office
 description: Learn how to read, approve, and reject product reviews in the Back Office.

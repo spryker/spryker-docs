@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-in-the-back-office/log-into-the-back-office.html
 ---
 title: Log into the Back Office
 description: Learn how to log into the Back Office.

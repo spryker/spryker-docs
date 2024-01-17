@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/ratings-and-reviews.html
 ---
 title: Ratings and Reviews
 last_updated: Jul 29, 2022

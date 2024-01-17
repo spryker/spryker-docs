@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
 ---
 title: Install the Product Rating and Reviews Glue API
 description: This guide contains step-by-step instructions on integrating Product Rating & Reviews API feature into a Spryker-based project.

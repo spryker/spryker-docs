@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
 ---
 title: Install the Product Rating and Reviews + Product Group feature
 description: Learn how to install the Product Rating and Reviews + Product Group feature to a Spryker project.

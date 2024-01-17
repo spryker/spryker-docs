@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-abstract-products.html
 ---
 title: "Glue API: Retrieve product reviews when retrieving abstract products"
 description: Learn how to retrieve product reviews when retrieving abstract products using Glue API.

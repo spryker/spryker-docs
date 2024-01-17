@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/import-file-details-product-review.csv.html
 ---
 title: "Import file details: product_review.csv"
 last_updated: Jun 16, 2021

@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
 ---
 title: "Glue API: Retrieve product reviews when retrieving concrete products"
 description: Retrieve general information about concrete products.

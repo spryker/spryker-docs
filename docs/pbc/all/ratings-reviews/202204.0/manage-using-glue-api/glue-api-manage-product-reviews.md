@@ -1,3 +1,4 @@
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html
 ---
 title: "Glue API: Manage product reviews"
 description: Learn how to manage product reviews via Glue API.

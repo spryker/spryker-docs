@@ -83,7 +83,7 @@ Backend:
 - Plan the OMS design with a focus on bulk processing and asynchronous (background) operations. Be cautious with functionalities like [Splittable Order Items](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/splittable-order-items-overview.html) to avoid creating too big orders.
 - If placing an order is inevitably complex and slow, consider making it asynchronously to prevent customers from waiting. Make sure to cover the cases of overbooking and failed order placements.
 
-Storefront: Consider UI changes, similar to the [cart UI changes](##ui-chanllenges).
+Storefront: Consider UI changes, similar to the [cart UI changes](##ui-challenges).
 
 Glue: Implement an API endpoint that supports asynchronous order creation.
 

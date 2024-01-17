@@ -31,7 +31,7 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Install the Customer Account Management + Agent Assist feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
 
-* [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
+* [Install the Customer Account Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ## Authenticate as an agent assist
 

@@ -9,6 +9,7 @@ related:
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/vertex/vertex.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/vertex/vertex.html
+  - /docs/pbc/all/tax-management/202400.0/base-shop/third-party-integrations/vertex/vertex.html
 ---
 
 ![vertex-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/vertex.md/vertex-hero.png)

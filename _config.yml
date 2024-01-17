@@ -226,15 +226,6 @@ versioned_categories:
       - user-management
       - warehouse-management-system
       - warehouse-picking
-  dg:
-    dev:
-      - data-import
-      - glue-api-guides
-      - the-docker-sdk
-      - technology-partner-guides
-      - devops-migration-guides
-      - system-requirements
-      - front-end-development
 
 
 # these are defaults used for the front matter for these file types

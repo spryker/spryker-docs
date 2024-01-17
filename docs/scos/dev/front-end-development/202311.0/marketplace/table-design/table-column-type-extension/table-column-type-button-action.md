@@ -25,13 +25,12 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-text.html
 ---
 
-This document explains the Table Column Type Button Action in the Components library.
+Table Column Button Action is an Angular component in the components library that renders button using the `@spryker/button.action` component.
 
-## Overview
 
-Table Column Button Action is an Angular Component that renders button using the `@spryker/button.action` component.
+## Usage
 
-Check out an example usage of the Table Column Button Action in the `@spryker/table` config:
+Example of usage in the `@spryker/table` config:
 
 ```html
 <spy-table
@@ -83,7 +82,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Table Column Button Action:
+Table Column Button Action interfaces:
 
 ```ts
 export type ButtonAttributes = Record<string, string>;
@@ -102,6 +101,6 @@ interface TableColumnButtonActionConfig {
     variant?: ButtonVariant; // 'primary' - by default
     shape?: ButtonShape; // 'default' - by default
     size?: ButtonSize; // 'md' - by default
-    attrs?: ButtonAttributes; 
+    attrs?: ButtonAttributes;
 }
 ```

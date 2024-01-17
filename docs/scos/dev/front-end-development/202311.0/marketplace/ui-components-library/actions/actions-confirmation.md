@@ -24,19 +24,21 @@ related:
 
 ---
 
-This document explains the Actions Confirmation service in the Components Library.
+Actions Confirmation is an angular Service in the components library that calls another action with a confirmation via the Modal component.
 
-## Overview
 
-Actions Confirmation is an Angular Service that calls another action with confirmation via the Modal component.
-
-Check out an example usage of the Actions Confirmation.
+## Usage
 
 Service configuration:
 
-- `type`—an action type.
-- `action`—registered action configuration.
-- `modal`—modal configuration based on the `ConfirmModalStrategyOptions` interface of the Modal component.  
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+| `type` | An action type. |
+| `action` | Registered action configuration. |
+| `modal` | Modal configuration based on the `ConfirmModalStrategyOptions` interface of the Modal component.  |
+
+
+Usage example:
 
 ```html
 <spy-button-action
@@ -77,7 +79,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Actions Confirmation:
+Actions Confirmation interfaces:
 
 ```ts
 export interface ConfirmationActionConfig extends ActionConfig {

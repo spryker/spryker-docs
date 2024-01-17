@@ -119,14 +119,16 @@ export interface ActionHandler<C = unknown, R = unknown>
 
 ## Action types
 
-There are a few common Actions that are available in UI library as separate packages:
+The following common Actions are available in UI library as separate packages:
 
-- [Close-drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-close-drawer.html) - closes the first Drawer in the current context.
-- [Confirmation](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-confirmation.html) - calls another registered action with confirmation.
-- [Drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-drawer.html) - opens component in the Drawer.
-- [HTTP](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-http.html) - renders content via html request.
-- [Notification](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-notification.html) - renders notification box.
-- [Redirect](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-redirect.html) - performs the hard redirect to the URL.  
-- [Refresh-drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-drawer.html) - refreshes/rerenders opened Drawer in current context.  
-- [Refresh-parent-table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-parent-table.html) - refreshes data of the parent Table of a Table in current context.
-- [Refresh-table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-table.html) - refreshes data of the Table in current context.  
+| ACTION | DESCRIPTION |
+
+| [Close-drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-close-drawer.html)  | Closes the first Drawer in the current context.|
+| [Confirmation](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-confirmation.html)  | Calls another registered action with a confirmation.|
+| [Drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-drawer.html)  | Opens a component in the Drawer.|
+| [HTTP](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-http.html)  | Renders content via an HTML request.|
+| [Notification](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-notification.html)  | Renders a notification box.|
+| [Redirect](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-redirect.html) |  Performs a hard redirect to the URL.  |
+| [Refresh-drawer](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-drawer.html)  | Refreshes or rerenders an opened Drawer in the current context.  |
+| [Refresh-parent-table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-parent-table.html) | Refreshes the data of the parent Table of a Table the in current context. |
+| [Refresh-table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/actions-refresh-table.html) |  Refreshes the data of the Table the in the current context.  |

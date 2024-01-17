@@ -31,10 +31,6 @@
                                             <span class="main-nav__opener-text">
                                                 {% if page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
-                                                {% elsif page.product == 'development-guide' and page.role == 'dev' %}
-                                                Development
-                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'all' %}
-                                                Packages Business Capabilities
                                                 {% elsif page.product == 'ca' and page.role == 'dev' %}
                                                 Cloud administration
                                                 {% elsif page.product == 'scos' and page.role == 'dev' %}
@@ -43,6 +39,8 @@
                                                 SCOS users guide
                                                 {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
                                                 Spryker Code Upgrader
+                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'all' %}
+                                                Packages Business Capabilities
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
                                                 {% else %}
@@ -79,16 +77,6 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/docs/dg/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
-                                                Development
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/pbc/all/pbc.html" class="main-nav__drop-link">
-                                                Packaged Business Capabilities [BETA]
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
                                                 Spryker SDK
                                                 </a>
@@ -106,6 +94,11 @@
                                             <li>
                                                 <a href="/docs/scu/dev/spryker-code-upgrader.html" class="main-nav__drop-link">
                                                 Spryker Code Upgrader
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="/docs/pbc/all/pbc.html" class="main-nav__drop-link">
+                                                Packaged Business Capabilities (PBC) [BETA]
                                                 </a>
                                             </li>
                                         </ul>

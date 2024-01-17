@@ -311,7 +311,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### 5. Receive messages
 
-This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.html).
 
 ### 6. Configure OMS
 

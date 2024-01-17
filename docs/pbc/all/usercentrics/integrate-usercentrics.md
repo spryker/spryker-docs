@@ -207,7 +207,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### Console command for receiving messages
 
-This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.md).
+This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.html).
 
 ## Next steps
 

@@ -341,8 +341,8 @@ oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,de_D
 ```
 Then run the data import for the glossary:
 
-```php
-vendor/bin/console data:import glossary
+```bash
+console data:import glossary
 ```
 
 ### Template changes in `CheckoutPage`
@@ -382,7 +382,7 @@ Credit Card,Credit Card (Payone),en_US
 Then run the data import for the glossary:
     
 ```bash
-vendor/bin/console data:import glossary
+console data:import glossary
 ```
 
 ### Console command for receiving messages

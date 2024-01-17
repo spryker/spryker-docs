@@ -41,7 +41,7 @@ After a customer has been created (to create a customer, see [Customers](/docs/p
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html).
 
 ## Confirm customer registration
 

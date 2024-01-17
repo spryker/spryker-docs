@@ -9,9 +9,12 @@ redirect_from:
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
 
-## Guidlines
-Development guidelines for ACP APP contains general rules how to desigtn app and write code for it.
-ACP Apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework) that is based on the Spryker Framework as a result we recomend to follow the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+{% info_block infoBox "Development guidelines" %}
+
+Development guidelines for ACP apps contains general rules how to design an app and write code for it.
+ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which is its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+
+{% endinfo_block %}
 
 ## Prerequisites
 
@@ -207,7 +210,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-Please follow [these steps](/docs/acp/user/app-connect.html#test-the-endpoints).
+Follow the guidelines in [Test the endpoints](/docs/acp/user/app-connect.html#test-the-endpoints).
 
 ## Implement business logic
 

@@ -24,7 +24,9 @@ entries:
           - title: Manifest JSON file
             url: /docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html
           - title: Translation JSON file
-            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html
+            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html      
+      - title: Connect an app
+        url: /docs/acp/user/develop-an-app/connect-an-app.html
       - title: Set up the message broker
         url: /docs/acp/user/develop-an-app/set-up-the-message-broker.html
       - title: Debug an app with XDebug
@@ -39,6 +41,4 @@ entries:
         url: /docs/acp/user/sync-api.html
       - title: Async API
         url: /docs/acp/user/async-api.html
-      - title: Connect new App
-        url: /docs/acp/user/develop-an-app/app-connect.html
 

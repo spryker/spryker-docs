@@ -57,6 +57,9 @@ Review the [reference information](#reference-information-create-and-edit-produc
 ## Reference information: Create and edit product offers
 
 {% include pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md %} <!-- To edit, see _includes/pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md -->
+
+| ATTRIBUTE     | DESCRIPTION |
+| --- | --- |
 | SERVICE POINT | Location in which this offer is provided. |
 | SERVICES | Services that are provided for this offer in the **SERVICE POINT**. |
 | Shipment Types | Types of shipment available for this offer. |

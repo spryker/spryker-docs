@@ -210,7 +210,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-Follow the guidelines in [Test the endpoints](/docs/acp/user/app-connect.html#test-the-endpoints).
+Follow the guidelines in [Test the endpoints](/docs/acp/user/connect-an-app.html#test-the-endpoints).
 
 ## Implement business logic
 

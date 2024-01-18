@@ -2404,6 +2404,15 @@ entries:
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
                           - title: Invoice
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
+                  - title: Stripe
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/stripe.html
+                    nested:
+                      - title: Install Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-stripe.html
+                      - title: Configure Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/configure-stripe.html
+                      - title: Disconnect Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
                     nested:
@@ -3533,6 +3542,7 @@ entries:
                       include_versions:
                       - "202212.0"
                       - "202307.0"
+                      - "202311.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
               - title: Best practices

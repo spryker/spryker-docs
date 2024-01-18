@@ -1,3 +1,4 @@
+  
 ---
 title: Create tax rates
 description: Learn how to create tax rates in the Back Office.

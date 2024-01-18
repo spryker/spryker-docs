@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Manage wishlists"
 description: Create, update and delete wishlists via Glue API.

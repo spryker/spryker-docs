@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-wishlists/managing-wishlists.html  
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-via-glue-api/manage-wishlists-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
 related:
   - title: Managing wishlist items
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html

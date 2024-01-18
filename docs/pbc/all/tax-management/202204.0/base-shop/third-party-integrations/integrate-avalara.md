@@ -1,3 +1,4 @@
+  
 ---
 title: Integrate Avalara
 description: Integrate Avalara to automatically calculate taxes.

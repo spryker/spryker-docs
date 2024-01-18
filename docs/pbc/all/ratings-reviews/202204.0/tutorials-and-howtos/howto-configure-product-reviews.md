@@ -1,4 +1,4 @@
-  - /docs/pbc/all/ratings-reviews/202204.0/tutorials-and-howtos/howto-configure-product-reviews.html
+  
 ---
 title: "HowTo: Configure product reviews"
 last_updated: Jun 16, 2021

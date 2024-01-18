@@ -1,3 +1,4 @@
+  - /docs/pbc/all/user-management/202204.0/user-management.html
 ---
 title: Users Management
 description: User Management capability lets you manage Back Office users.

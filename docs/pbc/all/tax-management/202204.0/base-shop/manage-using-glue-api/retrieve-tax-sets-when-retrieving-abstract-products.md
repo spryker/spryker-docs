@@ -1,3 +1,4 @@
+  
 ---
 title: Retrieve tax sets when retrieving abstract products
 description: Learn how to retrieve tax sets when retrieving abstract products using Glue API.

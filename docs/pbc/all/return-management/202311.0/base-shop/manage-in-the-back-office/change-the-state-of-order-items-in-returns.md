@@ -11,6 +11,8 @@ related:
     link: docs/pbc/all/return-management/page.version/base-shop/manage-in-the-back-office/manage-returns.html
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/page.version/return-management.html
+redirect_from:
+- /docs/pbc/all/return-management/202204.0/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
 ---
 
 This document describes how to change the state of order items in returns. Each return is linked to the order it was created from. When you change the state of an order in a return, you change it in the linked order.

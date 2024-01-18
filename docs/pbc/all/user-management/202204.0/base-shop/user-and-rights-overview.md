@@ -1,3 +1,4 @@
+  - /docs/pbc/all/user-management/202204.0/base-shop/user-and-rights-overview.html
 ---
 title: Users and rights overview
 last_updated: Aug 20, 2021

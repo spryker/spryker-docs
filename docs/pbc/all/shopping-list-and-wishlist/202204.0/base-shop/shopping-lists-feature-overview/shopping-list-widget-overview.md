@@ -1,3 +1,4 @@
+  
 ---
 title: Shopping list widget overview
 description: For convenience and ease of use, when customer puts a cursor on the shopping list icon, a drop-down list with all their shopping lists is displayed.

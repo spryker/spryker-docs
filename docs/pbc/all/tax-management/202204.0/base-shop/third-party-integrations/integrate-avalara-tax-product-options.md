@@ -1,3 +1,4 @@
+  
 ---
 title: Integrate Avalara Tax + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project

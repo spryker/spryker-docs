@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Wishlist + Alternative Products feature
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.

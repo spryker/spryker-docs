@@ -1,4 +1,4 @@
-  - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/configure-bazaarvoice.html
+  
 ---
 title: Configure Bazaarvoice
 description: Find out how you can configure Bazaarvoice in your Spryker shop

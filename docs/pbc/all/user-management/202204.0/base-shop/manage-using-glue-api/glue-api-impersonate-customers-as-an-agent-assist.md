@@ -1,3 +1,4 @@
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
 ---
 title: "Glue API: Impersonate customers as an agent assist"
 description: As an agent assist, authenticate as a customer and impersonate them.

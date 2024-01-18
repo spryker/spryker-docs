@@ -1,4 +1,4 @@
-  - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/bazaarvoice.html
+  
 ---
 title: Bazaarvoice
 description: Find out how you can integrate and use Bazaarvoice in your Spryker shop

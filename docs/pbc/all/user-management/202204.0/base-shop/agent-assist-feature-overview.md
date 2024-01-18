@@ -1,3 +1,4 @@
+  - /docs/pbc/all/user-management/202204.0/base-shop/agent-assist-feature-overview.html
 ---
 title: Agent Assist feature overview
 description: An agent helps customers to perform activities in the online store and provides support by carrying out actions on customer's behalf in the web-shop

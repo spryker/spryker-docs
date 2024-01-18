@@ -1,3 +1,4 @@
+  
 ---
 title: Upgrade the Wishlist module
 description: Use the guide to learn how to update the Wishlist module to a newer version.

@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Manage wishlist items"
 description: Managing wishlist items via Glue API.

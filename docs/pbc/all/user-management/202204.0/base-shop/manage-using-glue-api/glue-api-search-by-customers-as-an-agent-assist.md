@@ -1,3 +1,4 @@
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
 ---
 title: "Glue API: Search by customers as an agent assist"
 description: As an agent assist, search by customers to find the customer reference you want to impersonate.

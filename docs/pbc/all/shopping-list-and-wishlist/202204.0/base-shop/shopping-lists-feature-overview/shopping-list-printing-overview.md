@@ -1,3 +1,4 @@
+  
 ---
 title: Shopping list printing overview
 description: Shopping list printing lets shop visitors print their own shopping lists and shopping lists shared with them from their account or the Shopping list view page.

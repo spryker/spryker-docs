@@ -4,6 +4,7 @@ description: Learn how to manage users and their permissions with roles and grou
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
 related:
   - title: Customer Groups overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html

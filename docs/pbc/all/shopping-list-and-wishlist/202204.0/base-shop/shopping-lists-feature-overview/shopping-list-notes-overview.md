@@ -1,3 +1,4 @@
+  
 ---
 title: Shopping List Notes overview
 description: With the feature, you can leave and manage notes for each item in the order.

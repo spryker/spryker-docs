@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Manage shopping lists"
 last_updated: Jun 16, 2021

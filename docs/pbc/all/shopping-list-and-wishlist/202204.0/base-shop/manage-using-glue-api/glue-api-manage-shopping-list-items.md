@@ -1,3 +1,4 @@
+  
 ---
 title: "Glue API: Manage shopping list items"
 description: Learn how to manage shopping list items via Glue API.

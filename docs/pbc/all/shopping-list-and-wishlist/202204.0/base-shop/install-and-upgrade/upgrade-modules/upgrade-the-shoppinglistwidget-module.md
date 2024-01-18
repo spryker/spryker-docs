@@ -1,3 +1,4 @@
+  
 ---
 title: Upgrade the ShoppingListWidget module
 description: Use the guide to learn how to update the ShoppingListWidget module.

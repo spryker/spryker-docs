@@ -1173,7 +1173,7 @@ entries:
                     nested:
                       - title: Dynamic Multistore
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
-                      - title: Dynamic Multistore + Avalability Notification
+                      - title: Dynamic Multistore + Availability Notification
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
                       - title: Dynamic Multistore + Cart
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html
@@ -1980,7 +1980,7 @@ entries:
                     nested:
                       - title: Change the state of order items
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html
-                      - title: Commente orders
+                      - title: Comment orders
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/comment-orders.html
                       - title: Create returns
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-returns.html
@@ -2008,7 +2008,7 @@ entries:
                     url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/view-the-order-matrix.html
               - title: "Glue API: Retrieve orders"
                 url: /docs/pbc/all/order-management-system/base-shop/glue-api-retrieve-orders.html
-              - title: Domain model and relationsips
+              - title: Domain model and relationships
                 nested:
                   - title: "Custom Order Reference: module relations"
                     url: /docs/pbc/all/order-management-system/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html
@@ -3184,7 +3184,7 @@ entries:
                         nested:
                           - title: Create abstract products
                             url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
-                          - title: Edit absract products
+                          - title: Edit abstract products
                             url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
                       - title: Create product variants
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/create-product-variants.html

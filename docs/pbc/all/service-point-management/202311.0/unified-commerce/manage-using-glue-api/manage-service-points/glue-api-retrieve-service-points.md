@@ -25,7 +25,7 @@ This endpoint lets you retrieve service points.
 
 | QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|-|
-| include | Backend | Adds resource relationships to the request. | services service-point-addresses |
+| include | Backend | Adds resource relationships to the request. | services, service-point-addresses |
 
 | REQUEST | API TYPE | USAGE |
 |-|-|-|
@@ -443,7 +443,7 @@ This endpoint lets you retrieve service points.
 
 | QUERY PARAMETER | API TYPE | DESCRIPTION | POSSIBLE VALUES |
 |-|-|-|-|
-| include | Backend | Adds resource relationships to the request. | services service-point-addresses |
+| include | Backend | Adds resource relationships to the request. | services, service-point-addresses |
 
 | REQUEST | API TYPE | USAGE |
 |-|-|-|

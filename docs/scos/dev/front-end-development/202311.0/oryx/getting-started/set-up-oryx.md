@@ -38,7 +38,7 @@ Fulfillment App is a PWA that comes with an additional build process for the ser
 {% endinfo_block %}
 
 
-2. Run the application:
+3. Run the application:
 
 ```shell
 npm run dev

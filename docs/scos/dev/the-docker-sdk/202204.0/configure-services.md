@@ -567,7 +567,7 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 }
 ```
 
-Next create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtensionPlugin.php`
+Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtensionPlugin.php`
 
 ```php
 <?php

@@ -85,7 +85,7 @@ The following example shows how you can define a specific version:
 ORYX_FEATURE_VERSION=1.1
 ```
 
-You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features.
+You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features:
 
 ```typescript
 import { featureVersion } from '@spryker-oryx/utilities';

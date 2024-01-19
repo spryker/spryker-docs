@@ -23,11 +23,11 @@ Icons are rendered using `IconComponent`, a design system component designed for
 
 The icon system is standardized around the 24x24 pixels format. Icons can be scaled to fit alternative sizes with three pre-defined sizes available:
 
-| SIZE NAME | PIXELS |
-|-|-|
-| `xs`: extra small | 16x16 |
-| `md`: medium | 20x20 |
-| `lg`: large | 24x24 |
+| SIZE | DESCRIPTION | PIXELS |
+|-|-|-|
+| `xs` | Extra small | 16x16 |
+| `md` | Medium | 20x20 |
+| `lg` | Large | 24x24 |
 
 To maintain consistency, `IconComponent` provides the `--oryx-icon-size` CSS variable, which applies to both font-based and SVG-based icons. This feature enables you to control icon sizes throughout UI effortlessly, ensuring icons remain clear and sharp across different contexts and devices.
 

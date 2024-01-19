@@ -9,7 +9,7 @@ redirect_from:
 
 related:
   - title: Showing messages in Zed
-    link: docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
+    link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
   - title: Registering a new service
     link: docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html
   - title: Handling internal server messages
@@ -23,4 +23,4 @@ This section contains the information you need to work with messages and errors 
 * [Handling Internal Server messages](/docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html)
 * [Messages and errors](/docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html)
 * [Registering a new service](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html)
-* [Showing messages in Zed](/docs/dg/dev/backend-development/messages-and-errors/showing-messages-in-zed.html)
+* [Showing messages in Zed](/docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html)

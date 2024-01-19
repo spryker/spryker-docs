@@ -11,7 +11,7 @@ related:
   - title: Handling errors with ErrorHandler
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
   - title: Showing messages in Zed
-    link: docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
+    link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---
 
 The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for an internal error, this is done through configuration.

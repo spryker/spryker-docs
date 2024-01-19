@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
   - title: Add buttons to Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
+    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.

@@ -11,7 +11,7 @@ related:
   - title: Handling Internal Server messages
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
   - title: Showing messages in Zed
-    link: docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
+    link: docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
 ---
 
 The Spryker Commerce OS uses a dedicated error handling mechanism to collect detailed information on errors. Normally, notices, warnings, and other types of minor issues are not thrown as exceptions, but ErrorHandler converts them into meaningful exceptions. These exceptions pose an early warning system for isolating minor issues in code that are usually overlooked.

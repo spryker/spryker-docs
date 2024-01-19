@@ -95,21 +95,21 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html) |
-| EventDispatcher | [Migration guide - EventDispatcher](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html) |
-| Form | [Migration guide - Form](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-form-module.html) |
-| Http | [Migration guide - Http](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-http-module.html) |
-| Locale | [Migration guide - Locale](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-locale-module.html) |
-| Propel | [Migration guide - Propel](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-propel-module.html) |
-| Messenger | [Migration guide - Messenger](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-messenger-module.html) |
-| Router | [Migration guide - Router](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-router-module.html) |
-| Security | [Migration guide -Security](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-security-module.html) |
-| Session | [Migration guide - Session](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-session-module.html) |
-| Store | [Migration guide - Store](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-store-module.html) |
-| Translator | [Migration guide - Translator](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-translator-module.html) |
-| Twig | [Migration guide -Twig](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-twig-module.html) |
-| Validator | [Migration guide - Validator](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-validator-module.html) |
-| WebProfiler | [Migration guide - WebProfiler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/upgrade-the-errorhandler-module.html) |
+| EventDispatcher | [Migration guide - EventDispatcher](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html) |
+| Form | [Migration guide - Form](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html) |
+| Http | [Migration guide - Http](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html) |
+| Locale | [Migration guide - Locale](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-locale-module.html) |
+| Propel | [Migration guide - Propel](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-propel-module.html) |
+| Messenger | [Migration guide - Messenger](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-messenger-module.html) |
+| Router | [Migration guide - Router](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html) |
+| Security | [Migration guide -Security](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-security-module.html) |
+| Session | [Migration guide - Session](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-session-module.html) |
+| Store | [Migration guide - Store](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-store-module.html) |
+| Translator | [Migration guide - Translator](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-translator-module.html) |
+| Twig | [Migration guide -Twig](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-twig-module.html) |
+| Validator | [Migration guide - Validator](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html) |
+| WebProfiler | [Migration guide - WebProfiler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html) |
 
 You've replaced Silex.
 

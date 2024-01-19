@@ -25,7 +25,7 @@ entries:
       - title: CLI entry point for Yves
         url: /docs/dg/dev/backend-development/yves/cli-entry-point-for-yves.html
       - title: Add translations for Yves
-        url: /docs/dg/dev/backend-development/yves/add-translations-for-yves.html
+        url: /docs/dg/dev/backend-development/yves/adding-translations-for-yves.html
       - title: URL
         url: /docs/dg/dev/backend-development/yves/url.html
       - title: Implement URL routing in Yves
@@ -256,12 +256,12 @@ entries:
       - title: Create and configure Zed tables
         url: /docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html
       - title: Add buttons to Zed tables
-        url: /docs/dg/dev/backend-development/zed-ui-tables/add-buttons-to-zed-tables.html
+        url: /docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html
     - title: Messages and errors
       url: /docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html
       nested:
-      - title: Showing messages in Zed
-        url: /docs/dg/dev/backend-development/messages-and-errors/showing-messages-in-zed.html
+      - title: Showing messages in the Back Office
+        url: /docs/dg/dev/backend-development/messages-and-errors/show-messages-in-the-back-office.html
       - title: Registering a new service
         url: /docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html
       - title: Handling internal server messages
@@ -314,35 +314,35 @@ entries:
       - title: Migrate modules
         nested:
           - title: ErrorHandler
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-errorhandler-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/upgrade-the-errorhandler-module.html
           - title: EventDispatcher
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-eventdispatcher-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html
           - title: Form
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-form-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html
           - title: HTTP
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-http-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html
           - title: Locale
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-locale-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-locale-module.html
           - title: Messenger
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-messenger-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-messenger-module.html
           - title: Propel
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-propel-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-propel-module.html
           - title: Router
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-router-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html
           - title: Security
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-security-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-security-module.html
           - title: Session
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-session-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-session-module.html
           - title: Store
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-store-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-store-module.html
           - title: Translator
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-translator-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-translator-module.html
           - title: Twig
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-twig-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-twig-module.html
           - title: Validator
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-validator-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html
           - title: WebProfiler
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/migrate-the-webprofiler-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
       - title: Upgrade to Angular 12
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
@@ -640,5 +640,3 @@ entries:
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/dg/dev/best-practices/coding-best-practices.html
-
-    

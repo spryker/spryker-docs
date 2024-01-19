@@ -11,7 +11,7 @@ related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
   - title: Add translations for Yves
-    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions

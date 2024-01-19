@@ -49,7 +49,7 @@ We support the following Spryk definition types:
 
 To install Spryk, do the following:
 
-1. Add this private repository to your project's `composer.json`:
+1. Add this repository to your project's `composer.json`:
 
 ```js
 "repositories": [

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/dataimporter-speed-optimization
   - /docs/dataimporter-speed-optimization
   - /docs/en/dataimporter-speed-optimization
+  - /docs/scos/dev/data-import/202204.0/data-importer-speed-optimization.html
 ---
 
 ## Concept

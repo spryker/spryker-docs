@@ -1,3 +1,4 @@
+  
 ---
 title: Glue API - Company Account feature integration
 last_updated: Jul 13, 2021

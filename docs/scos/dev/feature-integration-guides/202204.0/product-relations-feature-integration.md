@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-relations-feature-integration.html
 ---
 title: Product Relations feature integration
 description: Integrate the Product Relations feature into your project.

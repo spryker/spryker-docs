@@ -1,3 +1,4 @@
+  
 ---
 title: Glue API - Payments feature integration
 last_updated: Jun 16, 2021

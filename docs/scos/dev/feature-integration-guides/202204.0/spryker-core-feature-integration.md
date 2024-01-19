@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html
 ---
 title: Install the Spryker Core feature
 description: The procedure to integrate Spryker Core feature into your project.

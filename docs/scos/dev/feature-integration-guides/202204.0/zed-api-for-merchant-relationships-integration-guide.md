@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/zed-api-for-merchant-relationships-integration-guide.html
 ---
 title: Zed API for Merchant Relationships feature integration
 description: Integrate the Zed API for Merchant Relationships into your project.

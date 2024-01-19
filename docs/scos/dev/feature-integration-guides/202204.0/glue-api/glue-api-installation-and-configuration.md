@@ -1,3 +1,4 @@
+ 
 ---
 title: Glue API installation and configuration
 description: This article describes the process of installing and enabling the GLUE API infrastructure and explains the details of integrating the REST API resources.

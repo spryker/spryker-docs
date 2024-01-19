@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/queue-data-import-feature-integration.html
 ---
 title: Queue Data Import feature integration
 description: This guide will navigate you through the process of integrating the Queue Data feature in Spryker OS.

@@ -1,3 +1,4 @@
+  
 ---
 title: Glue API - REST Schema Validation feature integration
 description: This guide will navigate you through the process of installing and configuring the REST Schema Validation feature in Spryker OS.

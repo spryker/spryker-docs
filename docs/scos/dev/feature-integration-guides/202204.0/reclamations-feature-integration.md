@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/reclamations-feature-integration.html
 ---
 title: Reclamations feature integration
 last_updated: Jun 16, 2021

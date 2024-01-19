@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
 ---
 title: Multiple Abstract Products as Promotional Products & Discounts feature integration
 description: Add support of multiple abstract products as promotional products in the Promotions & Discounts feature.

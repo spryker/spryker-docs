@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Company Account + Order Management feature
 description: This guide provides step-by-step instruction on integrating Company Account Management + Order Management feature into the Spryker-based project.

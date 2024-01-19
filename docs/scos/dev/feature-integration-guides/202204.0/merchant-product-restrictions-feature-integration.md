@@ -1,3 +1,4 @@
+  
 ---
 title: Merchant Product Restrictions feature integration
 description: Merchant Product Restrictions allows setting access to particular products. This guide describes the process of integrating the feature into a project.

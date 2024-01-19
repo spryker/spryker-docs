@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/search-widget-for-concrete-products-feature-integration.html
 ---
 title: Search Widget for Concrete Products feature integration
 last_updated: Jun 16, 2021

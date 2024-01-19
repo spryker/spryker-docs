@@ -1,3 +1,4 @@
+  
 ---
 title: Customer Account Management feature integration
 description: The guide walks you through the process of adding Redirect support for Customer login functionality to your project.

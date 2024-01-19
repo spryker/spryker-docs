@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/payments-feature-integration.html
 ---
 title: Payments feature integration
 description: Use the guide to install the Payment per store feature in your project.

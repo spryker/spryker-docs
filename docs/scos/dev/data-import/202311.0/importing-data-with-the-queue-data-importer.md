@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/importing-data-with-queue-data-importer
   - /docs/importing-data-with-queue-data-importer
   - /docs/en/importing-data-with-queue-data-importer
+  - /docs/scos/dev/data-import/202204.0/importing-data-with-the-queue-data-importer.html
 related:
   - title: Queue Data Import feature integration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-queue-data-import-feature.html

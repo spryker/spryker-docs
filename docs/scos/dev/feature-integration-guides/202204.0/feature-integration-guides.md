@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/feature-integration-guides.html
 ---
 title: Feature integration guides
 last_updated: Jun 16, 2021

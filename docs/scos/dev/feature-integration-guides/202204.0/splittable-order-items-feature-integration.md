@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/splittable-order-items-feature-integration.html
 ---
 title: Splittable Order Items feature integration
 last_updated: Jun 20, 2022

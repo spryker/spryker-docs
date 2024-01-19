@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/order-management-feature-integration.html
 ---
 title: Install the Order Management feature
 last_updated: Aug 30, 2021

@@ -1,3 +1,4 @@
+  
 ---
 title: Install the Mailing and Notifications feature
 description: The guide describes the process of installing the mailing provider in your project.

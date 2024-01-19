@@ -1,3 +1,4 @@
+  
 ---
 title: Merchant feature integration
 description: Learn how to integrate the Merchant feature into a Spryker project.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/prices-per-merchant-relation-feature-integration.html
 ---
 title: Prices per Merchant Relation feature integration
 description: The guide walks you through the process of installing the Prices per Merchant feature in your project.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/permissions-feature-integration.html
 ---
 title: Permissions feature integration
 description: The guide provides a step-by-step procedure to install the Permissions feature into your project.

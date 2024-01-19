@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/zed-api-feature-integration.html
 ---
 title: Zed API feature integration
 description: Integrate the Zed API into your project

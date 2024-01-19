@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/uuid-generation-console-feature-integration.html
 ---
 title: Uuid Generation Console feature integration
 last_updated: Jul 4, 2022

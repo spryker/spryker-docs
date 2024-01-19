@@ -1,3 +1,4 @@
+  - /docs/scos/dev/feature-integration-guides/202204.0/sales-data-export-feature-integration.html
 ---
 title: Install the Sales Data Export feature
 description: Integrate the Sales Data Export feature into your project.

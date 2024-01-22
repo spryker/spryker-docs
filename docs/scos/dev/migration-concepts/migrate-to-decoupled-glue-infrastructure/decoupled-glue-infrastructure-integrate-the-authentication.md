@@ -8,24 +8,19 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/decoupled-glue-infrastructure/glue-api-authentication-integration.html
 ---
 
-This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+This document describes how to create an authentication token for the Storefront and Backend API applications.
 
-## Install feature core
-
-Follow the steps below to install the Authentication feature API.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
 | NAME                            | VERSION            | INSTALLATION GUIDE                                                                                                                                                                                                               |
 |---------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue Backend API Application    | {{page.version}}   | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
-| Glue Storefront API Application | {{page.version}}   | [Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| Storefront and Backend Glue API applications    | {{page.version}}   | [Integrate Storefront and Backend Glue API applications](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/oauth-api:"^1.0.0" \
@@ -53,7 +48,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+## 2) Set up database schema and transfer objects
 
 Apply database changes and generate entity and transfer changes:
 
@@ -65,7 +60,7 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following changes have occurred in the database:
+Make sure the following changes have occurred in the database:
 
 | DATABASE ENTITY           | TYPE  | EVENT   |
 |---------------------------|-------|---------|
@@ -73,7 +68,7 @@ Ensure that the following changes have occurred in the database:
 | spy\_oauth\_client        | table | created |
 | spy\_oauth\_scope         | table | created |
 
-Ensure that the following changes have occurred in transfer objects:
+Make sure the following changes have occurred in transfer objects:
 
 | TRANSFER                           | TYPE  | EVENT   | PATH                                                                         |
 |------------------------------------|-------|---------|------------------------------------------------------------------------------|
@@ -97,7 +92,7 @@ Ensure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+## 3) Set up behavior
 
 1. Activate the following plugins:
 
@@ -109,31 +104,31 @@ Ensure that the following changes have occurred in transfer objects:
 
 | PLUGIN                                                           | SPECIFICATION                                                                                        | NAMESPACE                                                              |
 |------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------|
-| AccessTokenValidatorPlugin                                       | Validates access token passed via authorisation header.                                              | Spryker\\Glue\\OauthApi\\Plugin                                        |
+| AccessTokenValidatorPlugin                                       | Validates the access token passed via the authorization header.                                              | Spryker\\Glue\\OauthApi\\Plugin                                        |
 | CustomerRequestBuilderPlugin                                     | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid.                    | Spryker\\Glue\\OauthApi\\Plugin                                        |
-| OauthAuthenticationServerPlugin                                  | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Client\\AuthenticationOauth\\Plugin                           |
-| OauthCustomerScopeInstallerPlugin                                | Installs Oauth customer scope data.                                                                  | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin\\Installer |
+| OauthAuthenticationServerPlugin                                  | Makes a request to process an access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Client\\AuthenticationOauth\\Plugin                           |
+| OauthCustomerScopeInstallerPlugin                                | Installs the Oauth customer scope data.                                                                  | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin\\Installer |
 | OauthTokenResource                                               | Registers the `token` resource.                                                                      | Spryker\\Glue\\OauthApi\\Plugin\\GlueApplication                       |
-| CustomerOauthUserProviderPlugin                                  | Gets the customer based on authorisation client.                                                     | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin            |
+| CustomerOauthUserProviderPlugin                                  | Gets the customer based on the authorization client.                                                     | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin            |
 | CustomerOauthScopeProviderPlugin                                 | Gets a list of customer scopes.                                                                      | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin            |
-| CustomerPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data.          | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                      |
+| CustomerPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` the from configuration of Password GrantType data.          | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                      |
 
 **Backend API plugins:**
 
 | PLUGIN                                                        | SPECIFICATION                                                                                        | NAMESPACE                                                                              |
 |---------------------------------------------------------------|------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| BackendApiAccessTokenValidatorPlugin                          | Validates access token passed via authorisation header.                                              | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
+| BackendApiAccessTokenValidatorPlugin                          | Validates the access token passed via the authorization header.                                              | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
 | CustomerRequestBuilderPlugin                                  | Sets `GlueRequestTransfer.requestCustomer` if the customer credentials are valid.                    | Spryker\\Glue\\OauthBackendApi\\Plugin                                                 |
-| OauthAuthenticationServerPlugin                               | Makes request to process access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Zed\\AuthenticationOauth\\Communication\\Plugin                               |
+| OauthAuthenticationServerPlugin                               | Makes a request to process the access token and builds `GlueAuthenticationResponseTransfer.oauthResponse`. | Spryker\\Zed\\AuthenticationOauth\\Communication\\Plugin                               |
 | OauthBackendTokenResource                                     | Registers the `token` resource.                                                                      | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
-| OauthUserScopeInstallerPlugin                                 | Installs Oauth user scope data.                                                                      | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Installer                     |
+| OauthUserScopeInstallerPlugin                                 | Installs the Oauth user scope data.                                                                      | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Installer                     |
 | UserOauthScopeProviderPlugin                                  | Gets a list of customer scopes.                                                                      | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth                         |
-| UserOauthUserProviderPlugin                                   | Gets the user based on authorisation client.                                                         | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth                         |
-| UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin  | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data.          | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                                      |
-| UserRequestValidatorPlugin                                    | Validates if `GlueRequestTransfer.requestUser` is set in case if request has Authorisation header.   | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
-| BackofficeUserOauthScopeAuthorizationCheckerPlugin            | Execute authorization check based on back-office user OAuth scope.                                   | Spryker\Zed\OauthUserConnector\Communication\Plugin\OauthUserConnector                 |
-| OauthUserScopeProtectedRouteAuthorizationConfigProviderPlugin | Provides Oauth users authorization strategy configuration.                                           | Spryker\Glue\OauthUserConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
-| OauthUserScopeAuthorizationStrategyPlugin                     | Processes Oauth users an authorization request.                                                      | Spryker\Zed\OauthUserConnector\Communication\Plugin\Authorization                      |
+| UserOauthUserProviderPlugin                                   | Gets the user based on the authorization client.                                                         | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth                         |
+| UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin  | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of Password GrantType data.          | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                                      |
+| UserRequestValidatorPlugin                                    | Validates if `GlueRequestTransfer.requestUser` is set if the request has the Authorisation header.   | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
+| BackofficeUserOauthScopeAuthorizationCheckerPlugin            | Executes the authorization check based on the Back Office user OAuth scope.                                   | Spryker\Zed\OauthUserConnector\Communication\Plugin\OauthUserConnector                 |
+| OauthUserScopeProtectedRouteAuthorizationConfigProviderPlugin | Provides Oauth users authorization strategy configuration.                                            | Spryker\Glue\OauthUserConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
+| OauthUserScopeAuthorizationStrategyPlugin                     | Processes Oauth users an authorization request.                                                         | Spryker\Zed\OauthUserConnector\Communication\Plugin\Authorization                      |
 
 **src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
 

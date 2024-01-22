@@ -9,6 +9,13 @@ redirect_from:
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
 
+{% info_block infoBox "Development guidelines" %}
+
+Development guidelines for ACP apps contains general rules how to design an app and write code for it.
+ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which is its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+
+{% endinfo_block %}
+
 ## Prerequisites
 
 Before you begin, ensure that you have the following prerequisites in place:
@@ -144,68 +151,8 @@ Every app requires default endpoints for the App Registry Service. This service 
  - Configure
  - Disconnect
 
-To be able to use your Mini Framework as an app, add a new Spryker module:
-
-```bash
-docker/sdk cli composer require 'spryker/app-kernel:^0.1.1  spryker/message-broker-aws'
-```
-
 The `spryker/app-kernel` module transforms the Mini-Framework into an app. It provides SyncAPI schema and code for configuration and disconnection, as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
 The `spryker/message-broker-aws` module installs the necessary plugins for sending and receiving messages. 
-
-### Step validation
-
-- Make sure that new packages are added in `composer.json` and composer command is executed without errors.
-
-## Set up the message broker
-
-Install and configure the message broker as described in [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html).
-
-### Step validation
-
-- Make sure that `spryker/message-broker` is installed and configured properly.
-
-## Config
-
-To be identifiable in the App Eco System, every app needs an app identifier. To provide the identifier, add the following configuration to `config/Shared/config_default.php`:
-
-```php
-use Spryker\Shared\AppKernel\AppKernelConstants;
-
-$config[AppKernelConstants::APP_IDENTIFIER] = getenv('APP_IDENTIFIER') ?: 'hello-world';
-```
-
-## Plugins
-
-Add some plugins to your app to enable certain functionality. 
-
-### AppRouteProviderPlugin
-
-Add `\Spryker\Glue\App\Plugin\RouteProvider\AppRouteProviderPlugin` to the `\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getRouteProviderPlugins()` method. In case the method doesn’t exist, add the complete method.
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueBackendApiApplication;
-
-use Spryker\Glue\AppKernel\Plugin\RouteProvider\AppRouteProviderPlugin;
-use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-
-class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
-{   
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
-     */
-    protected function getRouteProviderPlugins(): array
-    {
-        return [
-            new AppRouteProviderPlugin(),
-        ];
-    }
-}
-```
-
-This enables the two required endpoints for the App Catalog Communication.
 
 ### Step validation
 
@@ -233,40 +180,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-```bash
-curl --location --request POST 'http://my-app.spryker.local/private/configure' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: en-US, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw '{
-    "data": {
-        "type": "configuration",
-        "attributes": {
-            "configuration": "{\"clientId\":\"clientId\",\"clientSecret\":\"clientSecret\",\"securityUri\":\"securityUri\",\"transactionCallsUri\":\"transactionCallsUri\",\"isActive\": false,\"isInvoicingEnabled\": false}"
-        }
-    }
-}'
-```
-
-### Step validation
-
-You can check if your database contains the newly created configuration in the `spy_app_config` table. The database credentials you can find in `deploy.dev.yml` file.
-
-### Test the /private/disconnect endpoint
-
-```bash
-curl --location --request POST 'http://my-app.spryker.local/private/disconnect' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: de-DE, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw ''
-```
-
-### Step validation
-
-- Now you can check if the previously created configuration in the spy_app_config table has been removed from your database.
+Follow the guidelines in [Test the endpoints](/docs/acp/user/connect-an-app.html#test-the-endpoints).
 
 ## Implement business logic
 

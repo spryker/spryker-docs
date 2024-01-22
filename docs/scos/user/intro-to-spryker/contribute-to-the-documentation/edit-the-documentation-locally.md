@@ -6,7 +6,7 @@ template: howto-guide-template
 ---
 
 
-This document describes how to you can edit documents on your machine and submit your changes directly to our repository.
+This document describes how to edit documents on your machine and submit your changes directly to our repository.
 
 ## Prerequisites
 
@@ -34,10 +34,13 @@ This document describes how to you can edit documents on your machine and submit
 
 1. To change the branch, click **Current Branch&nbsp;<span aria-label="and then">></span> New Branch**.
     This opens the **Create a Brunch** window.
+
 2. For **Name**, enter a branch name that best describes your changes.
     The app automatically replaces spaces in branch names with hyphens. You don't have to do anything about it.
+
 3. Click **Create Branch**.
     This changes the **Current Branch** to the branch name you've entered. The branch exists only on your machine.
+
 4. To add the branch to our repository on GitHub, click **Publish branch**.
 
 <figure class="video_container">
@@ -58,16 +61,7 @@ At this point, you are most likely to know which document you want to edit. To f
     You'd help us a lot by following [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html) and [general rules](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html), but it's completely optional. We are grateful for your contribution in any form.
 3. Save the edited document.
 4. In GitHub Desktop, double-check your changes in the **Changes** tab.
-5. Below the list of edit files, enter the name and description of your changes. The name of your fist commit will be used as the pull request's name.
-
-<a name="pr-naming-convention"></a>
-
-{% info_block infoBox "Naming convention" %}
-
-The name of the pull request must match the title of the page or section that you create or edit. For example, if you make changes to the document titled "Cart Feature Integration Guide," your pull request must be named "Cart Feature Integration Guide" as well.
-
-{% endinfo_block %}
-
+5. Below the list of edited files, enter the name and description of your changes. The name of your fist commit will be used as the pull request's name.
 6. To add your changes to the branch, click **Commit to {BRANCH_NAME}**.
 7. To publish the changes on GitHub, click **Push origin**.
     If you are editing in several sessions, it is good practice to commit and push after each session. If something happens to the changes on your machine, they will be safe on GitHub, and you will be able to keep working on them.
@@ -84,7 +78,16 @@ The name of the pull request must match the title of the page or section that yo
 
 1. To prepare the changes to be published on the documentation website, click **Create Pull Request**.
     This opens the **Open a pull request** page with prefilled name and description.
-2. Optional: If the name doesn't correspond to the [naming convention](#pr-naming-convention) for pull requests, update the name.     
+2. Optional: Update the pull requests's name to match the changes.
+
+<a name="pr-naming-convention"></a>
+
+{% info_block infoBox "Naming convention" %}
+
+The name of the pull request must match the title of the page or section you've created or edited. For example, if you've made changes to this document, the pull request's name should be "Edit the documentation locally".
+
+{% endinfo_block %}
+
 3. Add a description of what you've changed.
 4. Click **Create pull request**.
     This refreshes the page and displays the created pull request. The status is **Open**.

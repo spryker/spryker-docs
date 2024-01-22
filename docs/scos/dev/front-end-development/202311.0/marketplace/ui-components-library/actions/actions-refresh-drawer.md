@@ -4,6 +4,7 @@ description: This document provides details about the Actions Refresh Drawer ser
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-refresh-drawer.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions-refresh-drawer.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html

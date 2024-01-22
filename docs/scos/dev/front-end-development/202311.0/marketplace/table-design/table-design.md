@@ -4,6 +4,7 @@ description: This document describes the Table Design in the Components Library.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-design.html
 ---
 
 This document describes the Table Design in the Components Library.

@@ -6,6 +6,7 @@ last_updated: Sep 13, 2023
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
+- /docs/pbc/all/search/202311.0/third-party-integrations/integrate-algolia.html
 ---
 
 This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html) into a Spryker shop.
@@ -14,9 +15,9 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 Before integrating Algolia, ensure the following prerequisites are met:
 
-- Make sure your project is [ACP-enabled](/docs/acp/user/app-composition-platform-installation.html).
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-- The Algolia app catalog page lists specific packages which must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
+- The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
 Ensure that your installation meets these requirements.

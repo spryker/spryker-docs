@@ -5,7 +5,7 @@ last_updated: Nov 3 2023
 template: howto-guide-template
 ---
 
-Once you have [integrated the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
+Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ To configure Vertex, do the following:
 5. To activate the app, select *Active*.
 6. In *Security URI*, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
 7. In *Transaction calls URI*, enter the Transaction Calls URI of your Vertex platform. For details on the Transaction Calls URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).
-7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://hanes.ondemand.vertexinc.com/oseries-help/help/oseries/166223.htm) for details about how to obtain it. 
+7. In *Client ID/Client secret*, enter your Vertex client secret. See [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html) for details about how to obtain it.
 8. Optional: To enable invoice saving in Vertex, check *Enable invoice save in Vertex*.
 9. Click **Save**.
 
@@ -36,7 +36,7 @@ To configure Vertex, do the following:
 
 {% info_block infoBox "Company code" %}
 
-Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
+Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
 
 
 {% endinfo_block %}
@@ -53,7 +53,7 @@ Once you have configured Vertex, the taxes are calculated in real time in the ch
 
 ![vertex_checkout_page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex_checkout_page.png)
 
-On the Storefront, the tax amount is displayed at the checkout summary page. 
+On the Storefront, the tax amount is displayed at the checkout summary page.
 
 In the Back Office, the taxes are displayed at the order details page.
 
@@ -65,4 +65,3 @@ If you enabled invoice saving in Vertex in your configuration, you can view the 
 ![vertex-report-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-report-output.png)
 4. On the invoice page, you verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
-

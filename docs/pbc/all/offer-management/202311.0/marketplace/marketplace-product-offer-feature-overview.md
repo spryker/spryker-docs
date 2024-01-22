@@ -13,7 +13,7 @@ The *Product Offer* entity is created when multiple merchants need to sell the s
 
 A product offer is created per concrete product and contains product-specific information, information about the merchant selling this product, and the offer price. Any concrete product can have one or many offers from different merchants. Therefore, a unique *product offer reference* is defined per each product offer and is used to identify the offer in the system. Offer reference is mandatory and can only be defined once.
 
-Merchants can [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html#creating-a-product-offer) in the Merchant Portal or [import the product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html).
+Merchants can [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html) in the Merchant Portal or [import the product offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer.csv.html).
 
 Marketplace administrators can view and approve or deny merchants' product offers in the Back Office. For details, see [Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html).
 
@@ -77,7 +77,7 @@ The product offer prices support:
 
 Product offer price follows the [concrete product price inheritance model](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html). So if the Merchant doesn't set a price in the offer, it is taken from the concrete product. Otherwise, the product offer price has a higher priority and substitutes the concrete product price if it is indicated. If at least one price is defined for the offer (for example, original), it is valid for this offer even if the concrete product has a default price (sales price), but the offer does not. For details about price types, see [Price types](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html).
 
-Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html#creating-a-product-offer) or [import product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html).
+Merchants can define product offer prices in the Merchant Portal when they [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/create-product-offers.html) or [import product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html).
 
 ## Product offer stores
 
@@ -91,13 +91,13 @@ The following table illustrates the logic according to which the product offer 
 | Store where the product offer is added    | x    | &check;    | &check;    |
 | Is product offer visible?                 | no   | yes  | no   |
 
-Merchants can define product offer stores in the Merchant Portal when they [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html#creating-a-product-offer), or [import the product offer store](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer-store.csv.html).
+Merchants can define product offer stores in the Merchant Portal when they [create product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html), or [import the product offer store](/docs/pbc/all/offer-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-offer-store.csv.html).
 
 ## Product offers on the Storefront
 
 Merchant product offer with all the related offer information is visible on the product detail page, and further on the shopping cart page and checkout pages when the following conditions are met:
 
-1. The merchant who owns the offer is [*Active*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
+1. The merchant who owns the offer is *Active*.
 2. The product offer status is:
    - Approved
    - Active

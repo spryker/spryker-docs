@@ -19,7 +19,7 @@ Install the required features:
 | Order Management| {{page.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
 | Checkout |{{page.version}} |[Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)|
 | Prices |{{page.version}} |[Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)|
-| Inventory Management |{{page.version}} |[Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html)|
+| Inventory Management |{{page.version}} |[Inventory management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)|
 | Wishlist             |{{page.version}} ||
 | ShoppingList         |{{page.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)|
 

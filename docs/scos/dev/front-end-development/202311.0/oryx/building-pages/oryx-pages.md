@@ -82,7 +82,7 @@ import { provideExperienceData } from "@spryker-oryx/experience";
 import { customPage } from "./custom/page";
 
 export const app = appBuilder()
-  .withProviders(provideExperienceData(customData))
+  .withProviders([provideExperienceData(customData)])
   .create();
 ```
 
@@ -132,7 +132,7 @@ import { appBuilder } from "@spryker-oryx/application";
 import { provideExperienceData } from "@spryker-oryx/experience";
 
 export const app = appBuilder()
-  .withProviders(
+  .withProviders([
     provideExperienceData({
       merge: {
         selector: "#home-page",
@@ -140,7 +140,7 @@ export const app = appBuilder()
       type: "oryx-content-text",
       content: { data: { text: "<h1>Home page</h1>" } },
     })
-  )
+  ])
   .create();
 ```
 
@@ -165,7 +165,7 @@ import { appBuilder } from "@spryker-oryx/application";
 import { provideExperienceData } from "@spryker-oryx/experience";
 
 export const app = appBuilder()
-  .withProviders(
+  .withProviders([
     provideExperienceData({
       merge: {
         selector: "site-logo",
@@ -179,7 +179,7 @@ export const app = appBuilder()
         },
       },
     })
-  )
+  ])
   .create();
 ```
 
@@ -189,7 +189,7 @@ The following table gives an overview of the various merge types.
 
 | STRATEGY            | DESCRIPTION                                                                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `replace` (default) | Replaces the selected element with the given content.                                                                                                          |
+| `replace`           | Replaces the selected element with the given content. This is the default strategy.                                                                                                        |
 | `patch`             | Patches the selected component with the given component. This includes both the component options and content. All data, except for arrays, is deep-merged.    |
 | `remove`            | Removes the selected component.                                                                                                                                |
 | `before`            | Adds the content before the selected component.                                                                                                                |

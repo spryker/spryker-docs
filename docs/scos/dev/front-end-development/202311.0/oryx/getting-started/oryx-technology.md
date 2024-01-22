@@ -78,6 +78,6 @@ Oryx applications are decoupled applications and can be hosted separately. We re
 - Rewrites and redirects: simplifies the management of URL structure and routing.
 - Lambda function integration: lets you execute custom logic, server-side operations, and perform server-side rendering.
 
-If your Oryx applications requires [SSR](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
+If your Oryx application requires [SSR](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
 
 If your application is fairly static and doesn't require SSR, you could consider a non-frontend hosting provider.

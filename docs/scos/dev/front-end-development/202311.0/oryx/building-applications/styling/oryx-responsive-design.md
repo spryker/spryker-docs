@@ -57,9 +57,9 @@ Oryx provides the following default breakpoints for three screen sizes.
 
 | Screen size | Breakpoints                      |
 | ----------- | -------------------------------- |
-| Small       | Smaller than `"768px"`           |
-| Medium      | Between `"768px"` and `"1023px"` |
-| Large       | Larger than `"1023px"`           |
+| Small       | Smaller than `768px`.           |
+| Medium      | Between `768px` and `1023px`. |
+| Large       | Larger than `1023px`.           |
 
 The default breakpoints are given by the `defaultBreakpoints` object, which is available in the [themes](https://www.npmjs.com/package/@spryker-oryx/themes) package. The breakpoint values are configured in pixels.
 
@@ -166,7 +166,7 @@ Other important responsive design concepts are the layout container and the page
 
 All design tokens are configurable per screen size, which allows you to control the layout per screen without changing component styles.
 
-For more information about the layout system, see [Layout]()
+<!-- For more information about the layout system, see [Layout]() -->
 
 ## Responsive images
 

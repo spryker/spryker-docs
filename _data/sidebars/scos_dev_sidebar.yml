@@ -1607,7 +1607,7 @@ entries:
             - title: Set up
               url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
             - title: Technology
-              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html              
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html
             - title: Boilerplate
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
             - title: Packages
@@ -1862,6 +1862,21 @@ entries:
             - title: "Datasources"
               url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasources.html
               nested:
+                - title: "Trigger"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
+                  nested:
+                    - title: "Change"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html
+                    - title: "Input"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html
+                - title: "Dependable"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-dependable.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
                 - title: "HTTP"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-http.html
                 - title: "Inline"
@@ -2965,6 +2980,10 @@ entries:
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test Glue API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+          - title: Test Glue Backend API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
           - title: Test the asynchronous API
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
@@ -3159,6 +3178,8 @@ entries:
         url: /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/scos/dev/updating-spryker/troubleshooting-updates.html
+  - title: Example modules
+    url: /docs/scos/dev/example-modules.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
 ...

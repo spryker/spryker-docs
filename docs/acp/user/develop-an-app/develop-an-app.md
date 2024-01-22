@@ -9,6 +9,13 @@ redirect_from:
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
 
+{% info_block infoBox "Development guidelines" %}
+
+Development guidelines for ACP apps contains general rules how to design an app and write code for it.
+ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which is its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+
+{% endinfo_block %}
+
 ## Prerequisites
 
 Before you begin, ensure that you have the following prerequisites in place:
@@ -21,7 +28,9 @@ Before you begin, ensure that you have the following prerequisites in place:
 Make sure you have the Spryker Docker SDK, Git, and an empty repository for your app code.
 
 {% info_block infoBox "Info" %}
-[Download the](https://github.com/spryker-projects/mini-framework) completed example from the Mini-Framework.
+
+[Download](https://github.com/spryker-projects/mini-framework) the completed example from the Mini-Framework.
+
 {% endinfo_block %}
  
 ## Thought process
@@ -148,36 +157,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/configure' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: en-US, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw '{
-    "data": {
-        "type": "configuration",
-        "attributes": {
-            "configuration": "{\"clientId\":\"clientId\",\"clientSecret\":\"clientSecret\",\"securityUri\":\"securityUri\",\"transactionCallsUri\":\"transactionCallsUri\",\"isActive\": false,\"isInvoicingEnabled\": false}"
-        }
-    }
-}'
-```
-
-Now, check if your database contains the newly created configuration in the `spy_app_config` table.
-
-### Test the /private/disconnect endpoint
-
-```bash
-curl --location --request POST 'http://my-app.de.spryker.local/private/disconnect' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Accept: application/vnd.api+json' \
---header 'Accept-Language: de-DE, en;q=0.9,*;q=0.5' \
---header 'X-Tenant-Identifier: dev-US' \
---data-raw ''
-```
-
-Now, check if the previously created configuration in the spy_app_config table has been removed from your database.
+Follow the guidelines in [Test the endpoints](/docs/acp/user/connect-an-app.html#test-the-endpoints).
 
 ## Implement business logic
 

@@ -16,7 +16,8 @@ redirect_from:
   - /docs/en/creating-product-bundles
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html
-  - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html  
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html 
+  - /docs/marketplace/user/back-office-user-guides/202204.0/catalog/products/abstract-products/creating-abstract-products.html
 related:
   - title: Creating Product Variants
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html
@@ -56,13 +57,13 @@ Each section contains reference information. Make sure to look up the necessary 
 
 ### Reference information: Defining general settings
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| STORE RELATION  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in. |
-| SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
-| NAME | Name that will be displayed for the product on the Storefront. |
-| DESCRIPTION | Description that will be displayed for the product on the Storefront. |
-| NEW FROM <br>NEW TO  | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul>. |
+| ATTRIBUTE           | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| STORE RELATION      | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.                                                                                                                                                                                                                                                                                                                                                  |
+| SKU PREFIX          | Unique product identifier that will be used to track unique information related to the product.                                                                                                                                                                                                                                                                                                                                                                                       |
+| NAME                | Name that will be displayed for the product on the Storefront.                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| DESCRIPTION         | Description that will be displayed for the product on the Storefront.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| NEW FROM <br>NEW TO | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul>. |
 
 ## Define prices
 
@@ -77,13 +78,13 @@ On the **Price & Tax** tab, do the following:
 
 ### Reference information: Define prices
 
-| ATTRIBUTE |DESCRIPTION |
-| --- | --- |
-| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
+| ATTRIBUTE                | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>.                  |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
-| DEFAULT price | Default price is the price a customer pays for the product.
-| ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
+| DEFAULT price            | Default price is the price a customer pays for the product.                                                                                                                                                                                                                                                                                                                                                                      |
+| ORIGINAL price           | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change.                                                                                                                                                                                                                                             |
+| TAX SET                  | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html).                                                                                                                                                                                                      |
 
 #### Default and original prices on the Storefront
 
@@ -135,11 +136,11 @@ You can select as many super attributes as you need and define one or more value
 
 ### Reference information: Define meta information
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| TITLE | Meta title to display on search pages and browser tabs.|
-| KEYWORDS | Meta keywords that will be used by some search engines to match search results to search queries.|
-| DESCRIPTION | Meta description to be displayed on search pages. |
+| ATTRIBUTE   | DESCRIPTION                                                                                       |
+| ----------- | ------------------------------------------------------------------------------------------------- |
+| TITLE       | Meta title to display on search pages and browser tabs.                                           |
+| KEYWORDS    | Meta keywords that will be used by some search engines to match search results to search queries. |
+| DESCRIPTION | Meta description to be displayed on search pages.                                                 |
 
 ## Optional: Add images
 
@@ -149,13 +150,13 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 
 ### Reference information: Add images
 
-| ATTRIBUTE |DESCRIPTION |
-| --- | --- |
-| *DEFAULT* locale | Images from this locale will be displayed for the product in the locales images are not added for. |
-| IMAGE SET NAME | Image set name. For a multi-word name, instead of spaces, use dashes and underscores. |
-| SMALL IMAGE URL | A public URL to fetch a low-resolution image from. The image will be displayed on product catalog pages. |
-| LARGE IMAGE URL | A public URL to fetch a high-resolution image from. The image will be displayed on product details pages. |
-| SORT ORDER | A number that will define the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
+| ATTRIBUTE        | DESCRIPTION                                                                                                                                                                                   |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| *DEFAULT* locale | Images from this locale will be displayed for the product in the locales images are not added for.                                                                                            |
+| IMAGE SET NAME   | Image set name. For a multi-word name, instead of spaces, use dashes and underscores.                                                                                                         |
+| SMALL IMAGE URL  | A public URL to fetch a low-resolution image from. The image will be displayed on product catalog pages.                                                                                      |
+| LARGE IMAGE URL  | A public URL to fetch a high-resolution image from. The image will be displayed on product details pages.                                                                                     |
+| SORT ORDER       | A number that will define the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
 
 
 ## Next steps

@@ -30,7 +30,7 @@ Oryx includes predefined feature sets that cover common use cases for web applic
 - b2cFeatures: features commonly used in B2C applications.
 - fulfillmentFeatures: features used in PWAs, used for picking products for fulfillment.
 
-## Static Experience Data
+## Static experience data
 
 Feature sets contain static experience data. Experience data includes the structure and layout of the components of an application. Feature sets provide all the static pages data that is required for the application experiences. For example, the `b2cFeatures` feature set comes with the following static data:
 
@@ -97,7 +97,7 @@ The labs package provides experimental features that are not designed for produc
 
 ## Create feature sets
 
-In addition to the provided feature sets, you can create custom sets tailored to your business requirements. To create a custom set, create an array of feature objects that implement the `AppFeature` interface and pass it to the `withFeature()` method of the `appBuilder()` object. For example:
+In addition to the provided feature sets, you can create custom sets tailored to your business requirements. To create a custom set, create an array of feature objects that implement the `AppFeature` interface and pass it to the `withFeature()` method of the `appBuilder()` object. Example:
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";

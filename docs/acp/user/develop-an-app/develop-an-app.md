@@ -11,7 +11,7 @@ This document will walk you through the process of developing an app using Spryk
 
 {% info_block infoBox "Development guidelines" %}
 
-Development guidelines for ACP apps contains general rules how to design an app and write code for it.
+Development guidelines for ACP apps contain general rules on how to design an app and write code for it.
 ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which is its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
 
 {% endinfo_block %}
@@ -33,7 +33,7 @@ Make sure you have the Spryker Docker SDK, Git, and an empty repository for your
 
 {% endinfo_block %}
  
-## Thought process
+## 1. Thought process
 First, think about what your app should be capable of: what features it will bring and what data will be exchanged, not only to you but also to those interested in your app functionality. For example, what messages could be of interest to others, and what API endpoints you should provide. 
 
 ### API-first
@@ -57,7 +57,7 @@ You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-## Create an app
+## 2. Create an app
 
 To create an app, execute the following commands:
 
@@ -86,27 +86,33 @@ You can also execute this step later.
 
 Now, you have done the groundwork that enables you to develop an App. You created a new repository that contains the boilerplate code for almost any App you’d like to build.
 
-### Step validation
+### Setp validation
 
-- Make sure that project is cloned properly and it has no uncommited files.
+Make sure that the project is cloned properly and has no uncommitted files.
 
 
-## Start the local development environment
+## 3. Start the local development environment
 
-### Boot and up your environment
+To start the local development environment, you need to boot and up your environment. Do the following:
 
-Clone Spryker Docker SDK in project directory:
+1. Clone Spryker Docker SDK to the project directory:
 
 ```bash
 git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
-Execute the following command to boot your application and start it:
+2. Execute the following command to boot your application and start it:
 
 ```bash
 docker/sdk boot deploy.dev.yml
 docker/sdk up
 ```
+
+3. Validate if everything is set up correctly. Do the following:
+
+- Make sure that all the commands are executed without errors and the tests are successfully passed.
+- Check that docker containers are started by executing the `docker/sdk ps` command.
+- Make sure that `my-app.spryker.local` domain is resolved by executing the `ping my-app.spryker.local` command.
 
 After creating the development environment, you have several ways of using the app. The easiest one is to run the test suite as follows:
 
@@ -114,15 +120,9 @@ After creating the development environment, you have several ways of using the a
 docker/sdk testing codecept run
 ```
 
-You will now see that your app boilerplate code is up and running.
+Now, your app boilerplate code should be up and running.
 
-### Step validation
-
-- Make sure that all the command are executed without errors and the tests are successfully passed.
-- Check that docker containers are started by using the `docker/sdk ps` command.
-- Make sure that `my-app.spryker.local` domain is resolved by using `ping my-app.spryker.local` command
-
-## Add the app manifest files
+## 4. Add the app manifest files
 
 Before your app can be listed in the App Store Catalog, you need to add the following files.
 
@@ -142,9 +142,9 @@ The translation file contains all translations for the form fields you’ve prev
 
 ### Step validation
 
-- Make sure that all the needed configuration files are created and populated properly.
+Make sure that all the needed configuration files have been created and populated properly.
 
-## Add the registry (code)
+## 5. Add the registry (code)
 
 Every app requires default endpoints for the App Registry Service. This service acts as an intermediary between the App Store Catalog and all apps. Each app is registered in the App Registry Service and requires the following endpoints for communication:
 
@@ -156,9 +156,9 @@ The `spryker/message-broker-aws` module installs the necessary plugins for sendi
 
 ### Step validation
 
-- The new routes you can check in [Test the endpoints](#test-the-endpoints) after the next two steps.
+After the next two steps, check the new routesin [Test the endpoints](#8-test-the-endpoints).
 
-## Build the transfer objects
+## 6. Build the transfer objects
 
 Transfer objects are used in many places. Since you installed some modules, you also need to generate the transfers. To generate the transfers, run the following command:
 
@@ -166,7 +166,7 @@ Transfer objects are used in many places. Since you installed some modules, you 
 docker/sdk cli console transfer:generate
 ```
 
-## Update the database
+## 7. Update the database
 
 Generate the database entities and update the database:
 
@@ -174,7 +174,7 @@ Generate the database entities and update the database:
 docker/sdk cli console propel:install
 ```
 
-## Test the endpoints
+## 8. Test the endpoints
 
 You can now test the `configure` request with the following snippets. Run the cURL snippets from your host machine.
 
@@ -182,12 +182,12 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 Follow the guidelines in [Test the endpoints](/docs/acp/user/connect-an-app.html#test-the-endpoints).
 
-## Implement business logic
+## 9. Implement business logic
 
 Your app is now ready to use, although it doesn't contain any business logic yet. 
 Start implementing the business logic by implementing a synchronous or asynchronous API.
 
-## Debug your app
+## 10. Debug your app
 
 If you want to understand what is happening in the code, you can [debug your app](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html) with XDebug and by adding `--cookie "XDEBUG_SESSION=PHPSTORM;" \` to the above cURL request.
 

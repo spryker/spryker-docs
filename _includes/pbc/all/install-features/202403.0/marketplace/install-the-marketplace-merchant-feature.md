@@ -12,12 +12,9 @@ Install the required features:
 | NAME                           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
 |--------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
-| Merchant                       | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                                        |
-| Glue Authentication (Optional) | {{page.version}} | [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
+| Merchant                       | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                                        |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
@@ -42,8 +39,6 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
-
-Set up database schema:
 
 1. Adjust the schema definition so entity changes trigger events:
 
@@ -117,13 +112,11 @@ Make sure that the following changes have occurred in transfer objects:
 
 {% endinfo_block %}
 
-## 3) Set up configuration
+### 3) Optional: Set up configuration
 
-{% info_block warningBox "Warning" %}
+1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
-Apply the following changes only if you have the [Glue Authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) feature installed and if you would like to specify a list of endpoints access to which is allowed for merchant users.
-
-{% endinfo_block %}
+2. Define the endpoints which merchant users have access to:
 
 **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.php**
 
@@ -226,7 +219,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
             new SyncMerchantUsersStatusMerchantPostUpdatePlugin(),
         ];
     }
-   
+
     /**
      * @return list<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantBulkExpanderPluginInterface>
      */
@@ -243,7 +236,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following applies:
 
 * When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
@@ -309,7 +302,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit a merchant in the **Merchants** section of the Back Office, you can see merchant profile related tabs: **Contact Person**, **Merchant Profile**, **Legal Information**, **Merchant User**.
+Make sure that, on the **Edit Merchant: `merchant_id`** page in the Back Office, you can see the following tabs:
+* **Contact Person**
+* **Merchant Profile**
+* **Legal Information**
+* **Merchant User**
 
 {% endinfo_block %}
 
@@ -363,22 +360,21 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you retrieve a product offer from storage, you can see merchant transfer property.
+Make sure that, when you retrieve a product offer from storage, you can see the merchant transfer property.
 
 {% endinfo_block %}
 
-{% info_block warningBox "Warning" %}
+#### Optional: Enable the Backend API authentication
 
-Apply the following changes only if you have the [Glue Authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) feature installed.
+1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
-{% endinfo_block %}
 
-Enable the Backend API authentication by registering the plugin:
+2. Register the following plugins:
 
 | PLUGIN                                               | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                             |
 |------------------------------------------------------|----------------------------------------------------|---------------|-----------------------------------------------------------------------|
 | MerchantUserTypeOauthScopeAuthorizationCheckerPlugin | Authorizes user by merchant user scopes.           |               | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
-| MerchantUserTypeOauthScopeProviderPlugin             | Provides OAuth scopes related to merchant users.   |               | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
+| MerchantUserTypeOauthScopeProviderPlugin             | Provides the OAuth scopes related to merchant users.   |               | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
 
 **src/Pyz/Zed/OauthUserConnector/OauthUserConnectorDependencyProvider.php**
 
@@ -434,17 +430,15 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 }
 ```
 
-2. Check that the output contains the 201 response with a valid token.
-3. Make sure that a merchant user can assess only to endpoints specified in **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.php**.
+Make sure the output contains the 201 response with a valid token. Make sure that the warehouse user can assess only the endpoints specified in **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.php**.
 
 {% endinfo_block %}
 
 ### 6) Configure navigation
 
-Add marketplace section to `navigation.xml`:
+1. Add the marketplace section to the navigation:
 
 **config/Zed/navigation.xml**
-
 ```xml
 <?xml version="1.0"?>
 <config>
@@ -465,7 +459,7 @@ Add marketplace section to `navigation.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -473,7 +467,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can see the **Marketplace** button in the navigation menu of the Back Office.
+Make sure there is the **Marketplace** button in the Back Office navigation.
 
 {% endinfo_block %}
 
@@ -659,7 +653,7 @@ Make sure that when merchant profile entities are created or updated through ORM
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
 
-1. Setup event listeners and publishers by registering the plugins:
+1. Set up event listeners and publishers by registering the plugins:
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -687,7 +681,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-2. Register synchronization queue:
+2. Register a synchronization queue:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -884,7 +878,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
 | TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
 |---------------|-------------------------------------|
@@ -1082,14 +1076,16 @@ Make sure that when merchant entities are created or updated through ORM, they a
 
 ### 8) Import data
 
-To import data:
+To import data follow the steps in the following sections.
+
+### Import merchant profile data
 
 1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
 
-```
+```csv
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number
 MER000001,E-Commerce Manager,Mr,Harald,Schmidt,+49 30 208498350,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png,info@spryker.com,+49 30 234567891,Spryker is the main merchant at the Demo Marketplace.,Spryker ist der Haupthändler auf dem Demo-Marktplatz.,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,1-3 days,1-3 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",Spryker Systems GmbH values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH.,1,+49 30 234567800
 MER000002,Country Manager DE,Ms,Martha,Farmer,+31 123 345 678,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-logo.png,hi@video-king.nl,+31 123 345 777,"Video King is a premium provider of video equipment. In business since 2010, we understand the needs of video professionals and enthusiasts and offer a wide variety of products with competitive prices. ","Video King ist ein Premium-Anbieter von Videogeräten. Wir sind seit 2010 im Geschäft, verstehen die Bedürfnisse von Videoprofis und -enthusiasten und bieten eine große Auswahl an Produkten zu wettbewerbsfähigen Preisen an. ",https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL <br><br>Phone: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Amsterdam<br>Register Number: 1234.4567<br></p>,<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL<br><br>Telefon: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Amsterdam<br>Registernummer: 1234.4567<br></p>,Video King values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Video King.,1,+31 123 345 733
@@ -1138,7 +1134,7 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 **/data/import/common/common/marketplace/merchant_profile_address.csv**
 
-```
+```csv
 merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
 MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
 MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
@@ -1199,7 +1195,8 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
-To import merchant user data, perform the following steps:
+### Import merchant users
+
 1. Prepare merchant user data according to your requirements using the demo data:
 
 **/data/import/common/common/marketplace/merchant_user.csv**
@@ -1214,7 +1211,7 @@ MER000006,michele@sony-experts.com
 | merchant_reference | &check;  | String    | MER000006                  | Identifier of the merchant in the system. Have to be unique.                                                                |
 | username           | &check;  | String    | `michele@sony-experts.com` | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user. |
 
-2. Create the Step model for writing merchant user data.
+2. Create the Step model for writing merchant user data:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
@@ -1321,7 +1318,7 @@ class MerchantUserWriterStep implements DataImportStepInterface
 
 </details>
 
-3. Add the merchant user import type to full import (if needed).
+3. Optional: Add the merchant user import type to full import:
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
 
@@ -1353,7 +1350,7 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-4. Enable merchant user data import command.
+4. Enable the merchant user data import command:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
@@ -1426,7 +1423,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
 </details>
 
-5. Create and prepare your data import configuration files according to your requirements using our demo config template:
+5. Create and prepare your data import configuration files according to your requirements using the demo config template:
 
 **data/import/common/marketplace_import_config_EU.yml**
 
@@ -1442,7 +1439,7 @@ actions:
     source: data/import/common/common/marketplace/merchant_profile_address.csv
  ```
 
-6. Import data.
+6. Import data:
 
 ```bash
 console data:import merchant-user
@@ -1450,13 +1447,16 @@ console data:import merchant-user
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data has been added to the `spy_merchant_profile`, `spy_merchant_profile_address` and `spy_merchant_user` tables.
+Make sure the data has been added to the following tables:
+* `spy_merchant_profile`
+* `spy_merchant_profile_address`
+* `spy_merchant_user`
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-Follow the steps below to install the Marketplace Merchant feature front end.
+Follow the steps below to install the Marketplace Merchant feature frontend.
 
 ### Prerequisites
 
@@ -1468,16 +1468,22 @@ Install the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
 
 | MODULE                | EXPECTED DIRECTORY                          |
 |-----------------------|---------------------------------------------|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantWidget        | vendor/spryker-shop/merchant-widget         |
 | MerchantPage          | vendor/spryker-shop/merchant-page           |
+
+{% endinfo_block %}
+
 
 ### 2) Add translations
 
@@ -1487,7 +1493,7 @@ Add Yves translations:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant.sold_by,Sold by,en_US
 merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
@@ -1516,13 +1522,13 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN               | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                              |
 |----------------------|------------------------------------------------------------------------|---------------|----------------------------------------|
@@ -1552,7 +1558,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1560,24 +1566,18 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
-
-| MODULE               | TEST                                                                                                                |
-|----------------------|---------------------------------------------------------------------------------------------------------------------|
-| SoldByMerchantWidget | Open product detail page, and you will see the sold by merchant text. (May require Marketplace Product integration) |
+To verify `SoldByMerchantWidget` has been registered, make sure the **Sold by merchant:** section is displayed on the Product Details pages. This also requires the [Marketplace Product feature to be installed](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html).
 
 {% endinfo_block %}
 
 ### 4) Set up behavior
 
-To set up behavior:
-
 1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                            | SPECIFICATION                                                                                                                                | PREREQUISITES                                                         | NAMESPACE                             |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|
-| MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`.                                           |                                                                       | SprykerShop\Yves\MerchantPage\Plugin  |
-| UrlStorageMerchantMapperPlugin    | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
+| MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://mysprykershop.com/merchant/{merchantReference}`.                                           |                                                                       | SprykerShop\Yves\MerchantPage\Plugin  |
+| UrlStorageMerchantMapperPlugin    | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
 
@@ -1629,7 +1629,7 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+Make sure the merchant page is accessible at `https://mysprykershop/de/merchant/spryker`.
 
 {% endinfo_block %}
 
@@ -1641,13 +1641,11 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can view merchant profile data at `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+Make sure merchant profile data is displayed at `https://mysprykershop.com/de/merchant/spryker`.
 
 {% endinfo_block %}
 
 ## Install related features
-
-Integrate the following related features:
 
 | FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                              |
 |--------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

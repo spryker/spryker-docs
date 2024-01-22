@@ -11,7 +11,6 @@ Install the required features:
 | Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                |  |
 | Spryker Core Back Office       | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)                                               |
 | Inventory Management           | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html)        |
-| Glue Authentication (Optional) | {{page.version}} | [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html)  |
 
 ## 1) Install the required modules using Composer
 
@@ -91,7 +90,7 @@ Make sure the following changes have been triggered in transfer objects:
 
 ## 3) Set up configuration
 
-Optional: To make `warehouse-user-assignments` and `warehouse-tokens` resources protected, adjust the protected paths configuration:
+1. Optional: To make `warehouse-user-assignments` and `warehouse-tokens` resources protected, adjust the protected paths configuration:
 
 **src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php**
 
@@ -124,13 +123,16 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 }
 ```
 
-{% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Glue Authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) feature installed and if you would like to specify a list of endpoints access to which is allowed for warehouse users.
+2. Optional: To give warehouse users access to Backend Glue API endpoints, do the following:
 
-{% endinfo_block %}
+    1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
-**src/Pyz/Zed/OauthWarehouseUser/OauthWarehouseUserConfig.php**
+    2. Specify the list of endpoints which warehouse users have access to:
+
+
+<details>
+  <summary>src/Pyz/Zed/OauthWarehouseUser/OauthWarehouseUserConfig.php</summary>
 
 ```php
 <?php
@@ -185,6 +187,8 @@ class OauthWarehouseUserConfig extends SprykerOauthWarehouseUserConfig
 }
 ```
 
+</details>
+
 ## 4) Add translations
 
 1. Append glossary according to your configuration:
@@ -217,16 +221,18 @@ console translator:generate-cache
 {% info_block warningBox "Verification" %}
 
 * Make sure the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
-* Make sure the translation cache has been built:
+* Verify that the translation cache has been built:
    1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
    2. For a user of your choice, click **Assign Warehouses**.
    Make sure that the **Warehouse User Assignment** table is translatable.
 
-* Make sure you can switch the language in the Back Office:
-1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. For a user of your choice, click **Edit**.
-  The **Edit User: `USER_NAME`** page opens. `USER_NAME` stands for the name of the user whose profile you edit.
-3. From **INTERFACE LANGUAGE**, select another language.
+* Verify that you can switch the language in the Back Office:
+  1. Go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+  2. For a user of your choice, click **Edit**.
+    The **Edit User: `USER_NAME`** page opens.
+  3. For **INTERFACE LANGUAGE**, select another language.
+  4. Click **Update**.
+    Make sure this opens the list of users with a success message displayed.
 
 {% endinfo_block %}
 
@@ -306,15 +312,15 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the plugins work correctly:
+Verify the plugins are set up correctly:
 
 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
 2. Initiate creating a user or editing an existing user.
-3. Make sure that the user form has the **This user is a warehouse user** checkbox.
-4. Select the checkbox and submit the form.
-5. On the **Users** page, make sure that the **Assign Warehouses** button is displayed for the user.
-6. Log out from the Back Office.
-7. Try to log into the Back Office with the warehouse user's login details.
+3. Select the **THIS USER IS A WAREHOUSE USER** checkbox.
+4. Create or update the user.
+    On the **Users** page, make sure that the **Assign Warehouses** button is displayed for the user.
+5. Log out from the Back Office.
+6. Try to log into the Back Office with the warehouse user's login details.
     Make sure you can't log in.
 
 {% endinfo_block %}
@@ -330,11 +336,11 @@ Make sure the plugins work correctly:
 | WarehouseOauthRequestGrantTypeConfigurationProviderPlugin | Checks if the requested OAuth grant type equals to `\Spryker\Zed\OauthWarehouse\OauthWarehouseConfig::WAREHOUSE_GRANT_TYPE` and if the requested application context equals to `GlueBackendApiApplication`. |               | Spryker\Zed\OauthWarehouse\Communication\Plugin\Oauth                                        |
 | WarehouseTokensBackendResourcePlugin                      | Registers the `warehouse-tokens` resource.                                                                                                                                                                  |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
 | WarehouseRequestBuilderPlugin                             | If the warehouse credentials are valid, sets `GlueRequestTransfer.requestWarehouse`.                                                                                                                        |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
-| WarehouseRequestValidatorPlugin                           | if a request has the Authorization header, validates if `GlueRequestTransfer.requestWarehouse` is set.                                                                                                      |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
+| WarehouseRequestValidatorPlugin                           | if a request has the Authorization header, validates if `GlueRequestTransfer.requestWarehouse` is set.  |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplication                       |
 | WarehouseAuthorizationRequestExpanderPlugin               | Expands `AuthorizationRequestTransfer.entity` with `GlueRequestWarehouseTransfer`.                                                                                                                          |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 | WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer`. If true, sets `GlueRequestValidationTransfer` as valid.                                                                                 |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                 |
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
@@ -485,7 +491,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
@@ -542,7 +548,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 5. On the **Users** page, for the user you've edited, click **Assign Warehouses**.
     This opens the **Assign Warehouse to User: `{USER_NAME}`** page.
 6. In the **Select warehouses to assign** tab, for a warehouse of your choice, select **ASSIGN** and click **Save**.
-7. Authenticate as the warehouse user:
+7. Authenticate as the warehouse user using Glue API:
 
 ```json
 POST /access-tokens HTTP/1.1
@@ -653,18 +659,17 @@ Make sure you can send the following requests:
 
 {% endinfo_block %}
 
-{% info_block warningBox "Warning" %}
 
-Apply the following changes only if you have the [Glue Authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) feature installed.
+### Optional: Enable Backend API authentication
 
-{% endinfo_block %}
+1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
-4. Enable the Backend API authentication by registering the plugin:
+2. Registering the plugins:
 
 | PLUGIN                                                | SPECIFICATION                                     | PREREQUISITES | NAMESPACE                                                              |
 |-------------------------------------------------------|---------------------------------------------------|---------------|------------------------------------------------------------------------|
-| WarehouseUserTypeOauthScopeAuthorizationCheckerPlugin | Authorizes user by warehouse user scopes.         |               | Spryker\Zed\OauthWarehouseUser\Communication\Plugin\OauthUserConnector |
-| WarehouseUserTypeOauthScopeProviderPlugin             | Provides OAuth scopes related to warehouse users. |               | Spryker\Zed\OauthWarehouseUser\Communication\Plugin\OauthUserConnector |
+| WarehouseUserTypeOauthScopeAuthorizationCheckerPlugin | Authorizes a user by warehouse user scopes.         |               | Spryker\Zed\OauthWarehouseUser\Communication\Plugin\OauthUserConnector |
+| WarehouseUserTypeOauthScopeProviderPlugin             | Provides the OAuth scopes related to warehouse users. |               | Spryker\Zed\OauthWarehouseUser\Communication\Plugin\OauthUserConnector |
 
 **src/Pyz/Zed/OauthUserConnector/OauthUserConnectorDependencyProvider.php**
 
@@ -703,10 +708,9 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can authenticate as a warehouse user:
+To verify the plugins are set up correctly, authenticate as a warehouse user:
 
-* `POST https://glue-backend.mysprykershop.com/token`
-
+`POST https://glue-backend.mysprykershop.com/token`
 ```json
 {
     "data": {
@@ -720,7 +724,6 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 }
 ```
 
-2. Check that the output contains the 201 response with a valid token.
-3. Make sure that a warehouse user can assess only to endpoints specified in **src/Pyz/Zed/OauthWarehouseUser/OauthWarehouseUserConfig.php**.
+Make sure the output contains the 201 response with a valid token. Make sure that the warehouse user can assess only the endpoints specified in **src/Pyz/Zed/OauthWarehouseUser/OauthWarehouseUserConfig.php**.
 
 {% endinfo_block %}

@@ -154,7 +154,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.****php</summary>
 
 ```php
@@ -204,7 +204,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
 ```php
@@ -304,7 +304,7 @@ class AuthenticationDependencyProvider extends SprykerAuthenticationDependencyPr
 }
 ```
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
@@ -391,9 +391,9 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 }
 ```
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "Prerequisites required" %}
 
-Apply the following changes only if you have the [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html) feature installed.
+Apply the following changes only if [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html) is integrated.
 
 {% endinfo_block %}
 
@@ -456,45 +456,37 @@ vendor/bin/console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Ensure that the Oauth client has been added to the `spy_oauth_client` table:
-
-  1. Run the SQL query:
-    ```sql
-    SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
-    ```
-
-  2. Check that the output contains one record.
+To verify that the Oauth client has been added to the `spy_oauth_client` table, run the SQL query:
+```sql
+SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
+```
+Make sure the output contains one record.
 
 
-* Ensure that you can authenticate as a customer:
-  1. Send the request:
-    ```
-    POST /token/ HTTP/1.1
-    Host: glue-storefront.mysprykershop.com
-    Content-Type: application/x-www-form-urlencoded
-    Accept: application/json
-    Content-Length: 66
+* To verify that you can authenticate as a customer, send the request:
+```
+POST /token/ HTTP/1.1
+Host: glue-storefront.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 66
 
-    grant_type=password&username={customer_username}&password={customer_password}
-    ```
+grant_type=password&username={customer_username}&password={customer_password}
+```
+Make sure the output contains the 201 response with a valid token.
 
-  2. Check that the output contains the 201 response with a valid token.
 
-* Ensure that you can authenticate as a user:
+* To verify that you can authenticate as a user, send the request:
+```
+POST /token/ HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/x-www-form-urlencoded
+Accept: application/json
+Content-Length: 66
 
-  1. Send the request:
-    ```
-    POST /token/ HTTP/1.1
-    Host: glue-backend.mysprykershop.com
-    Content-Type: application/x-www-form-urlencoded
-    Accept: application/json
-    Content-Length: 66
-
-    grant_type=password&username={user_username}&password={user_password}
-    ```
-
-  2. Check that the output contains the 201 response with a valid token.
-  3. Ensure that a user can assess to protected resources.
+grant_type=password&username={user_username}&password={user_password}
+```
+Make sure the output contains the 201 response with a valid token and the user can assess protected resources.
 
 
 {% endinfo_block %}

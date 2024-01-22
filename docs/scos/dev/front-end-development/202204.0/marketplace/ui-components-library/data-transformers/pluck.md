@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/pluck.html
 ---
 title: Data Transformer Pluck
 description: This document provides details about the Data Transformer Pluck service in the Components Library.

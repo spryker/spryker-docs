@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Settings
 description: This document provides details about the Table Feature Settings component in the Components Library.

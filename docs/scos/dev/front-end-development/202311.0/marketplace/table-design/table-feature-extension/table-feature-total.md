@@ -4,6 +4,7 @@ description: This document provides details about the Table Feature Total compon
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-total.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-total.html
 related:
   - title: Table Feature extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html

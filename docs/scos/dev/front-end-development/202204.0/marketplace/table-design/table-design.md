@@ -1,3 +1,4 @@
+  
 ---
 title: Table Design
 description: This document describes the Table Design in the Components Library.

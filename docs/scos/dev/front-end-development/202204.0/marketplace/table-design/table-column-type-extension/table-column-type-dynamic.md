@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Dynamic
 description: This document provides details about the Table Column Type Dynamic in the Components Library.

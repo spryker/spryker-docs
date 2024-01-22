@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Total
 description: This document provides details about the Table Feature Total component in the Components Library.

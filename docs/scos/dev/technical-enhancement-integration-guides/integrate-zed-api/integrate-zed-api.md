@@ -4,6 +4,7 @@ description: Integrate the Zed API into your project
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/backend-api-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/zed-api-feature-integration.html
 ---
 
 

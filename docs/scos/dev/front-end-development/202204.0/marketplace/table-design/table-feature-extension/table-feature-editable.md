@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Editable
 description: This document provides details about the Table Feature Editable component in the Components Library.

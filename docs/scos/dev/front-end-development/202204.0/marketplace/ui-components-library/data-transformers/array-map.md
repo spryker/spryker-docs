@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/array-map.html
 ---
 title: Data Transformer Array-map
 description: This document provides details about the Data Transformer Array-map service in the Components Library.

@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.

@@ -1,3 +1,4 @@
+  
 ---
 title: Actions Refresh Table
 description: This document provides details about the Actions Refresh Table service in the Components Library.

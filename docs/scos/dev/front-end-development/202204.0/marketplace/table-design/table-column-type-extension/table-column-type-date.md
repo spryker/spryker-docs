@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Date
 description: This document provides details about the Table Column Type Date in the Components Library.

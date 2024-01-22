@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Pagination
 description: This document provides details about the Table Feature Pagination component in the Components Library.

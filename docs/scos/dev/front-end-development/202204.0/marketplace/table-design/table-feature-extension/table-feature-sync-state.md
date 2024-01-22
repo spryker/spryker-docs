@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Sync State
 description: This document provides details about the Table Feature Sync State component in the Components Library.

@@ -1,3 +1,4 @@
+  
 ---
 title: Data Transformer Collate Filter Equals
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.

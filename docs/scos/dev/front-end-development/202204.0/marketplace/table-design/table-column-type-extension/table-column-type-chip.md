@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Chip
 description: This document provides details about the Table Column Type Chip in the Components Library.

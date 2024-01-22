@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/set-up-the-merchant-portal.html
 ---
 title: Set up the Merchant Portal
 description: This document provides details about setting up Spryker Marketplace project.

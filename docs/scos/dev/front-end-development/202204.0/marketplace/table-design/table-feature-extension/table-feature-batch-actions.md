@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Batch Actions
 description: This document provides details about the Table Feature Batch Actions component in the Components Library.

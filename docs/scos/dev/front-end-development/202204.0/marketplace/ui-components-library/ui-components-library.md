@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/ui-components-library.html
 ---
 title: UI Components Library
 description: This articles provides details about UI components library.

@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Select
 description: This document provides details about the Table Column Type Select in the Components Library.

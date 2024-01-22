@@ -1,3 +1,4 @@
+  
 ---
 title: Table Configuration
 description: This document provides details about the table configuration.

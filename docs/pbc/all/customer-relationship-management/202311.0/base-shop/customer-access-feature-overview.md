@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
   - /docs/scos/user/features/202311.0/customer-access-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/customer-access-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/customer-access-feature-walkthrough.html
 ---
 
 _Customer Access_ lets store administrators define whether certain information is visible to logged-out users.

@@ -1,3 +1,4 @@
+  
 ---
 title: Cache Strategy Static
 description: This document provides details about the Cache Strategy Static service in the Components Library.

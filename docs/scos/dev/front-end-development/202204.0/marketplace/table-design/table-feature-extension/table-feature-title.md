@@ -1,3 +1,4 @@
+  
 ---
 title: Table Feature Title
 description: This document provides details about the Table Feature Title component in the Components Library.

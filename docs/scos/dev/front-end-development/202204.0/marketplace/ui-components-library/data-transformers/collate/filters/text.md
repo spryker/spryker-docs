@@ -1,3 +1,4 @@
+  
 ---
 title: Data Transformer Collate Filter Text
 description: This document provides details about the Data Transformer Collate Filter Text service in the Components Library.

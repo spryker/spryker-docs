@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Input
 description: This document provides details about the Table Column Type Input in the Components Library.

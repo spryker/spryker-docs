@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/chain.html
 ---
 title: Data Transformer Chain
 description: This document provides details about the Data Transformer Chain service in the Components Library.

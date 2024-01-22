@@ -4,6 +4,7 @@ description: This document provides details about the Table Column Type Autocomp
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-autocomplete.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
@@ -23,6 +24,7 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-select.html
   - title: Table Column Type Text
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-text.html
+    
 ---
 
 This document explains the Table Column Type Autocomplete in the Components library.

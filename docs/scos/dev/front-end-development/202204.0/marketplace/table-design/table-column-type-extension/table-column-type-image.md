@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type Image
 description: This document provides details about the Table Column Type Image in the Components Library.

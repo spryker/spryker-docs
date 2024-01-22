@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/extend-the-marketplace-frontend.html
 ---
 title: Extending the project
 description: This document provides details about how to extend the new project.

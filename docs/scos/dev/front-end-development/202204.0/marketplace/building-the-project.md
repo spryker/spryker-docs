@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/building-the-project.html
 ---
 title: Building the project
 description: This document provides details how to build the frontend part of the Merchant Portal.

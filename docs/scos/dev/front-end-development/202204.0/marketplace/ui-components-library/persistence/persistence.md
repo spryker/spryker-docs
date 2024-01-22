@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/persistence.html
 ---
 title: Persistence
 last_updated: Jun 07, 2021

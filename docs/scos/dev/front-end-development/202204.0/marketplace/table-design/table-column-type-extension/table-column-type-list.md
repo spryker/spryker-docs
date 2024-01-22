@@ -1,3 +1,4 @@
+  
 ---
 title: Table Column Type List
 description: This document provides details about the Table Column Type List in the Components Library.

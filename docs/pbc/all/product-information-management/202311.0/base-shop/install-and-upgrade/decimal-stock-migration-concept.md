@@ -6,16 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/decimal-stock-concept
 originalArticleId: da336e52-e8e8-4849-9be3-e208cd42e273
 redirect_from:
-  - /2021080/docs/decimal-stock-concept
-  - /2021080/docs/en/decimal-stock-concept
-  - /docs/decimal-stock-concept
-  - /docs/en/decimal-stock-concept
-  - /v6/docs/decimal-stock-concept
-  - /v6/docs/en/decimal-stock-concept
-  - /v5/docs/decimal-stock-concept
-  - /v5/docs/en/decimal-stock-concept
-  - /v4/docs/decimal-stock-concept
-  - /v4/docs/en/decimal-stock-concept
   - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 related:
   - title: Packaging Units feature overview
@@ -86,7 +76,7 @@ The following table lists the modules affected by the Decimal Stock update and w
 | `spryker/cart-variant` | 2.0.0 | [Upgrade the CartVariant module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html#upgrading-from-version-6-to-version-700) |
-| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
+| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html#upgrading-from-version-4-to-version-500) |
 | `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html#upgrading-from-version-1-to-version-200) |

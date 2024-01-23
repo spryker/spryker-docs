@@ -34,6 +34,14 @@ entries:
                     url: /docs/pbc/all/back-office//unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html
                     include_versions:
                     - "202311.0"
+          - title: Tutorials and HowTos
+            include_versions:
+            - "202311.0"
+            nested:
+              - title: "HowTo: Configure timezone in the Back Office"
+                url: /docs/pbc/all/back-office/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
+                include_versions:
+                - "202311.0"
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -94,6 +102,14 @@ entries:
                     url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-when-checking-out-purchases.html
                   - title: Retrieve shipments in orders
                     url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html
+                  - title: Manage shipment types
+                    nested:
+                      - title: Add shipment types
+                        url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-add-shipment-types.html
+                      - title: Retrieve shipment types
+                        url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-retrieve-shipment-types.html
+                      - title: Update shipment types
+                        url: /docs/pbc/all/carrier-management/base-shop/manage-using-glue-api/manage-shipment-types/glue-api-update-shipment-types.html
               - title: Import data
                 url: /docs/pbc/all/carrier-management/base-shop/import-and-export-data/import-carrier-management-data.html
                 nested:
@@ -433,6 +449,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
                   - title: Implement a customer approval process based on a generic state machine
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
+                  - title: Handling carts with a big number of items
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
                   - title: "Tutorial: Calculator plugin"
@@ -1281,7 +1299,11 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
               - title: Manage customer authentication tokens
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
-              - title: Authenticating as a company user
+              - title: Authenticate as a Back Office user
+                url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html
+                include_versions:
+                - "202311.0"
+              - title: Authenticate as a company user
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
               - title: Manage company user authentication tokens
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
@@ -1442,6 +1464,23 @@ entries:
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
+                - "202311.0"
+                nested:
+                  - title: Manage merchants
+                    nested:
+                      - title: Create merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
+                      - title: Edit merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
+                  - title: Manage merchant users
+                    nested:
+                      - title: Create merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html
+                      - title: Edit merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+                include_versions:
                 - "202212.0"
                 - "202307.0"
                 nested:
@@ -1450,11 +1489,15 @@ entries:
                   - title: Manage merchants users
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
               - title: Manage in the Merchant Portal
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
                 nested:
                   - title: Manage merchant's performance data
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html
                   - title: Manage merchant account details and settings
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
+                  - title: Edit merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html
+
               - title: Manage using Glue API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
                 nested:
@@ -1464,8 +1507,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
                   - title: Retrieve merchant opening hours
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
-              - title: Edit merchant profiles
-                url: /docs/pbc/all/merchant-management/marketplace/edit-merchant-profiles.html
+
               - title: Tutorials and HowTos
                 nested:
                   - title: Create GUI modules
@@ -1549,10 +1591,6 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-setup-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
-              - title: Import and export data
-                nested:
-                  - title: "Import file details: glossary.csv"
-                    url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
               - title: Install Glue API
                 nested:
                   - title: Spryker Core
@@ -1565,14 +1603,32 @@ entries:
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html
                   - title: Transfer
                     url: /docs/pbc/all/miscellaneous/install-and-upgrade/upgrade-modules/upgrade-the-transfer-module.html
+          - title: Import and export data
+            nested:
+              - title: "Import file details: glossary.csv"
+                url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
           - title: Manage in the Back Office
             nested:
               - title: Add translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
               - title: Edit translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/edit-translations.html
-          - title: Retrieve store configuration using Glue API
-            url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve store configuration using Glue API
+                url: /docs/pbc/all/miscellaneous/glue-api-retrieve-store-configuration.html
+              - title: Manage push notification providers
+                nested:
+                  - title: Add push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-add-push-notification-providers.html
+                  - title: Retrieve push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-retrieve-push-notification-providers.html
+                  - title: Update push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html
+                  - title: Delete push notification providers
+                    url: /docs/pbc/all/miscellaneous/manage-using-glue-api/manage-push-notification-providers/glue-api-delete-push-notification-providers.html
+              - title: Add push notification subscriptions
+                url: /docs/pbc/all/miscellaneous/manage-using-glue-api/glue-api-add-push-notification-subscriptions.html
           - title: Third-party integrations
             nested:
               - title: Customer service
@@ -1771,6 +1827,18 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/manage-merchant-product-offers.html
               - title: Manage product offers in the Merchant Portal
                 url: /docs/pbc/all/offer-management/marketplace/manage-product-offers.html
+                include_versions:
+                - "202212.0"
+                - "202307.0"
+              - title: Manage product offers in the Merchant Portal
+                url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/manage-product-offers-in-the-merchant-portal.html
+                include_versions:
+                - "202311.0"
+                nested:
+                  - title: Create product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
+                  - title: Edit product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
               - title: Retrieve product offers using Glue API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
               - title: Render merchant product offers on the Storefront
@@ -1824,7 +1892,9 @@ entries:
               - title: "Import file details: product_offer_service.csv"
                 url: /docs/pbc/all/offer-management/unified-commerce/import-file-details-product-offer-service.csv.html
               - title: Create and edit product offers
-                url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html                    
+                url: /docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.html
+              - title: Retrieve product offer service point availability using Glue API
+                url: /docs/pbc/all/offer-management/unified-commerce/glue-api-retrieve-product-offer-service-point-availability.html
 
       - title: Order Management System
         url: /docs/pbc/all/order-management-system/order-management-system.html
@@ -2334,6 +2404,15 @@ entries:
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
                           - title: Invoice
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
+                  - title: Stripe
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/stripe.html
+                    nested:
+                      - title: Install Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-stripe.html
+                      - title: Configure Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/configure-stripe.html
+                      - title: Disconnect Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
                     nested:
@@ -3463,6 +3542,7 @@ entries:
                       include_versions:
                       - "202212.0"
                       - "202307.0"
+                      - "202311.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
               - title: Best practices
@@ -3505,80 +3585,99 @@ entries:
             nested:
               - title: Service Points feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-feature-overview.html
-                include_versions:
-                - "202311.0"
               - title: Service Points Cart + Checkout feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-checkout-feature-overview.html
-                include_versions:
-                - "202311.0"
               - title: Service Points Cart feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-cart-feature-overview.html
-                include_versions:
-                - "202311.0"
               - title: Service Points + Customer Account Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-customer-account-management-feature-overview.html
-                include_versions:
-                - "202311.0"
               - title: Service Points + Order Management feature overview
                 url: /docs/pbc/all/service-point-management/unified-commerce/service-points-order-management-feature.html
-                include_versions:
-                - "202311.0"
+              - title: Click & Collect domains
+                url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-domains.html
+                nested:
+                  - title: Marketplace Merchant Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-marketplace-merchant-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-availability-subdomain.html
+                  - title: Product Offer Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-service-point-subdomain.html
+                  - title: Product Offer Shipment Type Availability subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-availability-subdomain.html
+                  - title: Product Offer Shipment Type subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-product-offer-shipment-type-subdomain.html
+                  - title: Service Point Cart subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-point-cart-subdomain.html
+                  - title: Service Points domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-service-points-domain.html
+                  - title: Shipment Type Service Point subdomain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html
+                  - title: Shipment Types domain
+                    url: /docs/pbc/all/service-point-management/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html
               - title: Enable Click & Collect
                 url: /docs/pbc/all/service-point-management/unified-commerce/enable-click-collect.html
-                include_versions:
-                - "202311.0"
               - title: Install features
                 nested:
                   - title: Service Points Cart + Checkout
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points Cart
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-cart-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points + Customer Account Management
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-customer-account-management-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points + Order Management
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-order-management-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points + Product Offer
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-product-offer-feature.html
-                    include_versions:
-                    - "202311.0"
                   - title: Service Points Cart + Shipment
                     url: /docs/pbc/all/service-point-management/unified-commerce/install-features/install-the-service-points-shipment-feature.html
-                    include_versions:
-                    - "202311.0"
               - title: Import and export data
                 nested:
                   - title: "Import file details: service_point_address.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html
-                    include_versions:
-                    - "202311.0"
                   - title: "Import file details: service_point_store.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point-store.csv.html
-                    include_versions:
-                    - "202311.0"
                   - title: "Import file details: service_point.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html
-                    include_versions:
-                    - "202311.0"
                   - title: "Import file details: service_type.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html
-                    include_versions:
-                    - "202311.0"
                   - title: "Import file details: service.csv"
                     url: /docs/pbc/all/service-point-management/unified-commerce/import-and-export-data/import-file-details-service.csv.html
-                    include_versions:
-                    - "202311.0"
+              - title: Manage using Glue API
+                nested:
+                  - title: Manage service points
+                    nested:
+                      - title: Add service points
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html
+                      - title: Retrieve service points
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-retrieve-service-points.html
+                      - title: Update service points
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-update-service-points.html
+                  - title: Manage service types
+                    nested:
+                      - title: Add service types
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html
+                      - title: Retrieve service types
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-retrieve-service-types.html
+                      - title: Update service types
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-update-service-types.html
+                  - title: Manage service point addresses
+                    nested:
+                      - title: Add service point addresses
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html
+                      - title: Retrieve service point addresses
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-retrieve-service-point-addresses.html
+                      - title: Add service point addresses
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-update-service-point-addresses.html
+                  - title: Manage services
+                    nested:
+                      - title: Add services
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html
+                      - title: Retrieve services
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-retrieve-services.html
+                      - title: Update services
+                        url: /docs/pbc/all/service-point-management/unified-commerce/manage-using-glue-api/manage-services/glue-api-update-services.html
 
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
@@ -3757,6 +3856,15 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                        nested:
+                          - title: Integrate the connector module
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+                            include_versions:
+                            - "202311.0"
+                          - title: Integrate Vertex
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                            include_versions:
+                            - "202311.0"
                       - title: Configure Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
                         include_versions:
@@ -3988,10 +4096,12 @@ entries:
             include_versions:
             - "202311.0"
             nested:
-              - title: Fulfillment App feature overview
-                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-feature-overview.html
+              - title: Fulfillment App overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-overview.html
               - title: Warehouse Picking feature overview
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html
+              - title: Warehouse User Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-user-management-feature-overview.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -4002,11 +4112,34 @@ entries:
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
+              - title: Set up Fulfillment App
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html
               - title: "Back Office: Assign and deassign warehouses from warehouse users"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-fulfill-orders.html
-
+              - title: Manage using Glue API
+                nested:
+                  - title: Authenticate as a warehouse user
+                    url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html
+                  - title: Manage warehouse user assignments
+                    nested:
+                      - title: Create warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html
+                      - title: Update warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-update-warehouse-user-assignments.html
+                      - title: Retrieve warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-retrieve-warehouse-user-assignments.html
+                      - title: Delete warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html
+                  - title: Manage picklists
+                    nested:
+                      - title: Retrieve picklists
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html
+                      - title: Start picking
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html
+                      - title: Pick picklist items
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html
         nested:

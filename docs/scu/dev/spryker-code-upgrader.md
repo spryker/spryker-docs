@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 {% info_block infoBox "Availability" %}
-Provided through PaaS+
+Provided through PaaS+ and in EU region.
 {% endinfo_block %}
 
 Keeping enterprise software up-to-date is a known hurdle, especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security, improvements, patches, and new features.

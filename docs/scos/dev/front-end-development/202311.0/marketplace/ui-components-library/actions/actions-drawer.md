@@ -9,6 +9,8 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Actions Close Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-close-drawer.html
+  - title: Actions Confirmation
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-confirmation.html
   - title: Actions HTTP
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-http.html
   - title: Actions Notification

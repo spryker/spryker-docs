@@ -1470,6 +1470,8 @@ entries:
               nested:
                 - title: "Autocomplete"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+                - title: "Button Action"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
                 - title: "Chip"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
                 - title: "Date"
@@ -1532,6 +1534,8 @@ entries:
               nested:
                 - title: "Close Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-close-drawer.html
+                - title: "Confirmation"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-confirmation.html
                 - title: "Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-drawer.html
                 - title: "HTTP"

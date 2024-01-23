@@ -7,6 +7,8 @@ redirect_from:
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
+  - title: Actions Confirmation
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-confirmation.html
   - title: Actions Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-drawer.html
   - title: Actions HTTP

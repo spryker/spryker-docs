@@ -132,6 +132,6 @@ For more information on how to access registered plugins, see [interacting with 
 
 Plugins are used for the following:
 
-- To execute code when Oryx application starts up.
+- To execute code when an Oryx application starts up.
 - To interact with existing Oryx plugins.
 - To extend functionality of an Oryx application by building a custom plugin or extending existing Oryx plugins.

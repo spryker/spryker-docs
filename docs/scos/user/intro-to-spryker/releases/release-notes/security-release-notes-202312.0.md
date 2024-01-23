@@ -210,12 +210,13 @@ composer require spryker-shop/company-page:"~2.24.0"
 composer show spryker-shop/company-page # Verify the version
 ```
 
-If your platform is based on PHP 8.0 you can use version 2.23.1 of the `company-page` module:
+If your platform is based on PHP 8.0, you can use version 2.23.1 of the CompanyPage module:
 
 ```bash
 composer require spryker-shop/company-page:"~2.23.1"
 composer show spryker-shop/company-page # Verify the version
 ```
+
 2. In the `CompanyPage/Theme/default/views/role-update/role-update.twig` template, define the data properties:
 
 ```bash

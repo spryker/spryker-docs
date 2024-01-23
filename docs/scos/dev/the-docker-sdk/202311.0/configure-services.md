@@ -484,12 +484,15 @@ composer require spryker-eco/new-relic
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
+    ...
     php:
         ...
         enabled-extensions:
             ...
             - newrelic
+    environment:
+        ...
+        NEWRELIC_CUSTOM_APP_ENVIRONMENT: ENVIRONMENT_VALUE_HERE # staging, dev, production, uat
 ```
 
 2. Push and deploy the changes using one of the following guides:
@@ -531,7 +534,7 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
+    ...
     php:
         ...
         enabled-extensions:
@@ -543,21 +546,21 @@ image:
 
 By default, in the New Relic dashboard, the APM is displayed as `company-staging-newrelic-app`. To improve visibility, you may want to configure each application as a separate APM. For example, `YVES-DE (docker.dev)`.
 
-To do it, adjust the Monitoring service in `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
+To do it, add the `NewRelicMonitoringExtensionPlugin` by creating the class `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
 
 ```php
 <?php declare(strict_types = 1);
-
+​
 /**
  * This file is part of the Spryker Commerce OS.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
-
+​
 namespace Pyz\Service\Monitoring;
-
+​
 use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
-use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
-
+use Pyz\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
+​
 class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 {
     /**
@@ -568,6 +571,45 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
         return [
             new NewRelicMonitoringExtensionPlugin(),
         ];
+    }
+}
+```
+
+Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtensionPlugin.php`
+
+```php
+<?php
+​
+/**
+ * MIT License
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+​
+namespace Pyz\Service\NewRelic\Plugin;
+​
+use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin as SprykerNewRelicMonitoringExtensionPlugin;
+​
+class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensionPlugin
+{
+    /**
+     * @param string|null $application
+     * @param string|null $store
+     * @param string|null $environment
+     *
+     * @return void
+     */
+    public function setApplicationName(?string $application = null, ?string $store = null, ?string $environment = null): void
+    {
+        if (!$this->isActive) {
+            return;
+        }
+​
+        // Custom application environment name, or use $environment as fallback
+        $environment = getenv('NEWRELIC_CUSTOM_APP_ENVIRONMENT') ?: $environment;
+​
+        $this->application = $application . '-' . $store . ' (' . $environment . ')';
+​
+        newrelic_set_appname($this->application, null, false);
     }
 }
 ```

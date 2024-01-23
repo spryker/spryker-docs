@@ -42,7 +42,7 @@ Ensure you have addressed all the items from the following checklists.
 
 After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
-We highly recommend you to follow our [Security guidelines](/docs/dg/dev/guidelines/making-your-spryker-shop-secure.html) and ensure all the points are acknowledged and applied.
+We highly recommend you to follow our [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html) and ensure all the points are acknowledged and applied.
 
 Double check that you do not have any clear text passwords stored in config files or repositories.
 
@@ -59,7 +59,7 @@ Double check that you do not have any clear text passwords stored in config file
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 - Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
-- Make sure you have applied the security guidelines. For details, see [Security guidelines](https://docs.spryker.com/docs/dg/dev/guidelines/security-guidelines.html).
+- Make sure you have applied the security guidelines. For details, see [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
 - Double-check that you don't have any clear text passwords stored in config files or repositories.
 
 ### Testing

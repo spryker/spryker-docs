@@ -431,9 +431,9 @@ Sending a wrong `If-Match` header value results in the following error:
 {
     "errors": [
         {
-            "detail": "If-Match header is missing.",
-            "status": 428,
-            "code": "005"
+            "detail": "If-Match header value is invalid.",
+            "status": 412,
+            "code": "006"
         }
     ]
 }

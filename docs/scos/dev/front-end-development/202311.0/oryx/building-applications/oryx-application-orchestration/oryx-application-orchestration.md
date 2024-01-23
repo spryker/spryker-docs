@@ -2,6 +2,7 @@
 title: Oryx application orchestration
 description: Orchestration of the Oryx Application
 template: concept-topic-template
+last_updated: Oct 24, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202311.0/oryx/oryx-application-orchestration/oryx-application-orchestration.html
 ---
@@ -10,13 +11,10 @@ redirect_from:
 An Oryx application starts with the application orchestration. It lets you bootstrap and configure your application from reusable bits and pieces, such as the following:
 
 - [Features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html)
-<!-- TODO: Link to components -->
-- Components
-<!-- TODO: Link to providers -->
-- Providers
-<!-- TODO: Link to themes -->
-- Themes
-- Resources
+- Components <!-- TODO: Link to components -->
+- [Providers](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)
+- Themes <!-- TODO: Link to themes -->
+- Resources <!-- TODO: Link to resources -->
 - [Environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html)
 
 Application orchestration is used to configure and customize Oryx applications. As Oryx is a framework, it provides different pieces of functionality for different use cases, like B2B, B2C, Back Office, or Fulfillment. And orchestration lets you select specific functionality from Oryx to match your use case.
@@ -32,12 +30,9 @@ To start using orchestration, you need to import `appBuilder`from `@spryker-oryx
 Application builder lets you compose and customize different pieces of functionality. The builder is chainable and pluggable, and it supports the following built-in plugins:
 
 - [Features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): `withFeature`
-<!-- TODO: Link to components -->
-- Components: `withComponents`
-<!-- TODO: Link to providers -->
-- Providers: `withProviders`
-<!-- TODO: Link to themes -->
-- Themes: `withTheme`
+- Components: `withComponents` <!-- TODO: Link to components -->
+- Providers: `withProviders` <!-- TODO: Link to providers -->
+- Themes: `withTheme` <!-- TODO: Link to themes -->
 - [Options](#customization-of-options): `withAppOptions`
 - [FeatureOptions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): `withOptions`
 - [Environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html): `withEnvironment`
@@ -91,13 +86,9 @@ For more details about application orchestration, see the following documents:
 
 - [Set up the environment](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html)
 - [Add features](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html)
-<!-- TODO: Link to components -->
-- Add components
-<!-- TODO: Link to providers -->
-- Configure providers
-<!-- TODO: Link to resources -->
-- Add resources
-<!-- TODO: Link to theme -->
-- Add theme
+- Add components <!-- TODO: Link to components -->
+- Configure providers <!-- TODO: Link to providers -->
+- Add resources <!-- TODO: Link to resources -->
+- Add theme <!-- TODO: Link to theme -->
 - [Add plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
 - [Interact with application](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application.html)

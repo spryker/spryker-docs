@@ -4,6 +4,7 @@ description: This document provides details about the Data Transformer Chain ser
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-chain.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/chain.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html

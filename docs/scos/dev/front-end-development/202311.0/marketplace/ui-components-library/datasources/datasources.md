@@ -10,6 +10,8 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+redirect_from:
+- /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 
 This document explains the Datasources service in the Components Library.

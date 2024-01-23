@@ -4,6 +4,7 @@ description: This document provides details about the Angular Components, and ho
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/angular-components.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/angular-components.html
 related:
   - title: Angular Services
     link: docs/scos/dev/front-end-development/page.version/marketplace/angular-services.html

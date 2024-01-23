@@ -4,6 +4,7 @@ description: This document provides details about the Datasource Http service in
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-http.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasource-http.html
 related:
   - title: Datasources
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html

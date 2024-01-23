@@ -4,6 +4,7 @@ description: This document provides details about the Data Transformer Date-seri
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-date-serialize.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/date-serialize.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html

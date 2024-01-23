@@ -4,6 +4,7 @@ description: This document provides details about the Local Storage Persistence 
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/persistence/local-storage-persistence-strategy.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
 related:
   - title: Persistence
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html

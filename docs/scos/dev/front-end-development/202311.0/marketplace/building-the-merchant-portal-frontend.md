@@ -4,6 +4,7 @@ description: This document provides details how to build the frontend part of th
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/building-the-project.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/building-the-project.html
 related:
   - title: Project structure
     link: docs/scos/dev/front-end-development/page.version/marketplace/project-structure.html

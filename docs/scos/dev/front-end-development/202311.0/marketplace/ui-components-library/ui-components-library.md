@@ -4,6 +4,7 @@ description: This articles provides details about UI components library.
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/ui-components-library.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html

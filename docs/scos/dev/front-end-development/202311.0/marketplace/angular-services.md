@@ -4,6 +4,7 @@ description: This document provides details about the Angular Services, and how 
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/angular-services.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/angular-services.html
 related:
   - title: Angular Components
     link: docs/scos/dev/front-end-development/page.version/marketplace/angular-components.html

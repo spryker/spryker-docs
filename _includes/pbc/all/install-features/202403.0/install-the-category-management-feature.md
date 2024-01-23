@@ -8,7 +8,7 @@ Follow the steps below to install the Category Management feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required feature:
+Install the required feature:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                   |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -16,15 +16,13 @@ To start feature integration, integrate the required feature:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE               | EXPECTED DIRECTORY                    |
 |----------------------|---------------------------------------|
@@ -312,7 +310,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in the database.
+* Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                          | TYPE  | EVENT   |
 |------------------------------------------|-------|---------|
@@ -330,7 +328,7 @@ Make sure that the following changes have been applied in the database.
 | spy_category_image_set_to_category_image | table | created |
 | spy_category_image_storage               | table | created |
 
-Make sure that propel entities have been generated successfully by checking their existence.
+* Make sure propel entities have been generated successfully by checking their existence.
 
 {% endinfo_block %}
 
@@ -399,7 +397,6 @@ Make sure that the following changes have been implemented in transfer objects:
 1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
-
 ```csv
 category.validation.category_node_entity_not_found,The category node ID '%category_node_id%' cannot be relocated because this category node no longer exists.,en_US
 category.validation.category_node_entity_not_found,"Die Kategorieknoten-ID '%category_node_id%' kann nicht verschoben werden, da dieser Kategorieknoten nicht mehr existiert.",de_DE
@@ -413,7 +410,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -425,7 +422,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the Zed navigation related to categories has been translated.
+Make sure that the Back Office navigation related to categories has been translated.
 
 {% endinfo_block %}
 
@@ -708,14 +705,14 @@ Make sure that the `category-node` and `category-tree` trigger plugins work corr
 4.  Make sure that the `spy_category_node_storage` and `spy_category_tree_storage` tables have been filled with respective data.
 5.  Make sure that, in your system, storage entries are displayed with `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-Make sure that *category-node*, *category-tree* synchronization plugins works correctly:
+Make sure that *category-node* and *category-tree* synchronization plugins works correctly:
 
 1.  Fill the `spy_category_node_storage` and `spy_category_tree_storage` tables with some data.
 2.  Run the `console sync:data -r category_node` command.
 3.  Run the `console sync:data -r category_tree` command.
 4.  Check that, in your system, the storage entries are displayed with the `kv:category_node:{store}:{locale}:{id}` and `kv:category_tree:{store}:{locale}:{id}` masks.
 
-Make sure that when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
+Make sure that, when a category is created or edited through ORM, it is exported to Redis and Elasticsearch accordingly.
 
 | STORAGE TYPE  | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 |---------------|---------------|----------------------------------|
@@ -765,7 +762,7 @@ Make sure that when a category is created or edited through ORM, it is exported 
 }
 ```
 
-<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
+<details><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
 ```yaml
 {
@@ -835,7 +832,8 @@ Make sure that when a category is created or edited through ORM, it is exported 
 ```
 </details>
 
-**EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us**
+<details>
+  <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_tree:de:en_us**</summary>
 
 ```yaml
 {
@@ -884,7 +882,10 @@ Make sure that when a category is created or edited through ORM, it is exported 
 }
 ```
 
-**EXAMPLE EXPECTED DATA FRAGMENT: category_image:de_de:15**
+</details>
+
+<details>
+  <summary>EXAMPLE EXPECTED DATA FRAGMENT: category_image:de_de:15</summary>
 
 ```yaml
 {
@@ -904,6 +905,8 @@ Make sure that when a category is created or edited through ORM, it is exported 
     "_timestamp": 1622025094.247298
 }
 ```
+
+</details>
 
 {% endinfo_block %}
 
@@ -1047,13 +1050,13 @@ console data:import category-template
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data has been added to the `spy_category_*` tables.
+Make sure the configured data has been added to the `spy_category_*` database tables.
 
 {% endinfo_block %}
 
 ### 8) Set up behavior
 
-Add the following plugins to your project:
+Add the following plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                       | PREREQUISITES | NAMESPACE                                                     |
 |---------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
@@ -1063,7 +1066,7 @@ Add the following plugins to your project:
 | CategoryImageSetUpdaterPlugin         | After a category is updated, persists category image set changes into the database.                                                 |               | Spryker\Zed\CategoryImage\Communication\Plugin                |
 | RemoveCategoryImageSetRelationPlugin  | When a category is deleted, deletes the category image sets.                                                                        |               | Spryker\Zed\CategoryImage\Communication\Plugin                |
 | ImageSetSubformCategoryFormPlugin     | Extends the create and edit category forms with the fields related to category image sets.                                          |               | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui |
-| ImageSetCategoryFormTabExpanderPlugin | Extends create and edit category tabs with category image set.                                                                      |               | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui |
+| ImageSetCategoryFormTabExpanderPlugin | Extends create and edit category tabs with a category image set.                                                                      |               | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui |
 | UrlStorageCategoryNodeMapperPlugin    | If `UrlStorageTransfer.fkResourceCategorynode` is provided, maps the category node storage data to `UrlStorageResourceMapTransfer`. |               | Spryker\Client\CategoryStorage\Plugin                         |
 
 <details open ><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
@@ -1206,9 +1209,9 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To make sure that you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
+* To verify you've integrated category image handling successfully, check that you can manage category images when creating and editing categories in the Back Office.
 
-Make sure you've integrated category store assignments successfully by checking that you can manage store relations when creating and editing categories in the Back Office.
+* To verify you've integrated category store assignments successfully, check that you can manage store relations when creating and editing categories in the Back Office.
 
 {% endinfo_block %}
 
@@ -1226,15 +1229,13 @@ Install the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
-
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                                |
 |----------------------------|---------------------------------------------------|

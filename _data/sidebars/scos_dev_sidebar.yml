@@ -1737,6 +1737,8 @@ entries:
               nested:
                 - title: "Autocomplete"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+                - title: "Button Action"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
                 - title: "Chip"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
                 - title: "Date"
@@ -1799,6 +1801,8 @@ entries:
               nested:
                 - title: "Close Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-close-drawer.html
+                - title: "Confirmation"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-confirmation.html
                 - title: "Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-drawer.html
                 - title: "HTTP"
@@ -1862,6 +1866,21 @@ entries:
             - title: "Datasources"
               url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasources.html
               nested:
+                - title: "Trigger"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
+                  nested:
+                    - title: "Change"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html
+                    - title: "Input"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html
+                - title: "Dependable"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-dependable.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
                 - title: "HTTP"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-http.html
                 - title: "Inline"
@@ -3163,6 +3182,8 @@ entries:
         url: /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/scos/dev/updating-spryker/troubleshooting-updates.html
+  - title: Example modules
+    url: /docs/scos/dev/example-modules.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
 ...

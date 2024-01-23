@@ -59,7 +59,7 @@ A major upgrade may require significant code changes that may be incompatible wi
 
 ## Public API
 
-Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](//TODO: add link)-->.
+Oryx consists of a range of packages, applications, and tools. To avoid inadvertent use of private APIs and get a clear understanding of what's included or excluded from the private API, see public API](//TODO: add link).-->
 
 ## Backward compatibility
 
@@ -85,7 +85,7 @@ The following example shows how you can define a specific version:
 ORYX_FEATURE_VERSION=1.1
 ```
 
-You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features.
+You can also use the `featureVersion` utility in your code or third-party libraries to conditionally enable features:
 
 ```typescript
 import { featureVersion } from '@spryker-oryx/utilities';

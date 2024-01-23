@@ -12,18 +12,18 @@ This document will walk you through the process of developing an app using Spryk
 {% info_block infoBox "Development guidelines" %}
 
 Development guidelines for ACP apps contain general rules on how to design an app and write code for it.
-ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which is its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
+ACP apps are based on the [mini-framework](https://github.com/spryker-projects/mini-framework), which in its turn is based on the Spryker Framework. Therefore, we recommend following the same rules that are applicable for the [Spryker project development](https://docs.spryker.com/docs/scos/dev/guidelines/project-development-guidelines.html#updating-spryker).
 
 {% endinfo_block %}
 
 ## Prerequisites
 
-Before you begin, ensure that you have the following prerequisites in place:
+Before you begin, make sure that the following prerequisites are met:
 
-- Completed the [thought process](#thought-process) for your app.
-- An empty GitHub repository.
-- A local project directory for your app (for example, `/www/my-app`).
-- [DockerSDK](https://github.com/spryker/docker-sdk) installed globally.
+- You have completed the [thought process](#thought-process) for your app.
+- There is an empty GitHub repository.
+- There is a local project directory for your app (for example, `/www/my-app`).
+- [DockerSDK](https://github.com/spryker/docker-sdk) is installed globally.
 
 Make sure you have the Spryker Docker SDK, Git, and an empty repository for your app code.
 
@@ -34,12 +34,12 @@ Make sure you have the Spryker Docker SDK, Git, and an empty repository for your
 {% endinfo_block %}
  
 ## 1. Thought process
-First, think about what your app should be capable of: what features it will bring and what data will be exchanged, not only to you but also to those interested in your app functionality. For example, what messages could be of interest to others, and what API endpoints you should provide. 
+First, think about what your app should be capable of: what features it will bring and what data will be exchanged, not only to you but also to those interested in your app functionality. For example, what messages could be of interest to others and what API endpoints you should provide. 
 
 ### API-first
 It's strongly recommended that apps follow the API-first approach. 
-API-first means that your app is centered on the API. It should be possible to perform every action via the scripting language, and every piece of functionality should be available for other systems to leverage. For more information on the API-first approach, see [this blog post](https://www.algolia.com/blog/product/the-5-principles-of-api-first-development-and-what-does-api-first-even-mean/).
-You need to have a clear understanding of what your app API will provide to others, and always keep that in mind when designing your app.
+API-first means that your app is centered around the API. It should be possible to perform every action via the scripting language, and every piece of functionality should be available for other systems to leverage. For more information on the API-first approach, see [this blog post](https://www.algolia.com/blog/product/the-5-principles-of-api-first-development-and-what-does-api-first-even-mean/).
+You need to have a clear understanding of what your app API will provide to others and always keep that in mind when designing your app.
 
 ### Schema-first
 
@@ -69,9 +69,9 @@ git add --all
 git commit -m "first commit"
 ```
 
-After running these commands, you will have a new local repository that needs to be linked with your remote one.
+After running these commands, you get a new local repository that needs to be linked with your remote one.
 
-If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you created a new repository, GitHub shows you instructions on how to continue. Follow the list below, as you don’t need some of the first steps proposed by GitHub since you’ve already initialized Git and you already have the `README.md` file from the cloned repository.
+If not done yet, create a new remote repository by opening your [Github account](https://github.com/newConnect). After you have created the new repository, GitHub will display instructions on how to proceed. Execute the commands from the list below, as you don’t need some of the first steps proposed by GitHub since you’ve already initialized Git and you already have the `README.md` file from the cloned repository.
 
 ```bash
 git branch -M main
@@ -84,16 +84,16 @@ You can also execute this step later.
 
 {% endinfo_block %}
 
-Now, you have done the groundwork that enables you to develop an App. You created a new repository that contains the boilerplate code for almost any App you’d like to build.
+Now, you have done the groundwork that enables you to develop an app. You created a new repository that contains the boilerplate code for almost any app you’d like to build.
 
-### Setp validation
+### Validation
 
 Make sure that the project is cloned properly and has no uncommitted files.
 
 
 ## 3. Start the local development environment
 
-To start the local development environment, you need to boot and up your environment. Do the following:
+To start the local development environment, you need must boot and up your environment. Do the following:
 
 1. Clone Spryker Docker SDK to the project directory:
 
@@ -140,7 +140,7 @@ The configuration file contains all necessary form fields for inputs required by
 
 The translation file contains all translations for the form fields you’ve previously defined. You can use the Hello World [example translation file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html) and update it to your needs. Add this file to `config/app/translation.json` of your app.
 
-### Step validation
+### Validation
 
 Make sure that all the needed configuration files have been created and populated properly.
 
@@ -154,9 +154,9 @@ Every app requires default endpoints for the App Registry Service. This service 
 The `spryker/app-kernel` module transforms the Mini-Framework into an app. It provides SyncAPI schema and code for configuration and disconnection, as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
 The `spryker/message-broker-aws` module installs the necessary plugins for sending and receiving messages. 
 
-### Step validation
+### Validation
 
-After the next two steps, check the new routesin [Test the endpoints](#8-test-the-endpoints).
+After the next two steps, check the new routes in [Test the endpoints](#test-the-endpoints).
 
 ## 6. Build the transfer objects
 

@@ -132,61 +132,8 @@ Every app requires default endpoints for the App Registry Service. This service 
  - Configure
  - Disconnect
 
-To be able to use your Mini Framework as an app, add a new Spryker module:
-
-```bash
-docker/sdk cli composer require spryker/app-kernel spryker/message-broker-aws spryker/propel-encryption-behavior 
-```
-
 The `spryker/app-kernel` module transforms the Mini-Framework into an app. It provides SyncAPI schema and code for configuration and disconnection, as well as an AsyncAPI schema and code for the AppConfigure and AppDisconnect messages. 
 The `spryker/message-broker-aws` module installs the necessary plugins for sending and receiving messages. 
-After installing the modules, you need to configure them. See the [configuration example](https://github.com/spryker-projects/mini-framework/blob/examples/acp/hello-world/my-app-final/config/Shared/config_default.php#L28).
-
-## Set up the message broker
-
-Install and configure the message broker as described in [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html).
-
-## Config
-
-To be identifiable in the App Eco System, every app needs an app identifier. To provide the identifier, add the following configuration to `config/Shared/config_default.php`:
-
-```php
-use Spryker\Shared\AppKernel\AppKernelConstants;
-
-$config[AppKernelConstants::APP_IDENTIFIER] = getenv('APP_IDENTIFIER') ?: 'hello-world';
-```
-
-## Plugins
-
-Add some plugins to your app to enable certain functionality. 
-
-### AppRouteProviderPlugin
-
-Add `\Spryker\Glue\App\Plugin\RouteProvider\AppRouteProviderPlugin` to the `\Pyz\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider::getRouteProviderPlugins()` method. In case the method doesn’t exist, add the complete method.
-
-```php
-<?php
-
-namespace Pyz\Glue\GlueBackendApiApplication;
-
-use Spryker\Glue\AppKernel\Plugin\RouteProvider\AppRouteProviderPlugin;
-use Spryker\Glue\GlueBackendApiApplication\GlueBackendApiApplicationDependencyProvider as SprykerGlueBackendApiApplicationDependencyProvider;
-
-class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiApplicationDependencyProvider
-{   
-    /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\RouteProviderPluginInterface>
-     */
-    protected function getRouteProviderPlugins(): array
-    {
-        return [
-            new AppRouteProviderPlugin(),
-        ];
-    }
-}
-```
-
-This enables the two required endpoints for the App Catalog Communication.
 
 ## Build the transfer objects
 

@@ -9,13 +9,13 @@ redirect_from:
   - /docs/scos/dev/architecture/code-buckets.html
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
-    link: docs/scos/dev/architecture/programming-concepts.html
+    link: docs/dg/dev/architecture/programming-concepts.html
   - title: Technology stack
-    link: docs/scos/dev/architecture/technology-stack.html
+    link: docs/dg/dev/architecture/technology-stack.html
   - title: Modules and layers
-    link: docs/scos/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-layers.html
 ---
 
 

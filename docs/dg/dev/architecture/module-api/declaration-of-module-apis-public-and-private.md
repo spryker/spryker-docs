@@ -10,11 +10,11 @@ redirect_from:
   - /docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 related:
   - title: Performance and scalability
-    link: docs/scos/dev/architecture/module-api/performance-and-scalability.html
+    link: docs/dg/dev/architecture/module-api/performance-and-scalability.html
   - title: Semantic versioning - major vs. minor vs. patch release
-    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+    link: docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
   - title: Using ~ Composer constraint for customized modules
-    link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+    link: docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 ---
 
 According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility (BC) breaking changes in the Public API. This document declares what public and private APIs are.

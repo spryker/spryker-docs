@@ -53,7 +53,7 @@ Since the `202307.0` release, this tool is no longer supported and has been repl
 
 ## Installation
 
-For details about how to install the TS Linter for your project, see the [TS Linter integration file](/docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-ts-linter.html).
+For details about how to install the TS Linter for your project, see the [TS Linter integration file](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-ts-linter.html).
 
 ## Using TS Linter
 

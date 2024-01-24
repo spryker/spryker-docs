@@ -11,7 +11,7 @@ redirect_from:
 
 This document describes how to create a new authorization strategy.
 
-Integrate authorization following the [Integrating Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrating-authorization-enabler.html) guide.
+Integrate authorization following the [Integrating Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html) guide.
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization:
 

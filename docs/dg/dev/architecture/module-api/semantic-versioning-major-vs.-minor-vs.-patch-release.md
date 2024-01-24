@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
 related:
   - title: Performance and scalability
-    link: docs/scos/dev/architecture/module-api/performance-and-scalability.html
+    link: docs/dg/dev/architecture/module-api/performance-and-scalability.html
   - title: Using ~ Composer constraint for customized modules
-    link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+    link: docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
   - title: "Declaration of module APIs: Public and private"
-    link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
+    link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
 The Spryker Commerce OS versioning of modules relies on the [semantic versioning](https://semver.org/) approach, which implies a clear set of rules and requirements that dictate how version numbers are assigned and incremented. This document describes how we release modules and version them depending on the release type.

@@ -53,7 +53,7 @@ Double check that you do not have any clear text passwords stored in config file
 - Upgrade your project's code to match the latest Demo Shop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
 - Update `spryker/twig` to version 3.15.2 or later because this version and the later ones have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB if you don't use it already.
-- Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrating-separate-endpoint-bootstraps.html) guide.
+- Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html) guide.
 - Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.

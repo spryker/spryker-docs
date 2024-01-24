@@ -333,7 +333,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 ### 5) Separate login feature setup (security firewalls).
 
-It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project. For details, see [Symfony 5 integration](/docs/dg/dev/integrate-and-configure/integrating-symfony-5.html).
+It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project. For details, see [Symfony 5 integration](/docs/dg/dev/integrate-and-configure/integrate-symfony-5.html).
 
 1. Install the required modules:
 

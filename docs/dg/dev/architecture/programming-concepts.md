@@ -9,13 +9,13 @@ redirect_from:
   - /docs/scos/dev/architecture/programming-concepts.html
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Technology stack
-    link: docs/scos/dev/architecture/technology-stack.html
+    link: docs/dg/dev/architecture/technology-stack.html
   - title: Modules and layers
-    link: docs/scos/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-layers.html
   - title: Code buckets
-    link: docs/scos/dev/architecture/code-buckets.html
+    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 Having covered the main architectural concepts of the Spryker Commerce OS, frontend, modularity, and the application and software layers, this document dives deeper into these approaches and explains the main software and coding concepts in Spryker. There are seven main software concepts in Spryker.

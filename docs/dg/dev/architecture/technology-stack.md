@@ -9,13 +9,13 @@ redirect_from:
   - /docs/scos/dev/architecture/technology-stack.html
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
-    link: docs/scos/dev/architecture/programming-concepts.html
+    link: docs/dg/dev/architecture/programming-concepts.html
   - title: Modules and layers
-    link: docs/scos/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-layers.html
   - title: Code buckets
-    link: docs/scos/dev/architecture/code-buckets.html
+    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 Spryker is an e-commerce Commerce OS developed in PHP, that promotes SOLID principles and clean code. Its purpose is to facilitate rapid development in building a customized solution for an e-commerce business.

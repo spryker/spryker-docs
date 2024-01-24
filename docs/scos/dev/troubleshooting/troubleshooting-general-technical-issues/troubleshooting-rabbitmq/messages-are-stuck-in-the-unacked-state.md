@@ -20,7 +20,7 @@ This is most often caused by the consumption process not being able to successfu
 
 ## Solution
 
-Unfortunately, this is tricky to diagnose in a PaaS environment as you may lack debugging tools. However, you can try to reduce the [chunk size](https://docs.spryker.com/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#publish-and-synchronization). For this, adjust the following configuration in the `default_config.php` file of your project:
+Unfortunately, this is tricky to diagnose in a PaaS environment as you may lack debugging tools. However, you can try to reduce the [chunk size](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#publish-and-synchronization). For this, adjust the following configuration in the `default_config.php` file of your project:
 
 ```bash
 $config[EventConstants::EVENT_CHUNK]

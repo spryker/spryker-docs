@@ -109,7 +109,7 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-See [Integrating custom location for static assets](/docs/dg/dev/integrate-and-configure/integrating-custom-location-for-static-assets.html) for more details.
+See [Integrating custom location for static assets](/docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html) for more details.
 
 ## Related Business User documents
 

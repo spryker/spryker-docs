@@ -47,7 +47,7 @@ To analyze and fix existing SCSS files, [Stylelint](https://stylelint.io/) is us
 
 ## Installation
 
-For details about how to install the SCSS Linter for your project, see the [SCSS linter integration guide](/docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-scss-linter.html).
+For details about how to install the SCSS Linter for your project, see the [SCSS linter integration guide](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-scss-linter.html).
 
 ## Using SCSS Linter
 

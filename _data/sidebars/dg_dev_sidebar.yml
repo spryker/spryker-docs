@@ -392,71 +392,71 @@ entries:
     url: /docs/dg/dev/integrate-and-configure/integrate-and-configure.html
     nested:
     - title: Integrate development tools
-      url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-development-tools.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-development-tools.html
       nested:
       - title: "Glue API: Development tools"
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrate-the-development-tools-glue-api.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-formatter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-formatter.html
       - title: Combined product offer import
         url: /docs/dg/dev/integrate-and-configure/install-combined-product-offer-import.html
       - title: SCSS linter
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-scss-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-scss-linter.html
       - title: TS linter
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-ts-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-ts-linter.html
       - title: Web Profiler for Zed
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-web-profiler-for-zed.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
-        url: /docs/dg/dev/integrate-and-configure/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-web-profiler-widget-for-yves.html
     - title: Integrate Zed API
       url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
       nested:
         - title: Integrate Zed API for merchant relationships
           url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Authorization Enabler
-      url: /docs/dg/dev/integrate-and-configure/integrating-authorization-enabler.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Basic SEO techniques
-      url: /docs/dg/dev/integrate-and-configure/integrating-basic-seo-techniques.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
     - title: Cache of unresolved entities for Zed
-      url: /docs/dg/dev/integrate-and-configure/integrating-cache-of-unresolved-entities-for-zed.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
     - title: CSS lazy loading for the frontend
-      url: /docs/dg/dev/integrate-and-configure/integrating-css-lazy-loading-for-the-front-end.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading-for-the-front-end.html
     - title: Chromium browser for tests
-      url: /docs/dg/dev/integrate-and-configure/integrating-chromium-browser-for-tests.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-chromium-browser-for-tests.html
     - title: CMS block widgets
-      url: /docs/dg/dev/integrate-and-configure/integrating-cms-block-widgets.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-cms-block-widgets.html
     - title: CSS lazy loading for the frontend
-      url: /docs/dg/dev/integrate-and-configure/integrating-authorization-enabler.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Custom location for static assets
-      url: /docs/dg/dev/integrate-and-configure/integrating-custom-location-for-static-assets.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
     - title: Dynamic Yves-Zed tokens
       url: /docs/dg/dev/integrate-and-configure/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
-      url: /docs/dg/dev/integrate-and-configure/integrating-dynamic-propel-configuration.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-dynamic-propel-configuration.html
     - title: Elastic computing
       url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
     - title: Environment configuration enhancement
-      url: /docs/dg/dev/integrate-and-configure/integrating-environment-configuration-enhancement.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
     - title: Health checks
-      url: /docs/dg/dev/integrate-and-configure/integrating-health-checks.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
     - title: MariaDB database engine
-      url: /docs/dg/dev/integrate-and-configure/integrating-mariadb-database-engine.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-mariadb-database-engine.html
     - title: Multi-database logic
       url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
-      url: /docs/dg/dev/integrate-and-configure/integrating-multi-queue-publish-structure.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html
     - title: Profiler module
       url: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
     - title: Propel clean command
-      url: /docs/dg/dev/integrate-and-configure/integrating-propel-clean-command.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-propel-clean-command.html
     - title: Queue worker signal handling
       url: /docs/dg/dev/integrate-and-configure/configuring-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
-      url: /docs/dg/dev/integrate-and-configure/integrating-separate-endpoint-bootstraps.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Symfony 5
-      url: /docs/dg/dev/integrate-and-configure/integrating-symfony-5.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-5.html
     - title: Symfony 6
-      url: /docs/dg/dev/integrate-and-configure/integrating-symfony-6.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-6.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)

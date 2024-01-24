@@ -9,11 +9,11 @@ redirect_from:
   - /docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 related:
   - title: Performance and scalability
-    link: docs/scos/dev/architecture/module-api/performance-and-scalability.html
+    link: docs/dg/dev/architecture/module-api/performance-and-scalability.html
   - title: Semantic versioning - major vs. minor vs. patch release
-    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+    link: docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
   - title: "Declaration of module APIs: Public and private"
-    link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
+    link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
 Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/dg/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.

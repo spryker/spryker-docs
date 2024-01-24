@@ -59,7 +59,7 @@ For example, if the problem is with “place-order“ with 25 product items, do 
   
 {% info_block infoBox "Issues with transaction grouping" %}
 
-If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](https://docs.spryker.com/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
+If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
 
 {% endinfo_block %} 
 

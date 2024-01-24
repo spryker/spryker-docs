@@ -150,7 +150,7 @@ We have also made Symfony 5.4 compatible while preparing to support compatibilit
 With the knowledge of 6.0 changes, we can now make our code 5.4 compatible with minimal BC breaks while already planning future 6.0 support for the next year.
 
 #### Documentation
-[Integrating Symfony 5](/docs/dg/dev/integrate-and-configure/integrating-symfony-5.html)
+[Integrating Symfony 5](/docs/dg/dev/integrate-and-configure/integrate-symfony-5.html)
 
 ## Performance upgrades
 

@@ -9,15 +9,15 @@ redirect_from:
   - /docs/scos/dev/architecture/architecture.html
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
-    link: docs/scos/dev/architecture/programming-concepts.html
+    link: docs/dg/dev/architecture/programming-concepts.html
   - title: Technology stack
-    link: docs/scos/dev/architecture/technology-stack.html
+    link: docs/dg/dev/architecture/technology-stack.html
   - title: Modules and layers
-    link: docs/scos/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-layers.html
   - title: Code buckets
-    link: docs/scos/dev/architecture/code-buckets.html
+    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 One of the main tasks of a commerce platform is the possibility to customize, extend, and integrate it with external services, such as payment providers, order processors, and the like. To provide a clear path for the Spryker Commerce OS development and extension, its architecture is based on strict modularity and separation. These principles are strongly supported by the OS architecture. This architecture guide helps you understand how they are implemented on different levels.

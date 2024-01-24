@@ -9,13 +9,13 @@ redirect_from:
   - /docs/scos/dev/architecture/modules-and-application-layers.html
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
-    link: docs/scos/dev/architecture/programming-concepts.html
+    link: docs/dg/dev/architecture/programming-concepts.html
   - title: Technology stack
-    link: docs/scos/dev/architecture/technology-stack.html
+    link: docs/dg/dev/architecture/technology-stack.html
   - title: Code buckets
-    link: docs/scos/dev/architecture/code-buckets.html
+    link: docs/dg/dev/architecture/code-buckets.html
 ---
 
 In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages—modules.

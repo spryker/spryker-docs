@@ -171,7 +171,7 @@ This involves additional migration effort because of a required upgrade to Symfo
 
 {% endinfo_block %}
 
-To upgrade to Symfony 6, see [Integrating Symfony 6](/docs/dg/dev/integrate-and-configure/integrate-symfony-6.html).
+To upgrade to Symfony 6, see [Integrating Symfony 6](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html).
 
 {% info_block warningBox "Verification" %}
 

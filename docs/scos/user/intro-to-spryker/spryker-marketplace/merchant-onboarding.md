@@ -78,7 +78,7 @@ In the Merchant Portal, merchants can [create and update products](/docs/pbc/all
 
 Based on the product volume, we recommend the following:
 - If the number of products to be created or edited is small, merchants can use the interface in the [Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html).
-- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-middleware.html).
+- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html).
 
 {% endinfo_block %}
 

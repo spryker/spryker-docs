@@ -49,7 +49,7 @@ The Spryker Commerce OS supports the integration of the following payment provid
 ## Dummy payment
 
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has credit card and invoice payments implemented. You can use these implemented payment methods or refer to the DummyPayment module when implementing additional payment methods in your project.
-For details about implementing a new payment method, see [how to implement the Direct Debit payment method](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these documents, you can implement other payment methods for your projects.
+For details about implementing a new payment method, see [how to implement the Direct Debit payment method](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html). Based on the examples in these documents, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 

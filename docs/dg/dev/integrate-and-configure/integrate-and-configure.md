@@ -7,7 +7,7 @@ redirect_from:
 ---
 
 This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS:
-* [Integrate development tools](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-formatter.html)
+* [Integrate development tools](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html)
 * [Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html)
 * [Basic SEO techniques](/docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html)
 * [Cache of unresolved entities for Zed](/docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html)
@@ -27,5 +27,5 @@ This section contains a collection of integration guides for tools that enhance 
 * [Queue worker signal handling](/docs/dg/dev/integrate-and-configure/configuring-queue-worker-signal-handling.html)
 * [Search initialization enhancement](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-search-initialization.html)
 * [Separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html)
-* [Symfony 5](/docs/dg/dev/integrate-and-configure/integrate-symfony-5.html)
+* [Symfony 5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html)
 * [Arm architecture (M1 chip)](/docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html)

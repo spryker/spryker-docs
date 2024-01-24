@@ -136,21 +136,21 @@ In November 2023, we have added and updated the following pages:
     - [Configure the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html).
     - [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
 - [Vertex FAQ](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex-faq.html): FAQ about the the Vertex app from the Spryker's App Composition Platform.
-- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
-    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-1-integrate-the-docker-sdk.html).
-    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-2-upgrade-the-php-version.html).
-    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-3-migrate-non-standard-services.html).
-    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-4-provision-the-sccos-environments.html).
-    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-5-define-the-deployment-strategy.html).
-    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html).
-    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-7-restore-es-and-redis.html).
-    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html).
-    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html).
-    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-10-add-frontend-assets.html).
-    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-11-wire-custom-services.html).
-    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-12-choose-a-multi-store-setup.html).
-    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-13-migrate-database.html).
-    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-14-finalize-the-migration.html).
+- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
+    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-1-integrate-the-docker-sdk.html).
+    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-2-upgrade-the-php-version.html).
+    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-3-migrate-non-standard-services.html).
+    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-4-provision-the-sccos-environments.html).
+    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-5-define-the-deployment-strategy.html).
+    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-6-define-environment-variables.html).
+    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-7-restore-es-and-redis.html).
+    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-8-adapt-the-filesystem-based-features.html).
+    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-9-implement-security-and-performance-guidelines.html).
+    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-10-add-frontend-assets.html).
+    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-11-wire-custom-services.html).
+    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-12-choose-a-multi-store-setup.html).
+    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-13-migrate-database.html).
+    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-14-finalize-the-migration.html).
 - [Backend API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
 - [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
@@ -221,11 +221,11 @@ In October 2023, we have added and updated the following pages:
 - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
 - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
 - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
 - - [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
-- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Learn how to check for security fixes in the Spryker modules.
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
 - [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Install Product feature](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-product-feature.html).
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
@@ -278,7 +278,7 @@ In August 2023, we have added and updated the following pages:
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html).
 - [Security release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html).
-- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Learn how to check for security fixes in the Spryker modules.
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
 - [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Dynamic multistore docs](/docs/pbc/all/dynamic-multistore/202307.0/dynamic-multistore.html):
     - [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
@@ -387,7 +387,7 @@ In June 2023, we have added and updated the following pages:
 - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
 - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
 - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
 - [Integrate profiler module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 - [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/feature-overviews/approval-process-feature-overview.html).
@@ -413,7 +413,7 @@ In May 2023, we have added and updated the following pages:
     - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
     - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
     - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-    - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+    - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
     - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)

@@ -218,7 +218,7 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
-        - title: Spryker Middleware
+        - title: Spryker LINK Middleware
           url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html
       - title: Event
         url: /docs/dg/dev/backend-development/data-manipulation/event/event.html
@@ -347,6 +347,10 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to Symfony 5
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
+      - title: Upgrade to Symfony 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
       - title: Upgrade Publish and Sync
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
       - title: Upgrade to Marketplace
@@ -356,58 +360,58 @@ entries:
         nested:
           - title: Adjust Jenkins for a Docker environment
             url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
-    - title: Migrate to SCCOS
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/migrate-to-sccos.html
+    - title: Migrate to cloud
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-sccos.html
       nested:
-      - title: "Step 1: Integrate the Docker SDK"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-1-integrate-the-docker-sdk.html
-      - title: "Step 2: Upgrade the PHP version"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-2-upgrade-the-php-version.html
-      - title: "Step 3: Migrate non-standard services"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-3-migrate-non-standard-services.html
-      - title: "Step 4: Provision the Spryker SCCOS environments"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-4-provision-the-sccos-environments.html
-      - title: "Step 5: Define the deployment strategy"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-5-define-the-deployment-strategy.html
-      - title: "Step 6: Define environment variables"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-6-define-environment-variables.html
-      - title: "Step 7: Restore Elasticsearch and Redis"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-7-restore-es-and-redis.html
-      - title: "Step 8: Adapt the file system-based features"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html
-      - title: "Step 9: Implement security and performance guidelines"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html
-      - title: "Step 10: Add frontend assets"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-10-add-frontend-assets.html
-      - title: "Step 11: Wire custom services"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-11-wire-custom-services.html
-      - title: "Step 12: Choose a multi-store setup"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-12-choose-a-multi-store-setup.html
-      - title: "Step 13: Migrate database"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-13-migrate-database.html
-      - title: "Step 14: Finilize the migration"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-14-finalize-the-migration.html
+      - title: "Integrate the Docker SDK"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html
+      - title: "Upgrade the PHP version"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html
+      - title: "Migrate non-standard services"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html
+      - title: "Provision the Spryker SCCOS environments"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-provision-the-sccos-environments.html
+      - title: "Define the deployment strategy"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html
+      - title: "Define environment variables"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html
+      - title: "Restore Elasticsearch and Redis"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html
+      - title: "Adapt the file system-based features"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html
+      - title: "Implement security and performance guidelines"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html
+      - title: "Add frontend assets"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-add-frontend-assets.html
+      - title: "Wire custom services"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html
+      - title: "Choose a multi-store setup"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html
+      - title: "Migrate database"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html
+      - title: "Finilize the migration"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html
 
   - title: Integrate and configure
     url: /docs/dg/dev/integrate-and-configure/integrate-and-configure.html
     nested:
     - title: Integrate development tools
-      url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-development-tools.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-development-tools.html
       nested:
       - title: "Glue API: Development tools"
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-the-development-tools-glue-api.html
       - title: Formatter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-formatter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
       - title: Combined product offer import
         url: /docs/dg/dev/integrate-and-configure/install-combined-product-offer-import.html
       - title: SCSS linter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-scss-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
       - title: TS linter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-ts-linter.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
       - title: Web Profiler for Zed
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-web-profiler-for-zed.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrating-web-profiler-widget-for-yves.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
     - title: Integrate Zed API
       url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
       nested:
@@ -420,7 +424,7 @@ entries:
     - title: Cache of unresolved entities for Zed
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
     - title: CSS lazy loading for the frontend
-      url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading-for-the-front-end.html
+      url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
     - title: Chromium browser for tests
       url: /docs/dg/dev/integrate-and-configure/integrate-chromium-browser-for-tests.html
     - title: CMS block widgets
@@ -453,10 +457,6 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/configuring-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
-    - title: Symfony 5
-      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-5.html
-    - title: Symfony 6
-      url: /docs/dg/dev/integrate-and-configure/integrate-symfony-6.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)

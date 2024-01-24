@@ -15,7 +15,7 @@ related:
   - title: Technology stack
     link: docs/dg/dev/architecture/technology-stack.html
   - title: Modules and layers
-    link: docs/dg/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
   - title: Code buckets
     link: docs/dg/dev/architecture/code-buckets.html
 ---

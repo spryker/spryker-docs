@@ -29,7 +29,7 @@ related:
   - title: Programming concepts
     link: docs/dg/dev/architecture/programming-concepts.html
   - title: Modules and layers
-    link: docs/dg/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 {% info_block infoBox %}

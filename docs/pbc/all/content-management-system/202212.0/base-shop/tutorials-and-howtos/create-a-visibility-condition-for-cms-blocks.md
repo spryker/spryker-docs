@@ -165,7 +165,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class that implements `\Symfony\Component\Form\FormBuilderInterface`. For details, see the following:
    * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-   * [Creating Forms](/docs/dg/dev/backend-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
+   * [Creating Forms](/docs/dg/dev/backend-development/forms/create-forms.html) to learn about form creation procedure in Spryker.
    * A form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}

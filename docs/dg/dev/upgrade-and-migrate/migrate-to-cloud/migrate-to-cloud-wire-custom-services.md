@@ -12,4 +12,4 @@ If you need such connections, request them via the [Spryker Support Portal](http
 
 ## Next step
 
-[Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-sccos/step-12-choose-a-multi-store-setup.html)
+[Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-12-choose-a-multi-store-setup.html)

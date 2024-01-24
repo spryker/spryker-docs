@@ -14,7 +14,7 @@ Once you have [installed Stipe](/docs/pbc/all/payment-service-provider/{{page.ve
 
 ## Prerequisites
 
-Before configuring Stripe, ensure you have a Stripe account which is connected to the Spryker platform. If you are unsure how to do it, contact the Spryker support team.
+Before configuring Stripe, make sure you have met all the prerequisites listed in [Prerequisites for using the Stripe app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html#prerequisites-for-using-the-stripe-app).
 
 ## Configure Stripe
 

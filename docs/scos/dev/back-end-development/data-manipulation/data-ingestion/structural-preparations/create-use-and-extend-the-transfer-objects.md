@@ -54,7 +54,7 @@ The following example describes a Customer with email, first name, last name, an
 
 ### Available types
 
-You can use any name for your transfer objects. However, make sure that the names start with a small letter and use the camelCase format.
+You can use any name for your transfer objects. However, make sure that the property names start with a small letter and use the camelCase format.
 As for the types, you can use PHP native types: `int`, `string`, `bool`, and `array`. To create a nested transfer object, use the name of the transfer object as the type. You can also define collections of objects with the _[]_ symbols.
 
 ```xml

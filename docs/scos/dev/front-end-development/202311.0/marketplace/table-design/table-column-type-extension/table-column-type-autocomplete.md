@@ -7,6 +7,8 @@ redirect_from:
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
+  - title: Table Column Type Button Action
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
   - title: Table Column Type Chip
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
   - title: Table Column Type Date

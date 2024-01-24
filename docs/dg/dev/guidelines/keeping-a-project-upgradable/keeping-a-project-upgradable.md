@@ -49,9 +49,9 @@ The manifest files cover a list of the ways code changes can be done.
 
 To ensure the successful delivery of Spryker updates, we recommend using the following extension points:
 
-* [Plugins registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
-* [Event subscribers registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html)
-* [Modules configuration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html)
+* [Plugins registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
+* [Event subscribers registration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html)
+* [Modules configuration](/docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html)
 
 {% info_block infoBox "" %}
 

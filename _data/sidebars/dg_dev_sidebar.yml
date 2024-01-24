@@ -360,6 +360,8 @@ entries:
         nested:
           - title: Adjust Jenkins for a Docker environment
             url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+    - title: Update environemnt configuration
+      url: /docs/dg/dev/update-and-migrate/update-environment-configuration.html            
     - title: Migrate to cloud
       url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-sccos.html
       nested:
@@ -461,8 +463,7 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
-    - title: Update environemnt configuration
-      url: /docs/dg/dev/integrate-and-configure/update-environment-configuration.html
+
 
 
   - title: Architecture
@@ -478,7 +479,7 @@ entries:
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
       - title: Using ~ Composer Constraint for Customized Modules
-        url: /docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+        url: /docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html
       - title: Performance and Scalability
         url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
       - title: "Declaration of module APIs: Public and private"
@@ -524,11 +525,11 @@ entries:
         url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/extenstion-scenarios.html
         nested:
         - title: Event subscribers' registration
-          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/event-subscribers-registration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/event-subscribers-registration.html
         - title: Modules configuration
-          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/modules-configuration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
         - title: Plugins registration
-          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/supported-extension-scenarios/plugins-registration.html
+          url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
       - title: Run the evaluator tool
         url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
       - title: Upgradability guidelines
@@ -609,7 +610,7 @@ entries:
           - title: Test the asynchronous API
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
-            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-publish-and-synchronization-process.html
+            url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
       - title: Testify
         url: /docs/dg/dev/guidelines/testing-guidelines/testify.html
       - title: Testing concepts

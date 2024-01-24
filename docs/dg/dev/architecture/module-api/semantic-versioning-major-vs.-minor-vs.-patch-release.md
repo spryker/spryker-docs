@@ -11,7 +11,7 @@ related:
   - title: Performance and scalability
     link: docs/dg/dev/architecture/module-api/performance-and-scalability.html
   - title: Using ~ Composer constraint for customized modules
-    link: docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
+    link: docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html
   - title: "Declaration of module APIs: Public and private"
     link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
@@ -36,7 +36,7 @@ We have two types of major releases:
 
 A release is *minor* when the internal API is changed. For example, when the signature of internal models or constructors is changed, or classes are renamed. Actually, it is anything that can break extensions using inheritance or composition on a project level.
 
-Our customers get all new minor releases automatically during composer update if they use the _^_ (caret) symbol in `composer.json`—for example, `"spryker/category": "^4.1.2"`. We recommend using the _~_ (tilde) symbol for all modules that have been extended at the project level to make sure that nothing breaks after a release—for example, `"spryker/category": "~4.1.0"`. For mode details about how you can easily detect _^_ in the extended modules and update them with _~_, see [Using ~ Composer Constraint for Customized Modules](/docs/dg/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html)
+Our customers get all new minor releases automatically during composer update if they use the _^_ (caret) symbol in `composer.json`—for example, `"spryker/category": "^4.1.2"`. We recommend using the _~_ (tilde) symbol for all modules that have been extended at the project level to make sure that nothing breaks after a release—for example, `"spryker/category": "~4.1.0"`. For mode details about how you can easily detect _^_ in the extended modules and update them with _~_, see [Using ~ Composer Constraint for Customized Modules](/docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html)
 
 ## What is a Patch release?
 

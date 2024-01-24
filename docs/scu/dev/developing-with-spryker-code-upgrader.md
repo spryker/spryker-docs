@@ -1,5 +1,5 @@
 ---
-title: Developing with the Upgrader
+title: Developing with Spryker Code Upgrader
 description: Instructions for integrating Spryker Code Upgrader into a development process
 last_updated: Oct 10, 2023
 template: concept-topic-template

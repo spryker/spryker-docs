@@ -1,17 +1,14 @@
 ---
-title: Onboard to Spryker Code Upgrader
+title: Get access to Spryker Code Upgrader
 description: Get your project ready and start upgrading with Spryker Code Upgrader
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
   - /docs/paas-plus/dev/onboarding-to-paas-plus.html
+  - /docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
 ---
 
 Onboarding to Spryker CI consists of the following steps.
-
-## Prerequisites
-
-[Prepare your project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
 
 
 ## 1. Get initial access

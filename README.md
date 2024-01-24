@@ -16,7 +16,6 @@ To build the documentation site with Docker, run this command:
 For the specific Markdown syntax we use in documentation, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html). For the general style, syntax, and formatting rules, see [Style, syntax, formatting, and general rules](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html).
 
 To suggest changes, follow the steps:
-
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the repository.
 2. In your forked repository, go to the document you want to edit.
     The actual documents are in the `docs/` directory.

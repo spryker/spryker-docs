@@ -23,13 +23,13 @@ The Stripe App supports the business-to-business (B2B) and business-to-consumer 
 4. You have a Stripe account, and you have been onboarded to the Spryker platform with it. Spryker manages the onboarding process. For details, contact the [Spryker support team](https://spryker.my.site.com/support/s/).
 Once you have been onboarded to the platform, you will have access to your account ID on the Stripe dashboard. The account ID is necessary to connect your project to the Stripe App. For more information on the Stripe account ID, see the [Stripe documentation](https://stripe.com/docs/payments/account).
 
-### Setting up the Stripe app
+## Setting up the Stripe app
 
 To set up Stripe on your project, do the following:
 1. [Install Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html).
 2. [Configure and Connect Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html).
 
-### Supported payment methods
+## Supported payment methods
 The Stripe app supports the following payment methods:
 - Cards: Visa and Mastercard
 - Debit card
@@ -37,7 +37,7 @@ The Stripe app supports the following payment methods:
 
 {% info_block infoBox "Bank transfers" %}
 
-Here are some important points to note about bank transfers in Stripe:
+Keep in mind following about bank transfers in Stripe:
 1. Stripe supports bank transfers in specific regions. For details on this payment method, see the Stripe documentation on [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers).
 2. Stripe provides some best practices for bank transfers. For example, if a business in EU wants to receive a transfer from a customer in Switzerland, it is recommended to make the transfer in Euro, not in CHF. For details, see [Stripe’s Payment Method Factsheet](https://stripe.com/ie/guides/payment-methods-guide#4-payment-methods-fact-sheets).
 

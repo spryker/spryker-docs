@@ -12,7 +12,7 @@ related:
 
 The Stripe integration in Spryker is a part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs. 
 
-# Supported business models
+## Supported business models
 The Stripe App supports the business-to-business (B2B) and business-to-consumer (B2C) models.
 
 ## Prerequisites for using the Stripe app
@@ -37,9 +37,9 @@ The Stripe app supports the following payment methods:
 
 {% info_block infoBox "Bank transfers" %}
 
-Note the following about bank transfers in Stripe:
+Here are some important points to note about bank transfers in Stripe:
 1. Stripe supports bank transfers in specific regions. For details on this payment method, see the Stripe documentation on [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers).
-2. Stripe provides some best practices for bank transfers. For example, if a business in EU wants to receive a transfer from a customer in Switzerland then they are advised to make the transfer in Euro, and not in CHF. For details, see [Stripe’s Payment Method Factsheet](https://stripe.com/ie/guides/payment-methods-guide#4-payment-methods-fact-sheets).
+2. Stripe provides some best practices for bank transfers. For example, if a business in EU wants to receive a transfer from a customer in Switzerland, it is recommended to make the transfer in Euro, not in CHF. For details, see [Stripe’s Payment Method Factsheet](https://stripe.com/ie/guides/payment-methods-guide#4-payment-methods-fact-sheets).
 
 {% endinfo_block %}
 

@@ -49,6 +49,6 @@ Keep in mind following about bank transfers in Stripe:
 
 For more information about payment methods available in Stripe and regional peculiarities, see the Stripe documentation [Payment methods overview](https://stripe.com/docs/payments/payment-methods/overview).
 
-### Current limitations
+## Current limitations
 1. Refunds: The refund process using the Spryker OMS currently isn't supported.
 2. Multi-Capture: Multi-Capture enables businesses to capture money paid for an order multiple times. Stripe offers it only to customers who use the IC+ pricing model. For details on the pricing model, see the Stripe documentation [Understanding Blended & Interchange+ pricing](https://support.stripe.com/questions/understanding-blended-interchange-pricing).

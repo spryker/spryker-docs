@@ -2,6 +2,7 @@
 title: "Marketplace Inventory Management feature: Domain model"
 description: Merchants are product and service sellers in the Marketplace.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 ---
 
 The _Marketplace Inventory Management_ implies stock & availability management as well as multiple warehouse stock management for product offers and marketplace products.

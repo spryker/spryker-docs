@@ -2,6 +2,7 @@
 title: Building the project
 description: This document provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
+last_updated: Jul 24, 2023
 related:
   - title: Project structure
     link: docs/scos/dev/front-end-development/page.version/marketplace/project-structure.html

@@ -2,6 +2,7 @@
 title: Actions
 description: This document provides details about the Actions service in the Components Library.
 template: concept-topic-template
+last_updated: Jul 26, 2023
 related:
   - title: Actions Close Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-close-drawer.html

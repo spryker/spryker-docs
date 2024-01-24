@@ -1,6 +1,7 @@
 ---
 title: Multi-store setup infrastructure options
 template: howto-guide-template
+last_updated: May 3, 2023
 ---
 
 Extracted from this doc: docs\scos\dev\tutorials-and-howtos\howtos\howto-set-up-multiple-stores.md

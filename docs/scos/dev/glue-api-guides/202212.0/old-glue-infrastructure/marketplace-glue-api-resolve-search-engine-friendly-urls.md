@@ -2,6 +2,7 @@
 title: "Marketplace Glue API: Resolve search engine friendly URLs"
 description: Learn how to resolve search engine friendly URLs via Glue API in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 2, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/resolving-search-engine-friendly-urls.html
 ---

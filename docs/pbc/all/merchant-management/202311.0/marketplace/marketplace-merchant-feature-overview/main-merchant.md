@@ -2,6 +2,7 @@
 title: Main merchant
 description: This document contains concept information for the main merchant in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/main-merchant-concept.html
 related:

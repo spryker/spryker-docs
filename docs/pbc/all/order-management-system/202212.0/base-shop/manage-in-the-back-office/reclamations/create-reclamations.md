@@ -2,6 +2,7 @@
 title: Create reclamations
 description: Learn how to create reclamations in the Back Office
 template: back-office-user-guide-template
+last_updated: May 5, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/sales/orders/creating-reclamations.html
 related:

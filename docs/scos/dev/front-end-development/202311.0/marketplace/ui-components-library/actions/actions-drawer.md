@@ -2,6 +2,7 @@
 title: Actions Drawer
 description: This document provides details about the Actions Drawer service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-drawer.html
 related:
@@ -111,6 +112,7 @@ import { DrawerTemplateContext } from '@spryker/drawer';
 
 // Call the method
 handleAction(injector, config: { template: contentTpl }, context);
+last_updated: Jan 11, 2024
 ```
 
 `DrawerRef.openTemplate()` is called, and the Drawer is opened with `contentTpl` template.
@@ -161,6 +163,7 @@ export interface DrawerActionConfigComponent extends ActionConfig {
 
 export interface DrawerActionConfigTemplate extends ActionConfig {
     template: TemplateRef<DrawerTemplateContext>;
+last_updated: Jan 11, 2024
     options?: Partial<DrawerOptionsTemplate>;
 }
 

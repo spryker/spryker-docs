@@ -2,6 +2,7 @@
 title: UI components library
 description: UI components library contains Angular components.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/
 related:

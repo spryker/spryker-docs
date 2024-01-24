@@ -2,6 +2,7 @@
 title: Adding and removing custom order references
 description: Learn how to add and remove custom order references in the Back Office
 template: back-office-user-guide-template
+last_updated: Jun 14, 2022
 related:
   - title: Custom Order Reference overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/custom-order-reference-overview.html

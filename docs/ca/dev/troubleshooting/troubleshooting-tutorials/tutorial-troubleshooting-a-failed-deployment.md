@@ -2,6 +2,7 @@
 title: Tutorial — Troubleshooting a failed deployment
 description: Learn how to troubleshoot a failed deployment
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-a-failed-deployment.html
 ---

@@ -2,6 +2,7 @@
 title: Task set
 description: Task set is a group of related tasks that you can run with one command.
 template: concept-topic-template
+last_updated: Nov 22, 2022
 ---
 Sometimes, you might need to run multiple related [tasks](/docs/sdk/dev/task.html) at a time. In this case, you can create a task set. A *task set* is a group of related tasks that you can run with one command. To create a task set, you can either create the task set [YAML configuration file](/docs/sdk/dev/task.html#task-yaml-configuration-file), or implement `\SprykerSdk\SdkContracts\Entity\TaskSetInterface`.
 

@@ -2,6 +2,7 @@
 title: Troubleshooting RabbitMQ
 description: Troubleshoot RabbitMQ issues
 template: concept-topic-template
+last_updated: May 2, 2023
 ---
 
 This section helps you troubleshoot issues related to RabbitMQ.

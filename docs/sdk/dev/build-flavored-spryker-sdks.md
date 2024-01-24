@@ -2,6 +2,7 @@
 title: Build flavored Spryker SDKs
 description: Find out how you can build flavored Spryker SDKs
 template: howto-guide-template
+last_updated: Nov 22, 2022
 redirect_from:
     - /docs/sdk/dev/building-flavored-spryker-sdks.html
 ---

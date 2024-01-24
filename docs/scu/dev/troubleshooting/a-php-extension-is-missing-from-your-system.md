@@ -2,6 +2,7 @@
 title: A PHP extension is missing from your system
 description: Learn how to resolve missing PHP extensions
 template: concept-topic-template
+last_updated: Nov 9, 2023
 redirect_from:
   - /docs/paas-plus/dev/troubleshooting/install-or-enable-php-s-extension.html
 ---

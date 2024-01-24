@@ -2,6 +2,7 @@
 title: 'Step 8: Adapt the file system-based features'
 description: To migrate to SCCOS, one of the steps, is restoring Elasticsearch and Redis.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 Due to the specifics of the Spryker architecture, all containers, such as Yves, Gateway, Backoffice, Jenkins, or Glue are isolated from each other and don't share any volume. For more details, refer to [Docker environment infrastructure](/docs/scos/dev/the-docker-sdk/{{site.version}}/docker-environment-infrastructure.html). 

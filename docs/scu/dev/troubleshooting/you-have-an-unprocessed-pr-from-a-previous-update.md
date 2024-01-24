@@ -2,6 +2,7 @@
 title: You have an unprocessed PR from a previous update
 description: How to decline the changes done by Spryker Code Upgrader
 template: concept-topic-template
+last_updated: Mar 2, 2023
 redirect_from:
   - /docs/paas-plus/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
 ---

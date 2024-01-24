@@ -2,6 +2,7 @@
 title: 'Step 14: Finalize the migration'
 description: 
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 After you have completed the migration process, you need to prepare your project for going live. 

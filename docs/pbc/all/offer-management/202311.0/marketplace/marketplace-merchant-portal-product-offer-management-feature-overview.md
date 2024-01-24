@@ -2,6 +2,7 @@
 title: Marketplace Merchant Portal Product Offer Management feature overview
 description: This document describes product offer management in the Merchant Portal.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 related:
   - title: Managing marketplace product offers
     link: docs/pbc/all/offer-management/page.version/marketplace/manage-product-offers.html

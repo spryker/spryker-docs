@@ -2,6 +2,7 @@
 title: Additional logic in dependency provider
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
 ---
 

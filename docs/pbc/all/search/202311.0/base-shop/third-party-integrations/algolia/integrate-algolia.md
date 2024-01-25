@@ -31,8 +31,6 @@ Follow these steps to integrate Algolia.
 Add the following config to `config/Shared/config_default.php`:
 
 ```php
-//...
-
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
 use Generated\Shared\Transfer\ProductCreatedTransfer;
 use Generated\Shared\Transfer\ProductDeletedTransfer;
@@ -40,11 +38,18 @@ use Generated\Shared\Transfer\ProductExportedTransfer;
 use Generated\Shared\Transfer\ProductUpdatedTransfer;
 use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\Product\ProductConstants;
+use Spryker\Shared\SearchHttp\SearchHttpConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[SearchHttpConstants::TENANT_IDENTIFIER]
+    = $config[ProductConstants::TENANT_IDENTIFIER]
+    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     ProductExportedTransfer::class => 'product-events',
     ProductCreatedTransfer::class => 'product-events',
@@ -55,13 +60,13 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...
     'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
     'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
     'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];

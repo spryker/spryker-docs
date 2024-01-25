@@ -62,37 +62,36 @@ If the app was connected successfully, a corresponding message appears, and the 
 
 Follow these steps to integrate Payone.
 
-### Add Payone domain to your allowlist
-
-To enable Payone to redirect your customers to their 3D Secure page and later to your success page, you must add the ACP domain inside your **Content Security Policy** allowlist. To do that, change your `deploy.yml` file or your `config/Shared/config_default.php` file if changing the environment variable is not possible.
-
-In the `deploy.yml` file, introduce the required changes:
-
-```yml
-image:
-  environment:
-    SPRYKER_AOP_APPLICATION: '{
-      "APP_DOMAINS": [
-        "os.apps.aop.spryker.com",
-        ...
-      ],
-      ...
-    }'
-```
-
-Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
-
-```php
-$config[KernelConstants::DOMAIN_WHITELIST][] = 'os.apps.aop.spryker.com';
-```
-
 ### Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
     
 ```php
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+use Spryker\Shared\OauthClient\OauthClientConstants;
+use Generated\Shared\Transfer\PaymentMethodAddedTransfer;
+use Generated\Shared\Transfer\PaymentMethodDeletedTransfer;
+use Generated\Shared\Transfer\PaymentCancelReservationRequestedTransfer;
+use Generated\Shared\Transfer\PaymentConfirmationRequestedTransfer;
+use Generated\Shared\Transfer\PaymentRefundRequestedTransfer;
+use Generated\Shared\Transfer\PaymentPreauthorizedTransfer;
+use Generated\Shared\Transfer\PaymentPreauthorizationFailedTransfer;
+use Generated\Shared\Transfer\PaymentConfirmedTransfer;
+use Generated\Shared\Transfer\PaymentConfirmationFailedTransfer;
+use Generated\Shared\Transfer\PaymentRefundedTransfer;
+use Generated\Shared\Transfer\PaymentRefundFailedTransfer;
+use Generated\Shared\Transfer\PaymentReservationCanceledTransfer;
+use Generated\Shared\Transfer\PaymentCancelReservationFailedTransfer;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\Oms\OmsConstants;
+use Spryker\Shared\Payment\PaymentConstants;
+use Spryker\Shared\Sales\SalesConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+use Spryker\Zed\Payment\PaymentConfig;
+
+//...
+$config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     PaymentMethodAddedTransfer::class => 'payment-method-commands',
     PaymentMethodDeletedTransfer::class => 'payment-method-commands',
@@ -122,21 +121,29 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
-    APPLICATION_ROOT_DIR . '/vendor/spryker/spryker/Bundles/Payment/config/Zed/Oms', # this line must be removed if exists
-    APPLICATION_ROOT_DIR . '/vendor/spryker/spryker/Bundles/SalesPayment/config/Zed/Oms', # this line must be added
+    //APPLICATION_ROOT_DIR . '/vendor/spryker/payment/config/Zed/Oms', # this line must be removed if exists
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added
 ];
 
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...
-    'B2CStateMachine01', # this line must be removed if exists
+    //'B2CStateMachine01', # this line must be removed if exists
     'ForeignPaymentStateMachine01', # this line must be added
 ];
 
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
+    //PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
     PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added
 ];
+
+// ----------------------------------------------------------------------------
+// ------------------------------ OAUTH ---------------------------------------
+// ----------------------------------------------------------------------------
+//...
+$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
+$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
+$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 
 ### Configure dependencies in `MessageBroker`
@@ -177,6 +184,33 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new PaymentMethodMessageHandlerPlugin(),
         ];
     }
+}
+```
+
+### Configure channels in `MessageBroker` configuration
+
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+
+```php
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            //...
+            'payment-events',
+            'payment-method-commands',
+        ];
+    }
+
+    //...
 }
 ```
 

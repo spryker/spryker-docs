@@ -101,14 +101,20 @@ Follow these steps to integrate Usercentics.
 Add the following config to `config/Shared/config_default.php`:
 
 ```php
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+
+//...
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    //...
     AssetAddedTransfer::class => 'asset-commands',
     AssetUpdatedTransfer::class => 'asset-commands',
     AssetDeletedTransfer::class => 'asset-commands',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    //...
     'asset-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 ```
@@ -134,6 +140,32 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           new AssetMessageHandlerPlugin(),
       ];
   }
+}
+```
+
+### Configure channels in `MessageBroker` configuration
+
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+
+```php
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            //...
+            'asset-commands',
+        ];
+    }
+
+    //...
 }
 ```
 

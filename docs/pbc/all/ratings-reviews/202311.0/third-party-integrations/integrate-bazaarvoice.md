@@ -192,13 +192,14 @@ Example:
 Add the following configuration to `config/Shared/config_default.php`:
 
 ```php
-use \Generated\Shared\Transfer\AddReviewsTransfer;
-use \Generated\Shared\Transfer\OrderStatusChangedTransfer;
-use \Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+use Generated\Shared\Transfer\AddReviewsTransfer;
+use Generated\Shared\Transfer\OrderStatusChangedTransfer;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
+
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     AssetAddedTransfer::class => 'asset-commands',
     AssetUpdatedTransfer::class => 'asset-commands',
@@ -235,6 +236,33 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
          new ProductReviewAddReviewsMessageHandlerPlugin(),
      ];
  }
+```
+
+#### Configure channels
+
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+
+```php
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            //...
+            'asset-commands',
+            'product-review-commands',
+        ];
+    }
+
+    //...
+}
 ```
 
 ### 4. Configure synchronization

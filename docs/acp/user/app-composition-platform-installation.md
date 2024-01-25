@@ -57,7 +57,7 @@ To get your project ACP-ready, it is important to ensure that your project modul
 Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
-* `spryker/message-broker: ^1.9.0` or later
+* `spryker/message-broker: ^1.10.0` or later
 * `spryker/message-broker-aws: ^1.6.0` or later
 * `spryker/session: ^4.15.1` or later
 * `spryker/oauth-client: ^1.4.0` or later
@@ -116,17 +116,16 @@ $config[OauthAuth0Constants::AUTH0_CUSTOM_DOMAIN] = $aopAuthenticationConfigurat
 $config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration['AUTH0_CLIENT_ID'] ?? '';
 $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    // Here we will define the transport map accordinally to APP (PBC)
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    // Here we will define the transport map accordingly to APP (PBC)
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // Here we will define the receiver transport map accordinally to APP (PBC)
+    // Here we will define the receiver transport map accordingly to APP (PBC)
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // Here we will define the sender transport map accordinally to APP (PBC)
+    // Here we will define the sender transport map accordingly to APP (PBC)
 ];
 
 // -------------------------------- ACP AWS --------------------------------------
@@ -138,12 +137,9 @@ $config[MessageBrokerConstants::IS_ENABLED] = (
     && $config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL]
 );
 
-$config[SearchHttpConstants::TENANT_IDENTIFIER]
-    = $config[ProductConstants::TENANT_IDENTIFIER]
+$config[OauthClientConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerAwsConstants::CONSUMER_ID]
-    = $config[OauthClientConstants::TENANT_IDENTIFIER]
-    = $config[PaymentConstants::TENANT_IDENTIFIER]
     = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
     
@@ -157,10 +153,6 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-e
 $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
 $config[AppCatalogGuiConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
-
-$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
-$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
-$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 </details>
 
@@ -180,6 +172,12 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 ```
 
 3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
+
+{% info_block infoBox "Note" %}
+
+Please ensure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+
+{% endinfo_block %}
 
 <details>
 <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
@@ -289,42 +287,13 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 ```
 </details>
 
-5. In the `MessageBrokerConfig.php` file, adjust the following module config:
+5. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
 
-**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**:
+{% info_block infoBox "Note" %}
 
-```php
-<?php
+Please ensure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
 
-/**
- * This file is part of the Spryker Suite.
- * For full license information, please view the LICENSE file that was distributed with this source code.
- */
-
-namespace Pyz\Zed\MessageBroker;
-
-use Generated\Shared\Transfer\MessageAttributesTransfer;
-use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
-
-class MessageBrokerConfig extends SprykerMessageBrokerConfig
-{
-    /**
-     * Defines attributes which should not be logged.
-     *
-     * @api
-     *
-     * @return array<string>
-     */
-    public function getProtectedMessageAttributes(): array
-    {
-        return [
-            MessageAttributesTransfer::AUTHORIZATION,
-        ];
-    }
-}
-```
-
-6. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
+{% endinfo_block %}
 
 <details>
 <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
@@ -370,109 +339,9 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 ```
 </details>
 
-### Provide ACP-related SCCOS environment variables
-
-This section describes the variables that you must configure for use within your SCCOS AWS environment.
-
-You need to define the environment variables in the `deploy.yml` file of *each* SCCOS environment like testing, staging, and production. There will be multiple general environment variables that in turn will contain several configurations. 
-
-General structure:
-
-```yaml
-ENVIRONMENT_VARIABLE_NAME_A: '{
-  "CONFIGURATION_KEY_A":"SOME_VALUE_A",
-  "CONFIGURATION_KEY_B":"SOME_VALUE_B"
-}'
-```
-
-Data structure example for a demo environment connected to the Spryker ACP production:
-
-```yaml
-#AOP
-SPRYKER_TENANT_IDENTIFIER: "tenant-<<uuid>>"
-
-SPRYKER_AOP_AUTHENTICATION: '{
-  "AUTH0_CUSTOM_DOMAIN": "spryker-prod.eu.auth0.com",
-  "AUTH0_CLIENT_SECRET": "<<clientSecret>>",
-  "AUTH0_CLIENT_ID": "<<clientId>>"
-}'
-        
-SPRYKER_AOP_APPLICATION: '{
-  "APP_CATALOG_SCRIPT_URL": "https://app-catalog.atrs.spryker.com/loader",
-  "APP_DOMAINS": [
-      "os.apps.aop.spryker.com",
-      "*.bazaarvoice.com"
-  ]
-}'
-
-SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL: "https://publish.mb.spryker.com/"
-SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL: "https://consume.mb.spryker.com/"
-```
-
-#### General configurations: SPRYKER_TENANT_IDENTIFIER variable
-
-The tenant-identifier is manually created by prefixing a UUID with `tenant-`
-
-Example:
-
-```yaml
-SPRYKER_TENANT_IDENTIFIER: "tenant-3342063d-0920-4004-acb0-ce8c8bbae513"
-```
-
-#### General configurations: SPRYKER_AOP_AUTHENTICATION variable 
-
-The configuration key `SPRYKER_AOP_AUTHENTICATION` is a json which contains auth0 credentials.
-
-It should be placed in AWS Param Store.
-
-{% info_block infoBox "Spryker OPS" %}
-
-For customers, the environment variables must be added to the AWS Parameter Store by the Spryker OPS team.
-
-{% endinfo_block %}
-
-#### General configurations: SPRYKER_AOP_APPLICATION variable
-
-The configuration key `APP_CATALOG_SCRIPT_URL` is a URL for the App-Tenant-Registry-Service (ATRS) and the path to the JS script to load the ACP catalog.
-
-Example of the production ATRS_HOST and path:
-
-```yaml
-https://app-catalog.atrs.spryker.com/loader
-```
-
-The configuration key `APP_DOMAINS` designates the app domains used in redirects.
-
-{% info_block infoBox "Spryker OPS" %}
-
-The app domains are provided by Spryker OPS.
-
-{% endinfo_block %}
-
-Example of the app domain values:
-
-```yaml
-[
-  "os.apps.aop.spryker.com",
-  "*.bazaarvoice.com"
-]
-```
-
-#### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL variable
-
-The configuration key `SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL` is a URL of Event Platform (EP) HTTP channel sender.
-
-The URL is different for each environment.
-
-#### General configurations: SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL variable
-
-The configuration key `SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL` is a URL of Event Platform (EP) HTTP channel receiver.
-
-The URL is different for each environment.
-
 ## Next steps after the ACP-readiness
 
-After configuring the files, updating all modules, and adding the requested keys with their corresponding values provided by Spryker OPS to the `deploy.yml` file, the SCCOS codebase is now up-to-date. Once redeployed, your environment is ACP-ready.
+After configuring the files and updating all modules, the SCCOS codebase is now up-to-date. Once redeployed, your environment is ACP-ready.
 
 The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies the registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
 

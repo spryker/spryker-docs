@@ -18,7 +18,7 @@ Oryx supports both LTR and RTL directionality. The directionality feature applie
 
 1. HTML Root: The direction is added to the root of the document, ensuring that the entire page is rendered according to the selected direction.
 
-2. Current language: The direction is automatically detected based on the current language. The [reactive system](/docs/scos/dev/front-end-development/{page.version}/oryx/architecture/reactivity/reactivity.html) enables the language to instantly change with all the elements on a page reflecting the changed language state, including direction.
+2. Current language: The direction is automatically detected based on the current language. The [reactive system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) enables the language to instantly change with all the elements on a page reflecting the changed language state, including direction.
 
 3. Layout: All layouts in Oryx are automatically flipped based on direction. This ensures that the layout of components is adjusted accordingly, providing a consistent and visually appealing design.
 

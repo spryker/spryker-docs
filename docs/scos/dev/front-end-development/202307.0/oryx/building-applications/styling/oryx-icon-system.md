@@ -153,7 +153,7 @@ export const app = appBuilder().withTheme({
 
 Icon libraries are typically created for left-to-right (LTR), but when they're used in right-to-left (RTL) some icons much flip to reflect the layout. This is affecting only icons that express a direction, such as arrow icons.
 
-Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalisation/directionality.html) and to ensure that some icons will flip accordingly, the icon style must be set with the `direction: true` config. The following example shows how the forward icon is configured to flip in RTL mode.
+Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalization/oryx-directionality.html) and to ensure that some icons will flip accordingly, the icon style must be set with the `direction: true` config. The following example shows how the forward icon is configured to flip in RTL mode.
 
 ```ts
 export const materialDesignIcons: IconMapper = {

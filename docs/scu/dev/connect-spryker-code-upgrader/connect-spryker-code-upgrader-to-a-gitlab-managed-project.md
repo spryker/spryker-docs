@@ -1,5 +1,5 @@
 ---
-title: Connect the Spryker CI to a GitLab managed project
+title: Connect Spryker Code Upgrader to a GitLab managed project
 description: Learn how to connect Spryker CI to a GitLab managed project
 template: howto-guide-template
 redirect_from:

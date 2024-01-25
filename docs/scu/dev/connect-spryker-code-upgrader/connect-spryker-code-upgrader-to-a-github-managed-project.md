@@ -1,5 +1,5 @@
 ---
-title: Connect the Spryker CI to a GitHub managed project
+title: Connect Spryker Code Upgrader to a GitHub managed project
 description: Learn how to connect Spryker CI to a GitHub managed project
 template: howto-guide-template
 redirect_from:

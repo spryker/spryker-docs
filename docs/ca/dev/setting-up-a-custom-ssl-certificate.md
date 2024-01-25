@@ -2,6 +2,7 @@
 title: Setting up a custom SSL certificate
 description: Set up a third-party SSL certificate for an application
 template: howto-guide-template
+last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/setting-up-a-custom-ssl-certificate
 originalArticleId: 2e1dea17-21b4-4b25-ac8f-7cf2766f07eb
 redirect_from:

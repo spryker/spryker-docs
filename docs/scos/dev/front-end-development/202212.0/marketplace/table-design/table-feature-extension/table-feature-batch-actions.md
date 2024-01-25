@@ -2,6 +2,7 @@
 title: Table Feature Batch Actions
 description: This document provides details about the Table Feature Batch Actions component in the Components Library.
 template: concept-topic-template
+last_updated: Aug 7, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/.html
 related:

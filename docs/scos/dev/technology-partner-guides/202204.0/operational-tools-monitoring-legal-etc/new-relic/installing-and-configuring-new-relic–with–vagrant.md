@@ -1,6 +1,7 @@
 ---
 title: Installing and configuring New Relic with Vagrant
 template: howto-guide-template
+last_updated: Jun 29, 2023
 related:
   - title: Migration Guide - Session
     link: docs/scos/dev/module-migration-guides/migration-guide-session.html

@@ -2,6 +2,7 @@
 title: Marketplace Merchant Portal Product Offer Service Point feature overview
 description: General overview of the Marketplace Merchant Portal Product Offer Service Point feature
 template: concept-topic-template
+last_updated: Nov 26, 2023
 ---
 
 This feature lets merchants assign services to product offers in the Merchant Portal.

@@ -2,6 +2,7 @@
 title: Table Column Type Text
 description: This document provides details about the Table Column Type Text in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-text.html
 related:

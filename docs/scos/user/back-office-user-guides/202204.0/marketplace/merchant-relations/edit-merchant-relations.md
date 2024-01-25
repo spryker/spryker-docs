@@ -2,6 +2,7 @@
 title: Edit merchant relations
 description: Learn how to edit merchant relations in the Back Office
 template: back-office-user-guide-template
+last_updated: May 10, 2023
 related:
   - title: Create merchant relations
     link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchant-relations/create-merchant-relations.html

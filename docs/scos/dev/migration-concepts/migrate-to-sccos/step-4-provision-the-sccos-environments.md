@@ -2,6 +2,7 @@
 title: 'Step 4: Provision the Spryker Cloud Commerce OS environments'
 description: To migrate the SCCOS, you need to provision the Spryker SCCOS environments.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 After you have [migrated non-standard services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html) and your application is up and running in the local environment, you can deploy it on remote servers.

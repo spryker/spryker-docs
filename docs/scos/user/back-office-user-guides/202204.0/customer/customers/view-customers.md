@@ -2,6 +2,7 @@
 title: View customers
 description: Learn how to view customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 20, 2023
 related:
   - title: Customer Account Management feature overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

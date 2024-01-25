@@ -2,6 +2,7 @@
 title: The process exceeded the timeout
 description: What to do if you get the timeout error in Spryker Code Upgrader
 template: concept-topic-template
+last_updated: May 8, 2023
 redirect_from:
   - /docs/paas-plus/dev/troubleshooting/the-process-exceeded-the-timeout.html
 ---

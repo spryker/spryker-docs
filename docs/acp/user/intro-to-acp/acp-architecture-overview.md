@@ -2,6 +2,7 @@
 title: ACP architecture overview
 description: Learn about the App Orchestration Platform architecture and how to use it.
 template: concept-topic-template
+last_updated: Jan 17, 2024
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
 keywords: acp

@@ -2,6 +2,7 @@
 title: Usercentrics
 description: Usercentrics lets you manage the consent of your users to use cookies across your Spryker store
 template: howto-guide-template
+last_updated: Jul 4, 2023
 redirect_from:
    - docs/aop/user/apps/usercentrics.html
    - docs/acp/user/apps/usercentrics.html

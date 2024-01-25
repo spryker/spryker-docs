@@ -2,6 +2,7 @@
 title: Table Column Type Chip
 description: This document provides details about the Table Column Type Chip in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-chip.html
 related:

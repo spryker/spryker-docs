@@ -2,6 +2,7 @@
 title: Table Column Type Image
 description: This document provides details about the Table Column Type Image in the Components Library.
 template: concept-topic-template
+last_updated: Aug 2, 2023
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html

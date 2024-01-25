@@ -2,6 +2,7 @@
 title: Product Information Management
 description: The capability for managing product catalogs
 template: concept-topic-template
+last_updated: Aug 16, 2023
 last_udpated: Aug 16, 2023
 ---
 

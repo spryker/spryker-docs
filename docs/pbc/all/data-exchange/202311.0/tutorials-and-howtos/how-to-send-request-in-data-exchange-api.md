@@ -483,7 +483,16 @@ The payload for these requests follows a nested structure where the main entity 
 Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
 
 To be processed correctly related entities must be defined with existing relation names, and they should be
-organized to align with their hierarchical relationships in the database. 
+organized to align with their hierarchical relationships in the database, corresponding to the relationships 
+defined in tables like `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping`:
+
+- `spy_dynamic_entity_configuration_relation` specifies the relationships between parent and child entities. Each record links a parent entity to a child entity.
+- `spy_dynamic_entity_configuration_relation_field_mapping` contains the field mappings between related entities.
+
+The hierarchical relationships are primarily defined by the foreign key references in these tables. 
+For example, `spy_dynamic_entity_configuration_relation` uses foreign keys to establish connections between 
+parent and child configurations in `spy_dynamic_entity_configuration`.
+
 Incorrect or non-existent relation names or a misalignment in the hierarchy will lead to processing errors.
 For a detailed list of potential errors, see [error codes](#error-codes).
 

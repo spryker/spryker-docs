@@ -2,6 +2,7 @@
 title: "Marketplace Merchant Portal Product Management feature: Domain model and relationships"
 description: This document provides reference information about product in the Merchant Portal.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 ---
 
 

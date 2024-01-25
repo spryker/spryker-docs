@@ -2,6 +2,7 @@
 title: Discount Management
 description: Discount Management PBC lets you manage discounts
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Discount Management lets you manage different kinds of discounts, such as cart rules and vouchers.

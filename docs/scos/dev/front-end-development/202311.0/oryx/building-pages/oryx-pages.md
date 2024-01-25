@@ -189,7 +189,7 @@ The following table gives an overview of the various merge types.
 
 | STRATEGY            | DESCRIPTION                                                                                                                                                    |
 | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `replace` (default) | Replaces the selected element with the given content.                                                                                                          |
+| `replace`           | Replaces the selected element with the given content. This is the default strategy.                                                                                                        |
 | `patch`             | Patches the selected component with the given component. This includes both the component options and content. All data, except for arrays, is deep-merged.    |
 | `remove`            | Removes the selected component.                                                                                                                                |
 | `before`            | Adds the content before the selected component.                                                                                                                |

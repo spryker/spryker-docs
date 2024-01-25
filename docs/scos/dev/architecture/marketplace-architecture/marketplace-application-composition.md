@@ -2,6 +2,7 @@
 title: Marketplace Application composition
 description: The following document shows how Spryker Marketplace looks in general.
 template: concept-topic-template
+last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
 related:

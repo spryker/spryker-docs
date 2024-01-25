@@ -2,6 +2,7 @@
 title: Technology partner guides
 description: Guides for developers working with Spryker technology partners
 template: concept-topic-template
+last_updated: May 4, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/index.html
 ---

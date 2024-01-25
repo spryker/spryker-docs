@@ -2,6 +2,7 @@
 title: Initialize and run workflows
 description: Learn about the Spryker SDK telemetry configuration. 
 template: howto-guide-template
+last_updated: Dec 16, 2022
 redirect_from:
     - /docs/scos/dev/sdk/initializing-and-running-workflows.html
 ---

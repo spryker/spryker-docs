@@ -2,6 +2,7 @@
 title: Marketplace Product Approval Process feature overview
 description: This document contains concept information for the Marketplace Product Approval Process feature.
 template: concept-topic-template
+last_updated: Oct 20, 2023
 redirect_from:
   - /docs/marketplace/user/features/202307.0/marketplace-product-approval-process-feature-overview.html
 related:

@@ -2,6 +2,7 @@
 title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 related:
   - title: Table Column Type Autocomplete
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html

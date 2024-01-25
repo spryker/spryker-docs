@@ -2,6 +2,7 @@
 title: App manifest
 Descriptions: App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 template: howto-guide-template
+last_updated: Sep 22, 2023
 ---
 App manifest represents a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service (ATRS) and to display information about the application in the Application Catalog (AppCatalog).
 

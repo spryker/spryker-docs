@@ -2,6 +2,7 @@
 title: Handling upgrade warnings
 description: How Spryker Code Upgrader actively detects and warns you when your code becomes incompatible with the code in upgraded modules
 template: concept-topic-template
+last_updated: Oct 20, 2023
 ---
 
 To ensure successful upgrades, Spryker Code Upgrader evaluates your project before creating a PR. If there is anything that might affect the upgrade process, the PR will contain a warning. The Upgrader's warning system focuses on preventing upgrade-related issues. We recommend implementing your own CI system with tests and running it before you merge PRs.

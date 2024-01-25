@@ -2,6 +2,7 @@
 title: Test Glue API
 description: Learn how to test Glue API
 template: howto-guide-template
+last_updated: Jan 9, 2024
 ---
 
 This guide explains how to set up and run Glue API end-to-end (E2E) tests using the `WishlistsRestApi` module as an example and the `Pyz` project namespace. Adjust the module name according to your requirements.

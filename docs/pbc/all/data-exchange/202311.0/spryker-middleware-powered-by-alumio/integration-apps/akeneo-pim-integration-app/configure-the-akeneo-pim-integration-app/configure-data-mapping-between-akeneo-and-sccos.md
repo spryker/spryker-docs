@@ -2,6 +2,7 @@
 title: Configure data mapping between Akeneo and SCCOS
 description: Create data transformers in the Spryker Middleware powered by Alumio
 template: howto-guide-template
+last_updated: Nov 17, 2023
 ---
 
 After you have [connected the Spryker Middleware Powered by Alumio with Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html), you need to map the data you want to import between the two systems by doing the following:

@@ -2,6 +2,7 @@
 title: Marketing and conversion
 description: Guides for how to integrate Spryker marketing and conversion technology partners
 template: concept-topic-template
+last_updated: Dec 8, 2022
 ---
 
 This section contains the following guides for integrating with marketing and conversion technology partners on Spryker Commerce OS:  

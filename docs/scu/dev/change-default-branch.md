@@ -2,6 +2,7 @@
 title: Change default branch
 description: How to change the default branch in Spryker CI
 template: concept-topic-template
+last_updated: May 4, 2023
 ---
 
 To change the *default* branch in Spryker CI, do the following:

@@ -2,6 +2,7 @@
 title: 'Step 5: Define the deployment strategy'
 description: To migrate to SCCOS, one of the steps, is defining the deployment strategy.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 After you have [provisioned the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html), you have to define the deployment strategy.

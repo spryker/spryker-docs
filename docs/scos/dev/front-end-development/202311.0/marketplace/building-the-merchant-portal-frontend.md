@@ -2,6 +2,7 @@
 title: Building the Merchant Portal frontend
 description: This document provides details how to build the frontend part of the Merchant Portal.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/building-the-project.html
 related:

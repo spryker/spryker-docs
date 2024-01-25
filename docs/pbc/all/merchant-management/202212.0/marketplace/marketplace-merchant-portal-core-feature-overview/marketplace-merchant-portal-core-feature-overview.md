@@ -2,6 +2,7 @@
 title: Marketplace Merchant Portal Core feature overview
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
+last_updated: Oct 20, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---

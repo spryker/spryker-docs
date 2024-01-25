@@ -2,6 +2,7 @@
 title: "Glue API: Manage products"
 description: Describes the endpoints used to manage products
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-manage-products.html
 ---

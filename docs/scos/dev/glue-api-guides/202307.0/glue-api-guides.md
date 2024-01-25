@@ -2,6 +2,7 @@
 title: Glue API guides
 description: Guides for developers working with the Spryker Glue API
 template: concept-topic-template
+last_updated: Oct 26, 2023
 redirect_from:
   - /docs/scoc/dev/glue-api-guides/202307.0/index.html
   - /docs/scos/dev/glue-api-guides/202307.0/glue-rest-api.html

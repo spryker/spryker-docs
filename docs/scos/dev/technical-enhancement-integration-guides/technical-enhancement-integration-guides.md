@@ -2,6 +2,7 @@
 title: Technical enhancement integration guides
 description: guides for integrating technical enhancement tools with Spryker SCOS
 template: concept-topic-template
+last_updated: Jun 20, 2023
 ---
 
 This section contains a collection of integration guides for tools that enhance the Spryker Commerce OS:

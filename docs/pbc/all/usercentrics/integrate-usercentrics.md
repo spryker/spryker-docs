@@ -2,6 +2,7 @@
 title: Integrate Usercentrics
 description: Find out how you can integrate Usercentrics in your Spryker shop
 template: howto-guide-template
+last_updated: Jul 4, 2023
 ---
 
 To use Usercentrics, you need an account with Usercentrics. To create it, select a [Usercentrics pricing plan](https://usercentrics.com/pricing/) and create an account that lets you access the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).

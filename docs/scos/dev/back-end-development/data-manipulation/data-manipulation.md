@@ -2,6 +2,7 @@
 title: Data Manipulation
 description: This document explains how to work with data in the Spryker SCOS backend
 template: concept-topic-template
+last_updated: May 2, 2023
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-%3Cspan%20class=
 

@@ -2,6 +2,7 @@
 title: Direct Debit payment
 description: how to implement Direct Debit payment in Spryker SCOS
 template: concept-topic-template
+last_updated: Dec 15, 2022
 ---
 
 This section explains how to implement direct debit payment in Spryker SCOS by completing the following processes:

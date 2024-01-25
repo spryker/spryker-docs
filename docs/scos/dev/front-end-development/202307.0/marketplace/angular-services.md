@@ -2,6 +2,7 @@
 title: Angular Services
 description: This document provides details about the Angular Services, and how to create and use them.
 template: concept-topic-template
+last_updated: Jul 27, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/angular-services.html
 related:

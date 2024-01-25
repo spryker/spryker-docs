@@ -473,15 +473,22 @@ and its child entities.
 
 {% info_block infoBox %}
 
-Currently, our system does not support many-to-many relationships. Only one-to-one and one-to-many relationships are allowed. 
-This means each child entity can be associated with only one parent entity.
+Currently, our system does not support `many-to-many` relationships for POST, PATCH and PUT requests. 
+Only `one-to-one` and `one-to-many` relationships are allowed. This means each child entity can be associated 
+with only one parent entity.
 
 {% endinfo_block %}
 
 The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array. 
 Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
 
-To be processed correctly, a relation chain must contain only existing relation names arranged in the correct sequence that aligns with the relation hierarchy. Otherwise, an error will be returned. See [error codes](#error-codes).
+To be processed correctly related entities must be defined with existing relation names, and they should be
+organized to align with their hierarchical relationships in the database. 
+Incorrect or non-existent relation names or a misalignment in the hierarchy will lead to processing errors.
+For a detailed list of potential errors, see [error codes](#error-codes).
+
+For POST, PATCH, and PUT requests the payload must accurately reflect the entity relationships. 
+Each entity in the request should include its corresponding related entities, structured as nested objects within the payload.
 
 ```bash
 POST /dynamic-entity/countries HTTP/1.1

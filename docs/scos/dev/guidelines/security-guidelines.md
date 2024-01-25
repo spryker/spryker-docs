@@ -53,6 +53,11 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 
 The Back Office application serves as an administration panel. So, we highly recommend adding an extra layer of security by introducing a VPN, IP whitelisting, or additional authentication. This ensures that only authorized users have access to the Back Office.
 
+## Access the Merchant Portal
+
+If you use Merchant Portal Agent Assist feature we highly recommend implementing similar security measures for mp.mysprykershop.com/agent-security-merchant-portal-gui/login page
+as those recommended for the Back Office. This ensures that only authorized users can log in as an Agent to Merchant Portal.
+
 ## Security Headers
 
 Security headers are directives used by web applications to configure security defenses in web browsers.

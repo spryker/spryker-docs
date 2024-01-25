@@ -36,6 +36,8 @@ How to send a pull request:
 - Ensure all GitHub actions required checks are passed.
 - Provide a clear and concise description of your changes in the pull request description.
 
+Our team is monitoring pull requests. We will review your pull request and either merge it, request changes to it or close it with an explanation.
+
 ## Development Workflow
 
 After cloning the repository, run `npm install` in the repository root. This will install all dependencies for all packages.

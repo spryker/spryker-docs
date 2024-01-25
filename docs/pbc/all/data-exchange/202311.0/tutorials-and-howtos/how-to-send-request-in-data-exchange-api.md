@@ -465,6 +465,86 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
+### Sending `POST`, `PATCH` and `PUT` requests with relationships
+
+To create or update an entity along with its related entities, you need to include the relationships directly in 
+the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 
+and its child entities.
+
+{% info_block infoBox %}
+
+Currently, our system does not support many-to-many relationships. Only one-to-one and one-to-many relationships are allowed. 
+This means each child entity can be associated with only one parent entity.
+
+{% endinfo_block %}
+
+The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array. 
+Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
+
+To be processed correctly, a relation chain must contain only existing relation names arranged in the correct sequence that aligns with the relation hierarchy. Otherwise, an error will be returned. See [error codes](#error-codes).
+
+```bash
+POST /dynamic-entity/countries HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+Content-Length: 245
+
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00"
+            }
+      ]
+    }
+  ]
+}
+```
+
+Response sample:
+
+```json
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "postal_code_mandatory": null,
+      "postal_code_regex": null,
+      "id_country": 1,
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00",
+                "id_country_tax_rate": 1,
+                "fk_country": 1
+            }
+      ]
+    }
+  ]
+}
+```
+
+The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table, 
+as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName` 
+as the key, providing a comprehensive view of the table’s data in the API response.
+
+{% info_block infoBox %}
+
+For POST and PUT requests, which are used to create new entities, child entities receive their foreign key reference 
+to the parent entity only after the parent entity is created. The system automatically assigns the foreign key 
+to the child entities based on the newly created parent entity's ID.
+
+{% endinfo_block %}
+
 #### Error codes
 
 Bellow, you can find a list of error codes that you can receive when sending `GET`, `POST`, `PATCH` or `PUT` requests.
@@ -484,3 +564,4 @@ Bellow, you can find a list of error codes that you can receive when sending `GE
 | 1311       | The provided `field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                          |
 | 1312       | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
 | 1313       | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                        |
+| 1314       | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                       |

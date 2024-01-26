@@ -1,5 +1,5 @@
 ---
-title: Receiving ACP Messages 
+title: Receive ACP Messages 
 description: Find out how you can receive ACP messages in SCCOS.
 template: howto-guide-template
 last_updated: Jan 09, 2024
@@ -7,17 +7,18 @@ last_updated: Jan 09, 2024
 
 This document describes how to receive ACP messages in SCCOS.
 
-Receive messages from all channels:
+To receive messages from all the channels, run the following command:
 ```bash
 console message-broker:consume
 ```
 
-Receive messages from the specific channel:
+To receive messages from a specific channel, run the following command:
+
 ```bash
 console message-broker:consume {channel-name} # {channel-name} is the name of the channel, like `asset-commands`.
 ```
 
-This command must be executed periodically. To achieve this, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
+This command must be executed periodically. To set up this periodic execution, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
 
 ```php
 $jobs[] = [

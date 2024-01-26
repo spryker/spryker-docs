@@ -55,7 +55,7 @@ Add the following configuration:
 use Spryker\Shared\Acl\AclConstants;
 use Spryker\Shared\AgentSecurityBlockerMerchantPortal\AgentSecurityBlockerMerchantPortalConstants;
 
-// ACL: Allow or disallow of urls for Zed Admin GUI for ALL users
+// ACL: Allow or disallow URLs for Zed Admin GUI for ALL users
 $config[AclConstants::ACL_DEFAULT_RULES] = [
     [
         'bundle' => 'agent-security-merchant-portal-gui',

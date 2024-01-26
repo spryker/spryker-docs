@@ -1,6 +1,3 @@
-
-
-
 This document describes how to install the ACL feature.
 
 ## Install feature core
@@ -11,10 +8,10 @@ Follow the steps below to install the ACL feature core.
 
 Install the required features:
 
-| NAME | VERSION | INSTALLATION GUIDE        |
-| --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}}      | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Spryker Core Back Office | {{page.version}}      | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
+|--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -23,18 +20,19 @@ Install the required modules:
 ```bash
 composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
-| MODULE              | EXPECTED DIRECTORY                   |
-| ------------------- | ------------------------------------ |
-| Acl           | vendor/spryker/acl             |
-| AclDataImport | vendor/spryker/acl-data-import |
-| AclEntity        | vendor/spryker/acl-entity         |
-| AclEntityDataImport     | vendor/spryker/acl-entity-data-import      |
-| AclEntityExtension  (optional)  | vendor/spryker/acl-entity-extension     |
-| AclExtension  (optional)  | vendor/spryker/acl-extension    |
+| MODULE                         | EXPECTED DIRECTORY                    |
+|--------------------------------|---------------------------------------|
+| Acl                            | vendor/spryker/acl                    |
+| AclDataImport                  | vendor/spryker/acl-data-import        |
+| AclEntity                      | vendor/spryker/acl-entity             |
+| AclEntityDataImport            | vendor/spryker/acl-entity-data-import |
+| AclEntityExtension  (optional) | vendor/spryker/acl-entity-extension   |
+| AclExtension  (optional)       | vendor/spryker/acl-extension          |
 
 {% endinfo_block %}
 
@@ -52,15 +50,15 @@ console transfer:generate
 
 Verify that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY               | TYPE  | EVENT   |
-| ----------------------------- | ----- | ------- |
-| spy_acl_role | table | created |
-| spy_acl_rule | table | created |
-| spy_acl_group | table | created |
-| spy_acl_user_has_group | table | created |
+| DATABASE ENTITY          | TYPE  | EVENT   |
+|--------------------------|-------|---------|
+| spy_acl_role             | table | created |
+| spy_acl_rule             | table | created |
+| spy_acl_group            | table | created |
+| spy_acl_user_has_group   | table | created |
 | spy_acl_groups_has_roles | table | created |
-| spy_acl_entity_segment | table | created |
-| spy_acl_entity_rule | table | created |
+| spy_acl_entity_segment   | table | created |
+| spy_acl_entity_rule      | table | created |
 
 {% endinfo_block %}
 
@@ -68,53 +66,194 @@ Verify that the following changes have been applied by checking your database:
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE | EVENT | PATH  |
-| ----------------- | ----- | ------ | -------------------------- |
-|   Group  | object | Created | src/Generated/Shared/Transfer/GroupTransfer |
-|   AclEntityRule | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer |
-|   AclEntitySegment | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer |
-|   AclEntitySegmentRequest | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer |
-|   AclEntityRuleRequest | object | Created | src/Generated/Shared/Transfer/AclEntityRuleRequestTransfer |
-|   AclEntityRuleCollection | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCollectionTransfer |
-|   AclEntitySegmentResponse | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer |
-|   AclEntitySegmentCriteria | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentCriteriaTransfer |
-|   AclEntityRuleCriteria | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCriteriaTransfer |
-|   AclEntityRuleResponse | object | Created | src/Generated/Shared/Transfer/AclEntityRuleResponseTransfer |
-|   AclEntityMetadata | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer |
-|   AclEntityParentMetadata | object | Created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer |
-|   AclEntityParentConnectionMetadata | object | Created | src/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer |
-|   AclEntityMetadataCollection | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer |
-|   AclEntityMetadataConfig | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer |
-|   AclRoleCriteria | object | Created | src/Generated/Shared/Transfer/AclRoleCriteriaTransfer |
-|   GroupCriteria | object | Created | src/Generated/Shared/Transfer/GroupCriteriaTransfer |
-|   Groups | object | Created | src/Generated/Shared/Transfer/GroupsTransfer |
-|   Role | object | Created | src/Generated/Shared/Transfer/RoleTransfer |
-|   Roles | object | Created | src/Generated/Shared/Transfer/RolesTransfer |
-|   Rule | object | Created | src/Generated/Shared/Transfer/RuleTransfer |
-|   Rules | object | Created | src/Generated/Shared/Transfer/Transfer |
-|   User | object | Created | src/Generated/Shared/Transfer/UserTransfer |
-|   NavigationItem | object | Created | src/Generated/Shared/Transfer/NavigationItemTransfer |
-|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/NavigationItemCollection |
-|   AclUserHasGroupCollection | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupCollection |
-|   AclUserHasGroup | object | Created | src/Generated/Shared/Transfer/AclUserHasGroup |
-|   AclUserHasGroupCriteria | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupCriteria |
-|   AclUserHasGroupConditions | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupConditions |
+| TRANSFER                          | TYPE   | EVENT   | PATH                                                                    |
+|-----------------------------------|--------|---------|-------------------------------------------------------------------------|
+| Group                             | object | Created | src/Generated/Shared/Transfer/GroupTransfer                             |
+| AclEntityRule                     | object | Created | src/Generated/Shared/Transfer/AclEntityRuleTransfer                     |
+| AclEntitySegment                  | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentTransfer                  |
+| AclEntitySegmentRequest           | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentRequestTransfer           |
+| AclEntityRuleRequest              | object | Created | src/Generated/Shared/Transfer/AclEntityRuleRequestTransfer              |
+| AclEntityRuleCollection           | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCollectionTransfer           |
+| AclEntitySegmentResponse          | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentResponseTransfer          |
+| AclEntitySegmentCriteria          | object | Created | src/Generated/Shared/Transfer/AclEntitySegmentCriteriaTransfer          |
+| AclEntityRuleCriteria             | object | Created | src/Generated/Shared/Transfer/AclEntityRuleCriteriaTransfer             |
+| AclEntityRuleResponse             | object | Created | src/Generated/Shared/Transfer/AclEntityRuleResponseTransfer             |
+| AclEntityMetadata                 | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataTransfer                 |
+| AclEntityParentMetadata           | object | Created | src/Generated/Shared/Transfer/AclEntityParentMetadataTransfer           |
+| AclEntityParentConnectionMetadata | object | Created | src/Generated/Shared/Transfer/AclEntityParentConnectionMetadataTransfer |
+| AclEntityMetadataCollection       | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataCollectionTransfer       |
+| AclEntityMetadataConfig           | object | Created | src/Generated/Shared/Transfer/AclEntityMetadataConfigTransfer           |
+| AclRoleCriteria                   | object | Created | src/Generated/Shared/Transfer/AclRoleCriteriaTransfer                   |
+| GroupCriteria                     | object | Created | src/Generated/Shared/Transfer/GroupCriteriaTransfer                     |
+| Groups                            | object | Created | src/Generated/Shared/Transfer/GroupsTransfer                            |
+| Role                              | object | Created | src/Generated/Shared/Transfer/RoleTransfer                              |
+| Roles                             | object | Created | src/Generated/Shared/Transfer/RolesTransfer                             |
+| Rule                              | object | Created | src/Generated/Shared/Transfer/RuleTransfer                              |
+| Rules                             | object | Created | src/Generated/Shared/Transfer/Transfer                                  |
+| User                              | object | Created | src/Generated/Shared/Transfer/UserTransfer                              |
+| NavigationItem                    | object | Created | src/Generated/Shared/Transfer/NavigationItemTransfer                    |
+| NavigationItemCollection          | object | Created | src/Generated/Shared/Transfer/NavigationItemCollection                  |
+| AclUserHasGroupCollection         | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupCollection                 |
+| AclUserHasGroup                   | object | Created | src/Generated/Shared/Transfer/AclUserHasGroup                           |
+| AclUserHasGroupCriteria           | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupCriteria                   |
+| AclUserHasGroupConditions         | object | Created | src/Generated/Shared/Transfer/AclUserHasGroupConditions                 |
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+### 4) Import the ACL groups and roles:
+
+1. Prepare your data according to your requirements using our demo data:
+
+**data/import/common/common/acl_group.csv**
+
+```csv
+name,reference
+root_group,root_group
+```
+
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                     |
+|-----------|----------|-----------|--------------|----------------------------------------------------------------------|
+| name      | ✓        | string    | root_group   | The nane of the ACL group.                                           |
+| reference | x        | string    | root_group   | Key of the ACL group that is used as a reference in the data import. |
+
+**data/import/common/common/acl_role.csv**
+
+```csv
+name,reference
+root_role,root_role
+```
+
+| COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                    |
+|-----------|----------|-----------|--------------|---------------------------------------------------------------------|
+| name      | ✓        | string    | root_role    | The nane of the ACL role.                                           |
+| reference | x        | string    | root_role    | Key of the ACL role that is used as a reference in the data import. |
+
+**data/import/common/common/acl_group_role.csv**
+
+```csv
+group_name,role_name
+root_group,root_role
+```
+
+| COLUMN     | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION           |
+|------------|----------|-----------|--------------|----------------------------|
+| group_name | ✓        | string    | root_group   | The name of the ACL group. |
+| role_name  | ✓        | string    | root_role    | The name of the ACL role.  |
+
+2. Add the following data to your `data/import/local/full_EU.yml` file:
+
+**/data/import/local/full_EU.yml**
+
+```yaml
+# ...
+
+# Acl import
+- data_entity: acl-role
+  source: data/import/common/common/acl_role.csv
+- data_entity: acl-group
+  source: data/import/common/common/acl_group.csv
+- data_entity: acl-group-role
+  source: data/import/common/common/acl_group_role.csv
+```
+
+3. Register the following data import plugin:
+
+| PLUGIN                       | SPECIFICATION                                                                  | PREREQUISITES | NAMESPACE                                       |
+|------------------------------|--------------------------------------------------------------------------------|---------------|-------------------------------------------------|
+| AclGroupDataImportPlugin     | Imports ACL group data from the specified file.                                | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclRoleDataImportPlugin      | Imports ACL role data from the specified file.                                 | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclGroupRoleDataImportPlugin | Imports the connection between ACL role and ACL group from the specified file. | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupDataImportPlugin;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclGroupRoleDataImportPlugin;
+use Spryker\Zed\AclDataImport\Communication\Plugin\AclRoleDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     */
+    protected function getDataImporterPlugins(): array
+    {
+        return [
+            new AclGroupDataImportPlugin(),
+            new AclRoleDataImportPlugin(),
+            new AclGroupRoleDataImportPlugin(),
+        ];
+    }
+}
+```
+
+4. Enable the behaviors by registering the console commands:
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
+use Spryker\Zed\AclDataImport\AclDataImportConfig;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return list<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container)
+    {
+        $commands = [
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_ROLE),
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE),
+        ];
+
+        return $commands;
+    }
+}
+```
+
+4. Run the following command to import the data:
+
+```bash
+console data:import:data:import:acl-role
+console data:import:data:import:acl-group
+console data:import:data:import:acl-group-role
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_acl_group`, `spy_acl_role` and `spy_acl_groups_has_roles` tables in the database.
+
+{% endinfo_block %}
+
+
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| AccessControlEventDispatcherPlugin | Adds a listener to the `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |  | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher |
-| AclNavigationItemCollectionFilterPlugin | Checks if the navigation item can be accessed by the current user. |  | Spryker\Zed\Acl\Communication\Plugin\Navigation |
-| AclInstallerPlugin | Fills the DB  with required ACL data. |  | Spryker\Zed\Acl\Communication\Plugin |
-| GroupPlugin | Provides Acl Groups for User. |  | Spryker\Zed\Acl\Communication\Plugin |
-| AclEntityAclRolePostSavePlugin | Saves `RoleTransfer.aclEntityRules` to database. |  | Spryker\Zed\AclEntity\Communication\Plugin\Acl |
-| AclRulesAclRolesExpanderPlugin | Expands `Roles` transfer object with ACL rules. |  | Spryker\Zed\AclEntity\Communication\Plugin\Acl |
-| AclEntityApplicationPlugin | Enables ACL for the whole Application. |  | Spryker\Zed\AclEntity\Communication\Plugin\Application |
+| PLUGIN                                  | DESCRIPTION                                                                                                                                      | PREREQUISITES | NAMESPACE                                              |
+|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
+| AccessControlEventDispatcherPlugin      | Adds a listener to the `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |               | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher   |
+| AclNavigationItemCollectionFilterPlugin | Checks if the navigation item can be accessed by the current user.                                                                               |               | Spryker\Zed\Acl\Communication\Plugin\Navigation        |
+| AclInstallerPlugin                      | Fills the DB  with required ACL data.                                                                                                            |               | Spryker\Zed\Acl\Communication\Plugin                   |
+| GroupPlugin                             | Provides Acl Groups for User.                                                                                                                    |               | Spryker\Zed\Acl\Communication\Plugin                   |
+| AclEntityAclRolePostSavePlugin          | Saves `RoleTransfer.aclEntityRules` to database.                                                                                                 |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
+| AclRulesAclRolesExpanderPlugin          | Expands `Roles` transfer object with ACL rules.                                                                                                  |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
+| AclEntityApplicationPlugin              | Enables ACL for the whole Application.                                                                                                           |               | Spryker\Zed\AclEntity\Communication\Plugin\Application |
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
 
@@ -252,7 +391,8 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant Portal:
+Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant
+Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -278,7 +418,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
-### 5) Install the database data for ACL
+### 6) Install the database data for ACL
 
 ```bash
 console setup:init-db
@@ -287,6 +427,7 @@ console setup:init-db
 {% info_block warningBox "Verification" %}
 
 Make sure the following works correctly:
+
 * The request doesn't succeed for users without permission.
 * The user can see only the allowed menu links.
 * The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.

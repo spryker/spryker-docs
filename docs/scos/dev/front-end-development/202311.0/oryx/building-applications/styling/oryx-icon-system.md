@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/202311.0/oryx/styling/oryx-icon-system.html
 ---
 
-Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components of an  application.
+Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components of an application.
 
 ## Icon component
 
@@ -83,10 +83,13 @@ Here's an example of how to apply colors using standard CSS or the `--oryx-icon-
 ## Variable font styles
 
 When using Material Symbols, you can configure the adjustable variable font styles of the icons:
-* fill
-* weight
-* grade
-* optical size
+
+- fill
+- weight
+- grade
+- optical size
+
+Additionally, you can configure the direction of icons. For more details, see [Configuring icons for right-to-left](#configuring-icons-for-right-to-left).
 
 ### Global configuration
 
@@ -144,6 +147,24 @@ export const app = appBuilder().withTheme({
     ],
   },
 });
+```
+
+### Configuring icons for right-to-left
+
+Icon libraries are typically created for left-to-right (LTR), but when they're used in right-to-left (RTL), some icons much flip to reflect the layout. This only affects icons that express a direction, such as arrow icons.
+
+Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalization/oryx-directionality.html). To ensure that icons flip accordingly, the icon style configuration needs to have `direction` set to `true`. The following example shows how the forward icon is configured to flip in the RTL mode.
+
+```ts
+export const materialDesignIcons: IconMapper = {
+  id: "material-icons",
+  mapping: {
+    [IconTypes.Forward]: {
+      text: "chevron_right",
+      styles: { direction: true },
+    },
+  },
+};
 ```
 
 ## Icon configuration

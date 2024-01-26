@@ -1634,8 +1634,6 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
               - title: Application plugins
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
-          - title: Localization
-            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-localization.html
           - title: Styling
             include_versions:
             - "202212.0"
@@ -1710,6 +1708,13 @@ entries:
                   url: /docs/scos/dev/front-end-development/oryx/architecture/reactivity/signals.html
             - title: Server-side rendering
               url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
+
+        - title: Internationalization
+          nested:
+            - title: Localization
+              url: /docs/scos/dev/front-end-development/oryx/internationalization/oryx-localization.html
+            - title: Directionality
+              url: /docs/scos/dev/front-end-development/oryx/internationalization/oryx-directionality.html
 
     - title: Marketplace
       url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html

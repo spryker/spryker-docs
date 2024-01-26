@@ -453,7 +453,7 @@ console data:import glossary
 
 ### Console command for receiving messages
 
-This document describes how to [receive messages](/docs/pbc/all/mb2-receiving-messages.html).
+This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.md).
 
 ## Next steps
 

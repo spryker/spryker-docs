@@ -23,7 +23,7 @@ This command must be executed periodically. To set up this periodic execution, c
 ```php
 $jobs[] = [
     'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=30 --sleep=5',
+    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
     'schedule' => '* * * * *',
     'enable' => true,
     'stores' => $allStores,

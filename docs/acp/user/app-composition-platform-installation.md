@@ -38,13 +38,13 @@ The actions and level of effort required to make your project ACP-ready may vary
 
 To make your project ACP-ready, different update steps are necessary depending on the template version on which your project was started:
 
-- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.md) has basic ACP set up in place, all ACP modules (Apps & Platform) need updates.
+- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) has basic ACP set up in place, all ACP modules (Apps & Platform) need updates.
 
-- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md) or newer: you can skip the configuration step described in this document.
+- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or newer: you can skip the configuration step described in this document.
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.md), please [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
@@ -54,7 +54,7 @@ To get your project ACP-ready, it is important to ensure that your project modul
 
 #### ACP modules
 
-Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
 * `spryker/message-broker: ^1.10.0` or later
@@ -78,7 +78,7 @@ For each app you wish to use, ensure that you have the latest app-related SCOS m
 
 {% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 
-If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.md) or newer, you can skip this section! 
+If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or newer, you can skip this section. 
 
 {% endinfo_block %}
 

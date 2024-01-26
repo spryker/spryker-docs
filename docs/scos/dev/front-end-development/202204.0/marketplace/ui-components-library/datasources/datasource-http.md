@@ -2,6 +2,7 @@
 title: Datasource Http
 description: This document provides details about the Datasource Http service in the Components Library.
 template: concept-topic-template
+last_updated: Aug 8, 2023
 related:
   - title: Datasources
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html

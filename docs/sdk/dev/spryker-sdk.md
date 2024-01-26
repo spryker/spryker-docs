@@ -2,6 +2,7 @@
 title: Spryker SDK
 description: Learn about the Spryker SDK and how you can use it in your project.
 template: concept-topic-template
+last_updated: Aug 31, 2023
 redirect_from: 
     - /docs/sdk/dev/sdk-conventions.com
     - /docs/scos/dev/sdk/sdk.html

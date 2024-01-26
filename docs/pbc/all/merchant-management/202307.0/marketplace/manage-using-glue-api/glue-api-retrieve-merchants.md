@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve merchants"
 description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/merchants/retrieving-merchants.html
 related:

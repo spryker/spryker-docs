@@ -2,6 +2,7 @@
 title: VCS connector
 description: The VCS connector feature for the Spryker SDK.
 template: concept-topic-template
+last_updated: Jan 18, 2023
 ---
 
 VCS Connector lets you use a different VCS system with a single command interface.

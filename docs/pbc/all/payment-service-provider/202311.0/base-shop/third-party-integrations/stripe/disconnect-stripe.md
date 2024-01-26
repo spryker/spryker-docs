@@ -2,6 +2,7 @@
 title: Disconnect Stripe
 description: Learn how you can disconnect the Stripe app from your Spryker shop
 template: howto-guide-template
+last_updated: Jan 16, 2024
 redirect_from:
   - /docs/pbc/all/payment-service-provider/stripe/disconnect-stripe.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/integration-in-the-back-office/disconnect-stripe.html

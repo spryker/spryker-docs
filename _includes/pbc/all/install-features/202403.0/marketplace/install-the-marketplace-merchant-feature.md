@@ -9,14 +9,12 @@ Follow the steps below to install the Marketplace Merchant feature core.
 
 Install the required features:
 
-| NAME | VERSION |INTEGRATION GUIDE |
-| --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Merchant | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |
+| NAME                           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
+|--------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
+| Merchant                       | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                                        |
 
 ### 1) Install the required modules using Composer
-
-Install the required modules:
 
 ```bash
 composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
@@ -26,22 +24,21 @@ composer require spryker-feature/marketplace-merchant:"{{page.version}}" --updat
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| MerchantProfile | vendor/spryker/merchant-profile |
+| MODULE                    | EXPECTED DIRECTORY                          |
+|---------------------------|---------------------------------------------|
+| MerchantProfile           | vendor/spryker/merchant-profile             |
 | MerchantProfileDataImport | vendor/spryker/merchant-profile-data-import |
-| MerchantProfileGui | vendor/spryker/merchant-profile-gui |
-| MerchantSearch | vendor/spryker/merchant-search |
-| MerchantSearchExtension | vendor/spryker/merchant-search-extension |
-| MerchantUser | vendor/spryker/merchant-user |
-| MerchantUserGui |	vendor/spryker/merchant-user-gui |
-| MerchantStorage | vendor/spryker/merchant-storage |
+| MerchantProfileGui        | vendor/spryker/merchant-profile-gui         |
+| MerchantSearch            | vendor/spryker/merchant-search              |
+| MerchantSearchExtension   | vendor/spryker/merchant-search-extension    |
+| MerchantUser              | vendor/spryker/merchant-user                |
+| MerchantUserGui           | vendor/spryker/merchant-user-gui            |
+| MerchantStorage           | vendor/spryker/merchant-storage             |
+| OauthMerchantUser         | vendor/spryker/oauth-merchant-user          |
 
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
-
-Set up database schema:
 
 1. Adjust the schema definition so entity changes trigger events:
 
@@ -76,12 +73,12 @@ console transfer:generate
 
 Make sure that the following changes have occurred in the database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-|---|---|---|
+| DATABASE ENTITY      | TYPE  | EVENT   |
+|----------------------|-------|---------|
 | spy_merchant_storage | table | created |
-| spy_merchant_search | table | created |
+| spy_merchant_search  | table | created |
 | spy_merchant_profile | table | created |
-| spy_merchant_user | table | created |
+| spy_merchant_user    | table | created |
 
 {% endinfo_block %}
 
@@ -95,30 +92,72 @@ console transfer:generate
 
 Make sure that the following changes have occurred in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-|---|---|---|---|
-| MerchantProfileAddress | class | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer |
-| MerchantProfileCollection | class | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer|
-| MerchantProfileCriteria | class | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaTransfer |
-| MerchantProfileGlossaryAttributeValues | class | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer |
-| MerchantProfileLocalizedGlossaryAttributes | class | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
-| MerchantSearch | class | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer |
-| MerchantSearchCollection | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantUser | class | Created | src/Generated/Shared/Transfer/MerchantUserTransfer |
-| MerchantUserCriteria | class | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer |
-| MerchantUserSearchConditions | class | Created | src/Generated/Shared/Transfer/MerchantUserSearchConditionsTransfer |
-| MerchantUserResponse | class | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer |
-| MerchantUserCollection | class | Created | src/Generated/Shared/Transfer/MerchantUserCollectionTransfer |
-| SpyMerchantProfileEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer |
-| SpyMerchantSearchEntity | class | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer |
-| SpyMerchantStorageEntity |  class | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer |
-| SpyMerchantUserEntity | class | Created |src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer |
-| UrlStorage.fkResourceMerchant | property | Created |src/Generated/Shared/Transfer/UrlStorageTransfer |
+| TRANSFER                                   | TYPE     | EVENT   | PATH                                                                             |
+|--------------------------------------------|----------|---------|----------------------------------------------------------------------------------|
+| MerchantProfileAddress                     | class    | Created | src/Generated/Shared/Transfer/MerchantProfileAddressTransfer                     |
+| MerchantProfileCollection                  | class    | Created | src/Generated/Shared/Transfer/MerchantProfileCollectionTransfer                  |
+| MerchantProfileCriteria                    | class    | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaTransfer                    |
+| MerchantProfileGlossaryAttributeValues     | class    | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer     |
+| MerchantProfileLocalizedGlossaryAttributes | class    | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
+| MerchantSearch                             | class    | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer                             |
+| MerchantSearchCollection                   | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer                   |
+| MerchantUser                               | class    | Created | src/Generated/Shared/Transfer/MerchantUserTransfer                               |
+| MerchantUserCriteria                       | class    | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer                       |
+| MerchantUserResponse                       | class    | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer                       |
+| SpyMerchantProfileEntity                   | class    | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer                   |
+| SpyMerchantSearchEntity                    | class    | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer                    |
+| SpyMerchantStorageEntity                   | class    | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer                   |
+| SpyMerchantUserEntity                      | class    | Created | src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer                      |
+| UrlStorage.fkResourceMerchant              | property | Created | src/Generated/Shared/Transfer/UrlStorageTransfer                                 |
 
 {% endinfo_block %}
 
+### 3) Optional: Set up configuration
 
-### 3) Add Zed translations
+1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
+
+2. Define the endpoints which merchant users have access to:
+
+**src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\OauthMerchantUser;
+
+use Spryker\Zed\OauthMerchantUser\OauthMerchantUserConfig as SprykerOauthMerchantUserConfig;
+
+class OauthMerchantUserConfig extends SprykerOauthMerchantUserConfig
+{
+    /**
+     * Specification:
+     * - Returns a list of configurations for endpoints accessible to merchant users.
+     * - Structure example:
+     * [
+     *      '/example' => [
+     *          'isRegularExpression' => false,
+     *      ],
+     *      '/\/example\/.+/' => [
+     *          'isRegularExpression' => true,
+     *          'methods' => [
+     *              'patch',
+     *              'delete',
+     *          ],
+     *      ],
+     * ]
+     *
+     * @api
+     *
+     * @return array<string, mixed>
+     */
+    public function getAllowedForMerchantUserPaths(): array
+    {
+        return [];
+    }
+}
+```
+
+### 4) Add Zed translations
 
 Generate new translation cache for Zed:
 
@@ -126,13 +165,13 @@ Generate new translation cache for Zed:
 console translator:generate-cache
 ```
 
-### 4) Set up behavior
+### 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                               | DESCRIPTION                                                                                              | PREREQUISITES | NAMESPACE                                                            |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| MerchantProfileExpanderPlugin                        | Expands merchant with profile data.                                                                      |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
+| MerchantProfileMerchantBulkExpanderPlugin            | Expands merchants with profile data.                                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostCreatePlugin              | Creates merchant profile on merchant create action.                                                      |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostUpdatePlugin              | Updates merchant profile on merchant update action.m                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileContactPersonFormTabExpanderPlugin    | Adds an extra tab to merchant edit and create forms for editing and creating contact person data.        |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
@@ -144,7 +183,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
 | MerchantProductOfferStorageExpanderPlugin            | Returns `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
 | MerchantProductOfferStorageFilterPlugin              | Filters `ProductOfferCollection` transfer object by active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantUserTwigPlugin                               | Adds 'merchantName' Twig global variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
@@ -154,7 +192,7 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Zed\Merchant;
 
 use Spryker\Zed\Merchant\MerchantDependencyProvider as SprykerMerchantDependencyProvider;
-use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileExpanderPlugin;
+use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantBulkExpanderPlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantPostCreatePlugin;
 use Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant\MerchantProfileMerchantPostUpdatePlugin;
   use Spryker\Zed\MerchantUser\Communication\Plugin\Merchant\SyncMerchantUsersStatusMerchantPostUpdatePlugin;
@@ -183,12 +221,12 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
+     * @return list<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantBulkExpanderPluginInterface>
      */
-    protected function getMerchantExpanderPlugins(): array
+    protected function getMerchantBulkExpanderPlugins(): array
     {
         return [
-            new MerchantProfileExpanderPlugin(),
+            new MerchantProfileMerchantBulkExpanderPlugin(),
         ];
     }
 }
@@ -198,7 +236,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that:
+Make sure the following applies:
 
 * When you create a merchant using `MerchantFacade::createMerchant()`, its profile also gets created.
 * When you update a merchant using `MerchantFacade::updateMerchant()`, its profile also gets updated.
@@ -264,7 +302,11 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit a merchant in the **Merchants** section of the Back Office, you can see merchant profile related tabs: **Contact Person**, **Merchant Profile**, **Legal Information**, **Merchant User**.
+Make sure that, on the **Edit Merchant: `merchant_id`** page in the Back Office, you can see the following tabs:
+* **Contact Person**
+* **Merchant Profile**
+* **Legal Information**
+* **Merchant User**
 
 {% endinfo_block %}
 
@@ -318,29 +360,52 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you retrieve a product offer from storage, you can see merchant transfer property.
+Make sure that, when you retrieve a product offer from storage, you can see the merchant transfer property.
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/AclMerchantAgent/AclMerchantAgentConfig.php**
+#### Optional: Enable the Backend API authentication
+
+1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
+
+
+2. Register the following plugins:
+
+| PLUGIN                                               | SPECIFICATION                                      | PREREQUISITES | NAMESPACE                                                             |
+|------------------------------------------------------|----------------------------------------------------|---------------|-----------------------------------------------------------------------|
+| MerchantUserTypeOauthScopeAuthorizationCheckerPlugin | Authorizes user by merchant user scopes.           |               | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
+| MerchantUserTypeOauthScopeProviderPlugin             | Provides the OAuth scopes related to merchant users.   |               | Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector |
+
+**src/Pyz/Zed/OauthUserConnector/OauthUserConnectorDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Zed\Twig;
+namespace Pyz\Zed\OauthUserConnector;
 
-use Spryker\Zed\MerchantUser\Communication\Plugin\Twig\MerchantUserTwigPlugin;
-use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+use Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector\MerchantUserTypeOauthScopeAuthorizationCheckerPlugin;
+use Spryker\Zed\OauthMerchantUser\Communication\Plugin\OauthUserConnector\MerchantUserTypeOauthScopeProviderPlugin;
+use Spryker\Zed\OauthUserConnector\OauthUserConnectorDependencyProvider as SprykerOauthUserConnectorDependencyProvider;
 
-class TwigDependencyProvider extends SprykerTwigDependencyProvider
+class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     * @return list<\Spryker\Zed\OauthUserConnectorExtension\Dependency\Plugin\UserTypeOauthScopeProviderPluginInterface>
      */
-    protected function getTwigPlugins(): array
+    protected function getUserTypeOauthScopeProviderPlugins(): array
     {
         return [
-            new MerchantUserTwigPlugin(),
+            new MerchantUserTypeOauthScopeProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\OauthUserConnectorExtension\Dependency\Plugin\UserTypeOauthScopeAuthorizationCheckerPluginInterface>
+     */
+    protected function getUserTypeOauthScopeAuthorizationCheckerPlugins(): array
+    {
+        return [
+            new MerchantUserTypeOauthScopeAuthorizationCheckerPlugin(),
         ];
     }
 }
@@ -348,16 +413,32 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `merchantName`  global Twig variable is available.
+1. Make sure that you can authenticate as a merchant user:
+
+* `POST https://glue-backend.mysprykershop.com/token`
+
+```json
+{
+    "data": {
+        "type": "token",
+        "attributes": {
+            "grant_type": "password",
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
+        }
+    }
+}
+```
+
+Make sure the output contains the 201 response with a valid token. Make sure that the warehouse user can assess only the endpoints specified in **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.php**.
 
 {% endinfo_block %}
 
-### 5) Configure navigation
+### 6) Configure navigation
 
-Add marketplace section to `navigation.xml`:
+1. Add the marketplace section to the navigation:
 
 **config/Zed/navigation.xml**
-
 ```xml
 <?xml version="1.0"?>
 <config>
@@ -378,7 +459,7 @@ Add marketplace section to `navigation.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -386,11 +467,11 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can see the **Marketplace** button in the navigation menu of the Back Office.
+Make sure there is the **Marketplace** button in the Back Office navigation.
 
 {% endinfo_block %}
 
-### 6) Configure export to Redis and Elasticsearch
+### 7) Configure export to Redis and Elasticsearch
 
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
 
@@ -398,10 +479,10 @@ This step publishes tables on change (create, edit) to `spy_merchant_profile_sto
 
 1. Set up event listeners and publishers:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin |
-| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
+| PLUGIN                         | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                          |
+|--------------------------------|---------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
+| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
+| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table.              |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -477,9 +558,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| PLUGIN                                            | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                              |
+|---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
 
@@ -533,9 +614,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set up re-generate and re-sync features:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
+| PLUGIN                            | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                        |
+|-----------------------------------|---------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
+| MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -572,7 +653,7 @@ Make sure that when merchant profile entities are created or updated through ORM
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
 
-1. Setup event listeners and publishers by registering the plugins:
+1. Set up event listeners and publishers by registering the plugins:
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -600,7 +681,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-2. Register synchronization queue:
+2. Register a synchronization queue:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
@@ -628,9 +709,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 3. Configure message processors:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. |   | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| PLUGIN                                           | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                              |
+|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
+| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 ```php
@@ -661,9 +742,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Setup re-generate and re-sync features:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. |   | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
+| PLUGIN                                          | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
+|-------------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. |               | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -715,9 +796,9 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 
 6. Set up result formatters:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer.    | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
+| PLUGIN                              | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                           |
+|-------------------------------------|-----------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
+| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer. |               |  Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
@@ -745,10 +826,10 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 7. Set up query expanders:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|----|----|----|----|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search. |   | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin | Allows searching to filter out merchants that do not belong to the current store. |   | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander |
+| PLUGIN                                     | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                |
+|--------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search.                                      |               | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| StoreQueryExpanderPlugin                   | Allows searching to filter out merchants that do not belong to the current store. |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander  |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
@@ -797,11 +878,11 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
 
 | TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
-|---|---|
-| Merchant | merchant:1 |
+|---------------|-------------------------------------|
+| Merchant      | merchant:1                          |
 
 {% endinfo_block %}
 
@@ -993,16 +1074,18 @@ Make sure that when merchant entities are created or updated through ORM, they a
 
 </details>
 
-### 7) Import data
+### 8) Import data
 
-To import data:
+To import data follow the steps in the following sections.
+
+### Import merchant profile data
 
 1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
 <summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
 
-```
+```csv
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number
 MER000001,E-Commerce Manager,Mr,Harald,Schmidt,+49 30 208498350,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-logo.png,info@spryker.com,+49 30 234567891,Spryker is the main merchant at the Demo Marketplace.,Spryker ist der Haupthändler auf dem Demo-Marktplatz.,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/spryker-banner.png,1-3 days,1-3 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>","<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Vertreten durch<br>Geschäftsführer: Alexander Graf, Boris Lokschin<br>Registergericht: Hamburg<br>Registernummer: HRB 134310<br></p>",Spryker Systems GmbH values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Spryker Systems GmbH.,1,+49 30 234567800
 MER000002,Country Manager DE,Ms,Martha,Farmer,+31 123 345 678,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-logo.png,hi@video-king.nl,+31 123 345 777,"Video King is a premium provider of video equipment. In business since 2010, we understand the needs of video professionals and enthusiasts and offer a wide variety of products with competitive prices. ","Video King ist ein Premium-Anbieter von Videogeräten. Wir sind seit 2010 im Geschäft, verstehen die Bedürfnisse von Videoprofis und -enthusiasten und bieten eine große Auswahl an Produkten zu wettbewerbsfähigen Preisen an. ",https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,https://d2s0ynfc62ej12.cloudfront.net/merchant/videoking-banner.png,2-4 days,2-4 Tage,"<p><span style=""font-weight: bold;"">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=""font-weight: bold;"">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=""font-weight: bold;"">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>","<p><span style=""font-weight: bold;"">§ 1 Geltungsbereich &amp; Abwehrklausel</span><br><br>(1) Für die über diesen Internet-Shop begründeten Rechtsbeziehungen zwischen dem Betreiber des Shops (nachfolgend „Anbieter“) und seinen Kunden gelten ausschließlich die folgenden Allgemeinen Geschäftsbedingungen in der jeweiligen Fassung zum Zeitpunkt der Bestellung. <br><br>(2) Abweichende Allgemeine Geschäftsbedingungen des Kunden werden zurückgewiesen.<br><br><span style=""font-weight: bold;"">§ 2 Zustandekommen des Vertrages</span><br><br>(1) Die Präsentation der Waren im Internet-Shop stellt kein bindendes Angebot des Anbieters auf Abschluss eines Kaufvertrages dar. Der Kunde wird hierdurch lediglich aufgefordert, durch eine Bestellung ein Angebot abzugeben. <br><br>(2) Durch das Absenden der Bestellung im Internet-Shop gibt der Kunde ein verbindliches Angebot gerichtet auf den Abschluss eines Kaufvertrages über die im Warenkorb enthaltenen Waren ab. Mit dem Absenden der Bestellung erkennt der Kunde auch diese Geschäftsbedingungen als für das Rechtsverhältnis mit dem Anbieter allein maßgeblich an. <br><br>(3) Der Anbieter bestätigt den Eingang der Bestellung des Kunden durch Versendung einer Bestätigungs-Email. Diese Bestellbestätigung stellt noch nicht die Annahme des Vertragsangebotes durch den Anbieter dar. Sie dient lediglich der Information des Kunden, dass die Bestellung beim Anbieter eingegangen ist. Die Erklärung der Annahme des Vertragsangebotes erfolgt durch die Auslieferung der Ware oder eine ausdrückliche Annahmeerklärung.<br><br><span style=""font-weight: bold;"">§ 3 Eigentumsvorbehalt</span><br><br>Die gelieferte Ware verbleibt bis zur vollständigen Bezahlung im Eigentum des Anbieters.<br><br><span style=""font-weight: bold;"">§ 4 Fälligkeit</span><br><br>Die Zahlung des Kaufpreises ist mit Vertragsschluss fällig.</p>","You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.","Sie haben das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen. Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter, der nicht der Beförderer ist, die letzte Ware in Besitz genommen hat. Sie können dafür das beigefügte Muster-Widerrufsformular verwenden, das jedoch nicht vorgeschrieben ist. Zur Wahrung der Widerrufsfrist reicht es aus, dass Sie die Mitteilung über die Ausübung des Widerrufsrechts vor Ablauf der Widerrufsfrist absenden.",<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL <br><br>Phone: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Represented by<br>Managing Director: Max Mustermann<br>Register Court: Amsterdam<br>Register Number: 1234.4567<br></p>,<p>Video King<br><br>Gilzeweg 24<br>4854SG Bavel<br>NL<br><br>Telefon: +31 123 45 6789<br>Email: hi@video-king.nl<br><br>Vertreten durch<br>Geschäftsführer: Max Mustermann<br>Registergericht: Amsterdam<br>Registernummer: 1234.4567<br></p>,Video King values the privacy of your personal data.,Für die Abwicklung ihrer Bestellung gelten auch die Datenschutzbestimmungen von Video King.,1,+31 123 345 733
@@ -1019,39 +1102,39 @@ Budget Cameras bietet eine große Auswahl an Digitalkameras mit den niedrigsten 
 
 </details>
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-|-|-|-|-|-|
-| merchant_reference | &check; | String | MER000007 | Merchant identifier. |
-| contact_person_role |   | String | E-Commerce Manager | Role of the contact person of a merchant. |
-| contact_person_title |   | String | Mr | The title shown for the contact person of a merchant. |
-| contact_person_first_name |   | String | Harald | First name of the contact person of a merchant. |
-| contact_person_last_name |   | String | Schmidt | Last name of the contact person of a merchant. |
-| contact_person_phone |   | String | 030 234567891a | Phone number of the contact person of a merchant. |
-| banner_url |   | String | `http://cdn-link/banner.png` | Default banner URL of a merchant if a locale specific one does not exist. |
-| logo_url |   | String | `http://cdn-link/logo.png` | Logo URL of a merchant. |
-| public_email |   | String | `email@merchant-domain.com` | Public email for communication of a merchant. |
-| public_phone |   | String | 030 234567891 | Public phone for communication of a merchant. |
-| description_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Description of a merchant in the en_US locale. |
-| description_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Description of a merchant in the de_DE locale. |
-| banner_url_glossary_key.en_US |   | String | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant. |
-| banner_url_glossary_key.de_DE |   | String | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant. |
-| delivery_time_glossary_key.en_US |   | String | 1-3 days | Average delivery time of a merchant in the en_US locale. |
-| delivery_time_glossary_key.de_DE |   | String | 1-3 days | Average delivery time of a merchant in the de_DE locale. |
-| terms_conditions_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Terms and conditions of a merchant in the en_US locale. |
-| terms_conditions_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Terms and conditions of a merchant in the de_DE locale. |
-| cancellation_policy_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Cancellation policy of a merchant in the en_US locale. |
-| cancellation_policy_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Cancellation policy of a merchant in the de_DE locale. |
-| imprint_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Imprint of a merchant in the en_US locale. |
-| imprint_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Imprint of a merchant in the de_DE locale. |
-| data_privacy_glossary_key.en_US |   | String | Lorem ipsum dolor sit amet | Data privacy statement of a merchant in the en_US locale. |
-| data_privacy_glossary_key.de_DE |   | String | Lorem ipsum dolor sit amet | Data privacy statement of a merchant in the de_DE locale. |
-| fax_number |   | String | 030 234567800 | Fax number of a merchant. |
+| COLUMN                                 | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                                                          |
+|----------------------------------------|----------|-----------|---------------------------------|---------------------------------------------------------------------------|
+| merchant_reference                     | &check;  | String    | MER000007                       | Merchant identifier.                                                      |
+| contact_person_role                    |          | String    | E-Commerce Manager              | Role of the contact person of a merchant.                                 |
+| contact_person_title                   |          | String    | Mr                              | The title shown for the contact person of a merchant.                     |
+| contact_person_first_name              |          | String    | Harald                          | First name of the contact person of a merchant.                           |
+| contact_person_last_name               |          | String    | Schmidt                         | Last name of the contact person of a merchant.                            |
+| contact_person_phone                   |          | String    | 030 234567891a                  | Phone number of the contact person of a merchant.                         |
+| banner_url                             |          | String    | `http://cdn-link/banner.png`    | Default banner URL of a merchant if a locale specific one does not exist. |
+| logo_url                               |          | String    | `http://cdn-link/logo.png`      | Logo URL of a merchant.                                                   |
+| public_email                           |          | String    | `email@merchant-domain.com`     | Public email for communication of a merchant.                             |
+| public_phone                           |          | String    | 030 234567891                   | Public phone for communication of a merchant.                             |
+| description_glossary_key.en_US         |          | String    | Lorem ipsum dolor sit amet      | Description of a merchant in the en_US locale.                            |
+| description_glossary_key.de_DE         |          | String    | Lorem ipsum dolor sit amet      | Description of a merchant in the de_DE locale.                            |
+| banner_url_glossary_key.en_US          |          | String    | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant.                                 |
+| banner_url_glossary_key.de_DE          |          | String    | `http://cdn-link/en-banner.png` | Locale specific banner URL of a merchant.                                 |
+| delivery_time_glossary_key.en_US       |          | String    | 1-3 days                        | Average delivery time of a merchant in the en_US locale.                  |
+| delivery_time_glossary_key.de_DE       |          | String    | 1-3 days                        | Average delivery time of a merchant in the de_DE locale.                  |
+| terms_conditions_glossary_key.en_US    |          | String    | Lorem ipsum dolor sit amet      | Terms and conditions of a merchant in the en_US locale.                   |
+| terms_conditions_glossary_key.de_DE    |          | String    | Lorem ipsum dolor sit amet      | Terms and conditions of a merchant in the de_DE locale.                   |
+| cancellation_policy_glossary_key.en_US |          | String    | Lorem ipsum dolor sit amet      | Cancellation policy of a merchant in the en_US locale.                    |
+| cancellation_policy_glossary_key.de_DE |          | String    | Lorem ipsum dolor sit amet      | Cancellation policy of a merchant in the de_DE locale.                    |
+| imprint_glossary_key.en_US             |          | String    | Lorem ipsum dolor sit amet      | Imprint of a merchant in the en_US locale.                                |
+| imprint_glossary_key.de_DE             |          | String    | Lorem ipsum dolor sit amet      | Imprint of a merchant in the de_DE locale.                                |
+| data_privacy_glossary_key.en_US        |          | String    | Lorem ipsum dolor sit amet      | Data privacy statement of a merchant in the en_US locale.                 |
+| data_privacy_glossary_key.de_DE        |          | String    | Lorem ipsum dolor sit amet      | Data privacy statement of a merchant in the de_DE locale.                 |
+| fax_number                             |          | String    | 030 234567800                   | Fax number of a merchant.                                                 |
 
 2. Prepare merchant profile address data according to your requirements using the demo data:
 
 **/data/import/common/common/marketplace/merchant_profile_address.csv**
 
-```
+```csv
 merchant_reference,country_iso2_code,country_iso3_code,address1,address2,address3,city,zip_code,longitude,latitude
 MER000001,DE,DEU,Julie-Wolfthorn-Straße,1,,Berlin,10115,52.534105,13.384458
 MER000002,NL,,Gilzeweg,24,,Bavel,4854SG,51.558107,4.838470
@@ -1062,25 +1145,25 @@ MER000003,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,,
 MER000007,DE,DEU,Caroline-Michaelis-Straße,8,,Berlin,10115,53.552463,10.004663
 ```
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-|-|-|-|-|-|
-| merchant_reference | &check; | String | MER000006 | Merchant identifier. |
-| country_iso2_code |   | String | DE | Country ISO-2 code the address exists in. |
-| country_iso3_code |   | String | DEU | Country ISO-3 code the address exists in. |
-| address1 |   | String | Caroline-Michaelis-Straße | Address line 1 of a merchant. |
-| address2 |   | String | 8 | Address line 2 of a merchant. |
-| address3 |   | String | Second floor | Address line 3 of a merchant. |
-| city |   | String | Berlin | City address of a merchant. |
-| zip_code |   | String | 10115 | Zip code address of a merchant. |
-| longitude |   | String | 52.534105 | Longitude value of a merchant. |
-| latitude |   | String | 13.384458 | Latitude value of a merchant. |
+| COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                          |
+|--------------------|----------|-----------|---------------------------|-------------------------------------------|
+| merchant_reference | &check;  | String    | MER000006                 | Merchant identifier.                      |
+| country_iso2_code  |          | String    | DE                        | Country ISO-2 code the address exists in. |
+| country_iso3_code  |          | String    | DEU                       | Country ISO-3 code the address exists in. |
+| address1           |          | String    | Caroline-Michaelis-Straße | Address line 1 of a merchant.             |
+| address2           |          | String    | 8                         | Address line 2 of a merchant.             |
+| address3           |          | String    | Second floor              | Address line 3 of a merchant.             |
+| city               |          | String    | Berlin                    | City address of a merchant.               |
+| zip_code           |          | String    | 10115                     | Zip code address of a merchant.           |
+| longitude          |          | String    | 52.534105                 | Longitude value of a merchant.            |
+| latitude           |          | String    | 13.384458                 | Latitude value of a merchant.             |
 
 3. Register the following plugins to enable data import:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantProfileDataImportPlugin | Imports merchant profile data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
-| MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. |   | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
+| PLUGIN                                 | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                  |
+|----------------------------------------|----------------------------------------------------------|---------------|------------------------------------------------------------|
+| MerchantProfileDataImportPlugin        | Imports merchant profile data into the database.         |               | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
+| MerchantProfileAddressDataImportPlugin | Imports merchant profile address data into the database. |               | Spryker\Zed\MerchantProfileDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -1112,7 +1195,8 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
-To import merchant user data, perform the following steps:
+### Import merchant users
+
 1. Prepare merchant user data according to your requirements using the demo data:
 
 **/data/import/common/common/marketplace/merchant_user.csv**
@@ -1122,12 +1206,12 @@ merchant_reference,username
 MER000006,michele@sony-experts.com
 ```
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-|-|-|-|-|-|
-| merchant_reference | &check; | String | MER000006  | Identifier of the merchant in the system. Have to be unique. |
-| username | &check; | String | `michele@sony-experts.com`  | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user.  |
+| COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE               | DATA EXPLANATION                                                                                                            |
+|--------------------|----------|-----------|----------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| merchant_reference | &check;  | String    | MER000006                  | Identifier of the merchant in the system. Have to be unique.                                                                |
+| username           | &check;  | String    | `michele@sony-experts.com` | Username of the merchant user. It is an email address that is used for logging into the Merchant Portal as a merchant user. |
 
-2. Create the Step model for writing merchant user data.
+2. Create the Step model for writing merchant user data:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
@@ -1234,7 +1318,7 @@ class MerchantUserWriterStep implements DataImportStepInterface
 
 </details>
 
-3. Add the merchant user import type to full import (if needed).
+3. Optional: Add the merchant user import type to full import:
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
 
@@ -1266,7 +1350,7 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-4. Enable merchant user data import command.
+4. Enable the merchant user data import command:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
@@ -1339,7 +1423,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
 </details>
 
-5. Create and prepare your data import configuration files according to your requirements using our demo config template:
+5. Create and prepare your data import configuration files according to your requirements using the demo config template:
 
 **data/import/common/marketplace_import_config_EU.yml**
 
@@ -1355,7 +1439,7 @@ actions:
     source: data/import/common/common/marketplace/merchant_profile_address.csv
  ```
 
-6. Import data.
+6. Import data:
 
 ```bash
 console data:import merchant-user
@@ -1363,34 +1447,43 @@ console data:import merchant-user
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the imported data has been added to the `spy_merchant_profile`, `spy_merchant_profile_address` and `spy_merchant_user` tables.
+Make sure the data has been added to the following tables:
+* `spy_merchant_profile`
+* `spy_merchant_profile_address`
+* `spy_merchant_user`
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-Follow the steps below to install the Marketplace Merchant feature front end.
+Follow the steps below to install the Marketplace Merchant feature frontend.
 
 ### Prerequisites
 
 Install the required features:
 
-| NAME | VERSION | INSTALLATION GUIDE |
-|-|-|-|
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
+|--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
 ```bash
 composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
 ```
 
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                | EXPECTED DIRECTORY                          |
+|-----------------------|---------------------------------------------|
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
-| MerchantWidget | vendor/spryker-shop/merchant-widget |
-| MerchantPage | vendor/spryker-shop/merchant-page |
+| MerchantWidget        | vendor/spryker-shop/merchant-widget         |
+| MerchantPage          | vendor/spryker-shop/merchant-page           |
+
+{% endinfo_block %}
+
 
 ### 2) Add translations
 
@@ -1400,7 +1493,7 @@ Add Yves translations:
 
 **data/import/common/common/glossary.csv**
 
-```
+```csv
 merchant.sold_by,Sold by,en_US
 merchant.sold_by,Verkauft durch,de_DE
 merchant_profile.email,Email Address,en_US
@@ -1429,17 +1522,17 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-| -------------- | --------------- | ------ | ---------------- |
-| SoldByMerchantWidget      | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantWidget\Widget |
+| PLUGIN               | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                              |
+|----------------------|------------------------------------------------------------------------|---------------|----------------------------------------|
+| SoldByMerchantWidget | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1465,7 +1558,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1473,24 +1566,18 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
-
-| MODULE | TEST |
-| ----------------- | ----------------- |
-| SoldByMerchantWidget | Open product detail page, and you will see the sold by merchant text. (May require Marketplace Product integration) |
+To verify `SoldByMerchantWidget` has been registered, make sure the **Sold by merchant:** section is displayed on the Product Details pages. This also requires the [Marketplace Product feature to be installed](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html).
 
 {% endinfo_block %}
 
 ### 4) Set up behavior
 
-To set up behavior:
-
 1. Enable the following behaviors by registering the plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://yves.mysprykershop.com/merchant/{merchantReference}`. |   | SprykerShop\Yves\MerchantPage\Plugin |
-| UrlStorageMerchantMapperPlugin | Provides access to merchant storage data in the controller related to the `https://yves.mysprykershop.com/merchant/{merchantReference}` URL.  | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
+| PLUGIN                            | SPECIFICATION                                                                                                                                | PREREQUISITES                                                         | NAMESPACE                             |
+|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|
+| MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://mysprykershop.com/merchant/{merchantReference}`.                                           |                                                                       | SprykerShop\Yves\MerchantPage\Plugin  |
+| UrlStorageMerchantMapperPlugin    | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
 
@@ -1542,7 +1629,7 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+Make sure the merchant page is accessible at `https://mysprykershop/de/merchant/spryker`.
 
 {% endinfo_block %}
 
@@ -1554,14 +1641,12 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can view merchant profile data at `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+Make sure merchant profile data is displayed at `https://mysprykershop.com/de/merchant/spryker`.
 
 {% endinfo_block %}
 
 ## Install related features
 
-Integrate the following related features:
-
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
-| - | - | -|
-| Marketplace Merchant API | &check;  |  [Install the Marketplace Merchant feature ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |
+| FEATURE                  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                              |
+|--------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Merchant API | &check;                          | [Install the Marketplace Merchant feature ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) |

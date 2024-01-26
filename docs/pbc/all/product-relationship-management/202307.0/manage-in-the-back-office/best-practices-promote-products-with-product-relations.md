@@ -2,6 +2,7 @@
 title: "Best practices: Promote products with product relations"
 description: Learn how to promote products using product relations
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html

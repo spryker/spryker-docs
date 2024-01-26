@@ -2,6 +2,7 @@
 title: Datasource Dependable
 description: Details about the Datasource Dependable service in the components library.
 template: concept-topic-template
+last_updated: Jan 16, 2024
 related:
   - title: Datasource Trigger
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html

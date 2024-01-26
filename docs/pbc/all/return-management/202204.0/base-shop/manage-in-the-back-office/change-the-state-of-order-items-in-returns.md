@@ -2,6 +2,7 @@
 title: Change the state of order items in returns
 description: Learn how to change the state of order items in returns in the Back Office.
 template: back-office-user-guide-template
+last_updated: May 12, 2023
 related:
   - title: Creating returns
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-returns.html

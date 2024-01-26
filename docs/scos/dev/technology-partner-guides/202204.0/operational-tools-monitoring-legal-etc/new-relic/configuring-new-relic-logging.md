@@ -1,6 +1,7 @@
 ---
 title: Configuring New Relic logging
 template: howto-guide-template
+last_updated: May 13, 2022
 redirect_from:
     - /scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
 ---

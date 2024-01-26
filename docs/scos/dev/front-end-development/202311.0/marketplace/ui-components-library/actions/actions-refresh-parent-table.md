@@ -2,6 +2,7 @@
 title: Actions Refresh Parent Table
 description: This document provides details about the Actions Refresh Parent Table service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-refresh-parent-table.html
 related:

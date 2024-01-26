@@ -2,6 +2,7 @@
 title: Extending the project
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/index.html
 related:

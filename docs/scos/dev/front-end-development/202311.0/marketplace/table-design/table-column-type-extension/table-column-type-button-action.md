@@ -2,6 +2,7 @@
 title: Table Column Type Button Action
 description: This document provides details about the Table Column Type Button Action in the Components Library.
 template: concept-topic-template
+last_updated: Jan 17, 2024
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html

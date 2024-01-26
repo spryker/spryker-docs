@@ -183,8 +183,8 @@ use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDepende
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
   /**
-  * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-  */
+   * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+   */
   protected function getAssetStoragePlugins(): array
   {
       return [

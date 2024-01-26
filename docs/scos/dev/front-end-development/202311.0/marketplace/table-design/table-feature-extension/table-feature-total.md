@@ -2,6 +2,7 @@
 title: Table Feature Total
 description: This document provides details about the Table Feature Total component in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-total.html
 related:

@@ -2,6 +2,7 @@
 title: Set up the message broker
 Descriptions: Learn how to set up the message broker
 template: howto-guide-template
+last_updated: Dec 14, 2023
 ---
 This document describes how to set up the message broker for your app.
 

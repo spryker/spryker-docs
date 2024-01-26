@@ -2,6 +2,7 @@
 title: Editing shipments
 description: Learn how to edit shipments in the Back Office
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 related:
   - title: Creating shipments
     link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-shipments.html

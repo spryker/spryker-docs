@@ -2,6 +2,7 @@
 title: Edit product labels
 description: Learn how to edit product labels in the Back Office
 template: back-office-user-guide-template
+last_updated: May 10, 2023
 related:
   - title: Create product labels
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html

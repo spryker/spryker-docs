@@ -2,6 +2,7 @@
 title: Deploy file
 description: Overview of the deploy file
 template: concept-topic-template
+last_updated: Sep 12, 2022
 related: 
   - title: Deploy file inheritance—common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
@@ -18,6 +19,7 @@ An application usually has a deploy file for each environment. Even though the e
 Deploy file template is a deploy file that contains the most basic configuration of an application or the configuration that's the same for multiple environments. By including a deploy file template into your application's configuration, you avoid defining all the basic and duplicate configuration in the main deploy files.
 
 Docker SDK is shipped with the basic deploy file template: `deploy.base.template.yml`. By default, it works with `dev` and `demo` environments, as well as CI. You can also adjust it to work with the production environment or create a custom template.
+last_updated: Sep 12, 2022
 
 ### Including deploy file templates
 
@@ -98,8 +100,10 @@ imports:
 imports:
     base-deploy-file:
         template: deploy.base.template.yml
+last_updated: Sep 12, 2022
     project-deploy-file:
         template: deploy.project.template.yml
+last_updated: Sep 12, 2022
 ```
 
 * Unnamed array:
@@ -107,7 +111,9 @@ imports:
 ```yaml
 imports:
     - template: deploy.base.template.yml
+last_updated: Sep 12, 2022
     - template: deploy.project.template.yml
+last_updated: Sep 12, 2022
 ```
 
 Unlike file path import, named and unnamed array imports support including the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
@@ -118,9 +124,11 @@ Example of including the same deploy file with different parameters via a named 
 imports:
     project-deploy-file:
         template: deploy.project.template.yml
+last_updated: Sep 12, 2022
         parameters: 'stage'
     extended-project-deploy-file:
         template: deploy.project.template.yml
+last_updated: Sep 12, 2022
         parameters:
             env_name: 'dev'
 ```
@@ -129,9 +137,11 @@ Example of including the same deploy file with different parameters via an unnam
 
 ```yaml
 - template: deploy.porject.template.yml
+last_updated: Sep 12, 2022
   parameters:
       env-name: 'stage'
 - template: deploy.porject.template.yml
+last_updated: Sep 12, 2022
   parameters:
       env-name: 'dev'
 ```

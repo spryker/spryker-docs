@@ -2,6 +2,7 @@
 title: Technology restrictions
 description: Fix the issue with slow actions, parts of the website, or the entire webiste related to technology restrictions.
 template: troubleshooting-guide-template
+last_updated: Mar 1, 2023
 ---
 
 Some actions, parts of the website, or the entire website are slow.

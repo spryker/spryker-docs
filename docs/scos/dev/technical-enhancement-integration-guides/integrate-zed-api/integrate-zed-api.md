@@ -2,6 +2,7 @@
 title: Integrate Zed API
 description: Integrate the Zed API into your project
 template: feature-integration-guide-template
+last_updated: Oct 30, 2023
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/backend-api-feature-integration.html
 ---

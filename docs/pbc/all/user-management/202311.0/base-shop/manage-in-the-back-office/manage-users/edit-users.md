@@ -2,6 +2,7 @@
 title: Editing users
 description: Learn how to edit users in the Back Office
 template: back-office-user-guide-template
+last_updated: Jan 4, 2024
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/editing-users.html
 related:

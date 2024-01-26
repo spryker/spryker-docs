@@ -2,6 +2,7 @@
 title: Vertex FAQ
 description: FAQ about Vertex 
 template: concept-topic-template
+last_updated: Nov 17, 2023
 ---
 
 **What is a Product Class Code for Vertex, and how can we use it?**

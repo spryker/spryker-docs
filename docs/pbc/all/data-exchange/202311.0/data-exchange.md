@@ -2,6 +2,7 @@
 title: Data Exchange
 description: General information about the data exchange options.
 template: concept-topic-template
+last_updated: Dec 18, 2023
 ---
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.

@@ -2,6 +2,7 @@
 title: Install the Checkout Glue API
 description: Learn how to install the Checkout Glue API in your project
 template: feature-integration-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-checkout-glue-api.html
 related:

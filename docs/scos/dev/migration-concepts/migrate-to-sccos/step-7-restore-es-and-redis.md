@@ -2,6 +2,7 @@
 title: 'Step 7: Restore Elasticsearch and Redis'
 description: To migrate to SCCOS, one of the steps, is restoring Elasticsearch and Redis.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 After you have [defined the environment variables](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html), you must restore Elasticsearch and Redis.
 

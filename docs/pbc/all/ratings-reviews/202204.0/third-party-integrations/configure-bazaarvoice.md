@@ -2,6 +2,7 @@
 title: Configure Bazaarvoice
 description: Find out how you can configure Bazaarvoice in your Spryker shop
 template: howto-guide-template 
+last_updated: Dec 20, 2022
 ---
 
 After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:

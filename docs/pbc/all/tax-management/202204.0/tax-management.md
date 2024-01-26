@@ -2,6 +2,7 @@
 title: Tax Management
 description: Tax Management PBC lets you define tax rates for different stores and products
 template: concept-topic-template
+last_updated: May 17, 2023
 ---
 
 Tax Management lets you manage taxes per store, product, and country.

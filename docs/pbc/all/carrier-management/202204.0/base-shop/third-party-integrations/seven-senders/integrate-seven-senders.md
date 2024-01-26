@@ -1,6 +1,7 @@
 ---
 title: Integrate Seven Senders
 template: howto-guide-template
+last_updated: Apr 5, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/integrating-seven-senders.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/integrating-seven-senders.html

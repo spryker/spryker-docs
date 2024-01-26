@@ -2,6 +2,7 @@
 title: Spryker dev packages checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Sep 27, 2023
 ---
 
 Spryker dev packages checker checks the project Spryker dependencies for the _dev-*_ constraints.

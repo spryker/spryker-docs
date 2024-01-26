@@ -2,6 +2,7 @@
 title: Marketplace Cart feature overview
 description: This document contains concept information for the Marketplace Cart feature.
 template: concept-topic-template
+last_updated: Nov 17, 2023
 redirect_from:
   - docs/marketplace/user/features/page.version/marketplace-cart-notes-feature-overview.html
 ---

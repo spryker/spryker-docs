@@ -2,6 +2,7 @@
 title: 'Step 6: Define environment variables'
 description: To migrate to SCCOS, one of the steps, is defining the environment variables.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 Having [defined the deployment strategy](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html), you must define the environment variables.

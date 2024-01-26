@@ -2,6 +2,7 @@
 title: Profiler
 description: For the Spryker SDK development, you build it as a Docker container and run it in the development or debug mode. 
 template: howto-guide-template
+last_updated: Nov 4, 2022
 ---
 
 Profiler is available only in the dev environment.

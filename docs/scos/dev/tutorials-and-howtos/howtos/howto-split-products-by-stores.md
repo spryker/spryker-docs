@@ -2,6 +2,7 @@
 title: "HowTo: Split products by stores"
 description: This document provides details about how to split products by stores.
 template: howto-guide-template
+last_updated: Aug 2, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
 related:

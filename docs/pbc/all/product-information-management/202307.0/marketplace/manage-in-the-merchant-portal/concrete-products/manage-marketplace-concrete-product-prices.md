@@ -2,6 +2,7 @@
 title: Manage marketplace concrete product prices
 description: This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Aug 22, 2023
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html

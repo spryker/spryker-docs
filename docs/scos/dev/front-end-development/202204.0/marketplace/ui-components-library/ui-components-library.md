@@ -2,6 +2,7 @@
 title: UI Components Library
 description: This articles provides details about UI components library.
 template: concept-topic-template
+last_updated: Aug 8, 2023
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html

@@ -2,6 +2,7 @@
 title: Table Configuration
 description: This document provides details about the table configuration.
 template: concept-topic-template
+last_updated: Aug 7, 2023
 ---
 
 This document provides details about how to configure the table.

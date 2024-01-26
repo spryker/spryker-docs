@@ -2,6 +2,7 @@
 title: Value resolvers
 description: The Spryker SDK has several value resolvers described in this document.
 template: concept-topic-template
+last_updated: Jan 13, 2023
 ---
 Spryker SDK value resolvers
 

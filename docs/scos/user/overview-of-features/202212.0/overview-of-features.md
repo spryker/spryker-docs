@@ -1,6 +1,7 @@
 ---
 title: Overview of features
 template: concept-topic-template
+last_updated: May 15, 2023
 redirect_from:
   - /capabilities/features.htm
   - /docs/scos/user/intro-to-spryker/overview-of-features.html

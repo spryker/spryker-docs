@@ -3,6 +3,7 @@ title: Spryker Core Back Office feature walkthrough
 last_updated: The Spryker Core Back Office feature adds a comprehensive, intuitive administration area
 description:
 template: concept-topic-template
+last_updated: Jul 20, 2023
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---

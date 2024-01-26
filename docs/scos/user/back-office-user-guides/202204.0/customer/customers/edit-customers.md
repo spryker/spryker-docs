@@ -2,6 +2,7 @@
 title: Edit customers
 description: Learn how to edit customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 related:
   - title: Customer Account Management feature overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

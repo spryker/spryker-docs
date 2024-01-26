@@ -2,6 +2,7 @@
 title: Checklist for a new store implementation
 description: Learn how to implement a new store in a multi-store environment
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
 related:

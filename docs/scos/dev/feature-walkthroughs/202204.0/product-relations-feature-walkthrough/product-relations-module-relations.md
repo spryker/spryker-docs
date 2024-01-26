@@ -2,6 +2,7 @@
 title: "Product Relations: module relations"
 description: Module relations of the product relations.
 template: feature-walkthrough-template
+last_updated: Jul 15, 2022
 ---
 
 The schema below illustrates the module relations within the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature:

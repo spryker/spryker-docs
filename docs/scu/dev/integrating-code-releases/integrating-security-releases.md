@@ -2,6 +2,7 @@
 title: Integrating security releases
 description: Spryker Code Upgrader prioritizes security releases over regular releases
 template: concept-topic-template
+last_updated: Dec 20, 2023
 ---
 
 Being on top of security releases of your vendor or third parties is very crucial:

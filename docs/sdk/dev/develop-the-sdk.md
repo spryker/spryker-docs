@@ -2,6 +2,7 @@
 title: Develop the SDK
 description: You can install and use Spryker SDK for your development needs
 template: howto-guide-template
+last_updated: Nov 22, 2022
 related: 
   - title: Profiler
     link: docs/sdk/dev/profiler.html

@@ -4,6 +4,7 @@ description: To migrate to SCCOS, one of the steps is migrating the database
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html
+last_updated: Dec 6, 2023
 ---
 
 After you have [chosen a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-12-choose-a-multi-store-setup.html), your next step is migrating your data to the database. For the database, Spryker SCCOS uses MariaDB. Therefore, you must migrate data in the MariaDB-compatible dump.

@@ -2,6 +2,7 @@
 title: Multi-store setup options
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
   - /docs/scos/user/introduction-to-the-spryker-commerce-os/multiple-stores/multi-store-setup.html

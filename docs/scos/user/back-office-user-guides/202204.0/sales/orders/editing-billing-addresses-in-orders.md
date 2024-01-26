@@ -2,6 +2,7 @@
 title: Editing billing addresses in orders
 description: Learn how to edit order billing addresses in the Back Office
 template: back-office-user-guide-template
+last_updated: Jun 14, 2022
 related:
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html

@@ -2,6 +2,7 @@
 title: Spryker Code Upgrader
 description: Spryker Code Upgrader is a key to easy upgrades
 template: concept-topic-template
+last_updated: Dec 13, 2023
 redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader.html
   - /docs/paas-plus/dev/platform-as-a-service-plus.html

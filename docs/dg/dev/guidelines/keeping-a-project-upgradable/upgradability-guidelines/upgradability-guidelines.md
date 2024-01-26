@@ -2,6 +2,7 @@
 title: Upgradability guidelines
 description: Find solutions to Evaluator violations
 template: howto-guide-template
+last_updated: Nov 16, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
 ---

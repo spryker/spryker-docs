@@ -2,6 +2,7 @@
 title: "Best practices: Promote products with search preferences"
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+last_updated: May 10, 2023
 related:
   - title: Search feature overview
     link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html

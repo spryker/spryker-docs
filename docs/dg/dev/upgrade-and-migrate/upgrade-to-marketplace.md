@@ -2,6 +2,7 @@
 title: Upgrade to Marketplace
 description: This document provides details how to upgrade Spryker instance to the Marketplace.
 template: howto-guide-template
+last_updated: Sep 25, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html
   - /docs/scos/dev/migration-concepts/upgrade-to-marketplace.html

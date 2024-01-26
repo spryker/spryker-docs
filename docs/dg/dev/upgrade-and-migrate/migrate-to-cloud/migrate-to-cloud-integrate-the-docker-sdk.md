@@ -4,6 +4,8 @@ description: The first step to migrating to SCCOS, is integrating the Docker SDK
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-1-integrate-the-docker-sdk.html
+  last_updated: Dec 6, 2023
+
 ---
 
 To start migrating from the on-prem system to SCCOS, the first thing you need to do is to integrate the Docker SDK. To integrate the Docker SDK, follow these steps.

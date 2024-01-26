@@ -2,6 +2,7 @@
 title: Edit filter preferences
 description: Learn how to edit filter preferences in the Back Office
 template: back-office-user-guide-template
+last_updated: May 10, 2023
 related:
   - title: Standard filters overview
     link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html

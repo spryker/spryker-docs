@@ -4,6 +4,7 @@ description: To migrate to SCCOS, you need to upgrade the PHP version.
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html
+last_updated: Dec 6, 2023
 ---
 
 After you have [integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-1-integrate-the-docker-sdk.html), you have to upgrade the PHP version.

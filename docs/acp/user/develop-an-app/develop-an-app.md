@@ -2,6 +2,7 @@
 title: Developing an app with Spryker Mini-Framework
 Descriptions: Learn the step-by-step process of developing an app using Spryker's Mini-Framework
 template: howto-guide-template
+last_updated: Jan 23, 2024
 redirect_from:
 - /docs/acp/user/developing-an-app.html
 - /docs/acp/user/developing-an-app/developing-an-app.html

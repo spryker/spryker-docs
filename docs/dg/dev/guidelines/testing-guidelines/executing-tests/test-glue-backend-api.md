@@ -2,6 +2,7 @@
 title: Test Glue Backend API
 description: Learn how to test Glue Backend API
 template: howto-guide-template
+last_updated: Jan 9, 2024
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
 ---

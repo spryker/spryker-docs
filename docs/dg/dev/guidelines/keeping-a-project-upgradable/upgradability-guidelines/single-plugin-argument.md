@@ -2,6 +2,7 @@
 title: Single plugin argument
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Oct 24, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
 ---

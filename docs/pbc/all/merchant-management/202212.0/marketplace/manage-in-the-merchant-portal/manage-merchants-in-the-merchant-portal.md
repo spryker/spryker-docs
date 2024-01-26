@@ -2,6 +2,7 @@
 title: Manage merchants in the Merchant Portal
 description: Learn how to log into the Merchant Portal and manage merchants
 template: back-office-user-guide-template
+last_updated: Jan 9, 2024
 ---
 
 

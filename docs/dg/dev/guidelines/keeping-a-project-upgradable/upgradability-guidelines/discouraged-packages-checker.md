@@ -2,6 +2,7 @@
 title: Discouraged packages checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/discouraged-packages-checker.html
 ---

@@ -4,6 +4,8 @@ description:
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html
+last_updated: Dec 6, 2023
+
 ---
 
 After you have completed the migration process, you need to prepare your project for going live.

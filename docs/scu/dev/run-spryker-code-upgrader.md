@@ -2,6 +2,7 @@
 title: Run Spryker Code Upgrader
 description: Instructions for running Spryker Code Upgrader
 template: concept-topic-template
+last_updated: Sep 25, 2023
 redirect_from:
   - /docs/paas-plus/dev/run-spryker-code-upgrader.html
 ---

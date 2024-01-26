@@ -2,6 +2,7 @@
 title: "Data Transformer: Date-parse"
 description: This document provides details about the Data Transformer Date-parse service in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-date-parse.html
 related:

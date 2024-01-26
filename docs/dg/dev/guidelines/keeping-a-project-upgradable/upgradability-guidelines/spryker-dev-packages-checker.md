@@ -2,6 +2,7 @@
 title: Spryker dev packages checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Sep 27, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
 ---

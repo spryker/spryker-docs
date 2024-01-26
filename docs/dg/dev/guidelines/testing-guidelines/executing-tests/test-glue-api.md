@@ -2,6 +2,7 @@
 title: Test Glue API
 description: Learn how to test Glue API
 template: howto-guide-template
+last_updated: Jan 9, 2024
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
 ---

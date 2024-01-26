@@ -2,6 +2,7 @@
 title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly.

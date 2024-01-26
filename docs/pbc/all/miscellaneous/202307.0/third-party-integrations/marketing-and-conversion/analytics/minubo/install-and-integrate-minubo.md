@@ -2,6 +2,7 @@
 title: Install and integrate Minubo
 description: Learn how to install and integrate Minubo
 template: howto-guide-template
+last_updated: Sep 12, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
   - /docs/scos/dev/technology-partner-guides/201903.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html

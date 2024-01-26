@@ -4,6 +4,7 @@ description: To migrate to SCCOS, one of the steps, is defining the environment 
 template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html
+last_updated: Dec 6, 2023
 ---
 
 Having [defined the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-5-define-the-deployment-strategy.html), you must define the environment variables.

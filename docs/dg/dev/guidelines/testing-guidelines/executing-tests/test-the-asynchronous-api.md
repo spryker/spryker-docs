@@ -4,6 +4,8 @@ description: How to test the Asynchronous API.
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
+  last_updated: Oct 18, 2023
+
 related:
   - title: Available test helpers
     link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html

@@ -2,6 +2,7 @@
 title: Checking and debugging Spryks
 description: Find out how you can check and debug Spryks
 template: howto-guide-template
+last_updated: Nov 8, 2022
 ---
 
 To avoid dependency conflicts, `spryker-sdk/spryk-src` is compiled into a `phar` archive. The archive is then pushed to `spryker-sdk/spryk` and included as a dependency into the target project.

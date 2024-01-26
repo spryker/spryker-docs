@@ -2,6 +2,7 @@
 title: Integrate Zed API for merchant relationships
 description: Learn how to integrate the Zed API for merchant relationships into your project.
 template: feature-integration-guide-template
+last_updated: Nov 6, 2023
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/backend-api-for-merchant-relationships-integration-guide.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html

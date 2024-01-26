@@ -2,6 +2,7 @@
 title: Marketplace domain model
 description: The following document describes the key domain objects that make a Spryker Shop a Marketplace.
 template: concept-topic-template
+last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
   - /docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html

@@ -2,6 +2,7 @@
 title: "Marketplace Order Management feature: Domain model and relationships"
 description: The Marketplace Order Management feature lets Marketplace customers place orders.
 template: feature-walkthrough-template
+last_updated: Sep 21, 2023
 related:
     - title: MerchantOms
       link: docs/pbc/all/order-management-system/page.version/marketplace/merchant-oms.html

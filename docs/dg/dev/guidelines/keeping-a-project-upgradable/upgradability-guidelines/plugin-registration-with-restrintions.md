@@ -2,6 +2,7 @@
 title: Plugin registration with restrictions
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Oct 24, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html
 ---

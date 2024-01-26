@@ -2,6 +2,7 @@
 title: "Glue API: Delete warehouse user assignments"
 description: Learn how to activate and deactivate warehouse assignments using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 18, 2023
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you delete warehouse user assignments.

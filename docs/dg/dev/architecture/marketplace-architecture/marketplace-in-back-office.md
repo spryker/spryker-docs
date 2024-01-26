@@ -2,6 +2,7 @@
 title: Marketplace in the Back Office
 description: This document explains how Marketplace functionality is presented in the Back Office.
 template: concept-topic-template
+last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
   - /docs/scos/dev/architecture/marketplace-architecture/marketplace-in-back-office.html

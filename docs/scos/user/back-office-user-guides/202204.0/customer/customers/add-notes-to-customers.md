@@ -2,6 +2,7 @@
 title: Add notes to customers
 description: Learn how to add notes to customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jun 8, 2022
 related:
   - title: Customer Account Management feature overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

@@ -2,6 +2,7 @@
 title: External calls take a lot of time
 description: Troubleshoot the performance issue with external calls taking much time
 template: troubleshooting-guide-template
+last_updated: Feb 27, 2023
 ---
 
 Some actions, parts of website or the whole website is slow.

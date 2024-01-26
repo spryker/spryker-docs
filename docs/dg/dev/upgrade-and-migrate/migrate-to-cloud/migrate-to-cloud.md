@@ -2,6 +2,7 @@
 title: Migrate to cloud
 description: Step-by-step guide on migrating from the on-prem Spryker system to SCCOS
 template: howto-guide-template
+last_updated: Dec 6, 2023
 redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-paas/migrate-to-paas.html
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/migrate-to-sccos.html

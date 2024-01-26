@@ -2,6 +2,7 @@
 title: "Product Offer storage: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer storage.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Product Offer and data related to it is cached to enhance performance.

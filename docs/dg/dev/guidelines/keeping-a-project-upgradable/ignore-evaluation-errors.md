@@ -2,6 +2,7 @@
 title: Ignore evaluation errors
 description: Reference information for evaluator configuration file.
 template: howto-guide-template
+last_updated: Sep 20, 2023
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
 ---

@@ -1,6 +1,7 @@
 ---
 title: CrefoPay
 template: concept-topic-template
+last_updated: Oct 11, 2023
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay.html
     - /docs/scos/dev/technology-partner-guides/202307.0/payment-partners/crefopay/crefopay.html

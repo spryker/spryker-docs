@@ -2,6 +2,7 @@
 title: Datasource Trigger Input
 description: Details about the Datasource Trigger Input service in the components library.
 template: concept-topic-template
+last_updated: Jan 16, 2024
 related:
   - title: Datasource Dependable
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html

@@ -2,6 +2,7 @@
 title: Service Points feature overview
 description: General overview of the Service Points feature
 template: concept-topic-template
+last_updated: Jan 19, 2024
 ---
 
 The *Service Points* feature lets you create and manage service points, service types, and associated services.

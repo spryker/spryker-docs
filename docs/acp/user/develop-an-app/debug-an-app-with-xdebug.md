@@ -2,6 +2,7 @@
 title: Debug an app with XDebug
 Descriptions: Learn how to use XDebug for your app
 template: howto-guide-template
+last_updated: Jan 10, 2024
 ---
 
 This document describes how to set up and use XDebug to debug your app. 

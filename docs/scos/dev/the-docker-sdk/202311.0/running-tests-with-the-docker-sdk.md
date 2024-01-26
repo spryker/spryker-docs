@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/running-tests-with-the-docker-sdk
   - /docs/running-tests-with-the-docker-sdk
   - /docs/en/running-tests-with-the-docker-sdk
+  - /docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

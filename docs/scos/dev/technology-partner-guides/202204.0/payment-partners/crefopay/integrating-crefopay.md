@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/integrating-crefopay.html
 ---
 title: Integrating CrefoPay
 description: This document shows how to integrate CrefoPay into the Spryker Commerce OS.

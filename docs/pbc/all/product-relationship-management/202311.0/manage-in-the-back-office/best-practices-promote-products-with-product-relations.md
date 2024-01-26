@@ -5,6 +5,8 @@ template: back-office-user-guide-template
 related:
   - title: Product Relations feature overview
     link: docs/pbc/all/product-relationship-management/page.version/product-relationship-management.html
+redirect_from:
+- /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/best-practices-promote-products-with-product-relations.html
 ---
 
 This best practices guide describes how to promote products by configuring product relations.

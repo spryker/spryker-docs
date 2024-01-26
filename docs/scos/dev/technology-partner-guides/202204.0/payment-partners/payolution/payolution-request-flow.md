@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-request-flow.html
 ---
 title: Payolution request flow
 description: This article describes the request flow for Payolution.

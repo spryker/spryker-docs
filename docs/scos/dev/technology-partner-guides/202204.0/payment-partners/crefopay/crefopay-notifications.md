@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay-notifications.html
 ---
 title: CrefoPay notifications
 description: Merchant Notification System (MNS) is a push notification service for merchants that CrefoPay module uses.

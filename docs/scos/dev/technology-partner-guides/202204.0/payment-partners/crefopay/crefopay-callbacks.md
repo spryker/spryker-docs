@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay-callbacks.html
 ---
 title: CrefoPay callbacks
 description: Callbacks are redirects performed by the CrefoPay system.

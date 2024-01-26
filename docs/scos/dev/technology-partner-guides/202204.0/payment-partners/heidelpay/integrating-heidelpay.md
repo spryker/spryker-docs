@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-heidelpay.html
 ---
 title: Integrating Heidelpay
 description: This article contains information on integrating the Heidelpay module into the Spryker Commerce OS.

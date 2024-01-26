@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
 ---
 title: Integrating the Paypal Authorize payment method for Heidelpay
 description: Integrate Paypal Authorize payment through Heidelpay into the Spryker-based shop.

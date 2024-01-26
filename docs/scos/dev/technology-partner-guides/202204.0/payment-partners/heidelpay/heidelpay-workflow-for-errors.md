@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
 ---
 title: Heidelpay workflow for errors
 description: This article describes the procedure for handling errors in Heidelpay.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
 ---
 title: Integrating the installment payment method for Payolution
 description: Integrate installment payment through Payolution into the Spryker-based shop.

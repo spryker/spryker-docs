@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-tracking.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
 ---
 
 Now that we have integrated Econda to the website we can start adding the tracking code.

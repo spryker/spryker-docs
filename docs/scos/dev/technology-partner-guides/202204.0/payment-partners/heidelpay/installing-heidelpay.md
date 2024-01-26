@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/installing-heidelpay.html
 ---
 title: Installing Heidelpay
 description: This article contains installation information for the Heidelpay module into the Spryker Legacy Demoshop.

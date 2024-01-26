@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/klarna/klarna-state-machine-commands-and-conditions.html
 ---
 title: Klarna state machine commands and conditions
 description: This article includes the state machine commands and conditions provided by Klarna.

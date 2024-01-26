@@ -1,3 +1,4 @@
+  
 ---
 title: Adding the Econda tracking code
 description: Add the Econda tracking code into Spryker Commerce OS.

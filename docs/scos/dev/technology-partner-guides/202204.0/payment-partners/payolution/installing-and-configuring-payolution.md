@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html
 ---
 title: Installing and configuring Payolution
 description: This article contains information on configuring the Payolution module for the Spryker Commerce OS.

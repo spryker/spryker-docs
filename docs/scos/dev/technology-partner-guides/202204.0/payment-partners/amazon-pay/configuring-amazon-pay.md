@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/configuring-amazon-pay.html
 ---
 title: Configuring Amazon Pay
 description: Configure and integrate Amazon Pay into the Spryker Commerce OS by following the instructions from this article.

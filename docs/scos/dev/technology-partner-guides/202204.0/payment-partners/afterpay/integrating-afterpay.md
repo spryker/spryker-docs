@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/afterpay/integrating-afterpay.html
 ---
 title: Integrating AfterPay
 description: Learn how to integrate AfterPay into Spryker-based project

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 title: Obtaining an Amazon Order Reference and information about shipping addresses
 description: This article contains information about order reference and shipping address in Spryker Commerce OS.

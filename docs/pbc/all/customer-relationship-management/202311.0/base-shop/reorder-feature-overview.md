@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/reorder-feature-walkthrough.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/reorder-feature-walkthrough.html  
   - /docs/scos/dev/feature-walkthroughs/202204.0/reorder-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/reorder-feature-overview.html
 ---
 
 One of the biggest factors that influences customer loyalty and persuades them to repeatedly buy from your shop is shopping convenience. Reorder feature simplifies the order placement process for your customers: it lets them reorder their previous orders in just one click. All the customers need to do is go to the **Order History** page in their _Customer Account_ and reorder either the entire order or individual items from it.

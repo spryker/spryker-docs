@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-performing-requests.html
 ---
 title: Payolution - Performing Requests
 description: This article includes the state machine commands and conditions provided by Payolution.

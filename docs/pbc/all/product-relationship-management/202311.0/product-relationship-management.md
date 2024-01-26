@@ -15,6 +15,7 @@ redirect_from:
   - /docs/product-relations
   - /docs/en/product-relations
   - /docs/scos/user/features/202200.0/product-relations-feature-overview.html
+  - /docs/scos/user/features/202204.0/product-relations-feature-overview.html
 ---
 
 The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:

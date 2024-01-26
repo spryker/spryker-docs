@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-state-machines.html
 ---
 title: RatePay state machines
 description: Managing RatePay with state machines

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
 ---
 title: Billpay - Switching invoice payments to a preauthorize mode
 last_updated: Jun 16, 2021

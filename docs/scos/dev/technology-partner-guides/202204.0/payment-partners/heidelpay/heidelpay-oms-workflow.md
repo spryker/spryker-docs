@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/heidelpay-oms-workflow.html
 ---
 title: Heidelpay OMS workflow
 last_updated: Jun 16, 2021

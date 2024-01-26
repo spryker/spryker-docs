@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-payment-workflow.html
 ---
 title: RatePay payment workflow
 description: This article describes the request flow that uses Ratepay.

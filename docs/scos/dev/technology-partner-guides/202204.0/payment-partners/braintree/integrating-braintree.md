@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/integrating-braintree.html
 ---
 title: Integrating Braintree
 description: This guide provides steps to integrate Braintree in the Spryker Frontend.

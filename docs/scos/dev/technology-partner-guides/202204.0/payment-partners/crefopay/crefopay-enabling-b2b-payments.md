@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
 ---
 title: CrefoPay—Enabling B2B payments
 description: CrefoPay module provides B2B strategy in payments.

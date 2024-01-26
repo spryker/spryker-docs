@@ -5,6 +5,8 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/company-roles/edit-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/company-unit-addresses/edit-company-unit-addresses.html
 related:
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html

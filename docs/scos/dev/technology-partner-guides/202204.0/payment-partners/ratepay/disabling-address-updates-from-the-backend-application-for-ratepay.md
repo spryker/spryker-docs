@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
 ---
 title: Disabling address updates from the backend application for RatePay
 description: Disable address updates from the backend application for RatePay

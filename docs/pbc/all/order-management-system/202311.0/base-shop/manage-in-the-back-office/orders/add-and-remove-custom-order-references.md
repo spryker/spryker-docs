@@ -4,6 +4,7 @@ description: Learn how to add and remove custom order references in the Back Off
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/adding-and-removing-custom-order-references.html
+   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/adding-and-removing-custom-order-references.html
 related:
   - title: Custom Order Reference overview
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/custom-order-reference-overview.html

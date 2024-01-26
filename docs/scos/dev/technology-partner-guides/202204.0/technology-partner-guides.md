@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/technology-partner-guides.html
 ---
 title: Technology partner guides
 description: Guides for developers working with Spryker technology partners

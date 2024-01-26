@@ -1,3 +1,4 @@
+  
 ---
 title: Inxmail API requests
 description: Learn about the API requests for Inxmail in Spryker.

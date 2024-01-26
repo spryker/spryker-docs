@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
 ---
 title: Installing and configuring ratenkauf by easyCredit
 description: This article contains installation and configuration information for the ratenkauf by easyCredit module into the Spryker-based shop.

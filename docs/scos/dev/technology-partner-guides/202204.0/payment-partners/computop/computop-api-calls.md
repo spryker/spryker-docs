@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/computop-api-calls.html
 ---
 title: Computop API calls
 description: This article provides details on the API structure of the Computop module in the Spryker Commerce OS.

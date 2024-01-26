@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html
 related:
   - title: Search feature overview
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html

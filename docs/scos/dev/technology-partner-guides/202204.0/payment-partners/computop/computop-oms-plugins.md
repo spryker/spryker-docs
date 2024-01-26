@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/computop-oms-plugins.html
 ---
 title: Computop - OMS plugins
 description: This article contains information on the state machine commands and conditions for the Computop module in the Spryker Commerce OS.

@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/201903.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
   - /docs/scos/dev/technology-partner-guides/201907.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
   - /docs/scos/dev/technology-partner-guides/202005.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
 ---
 
 The Minubo module provides functionality to export order and customer data that was updated since last run of export. Data exported to Amazon S3 bucket as file with list of JSON-objects.

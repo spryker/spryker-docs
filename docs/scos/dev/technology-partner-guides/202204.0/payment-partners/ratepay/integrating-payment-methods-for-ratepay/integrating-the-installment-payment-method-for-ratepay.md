@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
 ---
 title: Integrating the Installment payment method for RatePay
 description: Integrate installment payment through Ratepay into the Spryker-based shop.

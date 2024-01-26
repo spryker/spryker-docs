@@ -1,3 +1,4 @@
+  
 ---
 title: Configuring New Relic logging
 template: howto-guide-template

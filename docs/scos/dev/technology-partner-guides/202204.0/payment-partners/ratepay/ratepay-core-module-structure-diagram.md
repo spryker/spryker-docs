@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
 ---
 title: RatePay Core module structure diagram
 description: This article includes module schema with the class structure and flow.

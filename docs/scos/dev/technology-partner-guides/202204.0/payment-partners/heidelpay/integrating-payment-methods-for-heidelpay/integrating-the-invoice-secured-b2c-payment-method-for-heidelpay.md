@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
 ---
 title: Integrating the Invoice Secured B2C payment method for Heidelpay
 description: Integrate invoice secured B2C payment through Heidelpay into the Spryker-based shop.

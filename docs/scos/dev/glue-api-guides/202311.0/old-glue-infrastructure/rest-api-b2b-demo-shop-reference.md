@@ -6,6 +6,8 @@ template: glue-api-storefront-guide-template
 related:
   - title: Reference information- GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html
+redirect_from:
+- /docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

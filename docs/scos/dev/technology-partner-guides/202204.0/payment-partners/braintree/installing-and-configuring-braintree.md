@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/braintree/installing-and-configuring-braintree.html
 ---
 title: Installing and configuring Braintree
 description: This article contains information on configuring the Braintree module for the Spryker Commerce OS.

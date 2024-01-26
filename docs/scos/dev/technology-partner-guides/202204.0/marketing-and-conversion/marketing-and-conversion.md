@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/marketing-and-conversion.html
 ---
 title: Marketing and conversion
 description: Guides for how to integrate Spryker marketing and conversion technology partners

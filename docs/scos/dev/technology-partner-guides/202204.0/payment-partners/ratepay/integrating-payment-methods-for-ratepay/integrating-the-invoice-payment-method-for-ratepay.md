@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-invoice-payment-method-for-ratepay.html
 ---
 title: Integrating the Invoice payment method for RatePay
 description: Integrate invoice payment through Ratepay into the Spryker-based shop.

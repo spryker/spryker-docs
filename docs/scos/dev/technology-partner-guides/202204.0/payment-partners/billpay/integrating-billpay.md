@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/integrating-billpay.html
 ---
 title: Integrating Billpay
 last_updated: Jun 16, 2021

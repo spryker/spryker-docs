@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
 ---
 title: Integrating the Paypal Debit payment method for Heidelpay
 description: Integrate Paypal debit workflow payment through Heidelpay into the Spryker-based shop.

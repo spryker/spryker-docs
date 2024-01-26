@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/afterpay/installing-and-configuring-afterpay.html
 ---
 title: Installing and configuring Afterpay
 description: Learn how to install and configure AfterPay into Spryker-based project

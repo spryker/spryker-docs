@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-computop.html
 ---
 title: Integrating Computop
 last_updated: Jun 10, 2022

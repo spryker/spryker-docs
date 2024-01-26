@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 ---
 title: Integrating the CRIF payment method for Computop
 description: In this article, you can find information on the CRIF process for Spryker Commerce OS.

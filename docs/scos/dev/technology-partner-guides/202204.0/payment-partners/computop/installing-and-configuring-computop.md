@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html
 ---
 title: Installing and configuring Computop
 last_updated: Jun 16, 2021

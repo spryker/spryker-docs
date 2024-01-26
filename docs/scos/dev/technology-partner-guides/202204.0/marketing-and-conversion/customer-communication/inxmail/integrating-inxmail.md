@@ -1,3 +1,4 @@
+  
 ---
 title: Integrating Inxmail
 description: Integrate Inxmail in the Spryker Commerce OS

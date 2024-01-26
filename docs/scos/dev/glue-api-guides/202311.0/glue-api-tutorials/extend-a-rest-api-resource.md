@@ -21,6 +21,7 @@ redirect_from:
   - /v1/docs/extending-a-rest-request-resource
   - /v1/docs/en/extending-a-rest-request-resource
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/extend-a-rest-api-resource.html
 related:
   - title: Glue API installation and configuration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html

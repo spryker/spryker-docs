@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/integrating-payolution.html
 ---
 title: Integrating Payolution
 last_updated: Jun 16, 2021

@@ -1,3 +1,4 @@
+  
 ---
 title: Installing and integrating Minubo
 description: Learn how to install and integrate Minubo

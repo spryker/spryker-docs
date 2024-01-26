@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay.html
 ---
 title: CrefoPay
 template: concept-topic-template

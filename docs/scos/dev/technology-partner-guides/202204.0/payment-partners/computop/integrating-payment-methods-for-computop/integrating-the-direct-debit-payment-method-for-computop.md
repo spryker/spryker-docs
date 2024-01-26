@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
 ---
 title: Integrating the Direct Debit payment method for Computop
 description: Integrate direct debit payment through Computop into the Spryker-based shop.

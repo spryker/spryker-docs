@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/arvato/arvato-store-order.html
 ---
 title: Arvato - Store Order
 description: In this article, you can get details about the  Store Order service in the Arvato module.

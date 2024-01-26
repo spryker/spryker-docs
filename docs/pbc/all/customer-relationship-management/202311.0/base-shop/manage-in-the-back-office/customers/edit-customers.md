@@ -4,6 +4,7 @@ description: Learn how to edit customers in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customers/edit-customers.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/customers/edit-customers.html
 related:
   - title: Customer Account Management feature overview
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html

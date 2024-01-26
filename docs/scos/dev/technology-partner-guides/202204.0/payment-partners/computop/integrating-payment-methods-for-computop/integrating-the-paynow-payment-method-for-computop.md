@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
 ---
 title: Integrating the PayNow payment method for Computop
 description: Integrate PayNow payment through Computop into the Spryker-based shop.

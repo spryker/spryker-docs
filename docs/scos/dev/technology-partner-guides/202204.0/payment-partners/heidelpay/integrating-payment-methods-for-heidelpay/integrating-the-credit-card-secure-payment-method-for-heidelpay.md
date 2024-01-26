@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
 ---
 title: Integrating the Credit Card Secure payment method for Heidelpay
 description: Integrate Credit Card payment through Heidelpay into the Spryker-based shop.

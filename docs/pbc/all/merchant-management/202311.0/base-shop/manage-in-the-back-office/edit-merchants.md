@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/marketplace/merchants-and-merchant-relations/managing-merchants.html
   - /docs/scos/user/back-office-user-guides/202311.0/marketplace/merchants/edit-merchants.html
+  - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants/edit-merchants.html
 related:
   - title: Create merchants
     link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/create-merchants.html

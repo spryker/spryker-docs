@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
 ---
 title: Handling orders with Amazon Pay API
 description: This article provides details on the API structure of the Amazon Pay module in Spryker Commerce OS.

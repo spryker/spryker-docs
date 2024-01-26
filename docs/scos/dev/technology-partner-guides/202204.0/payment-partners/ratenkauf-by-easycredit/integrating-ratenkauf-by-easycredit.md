@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
 ---
 title: Integrating ratenkauf by easyCredit
 description: This article provides step-by-step instruction on how to integrate ratenkauf by easyCredit payment into your project.

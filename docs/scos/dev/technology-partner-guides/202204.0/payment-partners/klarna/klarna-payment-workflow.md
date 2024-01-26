@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/klarna/klarna-payment-workflow.html
 ---
 title: Klarna payment workflow
 description: In this article, you will find part payment request flow with Klarna.

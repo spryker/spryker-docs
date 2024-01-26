@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
 ---
 title: Integrating the Direct Debit payment method for Heidelpay
 description: Integrate direct debit payment through Heidelpay into the Spryker-based shop.

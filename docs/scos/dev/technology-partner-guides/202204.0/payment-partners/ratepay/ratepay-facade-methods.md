@@ -1,3 +1,4 @@
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-facade-methods.html
 ---
 title: RatePay facade methods
 description: This article includes facade methods provided by Ratepay.

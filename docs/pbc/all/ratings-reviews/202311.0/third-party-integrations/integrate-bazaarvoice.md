@@ -339,7 +339,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### 5. Receive messages
 
-This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.md).
+This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.html).
 
 ### 6. Configure OMS
 

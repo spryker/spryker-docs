@@ -239,7 +239,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ### Console command for receiving messages
 
-This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.md).
+This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.html).
 
 ## Next steps
 

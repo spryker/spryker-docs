@@ -26,7 +26,7 @@ Before integrating Stripe, ensure the following prerequisites are met:
 Your project probably already contains the following code in `config/Shared/config_default.php` already. If not, add it:
 
 ```php
-// ...
+//...
 
 use Generated\Shared\Transfer\PaymentConfirmationFailedTransfer;
 use Generated\Shared\Transfer\PaymentConfirmationRequestedTransfer;
@@ -35,29 +35,36 @@ use Generated\Shared\Transfer\PaymentMethodAddedTransfer;
 use Generated\Shared\Transfer\PaymentMethodDeletedTransfer;
 use Generated\Shared\Transfer\PaymentPreauthorizationFailedTransfer;
 use Generated\Shared\Transfer\PaymentPreauthorizedTransfer;
-use Spryker\Shared\Sales\SalesConstants;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\Oms\OmsConstants;
+use Spryker\Shared\Payment\PaymentConstants;
+use Spryker\Shared\Sales\SalesConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 use Spryker\Zed\Oms\OmsConfig;
 use Spryker\Zed\Payment\PaymentConfig;
 
-// ...
+//...
+$config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[OmsConstants::PROCESS_LOCATION] = [
-    // ...
+    //...
     OmsConfig::DEFAULT_PROCESS_LOCATION,
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms',
+    //APPLICATION_ROOT_DIR . '/vendor/spryker/payment/config/Zed/Oms', # this line must be removed if exists
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
-    // ...
-    'ForeignPaymentStateMachine01',
+    //...
+    //'B2CStateMachine01', # this line must be removed if exists
+    'ForeignPaymentStateMachine01', # this line must be added
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    // ...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01',
+    //...
+    //PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added
 ];
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    //...
     PaymentMethodAddedTransfer::class => 'payment-method-commands',
     PaymentMethodDeletedTransfer::class => 'payment-method-commands',
     PaymentConfirmationRequestedTransfer::class => 'payment-commands',
@@ -67,21 +74,18 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentConfirmationFailedTransfer::class => 'payment-events',
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // ...
-
-    'payment-method-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    //...
+    'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // ...
-
-    'payment-commands' => 'http',
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+    //...
+    'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
 ```
-
 
 ## 2. Configure the Message Broker dependency provider
 
@@ -106,7 +110,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageHandlerPlugins(): array
     {
         return [
-            // ...
+            //...
 
             # These plugins are handling messages sent from Stripe app to SCCOS.
             new PaymentConfirmationFailedMessageHandlerPlugin(),
@@ -120,39 +124,42 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-## 3. Add Stripe domain to your allowlist
+### 3. Configure channels in Message Broker configuration
 
-To enable Stripe to redirect your customers to the Stripe payment page and later to your payment success page, you must add the ACP domain inside your *Content Security Policy* allowlist. To do that, change your `deploy-{your_environment}.yml` file or your `config/Shared/config_default.php` file if changing the environment variable isn't possible.
-
-In the `deploy.yml` file, introduce the required changes:
-
-```yml
-image:
-  environment:
-    SPRYKER_AOP_APPLICATION: '{
-      "APP_DOMAINS": [
-        "stripe.acp.spryker.com",
-        ...
-      ],
-      ...
-    }'
-```
-
-Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, ignore this step.
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
-$config[KernelConstants::DOMAIN_WHITELIST][] = 'stripe.acp.spryker.com';
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            //...
+            'payment-events',
+            'payment-method-commands',
+        ];
+    }
+
+    //...
+}
 ```
 
 ## 4. Configure the OMS dependency provider
 Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
 
 ```php
-// ...
+//...
 
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmationPendingPlugin;
 
-// ...
+//...
 
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -163,11 +170,11 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
     {
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
 
-             // ...
+             //...
 
              $commandCollection->add(new SendEventPaymentConfirmationPendingPlugin(), 'Payment/SendEventPaymentConfirmationPending');
 
-             // ...
+             //...
 
              return $commandCollection;
         });
@@ -232,6 +239,49 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 </statemachine>
 ```
 
+### Optional: Template changes in `CheckoutPage`
+
+Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level:
+
+- You should check that for payment selection choices a form molecule uses the following code:
+
+```twig
+{% raw %}
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    {% embed molecule('form') with {
+        data: {
+            form: data.form[data.form.paymentSelection[key].vars.name],
+            ...
+        }
+    {% endembed %}    
+{% endfor %}  
+{% endraw %}          
+```
+
+- Payment provider names now have glossary keys instead of a name itself, so you need to check if the names of the payment providers are translated without using the prefix:
+
+```twig
+{% raw %}
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    <h5>{{ name | trans }}</h5>
+{% endfor %}
+{% endraw %}
+```
+
+- Also, if you need, you can add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. For example, there is 1 new external payment with the provider name Payone (can be found in spy_payment_method table in group_name column)  and the payment method name Credit Card (can be found in spy_payment_method table in label_name column). For all of them, you can add translations to your glossary data import file like this:
+
+```csv
+...
+Payone,Payone Payments,en_US
+Credit Card,Credit Card (Payone),en_US
+```
+Then run the data import for the glossary:
+
+```bash
+console data:import glossary
+```
 
 ## Next step
 [Configure Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html)

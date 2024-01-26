@@ -126,9 +126,9 @@ Make sure the following changes have occurred in transfer objects:
 | UserOauthUserProviderPlugin                                   | Gets the user based on the authorization client.                                                         | Spryker\\Zed\\OauthUserConnector\\Communication\\Plugin\\Oauth                         |
 | UserPasswordOauthRequestGrantTypeConfigurationProviderPlugin  | Builds `OauthGrantTypeConfigurationTransfer` from the configuration of Password GrantType data.          | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth                                      |
 | UserRequestValidatorPlugin                                    | Validates if `GlueRequestTransfer.requestUser` is set if the request has the Authorisation header.   | Spryker\\Glue\\OauthBackendApi\\Plugin\\GlueApplication                                |
-| BackofficeUserOauthScopeAuthorizationCheckerPlugin            | Executes the authorization check based on the Back Office user OAuth scope.                                   | Spryker\Zed\OauthUserConnector\Communication\Plugin\OauthUserConnector                 |
-| OauthUserScopeProtectedRouteAuthorizationConfigProviderPlugin | Provides Oauth users authorization strategy configuration.                                            | Spryker\Glue\OauthUserConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
-| OauthUserScopeAuthorizationStrategyPlugin                     | Processes Oauth users an authorization request.                                                         | Spryker\Zed\OauthUserConnector\Communication\Plugin\Authorization                      |
+| BackofficeUserOauthScopeAuthorizationCheckerPlugin            | Executes the authorization check based on the Back Office user OAuth scope.                                  | Spryker\Zed\OauthUserConnector\Communication\Plugin\OauthUserConnector                 |
+| OauthUserScopeProtectedRouteAuthorizationConfigProviderPlugin | Provides the configuration of Oauth user authorization strategy.                                            | Spryker\Glue\OauthUserConnector\Plugin\GlueBackendApiApplicationAuthorizationConnector |
+| OauthUserScopeAuthorizationStrategyPlugin                     | Processes the authorization requests of Oauth users.                                                         | Spryker\Zed\OauthUserConnector\Communication\Plugin\Authorization                      |
 
 **src/Pyz/Client/Authentication/AuthenticationDependencyProvider.php**
 

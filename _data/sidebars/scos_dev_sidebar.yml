@@ -822,7 +822,7 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-    - title: Multiple Abstract Products as Promotional Producs & Discounts
+    - title: Multiple Abstract Products as Promotional Products & Discounts
       url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
       include_versions:
       - "202204.0"
@@ -1471,7 +1471,7 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Creae modules
+          - title: Create modules
             url: /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
         - title: Spryker OS module customization
           url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
@@ -2265,7 +2265,7 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
-    - title: Update environemnt configuration
+    - title: Update environment configuration
       url: /docs/scos/dev/technical-enhancement-integration-guides/update-environment-configuration.html
   - title: Zed API
     url: /docs/scos/dev/zed-api/zed-api.html
@@ -2747,7 +2747,7 @@ entries:
             - "202212.0"
             - "202307.0"
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
-          - title: Integrating the invoice paymnet method
+          - title: Integrating the invoice payment method
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
           - title: Integrating the installment payment method for
             url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
@@ -3086,7 +3086,7 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
       - title: Redis session lock
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
-      - title: Slow Publish and Synchronizationme
+      - title: Slow Publish and Synchronization
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html

@@ -2,6 +2,7 @@
 title: Extend the SDK
 description: Find out how you can extend the Spryker SDK
 template: howto-guide-template
+last_updated: Jan 13, 2023
 redirect_from:
     - /docs/sdk/dev/extending-the-sdk.html
 ---

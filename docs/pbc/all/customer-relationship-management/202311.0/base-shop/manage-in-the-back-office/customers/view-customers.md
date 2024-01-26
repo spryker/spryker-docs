@@ -2,6 +2,7 @@
 title: View customers
 description: Learn how to view customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/customer/customers/view-customers.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customers/view-customers.html

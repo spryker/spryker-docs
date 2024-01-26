@@ -2,6 +2,7 @@
 title: Merchant Portal
 description: This document describes the peculiarities of the Merchant Portal application.
 template: concept-topic-template
+last_updated: Dec 4, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
 ---

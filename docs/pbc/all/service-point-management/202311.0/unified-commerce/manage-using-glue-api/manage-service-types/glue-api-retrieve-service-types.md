@@ -80,9 +80,9 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 
 ## Retrieve a service type
 
----
+***
 `GET` {% raw %}**/service-types/*{{service_type_id}}***{% endraw %}
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |

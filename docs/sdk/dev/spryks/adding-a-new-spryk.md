@@ -2,6 +2,7 @@
 title: Adding a new Spryk
 description: Find out how you can add a new Spryk
 template: howto-guide-template
+last_updated: Nov 10, 2022
 related:
     - title: Spryk configuration reference
       link: docs/sdk/dev/spryks/spryk-configuration-reference.html	

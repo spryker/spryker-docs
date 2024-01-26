@@ -2,6 +2,7 @@
 title: Loggly
 description: Overview of the Loggly integration.
 template: concept-topic-template
+last_updated: Nov 17, 2023
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/loggly/loggly.html
      - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/loggly/loggly.html

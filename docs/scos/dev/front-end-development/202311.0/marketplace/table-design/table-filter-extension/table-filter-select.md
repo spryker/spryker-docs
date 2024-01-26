@@ -2,6 +2,7 @@
 title: Table Filter Select
 description: This document provides details about the Table Filter Select component in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/table-filter-select.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-filter-extension/table-filter-select.html

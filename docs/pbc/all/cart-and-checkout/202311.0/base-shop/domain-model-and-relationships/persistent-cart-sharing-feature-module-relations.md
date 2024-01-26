@@ -1,6 +1,7 @@
 ---
 title: "Persistent Cart Sharing feature: module relations"
 template: feature-walkthrough-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html
   - /docs/pbc/all/cart-and-checkout/base-shop/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html

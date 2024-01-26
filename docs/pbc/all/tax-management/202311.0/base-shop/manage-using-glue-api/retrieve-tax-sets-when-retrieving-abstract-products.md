@@ -107,7 +107,7 @@ For detailed information on the modules that provide the API functionality and r
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 For the attributes of tax sets, see [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes).
 

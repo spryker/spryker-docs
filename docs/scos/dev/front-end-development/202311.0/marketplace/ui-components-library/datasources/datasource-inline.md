@@ -2,6 +2,7 @@
 title: Datasource Inline
 description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-inline.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasource-inline.html
@@ -14,18 +15,19 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
 ---
 
-This document explains the Datasource Inline service in the Components Library.
 
-## Overview
+Datasource Inline is an Angular service in the components library that allows for passing data along with the configuration of the Datasource.
 
-Datasource Inline is an Angular Service that allows passing data along with the configuration of the Datasource.
-
-Check out an example usage of the Datasource Inline.
+## Usage
 
 Service configuration:
 
-- `type`—a datasource type.  
-- `data`—a datasource data.  
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+| `type` | A datasource type.  |
+| `data` | Datasource data.  |
+
+Usage example:
 
 ```html
 <spy-select
@@ -60,7 +62,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Inline:
+Datasource Inline interfaces:
 
 ```ts
 export interface DatasourceInlineConfig extends DatasourceConfig {

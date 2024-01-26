@@ -2,6 +2,7 @@
 title: Disconnect Payone
 description: Learn how you can disconnect the Payone app from your Spryker shop
 template: howto-guide-template
+last_updated: Oct 11, 2023
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/disconnect-payone.html
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html

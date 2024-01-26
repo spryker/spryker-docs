@@ -2,6 +2,7 @@
 title: View product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
 - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/product-sets/view-product-sets.html
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html

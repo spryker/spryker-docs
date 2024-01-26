@@ -2,6 +2,7 @@
 title: Getting started with cloud administration
 description: After the initial setup, access Spryker Cloud and start developing.
 template: howto-guide-template
+last_updated: Oct 17, 2023
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
 originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:

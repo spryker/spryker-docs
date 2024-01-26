@@ -61,8 +61,8 @@ The following table describes the states you can select for order items.
 | Cancel | Select this state to cancel the order on the customer’s behalf. |
 | Skip Timeout | Select this status to end the time period during which the customer can cancel the order. |
 | Generate invoice | Select this state to generate the invoice and send it to the customer. If invoice BCC is configured for your project, the copy of the invoice will be sent to the specified email address as well. You can trigger the invoice-generate only for the whole order. Even if you selected just some of the order items, the invoice is generated for the whole order.|
-| Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html). |
-| Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html). | 
+| Picking list generation schedule | Select this state to generate a picklist. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
+| Prepare for picking | Makes the picklist available in the Fulfillment App. Available with the [Fulfillment App](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
 | Ship | Select this state once the order is shipped.|
 | Stock-update | Select this state when you update the number of available products of products in **Products&nbsp;<span aria-label="and then">></span> Availability**. |
 |  Close| Select this state when your customer has successfully received the ordered items and is satisfied with their quality.|

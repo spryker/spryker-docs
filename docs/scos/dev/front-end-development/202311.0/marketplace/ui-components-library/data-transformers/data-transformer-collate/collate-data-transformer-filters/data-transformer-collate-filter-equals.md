@@ -2,6 +2,7 @@
 title: "Data transformer Collate filter: Equals"
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/filters/equals.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/collate/filters/equals.html

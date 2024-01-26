@@ -2,6 +2,7 @@
 title: In Memory Persistence Strategy
 description: This document provides details about the In Memory Persistence Strategy service in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/persistence/in-memory-persistence-strategy.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html

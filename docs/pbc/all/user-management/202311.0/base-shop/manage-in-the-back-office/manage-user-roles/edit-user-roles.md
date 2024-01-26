@@ -2,6 +2,7 @@
 title: Edit user roles
 description: Learn how to edit user roles in the Back Office.
 template: back-office-user-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202005.0/users/roles-groups-and-users/managing-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-user-roles/editing-user-roles.html

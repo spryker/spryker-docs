@@ -2,6 +2,7 @@
 title: Open-source vulnerabilities checker
 description: Reference information for evaluator tools.
 template: howto-guide-template
+last_updated: Oct 24, 2023
 redirect_from:
 ---
 

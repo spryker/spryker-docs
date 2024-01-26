@@ -2,6 +2,7 @@
 title: Edit user groups
 description: Learn how to edit user groups in the Back Office
 template: back-office-user-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-user-groups/editing-user-groups.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html

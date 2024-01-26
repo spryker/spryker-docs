@@ -2,6 +2,7 @@
 title: "UI components library: Cache Strategy Static service"
 description: This document provides details about the Cache Strategy Static service in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/cache/static.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/cache/static.html

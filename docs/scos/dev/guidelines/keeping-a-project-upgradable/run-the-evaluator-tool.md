@@ -2,6 +2,7 @@
 title: Run the evaluator tool
 description: Instructions for running the evaluator tool
 template: howto-guide-template
+last_updated: Sep 18, 2023
 redirect_from:
 ---
 

@@ -2,6 +2,7 @@
 title: "Entity does not exist: Pyz prefix"
 description: How to solve the issue related to an entity prefixed with pyz
 template: concept-topic-template
+last_updated: Oct 16, 2023
 ---
 
 When running an upgrade, you can get an error about a non-existent constant, class, method, or property. It's caused by the name of the entity containing the `pyz` prefix.

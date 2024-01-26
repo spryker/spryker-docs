@@ -14,12 +14,7 @@ redirect_from:
 - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 
-This document explains the Datasources service in the Components Library.
-
-## Overview
-
-Datasources are responsible for providing any data to the system based on a given configuration.
-This lets backend systems control where the data is coming from without changing the front-end (ex. table data, select options).
+Datasources are responsible for providing data to the system based on a given configuration. This lets backend systems control where data is coming from without changing the frontend. For example, table data or select options.
 
 Datasources are used in other components like Table, Select, Autocomplete.
 
@@ -33,19 +28,19 @@ Datasources are used in other components like Table, Select, Autocomplete.
 </spy-select>
 ```
 
-## Main Service
+## Main service
 
-The main module provides an opportunity to register any datasource by key via static method `withDatasources()`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
+The main module lets you register a datasource by key using the `withDatasources()` static method. It assigns the object of datasources to`DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformers.html)).
+The main service injects all registered types from `DatasourceTypesToken` and `DataTransformerService`. For more details, see [Data Transformers](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformers.html).
 
-`resolve()` method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve()`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
+The `resolve()` method locates a specific service from `DatasourceTypesToken` based on the argument from `config.type` and returns an observable with data by `Datasource.resolve()`. If `config.transform` exists, data is also transformed by `DataTransformerService`.
 
 ## Datasource
 
-Datasource is basically an Angular Service that encapsulates the algorithm of how the data is loaded into the Component.
+Datasource is an Angular service that encapsulates the algorithm of how the data is loaded into a component.
 
-Datasource must implement a specific interface (Datasource) and then be registered to the Root Module via `DatasourceModule.withDatasources()`.
+Datasource must implement a specific Datasource interface and be registered to the Root Module via `DatasourceModule.withDatasources()`.
 
 ```ts
 // Module augmentation
@@ -90,7 +85,7 @@ The context within which Datasources operate is defined by the local injector wh
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource configuration and Datasource type:
+Interfaces for the Datasource configuration and Datasource type:
 
 ```ts
 export interface DatasourceConfig {
@@ -110,11 +105,12 @@ export interface Datasource<D = unknown, C = unknown> {
 }
 ```
 
-## Datasource types
+## Available Datasources
 
-There are a few common Datasources that are available in UI library as separate packages:
+The following common Datasources are available in the UI components library as separate packages:
 
-- [HTTP](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html)—allows fetching data from URL via HTTP configured in the configuration of the Datasource.
-  HTTP Datasource supports caching strategy (see [Cache](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that may be configured via config and used before the request is made when applicable.
-- [Inline](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource.
-- [Inline.table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource
+| DATASOURCE | DESCRIPTION |
+| - | - |
+| [HTTP](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html) | Allows fetching data from a URL configured in the configuration of the Datasource via HTTP. HTTP Datasource supports the [caching strategy](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html) that can be configured via config and used before the request is made. |
+| [Inline](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource. |
+| [Inline.table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource. |

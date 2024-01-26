@@ -2,6 +2,7 @@
 title: Install the Promotions & Discounts feature
 description: Learn how to integrate the Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/promotions-and-discounts-feature-integration.html
   - /docs/pbc/all/discount-management/202311.0/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html  

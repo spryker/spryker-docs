@@ -2,6 +2,7 @@
 title: "UI components library: Cache service"
 description: This document provides details about the Cache service in the Component Library.
 template: concept-topic-template
+last_updated: Aug 8, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/cache/
 related:

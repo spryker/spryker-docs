@@ -2,6 +2,7 @@
 title: Performance guidelines
 description: This guidelines explains how to optimize the performance of your website.
 template: concept-topic-template
+last_updated: Nov 14, 2023
 redirect_from:
   - /docs/scos/dev/tuning-up-performance/202204.0/performance-guidelines.html
 ---

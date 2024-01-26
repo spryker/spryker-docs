@@ -2,6 +2,7 @@
 title: Integrate development tools
 description: guides for integrating technical enhancement tools with Spryker SCOS
 template: concept-topic-template
+last_updated: Dec 23, 2022
 ---
 
 This section contains a collection of integration guides for development tools: 

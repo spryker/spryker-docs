@@ -2,6 +2,7 @@
 title: Edit company roles
 description: Learn how to edit company roles in the Back Office.
 template: back-office-user-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-roles.html

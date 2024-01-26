@@ -2,6 +2,7 @@
 title: Task
 description: Task is the smallest unit for running commands in the Spryker SDK which serves as a command wrapper.
 template: concept-topic-template
+last_updated: Nov 22, 2022
 ---
 
 A *task* is the smallest unit for running commands in the SDK.

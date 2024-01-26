@@ -2,6 +2,7 @@
 title: Datasource Inline Table
 description: This document provides details about the Datasource Inline Table service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-inline-table.html
   - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasource-inline-table.html
@@ -14,17 +15,19 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document explains the Datasource Inline Table service in the Components Library.
+Datasource Inline Table is an Angular service in the components library that allows for passing the data transformed for the table format along with the configuration of the Datasource.
 
-Datasource Inline Table is an Angular Service that allows passing transformed for the table format data along with the configuration of the Datasource.
-
-Check out an example usage of the Datasource Inline Table.
+## Usage
 
 Service configuration:
 
-- `type`-a datasource type.  
-- `data`-a datasource table data (usually coming from backend).  
-- `filter`-an array of filters that passes transformed for the table format data.
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+| `type` | A datasource type.   |
+| `data` | Datasource table data, which usually comes from the backend.   |
+| `filter` | An array of filters that passes the data transformed for the table format. |
+
+Usage example:
 
 ```html
 <spy-table
@@ -94,7 +97,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Inline Table:
+Datasource Inline Table interfaces:
 
 ```ts
 export interface TableDatasourceInlineConfig extends DatasourceConfig {

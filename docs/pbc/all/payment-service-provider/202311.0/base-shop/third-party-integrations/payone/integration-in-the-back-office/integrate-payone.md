@@ -324,32 +324,60 @@ protected function extendCommandPlugins(Container $container): Container
     });
 }
 ```
-   
-### OMS configuration
 
-One single OMS file is now divided into the main process and sub-processes:
-The following file must be changed `ForeignPaymentStateMachine01.xml`:
+### Optional: Configure your payment OMS
 
-```xml
-<process name="ForeignPaymentStateMachine01" main="true">
-
-        <subprocesses>
-            <process>PaymentAuthorization</process>
-            <process>PaymentConfirmation</process>
-            <process>ItemSupply</process>
-            <process>ItemReturn</process>
-            <process>PaymentRefund</process>
-            <process>PaymentReservationCancel</process>
-            <process>ItemClose</process>
-        </subprocesses>
-...
-```
-
-Main process not only combines and operates sub-processes, its main goal to build everything around the only reserved=”true” state named invoiced;
-Each sub-process has its own states, events, transitions, entry and exit points and can be extended/expanded at the project level to meet all the needs of a particular tenant:
+The complete default payment OMS configuration is available at `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 
 ```xml
-<process name="PaymentAuthorization" file="Subprocess/PaymentAuthorization01.xml"/> <!--Can be replaced with any subprocess file you want -->
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="SomePaymentProcess" main="true">
+
+        <!-- other configurations -->
+
+        <states>
+
+            <!-- other states -->
+
+          <state name="payment capture pending" display="oms.state.in-progress"/>
+
+            <!-- other states -->
+
+        </states>
+
+        <transitions>
+
+            <!-- other transitions -->
+
+            <transition happy="true">
+              <source>ready for dispatch</source>
+              <target>payment capture pending</target>
+              <event>capture payment</event>
+            </transition>
+
+            <!-- other transitions -->
+
+        </transitions>
+
+        <events>
+
+            <!-- other events -->
+
+            <event name="capture payment" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
+
+            <!-- other events -->
+
+        </events>
+
+    </process>
+
+</statemachine>
 ```
 
 ### Data and presentation changes
@@ -379,7 +407,7 @@ Then run the data import for the glossary:
 console data:import glossary
 ```
 
-### Template changes in `CheckoutPage`
+### Optional: Template changes in `CheckoutPage`
 
 Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level:
 

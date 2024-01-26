@@ -239,6 +239,45 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 </statemachine>
 ```
 
+### Optional: Template changes in `CheckoutPage`
+
+Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level:
+
+- You should check that for payment selection choices a form molecule uses the following code:
+
+```twig
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    {% embed molecule('form') with {
+        data: {
+            form: data.form[data.form.paymentSelection[key].vars.name],
+            ...
+        }
+    {% endembed %}    
+{% endfor %}            
+```
+
+- Payment provider names now have glossary keys instead of a name itself, so you need to check if the names of the payment providers are translated without using the prefix:
+
+```twig
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    <h5>{{ name | trans }}</h5>
+{% endfor %}
+```
+
+- Also, if you need, you can add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. For example, there is 1 new external payment with the provider name Payone (can be found in spy_payment_method table in group_name column)  and the payment method name Credit Card (can be found in spy_payment_method table in label_name column). For all of them, you can add translations to your glossary data import file like this:
+
+```csv
+...
+Payone,Payone Payments,en_US
+Credit Card,Credit Card (Payone),en_US
+```
+Then run the data import for the glossary:
+
+```bash
+console data:import glossary
+```
 
 ## Next step
 [Configure Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html)

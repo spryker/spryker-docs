@@ -314,7 +314,7 @@ entries:
       - title: Migrate modules
         nested:
           - title: ErrorHandler
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/upgrade-the-errorhandler-module.html
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-errorhandler-module.html
           - title: EventDispatcher
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html
           - title: Form
@@ -361,9 +361,9 @@ entries:
           - title: Adjust Jenkins for a Docker environment
             url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
     - title: Update environemnt configuration
-      url: /docs/dg/dev/update-and-migrate/update-environment-configuration.html            
+      url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
     - title: Migrate to cloud
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-sccos.html
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html
       nested:
       - title: "Integrate the Docker SDK"
         url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html
@@ -405,7 +405,7 @@ entries:
       - title: Formatter
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
       - title: Combined product offer import
-        url: /docs/dg/dev/integrate-and-configure/install-combined-product-offer-import.html
+        url: /docs/dg/dev/integrate-and-configure/integrate-combined-product-offer-import.html
       - title: SCSS linter
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
       - title: TS linter
@@ -427,8 +427,6 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
     - title: CSS lazy loading for the frontend
       url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
-    - title: Chromium browser for tests
-      url: /docs/dg/dev/integrate-and-configure/integrate-chromium-browser-for-tests.html
     - title: CMS block widgets
       url: /docs/dg/dev/integrate-and-configure/integrate-cms-block-widgets.html
     - title: CSS lazy loading for the frontend
@@ -436,7 +434,7 @@ entries:
     - title: Custom location for static assets
       url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
     - title: Dynamic Yves-Zed tokens
-      url: /docs/dg/dev/integrate-and-configure/configuring-dynamic-yves-zed-tokens.html
+      url: /docs/dg/dev/integrate-and-configure/configure-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
       url: /docs/dg/dev/integrate-and-configure/integrate-dynamic-propel-configuration.html
     - title: Elastic computing
@@ -445,8 +443,6 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
     - title: Health checks
       url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
-    - title: MariaDB database engine
-      url: /docs/dg/dev/integrate-and-configure/integrate-mariadb-database-engine.html
     - title: Multi-database logic
       url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
@@ -456,7 +452,7 @@ entries:
     - title: Propel clean command
       url: /docs/dg/dev/integrate-and-configure/integrate-propel-clean-command.html
     - title: Queue worker signal handling
-      url: /docs/dg/dev/integrate-and-configure/configuring-queue-worker-signal-handling.html
+      url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
     - title: Twig and TwigExtension

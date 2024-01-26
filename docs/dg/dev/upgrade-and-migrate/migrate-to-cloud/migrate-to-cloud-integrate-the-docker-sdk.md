@@ -21,4 +21,4 @@ To run your project on a local machine using the Docker SDK, refer to the [Docke
 Once you have successfully integrated the Docker SDK and defined your deploy files, create the [installation recipes](/docs/scos/dev/the-docker-sdk/{{site.version}}/installation-recipes-of-deployment-pipelines.html) for deployment pipelines. Assuming all the preceding integration steps have been executed, your application should be bootable on a local machine with minimal data imported, making it ready for deployment to one of the demo environments.
 
 ## Next step
-[Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-2-upgrade-the-php-version.html)
+[Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html)

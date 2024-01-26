@@ -7,7 +7,7 @@ redirect_from:
 last_updated: Dec 6, 2023
 ---
 
-Having [defined the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-5-define-the-deployment-strategy.html), you must define the environment variables.
+Having [defined the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html), you must define the environment variables.
 
 Spryker uses `config/Shared/config_*.php` files to configure applications for specific environments and stores. Inside those config files, we use `env()` function to get specific values, for example:
 
@@ -20,4 +20,4 @@ Follow the same configuration approach to define the variables in your applicati
 
 ## Next step
 
-[Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-7-restore-es-and-redis.html)
+[Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html)

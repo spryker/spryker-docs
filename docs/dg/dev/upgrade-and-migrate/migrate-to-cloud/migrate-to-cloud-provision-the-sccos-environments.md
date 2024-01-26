@@ -6,7 +6,7 @@ redirect_from:
 - /docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html
 ---
 
-After you have [migrated non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-3-migrate-non-standard-services.html) and your application is up and running in the local environment, you can deploy it on remote servers.
+After you have [migrated non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html) and your application is up and running in the local environment, you can deploy it on remote servers.
 
 Review the existing Spryker SCCOS environments at [Environments overview](/docs/ca/dev/environments-overview.html) and determine which environments you need for your project.
 
@@ -14,4 +14,4 @@ Following the assessment, initiate the process of requesting the environments th
 
 ## Next step
 
-[Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-5-define-the-deployment-strategy.html)
+[Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html)

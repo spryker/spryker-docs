@@ -7,7 +7,7 @@ redirect_from:
 last_updated: Dec 6, 2023
 ---
 
-After you have [integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-1-integrate-the-docker-sdk.html), you have to upgrade the PHP version.
+After you have [integrated the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html), you have to upgrade the PHP version.
 To upgrade, follow these steps.
 
 ## 1. Check project code for PHP 8.0 compatibility using PHPCompatibility
@@ -66,4 +66,4 @@ image:
 ```
 
 ## Next step
- [Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-3-migrate-non-standard-services.html)
+ [Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html)

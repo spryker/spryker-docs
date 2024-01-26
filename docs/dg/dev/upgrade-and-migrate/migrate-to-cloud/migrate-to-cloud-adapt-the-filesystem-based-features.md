@@ -17,4 +17,4 @@ When migrating to SCCOS, make sure to consider these architectural peculiarities
 
 ## Next step
 
-[Implement Security and Performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-9-implement-security-and-performance-guidelines.html)
+[Implement Security and Performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html)

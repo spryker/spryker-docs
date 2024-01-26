@@ -7,7 +7,7 @@ redirect_from:
 last_updated: Dec 6, 2023
 ---
 
-After you have [chosen a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-12-choose-a-multi-store-setup.html), your next step is migrating your data to the database. For the database, Spryker SCCOS uses MariaDB. Therefore, you must migrate data in the MariaDB-compatible dump.
+After you have [chosen a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html), your next step is migrating your data to the database. For the database, Spryker SCCOS uses MariaDB. Therefore, you must migrate data in the MariaDB-compatible dump.
 
 ## Migrating MySQL or MariDB to MariaDB
 
@@ -102,4 +102,4 @@ ORDER BY rows_n DESC;
 ```
 
 ## Next step
-[Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-14-finalize-the-migration.html)
+[Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html)

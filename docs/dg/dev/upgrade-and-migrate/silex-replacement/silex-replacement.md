@@ -95,7 +95,7 @@ Update the following modules using the provided migration guides:
 
 | MODULE | MIGRATION GUIDE |
 | --- | --- |
-| ErrorHandler | [Migration guide - ErrorHandler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/migrate-modules/upgrade-the-errorhandler-module.html) |
+| ErrorHandler | [Migration guide - ErrorHandler](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-errorhandler-module.html) |
 | EventDispatcher | [Migration guide - EventDispatcher](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html) |
 | Form | [Migration guide - Form](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html) |
 | Http | [Migration guide - Http](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html) |

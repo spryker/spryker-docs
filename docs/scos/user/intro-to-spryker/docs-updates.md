@@ -136,21 +136,21 @@ In November 2023, we have added and updated the following pages:
     - [Configure the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html).
     - [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
 - [Vertex FAQ](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex-faq.html): FAQ about the the Vertex app from the Spryker's App Composition Platform.
-- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
-    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-1-integrate-the-docker-sdk.html).
-    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-2-upgrade-the-php-version.html).
-    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-3-migrate-non-standard-services.html).
-    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-4-provision-the-sccos-environments.html).
-    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-5-define-the-deployment-strategy.html).
-    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-6-define-environment-variables.html).
-    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-7-restore-es-and-redis.html).
-    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-8-adapt-the-filesystem-based-features.html).
-    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-9-implement-security-and-performance-guidelines.html).
-    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-10-add-frontend-assets.html).
-    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-11-wire-custom-services.html).
-    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-12-choose-a-multi-store-setup.html).
-    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-13-migrate-database.html).
-    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-14-finalize-the-migration.html).
+- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
+    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html).
+    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html).
+    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html).
+    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-provision-the-sccos-environments.html).
+    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html).
+    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html).
+    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html).
+    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html).
+    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html).
+    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-add-frontend-assets.html).
+    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html).
+    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html).
+    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html).
+    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html).
 - [Backend API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
 - [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).

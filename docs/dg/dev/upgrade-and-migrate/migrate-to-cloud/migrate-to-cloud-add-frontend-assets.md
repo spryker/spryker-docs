@@ -32,4 +32,4 @@ console publisher:trigger-events -r product_abstract_image,product_concrete_imag
 
 ## Next step
 
-[Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-11-wire-custom-services.html)
+[Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html)

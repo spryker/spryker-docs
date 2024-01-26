@@ -17,4 +17,4 @@ The following image represents the actors and process of the migration:
 
 ## Next step
 
-[Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/step-1-integrate-the-docker-sdk.html)
+[Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html)

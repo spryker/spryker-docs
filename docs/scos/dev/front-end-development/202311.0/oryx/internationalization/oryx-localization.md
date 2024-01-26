@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: July 23, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202311.0/oryx/oryx-localization.html
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/oryx-localization.html
 ---
 
 Localization is the part of internationalization (`i18n`) that's concerned with creating variations of the same application in different locales.

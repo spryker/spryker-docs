@@ -2,6 +2,7 @@
 title: Cache
 description: This document provides details about the Cache service in the Component Library.}
 template: concept-topic-template
+last_updated: Aug 8, 2023
 related:
   - title: Cache Strategy Static
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html

@@ -2,6 +2,7 @@
 title: Merchant Management
 description: Merchant Management PBC lets you manage merchant information
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Merchant Management lets you manage different kinds of merchants depending on the shop type.

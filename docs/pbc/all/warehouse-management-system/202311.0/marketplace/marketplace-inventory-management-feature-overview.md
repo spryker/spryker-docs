@@ -2,6 +2,7 @@
 title: Marketplace Inventory Management feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
 ---

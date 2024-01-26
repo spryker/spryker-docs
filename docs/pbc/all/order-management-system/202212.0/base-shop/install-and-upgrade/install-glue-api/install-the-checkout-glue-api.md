@@ -1,6 +1,7 @@
 ---
 title: Install the Checkout Glue API
 template: feature-integration-guide-template
+last_updated: Oct 30, 2023
 related:
   - title: Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html

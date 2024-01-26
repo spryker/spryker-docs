@@ -2,6 +2,7 @@
 title: Commenting orders
 description: Learn how to comment orders in the Back Office
 template: back-office-user-guide-template
+last_updated: Jun 14, 2022
 related:
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html

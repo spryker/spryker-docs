@@ -2,6 +2,7 @@
 title: Back Office for Marketplace Operator
 description: This document describes how a marketplace operator works in the Back Office.
 template: concept-topic-template
+last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html
 ---

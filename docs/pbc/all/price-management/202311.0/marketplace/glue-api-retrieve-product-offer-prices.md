@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve product offer prices"
 description: Retrieve Marketplace product offer prices via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/product-offers/retrieving-product-offer-prices.html
 related:

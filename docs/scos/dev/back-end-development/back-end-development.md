@@ -2,6 +2,7 @@
 title: Back-end development
 description: Back-end development information for the Spryker Commerce OS
 template: concept-topic-template
+last_updated: Feb 6, 2023
 ---
 
 This section contains overviews and instructions for back-end developing on the the Spryker Commerce OS. It includes the following components and topics:

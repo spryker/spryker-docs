@@ -2,6 +2,7 @@
 title: Integrate Bazaarvoice
 description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template 
+last_updated: Mar 3, 2023
 ---
 
 ## Prerequisites
@@ -82,6 +83,7 @@ If you have custom templates or make your own frontend, the markups required for
 
 #### DCC (product catalog collection)
 Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.twig`
+last_updated: Mar 3, 2023
 
 | SCHEMA.ORG PROPERTY          | BAZAARVOICE PROPERTY |
 |------------------------------|----------------------|
@@ -97,6 +99,7 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 
 #### DCC (merchant catalog collection)
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+last_updated: Mar 3, 2023
 
 | SCHEMA.ORG PROPERTY        | BAZAARVOICE PROPERTY |
 |----------------------------|----------------------|
@@ -145,6 +148,7 @@ Example:
 
 #### Ratings and reviews (Merchant)
 Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/molecules/merchant-profile/merchant-profile.twig`
+last_updated: Mar 3, 2023
 
 Example:
 ```html

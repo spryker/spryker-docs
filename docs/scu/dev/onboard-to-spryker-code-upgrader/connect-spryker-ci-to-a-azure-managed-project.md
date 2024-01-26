@@ -2,6 +2,7 @@
 title: Connect the Spryker CI to a Azure managed project
 description: Learn how to connect Spryker CI to Azure managed project
 template: howto-guide-template
+last_updated: May 9, 2023
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
 ---

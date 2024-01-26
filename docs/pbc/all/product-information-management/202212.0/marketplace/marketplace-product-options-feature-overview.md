@@ -2,6 +2,7 @@
 title: Marketplace Product Options feature overview
 description: The Marketplace Product Options feature lets merchants and Marketplace administrators create product option groups.
 template: concept-topic-template
+last_updated: Oct 30, 2023
 redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-product-options-feature-overview.html
 related:

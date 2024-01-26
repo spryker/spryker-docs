@@ -2,6 +2,7 @@
 title: Table Feature Sync State
 description: This document provides details about the Table Feature Sync State component in the Components Library.
 template: concept-topic-template
+last_updated: Aug 2, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-sync-state.html
 related:

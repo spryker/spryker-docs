@@ -2,6 +2,7 @@
 title: Spryker Marketplace
 description: This document is an overview of Spryker Marketplace
 template: concept-topic-template
+last_updated: Sep 25, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
   - /docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html

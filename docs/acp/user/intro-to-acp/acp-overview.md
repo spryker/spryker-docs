@@ -2,6 +2,7 @@
 title: App Composition Platform overview
 description: Learn about the App Orchestration Platform and how to use it.
 template: concept-topic-template
+last_updated: Dec 15, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
 keywords: acp

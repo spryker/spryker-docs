@@ -2,6 +2,7 @@
 title: "Create Gui table filter types"
 description: This articles provides details how to create a new Gui table filter type
 template: howto-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html
 related:

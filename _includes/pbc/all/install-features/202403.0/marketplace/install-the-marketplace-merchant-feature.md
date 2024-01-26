@@ -183,6 +183,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
 | MerchantProductOfferStorageExpanderPlugin            | Returns `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
 | MerchantProductOfferStorageFilterPlugin              | Filters `ProductOfferCollection` transfer object by active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
+| MerchantUserTwigPlugin                               | Adds 'merchantName' Twig global variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
@@ -364,6 +365,34 @@ Make sure that, when you retrieve a product offer from storage, you can see the 
 
 {% endinfo_block %}
 
+```php
+<?php
+
+namespace Pyz\Zed\Twig;
+
+use Spryker\Zed\MerchantUser\Communication\Plugin\Twig\MerchantUserTwigPlugin;
+use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
+
+class TwigDependencyProvider extends SprykerTwigDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     */
+    protected function getTwigPlugins(): array
+    {
+        return [
+            new MerchantUserTwigPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that `merchantName`  global Twig variable is available.
+
+{% endinfo_block %}
+
 #### Optional: Enable the Backend API authentication
 
 1. [Integrate Glue authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
@@ -410,6 +439,8 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
     }
 }
 ```
+
+
 
 {% info_block warningBox "Verification" %}
 

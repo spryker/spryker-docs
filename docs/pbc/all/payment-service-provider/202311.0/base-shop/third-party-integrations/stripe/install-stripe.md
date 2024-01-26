@@ -246,6 +246,7 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
 - You should check that for payment selection choices a form molecule uses the following code:
 
 ```twig
+{% raw %}
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     {% embed molecule('form') with {
@@ -254,16 +255,19 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
             ...
         }
     {% endembed %}    
-{% endfor %}            
+{% endfor %}  
+{% endraw %}          
 ```
 
 - Payment provider names now have glossary keys instead of a name itself, so you need to check if the names of the payment providers are translated without using the prefix:
 
 ```twig
+{% raw %}
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     <h5>{{ name | trans }}</h5>
 {% endfor %}
+{% endraw %}
 ```
 
 - Also, if you need, you can add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. For example, there is 1 new external payment with the provider name Payone (can be found in spy_payment_method table in group_name column)  and the payment method name Credit Card (can be found in spy_payment_method table in label_name column). For all of them, you can add translations to your glossary data import file like this:

@@ -8,7 +8,8 @@ redirect_from:
 related:
   - title: Assign and deassign filters from categories
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html
-    - /docs/scos/user/back-office-user-guides/202204.0/merchandising/category-filters/reorder-category-filters.html
+redirect_from:
+- /docs/scos/user/back-office-user-guides/202204.0/merchandising/category-filters/reorder-category-filters.html
 ---
 
 To reorder category filter in the Back Office, do the following:

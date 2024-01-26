@@ -2,6 +2,7 @@
 title: Get access to Spryker Code Upgrader
 description: Get your project ready and start upgrading with Spryker Code Upgrader
 template: concept-topic-template
+last_updated: May 8, 2023
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
   - /docs/paas-plus/dev/onboarding-to-paas-plus.html

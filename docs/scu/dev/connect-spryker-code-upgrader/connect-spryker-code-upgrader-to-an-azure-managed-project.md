@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-To connect the Spryker CI manually using a Azure access token, follow the steps below.
+To connect the Spryker Code Upgrader manually using a Azure access token, follow the steps below.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Open **Clone Repository** window in your Azure repository and click on **Generat
 
 Azure access token should have the following repository permissions:
 
-* **Code (Read & write)** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
+**Code (Read & write)** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
 
 ## Configure the connection in Spryker CI
 

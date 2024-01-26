@@ -7,18 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/run-spryker-code-upgrader.html
 ---
 
-This document describes how to manually trigger Spryker Code Upgrader.
-
-## Prerequisites
-
-Connect the Upgrader to your project using one of the following guides:
-
-* [GitHub access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html#prerequisites)
-* [GitLab access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html#prerequisites)
-* [GitLab access token requirements for self-hosted projects](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html#prerequisites)
-* [Azure access token requirements](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html#prerequisites)
-
-## Manually trigger Spryker Code Upgrader
+To manually trigger Spryker Code Upgrader, follow the steps:
 
 1. In Spryker CI, go to **Projects**.
 2. On the **Projects** page, select **Spryker Code Upgrader**.

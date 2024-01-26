@@ -29,4 +29,4 @@ The following schema shows relations within the merchant domain:
 |INSTALLATION GUIDES  |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html)   |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html)  |
+| [Install the Merchant feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html)  |

@@ -2,6 +2,7 @@
 title: Assign product attributes to abstract products
 description: Learn how to assign product attributes to abstract products in the Back Office
 template: back-office-user-guide-template
+last_updated: May 10, 2023
 related:
   - title: Product feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html

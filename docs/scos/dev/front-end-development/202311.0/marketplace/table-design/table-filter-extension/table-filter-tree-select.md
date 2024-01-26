@@ -2,6 +2,7 @@
 title: Table Filter Tree Select
 description: This document provides details about the Table Filter Tree Select component in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/table-filter-tree-select.html
 related:

@@ -2,6 +2,7 @@
 title: Spryk configuration reference
 description: Learn about the Spryk file structure and its elements
 template: howto-guide-template
+last_updated: Nov 10, 2022
 ---
 
 All the Spryk definitions are located in the `config/spryk/spryks` directory. A Spryk's name is defined by its filename.

@@ -2,6 +2,7 @@
 title: "Create Gui tables"
 description: This articles provides details how to create a new Gui table
 template: howto-guide-template
+last_updated: Aug 22, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-create-gui-table.html
 related:

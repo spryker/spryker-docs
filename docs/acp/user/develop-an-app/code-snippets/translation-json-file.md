@@ -2,6 +2,7 @@
 title: Translation JSON file
 Descriptions: Translation Json code snippet
 template: howto-guide-template
+last_updated: Dec 15, 2023
 ---
 
 The `translation.json` file contains translations of the form files which are defined in the `configuration.json` file of your app [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html). Add this file to `config/app/translation.json`in your app.

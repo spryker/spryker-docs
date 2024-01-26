@@ -2,6 +2,7 @@
 title: Feature Walkthroughs
 description: A collection of walkthroughs for Spryker Commerce OS features.
 template: concept-topic-template
+last_updated: Jun 20, 2023
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
   - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html

@@ -2,6 +2,7 @@
 title: DataPayload Conversion
 description: about DataPayload conversion
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/datapayload-conversion.html
 ---

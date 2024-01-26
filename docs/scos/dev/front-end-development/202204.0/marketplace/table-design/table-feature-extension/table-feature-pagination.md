@@ -2,6 +2,7 @@
 title: Table Feature Pagination
 description: This document provides details about the Table Feature Pagination component in the Components Library.
 template: concept-topic-template
+last_updated: Aug 2, 2023
 related:
   - title: Table Feature extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html

@@ -2,6 +2,7 @@
 title: Reorder category filters
 description: Learn how to reorder category filters in the Back Office
 template: back-office-user-guide-template
+last_updated: Jun 8, 2022
 related:
   - title: Standard filters overview
     link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html

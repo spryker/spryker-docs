@@ -2,6 +2,7 @@
 title: "Import file details: merchant_product_approval_status_default.csv"
 description: This document describes the merchant_product_approval_status_default.csv file to configure default merchant products approval statuses in your Spryker shop.
 template: import-file-template
+last_updated: Oct 20, 2023
 related:
   - title: Marketplace Product Approval Process feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-approval-process-feature-overview.html

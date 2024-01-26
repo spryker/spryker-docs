@@ -1,6 +1,7 @@
 ---
 title: Heroku
 template: concept-topic-template
+last_updated: May 16, 2022
 redirect_from:
   - /docs/scos/user/technology-partners/202200.0/hosting-providers/heroku.html
 ---

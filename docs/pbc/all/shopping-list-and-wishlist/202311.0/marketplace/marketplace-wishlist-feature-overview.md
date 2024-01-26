@@ -2,6 +2,7 @@
 title: Marketplace Wishlist feature overview
 description: This document contains concept information for the Marketplace Wishlist feature.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 ---
 
 Wishlists are collections of products that a customer saves for further reference.

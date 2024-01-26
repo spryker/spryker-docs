@@ -2,6 +2,7 @@
 title: Managing B2B account
 description: Describes the endpoints used to manage a B2B account
 template: concept-topic-template
+last_updated: Jan 3, 2023
 ---
 
 This section contains the descriptions of the following endpoints used to manage B2B accounts in Spryker Commerce OS:  

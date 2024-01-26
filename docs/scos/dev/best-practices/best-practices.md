@@ -2,6 +2,7 @@
 title: Best practices
 description: Best practices for developers working on Spryker Commerce OS
 template: concept-topic-template
+last_updated: May 12, 2023
 redirect_from:
   - /docs/scos/dev/best-practices/
 ---

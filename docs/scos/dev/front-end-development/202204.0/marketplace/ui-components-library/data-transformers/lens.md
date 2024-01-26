@@ -2,6 +2,7 @@
 title: Data Transformer Lens
 description: This document provides details about the Data Transformer Lens service in the Components Library.
 template: concept-topic-template
+last_updated: Aug 8, 2023
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html

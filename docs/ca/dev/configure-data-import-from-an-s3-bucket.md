@@ -2,6 +2,7 @@
 title: Configure data import from an S3 bucket via Flysystem
 description: Learn how to import data via an S3 bucket.  
 template: howto-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
 ---

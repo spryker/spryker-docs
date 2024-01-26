@@ -2,6 +2,7 @@
 title: Configure the data integration path between Akeneo and SCCOS
 description: Create incoming configuration, outgoing configuration, and route in the Spryker Middleware powered by Alumio
 template: howto-guide-template
+last_updated: Nov 10, 2023
 ---
 
 After you have [configured data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html), you need to configure the data integration path.

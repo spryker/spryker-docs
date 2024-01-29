@@ -25,14 +25,14 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 
 ## Eight weeks before go-live
 
-Eight weeks before your project goes live, *let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
+Eight weeks before your project goes live, *please inform us about your detailed go-live plans*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
-Ensure you have addressed all the items from the following checklists.
+Ensure you have considered and/or addressed all the items from the following checklists.
 
 ### Cloud
 
-- *DDOS prevention or mitigation checked and implemented.*
-    - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
+- *Distributed Denial-of-service (DDOS) prevention or mitigation checked and implemented.*
+    - Check your concepts for Denial-of-service (DOS) and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention Admin panel and Merchant portal. Add basic auth if applicable. For details, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - *DNS strategy is defined*. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
 
@@ -64,7 +64,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Make sure to install all the security updates from all external packages. [Security checker](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html) can be used.
 - *Compliance and Legal Checks* 
   - Consult your legal team to ensure the platform complies with relevant legal and regulatory requirements, especially for international operations. Check [Guidelines for new GDPR rules](https://docs.spryker.com/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html) as a starting point.
-- *Admin panel ACL set up and verified*. Ensure that the admin Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
+- *Admin panel Access Control List (ACL) set up and verified*. Ensure that the admin ACL setup is configured correctly to manage user permissions and access rights within the system's administrative interface.
 
 ### Testing 
 
@@ -72,7 +72,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - *Test All Payment options*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 - *User Acceptance Testing (UAT)*. Besides internal testing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
-### SEO ### 
+### Search Engine Optimization (SEO) ### 
 
 - *Make sure the SEO strategy and plan are defined.*
   - *Redirects*. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
@@ -91,7 +91,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Cloud 
 
-- *Make sure you have an APM set up*:
+- *Make sure you have an Application Performance Monitoring (APM) set up*:
   - Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
   - Establish robust post-launch monitoring plan, with the aim to watch system's performance and configuring alerting mechanisms.We highly recommend logs to be configured to be gathered in a centralised SIEM system, in order to ensure that effective investigation would be possible in case of security incidents.
 - *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
@@ -99,7 +99,7 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 - *The DNS names and strategy for your shop are clear*. 
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS for your application.
     - Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
-    - *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
+    - *Transport Layer Security (TLS) certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 - *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name. See [Email service](/docs/ca/dev/email-service/email-service.html) for more information about the default email service and its restrictions.
 
 ### Application

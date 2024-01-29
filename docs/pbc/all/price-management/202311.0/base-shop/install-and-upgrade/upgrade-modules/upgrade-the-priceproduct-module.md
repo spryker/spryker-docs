@@ -30,6 +30,7 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html
   - docs/scos/dev/module-migration-guides/202311.0/migration-guide-priceproduct.html
   - /module_migration_guides/mg-priceproduct.htm
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproduct-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproduct-module.md -->

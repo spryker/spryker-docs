@@ -5,6 +5,7 @@ last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-abstract-products.html
 ---
 
 This endpoint allows retrieving general information about abstract products.

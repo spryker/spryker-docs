@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/data-transformer-pluck.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/pluck.html
 related:
   - title: Data Transformers
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html

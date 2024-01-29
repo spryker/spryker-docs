@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara.html
   - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
   - /docs/pbc/all/tax-management/202212.0/base-shop/third-party-integrations/integrate-avalara.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/integrate-avalara.html
 ---
 
 To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.

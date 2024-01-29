@@ -6,7 +6,8 @@ last_updated: Nov 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/export-voucher-codes.html
   - /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
-  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/export-voucher-codes.html  
+  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/export-voucher-codes.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/export-voucher-codes.html  
 related:
   - title: Promotions & Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html

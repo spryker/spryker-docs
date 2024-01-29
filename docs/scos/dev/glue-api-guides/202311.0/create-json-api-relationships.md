@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/decoupled-glue-infrastructure/glue-api-json-api-convention-integration.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-create-a-json-api-relationship.html
+  - /docs/scos/dev/glue-api-guides/202204.0/create-json-api-relationships.html
 ---
 
 Some modules represent relationships between two different resources. Their task is to extend the response of one of the resources with the data of related resources.

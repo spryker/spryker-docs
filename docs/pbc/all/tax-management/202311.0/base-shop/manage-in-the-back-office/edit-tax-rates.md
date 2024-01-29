@@ -8,6 +8,7 @@ related:
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 redirect_from:
     - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-rates.html
+    - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-rates.html
 ---
 
 

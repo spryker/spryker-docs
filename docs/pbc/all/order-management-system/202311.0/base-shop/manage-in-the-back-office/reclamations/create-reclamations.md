@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/sales/orders/creating-reclamations.html
+  - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html
 related:
   - title: Viewing reclamations
     link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/reclamations/view-reclamations.html

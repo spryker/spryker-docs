@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Jan 09, 2024
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
+  - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/integrate-bazaarvoice.html
 ---
 To integrate Bazaarvoice, follow these guidelines.
 

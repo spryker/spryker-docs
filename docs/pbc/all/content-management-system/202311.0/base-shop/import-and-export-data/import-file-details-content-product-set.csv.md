@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/content-management/file-details-content-product-set.csv.html
   - /docs/pbc/all/content-management-system/202311.0/import-and-export-data/file-details-content-product-set.csv.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/import-and-export-data/file-details-content-product-set.csv.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

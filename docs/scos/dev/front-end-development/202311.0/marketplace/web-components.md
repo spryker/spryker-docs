@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/web-components.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/web-components.html
 related:
   - title: Angular Components
     link: docs/scos/dev/front-end-development/page.version/marketplace/angular-components.html

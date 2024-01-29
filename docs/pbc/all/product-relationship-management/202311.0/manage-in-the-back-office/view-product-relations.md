@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-product-relations
   - /docs/en/managing-product-relations
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/managing-product-relations.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/view-product-relations.html
 related:
   - title: Create product relations
     link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/create-product-relations.html

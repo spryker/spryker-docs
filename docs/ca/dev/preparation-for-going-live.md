@@ -38,13 +38,13 @@ Ensure you have considered and/or addressed all the items from the following che
 
 {% info_block infoBox "DNS propagation" %}
 
-After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
+After pointing the domain name to your Spryker project, some of your customers may still see your old project until the DNS propagation is completed. So, keep it live for at least 72 hours after the migration.
 
 {% endinfo_block %}
 
 ### Application
 
-- Upgrade your project's code to match the latest Demo Shop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
+- Upgrade your project's code to match the [latest Demo Shop release](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html), or at minimum, upgrade to a release that fully supports the Docker SDK (202009.0 and higher).
 - Update `spryker/twig` to version 3.15.2 or later because this version and the later ones have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB if you don't use it already.
 - Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html) guide.
@@ -52,6 +52,9 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
+- Connect correct S3 bucket to correct environment:
+  - Production S3 bucket to Production environment.
+  - Staging S3 bucket to Staging environment. 
 - *Performance tips are implemented and verified*:
   - Double-check that you implemented all the [performance guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
@@ -68,15 +71,15 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Testing 
 
-- *Test deployments*. [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
-- *Test All Payment options*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
-- *User Acceptance Testing (UAT)*. Besides internal testing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
+- *Perform Deployment tests*. [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
+- *Perform all Payment options tests*. Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- *Perform User Acceptance Testing (UAT)*. Beside internal testing, conducting extensive UAT to validate the functionality and user experience from an end-user perspective is always a great idea before opening your system publicly. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### Search Engine Optimization (SEO) ### 
 
 - *Make sure the SEO strategy and plan are defined.*
   - *Redirects*. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
-  - *Best practices*. Make sure that best practices are implemented. See [Basic SEO techniques to use in your project](/https://docs.spryker.com/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html)
+  - *Best practices*. Make sure that best practices are reviewed and implemented where applicable. See [Basic SEO techniques to use in your project](/https://docs.spryker.com/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html)
 
 ### Training ### 
 
@@ -91,11 +94,11 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Cloud 
 
-- *Make sure you have an Application Performance Monitoring (APM) set up*:
-  - Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
+- *We strongly encourage you to have an Application Performance Monitoring (APM)*:
+  - APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
   - Establish robust post-launch monitoring plan, with the aim to watch system's performance and configuring alerting mechanisms.We highly recommend logs to be configured to be gathered in a centralised SIEM system, in order to ensure that effective investigation would be possible in case of security incidents.
-- *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
+- *Verify that your Deploy file is set up correctly regards your project needs*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
+- *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes] (https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
 - *The DNS names and strategy for your shop are clear*. 
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS for your application.
     - Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
@@ -105,9 +108,10 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 ### Application
 
 - *Prepare and communicate technical debt mitigation plan*. Develop a comprehensive plan to identify, address, and communicate strategies for managing technical debt before the system goes live.
-- *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
+- *Variables and parameter store values are set up*. Double-check whether you have all needed environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
 - *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting, port configuration or similar. 
 - *Prepare and implement DB creating on production*. F.e. commit propel migration for production and update deploy file to install DB from the commited migration files.
+
 ### Testing
 
 - *Conduct load tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
@@ -143,7 +147,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 - *Sitemap is generated*.
 - *File robots.txt is prepared*.
 - *All the content is prepared*. All the CMS pages and other content are prepared (including meta tags, internal and external links, etc).
-- *Favicon is set*.
+- *[Favicon](https://en.wikipedia.org/wiki/Favicon) is set*.
 
 ## Two weeks before go-live ##
 
@@ -163,7 +167,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 ### Testing ###
 
-- *Perform end-to-end testing on production*. Make sure to test customer journey with all the 3rd party systems switched to production mode. Make sure to cover all the parts of application, including:
+- *Perform end-to-end testing on production*. Make sure to test customer journey with all the 3rd party systems switched to production mode. Make sure to cover all parts of the application, including:
   - Customer registration, account.
   - Main E-commerce flow (search, checkout/OMS process).
   - User/Merchant flow.

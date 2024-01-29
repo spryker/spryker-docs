@@ -1,5 +1,5 @@
 ---
-title: Implement a new console command
+title: Implement console commands
 description: This document describes how you can implement a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -15,10 +15,10 @@ related:
     link: docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
 ---
 
-This document describes how you can implement a new console command. However, before implementing your commands, we recommend you to do the following:
+This document describes how you can implement a new console command. However, before implementing your commands, we recommend doing the following:
 
-* Get the list of the console commands already available at Spryker. For instructions about how to do that, see [Get the list of console commands and available options](/docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html).
-* Check out what each command does. For details, see [Console commands in Spryker](/docs/dg/dev/backend-development/console-commands/console-commands.html).
+* [Get the list of available console commands](/docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html).
+* [Learn what available commands do](/docs/dg/dev/backend-development/console-commands/console-commands.html).
 
 ## Add a new console command
 

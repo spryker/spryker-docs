@@ -1,5 +1,5 @@
 ---
-title: Console commands in Spryker
+title: Console commands
 description: The list of console commands contains the command names together with a short description of what the command does.
 last_updated: Aug 31, 2022
 template: howto-guide-template

@@ -16,7 +16,7 @@ related:
     link: docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
-Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/dg/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
+Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
 
 When you customize Spryker modules by changing their behavior on the project level, even minor changes could potentially cause migration efforts. To avoid such cases and keep project updates safe and predictable, a project should use _~_ (tilde) composer constraint instead of _^_ (caret) for the customized modules.
 

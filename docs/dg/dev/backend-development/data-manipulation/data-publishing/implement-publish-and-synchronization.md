@@ -346,7 +346,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block infoBox "Generic listener classes" %}
 
-For details about creating your non-publish and synchronize listener classes, see [Listening to Events](/docs/dg/dev/backend-development/data-manipulation/event/listening-to-events.html).
+For details about creating your non-publish and synchronize listener classes, see [Listening to Events](/docs/dg/dev/backend-development/data-manipulation/event/listen-to-events.html).
 
 {% endinfo_block %}
 

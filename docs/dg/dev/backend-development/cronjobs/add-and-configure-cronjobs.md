@@ -57,7 +57,7 @@ For each job you can define several configurations:
 | KEY                   | TYPE   | PURPOSE                                                      | ✓ |
 | --------------------- | ------ | ------------------------------------------------------------ | --------- |
 | name                  | string | Name of the job.                                              | yes       |
-| command               | string | The [console command](/docs/dg/dev/backend-development/console-commands/implementing-a-new-console-command.html) that is executed. | yes       |
+| command               | string | The [console command](/docs/dg/dev/backend-development/console-commands/implement-console-commands.html) that is executed. | yes       |
 | schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition—for example, `0 * * * *` means run once each hour at 00 minute). If the environment is in development, return empty string—cronjobs are being executed on development environment only manually. | yes       |
 | enable                | bool   | Enable or disable jobs.                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |

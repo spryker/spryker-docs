@@ -11,9 +11,14 @@ entries:
     - title: System requirements
       url: /docs/scos/dev/system-requirements/system-requirements.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
+    - title: SCOS supported browsers
+      url: /docs/scos/dev/system-requirements/scos-supported-browsers.html
+      include_versions:
+      - "202204.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
@@ -75,9 +80,152 @@ entries:
         url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
       - title: Vendor folder synchronization error
         url: /docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+  - title: Feature walkthroughs
+    url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
+    include_versions:
+    - "202204.0"
+    nested:
+    - title: Agent Assist
+      url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+    - title: Alternative Products
+      url: /docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+    - title: Customer Access
+      url: /docs/scos/dev/feature-walkthroughs/customer-access-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+    - title: Customer Account Management
+      url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: "Customer module overview: reference information"
+        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
+
+
+    - title: Merchant
+      url: /docs/scos/dev/feature-walkthroughs/merchant-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+    - title: Merchant B2B Contracts
+      url: /docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+    - title: Merchant Product Restrictions
+      url: /docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: Restricted products behavior
+        url: /docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
+        include_versions:
+        - "202204.0"
+
+
+    - title: Order Management
+      url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: "Sales module: reference information"
+        url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/sales-module-reference-information.html
+      - title: "Custom order reference: module relations"
+        url: /docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/custom-order-reference-module-relations.html
+        include_versions:
+        - "202204.0"
+    - title: Product Relations
+      url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      nested:
+      - title: "Product Relations: module relations"
+        url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-module-relations.html
+        include_versions:
+        - "202204.0"
+
+    - title: Reclamations
+      url: /docs/scos/dev/feature-walkthroughs/reclamations-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+
+    - title: Refunds
+      url: /docs/scos/dev/feature-walkthroughs/refunds-feature-walkthrough.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Reorder
+      url: /docs/scos/dev/feature-walkthroughs/reorder-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+
+    - title: Search
+      url: /docs/scos/dev/feature-walkthroughs/search-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+
+
+    - title: Spryker Core Back Office
+      url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+      include_versions:
+      - "202204.0"
+      - "202108.0"
+    - title: Spryker Core
+      url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+      nested:
+      - title: How translations are managed
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/how-translations-are-managed.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: URL redirects overview
+        url: /docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/url-redirects-overview.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+
   - title: Glue API guides
     url: /docs/scos/dev/glue-api-guides/glue-api-guides.html
     nested:
+    - title: Glue REST API
+      url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Glue Spryks
       url: /docs/scos/dev/glue-api-guides/glue-spryks.html
     - title: Decoupled Glue API
@@ -86,6 +234,37 @@ entries:
         - "202212.0"
         - "202307.0"
         - "202311.0"
+    - title: Glue infrastructure
+      url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Decoupled Glue infrastructure
+      include_versions:
+      - "202204.0"
+      nested:
+        - title: Backend and Storefront API module differences
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/backend-and-storefront-api-module-differences.html
+          include_versions:
+          - "202204.0"
+        - title: Create Glue API applications
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/create-glue-api-applications.html
+          include_versions:
+          - "202204.0"
+        - title: Authentication and authorization
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/authentication-and-authorization.html
+          include_versions:
+          - "202204.0"
+        - title: Security and authentication
+          url: /docs/scos/dev/glue-api-guides/decoupled-glue-infrastructure/security-and-authentication.html
+          include_versions:
+          - "202204.0"
     - title: Backend and Storefront API module differences
       url: /docs/scos/dev/glue-api-guides/backend-and-storefront-api-module-differences.html
       include_versions:
@@ -195,6 +374,7 @@ entries:
 
     - title: Routing
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -212,68 +392,96 @@ entries:
     - title: Create and change Glue API conventions
       url: /docs/scos/dev/glue-api-guides/create-and-change-glue-api-conventions.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Create Glue API authorization strategies
       url: /docs/scos/dev/glue-api-guides/create-glue-api-authorization-strategies.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Create Glue API resources with parent-child relationships
       url: /docs/scos/dev/glue-api-guides/create-glue-api-resources-with-parent-child-relationships.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Create grant type parameters
       url: /docs/scos/dev/glue-api-guides/create-grant-type-parameters.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Create JSON:API relationships
       url: /docs/scos/dev/glue-api-guides/create-json-api-relationships.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Create protected Glue API endpoints
       url: /docs/scos/dev/glue-api-guides/create-protected-glue-api-endpoints.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Document Glue API endpoints
       url: /docs/scos/dev/glue-api-guides/document-glue-api-endpoints.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
+    - title: Handling concurrent REST requests and caching with entity tags
+      url: /docs/scos/dev/glue-api-guides/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Integrate a CIAM provider
       url: /docs/scos/dev/glue-api-guides/integrate-a-ciam-provider.html
+    - title: Resolving search engine friendly URLs
+      url: /docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Use authentication servers with Glue API
       url: /docs/scos/dev/glue-api-guides/use-authentication-servers-with-glue-api.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Use default Glue parameters
       url: /docs/scos/dev/glue-api-guides/use-default-glue-parameters.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Use Glue API authorization scopes
       url: /docs/scos/dev/glue-api-guides/use-glue-api-authorization-scopes.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Glue API tutorials
       url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -291,12 +499,62 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-a-rest-api-resource.html
         - title: Implement versioning for REST API resources
           url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
+        - title: Interact with third party payment providers using Glue API
+          url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+          include_versions:
+          - "202204.0"
         - title: Validate REST request format
           url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
           include_versions:
+          - "202204.0"
           - "202212.0"
           - "202307.0"
           - "202311.0"
+    - title: Reference information - GlueApplication errors
+      url: /docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: REST API B2C Demo Shop reference
+      url: /docs/scos/dev/glue-api-guides/rest-api-b2c-reference.html
+      include_versions:
+      - "202204.0"
+    - title: REST API B2B Demo Shop reference
+      url: /docs/scos/dev/glue-api-guides/rest-api-b2b-reference.html
+      include_versions:
+      - "202204.0"
+    - title: Managing customers
+      url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+      nested:
+      - title: Managing customer addresses
+        url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Retrieving customer orders
+        url: /docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+    - title: Managing B2B account
+      url: /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-b2b-account.html
+      include_versions:
+      - "202204.0"
       nested:
         - title: Searching by company users
           url: /docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
@@ -310,9 +568,369 @@ entries:
           url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
         - title: Retrieving business unit addresses
           url: /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html
+    - title: Retrieving store configuration
+      url: /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Retrieve related products
+      url: /docs/scos/dev/glue-api-guides/retrieve-related-products.html
+      include_versions:
+      - "202204.0"
+    - title: Searching the product catalog
+      url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Retrieving autocomplete and search suggestions
+      url: /docs/scos/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Retrieving orders
+      url: /docs/scos/dev/glue-api-guides/retrieving-orders.html
+      include_versions:
+      - "202009.0"
+      - "201907.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Data Exchange API
+      include_versions:
+      - "202307.0"
+      - "202311.0"
+      nested:
+      - title: How to send a request in Data Exchange API
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
+      - title: How to configure Data Exchange API endpoints.
+        url: /docs/scos/dev/glue-api-guides/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
+  - title: Feature integration guides
+    url: /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
+    include_versions:
+    - "202009.0"
+    - "201907.0"
+    - "202108.0"
+    - "202204.0"
+    nested:
+    - title: Glue API
+      nested:
+      - title: Glue API installation and configuration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html
+        include_versions:
+        - "202009.0"
+        - "201907.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Agent Assist
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Cart
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Company Account
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html
+        include_versions:
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+
+      - title: Glue API - Development Tools
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-development-tools-feature-integration.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+        include_versions:
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Glue application
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Order Management
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Payments
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Product Relations
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - REST Schema Validation
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html
+        include_versions:
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Spryker Core
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Glue API - Wishlist
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+      - title: Install the Data Exchange API
+        url: /docs/scos/dev/feature-integration-guides/glue-api/data-exchange-api/install-the-data-exchange-api.html
+        include_versions:
+        - "202307.0"
+        - "202311.0"
+      - title: Data Exchange API + Inventory Management feature integration
+        url: /docs/scos/dev/feature-integration-guides/glue-api/dynamic-data-api/install-the-data-exchange-api-inventory-management-feature.md
+        include_versions:
+        - "202307.0"
+        - "202311.0"
+    - title: Company Account
+      url: /docs/scos/dev/feature-integration-guides/company-account-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Company Account + Order Management
+      url: /docs/scos/dev/feature-integration-guides/company-account-order-management-feature-integration.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Customer Access
+      url: /docs/scos/dev/feature-integration-guides/customer-access-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Customer Account Management
+      url: /docs/scos/dev/feature-integration-guides/customer-account-management-feature-integration.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Customer Account Management + Agent Assist
+      url: /docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Customer Account Management + Order Management
+      url: /docs/scos/dev/feature-integration-guides/customer-account-management-order-management-feature-integration.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Discontinued Products + Product Labels
+      url: /docs/scos/dev/feature-integration-guides/discontinued-products-product-labels-feature-integration.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
+    - title: Mailing and Notifications
+      url: /docs/scos/dev/feature-integration-guides/mailing-and-notifications-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Merchant
+      url: /docs/scos/dev/feature-integration-guides/merchant-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+    - title: Merchant B2B Contracts
+      url: /docs/scos/dev/feature-integration-guides/merchant-b2b-contracts-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Merchant Product Restrictions
+      url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+    - title: Merchants and Merchant Relations
+      url: /docs/scos/dev/feature-integration-guides/merchants-and-merchant-relations-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+    - title: Multiple Abstract Products as Promotional Products & Discounts
+      url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Multi-store Products
+      url: /docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Order Management
+      url: /docs/scos/dev/feature-integration-guides/order-management-feature-integration.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Payments
+      url: /docs/scos/dev/feature-integration-guides/payments-feature-integration.html
+      include_versions:
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Permissions
+      url: /docs/scos/dev/feature-integration-guides/permissions-feature-integration.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+    - title: Product Relations
+      url: /docs/scos/dev/feature-integration-guides/product-relations-feature-integration.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Queue Data Import
+      url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Reclamations
+      url: /docs/scos/dev/feature-integration-guides/reclamations-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+
+    - title: Search Widget for Concrete Products
+      url: /docs/scos/dev/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+
+
+    - title: Splittable Order Items
+      url: /docs/scos/dev/feature-integration-guides/splittable-order-items-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202204.0"
+    - title: Spryker Core
+      url: /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Spryker Core Back Office
+      url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+    - title: Uuid Generation Console
+      url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Zed API
+      url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
+      include_versions:
+      - "202204.0"
+
   - title: Data import
     url: /docs/scos/dev/data-import/data-import.html
     include_versions:
+    - "202108.0"
+    - "202204.0"
     - "202212.0"
     - "202307.0"
     - "202311.0"
@@ -320,12 +938,20 @@ entries:
     - title: Importing data with a configuration file
       url: /docs/scos/dev/data-import/importing-data-with-a-configuration-file.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Demo Shop data import
       url: /docs/scos/dev/data-import/demo-shop-data-import/importing-demo-shop-data.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -333,9 +959,224 @@ entries:
       - title: Execution order of data importers in Demo Shop
         url: /docs/scos/dev/data-import/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
         include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
         - "202212.0"
         - "202307.0"
         - "202311.0"
+    - title: Data import categories
+      url: /docs/scos/dev/data-import/data-import-categories/about-data-import-categories.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
+      nested:
+      - title: Commerce setup
+        url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/commerce-setup.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+        nested:
+        - title: File details - payment_method.csv
+          url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method.csv.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+        - title: File details - payment_method_store.csv
+          url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+        - title: File details - customer.csv
+          url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+        - title: File details - order-status.csv
+          url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-order-status.csv.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
+      - title: Catalog setup
+        url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/catalog-setup.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+        nested:
+        - title: Pricing
+          url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/pricing.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          - "202212.0"
+          - "202307.0"
+          - "202311.0"
+          nested:
+          - title: "Import file details: product_price.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_price_schedule.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+
+
+      - title: Merchandising setup
+        url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/merchandising-setup.html
+        include_versions:
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
+        - "202204.0"
+        nested:
+        - title: Product merchandising
+          url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          - "202212.0"
+          - "202307.0"
+          - "202311.0"
+          nested:
+          - title: File details - product_review.csv
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_alternative.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+            - "202212.0"
+            - "202307.0"
+            - "202311.0"
+          - title: "Import file details: product_group.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_label.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: File details - product_search_attribute_map.csv
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute-map.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_discontinued.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_relation.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-relation.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: File details - product_search_attribute.csv
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-search-attribute.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: product_quantity.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: File details - product_set.csv
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+          - title: "Import file details: product_label_store.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+        - title: Discounts
+          url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/discounts.html
+          include_versions:
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: "Import file details: discount.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: discount_amount.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: discount_voucher.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+          - title: "Import file details: discount_store.csv"
+            url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html
+            include_versions:
+            - "202005.0"
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+
     - title: Marketplace data import
       url: /docs/scos/dev/data-import/marketplace-data-import.html
       include_versions:
@@ -345,24 +1186,39 @@ entries:
     - title: Creating a data importer
       url: /docs/scos/dev/data-import/creating-a-data-importer.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Importing product data with a single file
       url: /docs/scos/dev/data-import/importing-product-data-with-a-single-file.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Data importers overview and implementation
       url: /docs/scos/dev/data-import/data-importers-overview-and-implementation.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Importing data with the queue data importer
       url: /docs/scos/dev/data-import/importing-data-with-the-queue-data-importer.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -375,6 +1231,10 @@ entries:
     - title: Data importer speed optimization
       url: /docs/scos/dev/data-import/data-importer-speed-optimization.html
       include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -611,7 +1471,7 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Creae modules
+          - title: Create modules
             url: /docs/scos/dev/back-end-development/extend-spryker/create-modules.html
         - title: Spryker OS module customization
           url: /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
@@ -747,7 +1607,7 @@ entries:
             - title: Set up
               url: /docs/scos/dev/front-end-development/oryx/getting-started/set-up-oryx.html
             - title: Technology
-              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html              
+              url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-technology.html
             - title: Boilerplate
               url: /docs/scos/dev/front-end-development/oryx/getting-started/oryx-boilerplate.html
             - title: Packages
@@ -774,8 +1634,6 @@ entries:
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
               - title: Application plugins
                 url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
-          - title: Localization
-            url: /docs/scos/dev/front-end-development/oryx/building-applications/oryx-localization.html
           - title: Styling
             include_versions:
             - "202212.0"
@@ -851,9 +1709,17 @@ entries:
             - title: Server-side rendering
               url: /docs/scos/dev/front-end-development/oryx/architecture/oryx-server-side-rendering.html
 
+        - title: Internationalization
+          nested:
+            - title: Localization
+              url: /docs/scos/dev/front-end-development/oryx/internationalization/oryx-localization.html
+            - title: Directionality
+              url: /docs/scos/dev/front-end-development/oryx/internationalization/oryx-directionality.html
+
     - title: Marketplace
       url: /docs/scos/dev/front-end-development/marketplace/marketplace-frontend.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -861,6 +1727,7 @@ entries:
         - title: Extend the Marketplace frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-marketplace-frontend.html
           include_versions:
+          - "202204.0"
           - "202212.0"
         - title: Extend the Merchant Portal frontend
           url: /docs/scos/dev/front-end-development/marketplace/extend-the-merchant-portal-frontend.html
@@ -875,6 +1742,8 @@ entries:
               nested:
                 - title: "Autocomplete"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+                - title: "Button Action"
+                  url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
                 - title: "Chip"
                   url: /docs/scos/dev/front-end-development/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
                 - title: "Date"
@@ -937,6 +1806,8 @@ entries:
               nested:
                 - title: "Close Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-close-drawer.html
+                - title: "Confirmation"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-confirmation.html
                 - title: "Drawer"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/actions/actions-drawer.html
                 - title: "HTTP"
@@ -1000,6 +1871,21 @@ entries:
             - title: "Datasources"
               url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasources.html
               nested:
+                - title: "Trigger"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
+                  nested:
+                    - title: "Change"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html
+                    - title: "Input"
+                      url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html
+                - title: "Dependable"
+                  url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-dependable.html
+                  include_versions:
+                  - "202307.0"
+                  - "202311.0"
                 - title: "HTTP"
                   url: /docs/scos/dev/front-end-development/marketplace/ui-components-library/datasources/datasource-http.html
                 - title: "Inline"
@@ -1176,6 +2062,12 @@ entries:
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    - "202009.0"
+    - "202108.0"
+    - "202204.0"
     - "202212.0"
     - "202307.0"
     - "202311.0"
@@ -1183,6 +2075,8 @@ entries:
     - title: Deploy file
       url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html
       include_versions:
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -1190,12 +2084,16 @@ entries:
       - title: Deploy file reference - 1.0
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
         include_versions:
+        - "202108.0"
+        - "202204.0"
         - "202212.0"
         - "202307.0"
         - "202311.0"
       - title: Deploy file inheritance — common use cases
         url: /docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
         include_versions:
+        - "202108.0"
+        - "202204.0"
         - "202212.0"
         - "202307.0"
         - "202311.0"
@@ -1203,42 +2101,61 @@ entries:
     - title: Choosing a Docker SDK version
       url: /docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Docker SDK quick start guide
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-quick-start-guide.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Choosing a mount mode
       url: /docs/scos/dev/the-docker-sdk/choosing-a-mount-mode.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Configuring a mount mode
       url: /docs/scos/dev/the-docker-sdk/configuring-a-mount-mode.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Configuring access to private repositories
       url: /docs/scos/dev/the-docker-sdk/configuring-access-to-private-repositories.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Configure services
       url: /docs/scos/dev/the-docker-sdk/configure-services.html
       include_versions:
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Docker SDK configuration reference
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -1247,18 +2164,30 @@ entries:
     - title: Docker environment infrastructure
       url: /docs/scos/dev/the-docker-sdk/docker-environment-infrastructure.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Configuring debugging in Docker
       url: /docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html
       include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
       - "202212.0"
       - "202307.0"
       - "202311.0"
@@ -1336,7 +2265,7 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
-    - title: Update environemnt configuration
+    - title: Update environment configuration
       url: /docs/scos/dev/technical-enhancement-integration-guides/update-environment-configuration.html
   - title: Zed API
     url: /docs/scos/dev/zed-api/zed-api.html
@@ -1455,6 +2384,474 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html"
       - title: "HowTo: Split products by stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-split-products-by-stores.html
+  - title: Technology partner guides
+    url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
+    include_versions:
+    - "202204.0"
+    nested:
+    - title: Marketing and conversion
+      url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/marketing-and-conversion.html
+      nested:
+      - title: Analytics
+        nested:
+        - title: Installing and integrating Minubo
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html
+          include_versions:
+          - "202108.0"
+          - "202204.0"
+          - "202212.0"
+          - "202307.0"
+          - "202311.0"
+      - title: Customer communication
+        nested:
+        - title: Episerver guides
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver.html
+          include_versions:
+          - "202212.0"
+          - "202307.0"
+          - "202311.0"
+          nested:
+          - title: Integrating Episerver
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
+          - title: Installing and configuring Episerver
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+          - title: API
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-api.html
+          - title: Order reference commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/episerver/episerver-order-reference-commands.html
+        - title: Inxmail guides
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing and configuring Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
+          - title: Integrating Inxmail
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
+          - title: Inxmail API requests
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html
+          - title: Inxmail order referenced commands
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html
+      - title: Personalization and cross-selling
+        include_versions:
+        - "202108.0"
+        - "202204.0"
+        nested:
+        - title: Econda
+          url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+          include_versions:
+          - "202212.0"
+          - "202307.0"
+          - "202311.0"
+          nested:
+          - title: Installing Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
+          - title: Integrating Econda
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+          - title: Integrating Econda cross-selling
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
+          - title: Adding the Econda tracking code
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/adding-the-econda-tracking-code.html
+          - title: Exporting Econda data
+            url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
+    - title: Operational tools, monitoring, legal, etc.
+      url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/operational-tools-monitoring-legal-etc.html
+      nested:
+        - title: New Relic
+          include_versions:
+          - "202204.0"
+          nested:
+            - title: Installing and configuring New Relic
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
+            - title: Configuring logging
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+        - title: Loggly
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/loggly.html
+          nested:
+            - title: Configuring Loggly
+              url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
+        - title: Installing and configuring Tideways
+          url: /docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+          include_versions:
+          - "202204.0"
+    - title: Order Management Erpoms
+      include_versions:
+      - "202204.0"
+      nested:
+    - title: Payment partners
+      nested:
+        - title: Adyen
+          include_versions:
+          - "202204.0"
+          nested:
+            - title: Installing and configuring Adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
+            - title: Integrating Adyen
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
+            - title: Integrating payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
+            - title: Enabling filtering of payment methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+        - title: Afterpay
+          include_versions:
+          - "202204.0"
+          nested:
+            - title: Installing and configuring Afterpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/installing-and-configuring-afterpay.html
+            - title: Integrating Afterpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/afterpay/integrating-afterpay.html
+        - title: Amazon Pay
+          include_versions:
+          - "202204.0"
+          nested:
+            - title: Configuring Amazon Pay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
+            - title: Obtaining an Amazon Order Reference and information about shipping addresses
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+            - title: Sandbox Simulations
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+            - title: State machine
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
+            - title: Handling orders with Amazon Pay API
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+
+        - title: Arvato
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+            - title: Installing and configuring Arvato
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/installing-and-configuring-arvato.html
+              include_versions:
+              - "202001.0"
+              - "202005.0"
+              - "202009.0"
+              - "202108.0"
+              - "202204.0"
+            - title: Arvato - Risk Check
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-risk-check.html
+              include_versions:
+              - "202001.0"
+              - "202005.0"
+              - "202009.0"
+              - "202108.0"
+              - "202204.0"
+            - title: Arvato - Store Order
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-store-order.html
+            - title: v.2.0
+              include_versions:
+              - "201811.0"
+              - "201903.0"
+              - "201907.0"
+              nested:
+              - title: Arvato - Risk Check 2.0
+                url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
+                include_versions:
+                - "201811.0"
+                - "201903.0"
+                - "201907.0"
+              - title: Installing and configuring Arvato 2.0
+                url: /docs/scos/dev/technology-partner-guides/payment-partners/arvato/v.2.0/installing-and-configuring-arvato-2.0.html
+                include_versions:
+                - "201811.0"
+                - "201903.0"
+                - "201907.0"
+        - title: Billpay
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+            - title: Integrating Billpay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html
+            - title: Billpay - Switching invoice payments to a preauthorize mode
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
+        - title: Braintree
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+            - title: Installing and configuring Braintree
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/installing-and-configuring-braintree.html
+            - title: Integrating Braintree
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/integrating-braintree.html
+              include_versions:
+              - "202009.0"
+              - "202108.0"
+              - "202204.0"
+            - title: Performing requests
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-performing-requests.html
+            - title: Request workflow
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/braintree/braintree-request-workflow.html
+
+        - title: Computop
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing and configuring Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html
+          - title: OMS plugins
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms-plugins.html
+          - title: API calls
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api-calls.html
+          - title: Integrating payment methods for Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-payment-methods-for-computop.html
+            include_versions:
+            - "202212.0"
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+            - title: Integrating the PayPal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
+            - title: Integrating the CRIF payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
+            - title: Integrating the PayNow payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
+            - title: Integrating the Сredit Сard payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
+            - title: Integrating the Paydirekt payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+          - title: Integrating Computop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-computop.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+            - "202212.0"
+        - title: CrefoPay
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing and configuring CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
+          - title: Integrating CrefoPay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
+          - title: Enabling B2B payments
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
+          - title: Callbacks
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
+          - title: Notifications
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
+          - title: Capture and refund processes
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
+          - title: Payment methods
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
+        - title: Heidelpay
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/installing-heidelpay.html
+          - title: Integrating Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay.html
+          - title: Configuring Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/configuring-heidelpay.html
+          - title: Integrating payment methods for Heidelpay
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-payment-methods-for-heidelpay.html
+            include_versions:
+            - "202212.0"
+            - "202307.0"
+            nested:
+            - title: Integrating the Sofort payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
+            - title: Integrating the Invoice Secured B2C payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-invoice-secured-b2c-payment-method-for-heidelpay.html
+            - title: Integrating the iDeal payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-ideal-payment-method-for-heidelpay.html
+            - title: Integrating the Easy Credit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
+            - title: Integrating the Direct Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-direct-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Split-payment Marketplace payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-split-payment-marketplace-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Debit payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-debit-payment-method-for-heidelpay.html
+            - title: Integrating the Paypal Authorize payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-paypal-authorize-payment-method-for-heidelpay.html
+            - title: Integrating the Credit Card Secure payment method
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-credit-card-secure-payment-method-for-heidelpay.html
+          - title: Workflow for errors
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
+          - title: OMS workflow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-oms-workflow.html
+          - title: Integrating Heidelpay into the Legacy Demoshop
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
+            include_versions:
+            - "201811.0"
+            - "201903.0"
+            - "201907.0"
+            - "202001.0"
+        - title: Payolution
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing and configuring Payolution
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
+          - title: Integrating Payolution
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+            - "202212.0"
+            - "202307.0"
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
+          - title: Integrating the invoice payment method
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+          - title: Integrating the installment payment method for
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+          - title: Performing requests
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
+          - title: Payolution request flow
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
+        - title: Ratenkauf by easyCredit
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+          - title: Installing and configuring ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/installing-and-configuring-ratenkauf-by-easycredit.html
+          - title: Integrating ratenkauf by easyCredit
+            url: /docs/scos/dev/technology-partner-guides/payment-partners/ratenkauf-by-easycredit/integrating-ratenkauf-by-easycredit.html
+            include_versions:
+            - "202009.0"
+            - "202108.0"
+            - "202204.0"
+            - "202212.0"
+            - "202307.0"
+        - title: RatePay
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+          - "202204.0"
+          nested:
+            - title: Facade methods
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-facade-methods.html
+            - title: Payment workflow
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-payment-workflow.html
+            - title: Disabling address updates from the backend application
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/disabling-address-updates-from-the-backend-application-for-ratepay.html
+            - title: State machine commands and conditions
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machine-commands-and-conditions.html
+            - title: Core module structure diagram
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+            - title: State machines
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/ratepay-state-machines.html
+            - title: Integrating payment methods for RatePay
+              url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-payment-methods-for-ratepay.html
+              nested:
+                - title: Integrating the Direct Debit payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-direct-debit-payment-method-for-ratepay.html
+                - title: Integrating the Prepayment payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-prepayment-payment-method-for-ratepay.html
+                - title: Integrating the Installment payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
+                - title: Integrating the Invoice payment method
+                  url: /docs/scos/dev/technology-partner-guides/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-invoice-payment-method-for-ratepay.html
+    - title: Product information (PIMERP)
+      nested:
+      - title: Akeneo
+        include_versions:
+        - "202009.0"
+        - "202108.0"
+        nested:
+        - title: Installing and configuring Akeneo
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
+        - title: Akeneo — Console commands
+          url: /docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/akeneo-console-commands.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
+    - title: Shipment
+      include_versions:
+      - "202108.0"
+      nested:
+      - title: Seven Senders
+        nested:
+          - title: Installing and configuring Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/installing-and-configuring-seven-senders.html
+          - title: Integrating Seven Senders
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/integrating-seven-senders.html
+          - title: API requests
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-api-requests.html
+          - title: Mappers
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-mappers.html
+          - title: Persistance layer
+            url: /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-persistance-layer.html
+    - title: Taxes
+      include_versions:
+      - "202108.0"
+      nested:
+        - title: Avalara
+          nested:
+            - title: Integrating Avalara
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html
+            - title: Integrating Avalara Tax + Product Options
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-product-options.html
+            - title: Integrating Avalara Tax + Shipment
+              url: /docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara-tax-shipment.html
   - title: Architecture
     url: /docs/scos/dev/architecture/architecture.html
     nested:
@@ -1592,6 +2989,10 @@ entries:
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/execute-tests.html
           - title: Test console commands
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
+          - title: Test Glue API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html
+          - title: Test Glue Backend API
+            url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html
           - title: Test the asynchronous API
             url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
@@ -1685,7 +3086,7 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
       - title: Redis session lock
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
-      - title: Slow Publish and Synchronizationme
+      - title: Slow Publish and Synchronization
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions
         url: /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
@@ -1786,6 +3187,8 @@ entries:
         url: /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/scos/dev/updating-spryker/troubleshooting-updates.html
+  - title: Example modules
+    url: /docs/scos/dev/example-modules.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
-...
+..

@@ -20,11 +20,11 @@ Before integrating Algolia, ensure the following prerequisites are met:
 - The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
-Ensure that your installation meets these requirements.
+Make sure that your installation meets these requirements.
 
 ## Integrate Algolia
 
-Follow these steps to integrate Algolia.
+To integrate Algolia, follow these steps.
 
 ### 1. Configure shared configs
 
@@ -679,9 +679,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### Console command for receiving messages
+### Receive ACP messages
 
-This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.html).
+Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
 
 ## Additional information on Algolia integration
 

@@ -2248,9 +2248,11 @@ entries:
                       - title: Integration in the Back Office
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
                         nested:
-                          - title: Integrate
+                          - title: Integrate Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
-                          - title: Disconnect
+                          - title: Configure Payone
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html
+                          - title: Disconnect Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
@@ -2407,8 +2409,8 @@ entries:
                   - title: Stripe
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/stripe.html
                     nested:
-                      - title: Install Stripe
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/install-stripe.html
+                      - title: Integrate Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/integrate-stripe.html
                       - title: Configure Stripe
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/configure-stripe.html
                       - title: Disconnect Stripe

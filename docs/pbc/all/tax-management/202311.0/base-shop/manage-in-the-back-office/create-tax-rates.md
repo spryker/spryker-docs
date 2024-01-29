@@ -14,7 +14,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/administration/tax-rates/managing-tax-rates.html
   - /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202311.0/manage-in-the-back-office/create-tax-rates.html
-  - /docs/pbc/all/tax-management/202311.0/base-shop/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/create-tax-rates.html
   - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/create-tax-rates.html
 related:

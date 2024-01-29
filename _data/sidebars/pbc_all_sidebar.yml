@@ -86,7 +86,7 @@ entries:
                   - title: Install the Shipment Glue API
                     url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/manage-carrier-companies-and-delivery-methods-in-the-back-office.html
                 nested:
                   - title: Add carrier companies
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
@@ -391,7 +391,7 @@ entries:
                   - title: File details - sales_order_threshold.csv
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/manage-thresholds-the-back-office.html
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html

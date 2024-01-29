@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-merchants
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchants.html
   - docs/scos/user/back-office-user-guides/202311.0/marketplace/merchants/create-merchants.html
+  - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants/create-merchants.html
 related:
   - title: Edit merchants
     link: docs/pbc/all/merchant-management/page.version/base-shop/manage-in-the-back-office/edit-merchants.html

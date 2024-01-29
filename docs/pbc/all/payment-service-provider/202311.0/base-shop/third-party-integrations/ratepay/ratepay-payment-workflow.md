@@ -8,6 +8,7 @@ originalArticleId: 9e0777dc-e660-4a9c-b2e0-0b8cf7adabb2
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/ratepay-payment-workflow.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/ratepay-payment-workflow.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/ratepay-payment-workflow.html
 related:
   - title: RatePay facade methods
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-facade-methods.html

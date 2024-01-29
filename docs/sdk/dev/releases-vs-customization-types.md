@@ -2,6 +2,7 @@
 title: Releases vs customization types
 description: Explain Spryker Corer release types and how different project development strategies are affected by each of them.
 template: concept-topic-template
+last_updated: May 16, 2023
 ---
 Spryker uses semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](https://docs.spryker.com/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
 

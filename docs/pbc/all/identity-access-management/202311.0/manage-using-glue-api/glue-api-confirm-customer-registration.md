@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/confirming-customer-registration.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -37,7 +38,7 @@ After a customer has been created (to create a customer, see [Customers](/docs/p
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
 
 ## Confirm customer registration
 

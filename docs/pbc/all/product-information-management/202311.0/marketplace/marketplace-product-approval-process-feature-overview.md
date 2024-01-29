@@ -2,8 +2,10 @@
 title: Marketplace Product Approval Process feature overview
 description: This document contains concept information for the Marketplace Product Approval Process feature.
 template: concept-topic-template
+last_updated: Dec 11, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-approval-process-feature-overview.html
+  - /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-approval-process-feature-walkthrough.html
 related:
   - title: Approving and denying marketplace products
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-back-office/products/manage-products.html#approving-and-denying-marketplace-products
@@ -30,12 +32,12 @@ The following workflow is valid only in case the [Marketplace Product Approval P
 
 A product can have one of the following statuses:
 
-| STATUS               | DESCRIPTION                                                  |
-| -------------------- | ------------------------------------------------------------ |
-| Draft                | When the product is created, it obtains the *draft* status.  |
-| Waiting for approval | When the product is sent for approval by a merchant in the Merchant Portal, the status changes to *waiting for approval*. |
+| STATUS               | DESCRIPTION                                                                                                                                                                                                                                                                                |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Draft                | When the product is created, it obtains the *draft* status.                                                                                                                                                                                                                                |
+| Waiting for approval | When the product is sent for approval by a merchant in the Merchant Portal, the status changes to *waiting for approval*.                                                                                                                                                                  |
 | Approved             | The marketplace administrator can  approve the product in the Back Office and in this case the status of the product changes to the *approved* one in the Merchant Portal. The marketplace administrator can cancel the approval procedure and return the product into the *draft* status. |
-| Denied               | When the marketplace administrator rejects the product in the Back Office, the product gets *denied* status in the Merchant Portal. The marketplace administrator can cancel the approval procedure and return the product into the *draft* status. |
+| Denied               | When the marketplace administrator rejects the product in the Back Office, the product gets *denied* status in the Merchant Portal. The marketplace administrator can cancel the approval procedure and return the product into the *draft* status.                                        |
 
 {% info_block infoBox "Info" %}
 
@@ -59,12 +61,12 @@ A marketplace owner can set a default approval status for marketplace products o
 
 ## Related Business User documents
 
-| BACK OFFICE USER GUIDES  | MERCHANT PORTAL USER GUIDES  |
-| -------------------- | ------------------ |
-|  [Approve and deny marketplace products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/manage-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html#sending-the-product-for-approval)   |
+| BACK OFFICE USER GUIDES                                                                                                                                                                                               | MERCHANT PORTAL USER GUIDES                                                                                                                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Approve and deny marketplace products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/manage-products.html#approving-and-denying-marketplace-products) | [Send the product for approval](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html#sending-the-product-for-approval) |
 
 ## Related Developer documents
 
-|INSTALLATION GUIDES  | DATA IMPORT |
-|---------| --- |
+| INSTALLATION GUIDES                                                                                                                                                                         | DATA IMPORT                                                                                                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |

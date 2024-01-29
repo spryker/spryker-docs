@@ -13,7 +13,8 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/creating-vouchers.html
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/discount/create-discounts.html
   - /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
-  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/create-discounts.html  
+  - /docs/pbc/all/discount-management/202311.0/manage-in-the-back-office/create-discounts.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-in-the-back-office/create-discounts.html  
 ---
 
 This document describes how to create discounts in the Back Office.

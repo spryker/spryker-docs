@@ -11,6 +11,7 @@ redirect_from:
   - /docs/merchant-product-restrictions-feature-overview
   - /docs/en/merchant-product-restrictions-feature-overview
   - /docs/scos/user/features/202311.0/merchant-product-restrictions-feature-overview.html
+  - /docs/scos/user/features/202204.0/merchant-product-restrictions-feature-overview.html
 ---
 
 The _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
@@ -50,4 +51,4 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 | INSTALLATION GUIDES |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
-| [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |
+| [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |

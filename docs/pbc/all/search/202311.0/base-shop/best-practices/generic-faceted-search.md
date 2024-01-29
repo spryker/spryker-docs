@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/generic-faceted-search
   - /v1/docs/en/generic-faceted-search
   - /docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - /docs/pbc/all/search/202212.0/best-practices/generic-faceted-search.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/base-shop/best-practices/data-driven-ranking.html

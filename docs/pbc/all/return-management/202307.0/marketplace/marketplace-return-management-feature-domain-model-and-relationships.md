@@ -2,6 +2,7 @@
 title: "Marketplace Return Management feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Return Management feature.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 ---
 
 With the *Marketplace Return Management* feature, marketplace merchants can manage their returns.

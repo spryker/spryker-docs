@@ -24,15 +24,15 @@ A feature set contains a group of features that can be added with a single refer
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
-import { b2cFeatures } from "@spryker-oryx/oryx-presets";
+import { storefrontFeatures } from "@spryker-oryx/presets/storefront";
 
-export const app = appBuilder().withFeature(b2cFeatures).create();
+export const app = appBuilder().withFeature(storefrontFeatures).create();
 ```
 
-The `b2cFeatures` feature set contains a list of features that exposes all the available B2C features:
+The `storefrontFeatures` feature set contains a list of features that exposes all the available storefront features:
 
 ```ts
-export const b2cFeatures: AppFeature[] = [
+export const storefrontFeatures: AppFeature[] = [
   productFeature,
   cartFeature,
   checkoutFeature,
@@ -52,11 +52,12 @@ To apply a theme to your Oryx application, you can import it from the preset pac
 
 ```ts
 import { appBuilder } from "@spryker-oryx/core";
-import { b2cFeatures, b2cTheme } from "@spryker-oryx/oryx-presets";
+import { storefrontFeatures } from "@spryker-oryx/presets/storefront";
+import { storefrontTheme } from '@spryker-oryx/themes';
 
 export const app = appBuilder()
-  .withFeature(b2cFeatures)
-  .withTheme(b2cTheme)
+  .withFeature(storefrontFeatures)
+  .withTheme(storefrontTheme)
   .create();
 ```
 
@@ -84,22 +85,14 @@ const app = appBuilder()
 As an application developer, you might want to create your own resources.
 
 ```ts
-import { Resources } from "@spryker-oryx/core";
+import { ResourceGraphic } from '@spryker-oryx/experience';
 
 const myResources: Resources = {
-  graphics: {
-    logo: {
-      source: () =>
-        import(
-          "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-logo"
-        ).then((m) => m.default),
-    },
-    otherImg: {
-      source: () =>
-        import(
-          "/docs/scos/dev/front-end-development/{{page.version}}/oryx/my-other-img"
-        ).then((m) => m.default),
-    },
+  logo: {
+    source: () => import('my-logo').then((m) => m.default),
+  },
+  otherImg: {
+    source: () => import('my-other-img').then((m) => m.default),
   },
 };
 ```

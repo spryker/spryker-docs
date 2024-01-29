@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/reference-information-glueapplication-errors
   - /docs/scos/dev/glue-api-guides/202200.0/reference-information-glueapplication-errors.html
   - /docs/scos/dev/glue-api-guides/202311.0/reference-information-glueapplication-errors.html
+  - /docs/scos/dev/glue-api-guides/202204.0/reference-information-glueapplication-errors.html
 related:
   - title: Glue REST API
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-rest-api.html

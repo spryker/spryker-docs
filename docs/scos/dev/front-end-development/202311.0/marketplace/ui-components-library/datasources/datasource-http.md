@@ -2,8 +2,10 @@
 title: Datasource Http
 description: This document provides details about the Datasource Http service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-http.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasource-http.html
 related:
   - title: Datasources
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
@@ -13,20 +15,23 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
-This document explains the Datasource Http service in the Components Library.
 
-## Overview
+Datasource Http is an Angular service in the components library that fetches data from URLs via HTTP as configured in the Datasource configuration.
+Datasource Http supports the [caching strategy](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html) that can be configured via config and used before the request is made.
 
-Datasource Http is an Angular Service that fetches data from URLs via HTTP as configured in the Datasource configuration.
-Datasource Http supports caching strategy (see [Cache](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that can be configured via config and used before the request is made, when applicable.
+## Usage
 
 Check out an example usage of the Datasource Http.
 
 Service configuration:
 
-- `type`—a datasource type.  
-- `url`—a datasource request URL.  
-- `method`—a datasource request method (`GET` by default).  
+| ATTRIBUTE | DESCRIPTION |
+| - | - |
+|`type` | A datasource type.  |
+|`url` | A datasource request URL.  |
+|`method` | A datasource request method; `GET` by default.  |
+
+Usage example:
 
 ```html
 <spy-select
@@ -62,7 +67,7 @@ export class RootModule {}
 
 ## Interfaces
 
-Below you can find interfaces for the Datasource Http:
+Datasource Http interfaces:
 
 ```ts
 export interface DatasourceHttpConfig extends DatasourceConfig {

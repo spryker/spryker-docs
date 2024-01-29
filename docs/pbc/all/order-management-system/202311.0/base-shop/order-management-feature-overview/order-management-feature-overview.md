@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/features/202108.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202311.0/order-management-feature-overview/order-management-feature-overview.html
+  - /docs/scos/user/features/202204.0/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 Bringing flexible shipping options to your online business may have a key impact on the purchasing decisions of your customers. The *Order Management* feature is a collection of functionalities that let your customers place orders easily and let you manage the orders effectively.
@@ -45,6 +46,6 @@ B2B customers usually purchase large volumes of products selecting specific meas
 | [Quick Add to Cart + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) | [Upgrade the ManualOrderEntryGui module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html) |  | [HowTo: Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | [Custom order reference- module relations](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html) |
 | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |  |  |  |  |
 |[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
-| [Glue API: Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html) |  |  |  |  |
+| [Install the Customer Account Management Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html) |  |  |  |  |
 | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |  |  |  |  |
 | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |  |  |  |  |

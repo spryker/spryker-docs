@@ -2,6 +2,7 @@
 title: "Glue API: Delete warehouse user assignments"
 description: Learn how to activate and deactivate warehouse assignments using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 18, 2023
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you delete warehouse user assignments.
@@ -16,13 +17,13 @@ For detailed information about the modules that provide the API functionality an
 
 ## Delete a warehouse user assignment
 
----
+***
 `DELETE` **/warehouse-user-assignments/*{% raw %}{{warehouse_user_assignment_id}}{% endraw %}***
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
+| ***{% raw %}{{warehouse_user_assignment_id}}{% endraw %}*** | ID of the user warehouse assignment to delete. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
 
 
 ### Request

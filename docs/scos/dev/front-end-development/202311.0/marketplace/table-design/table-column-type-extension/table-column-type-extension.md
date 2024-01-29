@@ -2,11 +2,15 @@
 title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
 related:
   - title: Table Column Type Autocomplete
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+  - title: Table Column Type Button Action
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
   - title: Table Column Type Chip
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
   - title: Table Column Type Date
@@ -202,6 +206,7 @@ export enum ColumnTypeOptionsType {
 UI library comes with a number of standard column types that can be used on any project:
 
 - [Autocomplete](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
+- [Button-action](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html) - renders `@spryker/button-action` component.
 - [Chip](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-chip.html) - renders `@spryker/chip` component.
 - [Date](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-date.html) - renders a formatted date by `config`.
 - [Dynamic](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.

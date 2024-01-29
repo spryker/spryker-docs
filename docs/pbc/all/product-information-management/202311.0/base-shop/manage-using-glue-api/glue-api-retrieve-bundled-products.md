@@ -7,6 +7,7 @@ originalArticleId: f77455d1-e0ca-470c-a6f6-15a060ea2647
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-bundled-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-bundled-products.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html
 related:
   - title: Product Bundles feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-bundles-feature-overview.html
@@ -787,15 +788,17 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 <a name="bundled-products-response-attributes"></a>
 
+
+
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | sku | String | Unique identifier of the product in the bundle. |
 |quantity |Integer| Quantity of the product in the bundle.|
 
-For the attributes of the included resources, see:
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-* [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
+{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+
 
 ## Possible errors
 

@@ -1,9 +1,11 @@
 ---
-title: UI Components Library
-description: This articles provides details about UI components library.
+title: UI components library
+description: UI components library contains Angular components.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/ui-components-library.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
@@ -17,11 +19,7 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
 ---
 
-This document provides details about the UI components library.
-
-## Introduction
-
-Separate from Spryker Core, there is a set of UI Angular Components that are distributed independently via npm Registry. Each package can be installed via npm or yarn commands:
+Separate from Spryker Core, there is a set of UI Angular components that are distributed independently via npm. Each package can be installed via npm or yarn commands:
 
 ```bash
 npm install @spryker/package_name
@@ -31,10 +29,11 @@ npm install @spryker/package_name
 yarn add @spryker/package_name
 ```
 
-Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see [Web Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html)).
-Many UI Components have extension points, and some of them must be configured on a project-level (e.g `Table`, `Datasource`).
+Under the hood, the components are built using Angular 9, rxjs and Ant Design. These components are used in the core modules of the Merchant Portal. You can use them in the Angular ecosystem as default Angular components, or you can transform them into web components and reuse them in Spryker Twig modules. For more details about web components in Twig modules, see [Web Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html).
 
-## UI Components List
+Many UI Components have extension points, and some of them must be configured on a project-level. For example, `Table` or `Datasource`.
+
+## Available UI components
 
 The following is a list of available UI components:
 
@@ -74,9 +73,13 @@ The following is a list of available UI components:
     - @spryker/data-transformer.object-map ([npm](https://www.npmjs.com/package/@spryker/data-transformer.object-map))
     - @spryker/data-transformer.pluck ([npm](https://www.npmjs.com/package/@spryker/data-transformer.pluck))
 - @spryker/datasource ([npm](https://www.npmjs.com/package/@spryker/datasource))
-- @spryker/datasource.http ([npm](https://www.npmjs.com/package/@spryker/datasource.http))
-- @spryker/datasource.inline ([npm](https://www.npmjs.com/package/@spryker/datasource.inline), [story](https://spy-storybook.web.app/?path=/story/datasourceinline--primary))
-- @spryker/datasource.inline.table ([npm](https://www.npmjs.com/package/@spryker/datasource.inline.table), [story](https://spy-storybook.web.app/?path=/story/tabledatasourceinlineservice--with-table))
+    - @spryker/datasource.dependable ([npm](https://www.npmjs.com/package/@spryker/datasource.dependable), [story](https://spy-storybook.web.app/?path=/story/datasourcedependableservice--primary))
+    - @spryker/datasource.http ([npm](https://www.npmjs.com/package/@spryker/datasource.http))
+    - @spryker/datasource.inline ([npm](https://www.npmjs.com/package/@spryker/datasource.inline), [story](https://spy-storybook.web.app/?path=/story/datasourceinline--primary))
+    - @spryker/datasource.inline.table ([npm](https://www.npmjs.com/package/@spryker/datasource.inline.table), [story](https://spy-storybook.web.app/?path=/story/tabledatasourceinlineservice--with-table))
+    - @spryker/datasource.trigger ([npm](https://www.npmjs.com/package/@spryker/datasource.trigger))
+    - @spryker/datasource.trigger.change ([npm](https://www.npmjs.com/package/@spryker/datasource.trigger.change), [story](https://spy-storybook.web.app/?path=/story/changedatasourcetriggerservice--primary))
+    - @spryker/datasource.trigger.input ([npm](https://www.npmjs.com/package/@spryker/datasource.trigger.input), [story](https://spy-storybook.web.app/?path=/story/inputdatasourcetriggerservice--primary))
 - @spryker/date-picker ([npm](https://www.npmjs.com/package/@spryker/date-picker), [story](https://spy-storybook.web.app/?path=/story/datepickercomponent--primary))
 - @spryker/drawer ([npm](https://www.npmjs.com/package/@spryker/drawer), [story](https://spy-storybook.web.app/?path=/story/drawerscomponent--primary))
 - @spryker/dropdown ([npm](https://www.npmjs.com/package/@spryker/dropdown), [story](https://spy-storybook.web.app/?path=/story/dropdowncomponent--primary))

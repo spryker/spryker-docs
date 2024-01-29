@@ -2,6 +2,7 @@
 title: Extend the Merchant Portal frontend
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
+last_updated: Sep 22, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/index.html
   - /docs/marketplace/dev/front-end/202212.0/extending-the-project/migration-guide-extending-the-project.html

@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
 related:
   - title: Managing items in carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
@@ -112,33 +113,8 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 ```
 </details>
 
-**General cart information**
+{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| priceMode | String | The price mode that was active when the cart was created. |
-| currency | String | The currency that was selected when the cart was created. |
-| store | String | The store for which the cart was created. |
-| name | String | Specifies a cart name.<br>The field is only available in multi-cart environments. |
-| isDefault | Boolean | If true, the cart is the default one for the customer.<br>The field is only available in multi-cart environments.  |
-
-**Discount Information**
-
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| displayName | String | The name of the discount. |
-| amount | Integer | The discount amount applied to the cart.  |
-| code | String | The discount code applied to the cart. |
-
-**Totals**
-
-| ATTRIBUTE | TYPE  | DESCRIPTION |
-| --- | --- | --- |
-| expenseTotal | Integer | The total amount of expenses (including e.g. shipping costs). |
-| discountTotal | Integer | The total amount of discounts applied to the cart.  |
-| taxTotal | Integer | The total amount of taxes to be paid. |
-| subTotal | Integer | The subtotal of the cart.  |
-| grandTotal | Integer | The grand total of the cart.  |
 
 
 ## Retrieve registered user's carts
@@ -1711,28 +1687,21 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-<a name="retrieve-a-registered-users-carts-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-registered-users-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-registered-users-carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
 | promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
 | promotional-items | sku | String | The SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| product-options | optionGroupName | String | The name of the group to which the option belongs. |
-| product-options | sku | String | The SKU of the product option. |
-| product-options | optionName | String | The Product option's name. |
-| product-options | price | Integer | The product option price in cents. |
-| product-options | currencyIsoCode | String | The ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
-| vouchers, cart-rules | code | String | The code of the discount. |
-| vouchers, cart-rules | discountType | String | The type of the discount. |
-| vouchers, cart-rules  | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 | shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
 | cart-permission-groups | name | String | The permission group's name. |
@@ -1742,8 +1711,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | company-users |  isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
-* [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
 * [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
 
@@ -2921,18 +2888,19 @@ To retrieve a particular cart, send the request:
     }
 }
 ```
+
 </details>
 
-For the threshold attributes, see [Threshold attributes](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#threshold-attributes).
+{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
+{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the attributes of other included resources, see:
-* [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes).
+
 * [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
 * [Cart permission groups](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
-* [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes).
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes).
 
 ## Edit a cart
@@ -3020,6 +2988,7 @@ Response sample:
 ```
 
 ## Delete a cart
+
 To delete a cart, send the request:
 
 ---

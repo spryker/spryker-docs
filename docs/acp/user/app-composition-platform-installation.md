@@ -2,7 +2,7 @@
 title: App Composition Platform installation
 description: Learn how to install the App Orchestration Platform.
 template: concept-topic-template
-last_updated: Nov 15, 2023
+last_updated: Jan 09, 2024
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
 ---
@@ -38,49 +38,51 @@ The actions and level of effort required to make your project ACP-ready may vary
 
 To make your project ACP-ready, different update steps are necessary depending on the template version on which your project was started:
 
-- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html): All the changes required for ACP readiness are already included, but you should still verify them at the project level.
-- Older versions: To get the project ACP-ready, you should complete all steps described in this document.
+- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) requiere updates.
 
-{% info_block infoBox "Product version earlier than 202211.0" %}
+- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later: you can skip the configuration step described in this document.
 
-If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
+{% info_block infoBox "Product version earlier than 202311.0" %}
+
+If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
 ### Module updates for ACP
 
-To get your project ACP-ready, it is important to ensure that your project modules are updated to the necessary versions.
+To get your project ACP-ready, it is important to make sure that your project modules are updated to the necessary versions.
 
 #### ACP modules
 
-Starting with the Spryker product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerc OS product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
-* `spryker/app-catalog-gui: ^1.2.0` or later
-* `spryker/message-broker: ^1.4.0` or later
-* `spryker/message-broker-aws: ^1.3.2` or later
+* `spryker/app-catalog-gui: ^1.4.1` or later
+* `spryker/message-broker: ^1.10.0` or later
+* `spryker/message-broker-aws: ^1.6.0` or later
 * `spryker/session: ^4.15.1` or later
+* `spryker/oauth-client: ^1.4.0` or later
 
 #### App modules
 
 {% info_block warningBox "Apps- and PBC-specific modules" %}
 
-Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
+Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
 
 {% endinfo_block %}
 
 The Spryker ACP Apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCCOS modules to take full advantage of the latest app feature updates.
 
-For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each App integration guide.
+For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each app integration guide.
 
 ### Configure SCCOS
 
-{% info_block infoBox "This step can be omitted for Product version later than 202211.0" %}
+{% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 
-If your version is based on product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) or newer, you can skip this section! 
+If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can skip this section. 
 
 {% endinfo_block %}
 
-Once you have ensured that your project modules are up-to-date, proceed to configure your SCCOS project to activate the ACP catalog in the Back Office using the following steps:
+Once you have made sure that your project modules are up-to-date, configure your SCCOS project to activate the ACP catalog in the Back Office. Do the following:
 
 1. Define the configuration and add plugins to the following files:
 
@@ -107,7 +109,6 @@ $config[KernelConstants::DOMAIN_WHITELIST] = array_merge(
     $config[KernelConstants::DOMAIN_WHITELIST],
     $aopApplicationConfiguration['APP_DOMAINS'] ?? [],
 );
-$config[StoreConstants::STORE_NAME_REFERENCE_MAP] = $aopApplicationConfiguration['STORE_NAME_REFERENCE_MAP'] ?? [];
 $config[AppCatalogGuiConstants::APP_CATALOG_SCRIPT_URL] = $aopApplicationConfiguration['APP_CATALOG_SCRIPT_URL'] ?? '';
 
 $aopAuthenticationConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_AUTHENTICATION')), true);
@@ -115,20 +116,33 @@ $config[OauthAuth0Constants::AUTH0_CUSTOM_DOMAIN] = $aopAuthenticationConfigurat
 $config[OauthAuth0Constants::AUTH0_CLIENT_ID] = $aopAuthenticationConfiguration['AUTH0_CLIENT_ID'] ?? '';
 $config[OauthAuth0Constants::AUTH0_CLIENT_SECRET] = $aopAuthenticationConfiguration['AUTH0_CLIENT_SECRET'] ?? '';
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    // Here we will define the transport map accordingly to APP (PBC)
+];
+
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // Here we will define the receiver transport map accordinally to APP (PBC)
+    // Here we will define the receiver transport map accordingly to APP (PBC)
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // Here we will define the sender transport map accordinally to APP (PBC)
+    // Here we will define the sender transport map accordingly to APP (PBC)
 ];
 
-$aopInfrastructureConfiguration = json_decode(html_entity_decode((string)getenv('SPRYKER_AOP_INFRASTRUCTURE')), true);
+// -------------------------------- ACP AWS --------------------------------------
+$config[MessageBrokerAwsConstants::HTTP_CHANNEL_SENDER_BASE_URL] = getenv('SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_SENDER_BASE_URL') ?: '';
+$config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL] = getenv('SPRYKER_MESSAGE_BROKER_HTTP_CHANNEL_RECEIVER_BASE_URL') ?: '';
 
-$config[MessageBrokerAwsConstants::SQS_RECEIVER_CONFIG] = json_encode($aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG'] ?? []);
-$config[MessageBrokerAwsConstants::HTTP_SENDER_CONFIG] = $aopInfrastructureConfiguration['SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG'] ?? [];
+$config[MessageBrokerConstants::IS_ENABLED] = (
+    $config[MessageBrokerAwsConstants::HTTP_CHANNEL_SENDER_BASE_URL]
+    && $config[MessageBrokerAwsConstants::HTTP_CHANNEL_RECEIVER_BASE_URL]
+);
 
+$config[OauthClientConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerConstants::TENANT_IDENTIFIER]
+    = $config[MessageBrokerAwsConstants::CONSUMER_ID]
+    = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
+    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+    
 // ----------------------------------------------------------------------------
 // ------------------------------ OAUTH ---------------------------------------
 // ----------------------------------------------------------------------------
@@ -139,14 +153,10 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_MESSAGE_BROKER] = 'aop-e
 $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
 $config[AppCatalogGuiConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
-
-$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
-$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
-$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 </details>
 
-1. In the `navigation.xml` file, add one more navigation item:
+2. In the `navigation.xml` file, add one more navigation item:
 
 ```xml
 ...
@@ -163,6 +173,12 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 
 3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
 
+{% info_block infoBox "Deprecated plugins" %}
+
+Make sure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+
+{% endinfo_block %}
+
 <details>
 <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
@@ -177,16 +193,14 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'ao
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TenantActorMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TimestampMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TransactionIdMessageAttributeProviderPlugin;
 use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\ValidationMiddlewarePlugin;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Receiver\AwsSqsMessageReceiverPlugin;
-use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\HttpMessageSenderPlugin;
+use Spryker\Zed\MessageBrokerAws\Communication\Plugin\MessageBroker\Sender\HttpChannelMessageSenderPlugin;
 use Spryker\Zed\OauthClient\Communication\Plugin\MessageBroker\AccessTokenMessageAttributeProviderPlugin;
 use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
-use Spryker\Zed\Store\Communication\Plugin\MessageBroker\CurrentStoreReferenceMessageAttributeProviderPlugin;
-use Spryker\Zed\Store\Communication\Plugin\MessageBroker\StoreReferenceMessageValidatorPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -196,7 +210,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageSenderPlugins(): array
     {
         return [
-            new HttpMessageSenderPlugin(),
+            new HttpChannelMessageSenderPlugin(),
         ];
     }
 
@@ -206,7 +220,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageReceiverPlugins(): array
     {
         return [
-            new AwsSqsMessageReceiverPlugin(),
+            new HttpChannelMessageReceiverPlugin(),
         ];
     }
 
@@ -218,10 +232,10 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
         return [
             new CorrelationIdMessageAttributeProviderPlugin(),
             new TimestampMessageAttributeProviderPlugin(),
-            new CurrentStoreReferenceMessageAttributeProviderPlugin(),
             new AccessTokenMessageAttributeProviderPlugin(),
             new TransactionIdMessageAttributeProviderPlugin(),
             new SessionTrackingIdMessageAttributeProviderPlugin(),
+            new TenantActorMessageAttributeProviderPlugin(),
         ];
     }
 
@@ -234,23 +248,14 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new ValidationMiddlewarePlugin(),
         ];
     }
-
-    /**
-     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageValidatorPluginInterface>
-     */
-    public function getExternalValidatorPlugins(): array
-    {
-        return [
-            new StoreReferenceMessageValidatorPlugin(),
-        ];
-    }
 }
 ```
 </details>
 
-4. In the `MessageBrokerConfig.php` file, adjust the following module config:
+4. In the `MessageBrokerAwsDependencyProvider.php` file, enable the following module plugins:
 
-**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**:
+<details>
+<summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -260,32 +265,35 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
 
-namespace Pyz\Zed\MessageBroker;
+namespace Pyz\Zed\MessageBrokerAws;
 
-use Generated\Shared\Transfer\MessageAttributesTransfer;
-use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBrokerAws\Expander\ConsumerIdHttpChannelMessageConsumerRequestExpanderPlugin;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsDependencyProvider as SprykerMessageBrokerAwsDependencyProvider;
+use Spryker\Zed\OauthClient\Communication\Plugin\MessageBrokerAws\HttpChannelRequestExpanderPlugin;
 
-class MessageBrokerConfig extends SprykerMessageBrokerConfig
+class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependencyProvider
 {
     /**
-     * Defines attributes which should not be logged.
-     *
-     * @api
-     *
-     * @return array<string>
+     * @return list<\Spryker\Zed\MessageBrokerAwsExtension\Dependency\Plugin\HttpChannelMessageReceiverRequestExpanderPluginInterface>
      */
-    public function getProtectedMessageAttributes(): array
+    protected function getHttpChannelMessageReceiverRequestExpanderPlugins(): array
     {
         return [
-            MessageAttributesTransfer::AUTHORIZATION,
+            new ConsumerIdHttpChannelMessageReceiverRequestExpanderPlugin(),
+            new AccessTokenHttpChannelMessageReceiverRequestExpanderPlugin(),
         ];
     }
 }
 ```
+</details>
 
 5. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
 
-In the `MessageBrokerConfig.php`, adjust the following module config:
+{% info_block infoBox "Deprecated plugins" %}
+
+Make sure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+
+{% endinfo_block %}
 
 <details>
 <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
@@ -300,9 +308,10 @@ In the `MessageBrokerConfig.php`, adjust the following module config:
 
 namespace Pyz\Zed\OauthClient;
 
+use Spryker\Zed\MessageBroker\Communication\Plugin\OauthClient\TenantIdentifierAccessTokenRequestExpanderPlugin;
 use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\Auth0OauthAccessTokenProviderPlugin;
+use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\CacheKeySeedAccessTokenRequestExpanderPlugin;
 use Spryker\Zed\OauthClient\OauthClientDependencyProvider as SprykerOauthClientDependencyProvider;
-use Spryker\Zed\Store\Communication\Plugin\OauthClient\CurrentStoreReferenceAccessTokenRequestExpanderPlugin;
 
 class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 {
@@ -322,146 +331,17 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
     protected function getAccessTokenRequestExpanderPlugins(): array
     {
         return [
-            new CurrentStoreReferenceAccessTokenRequestExpanderPlugin(),
+            new CacheKeySeedAccessTokenRequestExpanderPlugin(),
+            new TenantIdentifierAccessTokenRequestExpanderPlugin(),
         ];
     }
 }
 ```
 </details>
 
-### 3. Update the SCCOS deploy.yml file
-
-This section describes the variables that you must configure for use within your SCCOS AWS environment.
-
-You need to define the environment variables in the `deploy.yml` file of *each* SCCOS environment like testing, staging, and production. There will be multiple general environment variables that in turn will contain several configurations. 
-
-{% info_block warningBox "Warning" %}
-
-It is crucial to specify the keys for the environment variables. The infrastructure values, such as `SPRYKER_AOP_INFRASTRUCTURE` and `STORE_NAME_REFERENCE_MAP`, are provided by Spryker OPS upon request.
-
-{% endinfo_block %}
-
-General structure:
-
-```json
-ENVIRONMENT_VARIABLE_NAME_A: '{
-  "CONFIGURATION_KEY_A":"SOME_VALUE_A",
-  "CONFIGURATION_KEY_B":"SOME_VALUE_B"
-}'
-```
-
-Data structure example for a demo environment connected to the Spryker ACP production:
-
-```json
-#AOP
-SPRYKER_AOP_APPLICATION: '{
-  "APP_CATALOG_SCRIPT_URL": "https://app-catalog.atrs.spryker.com/loader",
-  "STORE_NAME_REFERENCE_MAP": {"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT.fifo"},
-  "APP_DOMAINS": [
-      "os.apps.aop.spryker.com",
-      "*.bazaarvoice.com"
-  ]
-}'
-
-SPRYKER_AOP_INFRASTRUCTURE: '{
-  "SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG": {
-        "endpoint":"https:\/\/events.atrs.spryker.com\/events\/tenant"
-  },
-  "SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG": {
-    "default": {
-        "endpoint":"https:\/\/sqs.eu-central-1.amazonaws.com",
-        "region":"eu-central-1",
-        "auto_setup":false,
-        "buffer_size":1
-    },
-      "DE": {
-        "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
-    },
-    "AT": {
-        "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-AT.fifo"
-    }
-  }
-}'
-```
-
-#### General configurations: SPRYKER_AOP_APPLICATION variable
-
-The configuration key `APP_CATALOG_SCRIPT_URL` is a URL for the App-Tenant-Registry-Service (ATRS) and the path to the JS script to load the ACP catalog.
-
-Example of the production ATRS_HOST and path:
-
-```json
-https://app-catalog.atrs.spryker.com/loader
-```
-
-The configuration key: `STORE_NAME_REFERENCE_MAP` is the StoreReference mapping to the appropriate Spryker store.
-
-{% info_block infoBox "Spryker OPS" %}
-
-The StoreReference mapping is created by Spryker OPS, and they provide you with the corresponding values to be added to your deploy.yml file.
-
-{% endinfo_block %}
-
-Example of demo stores for DE and AT:
-
-```json
-{"DE": "tenant_messages_for_store_reference_AOP_Demo_Production-DE", "AT": "tenant_messages_for_store_reference_AOP_Demo_Production-AT"}
-```
-
-The configuration key `APP_DOMAINS` designates the app domains used in redirects.
-
-{% info_block infoBox "Spryker OPS" %}
-
-The app domains are provided by Spryker OPS.
-
-{% endinfo_block %}
-
-Example of the app domain values:
-
-```json
-[
-  "os.apps.aop.spryker.com",
-  "*.bazaarvoice.com"
-]
-```
-#### Message Broker configuration: SPRYKER_AOP_INFRASTRUCTURE variable
-
-The configuration key `SPRYKER_MESSAGE_BROKER_SQS_RECEIVER_CONFIG` is for the receiver configuration. The queues must be defined for each store, or a default queue for all stores is to be defined.
-
-{% info_block infoBox "Spryker OPS" %}
-
-The queues are created by Spryker OPS, and they provide you with the corresponding values to be added to your deploy.yml file.
-
-{% endinfo_block %}
-
-Example of the receiver configuration for the Spryker production environment:
-
-```json
-{
-  "default": {
-    "endpoint":"https://sqs.eu-central-1.amazonaws.com",
-    "auto_setup":false, "buffer_size":1
-  },
-  "DE": {
-    "queue_name":"tenant_messages_for_store_reference_AOP_Demo_Production-DE.fifo"
-  },
-  "<Store Reference>": {
-    "queue_name":"queue_name_for_store_reference_<Store>"
-  }
-}
-```
-
-Example of the `SPRYKER_MESSAGE_BROKER_HTTP_SENDER_CONFIG` configuration key value:
-
-```json
-{
-    "endpoint":"https://events.atrs.spryker.com/events/tenant"
-}
-```
-
 ## Next steps after the ACP-readiness
 
-After configuring the files, updating all modules, and adding the requested keys with their corresponding values provided by Spryker OPS to the `deploy.yml` file, the SCCOS codebase is now up-to-date. Once redeployed, your environment is ACP-ready.
+After configuring the files and updating all modules, the SCCOS codebase is now up-to-date. Once redeployed, your environment will be ACP-ready.
 
 The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies the registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
 

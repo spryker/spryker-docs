@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/third-party-integrations/configure-algolia.html  -
   - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/configure-algolia.html
 ---
-Once you have integrated the Algolia app, you can configure it.
+Once you have [integrated the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html), you can configure it.
 
 ## Prerequisites
 

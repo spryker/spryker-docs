@@ -2,6 +2,7 @@
 title: Roll back upgrades
 description: How to revert changes provided by Spryker Code Upgrader
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/paas-plus/dev/roll-back-upgrades.html
 ---

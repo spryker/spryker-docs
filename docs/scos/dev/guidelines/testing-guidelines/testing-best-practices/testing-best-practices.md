@@ -2,6 +2,7 @@
 title: Testing best practices
 description: Best practices in the testing process and for specific test types.
 template: concept-topic-template
+last_updated: Aug 29, 2023
 ---
 
 This section provides an overview of best practices for tests and includes the following topics:

@@ -111,7 +111,7 @@ entries:
       url: /docs/dg/dev/backend-development/console-commands/console-commands.html
       nested:
       - title: Implement a new console command
-        url: /docs/dg/dev/backend-development/console-commands/implement-a-new-console-command.html
+        url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
       - title: Get the list of console commands and available options
         url: /docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation

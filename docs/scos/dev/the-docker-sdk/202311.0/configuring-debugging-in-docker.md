@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/configuring-debugging-in-docker
   - /docs/debugging-setup
   - /docs/en/debugging-setup
+  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-debugging-in-docker.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

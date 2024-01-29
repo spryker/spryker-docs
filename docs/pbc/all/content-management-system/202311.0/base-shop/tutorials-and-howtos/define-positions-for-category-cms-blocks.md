@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-positions-for-category-cms-blocks.html
 ---
 
 

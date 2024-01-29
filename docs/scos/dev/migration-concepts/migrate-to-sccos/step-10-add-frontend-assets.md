@@ -2,6 +2,7 @@
 title: 'Step 10: Add frontend assets'
 description: To migrate to SCCOS, one of the steps, is adding the frontend assets.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 After you have implemented security and performance guidelines, add the frontend assets as described in this document.

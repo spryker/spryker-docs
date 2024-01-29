@@ -71,6 +71,12 @@ Each shipment method has a dedicated price and tax set in the various currencies
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
 
+## Current constraints
+
+* Product catalog can't be filtered by a shipment type.
+* Customers can't add products with preselected shipment types to cart. They can select shipment types only during checkout.
+* If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
+
 
 ## Related Business User documents
 

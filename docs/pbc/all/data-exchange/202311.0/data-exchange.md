@@ -2,6 +2,7 @@
 title: Data Exchange
 description: General information about the data exchange options.
 template: concept-topic-template
+last_updated: Dec 18, 2023
 ---
 
 Data Exchange refers to the process of transferring data between Spryker and third-party systems.
@@ -34,9 +35,9 @@ Spryker offers the following options to import and export data:
 
 ## Data Exchange API
 
-Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is always current across all integrated platforms. It's part of the SCCOS platform core.
+Data Exchange API is a dynamic database API that facilitates data transfer in real-time, ensuring data is exchanged across all integrated platforms. It's part of the SCCOS platform core.
 
-Data Exchange API lets you build, customize, and manage APIs tailored to your specific business requirements through a user interface.
+Data Exchange API lets you build, customize, and manage database APIs tailored to your specific business requirements through a user interface.
 
 The main benefits of the Data Exchange API include the following:
 

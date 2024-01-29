@@ -2,6 +2,7 @@
 title: Async API
 Descriptions: Async API schema file helps users understand the asynchronous message handling in Spryker.
 template: howto-guide-template
+last_updated: Nov 16, 2023
 ---
 
 To define the [Async API](https://github.com/spryker-sdk/async-api) messages, Spryker uses the [Async API specification](https://www.asyncapi.com/) which is similar to the OpenAPI specification. The main purpose of the Async API schema file is to help users understand the asynchronous message handling in Spryker. The file contains some important information, such as the channel which a message goes through, the name of the message, and the data that is transported within a message. For more information, see [Async API docs](https://www.asyncapi.com/docs).

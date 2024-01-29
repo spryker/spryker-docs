@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
   - /docs/pbc/all/product-information-management/202311.0/import-and-export-data/products-data-import/file-details-product-concrete.csv.html  
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

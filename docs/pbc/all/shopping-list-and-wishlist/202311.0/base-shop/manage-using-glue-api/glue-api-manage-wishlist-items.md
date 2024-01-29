@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-wishlists/managing-wishlist-items.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-using-glue-api/manage-wishlist-items-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 related:
   - title: Managing wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
@@ -316,7 +317,7 @@ To update a wishlist item, send the request:
 | quantity  | Integer  | Quantity of the configurable product to update in the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 ### Response
 

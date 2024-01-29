@@ -2,6 +2,7 @@
 title: Connect the Spryker CI to a GitHub managed project
 description: Learn how to connect Spryker CI to a GitHub managed project
 template: howto-guide-template
+last_updated: Jul 4, 2023
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
 ---

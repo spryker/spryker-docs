@@ -11,6 +11,7 @@ redirect_from:
   - /docs/akeneo
   - /docs/en/akeneo
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/akeneo.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/akeneo.html
 related:
   - title: Akeneo PIM Integration App
     link: docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html

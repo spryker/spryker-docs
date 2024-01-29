@@ -8,6 +8,7 @@ originalArticleId: 14356b81-71a8-46ba-93b0-ef5d376fc290
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202108.0/product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/product-lists-catalog-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
 related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html

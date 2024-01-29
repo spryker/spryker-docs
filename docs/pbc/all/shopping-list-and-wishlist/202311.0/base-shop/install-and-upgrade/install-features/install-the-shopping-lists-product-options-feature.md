@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/shopping-lists-product-options-feature-integration.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/install-the-shopping-lists-product-options-feature.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-product-options-feature.html
 
 related:
   - title: Shopping Lists feature walkthrough

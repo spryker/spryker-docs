@@ -2,6 +2,7 @@
 title: Verify email addresses
 description: Learn how to verify email addresses, so that your applications can send emails from them.
 template: howto-guide-template
+last_updated: Dec 18, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
   - /docs/ca/dev/verify-email-addresses.html

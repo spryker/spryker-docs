@@ -7,6 +7,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-guest-carts.html
 ---
 
 This document describes how to add items with discounts to guest carts. For full information on the endpoint, see [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html).
@@ -679,7 +680,11 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 
-{% include pbc/all/glue-api-guides/202311.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 
 

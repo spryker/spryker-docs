@@ -2,8 +2,10 @@
 title: Table Feature Selectable
 description: This document provides details about the Table Feature Selectable component in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-selectable.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-selectable.html
 related:
   - title: Table Feature extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html

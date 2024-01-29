@@ -2,6 +2,7 @@
 title: Ignore evaluation errors
 description: Reference information for evaluator configuration file.
 template: howto-guide-template
+last_updated: Sep 20, 2023
 ---
 
 In some cases, the evaluator's rules may cause false positive errors. Then you can configure the evaluator to ignore some errors.

@@ -2,6 +2,7 @@
 title: Contributing to the Spryker documentation
 description: Find out how you can build the Spryker documentation site and contribute to docs
 template: concept-topic-template
+last_updated: Jan 23, 2023
 ---
 
 We at Spryker aim to constantly improve the content we provide our customers and partners with. You can get involved in improving the Spryker documentation by reporting issues and editing documentation via pull requests on GitHub.

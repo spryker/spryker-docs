@@ -2,6 +2,7 @@
 title: Guidelines
 description: Guidelines for developers working on Spryker Commerce OS
 template: concept-topic-template
+last_updated: Sep 18, 2023
 redirect_from:
 ---
 

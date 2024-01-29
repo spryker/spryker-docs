@@ -2,6 +2,7 @@
 title: The Spryker SDK settings
 description: There are three types of settings in the Spryker SDK - shared, local(private), and SDK.
 template: howto-guide-template
+last_updated: Nov 4, 2022
 ---
 
 The Spryker SDK has three types of settings: shared, local (private), and SDK.

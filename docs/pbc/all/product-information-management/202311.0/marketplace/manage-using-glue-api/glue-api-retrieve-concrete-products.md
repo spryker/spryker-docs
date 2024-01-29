@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve concrete products"
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Dec 18, 2023
 redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/marketplace/manage-using-glue-api/retrieve-concrete-products.html
 related:
@@ -1101,30 +1102,11 @@ To retrieve product offer prices, include `product-offers` and `product-offer-pr
 ```
 </details>
 
-<a name="concrete-products-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| sku | String | SKU of the concrete product. |
-| name | String | Name of the concrete product. |
-| description | String | Description of the concrete product. |
-| attributes | Object | List of attribute keys and their values for the product. |
-| superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
-| metaTitle|String|Meta title of the product. |
-| metaKeywords|String|Meta keywords of the product. |
-| metaDescription|String|Meta description of the product. |
-| attributeNames | String | List of attribute keys and their translations. |
-| productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
-
-
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| product-options | sku | String | Specifies the SKU of the product option. |
-| product-options | optionName | String | Specifies the option name. |
-| product-options | optionGroupName | String | Specifies the name of the group to which the option belongs. |
-| product-options | price | Integer | Specifies the option price in cents. |
-| product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
 For attributes of the other included resources, see the following:
 

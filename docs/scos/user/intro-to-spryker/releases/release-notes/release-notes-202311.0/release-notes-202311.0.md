@@ -3,6 +3,8 @@ title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
 last_updated: Nov 7, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -26,7 +28,7 @@ The fulfillment App includes the following features:
 - Rapidly customize and scale with a flexibly built app.
 
 ### Documentation
-[Fulfillment App feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html)
+[Fulfillment App overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html)
 
 
 ## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Click&Collect <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>

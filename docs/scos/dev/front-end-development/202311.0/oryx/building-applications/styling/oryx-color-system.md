@@ -41,7 +41,7 @@ There are eight semantic color types used in Oryx components:
 | Primary   | Typically represents the brand color of a website. This color is used as the call-to-action color in many components.                     |
 | Secondary | Additional accent color that can be used for more color-full experiences. Oryx components rarely use the secondary color.                                 |
 | Neutral   | Also known as "grays". The neutrals are used for the layout—for example, as a divider or background color. The Radix color system provides different neutrals that pair nicely with the color of choice, also known as "natural pairing". |
-| Highlight | Used to highlight a    |
+| Highlight | Used to highlight elements.   |
 | Success   | One of the `AlertType` colors that is used in components that are driven by `AlertType`—for example, notification.                              |
 | Info      | Similar to Success.                                             |
 | Warning   | Similar to Success.                                               |

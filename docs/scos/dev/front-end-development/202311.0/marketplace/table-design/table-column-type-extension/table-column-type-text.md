@@ -2,13 +2,17 @@
 title: Table Column Type Text
 description: This document provides details about the Table Column Type Text in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-column-types/table-column-type-text.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-column-type-extension/table-column-type-text.html
 related:
   - title: Table Column Type extension
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
   - title: Table Column Type Autocomplete
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+  - title: Table Column Type Button Action
+    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
   - title: Table Column Type Chip
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
   - title: Table Column Type Date

@@ -33,7 +33,7 @@ The following steps are visualized:
 
 To make the transformation from API models to client models extensible, Oryx uses a _multi-provider_ injection token for normalizers. This lets third-party packages and custom implementations to provide their own normalizers and seamlessly integrate with the existing architecture.
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "" %}
 
 While a decoupled data model provides a more flexible architecture and is recommended in the Oryx framework, it does not mean that customizations or third-party integrations need to follow this practice. In some cases, you may want to skip the normalization and over-engineer the architecture for an individual extension.
 

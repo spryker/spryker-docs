@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlistsearch.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productlistsearch.html
   - /module_migration_guides/mg-product-list-search.htm
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlistsearch-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productlistsearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlistsearch-module.md -->

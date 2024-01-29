@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
   - /docs/pbc/all/ratings-reviews/202311.0/import-and-export-data/file-details-product-review.csv.html
   - /docs/pbc/all/ratings-reviews/202311.0/import-and-export-data/file-details-product-review.csv.html
+  - /docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/import-file-details-product-review.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

@@ -79,7 +79,7 @@ This endpoint lets you retrieve shipment types.
 }
 ```
 
-<details>
+</details>
 
 <details>
   <summary>Storefront: Retrieve shipment types</summary>

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/gift-cards-import
   - /docs/scos/dev/data-import/202311.0/data-import-categories/special-product-types/gift-cards/gift-cards.html
   - /docs/pbc/all/gift-cards/202311.0/import-and-export-data/import-of-gift-cards.html
+  - /docs/pbc/all/gift-cards/202204.0/import-and-export-data/import-gift-cards-data.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Gift Cards PBC:

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-cart-feature-integration
   - /docs/en/product-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/product-cart-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-cart-feature.html
 related:
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html

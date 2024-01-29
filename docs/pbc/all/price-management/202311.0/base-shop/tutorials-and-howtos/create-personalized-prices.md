@@ -7,6 +7,7 @@ originalArticleId: f196671d-6261-40e4-b405-0f0eda110b7b
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
 ---
 
 This document describes the steps to consider when implementing personalized prices for customer groups.

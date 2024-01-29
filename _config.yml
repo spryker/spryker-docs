@@ -166,7 +166,6 @@ defaults:
       role: "all"
 
 versions:
-  '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202307.0': '202307.0'
   '202311.0': '202311.0'
@@ -174,24 +173,12 @@ versions:
 # versioned categories - these must match corresponding directories
 versioned_categories:
   scos:
-    user:
-      - features
-      - back-office-user-guides
-      - technology-partners
-      - shop-user-guides
-      - overview-of-features
     dev:
-      - feature-walkthroughs
       - feature-integration-guides
       - data-import
       - data-export
       - glue-api-guides
-      - technology-partner-integration-guides
       - the-docker-sdk
-      - migration-and-integration
-      - legacy-demoshop
-      - technology-partner-guides
-      - devops-migration-guides
       - system-requirements
       - front-end-development
   pbc:

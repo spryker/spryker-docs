@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
 ---
 
 To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) and [plugins](/docs/dg/dev/backend-development/plugins/plugins.html).

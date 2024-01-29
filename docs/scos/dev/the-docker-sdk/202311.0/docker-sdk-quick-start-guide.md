@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-quick-start-guide
   - /docs/docker-sdk-quick-start-guide
   - /docs/en/docker-sdk-quick-start-guide
+  - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

@@ -6,10 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-api-details
 originalArticleId: 40f89caf-03ea-43b6-975d-364f30c29f52
 redirect_from:
-
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/computop-api-calls.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/computop-api-calls.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/computop-api-calls.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/computop-api-calls.html
 related:
   - title: Computop
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/computop/computop.html

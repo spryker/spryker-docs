@@ -7,6 +7,7 @@ originalArticleId: 23652c0f-92b4-45c1-9053-905389353411
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-shopping-lists/managing-shopping-lists.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-using-glue-api/manage-shopping-lists-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
       link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html

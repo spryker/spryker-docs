@@ -8,6 +8,7 @@ originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-alternative-products.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 related:
   - title: Retrieving related products
     link: docs/pbc/all/product-relationship-management/page.version/glue-api-retrieve-related-products.html

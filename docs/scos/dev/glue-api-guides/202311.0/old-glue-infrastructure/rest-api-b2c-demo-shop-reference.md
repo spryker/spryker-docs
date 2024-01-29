@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/rest-api-reference.html
   - /docs/scos/dev/glue-api-guides/202108.0/rest-api-reference.html
   - /docs/scos/dev/glue-api-guides/202212.0/rest-api-b2c-reference.html
+  - /docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html
 related:
   - title: Reference information- GlueApplication errors
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/reference-information-glueapplication-errors.html

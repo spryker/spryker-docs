@@ -12,7 +12,8 @@ redirect_from:
   - /docs/en/payolution-configuration
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/installing-and-configuring-payolution.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/payolution/installing-and-configuring-payolution.html
-    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/install-and-configure-payolution.html
+  - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/install-and-configure-payolution.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/installing-and-configuring-payolution.html
 related:
   - title: Integrating Payolution
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-payolution.html

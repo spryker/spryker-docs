@@ -22,7 +22,11 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
   - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
-  - /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html  
+  - /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/configure-services.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html    
 
 related:
   - title: Deploy File Reference - 1.0

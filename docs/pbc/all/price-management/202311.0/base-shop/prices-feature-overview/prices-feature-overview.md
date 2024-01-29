@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/prices-feature-walkthrough/prices-feature-walkthrough.html
   - /docs/scos/user/features/202108.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202005.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/prices-feature-overview.html
 ---
 
 The *Prices* feature enables Back Office users to set prices for products and manage them effectively.

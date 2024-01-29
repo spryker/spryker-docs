@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/content/redirects/managing-cms-redirects.html
   - /docs/scos/user/back-office-user-guides/202204.0/content/redirects/managing-cms-redirects.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/redirects/manage-cms-redirects.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/redirects/manage-cms-redirects.html
 ---
 
 This topic describes how to manage redirects in the Back Office.

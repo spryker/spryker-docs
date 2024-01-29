@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
 related:
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/decimal-stock-migration-concept.html

@@ -10,7 +10,8 @@ redirect_from:
   - /docs/mailing-notifications-feature-overview
   - /docs/en/mailing-notifications-feature-overview
   - /docs/scos/user/features/202200.0/mailing-and-notifications-feature-overview.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html
+  - /docs/pbc/all/emails/202204.0/emails.html  
 ---
 
 The *Emails* capability lets you manage newsletters and notifications.

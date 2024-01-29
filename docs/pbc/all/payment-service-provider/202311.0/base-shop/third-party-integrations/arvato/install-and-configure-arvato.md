@@ -8,6 +8,7 @@ originalArticleId: 01e4a638-f2ea-4974-8f55-ee85d8745298
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/arvato/installing-and-configuring-arvato.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/arvato/install-and-configure-arvato.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/arvato/installing-and-configuring-arvato.html
 related:
 related:
   - title: Arvato - Store Order 2.0

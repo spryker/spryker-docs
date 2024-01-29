@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/en/implementing-rest-api-resource
   - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/implement-a-rest-api-resource.html
 ---
 
 This document shows how to implement a REST API resource in your project.

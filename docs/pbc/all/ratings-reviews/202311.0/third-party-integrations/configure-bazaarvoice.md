@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
+  - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/configure-bazaarvoice.html
 ---
 
 After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:

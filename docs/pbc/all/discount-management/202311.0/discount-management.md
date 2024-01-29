@@ -2,6 +2,8 @@
 title: Discount Management
 description: Discount Management PBC lets you manage discounts
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/discount-management/202204.0/discount-management.html
 last_updated: Nov 17, 2023
 ---
 

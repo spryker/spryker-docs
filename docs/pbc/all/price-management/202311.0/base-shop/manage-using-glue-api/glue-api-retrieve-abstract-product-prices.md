@@ -8,6 +8,7 @@ originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html

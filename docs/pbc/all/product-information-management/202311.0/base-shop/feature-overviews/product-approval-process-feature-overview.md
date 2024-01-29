@@ -2,6 +2,8 @@
 title: Product Approval Process feature overview
 description: Product Approval Process feature adds approval mechanism for products.
 template: feature-walkthrough-template
+redirect_from:
+- /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-approval-process-feature-overview.html
 last_updated: Nov 21, 2023
 ---
 

@@ -11,9 +11,9 @@ To integrate Bazaarvoice, follow these guidelines.
 
 ## Prerequisites
 
-Before you can integrate Bazaarvoice, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+- Before you can integrate Bazaarvoice, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-The Bazaarvoice app requires the following Spryker modules:
+- The Bazaarvoice app requires the following Spryker modules:
 
 * `spryker/asset: ^1.6.0`
 * `spryker/asset-storage: ^1.2.1`
@@ -32,9 +32,11 @@ The Bazaarvoice app requires the following Spryker modules:
 * `spryker-shop/merchant-widget: ^1.3.0` (Marketplace only)
 * `spryker-shop/payment-page: ^1.3.0`
 
+Make sure your installation meets these requirements.
+
 ## Integrate Bazaarvoice
 
-To integrate Bazaarvoice, follow these steps:
+To integrate Bazaarvoice, follow these steps.
 
 ### 1. Add the Bazaarvoice domain to your allowlist
 
@@ -55,7 +57,7 @@ image:
     }'
 ```
 
-Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, this step can be ignored.
+Alternatively, you may add the domain to the allowlist from the `config/Shared/config_default.php` file. If you updated the `deploy.yml` file, you can ignore this step.
 
 ```php
 $config[KernelConstants::DOMAIN_WHITELIST][] = '*.bazaarvoice.com';
@@ -190,7 +192,7 @@ Example:
 
 ### 3. Configure a message broker
 
-Add the following configuration to `config/Shared/config_default.php`:
+1. Add the following configuration to `config/Shared/config_default.php`:
 
 ```php
 use Generated\Shared\Transfer\AddReviewsTransfer;
@@ -221,7 +223,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 ];
 ```
 
-#### Add a message handler
+#### 2. Add a message handler
 
 Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
@@ -239,7 +241,7 @@ Add the following plugin to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyPr
  }
 ```
 
-#### Configure channels
+#### 3. Configure channels
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -270,9 +272,9 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 To configure Synchronization, follow these steps:
 
-#### Configure plugins in `Publisher`
+#### 1. Configure plugins in `Publisher`
 
-The following plugin must be added to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
+Add the following plugin to `src/Pyz/Zed/Publisher/PublisherDependencyProvider.php`:
 
 ```php
 namespace Pyz\Zed\Publisher;
@@ -296,7 +298,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-#### Configure plugins in `Synchronization`
+#### 2. Configure plugins in `Synchronization`
 
 The following plugin must be added to `src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php`:
 
@@ -317,7 +319,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-#### Configure RabbitMq in `Client`
+#### 3. Configure RabbitMq in `Client`
 
 The following plugin must be added to `src/Pyz/Client/RabbitMq/RabbitMqConfig.php`:
 
@@ -338,15 +340,15 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
-### 5. Receive messages
+### 5. Receive ACP messages
 
-This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.html).
+Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
 
 ### 6. Configure OMS
 
-To configure OMS, follow these steps:
+To configure OMS, follow these steps.
 
-#### Extend command plugins
+#### 1. Extend command plugins
 
 Add the following plugin to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
@@ -371,7 +373,7 @@ protected function extendCommandPlugins(Container $container): Container
  }
 ```
 
-#### Update the OMS schema
+#### 2. Update the OMS schema
 
 Adjust your OMS state machine configuration to trigger the `Order/RequestProductReviews` command according to your project’s requirements.
 
@@ -396,7 +398,7 @@ Here is an example with the `DummyPayment01.xml` process for the `deliver` event
 </statemachine>
 ```
 
-#### Add order hydration plugin (Marketplace only)
+#### 3. Add order hydration plugin (Marketplace only)
 
 For a Marketplace project, add the following plugin to `src/Pyz/Zed/Sales/SalesDependencyProvider.php`:
 
@@ -419,18 +421,16 @@ protected function getOrderHydrationPlugins(): array
 
 ### 7. Configure DataImport
 
-To configure DataImport, follow these steps:
+To configure DataImport, extend .CSV files. Do the following:
 
-#### Extend csv files
-
-Add the following data to `data/import/common/common/product_abstract.csv`:
+1. Add the following data to `data/import/common/common/product_abstract.csv`:
 
 ```csv
 Add 2 columns, for example, attribute_key_7 and value_7 with UPCs, for example
 attribute_key_7 = upcs, value_7 = 12345678
 ```
 
-Add the following data to `data/import/common/common/product_concrete.csv`:
+2. Add the following data to `data/import/common/common/product_concrete.csv`:
 
 ```csv
 Add UPCs into columns, for example 
@@ -438,14 +438,14 @@ attribute_key_2 = upcs, value_2 = 12345678
 update UPC for an abstract product with the same abstract_sku
 ```
 
-Add the following data to `data/import/common/common/product_attribute_key.csv`:
+3. Add the following data to `data/import/common/common/product_attribute_key.csv`:
 
 ```csv
 Add a new row with the data
 upcs,0 to enable support of UPC
 ```
 
-Add the following data to `data/import/common/common/product_management_attribute.csv`:
+4. Add the following data to `data/import/common/common/product_management_attribute.csv`:
 
 ```csv
 Add a new row with the data

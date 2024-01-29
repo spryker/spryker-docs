@@ -8,13 +8,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
 ---
 
-To integrate Payone, follow these steps.
+This document describes how to integrate the Payone app into a Spryker shop.
 
 ## Prerequisites
+Before integrating Algolia, ensure the following prerequisites are met:
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-Before you can integrate Payone, make sure that your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-
-The Payone app requires the following Spryker modules:
+- The Payone app requires the following Spryker modules:
 
 * `spryker/payment: ^5.15.0`
 * `spryker/sales: ^11.41.0`
@@ -24,45 +24,14 @@ The Payone app requires the following Spryker modules:
 * `spryker/oms: ^11.21.0`
 * `spryker/sales-payment: ^1.2.0`
 
-## 1. Connect Payone
+Make sure that your installation meets these requirements.
 
-1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
-2. Click **Payone**.
-   This takes you to the Payone app details page.
-3. In the top right corner of the Payone app details page, click **Connect app**.
-   This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to *Connection pending*.   
-4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
 
-   {% info_block infoBox "Info" %}
+## Integrate Payone
 
-   It takes some time to obtain credentials from Payone because you have to go through a thorough vetting process by Payone, such as the "know your customer" (KYC) process before Payone verifies you.
+To integrate Payone, follow these steps.
 
-   {% endinfo_block %}
-
-## 2. Configure Payone
-
-1. Go to your store's Back Office, to the Payone app details page.
-2. In the top right corner of the Payone app details page, click **Configure**.
-3. On the Payone app details page, fill in fields in the **Credentials** section.
-   ![payone-app-detais](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-app-details.png)
-4. Select **Payone Environment Mode**.
-5. Enter your *Shop Name*. This name will be displayed on **Payment** page as a merchant label for whom to pay:
-   ![payone-shop-name](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-shop-name.png)
-6. Select one or more payment methods.
-   ![payone-payment-methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-methods.png)
-7. Optional: To configure payment methods per store, click **Payment methods per store configuration** and select stores for the defined payment methods.
-8. Click **Save**.
-
-![configure-payone](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/payone/integrate-payone/configure-payone.png)
-
-If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
-![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
-
-## 3. Manual Payone integration
-
-Follow these steps to integrate Payone.
-
-### Configure shared configs
+### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
     
@@ -146,7 +115,7 @@ $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAut
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 
-### Configure dependencies in `MessageBroker`
+### 2. Configure dependencies in `MessageBroker`
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
@@ -187,7 +156,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-### Configure channels in `MessageBroker` configuration
+### 3. Configure channels in the `MessageBroker` configuration
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -214,9 +183,9 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-### Configure plugins in `Checkout`
+### 4. Configure plugins in `Checkout`
 
-The following plugin must be added to `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`:
+1. Add the following plugin to `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`:
 
 ```php
 namespace Pyz\Zed\Checkout;
@@ -241,7 +210,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-- Remove the use of the following plugins (if any):
+2. Eliminate the use of the following plugins (if any):
 
 ```php
 SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutDoSaveOrderPlugin;
@@ -249,9 +218,9 @@ SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPostSavePlugin
 SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPreConditionPlugin;
 ```
 
-### Configure plugins in `CheckoutPage`
+### 5. Configure plugins in `CheckoutPage`
 
-The following plugin must be added to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
+Add the following plugin to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -274,9 +243,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 }
 ```
 
-### Configure plugins in `Router`
+### 6. Configure plugins in `Router`
 
-The following plugin must be added to `src/Pyz/Yves/Router/RouterDependencyProvider.php`:
+Add the following plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`:
 
 ```php
 namespace Pyz\Yves\Router;
@@ -299,11 +268,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### Configure plugins in `Oms`
+### 7. Configure plugins in `Oms`
 
-The following file `\Pyz\Zed\Oms\OmsDependencyProvider` must be adjusted:
+Adjust the `\Pyz\Zed\Oms\OmsDependencyProvider` file as follows:
 
-- Remove the use of the following plugins (if any):
+1. Eliminate the use of the following plugins (if any):
 
 ```php
 Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentCancelReservationPendingPlugin;
@@ -311,7 +280,7 @@ Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentConfirmationPen
 Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentRefundPendingPlugin;
 ```
 
-- Add next plugins:
+2. Add the following plugins:
 
 ```php
 protected function extendCommandPlugins(Container $container): Container
@@ -325,7 +294,7 @@ protected function extendCommandPlugins(Container $container): Container
 }
 ```
 
-### Optional: Configure your payment OMS
+### 8. Optional: Configure your payment OMS
 
 The complete default payment OMS configuration is available at `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 
@@ -380,9 +349,11 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 </statemachine>
 ```
 
-### Data and presentation changes
+### 9. Accommodate data and presentation change
 
-New glossary keys were added and they require a few additional actions. Please add the following glossary keys to your glossary data import file:
+The newly added glossary keys require a few additional actions. Do the following:
+
+1. Add the following glossary keys to your glossary data import file:
 
 ```csv
 ...
@@ -401,17 +372,17 @@ oms.state.reservation-cancelled,Reservation Cancelled,de_DE
 oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,en_US
 oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,de_DE
 ```
-Then run the data import for the glossary:
+2. Run the data import for the glossary:
 
 ```bash
 console data:import glossary
 ```
 
-### Optional: Template changes in `CheckoutPage`
+### 10. Optional: Introduce template changes in `CheckoutPage`
 
-Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level:
+If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
-- You should check that for payment selection choices a form molecule uses the following code:
+1. Make sure that a form molecule uses the following code for the payment selection choices:
 
 ```twig
 {% raw %}
@@ -427,7 +398,7 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
 {% endraw %} 
 ```
 
-- Payment provider names now have glossary keys instead of a name itself, so you need to check if the names of the payment providers are translated without using the prefix:
+2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated without using the prefix:
     
 ```twig
 {% raw %}
@@ -438,7 +409,8 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
 {% endraw %} 
 ```
 
-- Also, if you need, you can add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. For example, there is 1 new external payment with the provider name Payone (can be found in spy_payment_method table in group_name column)  and the payment method name Credit Card (can be found in spy_payment_method table in label_name column). For all of them, you can add translations to your glossary data import file like this:
+3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. 
+For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
 
 ```csv
 ...
@@ -451,10 +423,10 @@ Then run the data import for the glossary:
 console data:import glossary
 ```
 
-### Console command for receiving messages
+### 11. Receive ACP messages
 
-This document describes how to [receive messages](/docs/acp/user/receive-acp-messages.html).
+Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
 
 ## Next steps
 
-[Activate the added payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html)
+[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html) for your store.

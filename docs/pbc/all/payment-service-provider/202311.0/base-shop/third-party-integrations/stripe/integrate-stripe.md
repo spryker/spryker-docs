@@ -1,5 +1,5 @@
 ---
-title: Install Stripe
+title: Integrate Stripe
 description: Find out how you can install Stripe in your Spryker shop
 draft: true
 last_updated: Jan 31, 2024
@@ -9,6 +9,7 @@ related:
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
+- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
 
 ---
 This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.
@@ -239,11 +240,11 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 </statemachine>
 ```
 
-### Optional: Template changes in `CheckoutPage`
+### Optional: Introduce template changes in `CheckoutPage`
 
-Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level:
+If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
-- You should check that for payment selection choices a form molecule uses the following code:
+1. Make sure that a form molecule uses the following code for the payment selection choices:
 
 ```twig
 {% raw %}
@@ -259,7 +260,7 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
 {% endraw %}          
 ```
 
-- Payment provider names now have glossary keys instead of a name itself, so you need to check if the names of the payment providers are translated without using the prefix:
+2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated without using the prefix:
 
 ```twig
 {% raw %}
@@ -270,7 +271,8 @@ Please be aware that if you have rewritten `@CheckoutPage/views/payment/payment.
 {% endraw %}
 ```
 
-- Also, if you need, you can add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. For example, there is 1 new external payment with the provider name Payone (can be found in spy_payment_method table in group_name column)  and the payment method name Credit Card (can be found in spy_payment_method table in label_name column). For all of them, you can add translations to your glossary data import file like this:
+3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. 
+For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
 
 ```csv
 ...

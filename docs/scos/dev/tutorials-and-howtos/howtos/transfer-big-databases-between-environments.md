@@ -44,10 +44,10 @@ Running the job multiple times creates multiple dump files in the S3 bucket. To 
 
 {% endinfo_block %}
 
-4. Go to AWS and download the dump file to the needed environment.
+5. Go to AWS and download the dump file to the needed environment.
     Because the S3 bucket is shared, the dump file is accessible from any of your environments.
 
-5. Import the compressed dump file from the bucket:
+6. Import the compressed dump file from the bucket:
 
 ```shell
 aws s3 cp s3://{S3_BUCKET_NAME}/{DUMP_FILE_NAME}.sql.gz - | zcat | mysql --host=$SPRYKER_DB_HOST --user=$SPRYKER_DB_ROOT_USERNAME --password=$SPRYKER_DB_ROOT_PASSWORD $SPRYKER_DB_DATABASE

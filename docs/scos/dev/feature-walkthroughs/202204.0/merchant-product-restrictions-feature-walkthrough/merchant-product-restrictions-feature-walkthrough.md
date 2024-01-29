@@ -27,4 +27,4 @@ The following schema illustrates product restrictions relations within the Merch
 | INSTALLATION GUIDES |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-b2b-contracts-feature-integration.html) |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |
+| [Install the Merchant feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |

@@ -41,4 +41,6 @@ entries:
         url: /docs/acp/user/sync-api.html
       - title: Async API
         url: /docs/acp/user/async-api.html
+      - title: Receive ACP messages
+        url: /docs/acp/user/receive-acp-messages.html
 

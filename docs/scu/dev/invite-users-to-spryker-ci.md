@@ -1,10 +1,11 @@
 ---
-title: Invite users to Spryker CI
-description: Instructions for inviting users to Spryker CI
+title: Invite users to the Upgrader workspace
+description: Learn how to invite users to the Upgrader workspace
 template: howto-guide-template
 last_updated: Mar 8, 2023
 redirect_from:
   - /docs/paas-plus/dev/invite-users-to-spryker-ci.html
+  - /docs/scu/dev/invite-users-to-spryker-ci.html
 ---
 
 To collaborate with a teammate, you need to invite them to your workspace and add them to a project. The only exception is the workspace owner who has access to all projects in the workspace.

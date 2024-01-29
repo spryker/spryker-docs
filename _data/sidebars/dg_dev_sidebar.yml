@@ -588,8 +588,8 @@ entries:
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:
-          - title: Available test helpers
-            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html
+          - title: Using test helpers
+            url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
           - title: Test helpers best practices
             url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
       - title: Executing tests

@@ -68,7 +68,7 @@ Since we work with the real database, we execute one test for:
 To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
-- Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
+- Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
     - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
     - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
     - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
@@ -117,7 +117,7 @@ Since we work with the real database, we execute one test for:
 To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Search` module
-- Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
+- Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
     - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
     - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
     - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)

@@ -95,4 +95,4 @@ class CheckoutPageDependencyInjector implements DependencyInjectorInterface
 
 **What's next?**
 
-[Create and integrate the Direct Debit payment method in the backend](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).
+[Create and integrate the Direct Debit payment method in the backend](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html).

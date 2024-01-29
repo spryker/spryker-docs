@@ -162,7 +162,7 @@ The **Presentation** suite contains functional tests that can be used to interac
 
 All test classes follow the exact same path as the class under test, except that tests live in the `tests` directory, and the organization part of the namespace is suffixed with `Test`. For example, `tests/PyzTest/*`. For details on the `tests` directory structure, see [Directory Structure](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html#directory-structure).
 
-Each test suite contains a `codeception.yml`configuration file. This file includes, for example, [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html) that are enabled for the current suite.
+Each test suite contains a `codeception.yml`configuration file. This file includes, for example, [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html) that are enabled for the current suite.
 
 For example, check the organization in the [Application](https://github.com/spryker-shop/suite/tree/master/tests/PyzTest/Yves/Application) module of Spryker Master Suite.
 

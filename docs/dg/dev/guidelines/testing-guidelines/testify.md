@@ -37,7 +37,7 @@ On top of [Codeception](https://codeception.com), Spryker offers some classes to
 
 The helpers provided within the Testify module let you write your tests way faster and with less mocking required. For the list of the most useful helpers from the Testify module, see [Testify Helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#testify-helpers).
 
-Spryker follows an [API test](/docs/dg/dev/guidelines/testing-guidelines/testing-best-practices.html) approach to have more coverage with less test code. Testing through the API ensures that the underlying wireup code is working properly. With the helpers of the Testify module, you can avoid ending-up in the so-called "mocking hell". The "mocking hell" means that your test contains more mocks than real test code, which makes the test unreadable and hard to maintain.
+Spryker follows an [API test](/docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/testing-best-practices.html) approach to have more coverage with less test code. Testing through the API ensures that the underlying wireup code is working properly. With the helpers of the Testify module, you can avoid ending-up in the so-called "mocking hell". The "mocking hell" means that your test contains more mocks than real test code, which makes the test unreadable and hard to maintain.
 
 Assume you want to test a Facade method. The underlying model which should be tested has dependencies to other models and/or to the module config. Inside the Facade method, you have to create the model through the factory, including its dependencies, and call a method on the created model.
 
@@ -84,5 +84,5 @@ As you can see, this test is much smaller, easier to read, and better understand
 ## Next steps
 
 * [Set up an organization of your tests](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html).
-* [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html).
+* [Create or enable a test helper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html).
 * Learn about the [console commands you can use to execute your tests](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html).

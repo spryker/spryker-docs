@@ -29,9 +29,7 @@
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="main-nav__opener-label">Select a guide</span>
                                             <span class="main-nav__opener-text">
-                                                {% if page.product == 'sdk' and page.role == 'dev' %}
-                                                Spryker SDK
-                                                {% elsif page.product == 'development-guide' and page.role == 'dev' %}
+                                                {% if page.product == 'development-guide' and page.role == 'dev' %}
                                                 Development
                                                 {% elsif page.product == 'packages-business-capabilities' and page.role == 'all' %}
                                                 Packages Business Capabilities
@@ -43,6 +41,8 @@
                                                 SCOS users guide
                                                 {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
                                                 Spryker Code Upgrader
+                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
+                                                Spryker SDK
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
                                                 {% else %}
@@ -52,6 +52,16 @@
                                             <i class="main-nav__opener-icon icon-arrow-down"></i>
                                         </a>
                                         <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                          <li>
+                                              <a href="/docs/dg/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
+                                              Development
+                                              </a>
+                                          </li>
+                                          <li>
+                                              <a href="/docs/pbc/all/pbc.html" class="main-nav__drop-link">
+                                              Packaged Business Capabilities [BETA]
+                                              </a>
+                                          </li>
                                             <li class="dropdown">
                                                 <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                     Spryker Commerce OS
@@ -79,23 +89,13 @@
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="/docs/dg/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
-                                                Development
+                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
+                                                Cloud administration
                                                 </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/pbc/all/pbc.html" class="main-nav__drop-link">
-                                                Packaged Business Capabilities [BETA]
-                                                </a>
-                                            </li>
+                                            </li>                                            
                                             <li>
                                                 <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
                                                 Spryker SDK
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
-                                                Cloud administration
                                                 </a>
                                             </li>
                                             <li>

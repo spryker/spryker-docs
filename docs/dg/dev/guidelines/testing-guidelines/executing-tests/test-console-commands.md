@@ -32,7 +32,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-console-commands.html
 ---
 
-Spryker supports several [test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
+Spryker supports several [test helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html) to assist you in testing your project. This article provides details of how to test console commands with ConsoleHelper.
 
 To test console commands, do the following:
 

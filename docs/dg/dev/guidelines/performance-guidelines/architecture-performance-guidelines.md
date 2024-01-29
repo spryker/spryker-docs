@@ -224,7 +224,7 @@ One can avoid using the unnecessary transitions by:
 
 Make sure to check the following articles on how to optimize the performance of your application:
 
-- [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines.html)
+- [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
 - [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html)
 - [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html)
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)

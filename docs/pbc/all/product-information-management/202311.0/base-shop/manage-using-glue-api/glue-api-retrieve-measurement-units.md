@@ -8,6 +8,7 @@ originalArticleId: 21b908ed-07a9-44fa-b3a8-614401d4deab
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-measurement-units.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-measurement-units.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html
 related:
   - title: Measurement Units feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/measurement-units-feature-overview.html

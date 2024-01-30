@@ -5,6 +5,7 @@ last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/assigning-customers-to-users.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html

@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-customerreorderwidget.html
   - /module_migration_guides/mg-customer-reorder-widget.htm
   - /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
+  - /docs/pbc/all/customer-relationship-management/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-customerreorderwidget-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-customerreorderwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-customerreorderwidget-module.md -->

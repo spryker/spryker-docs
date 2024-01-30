@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path="docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api"
+folder_path="C:/Dev/spryker-docs/docs/scos/dev/technology-partner-guides/202204.0"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

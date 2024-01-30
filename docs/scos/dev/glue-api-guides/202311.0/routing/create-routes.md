@@ -6,6 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-route.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-a-route.html
+  - /docs/scos/dev/glue-api-guides/202204.0/routing/create-routes.html
 ---
 
 This guide describes how to create an API endpoint using a custom route.

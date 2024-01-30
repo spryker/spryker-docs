@@ -38,23 +38,23 @@ The actions and level of effort required to make your project ACP-ready may vary
 
 To make your project ACP-ready, different update steps are necessary depending on the template version on which your project was started:
 
-- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) has basic ACP set up in place, all ACP modules (Apps & Platform) need updates.
+- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) requiere updates.
 
-- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or newer: you can skip the configuration step described in this document.
+- SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later: you can skip the configuration step described in this document.
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), please [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
 ### Module updates for ACP
 
-To get your project ACP-ready, it is important to ensure that your project modules are updated to the necessary versions.
+To get your project ACP-ready, it is important to make sure that your project modules are updated to the necessary versions.
 
 #### ACP modules
 
-Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerc OS product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
 * `spryker/message-broker: ^1.10.0` or later
@@ -66,23 +66,23 @@ Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-sp
 
 {% info_block warningBox "Apps- and PBC-specific modules" %}
 
-Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you will need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
+Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
 
 {% endinfo_block %}
 
 The Spryker ACP Apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCCOS modules to take full advantage of the latest app feature updates.
 
-For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each App integration guide.
+For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each app integration guide.
 
 ### Configure SCCOS
 
 {% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 
-If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or newer, you can skip this section. 
+If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can skip this section. 
 
 {% endinfo_block %}
 
-Once you have ensured that your project modules are up-to-date, proceed to configure your SCCOS project to activate the ACP catalog in the Back Office using the following steps:
+Once you have made sure that your project modules are up-to-date, configure your SCCOS project to activate the ACP catalog in the Back Office. Do the following:
 
 1. Define the configuration and add plugins to the following files:
 
@@ -173,9 +173,9 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 
 3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Deprecated plugins" %}
 
-Please ensure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+Make sure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
 
 {% endinfo_block %}
 
@@ -289,9 +289,9 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
 
 5. In the `OauthClientDependencyProvider.php` file, enable the following module plugins:
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Deprecated plugins" %}
 
-Please ensure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
+Make sure that you have no deprecated plugins enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
 
 {% endinfo_block %}
 
@@ -341,7 +341,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 
 ## Next steps after the ACP-readiness
 
-After configuring the files and updating all modules, the SCCOS codebase is now up-to-date. Once redeployed, your environment is ACP-ready.
+After configuring the files and updating all modules, the SCCOS codebase is now up-to-date. Once redeployed, your environment will be ACP-ready.
 
 The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies the registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
 

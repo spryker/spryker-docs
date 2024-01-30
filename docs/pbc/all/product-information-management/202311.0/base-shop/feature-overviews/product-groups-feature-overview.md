@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/product-groups-feature-walkthrough.html  
   - /docs/scos/user/features/202311.0/product-groups-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-groups-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-groups-feature-overview.html
 ---
 
 The *Product Groups* feature lets product catalog managers group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.

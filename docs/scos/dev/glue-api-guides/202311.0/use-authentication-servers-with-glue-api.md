@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/using-authentication-server.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-an-authentication-server.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-an-authentication-server.html
+  - /docs/scos/dev/glue-api-guides/202204.0/use-authentication-servers-with-glue-api.html
 ---
 
 This document describes Use authentication servers with Glue API.

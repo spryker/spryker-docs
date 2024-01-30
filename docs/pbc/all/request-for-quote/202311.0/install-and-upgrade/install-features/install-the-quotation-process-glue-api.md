@@ -5,6 +5,7 @@ template: feature-integration-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-quotation-process-feature-integration.html
+  - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
 related:
   - title: Install the Quotation Process feature
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-feature.html

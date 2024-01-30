@@ -8,6 +8,7 @@ originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/searching-the-product-catalog.html
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
+  - /docs/scos/dev/glue-api-guides/202204.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html

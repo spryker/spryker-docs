@@ -1,4 +1,3 @@
----
 title: SCOS Developer Guides
 entries:
 - product: SCOS
@@ -3191,4 +3190,3 @@ entries:
     url: /docs/scos/dev/example-modules.html
   - title: Code contribution guide
     url: /docs/scos/dev/code-contribution-guide.html
-...

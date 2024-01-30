@@ -8,6 +8,7 @@ originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-store-configuration.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html
   - /docs/pbc/all/miscellaneous/202311.0/glue-api-retrieve-store-configuration.html
 ---
 

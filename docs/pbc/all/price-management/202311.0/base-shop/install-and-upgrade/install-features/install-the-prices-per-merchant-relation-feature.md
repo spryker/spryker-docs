@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/prices-per-merchant-relation-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-per-merchant-relation-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/prices-per-merchant-relation-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/prices-per-merchant-relation-feature-integration.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-prices-per-merchant-relation-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-prices-per-merchant-relation-feature.md -->

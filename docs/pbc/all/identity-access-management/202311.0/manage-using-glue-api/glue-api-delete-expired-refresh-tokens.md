@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/deleting-expired-re
 originalArticleId: acf43e94-6fa4-46dd-8f39-b971e5f6aa04
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/deleting-expired-refresh-tokens.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-delete-expired-refresh-tokens.html
 related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html

@@ -10,6 +10,8 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+redirect_from:
+- /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 
 Datasources are responsible for providing data to the system based on a given configuration. This lets backend systems control where data is coming from without changing the frontend. For example, table data or select options.

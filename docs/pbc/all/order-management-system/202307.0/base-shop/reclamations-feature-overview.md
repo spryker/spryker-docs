@@ -11,6 +11,7 @@ redirect_from:
   - /docs/reclamations-feature-overview
   - /docs/en/reclamations-feature-overview
   - /docs/scos/user/features/202307.0/reclamations-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/reclamations-feature-walkthrough.html
 ---
 
 Handling order claims are the reality of doing business for most ecommerce sites. A customer might have bought an item and then discovered that it does not fit, or they might have stumbled upon another item and want to order it instead of the order already placed, or an item is faulty, or additional parts are needed.

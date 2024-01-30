@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/glue-api-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
 related:
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html

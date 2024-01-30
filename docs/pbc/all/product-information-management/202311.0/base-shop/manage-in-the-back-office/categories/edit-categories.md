@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/category/managing-categories.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/managing-categories.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/category/managing-categories.html  
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/edit-categories.html
 related:
   - title: Category Management feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/category-management-feature-overview.html

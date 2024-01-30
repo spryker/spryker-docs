@@ -7,6 +7,7 @@ originalArticleId: d4ee04b4-8159-4846-9c3a-d98c28423b5c
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-currency.csv.html
   - /docs/pbc/all/price-management/202311.0/base-shop/import-and-export-data/file-details-currency.csv.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/import-and-export-data/import-file-details-currency.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html

@@ -4,6 +4,8 @@ last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-options-import
 originalArticleId: 07d8b5ee-b4c6-4538-a21c-5a7a8b16837c
+redirect_from: 
+- /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-options/product-options-data-import.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to product options:

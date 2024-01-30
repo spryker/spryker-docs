@@ -4,6 +4,8 @@ description: This document provides details about the table configuration.
 template: concept-topic-template
 last_updated: Nov 21, 2023
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-configuration.html
+redirect_from:
+- /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-configuration.html
 ---
 
 This document provides details about how to configure the table.

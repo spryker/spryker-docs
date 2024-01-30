@@ -12,6 +12,7 @@ redirect_from:
     - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authentication-and-authorization.html
     - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/authentication-and-authorization.html
     - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-authentication-integration.html
+    - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/authentication-and-authorization.html
 ---
 
 For authentication, Spryker implements the OAuth 2.0 mechanism. On the REST API level, it is represented by the Login API.

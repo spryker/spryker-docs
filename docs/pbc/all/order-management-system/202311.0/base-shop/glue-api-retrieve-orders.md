@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-orders.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html

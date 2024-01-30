@@ -5,6 +5,7 @@ description: In this document, you can find commonly encountered cases of produc
 template: concept-topic-template
 redirect_from:
   - docs/scos/dev/feature-walkthroughs/202311.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html
 ---
 
 <div class="width-100">

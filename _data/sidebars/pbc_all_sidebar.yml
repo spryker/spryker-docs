@@ -921,7 +921,7 @@ entries:
               - title: Customer Access feature overview
                 url: /docs/pbc/all/customer-relationship-management/base-shop/customer-access-feature-overview.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/manage-companies-and-customers-in-the-back-office.html
                 nested:
                   - title: Manage customers
                     nested:
@@ -2869,10 +2869,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
                       - title: Stock
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html
-                      - title: StockSalesConnector
-                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stocksalesconnector-module.html
-                        include_versions:
-                        - "202204.0"
                       - title: Touch
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
 

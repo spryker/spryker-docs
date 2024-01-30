@@ -13,7 +13,7 @@ To transfer data from one environment to another, take the following steps.
 
 Make sure the S3 bucket you are going to use for the transfer isn't public, and only the people that need to access the data have access to it.
 
-## Export and import the data
+## Export the data to an S3 bucket
 
 1. Go to the Jenkins web interface of the environment you want to transfer the data from.
 
@@ -32,7 +32,7 @@ apk add aws-cli
 which aws
 aws --version
 
-# Export the database and upload it to an S3 bucket
+# export the database to an S3 bucket
 mysqldump --skip-lock-tables --host=$SPRYKER_DB_HOST --user=$SPRYKER_DB_ROOT_USERNAME --password=$SPRYKER_DB_ROOT_PASSWORD $SPRYKER_DB_DATABASE | gzip | aws s3 cp - s3://{S3_BUCKET_NAME}/backup.$(date +"%Y-%m-%d__%H-%M-%S").sql.gz
 ```
 
@@ -44,12 +44,29 @@ Running the job multiple times creates multiple dump files in the S3 bucket. To 
 
 {% endinfo_block %}
 
-5. Go to AWS and download the dump file to the needed environment.
-    Because the S3 bucket is shared, the dump file is accessible from any of your environments.
 
-6. Import the compressed dump file from the bucket:
+## Import the data into the database
+
+1. Go to the Jenkins web interface of the environment you want to transfer the data to.
+
+2. Go to **General**.
+
+3. Add the following commands to the job:
 
 ```shell
+# update apk and install aws cli
+apk update
+apk add aws-cli
+
+# confirm aws cli version
+which aws
+aws --version
+
+# import the data from the s3 bucket to the target database
 aws s3 cp s3://{S3_BUCKET_NAME}/{DUMP_FILE_NAME}.sql.gz - | zcat | mysql --host=$SPRYKER_DB_HOST --user=$SPRYKER_DB_ROOT_USERNAME --password=$SPRYKER_DB_ROOT_PASSWORD $SPRYKER_DB_DATABASE
 ```
-This uploads the data from the bucket to the target database.
+
+4. Execute the job and wait for it to finish.
+
+
+Once the job finishes, the data should be in the target database.

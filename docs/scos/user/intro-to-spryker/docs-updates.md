@@ -10,7 +10,7 @@ redirect_from:
 
 In December 2023, we have added and updated the following pages:
 
-### New pages 
+### New pages
 
 - [Glue API: Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202311.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html): Learn how to authenticate as a Back Office user using Glue API.
 - [Glue API: Authenticate as a warehouse user](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html): Learn how to authenticate as a warehouse user using Glue API.
@@ -263,7 +263,7 @@ In September 2023, we have added and updated the following pages:
 - [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
-- [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html).
+- [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html).
 - [Vertex app integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 
 For more details about these and other updates to the Spryker docs in September 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).

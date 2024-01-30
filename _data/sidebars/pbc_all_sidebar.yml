@@ -697,7 +697,7 @@ entries:
                   - title: Retrieve navigation trees
                     url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-content-in-the-back-office.html
                 nested:
                   - title: "Best practices: Add content to the Storefront pages using templates and slots"
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html

@@ -125,7 +125,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-### 3. Configure channels in Message Broker configuration
+## 3. Configure channels in Message Broker configuration
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -192,14 +192,13 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentRefundPend
 
 The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
 
-It has payment flow when first payment is authorized (the amount is just blocked, when payment method allows it) and then OMS sends requests to capture (move previously blocked amount from customer's account to store account).
-The capture action is initiated by `Payment/SendEventPaymentConfirmationPending` command, by default it's initiated when a Back office user clicks `ship` button in the order view. 
+The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from core package and change this behavior accroding to your business flow.
+The `Payment/SendEventPaymentConfirmationPending` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page. 
 
-[Read more](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) about OMS feature and its configuration.
+Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
-Copy & paste `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to project root `config/Zed/oms`, change the name of the file and the value of `<process name=` inside the file.
+To configure your payment OMS, copy and paste `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`, and change the name of the file and the value of `<process name=` inside the file.
 
 This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 

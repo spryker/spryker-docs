@@ -784,7 +784,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                      | TYPE   | EVENT   | PATH                                                                |
 |-------------------------------|--------|---------|---------------------------------------------------------------------|
@@ -802,11 +802,11 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant Portal has the **Dashboard** menu.
+Make sure the Merchant Portal has the **Dashboard** menu.
 
 {% endinfo_block %}
 
-### 4) Set up Marketplace builder configs
+### 4) Set up marketplace builder configs
 
 1. Add the following files to the root folder:
 
@@ -818,7 +818,7 @@ wget -O .npmrc https://raw.githubusercontent.com/spryker-shop/suite/master/.npmr
 wget -O .stylelintrc.mp.js https://raw.githubusercontent.com/spryker-shop/suite/master/.stylelintrc.mp.js
 ```
 
-2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
+2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files: `tsconfig.yves.json` and `tsconfig.mp.json`.
 
 ```bash
 mv tsconfig.json tsconfig.base.json

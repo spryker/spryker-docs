@@ -428,9 +428,9 @@ Make sure the following works correctly:
 * The request doesn't succeed for users without permission.
 * The user can see only the allowed menu links.
 * The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-* You can edit user's ACL groups on User edit page in Back Office.
-* `AclEntityRule` is created in `spy_acl_entity_rule` when the `RoleTransfer` is saved and contains `AclEntityRules`.
-* `RolesTransfer` contains needed `AclEntityRules`.
-* The user who is not supposed to have access to an entity or endpoint does not have it.
+* You can edit user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+* When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
+* `RolesTransfer` contains the needed `AclEntityRules`.
+* Users without permissions to access an entity or endpoint can't access them.
 
 {% endinfo_block %}

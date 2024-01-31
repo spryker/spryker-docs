@@ -9,7 +9,7 @@ Follow the steps below to install the Marketplace Merchant feature core.
 
 Install the required features:
 
-| NAME                           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                                         |
+| NAME                           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                         |
 |--------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
 | Merchant                       | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                                        |
@@ -22,7 +22,7 @@ composer require spryker-feature/marketplace-merchant:"{{page.version}}" --updat
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                    | EXPECTED DIRECTORY                          |
 |---------------------------|---------------------------------------------|
@@ -71,7 +71,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have occurred in the database:
+Make sure the following changes have occurred in the database:
 
 | DATABASE ENTITY      | TYPE  | EVENT   |
 |----------------------|-------|---------|
@@ -90,7 +90,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have occurred in transfer objects:
+Make sure the following changes have occurred in transfer objects:
 
 | TRANSFER                                   | TYPE     | EVENT   | PATH                                                                             |
 |--------------------------------------------|----------|---------|----------------------------------------------------------------------------------|
@@ -174,16 +174,16 @@ Enable the following behaviors by registering the plugins:
 | MerchantProfileMerchantBulkExpanderPlugin            | Expands merchants with profile data.                                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostCreatePlugin              | Creates merchant profile on merchant create action.                                                      |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
 | MerchantProfileMerchantPostUpdatePlugin              | Updates merchant profile on merchant update action.m                                                     |               | Spryker\Zed\MerchantProfile\Communication\Plugin\Merchant            |
-| MerchantProfileContactPersonFormTabExpanderPlugin    | Adds an extra tab to merchant edit and create forms for editing and creating contact person data.        |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileFormTabExpanderPlugin                 | Adds an extra tab to merchant edit and create forms for editing and creating merchant profile data.      |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileLegalInformationFormTabExpanderPlugin | Adds an extra tab to merchant edit and create forms for editing and creating merchant legal information. |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
-| MerchantProfileFormExpanderPlugin                    | Expands MerchantForm with merchant profile fields.                                                       |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui      |
+| MerchantProfileContactPersonFormTabExpanderPlugin    | Adds the tab for editing and creating contact person data to merchant edit and create forms.        |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileFormTabExpanderPlugin                 | Adds the tab for editing and creating merchant profile data to merchant edit and create forms.      |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileLegalInformationFormTabExpanderPlugin | Adds the tab for editing and creating merchant legal information to merchant edit and create forms. |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui\Tabs |
+| MerchantProfileFormExpanderPlugin                    | Expands the MerchantForm with merchant profile fields.                                                       |               | Spryker\Zed\MerchantProfileGui\Communication\Plugin\MerchantGui      |
 | SyncMerchantUsersStatusMerchantPostUpdatePlugin      | Updates merchant users status by merchant status on merchant update.                                     |               | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant               |
 | MerchantUserTabMerchantFormTabExpanderPlugin         | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information.  |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
-| MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
-| MerchantProductOfferStorageExpanderPlugin            | Returns `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
-| MerchantProductOfferStorageFilterPlugin              | Filters `ProductOfferCollection` transfer object by active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantUserTwigPlugin                               | Adds 'merchantName' Twig global variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
+| MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands the merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
+| MerchantProductOfferStorageExpanderPlugin            | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
+| MerchantProductOfferStorageFilterPlugin              | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
+| MerchantUserTwigPlugin                               | Adds the 'merchantName' global Twig variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
@@ -389,7 +389,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `merchantName`  global Twig variable is available.
+Make sure that the `merchantName` global Twig variable is available.
 
 {% endinfo_block %}
 

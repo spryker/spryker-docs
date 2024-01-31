@@ -164,14 +164,22 @@ class OauthWarehouseUserConfig extends SprykerOauthWarehouseUserConfig
      *
      * @return array<string, mixed>
      */
-    public function getAllowedForWarehouseUserPaths(): array
+       public function getAllowedForWarehouseUserPaths(): array
     {
         return [
-            '/\/picking-lists.*/' => [
-                'isRegularExpression' => true,
-            ],
             '/\/warehouse-user-assignments(?:\/[^\/]+)?\/?$/' => [
                 'isRegularExpression' => true,
+                'methods' => [
+                    'get',
+                    'getCollection',
+                    'patch',
+                ],
+            ],
+            '/\/picking-lists.*/' => [
+                'isRegularExpression' => true,
+                'methods' => [
+                    'patch',
+                ],
             ],
             '/push-notification-subscriptions' => [
                 'isRegularExpression' => false,
@@ -186,7 +194,48 @@ class OauthWarehouseUserConfig extends SprykerOauthWarehouseUserConfig
     }
 }
 ```
+</details>
 
+ 2.1. Optional: To give any type of users access to the backend API endpoints that are protected by `WarehouseTokenAuthorizationStrategy` strategy, set the module configuration as below: 
+
+<details>
+ <summary>src/Pyz/Zed/OauthWarehouse/OauthWarehouseConfig.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\OauthWarehouse;
+
+use Spryker\Zed\OauthWarehouse\OauthWarehouseConfig as SprykerOauthWarehouseConfig;
+
+class OauthWarehouseConfig extends SprykerOauthWarehouseConfig
+{
+    /**
+     * @uses \Spryker\Zed\OauthUserConnector\OauthUserConnectorConfig::SCOPE_BACK_OFFICE_USER
+     *
+     * @var string
+     */
+    protected const SCOPE_BACK_OFFICE_USER = 'back-office-user';
+
+    /**
+     * @uses \Spryker\Zed\OauthWarehouseUser\OauthWarehouseUserConfig::SCOPE_WAREHOUSE_USER
+     *
+     * @var string
+     */
+    protected const SCOPE_WAREHOUSE_USER = 'warehouse-user';
+
+    /**
+     * @return list<string>
+     */
+    public function getAllowedUserScopes(): array
+    {
+        return [
+            static::SCOPE_BACK_OFFICE_USER,
+            static::SCOPE_WAREHOUSE_USER,
+        ];
+    }
+}
+```
 </details>
 
 ## 4) Add translations

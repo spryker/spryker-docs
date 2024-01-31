@@ -152,13 +152,15 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-## 4. Configure the OMS dependency provider
+## 4. Configure the Order State Machine (OMS)
 Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
 
 ```php
 //...
 
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentCancelReservationPendingPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmationPendingPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentRefundPendingPlugin;
 
 //...
 
@@ -170,12 +172,13 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
     protected function extendCommandPlugins(Container $container): Container
     {
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-
              //...
 
              $commandCollection->add(new SendEventPaymentConfirmationPendingPlugin(), 'Payment/SendEventPaymentConfirmationPending');
 
-             //...
+             // these two commands will be also supported soon.
+             $commandCollection->add(new SendEventPaymentRefundPendingPlugin(), 'Payment/SendEventPaymentRefundPending');
+             $commandCollection->add(new SendEventPaymentCancelReservationPendingPlugin(), 'Payment/SendEventPaymentCancelReservationPending');
 
              return $commandCollection;
         });
@@ -185,9 +188,20 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmati
 
 ```
 
-### Optional: Configure your payment OMS
+### Optional: Configure your own payment OMS
 
-The complete default payment OMS configuration is available at `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
+The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+
+It has payment flow when first payment is authorized (the amount is just blocked, when payment method allows it) and then OMS sends requests to capture (move previously blocked amount from customer's account to store account).
+The capture action is initiated by `Payment/SendEventPaymentConfirmationPending` command, by default it's initiated when a Back office user clicks `ship` button in the order view. 
+
+Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from core package and change this behavior accroding to your business flow.
+
+[Read more](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) about OMS feature and its configuration.
+
+Copy & paste `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to project root `config/Zed/oms`, change the name of the file and the value of `<process name=` inside the file.
+
+This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 
 ```xml
 <?xml version="1.0"?>
@@ -240,7 +254,10 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 </statemachine>
 ```
 
-### Optional: Introduce template changes in `CheckoutPage`
+By default timeout for payment authorization action is 1 day, it means if the order is in state `payment authorization pending` OMS will wait 1 day and then move the order state to `payment authorization failed`. In one more day after it the order is moved to `payment authorization canceled` automatically. So if you need to increase timeouts or change the states, modify also `config/Zed/oms/Subprocess/PaymentAuthorization01.xml` for your needs.
+
+
+## Optional: Introduce template changes in `CheckoutPage`
 
 If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
@@ -276,8 +293,7 @@ For example, there is a new external payment with the provider name Payone, foun
 
 ```csv
 ...
-Payone,Payone Payments,en_US
-Credit Card,Credit Card (Payone),en_US
+Stripe,Pay Online with Stripe,en_US
 ```
 Then run the data import for the glossary:
 

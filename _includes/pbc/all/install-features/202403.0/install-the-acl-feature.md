@@ -150,13 +150,13 @@ root_group,root_role
   source: data/import/common/common/acl_group_role.csv
 ```
 
-3. Register the following data import plugin:
+3. Register the following data import plugins:
 
 | PLUGIN                       | SPECIFICATION                                                                  | PREREQUISITES | NAMESPACE                                       |
 |------------------------------|--------------------------------------------------------------------------------|---------------|-------------------------------------------------|
-| AclGroupDataImportPlugin     | Imports ACL group data from the specified file.                                | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
-| AclRoleDataImportPlugin      | Imports ACL role data from the specified file.                                 | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
-| AclGroupRoleDataImportPlugin | Imports the connection between ACL role and ACL group from the specified file. | None          | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclGroupDataImportPlugin     | Imports ACL group data from the specified file.                                |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclRoleDataImportPlugin      | Imports ACL role data from the specified file.                                 |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclGroupRoleDataImportPlugin | Imports the connection between ACL role and ACL group from the specified file. |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -220,7 +220,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-4. Run the following command to import the data:
+4. Run the following commands to import the data:
 
 ```bash
 console data:import:data:import:acl-role
@@ -230,7 +230,10 @@ console data:import:data:import:acl-group-role
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_acl_group`, `spy_acl_role` and `spy_acl_groups_has_roles` tables in the database.
+Make sure the configured data has been added to the following database tables:
+* `spy_acl_group`
+* `spy_acl_role`
+* `spy_acl_groups_has_roles`
 
 {% endinfo_block %}
 
@@ -241,12 +244,12 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                  | DESCRIPTION                                                                                                                                      | PREREQUISITES | NAMESPACE                                              |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| AccessControlEventDispatcherPlugin      | Adds a listener to the `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |               | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher   |
+| AccessControlEventDispatcherPlugin      | Adds a listener to `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |               | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher   |
 | AclNavigationItemCollectionFilterPlugin | Checks if the navigation item can be accessed by the current user.                                                                               |               | Spryker\Zed\Acl\Communication\Plugin\Navigation        |
-| AclInstallerPlugin                      | Fills the DB  with required ACL data.                                                                                                            |               | Spryker\Zed\Acl\Communication\Plugin                   |
+| AclInstallerPlugin                      | Fills the database  with required ACL data.                                                                                                            |               | Spryker\Zed\Acl\Communication\Plugin                   |
 | GroupPlugin                             | Provides Acl Groups for User.                                                                                                                    |               | Spryker\Zed\Acl\Communication\Plugin                   |
 | AclEntityAclRolePostSavePlugin          | Saves `RoleTransfer.aclEntityRules` to database.                                                                                                 |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
-| AclRulesAclRolesExpanderPlugin          | Expands `Roles` transfer object with ACL rules.                                                                                                  |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
+| AclRulesAclRolesExpanderPlugin          | Expands the `Roles` transfer object with ACL rules.                                                                                                  |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
 | AclEntityApplicationPlugin              | Enables ACL for the whole Application.                                                                                                           |               | Spryker\Zed\AclEntity\Communication\Plugin\Application |
 
 **src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php**
@@ -385,7 +388,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, for example,for the Merchant
+Use the following example if you want to enable ACL Entity for the whole Application, for example, for the Merchant
 Portal:
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**

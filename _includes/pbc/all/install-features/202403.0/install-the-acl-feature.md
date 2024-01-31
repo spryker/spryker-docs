@@ -1,10 +1,6 @@
 This document describes how to install the ACL feature.
 
-## Install feature core
-
-Follow the steps below to install the ACL feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -13,9 +9,7 @@ Install the required features:
 | Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
-### 1) Install the required modules using Composer
-
-Install the required modules:
+## 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
@@ -23,7 +17,7 @@ composer require spryker-feature/acl:"{{page.version}}" --update-with-dependenci
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                         | EXPECTED DIRECTORY                    |
 |--------------------------------|---------------------------------------|
@@ -36,7 +30,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the database schema
+## 2) Set up the database schema
 
 Apply database changes and to generate entity and transfer changes:
 
@@ -48,7 +42,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following changes have been applied by checking your database:
+Make sure the following changes have been applied to the database:
 
 | DATABASE ENTITY          | TYPE  | EVENT   |
 |--------------------------|-------|---------|
@@ -64,7 +58,7 @@ Verify that the following changes have been applied by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                          | TYPE   | EVENT   | PATH                                                                    |
 |-----------------------------------|--------|---------|-------------------------------------------------------------------------|
@@ -100,7 +94,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Import the ACL groups and roles:
+## 4) Import the ACL groups and roles
 
 1. Prepare your data according to your requirements using our demo data:
 
@@ -113,7 +107,7 @@ root_group,root_group
 
 | COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                     |
 |-----------|----------|-----------|--------------|----------------------------------------------------------------------|
-| name      | ✓        | string    | root_group   | The nane of the ACL group.                                           |
+| name      | ✓        | string    | root_group   | The name of the ACL group.                                           |
 | reference | x        | string    | root_group   | Key of the ACL group that is used as a reference in the data import. |
 
 **data/import/common/common/acl_role.csv**
@@ -125,7 +119,7 @@ root_role,root_role
 
 | COLUMN    | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                    |
 |-----------|----------|-----------|--------------|---------------------------------------------------------------------|
-| name      | ✓        | string    | root_role    | The nane of the ACL role.                                           |
+| name      | ✓        | string    | root_role    | The name of the ACL role.                                           |
 | reference | x        | string    | root_role    | Key of the ACL role that is used as a reference in the data import. |
 
 **data/import/common/common/acl_group_role.csv**
@@ -140,7 +134,7 @@ root_group,root_role
 | group_name | ✓        | string    | root_group   | The name of the ACL group. |
 | role_name  | ✓        | string    | root_role    | The name of the ACL role.  |
 
-2. Add the following data to your `data/import/local/full_EU.yml` file:
+2. Add the following data to `data/import/local/full_EU.yml`:
 
 **/data/import/local/full_EU.yml**
 
@@ -241,7 +235,7 @@ Make sure that the configured data has been added to the `spy_acl_group`, `spy_a
 {% endinfo_block %}
 
 
-### 5) Set up behavior
+## 5) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -418,7 +412,7 @@ class MerchantPortalApplicationDependencyProvider extends SprykerMerchantPortalA
 }
 ```
 
-### 6) Install the database data for ACL
+## 6) Install the database data for ACL
 
 ```bash
 console setup:init-db

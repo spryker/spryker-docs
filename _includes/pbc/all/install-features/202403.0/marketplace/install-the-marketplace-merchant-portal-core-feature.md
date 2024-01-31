@@ -159,24 +159,24 @@ class SecurityMerchantPortalGuiConfig extends SprykerSecurityMerchantPortalGui
 
 ### 4) Set up behavior
 
-Set up behavior as follows:
+Set up the following behaviors.
 
 #### Integrate the following plugins
 
 | PLUGIN                                                           | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                                                        |
 |------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
 | ZedMerchantUserSecurityPlugin                                    | Sets security firewalls (rules, handlers) for Marketplace users.                                                     |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
-| BooleanToStringTwigPlugin                                        | Adds a new Twig function for converting Boolean to String.                                                           |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
-| ZedUiNavigationTwigPlugin                                        | Adds a new Twig function for rendering Navigation using web components.                                              |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
-| GuiTableApplicationPlugin                                        | Enables GuiTable infrastructure for Zed.                                                                             |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
-| GuiTableConfigurationTwigPlugin                                  | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.                         |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
+| BooleanToStringTwigPlugin                                        | Adds a Twig function for converting Boolean to String.                                                           |               | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
+| ZedUiNavigationTwigPlugin                                        | Adds a Twig function for rendering Navigation using web components.                                              |               | Spryker\Zed\ZedUi\Communication\Plugin                                           |
+| GuiTableApplicationPlugin                                        | Enables the GuiTable infrastructure for Zed.                                                                             |               | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
+| GuiTableConfigurationTwigPlugin                                  | Adds a Twig function for rendering `GuiTableConfiguration` for the `GuiTable` web component.                         |               | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
 | MerchantUserSecurityTokenUpdateMerchantUserPostChangePlugin      | Rewrites the Symfony security token for merchant users with `MerchantUser` and without `IS_IMPERSONATOR` roles granted.  |               | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
-| MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin | Expands provided the `AclEntityMetadataConfig` transfer object with event behavior composite data.                   |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
-| MerchantAclEntitiesMerchantPostCreatePlugin                      | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant.            |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
-| MerchantUserAclEntitiesMerchantUserPostCreatePlugin              | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin        | Checks if the Symfony security authentication roles should be filtered out.                                          |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| MerchantUserUserRoleFilterPlugin                                 | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from loging in to the Back Office.                        |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
-| ProductViewerForOfferCreationAclInstallerPlugin                  | Provide `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| MerchantPortalConfigurationAclEntityMetadataConfigExpanderPlugin | Expands the provided `AclEntityMetadataConfig` transfer object with event behavior composite data.                   |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
+| MerchantAclEntitiesMerchantPostCreatePlugin                      | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant.            |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
+| MerchantUserAclEntitiesMerchantUserPostCreatePlugin              | Creates an ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user.       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin        | Checks if Symfony security authentication roles should be filtered out.                                          |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
+| MerchantUserUserRoleFilterPlugin                                 | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from logging into the Back Office.                        |               | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
+| ProductViewerForOfferCreationAclInstallerPlugin                  | Provides `ProductViewerForOfferCreation` roles with rules and groups to create on installation.                       |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
 | AclGroupMerchantUserLoginRestrictionPlugin                       | Checks if the merchant user login is restricted.                                                                     |               | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
@@ -282,7 +282,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that merchant users or users, whose Acl Group does't have Back Office allowed Acl Group Reference, cannot log in to the Back Office.
+Make sure that merchant users or users whose ACL group does't have a Back Office allowed ACL group reference can't log into the Back Office.
 
 {% endinfo_block %}
 
@@ -395,7 +395,7 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that non-merchant users whose Acl Group has Back Office allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
+Make sure that non-merchant users whose ACL group has a Back Office allowed ACL group reference can log into the Back Office. You can check the reference in `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`.
 
 {% endinfo_block %}
 
@@ -448,11 +448,12 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 ```
 
 #### Enable Merchant Portal infrastructural plugins
+
 1. Enable the following infrastructural plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                               | PREREQUISITES | NAMESPACE                                                    |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------|
-| SessionApplicationPlugin              | Registers session in `Application`.                                                                                                           |               | Spryker\Zed\Session\Communication\Plugin\Application         |
+| SessionApplicationPlugin              | Registers a session in `Application`.                                                                                                           |               | Spryker\Zed\Session\Communication\Plugin\Application         |
 | TwigApplicationPlugin                 | Registers Twig in `Application`.                                                                                                              |               | Spryker\Zed\Twig\Communication\Plugin\Application            |
 | EventDispatcherApplicationPlugin      | Extends `EventDispatcher` with `EventDispatcherExtensionPlugins`.                                                                           |               | Spryker\Zed\EventDispatcher\Communication\Plugin\Application |
 | LocaleApplicationPlugin               | Adds the `Locale` service.                                                                                                                    |               | Spryker\Zed\Locale\Communication\Plugin\Application          |
@@ -460,16 +461,16 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 | MessengerApplicationPlugin            | Adds the `Messenger` service to the Container.                                                                                                |               | Spryker\Zed\Messenger\Communication\Plugin\Application       |
 | PropelApplicationPlugin               | Initializes `PropelOrm` to be used within Zed.                                                                                                |               | Spryker\Zed\Propel\Communication\Plugin\Application          |
 | MerchantPortalRouterApplicationPlugin | Adds the `Router` service.                                                                                                                    |               | Spryker\Zed\Router\Communication\Plugin\Application          |
-| HttpApplicationPlugin                 | Sets trusted proxies and host. Sets `cookies` service identifier. Adds `HttpKernel`, `RequestStack`, and `RequestContext` to the container. |               | Spryker\Zed\Http\Communication\Plugin\Application            |
+| HttpApplicationPlugin                 | Sets the trusted proxies and host. Sets the `cookies` service identifier. Adds `HttpKernel`, `RequestStack`, and `RequestContext` to the container. |               | Spryker\Zed\Http\Communication\Plugin\Application            |
 | ErrorHandlerApplicationPlugin         | Register the `Whoops` error handler which provides a pretty error interface when its enabled.                                                 |               | Spryker\Zed\ErrorHandler\Communication\Plugin\Application    |
-| FormApplicationPlugin                 | Adds `form.factory` service, `form.csrf_provider` service, global `FORM_FACTORY` service as an alias for `form.factory`.                    |               | Spryker\Zed\Form\Communication\Plugin\Application            |
-| ValidatorApplicationPlugin            | Adds `validator` service.                                                                                                                   |               | Spryker\Zed\Validator\Communication\Plugin\Application       |
+| FormApplicationPlugin                 | Adds the `form.factory` service, `form.csrf_provider` service, and the global `FORM_FACTORY` service as an alias for `form.factory`.                    |               | Spryker\Zed\Form\Communication\Plugin\Application            |
+| ValidatorApplicationPlugin            | Adds the `validator` service.                                                                                                                   |               | Spryker\Zed\Validator\Communication\Plugin\Application       |
 | GuiTableApplicationPlugin             | Enables the `GuiTable` infrastructure for Zed.                                                                                                    |               | Spryker\Zed\GuiTable\Communication\Plugin\Application        |
 | ZedSecurityApplicationPlugin          | Adds security applications to `Application`.                                                                                              |               | Spryker\Zed\Security\Communication\Plugin\Application        |
-| ZedUiApplicationPlugin                | Adds `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
+| ZedUiApplicationPlugin                | Adds the `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
 | AclEntityApplicationPlugin            | Enables ACL for the whole `Application`.                                                                                                      |               | Spryker\Zed\AclEntity\Communication\Plugin\Application       |
 
-<details open><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -594,7 +595,7 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 ];
 ```
 
-3. Add a console command for warming up the *Merchant Portal* router cache:
+3. Add a console command for warming up the Merchant Portal router cache:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -646,7 +647,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                | TYPE  | EVENT   | PATH                                                                          |
 |-----------------------------------------|-------|---------|-------------------------------------------------------------------------------|

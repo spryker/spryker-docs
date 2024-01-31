@@ -198,7 +198,7 @@ The `Payment/SendEventPaymentConfirmationPending` command initiates the capture 
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
-To configure your payment OMS, copy and paste `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`, and change the name of the file and the value of `<process name=` inside the file.
+To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`. Then, change the name of the file and the value of `<process name=` in the file.
 
 This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 

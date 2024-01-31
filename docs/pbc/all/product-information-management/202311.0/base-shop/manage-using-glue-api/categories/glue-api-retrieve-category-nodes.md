@@ -8,6 +8,7 @@ originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html

@@ -5,6 +5,7 @@ template: back-office-user-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/filter-preferences/reorder-filter-preferences.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/reorder-filter-preferences.html
 related:
   - title: Standard filters overview
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/standard-filters-overview.html

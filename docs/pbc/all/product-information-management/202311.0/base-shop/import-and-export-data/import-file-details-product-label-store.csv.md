@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202005.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-label-store.csv.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
 related:
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html

@@ -3,6 +3,8 @@ title: Installation recipes of deployment pipelines
 description: Installation recipe commands and file structure.
 last_updated: Nov 29, 2022
 template: howto-guide-template
+redirect_from:
+- /docs/scos/dev/the-docker-sdk/202204.0/installation-recipes-of-deployment-pipelines.html
 ---
 
 Installation recipes contain the commands that are ran during the [install stage of deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/deployment-pipelines.html#install-stage). The recipes are located in `config/install/`.  For example, this is how they look in the [B2C Demo Shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/config/install):

@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/b2c-api-react-example
   - /v1/docs/b2c-api-react-example
   - /v1/docs/en/b2c-api-react-example
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
   -
 related:
   - title: Install B2C API React example

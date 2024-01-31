@@ -5,6 +5,7 @@ description: This document provides details about the Table Feature extension in
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-feature-extension/table-feature-extension.html
 related:
   - title: Table Feature Batch Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html

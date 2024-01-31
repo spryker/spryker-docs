@@ -11,6 +11,7 @@ redirect_from:
 - /docs/marketplace/dev/setup/202204.0/system-requirements.html
 - /docs/scos/dev/system-requirements/202304.0/system-requirements.html
 - /docs/marketplace/dev/setup/202307.0/system-requirements.html
+- /docs/scos/dev/system-requirements/202204.0/system-requirements.html
 ---
 
 ## Base shop system requirements

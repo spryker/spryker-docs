@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-api-applications.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/create-glue-api-applications.html
+  - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/create-glue-api-applications.html
 ---
 
 New Glue projects can create API applications. This is what you need to do in order to create one.

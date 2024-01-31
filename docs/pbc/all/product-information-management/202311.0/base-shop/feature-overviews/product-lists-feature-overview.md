@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/product-lists-feature-walkthrough.html  
   - /docs/scos/user/features/202311.0/product-lists-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/product-lists-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/product-lists-feature-overview.html
 ---
 
 The *Product Lists* feature lets you configure product availability for specific companies by adding their products to an excludelist or allowlist. For example, if you want to hide some products, or even a category, from a company you've signed a contract with, with this feature, you can create an excludelist of those products and assign it to the company. This prevents the company from purchasing products from the excludelist.

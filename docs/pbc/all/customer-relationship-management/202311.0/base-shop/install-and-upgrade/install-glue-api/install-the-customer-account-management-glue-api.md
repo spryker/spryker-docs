@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/glue-api-customer-account-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-customer-account-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-customer-account-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-customer-account-management-feature-integration.html
 related:
   - title: Customer Account Management feature integration
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html

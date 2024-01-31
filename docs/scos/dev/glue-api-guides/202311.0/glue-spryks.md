@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/glue-spryks
   - /docs/scos/dev/concepts/glue-api/glue-spryks.html
   - /docs/scos/dev/glue-api-guides/202200.0/glue-spryks.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-spryks.html
 ---
 
 Spryker SDK facilitates Glue API Resource development by providing a set of code generation tools, called *Spryks*. Usage of _Spryks_ not only provides an easy and fast way of performing various tasks, but also ensures that the generated code is fully compatible with Spryker and that all coding, naming and other conventions are observed. For more information on Spryks, see [Spryks](/docs/sdk/dev/spryks/spryks.html).

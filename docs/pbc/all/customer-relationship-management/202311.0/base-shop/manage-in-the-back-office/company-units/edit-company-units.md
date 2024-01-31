@@ -6,6 +6,7 @@ last_updated: Nov 17, 2023
 redirect_from:
 - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
 - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-units.html
+- /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/edit-company-units.html
 related:
   - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html

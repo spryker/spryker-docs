@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-lists-feature-integration
   - /docs/product-lists-feature-integration
   - /docs/en/product-lists-feature-integration
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
 related:
   - title: Product Lists + Catalog feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html

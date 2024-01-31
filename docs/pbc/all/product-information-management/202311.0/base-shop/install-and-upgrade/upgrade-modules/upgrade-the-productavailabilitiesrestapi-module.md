@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /module_migration_guides/glue_api/productavailabilitiesrestapi-migration-guide.htm
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-productavailabilitiesrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-productavailabilitiesrestapi-module.md -->

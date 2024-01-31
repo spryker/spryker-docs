@@ -2,6 +2,7 @@
 title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:

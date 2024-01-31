@@ -2,6 +2,7 @@
 title: Managing guest carts
 description: Retrieve details about guest carts and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201811.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201903.0/guest-carts/managing-guest-carts.html

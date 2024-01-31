@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve concrete products"
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 16, 2023
 related:
   - title: Retrieving product offers of concrete products
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-using-glue-api/glue-api-retrieve-product-offers-of-concrete-products.html

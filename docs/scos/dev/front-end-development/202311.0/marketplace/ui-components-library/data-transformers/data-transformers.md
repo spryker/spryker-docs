@@ -5,6 +5,7 @@ description: This document provides details about the Data Transformers service 
 template: concept-topic-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/data-transformers.html
 related:
   - title: Data Transformer Array-map
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/standard-filters-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/search-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/search-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/search-feature-overview/standard-filters-overview.html
 ---
 
 Ecommerce solutions usually offer a huge product catalog to display products and their variations. To help buyers find the products they are looking for in the catalog, we have the *Standard Filters* feature.

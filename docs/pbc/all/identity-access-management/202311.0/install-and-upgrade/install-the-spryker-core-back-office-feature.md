@@ -18,6 +18,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-back-office-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/spryker-core-back-office-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/spryker-core-back-office-feature-integration.html
+  - /docs/pbc/all/identity-access-management/202204.0/install-and-upgrade/install-the-spryker-core-back-office-feature.html
 related:
     - title: Spryker Core Back Office feature walkthrough
       link: docs/pbc/all/back-office/page.version/spryker-core-back-office-feature-overview.html

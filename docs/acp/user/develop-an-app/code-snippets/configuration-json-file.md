@@ -2,6 +2,7 @@
 title: Configuration JSON file
 Descriptions: Configuration Json code snippet
 template: howto-guide-template
+last_updated: Dec 15, 2023
 ---
 To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the App Store Catalog, the app needs to have the `configuration.json` file. This file contains all necessary form fields for inputs required by users of your app. Add this file to `config/app/configuration.json` in your app.
 

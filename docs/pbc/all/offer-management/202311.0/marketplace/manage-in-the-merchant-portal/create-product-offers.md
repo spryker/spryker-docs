@@ -2,6 +2,7 @@
 title: Create product offers
 description: learn how to create product offers in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Jan 9, 2024
 redirect_from:
   - /docs/pbc/all/offer-management/202311.0/marketplace/manage-product-offers.html
 related:

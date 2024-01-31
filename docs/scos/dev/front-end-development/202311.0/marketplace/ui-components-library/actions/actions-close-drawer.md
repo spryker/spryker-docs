@@ -2,11 +2,15 @@
 title: Actions Close Drawer
 description: This document provides details about the Actions Close Drawer service in the Components Library.
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-close-drawer.html 
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/actions/actions-close-drawer.html
 related:
   - title: Actions
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
+  - title: Actions Confirmation
+    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-confirmation.html
   - title: Actions Drawer
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-drawer.html
   - title: Actions HTTP

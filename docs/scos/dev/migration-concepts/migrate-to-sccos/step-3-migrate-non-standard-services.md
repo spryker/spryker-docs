@@ -2,6 +2,7 @@
 title: 'Step 3: Migrate non-standard services'
 description: To migrate to SCCOS, you need to migrate non-standard services.
 template: howto-guide-template
+last_updated: Dec 6, 2023
 ---
 
 Spryker comes pre-configured with the following services by default:

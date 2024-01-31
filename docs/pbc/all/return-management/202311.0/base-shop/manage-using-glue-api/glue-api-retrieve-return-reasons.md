@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/retrieving-return-r
 originalArticleId: 469a4a94-e7b3-4c0c-a814-837f20bdc9e4
 redirect_from:
   - /docs/pbc/all/return-management/202311.0/manage-using-glue-api/glue-api-retrieve-return-reasons.html
+  - /docs/pbc/all/return-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html

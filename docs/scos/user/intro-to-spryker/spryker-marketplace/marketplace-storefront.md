@@ -2,6 +2,7 @@
 title: Marketplace Storefront
 description: This document describes the peculiarities of the Marketplace Storefront application.
 template: concept-topic-template
+last_updated: Sep 25, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.html
 ---

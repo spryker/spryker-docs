@@ -2,6 +2,7 @@
 title: Managing marketplace abstract product prices
 description: This document describes how to manage marketplace abstract product prices in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
 related:

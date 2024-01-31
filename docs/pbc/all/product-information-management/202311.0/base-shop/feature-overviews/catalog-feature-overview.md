@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/catalog-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/catalog-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/catalog-feature-walkthrough.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/catalog-feature-overview.html
   - /docs/scos/dev/feature-integration-guides/201903.0/cms-catalog-feature-integration.html
 ---
 

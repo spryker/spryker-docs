@@ -2,6 +2,7 @@
 title: Manage items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:

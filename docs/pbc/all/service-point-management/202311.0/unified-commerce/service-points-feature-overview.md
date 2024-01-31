@@ -2,6 +2,7 @@
 title: Service Points feature overview
 description: General overview of the Service Points feature
 template: concept-topic-template
+last_updated: Jan 19, 2024
 ---
 
 The *Service Points* feature lets you create and manage service points, service types, and associated services.
@@ -10,11 +11,9 @@ The *Service Points* feature lets you create and manage service points, service 
 
 A *service point* is a physical location where services are provided. Depending on the services provided, there can be different kinds of service points, like a warehouse or a physical store. The definition of a service point ultimately depends on the services it provides.
 
-To add service points and service point addresses using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service points using Glue API, see [Add service points](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-points/glue-api-add-service-points.html). To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
 
-To import service points, see [Import file details: service_point.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point.csv.html).
-
-To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html)
+To add service point addresses using Glue API, see [Add service point addresses](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-point-addresses/glue-api-add-service-point-addresses.html). To import service point addresses, see [Import file details: service_point_address.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-point-address.csv.html)
 
 ## Service type
 
@@ -24,7 +23,7 @@ A *service type* is a classification of services that a business offers to its c
 * Rental service
 * Repair service
 
-To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service types using Glue API, see [Add service types](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-service-types/glue-api-add-service-types.html).
 
 To import service types, see [Import file details: service_type.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service-type.csv.html).
 
@@ -33,7 +32,7 @@ To import service types, see [Import file details: service_type.csv](/docs/pbc/a
 
 A *service* represents a specific service type that is provided at a specific service point. Because each service is unique, if two service points provide services with the same service type, like pickup, those services are represented as two separate entities and are managed accordingly. For example, a pickup service at a retail location at Julie-Wolfthorn-Straße 1, 10115, Berlin is a unique service.
 
-To add services using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add services using Glue API, see [Add services](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/manage-using-glue-api/manage-services/glue-api-add-services.html).
 
 To import services, see [Import file details: service.csv](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-service.csv.html).
 
@@ -44,13 +43,13 @@ To import services, see [Import file details: service.csv](/docs/pbc/all/service
 With the help of service points, types, and services, a store operator can model different use cases depending on their business needs. Here are some examples of services that can be implemented at the project level:
 * Ship from store
 * Car maintenance or installations services
-* Product demonstration at the retail location
-* Repair service at the retail location
+* Product demonstration at a retail location
+* Repair service at a retail location
 
 
 ## Service points on the Storefront
 
-When checking out, customers select a service point they want to process their order at. The feature is shipped with a search widget that lets them search service points by the following:
+When checking out, customers select a service point they want the order to be processes at. The feature is shipped with a search widget that lets them search service points by the following:
 * Service point name
 * Zip code
 * City

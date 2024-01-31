@@ -2,6 +2,7 @@
 title: N+1 problem
 description: N+1 problem
 template: troubleshooting-guide-template
+last_updated: Mar 7, 2023
 keywords: n1; n one
 ---
 

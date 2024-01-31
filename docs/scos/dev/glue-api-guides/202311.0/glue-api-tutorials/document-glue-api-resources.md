@@ -21,6 +21,7 @@ redirect_from:
   - /v1/docs/documenting-glue-api-resources
   - /v1/docs/en/documenting-glue-api-resources
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/document-glue-api-resources.html
 related:
   - title: Glue infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/old-glue-infrastructure/glue-infrastructure.html

@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - /docs/pbc/all/warehouse-management-system/extend-and-customize/inventory-management-feature-modules-overview.html
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/inventory-management-feature-modules-overview.html
 ---
 
 This document describes the modules of the Inventory Management feature.

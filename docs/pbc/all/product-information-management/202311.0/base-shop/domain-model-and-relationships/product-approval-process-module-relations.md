@@ -2,6 +2,8 @@
 title: "Product approval process: Module relations"
 last_updated: Dec 22, 2022
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-approval-process-module-relations.html
 ---
 
 The following diagram illustrates the dependencies between the modules for the *Product Approval Process* feature.

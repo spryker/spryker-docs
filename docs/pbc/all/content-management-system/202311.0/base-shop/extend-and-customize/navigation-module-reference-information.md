@@ -5,6 +5,7 @@ description: The Navigation module provides database structure and a public API 
 template: concept-topic-template
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/extend-and-customize/navigation-module-reference-information.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/extend-and-customize/navigation-module-reference-information.html
 ---
 
 ## Overview

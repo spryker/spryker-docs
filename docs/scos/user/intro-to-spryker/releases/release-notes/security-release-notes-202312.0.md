@@ -12,7 +12,7 @@ If you need any additional support with this content, [contact our support](http
 ## Insecure password reset workflow
 
 The password reset functionality missed security-related controls that could lead to manipulation by attackers. The security flaws related to fixing this issue included the following:
-* Reusable password reset tokens: Upon successful completion of a password reset, the same link containing a token could be reused to reset the password again.<br> 
+* Reusable password reset tokens: Upon successful completion of a password reset, the same link containing a token could be reused to reset the password again.<br>
 Affected applications: BackOffice, Merchant Portal.
 * Extended expiration time for password reset tokens:  The password reset token expiration time was too long.<br>
 Affected applications: Storefront, Back Office, Merchant Portal.
@@ -216,7 +216,8 @@ If your platform is based on PHP 8.0, you can use version 2.23.1 of the CompanyP
 composer require spryker-shop/company-page:"~2.23.1"
 composer show spryker-shop/company-page # Verify the version
 ```
-2. In the `CompanyPage/Theme/default/views/role-update/role-update.twig` template, define the data properties::
+
+2. In the `CompanyPage/Theme/default/views/role-update/role-update.twig` template, define the data properties:
 
 ```bash
 {% raw %}
@@ -229,7 +230,7 @@ composer show spryker-shop/company-page # Verify the version
 {% endraw %}
 ```
 
-3. Add these properties to the data config of the `permission-table` molecule: 
+3. Add these properties to the data config of the `permission-table` molecule:
 
 ```bash
 {% raw %}
@@ -257,7 +258,7 @@ composer show spryker-shop/company-page # Verify the version
 {% endraw %}
 ```
 
-5. Replace the static links currently used for assigning and unassigning company role permissions with the following Symfony forms: 
+5. Replace the static links currently used for assigning and unassigning company role permissions with the following Symfony forms:
 
 ```bash
 {% raw %}
@@ -298,11 +299,11 @@ composer show spryker-shop/company-page # Verify the version
 {% set formAssign = data.companyRolePermissionAssignFormCloner.getForm.createView ?? null %}
 {% set formUnassign = data.companyRolePermissionUnassignFormCloner.getForm.createView ?? null %}
 {% set actionAssign = path('company/company-role-permission/assign', {
-    'id-permission': permission.idPermission, 
+    'id-permission': permission.idPermission,
     'id-company-role': data.idCompanyRole,
 }) %}
 {% set actionUnassign = path('company/company-role-permission/unassign', {
-    'id-permission': permission.idPermission, 
+    'id-permission': permission.idPermission,
     'id-company-role': data.idCompanyRole,
 }) %}
 {% set titleAssign = 'company.account.company_role.permission.assign' | trans %}
@@ -499,7 +500,7 @@ docker/sdk cli npm install
 docker/sdk up --assets
 ```
 
-or 
+or
 
 ```bash
 npm install && npm run yves && npm run zed

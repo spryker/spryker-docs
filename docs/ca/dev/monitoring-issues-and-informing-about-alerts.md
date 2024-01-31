@@ -2,6 +2,7 @@
 title: Monitoring issues and informing about alerts
 DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
 template: concept-topic-template
+last_updated: Jan 11, 2024
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
 ---

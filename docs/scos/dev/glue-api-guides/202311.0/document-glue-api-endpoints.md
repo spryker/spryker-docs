@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-document-glue-api-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202204.0/document-glue-api-endpoints.html
 ---
 
 This document shows Document Glue API endpoints.

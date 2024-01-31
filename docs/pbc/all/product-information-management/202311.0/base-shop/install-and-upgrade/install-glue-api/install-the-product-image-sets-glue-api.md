@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/glue-api-product-image-sets-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-image-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-image-sets-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
 related:
   - title: Retrieving image sets of abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html

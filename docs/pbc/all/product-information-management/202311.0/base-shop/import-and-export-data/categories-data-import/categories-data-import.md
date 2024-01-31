@@ -6,6 +6,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/categories
 originalArticleId: b75dadf8-b3bb-4411-a24c-2dfbb178f439
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/categories/categories.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/categories-data-import/categories-data-import.html
+
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to categories:

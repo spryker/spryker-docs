@@ -2,6 +2,7 @@
 title: Deploy in a production environment
 description: Deploy an application in a production environment in the AWS Management Console.
 template: howto-guide-template
+last_updated: Jan 19, 2024
 originalLink: https://cloud.spryker.com/docs/deploying-in-a-production-environment
 originalArticleId: 71dae250-39b8-4adc-a57d-ba9376587f7c
 redirect_from:

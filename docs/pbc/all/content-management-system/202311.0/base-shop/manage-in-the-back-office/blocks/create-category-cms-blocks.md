@@ -6,6 +6,8 @@ template: back-office-user-guide-template
 related:
   - title: Edit CMS blocks
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
+redirect_from:
+- /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-category-cms-blocks.html
 ---
 
 This topic describes how to create category CMS blocks in the Back Office.

@@ -2,6 +2,7 @@
 title: Marketplace Merchant Custom Prices feature overview
 description: This document contains concept information for the Marketplace Merchant Custom Prices feature.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-custom-prices-feature-overview.html
 related:

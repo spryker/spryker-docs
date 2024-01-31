@@ -2,6 +2,7 @@
 title: Service Points Cart + Checkout feature overview
 description: General overview of the Service Points Cart + Checkout feature
 template: concept-topic-template
+last_updated: Dec 19, 2023
 ---
 
 This feature provides an example of a replacement strategy used by Click & Collect. The strategy is needed to replace a product offer with another product offer after a customer changes a service point or a shipment type in cart.

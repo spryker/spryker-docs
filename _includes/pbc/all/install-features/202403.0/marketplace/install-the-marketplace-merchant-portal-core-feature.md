@@ -892,7 +892,7 @@ const globalSettings = {
 ```
 
 9. Run commands from the root of the project:
- 
+
 ```bash
 npm i -g @angular/cli@15.0.3
 ```
@@ -907,7 +907,7 @@ npm install
 
 {% info_block warningBox "Warning" %}
 
-If you're getting `Missing write access to node_modules/mp-profile`, delete this *file* and make a *folder* with the same name.
+If you're getting `Missing write access to node_modules/mp-profile`, delete the `node_modules/mp-profile` file and create a *folder* with the same name.
 
 {% endinfo_block %}
 

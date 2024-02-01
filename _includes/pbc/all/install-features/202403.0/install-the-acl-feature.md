@@ -134,7 +134,7 @@ root_group,root_role
 | group_name | ✓        | string    | root_group   | The name of the ACL group. |
 | role_name  | ✓        | string    | root_role    | The name of the ACL role.  |
 
-2. Add the following data to `data/import/local/full_EU.yml`:
+2. Add the following data to your `data/import/local/full_EU.yml` file in order to extend the data import configuration:
 
 **/data/import/local/full_EU.yml**
 

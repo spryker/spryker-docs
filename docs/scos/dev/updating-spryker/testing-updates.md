@@ -16,7 +16,7 @@ Automated tests are must-have for every project and are very helpful in case of 
 * Functional tests: cover your Facade methods in Zed.
 * Unit tests: cover classes with complex business logic and tricky algorithms.
 
-See [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html) for more information about testing your project's code.
+See [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html) for more information about testing your project's code.
 
 {% info_block infoBox "Qualitative coverage" %}
 
@@ -34,7 +34,7 @@ We find the following static code analysis tools the most helpful and strongly r
 ## Additional checks
 
 In addition to the automated tests and code analysis tools, you can optionally do the following:
-* *Re-install the project locally* to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
+* *Re-install the project locally* to make sure the installation process is not broken, demo-data import along with [publish and synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) work as expected.
 * *Run a manual smoke test* either locally or on stage to make sure everything works and looks fine. This is especially important if you don't have enough acceptance test coverage.
 
 

@@ -80,4 +80,4 @@ To choose an installation mode, see [Choose an installation mode](/docs/scos/dev
 If you've already selected an installation mode, follow one of the guides:
 * [Install in Development mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html)
 * [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html)
+* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)

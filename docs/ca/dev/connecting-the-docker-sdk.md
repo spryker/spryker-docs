@@ -36,7 +36,7 @@ To connect Docker SDK to your project, follow the instructions in [Integrating t
 
 {% info_block errorBox "Deploy file" %}
 
-At the [Set up a Deploy file](/docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html) step, instead of setting up a new deploy file, use the one provided to you after the onboarding.
+At the [Set up a Deploy file](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html) step, instead of setting up a new deploy file, use the one provided to you after the onboarding.
 
 {% endinfo_block %}
 

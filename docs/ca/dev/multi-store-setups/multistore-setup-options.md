@@ -73,7 +73,7 @@ While the search index and key-value storages are shared resources, you can have
 - Centralized third-party integrations.
 
 This is a standard Spryker setup, best suited for the following use cases:
-- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
+- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](/docs/dg/dev/architecture/code-buckets.html) to achieve store-specific business logic.
 - Products, customers, orders, etc., are stored in the same database, making collaborative management across all stores simpler.
 
 On the infrastructure level, applications can't be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:

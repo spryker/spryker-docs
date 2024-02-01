@@ -410,7 +410,8 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 
 1. In the Algloia web interface, go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices).
 2. Select **Create Index**.
-3. In the **Create index** window, enter the **Index name**
+3. In the **Create index** window, enter the **Index name**.
+4. Click **Create**.
   This shows a success message and opens the page of the created index.
 
 #### Add searchable attributes
@@ -489,4 +490,6 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Go to **SEARCH BEHAVIOR > Deduplication and Grouping**.
 2. For **Distinct**, select **true**.
 3. In the **Attribute for Distinct** section, enter `url` and press `Enter`.
-That's it. Now, you should be able to search within your new projects at the Spryker docs website.
+4. Click **Review and Save Settings**.
+5. Review the settings and click **Save Settings**.
+This shows a success message. After you merge the PR and it's deployed to master, you will be able to search across the new section.

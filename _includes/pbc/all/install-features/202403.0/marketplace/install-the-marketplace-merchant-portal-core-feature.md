@@ -878,7 +878,7 @@ npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@
 }
 ```
 
-8. For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
+8. For Yves in `frontend/settings.js`, update the `globalSettings.paths` object to point to an updated `tsconfig`:
 
 **frontend/settings.js**
 ```js
@@ -905,13 +905,19 @@ npm i -g @angular/cli@15.0.3
 npm install
 ```
 
-{% info_block warningBox "Warning" %}
+{% info_block infoBox "" %}
 
 If you're getting `Missing write access to node_modules/mp-profile`, delete the `node_modules/mp-profile` file and create a *folder* with the same name.
 
 {% endinfo_block %}
 
-11. Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
+
+{% info_block warningBox "Verification" %}
+
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
+
+{% endinfo_block %}
+
 
 ### 5) Install the marketplace builder
 
@@ -1093,7 +1099,13 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-Check if `npm run mp:build` runs successfully. If it doesn't work, try the full rebuild:
+Run the following command:
+```shell
+npm run mp:build
+```
+
+If the regular build doesn't work, try running a full rebuild:
+
 ```bash
 rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build
 ```
@@ -1102,9 +1114,9 @@ rm -rf node_modules && npm cache clean --force && npm install && npm run mp:buil
 
 ### 6) Adjust deployment configs
 
-To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
+To configure deployment configuration to automatically install and build the Merchant Portal, change frontend dependencies and installation commands in the deployment file:
 
-1. Remove the following Yves dependencies' installation commands from the needed deployment YAML file: `dependencies-install` and `yves-isntall-dependencies`.
+1. Remove the following Yves dependencies' installation commands from the needed deployment file: `dependencies-install` and `yves-isntall-dependencies`.
 2. Add required console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
@@ -1457,7 +1469,7 @@ Verify that all propel-related entities with the merchant have the allowed or re
 
 {% info_block warningBox "Merchant Portal security" %}
 
-It's not safe to expose `MerchantPortal` next to the Back Office. `MerchantPortal` *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It's not safe to expose the Merchant Portal next to the Back Office. The Merchant Portal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with the Back Office.
 
 {% endinfo_block %}
 
@@ -1575,7 +1587,7 @@ server {
 }
 ```
 
-2. Apply the`config:f`:
+2. Apply the `config:f`:
 
 ```bash
 sudo service nginx reload
@@ -1689,7 +1701,7 @@ Make sure the `user-merchant-portal-gui` rule has been added to the `spy_acl_rul
 </config>
 ```
 
-2. Build navigation catche:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -1697,14 +1709,15 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-1. Log in to the Merchant Portal and click the profile picture.
-2. In the overlay of the secondary navigation, ensure that the **My Account** and **Logout** buttons are visible.
+1. Log into the Merchant Portal.
+2. Click the profile picture.
+3. In the overlay of the secondary navigation, ensure that the **My Account** and **Logout** buttons are visible.
 
 {% endinfo_block %}
 
 ## Install related features
 
-Integrate the following related features:
+Install the following related features:
 
 | FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -10,7 +10,7 @@ redirect_from:
 
 The Loggly module provides a plugin to read log messages from a queue and send the messages via https to [Loggly](https://www.loggly.com/).
 
-To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).-->
+To integrate this plugin you need to have the `QueueHandler` enabled in your Logger configuration. <!-- as described [here](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html).-->
 
 In addition you need to properly configure the queue setup for Loggly to work.
 

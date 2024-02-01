@@ -16,7 +16,7 @@ redirect_from:
 ---
 
 
-[Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the following table for information on modules for which we plan major releases.
+[Major module releases](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the following table for information on modules for which we plan major releases.
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |

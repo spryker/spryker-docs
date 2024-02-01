@@ -17,4 +17,4 @@ An example of a pessimistic Redis session Lock in the New Relic report:
 
 ## Solution
 
-Follow the approaches from the [architecture performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#optimistic-vs-pessimistic-locking).
+Follow the approaches from the [architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#optimistic-vs-pessimistic-locking).

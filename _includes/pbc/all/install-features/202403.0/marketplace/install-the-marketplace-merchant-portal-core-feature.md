@@ -137,9 +137,11 @@ console propel:install
 console transfer:generate
 ```
 
-### 3) Set up the configuration
+### 3) Optional: Set up the configuration
 
-Optional: For security reasons, we recommend enabling the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
+**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
+
+For security reasons, we recommend enabling the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
 
 **src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
 
@@ -755,7 +757,9 @@ Environment requirements:
 - [Node.js](https://nodejs.org/en/download/): minimum version is 18.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
-Spryker requirements: To start builder integration, check versions of Spryker packages:
+Spryker requirements:
+
+To start builder integration, check versions of Spryker packages and update them if needed:
 
 | NAME                        | VERSION   |
 |-----------------------------|-----------|
@@ -891,7 +895,7 @@ const globalSettings = {
 };
 ```
 
-9. Run commands from the root of the project:
+9. Run commands from the root of the project to install Angular CLI:
 
 ```bash
 npm i -g @angular/cli@15.0.3

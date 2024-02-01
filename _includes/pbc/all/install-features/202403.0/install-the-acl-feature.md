@@ -388,8 +388,8 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-Use the following example if you want to enable ACL Entity for the whole Application, for example, for the Merchant
-Portal:
+To enable the ACL Entity feature for the `MerchantPortalApplication`, you must register the `AclEntityApplicationPlugin` plugin.
+The ACL Entity feature allows you to manage access to the entities in the store of different merchants separately.
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -425,8 +425,8 @@ console setup:init-db
 
 Make sure the following works correctly:
 
-* The request doesn't succeed for users without permission.
-* The user can see only the allowed menu links.
+* The request to access the Merchant Portal doesn't succeed for users without permissions.
+* The marketplace user can see only the allowed Merchant Portal menu links.
 * The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
 * You can edit user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 * When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.

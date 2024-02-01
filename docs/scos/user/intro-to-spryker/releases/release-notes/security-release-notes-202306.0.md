@@ -58,7 +58,7 @@ Access validation controls have been implemented to prevent administrators from 
 
 ### How to get the fix
 
-The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.0 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html) for details on how to migrate to PHP 8.0.
+The update requires PHP 8 to be installed. If you are using PHP 7, see [PHP 8.1 as the minimum version for all Spryker projects](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html) for details on how to migrate to PHP 8.1.
 
 To implement a fix for this vulnerability, upgrade the `company-page` module to version 2.22.0:
 

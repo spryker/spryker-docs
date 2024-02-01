@@ -15,40 +15,51 @@ The Stripe integration in Spryker is a part of the App Composition Platform and 
 ## Supported business models
 The Stripe App supports the business-to-business (B2B) and business-to-consumer (B2C) models.
 
+## Features
+The Stripe App currently has the following features:
+1. Interface within Spryker ACP Catalog to connect with Stripe: Users can easily connect to Stripe from the App Composition Platform.
+2. Easy switch between Test & Live mode: Users have the option to test payments in either mode.
+3. Responsive Redirect Payment Page: Once a connection is set up between Spryker & Stripe, End users checking out are redirected to a Spryker-hosted payment page where they can view activated payment methods. This works both on web and mobile.
+4. View Payment Methods activated in your Stripe Dashboard
+5. GLUE API Support: Support for customers using Spryker headless.
+6. Authorize payments and capture later: The default OMS configuration enables you authorize cards and capture the order amount after shipping or depending on the business logic set up.
+7. Default OMS Configuration: We provide a default OMS configuration which can be used as an example or modified to suit your business logic.
+
 ## Prerequisites for using the Stripe app
 
-1. Your country is included in the [list of countries supported by Stripe](https://stripe.com/global).
-2. Your business isn't listed among the [prohibited and restricted businesses](https://stripe.com/legal/restricted-businesses).
-3. Your Spryker project is ACP-enabled. For more information on the ACP enablement process, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
-4. You have a Stripe account, and you have been onboarded to the Spryker platform with it. Spryker manages the onboarding process. For details, contact the [Spryker support team](https://spryker.my.site.com/support/s/).
-Once you have been onboarded to the platform, you will have access to your account ID on the Stripe dashboard. The account ID is necessary to connect your project to the Stripe App. For more information on the Stripe account ID, see the [Stripe documentation](https://stripe.com/docs/payments/account).
+1. You have a Stripe account. Your Stripe account needs to be connected to the Spryker platform account. We will help you with this. Kindly send a message to our [Spryker support team](https://spryker.my.site.com/support/s/).
+2. Your Spryker project is ACP-enabled. For more information on the ACP enablement process, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
+3. You have the required [SCCOS prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html).
+4. Your country is included in the [list of countries supported by Stripe](https://stripe.com/global).
+5. Your business isn't listed among the [prohibited and restricted businesses](https://stripe.com/legal/restricted-businesses).
 
-## Setting up the Stripe app
 
-To set up Stripe on your project, do the following:
-1. [Install Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html).
-2. [Configure and Connect Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html).
-
-## Supported payment methods
-The Stripe app supports the following payment methods:
-- Cards: Visa and Mastercard
+## Payment methods
+The Stripe app supports all payments enabled by Stripe in your region. Learn more about [Payment methods in Stripe](https://stripe.com/docs/payments/payment-methods/overview). 
+However our team only tested the following payment methods
+- Cards: including Visa and Mastercard
 - Debit card
-- Bank transfer 
+- Bank transfer
+- Klarna
+- Apple Pay
+- Google Pay
+- Direct Debit (SEPA) / Sofortüberweisung
+- iDEAL
+- Link
+- Przelewy24
+- Giropay
 
 {% info_block infoBox "Bank transfers" %}
 
 Keep in mind following about bank transfers in Stripe:
-1. Stripe supports bank transfers in specific regions. For details on this payment method, see the Stripe documentation on [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers).
-2. Stripe provides some best practices for bank transfers. For example, if a business in EU wants to receive a transfer from a customer in Switzerland, it is recommended to make the transfer in Euro, not in CHF. For details, see [Stripe’s Payment Method Factsheet](https://stripe.com/ie/guides/payment-methods-guide#4-payment-methods-fact-sheets).
+Stripe supports bank transfers in specific regions. You can read more about [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers) here.
 
 {% endinfo_block %}
 
-- SEPA direct debit
-- iDEAL
-- Klarna
-
-For more information about payment methods available in Stripe and regional peculiarities, see the Stripe documentation [Payment methods overview](https://stripe.com/docs/payments/payment-methods/overview).
 
 ## Current limitations
-1. Refunds: The refund process using the Spryker OMS currently isn't supported.
-2. Multi-Capture: Multi-Capture enables businesses to capture money paid for an order multiple times. Stripe offers it only to customers who use the IC+ pricing model. For details on the pricing model, see the Stripe documentation [Understanding Blended & Interchange+ pricing](https://support.stripe.com/questions/understanding-blended-interchange-pricing).
+The Stripe App has limited or no support for the following features:
+1. Refunds & Payment Cancellation: Handling refunds & payment cancellation via the Spryker OMS.
+2. Payment Authorization & Capture: The current logic implemented works with separate authorization & capture hence all payment methods go through this transition.
+3. Payment Authorization Timeout: We have a timeout of 1 day for authorizing payments. This means that for payment methods such as Bank Transfers which are not authorized will have this timeout. Our recommendation is to change the 1-day timeout to 7 days. 
+4. Multi-Capture: Partial capture of payment for orders items.

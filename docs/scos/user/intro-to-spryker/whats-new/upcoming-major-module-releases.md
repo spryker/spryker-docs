@@ -21,7 +21,9 @@ To learn about Marketplace-related upcoming major releases, see [Marketplace upc
 
 {% endinfo_block %}
 
-[Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, check out the following table for information on modules for which we plan major releases.
+[Major module releases](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) might require some development efforts from projects. To help you plan in advance, we will be providing information on modules for which we plan major releases on this page.
 
+<!--
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
+-->

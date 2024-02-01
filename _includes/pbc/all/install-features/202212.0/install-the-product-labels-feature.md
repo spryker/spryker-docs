@@ -23,7 +23,7 @@ composer require spryker-feature/product-labels:"{{page.version}}" --update-with
 
 {% info_block warningBox “Verification” %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -569,7 +569,7 @@ composer require "spryker-feature/product-labels:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

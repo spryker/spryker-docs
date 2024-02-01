@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/tax-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/tax-feature-walkthrough/tax-feature-walkthrough.html  
   - /docs/pbc/all/tax-management/202212.0/domain-model-and-relationships/tax-domain-model-and-relationships.html
+  - /docs/pbc/all/tax-management/202212.0/base-shop/domain-model-and-relationships/tax-domain-model-and-relationships.html
 ---
 
 

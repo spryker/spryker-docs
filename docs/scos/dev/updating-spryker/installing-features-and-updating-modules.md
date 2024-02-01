@@ -42,7 +42,7 @@ If no extra dependencies are found, `composer.json` is updated respectively. Oth
 
 At some point, you need to install new or update existing features.
 
-Features are grouped into packaged business capabilities(PBCs). For a complete list of PBCs and respective features, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html). In the Related Developer documents section of each feature overview, you can find links to the installation guides for the feature. For example, see [Related Developer documents](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/checkout-feature-overview/checkout-feature-overview.html#related-developer-documents) for the Checkout feature. Use the installation guides to install or update features.
+Features are grouped into packaged business capabilities(PBCs). For a complete list of PBCs and respective features, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html). In the Related Developer documents section of each feature overview, you can find links to the installation guides for the feature. For example, see [Related Developer documents](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html#related-developer-documents) for the Checkout feature. Use the installation guides to install or update features.
 
 When you open an installation guide, in the right upper corner of the page, select the version of the feature you want to install.
 

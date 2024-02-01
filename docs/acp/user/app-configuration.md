@@ -2,6 +2,7 @@
 title: App configuration
 Descriptions: Make configuration to your app, like translation and widgets
 template: howto-guide-template
+last_updated: Nov 23, 2023
 ---
 Instead of writing different components for different App configurations, we use JSON to determine the form for the configuration of the apps. There is a [playground for NgxSchemaForm](https://guillotina.io/ngx-schema-form). There are predefined form elements and also custom form elements.
 
@@ -11,7 +12,7 @@ For the app configuration translation, see [App configuration translation](/docs
 
 {% endinfo_block %}
 
-## Apps configuration
+## Apps configuration form
 Configuration widget JSON format:
 
 ```json
@@ -629,3 +630,67 @@ DE shop:
 
 EN shop:
 ![configuration-en-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-en-shop.png)
+
+
+## Form validation (server side)
+
+The app will receive the request from the configuration form to the URL defined in your `api.json` file, for example, like this:
+
+```json
+{
+    "configuration": "/private/configure",
+    "disconnection": "/private/disconnect"
+}
+```
+
+In the cURL request, it will look like:
+
+```bash
+curl -x POST 'https://your-app.domain.name/private/configure' \
+-H 'Accept-Language: en' \
+-H 'X-Tenant-Identifier: tenant-uuid' \
+--data-raw '{
+  "data": {
+    "attributes": {
+      "configuration": "{\"fieldName1\":\"value1\", \"fieldName2\":\"value2\"}"
+    }
+  }
+}'
+```
+
+The app response format for a valid request is just the HTTP status `200`.
+
+The app response format for an invalid request could be an error for the whole form:
+
+```json
+{
+  "errors": [
+    {
+      "code": 443,
+      "message": "human readable message for a user, localized",
+      "status": 400
+    }
+  ]
+}
+```
+
+or field-specific messages in the following format:
+```
+{
+  "errors": [
+    {
+      "code": 444,
+      "message": "{"\"fieldName1\": \"errorMessage\", \"fieldName2\": \"errorMessage\"}",
+      "status": 400
+    }
+  ]
+}
+```
+
+In both cases HTTP status has to be `400`.
+
+{% info_block warningBox "Error number limitation" %}
+
+The current limitation for the number of displayed errors from the app response is 1.
+
+{% endinfo_block %}

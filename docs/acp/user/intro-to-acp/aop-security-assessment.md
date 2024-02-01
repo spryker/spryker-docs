@@ -2,6 +2,7 @@
 title: ACP security assessment
 Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
 template: howto-guide-template
+last_updated: Aug 30, 2023
 ---
 
 This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog or the app store. It covers the following app types:
@@ -163,7 +164,7 @@ The diagram below demonstrates the security assessment procedure:
 
 ## Communication channels
 
-- Spryker will create a Slack channel for the app developers to ask questions related to security. Security experts will monitor this channel and respond to the questions.
+- For the app developers to ask questions related to security, Spryker will create a (private) subforum in our [CommerceQuest](https://commercequest.space/) community platform. Security experts will monitor this channel and respond to the questions.
 - Communication during individual assessments would be handled through emails.
 - In cases where a discussion is needed to resolve open questions, a call can be set up between the developer and Spryker security experts.
 
@@ -181,4 +182,4 @@ Security assessment recommendations are created based on the following guides an
 - [OWASP Top-10](https://owasp.org/www-project-top-ten/)
 - [OWASP Web Security Testing guide](https://owasp.org/www-project-web-security-testing-guide/)
 - [OWASP Secure Coding Practices - Quick Reference Guide](https://owasp.org/www-pdf-archive/OWASP_SCP_Quick_Reference_Guide_v2.pdf)
-- [OWASP Security Knowledge Framework](https://owasp.org/www-project-security-knowledge-framework/)
+- [OWASP Security Knowledge Framework](https://owasp.org/projects/spotlight/historical/2021.02.03/)

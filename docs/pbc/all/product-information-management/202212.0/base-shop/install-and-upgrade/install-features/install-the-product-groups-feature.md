@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/product-groups-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-product-groups-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-groups-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-groups-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-product-groups-feature.md -->

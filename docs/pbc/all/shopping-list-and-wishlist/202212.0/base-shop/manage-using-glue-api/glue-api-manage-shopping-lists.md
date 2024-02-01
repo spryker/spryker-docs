@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-using-glue-api/manage-shopping-lists-via-glue-api.html
 related:
     - title: Glue API - Shopping Lists feature integration
-      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+      link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
     - title: Managing shopping list items
       link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
     - title: Shopping Lists feature overview
@@ -28,7 +28,7 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 
@@ -856,4 +856,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

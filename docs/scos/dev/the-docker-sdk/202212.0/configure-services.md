@@ -72,7 +72,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |       |          | mariadb-10.3 | &check;     |    |
 |       |          | mariadb-10.4 | &check;     |    |
 |       |          | mariadb-10.5 | &check;     |    |
-| broke | rabbitmq | 3.7          |             |    |
+| broker | rabbitmq | 3.7          |             |    |
 |       |          | 3.8          | &check;     |    |
 |       |          | 3.9          | &check;     |    |
 | session         | redis    | 5.0          | &check;     |    |
@@ -208,7 +208,7 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch
@@ -492,8 +492,8 @@ image:
 
 2. Push and deploy the changes using one of the following guides:
 
-  * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
-  * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+  * [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+  * [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 
 
@@ -507,7 +507,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support]((/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 

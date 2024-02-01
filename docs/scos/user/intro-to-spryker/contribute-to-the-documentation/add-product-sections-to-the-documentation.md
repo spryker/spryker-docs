@@ -33,7 +33,7 @@ In the `/docs` directory, create a folder for your project and a folder designat
 
 In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
-To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html#sidebars).
+To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html#sidebars).
 
 ## 3. Add the product to the configuration
 
@@ -104,7 +104,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
 {% raw %}
 <div class="main-nav dropdown">
     <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="main-nav__opener-label">Select Product</span>
+        <span class="main-nav__opener-label">Select a guide</span>
         <span class="main-nav__opener-text">
             ...
             {% elsif page.product == 'acp' and page.role == 'dev' %}
@@ -410,7 +410,8 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 
 1. In the Algloia web interface, go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices).
 2. Select **Create Index**.
-3. In the **Create index** window, enter the **Index name**
+3. In the **Create index** window, enter the **Index name**.
+4. Click **Create**.
   This shows a success message and opens the page of the created index.
 
 #### Add searchable attributes
@@ -489,4 +490,6 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Go to **SEARCH BEHAVIOR > Deduplication and Grouping**.
 2. For **Distinct**, select **true**.
 3. In the **Attribute for Distinct** section, enter `url` and press `Enter`.
-That's it. Now, you should be able to search within your new projects at the Spryker docs website.
+4. Click **Review and Save Settings**.
+5. Review the settings and click **Save Settings**.
+This shows a success message. After you merge the PR and it's deployed to master, you will be able to search across the new section.

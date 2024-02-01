@@ -8,5 +8,5 @@ redirect_from:
 ---
 
 This section provides a collection of articles that explain the Glue API endpoints for registered user carts in Spryker Marketplace:
-* [Managing carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html)
+* [Managing carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)
 * [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html)

@@ -2,6 +2,7 @@
 title: Connect the Spryker CI to a GitHub managed project
 description: Learn how to connect Spryker CI to a GitHub managed project
 template: howto-guide-template
+last_updated: Jul 4, 2023
 redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
 ---
@@ -61,6 +62,10 @@ To connect the Upgrader manually using a GitHub access token, follow the steps.
 To enable the Upgrader to analyze the project and create PRs, the GitHub personal access token (Fine-grained token) should have the following permissions:
 
 * **Metadata**: Access: Read-only
+
+* **Webhooks**: Access: Read-only
+
+* **Contents**: Access: Read and write
 
 * **Pull requests**: Access: Read and write
 

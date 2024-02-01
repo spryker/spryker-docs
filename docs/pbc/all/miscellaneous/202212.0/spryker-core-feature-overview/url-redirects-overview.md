@@ -8,11 +8,11 @@ redirect_from:
 ---
 
 With the URL redirects, you can create content redirects and increase your store's search engine visibility. Redirects can be store-internal or external and can reflect various HTTP status codes that play a major role in search engine ranking. Besides, redirects for the changed product, CMS pages, categories URLs are auto-generated.
-A URL redirect is a special entity that consists of a source URL (which is provided by the `spy_url database` table), a target URL, and an HTTP status code stored in the `spy_url_redirect` database table. Redirects are exported to the key-value storage with collectors and are matched with StorageRouter the same way as described in the [URL](/docs/scos/dev/back-end-development/yves/url.html) document. `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demo Shop, sends a redirect response to the target URL with the given status code.
+A URL redirect is a special entity that consists of a source URL (which is provided by the `spy_url database` table), a target URL, and an HTTP status code stored in the `spy_url_redirect` database table. Redirects are exported to the key-value storage with collectors and are matched with StorageRouter the same way as described in the [URL](/docs/dg/dev/backend-development/yves/url.html) document. `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demo Shop, sends a redirect response to the target URL with the given status code.
 
 ## Manual redirects
 
-In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/pbc/all/content-management-system/{{page.version}}/manage-in-the-back-office/redirects/create-cms-redirects.html) for details.
+In the Back Office, you can create custom URL redirects from not yet existing URLs to other internal or external URLs with different status codes. See [Creating CMS redirects](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html) for details.
 
 ## Automatic redirects
 

@@ -2,6 +2,7 @@
 title: Marketplace Merchant Custom Prices feature overview
 description: This document contains concept information for the Marketplace Merchant Custom Prices feature.
 template: concept-topic-template
+last_updated: May 29, 2023
 redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-merchant-custom-prices-feature-overview.html
 related:
@@ -44,4 +45,4 @@ Customers see custom prices for products based on their merchant relationship, o
 
 | INSTALLATION GUIDES|
 |---------|
-| [Marketplace Merchant Custom Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-custom-prices-feature.html) |
+| [Marketplace Merchant Custom Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-custom-prices-feature.html) |

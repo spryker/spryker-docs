@@ -23,7 +23,7 @@ This document helps you prepare for a traditionally very busy season of the year
 
 ## DevOps and hosting tips
 
-* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
+* Follow [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Prepare stand-by/hot-spare compute nodes. Buy it in advance.
 * Prepare sizing of Redis/ElasticSeach/Database services.
 * Make sure you have clear procedures for adding a new compute node to your cluster and removing one from it. It is good to have it fully automated allowing you to easily change your cluster configuration.
@@ -36,7 +36,7 @@ This document helps you prepare for a traditionally very busy season of the year
 
 ## Tips for developers
 
-* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
+* Follow [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Disable features, that might have no big value during Black Friday but add additional overhead:
 * Persistent Cart
 * Evaluate project features for the same reason
@@ -48,7 +48,7 @@ This document helps you prepare for a traditionally very busy season of the year
   * Make sure that your ERP or backend systems are capable of processing the expected number of transactions
   * Talk to partners integrated into checkout—for example, payment providers and fraud checks. They need to be prepared to handle expected volumes of transactions
   * Preload all relevant data in advanced: new products, prepare discount rules but mark them disabled
-  * Make sure application monitoring is in place ([Tideways](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/tideways.html), NewRelic) so you can watch for errors or issues
+  * Make sure application monitoring is in place ([Tideways](/docs/pbc/all/miscellaneous/{{site.version}}/third-party-integrations/operational-tools-monitoring-legal/tideways.html), NewRelic) so you can watch for errors or issues
 
 ## Extra: Performance tips
 

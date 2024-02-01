@@ -15,7 +15,6 @@ redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 ---
 
-{% info_block infoBox "Info" %}
 
 To learn about Marketplace-related upcoming major releases, see [Marketplace upcoming major module releases](/docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html).
 

@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - run: bundle exec jekyll build --config=_config.yml,_config_production.yml -t
@@ -39,12 +39,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -61,18 +61,18 @@ jobs:
 
       - run: bundle exec rake check_acp_user
 
-  link_validation_check_cloud:
-    name: Links validation (check_cloud)
+  link_validation_check_ca:
+    name: Links validation (check_ca)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -87,63 +87,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_cloud
-
-  link_validation_check_mp_dev:
-    name: Links validation (check_mp_dev)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_mp_dev-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_mp_dev
-
-  link_validation_check_mp_user:
-    name: Links validation (check_mp_user)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
-        with:
-          ruby-version: 2.6
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_mp_user-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_mp_user
+      - run: bundle exec rake check_ca
 
   link_validation_check_scos_dev:
     name: Links validation (check_scos_dev)
@@ -151,12 +95,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -179,12 +123,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -207,12 +151,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -235,12 +179,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -263,12 +207,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - name: Cache HTMLProofer
@@ -285,17 +229,45 @@ jobs:
 
       - run: bundle exec rake check_sdk
 
+  link_validation_check_dg:
+    name: Links validation (check_dg)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-check_sdk-htmlproofer
+
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_dg
+
   page_validation:
     name: Page validation
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
       - run: bundle exec jekyll validate
@@ -306,21 +278,15 @@ jobs:
 
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Ruby
-        uses: ruby/setup-ruby@477b21f02be01bcb8030d50f37cfec92bfa615b6
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6
+          ruby-version: 3.2.2
           bundler-cache: true
 
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_marketplace_user.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_cloud_dev.yml
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_ca_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scos_dev.yml

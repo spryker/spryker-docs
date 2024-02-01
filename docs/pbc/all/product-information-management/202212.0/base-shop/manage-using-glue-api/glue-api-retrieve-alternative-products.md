@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202212.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 related:
   - title: Retrieving related products
-    link: docs/scos/dev/glue-api-guides/page.version/retrieve-related-products.html
+    link: docs/pbc/all/product-relationship-management/page.version/glue-api-retrieve-related-products.html
   - title: Alternative Products feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
@@ -376,4 +376,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

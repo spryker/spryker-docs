@@ -1,12 +1,12 @@
 ---
-title: PHP 8.0 as the minimum version for all Spryker projects
-description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.0 as the minimum version.
+title: PHP 8.1 as the minimum version for all Spryker projects
+description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.1 as the minimum version.
 last_updated: November 22, 2022
 template: concept-topic-template
 ---
 
 
-End of November 2022, Spryker will release a new version of its Demo Shops, which will require PHP 8.0 as their minimum PHP version. PHP 7.4 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.0 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
+End of November 2022, Spryker will release a new version of its Demo Shops, which will require PHP 8.1 as their minimum PHP version. PHP 8.0 will no longer be supported. Spryker's new module releases will only be compatible with PHP version 8.1 or later. See [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html) for details about the supported PHP versions.
 
 ## Impacts
 
@@ -14,7 +14,7 @@ Backwards compatibility remains unaffected. If your project followed our recomme
 
 ## Migration steps
 
-To migrate your project to the 8.0 version of PHP, follow these steps:
+To migrate your project to the 8.1 version of PHP, follow these steps:
 
 1. Update your modules manually in `composer.json`.
 Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.
@@ -33,7 +33,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 2. Change the PHP version in `composer.json`:
 
-`config.platform.php => 8.0.12`
+`config.platform.php => 8.1.0`
 
 3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 

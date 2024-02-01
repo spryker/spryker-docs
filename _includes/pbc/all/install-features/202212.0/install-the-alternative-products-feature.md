@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -9,12 +9,12 @@ Follow the steps below to install the Alternative Products feature core.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -60,7 +60,7 @@ Make sure that the following modules were installed:
  </database>
  ```
 
-2. Set up synchronization queue pools so that non-multistore entities (not store-specific entities) get synchronized among stores:
+2. Set up synchronization queue pools so that non-multi-store entities (not store-specific entities) get synchronized among stores:
 
 **src/Pyz/Zed/ProductAlternativeStorage/Persistence/Propel/Schema/spy_product_alternative_storage.schema.xml**
 
@@ -255,7 +255,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
-|  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
+|  concrete_sku | ✓ | string | 420566 | SKU of concrete product which will have alternative products. |
 |  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
 |  alternative_product_abstract_sku | optional | string | M1000785 | SKU of the abstract alternative product. |
 
@@ -408,12 +408,12 @@ Follow the steps below to install the Alternative Products feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -511,7 +511,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

@@ -2,11 +2,12 @@
 title: App configuration translation
 Descriptions: App configuration translation is a JSON file that contains all translations for all entities from the application configuration file.
 template: howto-guide-template
+last_updated: Dec 15, 2023
 related:
   - title: App configuration
     link: docs/acp/user/app-configuration.html
-  - title: Developing an app
-    link: docs/acp/user/developing-an-app.html
+  - title: Develop an app
+    link: docs/acp/user/develop-an-app/develop-an-app.html
   - title: App manifest
     link: docs/acp/user/app-manifest.html
 ---

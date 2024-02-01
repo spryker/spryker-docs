@@ -16,10 +16,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202212.0/glue-api/glue-api-product-options-feature-integration.html
 related:
-  - title: Retrieve abstract products
+  - title: "Glue API: Retrieve abstract products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
-  - title: Retrieving concrete products
+  - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-glue-api/install-the-product-options-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-options-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-product-options-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-product-options-glue-api.md -->

@@ -25,7 +25,3 @@ To learn about Marketplace-related upcoming major releases, see [Marketplace upc
 
 | MODULE | DATE | REASON FOR THE MAJOR VERSION |
 | --- | --- | --- |
-| [Flysystem](https://github.com/spryker/flysystem) | Q1 2024 | Update `league/flysystem` to version 3. |
-| [FlysystemAws3v3FileSystem](https://github.com/spryker/flysystem-aws3v3-file-system) | Q1 2024 | Update `league/flysystem-async-aws-s3` to version 3. |
-| [FlysystemFtpFileSystem](https://github.com/spryker/flysystem-ftp-file-system) | Q1 2024 | Update `league/flysystem-ftp` to version 3. |
-| [FlysystemLocalFileSystem](https://github.com/spryker/flysystem-local-file-system) | Q1 2024 | Update `league/flysystem-local` to version 3. |

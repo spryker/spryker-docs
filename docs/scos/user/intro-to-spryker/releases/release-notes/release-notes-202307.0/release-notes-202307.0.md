@@ -261,9 +261,6 @@ Infrastructure Health Check Monitoring Dashboard: Elasticsearch example:
 
 ![elasticsearch-example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/elasticsearch-example.png)
 
-**Technical prerequisites:**
-
-As a prerequisite for the New Relic Application Monitoring Performance (APM) integration, which is also an optional additional feature, it must be active.
 
 ### [Cloud Observability] Pipeline Success Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -288,8 +285,6 @@ Documentation for this feature is coming soon.
 Pipeline Success Dashboard example:
 
 ![pipeline-success-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/pipeline-success-dashboard.png)
-
-**Technical prerequisites**: The Pipeline Success Dashboard feature is *not* a part of Spryker's base offering and is an *optional* additional feature. As a prerequisite, New Relic APM integration, which is also an optional additional feature, needs to be active.
 
 ### [Core Commerce] Upgraded Angular to v15 and Node.js to v18 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

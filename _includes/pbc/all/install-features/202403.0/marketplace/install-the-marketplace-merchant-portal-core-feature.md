@@ -802,7 +802,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure the Merchant Portal has the **Dashboard** menu.
+Make sure the Merchant Portal navigation has the **Dashboard** menu.
 
 {% endinfo_block %}
 
@@ -818,7 +818,7 @@ wget -O .npmrc https://raw.githubusercontent.com/spryker-shop/suite/master/.npmr
 wget -O .stylelintrc.mp.js https://raw.githubusercontent.com/spryker-shop/suite/master/.stylelintrc.mp.js
 ```
 
-2. Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files: `tsconfig.yves.json` and `tsconfig.mp.json`.
+2. Rename the default `tsconfig.json` to `tsconfig.base.json` and create additional `tsconfig` files: `tsconfig.yves.json` and `tsconfig.mp.json`.
 
 ```bash
 mv tsconfig.json tsconfig.base.json
@@ -827,7 +827,10 @@ wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/ma
 wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.json
 ```
 
-3. Add `src/Pyz/Zed/*/Presentation/Components/**`, `vendor/**` and `**/node_modules/**` to exclude option in `tslint.json`.
+3. In `tslint.json`, add the following to the exclude option:
+* `src/Pyz/Zed/*/Presentation/Components/**`
+* `vendor/**`
+* `**/node_modules/**`
 
 4. Add the `.eslintrc.mp.json` file:
 
@@ -850,7 +853,6 @@ npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@
 7. Update `package.json` with the following fields:
 
 **package.json**
-
 ```json
 {
     "workspaces": [
@@ -879,7 +881,6 @@ npm i -D @angular-builders/custom-webpack@~15.0.0 @angular-devkit/build-angular@
 8. For Yves, in the `globalSettings.paths` object, update `frontend/settings.js` to point to an updated `tsconfig`:
 
 **frontend/settings.js**
-
 ```js
 const globalSettings = {
     ...
@@ -891,7 +892,7 @@ const globalSettings = {
 ```
 
 9. Run commands from the root of the project:
-
+ 
 ```bash
 npm i -g @angular/cli@15.0.3
 ```

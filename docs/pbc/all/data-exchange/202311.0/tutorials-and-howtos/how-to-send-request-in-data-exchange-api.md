@@ -465,7 +465,7 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
-### Sending `POST`, `PATCH` and `PUT` requests with relationships
+### Sending `POST`, `PATCH`б and `PUT` requests with relationships
 
 To create or update an entity along with its related entities, you need to include the relationships directly in 
 the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 
@@ -473,8 +473,8 @@ and its child entities.
 
 {% info_block infoBox %}
 
-Currently, our system does not support `many-to-many` relationships for POST, PATCH and PUT requests. 
-Only `one-to-one` and `one-to-many` relationships are allowed. This means each child entity can be associated 
+Currently, our system doesn't support `many-to-many` relationships for POST, PATCH, and PUT requests. 
+Only `one-to-one` and `one-to-many` relationships are allowed. This means that each child entity can be associated 
 with only one parent entity.
 
 {% endinfo_block %}
@@ -482,9 +482,7 @@ with only one parent entity.
 The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array. 
 Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
 
-To be processed correctly related entities must be defined with existing relation names, and they should be
-organized to align with their hierarchical relationships in the database, corresponding to the relationships 
-defined in tables like `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping`:
+For correct processing, make sure that related entities are defined with existing relation names. Also, organize them in alignment with their hierarchical relationships in the database, corresponding to the relationships defined in tables like `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping`:
 
 - `spy_dynamic_entity_configuration_relation` specifies the relationships between parent and child entities. Each record links a parent entity to a child entity.
 - `spy_dynamic_entity_configuration_relation_field_mapping` contains the field mappings between related entities.
@@ -493,11 +491,11 @@ The hierarchical relationships are primarily defined by the foreign key referenc
 For example, `spy_dynamic_entity_configuration_relation` uses foreign keys to establish connections between 
 parent and child configurations in `spy_dynamic_entity_configuration`.
 
-Incorrect or non-existent relation names or a misalignment in the hierarchy will lead to processing errors.
-For a detailed list of potential errors, see [error codes](#error-codes).
+Incorrect or non-existent relation names or a misalignment in the hierarchy leads to processing errors.
+For a detailed list of potential errors, see [Error codes](#error-codes).
 
 For POST, PATCH, and PUT requests the payload must accurately reflect the entity relationships. 
-Each entity in the request should include its corresponding related entities, structured as nested objects within the payload.
+Make sure that each entity in the request includes its corresponding related entities, structured as nested objects within the payload.
 
 ```bash
 POST /dynamic-entity/countries HTTP/1.1

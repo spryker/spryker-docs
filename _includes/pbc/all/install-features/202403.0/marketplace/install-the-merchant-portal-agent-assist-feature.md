@@ -7,9 +7,9 @@ Install the required features:
 
 | NAME                             | VERSION | INSTALLATION GUIDE  |
 |----------------------------------| ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Marketplace Merchant Portal Core | {{page.version}}  | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
-## 1) Install the required modules using Composer
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/merchant-portal-agent-assist:"{{page.version}}" --update-with-dependencies
@@ -32,9 +32,9 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-## Set up the configuration
+### Set up the configuration
 
-Add the following configuration:
+1. Add the following configuration:
 
 | CONFIGURATION                                                  | SPECIFICATION                                                                                                    | NAMESPACE                |
 |----------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|--------------------------|
@@ -139,7 +139,7 @@ class AclMerchantAgentConfig extends SprykerAclMerchantAgentConfig
 }
 ```
 
-Execute the registered installer plugins:
+2. Execute the registered installer plugins:
 
 ```bash
 console setup:init-db
@@ -147,10 +147,10 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* You have access to `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
-* Enter incorrect login details for more than nine times within 900 seconds. This should lock you out of the login page for 360 seconds.
-* Log in as a Merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
-* Make sure that Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+* Make sure the page is available: `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+* Enter incorrect login details for more than nine times within 900 seconds. Make sure this locks you out of the login page for 360 seconds.
+* Log in as a merchant agent into the Merchant Portal. Make sure you have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
+* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users`.
 
 {% endinfo_block %}
 
@@ -231,14 +231,14 @@ The created Back Office user with the credentials specified in `UserConfig::getI
 
 ### Set up database schema and transfer objects
 
-1. Apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
 console transfer:generate
 ```
 
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure the following changes have been applied by checking your database:
 
@@ -252,11 +252,11 @@ Make sure the following changes have been triggered in transfer objects:
 | ---------- | ------ | ------- | ------ |
 | User.isMerchantAgent                                      | property | created | src/Generated/Shared/Transfer/User                                    |
 
-## Add translations
+{% endinfo_block %}
 
-Add translations as follows:
+### Add translations
 
-1. Append glossary for the feature:
+1. Append the glossary:
 
 ```
 agent_security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
@@ -276,7 +276,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 {% endinfo_block %}
 
 
-## Set up behavior
+### Set up behavior
 
 | PLUGIN                                                                | SPECIFICATION                                                                                                         | PREREQUISITES | NAMESPACE                                                                                 |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------------------|
@@ -498,38 +498,40 @@ class AgentDashboardMerchantPortalGuiDependencyProvider extends SprykerAgentDash
 }
 ```
 
-**Verification**
-
 {% info_block warningBox "Verification" %}
 
 1. Log into the Back Office as a `root` user.
 2. Go to **Users** > **Users**.
-Make sure there is an **Agent Merchant** column in the **USERS LIST** table.
+  Make sure there is an **Agent Merchant** column in the **USERS LIST** table.
+
+3. Next to a user of your choice, click **Edit**.
+    On the **Edit User** page, make sure there is a **THIS USER IS AN AGENT IN MERCHANT PORTAL** checkbox.
 
 
-
-* Next to a user of your choice, click **Edit**. On the **Edit User** page, make sure there is a **THIS USER IS AN AGENT IN MERCHANT PORTAL** checkbox.
-
-
-1. Click the **THIS USER IS AN AGENT IN MERCHANT PORTAL** checkbox.
-2. Click **Update**.
+4. Click the **THIS USER IS AN AGENT IN MERCHANT PORTAL** checkbox.
+5. Click **Update**.
   On the **Users** page, make sure the updated user has the `Agent` label in the **Agent Merchant** column.
 
-* Go to `mp.mysprykershop.com/agent-security-merchant-portal-gui/login` page and make sure the users with `Agent Merchant`
-role can login.
-* After logging in make sure you are on the `mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users` page
-and you can see the `Merchant Users` table.
-* Make sure you can see and assist the users without dependency on their status.
-* Make sure you don't see `Assist User` button for merchant users which have `root` tole.
-* Make sure you can assist the users which have `Assist User` button in the table.
+6. Go to `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+7. Log in with the login details of the user you've added the agent merchant role to.
+    Make sure this opens `https://mp.mysprykershop.com/agent-dashboard-merchant-portal-gui/merchant-users` and there is a **Merchant Users** table.
 
-* Go to `mp.mysprykershop.com/agent-security-merchant-portal-gui/login` page and try to enter not correct login/password
-more then 9 times during the 900 seconds and make sure you cannot access the
-`mp.mysprykershop.com/agent-security-merchant-portal-gui/login` page for 360 seconds.
+* Make sure you can see and assist the users regardless of their status.
+* Make sure the **Assist User** button  isn't displayed for merchant users with the **root** role.
+* Make sure you can assist the users that have the **Assist User** button next to them.
 
 {% endinfo_block %}
 
-## Configure navigation
+{% info_block warningBox "Verification" %}
+
+
+1. Go to `htpps://mp.mysprykershop.com/agent-security-merchant-portal-gui/login`.
+2. Enter incorrect login details for more than nine times within 900 seconds.
+    Make sure you get locked out of the login page for 360 seconds.
+
+{% endinfo_block %}
+
+### Configure navigation
 
 1. Add the `AgentDashboardMerchantPortalGui` section to `navigation.xml`:
 
@@ -549,7 +551,7 @@ more then 9 times during the 900 seconds and make sure you cannot access the
 </config>
 ```
 
-2. Execute the following command:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -557,13 +559,17 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-* Login as an Agent to Merchant Portal and make sure `Merchant Users` section is presented in the navigation.
+Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Users** navigation menu item.
 
 {% endinfo_block %}
 
-{% info_block infoBox %}
 
-We highly recommend adding an extra layer of security by introducing a VPN, IP whitelisting, or additional authentication for mp.mysprykershop.com/agent-security-merchant-portal-gui/login page.
-This ensures that only authorized users can log in as an Agent to Merchant Portal.
+## Install feature frontend
 
-{% endinfo_block %}
+For installing frontend dependencies, follow [Set up the Merchant Portal](docs/scos/dev/front-end-development/marketplace/set-up-the-merchant-portal.html).
+
+Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
+
+## Optional: Add extra security
+
+We highly recommend adding an extra layer of security by introducing a VPN, IP whitelisting, or additional authentication for the `https://mp.mysprykershop.com/agent-security-merchant-portal-gui/login` page.

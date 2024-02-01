@@ -134,7 +134,7 @@ root_group,root_role
 | group_name | ✓        | string    | root_group   | The name of the ACL group. |
 | role_name  | ✓        | string    | root_role    | The name of the ACL role.  |
 
-2. Add the following data to your `data/import/local/full_EU.yml` file in order to extend the data import configuration:
+2. Extend the data import configuration:
 
 **/data/import/local/full_EU.yml**
 
@@ -240,7 +240,7 @@ Make sure the configured data has been added to the following database tables:
 
 ## 5) Set up behavior
 
-Enable the following behaviors by registering the plugins:
+1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                  | DESCRIPTION                                                                                                                                      | PREREQUISITES | NAMESPACE                                              |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
@@ -388,8 +388,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-To enable the ACL Entity feature for the `MerchantPortalApplication`, you must register the `AclEntityApplicationPlugin` plugin.
-The ACL Entity feature allows you to manage access to the entities in the store of different merchants separately.
+2. To enable the ACL Entity feature for the `MerchantPortalApplication`, register the `AclEntityApplicationPlugin` plugin. The ACL Entity feature lets you manage access to the entities in the store of different merchants separately.
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -428,7 +427,7 @@ Make sure the following works correctly:
 * The request to access the Merchant Portal doesn't succeed for users without permissions.
 * The marketplace user can see only the allowed Merchant Portal menu links.
 * The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
-* You can edit user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
+* You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 * When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
 * `RolesTransfer` contains the needed `AclEntityRules`.
 * Users without permissions to access an entity or endpoint can't access them.

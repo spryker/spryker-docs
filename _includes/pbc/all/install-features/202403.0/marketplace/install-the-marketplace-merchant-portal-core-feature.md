@@ -139,11 +139,9 @@ console transfer:generate
 
 ### 3) Optional: Set up the configuration
 
-**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
+1. In `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`, enable the blocking of recurring attempts to reset password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`.
 
-For security reasons, we recommend enabling the security blocker feature that will block recurring attempts of resetting a password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`
-
-**src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php**
+2. Add the following configuration to `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`.
 
 ```php
 namespace Pyz\Zed\SecurityMerchantPortalGui;
@@ -757,15 +755,13 @@ Environment requirements:
 - [Node.js](https://nodejs.org/en/download/): minimum version is 18.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
 
-Spryker requirements:
-
-To start builder integration, check versions of Spryker packages and update them if needed:
+Spryker requirements: If you want to integrate the builder, update the following packages.
 
 | NAME                        | VERSION   |
 |-----------------------------|-----------|
-| Discount (optional)         | >= 9.7.4  |
-| Gui (optional)              | >= 3.30.2 |
-| Product Relation (optional) | >= 2.4.3  |
+| Discount         | >= 9.7.4  |
+| Gui | >= 3.30.2 |
+| Product Relation | >= 2.4.3  |
 
 ### 1) Install the required modules using Composer
 
@@ -895,13 +891,18 @@ const globalSettings = {
 };
 ```
 
-9. Run commands from the root of the project to install Angular CLI:
+9. From the project's root, install Angular CLI:
 
 ```bash
 npm i -g @angular/cli@15.0.3
 ```
 
-`ng --version` should show Angular CLI: 15.0.3 version.
+{% info_block warningBox "Verification" %}
+
+Run `ng --version` and make sure the version is 15.0.3.
+
+{% endinfo_block %}
+
 
 10. Install project dependencies:
 

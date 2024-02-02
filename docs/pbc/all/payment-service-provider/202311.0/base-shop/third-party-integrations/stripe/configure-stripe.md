@@ -16,7 +16,7 @@ Once you have [the SCCOS prerequisites for Stripe](/docs/pbc/all/payment-service
 
 Before configuring Stripe, make sure you have met all the prerequisites listed in [Prerequisites for using the Stripe app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html#prerequisites-for-using-the-stripe-app).
 
-## Configure & Connect the Stripe App
+## Connect & Configure the Stripe App
 
 1. In your store's Back Office, go to **Apps**.
 2. Click **Stripe**.

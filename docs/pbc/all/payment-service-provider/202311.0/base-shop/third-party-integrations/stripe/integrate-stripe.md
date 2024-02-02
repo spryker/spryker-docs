@@ -1,6 +1,6 @@
 ---
 title: SCCOS Prerequisites
-description: Find out about the SCCOS modules needed for the Stripe App to function
+description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
 draft: true
 last_updated: Jan 31, 2024
 template: howto-guide-template
@@ -14,7 +14,7 @@ redirect_from:
 ---
 This document gives an overview of the SCCOS prerequisites required for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) to function in your Spryker Shop.
 
-Please note that the steps listed below are only necessary if your Spryker Shop doesn't contain the packages and configurations below
+Please note that the steps listed below are only necessary if your Spryker Shop doesn't contain the packages (or their versions are outdated) and configurations below.
 
 ## 1. Required Packages
 

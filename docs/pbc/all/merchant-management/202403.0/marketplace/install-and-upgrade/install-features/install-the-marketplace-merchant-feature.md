@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html
-  
+
 ---
 
 {% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-feature.md -->

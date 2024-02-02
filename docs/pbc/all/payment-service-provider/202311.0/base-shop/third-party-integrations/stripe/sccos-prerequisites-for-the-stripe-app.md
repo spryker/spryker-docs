@@ -1,6 +1,6 @@
 ---
-title: Integrate Stripe
-description: Find out how you can install Stripe in your Spryker shop
+title: SCCOS prerequisites for the Stripe app
+description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
 draft: true
 last_updated: Jan 31, 2024
 template: howto-guide-template
@@ -10,19 +10,23 @@ related:
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
+- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
 
 ---
-This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.
+This document gives an overview of the SCCOS prerequisites required for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) to function in your Spryker Shop.
 
-## Prerequisites
+{% info_block infoBox "Info" %}
 
-Before integrating Stripe, ensure the following prerequisites are met:
+The steps listed is this document are only necessary if your Spryker shop doesn't contain the packages (or their versions are outdated) and configurations below.
 
-- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
+{% endinfo_block %}
 
-- The Stripe app catalog page lists specific packages that must be installed or upgraded before you can use the Stripe app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Stripe**. Ensure that your installation meets these requirements.
 
-## 1. Configure shared configs
+## 1. Required packages
+
+The Stripe app catalog page lists specific packages that must be installed or upgraded before you can use the Stripe app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Stripe**. Ensure that your installation meets these requirements.
+
+## 2. Configure shared configs
 
 Your project probably already contains the following code in `config/Shared/config_default.php` already. If not, add it:
 
@@ -88,7 +92,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ```
 
-## 2. Configure the Message Broker dependency provider
+## 3. Configure the Message Broker dependency provider
 
 Your project probably already contains the following code in `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php` already. If not, add it:
 
@@ -125,7 +129,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-## 3. Configure channels in Message Broker configuration
+## 4. Configure channels in Message Broker configuration
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -152,7 +156,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-## 4. Configure the Order State Machine (OMS)
+## 5. Configure the Order State Machine (OMS)
 Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
 
 ```php

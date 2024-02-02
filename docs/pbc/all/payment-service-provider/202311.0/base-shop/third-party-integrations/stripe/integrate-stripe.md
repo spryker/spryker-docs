@@ -8,8 +8,8 @@ related:
   - title: Stripe
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 redirect_from:
-- /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
+  - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
 
 ---
 This document describes how to integrate [Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) into a Spryker shop.
@@ -29,13 +29,6 @@ Your project probably already contains the following code in `config/Shared/conf
 ```php
 //...
 
-use Generated\Shared\Transfer\PaymentConfirmationFailedTransfer;
-use Generated\Shared\Transfer\PaymentConfirmationRequestedTransfer;
-use Generated\Shared\Transfer\PaymentConfirmedTransfer;
-use Generated\Shared\Transfer\PaymentMethodAddedTransfer;
-use Generated\Shared\Transfer\PaymentMethodDeletedTransfer;
-use Generated\Shared\Transfer\PaymentPreauthorizationFailedTransfer;
-use Generated\Shared\Transfer\PaymentPreauthorizedTransfer;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Payment\PaymentConstants;
@@ -63,29 +56,6 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
     PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added
 ];
-
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    //...
-    PaymentMethodAddedTransfer::class => 'payment-method-commands',
-    PaymentMethodDeletedTransfer::class => 'payment-method-commands',
-    PaymentConfirmationRequestedTransfer::class => 'payment-commands',
-    PaymentPreauthorizedTransfer::class => 'payment-events',
-    PaymentPreauthorizationFailedTransfer::class => 'payment-events',
-    PaymentConfirmedTransfer::class => 'payment-events',
-    PaymentConfirmationFailedTransfer::class => 'payment-events',
-];
-
-$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    //...
-    'payment-method-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-    'payment-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
-
-$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...
-    'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
-];
-
 ```
 
 ## 2. Configure the Message Broker dependency provider
@@ -97,11 +67,10 @@ Your project probably already contains the following code in `src/Pyz/Zed/Messag
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentConfirmationFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentConfirmedMessageHandlerPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentPreauthorizationFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentPreauthorizedMessageHandlerPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMessageBrokerConfigurationPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\MessageBroker\SalesPaymentMessageBrokerConfigurationPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -112,15 +81,51 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-
             # These plugins are handling messages sent from Stripe app to SCCOS.
-            new PaymentConfirmationFailedMessageHandlerPlugin(),
-            new PaymentConfirmedMessageHandlerPlugin(),
-            new PaymentPreauthorizationFailedMessageHandlerPlugin(),
-            new PaymentPreauthorizedMessageHandlerPlugin(),
+            new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
         ];
     }
+  
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageBrokerConfigurationPluginInterface>
+     */
+    public function getMessageBrokerConfigurationPlugins(): array
+    {
+        return [
+            new SalesPaymentMessageBrokerConfigurationPlugin(),
+            new PaymentMessageBrokerConfigurationPlugin(),
+        ];
+    }
+    
+}
+
+```
+Your project probably already contains the following code in `src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php` already. If not, add it:
+
+```php
+
+namespace Pyz\Zed\MessageBrokerAws;
+
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsDependencyProvider as SprykerMessageAwsBrokerDependencyProvider;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMessageBrokerConfigurationPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\MessageBroker\SalesPaymentMessageBrokerConfigurationPlugin;
+
+class MessageBrokerAwsDependencyProvider extends SprykerMessageAwsBrokerDependencyProvider
+{ 
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerAwsExtension\Dependency\Plugin\MessageBrokerAwsConfigurationPluginInterface>
+     */
+    public function getMessageBrokerAwsConfigurationPlugins(): array
+    {
+        return [
+            new SalesPaymentMessageBrokerConfigurationPlugin(),
+            new PaymentMessageBrokerConfigurationPlugin(),
+        ];
+    }
+    
 }
 
 ```
@@ -158,9 +163,9 @@ Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyPr
 ```php
 //...
 
-use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentCancelReservationPendingPlugin;
-use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentConfirmationPendingPlugin;
-use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentRefundPendingPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
 
 //...
 
@@ -173,13 +178,11 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendEventPaymentRefundPend
     {
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
              //...
-
-             $commandCollection->add(new SendEventPaymentConfirmationPendingPlugin(), 'Payment/SendEventPaymentConfirmationPending');
-
+             $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
              // these two commands will be also supported soon.
-             $commandCollection->add(new SendEventPaymentRefundPendingPlugin(), 'Payment/SendEventPaymentRefundPending');
-             $commandCollection->add(new SendEventPaymentCancelReservationPendingPlugin(), 'Payment/SendEventPaymentCancelReservationPending');
-
+             $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
+             $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
+            
              return $commandCollection;
         });
 
@@ -194,7 +197,7 @@ The complete default payment OMS configuration is available at `vendor/spryker/s
 
 The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-The `Payment/SendEventPaymentConfirmationPending` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page. 
+The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page.
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
@@ -205,9 +208,9 @@ This example demonstrates how to configure the order state machine transition fr
 ```xml
 <?xml version="1.0"?>
 <statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
 >
 
     <process name="SomePaymentProcess" main="true">
@@ -218,7 +221,7 @@ This example demonstrates how to configure the order state machine transition fr
 
             <!-- other states -->
 
-          <state name="payment capture pending" display="oms.state.in-progress"/>
+            <state name="payment capture pending" display="oms.state.in-progress"/>
 
             <!-- other states -->
 
@@ -229,9 +232,9 @@ This example demonstrates how to configure the order state machine transition fr
             <!-- other transitions -->
 
             <transition happy="true">
-              <source>ready for dispatch</source>
-              <target>payment capture pending</target>
-              <event>capture payment</event>
+                <source>ready for dispatch</source>
+                <target>payment capture pending</target>
+                <event>capture payment</event>
             </transition>
 
             <!-- other transitions -->
@@ -242,7 +245,7 @@ This example demonstrates how to configure the order state machine transition fr
 
             <!-- other events -->
 
-            <event name="capture payment" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
+            <event name="capture payment" onEnter="true" command="Payment/Capture"/>
 
             <!-- other events -->
 
@@ -286,8 +289,8 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 {% endraw %}
 ```
 
-3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. 
-For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
+3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file.
+   For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
 
 ```csv
 ...

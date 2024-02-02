@@ -33,7 +33,7 @@ related:
 
 {% info_block infoBox "Info" %}
 
-Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html).
+Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following [Switch to ARM architecture](/docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html).
 
 {% endinfo_block %}
 

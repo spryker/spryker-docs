@@ -43,7 +43,7 @@ If you've already selected an installation mode, follow one of the guides below:
 * [Install in Development mode on Windows](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html)
 * [Install in Demo mode on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html)
 * [Install in Demo mode on Windows](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html)
-* [Integrating Docker into existing projects](/docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html)
+* [Integrating Docker into existing projects](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html)
 
 ## Configure
 

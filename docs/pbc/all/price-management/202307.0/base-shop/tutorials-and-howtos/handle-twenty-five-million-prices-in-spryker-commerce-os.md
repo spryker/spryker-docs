@@ -29,7 +29,7 @@ When enabling Spryker to handle such a number of prices, the following challenge
 
 1. 25,000,000 prices are imported in two separate price dimensions.
 2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
-3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
+3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
 4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
 5. Each price having unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
@@ -184,7 +184,7 @@ The side effects of this solution are the following:
 
 ### How to speed up the publishing process
 
-To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Due to a large number of prices, the publish process became slow. This causes the following issues.
+To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Due to a large number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
 

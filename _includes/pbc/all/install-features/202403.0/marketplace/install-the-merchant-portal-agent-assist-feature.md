@@ -67,6 +67,7 @@ $config[AgentSecurityBlockerMerchantPortalConstants::AGENT_MERCHANT_PORTAL_BLOCK
 
 <details>
   <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
+
 ```php
 <?php
 
@@ -117,6 +118,7 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/AclMerchantAgent/AclMerchantAgentConfig.php**

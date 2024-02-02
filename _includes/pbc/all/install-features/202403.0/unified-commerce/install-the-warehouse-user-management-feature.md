@@ -196,11 +196,9 @@ class OauthWarehouseUserConfig extends SprykerOauthWarehouseUserConfig
 ```
 </details>
 
- 2.1. Optional: To give any type of users access to the backend API endpoints that are protected by `WarehouseTokenAuthorizationStrategy` strategy, set the module configuration as below: 
+3. Optional: To give any type of users access to the backend API endpoints that are protected by the  `WarehouseTokenAuthorizationStrategy` strategy, set the following module configuration:
 
-<details>
- <summary>src/Pyz/Zed/OauthWarehouse/OauthWarehouseConfig.php</summary>
-
+**src/Pyz/Zed/OauthWarehouse/OauthWarehouseConfig.php**
 ```php
 <?php
 
@@ -236,7 +234,6 @@ class OauthWarehouseConfig extends SprykerOauthWarehouseConfig
     }
 }
 ```
-</details>
 
 ## 4) Add translations
 

@@ -3962,6 +3962,8 @@ entries:
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: Install the Merchant Portal Agent Assist feature
                 url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
+                include_versions:
+                - "202403.0"
               - title: "Persistence ACL feature: Domain model and relationships"
                 url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
 

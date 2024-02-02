@@ -107,9 +107,10 @@ Four weeks before your project goes live, ensure you addressed all the items fro
 
 ### Application
 
-- *Prepare and communicate technical debt mitigation plan*. Develop a comprehensive plan to identify, address, and communicate strategies for managing technical debt before the system goes live.
+- *Prepare and communicate technical debt mitigation plan*. Develop a comprehensive plan to identify, address, and communicate strategies for managing technical debt before the system goes live. Please make sure that all the stakeholders are aware of any missing/incomplete
+  features and agreed on the mitigation plan.
 - *Variables and parameter store values are set up*. Double-check whether you have all needed environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
-- *Third-Party Integrations and Compatibility Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting, port configuration or similar. 
+- *Third-Party Integrations, Compatibility and Performance Checks*. Make sure to test that your third-party integrations (and plugins) are available and working when turned into production mode, using production credential. It is often the case that you'd need to comply with specific additional security measures, such as IP whitelisting, port configuration or similar. Make sure to run a performance testing for 3rd party systems, especially if they are involved in some critical customers flows (like Checkout, Place order, etc). 
 - *Prepare and implement DB creating on production*. F.e. commit propel migration for production and update deploy file to install DB from the commited migration files.
 
 ### Testing
@@ -159,6 +160,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
   - *Set up production configuration for all the 3rd party systems* (in environment variables). Make sure to not expose secrets in the codebase.
   - *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
 - *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
+- *Configure emails boxes and DMARC policy*.
 - *Define the exact plan for the go-live day.*:
   - Define the time of deployment.
   - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
@@ -187,6 +189,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
   - Other data
 - *Make sure that all the translations are provided*. Including all the needed languages.
 - *Make sure that all Emails are correct*. Including all the needed data and translations.
+- *Define glossary update strategy*. F.e. make sure to exclude glossary update during normal deployment or adjust for your business needs. 
 
 ### SEO ### 
 
@@ -196,6 +199,7 @@ Lower or nonproduction environments may not have the same WAF and firewall setti
 
 ## Go-live ##
 - *Perform end-to-end testing on production*.
+- Disable email sending restriction (if any).
 - Remove basic auth from the frontend part and deploy the change.
 - Run Go-live communication plan.
 - Disable the destructive pipeline after successful go-live.

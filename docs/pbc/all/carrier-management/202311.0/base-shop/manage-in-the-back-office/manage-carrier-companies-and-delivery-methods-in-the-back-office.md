@@ -1,10 +1,11 @@
 ---
-title: Log into the Back Office
+title: Manage carrier companies and delivery methods Back Office
 description: Learn how to log into the Back Office.
 last_updated: Apr 13, 2023
 template: back-office-user-guide-template
 redirect_from:
 - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+- /docs/pbc/all/carrier-management/202311.0/base-shop/manage-in-the-back-office/log-into-the-back-office.html
 ---
 
 {% include pbc/all/manage-in-the-back-office/log-into-the-back-office.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-back-office/log-into-the-back-office.md -->

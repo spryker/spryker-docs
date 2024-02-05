@@ -25,15 +25,17 @@ Both Demo Shops can also be expanded with separate features and modules.
 
 To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
-### The deploy file
+### Configure the local environment
 
-To configure the local environment, use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file. In the default deploy file, change the following attributes:
+To configure the local environment, change the following attributes in `deploy.dev.yml`:
 
 * Namespace: this helps to avoid issues when you have two or more projects with the same names.
 * Regions.
 * Stores.
 * Domains for the local environment.
 * Domains for the services like RabbitMQ and Jenkins: this helps to keep all project links together.
+
+For more information about deploy files, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html).
 
 ### Vagrant clean-up
 

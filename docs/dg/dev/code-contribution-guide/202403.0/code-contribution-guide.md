@@ -34,7 +34,7 @@ To contribute to a Spryker repository, follow these steps:
 I hereby agree to Spryker's Contribution License Agreement under https://docs.spryker.com/docs/dg/dev/code-contribution-guide/{{page.version}}/contribution-license-agreement.html.
 ```
 
-If we cannot merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR. We also provide the link to the relevant release or releases so you can check your changes.
+If we cannot merge a PR due to our release process, we manually introduce the change. Once the change is released, we inform you by closing the PR.
 
 Please note that pull requests without a signed Contribution License Agreement will not be merged until this requirement is fulfilled.
 We believe that this process will help maintain the integrity of our projects and protect the interests of all contributors.

@@ -20,22 +20,24 @@ The following diagrams outline the relation between Zed, MerchantPortal, Back Of
 
 ![MerchantPortal Architecture overview](https://confluence-connect.gliffy.net/embed/image/4b06167a-3c9a-483c-8b57-32544b211fc5.png?utm_medium=live&utm_source=custom)
 
-## Zed and MerchantPortal
-Zed is an application layer at Spryker (next to Yves, Glue, Client, Service, and Shared).
+## Zed and Merchant Portal
 
-This layer serves as a base for some backend-oriented applications such as MerchantPortal, Back Office, Gateway, Console (DataImport, Pub&Sync). This means that MerchantPortal shares the codebase with these applications, and the internal Zed infrastructure is available within the MerchantPortal runtime. It allows faster development and easier customizations of your Spryker Marketplace project.
+Zed is an application layer in Spryker that serves as a base for backend-oriented applications such as the following:
+* Merchant Portal
+* Back Office
+* Gateway
+* Console: DataImport, Pub&Sync
 
-## Security
-While addressing different concerns, both MerchantPortal and Back Office have direct access to the main database where all the application transactions are stored.
-The Marketplace Operator Back Office application is hidden behind the VPN secure connection, but MerchantPortal needs to be exposed to WAN directly.
-That raises security risks, such as Unauthorized Data Access, and imposes higher requirements on both Application and Infrastructure layers.
+This means that Merchant Portal shares the codebase with these applications, and the internal Zed infrastructure is available within the Merchant Portal runtime. It allows for faster development and easier customizations of marketplace applications.
 
-<!---### Security of the Spryker Marketplace system infrastructure
+## Merchant Portal security
 
-Make sure to fulfill [Spryker Marketplace System Infrastructure requirements](/docs/marketplace/dev/setup/system-infrastructure-requirements.html) to keep your Spryker Marketplace system safe from on infrastructure level.-->
+While addressing different concerns, both Merchant Portal and Back Office have direct access to the main database where all the application transactions are stored.
+
+The Marketplace Operator Back Office application is hidden behind a VPN secure connection, but Merchant Portal needs to be exposed to WAN directly. It raises security risks, such as unauthorized data access, and imposes higher requirements on both the Application and Infrastructure layers.
 
 
-### Security of the Spryker Marketplace MerchantPortal application
+### Security of the Spryker Marketplace Merchant Portal application
 
 The main database contains all the data of your system. It consists of the Merchant-specific data (MerchantOrders, MerchantOffers, and MerchantProducts) that should never be available to other Merchants in the system.
 

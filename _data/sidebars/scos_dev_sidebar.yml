@@ -1892,8 +1892,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
-      - title: "HowTo: Import big databases between environments"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html
+      - title: "Import big databases between environments"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
       - title: "HowTo: Handle graceful shutdown"

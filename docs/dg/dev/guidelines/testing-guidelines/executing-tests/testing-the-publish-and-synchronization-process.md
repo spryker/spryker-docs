@@ -47,11 +47,11 @@ For a better testing experience, Spryker provides some helpers that turn this as
 
 The main helpers involved in the P&S testing are:
 
-- [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
-- [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
-- [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
-- [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#storagehelper)
-- [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#searchhelper)
+- [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
+- [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
+- [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
+- [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#storagehelper)
+- [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#searchhelper)
 
 ## P&S testing storage
 
@@ -69,10 +69,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
-    - [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#storagehelper)
+    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
+    - [StorageHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#storagehelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.
@@ -118,10 +118,10 @@ To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Search` module
 - Besides some other [helpers](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html), add the necessary P&S helpers:
-    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#publishandsynchronizehelper)
-    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#eventbehaviorhelper)
-    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#queuehelper)
-    - [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/available-test-helpers.html#searchhelper)
+    - [PublishAndSynchronizeHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#publishandsynchronizehelper)
+    - [EventBehaviorHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#eventbehaviorhelper)
+    - [QueueHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#queuehelper)
+    - [SearchHelper](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html#searchhelper)
 - Add the `PublishAndSynchronizeTest` class
 
 This being done, you can start testing the entire process.

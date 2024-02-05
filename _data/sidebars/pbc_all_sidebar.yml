@@ -1019,10 +1019,12 @@ entries:
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
                 include_versions:
                 - "202311.0"
-              - title: Data Exchange API + Inventory Management
+              - title: Data Exchange API + Inventory Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
                 include_versions:
                 - "202311.0"
+              - title: Data Exchange API + Category Management feature
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html                
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints

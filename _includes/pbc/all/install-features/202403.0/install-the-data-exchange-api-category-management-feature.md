@@ -1,19 +1,15 @@
 This document describes how to install the Data Exchange API + Category Management feature.
 
-## Install feature core
-
-Follow the steps below to install the Data Exchange API + Category Management feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
 | NAME                | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                   |
 |---------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Exchange API   | {{page.version}} | [Data Exchange API integration](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)                                                                 |
+| Data Exchange API   | {{page.version}} | [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)                                                                 |
 | Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
 
 ```bash
 composer require spryker/category-dynamic-entity-connector:"^1.0.0" --update-with-dependencies
@@ -21,7 +17,7 @@ composer require spryker/category-dynamic-entity-connector:"^1.0.0" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following module has been installed:
+Make sure the following module has been installed:
 
 | MODULE                         | EXPECTED DIRECTORY                        |
 |--------------------------------|-------------------------------------------|
@@ -29,18 +25,18 @@ Ensure that the following module has been installed:
 
 {% endinfo_block %}
 
-### 1) Set up behavior
+## 1) Set up behavior
 
 Register the following plugins:
 
 | PLUGIN                                            | SPECIFICATION                                                          | PREREQUISITES                                                                        | NAMESPACE                                                                     |
 |---------------------------------------------------|------------------------------------------------------------------------|--------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|
-| CategoryClosureTableDynamicEntityPostCreatePlugin | Creates category closure table entity by provided dynamic entity data. |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
-| CategoryUrlDynamicEntityPostCreatePlugin          | Creates category URLs by provided dynamic entity data.                 | Should be executed after `CategoryClosureTableDynamicEntityPostCreatePlugin` plugin. | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
-| CategoryTreeDynamicEntityPostCreatePlugin         | Triggers category tree publish event.                                  |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
-| CategoryClosureTableDynamicEntityPostUpdatePlugin | Updates category closure table entity by provided dynamic entity data. |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
-| CategoryUrlDynamicEntityPostUpdatePlugin          | Updates category URLs by provided dynamic entity data.                 | Should be executed after `CategoryClosureTableDynamicEntityPostUpdatePlugin` plugin. | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
-| CategoryTreeDynamicEntityPostUpdatePlugin         | Triggers category tree publish event.                                  |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryClosureTableDynamicEntityPostCreatePlugin | Creates a category closure table entity based on the provided dynamic entity data. |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryUrlDynamicEntityPostCreatePlugin          | Creates category URLs based on the provided dynamic entity data.                 | Should be executed after the `CategoryClosureTableDynamicEntityPostCreatePlugin` plugin. | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryTreeDynamicEntityPostCreatePlugin         | Triggers the category tree publish event.                                  |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryClosureTableDynamicEntityPostUpdatePlugin | Updates a category closure table entity based on the provided dynamic entity data. |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryUrlDynamicEntityPostUpdatePlugin          | Updates category URLs based on the provided dynamic entity data.                 | Should be executed after the `CategoryClosureTableDynamicEntityPostUpdatePlugin` plugin. | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
+| CategoryTreeDynamicEntityPostUpdatePlugin         | Triggers the category tree publish event.                                  |                                                                                      | Spryker\Zed\CategoryDynamicEntityConnector\Communication\Plugin\DynamicEntity |
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php**
 
@@ -86,7 +82,8 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 ```
 
 {% info_block warningBox "Verification" %}
-To verify that plugins are installed correctly, go through the following steps:
+
+To verify that plugins are installed correctly, follow the steps:
 
 1. Create a category using dynamic entity API:
 ```bash
@@ -109,8 +106,10 @@ Content-Length: 257
     ]
 }
 ```
-Check that you receive `id_category` in response.
-2. Create category store relation:
+
+Take note of the `id_category` in the response.
+
+2. Create a category-store relation:
 ```bash
 POST /dynamic-entity/category-stores HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -120,14 +119,14 @@ Content-Length: 100
 {
     "data": [
         {
-            "fk_category": {id_category},
+            "fk_category": {ID_CATEGORY},
             "fk_store": 1
         }
     ]
 }
 ```
 
-3. Create category attribute:
+3. Create a category attribute:
 ```bash
 POST /dynamic-entity/category-attributes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -139,7 +138,7 @@ Content-Length: 184
 {
     "data": [
         {
-            "fk_category": {id_category},
+            "fk_category": {ID_CATEGORY},
             "meta_description": "My Category",
             "fk_locale": 66,
             "name": "My Category"
@@ -148,7 +147,7 @@ Content-Length: 184
 }
 ```
 
-4. Create category node:
+4. Create a category node:
 ```bash
 POST /dynamic-entity/category-nodes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -158,25 +157,29 @@ Content-Length: 203
 {
     "data": [
         {
-            "fk_category": {id_category},
+            "fk_category": {ID_CATEGORY},
             "fk_parent_category_node": 1,
             "is_main": true,
             "is_root": false,
             "node_order": 0
         }
     ]
-} 
+}
 ```
-Check that you receive `id_category_node` in response.
-5. Check that the category closure table entities are created by running the following SQL query:
+
+Take note of the `id_category_node` in the response.
+
+5. Check that the category closure table entities have been created:
 ```sql
-SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {id_category_node};
+SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {ID_CATEGORY_NODE};
 ```
-6. Check that the category URLs are created by running the following SQL query:
+
+6. Check that the category URLs have been created:
 ```sql
-SELECT * FROM spy_url WHERE fk_resource_categorynode = {id_category_node};
+SELECT * FROM spy_url WHERE fk_resource_categorynode = {ID_CATEGORY_NODE};
 ```
-7. Check that the category tree is published by running the following SQL query:
+
+7. Check that the category tree has been published:
 ```sql
 SELECT spy_category_tree_storage.`data`
 FROM spy_category_tree_storage
@@ -185,9 +188,10 @@ FROM spy_category_tree_storage
 WHERE spy_locale.id_locale = 66
   AND spy_store.id_store = 1;
 ```
-Check that newly created category is present in category tree JSON.
 
-8. Update category attribute:
+8. Check that newly created category is present in the category tree JSON.
+
+9. Update the category attribute:
 ```bash
 PATCH /dynamic-entity/category-attributes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -205,12 +209,12 @@ Content-Length: 173
 }
 ```
 
-Check that category URL is updated by running the following SQL query:
+10. Check that the category URL has been updated:
 ```sql
-SELECT * FROM spy_url WHERE fk_resource_categorynode = {id_category_node};
+SELECT * FROM spy_url WHERE fk_resource_categorynode = {ID_CATEGORY_NODE};
 ```
 
-9. Update category node:
+11. Update the category node:
 ```bash
 PATCH /dynamic-entity/category-nodes HTTP/1.1
 Host: glue-backend.mysprykershop.com
@@ -226,12 +230,13 @@ Content-Length: 120
     ]
 }
 ```
-Check that category closure table entities are updated by running the following SQL query:
+
+12. Check that category closure table entities have been updated:
 ```sql
-SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {id_category_node};
+SELECT * FROM spy_category_closure_table WHERE fk_category_node_descendant = {ID_CATEGORY_NODE};
 ```
 
-Check that category tree is updated by running the following SQL query:
+13. Check that category tree has been updated:
 ```sql
 SELECT spy_category_tree_storage.`data`
 FROM spy_category_tree_storage
@@ -240,6 +245,7 @@ FROM spy_category_tree_storage
 WHERE spy_locale.id_locale = 66
   AND spy_store.id_store = 1;
 ```
-Check that newly created category is present in category tree JSON.
+
+14. Check that newly created category is present in the category tree JSON.
 
 {% endinfo_block %}

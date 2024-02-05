@@ -172,6 +172,9 @@ versions:
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
+  dg:
+    dev:
+      - code-contribution-guide
   scos:
     dev:
       - feature-integration-guides

@@ -16,14 +16,14 @@ The Stripe integration in Spryker is a part of the App Composition Platform and 
 The Stripe App supports the business-to-business (B2B) and business-to-consumer (B2C) models.
 
 ## Features
-The Stripe App has the following features:
-- Interface within the Spryker ACP catalog to connect with Stripe: Users can connect to Stripe from the App Composition Platform.
-- Easy switch between Test & Live mode: Users have the option to test payments in either mode.
+The Stripe app has the following features:
+- Interface within the Spryker ACP catalog to connect with Stripe: You can connect to Stripe from the App Composition Platform.
+- Easy switch between Test & Live mode: You can test payments in either mode.
 - Responsive Redirect Payment Page: Once a connection is set up between Spryker & Stripe, upon check out, end users are redirected to a Spryker-hosted payment page where they can view activated payment methods. This works both on web and mobile.
-- View Payment Methods activated in your Stripe Dashboard
+- Viewing the activated payment methods in the Stripe dashboard.
 - GLUE API support: Support for customers using Spryker headless.
 - Authorize payments and capture later: The default OMS configuration allows you to authorize cards and capture the order amount either after shipping or based on the established business logic.
-- Default OMS Configuration: We provide a default OMS configuration which can be used as an example or be modified to align with your business logic.
+- Default OMS Configuration: We provide a default OMS configuration which you can use an example or modify to align with your business logic.
 
 ## Prerequisites for using the Stripe app
 
@@ -51,7 +51,6 @@ However our team only tested the following payment methods
 
 {% info_block infoBox "Bank transfers" %}
 
-Keep in mind following about bank transfers in Stripe:
 Stripe supports bank transfers in specific regions. You can read more about [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers) here.
 
 {% endinfo_block %}
@@ -62,5 +61,5 @@ Stripe supports bank transfers in specific regions. You can read more about [Ban
 The Stripe App has limited or no support for the following features:
 - Refunds & Payment Cancellation: Handling refunds & payment cancellation via the Spryker OMS.
 - Payment Authorization & Capture: The current logic works with separate authorization & capture. Hence, all payment methods go through this transition.
-- Payment Authorization Timeout: We currently have a one-day timeout for authorizing payments. This means that payment methods such as Bank Transfers, which are not authorized within this timeframe, will experience a timeout. We recommend extending the timeout from one day to seven days. 
+- Payment Authorization Timeout: There is currently a one-day timeout for authorizing payments. This means that payment methods such as bank transfers, which are not authorized within this timeframe, will experience a timeout. We recommend extending the timeout from one day to seven days. 
 - Multi-Capture: Partial capture of payment for orders items.

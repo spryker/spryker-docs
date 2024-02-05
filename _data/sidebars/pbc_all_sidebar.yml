@@ -2409,10 +2409,8 @@ entries:
                     nested:
                       - title: SCCOS prerequisites for Stripe
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.md
-                      - title: Configure Stripe
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/configure-stripe.html
-                      - title: Disconnect Stripe
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/disconnect-stripe.html
+                      - title: Manage Stripe configurations in the ACP catalog
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html                      
                       - title: Project Guidelines for Stripe
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html
                   - title: Unzer

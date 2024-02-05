@@ -14,6 +14,8 @@ redirect_from:
 
 ---
 
+This document provides guidelines for projects using the Stripe app.
+
 ## OMS configuration for the project
 
 The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
@@ -81,13 +83,14 @@ This example demonstrates how to configure the order state machine transition fr
 
 By default, the timeout for the payment authorization action is set to one day. This means that if the order is in the 'payment authorization pending' state, the OMS will wait for a day and then change the order state to 'payment authorization failed'. Another day later, the order is automatically transitioned to the 'payment authorization canceled' state. Therefore, if you need to increase timeouts or change the states, modify the config/Zed/oms/Subprocess/PaymentAuthorization01.xml file according to your requirements.
 
-## Checkout. Payment Step
+## Checkout payment step
 
 If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
 1. Make sure that a form molecule uses the following code for the payment selection choices:
 
 ```twig
+{% raw %}
 
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
@@ -97,25 +100,29 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
             ...
         }
     {% endembed %}
-{% endfor %}        
+{% endfor %} 
+{% endraw %}       
 ```
 
-2. If you want to change default payment provider or method names, make sure the names are translated in your payment step template:
+2. If you want to change default payment provider or method names, do the following:
+    1. Make sure the names are translated in your payment step template:
 
 ```twig
+{% raw %}
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     <h5>{{ name | trans }}</h5>
 {% endfor %}
+{% endraw %}
 ```
 
-add translations to your glossary data import file:
+    2. Add translations to your glossary data import file:
 
 ```csv
 ...
 Stripe,Pay Online with Stripe,en_US
 ```
-Then run the data import for the glossary:
+    3. Run the data import command for the glossary:
 
 ```bash
 console data:import glossary

@@ -10,11 +10,11 @@ redirect_from:
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
 ---
 
-This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).
+This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community at [CommerceQuest](https://commercequest.space/).
 
 ## 1. Install Spryker
 
-For the starting point of any project, it is good to start from one of the Spryker Demo Shops that are available. They act as a typical Spryker installation and help to establish different types of the Spryker Commerce OS. A Demo Shop includes different sets of components that have been selected for a different type of business or project. Each of these options is fully functional and can be used for both demonstrative purposes as well as working as a boilerplate for your new project. Though each shop comes with its own pre-selected components, Spryker also offers hundreds of additional modules which can be chosen later.
+Spryker Demo Shops are a good starting point for any project. A Demo Shop includes different sets of components that have been selected for a different type of business or project. Each of these options is fully functional and can be used for both demonstrative purposes as well as working as a boilerplate for your new project. Though each shop comes with its own pre-selected components, Spryker also offers hundreds of additional modules which can be chosen later.
 
 You can choose from the following options:
 
@@ -27,15 +27,13 @@ To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-l
 
 ### The deploy file
 
-When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file.
+To configure the local environment, use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) file. In the default deploy file, change the following attributes:
 
-In the default deploy file, change the following attributes:
-
-* Namespace: We recommend specifying the name for your project, as this helps to avoid issues when you have two or more projects with the same names
-* Regions
-* Stores
-* Domains for the local environment
-* Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together
+* Namespace: this helps to avoid issues when you have two or more projects with the same names.
+* Regions.
+* Stores.
+* Domains for the local environment.
+* Domains for the services like RabbitMQ and Jenkins: this helps to keep all project links together.
 
 ### Vagrant clean-up
 

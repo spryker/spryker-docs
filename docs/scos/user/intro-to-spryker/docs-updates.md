@@ -2,10 +2,62 @@
 title: Docs updates
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Oct 2, 2023
+last_updated: Jan 5, 2024
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
+
+## January 2024
+
+In January 2024, we have added and updated the following pages:
+
+### New pages
+
+- [Example modules](/docs/scos/dev/example-modules.html): Explore the use cases and functionality of the Spryker example modules.
+- [Datasource Dependable](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-dependable.html): Learn about the Datasource Dependable service in the components library.
+- [Datasource Trigger Change](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html): Learn about the Datasource Trigger Change service in the components library.
+- [Datasource Trigger Input](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html): Learn about the Datasource Trigger Input service in the components library.
+- [Datasource Trigger](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html): Learn about the Datasource Trigger service in the components library.
+- [Table Column Type Button Action](/docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html): Learn about the Table Column Type Button Action in the Components Library.
+- [Actions Confirmation](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-confirmation.html): Learn about the Actions Confirmation service in the Components Library.
+- [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Stripe app general overview.
+- [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
+- [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
+- [ACP architecture overview](/docs/acp/user/intro-to-acp/acp-architecture-overview.html).
+- [Connect an app](/docs/acp/user/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
+- [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
+- [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.
+- [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
+
+
+### Updated pages
+
+- [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html).
+- [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
+- [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
+- [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
+- [Integrate Payone](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html).
+- [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+- [Install the ACL feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202403.0/marketplace/install-the-merchant-portal-agent-assist-feature.html).
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
+- [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
+- [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202403.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
+- [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
+- [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
+- [Category Management feature overview](/docs/pbc/all/product-information-management/202403.0/base-shop/feature-overviews/category-management-feature-overview.html).
+- [Developing an app with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html).
+- [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202403.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
+
+For more details about these and other updates to the Spryker docs in January 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+
+
 ## December 2023
 
 In December 2023, we have added and updated the following pages:

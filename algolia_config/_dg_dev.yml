@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'ca_dev'
+  index_name: 'dg_dev'
   files_to_exclude:
     - index.md
     - 404.md
@@ -12,4 +12,4 @@ algolia:
     - docs/pbc/all/**/*.md
     - docs/acp/user/**/*.md
     - docs/sdk/dev/**/*.md
-    - docs/dg/dev/**/*.md
+    - docs/ca/dev/**/*.md

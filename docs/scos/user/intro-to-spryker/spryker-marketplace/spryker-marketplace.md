@@ -31,7 +31,7 @@ For new projects, we provide [B2C](/docs/scos/user/intro-to-spryker/spryker-mark
 
 Even if you don't need marketplace features at first, but you are going to use them in the future, the Demo Marketplaces are still the best starting point. You can just ignore the marketplace features until you actually want to use them.
 
-To learn how to install B2C or B2B Demo Marketplace, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+To learn how to install B2C or B2B Demo Marketplace, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 ## Can I upgrade to marketplace from a regular B2B or B2C shop?
 

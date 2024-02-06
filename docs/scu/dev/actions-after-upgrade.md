@@ -12,26 +12,28 @@ Those steps are applicable for both manual update process and automatic update b
 
 Verify all the modules' files on the project level and make sure they are compatible with the files from the vendor. Pay attention to business models, even after minor module updates they might be significantly changed since they are not a part of the module's public API. Functions might be renamed or refactored, constructors might have changed parameters, and even a whole business model might be split into several ones. The last one is a rare case, but it is still possible. So you need to check if project-level customizations are still compatible with the new module's version, and if you have new business models created on the project level and they use existing models from the vendor, they also must be reviewed.
 
-2. In case you performed a major update, you need to additionally search for an Upgrade guide for the module in the Spryker public documentation and execute all steps described in the appropriate document.
-    As an example, let's imagine the Category module was updated from version `4.*` to `5.*`. In this case, you should search for the `"Migration guide - Category"`,
-    find the `"Upgrading from version 4.* to 5.*"` part, and execute all the steps from it. The guide might introduce DB changes,
-    require adding changes in the codebase, new data import, etc.
 
-3. Major updates also might require some release plan and small downtime. It is recommended to first try to deploy an updated codebase
-    on a Production-like environment with similar data, and test functionality related to major updates.
-    During the testing, you may notice if the deployment requires some additional action like one-time data import,
-    republishing data into Storage (Redis) and/or Search (Elasticsearch), updating data in the Database, etc.
-    All findings must be considered for the Production deployment to make it smooth and predictable.
+## Finish a major upgrade
 
-4. Check dependency providers on the project level for the updated modules.
-    It is recommended to replace deprecated plugins with alternatives mentioned in the deprecated plugins.
-    Also, updates might have new plugins that are supposed to be injected on the project level.
-    It is an optional step, but in case you want to have all the latest OOTB functionality working on the project, you should inject them into appropriate dependency providers.
+2. If you updated a module to the next major version, you might need to take manual steps to finalize the update.
+For example, if you updated the Category module from version `4.*` to `5.*`, check if there are manual steps you need to take in [Upgrade the Category module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html).
 
-5. Make sure the CI is green. The CI must have enabled at least code style sniffer, architectural sniffer, and PHPStan.
-    Those sniffers can detect a lot of issues in the codebase after the upgrade process.
+## Test upgrades
 
-6. Pay attention to translations. Updates might bring new flash messages, titles, labels, etc.
-    If you found non-translated items (pure glossary key instead of text) during testing, collect them together and add translations
-    for all languages you have on the project. In case you want to see default translations (EN and DE) for your new glossary,
-    you can find them in a public demo shop, e.g. in [Glossary for B2B shop](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/glossary.csv)
+Major updates might require a release plan and a small downtime. We recommend deploying an updated codebase to a production-like environment with similar data and testing functionality related to the update.
+
+Testing will help you figure out if you need to add some additional deployment steps like a one-time data import, republishing data into the storage or search, updating data in the database. Then you can use these findings in your production environment to make the deployment smooth and predictable.
+
+## Update dependencies
+
+Check dependency providers for the updated modules on the project level. It is recommended to replace deprecated plugins with alternatives mentioned in the deprecated plugins.
+
+Also, updates might have new plugins that are supposed to be injected on the project level. It is an optional step, but in case you want to have all the latest OOTB functionality working on the project, you should inject them into appropriate dependency providers.
+
+## Make the CI green
+
+To keep the project healthy, the CI needs to include at least a code style sniffer, an architectural sniffer, and PHPStan. These sniffers can detect a lot of issues in the codebase after upgrading, so check if there are any issues you need to resolve before merging the changes.
+
+## Double-check translations
+
+Updates can introduce new flash messages, titles, or labels. If tests reveal non-translated items in the form of pure glossary keys instead of text, add translations for all the needed languages. In case you want to see default translations (EN and DE) for your new glossary, you can find them in a public demo shop, e.g. in [Glossary for B2B shop](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/glossary.csv)

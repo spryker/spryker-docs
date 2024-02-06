@@ -34,7 +34,7 @@ The following library is a suggestion, not a requirement.
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
+For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
 ## Module dependency graph
 

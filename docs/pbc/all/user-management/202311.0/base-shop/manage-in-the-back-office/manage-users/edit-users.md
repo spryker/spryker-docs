@@ -1,5 +1,5 @@
 ---
-title: Editing users
+title: Edit users
 description: Learn how to edit users in the Back Office
 template: back-office-user-guide-template
 last_updated: Jan 4, 2024

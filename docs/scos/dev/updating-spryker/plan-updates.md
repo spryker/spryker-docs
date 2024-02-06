@@ -25,7 +25,7 @@ Check for outdated packages:
 php -d memory_limit=-1 composer.phar outdated | grep spryker
 ```
 
-The command returns a list of outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors, minors, and bugfixes you have, and lets you estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information about the module release types.
+The command returns a list of outdated Spryker packages. It gives you a clear picture of what is outdated, how many majors, minors, and bugfixes you have, and lets you estimate the effort for the update. See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) for information about the module release types.
 As any feature update can take a while, the best approach is to split the update into deliverable chunks.
 
 ## Build up update iterations

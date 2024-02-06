@@ -92,7 +92,7 @@ For more details about creating a resource, see these documents:
 
 ## Resource modules
 
-A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the SAPI `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/scos/dev/back-end-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed) through RPC calls. 
+A `Resource` module is a module that implements a single resource or a set of resources. It is responsible for accepting a request in the form of `GlueRequestTransfer` and providing responses in the form of `GlueResponseTransfers`. For this purpose, the SAPI `Resource` module can communicate with the Storage or Search, for which purpose it implements a [Client](/docs/dg/dev/backend-development/client/client.html). It can also communicate with the Spryker Commerce OS (Zed) through RPC calls. 
 
 BAPI resources can use direct facade access through the dependency provider and access the database directly. `Resource` modules must implement all logic related to processing a request. It is not recommended to have any of the Business Logic, or a part of it, in the GlueApplication or specific application Module. If you need to extend any of the built-in Glue functionality, extending the relevant `Resource` module is always safer than infrastructure.
 

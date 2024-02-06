@@ -15,8 +15,7 @@ Verify all the modules' files on the project level and make sure they are compat
 
 ## Finish a major upgrade
 
-2. If you updated a module to the next major version, you might need to take manual steps to finalize the update.
-For example, if you updated the Category module from version `4.*` to `5.*`, check if there are manual steps you need to take in [Upgrade the Category module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html).
+If you updated a module to the next major version, you might need to take manual steps to finalize the update. For example, if you updated the Category module from version `4.*` to `5.*`, check if there are manual steps you need to take in [Upgrade the Category module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-module.html).
 
 ## Test upgrades
 
@@ -36,4 +35,4 @@ To keep the project healthy, the CI needs to include at least a code style sniff
 
 ## Double-check translations
 
-Updates can introduce new flash messages, titles, or labels. If tests reveal non-translated items in the form of pure glossary keys instead of text, add translations for all the needed languages. In case you want to see default translations (EN and DE) for your new glossary, you can find them in a public demo shop, e.g. in [Glossary for B2B shop](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/glossary.csv)
+Updates can introduce new flash messages, titles, or labels. If tests reveal non-translated items in the form of pure glossary keys instead of text, add translations for all the needed languages. Default glossary translations can be found in a public Demo Shop—for example, [B2B Demo Shop glossary](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/glossary.csv).

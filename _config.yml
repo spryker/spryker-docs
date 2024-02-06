@@ -258,6 +258,8 @@ algolia:
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'dg_dev'
+      title: 'Development'      
 sass:
     sass_dir: css
     style: compressed

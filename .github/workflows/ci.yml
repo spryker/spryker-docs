@@ -307,6 +307,9 @@ jobs:
       - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scu_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_dg_dev.yml
+        env: # Or as an environment variable
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}          
 
   deploy:
     runs-on: ubuntu-latest

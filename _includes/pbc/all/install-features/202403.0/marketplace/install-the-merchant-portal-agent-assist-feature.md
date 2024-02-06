@@ -66,7 +66,8 @@ $config[AgentSecurityBlockerMerchantPortalConstants::AGENT_MERCHANT_PORTAL_BLOCK
 ```
 
 <details>
-  <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
+<summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
+
 ```php
 <?php
 

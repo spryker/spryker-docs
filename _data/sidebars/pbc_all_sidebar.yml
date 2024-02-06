@@ -1024,7 +1024,9 @@ entries:
                 include_versions:
                 - "202311.0"
               - title: Data Exchange API + Category Management feature
-                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html                
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
+                include_versions:
+                - "202403.0"            
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -2413,7 +2415,7 @@ entries:
                       - title: SCCOS prerequisites for Stripe
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
                       - title: Manage Stripe configurations in the ACP catalog
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html                      
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
                       - title: Project guidelines for Stripe
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html
                   - title: Unzer

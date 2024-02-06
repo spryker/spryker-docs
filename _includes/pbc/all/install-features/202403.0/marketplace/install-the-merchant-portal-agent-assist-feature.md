@@ -118,6 +118,7 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
+
 </details>
 
 **src/Pyz/Zed/AclMerchantAgent/AclMerchantAgentConfig.php**

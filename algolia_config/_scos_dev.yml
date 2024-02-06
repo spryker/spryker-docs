@@ -12,3 +12,4 @@ algolia:
     - docs/pbc/all/**/*.md
     - docs/acp/user/**/*.md
     - docs/sdk/dev/**/*.md
+    - docs/dg/dev/**/*.md

@@ -5,14 +5,14 @@ template: howto-guide-template
 last_updated: Dec 15, 2023
 related:
   - title: App configuration
-    link: docs/acp/user/app-configuration.html
+    link: docs/acp/user/develop-an-app/develop-an-app/app-configuration.html
   - title: Develop an app
     link: docs/acp/user/develop-an-app/develop-an-app.html
   - title: App manifest
-    link: docs/acp/user/app-manifest.html
+    link: docs/acp/user/develop-an-app/app-manifest.html
 ---
 
-*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/app-configuration.html).
+*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/develop-an-app/develop-an-app/app-configuration.html).
 Translations for all configurations in all locales are contained in the same file. The default path for the translation file is: `/config/app/translation.json`.
 
 <details open>

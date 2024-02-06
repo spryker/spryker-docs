@@ -16,31 +16,31 @@ entries:
             url: /docs/acp/user/intro-to-acp/acp-security-tips.html
       - title: Install ACP catalog
         url: /docs/acp/user/app-composition-platform-installation.html
+      - title: Receive ACP messages in SCCOS
+        url: /docs/acp/user/receive-acp-messages.html
       - title: Develop an app
         url: /docs/acp/user/develop-an-app/develop-an-app.html
         nested:
+          - title: App manifest
+            url: /docs/acp/user/develop-an-app/app-manifest.html
+          - title: App configuration
+            url: /docs/acp/user/develop-an-app/develop-an-app/app-configuration.html
+          - title: App configuration translation
+            url: /docs/acp/user/develop-an-app/app-configuration-translation.html
+          - title: Sync API
+            url: /docs/acp/user/develop-an-app/sync-api.md
+          - title: Async API
+            url: /docs/acp/user/develop-an-app/async-api.html
+          - title: Receive ACP messages from SCCOS
+            url: /docs/acp/user/receive-acp-messages.html
+          - title: Debug an app with XDebug
+            url: /docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html
+          - title: Connect an app
+            url: /docs/acp/user/develop-an-app/connect-an-app.html
           - title: Configuration JSON file
             url: /docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html
           - title: Manifest JSON file
             url: /docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html
           - title: Translation JSON file
-            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html      
-      - title: Connect an app
-        url: /docs/acp/user/connect-an-app.html
-      - title: Set up the message broker
-        url: /docs/acp/user/develop-an-app/set-up-the-message-broker.html
-      - title: Debug an app with XDebug
-        url: /docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html
-      - title: App manifest
-        url: /docs/acp/user/app-manifest.html
-      - title: App configuration
-        url: /docs/acp/user/app-configuration.html
-      - title: App configuration translation
-        url: /docs/acp/user/app-configuration-translation.html
-      - title: Sync API
-        url: /docs/acp/user/sync-api.html
-      - title: Async API
-        url: /docs/acp/user/async-api.html
-      - title: Receive ACP messages
-        url: /docs/acp/user/receive-acp-messages.html
+            url: /docs/acp/user/develop-an-app/code-snippets/translation-json-file.html
 

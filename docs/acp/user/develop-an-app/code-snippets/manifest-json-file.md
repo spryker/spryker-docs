@@ -4,9 +4,9 @@ Descriptions: Manifest Json code snippet
 template: howto-guide-template
 last_updated: Dec 15, 2023
 ---
-To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the App Store Catalog,, the app needs to have the manifest file. Add this file to `config/app/manifest/en_US.json` in your App.
+To display the app you [developed with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html) in the ACP App Catalog,, the app needs to have the manifest file. Add this file to `config/app/manifest/en_US.json` in your App.
 
-For more information about configuration of the manifest file, see [App manifest](https://docs.spryker.com/docs/acp/user/app-manifest.html).
+For more information about configuration of the manifest file, see [App manifest](https://docs.spryker.com/docs/acp/user/develop-an-app/app-manifest.html).
 
 Here is the example manifest for the English version of the Hello World app:
 

@@ -24,7 +24,7 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
 - [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
 - [ACP architecture overview](/docs/acp/user/intro-to-acp/acp-architecture-overview.html).
-- [Connect an app](/docs/acp/user/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
+- [Connect an app](/docs/acp/user/develop-an-app/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
 - [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
 - [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.
 - [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
@@ -398,7 +398,7 @@ In July 2023, we have added and updated the following pages:
 - [Supported browsers](/docs/scos/user/intro-to-spryker/supported-browsers.html): This document lists browsers supported by Spryker Cloud Commerce OS.
 - [Install the shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html)
-- [App manifest](/docs/acp/user/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
+- [App manifest](/docs/acp/user/develop-an-app/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 - [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
 - [Project development guidelines](/docs/dg/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
 - [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
@@ -499,7 +499,7 @@ In May 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
-- [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
+- [App manifest](/docs/acp/user/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.

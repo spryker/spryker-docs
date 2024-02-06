@@ -30,7 +30,7 @@ docker/sdk cli vendor/bin/acp app:register --appIdentifier {YOUR APP IDENTIFIER}
 
 ## Connect an app to a tenant
 
-The `spryker/app-kernel` module contains all the necessary code to interact with AppStoreCatalog, enabling the persistence and retrieval of configurations for a given app.
+The `spryker/app-kernel` module contains all the necessary code to interact with ACP App Catalog, enabling the persistence and retrieval of configurations for a given app.
 
 ## Test the endpoints
 

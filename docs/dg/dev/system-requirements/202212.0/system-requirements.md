@@ -6,27 +6,10 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/system-requirements
 originalArticleId: 6f7d36c1-2ee4-47d1-8f7f-ea0f1b7f93a7
 redirect_from:
-- /20220204/docs/system-requirements
-- /20220204/docs/en/system-requirements
-- /docs/system-requirements
-- /docs/en/system-requirements
-- /v6/docs/system-requirements
-- /v6/docs/en/system-requirements
-- /v5/docs/system-requirements
-- /v5/docs/en/system-requirements
-- /v4/docs/system-requirements
-- /v4/docs/en/system-requirements
-- /v3/docs/system-requirements
-- /v3/docs/en/system-requirements
-- /v2/docs/system-requirements
-- /v2/docs/en/system-requirements
-- /v1/docs/system-requirements
-- /v1/docs/en/system-requirements
-- /v4/docs/supported-browsers
-- /v4/docs/en/supported-browsers
 - /docs/scos/dev/set-up-spryker-locally/system-requirements.html
 - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
 - /docs/marketplace/dev/setup/202212.0/system-requirements.html
+- /docs/scos/dev/system-requirements/202212.0/system-requirements.html
 ---
 
 ## Base shop system requirements  

@@ -6,6 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202005.0/users/roles-groups-and-users/managing-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-user-roles/editing-user-roles.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
 related:
   - title: Creating user roles
     link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html

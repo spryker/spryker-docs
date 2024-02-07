@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/approval-process-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html  
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/approval-process-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/approval-process-feature-overview.html
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.

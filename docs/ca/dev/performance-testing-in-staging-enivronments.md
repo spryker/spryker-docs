@@ -59,7 +59,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 ### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
+With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
 
 {% info_block infoBox %}
 
@@ -281,7 +281,7 @@ vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing
 console publish:trigger-events
 ```
 
-3. Run the *queue worker*. The [Queue System](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
+3. Run the *queue worker*. The [Queue System](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
 
 ```bash
 console queue:worker:start -s

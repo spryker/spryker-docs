@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/adding-scheduled-prices-to-abstract-products
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
 ---
 
 This doc describes how to add scheduled prices to abstract products and product bundles in the Back Office.

@@ -3,6 +3,8 @@ title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
 last_updated: Nov 7, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -233,12 +235,12 @@ Better awareness of security issues and vulnerabilities.
 
 ### Documentation
 - [Handling upgrade warnings](/docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html)
-- [Spryker security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html)
-- [NPM checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html)
-- [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html)
+- [NPM checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html)
+- [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)
 
 ### Technical prerequisites
-Install and run [Upgrader compliance Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) to detect security issues.
+Install and run [Upgrader compliance Evaluator](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) to detect security issues.
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Oryx Framework <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

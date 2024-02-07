@@ -6,6 +6,11 @@ template: concept-topic-template
 redirect_from:
     - /docs/scos/dev/sdk/data-import.html
     - /docs/scos/dev/data-import/202108.0/data-import-categories/catalog-setup/products/products.html
+    - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/commerce-setup.html
+    - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/product-merchandising.html
+    - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/merchandising-setup.html
+    - /docs/scos/dev/data-import/202204.0/data-import-categories/about-data-import-categories.html
+    - /docs/scos/dev/data-import/202204.0/data-import.html
 ---
 
 * [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html)

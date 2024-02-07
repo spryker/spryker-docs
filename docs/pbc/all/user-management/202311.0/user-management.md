@@ -3,6 +3,8 @@ title: Users Management
 description: User Management capability lets you manage Back Office users.
 last_updated: Aug 20, 2021
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/user-management/202204.0/user-management.html
 ---
 
 The *User Management* capability lets you create and manage Back Office users and their permissions.

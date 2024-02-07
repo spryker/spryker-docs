@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scoc/dev/glue-api-guides/202311.0/index.html
   - /docs/scos/dev/glue-api-guides/202311.0/glue-rest-api.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
+  - /docs/scos/dev/glue-api-guides/202204.0/index.html
 ---
 * [Decoupled Glue Api](/docs/scos/dev/glue-api-guides/{{page.version}}/decoupled-glue-api.html)
 * [Create new Glue Application](/docs/scos/dev/glue-api-guides/{{page.version}}/create-glue-api-applications.html)

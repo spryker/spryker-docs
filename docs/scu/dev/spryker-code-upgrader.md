@@ -34,7 +34,7 @@ Spryker CI ships with an upgrade tool pipeline per project. The pipelines are us
 
 ## Semi-automated upgrade process
 
-Based on the upgrade schedule, the Upgrader checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a PR. The PR contains [minor and patch module versions](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html), which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
+Based on the upgrade schedule, the Upgrader checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a PR. The PR contains [minor and patch module versions](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html), which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
 
 You can change the upgrade schedule to better fit your development process.
 

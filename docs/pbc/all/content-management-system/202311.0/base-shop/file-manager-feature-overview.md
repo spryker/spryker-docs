@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/file-uploader.html
   - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
   - /docs/pbc/all/content-management-system/202311.0/file-manager-feature-overview.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/file-manager-feature-overview.html
 ---
 
 The *File Manager* feature lets you upload and manage your assets (media files) effectively. You can do the following:
@@ -107,7 +108,7 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-See [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
+See [Integrating custom location for static assets](/docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html) for more details.
 
 ## Related Business User documents
 

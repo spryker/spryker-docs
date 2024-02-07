@@ -4,7 +4,7 @@ description: Explain Spryker Corer release types and how different project devel
 template: concept-topic-template
 last_updated: May 16, 2023
 ---
-Spryker uses semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](https://docs.spryker.com/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
+Spryker uses semantic versioning for its packages. There are 3 release types - major, minor, and patch. For more information visit our [Semantic versioning - major vs. minor vs. patch release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html#what-is-a-release) page.
 
 Depending on the customization strategy and the type of release, you will possibly need to invest additional efforts to integrate a release.
 
@@ -17,7 +17,7 @@ You can use the following strategies to customize your Spryker project:
 - Module customization (or, Private API customization)
 - Module replacement
 
-For more information, visit our [Development strategies](https://docs.spryker.com/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html) article.
+For more information, visit our [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html) article.
 
 In terms of upgradability, we'll look at the following customization strategies:
 
@@ -31,14 +31,14 @@ Module configuration is one of the SCOS Public APIs.  This means that Spryker ma
 ### Plug and Play customization
 Plug and Play is Spryker’s out-of-the-box development strategy that allows customers to extend a project with various built-in plugins. In case there’s no plugin, it is recommended to create a feature request or create a custom plugin and wire it up in the DependencyProvider, or via configuration.
 
-Check out our [Plugins](https://docs.spryker.com/docs/scos/dev/back-end-development/plugins/plugins.html) article to get more information.
+Check out our [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html) article to get more information.
 
 ### Private API customization
 Spryker generally allows changing private APIs and core code. However in this case, part of the upgrade responsibilities move to the side of the customer.
 
 What is a Private API?
 
-A [Private API](https://docs.spryker.com/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](https://docs.spryker.com/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a _Business model_, or any file in the _Persistence_ layer, except for _QueryContainer_.
+A [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#private-api) in SCOS is everything that is not a [Public API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html#public-api). For example, it can be a _Business model_, or any file in the _Persistence_ layer, except for _QueryContainer_.
 
 ## Project customization and release types in terms of upgradability
 
@@ -102,7 +102,7 @@ namespace Spryker\Zed\Category;
 class CategoryConfig extends AbstractBundleConfig
 {
     protected const DEFAULT_CATEGORY_READ_CHUNK = 10000;
-    
+
     public function getDefaultCategoryReadChunk (): int
     {
         return static::DEFAULT_CATEGORY_READ_CHUNK;
@@ -287,13 +287,13 @@ class AcmeReader implements AcmeReaderInterface
     public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransfer
     {
         $acmeTransfer = $this->acmeRepository->findAcmeById($acmeCriteriaTransfer->getId());
-        
+
         $fooTransfer = $this->fooFacade->findFooByAcme($acmeCriteriaTransfer->getId());
         $acmeTransfer->setFoo($fooTransfer);
-        
+
         return $this->acmExpander->expand($acmeTransfer);   
     }
-    
+
 }
 ```
 
@@ -305,17 +305,17 @@ class AcmeReader extends SprykerAcmeReader
     public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransfer
     {
         $acmeTransfer = $this->acmeRepository->findAcmeById($acmeCriteriaTransfer->getId());
-        
+
         $fooTransfer = $this->fooFacade->findFooByAcme($acmeCriteriaTransfer->getId());
         $acmeTransfer->setFoo($fooTransfer);
-        
+
         $this->callBeforeExpand($acmeTransfer);
-        
+
         $this->acmeExpander->expand($acmeTransfer);
-        
+
         return $acmeTransfer;
     }
-    
+
     protected function callBeforeExpand(AcmeTransfer $acmeTransfer): void
     {
         // Do something
@@ -349,12 +349,12 @@ In this example, the minor release 1.0.0 to 1.1.0 has Spryker replace the method
 public function readAcme(AcmeCriteriaTransfer $acmeCriteriaTransfer): AcmeTransfer
 {
     $acmeTransfer = $this->acmeRepository->findAcmeById($acmeCriteriaTransfer->getId());
-    
+
     $fooCriteriaTransfer = (new FooCriteriaTransfer())
         ->setAcmeId($acmeCriteriaTransfer->getId();
     $fooTransfer = $this->fooFacade->findFooByCriteria($fooCriteriaTransfer);
     $acmeTransfer->setFoo($fooTransfer);
-    
+
     return $this->acmExpander->expand($acmeTransfer);   
 }
 ```

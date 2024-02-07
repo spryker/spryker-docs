@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-configuration-reference
   - /docs/docker-sdk-configuration-reference
   - /docs/en/docker-sdk-configuration-reference
+  - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-configuration-reference.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

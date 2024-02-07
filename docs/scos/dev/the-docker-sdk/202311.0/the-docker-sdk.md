@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/docker-sdk
   - /docs/docker-sdk
   - /docs/en/docker-sdk
+  - /docs/scos/dev/the-docker-sdk/202204.0/the-docker-sdk.html
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html

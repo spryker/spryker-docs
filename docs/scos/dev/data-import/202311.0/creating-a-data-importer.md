@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/ht-data-import
   - /docs/ht-data-import
   - /docs/en/ht-data-import
+  - /docs/scos/dev/data-import/202204.0/creating-a-data-importer.html
 ---
 
 The following article describes how to build your data importer for a specific type. All steps in this article are built on the real-life example for importing product images.

@@ -3,6 +3,8 @@ title: Ratings and Reviews data import
 description: Details about data import files for the Ratings and Reviews PBC
 template: concept-topic-template
 last_updated: Jul 23, 2023
+redirect_from:
+- /docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html
 ---
 
 

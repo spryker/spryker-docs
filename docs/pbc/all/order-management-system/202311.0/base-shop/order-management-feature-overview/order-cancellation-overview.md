@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/order-cancellation-overview
   - /docs/order-cancellation-overview
   - /docs/en/order-cancellation-overview
+  - /docs/scos/user/features/202204.0/order-management-feature-overview/order-cancellation-overview.html
 ---
 
 Order cancellation makes the shopping experience of B2B and B2C shoppers more flexible by allowing them to cancel their orders within a defined time period. Also, it optimizes the workflow of sales and customer service by allowing them to cancel orders on customers’ behalf in the Back Office.

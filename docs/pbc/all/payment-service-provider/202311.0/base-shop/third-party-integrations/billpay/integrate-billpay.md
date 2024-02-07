@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/integrating-billpay.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/billpay/integrating-billpay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billpay/billpay.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/integrating-billpay.html
 related:
   - title: Billpay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/billpay/billpay.html
@@ -21,7 +22,7 @@ The Billpay module provides integration with the [Invoice with prescoring](https
 
 Billpay comes with a `config.dist.php` file that you can use as a sample configuration for your project by copying its content to your project configuration file. You can find all of your project configuration files in the `config `folder.
 
-See [Configuration Management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html) for details on the configuration.
+See [Configuration Management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html) for details on the configuration.
 
 ### Configuration Options:
 

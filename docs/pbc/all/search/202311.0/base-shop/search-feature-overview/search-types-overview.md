@@ -10,6 +10,7 @@ redirect_from:
   - /docs/search-types-overview
   - /docs/en/search-types-overview
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/search-types-overview.html
+  - /docs/scos/user/features/202204.0/search-feature-overview/search-types-overview.html
 ---
 
 This document describes the default search types shipped with the *Search* feature.

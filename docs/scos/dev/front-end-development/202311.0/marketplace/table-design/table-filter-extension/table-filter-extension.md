@@ -5,6 +5,7 @@ description: This document provides details about the Table Filter extension in 
 template: concept-topic-template
 redirect_from:
     - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/
+    - /docs/scos/dev/front-end-development/202204.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
 related:
   - title: Table Filter Date Range
     link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html

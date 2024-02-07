@@ -3,6 +3,8 @@ title: Order products in categories
 description: Learn how to order products in categories in the Back Office.
 last_updated: June 15, 2021
 template: back-office-user-guide-template
+redirect_from:
+- /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/categories/order-products-in-categories.html
 ---
 
 To order products in a category in the Back Office, follow the steps:

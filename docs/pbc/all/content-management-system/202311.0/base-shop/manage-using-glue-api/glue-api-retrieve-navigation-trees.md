@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-navigation-trees.html
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-navigation-trees.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html

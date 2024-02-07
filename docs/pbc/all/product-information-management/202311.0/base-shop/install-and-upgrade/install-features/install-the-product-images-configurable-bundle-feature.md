@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-images-configurable-bundle-feature-integration
   - /docs/en/product-images-configurable-bundle-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/product-images-configurable-bundle-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 related:
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html

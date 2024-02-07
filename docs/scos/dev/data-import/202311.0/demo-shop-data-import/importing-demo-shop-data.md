@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/importing-demo-shop-data
   - /docs/about-demo-shop-data-import
   - /docs/en/about-demo-shop-data-import
+  - /docs/scos/dev/data-import/202204.0/demo-shop-data-import/importing-demo-shop-data.html
 ---
 
 To import data into a Spryker Demo Shop, you need to:

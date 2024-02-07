@@ -23,7 +23,7 @@ This document helps you prepare for a traditionally very busy season of the year
 
 ## DevOps and hosting tips
 
-* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
+* Follow [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Prepare stand-by/hot-spare compute nodes. Buy it in advance.
 * Prepare sizing of Redis/ElasticSeach/Database services.
 * Make sure you have clear procedures for adding a new compute node to your cluster and removing one from it. It is good to have it fully automated allowing you to easily change your cluster configuration.
@@ -36,7 +36,7 @@ This document helps you prepare for a traditionally very busy season of the year
 
 ## Tips for developers
 
-* Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
+* Follow [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Disable features, that might have no big value during Black Friday but add additional overhead:
 * Persistent Cart
 * Evaluate project features for the same reason

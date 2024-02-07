@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202108.0/prices-feature-walkthrough/money-module-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/prices-feature-walkthrough/money-module-reference-information.html
   - /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/money-module-reference-information.html
 ---
 
 {% info_block infoBox "Money" %}

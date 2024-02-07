@@ -10,6 +10,8 @@ related:
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
   - title: Url Persistence Strategy
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+redirect_from:
+- /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/persistence.html
 ---
 
 This document explains the Persistence service in the Components Library.

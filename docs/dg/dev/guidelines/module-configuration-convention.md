@@ -68,7 +68,7 @@ class ModuleNameConfig extends AbstractBundleConfig
 
   public function getExampleModuleKey()
   {
-     return static::EXAMPLE_KEY;
+     return static::EXAMPLE_MODULE_KEY;
   }
 
   public function getExampleKey()

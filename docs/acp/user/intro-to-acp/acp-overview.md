@@ -21,6 +21,7 @@ The following apps are supported:
 - [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html), a Payment Service Provider (PSP)
 - [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html), a Consent Management Platform (CMP)
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), a platform for User-Generated Content (UGC)
+- [Stripe](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/stripe.html), a financial infrastructure platform that enables businesses to accept payments
 
 Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
 

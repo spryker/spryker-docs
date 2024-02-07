@@ -54,29 +54,32 @@ $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
     OmsConfig::DEFAULT_PROCESS_LOCATION,
-    //APPLICATION_ROOT_DIR . '/vendor/spryker/payment/config/Zed/Oms', # this line must be removed if exists
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
 ];
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...
-    //'B2CStateMachine01', # this line must be removed if exists
-    'ForeignPaymentStateMachine01', # this line must be added
+    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //...
-    //PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     AddPaymentMethodTransfer::class => 'payment-method-commands',
     DeletePaymentMethodTransfer::class => 'payment-method-commands',
-    CancelPayment::class => 'payment-commands',
-    PaymentAuthorized::class => 'payment-events',
-    PaymentAuthorizationFailed::class => 'payment-events',
-    PaymentCaptured::class => 'payment-events',
-    PaymentCaptureFailed::class => 'payment-events',
+    CancelPaymentTransfer::class => 'payment-commands',
+    CapturePaymentTransfer::class => 'payment-commands',
+    RefundPaymentTransfer::class => 'payment-commands',
+    PaymentAuthorizedTransfer::class => 'payment-events',
+    PaymentAuthorizationFailedTransfer::class => 'payment-events',
+    PaymentCapturedTransfer::class => 'payment-events',
+    PaymentCaptureFailedTransfer::class => 'payment-events',
+    PaymentRefundedTransfer::class => 'payment-events',
+    PaymentRefundFailedTransfer::class => 'payment-events',
+    PaymentCanceledTransfer::class => 'payment-events',
+    PaymentCancellationFailedTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -113,8 +116,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-
-            # These plugins are handling messages sent from Stripe app to SCCOS.
+            # These plugins are handling messages sent from Stripe app to your project.
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
         ];
@@ -154,8 +156,6 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
 
 ```php
-//...
-
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
@@ -172,7 +172,7 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
              //...
              $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
-             // these two commands will be also supported soon.
+             // These two commands will be also supported soon by ACP Stripe app.
              $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
              $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
             

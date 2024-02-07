@@ -81,7 +81,10 @@ This example demonstrates how to configure the order state machine transition fr
 </statemachine>
 ```
 
-By default, the timeout for the payment authorization action is set to one day. This means that if the order is in the 'payment authorization pending' state, the OMS will wait for a day and then change the order state to 'payment authorization failed'. Another day later, the order is automatically transitioned to the 'payment authorization canceled' state. Therefore, if you need to increase timeouts or change the states, modify the config/Zed/oms/Subprocess/PaymentAuthorization01.xml file according to your requirements.
+By default, the timeout for the payment authorization action is set to 7 days. This means that if the order is in the 'payment authorization pending' state, the OMS will wait for a day and then change the order state to 'payment authorization failed'. Another day later, the order is automatically transitioned to the 'payment authorization canceled' state. Therefore,
+if you need to decrease/increase timeouts or change the states, modify the `config/Zed/oms/Subprocess/PaymentAuthorization01.xml` file according to your requirements.
+
+[Read more](/docs/acp/user/acp-payment-oms-guides.html) about ACP payment methods integration with your project OMS configuration.
 
 ## Checkout payment step
 

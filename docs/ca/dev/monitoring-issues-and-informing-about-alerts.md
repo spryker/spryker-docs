@@ -2,12 +2,12 @@
 title: Monitoring issues and informing about alerts
 DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
 template: concept-topic-template
-last_updated: Jan 11, 2024
+last_updated: Feb 07, 2024
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
 ---
 
-Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This document explains in details how monitoring and alerting works on Spryker Cloud Commerce OS.
+Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side, or from your side. This document explains in details how monitoring and alerting works on Spryker Cloud Commerce OS.
 
 ## What is monitored?
 
@@ -24,6 +24,7 @@ The following alerts are configured by default for all environments.
 | 200 responses on Zed in ALB  | Checks whether ZED endpoint provides 200 OK response to application load balancer.  |
 | AVG Response time in ms  | Checks the page response time and runs on a pre-set threshold.  |
 | ALB 5XX response codes | Checks the status codes the application load balancer receives from the load balanced applications for the 5XX status codes.  |
+| ALB Healthy Hosts in Target Group | Check Healthy Hosts in Target Group.  |
 
 </div>
 
@@ -35,7 +36,8 @@ The following alerts are configured by default for all environments.
 |---|---|
 | ElastiCache Status  | Checks the status of ‘ElastiCache for Redis’.  |
 | Redis is not used by any service  | Checks whether ElastiCache is used.  |
-| Redis is full  | Alerts the standby team when Redis runs out of memory and is swapping above 50MB of data, the amount of free memory on the host is running low, and when keys are evicted due to memory constraints.   |
+| Redis available Memory  | Redis free Memory on the host is running low  |
+| Redis High CPU  | Redis service running High CPU  |
 
 </div>
 
@@ -45,7 +47,9 @@ The following alerts are configured by default for all environments.
 
 | NAME OF METRIC  | DESCRIPTION  |
 |---|---|
-| ES cluster status  | Checks the status of the Elasticsearch Cluster.  |  
+| ES Cluster Status  | Checks the status of the Elasticsearch Cluster.  |  
+| ES available storage  | Checks available storage of the Elasticsearch Cluster.  |  
+| ES High CPU  | Elasticsearch service running High CPU.  |  
 
 </div>
 
@@ -55,8 +59,11 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-|RDS DB connections   | Checks if there are active connections to RDS.  |
+| RDS Status  | Checks the status of the RDS.  |   
 | RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO Credits.  |   
+| RDS available storage  | Checks available storage of RDS.  | 
+| RDS High CPU   | RDS service running High CPU.  |
+
 
 </div>
 
@@ -66,9 +73,12 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-| Jenkins Failed Jobs  | Checks if there are failed jobs on Jenkins.  |
+| Jenkins Status  | Checks the status of the Jenkins.  |
 | Scheduler disk is 90% filled  | Alerts the monitoring team once Jenkins disk utilization is at 90% or above.  |
+| Scheduler inode usage is above 90%  | Alerts the monitoring team once Jenkins inode utilization is at 90% or above.  |
 | Jenkins container can't be deployed  | Checks whether there are deployment failures of the Jenkins container.   |
+| Jenkins High CPU  | Jenkins service running High CPU.   |
+| Jenkins High Memory  | Jenkins service running High Memory.   |
 
 </div>
 
@@ -80,8 +90,24 @@ The following alerts are configured by default for all environments.
 |---|---|
 | RabbitMQ web page isn't accessible  | Checks if RabbitMQ web UI is reachable.  |
 | RMQ: status by host  | Checks if the host that RabbitMQ is running on is online.  |
-| RMQ: disk alarms (Draft)  | Checks the status of the storage that is attached the instance that RabbitMQ is running on.  |
+| RMQ: disk alarms  | Checks the status of the storage that is attached the instance that RabbitMQ is running on.  |
 | RMQ: memory alarms  | Checks memory utilization on the RabbitMQ instance.   |
+| RMQ: missing queues  | Checks missing queues on the RabbitMQ instance.   |
+| RMQ: High CPU  | RabbitMQ service running High CPU.   |
+
+</div>
+
+### Elastic Container Services (ECS)
+
+<div class="width-100">
+
+| NAME OF METRIC  | DESCRIPTION  |  
+|---|---|
+| ECS Service Status  | Checks the status of all ECS services.  |
+| ECS Service High CPU  | ECS service running High CPU.  |
+| ECS Service High Memory  | ECS service running High Memory.  |
+| ECS Service Auto-Scaling  | ECS service Auto-Scaling activity.  |
+
 
 </div>
 

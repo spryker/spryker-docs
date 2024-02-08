@@ -10,7 +10,7 @@ redirect_from:
 To start migrating from the on-prem system to SCCOS, the first thing you need to do is to integrate the Docker SDK. To integrate the Docker SDK, follow these steps.
 
 ## Prerequisites
-Make sure you have met the installation prerequisites as detailed in the [installation prerequisites guide](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
+Make sure you have met the installation prerequisites as detailed in the [installation prerequisites guide](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
 
 ## 1. Integrate the Docker SDK
 To facilitate local development and SCCOS deployment, you have to integrate the Docker SDK into your project. Be sure to select the appropriate version of Docker SDK as described in [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).

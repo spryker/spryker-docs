@@ -9,15 +9,15 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/migrate-to-docker/migrate-to-docker.html
 ---
 
-This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+This page describes how you can migrate a non-Docker based project into a Docker based one. If you want to install Spryker from scratch, see [Set up](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 ## Install the prerequisites
 
 1. Follow one of the Docker installation prerequisites:
-    * [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
-    * [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
-    * [Install Docker prerequisites on Windows with WSL1](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
-    * [Installing Docker prerequisites on Windowswith WSL2](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+    * [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html)
+    * [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html)
+    * [Install Docker prerequisites on Windows with WSL1](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html).
+    * [Installing Docker prerequisites on Windowswith WSL2](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 2. Install the [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) feature.
 
@@ -116,9 +116,9 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 
 ## Next steps
 
-* [Troubleshooting](/docs/scos/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
+* [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
 * [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 * [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Self-signed SSL Certificate Setup](/docs/scos/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
+* [Self-signed SSL Certificate Setup](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
 * [Adjust Jenkins for a Docker environment](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html)

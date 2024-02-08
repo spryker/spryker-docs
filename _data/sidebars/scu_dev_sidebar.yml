@@ -10,15 +10,17 @@ entries:
         url: /docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html
       - title: Prepare a project for the Upgrader
         url: /docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
-      - title: Connect the Upgrader to your project
+      - title: Get access
+        url: /docs/scu/dev/get-access-to-spryker-code-upgrader.html
+      - title: Connect your project
         nested:
-          - title: Connect to a GitHub managed project
+          - title: Connect a GitHub managed project
             url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html
-          - title: Connect to a project self-hosted with GitLab
+          - title: Connect a project self-hosted with GitLab
             url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html
-          - title: Connect to a Azure managed project
+          - title: Connect a Azure managed project
             url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
-          - title: Connect to a GitLab managed project
+          - title: Connect a GitLab managed project
             url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
       - title: Select a target branch for PRs
         url: /docs/scu/dev/select-target-branch-for-prs.html

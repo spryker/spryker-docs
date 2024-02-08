@@ -24,7 +24,7 @@ The upgrade tool evaluates the code of a project and compares it to the latest S
 
 Spryker CI is powered by [Buddy](https://buddy.works/) and provides an intuitive UI for a seamless CI/CD experience. It enables the upgrade tool to deliver continuous upgrades to your project.
 
-### CI pipeline
+### CI pipelines
 
 Spryker CI ships with an upgrade tool pipeline per project. The pipelines are used to automate the process of running the upgrade tool.
 
@@ -34,10 +34,9 @@ Spryker CI ships with an upgrade tool pipeline per project. The pipelines are us
 
 ## Semi-automated upgrade process
 
-Based on the upgrade schedule, the Upgrader checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a PR. The PR contains [minor and patch module versions](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html), which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
+Based on the upgrade schedule, the Upgrader checks the connected branch of your application's repository. If  updates were released since your last upgrade, the Upgrader creates a PR. The PR contains [minor and patch module versions](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html), which you need to review and merge. If there are major updates, the PR will contain instructions for a manual upgrade.
 
 You can change the upgrade schedule to better fit your development process.
-
 
 ## Availability of Spryker Code Upgrader
 

@@ -9,12 +9,11 @@ redirect_from:
   - /docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html
 ---
 
-Onboarding to Spryker CI consists of the following steps.
-
+To get access to the Upgrader, take the following steps.
 
 ## Get invited to your workspace
 
-To get started, provide the email of your cloud admin. The admin user will be a super user. They will be able to change repositories and invite new users to their workspace.
+To get started, provide us with the email of your cloud admin. The admin user will be a super user. They will be able to change repositories and invite new users to their workspace.
 
 Once we receive the admin's email address, we will provision a workspace and send you an email invitation.
 
@@ -29,3 +28,7 @@ You receive an email with a one-time invitation token, but your invitation is al
 Your workspace contains the Spryker Code Upgrader project.
 
 ![Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.md/projects.png)
+
+## Next step
+
+[Connect the Upgrader to your project](/docs/scu/dev/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html)

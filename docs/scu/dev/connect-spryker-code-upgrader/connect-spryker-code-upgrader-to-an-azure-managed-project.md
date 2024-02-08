@@ -49,11 +49,6 @@ Repository URL should be in format `https://dev.azure.com/<organization_name>/<p
 
 {% endinfo_block %}
 
-## Support for Spryker CI
-
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
-
 ## Next steps
 
-[Run Spryker Code Upgrader](/docs/scu/dev/run-spryker-code-upgrader.html)
+[Set the target branch for the Upgrader](/docs/scu/dev/set-the-target-branch-for-spryker-code-upgrader.html)

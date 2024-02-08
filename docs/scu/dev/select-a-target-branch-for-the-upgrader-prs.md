@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scu/dev/select-target-branch-for-prs.html
 ---
 
-After connecting Spryker Code Upgrader to a repository, you can change the target branch for PRs. The PRs created by the Upgrader will be merged into the target branch.
+After connecting Spryker Code Upgrader to a repository, you can select the target branch for PRs. The PRs created by the Upgrader will be merged into the target branch.
 
 To select a target branch, follow the steps:
 
@@ -22,3 +22,7 @@ To select a target branch, follow the steps:
 ![Spryker CI Code - Target branch selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/select-target-branch-for-prs.md/set-as-default-branch.png)
 
 Now the Upgrader will create PRs for the selected branch.
+
+## Next step
+
+[Run the Upgrader](/docs/scu/dev/run-spryker-code-upgrader.html)

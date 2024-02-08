@@ -13,71 +13,70 @@ redirect_from:
 
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
-The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps because we won't be able to resolve the issues related to the steps not completed in time. Ensure that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
+The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps because we won't be able to resolve the issues related to the steps not completed in time. Make sure your project plan contains the tasks related to the go-live checklist and enough time for them to be completed.
 
 {% endinfo_block %}
 
 
-This document describes how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
+This document describes how to prepare a Spryker project for going live.
 
-We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all the following tasks are completed one week before going live.
-
-To successfully deploy a project on Spryker Cloud Commerce OS, make sure you follow all the guidelines described in this document.
-
+We divided the preparation into approximate timeframes, and you can adjust them to your needs. Make sure that all of the following tasks are completed at least one week before going live.
 
 ## Eight weeks before go-live
 
-Eight weeks before your project goes live, *let us know your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
+*Provide us with your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
 
 Ensure you have addressed all the items from the following checklists.
 
-### Cloud
+### Cloud environments
 
-- *Check and prepare connected systems - if applicable*
-    - Doublecheck that all VPC Peering/Site2Site VPN connections are monitored and secure. Spryker does not normally monitor such connections with external parties.
-    - Make sure that a network diagram exists that can be used to explain the setup quickly if need arises
-    - Make sure that routing is as expected and no internal resources are accidently exposed via the S2S or VPC Peering Setup.
-- *DDOS prevention or mitigation checked and implemented.*
+- Connected systems are checked and prepared:
+    - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
+    - Make sure that that there is a network diagram that can be used to explain the setup quickly if need arises.
+    - Make sure that routing works as expected and no internal resources are accidentally exposed via the S2S or VPC peering setup.
+- DDOS prevention or mitigation is checked and implemented:
     - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
-    - Check your concepts for DOS and DDOS prevention Admin panel and Merchant portal. Add basic auth if applicable. For details, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
-- *DNS strategy is defined*. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
+    - Check your concepts for DOS and DDOS prevention for the Back Office and Merchant portal. Add basic auth if applicable. For instructions on impleneting basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html).
+- DNS strategy is defined. If you delegate DNS to us, let us know the date on which to point the domain name to your project.
 
 {% info_block infoBox "DNS propagation" %}
 
-After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
-
-We highly recommend you to follow our [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html) and ensure all the points are acknowledged and applied.
-
-Double check that you do not have any clear text passwords stored in config files or repositories.
+After pointing the domain name to your project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
 {% endinfo_block %}
 
+
+We highly recommend implementing the [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
+
+Double-check that you do not have any clear text passwords stored in config files or repositories.
+
 ### Application
 
-- Upgrade your project's code to match the latest Demo Shop release, or at minimum, upgrade to a release that fully supports the Docker SDK.
-- Update `spryker/twig` to version 3.15.2 or later because this version and the later ones have important stability improvements over version 3.15.1.
-- Migrate the project's database to MariaDB if you don't use it already.
-- Split up your project's Zed endpoints as outlined in [Integrating separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html) guide.
-- Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
-- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
-- Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
-- Make sure that, where applicable, you have implemented our recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) and that you are observing the general [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management).
-- Make sure you have applied the security guidelines. For details, see [Security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
-- Double-check that you don't have any clear text passwords stored in config files or repositories.
+- Upgrade your project to the latest release. Or at least upgrade to a release that supports the Docker SDK.
+- Update `spryker/twig` to version 3.15.2 or higher because this and later version have important stability improvements over version 3.15.1.
+- Migrate the database to MariaDB.
+- Split Zed endpoints as outlined in [Integrate separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html).
+- Verify that the naming scheme of the services exactly matches the scheme in a Demo Shop: [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
+- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+- Migrate data from local storages to S3 by [integrating FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html).
+- Implement [Jenkins performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
+- Implement [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
+- Implement [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
+- Double-check that there are no clear text passwords stored in config files or repositories.
 
 ### Testing
 
-- [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
+- [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html) to understand how your application will perform and work when deployed.
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
 ### SEO
 
-Make sure the SEO strategy and plan are defined. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
+Make sure the SEO strategy and plan are defined. If you are migrating to Spryker, and the domain is already pointed to a live shop, prepare a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
 
 ## Four weeks before go-live
 
-Four weeks before your project goes live, ensure you addressed all the items from the following checklists.
+Four weeks before your project goes live, make sure you addressed all the items from the following checklists.
 
 ### Cloud
 

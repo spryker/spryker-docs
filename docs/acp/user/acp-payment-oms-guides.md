@@ -7,19 +7,93 @@ last_updated: Feb 10, 2024
 
 **Introduction:**
 
-This guide outlines the steps to set up your project with the ACP payment app, ensuring compatibility with your customized OMS configuration.
+This guide provides step-by-step instructions to set up your project with the ACP payment app, ensuring seamless integration with your customized Order Management System (OMS) configuration.
+
+## Prerequisites
+
+Before you begin, ensure the following:
+- You have installed the Spryker Order Management System. Refer to the [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) guide.
+- Familiarize yourself with OMS basics by exploring the [Order Management feature overview](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](https://docs.spryker.com/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html) along with their subpages.
+
+## Understanding Default ACP Payment OMS  
+
+The default ACP payment OMS configuration is located at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+This configuration is assigned to each order paid with the ACP payment method. 
+
+### XML file structure
+
+The main OMS file includes `<subprocesses>` – similar to libraries or building blocks with their own `<states>`, `<transitions>`, and `<events>`.
+
+```xml
+<subprocesses>
+    <process name="PaymentAuthorization" file="Subprocess/PaymentAuthorization01.xml"/>
+    <!-- Other subprocesses -->
+</subprocesses>
+```
+
+Each process in the `<subprocesses>` section has a start state, one or more final states, and the states are linked to each other in the main State Machine .xml file.
+
+[img: default OMS]
+
+The default setup assumes a two-step process for collecting money, beginning with the "PaymentAuthorization" subprocess.
+
+### Automatic states changing
+
+Transitions between states occur automatically via asynchronous ACP messages handled by the "spryker/message-broker" module. 
+The sub-processes with auto-transitions: "PaymentAuthorization", "PaymentCapture", "PaymentRefund" and "PaymentCancel".
+
+The MessageBroker worker checks for new messages in the background (cron job) and triggers OMS events based on
+the configuration in `\Spryker\Zed\Payment\PaymentConfig::getSupportedOrderPaymentEventTransfersList()` (you can modify it for your project).
+
+The list of payment event messages is predefined:
+- PaymentAuthorized
+- PaymentAuthorizationFailed
+- PaymentCanceled
+- PaymentCancellationFailed
+- PaymentCaptured
+- PaymentCaptureFailed
+- PaymentRefunded
+- PaymentRefundFailed
+
+and they are common for all payment methods from ACP App Catalog.
+
+For example, a submitted order from the state `"new"` goes to the "PaymentAuthorization" subprocess where OMS will wait a payment event from ACP apps
+which will move order to the next state: `"payment authorized"` or `"payment authorization failed"` depending on the message.
+
+Similar approach is implemented also in "PaymentCapture", "PaymentRefund" and "PaymentCancel" sub-processes.
+
+{% info_block infoBox "Note" %}
+
+In case when payment operation happened offline or changed in payment provider system, but for some reason the message about it is not sent/lost,
+there is a manual transition available for each operation (by clicking button in the Back office UI). For example, an order stuck in the `"payment capture pending"` state,
+in this case a Back office user can make sure that the payment is solved in another way and click [payment capture successful] button to move the order to `"payment captured"`.
+
+{% endinfo_block %}
+
+### Payment Operation Commands
+
+The default OMS setup has 3 commands:
+1. "Payment/Capture"
+2. "Payment/Cancel"
+3. "Payment/Refund"
+
+The commands send asynchronous ACP messages to a payment app, so it can schedule requested operation for the specific amount for selected order and its items.
+Then as a response a payment app with payment event message (success/fail).
+
+The list of payment command messages is predefined:
+- CapturePayment
+- CancelPayment
+- RefundPayment
+
+In the project OMS configuration you can put these commands into the needed transition.
 
 ## Configuring OMS for Your Project
 
-The default ACP payment OMS configuration is located at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`.
+As each project has its unique order flow and use-cases, customize your OMS configuration while ensuring compatibility with ACP Catalog payment methods. Follow these steps:
 
-However, as each project has its own order flow and unique use-cases, you'll want to customize your OMS configuration and still
-be compatible with payment methods from ACP Catalog. Follow these steps:
-
-1. Familiarize yourself with OMS basics by referring to the [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) guide.
-2. Create your own payment OMS configuration based on `ForeignPaymentStateMachine01.xml`. Copy this file along with the `Subprocess/` folder to the project root `config/Zed/oms`.
-3. Rename the file and update the `<process name=""` value within the file to be equal to the file name.
-4. Enabled your new OMS configuration in the config file.
+1. Create your own payment OMS configuration based on `ForeignPaymentStateMachine01.xml`. Copy this file along with the `Subprocess/` folder to the project root `config/Zed/oms`.
+2. Rename the file, for example to `MyProjectForeignPaymentStateMachine01.xml` and update the `<process name="MyProjectForeignPaymentStateMachine01">` tag at the beginning of the file.
+3. Enable your new OMS configuration in the application config file:
 
 ```php
 // config_default.php
@@ -37,26 +111,11 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-The main OMS file includes `<subprocesses>` – similar to libraries or building blocks with their own `<states>`, `<transitions>`, and `<events>`.
-
-```xml
-<subprocesses>
-    <process name="PaymentAuthorization" file="Subprocess/PaymentAuthorization01.xml"/>
-    <!-- Other subprocesses -->
-</subprocesses>
-```
-
-Each process in the `<subprocesses>` section has a start state, one or more final states, and they are linked to the main State Machine .xml file.
-
-[img: default OMS]
-
 ## Customizing for Your Business Flow
 
-If your project doesn't involve product shipping, customize the main .xml file and each subprocess .xml file.
-
 ### Without shipping
-
-For example, you can change the transition from `"invoiced"` to `payment capture ready` state, making a direct transition
+If your project doesn't involve product shipping, customize the main .xml file and each subprocess .xml file.
+For example, you can change the transition from `"invoiced"` to `"payment capture ready"` state, making a direct transition
 from `"invoiced"` to `"payment capture pending"` with `event = start payment capture`, which has the command `"Payment/Capture"` on-enter.
 
 ```xml
@@ -161,4 +220,14 @@ For a simpler payment flow without pre-authorization, cancellation, and refunds,
 
 ### The most critical elements that must stay in Your Project
 
-TODO
+1. `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::PLUGINS_MESSAGE_HANDLER` has plugins:
+- `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` 
+- `Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin`
+
+2. `\Spryker\Zed\Oms\OmsDependencyProvider::COMMAND_PLUGINS` has commands: 
+- `$commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');`
+- `$commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');`
+- `$commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');`
+
+They are responsible for the messages sent to the ACP payment apps to run payment operations for the specific order or order item(s).
+

@@ -285,7 +285,7 @@ In October 2023, we have added and updated the following pages:
 - [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
-- [System requirements](/docs/scos/dev/system-requirements/202307.0/system-requirements.html).
+- [System requirements](/docs/dg/dev/system-requirements/202307.0/system-requirements.html).
 
 For more details about these and other updates to the Spryker docs in October 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 

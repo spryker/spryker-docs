@@ -92,7 +92,7 @@ To configure and customize your project, you can do the following:
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
+    <!-- * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html) -->
     * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)

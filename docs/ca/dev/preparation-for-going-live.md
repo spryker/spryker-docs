@@ -33,6 +33,10 @@ Ensure you have addressed all the items from the following checklists.
 
 ### Cloud
 
+- *Check and prepare connected systems - if applicable*
+    - Doublecheck that all VPC Peering/Site2Site VPN connections are monitored and secure. Spryker does not normally monitor such connections with external parties.
+    - Make sure that a network diagram exists that can be used to explain the setup quickly if need arises
+    - Make sure that routing is as expected and no internal resources are accidently exposed via the S2S or VPC Peering Setup.
 - *DDOS prevention or mitigation checked and implemented.*
     - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention Admin panel and Merchant portal. Add basic auth if applicable. For details, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)

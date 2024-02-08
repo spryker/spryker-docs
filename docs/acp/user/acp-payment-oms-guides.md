@@ -48,7 +48,6 @@ The main OMS file includes `<subprocesses>` – similar to libraries or building
 
 Each process in the `<subprocesses>` section has a start state, one or more final states, and they are linked to the main State Machine .xml file.
 
-
 [img: default OMS]
 
 ## Customizing for Your Business Flow
@@ -68,8 +67,7 @@ from `"invoiced"` to `"payment capture pending"` with `event = start payment cap
 </transition>
 ```
 
-
-[img with oms without shipping]
+[img: OMS without shipping]
 
 
 ### Without Return and Refund
@@ -95,7 +93,7 @@ Also, remove the transition in the main file using states from the removed proce
 
 Now, your OMS will not include blocks for `"ItemReturn"` and `"PaymentRefund"`.
 
-[img: oms without returns and refunds]
+[img: OMS without returns and refunds]
 
 
 ### Without Payment Authorization and Cancellation
@@ -159,8 +157,8 @@ For a simpler payment flow without pre-authorization, cancellation, and refunds,
 </statemachine>
 ```
 
-[img: OMS capture only]
+[img: OMS payment capture without authorization]
 
-### The most important elements that must stay
+### The most critical elements that must stay in Your Project
 
 TODO

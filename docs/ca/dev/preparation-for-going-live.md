@@ -94,47 +94,33 @@ See [Set up DNS](/docs/ca/dev/set-up-dns.html) for details on how to set up DNS 
 
 ### Application
 
-- *Performance tips are implemented and verified*. Double-check that you implemented all the [performance tips](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
-- *Variables and parameter store values are set up*. Double-check whether you have all environment variables and parameter store values set up. Remember that this has some lead time on our side. If you are still missing parameters, create them.
+- [Performance tips](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html) are implemented and verified.
+- Variables and parameter store values are set up. This has some lead time on our side. If you are still missing parameters, create them.
 
 ### Testing
 
-- *Conduct load tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
-- *Performance testing and environment scale dial-in*. Testing your production environment before officially going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience to your users right from the first request to the application.
-To make this process work effectively, maintain active communication with us. Inform us about your load and performance test plans and share the results so that we can fine-tune the environment to meet your specific requirements.
-- Import real data on production.
+- Conduct load tests. The sample data used for testing should be comparable to the size and complexity of the production data.
+- Performance testing and environment scale dial-in. Testing your production environment before going live and assessing its performance are critical steps for a successful launch. Because production environments typically employ horizontal auto-scaling, it's essential to conduct stress and performance tests under expected average and peak loads. These tests enable our team to optimize the environment's vertical scaling in advance, ensuring that it can seamlessly handle the expected loads from the get-go, without any potential delays caused by auto-scaling mechanisms. This proactive approach eliminates the need for post-launch adjustments, providing your team with a significant advantage and peace of mind, while delivering a fast and responsive experience for your users at the launch. To make this process work effectively, keep us updated about your load and performance test plans and share the results so that we can fine-tune the environment to meet your requirements.
+- Import real data on production. You must start working with data of realistic size and quality as early as possible. At this point, you must be importing data regularly to all your environments. We recommend working with the same data across all environments. This significantly simplifies troubleshooting and helps you estimate import performance, leading up to your go-live and helping us with environment sizing estimations.
+- Test payment. Non-production environments may not have the same WAF and firewall settings as production environments. So, make sure that all your requests have valid headers. Also, test the functionality of payment integrations that use call-backs or depend on API calls to your application in your production environment.
 
-{% info_block warningBox "Data import" %}
 
-You must start working with data of realistic size and quality as early as possible. At this point, you must be importing data regularly to all your environments. We recommend working with the same import data across all your environments. This significantly simplifies troubleshooting and helps you estimate import performance, leading up to your go-live and helping us with environment sizing considerations. We expect all our customers to follow this advice.
 
-{% endinfo_block %}
+## Two weeks before go-live
 
-- Test payment.
-
-{% info_block warningBox "Integration with payment providers" %}
-
-Lower or nonproduction environments may not have the same WAF and firewall settings configured as production environments. Therefore, make sure that all your requests have valid headers. Also, test the functionality of payment integrations that use call-backs or depend on API calls to your application in your production environment.
-
-{% endinfo_block %}
-
-## Two weeks before go-live ##
-
-- *Code freeze*. We recomment to have a code freeze at least two weeks before going live.
-- *Double-check the go-live date*. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
-- *Make sure that the rollback strategy is still valid*. Check that you have everything you need to recover from an unforeseen issue with the newest version of the project you are deploying.
-- *Validate testing strategy.*
-- *Organize a go-live support team*. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support or Operations teams.
-- *Validate BI and analytics integrations*. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
-- *Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
-- *Define the exact plan for the go-live day.*:
+- Code freeze. We recommend to have a code freeze at least two weeks before going live.
+- Double-check the go-live date. If any of the preceding tasks are not complete, postpone your go-live or discuss with us how to complete them in time. DNS changes are especially sensitive to deadlines. Due to how the DNS system works, any DNS changes take time to take effect.
+- Make sure the rollback strategy is valid. Check that you have everything for recovering from an unforeseen issue with the newest version of the project you are deploying.
+- Validate the testing strategy.
+- Organize a go-live support team. Prepare a team that can monitor your go-live, react quickly to any issues, and work with the Spryker Support and Operations teams.
+- Validate BI and analytics integrations. They should not be connected to your production database, but rather to the provided read replica. Make sure no external system is interacting with your production database.
+- Remove all the demo data from the environment. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo users in a live shop pose a significant security risk for your project.
+- Define the exact plan for the go-live day:
   - Define the time of deployment.
-  - Define the exact steps to be performed (including running Jenkins or other scripts if needed).
-- Make sure that DNS is set.
+  - Define the exact steps to be performed, including running Jenkins or other scripts if needed.
+- Make sure the DNS is set.
 
 
-{% info_block infoBox "Don't hesitate to contact us" %}
+## Contact us
 
 If your go-live date is close and you feel like you need help with any of the described tasks, contact us by your onboarding case *right away*.
-
-{% endinfo_block %}

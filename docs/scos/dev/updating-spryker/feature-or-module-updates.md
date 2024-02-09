@@ -3,6 +3,7 @@ title: Feature or module updates
 description: Choose at which level to take updates
 last_updated: Jun 16, 2021
 template: concept-topic-template
+redirect_from:
 ---
 
 When you know that you need to update your project, you need to decide if you want to do updates on the *feature* or the *module* level.

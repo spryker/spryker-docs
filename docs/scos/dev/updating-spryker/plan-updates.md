@@ -3,6 +3,7 @@ title: Plan updates
 description: Learn how to plan updates in your development process
 last_updated: Apr 3, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 This section provides recommendations on how you can build a process around updating your Spryker project, so you can plan, estimate, and continuously deliver updates, just like any feature you are building.

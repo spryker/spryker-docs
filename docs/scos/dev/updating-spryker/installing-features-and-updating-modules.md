@@ -3,6 +3,7 @@ title: Installing features and updating modules
 description: Learn how to take different kinds of updates and install new packages
 last_updated: Jun 16, 2021
 template: concept-topic-template
+redirect_from:
 ---
 
 This document describes how to install new features and modules and take different kind of updates.

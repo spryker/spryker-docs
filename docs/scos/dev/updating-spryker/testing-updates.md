@@ -3,6 +3,7 @@ title: Testing updates
 description: Learn how to test your code after taking updates
 last_updated: Apr 3, 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 To find out about the obvious update errors before executing the tests, run `php -d memory_limit=-1 ./vendor/bin/phpstan analyze --no-progress src/ -l 5`. It has to be set up and green before the updates happen.

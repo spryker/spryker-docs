@@ -3,6 +3,7 @@ title: Troubleshooting updates
 description: Common update issues and how to solve them
 last_updated: Jun 16, 2021
 template: concept-topic-template
+redirect_from:
 ---
 
 This document contains common issues related to updates and provides solutions for fixing them. If an issue is not on the list, and you need help, [contact us](#get-help-with-an-update).

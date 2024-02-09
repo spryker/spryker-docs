@@ -1,10 +1,10 @@
-  - /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
 ---
 title: Switch Demo Shop version
 description: Learn how to switch the version of a Demo Shop
 last_updated: Apr 13, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
 ---
 
 This document describes how to switch the version of a Demo Shop. You can switch to the next or the previous version. To do that, follow the steps:

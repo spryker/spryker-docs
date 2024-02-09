@@ -1,10 +1,10 @@
-  - /docs/scos/dev/updating-spryker/testing-updates.html
 ---
 title: Testing updates
 description: Learn how to test your code after taking updates
 last_updated: Apr 3, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/updating-spryker/testing-updates.html
 ---
 
 To find out about the obvious update errors before executing the tests, run `php -d memory_limit=-1 ./vendor/bin/phpstan analyze --no-progress src/ -l 5`. It has to be set up and green before the updates happen.
@@ -42,4 +42,4 @@ In addition to the automated tests and code analysis tools, you can optionally d
 
 ## Next steps
 
-[Preventing update issues](/docs/scos/dev/updating-spryker/preventing-update-issues.html)
+[Preventing update issues](/docs/dg/dev/updating-spryker/preventing-update-issues.html)

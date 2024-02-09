@@ -1,4 +1,3 @@
-  - /docs/scos/dev/updating-spryker/updating-spryker.html
 ---
 title: Updating Spryker
 description: Learn how to make the Spryker update process smoother, easier, and update efforts predictable
@@ -8,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/updating-a-spryker-
 originalArticleId: 0aac9b81-7db9-4a7e-87f8-35c2ac6efe1d
 redirect_from:
   - /docs/scos/dev/updating-a-spryker-based-project.html
+  - /docs/scos/dev/updating-spryker/updating-spryker.html
 ---
 
 Updating your Spryker shop is always an effort. New features, fixes, and updates are coming every day, and modules become more and more outdated. This raises many questions, the most common of which are:
@@ -61,4 +61,4 @@ Check out the how to migrate and update Spryker projects video for more details 
 
 ## Next steps
 
-[Feature or module updates](/docs/scos/dev/updating-spryker/feature-or-module-updates.html)
+[Feature or module updates](/docs/dg/dev/updating-spryker/feature-or-module-updates.html)

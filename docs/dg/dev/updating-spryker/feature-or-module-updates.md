@@ -1,10 +1,10 @@
-  - /docs/scos/dev/updating-spryker/feature-or-module-updates.html
 ---
 title: Feature or module updates
 description: Choose at which level to take updates
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/updating-spryker/feature-or-module-updates.html
 ---
 
 When you know that you need to update your project, you need to decide if you want to do updates on the *feature* or the *module* level.
@@ -82,4 +82,4 @@ You can replace the `spryker-feature/agent-assist` dependency in your `composer.
 
 ## Next steps
 
-[Plan updates](/docs/scos/dev/updating-spryker/plan-updates.html)
+[Plan updates](/docs/dg/dev/updating-spryker/plan-updates.html)

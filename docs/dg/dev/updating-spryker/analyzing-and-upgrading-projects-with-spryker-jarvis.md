@@ -1,4 +1,3 @@
-  - /docs/scos/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
 ---
 title: Analyzing and upgrading projects with Spryker Jarvis
 description: Learn how to install and use the Spryker Jarvis tool for upgrade and analysis of your project.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
 originalArticleId: 156a13c8-ce34-4d8f-ba1c-203af2975226
 redirect_from:
-  - /2021080/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
-  - /2021080/docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
-  - /docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
-  - /docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
-  - /v6/docs/analyzing-and-upgrading-your-project-with-spryker-jarvis
-  - /v6/docs/en/analyzing-and-upgrading-your-project-with-spryker-jarvis
+  - /docs/scos/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 

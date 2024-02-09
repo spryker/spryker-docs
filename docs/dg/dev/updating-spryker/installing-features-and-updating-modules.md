@@ -1,10 +1,10 @@
-  - /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
 ---
 title: Installing features and updating modules
 description: Learn how to take different kinds of updates and install new packages
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
 ---
 
 This document describes how to install new features and modules and take different kind of updates.
@@ -34,7 +34,7 @@ For *major* module version updates or installation of *new packages*, follow the
 ```BASH
 php -d memory_limit=-1 composer.phar require "spryker/price:^5.0.0"
 ```
-If no extra dependencies are found, `composer.json` is updated respectively. Otherwise, see [Update is not possible](/docs/scos/dev/updating-spryker/troubleshooting-updates.html).
+If no extra dependencies are found, `composer.json` is updated respectively. Otherwise, see [Update is not possible](/docs/dg/dev/updating-spryker/troubleshooting-updates.html).
 
 2. Follow the upgrade steps of the needed module version in the upgrade guide. Following the example with the price module, see [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 3.  Check for project changes, just like for the *minor* updates in the section above. Go to  `https://github.com/[module-name-here]/compare/[your-version]…[available-version]` and check if there are any changes that might conflict with your business logic.
@@ -63,4 +63,4 @@ You can learn about new Spryker features from the [release notes](/docs/scos/use
 
 ## Next steps
 
-[Testing updates](/docs/scos/dev/updating-spryker/testing-updates.html)
+[Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html)

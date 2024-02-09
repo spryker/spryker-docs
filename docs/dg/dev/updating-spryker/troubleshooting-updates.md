@@ -1,10 +1,11 @@
-  - /docs/scos/dev/updating-spryker/troubleshooting-updates.html
 ---
 title: Troubleshooting updates
 description: Common update issues and how to solve them
 last_updated: Jun 16, 2021
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/updating-spryker/troubleshooting-updates.html
+- /docs/scos/dev/updating-spryker/preventing-update-issues.html
 ---
 
 This document contains common issues related to updates and provides solutions for fixing them. If an issue is not on the list, and you need help, [contact us](#get-help-with-an-update).
@@ -65,6 +66,10 @@ spryker/symfony 3.2.0 requires symfony/stopwatch (^4.0.0)
 myProject/platform dev-develop does not require symfony/stopwatch (but v2.8.34 is installed)
 ```
 		Update the required packages, then try updating the original module again.
+
+## Inherited class is updated on the core level
+
+One of the issues projects often face during an upgrade is when a Spryker class that was inherited on the project level gets updated on the core level. This can result in code syntax issues or logical issues, which you need to fix manually. To avoid such issues, follow the [Spryker Extension best practices](/docs/dg/dev/backend-development/extend-spryker/extend-spryker.html).
 
 ## Get help with an update
 

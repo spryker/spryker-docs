@@ -24,20 +24,20 @@ We divided the preparation into approximate timeframes, and you can adjust them 
 
 ## Eight weeks before go-live
 
-*Provide us with your go-live plan*. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
+Provide us with your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for DNS switching and the hypercare phase we provide before and after your go-live.
 
-Ensure you have addressed all the items from the following checklists.
+Make sure you addresses all the items from the following checklist.
 
 ### Cloud environments
 
 - Connected systems are checked and prepared:
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that that there is a network diagram that can be used to explain the setup quickly if need arises.
-    - Make sure that routing works as expected and no internal resources are accidentally exposed via the S2S or VPC peering setup.
+    - Make sure that routing works as expected and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.
 - DDOS prevention or mitigation is checked and implemented:
     - Check your concepts for DOS and DDOS prevention or mitigation and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
-    - Check your concepts for DOS and DDOS prevention for the Back Office and Merchant portal. Add basic auth if applicable. For instructions on impleneting basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html).
-- DNS strategy is defined. If you delegate DNS to us, let us know the date on which to point the domain name to your project.
+    - Check your concepts for DOS and DDOS prevention for the Back Office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html).
+- The DNS strategy is defined. If you delegate DNS to us, let us know the date on which to point the domain name to your project.
 
 {% info_block infoBox "DNS propagation" %}
 
@@ -46,28 +46,24 @@ After pointing the domain name to your project, some of your customers may still
 {% endinfo_block %}
 
 
-We highly recommend implementing the [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
-
-Double-check that you do not have any clear text passwords stored in config files or repositories.
-
 ### Application
 
 - Upgrade your project to the latest release. Or at least upgrade to a release that supports the Docker SDK.
 - Update `spryker/twig` to version 3.15.2 or higher because this and later version have important stability improvements over version 3.15.1.
 - Migrate the database to MariaDB.
-- Split Zed endpoints as outlined in [Integrate separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html).
+- Split Zed endpoints as described in [Integrate separate endpoint bootstraps](/docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html).
 - Verify that the naming scheme of the services exactly matches the scheme in a Demo Shop: [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
 - Migrate data from local storages to S3 by [integrating FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html).
 - Implement [Jenkins performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
 - Implement [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 - Implement [security guidelines](/docs/dg/dev/guidelines/security-guidelines.html).
-- Double-check that there are no clear text passwords stored in config files or repositories.
+- Double-check that there are no clear text passwords stored in config files and repositories.
 
 ### Testing
 
-- [Test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html) to understand how your application will perform and work when deployed.
+- To understand how your application will perform and work when deployed, [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html).
 - Before deploying your payment options, test them locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
 ### SEO
@@ -76,17 +72,17 @@ Make sure the SEO strategy and plan are defined. If you are migrating to Spryker
 
 ## Four weeks before go-live
 
-Four weeks before your project goes live, make sure you addressed all the items from the following checklists.
+Make sure you addressed all the items from the following checklist.
 
 ### Cloud
 
-- *Make sure you have an APM set up*. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
-- *Verify that your Deploy file is set up correctly*. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your Deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- *TLS certificates are provisioned*. If you delegate DNS to Spryker, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records by the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
-- *Deploy the production environment regularly*. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
-- *The DNS names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
-- *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker Cloud Commerce OS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name. See [Email service](/docs/ca/dev/email-service/email-service.html) for more information about the default email service and its restrictions.
-- Optional: *Delegate DNS*. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
+- An APM set up. Application Performance Monitoring tools help you identify performance bottlenecks in your application. You can request the NewRelic APM for an additional fee.
+- Verify that your deploy file is set up correctly. Verify that your project works with the production endpoints. You can set both testing and production endpoints in your deploy file. Developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
+- TLS certificates are provisioned. If you delegate DNS to us, TLS certificates for your endpoints are created automatically. If you want us to create TLS certificates for your endpoints but don't want to delegate your DNS, request the verification of DNS records using the [Support Portal](https://support.spryker.com). If you don't delegate your DNS and want to use your own certificates, provide them to us as described in [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
+- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html).
+- The DNS names and strategy for your shop are clear. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage it. For example, you want to use `spryker.com` as the domain for your shop, but you want users to access the Storefront using the `www.spryker.com` subdomain.
+- Decide how email sending should be handled. If you want to send emails using Spryker, decide whether you want to use the native mail service or integrate a third-party one. If you want to use the native one, let us know the email address you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name. For more information about the default email service and its restrictions, see [Email service](/docs/ca/dev/email-service/email-service.html).
+- Optional: Delegate DNS. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
 
 ### DNS setup
 

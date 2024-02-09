@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/feature-or-module-updates.html
 ---
 title: Feature or module updates
 description: Choose at which level to take updates

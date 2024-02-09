@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/plan-updates.html
 ---
 title: Plan updates
 description: Learn how to plan updates in your development process

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/troubleshooting-updates.html
 ---
 title: Troubleshooting updates
 description: Common update issues and how to solve them

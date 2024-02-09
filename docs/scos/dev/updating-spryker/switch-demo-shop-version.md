@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/switch-demo-shop-version.html
 ---
 title: Switch Demo Shop version
 description: Learn how to switch the version of a Demo Shop

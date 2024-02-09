@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/updating-spryker.html
 ---
 title: Updating Spryker
 description: Learn how to make the Spryker update process smoother, easier, and update efforts predictable

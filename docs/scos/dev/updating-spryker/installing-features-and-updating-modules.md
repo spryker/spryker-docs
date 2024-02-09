@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
 ---
 title: Installing features and updating modules
 description: Learn how to take different kinds of updates and install new packages

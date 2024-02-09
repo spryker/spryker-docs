@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/preventing-update-issues.html
 ---
 title: Preventing update issues
 description: Learn how to prevent update issues

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/testing-updates.html
 ---
 title: Testing updates
 description: Learn how to test your code after taking updates

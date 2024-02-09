@@ -1,3 +1,4 @@
+  - /docs/scos/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
 ---
 title: Analyzing and upgrading projects with Spryker Jarvis
 description: Learn how to install and use the Spryker Jarvis tool for upgrade and analysis of your project.

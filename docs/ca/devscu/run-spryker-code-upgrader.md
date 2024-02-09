@@ -7,7 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/run-spryker-code-upgrader.html
 ---
 
-Spryker Code Upgrader runs automatically based on the [configured schedule](/docs/scu/dev/configure-spryker-code-upgrader.html). 
+Spryker Code Upgrader runs automatically based on the [configured schedule](/docs/scu/dev/configure-spryker-code-upgrader.html).
 
 To manually trigger the Upgrader, follow the steps:
 
@@ -16,3 +16,7 @@ To manually trigger the Upgrader, follow the steps:
     This opens the **Pipelines** page.
 3. Next to the **Upgrader** pipeline, click **Run**.
     This manually triggers the Upgrader. It analyzes the connected project and creates a PR with updates.
+
+## Next step
+
+Finilizing upgrades

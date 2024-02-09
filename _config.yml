@@ -121,6 +121,12 @@ defaults:
       sidebar: "ca_dev_sidebar"
       role: "dev"
   -
+     scope:
+       path: "docs/ca/devscu"
+     values:
+       sidebar: "ca_devscu_sidebar"
+       role: "dev"
+  -
     scope:
       path: "docs/acp"
     values:
@@ -131,17 +137,6 @@ defaults:
     values:
       sidebar: "acp_user_sidebar"
       role: "user"
-  -
-     scope:
-       path: "docs/scu"
-     values:
-       product: "scu"
-  -
-     scope:
-       path: "docs/scu/dev"
-     values:
-       sidebar: "scu_dev_sidebar"
-       role: "dev"
   -
      scope:
        path: "docs/dg"
@@ -219,11 +214,11 @@ versioned_categories:
 
 sidebars:
   - ca_dev_sidebar
+  - ca_devscu_sidebar  
   - scos_dev_sidebar
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - scu_dev_sidebar
   - pbc_all_sidebar
   - dg_dev_sidebar
 
@@ -259,7 +254,7 @@ algolia:
     - name: 'scu_dev'
       title: 'SCU Developer'
     - name: 'dg_dev'
-      title: 'Development'      
+      title: 'Development'
 sass:
     sass_dir: css
     style: compressed

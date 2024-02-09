@@ -29,19 +29,19 @@
                                         <a href="/" class="main-nav__opener {% if page.layout == 'home' %}main-nav__opener--grey{% endif %} nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <span class="main-nav__opener-label">Select a guide</span>
                                             <span class="main-nav__opener-text">
-                                                {% if page.product == 'development-guide' and page.role == 'dev' %}
+                                                {% if page.product == 'dg' and page.role == 'dev' %}
                                                 Development
-                                                {% elsif page.product == 'packages-business-capabilities' and page.role == 'all' %}
+                                                {% elsif page.product == 'pbc' and page.role == 'all' %}
                                                 Packages Business Capabilities
                                                 {% elsif page.product == 'ca' and page.role == 'dev' %}
-                                                Cloud administration
+                                                Manage cloud applications
                                                 {% elsif page.product == 'scos' and page.role == 'dev' %}
+                                                Upgrade cloud applications
+                                                {% elsif page.product == 'scos' and page.role == 'devscu' %}
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
                                                 {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
-                                                Spryker Code Upgrader
-                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
                                                 {% elsif page.product == 'acp' and page.role == 'user' %}
                                                 App Composition Platform users guide
@@ -88,11 +88,32 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
-                                                Cloud administration
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Cloud administration
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
                                                 </a>
-                                            </li>                                            
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/ca/dev/getting-started-with-cloud-administration.html.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">Manage applications</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/ca/devscu/spryker-code-upgrader.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">Upgrade applications</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li>
                                                 <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
                                                 Spryker SDK
@@ -101,11 +122,6 @@
                                             <li>
                                                 <a href="/docs/acp/user/intro-to-acp/acp-overview.html" class="main-nav__drop-link">
                                                 App Composition Platform
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/scu/dev/spryker-code-upgrader.html" class="main-nav__drop-link">
-                                                Spryker Code Upgrader
                                                 </a>
                                             </li>
                                         </ul>

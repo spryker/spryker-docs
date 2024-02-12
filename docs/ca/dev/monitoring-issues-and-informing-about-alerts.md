@@ -36,8 +36,8 @@ The following alerts are configured by default for all environments.
 |---|---|
 | ElastiCache Status  | Checks the status of ‘ElastiCache for Redis’.  |
 | Redis is not used by any service  | Checks whether ElastiCache is used.  |
-| Redis available Memory  | Redis free Memory on the host is running low  |
-| Redis High CPU  | Redis service running High CPU  |
+| Redis available Memory  | Checks if Redis free memory on the host is running low.  |
+| Redis High CPU  | Checks if the Redis service is high on CPU usage.  |
 
 </div>
 
@@ -47,9 +47,9 @@ The following alerts are configured by default for all environments.
 
 | NAME OF METRIC  | DESCRIPTION  |
 |---|---|
-| ES Cluster Status  | Checks the status of the Elasticsearch Cluster.  |  
-| ES available storage  | Checks available storage of the Elasticsearch Cluster.  |  
-| ES High CPU  | Elasticsearch service running High CPU.  |  
+| ES Cluster Status  | Checks the status of the Elasticsearch cluster.  |  
+| ES available storage  | Checks the available storage of the Elasticsearch cluster.  |  
+| ES High CPU  | Checks if the Elasticsearch service is high on CPU usage.  |  
 
 </div>
 
@@ -60,9 +60,9 @@ The following alerts are configured by default for all environments.
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
 | RDS Status  | Checks the status of the RDS.  |   
-| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO Credits.  |   
+| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |   
 | RDS available storage  | Checks available storage of RDS.  |
-| RDS High CPU   | RDS service running High CPU.  |
+| RDS High CPU   | Checks if the RDS service is high on CPU usage.  |
 
 
 </div>
@@ -73,12 +73,12 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-| Jenkins Status  | Checks the status of the Jenkins.  |
+| Jenkins Status  | Checks the status of Jenkins.  |
 | Scheduler disk is 90% filled  | Alerts the monitoring team once Jenkins disk utilization is at 90% or above.  |
 | Scheduler inode usage is above 90%  | Alerts the monitoring team once Jenkins inode utilization is at 90% or above.  |
-| Jenkins container can't be deployed  | Checks whether there are deployment failures of the Jenkins container.   |
-| Jenkins High CPU  | Jenkins service running High CPU.   |
-| Jenkins High Memory  | Jenkins service running High Memory.   |
+| Jenkins container can't be deployed  | Checks if there are deployment failures of the Jenkins container.   |
+| Jenkins High CPU  | Checks if the Jenkins service is high on CPU usage.   |
+| Jenkins High Memory  | Checks if the Jenkins service is high on memory usage. |
 
 </div>
 
@@ -89,11 +89,11 @@ The following alerts are configured by default for all environments.
 | NAME OF METRIC  | DESCRIPTION  |  
 |---|---|
 | RabbitMQ web page isn't accessible  | Checks if RabbitMQ web UI is reachable.  |
-| RMQ: status by host  | Checks if the host that RabbitMQ is running on is online.  |
-| RMQ: disk alarms  | Checks the status of the storage that is attached the instance that RabbitMQ is running on.  |
-| RMQ: memory alarms  | Checks memory utilization on the RabbitMQ instance.   |
-| RMQ: missing queues  | Checks missing queues on the RabbitMQ instance.   |
-| RMQ: High CPU  | RabbitMQ service running High CPU.   |
+| RMQ: status by host  | Checks if the RabbitMQ host is reachable.  |
+| RMQ: disk alarms  | Checks the status of the storage attached to the instance which RabbitMQ is running on.  |
+| RMQ: memory alarms  | Checks the memory utilization on the RabbitMQ instance.   |
+| RMQ: missing queues  | Checks for missing queues on the RabbitMQ instance.   |
+| RMQ: High CPU  | Checks if the RabbitMQ service is high on CPU usage.   |
 
 </div>
 
@@ -104,9 +104,9 @@ The following alerts are configured by default for all environments.
 | NAME OF METRIC  | DESCRIPTION  |  
 |---|---|
 | ECS Service Status  | Checks the status of all ECS services.  |
-| ECS Service High CPU  | ECS service running High CPU.  |
-| ECS Service High Memory  | ECS service running High Memory.  |
-| ECS Service Auto-Scaling  | ECS service Auto-Scaling activity.  |
+| ECS Service High CPU  | Checks if the ECS service is high on CPU usage.  |
+| ECS Service High Memory  | Checks if the ECS service is high on memory usage.  |
+| ECS Service Auto-Scaling  | Monitors the activity of the ECS service auto-scaling.  |
 
 
 </div>
@@ -117,20 +117,18 @@ The following alerts are configured by default for all environments.
 
 | NAME OF METRIC  | DESCRIPTION  |  
 |---|---|
-| ECR Image scan results  | Spryker scans images that are used during the application build process. If high severity vulnerabilities are discovered, an alert is triggered.  |
+| ECR Image scan results  | Scans the images used for the application build process. If high severity vulnerabilities are discovered, an alert is triggered.  |
 
 </div>
 
 ## In what cases do we contact you?
 
-Most of the alerts that we receive are temporary states and do not constitute a real problem. However, there are alert patterns that require us to take action. Here we differentiate between acutely critical issues in production environments and staging or test environments. We focus on critical infrastructure problems in the production environments.
+Most alerts we receive are temporary states and aren't a real problem. However, some alert patterns require us to take action. There is a difference between critical issues in production environments and staging or test environments. We focus on critical infrastructure problems in production environments.
 
-If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the alert requires an action, the team decides if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the Case Detail view under Ticket Status.
+If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the team needs to take an action, they decide if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the **Case Detail** view under **Ticket Status**.
 
-If it is possible to resolve the problem on our own, we solve it. In case of  downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
-
-To sum up, we proactively inform you about infrastructure issues where your collaboration is necessary. In case of an emergency, we keep you in the loop by sharing our diagnosis, options for action, and after the issue is resolved, a root cause analysis.
+If it's possible to resolve an issue on our own, we'll do it. In case of a downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
 
 ## Want more insights?
 
-We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. If you want to request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.
+We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. To request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

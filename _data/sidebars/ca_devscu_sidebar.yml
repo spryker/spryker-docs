@@ -3,55 +3,55 @@ entries:
   - product: Spryker Code Upgrader
     nested:
       - title: Spryker Code Upgrader
-        url: /docs/scu/dev/spryker-code-upgrader.html
-      - title: How the Upgrader works
-        url: /docs/scu/dev/how-the-spryker-code-upgrader-works.html
-      - title: Developing with the Upgrader
-        url: /docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html
+        url: /docs/ca/devscu/spryker-code-upgrader.html
+      - title: How it works
+        url: /docs/ca/devscu/how-the-spryker-code-upgrader-works.html
+      - title: Upgrades in the development workflow
+        url: /docs/ca/devscu/spryker-code-upgrader-in-a-development-workflow.html
       - title: Prepare a project for the Upgrader
-        url: /docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
+        url: /docs/ca/devscu/connect-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
       - title: Get access
-        url: /docs/scu/dev/get-access-to-spryker-code-upgrader.html
+        url: /docs/ca/devscu/get-access-to-spryker-code-upgrader.html
       - title: Connect your project
         nested:
           - title: Connect a GitHub managed project
-            url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html
           - title: Connect a project self-hosted with GitLab
-            url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html
           - title: Connect a Azure managed project
-            url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
           - title: Connect a GitLab managed project
-            url: /docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
       - title: Set the target branch for PRs
-        url: /docs/scu/dev/select-target-branch-for-prs.html
+        url: /docs/ca/devscu/select-target-branch-for-prs.html
       - title: Configure
-        url: /docs/scu/dev/configure-spryker-code-upgrader.html
+        url: /docs/ca/devscu/configure-spryker-code-upgrader.html
       - title: Invite users
-        url: /docs/scu/dev/invite-users-to-spryker-ci.html
-      - title: Run the Upgrader
-        url: /docs/scu/dev/run-spryker-code-upgrader.html
+        url: /docs/ca/devscu/invite-users-to-spryker-ci.html
+      - title: Run
+        url: /docs/ca/devscu/run-spryker-code-upgrader.html
       - title: Roll back upgrades
-        url: /docs/scu/dev/roll-back-upgrades.html
+        url: /docs/ca/devscu/roll-back-upgrades.html
       - title: Integrating code releases
-        url: /docs/scu/dev/integrating-code-releases/integrating-code-releases.html
+        url: /docs/ca/devscu/integrating-code-releases/integrating-code-releases.html
         nested:
           - title: Integrating security releases
-            url: /docs/scu/dev/integrating-code-releases/integrating-security-releases.html
+            url: /docs/ca/devscu/integrating-code-releases/integrating-security-releases.html
           - title: Handling upgrade warnings
-            url: /docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html
+            url: /docs/ca/devscu/integrating-code-releases/handling-upgrade-warnings.html
 
       - title: Troubleshooting
         url: /docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html
         nested:
         - title: Check Spryker Code Upgrader logs
-          url: /docs/scu/dev/check-spryker-code-upgrader-logs.html
+          url: /docs/ca/devscu/check-spryker-code-upgrader-logs.html
         - title: "Entity does not exist: Pyz prefix"
-          url: /docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html
+          url: /docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html
         - title: "TransportException: Cannot move pack"
-          url: /docs/scu/dev/troubleshooting/transportexception-cannot-move-pack.html
+          url: /docs/ca/devscu/troubleshooting/transportexception-cannot-move-pack.html
         - title: The process exceeded the timeout
-          url: /docs/scu/dev/troubleshooting/the-process-exceeded-the-timeout.html
+          url: /docs/ca/devscu/troubleshooting/the-process-exceeded-the-timeout.html
         - title: You have an unprocessed PR from a previous update
-          url: /docs/scu/dev/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
+          url: /docs/ca/devscu/troubleshooting/you-have-an-unprocessed-pr-from-a-previous-update.html
         - title: A PHP extension is missing from your system
-          url: /docs/scu/dev/troubleshooting/a-php-extension-is-missing-from-your-system.html
+          url: /docs/ca/devscu/troubleshooting/a-php-extension-is-missing-from-your-system.html

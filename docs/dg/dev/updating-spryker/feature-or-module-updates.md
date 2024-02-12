@@ -82,4 +82,4 @@ You can replace the `spryker-feature/agent-assist` dependency in your `composer.
 
 ## Next steps
 
-[Plan updates](/docs/dg/dev/updating-spryker/plan-updates.html)
+[Plan updates](/docs/dg/dev/updating-spryker/planning-updates.html)

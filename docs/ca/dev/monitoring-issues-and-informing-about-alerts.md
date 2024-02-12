@@ -7,7 +7,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
 ---
 
-Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side, or from your side. This document explains in details how monitoring and alerting works on Spryker Cloud Commerce OS.
+Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. If an issue occurs, this team takes action autonomously and informs you about any further actions needed on their or your side. This document explains how monitoring and alerting works.
 
 ## What is monitored?
 
@@ -17,14 +17,14 @@ The following alerts are configured by default for all environments.
 
 <div class="width-100">
 
-|NAME OF METRIC   | DESCRIPTION  |
+| NAME OF METRIC   | DESCRIPTION  |
 |---|---|
-|External monitor: HTTP check Yves/Zed /health-check (Draft)   | Checks if Yves and Zed health-check endpoints provide an expected response.  |
-| 200 responses on Yves / Glue in ALB  | Checks whether Yves and GLUE provide 200 OK response to application load balancer.  |
-| 200 responses on Zed in ALB  | Checks whether ZED endpoint provides 200 OK response to application load balancer.  |
-| AVG Response time in ms  | Checks the page response time and runs on a pre-set threshold.  |
-| ALB 5XX response codes | Checks the status codes the application load balancer receives from the load balanced applications for the 5XX status codes.  |
-| ALB Healthy Hosts in Target Group | Check Healthy Hosts in Target Group.  |
+| External monitor: HTTP check Yves/Zed /health-check (Draft)   | Checks if Yves and Zed health-check endpoints provide an expected response.  |
+| 200 responses on Yves / Glue in ALB  | Checks if Yves and GLUE provide the 200 OK response to the application load balancer.  |
+| 200 responses on Zed in ALB  | Checks if the Zed endpoint provides the 200 OK response to the application load balancer.  |
+| AVG Response time in ms  | Checks page response time and runs on a pre-set threshold.  |
+| ALB 5XX response codes | Checks if the application load balancer receives 5XX status codes from the load-balanced applications.  |
+| ALB Healthy Hosts in Target Group | Sends health checks to the registered targets.  |
 
 </div>
 
@@ -61,7 +61,7 @@ The following alerts are configured by default for all environments.
 |---|---|
 | RDS Status  | Checks the status of the RDS.  |   
 | RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO Credits.  |   
-| RDS available storage  | Checks available storage of RDS.  | 
+| RDS available storage  | Checks available storage of RDS.  |
 | RDS High CPU   | RDS service running High CPU.  |
 
 

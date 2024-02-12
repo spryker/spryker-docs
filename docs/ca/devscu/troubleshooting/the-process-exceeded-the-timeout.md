@@ -7,7 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/troubleshooting/the-process-exceeded-the-timeout.html
 ---
 
-If the execution of Spryker Code Upgrader returns a Composer timeout error, make sure that your access token is still valid. It may be expired or have incorrect permissions.
+If executing the Upgrader returns a Composer timeout error, make sure that your access token is still valid. It may be expired or have incorrect permissions.
 
 ## Error
 

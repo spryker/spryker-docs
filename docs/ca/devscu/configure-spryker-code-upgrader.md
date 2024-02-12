@@ -7,7 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/configure-spryker-code-upgrader.html
 ---
 
-Spryker Code Upgrader offers customizable options to tailor the upgrading process according to your project requirements. The Upgrader is customized by running a dedicated pipeline with configuration variables.
+Spryker Code Upgrader offers customization options to tailor the upgrading process to your project requirements. The Upgrader is customized by running a dedicated pipeline with configuration variables.
 
 To configure the Upgrader, follow the steps:
 
@@ -30,7 +30,7 @@ To configure the Upgrader, follow the steps:
 
 This runs the pipeline. After it finishes, the configuration gets updated.
 
-## Variables
+## Customization variables
 
 | VARIABLE              | DESCRIPTION                                                                                                                                                                                                                                                                                          | DEFAULT VALUE |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|

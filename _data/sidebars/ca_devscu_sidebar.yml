@@ -41,6 +41,7 @@ entries:
             url: /docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html
 
       - title: Troubleshooting
+        url: /docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html
         nested:
         - title: Check Spryker Code Upgrader logs
           url: /docs/scu/dev/check-spryker-code-upgrader-logs.html

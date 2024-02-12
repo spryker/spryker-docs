@@ -36,13 +36,13 @@ Currently, the Upgrader supports GitHub, GitLab, and Azure. If you want to use a
 
 ## Migrate to cloud
 
-The Upgrader supports only projects that run in [cloud environments](/docs/ca/dev/getting-started-with-cloud-administration.html). If you are running Spryker on premises, migrate to cloud.
+The Upgrader supports only projects that run in [cloud environments](/docs/ca/dev/getting-started-with-cloud-administration.html). If you are running Spryker on premises, [migrate to cloud](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html).
 
 ## Fulfill minimum technical requirements
 
 For a smooth experience, make sure that your environments meet the minimum technical requirements:
 
-* PHP 8.1+. The Upgrader supports a minimum version of PHP 8.0. However, PHP 8.0 reaches end of life in November 2023, so make sure to update PHP to the [recommended version](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+* PHP 8.1+. The Upgrader supports a minimum version of PHP 8.0. However, PHP 8.0 reached end of life in November 2023, so make sure to update PHP to the [recommended version](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To check if your PHP version is supported, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
 * Composer 2.5+
 * Git 2.24+
 * PHPStan 1.9+

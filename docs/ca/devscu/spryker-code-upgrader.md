@@ -44,4 +44,4 @@ The Upgrader is shipped with PaaS+ in the EU region.
 
 ## Next steps
 
-[Developing with Spryker Code Upgrader](/docs/scu/dev/developing-with-spryker-code-upgrader.html)
+[How Spryker Code Upgrader works](/docs/ca/devscu/how-spryker-code-upgrader-works.html)

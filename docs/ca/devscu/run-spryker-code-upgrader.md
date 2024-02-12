@@ -19,4 +19,5 @@ To manually trigger the Upgrader, follow the steps:
 
 ## Next step
 
-Finilizing upgrades
+* [Troubleshooting](/docs/ca/devscu/troubleshooting/troubleshooting-spryker-code-upgrader-issues.html)
+* [Finilizing upgrades]()

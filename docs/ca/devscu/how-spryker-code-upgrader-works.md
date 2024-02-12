@@ -10,7 +10,7 @@ redirect_from:
 
 To update a project, Spryker Code Upgrader runs the following steps.
 
-## 1. Identifies the available updates for the Spryker modules
+## 1. Identify the available updates for the Spryker modules
 
 1. To identify the modules to be updated, the Upgrader compares the information present in the `composer.json` and `composer.lock` files with Spryker's latest released code.
 2. It creates a list of modules and third-party libraries to be updated and groups the modules according to how they are released.
@@ -22,7 +22,7 @@ Because modules depend on other modules, we tend to release them in groups. When
 {% endinfo_block %}
 
 
-## 2. Updates the modules and libraries
+## 2. Update the modules and libraries
 
 Using `composer`, the Upgrader updates the modules in groups.
 
@@ -55,19 +55,19 @@ The Upgrader uses [Composer](https://getcomposer.org/) for updating modules and 
 
 {% endinfo_block %}
 
-## 3. Creates a Git branch
+## 3. Create a Git branch
 
 The Upgrader creates a separate Git branch to commit the changes to. The branch name follows the pattern: `upgradebot/upgrade-for-{base-branch-name}-{last-commit-hash-in-the-base-branch}`.
 
-## 4. Commits the changes
+## 4. Commit the changes
 
 The Upgrader commits the changes in the `composer.json` and `composer.lock` files to the branch.
 
-## 5. Pushes the changes
+## 5. Push the changes
 
 The Upgrader pushes the changes to your source code provider.
 
-## 6. Creates a PR
+## 6. Create a PR
 
 The Upgrader creates a PR using your source code provider API. After the PR is created, you can review and merge it to apply the updates.
 

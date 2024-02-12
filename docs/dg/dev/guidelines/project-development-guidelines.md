@@ -24,7 +24,7 @@ There are different strategies developers can use to develop projects. Before st
 - Project modules
 
 ## Updating Spryker
-It is essential to ensure that [Spryker is updated](https://docs.spryker.com/docs/scos/dev/updating-spryker/updating-spryker.html) to the latest stable version.
+It is essential to ensure that [Spryker is updated](/docs/dg/dev/updating-spryker/updating-spryker.html) to the latest stable version.
 
 ## Apply coding guidelines
 Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html).

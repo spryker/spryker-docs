@@ -265,7 +265,7 @@ In October 2023, we have added and updated the following pages:
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
 - [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
@@ -516,7 +516,7 @@ In April 2023, we have added and updated the following pages:
 ### New pages
 
 - [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

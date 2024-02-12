@@ -1,8 +1,11 @@
 ---
-title: Plan updates
+title: Planning updates
 description: Learn how to plan updates in your development process
 last_updated: Apr 3, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html
+- /docs/scos/dev/updating-spryker/plan-updates.html
 ---
 
 This section provides recommendations on how you can build a process around updating your Spryker project, so you can plan, estimate, and continuously deliver updates, just like any feature you are building.
@@ -43,4 +46,4 @@ Like with any other task, you can prioritize and estimate the update iterations.
 
 ## Next steps
 
-[Installing features and updating modules](/docs/scos/dev/updating-spryker/installing-features-and-updating-modules.html)
+[Installing features and updating modules](/docs/dg/dev/updating-spryker/installing-features-and-updating-modules.html)

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/oryx-presets.html
 ---
 title: "Oryx: Presets"
 description: Presets are used to install predefined applications

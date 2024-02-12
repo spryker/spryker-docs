@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-compositions.html
 ---
 title: "Oryx: Compositions"
 description: Compositions are used to organize components and provide layout in Oryx applications

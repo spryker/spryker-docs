@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-feature-extension/table-feature-editable.html
 ---
 title: Table Feature Editable
 description: This document provides details about the Table Feature Editable component in the Components Library.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/project-structure.html
 ---
 title: Project structure
 description: This document provides details about the structure of the frontend project in the Spryker Marketplace.

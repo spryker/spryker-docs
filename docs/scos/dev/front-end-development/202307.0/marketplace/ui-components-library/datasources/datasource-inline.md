@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 title: Datasource Inline
 description: This document provides details about the Datasource Inline service in the Components Library.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/front-end-builder-for-yves.html
 ---
 title: Front-end builder for Yves
 description: This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.

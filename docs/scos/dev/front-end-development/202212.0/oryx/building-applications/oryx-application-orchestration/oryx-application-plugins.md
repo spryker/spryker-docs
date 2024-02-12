@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
 ---
 title: Oryx application plugins
 description: Plugins of the Oryx Application

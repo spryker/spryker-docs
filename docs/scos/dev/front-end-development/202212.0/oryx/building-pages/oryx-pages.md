@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-pages.html
 ---
 title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components

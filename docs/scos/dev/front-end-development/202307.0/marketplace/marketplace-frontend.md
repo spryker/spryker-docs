@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/marketplace-frontend.html
 ---
 title: Marketplace frontend
 description: working with Marketplace frontend
 last_updated: Jan 12, 2023
 template: concept-topic-template
+redirect_from:
 ---
 This section explains how to build and set up the Merchant Portal frontend and add additional frontend functionality. It includes the following articles:
 * [Extending the project](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/extend-the-marketplace-frontend.html)

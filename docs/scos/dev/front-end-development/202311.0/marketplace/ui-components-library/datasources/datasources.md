@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 title: Datasources
 last_updated: Jun 07, 2021

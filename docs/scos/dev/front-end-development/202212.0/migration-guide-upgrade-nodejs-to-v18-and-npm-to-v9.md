@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
 ---
 title: Migration guide - Upgrade Node.js to v18 and npm to v9
 last_updated: May 16, 2023

@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/persistence/persistence.html
 ---
 title: Persistence
 last_updated: Jun 07, 2021
 description: This document provides details about the Persistence service in the Components Library.
 template: concept-topic-template
+redirect_from:
 related:
   - title: In Memory Persistence Strategy
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html

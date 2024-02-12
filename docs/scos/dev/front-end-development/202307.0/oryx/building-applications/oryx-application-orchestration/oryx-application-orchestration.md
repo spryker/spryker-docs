@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html
 ---
 title: Oryx application orchestration
 description: Orchestration of the Oryx Application

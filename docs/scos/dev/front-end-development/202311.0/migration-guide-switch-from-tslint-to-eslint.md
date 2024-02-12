@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/migration-guide-switch-from-tslint-to-eslint.html
 ---
 title: Migration guide - Switch from TSLint to ESLint
 description: Use this guide to migrate the project from TSLint to ESLint.

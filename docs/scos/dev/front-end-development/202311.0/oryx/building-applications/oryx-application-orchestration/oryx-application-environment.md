@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
 ---
 title: Oryx application environment
 description: Environment of the Oryx Application

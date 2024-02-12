@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/zed/oryx-for-zed.html
 ---
 title: Oryx for Zed
 description: oryx-for-zed is an extension of Oryx that performs a full build for Spryker Zed UI applications.

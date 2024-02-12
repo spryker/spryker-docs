@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-typography.html
 ---
 title: "Oryx: Typography"
 description: Typography design tokens are used for a consistent design system through the components in Oryx applications

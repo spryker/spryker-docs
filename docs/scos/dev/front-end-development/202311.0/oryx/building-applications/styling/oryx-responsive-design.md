@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/styling/oryx-responsive-design.html
 ---
 title: "Oryx: Responsive design system"
 description: Learn how to leverage Oryx's Responsive Design system to create stunning and user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 last_updated: October 3, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx's responsive design system empowers developers to implement designs for a variety of screen sizes and layouts in a convenient way. The design system provides various screen sizes, which you can redefine when needed. The CSS styles that are linked to the screen sizes adapt automatically to the provided configuration. This makes the design system useful for different types of applications. For example, if you need to build a business application for users with large screens, you can optimize the layout of your application to benefit from the available space.

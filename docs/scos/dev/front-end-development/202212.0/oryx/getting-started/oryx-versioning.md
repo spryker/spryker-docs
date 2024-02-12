@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-versioning.html
 ---
 title: "Oryx: Versioning"
 description: Oryx framework uses semantic versioning to ensure stability

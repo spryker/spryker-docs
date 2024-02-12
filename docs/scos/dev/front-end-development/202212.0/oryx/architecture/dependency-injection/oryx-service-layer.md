@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html
 ---
 title: Oryx service layer
 description: Oryx service layer abstracts system functionality using DI

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-close-drawer.html
 ---
 title: Actions Close Drawer
 description: This document provides details about the Actions Close Drawer service in the Components Library.

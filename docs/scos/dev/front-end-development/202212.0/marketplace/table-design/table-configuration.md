@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-configuration.html
 ---
 title: Table Configuration
 description: This document provides details about the table configuration.
 template: concept-topic-template
+redirect_from:
 last_updated: Aug 7, 2023
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-configuration.html
 ---

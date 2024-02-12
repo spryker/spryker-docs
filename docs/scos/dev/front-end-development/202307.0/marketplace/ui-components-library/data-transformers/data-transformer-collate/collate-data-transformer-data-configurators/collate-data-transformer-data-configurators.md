@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html
 ---
 title: "Collate data transformer: Data configurators"
 description: This document provides details about the Data Transformer Data Configurators service in the Components Library.

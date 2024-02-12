@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/architecture/reactivity/signals.html
 ---
 title: Signals
 description: Signals are reactivity API for components in Oryx.

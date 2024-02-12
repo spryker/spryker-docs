@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
 ---
 title: Table Column Type Autocomplete
 description: This document provides details about the Table Column Type Autocomplete in the Components Library.

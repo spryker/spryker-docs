@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/managing-the-components/creating-a-component.html
 ---
 title: Creating a component
 last_updated: Jun 16, 2021

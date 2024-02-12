@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-design.html
 ---
 title: Table Design
 description: This document describes the Table Design in the Components Library.

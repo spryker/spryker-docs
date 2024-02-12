@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-column-type-extension/table-column-type-list.html
 ---
 title: Table Column Type List
 description: This document provides details about the Table Column Type List in the Components Library.

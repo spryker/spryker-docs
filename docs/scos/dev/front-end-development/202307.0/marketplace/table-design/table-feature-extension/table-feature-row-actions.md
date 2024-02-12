@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
 ---
 title: Table Feature Row Actions
 description: This document provides details about the Table Feature Row Actions component in the Components Library.

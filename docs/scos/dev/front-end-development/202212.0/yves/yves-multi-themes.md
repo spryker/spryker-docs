@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/yves/yves-multi-themes.html
 ---
 title: Yves multi-themes
 description: Manage multiple themes for Yves by extending them.

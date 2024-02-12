@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/actions/ui-components-library-actions.html
 ---
 title: "UI components library: Actions"
 description: This document provides details about the Actions service in the Components Library.

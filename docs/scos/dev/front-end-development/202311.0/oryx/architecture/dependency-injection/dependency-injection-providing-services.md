@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html
 ---
 title: "Dependency Injection: Providing services"
 description: Recommended conventions for providing services

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
 ---
 title: "Dependency Injection: Advanced strategies"
 description: Strategies for using DI that cover advanced use cases

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/atomic-frontend/atomic-front-end-general-overview.html
 ---
 title: "Atomic Frontend - general overview"
 description: Learn the basic principles of Spryker UI implementation and how to perform the tasks required to design Spryker UI.

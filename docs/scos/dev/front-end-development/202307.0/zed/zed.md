@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/zed/zed.html
 ---
 title: Zed
 description: Working with Zed tools in Spryker Commerce OS

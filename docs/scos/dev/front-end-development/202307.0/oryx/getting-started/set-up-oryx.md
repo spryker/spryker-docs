@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/getting-started/set-up-oryx.html
 ---
 title: Set up Oryx
 description: Learn how to set up Oryx using a boilerplate project

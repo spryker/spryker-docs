@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-feature-extension/table-feature-search.html
 ---
 title: Table Feature Search
 last_updated: Oct 21, 2022

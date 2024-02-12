@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html
 ---
 title: Table Column Type Button Action
 description: This document provides details about the Table Column Type Button Action in the Components Library.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 19, 2024
 related:
   - title: Table Column Type extension

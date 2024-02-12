@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 ---
 title: URL persistence strategy
 description: This document provides details about the Url Persistence Strategy service in the Components Library.

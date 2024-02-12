@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/architecture/reactivity/reactive-components.html
 ---
 title: Reactive components
 description: Reactive components are built with Lit

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html
 ---
 title: "Oryx: Icon system"
 description: Icons are used for a consistent design system throughout components in Oryx applications

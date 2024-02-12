@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/styling/oryx-design-tokens.html
 ---
 title: "Oryx: Design tokens"
 description: Design tokens provide a centralized and consistent approach for styling components in Oryx applications.

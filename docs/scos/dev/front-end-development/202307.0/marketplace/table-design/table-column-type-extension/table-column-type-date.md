@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-date.html
 ---
 title: Table Column Type Date
 description: This document provides details about the Table Column Type Date in the Components Library.

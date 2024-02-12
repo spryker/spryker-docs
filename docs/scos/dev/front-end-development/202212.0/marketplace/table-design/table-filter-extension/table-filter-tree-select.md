@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 title: Table Filter Tree Select
 description: This document provides details about the Table Filter Tree Select component in the Components Library.

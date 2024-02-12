@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-boilerplate.html
 ---
 title: "Oryx: Boilerplate"
 description: Create maintainable and upgradeable applications using the Oryx boilerplate

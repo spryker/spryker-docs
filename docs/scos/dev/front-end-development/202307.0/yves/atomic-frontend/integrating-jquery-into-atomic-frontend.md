@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
 ---
 title: Integrating JQuery into Atomic Frontend
 last_updated: Jun 16, 2021

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html
 ---
 title: Oryx application
 description: App of the Oryx Application

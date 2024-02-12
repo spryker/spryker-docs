@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 title: Integrating React into Atomic Frontend
 last_updated: Jun 16, 2021

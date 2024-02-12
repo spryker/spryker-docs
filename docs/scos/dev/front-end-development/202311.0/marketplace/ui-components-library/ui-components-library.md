@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/ui-components-library.html
 ---
 title: UI components library
 description: UI components library contains Angular components.

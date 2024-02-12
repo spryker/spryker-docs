@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html
 ---
 title: "Dependency Injection: Using services"
 description: Learn how to inject services and dependencies

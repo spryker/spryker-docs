@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-supported-browsers.html
 ---
 title: "Oryx: Supported browsers"
 description: Browsers supported by Oryx

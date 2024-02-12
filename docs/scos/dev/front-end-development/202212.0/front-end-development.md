@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/front-end-development.html
 ---
 title: Frontend development
 description: working with the Spryker Commerce OS SDK

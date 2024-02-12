@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
 ---
 title: "Collate data transformer: Filters"
 description: This document provides details about the Data Transformer Filters service in the Components Library.

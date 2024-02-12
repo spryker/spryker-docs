@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
 ---
 title: "UI components library: Cache service"
 description: This document provides details about the Cache service in the Component Library.

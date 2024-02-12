@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-managing-component-options.html
 ---
 title: "Oryx: Managing components options"
 description: Components Options provide reusable components cross business models
 last_updated: Sept 19, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx components support configurable options to make the components reusable in different business contexts. Component options are JavaScript objects that can be configured as part of the application configuration or added by providing an attribute. To ensure a good developer experience, each component type can provide an interface for the options.

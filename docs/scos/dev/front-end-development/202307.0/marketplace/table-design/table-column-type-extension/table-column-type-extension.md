@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-extension.html
 ---
 title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.

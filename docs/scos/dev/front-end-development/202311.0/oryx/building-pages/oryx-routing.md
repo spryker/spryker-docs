@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-pages/oryx-routing.html
 ---
 title: "Oryx: Routing"
 description:

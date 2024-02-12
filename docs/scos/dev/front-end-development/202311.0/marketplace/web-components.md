@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/web-components.html
 ---
 title: Web Components
 description: This document provides details how web components are used and what their function is in the Merchant Portal Frontend.

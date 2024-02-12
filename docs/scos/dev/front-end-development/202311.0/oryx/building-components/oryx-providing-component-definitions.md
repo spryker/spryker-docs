@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-components/oryx-providing-component-definitions.html
 ---
 title: "Oryx: Providing component definitions"
 description: Components are registered in an Oryx application by a definition file
 last_updated: Sept 19, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx components can be used in different ways. They can be configured in [pages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-pages.html) and [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), used in components, or integrated in CMS content.

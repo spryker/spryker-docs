@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
 ---
 title: "Data Transformer: Object-map"
 description: This document provides details about the Data Transformer Object-map service in the Components Library.

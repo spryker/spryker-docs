@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-configuration.html
 ---
 title: Table Configuration
 description: This document provides details about the table configuration.

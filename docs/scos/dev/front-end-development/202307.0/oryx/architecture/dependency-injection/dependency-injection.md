@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/architecture/dependency-injection/dependency-injection.html
 ---
 title: Dependency injection
 description: Dependency injection lets you customize logic but keep your project upgradable

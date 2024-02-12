@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/datasources/datasource-http.html
 ---
 title: Datasource Http
 description: This document provides details about the Datasource Http service in the Components Library.

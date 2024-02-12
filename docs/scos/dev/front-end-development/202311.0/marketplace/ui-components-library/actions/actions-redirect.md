@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-redirect.html
 ---
 title: Actions Redirect
 description: This document provides details about the Actions Redirect service in the Components Library.

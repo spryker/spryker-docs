@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/migration-guide-remove-support-of-ie11.html
 ---
 title: Migration guide - Remove support of IE11
 last_updated: Aug 31, 2022

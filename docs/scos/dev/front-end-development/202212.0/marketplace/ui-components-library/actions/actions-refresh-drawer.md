@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-refresh-drawer.html
 ---
 title: Actions Refresh Drawer
 description: This document provides details about the Actions Refresh Drawer service in the Components Library.

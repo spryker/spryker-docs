@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactivity.html
 ---
 title: Reactivity
 description: Reactivity enables real-time updates

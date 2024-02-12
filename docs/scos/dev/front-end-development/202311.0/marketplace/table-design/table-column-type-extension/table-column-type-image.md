@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-column-type-extension/table-column-type-image.html
 ---
 title: Table Column Type Image
 description: This document provides details about the Table Column Type Image in the Components Library.

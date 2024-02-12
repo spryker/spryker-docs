@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-feature-extension/table-feature-extension.html
 ---
 title: Table Feature extension
 last_updated: Jun 07, 2021

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
 ---
 title: Data Transformer Collate Filter Range
 description: This document provides details about the Data Transformer Collate Filter Range service in the Components Library.

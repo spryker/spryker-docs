@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-dependable.html
 ---
 title: Datasource Dependable
 description: Details about the Datasource Dependable service in the components library.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Trigger

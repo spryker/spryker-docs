@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
 ---
 title: Table Filter extension
 last_updated: Oct 21, 2022

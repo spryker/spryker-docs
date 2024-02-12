@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/yves/custom-twig-functions-for-yves.html
 ---
 title: Custom Twig Functions for Yves
 description: The article describes twig functions, its method signatures, and examples of their usage.

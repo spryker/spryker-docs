@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 title: Datasources
 last_updated: Jun 07, 2021
 description: This document provides details about the Datasources service in the Components Library.
 template: concept-topic-template
+redirect_from:
 related:
   - title: Datasource Http
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html

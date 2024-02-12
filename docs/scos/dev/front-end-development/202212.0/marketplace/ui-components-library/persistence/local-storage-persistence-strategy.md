@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
 ---
 title: Local Storage Persistence Strategy
 description: This document provides details about the Local Storage Persistence Strategy service in the Components Library.

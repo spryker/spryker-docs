@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/atomic-frontend/customizing-spryker-front-end.html
 ---
 title: Customizing Spryker Frontend
 description: This guide reviews customizing Spryker UI on each of these levels.

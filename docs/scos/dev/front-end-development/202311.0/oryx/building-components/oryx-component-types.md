@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-components/oryx-component-types.html
 ---
 title: "Oryx: Component types"
 description: Oryx components compared to Atomic Design
 last_updated: Sept 23, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx applications are built completely out of components. Whether it's a page or a section of the page or a button, they're all components.

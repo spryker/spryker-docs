@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-implementing-components.html
 ---
 title: "Oryx: Implementing components"
 description: Learn how to create an Oryx component
 last_updated: Sept 20, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx components are web components built with [Lit](https://lit.dev). Lit is a lightweight open-source framework from Google that's used to build highly efficient web components. Web components can be created with any framework or even with vanilla HTML, CSS, and JavaScript. You can use any other framework instead of Lit. However, some Oryx utilities, like [signals](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/signals.html) and component mixins, are available only with Lit.

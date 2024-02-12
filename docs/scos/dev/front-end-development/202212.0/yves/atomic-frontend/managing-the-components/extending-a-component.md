@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/managing-the-components/extending-a-component.html
 ---
 title: Extending a component
 last_updated: Jun 16, 2021

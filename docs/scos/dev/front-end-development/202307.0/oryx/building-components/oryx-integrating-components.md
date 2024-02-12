@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-integrating-components.html
 ---
 title: "Oryx: Integrating components"
 description: Oryx Components are build as web components
 last_updated: Sept 20, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx components are _framework agnostic_, so they can be used in other web frameworks.

@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-building-components.html
 ---
 title: "Oryx: Building components"
 description: Components are the building blocks of Oryx applications
 last_updated: Sep 19, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Oryx provides a fully component-based architecture where only components are used to render the application. Components are the building blocks used to create modular and reusable elements. The components are primarily concerned with UI/UX, leaving business logic and integrations to other application layers.

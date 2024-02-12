@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/yves/image-optimization-usage.html
 ---
 title: Images optimization usage
 description: Learn about the imagemin plugin and how to use it
 last_updated: Jul 12, 2023
 template: howto-guide-template
+redirect_from:
 ---
 
 The `imagemin` plugin is a npm package that compresses a particular image format. For example, `mozjpeg` compresses JPEG files. 

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/building-the-merchant-portal-frontend.html
 ---
 title: Building the Merchant Portal frontend
 description: This document provides details how to build the frontend part of the Merchant Portal.

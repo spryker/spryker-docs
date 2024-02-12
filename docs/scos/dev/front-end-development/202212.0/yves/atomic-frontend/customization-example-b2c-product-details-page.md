@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/customization-example-b2c-product-details-page.html
 ---
 title: Customization example - B2C Product Details page
 description: Customize any front–end element in Spryker by adjusting a respective SCSS file.

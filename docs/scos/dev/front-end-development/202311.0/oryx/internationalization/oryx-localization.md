@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-localization.html
 ---
 title: "Oryx: Localization"
 description: Localizations are decoupled from component implementations

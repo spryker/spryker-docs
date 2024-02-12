@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-input.html
 ---
 title: Table Column Type Input
 description: This document provides details about the Table Column Type Input in the Components Library.

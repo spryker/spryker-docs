@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-confirmation.html
 ---
 title: Actions Confirmation
 description: This document provides details about the Actions Confirmation service in the Components Library.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 19, 2024
 related:
   - title: Actions

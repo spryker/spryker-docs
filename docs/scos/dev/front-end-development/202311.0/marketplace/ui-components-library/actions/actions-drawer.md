@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-drawer.html
 ---
 title: Actions Drawer
 description: This document provides details about the Actions Drawer service in the Components Library.

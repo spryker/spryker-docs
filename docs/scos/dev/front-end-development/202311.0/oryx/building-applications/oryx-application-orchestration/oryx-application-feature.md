@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
 ---
 title: Oryx application feature
 description: Feature of the Oryx Application

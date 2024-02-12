@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-refresh-table.html
 ---
 title: Actions Refresh Table
 description: This document provides details about the Actions Refresh Table service in the Components Library.

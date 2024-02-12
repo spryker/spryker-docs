@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
 ---
 title: "Data Transformer: Date-parse"
 description: This document provides details about the Data Transformer Date-parse service in the Components Library.

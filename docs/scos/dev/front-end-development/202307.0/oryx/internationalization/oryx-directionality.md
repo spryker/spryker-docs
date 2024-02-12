@@ -1,8 +1,10 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/internationalization/oryx-directionality.html
 ---
 title: "Directionality in Oryx: Supporting RTL and LTR for applications"
 description: Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
 last_updated: November 6, 2023
 template: concept-topic-template
+redirect_from:
 ---
 
 Directionality refers to the writing direction of a language, which can be either left-to-right (LTR) or right-to-left (RTL). LTR languages, such as English, are written from left to right, while RTL languages, such as Arabic, are written from right to left. Directionality affects the layout, styling, and alignment of text and other elements in a user interface.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-date-range.html
 ---
 title: Table Filter Date Range
 description: This document provides details about the Table Filter Date Range component in the Components Library.

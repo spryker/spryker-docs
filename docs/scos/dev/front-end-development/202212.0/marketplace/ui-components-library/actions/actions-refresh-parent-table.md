@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-refresh-parent-table.html
 ---
 title: Actions Refresh Parent Table
 description: This document provides details about the Actions Refresh Parent Table service in the Components Library.

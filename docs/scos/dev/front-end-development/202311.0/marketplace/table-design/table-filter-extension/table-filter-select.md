@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-filter-extension/table-filter-select.html
 ---
 title: Table Filter Select
 description: This document provides details about the Table Filter Select component in the Components Library.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/migration-guide-switch-from-yarn-to-npm.html
 ---
 title: Migration guide - Switch from Yarn to npm v9
 last_updated: May 15, 2023

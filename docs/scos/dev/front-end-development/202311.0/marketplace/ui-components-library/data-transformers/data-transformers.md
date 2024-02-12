@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/data-transformers/data-transformers.html
 ---
 title: Data Transformers
 last_updated: Jun 07, 2021

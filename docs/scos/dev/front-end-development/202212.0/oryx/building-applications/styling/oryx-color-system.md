@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html
 ---
 title: "Oryx: Color system"
 description: Color design tokens are used for a consistent design system throughout the components in Oryx applications

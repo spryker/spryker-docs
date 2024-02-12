@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
 ---
 title: "Data Transformer: Lens"
 description: This document provides details about the Data Transformer Lens service in the Components Library.

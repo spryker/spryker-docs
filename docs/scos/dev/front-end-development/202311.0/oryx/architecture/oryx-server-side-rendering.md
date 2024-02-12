@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/architecture/oryx-server-side-rendering.html
 ---
 title: "Oryx: Server-side rendering"
 description: Get a general idea of server-side rendering

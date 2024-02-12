@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-notification.html
 ---
 title: Actions Notification
 description: This document provides details about the Actions Notification service in the Components Library.

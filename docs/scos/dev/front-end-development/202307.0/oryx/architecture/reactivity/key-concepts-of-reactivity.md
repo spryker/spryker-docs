@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
 ---
 title: Key concepts of Reactivity
 description: Understanding Reactivity concepts will help you understand how Oryx works

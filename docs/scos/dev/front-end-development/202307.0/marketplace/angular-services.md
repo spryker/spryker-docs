@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/angular-services.html
 ---
 title: Angular Services
 description: This document provides details about the Angular Services, and how to create and use them.

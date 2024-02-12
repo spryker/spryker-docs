@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/multi-theme.html
 ---
 title: Multi-theme
 description: The article describes Spryker Frontend - Atomic Frontend and Modular Frontend that support theming - current theme and default theme.

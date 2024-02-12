@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/yves/adding-and-using-external-libraries-in-yves.html
 ---
 title: Adding and Using External Libraries in Yves
 description: This article describes how to add external libraries in Yves.

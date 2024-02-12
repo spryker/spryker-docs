@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
 ---
 title: Table Feature Sync State
 description: This document provides details about the Table Feature Sync State component in the Components Library.

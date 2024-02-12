@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html
 ---
 title: Datasource Trigger Change
 description: This document provides details about the Datasource Trigger Change service in the Components Library.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Dependable

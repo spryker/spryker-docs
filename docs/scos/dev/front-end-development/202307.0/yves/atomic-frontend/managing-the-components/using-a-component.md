@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/managing-the-components/using-a-component.html
 ---
 title: Using a component
 last_updated: Jun 16, 2021

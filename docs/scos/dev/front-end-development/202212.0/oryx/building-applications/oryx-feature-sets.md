@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-feature-sets.html
 ---
 title: "Oryx: Feature sets"
 description: Feature sets are collections of standard features

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-feature-extension/table-feature-settings.html
 ---
 title: Table Feature Settings
 description: This document provides details about the Table Feature Settings component in the Components Library.

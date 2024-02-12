@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/angular-components.html
 ---
 title: Angular Components
 description: This document provides details about the Angular Components, and how to create and use them.

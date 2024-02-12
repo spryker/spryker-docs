@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html
 ---
 title: "Oryx: Integration of backend APIs"
 description: Compose a frontend application from backend APIs

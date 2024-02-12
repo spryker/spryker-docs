@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-packages.html
 ---
 title: "Oryx: Packages"
 description: Use Oryx packages from npm to ensure you can easily upgrade to newer versions.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/ui-components-library/actions/actions-http.html
 ---
 title: Actions HTTP
 description: This document provides details about the Actions HTTP service in the Components Library.

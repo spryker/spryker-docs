@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202307.0/oryx/oryx.html
 ---
 title: Oryx
 description: Get a general idea of Oryx
 template: concept-topic-template
+redirect_from:
 last_updated: Apr 4, 2023
 ---
 

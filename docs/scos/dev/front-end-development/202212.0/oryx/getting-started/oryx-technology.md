@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-technology.html
 ---
 title: "Oryx: Technology"
 description: The technologies Oryx is built on
 template: concept-topic-template
+redirect_from:
 last_updated: Oct 23, 2023
 ---
 

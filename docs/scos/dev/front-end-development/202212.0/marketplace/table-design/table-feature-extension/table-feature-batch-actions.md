@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
 ---
 title: Table Feature Batch Actions
 description: This document provides details about the Table Feature Batch Actions component in the Components Library.

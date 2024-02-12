@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/yves/yves.html
 ---
 title: Yves
 description: Working with Yves tools in Spryker Commerce OS

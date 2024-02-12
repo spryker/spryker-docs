@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/set-up-the-merchant-portal.html
 ---
 title: Set up the Merchant Portal
 last_updated: May 15, 2023

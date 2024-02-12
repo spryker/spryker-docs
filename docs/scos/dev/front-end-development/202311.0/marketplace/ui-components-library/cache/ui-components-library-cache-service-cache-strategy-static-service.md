@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
 ---
 title: "UI components library: Cache Strategy Static service"
 description: This document provides details about the Cache Strategy Static service in the Components Library.

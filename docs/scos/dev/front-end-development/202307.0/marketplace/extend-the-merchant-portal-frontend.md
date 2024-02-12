@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/extend-the-merchant-portal-frontend.html
 ---
 title: Extend the Merchant Portal frontend
 description: This document provides details about how to extend the new project.

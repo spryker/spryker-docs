@@ -1,7 +1,9 @@
+  - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
 ---
 title: Datasource Trigger
 description: Details about the Datasource Trigger service in the components library.
 template: concept-topic-template
+redirect_from:
 last_updated: Jan 12, 2024
 related:
   - title: Datasource Dependable

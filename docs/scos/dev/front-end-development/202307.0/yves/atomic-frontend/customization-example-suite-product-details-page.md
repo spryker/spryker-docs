@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/yves/atomic-frontend/customization-example-suite-product-details-page.html
 ---
 title: Customization example - Suite Product Details page
 description: Customize any front–end element in Spryker by overriding a respective SCSS file.

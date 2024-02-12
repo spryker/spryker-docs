@@ -1,3 +1,4 @@
+  - /docs/scos/dev/front-end-development/202307.0/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
 ---
 title: Table Column Type Chip
 description: This document provides details about the Table Column Type Chip in the Components Library.

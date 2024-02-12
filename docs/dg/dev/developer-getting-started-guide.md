@@ -23,7 +23,7 @@ You can choose from the following options:
 
 Both Demo Shops can also be expanded with separate features and modules.
 
-To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
+To install Spryker, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
 ### Configure the local environment
 
@@ -63,7 +63,7 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+When installing and managing module dependencies, we use [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
 
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 * To update all the modules for your project: `composer update "spryker/*"`.
@@ -88,12 +88,10 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 
 ## 3. Configure the environment
 
-To configure and customize your project, you can do the following:
-
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    * [Database](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
-    * [Redis](/docs/scos/dev/set-up-spryker-locally/redis-configuration.html)
+    <!-- * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html) -->
+    * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.

@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path="C:/Dev/spryker-docs/docs/scos/dev/technology-partner-guides/202204.0"
+folder_path="docs/scos/dev/zed-api"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

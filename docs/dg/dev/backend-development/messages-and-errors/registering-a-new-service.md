@@ -9,9 +9,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html
 ---
 
-A *service* is a Spryker application layer shared by the Client, Zed, and Yves application layers. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. Currently, there are already a few `Util` bundles providing services (UtilText and UtilEncoding).
+The Service Application represents Spryker's multi-purpose library. A service can be used in all other applications, like Yves or Zed. A service can contain only reusable lightweight stateless business logic with no reliance on database or storage connections. All required data should be provided as an input. Usage is focused on level details (infrastructure layer)—for example, encoding, text processing, and sanitization. There are a few `Util` existing bundles providing services: UtilText and UtilEncoding.
 
-## How to use a service
+## Using a service
 
 To support best practices, any services shared between bundles and applications (Yves, Zed, Client) that do not resolve high-level business processes are moved to services. You can access services with the locator: `$container->getLocator()->utilEncoding()->service()`.
 
@@ -55,7 +55,8 @@ class UtilEncodingService extends AbstractService implements UtilEncodingService
 ?>
 ```
 
-* After creating all mentioned files, make the service visible by the locator autocompletion:
+After creating all mentioned files, make the service visible by the locator autocompletion:
+
 ```bash
 vendor/bin/console dev:ide:generate-service-auto-completion
 ```

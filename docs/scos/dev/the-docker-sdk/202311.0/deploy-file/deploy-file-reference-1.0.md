@@ -56,7 +56,7 @@ This reference page describes version 1 of the Deploy file format. This is the n
 The topics below are organized alphabetically for top-level keys and sub-level keys to describe the hierarchy.
 
 You can use the extended YAML syntax according to [YAML™ Version 1.2](https://yaml.org/spec/1.2/spec.html).
-Find B2B and B2C deploy file examples for [development](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode) and [demo](/docs/scos/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) environments in the table:
+Find B2B and B2C deploy file examples for [development](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#development-mode) and [demo](/docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html#demo-mode) environments in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |

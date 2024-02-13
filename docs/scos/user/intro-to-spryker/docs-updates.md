@@ -221,8 +221,8 @@ In November 2023, we have added and updated the following pages:
 - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
 - [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
-- [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
-- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
+- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
 
 
 For more details about these and other updates to the Spryker docs in November 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -265,7 +265,7 @@ In October 2023, we have added and updated the following pages:
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
 - [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
@@ -285,7 +285,7 @@ In October 2023, we have added and updated the following pages:
 - [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
-- [System requirements](/docs/scos/dev/system-requirements/202307.0/system-requirements.html).
+- [System requirements](/docs/dg/dev/system-requirements/202307.0/system-requirements.html).
 
 For more details about these and other updates to the Spryker docs in October 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
@@ -392,7 +392,7 @@ In July 2023, we have added and updated the following pages:
 - [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
 - [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
-- [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [Payment Service Provider](/docs/pbc/all/payment-service-provider/202212.0/payment-service-provider.html): Different payment methods for your shop.
 - [System requirements](/docs/scos/dev/system-requirements/202304.0/system-requirements.html): This document provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 - [Supported browsers](/docs/scos/user/intro-to-spryker/supported-browsers.html): This document lists browsers supported by Spryker Cloud Commerce OS.
@@ -516,7 +516,7 @@ In April 2023, we have added and updated the following pages:
 ### New pages
 
 - [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

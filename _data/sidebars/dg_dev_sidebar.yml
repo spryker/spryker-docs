@@ -5,7 +5,73 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
-  - title: Back-end development
+  - title: Set up locally
+    url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
+    nested:
+    - title: System requirements
+      url: /docs/scos/dev/system-requirements/system-requirements.html
+    - title: "Quickstart guides: Install Spryker"
+      url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
+      nested:
+      - title: "Quickstart guide: Install Spryker on MacOS and Linux"
+        url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
+      - title: "Quickstart guide: Install Spryker on Windows"
+        url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
+    - title: Install Spryker
+      url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html
+      nested:
+      - title: Install Docker prerequisites
+        url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites.html
+        nested:
+        - title: Install Docker prerequisites on MacOS
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html
+        - title: Install Docker prerequisites on Linux
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html
+        - title: Install Docker prerequisites on Windows with WSL2
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
+        - title: Install Docker prerequisites on Windows with WSL1
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+      - title: Install
+        url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html
+        nested:
+        - title: Install in Development mode on MacOS and Linux
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-macos-and-linux.html
+        - title: Install in Development mode on Windows
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-development-mode-on-windows.html
+        - title: Install in Demo mode on MacOS and Linux
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html
+        - title: Install in Demo mode on Windows
+          url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
+      - title: Configure after installing
+        url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing.html
+        nested:
+        - title: Set up a self-signed SSL certificate
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
+      - title: Database access credentials
+        url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
+    - title: Manage dependencies with Composer
+      url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
+    - title: Redis configuration
+      url: /docs/dg/dev/set-up-spryker-locally/redis-configuration.html
+    - title: Troubleshooting
+      nested:
+      - title: An error during frontend setup
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/an-error-during-front-end-setup.html
+      - title: Demo data was imported incorrectly
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/demo-data-was-imported-incorrectly.html
+      - title: Docker daemon is not running
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-daemon-is-not-running.html
+      - title: docker-sync cannot start
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/docker-sync-cannot-start.html
+      - title: Error 403 No valid crumb was included in the request
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+      - title: Node Sass does not yet support your current environment
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/node-saas-does-not-yet-support-your-current-environment.html
+      - title: Setup of new indexes throws an exception
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
+      - title: Vendor folder synchronization error
+        url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+  - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
     nested:
     - title: Client
@@ -637,3 +703,37 @@ entries:
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/dg/dev/best-practices/coding-best-practices.html
+
+  - title: Zed API
+    url: /docs/dg/dev/zed-api/zed-api.html
+    nested:
+    - title: Project implementation - Zed API
+      url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
+    - title: Zed API configuration
+      url: /docs/dg/dev/zed-api/zed-api-configuration.html
+    - title: CRUD functionality - Zed API
+      url: /docs/dg/dev/zed-api/zed-api-crud-functionality.html
+    - title: Processor stack - Zed API
+      url: /docs/dg/dev/zed-api/zed-api-processor-stack.html
+    - title: Zed API resources
+      url: /docs/dg/dev/zed-api/zed-api-resources.html
+    - title: Zed API (BETA)
+      url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
+
+  - title: Updating Spryker
+    url: /docs/dg/dev/updating-spryker/updating-spryker.html
+    nested:
+      - title: Feature or module updates
+        url: /docs/dg/dev/updating-spryker/feature-or-module-updates.html
+      - title: Planning updates
+        url: /docs/dg/dev/updating-spryker/planning-updates.html
+      - title: Installing features and updating modules
+        url: /docs/dg/dev/updating-spryker/installing-features-and-updating-modules.html
+      - title: Testing updates
+        url: /docs/dg/dev/updating-spryker/testing-updates.html
+      - title: Analyzing and upgrading projects with Spryker Jarvis
+        url: /docs/dg/dev/updating-spryker/analyzing-and-upgrading-projects-with-spryker-jarvis.html
+      - title: Switch Demo Shop version
+        url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
+      - title: Troubleshooting updates
+        url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html

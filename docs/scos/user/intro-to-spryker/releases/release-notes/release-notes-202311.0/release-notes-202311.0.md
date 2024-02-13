@@ -168,7 +168,7 @@ Simplified and faster enablement of ACP for SCCOS, as well as improved scalabili
 [ACP overview](/docs/acp/user/intro-to-acp/acp-overview.html)
 
 ### Technical prerequisites
-[Install the ACP catalog](/docs/acp/user/intro-to-acp/acp-overview.html#installing-the-acp-catalog)
+[Install the ACP catalog](/docs/dg/dev/acp/app-composition-platform-installation.html)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Vertex app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 Staying up-to-date with ever-changing tax rules and rates can require a lot of resources. Spryker, through the Vertex integration, offers a means for businesses to automate tax calculation and centralize sales taxes on their transactions.

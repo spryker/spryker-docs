@@ -64,4 +64,4 @@ Make sure you check the configuration guidelines for the app you need because ad
 That's it! You are all set to try the app out.
 
 ## Next steps
-To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/acp/user/app-composition-platform-installation.html#getting-sccos-acp-ready).
+To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).

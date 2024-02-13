@@ -6,6 +6,7 @@ last_updated: Jan 23, 2024
 redirect_from:
 - /docs/acp/user/developing-an-app.html
 - /docs/acp/user/developing-an-app/developing-an-app.html
+- /docs/acp/user/develop-an-app/develop-an-app.html
 ---
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
@@ -181,7 +182,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-Follow the guidelines in [Test the endpoints](/docs/acp/user/develop-an-app/connect-an-app.html#test-the-endpoints).
+Follow the guidelines in [Test the endpoints](/docs/dg/dev/acp/develop-an-app/onnect-an-app.html#test-the-endpoints).
 
 ## 9. Implement business logic
 

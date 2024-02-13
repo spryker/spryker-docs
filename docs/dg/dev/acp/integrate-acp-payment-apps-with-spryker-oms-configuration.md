@@ -11,7 +11,7 @@ This document describes how to set up your project with the ACP payment app, ens
 
 Before you begin, make sure the following prerequisites are met:
 - You have installed the Spryker Order Management System. For the installation instructions, see [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html).
-- You are familiar with the basics of OMS provided in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html) and their sub-pages.
+- You are familiar with the basics of OMS provided in [Order Management feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/order-management-feature-overview.html), [State machine cookbook](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html) and their sub-pages.
 
 ## Default ACP payment OMS  
 

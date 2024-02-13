@@ -43,4 +43,4 @@ Both `spryker/app-kernel` and `spryker/app-<categoty>` contain the logic needed 
 
 ## Next steps
 
-To integrate and use ACP Apps in your project, follow the [ACP Installation guide](/docs/acp/user/app-composition-platform-installation.html#getting-sccos-acp-ready).
+To integrate and use ACP Apps in your project, follow the [ACP Installation guide](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).

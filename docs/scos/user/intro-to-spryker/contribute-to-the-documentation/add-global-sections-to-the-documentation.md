@@ -1,11 +1,12 @@
 ---
-title: Add product sections to the documentation
-description: Learn how to add a new product to the Spryker docs.
+title: Add global sections to the documentation
+description: Learn how to add a new global section to Spryker docs.
 last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
+  - /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
@@ -21,25 +22,27 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
 ---
 
-When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
+This document describes how to add global sections to the documentation, like the existing Development or Cloud administration sections.
 
-To add a new product, follow these steps.
+In this document, we assume that you need to create a new section *acp* with the *user* and *dev* roles. Make sure to adjust the provided examples to your requirements.
 
-## 1. Create a folder for the new project
+To add a new section, take the following steps.
 
-In the `/docs` directory, create a folder for your project and a folder designating the roles of the project. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
+## 1. Create a folder for the section
 
-## 2. Create sidebars for the product
+In the `/docs` directory, create a folder for the section per role. In this example, the folders are `/docs/acp/user` and `/docs/acp/dev`.
 
-In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
+## 2. Create sidebars
+
+In `_data/sidebars`, create sidebars for the new section per role: `{product_name}_{role}_sidebar.yml`. For the *acp* section with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
 To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html#sidebars).
 
-## 3. Add the product to the configuration
+## 3. Update the configuration
 
-To add the new product with its roles to the configuration, in `_config.yml`, do the following:
+In `_config.yml`, do the following:
 
-1. In the `defaults:` section, add the new product with its path and product name value to the scope. For example:
+1. In the `defaults:` section, add the scope as follows:
 
 ```yaml
 defaults:
@@ -51,7 +54,7 @@ defaults:
       product: "acp"
 ```
 
-2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the product](#create-sidebars-for-the-product). For example:
+2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars](#create-sidebars).
 
 ```yaml
 defaults:
@@ -70,7 +73,7 @@ defaults:
       role: "user"
 ```
 
-3. Optional: To version one or more categories in your new product, in the `versioned_categories:` section, add the product name and the categories to version. For example:
+3. Optional: To version one or more categories in the section, in the `versioned_categories:` section, add the section and the categories to version.
 
 ```yaml
 versioned_categories:
@@ -85,7 +88,7 @@ versioned_categories:
       - glue-api-guides
  ```
 
-4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars for the new product](#create-sidebars-for-the-product). For example:
+4. In the `sidebars:` section, add the names of the sidebars you've created in [1. Create sidebars](#create-sidebars).
 
 ```yaml
 sidebars:
@@ -94,11 +97,11 @@ sidebars:
   - acp_user_sidebar
 ```
 
-## 4. Add the product to the homepage
+## 4. Update the homepage
 
-To add the new product to the top navigation and the role boxes on the homepage, do the following:
+To add the new section to the top navigation and the role boxes on the homepage, do the following:
 
-1. In `_includes/topnav.html`, in the `<div class="main-nav dropdown">` class, add the names for the new guides. For example:
+1. In `_includes/topnav.html`, in the `<div class="main-nav dropdown">` class, add the names of the guides:
 
 ```html
 {% raw %}
@@ -115,7 +118,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
 {% endraw %}
 ```
 
-2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the product under the last existing product. For example:
+2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the drop-down menu items under the last item:
 
 ```html
                                         <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -148,23 +151,21 @@ To add the new product to the top navigation and the role boxes on the homepage,
                                             </li>
 ```
 
-3. In `_layouts/home.html`, do the following:
+3. In `_layouts/home.html`, in `<h2 class="card__heading-title">Developer guides</h2>`, add a home page menu item with a link to the starting document of the developer guide of the section:
 
-    1. In `<h2 class="card__heading-title">Developer guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
+```html
+                            <h2 class="card__heading-title">Developer guides</h2>
+                        </div>                            
+                        <p>Developer guides are intended for backend developers, frontend developers, and devOps engineers. They cover all the technical aspects of the Spryker products and will help you to improve your understanding of the system, install your Spryker project, and customize it to your needs.</p>
+                    </div>                        
+                    <div class="card__footer">
+                        <ul class="card__links">
+                            ...
+                            <li><a href="/docs/acp/dev/setup/system-requirements.html">App Composition Platform developer guides</a></li>                            
+                        ...    
+```
 
-    ```html
-                                <h2 class="card__heading-title">Developer guides</h2>
-                            </div>                            
-                            <p>Developer guides are intended for backend developers, frontend developers, and devOps engineers. They cover all the technical aspects of the Spryker products and will help you to improve your understanding of the system, install your Spryker project, and customize it to your needs.</p>
-                        </div>                        
-                        <div class="card__footer">
-                            <ul class="card__links">
-                                ...
-                                <li><a href="/docs/acp/dev/setup/system-requirements.html">App Composition Platform developeguides</a></li>                            
-                            ...    
-    ```
-
-    2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the business user guide of the product. For example:
+4. In `<h2 class="card__heading-title">Business User guides</h2>`, add a home page menu item with a link to the starting document of the business user guide of the section:
 
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>
@@ -178,9 +179,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
     ```
 
-## 5. Add CI checks for the product
-
-To add CI checks for the product per role, do the following:
+## 5. Add CI checks
 
 1. In `.github/workflows/ci.yml`, add CI configuration per role as follows:
 
@@ -244,7 +243,7 @@ jobs:
       - run: bundle exec rake check_acp_user
 ```
 
-2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles. For example:
+2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles:
 
 ```
 ...
@@ -275,7 +274,7 @@ task :check_acp_dev do
 end
 ```
 
-3. In `Rakefile`, in `options[:file_ignore]` of all the existing checks, exclude the new project for both roles. For example:
+3. In `Rakefile`, in `options[:file_ignore]` of all the existing checks, exclude the new section:
 
 ```
 ...
@@ -290,21 +289,21 @@ task :check_mp_dev do
 ...  
 ```
 
-## 6. Configure the Algolia search for the new project
+## 6. Configure Algolia
 
-To configure the Algolia search for the product, you need to configure the search in the *spryker-docs* repository and the Algolia app for Spryker docs.
+To configure Algolia in the repository and the Algolia app, take the following steps.
 
-### Configure the Algolia search in the repository
+### Configure Algolia in the repository
 
-1. In `algolia_config/`, create YML configuration files per role. For example, `algolia_config/_acp_dev.yml` and `algolia_config/_acp_user.yml`.
+1. In `algolia_config/`, create YML configuration files per role: `algolia_config/_acp_dev.yml` and `algolia_config/_acp_user.yml`.
 
-2. In both files, exclude generic pages and the pages of all the existing projects from indexing. Example:
+2. In both files, exclude generic pages and the pages of all the existing projects from indexing.
 
 {% info_block warningBox "Excluding the files you are adding" %}
 
 If you are adding configuration for two roles, you also need to exclude them from indexing each other. In the following examples, this is indicated by the following entries:
-* `docs/fes/dev/**/*.md`
-* `docs/fes/dev/**/*.md`
+* `docs/acp/dev/**/*.md`
+* `docs/acp/user/**/*.md`
 
 {% endinfo_block %}
 
@@ -350,7 +349,7 @@ algolia:
 ```
 
 
-3. In the Algolia configuration file of each existing project, exclude the project for both roles from indexing. Example:
+3. In the Algolia configuration file of each existing section, exclude the project for both roles from indexing:
 
 **algolia_config/_scos_dev.yml**
 
@@ -370,7 +369,7 @@ algolia:
     - docs/acp/user/**/*.md   
 ```
 
-4. In `.github/workflows/ci.yml`, add the Algolia configuration files you've created. Example:
+4. In `.github/workflows/ci.yml`, add the Algolia configuration files you've created:
 
 ```yaml
 jobs:
@@ -389,7 +388,7 @@ jobs:
 
 <a name="add-product-names-for-the-search"></a>
 
-5. In `_config.yml`, in the `algolia: indices:` section, add indexes for products per role. For example:
+5. In `_config.yml`, in the `algolia: indices:` section, add indexes per role:
 
 ```yaml
 algolia:
@@ -402,9 +401,9 @@ algolia:
       title: 'ACP Developer'
 ```
 
-### Configuring the Algolia search in the Algolia app
+### Configure Algolia in the Algolia app
 
-To configure the search in the Algolia app of the Spryker docs, do the following.
+To configure the search in the Algolia app, take the following steps.
 
 #### Create an index
 
@@ -420,11 +419,14 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 2. Click **+  Add a Searchable Attribute**.
 3. Enter `title` and press `Enter`.
 4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ordered or unordered for search:
-    * title: ordered
-    * headings: ordered
-    * content: unordered
-    * collection,categories,tags: unordered
-    * url: ordered
+
+| ATTRIBUTE | VALUE |
+| - | - |
+| title | ordered |
+| headings | ordered |
+| content | unordered |
+| collection,categories,tags | unordered |
+| url | ordered |
 
 #### Add ranking attributes
 
@@ -432,9 +434,12 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 2. Click **+  Add custom ranking attribute**.
 3. Enter `date` and press `Enter`.
 4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ascending or descending:
-    * date: descending
-    * custom_ranking.heading: descending
-    * custom_ranking.position: ascending
+
+| ATTRIBUTE | VALUE |
+| - | - |
+| date | descending |
+| custom_ranking.heading | descending |
+| custom_ranking.position | ascending |
 
 #### Configure languages
 
@@ -452,11 +457,14 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 2. Click **+  Add an Attribute**.
 3. Enter `categories` and press `Enter`.
 4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either searchable or not searchable:
-    * categories: searchable
-    * collection: searchable
-    * tags: searchable
-    * title: searchable
-    * type: not searchable
+
+| ATTRIBUTE | VALUE |
+| - | - |
+| categories | searchable |
+| collection | searchable |
+| tags | searchable |
+| title | searchable |
+| type | not searchable |
 
 #### Configure highlighting
 

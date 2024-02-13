@@ -101,10 +101,9 @@ In December 2023, we have added and updated the following pages:
     - [Click & Collect: Shipment Types domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html).
 - [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
 - [Configuration JSON file](/docs/dg/dev/acp/develop-an-app/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
-- [Manifest JSON file](docs/dg/dev/acp/develop-an-app/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Manifest JSON file](/docs/dg/dev/acp/develop-an-app/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
 - [Translation JSON file](/docs/dg/dev/acp/develop-an-app/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
 - [Debug an app with XDebug](/docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
-- [Set up the message broker](/docs/dg/dev/acp/develop-an-app/set-up-the-message-broker.html): to set up the message broker for your ACP app.
 - [Email service](/docs/ca/dev/email-service/email-service.html): Learn about the native mail service of the Spryker Cloud Commerce OS.
 - [Email quota restrictions](/docs/ca/dev/email-service/email-quota-restrictions.html): Learn the quotas of the Spryker Cloud Commerce OS email service.
 - [Set up DNS](/docs/ca/dev/set-up-dns.html): Learn how to set up DNS for your SCCOS project.

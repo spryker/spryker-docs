@@ -182,7 +182,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-Follow the guidelines in [Test the endpoints](/docs/dg/dev/acp/develop-an-app/onnect-an-app.html#test-the-endpoints).
+Follow the guidelines in [Test the endpoints](/docs/dg/dev/acp/develop-an-app/connect-an-app.html#test-the-endpoints).
 
 ## 9. Implement business logic
 

@@ -23,13 +23,13 @@ Sometimes you would like to add a new external package to your project. In this 
 
 ### Check security (now and future)
 
-1. Check that package has no known security vulnarabilities. 
-2. Add automated tool to your CI/CD to check it regularly for all the packages.
+1. Check that the package has no known security vulnerabilities. 
+2. Add an automated SAST&SCA tool to your CI/CD to check it regularly for all the packages.
 
 ### Check with your Legal (now and future)
 
-Every package comes with a licence. 
-1. Check with your legal team that you can use the package with its licence.
-2. Add automated tool to your CI/CD to check it regularly for all the packages.
+Every package comes with a license.
+1. Check with your legal team that you can use the package with its license.
+2. Add an automated tool to your CI/CD to check it regularly for all the packages.
 
-We can recommend [Snyc](https://snyk.io/) for all the stated above actions. But you are free to use any other tool. 
+We can recommend [Snyk](https://snyk.io/) for all the stated above actions. But you are free to use any other tool. 

@@ -1573,37 +1573,6 @@ entries:
         - title: "Web components"
           url: /docs/scos/dev/front-end-development/marketplace/web-components.html
 
-    - title: Migration guide - Remove support of IE11
-      url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-    - title: Migration guide - Switch from Yarn to NPM v8
-      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-    - title: Migration guide - Upgrade to Webpack v5
-      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-to-webpack-v5.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-    - title: Migration guide - Switch from TSLint to ESLint
-      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-tslint-to-eslint.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-    - title: Migration guide - Upgrade Node.js to v18 and npm to v9
-      url: /docs/scos/dev/front-end-development/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html
-      include_versions:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-
   - title: The Docker SDK
     url: /docs/scos/dev/the-docker-sdk/the-docker-sdk.html
     include_versions:

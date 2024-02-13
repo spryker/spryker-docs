@@ -417,6 +417,14 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
       - title: Upgrade to Symfony 6
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+      - title: Upgrade to Webpack v5
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+      - title: Upgrade Node.js to v18 and npm to v9
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+      - title: Migrate from TSLint to ESLint
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
+      - title: Migrate from Yarn to npm
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
       - title: Upgrade Publish and Sync
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
       - title: Upgrade to Marketplace
@@ -525,7 +533,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
-
+    - title: IE11
+      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
 
 
   - title: Architecture

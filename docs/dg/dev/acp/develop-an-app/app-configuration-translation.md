@@ -5,7 +5,7 @@ template: howto-guide-template
 last_updated: Dec 15, 2023
 related:
   - title: App configuration
-    link: docs/acp/user/develop-an-app/develop-an-app/app-configuration.html
+    link: docs/dg/dev/acp/develop-an-app/app-configuration.html
   - title: Develop an app
     link: docs/acp/user/develop-an-app/develop-an-app.html
   - title: App manifest

@@ -3,12 +3,15 @@ title: App configuration
 Descriptions: Make configuration to your app, like translation and widgets
 template: howto-guide-template
 last_updated: Nov 23, 2023
+redirec_from:
+- /docs/acp/user/app-configuration.html
+- /docs/acp/user/develop-an-app/develop-an-app/app-configuration.html
 ---
 Instead of writing different components for different App configurations, we use JSON to determine the form for the configuration of the apps. There is a [playground for NgxSchemaForm](https://guillotina.io/ngx-schema-form). There are predefined form elements and also custom form elements.
 
 {% info_block infoBox "Info" %}
 
-For the app configuration translation, see [App configuration translation](/docs/acp/user/app-configuration-translation.html). For information about the translation, see  [Translation appendix](#translation-appendix).
+For the app configuration translation, see [App configuration translation](/docs/acp/user/develop-an-app/app-configuration-translation.html). For information about the translation, see  [Translation appendix](#translation-appendix).
 
 {% endinfo_block %}
 

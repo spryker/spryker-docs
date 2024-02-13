@@ -3,6 +3,8 @@ title: Sync API
 Descriptions: You can use the Sync API's OpenAPI schema to generate code with the code generator and control the generated code by adjusting parts of the schema file.
 template: howto-guide-template
 last_updated: Sep 13, 2023
+redirect_from:
+- /docs/acp/user/sync-api.html
 ---
 
 [Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html) and [REST API B2B Demo Shop](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/rest-api-b2b-demo-shop-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).

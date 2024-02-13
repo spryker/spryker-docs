@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Dec 15, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
+    - /docs/acp/user/intro-to-acp/acp-overview.html
 keywords: acp
 ---
 
@@ -63,4 +64,4 @@ Make sure you check the configuration guidelines for the app you need because ad
 That's it! You are all set to try the app out.
 
 ## Next steps
-To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/acp/user/app-composition-platform-installation.html#getting-sccos-acp-ready).
+To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).

@@ -3,6 +3,8 @@ title: ACP security assessment
 Descriptions: This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog.
 template: howto-guide-template
 last_updated: Aug 30, 2023
+redirect_from:
+- /docs/acp/user/intro-to-acp/aop-security-assessment.html
 ---
 
 This document outlines the threat modeling and security assessment requirements and process for apps listed on the Spryker’s app catalog or the app store. It covers the following app types:

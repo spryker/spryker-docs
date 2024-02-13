@@ -6,6 +6,7 @@ last_updated: Jan 23, 2024
 redirect_from:
 - /docs/acp/user/developing-an-app.html
 - /docs/acp/user/developing-an-app/developing-an-app.html
+- /docs/acp/user/develop-an-app/develop-an-app.html
 ---
 
 This document will walk you through the process of developing an app using Spryker's Mini-Framework. Follow the steps below to set up and start your app development.
@@ -125,17 +126,17 @@ Now, your app boilerplate code should be up and running.
 
 ## 4. Add the app manifest files
 
-Before your app can be listed in the App Store Catalog, you need to add the following files.
+Before your app can be listed in the ACP App Catalog, you need to add the following files.
 
 ### Manifest
 
-The manifest file is the most important one for the app. It contains data that will be displayed in the App Store Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
+The manifest file is the most important one for the app. It contains data that will be displayed in the ACP App Catalog. You can use the [manifest code snippet](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html) and update it to your needs. Add the manifest file to `config/app/manifest/en_US.json` of your app.
 
 Manifest files must have the locale name as the filename, for example, `en_US.json`, and should be placed inside the `config/app/manifest` directory.
 
 ### Configuration
 
-The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the App Store Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html) and update it to your needs. Add this file to `config/app/configuration.json` of your app.
+The configuration file contains all necessary form fields for inputs required by the user of your app, to be displayed in the ACP App Catalog. You can use the [configuration code snippet](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html) and update it to your needs. Add this file to `config/app/configuration.json` of your app.
 
 ### Translation
 
@@ -147,7 +148,7 @@ Make sure that all the needed configuration files have been created and populate
 
 ## 5. Add the registry (code)
 
-Every app requires default endpoints for the App Registry Service. This service acts as an intermediary between the App Store Catalog and all apps. Each app is registered in the App Registry Service and requires the following endpoints for communication:
+Every app requires default endpoints for the App Registry Service. This service acts as an intermediary between the ACP App Catalog and all apps. Each app is registered in the App Registry Service and requires the following endpoints for communication:
 
  - Configure
  - Disconnect
@@ -181,7 +182,7 @@ You can now test the `configure` request with the following snippets. Run the cU
 
 ### Test the /private/configure endpoint
 
-Follow the guidelines in [Test the endpoints](/docs/acp/user/connect-an-app.html#test-the-endpoints).
+Follow the guidelines in [Test the endpoints](/docs/dg/dev/acp/develop-an-app/connect-an-app.html#test-the-endpoints).
 
 ## 9. Implement business logic
 

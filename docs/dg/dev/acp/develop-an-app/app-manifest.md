@@ -1,8 +1,10 @@
 ---
 title: App manifest
-Descriptions: App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
+Description: App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 template: howto-guide-template
 last_updated: Sep 22, 2023
+redirect_from:
+- /docs/acp/user/app-manifest.html
 ---
 App manifest represents a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service (ATRS) and to display information about the application in the Application Catalog (AppCatalog).
 
@@ -283,4 +285,4 @@ Here is how these parts are integrated on the application detail page:
 ![application-details-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-manifest/app-details-page.png)
 
 ## What's next
-[App configuration manifests](/docs/acp/user/develop-an-app/develop-an-app/app-configuration.html)
+[App configuration manifests](/docs/dg/dev/acp/develop-an-app/app-configuration.html)

@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Jan 17, 2024
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
+    - /docs/acp/user/intro-to-acp/acp-architecture-overview.html
 keywords: acp
 ---
 

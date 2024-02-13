@@ -3,6 +3,8 @@ title: Connect an app
 description: Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
 template: howto-guide-template
 last_updated: Jan 17, 2024
+redirect_from:
+- /docs/acp/user/connect-an-app.html
 ---
 
 This document describes how to connect, configure, and disconnect an ACP app (AppConnectionProvider) using the AppRegistry in the Spryker Cloud Commerce OS (SCCOS) environment. Communication between the ACP app and SCCOS is facilitated through the AppRegistry via REST API and message queues.

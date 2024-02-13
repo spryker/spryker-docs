@@ -10,9 +10,11 @@ related:
     link: docs/acp/user/develop-an-app/develop-an-app.html
   - title: App manifest
     link: docs/acp/user/develop-an-app/app-manifest.html
+redirect_from:
+- /docs/acp/user/app-configuration-translation.html
 ---
 
-*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/develop-an-app/develop-an-app/app-configuration.html).
+*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/dg/dev/acp/develop-an-app/app-configuration.html).
 Translations for all configurations in all locales are contained in the same file. The default path for the translation file is: `/config/app/translation.json`.
 
 <details open>

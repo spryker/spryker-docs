@@ -3,6 +3,8 @@ title: Receive ACP Messages
 description: Find out how you can receive ACP messages in SCCOS.
 template: howto-guide-template
 last_updated: Jan 09, 2024
+redirect_from:
+- /docs/acp/user/receive-acp-messages.html
 ---
 
 This document describes how to receive ACP messages in SCCOS.

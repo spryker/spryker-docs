@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Dec 15, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
+    - /docs/acp/user/intro-to-acp/acp-overview.html
 keywords: acp
 ---
 

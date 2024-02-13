@@ -138,6 +138,21 @@ Avoid using wildcards (*) in Redis, as they can significantly impact performance
 
 We recommend to minimize the number of RPC calls, ideally having only one per page. A high volume of RPC calls can lead to severe performance issues.
 
+### Disabling Propel instance pooling
+
+Propel instance pooling is a  Propel feature that determines whether object instance pooling is enabled or disabled. Object instance pooling involves the reuse of previously created instances. Enabling instance pooling may introduce a potential issue related to PHP memory leaks, especially when executing console commands that involve querying a substantial number of entities.
+
+If you encounter memory leak issues while running console commands, consider temporarily disabling instance pooling:
+
+1. Before executing a memory-intensive script, disable instance pooling:
+```php
+\Propel\Runtime\Propel::disableInstancePooling();
+```
+2. After the memory-intensive script has been executed, reenable instance pooling:
+```php
+\Propel\Runtime\Propel::enableInstancePooling();
+```
+
 ## Feature configurations
 
 Spryker has different features and several configurable modules that need to be adjusted correctly to have the best performance and smooth execution in the applications.

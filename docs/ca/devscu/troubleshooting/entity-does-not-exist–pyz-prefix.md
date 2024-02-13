@@ -1,5 +1,5 @@
 ---
-title: Entity does not exist: Pyz prefix
+title: "Entity does not exist: Pyz prefix"
 description: How to solve the issue related to an entity prefixed with pyz
 template: concept-topic-template
 last_updated: Oct 16, 2023

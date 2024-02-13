@@ -120,7 +120,7 @@ defaults:
     values:
       sidebar: "ca_dev_sidebar"
       role: "dev"
-   -
+  -
      scope:
        path: "docs/scu"
      values:

@@ -2,6 +2,7 @@
 title: Configuring GitLab pipelines
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
 template: howto-guide-template
+last_updated: Dec 4, 2023
 originalLink: https://cloud.spryker.com/docs/configuring-gitlab-pipelines
 originalArticleId: ed39b199-299a-4ad0-87c0-b259c5c171f0
 redirect_from:

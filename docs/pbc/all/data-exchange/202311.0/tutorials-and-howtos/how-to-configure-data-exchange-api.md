@@ -1,7 +1,7 @@
 ---
 title: Configure Data Exchange API endpoints
 description: This guide shows how to configure the Data Exchange API endpoints.
-last_updated: June 23, 2023
+last_updated: Dec 5, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
@@ -13,7 +13,7 @@ redirect_from:
 
 This document describes how to create and configure the Data Exchange API endpoints.
 
-The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/countries` endpoint to interact with the `spy_country` table. When following the steps, adjust the data per your requirements.
+The Data Exchange API lets you create endpoints to interact with any database tables through API. In this example, we are creating the `/dynamic-data/countries` endpoint to interact with the `spy_country` and `spy_tax_rate` tables. When following the steps, adjust the data per your requirements.
 
 ## Create and configure a Data Exchange API endpoint
 
@@ -23,11 +23,31 @@ To register an endpoint for interacting with entities in the database, you need 
 | --- | --- |
 | id_dynamic_entity_configuration | ID of the configuration. |
 | table_alias | An alias used in the request URL to refer to the endpoint. |
-| table_name | The name of the database table to operate on. |
+| table_name | Name of the database table to operate on. |
 | is_active | Defines if the endpoint can be interacted with. |
 | definition | A JSON-formatted string containing the configuration details for each field in the table. |
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
+
+You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. 
+The `spy_dynamic_entity_configuration_relation` contains the configuration of relations for dynamic entity endpoints and has the following columns:
+
+| COLUMN | SPECIFICATION                                                                                   |
+| --- |-------------------------------------------------------------------------------------------------|
+| id_dynamic_entity_configuration_relation | ID of the configuration relation.                                                               |
+| fk_parent_dynamic_entity_configuration | Foreign key of the dynamic entity configuration for parent dynamic entity configuration ID. |
+| fk_child_dynamic_entity_configuration | Foreign key of the dynamic entity configuration for child dynamic entity configuration ID.  |
+| name | Name of the dynamic entity relation.                                                        |
+| is_editable | Defines if the endpoint can be editable.                                                        |
+
+`spy_dynamic_entity_configuration_relation_field_mapping` contains the configuration of relation field mapping for dynamic entity endpoints and has the following columns:
+
+| COLUMN | SPECIFICATION                                                                                              |
+| --- |------------------------------------------------------------------------------------------------------------|
+| id_dynamic_entity_configuration_relation_field_mapping | ID of the configuration relation field mapping.                                                            |
+| fk_dynamic_entity_configuration_relation | Foreign key of the dynamic entity configuration relation for dynamic entity configuration relation ID. |
+| child_field_name | Foreign field key name for the child data table.                                                       |
+| parent_field_name | Reference field name for the parent data table.                                                        |
 
 The following example shows a possible value of the `spy_dynamic_entity_configuration.definition` field configured for the `spy_country` table:
 
@@ -60,6 +80,55 @@ The following example shows a possible value of the `spy_dynamic_entity_configur
   ]
 }
 ```
+
+and for `spy_tax_rate` table:
+
+```json
+{
+  "identifier": "id_tax_rate",
+  "fields": [
+    {
+      "fieldName": "id_tax_rate",
+      "fieldVisibleName": "id_tax_rate",
+      "isCreatable": true,
+      "isEditable": true,
+      "type": "integer",
+      "validation": { "isRequired": false }
+    },
+    {
+      "fieldName": "fk_country",
+      "fieldVisibleName": "fk_country",
+      "isCreatable": true,
+      "isEditable": true,
+      "type": "integer",
+      "validation": { "isRequired": false }
+    },
+    {
+      "fieldName": "name",
+      "fieldVisibleName": "name",
+      "isCreatable": true,
+      "isEditable": true,
+      "type": "string",
+      "validation": { "isRequired": true }
+    },
+    {
+      "fieldName": "rate",
+      "fieldVisibleName": "rate",
+      "isCreatable": true,
+      "isEditable": true,
+      "type": "float",
+      "validation": { "isRequired": true }
+    }
+  ]
+}
+```
+
+{% info_block infoBox %}
+
+For configuration relations follow [Configure Dynamic Data installation](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
+
+{% endinfo_block %}
+
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -124,7 +193,7 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Data Exchange API integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
 
 {% endinfo_block %}
 

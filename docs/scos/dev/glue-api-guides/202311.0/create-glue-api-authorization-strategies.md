@@ -7,11 +7,12 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/using-authorization-framework.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-use-authorization-framework.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-use-authorization-framework.html
+  - /docs/scos/dev/glue-api-guides/202204.0/create-glue-api-authorization-strategies.html
 ---
 
 This document describes how to create a new authorization strategy.
 
-Integrate authorization following the [Integrating Authorization Enabler](/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html) guide.
+Integrate authorization following the [Integrating Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html) guide.
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization:
 

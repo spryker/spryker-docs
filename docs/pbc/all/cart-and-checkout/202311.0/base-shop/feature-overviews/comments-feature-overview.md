@@ -8,6 +8,7 @@ originalArticleId: ba9714ca-0500-40fc-b573-c352bc04bff2
 redirect_from:
   - /docs/scos/user/features/202311.0/comments-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/comments-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/comments-feature-overview.html
 ---
 
 The *Comments* feature provides the ability for online owners to add the comments widget. The widget lets the customers leave comments, special requests, or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.

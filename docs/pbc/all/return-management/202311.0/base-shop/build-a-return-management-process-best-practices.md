@@ -11,6 +11,7 @@ redirect_from:
   - /docs/building-a-return-management-process-best-practices
   - /docs/en/building-a-return-management-process-best-practices
   - /docs/pbc/all/return-management/202311.0/build-a-return-management-process-best-practices.html
+  - /docs/pbc/all/return-management/202204.0/base-shop/build-a-return-management-process-best-practices.html
 ---
 
 Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This document contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html) functionality.

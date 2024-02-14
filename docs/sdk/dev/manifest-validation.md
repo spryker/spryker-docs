@@ -2,6 +2,7 @@
 title: Manifest validation
 description: The manifest validation validates the YAML structure for a task.
 template: howto-guide-template
+last_updated: Nov 22, 2022
 ---
 
 The manifest validation feature lets you validate the YAML structure definition of a [task](/docs/sdk/dev/task.html).

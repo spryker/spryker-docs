@@ -2,6 +2,7 @@
 title: External calls—several calls to Zed
 description: Troubleshoot the performance issue with several external calls to Zed
 template: troubleshooting-guide-template
+last_updated: Mar 1, 2023
 ---
 
 Some actions, parts of the website, or the whole website is slow.

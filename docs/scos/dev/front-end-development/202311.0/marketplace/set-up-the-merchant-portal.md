@@ -5,6 +5,7 @@ description: This document provides details about setting up Spryker Marketplace
 template: howto-guide-template
 redirect_from:
   - /docs/marketplace/dev/front-end/202304.0/setting-up-the-merchant-portal.html
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/set-up-the-merchant-portal.html
 related:
   - title: Building the project
     link: docs/scos/dev/front-end-development/page.version/marketplace/set-up-the-merchant-portal.html
@@ -17,7 +18,7 @@ This document provides details about how to set up the Spryker Merchant Portal.
 To start using Merchant Portal, install Spryker Demo Shop:
 
 1. For the Marketplace project installation, use [this repository](https://github.com/spryker-shop/suite).  
-2. [Install the project](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+2. [Install the project](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 
 ## Requirements

@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/security-and-authentication.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/security-and-authentication.html
+  - /docs/scos/dev/glue-api-guides/202204.0/decoupled-glue-infrastructure/security-and-authentication.html
 ---
 
 When exposing information through Spryker Glue API and integrating with third-party applications, it is essential to protect API endpoints from unauthorized access. For this purpose, Spryker provides an authorization mechanism, using which you can request users to authenticate themselves before accessing a resource. For this purpose, Spryker Glue is shipped with an implementation of the OAuth 2.0 protocol. It lets users authenticate themselves with their username and password and receive an access token. The token can then be used to access protected resources.
@@ -28,5 +29,5 @@ Authentication workflow:
 ## Authorization scopes
 
 The API can secure each endpoint individually. For this purpose, API has scopes. A scope defines, what resources specifically users can access.
-Follow the [Authorization scopes integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html) guide and check
+Follow the [Authorization scopes integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html) guide and check
 [how to use Glue API authorization scopes.](/docs/scos/dev/glue-api-guides/{{page.version}}/use-glue-api-authorization-scopes.html)

@@ -2,6 +2,7 @@
 title: Integrating security releases
 description: Spryker Code Upgrader prioritizes security releases over regular releases
 template: concept-topic-template
+last_updated: Dec 20, 2023
 ---
 
 Being on top of security releases of your vendor or third parties is very crucial:
@@ -28,6 +29,8 @@ The Upgrader creates PR for security releases in the same way it does for the re
 
 Automatic installation of security releases is only available for minor releases. The major releases require a manual installation.
 
+Major releases may come with backports to support backward compatibility. In such cases, they will be applied as replacements for major changes.
+
 ## Checking for available security fixes
 
-To check for available security fixes for your project, [run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+To check for available security fixes for your project, [run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).

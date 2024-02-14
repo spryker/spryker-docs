@@ -11,7 +11,8 @@ redirect_from:
   - /docs/glue-api-content-items-api-feature-integration
   - /docs/en/glue-api-content-items-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-content-items-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-content-items-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-content-items-feature-integration.html 
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html 
 related:
   - title: Install the Content Items feature
     link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html

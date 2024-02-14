@@ -7,6 +7,7 @@ originalArticleId: 16830216-0c33-4009-86e0-f9995eef7eed
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/catalog-setup/catalog-setup.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/import-product-catalog-data.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-information-management-data-import.html
 ---
 
 To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:

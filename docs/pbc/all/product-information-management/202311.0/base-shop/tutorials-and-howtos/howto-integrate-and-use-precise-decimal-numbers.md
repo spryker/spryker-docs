@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/en/ht-integrate-and-use-precise-decimal-numbers
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
 related:
   - title: Decimal Stock migration concept
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
@@ -49,7 +50,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about working with Data Transfer Objects, see [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
+For more information about working with Data Transfer Objects, see [Create, use, and extend the transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
 
 ## Create a decimal value object
 

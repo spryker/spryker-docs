@@ -21,6 +21,9 @@ redirect_from:
   - /v1/docs/validating-rest-request-format
   - /v1/docs/en/validating-rest-request-format
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-rest-schema-validation-feature-integration.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/validate-rest-request-format.html
+  
 related:
   - title: Glue API installation and configuration
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html

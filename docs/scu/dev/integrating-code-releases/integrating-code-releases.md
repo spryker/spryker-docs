@@ -2,6 +2,7 @@
 title: Integrating code releases
 description: Spryker Code Upgrader automatically integrates code releases
 template: concept-topic-template
+last_updated: Oct 20, 2023
 ---
 
 Spryker architecture supports the extensions of modules using extension points in the project code. With Spryker Code Upgrader, the process of integrating plugins, configuration updates, adding new translations, and other code changes is automated. As a result, to add new features, developers don't need to apply code changes manually.
@@ -42,7 +43,7 @@ After a release is integrated, a style fixer is applied to the changed files. We
 
 If you see errors in the generated code, do the following:
 
-1. Double-check if your code follows the upgradability guidelines by [running the Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
+1. Double-check if your code follows the upgradability guidelines by [running the Evaluator](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html).
     After fixing the upgradability issues, close the PR with errors and restart the Upgrader to get a new PR.
 2. If you see any quick fixes, try manually correcting the errors.
 3. [Contact us](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) for further assistance. 

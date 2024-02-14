@@ -2,6 +2,7 @@
 title: FileResolver
 description: Find out how you can enable or disable the Code Sniffer when running Spryks
 template: howto-guide-template
+last_updated: Nov 10, 2022
 ---
 
 The FileResolver, located in `SprykerSdk\Spryk\Model\Spryk\Builder\Resolver\FileResolverInterface`, is a core part of the file management.

@@ -2,6 +2,7 @@
 title: Marketplace Shipment feature overview
 description: This document contains concept information for the Marketplace Shipment feature.
 template: concept-topic-template
+last_updated: Nov 9, 2023
 redirect_from:
   - /docs/marketplace/user/features/202307.0/marketplace-shipment-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-shipment-feature-walkthrough.html

@@ -8,6 +8,7 @@ originalArticleId: 903570fe-6ca4-4165-b0d3-6764e0262308
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
@@ -196,19 +197,8 @@ To retrieve prices of an abstract product, send the request:
 
 <a name="abstract-product-prices-response-attributes"></a>
 
-| FIELD | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| price | Integer | Price to pay for that product in cents. |
-| priceTypeName | String | Price type. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| currency.code | String | Currency code. |
-| currency.name | String | Currency name. |
-| currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| quantity | Integer | Number of items. |
+{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+
 
 ## Possible errors
 

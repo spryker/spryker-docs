@@ -1,6 +1,7 @@
 ---
 title: Install the Checkout Glue API
 template: feature-integration-guide-template
+last_updated: Nov 17, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-checkout-feature-integration
 originalArticleId: f44bd963-7af3-4ce8-8b7a-3c1477880728
 redirect_from:
@@ -12,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-checkout-feature-integration.html  
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html

@@ -22,6 +22,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/quotation-process-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
   - /docs/pbc/all/request-for-quote/request-for-quote.html
+  - /docs/pbc/all/request-for-quote/202204.0/request-for-quote.html
 ---
 
 | DEFINITION | DESCRIPTION |

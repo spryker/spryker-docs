@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/en/glue-api-tutorials
   - /v1/docs/glue-api-tutorials
   - /v1/docs/en/glue-api-tutorials
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/glue-api-tutorials.html
 ---
 
 Glue API is a JSON REST API that can help B2C and B2B shops integrate with and personalize frontend APPs like IoT, mobile, and web page stores.

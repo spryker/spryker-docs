@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-companies.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-companies.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-companies.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/manage-companies.html
 related:
   - title: Company user roles and permissions overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html

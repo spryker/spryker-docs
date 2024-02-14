@@ -2,6 +2,7 @@
 title: Oryx application feature
 description: Feature of the Oryx Application
 template: concept-topic-template
+last_updated: Sep 14, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-feature.html
 ---

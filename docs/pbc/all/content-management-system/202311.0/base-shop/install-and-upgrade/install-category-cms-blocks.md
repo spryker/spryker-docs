@@ -6,14 +6,11 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-category-cms-block
 originalArticleId: ee92c90c-e72e-415e-ab58-19089024d1b5
 redirect_from:
-  - /2021080/docs/enabling-the-category-cms-block
-  - /2021080/docs/en/enabling-the-category-cms-block
-  - /docs/enabling-the-category-cms-block
-  - /docs/en/enabling-the-category-cms-block
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-block.html
   - /docs/scos/dev/technical-enhancements/enabling-the-category-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-category-cms-blocks.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-category-cms-blocks.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html

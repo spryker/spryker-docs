@@ -12,15 +12,15 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue Backend Api Application | {{page.version}} | [Glue API - Glue Storefront and Backend API applications integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
-| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
+| Glue Backend Api Application | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
+| Glue Authentication | {{page.version}} | [Glue API - Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 
 ### Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker/dynamic-entity-backend-api:"^1.0.0" spryker/dynamic-entity-gui:"^1.0.0" --update-with-dependencies
+composer require spryker/dynamic-entity-backend-api:"^1.5.0" spryker/dynamic-entity-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -158,6 +158,8 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 <details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
+##### Example:
+
 ```json
 [
   {
@@ -216,11 +218,46 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
             "validation": { "isRequired": false }
           }
         ]
-      }
+      },
+      "childRelations": [
+        {
+          "name": "countryTaxRates",
+          "isEditable": true,
+          "childDynamicEntityConfiguration": {
+            "tableAlias": "taxRates"
+          },
+          "relationFieldMapping": [
+            {
+              "childFieldName": "fk_country",
+              "parentFieldName": "id_country"
+            }
+           ]
+        }
+     ]
     }
 ]
 ```
 </details>
+
+##### Structure:
+
+{% info_block infoBox "" %}
+
+
+| Name                                                      | Imported to                                                                     | Description                                                                                                                                                                                                                                                                                     |
+|-----------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| tableName                                                 | spy_dynamic_entity_configuration.table_name                                     | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| tableAlias                                                | spy_dynamic_entity_configuration.table_alias                                    | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| isActive                                                  | spy_dynamic_entity_configuration.is_active                                      | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| definition                                                | spy_dynamic_entity_configuration.definition                                     | For details see [How to configure Data Exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html#create-and-configure-a-data-exchange-api-endpoint)                                                                                                          |
+| childRelations                                            | spy_dynamic_entity_configuration_relation                                       | Relation between two Data Exchange API configurations. Allows to execute complex requests to retrieve or save data together with relations. See details [How to send request in data exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) |
+| childRelations.name                                       | spy_dynamic_entity_configuration_relation.name                                  | Name of the relation, used to include relations as part of Data Exchange API requests, see details [How to send request in data exchange API](https://docs.spryker.com/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html)                                                      |
+| childRelations.isEditable                                 | spy_dynamic_entity_configuration_relation.is_editable                           | If set to `false` limits relation functionality to only GET requests, POST/PATCH/PUT requests are restricted.                                                                                                                                                                                   |
+| childRelations.childDynamicEntityConfiguration.tableAlias | spy_dynamic_entity_configuration_relation.fk_child_dynamic_entity_configuration | The alias of the child Data Exchange API configuration for the relation, parent configuration details are determined based on the configuration where the child relations added.                                                                                                                |
+| childRelations.relationFieldMapping                       | spy_dynamic_entity_configuration_relation_field_mapping                         | Details about how child and parent configuration of the relations are connected.                                                                                                                                                                                                                |
+
+{% endinfo_block %}
+
 2. Add the path to the configuration file, to `DynamicEntityConfig`:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
@@ -292,12 +329,15 @@ Make sure the following transfers have been created:
 | DynamicEntityConfigurationCollectionResponse | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCollectionResponseTransfer.php |
 | DynamicEntityConfigurationConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationConditionsTransfer.php |
 | DynamicEntityConfigurationCriteria | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationCriteriaTransfer.php |
+| DynamicEntityConfigurationRelation | class | created | src/Generated/Shared/Transfer/DynamicEntityConfigurationRelationTransfer.php |
 | DynamicEntityConditions | class | created | src/Generated/Shared/Transfer/DynamicEntityConditionsTransfer.php |
 | DynamicEntityCriteria | class | created | src/Generated/Shared/Transfer/DynamicEntityCriteriaTransfer.php |
 | DynamicEntityDefinition | class | created | src/Generated/Shared/Transfer/DynamicEntityDefinitionTransfer.php |
 | DynamicEntityFieldCondition | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldConditionTransfer.php |
 | DynamicEntityFieldDefinition | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldDefinitionTransfer.php |
 | DynamicEntityFieldValidation | class | created | src/Generated/Shared/Transfer/DynamicEntityFieldValidationTransfer.php |
+| DynamicEntityRelation | class | created | src/Generated/Shared/Transfer/DynamicEntityRelationTransfer.php |
+| DynamicEntityRelationFieldMapping | class | created | src/Generated/Shared/Transfer/DynamicEntityRelationFieldMappingTransfer.php |
 | Error | class | created | src/Generated/Shared/Transfer/ErrorTransfer.php |
 | ErrorCollection | class | created | src/Generated/Shared/Transfer/ErrorCollectionTransfer.php |
 | GlueError | class | created | src/Generated/Shared/Transfer/GlueErrorTransfer.php |
@@ -337,18 +377,26 @@ dynamic_entity.validation.persistence_failed_duplicate_entry,"Failed to persist 
 dynamic_entity.validation.persistence_failed_duplicate_entry,"Das Speichern der Daten ist fehlgeschlagen. Bitte überprüfen Sie die bereitgestellten Daten und versuchen Sie es erneut. Eintrag is doppelt vorhanden.",de_DE
 dynamic_entity.validation.entity_does_not_exist,"The entity could not be found in the database.",en_US
 dynamic_entity.validation.entity_does_not_exist,"Die Entität konnte in der Datenbank nicht gefunden werden.",de_DE
-dynamic_entity.validation.invalid_field_type,"Invalid data type for field: %fieldName%",en_US
-dynamic_entity.validation.invalid_field_type,"Ungültiger Datentyp: %fieldName%",de_DE
+dynamic_entity.validation.invalid_field_type,"Invalid data type for field: %tableAlias%.%fieldName%",en_US
+dynamic_entity.validation.invalid_field_type,"Ungültiger Datentyp: %tableAlias%.%fieldName%",de_DE
 dynamic_entity.validation.invalid_field_value,"Invalid data value for field: %fieldName%, row number: %rowNumber%. Field rules: %validationRules%",en_US
 dynamic_entity.validation.invalid_field_value,"Ungültiger Datenwert für das Feld: %fieldName%, Zeilennummer: %rowNumber%. Feldregeln: %validationRules%",de_DE
-dynamic_entity.validation.required_field_is_missing,"The required field must not be empty. Field: '%fieldName%'",en_US
-dynamic_entity.validation.required_field_is_missing,"Das erforderlich Feld darf nicht leer sein. Feld: '%fieldName%'",de_DE
+dynamic_entity.validation.required_field_is_missing,"The required field must not be empty. Field: '%tableAlias%.%fieldName%'",en_US
+dynamic_entity.validation.required_field_is_missing,"Das erforderlich Feld darf nicht leer sein. Feld: '%tableAlias%.%fieldName%'",de_DE
 dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entity `%identifier%` not found by identifier, and new identifier can not be persisted. Please update the request.",en_US
 dynamic_entity.validation.entity_not_found_or_identifier_is_not_creatable,"Entität `%identifier%` konnte anhand der ID nicht gefunden werden, und die neue ID kann nicht dauerhaft gespeichert werden. Bitte aktualisieren Sie die Anfrage.",de_DE
 dynamic_entity.validation.modification_of_immutable_field_prohibited,"Modification of immutable field `%fieldName%` is prohibited",en_US
 dynamic_entity.validation.modification_of_immutable_field_prohibited,"Änderung des unveränderlichen Feldes %fieldName% ist nicht zulässig.",de_DE
 dynamic_entity.validation.missing_identifier,"Incomplete Request - missing identifier",en_US
 dynamic_entity.validation.missing_identifier,"Unvollständige Anforderung - fehlende ID",de_DE
+dynamic_entity.validation.provided_field_is_invalid,"The provided `%fieldName%` is incorrect or invalid.",en_US
+dynamic_entity.validation.provided_field_is_invalid,"Der angegebene `%fieldName%` ist falsch oder ungültig.",de_DE
+dynamic_entity.validation.relation_not_found,"Relation %relationName% not found. Please check the requested relation name and try again.",en_US
+dynamic_entity.validation.relation_not_found,"Beziehung %relationName% nicht gefunden. Bitte überprüfen Sie den angeforderten Beziehungsnamen und versuchen Sie es erneut.",de_DE
+dynamic_entity.validation.relation_is_not_editable,"The relationship `%relationName%` is not editable by configuration.",en_US
+dynamic_entity.validation.relation_is_not_editable,"Die Beziehung `%relationName%` kann nicht per Konfiguration bearbeitet werden.",de_DE
+dynamic_entity.validation.configuration_not_found,"Dynamic entity configuration for table alias `%aliasName%` not found.",en_US
+dynamic_entity.validation.configuration_not_found,"Dynamische Entitätskonfiguration für Tabellenalias `%aliasName%` nicht gefunden.",de_DE
 ```
 
 2. Import data:

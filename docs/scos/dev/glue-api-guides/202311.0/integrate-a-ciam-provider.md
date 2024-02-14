@@ -5,6 +5,7 @@ last_updated: Nov 9, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/howto-integrate-a-ciam-provider.html
+  - /docs/scos/dev/glue-api-guides/202204.0/integrate-a-ciam-provider.html
 ---
 
 This document describes how to integrate a third-party _customer identity and access management (CIAM)_ provider into a Spryker project.
@@ -33,7 +34,7 @@ The following library is a suggestion, not a requirement.
 composer require "firebase/php-jwt": "^5.4" --update-with-dependencies
 ```
 
-For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
+For detailed information about the modules related to OAuth and GLUE Authentication integration that provide the API functionality and related installation instructions, see [Glue API - Authentication integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html).
 
 ## Module dependency graph
 

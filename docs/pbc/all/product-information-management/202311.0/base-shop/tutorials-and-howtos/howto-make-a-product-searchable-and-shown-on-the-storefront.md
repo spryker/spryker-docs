@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/products/manage-product-variants/create-product-variants.html

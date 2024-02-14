@@ -2,6 +2,7 @@
 title: Invite users to Spryker CI
 description: Instructions for inviting users to Spryker CI
 template: howto-guide-template
+last_updated: Mar 8, 2023
 redirect_from:
   - /docs/paas-plus/dev/invite-users-to-spryker-ci.html
 ---

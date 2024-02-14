@@ -3,6 +3,8 @@ title: Warehouse Management System data import
 description: Details about data import files for the Warehouse Management System PBC
 template: concept-topic-template
 last_updated: Jul 23, 2023
+redirect_from:
+- /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/warehouse-management-system-data-import.html
 ---
 
 

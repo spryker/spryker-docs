@@ -5,6 +5,7 @@ last_updated: Nov 21, 2022
 template: feature-integration-guide-template
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/mailing-and-notifications-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/mailing-and-notifications-feature-integration.html
 ---
 
 {% info_block errorBox %}

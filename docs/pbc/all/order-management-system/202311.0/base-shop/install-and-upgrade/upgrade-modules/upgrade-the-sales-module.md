@@ -31,6 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
   - /docs/scos/dev/module-migration-guides/migration-guide-sales.html
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/upgrade-modules/upgrade-the-sales-module.html
+  - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
+  - /docs/pbc/all/order-management-system/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html
+---
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-sales-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-sales-module.md -->

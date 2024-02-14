@@ -2,6 +2,7 @@
 title: Deployment pipelines
 description: Deployment pipelines consist of three configurable stages.
 template: howto-guide-template
+last_updated: Nov 30, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-return-management-feature-integration
   - /docs/en/glue-api-return-management-feature-integration
   - /docs/pbc/all/return-management/202311.0/install-and-upgrade/install-the-return-management-glue-api.html
+  - /docs/pbc/all/return-management/202204.0/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
 related:
   - title: Return Management feature integration
     link: docs/pbc/all/return-management/page.version/install-and-upgrade/install-the-return-management-feature.html

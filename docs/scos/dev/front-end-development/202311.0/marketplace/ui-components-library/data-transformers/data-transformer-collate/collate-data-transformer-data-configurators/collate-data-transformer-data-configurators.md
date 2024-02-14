@@ -2,8 +2,10 @@
 title: "Collate data transformer: Data configurators"
 description: This document provides details about the Data Transformer Data Configurators service in the Components Library.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/data-configurators/
+  - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/data-transformers/collate/data-configurators/index.html
 related:
   - title: Data Transformer Collate Configurator Table
     link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-table-configurator.html

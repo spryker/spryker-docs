@@ -7,13 +7,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html
   - /docs/scos/dev/glue-api-guides/202212.0/decoupled-glue-infrastructure/how-to-guides/how-to-create-protected-endpoints.html
+  - /docs/scos/dev/glue-api-guides/202204.0/create-protected-glue-api-endpoints.html
 ---
 
 This document describes how to create a protected endpoint for a resource, or a custom-route in storefront and backend API applications.
 
 ## Prerequisites
 
-Integrate authorization into your project. For details, see [Authorization protected endpoints integration](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html).
+Integrate authorization into your project. For details, see [Authorization protected endpoints integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html).
 
 ## Create protected endpoints
 

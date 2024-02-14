@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/en/implementing-rest-api-resource
   - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-api-tutorials/implement-a-rest-api-resource.html
 ---
 
 This document shows how to implement a REST API resource in your project.
@@ -267,7 +268,7 @@ The same as with any other data source, you can use containers called *transfer 
 
 {% info_block infoBox %}
 
-For information about defining objects and syntax, see [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
+For information about defining objects and syntax, see [Create, use, and extend the transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
 
 {% endinfo_block %}
 

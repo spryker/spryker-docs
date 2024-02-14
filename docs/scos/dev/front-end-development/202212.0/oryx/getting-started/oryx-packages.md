@@ -25,13 +25,14 @@ While the package layering might be irrelevant during your development, it might
 
 The template layer contains packages that can be used as quick starters for demos and projects. Templated packages follow semantic versioning and ensure upgradability. Some packages in the template layer, like presets, are opinionated and might not be used inside your final setup. Their main purpose is to quickly get up and running a standard frontend application.
 
-| PACKAGES                                                                 | LOCATION                                                                |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-|                                                                          |                                                                         |
-| [Application](https://www.npmjs.com/package/@spryker-oryx/application)   | `@spryker-oryx/oryx-application-orchestration/oryx-applicationlication` |
-| [Presets](https://www.npmjs.com/package/@spryker-oryx/oryx-presets.html) | `@spryker-oryx/oryx-presets`                                            |
-| [Labs ](https://www.npmjs.com/package/@spryker-oryx/labs)                | `@spryker-oryx/labs`                                                    |
-| [Themes ](https://www.npmjs.com/package/@spryker-oryx/themes)            | `@spryker-oryx/themes`                                                  |
+| PACKAGES                                                               | LOCATION                    |
+| ---------------------------------------------------------------------- | --------------------------- |
+|                                                                        |                             |
+| [Application](https://www.npmjs.com/package/@spryker-oryx/application) | `@spryker-oryx/application` |
+| [Presets](https://www.npmjs.com/package/@spryker-oryx/presets)         | `@spryker-oryx/presets`     |
+| [Labs](https://www.npmjs.com/package/@spryker-oryx/labs)               | `@spryker-oryx/labs`        |
+| [Themes](https://www.npmjs.com/package/@spryker-oryx/themes)           | `@spryker-oryx/themes`      |
+| [Resources](https://www.npmjs.com/package/@spryker-oryx/resources)     | `@spryker-oryx/resources`   |
 
 {% info_block infoBox %}
 
@@ -50,7 +51,7 @@ Domain packages provide components and service logic for certain domains. Organi
 | [Checkout](https://www.npmjs.com/package/@spryker-oryx/checkout) | `@spryker-oryx/checkout` |
 | [Content](https://www.npmjs.com/package/@spryker-oryx/content)   | `@spryker-oryx/content`  |
 | [Order](https://www.npmjs.com/package/@spryker-oryx/order)       | `@spryker-oryx/order`    |
-| [picking](https://www.npmjs.com/package/@spryker-oryx/picking)   | `@spryker-oryx/picking`  |
+| [Picking](https://www.npmjs.com/package/@spryker-oryx/picking)   | `@spryker-oryx/picking`  |
 | [Product](https://www.npmjs.com/package/@spryker-oryx/product)   | `@spryker-oryx/product`  |
 | [Search](https://www.npmjs.com/package/@spryker-oryx/search)     | `@spryker-oryx/search`   |
 | [Site](https://www.npmjs.com/package/@spryker-oryx/site)         | `@spryker-oryx/site`     |
@@ -66,9 +67,9 @@ The platform layer contains the core packages of the Oryx framework. They provid
 | [Experience](https://www.npmjs.com/package/@spryker-oryx/experience)               | `@spryker-oryx/experience`        |
 | [I18n](https://www.npmjs.com/package/@spryker-oryx/I18n)                           | `@spryker-oryx/i18n`              |
 | [Indexed-db](https://www.npmjs.com/package/@spryker-oryx/indexed-db)               | `@spryker-oryx/indexed-db`        |
-| [offline](https://www.npmjs.com/package/@spryker-oryx/offline)                     | `@spryker-oryx/offline`           |
-| [push-notification](https://www.npmjs.com/package/@spryker-oryx/push-notification) | `@spryker-oryx/push-notification` |
-| [router](https://www.npmjs.com/package/@spryker-oryx/router)                       | `@spryker-oryx/router`            |
+| [Offline](https://www.npmjs.com/package/@spryker-oryx/offline)                     | `@spryker-oryx/offline`           |
+| [Push-notification](https://www.npmjs.com/package/@spryker-oryx/push-notification) | `@spryker-oryx/push-notification` |
+| [Router](https://www.npmjs.com/package/@spryker-oryx/router)                       | `@spryker-oryx/router`            |
 
 ## Base packages
 

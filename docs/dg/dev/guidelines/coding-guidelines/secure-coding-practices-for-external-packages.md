@@ -1,6 +1,6 @@
 ---
-title: Secure Coding Practices (External packages)
-description: Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
+title: Secure coding practices for external packages
+description: 
 last_updated: Feb 02, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/secure-coding-practices
@@ -16,20 +16,21 @@ related:
   - title: Secure Coding Practices
     link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
+Unsafe coding practices can expose your application to the theft of sensitive data. In this document, we provide recommended coding practices for developing your app to ensure its security.
 
 ## How to add new external package to your project
 
-Sometimes you would like to add a new external package to your project. In this case check our doc to make sure that your project is secure.
+Before adding a new external package to your project, make sure to comply with the following security recommendations:
 
-### Check security (now and future)
+### Regularly check security
 
 1. Check that the package has no known security vulnerabilities. 
-2. Add an automated SAST&SCA tool to your CI/CD to check it regularly for all the packages.
+2. To regularly check all packages, add an automated SAST&SCA tool to your CI/CD.
 
-### Check with your Legal (now and future)
+### Perform regular compliance checks
 
-Every package comes with a license.
+Every package comes with a license. Do the following:
 1. Check with your legal team that you can use the package with its license.
-2. Add an automated tool to your CI/CD to check it regularly for all the packages.
+2. To regularly check all packages, add an automated tool to your CI/CD.
 
-We can recommend [Snyk](https://snyk.io/) for all the stated above actions. But you are free to use any other tool. 
+We recommend [Snyk](https://snyk.io/) for all the listed recommendations. However, you are free to use any other tool. 

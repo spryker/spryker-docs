@@ -1026,7 +1026,7 @@ entries:
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
-                - "202403.0"            
+                - "202404.0"            
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -3964,7 +3964,7 @@ entries:
               - title: Install the Merchant Portal Agent Assist feature
                 url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
                 include_versions:
-                - "202403.0"
+                - "202404.0"
               - title: "Persistence ACL feature: Domain model and relationships"
                 url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
 

@@ -14,6 +14,8 @@ related:
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
   - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html    
+redirect_from:
+- /docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 ---
 
-{% include pbc/all/install-features/202403.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202403.0/install-glue-api/install-the-checkout-glue-api.md -->
+{% include pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md -->

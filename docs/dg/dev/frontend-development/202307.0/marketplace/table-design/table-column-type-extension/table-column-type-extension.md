@@ -9,23 +9,23 @@ redirect_from:
 
 related:
   - title: Table Column Type Autocomplete
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html
   - title: Table Column Type Chip
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-chip.html
   - title: Table Column Type Date
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-date.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-date.html
   - title: Table Column Type Dynamic
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html
   - title: Table Column Type Image
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-image.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-image.html
   - title: Table Column Type Input
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-input.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-input.html
   - title: Table Column Type List
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-list.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-list.html
   - title: Table Column Type Select
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-select.html
   - title: Table Column Type Text
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-text.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-column-type-extension/table-column-type-text.html
 ---
 
 This document explains the Table Column Type extension in the Components library.
@@ -204,12 +204,12 @@ export enum ColumnTypeOptionsType {
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- [Autocomplete](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
-- [Chip](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-chip.html) - renders `@spryker/chip` component.
-- [Date](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-date.html) - renders a formatted date by `config`.
-- [Dynamic](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
-- [Image](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-image.html) - renders an image.
-- [Input](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-input.html) - renders `@spryker/input` component.
-- [List](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-list.html) - renders a list of column types.
-- [Select](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-select.html) - renders `@spryker/select` component.
-- [Text](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-text.html) - renders a static text.
+- [Autocomplete](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
+- [Chip](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-chip.html) - renders `@spryker/chip` component.
+- [Date](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-date.html) - renders a formatted date by `config`.
+- [Dynamic](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
+- [Image](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-image.html) - renders an image.
+- [Input](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-input.html) - renders `@spryker/input` component.
+- [List](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-list.html) - renders a list of column types.
+- [Select](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-select.html) - renders `@spryker/select` component.
+- [Text](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-text.html) - renders a static text.

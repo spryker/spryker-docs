@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/angular-services.html
 ---
 title: Angular Services
 description: This document provides details about the Angular Services, and how to create and use them.
@@ -6,11 +5,13 @@ template: concept-topic-template
 last_updated: Jul 24, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/angular-services.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/angular-services.html
+
 related:
   - title: Angular Components
-    link: docs/scos/dev/front-end-development/page.version/marketplace/angular-components.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-components.html
   - title: Web Components
-    link: docs/scos/dev/front-end-development/page.version/marketplace/web-components.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/web-components.html
 ---
 
 This document describes what Angular Services are, how to create and use them.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
 ---
 title: Oryx application environment
 description: Environment of the Oryx Application
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Sep 14, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-environment.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html
+
 ---
 
 `AppEnvironment` represents environment variables that are used in an Oryx application. It's a typesafe global object that can be extended wherever an environment variable is needed for a feature to work properly.

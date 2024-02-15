@@ -9,13 +9,13 @@ redirect_from:
 
 related:
   - title: Datasource Dependable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
   - title: Datasource Trigger
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
   - title: Datasource Http
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 Datasource Inline Table is an Angular service in the components library that allows for passing the data transformed for the table format along with the configuration of the Datasource.

@@ -1,28 +1,29 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-close-drawer.html
 ---
 title: Actions Close Drawer
 description: This document provides details about the Actions Close Drawer service in the Components Library.
 template: concept-topic-template
 last_updated: Aug 2, 2023
 redirect_from:
-  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-close-drawer.html 
+  - /docs/marketplace/dev/front-end/202212.0/ui-components-library/actions/actions-close-drawer.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/actions/actions-close-drawer.html
+
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Actions Drawer
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-drawer.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-drawer.html
   - title: Actions HTTP
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-http.html
   - title: Actions Notification
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-notification.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-notification.html
   - title: Actions Redirect
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-redirect.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-redirect.html
   - title: Actions Refresh Drawer
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-refresh-drawer.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-refresh-drawer.html
   - title: Actions Refresh Parent Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-refresh-parent-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-refresh-parent-table.html
   - title: Actions Refresh Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/actions-refresh-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/actions-refresh-table.html
 
 ---
 

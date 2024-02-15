@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
 ---
 title: Oryx application plugins
 description: Plugins of the Oryx Application
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Sep 14, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-plugins.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
+
 ---
 
 When you create an Oryx Application with the `appBuilder()` function, it creates an instance of `App`. `App` is a a shell that can be enhanced with custom plugins: `AppPlugin`. Plugins let you extend Oryx core behavior without modifying the core code of the framework.
@@ -125,7 +126,7 @@ Instead of relying on the order of registration of the plugins to the Oryx appli
 {% endinfo_block %}
 
 
-For more information on how to access registered plugins, see [interacting with plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application.html#interact-with-plugins).
+For more information on how to access registered plugins, see [interacting with plugins](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application.html#interact-with-plugins).
 
 ## Plugin use cases
 

@@ -10,25 +10,25 @@ redirect_from:
 
 related:
   - title: Table Feature Batch Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Editable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - title: Table Feature Pagination
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
   - title: Table Feature Row Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
   - title: Table Feature Search
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document explains the Table Feature extension in the Components Library.
@@ -176,14 +176,14 @@ export enum TableFeatureLocation {
 
 There are multiple standard Table Features that are shipped with the UI library:
 
-- [Batch Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
-- [Editable](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-editable.html) - allows editing/adding rows of the table
-- [Filters](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html) - allows filtering the data set.
-- [Pagination](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-pagination.html) - renders pagination of the table.
-- [Row Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html) - allows triggering actions from rows.
-- [Search](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-search.html) - allows searching within the data set.
-- [Selectable](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-selectable.html) - allows selecting multiple rows.
-- [Settings](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-settings.html) - allows customizing columns of the table (show/hide and reorder).
-- [Sync State](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting).
-- [Title](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-title.html) - renders the title of the table.
-- [Total](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-total.html) - renders the total number of the data set.
+- [Batch Actions](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html) - allows triggering batch/multiple actions from rows.
+- [Editable](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-editable.html) - allows editing/adding rows of the table
+- [Filters](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html) - allows filtering the data set.
+- [Pagination](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-pagination.html) - renders pagination of the table.
+- [Row Actions](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html) - allows triggering actions from rows.
+- [Search](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-search.html) - allows searching within the data set.
+- [Selectable](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-selectable.html) - allows selecting multiple rows.
+- [Settings](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-settings.html) - allows customizing columns of the table (show/hide and reorder).
+- [Sync State](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-sync-state.html) - allows syncing the state of the table with browser URL (like pagination, filters, sorting).
+- [Title](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-title.html) - renders the title of the table.
+- [Total](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-total.html) - renders the total number of the data set.

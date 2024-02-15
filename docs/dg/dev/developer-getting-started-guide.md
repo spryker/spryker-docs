@@ -14,16 +14,16 @@ This document helps you get started with the Spryker Cloud Commerce OS. It has b
 
 ## 1. Install Spryker
 
-Spryker Demo Shops are a good starting point for any project. A Demo Shop includes different sets of components that have been selected for a different type of business or project. Each of these options is fully functional and can be used for both demonstrative purposes as well as working as a boilerplate for your new project. Though each shop comes with its own pre-selected components, Spryker also offers hundreds of additional modules which can be chosen later.
+Spryker Demo Shops are a good starting point for any project. They are shipped with different sets of components, which are specific to respective business models. Demo Shops are fully functional and can be used for both demonstrative purposes as well as as a boilerplate for a new project. Though each shop comes with pre-selected components, Spryker offers hundreds of additional modules which you can add late.
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html)
+* [Marketplace B2C Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
+* [Marketplace B2B Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
 
-Both Demo Shops can also be expanded with separate features and modules.
-
-To install Spryker, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
+You can run Spryker on MacOS, Linux, and Windows with WSL1 or WSL2. For installation instructions, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 ### Configure the local environment
 
@@ -46,16 +46,14 @@ In the past, Vagrant had been used to run Spryker locally. Now that Spryker runs
 
 ### Adjust the `readme.md` file
 
-Once your project has been installed, you need to adjust the `readme.md` file as follows:
-
 * Update the project installation description.
 * Update the repository link.
-* Remove any unused information, such as Vagrant installation instructions if a DevVM was not used.
-* Consider moving the production information further done in the file so that new developers can more readily understand how to use the project.
+* Remove any unused information, like Vagrant installation instructions if DevVM was not used.
+* Consider moving the production information further down to make it easier for new developers to understand how to use the project.
 
 ## 2. Manage modules
 
-Once the installation of your new project has been completed, you may start to manage the modules you want to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
+A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently.
 
 {% info_block infoBox %}
 
@@ -63,10 +61,16 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+[Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies:
 
-* To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
-* To update all the modules for your project: `composer update "spryker/*"`.
+* Install the dependencies listed in `composer.json`:
+```bash
+composer install
+```
+* Update all the installed modules:
+```bash
+composer update "spryker/*"
+```
 
 {% info_block infoBox %}
 
@@ -74,7 +78,10 @@ We recommend running this command weekly to ensure you have the latest fixes. We
 
 {% endinfo_block %}
 
-* To update a particular module: `composer update "spryker/module-name"`.
+* Update a specific module:
+```bash
+composer update "spryker/{MODULE_NAME}"
+```
 
 {% info_block infoBox %}
 

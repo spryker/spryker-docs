@@ -9,7 +9,7 @@ redirect_from:
 
 related:
   - title: Cache Strategy Static
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html
 ---
 
 This document explains the Cache service in the Component Library.
@@ -177,9 +177,9 @@ interface CacheStrategyConfig {
 
 There are a few common Cache Strategies that are available in UI library as separate packages:
 
-- [Static](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html)—adds values immediately to the
+- [Static](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service-cache-strategy-static-service.html)—adds values immediately to the
 cache until the expiration date and always retrieves them from cache if requested.
 
 ## Related articles
 
-[Persistence](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/persistence/persistence.html)
+[Persistence](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/persistence/persistence.html)

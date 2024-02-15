@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html
 ---
 title: "Oryx: Presets"
 description: Presets are used to install predefined applications
@@ -6,9 +5,11 @@ template: concept-topic-template
 last_updated: Apr 4, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-presets.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html
+
 ---
 
-The [presets package](https://www.npmjs.com/package/@spryker-oryx/presets) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
+The [presets package](https://www.npmjs.com/package/@spryker-oryx/presets) contains standard feature sets and resources that are used to create sample applications without writing [boilerplate](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html). Presets might be too opinionated to use for a production application, but they let you get started quickly.
 
 Presets are typically used to demonstrate or try out Oryx applications. In production applications, the boilerplate is set up in a more optimized way, by leaving out the features that are not used.
 
@@ -42,11 +43,11 @@ export const storefrontFeatures: AppFeature[] = [
 
 Feature sets also contain static experience data. Experience data includes the structure and layout of the components of an application, such as pages and sections. By utilizing the static experience data provided by the presets, you don't need to set up any boilerplate code. Moreover, we avoid hardcoded page structures which enables personalized experiences.
 
-For more information about feature sets, see [Feature sets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html).
+For more information about feature sets, see [Feature sets](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-feature-sets.html).
 
 ## Themes
 
-A _theme_ represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
+A _theme_ represents the global visual appearance of an application, including typography, colors, and other specific design elements, such as the color of a form field's placeholder. Themes are built with [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html), which are configurable values that are used in CSS properties. Configuring these design tokens lets you customize a theme and align the application and its components with your brand identity or specific design requirements.
 
 To apply a theme to your Oryx application, you can import it from the preset package and use it during the application setup:
 

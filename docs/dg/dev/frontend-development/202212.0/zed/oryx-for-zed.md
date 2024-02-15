@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/zed/oryx-for-zed.html
 ---
 title: Oryx for Zed
 description: oryx-for-zed is an extension of Oryx that performs a full build for Spryker Zed UI applications.
@@ -26,6 +25,8 @@ redirect_from:
   - /front-end_developer_guide/zed/oryx/oryx-for-zed
   - /front-end_developer_guide/zed/oryx/oryx-for-zed.htm
   - /docs/scos/dev/front-end-development/zed/oryx-for-zed.html
+  - /docs/scos/dev/front-end-development/202212.0/zed/oryx-for-zed.html
+
 ---
 
 ## Introduction
@@ -34,7 +35,7 @@ redirect_from:
 
 {% info_block warningBox "Oryx framework" %}
 
-`Oryx` and `oryx-for-zed` should not be confused with the [Oryx frontend framework](/docs/scos/dev/front-end-development/{{page.version}}/oryx/oryx.html) that is used to create composable frontend applications.
+`Oryx` and `oryx-for-zed` should not be confused with the [Oryx frontend framework](/docs/dg/dev/frontend-development/{{page.version}}/oryx/oryx.html) that is used to create composable frontend applications.
 
 {% endinfo_block %}
 
@@ -89,7 +90,7 @@ yarn run build-zed
 
 ### Extend or change the settings
 
-Settings are extended and changed by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-for-zed.html#api).
+Settings are extended and changed by using the `oryx-for-zed` [API](/docs/dg/dev/frontend-development/{{page.version}}/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 
@@ -124,7 +125,7 @@ You will now be able to…
 
 ### Extend/change webpack configuration
 
-`webpack` is customized by using the `oryx-for-zed` [API](/docs/scos/dev/front-end-development/{{page.version}}/zed/oryx-for-zed.html#api).
+`webpack` is customized by using the `oryx-for-zed` [API](/docs/dg/dev/frontend-development/{{page.version}}/zed/oryx-for-zed.html#api).
 
 The example below shows how to create a custom build:
 

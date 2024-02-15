@@ -9,9 +9,9 @@ redirect_from:
 
 related:
   - title: Angular Services
-    link: docs/scos/dev/front-end-development/page.version/marketplace/angular-services.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-services.html
   - title: Web Components
-    link: docs/scos/dev/front-end-development/page.version/marketplace/web-components.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/web-components.html
 ---
 
 This document describes what Angular Components are, how to create and use them.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html
 ---
 title: "Oryx: Boilerplate"
 description: Create maintainable and upgradeable applications using the Oryx boilerplate
@@ -6,6 +5,8 @@ last_updated: Apr 3, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-boilerplate.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html
+
 ---
 
 Boilerplate refers to the _template_ code that is used to generate application code which can be further customized. At first sight, changing boilerplate is convenient as the code is at hand, generated in your project repository. However, when upgrading to newer versions of the original code, it becomes challenging. If you customized the boilerplate code and want to reapply a new version of the boilerplate, you have to merge the customizations with the new version during every update. This is a time-consuming and error-prone process that can slow down your development process and increase the risk of bugs.
@@ -17,11 +18,11 @@ The Oryx boilerplate is provided in the [Composable Frontend repository](https:/
 In Oryx, we use the following tactics to prevent boilerplate code:
 
 1. Bootstrap the application from [npm packages](https://www.npmjs.com/org/spryker-oryx) instead of source.
-2. Expose a function to set up the [app orchestrator](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) conveniently.
-3. Provide [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html) for the standard application setup, including the feature sets and UI themes.
+2. Expose a function to set up the [app orchestrator](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html) conveniently.
+3. Provide [presets](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-presets.html) for the standard application setup, including the feature sets and UI themes.
 4. Provide the source code in a [public repository](https://github.com/spryker/oryx) to enable developers to read the source code.
 5. Provide configurable components and business logic.
-6. Allow for customizations with [dependency injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html).
+6. Allow for customizations with [dependency injection](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html).
 
 By using these tactics, we greatly reduced the amount of boilerplate code required in Oryx projects. This simplifies maintaining and upgrading code over time, and lets you focus on building features instead of maintaining the underlying framework.
 
@@ -89,7 +90,7 @@ We recommend fronting the dependencies with a caret notation (`^`), so that the 
 {% endinfo_block %}
 
 
-Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
+Vite is the recommended build system, but you can use alternative build systems. For more details, see [Set up Oryx](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
 
 ### `index.html`
 

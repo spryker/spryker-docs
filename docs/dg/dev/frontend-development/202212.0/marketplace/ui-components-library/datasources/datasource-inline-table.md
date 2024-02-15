@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasource-inline-table.html
 ---
 title: Datasource Inline Table
 description: This document provides details about the Datasource Inline Table service in the Components Library.
@@ -6,13 +5,15 @@ template: concept-topic-template
 last_updated: Aug 2, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-inline-table.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasource-inline-table.html
+
 related:
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Datasource Http
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasource Inline Table service in the Components Library.

@@ -9,14 +9,14 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
 related:
   - title: Using a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
   - title: Extending a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/extending-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/extending-a-component.html
   - title: Overriding a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---
 
-As Spryker Shop implements the [Component Model](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
+As Spryker Shop implements the [Component Model](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
 
 ## 1. Create a component folder
 
@@ -165,7 +165,7 @@ Open file `new-component-counter.scss` file and add the following code:
 
 {% info_block infoBox %}
 
-As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer) section in _Atomic Frontend_.
+As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer) section in _Atomic Frontend_.
 
 {% endinfo_block %}
 

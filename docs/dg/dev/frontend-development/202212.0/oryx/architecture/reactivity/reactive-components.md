@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactive-components.html
 ---
 title: Reactive components
 description: Reactive components are built with Lit
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 3, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/reactive-components.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactive-components.html
+
 ---
 
 
@@ -31,7 +32,7 @@ export class ProductPriceComponent extends LitElement {
 }
 ```
 
-To emit values, [observables](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html) require to be subscribed to and unsubscribed when the values are no longer needed. To avoid such boilerplate code, you can use a decorator to subscribe and unsubscribe from observables. The decorator subscribes to the observable but also unsubscribes when the component is destroyed. This ensures that there's no leaking memory in the application. In the following snippet, an observable is assigned to the local `product$` field.
+To emit values, [observables](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/key-concepts-of-reactivity.html) require to be subscribed to and unsubscribed when the values are no longer needed. To avoid such boilerplate code, you can use a decorator to subscribe and unsubscribe from observables. The decorator subscribes to the observable but also unsubscribes when the component is destroyed. This ensures that there's no leaking memory in the application. In the following snippet, an observable is assigned to the local `product$` field.
 
 ```ts
 export class ProductPriceComponent {
@@ -102,4 +103,4 @@ In this example, the product data is observed from `ProductService`, but switche
 
 ## Next steps
 
-[Integration of backend APIs](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html)
+[Integration of backend APIs](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html)

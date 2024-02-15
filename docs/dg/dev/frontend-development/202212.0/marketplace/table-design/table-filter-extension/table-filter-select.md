@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-select.html
 ---
 title: Table Filter Select
 description: This document provides details about the Table Filter Select component in the Components Library.
@@ -6,13 +5,15 @@ template: concept-topic-template
 last_updated: Aug 8, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/table-filter-select.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-select.html
+
 related:
   - title: Table Filter extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-extension.html
   - title: Table Filter Date Range
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Tree Select
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Select component in the Components Library.

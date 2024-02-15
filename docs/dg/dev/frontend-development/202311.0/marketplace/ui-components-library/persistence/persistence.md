@@ -5,11 +5,11 @@ description: This document provides details about the Persistence service in the
 template: concept-topic-template
 related:
   - title: In Memory Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
   - title: Local Storage Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
   - title: Url Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 redirect_from:
 - /docs/scos/dev/front-end-development/202204.0/marketplace/ui-components-library/persistence/persistence.html
 - /docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/persistence/persistence.html
@@ -113,7 +113,7 @@ interface PersistenceStrategy {
 
 There are a few common Persistence Strategies that are available in the UI library:
 
-- [In-memory](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html)—
+- [In-memory](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html)—
  stores data in memory and will be lost when the browser page is reloaded.
-- [Local-storage](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html)—uses browser Local Storage to store the data.
-- [Url](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/persistence/url-persistence-strategy.html)—uses browser URL to store the data.
+- [Local-storage](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html)—uses browser Local Storage to store the data.
+- [Url](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/persistence/url-persistence-strategy.html)—uses browser URL to store the data.

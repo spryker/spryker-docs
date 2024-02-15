@@ -1,16 +1,17 @@
-  - /docs/scos/dev/front-end-development/202212.0/yves/image-optimization-usage.html
 ---
 title: Images optimization usage
 description: Learn about the imagemin plugin and how to use it
 last_updated: Jul 12, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/front-end-development/202212.0/yves/image-optimization-usage.html
+
 ---
 
-The `imagemin` plugin is a npm package that compresses a particular image format. For example, `mozjpeg` compresses JPEG files. 
-Popular image formats may have multiple plugins to choose from. 
+The `imagemin` plugin is a npm package that compresses a particular image format. For example, `mozjpeg` compresses JPEG files.
+Popular image formats may have multiple plugins to choose from.
 
-## Prerequisites 
+## Prerequisites
 
 Add the following plugins to the `package.json` and install them using the `npm install` command:
 
@@ -31,7 +32,7 @@ Add the following plugins to the `package.json` and install them using the `npm 
 "yves:images-optimization:replace": "node ./frontend/libs/images-optimization-build --replace",
 ```
 
-2. Create the folder with optimized images (`project/frontend/assets/%namespace%/%theme%/images/optimized-images`): 
+2. Create the folder with optimized images (`project/frontend/assets/%namespace%/%theme%/images/optimized-images`):
 
 ```bash
 npm run yves:images-optimization
@@ -43,7 +44,7 @@ npm run yves:images-optimization
 npm run yves:images-optimization:replace
 ```
 
-If you set the mode value to `true`—for example, `production: true`—when you run `npm run yves:production`, 
+If you set the mode value to `true`—for example, `production: true`—when you run `npm run yves:production`,
 the build is executed with optimized images by default, and they are added to the `public` folder.
 
 **frontend/settings.js**

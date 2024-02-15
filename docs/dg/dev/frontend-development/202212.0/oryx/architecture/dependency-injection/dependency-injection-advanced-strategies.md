@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
 ---
 title: "Dependency Injection: Advanced strategies"
 description: Strategies for using DI that cover advanced use cases
@@ -6,9 +5,11 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-advanced-strategies.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html
+
 ---
 
-This document describes advanced strategies of using [dependency injection (DI)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html).
+This document describes advanced strategies of using [dependency injection (DI)](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html).
 
 
 ## The INJECTOR token

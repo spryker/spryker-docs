@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html
 ---
 title: "Dependency Injection: Providing services"
 description: Recommended conventions for providing services
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-providing-services.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html
+
 ---
 
 To use and inject services, they must be provided in the DI container. Oryx offers several types of providers:
@@ -41,4 +42,4 @@ In this example, the customized cart service is provided by specifying the provi
 
 ## Next steps
 
-[Advanced strategies](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html)
+[Advanced strategies](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html)

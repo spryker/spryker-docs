@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
 ---
 title: Oryx application feature
 description: Feature of the Oryx Application
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Sep 14, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application-feature.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
+
 ---
 
 `AppFeature` is a higher level collection of lower-level primitives, such as the following:
@@ -14,11 +15,11 @@ redirect_from:
 - Components
 <!-- TODO: Link to providers -->
 - Providers
-- [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
+- [Plugins](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
 <!-- TODO: Link to resources -->
 - Resources
 - [Feature options](#feature-options)
-- [Builder options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
+- [Builder options](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
 
 Features are useful to structure and organize code and functionality into logical groups and to make them easier to reuse in different scenarios.
 

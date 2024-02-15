@@ -8,13 +8,13 @@ redirect_from:
 last_updated: Jan 12, 2024
 related:
   - title: Datasource Dependable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-dependable.html
   - title: Datasource Http
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 Datasource Trigger is an Angular service in the components library that provides a flexible way to fetch data based on user-triggered events.
@@ -141,5 +141,5 @@ The following common Datasources are available in the UI library as separate pac
 
 | DATASOURCE | DESCRIPTION |
 |-|-|
-| [Change](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html) | Allows for passing data along with the configuration of the Datasource using the `change` event. |
-| [Input](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html) | Allows for passing data along with the configuration of the Datasource using the `input` event. |
+| [Change](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html) | Allows for passing data along with the configuration of the Datasource using the `change` event. |
+| [Input](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html) | Allows for passing data along with the configuration of the Datasource using the `input` event. |

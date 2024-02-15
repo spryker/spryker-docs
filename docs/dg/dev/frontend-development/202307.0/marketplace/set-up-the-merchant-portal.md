@@ -9,7 +9,7 @@ redirect_from:
 
 related:
   - title: Building the project
-    link: docs/scos/dev/front-end-development/page.version/marketplace/set-up-the-merchant-portal.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.

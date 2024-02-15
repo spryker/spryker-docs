@@ -44,16 +44,16 @@ Check out the table architecture diagram for better understanding:
 
 ### Configuration
 
-A Table Component is configured via [Table Configuration](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-configuration.html) that sets up how the table should behave and look like.
+A Table Component is configured via [Table Configuration](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-configuration.html) that sets up how the table should behave and look like.
 
 ### Datasources
 
-To render data, the Table must receive it via [Datasources](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasources.html)
+To render data, the Table must receive it via [Datasources](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasources.html)
 that are registered by the user and then configured using the Table Configuration.
 
 ### Features
 
-Every other piece of functionality is extracted into the [Table Feature](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-extension.html):
+Every other piece of functionality is extracted into the [Table Feature](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-extension.html):
 
 - A *Table Feature* is an Angular Component that encapsulates a specific extension of the Core Table.
 - Core Table contains specific placeholders in its view that Table Feature may target to render its piece of UI.
@@ -77,7 +77,7 @@ export class AppModule {}
 
 ### Columns
 
-Columns in a Table are defined by the [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html) and rendered within the columns (text, image, link).
+Columns in a Table are defined by the [Column Type](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html) and rendered within the columns (text, image, link).
 A new Column Type may be created and registered to the table.
 
 A Column component must implement `TableColumn` interface with the defined config and then be registered to the Root Module via `TableModule.withColumnComponents()`:
@@ -101,7 +101,7 @@ export class AppModule {}
 A Table Component does not contain any filters a table usually has (filtering, searching).
 The Core Table Component has just a view of the columns and data and has built-in sorting.
 
-To use [Filter components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
+To use [Filter components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html), the Table Module must implement a specific interface (TableConfig) and then be registered to the Root Module via `TableModule.withFilterComponents()`:
 
 ```ts
 @NgModule({
@@ -119,12 +119,12 @@ export class AppModule {}
 
 ### Actions
 
-There is a way to trigger some [Actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html) while user interacts with the Table.
+There is a way to trigger some [Actions](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html) while user interacts with the Table.
 
 A few common Table Features that can trigger actions are available in the UI library:
 
-- [Row actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html)—renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
-- [Batch actions](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html)—allows triggering batch/multiple actions from rows.
+- [Row actions](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-row-actions.html)—renders a dropdown menu that contains actions applicable to the table row and on click triggers an Action which must be registered.
+- [Batch actions](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html)—allows triggering batch/multiple actions from rows.
 
 ## Interfaces
 

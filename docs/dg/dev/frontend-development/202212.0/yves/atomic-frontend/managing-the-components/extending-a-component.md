@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/managing-the-components/extending-a-component.html
 ---
 title: Extending a component
 last_updated: Jun 16, 2021
@@ -23,16 +22,18 @@ redirect_from:
   - /v1/docs/t-extend-component
   - /v1/docs/en/t-extend-component
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
+  - /docs/scos/dev/front-end-development/202212.0/yves/atomic-frontend/managing-the-components/extending-a-component.html
+
 related:
   - title: Creating a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/creating-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/creating-a-component.html
   - title: Using a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/using-a-component.html
   - title: Overriding a Component
-    link: docs/scos/dev/front-end-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---
 
-With the idea of [atomic design](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html) implemented in Spryker Frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
+With the idea of [atomic design](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html) implemented in Spryker Frontend, you have the possibility to develop each functional element of user interface in a self-contained, isolated container called a component. The frontend design allows you not only to [create components](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html) on your own, but also [replace](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/extending-a-component.html) any of them with a component that suits your needs better. But what if you do not want to replace a component? You can create a new component on the basis of an existing one. In this case, you will be able to use both the new component and the source one at the same time.
 
 Let us review the process of extending a component on the example of **side-drawer**. This component appears in Spryker Shop only on mobile screens. You can access it by clicking the menu button.
 
@@ -180,8 +181,8 @@ As soon as the frontend has been compiled, replace the original side drawer with
 
 Now, whenever you access a page with a side drawer in Spryker Shop, you will get an alert from the new side drawer.
 
-![Side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/side-drawer-notification.png) 
+![Side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/side-drawer-notification.png)
 
 Also, the drawer itself has a new outlook.
 
-![New side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-side-drawer.png) 
+![New side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/new-side-drawer.png)

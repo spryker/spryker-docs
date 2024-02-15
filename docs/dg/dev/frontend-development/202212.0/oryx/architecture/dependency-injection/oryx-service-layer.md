@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html
 ---
 title: Oryx service layer
 description: Oryx service layer abstracts system functionality using DI
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/oryx-service-layer.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html
+
 ---
 
 The service layer in Oryx serves as the foundation for the business logic. The main objective of the service layer is to abstract all the system functionality, including querying backend services, data caching and reloading, state management, and reactivity. Dependency injection (DI) plays a crucial role in achieving this objective.
@@ -25,4 +26,4 @@ In a typical Oryx application, the application orchestrator automatically handle
 
 ## Next steps
 
-[Using services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html)
+[Using services](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-using-services.html)

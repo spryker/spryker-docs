@@ -1,9 +1,9 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-technology.html
 ---
 title: "Oryx: Technology"
 description: The technologies Oryx is built on
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-technology.html
 last_updated: Oct 23, 2023
 ---
 
@@ -53,8 +53,8 @@ Lit is a lightweight library for creating web components using TS and HTML templ
 
 You can use Lit to customize Oryx, but you can also use another framework to build web components. Advantages of using Lit:
 - Reusable component mixins and controllers.
-- Out of the box integration with optimized [reactivity](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
-- Out of the box integration with [server-side rendering (SSR)](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
+- Out of the box integration with optimized [reactivity](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) and partial hydration concepts.
+- Out of the box integration with [server-side rendering (SSR)](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html).
 
 ## RxJS
 
@@ -80,6 +80,6 @@ Oryx applications are decoupled applications and can be hosted separately. We re
 - Rewrites and redirects: simplifies the management of URL structure and routing.
 - Lambda function integration: lets you execute custom logic, server-side operations, and perform server-side rendering.
 
-If your Oryx applications requires [SSR](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
+If your Oryx applications requires [SSR](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/oryx-server-side-rendering.html), make sure the hosting provider has the respective infrastructure. You can run SSR in a Lambda function or have a long-running server that processes SSR.
 
 If your application is fairly static and doesn't require SSR, you could consider a non-frontend hosting provider.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
 ---
 title: "Data transformer Collate filter: Equals"
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.
@@ -6,13 +5,15 @@ template: concept-topic-template
 last_updated: Aug 8, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/data-transformers/collate/filters/equals.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-equals.html
+
 related:
   - title: Data Transformer Filters
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html
   - title: Data Transformer Collate Filter Range
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-range.html
   - title: Data Transformer Collate Filter Text
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
 ---
 
 This document explains the Data Transformer Collate Filter Equals service in the Components Library.

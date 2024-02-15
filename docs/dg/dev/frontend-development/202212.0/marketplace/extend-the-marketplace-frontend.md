@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/extend-the-marketplace-frontend.html
 ---
 title: Extend the Marketplace frontend
 description: This document provides details about how to extend the new project.
@@ -7,6 +6,8 @@ last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/index.html
   - /docs/marketplace/dev/front-end/202212.0/extending-the-project/migration-guide-extending-the-project.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/extend-the-marketplace-frontend.html
+
 ---
 
 To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.
@@ -58,11 +59,11 @@ export class AppModule {}
 
 ## Overriding / creating new angular components
 
-For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/project-structure.html#module-structure) section).
+For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/project-structure.html#module-structure) section).
 
 Default `entry.ts` should use the same code as vendor-level `entry.ts`.
 
-Add angular components in the app folder [Angular Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/angular-components.html).
+Add angular components in the app folder [Angular Components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/angular-components.html).
 
 Add newly-created component `Module` and `Component` classes to the `components.module.ts`.
 

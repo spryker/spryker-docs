@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/angular-components.html
 ---
 title: Angular Components
 description: This document provides details about the Angular Components, and how to create and use them.
@@ -6,11 +5,13 @@ template: concept-topic-template
 last_updated: Jul 24, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/angular-components.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/angular-components.html
+
 related:
   - title: Angular Services
-    link: docs/scos/dev/front-end-development/page.version/marketplace/angular-services.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/angular-services.html
   - title: Web Components
-    link: docs/scos/dev/front-end-development/page.version/marketplace/web-components.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/web-components.html
 ---
 
 This document describes what Angular Components are, how to create and use them.

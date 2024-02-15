@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-icon-system.html
 ---
 title: "Oryx: Icon system"
 description: Icons are used for a consistent design system throughout components in Oryx applications
@@ -6,6 +5,8 @@ last_updated: July 29, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-icon-system.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-icon-system.html
+
 ---
 
 Icons provide clear visual cues, enhance user interactions, and save screen space. Oryx offers a sophisticated icon system that ensures a consistent design across all components of an  application.
@@ -66,7 +67,7 @@ Oryx does not provide support for using images as icons. Images lack scalability
 
 ## Icon colors
 
-In Oryx, icons are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
+In Oryx, icons are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
 
 Here's an example of how to apply colors using standard CSS or the `--oryx-icon-color` variable:
 
@@ -91,7 +92,7 @@ When using Material Symbols, you can configure the adjustable variable font styl
 
 ### Global configuration
 
-You can provide the variable font styles globally using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html):
+You can provide the variable font styles globally using [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html):
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";

@@ -293,7 +293,7 @@ To maintain the stability and longevity of our platform, we have migrated to Ang
 #### Documentation
 
 * [Upgrade to Angular v15](/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html)
-* [Upgrade to Node.js v18](/docs/scos/dev/front-end-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html)
+* [Upgrade to Node.js v18](/docs/dg/dev/frontend-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html)
 
 ### [Composable Storefront] Early Access release
 
@@ -312,7 +312,7 @@ If you are interested in being part of Spryker's Composable Storefront Early Acc
 **Business benefit**: Spryker Composable Storefront allows Spryker customers to implement and customize a decoupled storefront quickly. It offers Spryker customers a future-proof, agile, and scalable solution.
 #### Documentation
 
-[Oryx](/docs/scos/dev/front-end-development/202307.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/202307.0/oryx/oryx.html)
 
 ### [Dynamic Multistore] Early Access release
 

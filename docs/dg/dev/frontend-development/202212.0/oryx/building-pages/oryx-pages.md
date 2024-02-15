@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-pages.html
 ---
 title: "Oryx: Creating pages"
 description: Pages can be created from a data set or custom components
@@ -6,17 +5,19 @@ last_updated: Aug 1, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-pages.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-pages.html
+
 ---
 
 In Oryx, pages are essential building blocks of web applications. They represent different sections or views within an application and can be created using a data-driven approach. This approach lets you define the composition and layout of pages using external data sources, making it easier to maintain, customize, and optimize your application.
 
-Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
+Oryx provides standard pages, like home, login, or search page, in [application presets](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-presets.html). Using presets gets you up and running fast. This document shows you how to provide custom pages or apply small customization on top of the standard preset pages.
 
 ## Understanding pages and compositions
 
-Pages in Oryx are represented as [compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in the code. This [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) makes your components more reusable and less tied to specific pages.
+Pages in Oryx are represented as [compositions](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-pages/oryx-compositions.html), which are collections of components organized in a specific order. Compositions enable you to define the structure and layout of pages without hardcoding them in the code. This [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns) makes your components more reusable and less tied to specific pages.
 
-Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
+Oryx leverages a data-driven approach for creating pages, letting you configure the composition and content of pages using external data sources. For the advantages and technical details, see [Compositions](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-pages/oryx-compositions.html).
 
 ## Creating pages with page components
 
@@ -63,7 +64,7 @@ In this example, the `route` field is set to `/cart`, so the page is rendered wh
 
 {% info_block infoBox "Routing" %}
 
-Changing the route of a page content is not changing the related route. To change a route, you need to configure the [routing](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-pages/oryx-routing.html).
+Changing the route of a page content is not changing the related route. To change a route, you need to configure the [routing](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-pages/oryx-routing.html).
 
 {% endinfo_block %}
 
@@ -73,7 +74,7 @@ Oryx enables you to provide custom experience data or change the existing data o
 
 ### Providing custom data
 
-You can provide custom experience data using Oryx's [dependency injection system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html).
+You can provide custom experience data using Oryx's [dependency injection system](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html).
 
 A small utility function is available from the experience package to add custom data:
 
@@ -124,7 +125,7 @@ const customHomePage: ExperienceComponent = {
 
 ### Merge selector
 
-To replace existing content provided by [presets](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
+To replace existing content provided by [presets](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-presets.html), you need to define the content that you want to merge and, optionally, the merge strategy.
 
 The selected content is defined by the `merge.selector` field. The following example shows how the provided data replaces the home page.
 

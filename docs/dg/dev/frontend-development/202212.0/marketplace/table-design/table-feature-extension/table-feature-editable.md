@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-feature-extension/table-feature-editable.html
 ---
 title: Table Feature Editable
 description: This document provides details about the Table Feature Editable component in the Components Library.
@@ -6,27 +5,29 @@ template: concept-topic-template
 last_updated: Dec 27, 2022
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-features/table-feature-editable.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-feature-extension/table-feature-editable.html
+
 related:
   - title: Table Feature extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Pagination
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
   - title: Table Feature Row Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-row-actions.html
   - title: Table Feature Search
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document describes the *Table Feature Editable* component in the Components Library.
@@ -62,10 +63,10 @@ Component configuration:
 
 Take a closer look at all the options available.
 
-- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-design.html#interfaces) document:  
+- `columns`—only required properties are listed; the entire interface can be found in [Table Design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html#interfaces) document:  
     - `id`—a cell `id`.  
     - `type`—a cell `type`.  
-    - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html):  
+    - `typeOptions`–to learn more about the column types available, see [Column Type](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html):  
         - `value`—sets the default value to the newly added row's cell.  
 
 - `create`:  

@@ -10,25 +10,25 @@ redirect_from:
 
 related:
   - title: Table Feature extension
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-extension.html
   - title: Table Feature Batch Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-batch-actions.html
   - title: Table Feature Editable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-editable.html
   - title: Table Feature Pagination
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-pagination.html
   - title: Table Feature Search
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-search.html
   - title: Table Feature Selectable
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-selectable.html
   - title: Table Feature Settings
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-settings.html
   - title: Table Feature Sync State
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-sync-state.html
   - title: Table Feature Title
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-title.html
   - title: Table Feature Total
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-feature-extension/table-feature-total.html
 ---
 
 This document explains the Table Feature Row Actions component in the Components Library.
@@ -43,7 +43,7 @@ Check out an example usage of the Table Feature Row Actions in the `@spryker/tab
 Component configuration:
 
 - `enabled`—enables the feature via config.  
-- `actions`—an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html).  
+- `actions`—an array with actions that are displayed in the drop down menu and their type of registered [action](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/actions/ui-components-library-actions.html).  
 - `click`—indicates which action is used for clicking the table row by its `id`.
 - `rowIdPath`—is used for the `rowId` action context.  
 - `availableActionsPath`—path to an array with the available action IDs in the table data row (supports nested objects using dot notation for ex. `prop.nestedProp`).  

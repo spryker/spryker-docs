@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html
 ---
 title: Oryx application
 description: App of the Oryx Application
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Sep 14, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/oryx-application-orchestration/oryx-application.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html
+
 ---
 
 `App` represents a running Oryx application instance.
@@ -16,7 +17,7 @@ It lets you do the following:
 - Wait for application ready state when all plugins have been initialized: `whenReady`.
 - Destroy and cleanup the application: `destroy`.
 
-The `App` instance is available in the [Dependency Injection](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html) under the `AppRef` token, which you can inject:
+The `App` instance is available in the [Dependency Injection](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection.html) under the `AppRef` token, which you can inject:
 
 ```ts
 import { AppRef } from '@spryker-oryx/core';

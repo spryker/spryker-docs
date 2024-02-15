@@ -9,15 +9,15 @@ redirect_from:
 
 related:
   - title: Actions
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/actions/ui-components-library-actions.html
   - title: Cache
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/cache/ui-components-library-cache-service.html
   - title: Data Transformers
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformers.html
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Persistence
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/persistence.html
 ---
 
 This document provides details about the UI components library.
@@ -34,7 +34,7 @@ npm install @spryker/package_name
 yarn add @spryker/package_name
 ```
 
-Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see [Web Components](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/web-components.html)).
+Under the hood, the UI Angular Components are built using Angular 9, rxjs and Ant Design. These components are used within the Spryker Core modules of the Merchant Portal. You can use them inside the angular ecosystem as default angular components, or you can transform them into web components and reuse them inside the Spryker `twig` modules (see [Web Components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/web-components.html)).
 Many UI Components have extension points, and some of them must be configured on a project-level (e.g `Table`, `Datasource`).
 
 ## UI Components List

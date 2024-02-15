@@ -9,11 +9,11 @@ redirect_from:
 
 related:
   - title: Persistence
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/persistence.html
   - title: Local Storage Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
   - title: Url Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 ---
 
 This document explains the In Memory Persistence Strategy service in the Components Library.

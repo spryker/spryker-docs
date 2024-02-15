@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
 ---
 title: Table Filter extension
 last_updated: Oct 21, 2022
@@ -6,13 +5,15 @@ description: This document provides details about the Table Filter extension in 
 template: concept-topic-template
 redirect_from:
     - /docs/marketplace/dev/front-end/202212.0/table-design/table-filters/
+    - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-filter-extension/table-filter-extension.html
+
 related:
   - title: Table Filter Date Range
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-date-range.html
   - title: Table Filter Select
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-select.html
   - title: Table Filter Tree Select
-    link: docs/scos/dev/front-end-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/table-design/table-filter-extension/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter extension in the Components Library.
@@ -131,6 +132,6 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 
 The Table Filters feature ships with a few common Table Filter types:
 
-- [Date Range](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-date-range.html)—allows filtering data via `DateRangePickerComponent`.
-- [Select](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-select.html)—allows filtering data via `SelectComponent`.
-- [Tree Select](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-tree-select.html)—allows filtering data via `TreeSelectComponent`.
+- [Date Range](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-date-range.html)—allows filtering data via `DateRangePickerComponent`.
+- [Select](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-select.html)—allows filtering data via `SelectComponent`.
+- [Tree Select](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-filter-extension/table-filter-tree-select.html)—allows filtering data via `TreeSelectComponent`.

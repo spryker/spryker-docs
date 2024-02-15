@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/building-the-merchant-portal-frontend.html
 ---
 title: Building the Merchant Portal frontend
 description: This document provides details how to build the frontend part of the Merchant Portal.
@@ -6,11 +5,13 @@ template: concept-topic-template
 last_updated: Jul 31, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/building-the-project.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/building-the-merchant-portal-frontend.html
+
 related:
   - title: Project structure
-    link: docs/scos/dev/front-end-development/page.version/marketplace/project-structure.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/project-structure.html
   - title: Setting up the Merchant Portal
-    link: docs/scos/dev/front-end-development/page.version/marketplace/set-up-the-merchant-portal.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---
 
 This document provides details about building the frontend part of the Merchant Portal.
@@ -23,7 +24,7 @@ Modules for Merchant Portal are split into composer modules, and each module has
 Every module has an entry point called `entry.ts` that is collected during the build as webpack entries and included in the Merchant Portal build as a chunk.
 Those chunk names are taken from the module name and then transformed into a `kebab-case`.
 
-General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/project-structure.html#module-structure).
+General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/project-structure.html#module-structure).
 
 The frontend of the Merchant Portal is built using the following commands:
 

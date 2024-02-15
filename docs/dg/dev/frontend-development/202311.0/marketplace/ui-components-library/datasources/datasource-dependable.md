@@ -8,13 +8,13 @@ redirect_from:
 last_updated: Jan 16, 2024
 related:
   - title: Datasource Trigger
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
   - title: Datasource Http
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 
@@ -28,7 +28,7 @@ Service configuration:
 | - | - |
 | type | A datasource type.  |
 | id | An ID of the dependent element. |
-| datasource | The next datasource that runs based on the depended element value, like [http](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html). |  
+| datasource | The next datasource that runs based on the depended element value, like [http](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html). |  
 
 Usage example:
 

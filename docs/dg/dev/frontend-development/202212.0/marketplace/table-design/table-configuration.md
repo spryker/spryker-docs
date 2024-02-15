@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-configuration.html
 ---
 title: Table Configuration
 description: This document provides details about the table configuration.
@@ -6,6 +5,8 @@ template: concept-topic-template
 redirect_from:
 last_updated: Aug 7, 2023
   - /docs/marketplace/dev/front-end/202212.0/table-design/table-configuration.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/table-design/table-configuration.html
+
 ---
 
 This document provides details about how to configure the table.
@@ -17,7 +18,7 @@ Using Table Configuration you can customize the behavior of the table based on y
 Table config has two required sections:
 
 - [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect.
-- [Datasource](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasources.html) type that describes how the data should be provided to a table.
+- [Datasource](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasources.html) type that describes how the data should be provided to a table.
 
 The rest of the sections are reserved for features (like Pagination, which describes pagination section and its properties).
 
@@ -167,7 +168,7 @@ typeOptionsMappings: {
 // default text(table column value) and default color('red')—in other cases
 ```
 
-To get more details about the table columns, see [Column Types](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html).
+To get more details about the table columns, see [Column Types](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-column-type-extension/table-column-type-extension.html).
 
 ## Interfaces
 

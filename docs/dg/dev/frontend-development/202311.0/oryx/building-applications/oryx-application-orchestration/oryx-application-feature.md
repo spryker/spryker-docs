@@ -14,11 +14,11 @@ redirect_from:
 
 
 - Components <!-- TODO: Link to components -->
-- [Providers](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)
-- [Plugins](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
+- [Providers](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)
+- [Plugins](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html)
 - Resources <!-- TODO: Link to resources -->
 - [Feature options](#feature-options)
-- [Builder options](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
+- [Builder options](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html#customization-of-options)
 
 Features are useful to structure and organize code and functionality into logical groups and to make them easier to reuse in different scenarios.
 

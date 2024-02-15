@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
 ---
 title: Overriding Webpack, JS, SCSS for ZED on project level
 description: Learn how to override Webpack, JS, SCSS for ZED on a project level
@@ -24,6 +23,8 @@ redirect_from:
   - /v1/docs/verriding-webpack-js-scss-for-zed-on-project-level
   - /v1/docs/en/verriding-webpack-js-scss-for-zed-on-project-level
   - /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+  - /docs/scos/dev/front-end-development/202212.0/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+
 ---
 
 {% include scos/dev/front-end-development/zed/202212.0/overriding-webpack-js-scss-for-zed-on-project-level.md %} <!-- To edit, see /_includes/scos/dev/front-end-development/zed/202212.0/overriding-webpack-js-scss-for-zed-on-project-level.md -->

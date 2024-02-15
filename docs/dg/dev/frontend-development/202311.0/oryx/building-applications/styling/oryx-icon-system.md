@@ -67,7 +67,7 @@ Oryx does not provide support for using images as icons. Images lack scalability
 
 ## Icon colors
 
-In Oryx, icons are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
+In Oryx, icons are seamlessly integrated into the main Document Object Model (DOM), which means they can inherit colors from ancestor HTML elements. To customize an icon's color, you can use standard CSS or leverage the [color system](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-color-system.html). If no explicit color is provided, the icon inherits its color from the parent element.
 
 Here's an example of how to apply colors using standard CSS or the `--oryx-icon-color` variable:
 
@@ -95,7 +95,7 @@ Additionally, you can configure the direction of icons. For more details, see [C
 
 ### Global configuration
 
-You can provide the variable font styles globally using [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html):
+You can provide the variable font styles globally using [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html):
 
 ```ts
 import { appBuilder } from "@spryker-oryx/application";
@@ -155,7 +155,7 @@ export const app = appBuilder().withTheme({
 
 Icon libraries are typically created for left-to-right (LTR), but when they're used in right-to-left (RTL), some icons much flip to reflect the layout. This only affects icons that express a direction, such as arrow icons.
 
-Oryx supports [directionality](/docs/scos/dev/front-end-development/{{page.version}}/oryx/internationalization/oryx-directionality.html). To ensure that icons flip accordingly, the icon style configuration needs to have `direction` set to `true`. The following example shows how the forward icon is configured to flip in the RTL mode.
+Oryx supports [directionality](/docs/dg/dev/frontend-development/{{page.version}}/oryx/internationalization/oryx-directionality.html). To ensure that icons flip accordingly, the icon style configuration needs to have `direction` set to `true`. The following example shows how the forward icon is configured to flip in the RTL mode.
 
 ```ts
 export const materialDesignIcons: IconMapper = {

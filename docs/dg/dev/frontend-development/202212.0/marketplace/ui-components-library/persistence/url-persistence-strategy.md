@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/persistence/url-persistence-strategy.html
 ---
 title: URL persistence strategy
 description: This document provides details about the Url Persistence Strategy service in the Components Library.
@@ -6,13 +5,15 @@ template: concept-topic-template
 last_updated: Aug 2, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/persistence/url-persistence-strategy.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/persistence/url-persistence-strategy.html
+
 related:
   - title: Persistence
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/persistence.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/persistence.html
   - title: In Memory Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/in-memory-persistence-strategy.html
   - title: Local Storage Persistence Strategy
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/persistence/local-storage-persistence-strategy.html
 ---
 
 This document explains the Url Persistence Strategy service in the Components Library.

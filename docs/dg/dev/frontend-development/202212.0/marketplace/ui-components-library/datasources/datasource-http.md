@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasource-http.html
 ---
 title: Datasource Http
 description: This document provides details about the Datasource Http service in the Components Library.
@@ -6,13 +5,15 @@ template: concept-topic-template
 last_updated: Aug 8, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/ui-components-library/datasources/datasource-http.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasource-http.html
+
 related:
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Datasource Inline Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasource Http service in the Components Library.
@@ -20,7 +21,7 @@ This document explains the Datasource Http service in the Components Library.
 ## Overview
 
 Datasource Http is an Angular Service that fetches data from URLs via HTTP as configured in the Datasource configuration.
-Datasource Http supports caching strategy (see [Cache](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that can be configured via config and used before the request is made, when applicable.
+Datasource Http supports caching strategy (see [Cache](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that can be configured via config and used before the request is made, when applicable.
 
 Check out an example usage of the Datasource Http.
 

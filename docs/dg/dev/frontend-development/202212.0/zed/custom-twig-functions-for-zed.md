@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/zed/custom-twig-functions-for-zed.html
 ---
 title: Custom Twig functions for Zed
 last_updated: Jun 16, 2021
@@ -17,6 +16,7 @@ redirect_from:
   - /v4/docs/custom-twig-functions-for-zed
   - /v4/docs/en/custom-twig-functions-for-zed
   - /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
+  - /docs/scos/dev/front-end-development/202212.0/zed/custom-twig-functions-for-zed.html
 
 ---
 

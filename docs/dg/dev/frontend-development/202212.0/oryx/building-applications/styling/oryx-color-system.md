@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html
 ---
 title: "Oryx: Color system"
 description: Color design tokens are used for a consistent design system throughout the components in Oryx applications
@@ -6,11 +5,13 @@ last_updated: July 9, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/styling/oryx-color-system.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html
+
 ---
 
 Colors are used everywhere throughout UI components and are important for a good user experience. To enable you to adjust colors throughout the application to your needs, Oryx provides a configurable color system.
 
-The color system lets you set up the color values globally as well as override them per component. Components do not define _values_ for colors directly in their CSS but use [design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html). Design tokens are (CSS) variables that are provided by themes, which you can customize in your project.
+The color system lets you set up the color values globally as well as override them per component. Components do not define _values_ for colors directly in their CSS but use [design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html). Design tokens are (CSS) variables that are provided by themes, which you can customize in your project.
 
 The color system comes with semantic color types and a consistent number of color steps. This results in a consistent naming system throughout all the components. The actual colors for those groups are not relevant to the color system and are part of the theme configuration. This lets you configure the colors in a global theme.
 
@@ -112,7 +113,7 @@ Even though it's optional, we recommend providing both the light and dark mode c
 
 ## Color design tokens
 
-Each color type and its values are provided as a _design token_. [Design tokens](/docs/scos/dev/front-end-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) are provided as CSS variables to the root of the application. The color design tokens follow a consistent naming pattern to improve the integration into your components:
+Each color type and its values are provided as a _design token_. [Design tokens](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/styling/oryx-design-tokens.html) are provided as CSS variables to the root of the application. The color design tokens follow a consistent naming pattern to improve the integration into your components:
 
 `--oryx-color-[type]-[step]`
 

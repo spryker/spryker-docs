@@ -1,17 +1,18 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasources.html
 ---
 title: Datasources
 last_updated: Jun 07, 2021
 description: This document provides details about the Datasources service in the Components Library.
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/front-end-development/202212.0/marketplace/ui-components-library/datasources/datasources.html
+
 related:
   - title: Datasource Http
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasources service in the Components Library.
@@ -37,7 +38,7 @@ Datasources are used in other components like Table, Select, Autocomplete.
 
 The main module provides an opportunity to register any datasource by key via static method `withDatasources()`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformers.html)).
+The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformers.html)).
 
 `resolve()` method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve()`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
 
@@ -114,7 +115,7 @@ export interface Datasource<D = unknown, C = unknown> {
 
 There are a few common Datasources that are available in UI library as separate packages:
 
-- [HTTP](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html)—allows fetching data from URL via HTTP configured in the configuration of the Datasource.
-  HTTP Datasource supports caching strategy (see [Cache](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that may be configured via config and used before the request is made when applicable.
-- [Inline](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource.
-- [Inline.table](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource
+- [HTTP](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-http.html)—allows fetching data from URL via HTTP configured in the configuration of the Datasource.
+  HTTP Datasource supports caching strategy (see [Cache](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html)) that may be configured via config and used before the request is made when applicable.
+- [Inline](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource.
+- [Inline.table](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource

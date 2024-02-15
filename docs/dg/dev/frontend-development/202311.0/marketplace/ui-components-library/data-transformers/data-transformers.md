@@ -10,19 +10,19 @@ redirect_from:
 
 related:
   - title: Data Transformer Array-map
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
   - title: Data Transformer Chain
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-chain.html
   - title: Data Transformer Date-parse
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html
   - title: Data Transformer Date-serialize
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html
   - title: Data Transformer Lens
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-lens.html
   - title: Data Transformer Object-map
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html
   - title: Data Transformer Pluck
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
 ---
 
 This document explains the Data Transformers service in the Components Library.
@@ -167,13 +167,13 @@ interface DataTransformer<D, DT> {
 
 There are a few common Data Transformers that are available in the UI library as separate packages:
 
-- [Collate](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/data-transformer-collate.html)—sorts, filters, and paginates data based on configuration. It has extra extension points:
-    - [Data Configurators](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html)—are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
-    - [Filters](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html)—are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
-- [Array-map](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html)—executes another Data Transformer from the config for every object in the array.
-- [Chain](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-chain.html)—executes another Data Transformer in sequence via configuration.
-- [Date-parse](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html)—parses the string value as a Date ISO into the JS Date Object.
-- [Date-serialize](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html)—serializes JS Date Object into a Date ISO string.
-- [Lens](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-lens.html)—updates the nested object by path using another Data Transformer set up with a configuration object.
-- [Object-map](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html)—executes another Data Transformer from the config for each object in the object.
-- [Pluck](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html)—selects and returns a nested object by path via configuration.
+- [Collate](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/data-transformer-collate.html)—sorts, filters, and paginates data based on configuration. It has extra extension points:
+    - [Data Configurators](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-data-configurators/collate-data-transformer-data-configurators.html)—are services that allow configuring re-population data (sorting, pagination, filtering). These services are registered via `CollateDataTransformer.withConfigurators()`. There are a few common Collate Data Configurators that are available:
+    - [Filters](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/collate-data-transformer-filters.html)—are services that extend the filtering. You need to register them via `CollateDataTransformer.withFilters()`. There are a few common Collate Filters that are available:
+- [Array-map](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html)—executes another Data Transformer from the config for every object in the array.
+- [Chain](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-chain.html)—executes another Data Transformer in sequence via configuration.
+- [Date-parse](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-date-parse.html)—parses the string value as a Date ISO into the JS Date Object.
+- [Date-serialize](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-date-serialize.html)—serializes JS Date Object into a Date ISO string.
+- [Lens](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-lens.html)—updates the nested object by path using another Data Transformer set up with a configuration object.
+- [Object-map](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-object-map.html)—executes another Data Transformer from the config for each object in the object.
+- [Pluck](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html)—selects and returns a nested object by path via configuration.

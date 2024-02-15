@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html
 ---
 title: Dependency injection
 description: Dependency injection lets you customize logic but keep your project upgradable
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html
+
 ---
 
 Dependency injection (DI) is a design pattern that provides loosely-coupled, maintainable, and testable code. It improves modularity, maintainability, testability, and is easily customizable and extensible.
@@ -16,4 +17,4 @@ The key advantage of using Oryx's DI implementation is that it is vanilla JavaSc
 
 ## Next step
 
-[Oryx service layer](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)
+[Oryx service layer](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/oryx-service-layer.html)

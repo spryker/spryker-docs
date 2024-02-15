@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html
 ---
 title: "Dependency Injection: Defining services"
 description: Recommended conventions for defining services
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection-defining-services.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html
+
 ---
 
 This document describes the conventions we use and recommend for defining services in Oryx.
@@ -59,4 +60,4 @@ export class DefaultCartService implements CartService {
 
 ## Next step
 
-[Providing services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)
+[Providing services](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-providing-services.html)

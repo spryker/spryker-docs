@@ -10,16 +10,16 @@ redirect_from:
 
 related:
   - title: Datasources
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasources.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasources.html
   - title: Datasource Inline Table
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/scos/dev/front-end-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/ui-components-library/datasources/datasource-inline.html
 ---
 
 
 Datasource Http is an Angular service in the components library that fetches data from URLs via HTTP as configured in the Datasource configuration.
-Datasource Http supports the [caching strategy](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html) that can be configured via config and used before the request is made.
+Datasource Http supports the [caching strategy](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/cache/ui-components-library-cache-service.html) that can be configured via config and used before the request is made.
 
 ## Usage
 

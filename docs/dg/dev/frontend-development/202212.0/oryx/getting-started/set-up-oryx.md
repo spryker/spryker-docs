@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html
 ---
 title: Set up Oryx
 description: Learn how to set up Oryx using a boilerplate project
@@ -6,6 +5,8 @@ last_updated: Apr 3, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/set-up-oryx.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html
+
 ---
 
 This document describes how to set up an environment for developing in the Oryx framework. We provide a [boilerplate project](https://github.com/spryker/composable-frontend) that helps you quickstart the development. It contains minimum dependencies and configuration to install a standard Oryx application.
@@ -33,7 +34,7 @@ npm run dev
 
 The application gets available at `localhost:3000`.
 
-For more information about the boilerplate project, see the [boilerplate guide](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html).
+For more information about the boilerplate project, see the [boilerplate guide](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-boilerplate.html).
 
 ## Builders and bundlers for Oryx
 
@@ -41,4 +42,4 @@ The recommended build tool for Oryx is [Vite](https://vitejs.dev/). However, Ory
 
 ## Packages
 
-Oryx [packages](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/oryx-packages.html) are distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).
+Oryx [packages](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/oryx-packages.html) are distributed on [npmjs.com](https://www.npmjs.com/org/spryker-oryx).

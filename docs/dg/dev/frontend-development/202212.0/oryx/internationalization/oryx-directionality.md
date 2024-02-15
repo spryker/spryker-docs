@@ -1,10 +1,11 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/internationalization/oryx-directionality.html
 ---
 title: "Directionality in Oryx: Supporting RTL and LTR for applications"
 description: Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
 last_updated: November 6, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/front-end-development/202212.0/oryx/internationalization/oryx-directionality.html
+
 ---
 
 Directionality refers to the writing direction of a language, which can be either left-to-right (LTR) or right-to-left (RTL). LTR languages, such as English, are written from left to right, while RTL languages, such as Arabic, are written from right to left. Directionality affects the layout, styling, and alignment of text and other elements in a user interface.
@@ -20,7 +21,7 @@ Oryx supports both LTR and RTL directionality. The directionality feature applie
 
 1. HTML Root: The direction is added to the root of the document, ensuring that the entire page is rendered according to the selected direction.
 
-2. Current language: The direction is automatically detected based on the current language. The [reactive system](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) enables the language to instantly change with all the elements on a page reflecting the changed language state, including direction.
+2. Current language: The direction is automatically detected based on the current language. The [reactive system](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) enables the language to instantly change with all the elements on a page reflecting the changed language state, including direction.
 
 3. Layout: All layouts in Oryx are automatically flipped based on direction. This ensures that the layout of components is adjusted accordingly, providing a consistent and visually appealing design.
 

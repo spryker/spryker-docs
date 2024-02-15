@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html
 ---
 title: "Dependency Injection: Using services"
 description: Learn how to inject services and dependencies
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Apr 13, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/dependency-injection/dependency-injection.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html
+
 ---
 
 There are two primary methods for injecting services and dependencies:
@@ -40,4 +41,4 @@ A typical Oryx application usually uses one global DI container, which is set up
 
 ## Next steps
 
-[Defining services](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-defining-services.html)
+[Defining services](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/dependency-injection/dependency-injection-defining-services.html)

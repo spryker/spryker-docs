@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/marketplace/set-up-the-merchant-portal.html
 ---
 title: Set up the Merchant Portal
 description: This document provides details about setting up Spryker Marketplace project.
@@ -6,9 +5,11 @@ template: howto-guide-template
 last_updated: May 26, 2023
 redirect_from:
   - /docs/marketplace/dev/front-end/202212.0/setting-up-the-merchant-portal.html
+  - /docs/scos/dev/front-end-development/202212.0/marketplace/set-up-the-merchant-portal.html
+
 related:
   - title: Building the project
-    link: docs/scos/dev/front-end-development/page.version/marketplace/building-the-merchant-portal-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/building-the-merchant-portal-frontend.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
 ---
 title: Key concepts of Reactivity
 description: Understanding Reactivity concepts will help you understand how Oryx works
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Jul 11, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/key-concepts-of-reactivity.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html
+
 ---
 
 ## Reactive data streams
@@ -55,7 +56,7 @@ Description:
 2. `ProductController` uses finds out the relevant _context_ for the component and resolves the product qualifier (SKU) in order to make the right request. Whenever the product data is resolved, an update to the DOM is requested. This is actually done in `AsyncStateController`, which is left out on this diagram. The `ProductController` controller uses `ProductService` to resolve the product data.
    `ProductService` is a business service that controls the application state for the product. It makes sure that multiple requests for the same product do not result in multiple requests to the backend. `ProductService` delegates the actual loading of the data to `ProductAdapter`.
 3. `ProductAdapter` integrates with the backend, by creating an HTTP request. The `ProductAdapter` knows the backend endpoint and it's contract so that it can create the right request. The `ProductAdapter` delegates actual HTTP requests to the `HttpService`.  
-   When an alternative backend is integrated, the `ProductAdapter` can be replaced. The adapter converts the API data model to the client-side model in case of a mismatch. This is done by using normalizers. For details, see [Designing the data model](/docs/scos/dev/front-end-development/{{page.version}}/oryx/best-practice.html#designing-the-data-model.
+   When an alternative backend is integrated, the `ProductAdapter` can be replaced. The adapter converts the API data model to the client-side model in case of a mismatch. This is done by using normalizers. For details, see [Designing the data model](/docs/dg/dev/frontend-development/{{page.version}}/oryx/best-practice.html#designing-the-data-model.
 4. `HttpService` is a small wrapper that is used to provide additional features such as support for interceptors.
 
 ## Updating data in the DOM
@@ -68,4 +69,4 @@ Oryx offers a signals implementation and the @signalAware decorator for Lit comp
 
 ## Next steps
 
-[Reactive components](/docs/scos/dev/front-end-development/{{page.version}}/oryx/architecture/reactivity/reactive-components.html)
+[Reactive components](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactive-components.html)

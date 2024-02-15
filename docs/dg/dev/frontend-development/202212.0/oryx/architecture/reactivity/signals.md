@@ -1,4 +1,3 @@
-  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/signals.html
 ---
 title: Signals
 description: Signals are reactivity API for components in Oryx.
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Jul 11, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/202212.0/oryx/reactivity/signals.html
+  - /docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/signals.html
+
 ---
 
 Signals offer a clean and efficient reactivity API for components in the Oryx framework. Signals contain values that can change over time. Whenever a new value is received, the component is automatically updated by the signal in an efficient way.

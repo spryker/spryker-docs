@@ -12,7 +12,7 @@ redirect_from:
 
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
-The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps (if applicable for your project) because we won’t be able to resolve the issues related to the steps not completed in time. Ensure that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
+The preparation steps listed here are mandatory as they are crucial for the success of your go-live. We strongly encourage you to complete these steps if they are applicable to your project, as we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
 {% endinfo_block %}
 
 

@@ -3977,6 +3977,8 @@ entries:
                 nested:
                   - title: Create users
                     url: /docs/pbc/all/user-management/marketplace/manage-in-the-back-office/create-users.html
+                    include_versions:
+                    - "202404.0"
 
 
       - title: Warehouse Management System

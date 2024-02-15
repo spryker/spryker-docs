@@ -39,7 +39,7 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Payone](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html).
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 - [Install the ACL feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
-- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-the-merchant-portal-agent-assist-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
 - [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
 - [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
@@ -50,7 +50,7 @@ In January 2024, we have added and updated the following pages:
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
 - [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
-- [Category Management feature overview](/docs/pbc/all/product-information-management/202404.0/base-shop/feature-overviews/category-management-feature-overview.html).
+- [Category Management feature overview](/docs/pbc/all/product-information-management/202311.0/base-shop/feature-overviews/category-management-feature-overview.html).
 - [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html).
 - [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
 - [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202404.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
@@ -117,7 +117,7 @@ In December 2023, we have added and updated the following pages:
 - [Warehouse User Management feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-user-management-feature-overview.html): General overview of the Warehouse User Management feature.
 - [Test Glue API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html): Learn how to test Glue API.
 - [Test Glue Backend API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html): Learn how to test Glue Backend API.
-- [Glue API: Search the product catalog](/docs/pbc/all/search/202404.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
+- [Glue API: Search the product catalog](/docs/pbc/all/search/202311.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
 
 ### Updated pages
 

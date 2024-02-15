@@ -121,17 +121,6 @@ defaults:
       sidebar: "ca_dev_sidebar"
       role: "dev"
   -
-    scope:
-      path: "docs/acp"
-    values:
-      product: "acp"
-  -
-    scope:
-      path: "docs/acp/user"
-    values:
-      sidebar: "acp_user_sidebar"
-      role: "user"
-  -
      scope:
        path: "docs/scu"
      values:
@@ -142,6 +131,17 @@ defaults:
      values:
        sidebar: "scu_dev_sidebar"
        role: "dev"
+  -
+     scope:
+       path: "docs/dg"
+     values:
+       product: "dg"
+  -
+    scope:
+      path: "docs/dg/dev"
+    values:
+      sidebar: "dg_dev_sidebar"
+      role: "dev"
   -
      scope:
        path: "docs/pbc"
@@ -204,7 +204,6 @@ versioned_categories:
       - warehouse-picking
 
 
-
 # these are defaults used for the front matter for these file types
 
 sidebars:
@@ -212,9 +211,9 @@ sidebars:
   - scos_dev_sidebar
   - scos_user_sidebar
   - sdk_dev_sidebar
-  - acp_user_sidebar
   - scu_dev_sidebar
   - pbc_all_sidebar
+  - dg_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -243,10 +242,10 @@ algolia:
       title: 'SDK Developer'
     - name: 'ca_dev'
       title: 'Cloud administration'
-    - name: 'acp_user'
-      title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'dg_dev'
+      title: 'Development'      
 sass:
     sass_dir: css
     style: compressed

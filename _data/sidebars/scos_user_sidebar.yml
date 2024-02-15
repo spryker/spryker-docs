@@ -45,7 +45,7 @@ entries:
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
-      - title: PHP 8.0 as a minimum version for all Spryker projects
+      - title: PHP 8.1 as a minimum version for all Spryker projects
         url: /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
       - title: Supported versions of PHP
         url: /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
@@ -159,7 +159,7 @@ entries:
       - title: Review pull requests
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
   - title: Features
     url: /docs/scos/user/features/features.html
     include_versions:

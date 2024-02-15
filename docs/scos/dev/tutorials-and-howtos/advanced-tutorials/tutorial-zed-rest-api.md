@@ -55,10 +55,10 @@ Reflection is used here for educational purposes, blindly exposing internal code
 It is advised to recap the following topics before starting the challenge:
 
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
-* [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
-* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* ["Tutorial: Add a new module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html)
-* [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
+* [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
+* [Transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
+* ["Tutorial: Add a new module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html)
+* [Controllers in Zed](/docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}
 

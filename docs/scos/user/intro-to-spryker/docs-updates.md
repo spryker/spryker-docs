@@ -2,15 +2,67 @@
 title: Docs updates
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Oct 2, 2023
+last_updated: Jan 5, 2024
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
+
+## January 2024
+
+In January 2024, we have added and updated the following pages:
+
+### New pages
+
+- [Example modules](/docs/scos/dev/example-modules.html): Explore the use cases and functionality of the Spryker example modules.
+- [Datasource Dependable](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-dependable.html): Learn about the Datasource Dependable service in the components library.
+- [Datasource Trigger Change](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html): Learn about the Datasource Trigger Change service in the components library.
+- [Datasource Trigger Input](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html): Learn about the Datasource Trigger Input service in the components library.
+- [Datasource Trigger](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html): Learn about the Datasource Trigger service in the components library.
+- [Table Column Type Button Action](/docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html): Learn about the Table Column Type Button Action in the Components Library.
+- [Actions Confirmation](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-confirmation.html): Learn about the Actions Confirmation service in the Components Library.
+- [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Stripe app general overview.
+- [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
+- [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
+- [ACP architecture overview](/docs/acp/user/intro-to-acp/acp-architecture-overview.html).
+- [Connect an app](/docs/dg/dev/acp/develop-an-app/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
+- [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
+- [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.
+- [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
+
+
+### Updated pages
+
+- [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html).
+- [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
+- [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
+- [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
+- [Integrate Payone](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html).
+- [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+- [Install the ACL feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202403.0/marketplace/install-the-merchant-portal-agent-assist-feature.html).
+- [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
+- [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
+- [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202403.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
+- [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
+- [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
+- [Category Management feature overview](/docs/pbc/all/product-information-management/202403.0/base-shop/feature-overviews/category-management-feature-overview.html).
+- [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html).
+- [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202403.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
+
+For more details about these and other updates to the Spryker docs in January 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+
+
 ## December 2023
 
 In December 2023, we have added and updated the following pages:
 
-### New pages 
+### New pages
 
 - [Glue API: Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/202311.0/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html): Learn how to authenticate as a Back Office user using Glue API.
 - [Glue API: Authenticate as a warehouse user](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html): Learn how to authenticate as a warehouse user using Glue API.
@@ -47,12 +99,11 @@ In December 2023, we have added and updated the following pages:
     - [Click & Collect: Service Points domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-service-points-domain.html).
     - [Click & Collect: Shipment Type Service Point subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html).
     - [Click & Collect: Shipment Types domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html).
-- [Developing an app with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
-- [Configuration JSON file](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
-- [Manifest JSON file](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
-- [Translation JSON file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
-- [Debug an app with XDebug](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
-- [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html): to set up the message broker for your ACP app.
+- [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
+- [Configuration JSON file](/docs/dg/dev/acp/develop-an-app/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Manifest JSON file](/docs/dg/dev/acp/develop-an-app/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Translation JSON file](/docs/dg/dev/acp/develop-an-app/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
+- [Debug an app with XDebug](/docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
 - [Email service](/docs/ca/dev/email-service/email-service.html): Learn about the native mail service of the Spryker Cloud Commerce OS.
 - [Email quota restrictions](/docs/ca/dev/email-service/email-quota-restrictions.html): Learn the quotas of the Spryker Cloud Commerce OS email service.
 - [Set up DNS](/docs/ca/dev/set-up-dns.html): Learn how to set up DNS for your SCCOS project.
@@ -64,13 +115,13 @@ In December 2023, we have added and updated the following pages:
 - [Glue API: Update push notification providers](/docs/pbc/all/miscellaneous/202311.0/manage-using-glue-api/manage-push-notification-providers/glue-api-update-push-notification-providers.html): Learn how to update push notification providers using Glue API.
 - [Set up Fulfillment App](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/set-up-fulfillment-app.html): Learn how to install and configure Fulfillment App.
 - [Warehouse User Management feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-user-management-feature-overview.html): General overview of the Warehouse User Management feature.
-- [Test Glue API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html): Learn how to test Glue API.
-- [Test Glue Backend API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html): Learn how to test Glue Backend API.
+- [Test Glue API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html): Learn how to test Glue API.
+- [Test Glue Backend API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html): Learn how to test Glue Backend API.
 - [Glue API: Search the product catalog](/docs/pbc/all/search/202403.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
 
 ### Updated pages
 
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
 - [Create Glue API authorization strategies](/docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
@@ -82,7 +133,7 @@ In December 2023, we have added and updated the following pages:
 - [Service Points feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
 - [Set up Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/set-up-oryx.html): Learn how to set up Oryx using a boilerplate project.
 - [Oryx: Packages](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-packages.html): Learn how to use Oryx packages from npm to ensure easy upgrade to newer versions.
-- [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
+- [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 
 For more details about these and other updates to the Spryker docs in December 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
@@ -136,21 +187,21 @@ In November 2023, we have added and updated the following pages:
     - [Configure the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html).
     - [Create tasks and import products from Akeneo to SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html).
 - [Vertex FAQ](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex-faq.html): FAQ about the the Vertex app from the Spryker's App Composition Platform.
-- [Migrate to SCCOS](/docs/scos/dev/migration-concepts/migrate-to-sccos/migrate-to-sccos.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
-    - [Step 1: Integrate the Docker SDK](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-1-integrate-the-docker-sdk.html).
-    - [Step 2: Upgrade the PHP version](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-2-upgrade-the-php-version.html).
-    - [Step 3: Migrate non-standard services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-3-migrate-non-standard-services.html).
-    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-4-provision-the-sccos-environments.html).
-    - [Step 5: Define the deployment strategy](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-5-define-the-deployment-strategy.html).
-    - [Step 6: Define environment variables](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-6-define-environment-variables.html).
-    - [Step 7: Restore Elasticsearch and Redis](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-7-restore-es-and-redis.html).
-    - [Step 8: Adapt the file system-based features](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-8-adapt-the-filesystem-based-features.html).
-    - [Step 9: Implement security and performance guidelines](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-9-implement-security-and-performance-guidelines.html).
-    - [Step 10: Add frontend assets](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-10-add-frontend-assets.html).
-    - [Step 11: Wire custom services](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-11-wire-custom-services.html).
-    - [Step 12: Choose a multi-store setup](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-12-choose-a-multi-store-setup.html).
-    - [Step 13: Migrate database](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-13-migrate-database.html).
-    - [Step 14: Finalize the migration](/docs/scos/dev/migration-concepts/migrate-to-sccos/step-14-finalize-the-migration.html).
+- [Migrate to SCCOS](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html): Learn how to migrate from an on-prem Spryker system to Spryker Cloud Commerce OS (SCCOS).
+    - [Step 1: Integrate the Docker SDK](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html).
+    - [Step 2: Upgrade the PHP version](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html).
+    - [Step 3: Migrate non-standard services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html).
+    - [Step 4: Provision the Spryker Cloud Commerce OS environments](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-provision-the-sccos-environments.html).
+    - [Step 5: Define the deployment strategy](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html).
+    - [Step 6: Define environment variables](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html).
+    - [Step 7: Restore Elasticsearch and Redis](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html).
+    - [Step 8: Adapt the file system-based features](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html).
+    - [Step 9: Implement security and performance guidelines](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html).
+    - [Step 10: Add frontend assets](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-add-frontend-assets.html).
+    - [Step 11: Wire custom services](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html).
+    - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html).
+    - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html).
+    - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html).
 - [Backend API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
 - [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
@@ -163,14 +214,14 @@ In November 2023, we have added and updated the following pages:
 - [Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html): Learn how the Vertex app from the Spryker's App Composition Platform can help you manage taxes.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn about the prerequisites for provisioning the Spryker Cloud Commerce OS environment.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
-- [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html): Learn how to optimize the server-side execution time for a Spryker project.
+- [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html): Learn how to optimize the server-side execution time for a Spryker project.
 - [Shipment Cart feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-cart-feature.html).
 - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
 - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
 - [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
-- [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
-- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
+- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
 
 
 For more details about these and other updates to the Spryker docs in November 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -196,8 +247,8 @@ In October 2023, we have added and updated the following pages:
 - [Oryx: Responsive design system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 - [Entity does not exist: Pyz prefix](/docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
-- [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
-- [Test the asynchronous API](/docs/scos/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
+- [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
+- [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
 - [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-feature.html).
 - [Install the Shipment Product Offer + Service Points Availability feature](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-product-offer-service-points-availability-feature.html).
@@ -207,33 +258,33 @@ In October 2023, we have added and updated the following pages:
 
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html): Learn how to integrate the Vertex app in your ACP catalog in the Back Office.
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-configure-data-exchange-api.html).
-- [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
-- [Test helpers best practices](/docs/scos/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html).
+- [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
+- [Test helpers best practices](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
-- [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
+- [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
 - [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
-- [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
-- [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
-- [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Multidimensional array](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
-- [PHP version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
-- [Plugin registration with restrictions](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-- [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-- [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
-- - [Container set function](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
-- [Spryker dev packages checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
-- [Spryker security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Learn how to check for security fixes in the Spryker modules.
-- [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
+- [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
+- [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+- [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
+- [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
+- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- - [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
+- [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
+- [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Install Product feature](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-product-feature.html).
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
-- [System requirements](/docs/scos/dev/system-requirements/202307.0/system-requirements.html).
+- [System requirements](/docs/dg/dev/system-requirements/202307.0/system-requirements.html).
 
 For more details about these and other updates to the Spryker docs in October 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
@@ -244,9 +295,9 @@ In September 2023, we have added and updated the following pages:
 ### New pages
 
 - [Catalog + Merchant Product Restrictions feature integration guide](/docs/pbc/all/search/202307.0/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
-- [Container set function](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
-- [Ignore evaluation errors](/docs/scos/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
-- [Spryker dev packages checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
+- [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
+- [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
+- [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
@@ -263,7 +314,7 @@ In September 2023, we have added and updated the following pages:
 - [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
-- [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/howto-import-big-databases-between-environments.html).
+- [HowTo: Import big databases between environments](/docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html).
 - [Vertex app integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 
 For more details about these and other updates to the Spryker docs in September 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -278,8 +329,8 @@ In August 2023, we have added and updated the following pages:
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html).
 - [Security release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html).
-- [Spryker security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Learn how to check for security fixes in the Spryker modules.
-- [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
+- [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Dynamic multistore docs](/docs/pbc/all/dynamic-multistore/202307.0/dynamic-multistore.html):
     - [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
     - [Dynamic Multistore feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html).
@@ -287,7 +338,7 @@ In August 2023, we have added and updated the following pages:
     - [Dynamic Multistore + Cart feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html).
     - [Dynamic Multistore + CMS feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html).
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
-- [Npm checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
+- [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
 - [Vertex integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 - [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
@@ -303,12 +354,12 @@ In August 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+- [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Product Rating and Reviews feature integration guide](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Best practises: Jenkins stability](/docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html): Learn how to improve the stability of the scheduler component..
-- [Decoupled Glue infrastructure: Integrate the authentication](/docs/scos/dev/migration-concepts/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
+- [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in your project.
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html):Learn how to define variables in the Parameter Store.
 
 For more details about these and other updates to the Spryker docs in August 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -337,18 +388,18 @@ In July 2023, we have added and updated the following pages:
 - [Adding variables in the parameter store](/docs/ca/dev/add-variables-in-the-parameter-store.html): Added reserved variable sub-section and removed deprecated text.
 - [Security Release Notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
 - [Merchant Users Overview](/docs/pbc/all/merchant-management/202212.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html): Added information about the assignment of groups for the merchant user.
-- [Handle data with Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
+- [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
 - [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
-- [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [Payment Service Provider](/docs/pbc/all/payment-service-provider/202212.0/payment-service-provider.html): Different payment methods for your shop.
 - [System requirements](/docs/scos/dev/system-requirements/202304.0/system-requirements.html): This document provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 - [Supported browsers](/docs/scos/user/intro-to-spryker/supported-browsers.html): This document lists browsers supported by Spryker Cloud Commerce OS.
 - [Install the shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html)
-- [App manifest](/docs/acp/user/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
-- [Development strategies](/docs/scos/dev/back-end-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
-- [Project development guidelines](/docs/scos/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
+- [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
+- [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
+- [Project development guidelines](/docs/dg/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
 - [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
 - [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The guide describes how to integrate the [Measurement Units](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/measurement-units-feature-overview.html) feature into your project.
 
@@ -381,15 +432,15 @@ In June 2023, we have added and updated the following pages:
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
 - [Install the Product Offer Shipment feature](/docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-features/install-the-product-offer-shipment-feature.html).
 - [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
-- [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
-- [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
-- [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-- [Multidimensional array](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
-- [PHP version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
-- [Plugin registration with restrictions](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-- [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-- [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
-- [Integrate profiler module](/docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html).
+- [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider.
+- [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
+- [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+- [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+- [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
+- [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
+- [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+- [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [Integrate profiler module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html).
 - [Approval Process feature overview](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/feature-overviews/approval-process-feature-overview.html).
 - [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/202212.0/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html).
 
@@ -405,16 +456,16 @@ In May 2023, we have added and updated the following pages:
     - [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multi-store environment.
     - [Checklist for a new store implementation](/docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html): Learn how to install the App Orchestration Platform.
-- [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html): Learn how to run the evaluator tool.
-- [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):
-    - [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
-    - [Dead code checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
-    - [Minimum allowed shop version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
-    - [Multidimensional array](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
-    - [PHP version](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
-    - [Plugin registration with restrictions](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
-    - [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
-    - [Single plugin argument](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
+- [Run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html): Learn how to run the evaluator tool.
+- [Upgradability guidelines](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html):
+    - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
+    - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
+    - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
+    - [Multidimensional array](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Resolve issues with the multidimensional arrays inside the dependency provider’s methods.
+    - [PHP version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): Make sure the allowed and consistent PHP version is used in different project parts.
+    - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
+    - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
+    - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
@@ -447,7 +498,7 @@ In May 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
-- [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
+- [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
@@ -464,7 +515,7 @@ In April 2023, we have added and updated the following pages:
 ### New pages
 
 - [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

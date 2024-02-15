@@ -101,4 +101,4 @@ To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop
 
 To download the B2B Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2b-demo-shop](https://github.com/spryker-shop/b2b-demo-shop).
 
-To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+To install the B2B Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).

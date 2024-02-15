@@ -69,7 +69,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for new GDPR rules](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 
-### Testing 
+### Testing
 
 - Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode).
 - Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
@@ -91,7 +91,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 Make sure you've addressed all the items from the following checklists.
 
-### Cloud 
+### Cloud
 
 - We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.

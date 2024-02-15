@@ -133,7 +133,7 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 ## February 2021
 
-* **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+* **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 * **Documentation about Onboarding deliverables**: updated the cloud administration getting started page with the deliverables provided after the onboarding. See [Getting started with cloud administration](/docs/ca/dev/getting-started-with-cloud-administration.html).
 

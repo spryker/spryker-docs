@@ -42,7 +42,7 @@ The Upgrader tool does not influence your development process. Your development 
 
 * Cover customizations with automated tests.
 
-* Cover with tests each pull request created by Spryker Code Upgrader. For information about different kinds of tests, see [Testing updates](/docs/scos/dev/updating-spryker/testing-updates.html).
+* Cover with tests each pull request created by Spryker Code Upgrader. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
 
 * To continue receiving suggestions from Spryker Code Upgrader, apply major upgrades manually.
 

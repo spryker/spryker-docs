@@ -12,9 +12,7 @@ redirect_from:
 
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
-The preparation activities mentioned here are critical for the success of your go-live process. 
-We strongly encourage you to include the tasks related to the go-live checklist in your project plan and allocate sufficient time to complete them.
-
+The preparation steps listed here are mandatory because they are critical to the success of your go-live. We strongly encourage you to complete these steps (if applicable for your project) because we won’t be able to resolve the issues related to the steps not completed in time. Ensure that your project plan contains the tasks related to the go-live checklist and allows enough time for them to be completed.
 {% endinfo_block %}
 
 

@@ -31,4 +31,4 @@ related:
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
 ---
 
-{% include pbc/all/install-features/202403.0/install-glue-api/install-the-company-account-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202403.0/install-glue-api/install-the-company-account-glue-api.md -->
+{% include pbc/all/install-features/202404.0/install-glue-api/install-the-company-account-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-company-account-glue-api.md -->

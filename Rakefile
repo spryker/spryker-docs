@@ -80,20 +80,6 @@ commonOptions = {
   :check_external_hash => false,
 }
 
-task :check_acp_user do
-  options = commonOptions.dup
-  options[:ignore_files] = [
-    /docs\/scos\/.+/,
-    /docs\/ca\/.+/,
-    /docs\/fes\/.+/,
-    /docs\/dg\/.+/,    
-    /docs\/scu\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
 task :check_ca do
   options = commonOptions.dup
   options[:ignore_files] = [

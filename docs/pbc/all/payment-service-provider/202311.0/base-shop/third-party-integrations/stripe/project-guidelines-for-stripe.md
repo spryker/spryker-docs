@@ -26,7 +26,7 @@ The `Payment/Capture` command initiates the capture action. By default, this com
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
-To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`. Then, change the name of the file and the value of `<process name=` in the file.
+To configure your payment OMS based on `ForeignPaymentStateMachine01.xml`, copy `ForeignPaymentStateMachine01.xml` with `Subprocess` folder to the project root `config/Zed/oms`. Then, change the file's name and the value of `<process name=` in the file.
 
 This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 
@@ -81,7 +81,10 @@ This example demonstrates how to configure the order state machine transition fr
 </statemachine>
 ```
 
-By default, the timeout for the payment authorization action is set to one day. This means that if the order is in the 'payment authorization pending' state, the OMS will wait for a day and then change the order state to 'payment authorization failed'. Another day later, the order is automatically transitioned to the 'payment authorization canceled' state. Therefore, if you need to increase timeouts or change the states, modify the config/Zed/oms/Subprocess/PaymentAuthorization01.xml file according to your requirements.
+By default, the timeout for the payment authorization action is set to 7 days. This means that if the order is in the `payment authorization pending` state, the OMS will wait for a day and then change the order state to `payment authorization failed`. Another day later, the order is automatically transitioned to the `payment authorization canceled` state. Therefore,
+if you need to decrease or increase timeouts or change the states, modify the `config/Zed/oms/Subprocess/PaymentAuthorization01.xml` file according to your requirements.
+
+For more information about ACP payment methods integration with your project OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
 
 ## Checkout payment step
 
@@ -104,7 +107,7 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 {% endraw %}       
 ```
 
-2. If you want to change default payment provider or method names, do the following:
+2. If you want to change the default payment provider or method names, do the following:
     1. Make sure the names are translated in your payment step template:
 
 ```twig

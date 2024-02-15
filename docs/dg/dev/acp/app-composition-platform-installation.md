@@ -5,6 +5,7 @@ template: concept-topic-template
 last_updated: Jan 09, 2024
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
+    - /docs/acp/user/app-composition-platform-installation.html
 ---
 
 This document describes how you can make your project ACP-ready and how you install ACP.

@@ -1,5 +1,5 @@
 ---
-title: Extend the Merchant Portal frontend
+title: Extending the Merchant Portal frontend
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
 last_updated: Nov 21, 2023

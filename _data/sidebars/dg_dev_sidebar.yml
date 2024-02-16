@@ -386,7 +386,7 @@ entries:
         - "202307.0"
         - "202311.0"
       - title: Atomic Frontend
-        url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+        url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-frontend.html
         include version:
         - "202212.0"
         - "202307.0"

@@ -1,6 +1,6 @@
 ---
 title: Marketplace frontend
-description: working with Marketplace frontend
+description: Working with Marketplace frontend
 last_updated: Jan 12, 2023
 template: concept-topic-template
 redirect_from:

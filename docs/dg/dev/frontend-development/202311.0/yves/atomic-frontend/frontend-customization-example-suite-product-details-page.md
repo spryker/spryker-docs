@@ -1,5 +1,5 @@
 ---
-title: Customization example - Suite Product Details page
+title: "Frontend customization example: suite Product Details page"
 description: Customize any front–end element in Spryker by overriding a respective SCSS file.
 last_updated: Jun 16, 2021
 template: howto-guide-template

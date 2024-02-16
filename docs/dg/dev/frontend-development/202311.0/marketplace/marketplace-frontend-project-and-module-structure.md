@@ -1,5 +1,5 @@
 ---
-title: Project structure
+title: Marketplace frontend project and module structure
 description: This document provides details about the structure of the frontend project in the Spryker Marketplace.
 template: concept-topic-template
 last_updated: Nov 21, 2023

@@ -1,5 +1,5 @@
 ---
-title: Customization example - B2B Product Details page
+title: "Frontend customization example: B2C Product Details page"
 description: Customize any front–end element in Spryker by adjusting a respective SCSS file.
 last_updated: Jun 16, 2021
 template: howto-guide-template

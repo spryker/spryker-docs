@@ -1,5 +1,5 @@
 ---
-title: Data Importer Speed Optimization
+title: Data import optimization guidelines
 description: This article defines the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize.
 last_updated: Jun 16, 2021
 template: data-import-template
@@ -10,9 +10,6 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-importer-speed-optimization.html
 ---
 
-## Concept
-
-**"Writing code is the easy part of every feature but writing a scalable and fast solution is a challenge"**
 
 This article will define the best practices for Spryker modules that need to work with two infrastructure concepts like DataImport and Publish & Synchronize. After several reviews and tests, we found that we need to define these rules to help developers to write more scalable and high-performance code when they implementing their features. Most of the time when developers create features, they don't consider very high traffic or heavy data processing for big data. This article is going to describe all necessary requirements when you want to create new features and they should work with big data, for example, you want to create a new DataImport or a new P&S module which save millions of entities into a database in a very short amount of time.
 

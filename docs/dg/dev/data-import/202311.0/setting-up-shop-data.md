@@ -1,5 +1,5 @@
 ---
-title: Importing Demo Shop data
+title: Setting up shop data
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/importing-demo-shop-data
@@ -9,7 +9,8 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/demo-shop-data-import/importing-demo-shop-data.html
 ---
 
-To import data into a Spryker Demo Shop, you need to:
+To import data into a shop, you need to do the following:
+
 1. [Enable the existing data importers](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) or [create your own](/docs/scos/dev/data-import/{{page.version}}/creating-a-data-importer.html).
 2. Populate the CSV files with import data. For import file details, see [Packaged Business Capabilities](/docs/pbc/all/pbc.html).
 3. [Define the correct order of import](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html).

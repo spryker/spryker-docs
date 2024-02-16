@@ -1,5 +1,5 @@
 ---
-title: Data Importers Overview and Implementation
+title: Data importers implementation
 description: This article includes the list of data importers provided in Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: data-import-template
@@ -101,7 +101,7 @@ On the project level, you can set a default configuration file path in `DataImpo
 
 Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* will not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution Order of Data Importers in Demo Shop](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
 
-## Implementation overview
+## Implementation
 
 Currently, we have two approaches to data importers. Most of the importers are project-based, but there are a few module-based importers. The main difference is the way the importer should be enabled.
 

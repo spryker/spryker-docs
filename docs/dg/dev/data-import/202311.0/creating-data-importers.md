@@ -1,5 +1,5 @@
 ---
-title: Creating a Data Importer
+title: Creating data importers
 description: The following article describes how to build your own DataImport for a specific type. All steps in this article are built on real life example for importing product images.
 last_updated: Jun 16, 2021
 template: data-import-template

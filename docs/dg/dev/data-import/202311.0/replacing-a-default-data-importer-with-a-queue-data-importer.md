@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Replace a default data importer with the queue data importer"
+title: Replacing a default data importer with a queue data importer
 description: This tutorial is a quick step-by-step guide on how to replace a default data importer with a queue data importer.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -16,13 +16,13 @@ Before integrating Algolia, ensure the following prerequisites are met:
 
 - The Payone app requires the following Spryker modules:
 
-* `spryker/payment: ^5.15.0`
+* `spryker/payment: ^5.18.0`
 * `spryker/sales: ^11.41.0`
 * `spryker/sales-return: ^1.5.0`
 * `spryker-shop/checkout-page: ^3.24.0`
 * `spryker-shop/payment-page: ^1.3.0`
 * `spryker/oms: ^11.21.0`
-* `spryker/sales-payment: ^1.2.0`
+* `spryker/sales-payment: ^1.5.0`
 
 Make sure that your installation meets these requirements.
 
@@ -36,21 +36,21 @@ To integrate Payone, follow these steps.
 Add the following config to `config/Shared/config_default.php`:
     
 ```php
-use Spryker\Shared\OauthClient\OauthClientConstants;
-use Generated\Shared\Transfer\PaymentMethodAddedTransfer;
-use Generated\Shared\Transfer\PaymentMethodDeletedTransfer;
-use Generated\Shared\Transfer\PaymentCancelReservationRequestedTransfer;
-use Generated\Shared\Transfer\PaymentConfirmationRequestedTransfer;
-use Generated\Shared\Transfer\PaymentRefundRequestedTransfer;
-use Generated\Shared\Transfer\PaymentPreauthorizedTransfer;
-use Generated\Shared\Transfer\PaymentPreauthorizationFailedTransfer;
-use Generated\Shared\Transfer\PaymentConfirmedTransfer;
-use Generated\Shared\Transfer\PaymentConfirmationFailedTransfer;
+use Generated\Shared\Transfer\AddPaymentMethodTransfer;
+use Generated\Shared\Transfer\CancelPaymentTransfer;
+use Generated\Shared\Transfer\CapturePaymentTransfer;
+use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
+use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
+use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
+use Generated\Shared\Transfer\PaymentCanceledTransfer;
+use Generated\Shared\Transfer\PaymentCancellationFailedTransfer;
+use Generated\Shared\Transfer\PaymentCapturedTransfer;
+use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
 use Generated\Shared\Transfer\PaymentRefundedTransfer;
 use Generated\Shared\Transfer\PaymentRefundFailedTransfer;
-use Generated\Shared\Transfer\PaymentReservationCanceledTransfer;
-use Generated\Shared\Transfer\PaymentCancelReservationFailedTransfer;
+use Generated\Shared\Transfer\RefundPaymentTransfer;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\Oms\OmsConstants;
 use Spryker\Shared\Payment\PaymentConstants;
 use Spryker\Shared\Sales\SalesConstants;
@@ -62,19 +62,19 @@ $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
-    PaymentMethodAddedTransfer::class => 'payment-method-commands',
-    PaymentMethodDeletedTransfer::class => 'payment-method-commands',
-    PaymentCancelReservationRequestedTransfer::class => 'payment-commands',
-    PaymentConfirmationRequestedTransfer::class => 'payment-commands',
-    PaymentRefundRequestedTransfer::class => 'payment-commands',
-    PaymentPreauthorizedTransfer::class => 'payment-events',
-    PaymentPreauthorizationFailedTransfer::class => 'payment-events',
-    PaymentConfirmedTransfer::class => 'payment-events',
-    PaymentConfirmationFailedTransfer::class => 'payment-events',
+    AddPaymentMethodTransfer::class => 'payment-method-commands',
+    DeletePaymentMethodTransfer::class => 'payment-method-commands',
+    CancelPaymentTransfer::class => 'payment-commands',
+    CapturePaymentTransfer::class => 'payment-commands',
+    RefundPaymentTransfer::class => 'payment-commands',
+    PaymentAuthorizedTransfer::class => 'payment-events',
+    PaymentAuthorizationFailedTransfer::class => 'payment-events',
+    PaymentCapturedTransfer::class => 'payment-events',
+    PaymentCaptureFailedTransfer::class => 'payment-events',
     PaymentRefundedTransfer::class => 'payment-events',
     PaymentRefundFailedTransfer::class => 'payment-events',
-    PaymentReservationCanceledTransfer::class => 'payment-events',
-    PaymentCancelReservationFailedTransfer::class => 'payment-events',
+    PaymentCanceledTransfer::class => 'payment-events',
+    PaymentCancellationFailedTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -90,20 +90,16 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     //...
-    //APPLICATION_ROOT_DIR . '/vendor/spryker/payment/config/Zed/Oms', # this line must be removed if exists
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added
+    OmsConfig::DEFAULT_PROCESS_LOCATION,
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
 ];
-
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     //...
-    //'B2CStateMachine01', # this line must be removed if exists
-    'ForeignPaymentStateMachine01', # this line must be added
+    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
 ];
-
 $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     //...
-    //PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'B2CStateMachine01', # this line must be removed if exists
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
 ];
 
 // ----------------------------------------------------------------------------
@@ -123,15 +119,8 @@ Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProv
 namespace Pyz\Zed\MessageBroker;
 
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentCancelReservationFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentConfirmationFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentConfirmedMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentPreauthorizationFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentPreauthorizedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentRefundedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentRefundFailedMessageHandlerPlugin;
-use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentReservationCanceledMessageHandlerPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -142,14 +131,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-            new PaymentCancelReservationFailedMessageHandlerPlugin(),
-            new PaymentConfirmationFailedMessageHandlerPlugin(),
-            new PaymentConfirmedMessageHandlerPlugin(),
-            new PaymentPreauthorizationFailedMessageHandlerPlugin(),
-            new PaymentPreauthorizedMessageHandlerPlugin(),
-            new PaymentReservationCanceledMessageHandlerPlugin(),
-            new PaymentRefundedMessageHandlerPlugin(),
-            new PaymentRefundFailedMessageHandlerPlugin(),
+            new PaymentOperationsMessageHandlerPlugin();
             new PaymentMethodMessageHandlerPlugin(),
         ];
     }
@@ -272,31 +254,21 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 Adjust the `\Pyz\Zed\Oms\OmsDependencyProvider` file as follows:
 
-1. Eliminate the use of the following plugins (if any):
-
-```php
-Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentCancelReservationPendingPlugin;
-Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentConfirmationPendingPlugin;
-Spryker\Zed\Payment\Communication\Plugin\Command\SendEventPaymentRefundPendingPlugin;
-```
-
-2. Add the following plugins:
-
 ```php
 protected function extendCommandPlugins(Container $container): Container
 {
     $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
         //...
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Command\SendEventPaymentConfirmationPendingPlugin(), 'Payment/SendEventPaymentConfirmationPending');
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Command\SendEventPaymentRefundPendingPlugin(), 'Payment/SendEventPaymentRefundPending');
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Command\SendEventPaymentCancelReservationPendingPlugin(), 'Payment/SendEventPaymentCancelReservationPending');
+        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
+        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
+        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
     });
 }
 ```
 
 ### 8. Optional: Configure your payment OMS
 
-The complete default payment OMS configuration is available at `/vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
+The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
 
 ```xml
 <?xml version="1.0"?>
@@ -338,7 +310,7 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 
             <!-- other events -->
 
-            <event name="capture payment" onEnter="true" command="Payment/SendEventPaymentConfirmationPending"/>
+            <event name="capture payment" onEnter="true" command="Payment/Capture"/>
 
             <!-- other events -->
 
@@ -348,6 +320,8 @@ The complete default payment OMS configuration is available at `/vendor/spryker/
 
 </statemachine>
 ```
+
+[Read more](/docs/acp/user/acp-payment-oms-guides.html) about ACP payment methods integration with your project OMS configuration.
 
 ### 9. Accommodate data and presentation change
 
@@ -367,10 +341,10 @@ payment.cancellation.title,Bezahlvorgang abgebrochen,de_DE
 payment.cancellation.title,Payment cancellation,en_US
 payment.cancellation.message,Du hast den Bezahlvorgang abgebrochen.,de_DE
 payment.cancellation.message,You have cancelled your payment.,en_US
-oms.state.reservation-cancelled,Reservation Cancelled,en_US
-oms.state.reservation-cancelled,Reservation Cancelled,de_DE
-oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,en_US
-oms.state.reservation-cancellation-pending,Reservation Cancellation Pending,de_DE
+oms.state.reservation-cancelled,Payment cancelled,en_US
+oms.state.reservation-cancelled,Payment cancelled,de_DE
+oms.state.reservation-cancellation-pending,Payment cancellation in progress,en_US
+oms.state.reservation-cancellation-pending,Payment cancellation in progress,de_DE
 ```
 2. Run the data import for the glossary:
 

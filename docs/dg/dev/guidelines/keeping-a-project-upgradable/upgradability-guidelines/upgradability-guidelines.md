@@ -33,7 +33,7 @@ In the example, the name is `DEPENDENCY PROVIDER ADDITIONAL LOGIC CHECKER`. The 
 </div>
 
 ## Avoid using deprecated methods and classes
-Avoiding [deprecated methods and classes](/docs/scos/dev/updating-spryker/updating-spryker.html) ensures stability, security, and compatibility with newer versions.
+Avoiding [deprecated methods and classes](/docs/dg/dev/updating-spryker/updating-spryker.html) ensures stability, security, and compatibility with newer versions.
 
 ## Avoid using additional logic in dependency provider
 Avoiding [additional logic in dependency providers](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html) helps to maintain simplicity, reliability, and adherence to best practices, ensuring clean and efficient dependency injection.

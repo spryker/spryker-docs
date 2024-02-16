@@ -1026,7 +1026,7 @@ entries:
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
-                - "202403.0"            
+                - "202404.0"            
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -3961,12 +3961,25 @@ entries:
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html
                       - title: Segment scope
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
-              - title: Install the Merchant Portal Agent Assist feature
-                url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
-                include_versions:
-                - "202403.0"
               - title: "Persistence ACL feature: Domain model and relationships"
                 url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
+              - title: Merchant Portal Agent Assist feature overview
+                url: /docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview.html
+                include_versions:
+                - "202404.0"
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Merchant Portal Agent Assist feature
+                    url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
+                    include_versions:
+                    - "202404.0"
+              - title: Manage in the Back Office
+                nested:
+                  - title: Create users
+                    url: /docs/pbc/all/user-management/marketplace/manage-in-the-back-office/create-users.html
+                    include_versions:
+                    - "202404.0"
+
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html

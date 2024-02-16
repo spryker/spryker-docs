@@ -10,7 +10,7 @@ redirect_from:
 
 ---
 
-To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with new Twig functions. All the Twig extension implementations are located in the `Gui` module and can be found in `Pyz\Zed\Twig\TwigDependencyProvider`.
+To improve developer experience, [Twig](https://twig.symfony.com/) functionality is extended with custom Twig functions. All the Twig extension implementations are located in the `Gui` module and can be found in `Pyz\Zed\Twig\TwigDependencyProvider`.
 
 <details>
 <summary>Pyz\Zed\Twig\TwigDependencyProvider</summary>

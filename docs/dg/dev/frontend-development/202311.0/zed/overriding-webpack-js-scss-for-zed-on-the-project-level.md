@@ -1,5 +1,5 @@
 ---
-title: Overriding Webpack, JS, SCSS for ZED on project level
+title: Overriding Webpack, JS, SCSS for ZED on the project level
 description: Learn how to override Webpack, JS, SCSS for ZED on a project level
 last_updated: Apr 28, 2023
 template: howto-guide-template

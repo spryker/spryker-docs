@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
 ---
 
-To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with the new Twig functions introduced. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
+To improve developer experience, [Twig](https://twig.symfony.com/) functionality is extended with custom Twig functions. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
 
 | FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |

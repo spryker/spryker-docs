@@ -1,5 +1,5 @@
 ---
-title: Front-end builder for Yves
+title: Frontend builder for Yves
 description: This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/front-end-builder-for-yves.html
 ---
 
-This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
+This article provides information about how to prepare assets, like CSS, js or images, for different namespaces and their themes.
 
 ## Commands
 
@@ -29,7 +29,7 @@ The builder has several modes to build frontend:
 * `-c <path> or --config <path>`—ability to define the path to the config JSON file that overwrites the default config JSON file.
 * `-i or --info`—displays a list of namespaces with all the available themes.
 
-## Configuration
+## Configuring
 
 To enable the multi-theme in Yves, add the`\SprykerShop\Shared\ShopUi\ShopUiConstants::YVES_ASSETS_URL_PATTERN` configuration.
 
@@ -94,7 +94,7 @@ class TwigConfig extends SprykerTwigConfig
 
 ## Public assets
 
-All public assets are generated into `/public/Yves/` plus the path defined in the config file (`assets/%namespace%/%theme%/` by default).
+All public assets are generated into `/public/Yves/` plus the path defined in the config file, which is `assets/%namespace%/%theme%/` by default.
 
 For example, for the `DE` namespace and default theme, it is`/public/Yves/assets/DE/default/`.
 

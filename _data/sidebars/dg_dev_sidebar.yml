@@ -348,7 +348,7 @@ entries:
     - "202311.0"
     nested:
     - title: Zed
-      url: /docs/dg/dev/frontend-development/zed/zed.html
+      url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
       include version:
       - "202212.0"
       - "202307.0"
@@ -361,7 +361,7 @@ entries:
         - "202307.0"
         - "202311.0"
       - title: Overriding Webpack, JS, SCSS for ZED on project level
-        url: /docs/dg/dev/frontend-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+        url: /docs/dg/dev/frontend-development/zed/overriding-webpack-js-scss-for-zed-on-the-project-level.html
         include version:
         - "202212.0"
         - "202307.0"
@@ -373,7 +373,7 @@ entries:
         - "202307.0"
         - "202311.0"
     - title: Yves
-      url: /docs/dg/dev/frontend-development/yves/yves.html
+      url: /docs/dg/dev/frontend-development/yves/yves-frontend.html
       include version:
       - "202212.0"
       - "202307.0"
@@ -399,7 +399,7 @@ entries:
         - title: Customization example - B2B Product Details page
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customization-example-b2b-product-details-page.html
         - title: Integrating React into Atomic Frontend
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
         - title: Managing the Components
           nested:
           - title: Creating a component
@@ -421,13 +421,13 @@ entries:
       - title: Adding and using external libraries in Yves
         url: /docs/dg/dev/frontend-development/yves/adding-and-using-external-libraries-in-yves.html
       - title: Frontend builder for Yves
-        url: /docs/dg/dev/frontend-development/yves/front-end-builder-for-yves.html
+        url: /docs/dg/dev/frontend-development/yves/frontend-builder-for-yves.html
       - title: Custom twig functions for Yves
         url: /docs/dg/dev/frontend-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/dg/dev/frontend-development/yves/multi-theme.html
       - title: Image optimization usage
-        url: /docs/dg/dev/frontend-development/yves/image-optimization-usage.html
+        url: /docs/dg/dev/frontend-development/yves/implement-image-optimization.html
     - title: Oryx
       url: /docs/dg/dev/frontend-development/oryx/oryx.html
       include_versions:

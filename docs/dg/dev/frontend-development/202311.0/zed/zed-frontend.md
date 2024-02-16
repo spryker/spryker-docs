@@ -1,6 +1,6 @@
 ---
-title: Zed
-description: Working with Zed tools in Spryker Commerce OS
+title: Zed frontend
+description: Developing Zed frontend
 template: concept-topic-template
 last_updated: Apr 3, 2023
 redirect_from:
@@ -9,7 +9,7 @@ redirect_from:
 
 ---
 
-This section contains instructions for frontend Zed developing on the Spryker Commerce OS. It includes the following components and topics:
+This section contains the following documents about developing the Zed frontend:
 
 - [Custom Twig functions for Zed](/docs/dg/dev/frontend-development/{{page.version}}/zed/custom-twig-functions-for-zed.html)
 - [Overriding Webpack, JS, SCSS, and TWIG for Zed on project level](/docs/dg/dev/frontend-development/{{page.version}}/zed/overriding-webpack-js-scss-for-zed-on-project-level.html)

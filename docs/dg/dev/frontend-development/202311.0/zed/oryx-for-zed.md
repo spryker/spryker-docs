@@ -19,7 +19,7 @@ redirect_from:
 
 {% endinfo_block %}
 
-### Requirements
+## Requirements
 
 - [Node.js](https://nodejs.org/en/download/): minimum version is 18.
 - [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/): minimum version is 9.
@@ -30,7 +30,7 @@ redirect_from:
 
 {% endinfo_block %}
 
-### Setup
+## Setup
 
 You need to add `oryx-for-zed` to your `package.json`. Open the terminal, go to your project root folder, and type:
 
@@ -45,9 +45,9 @@ Once installed, you can do the following actions:
 - Call the builder directly from your scripts (simple builder).
 - Extend or change the settings and Webpack configuration for your custom Zed build.
 
-### Simple builder
+## Simple builder
 
-The following section describes how to run `oryx-for-zed`.
+To run `oryx-for-zed`, follow the steps:
 
 1. Add the following script to your `package.json`:
 
@@ -65,7 +65,7 @@ The following section describes how to run `oryx-for-zed`.
 npm run build-zed
 ```
 
-### Extend or change the settings
+## Extend or change the settings
 
 Settings are extended and changed by using the `oryx-for-zed` [API](/docs/dg/dev/frontend-development/{{page.version}}/zed/oryx-for-zed.html#api).
 
@@ -109,7 +109,7 @@ oryxForZed
 
 You will now be able to…
 
-### Extend and change the Webpack configuration
+## Extend and change the Webpack configuration
 
 `webpack` is customized by using the `oryx-for-zed` [API](/docs/dg/dev/frontend-development/{{page.version}}/zed/oryx-for-zed.html#api).
 

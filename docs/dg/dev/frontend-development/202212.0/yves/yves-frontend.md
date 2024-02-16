@@ -5,13 +5,13 @@ template: concept-topic-template
 last_updated: Jan 10, 2023
 redirect_from:
   - /docs/scos/dev/front-end-development/yves/yves.html
-  - /docs/scos/dev/front-end-development/202307.0/yves/yves.html
+  - /docs/scos/dev/front-end-development/202212.0/yves/yves.html
 
 ---
 
 This section contains instructions for frontend Yves developing on the the Spryker Commerce OS. It includes the following components and topics:
 
-* [Yves multi-themes](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-multi-themes.html)
+* [Yves multi-themes](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-frontend-multi-themes.html)
 * [Atomic frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html)
 * [Frontend assets building and loading](/docs/dg/dev/frontend-development/{{page.version}}/yves/frontend-assets-building-and-loading.html)
 * [Adding and using external libraries in Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/adding-and-using-external-libraries-in-yves.html)

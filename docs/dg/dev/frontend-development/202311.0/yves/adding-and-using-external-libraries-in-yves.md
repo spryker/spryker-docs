@@ -1,5 +1,5 @@
 ---
-title: Adding and Using External Libraries in Yves
+title: Adding and using external libraries in Yves
 description: This article describes how to add external libraries in Yves.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,9 +10,11 @@ redirect_from:
   - /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
 ---
 
-## Adding and Using External Library in Your Project via npm
+This document describes how to use external libraries in Yves with and without npm.
 
-To install library and add it to dependencies, run the following command:
+## Adding and using external libraries using npm
+
+Install a library and add it to dependencies:
 
 ```bash
 npm i name-of-library
@@ -75,7 +77,7 @@ export default class NameOfYourComponent extends Component {
 
 If you need some images or fonts from a library separately, copy them to `frontend/assets/images` or `frontend/assets/fonts` and use them after that.
 
-## Adding and Using External Library in Your Project Without npm
+## Adding and using external libraries without npm
 
 If a library has source on CDN, use a molecule `script-loader` to load the library:
 

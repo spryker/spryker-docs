@@ -37,14 +37,7 @@ To configure the local environment, change the following attributes in `deploy.d
 
 For more information about deploy files, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html).
 
-### Vagrant clean-up
-
-In the past, Vagrant had been used to run Spryker locally. Now that Spryker runs on Docker, you can remove the following Vagrant configuration files:
-
-* `config/install/development.yml`
-* `config_default-development_*.php`
-
-### Adjust the `readme.md` file
+### Update the `readme.md` file
 
 * Update the project installation description.
 * Update the repository link.
@@ -57,7 +50,7 @@ A Spryker module is a single-function unit that has well-defined dependencies an
 
 {% info_block infoBox %}
 
-To better define your strategy when implementing Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
+To better define your strategy when implementing updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
 
 {% endinfo_block %}
 
@@ -89,20 +82,22 @@ You can easily keep track of new module versions using the [composer-versions-ch
 
 {% endinfo_block %}
 
-* To add a new module to your project: `composer require "spryker/module-name"`.
+* Add a new module:
+
+```bash
+composer require "spryker/module-name"`.
+```
 
 To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
 ## 3. Configure the environment
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
-2. Configure your environment:
-    <!-- * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html) -->
-    * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
-    <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
-    * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
+2. [Configure services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html).
+3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
+4. [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/dg/dev/backend-development/cronjobs/cronjobs.html) (Cron jobs).
+4. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
 <!---4. Move to the maintenance mode-->
 
 ### Store clean-up

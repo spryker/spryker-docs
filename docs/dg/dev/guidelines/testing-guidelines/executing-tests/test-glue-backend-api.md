@@ -181,9 +181,9 @@ class ModuleBackendJsonApiFixtures implements FixturesBuilderInterface, Fixtures
     protected UserTransfer $userTransfer;
 
     /**
-     * @return mixed
+     * @return \Generated\Shared\Transfer\UserTransfer
      */
-    public function getUserTransfer()
+    public function getUserTransfer(): UserTransfer
     {
         return $this->userTransfer;
     }

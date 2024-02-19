@@ -22,6 +22,8 @@ Testing will help you figure out if you need to add some additional deployment s
 
 ## Updating dependencies
 
+If you are using the Upgrader, dependencies are updated automatically, so you can skip this step.
+
 Check the dependency providers for the upgraded modules on the project level. If a plugin was deprecated, we recommend replacing it with the provided alternative.
 
 Updates can be shipped with optional new plugins that need to be injected on the project level. To make sure the default functionality works correctly, inject the optional plugins into appropriate dependency providers.
@@ -33,3 +35,5 @@ To keep the project healthy, the CI needs to include at least a code style sniff
 ## Adding missing translations
 
 Updates can introduce new flash messages, titles, or labels. If tests reveal non-translated items in the form of pure glossary keys instead of text, add translations for all the needed languages. Default glossary translations can be found in a public Demo Shop—for example, [B2B Demo Shop glossary](https://github.com/spryker-shop/b2b-demo-shop/blob/master/data/import/common/common/glossary.csv).
+
+The Upgrader adds translations for EN and DE locales. You have to do this step only if you have other locales or when updating manually.

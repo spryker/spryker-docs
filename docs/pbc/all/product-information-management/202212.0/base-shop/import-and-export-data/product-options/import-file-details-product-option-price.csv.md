@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-import-categories/special-product-types/product-options/file-details-product-option-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_option_price.csv` file to configure Product Option Price information on your Spryker Demo Shop. Importing the Product Option Price data sets the net and gross prices for each of the Product Options, per store and per currency.

@@ -18,7 +18,7 @@ redirect_from:
   - /docs/en/configurable-product-data-import  
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) information in your Spryker shop.

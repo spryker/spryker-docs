@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_option.csv` file to configure [product option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html) information in your Spryker Demo Shop.

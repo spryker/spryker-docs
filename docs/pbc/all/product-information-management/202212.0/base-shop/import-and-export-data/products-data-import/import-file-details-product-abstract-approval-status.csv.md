@@ -8,7 +8,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202212.0/import-and-export-data/products-data-import/file-details-product-abstract-approval-status.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document contains content of the `product_approval_status_default.csv` file to configure products approval information on your Spryker Demo Shop.

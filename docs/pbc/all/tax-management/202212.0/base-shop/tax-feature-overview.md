@@ -37,7 +37,7 @@ Tax sets can be applied to an abstract product, product option, and shipment:
 | --- | --- | --- |
 | Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/spryker-tax/configure-spryker-tax/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
 | Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/spryker-tax/configure-spryker-tax/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
-| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/spryker-tax/configure-spryker-tax/add-delivery-methods.html) | [File details: shipment.csv](/docs/dg/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/spryker-tax/configure-spryker-tax/add-delivery-methods.html) | [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
 
 ## International tax rates and sets
 

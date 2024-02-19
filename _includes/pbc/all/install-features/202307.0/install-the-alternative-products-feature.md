@@ -558,6 +558,6 @@ Make sure the following widgets have been registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [`product_label_store.csv`](/docs/dg/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/scos/user/features/{{site.version}}/product-labels-feature-overview.html) is integrated into your project, define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [`product_label_store.csv`](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

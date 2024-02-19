@@ -95,14 +95,14 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. [Configure services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html).
 3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
-4. [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
-3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
-4. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
-<!---4. Move to the maintenance mode-->
+4. [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
+5. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores).
+6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
+<!-- 4. Move to the maintenance mode -->
 
-### Store clean-up
+### Clean up store configuration
 
-This step depends on the store setup you came up with during your configuring. For example, if you choose to start with just one store, you should clean up the remaining stores in the following files:
+If you chose to start with one store, clean up the configuration of the unneeded stores in the following files:
 
 * `config/install/*`
 * `data/import/*`
@@ -110,50 +110,46 @@ This step depends on the store setup you came up with during your configuring. F
 * `config_default.php`
 * `src/SprykerConfig/CodeBucketConfig.php`
 
-### Modules clean-up
+### Clean up modules
 
-* Analyze modules that you have in the desired Demoshop.
-* Analyze modules that you need to have.
-* Remove unnecessary modules (to do that, you can use the migration guide backward).
+1. Go through the modules that came with the Demo Shop you've installed.
+2. Come up with the list of modules you actually need.
+3. Remove unnecessary modules by following module upgrade guides in a backwards fashion.
 
-### Data import clean-up
+### Clean up data import
 
-Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest.
+* In `data/import`, remove the files of the unneeded stores.
 
-{% info_block infoBox "Info" %}
+* Change the default config in `DataImportConfig::getDefaultYamlConfigPath()`.
 
-Keep in mind that you must also change the default config in `DataImportConfig::getDefaultYamlConfigPath()`.
-
-{% endinfo_block %}
-
-For those stores that you wish to allow, don’t forget to edit `CodeBucketConfig::getCodeBuckets()`.
+* Define the needed stores in `CodeBucketConfig::getCodeBuckets()`.
 
 ## 4. Configure CI
 
-Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
+Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and makes sure new features don't break the existing functionality. For instructions on setting up CI in different repositories, see the following documents:
 * [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
 * [Customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
 * [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
 * [Configuring GitLab pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
 * [Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
-* [Configuring Bitbucket Pipelines ](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+* [Configuring Bitbucket Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
 
 ## 5. Configure checkers
 
-To keep your code clean, we recommend using code checkers. To keep your code clean, we recommend using the code checkers.
+To keep your code clean, we recommend using code checkers.
 
-### Code Sniffer
+### Code sniffer
 
-Before running any code sniffer, we recommend that you update it to its latest version. There are often changes that introduce new checks which help to increase the quality of code. When updating, be sure to keep in mind that you will also need to make changes to the `composer.json` file.
+Before running any code sniffer, we recommend updating it to the latest version. When updating, make sure to update `composer.json`:
 
-```bash
+```json
 composer update spryker/code-sniffer slevomat/coding-standard --with-dependencies
 ```
 
-At the project level, you may choose to use your own rules or to exclude rules enabled in Spryker by default.
+On the project level, you add your own rules and exclude the default rules.
 
 * To activate a new rule, check out the full list of rules at [Slevomat Coding Standard](https://github.com/slevomat/coding-standard).
-* To disable a rule, you can use configuration. The following example excludes a rule that makes annotation for constructor and method required:
+* To disable a rule, update the configuration. The following example excludes the rule that makes annotations for constructors and methods required:
 
 ```yaml
 <rule ref="vendor/spryker/code-sniffer/Spryker/ruleset.xml">
@@ -164,7 +160,7 @@ At the project level, you may choose to use your own rules or to exclude rules e
 
 When using PHPStan, we recommend version 1.2.* or later. These versions help you avoid memory and other issues.
 
-This can be toggled at the project level by enabling rule level 6:
+You can enable PHPStan on project level by enabling rule level 6:
 
 ```yaml
 vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
@@ -174,12 +170,13 @@ vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
 
 If you wish to speed up your work, we recommend configuring PhpStorm.
 
-### Plugins
+### Configure plugins
 
-Make sure to configure the following plugins:
+Configure the following plugins.
 
 ### Speed up indexation
-At the beginning of the project, you need to reset your project quite often. PhpStorm indexing is annoying and takes too much of the resources. To avoid this, you can disable cache indexing.
+
+When you start developing a project, you need to reset it quite often. PhpStorm indexing is can slow it down.
 
 To disable cache indexing, in the PhpStorm, right-click the folder and select **Mark Directory As&nbsp;<span aria-label="and then">></span> Excluded**.
 

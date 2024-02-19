@@ -13,12 +13,12 @@ related:
     link: docs/scos/dev/data-import/page.version/importing-data-with-the-queue-data-importer.html
 ---
 
-This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html).
+This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/dg/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html).
 Specifically, the `ProductAbstract` data importer is replaced here.
 
 ## Prerequisites
 
-You should have data in the `PRODUCT_ABSTRACT_QUEUE`. For details about how to import data into the queue, see [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#importing-data-from-csv-to-queue)
+You should have data in the `PRODUCT_ABSTRACT_QUEUE`. For details about how to import data into the queue, see [Importing data with the queue data importer](/docs/dg/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#importing-data-from-csv-to-queue)
 
 ## 1. Configuration
 

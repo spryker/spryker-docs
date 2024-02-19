@@ -85,7 +85,7 @@ The constant is used to identify an import type. More information about it will 
 
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration YML file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration YML file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
 
 ```yml
 actions:

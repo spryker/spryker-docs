@@ -170,6 +170,9 @@ versioned_categories:
       - the-docker-sdk
       - system-requirements
       - front-end-development
+  dg:
+    dev:
+      - data-import    
   pbc:
     all:
       - back-office
@@ -245,7 +248,7 @@ algolia:
     - name: 'scu_dev'
       title: 'SCU Developer'
     - name: 'dg_dev'
-      title: 'Development'      
+      title: 'Development'
 sass:
     sass_dir: css
     style: compressed

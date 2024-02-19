@@ -14,7 +14,7 @@ When setting up a Spryker Demo Shop, a data content sample is imported while exe
 
 {% info_block infoBox "Info" %}
 
-The order of data importers is defined in the [YML configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
+The order of data importers is defined in the [YML configuration file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
@@ -33,8 +33,8 @@ The following list illustrates the order followed to run the data importers and 
   * [shipment-method-store](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment-method-store.csv.html)
   * [sales-order-threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html)
   * stock-store
-  * [payment-method](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
-  * [payment-method-store](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html)
+  * [payment-method](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
+  * [payment-method-store](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html)
 
 * [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-catalog-data.html):
   * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html)

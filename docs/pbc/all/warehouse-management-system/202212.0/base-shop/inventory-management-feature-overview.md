@@ -65,7 +65,7 @@ Schematically, the process looks like this:
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
 * Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
-* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
+* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/dg/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.

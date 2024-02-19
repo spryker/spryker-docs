@@ -17,7 +17,7 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202212.0/import-and-export-data/file-details-shipment.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `shipment.csv` file to configure the [shipment](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) information in your Spryker Demo Shop.

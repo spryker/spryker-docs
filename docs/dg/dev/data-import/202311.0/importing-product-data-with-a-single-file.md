@@ -17,15 +17,15 @@ Besides importing product-related data with multiple .csv files, like [product_a
 
 {% info_block warningBox "Prerequisites" %}
 
-Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html#implementation-overview) in your project.
+Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html#implementation-overview) in your project.
 
 {% endinfo_block %}
 
 To import combined product data via a single file, you need to:
 
-* Populate a [CSV file for product data import](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
-* Prepare a [YML file](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
-* Run a [console command](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
+* Populate a [CSV file for product data import](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#single-csv-file-for-combined-product-data-import).
+* Prepare a [YML file](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#yml-configuration-file-for-product-data-import) with `data_entity` items for import.
+* Run a [console command](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for product data import.
 
 ## Single .csv file for combined product data import
 <a name="single-csv-file-for-combined-product-data-import"></a>
@@ -40,7 +40,7 @@ The headers in this file are prefixed with the names of the individual product-r
 
 The only exceptions are `abstract_sku` and `concrete_sku` headers that are not prefixed.
 
-Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html).
+Thus, the CSV file for the main product data import is a combination of data from separate product-related CSV files (except for a [few fields specific for just this file](#specific-fields)). Due to this, when importing corresponding data, the same [dependencies and mandatory fields](#mandatory-fields) as for the separate files, apply to the combined product data import file. For example, if you want to import product image data via the combined product data file (headers *productimage.imageset_name*, *productimage.externalurl_large*, etc.), you should mind the dependencies and mandatory fields as for [product_image.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html).
 
 By default, the import CSV file resides in data/import/common/{STORE}/. As, for example, the [combined_product_DE.csv](https://github.com/spryker-shop/suite/blob/master/data/import/common/DE/combined_product.csv) file in Spryker Master Suite.
 
@@ -72,8 +72,8 @@ If you need to import other product data as well, for example, prices, images, e
 
 | FIELDS IN THE COMBINED PRODUCT DATA FILE | CSV FILE WITH DEPENDENCIES AND DETAILS ABOUT THE FIELD |
 | --- | --- |
-| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) |
-|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html) |
+| <ul><li>product_group.group_key</li><li>product_group.position</li></ul> | [File details: product_group.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) |
+|<ul><li>product_image.image_set_name</li><li>product_image.external_url_large</li><li>product_image.external_url_small</li><li>product_image.locale</li><li>product_image.sort_order</li><li>product_image.product_image_key</li><li>product_image.product_image_set_key</li></ul> | [File details: product_image.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-image.csv.html) |
 | <ul><li>product_price.price_type</li><li>product_price.store</li><li>product_price.currency</li><li>product_price.value_net</li><li>product_price.value_gross</li><li>product_price.price_data.volume_prices</li></ul> | [File details: product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html) |
 | <ul><li>product_stock.name</li><li>product_stock.quantity</li><li>product_stock.is_never_out_of_stock</li><li>product_stock.is_bundle</li></ul> | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html) |
 
@@ -98,7 +98,7 @@ Depending on the product types you specified for the `product.assigned_product_t
 ## YML configuration file for product data import
 <a href="#yml-configuration-file-for-product-data-import"></a>
 
-The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/scos/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
+The YML configuration file for product data import allows sequentially running importers for product data. This file can be used to import all product-related data sets, or just some of them. See [Console Commands for Product Data Import](/docs/dg/dev/data-import/{{page.version}}/importing-product-data-with-a-single-file.html#console-commands-for-product-data-import) for details.
 
 The `data_entity` names in the YML file match the prefixes (text before `.` ) in the combined product data import CSV file, with `combined-` added before them:
 

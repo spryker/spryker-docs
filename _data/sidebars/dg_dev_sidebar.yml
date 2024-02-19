@@ -564,7 +564,29 @@ entries:
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
 
-
+  - title: Data import
+    url: /docs/dg/dev/data-import/data-import.html
+    nested:
+    - title: Importing data with a configuration file
+      url: /docs/dg/dev/data-import/importing-data-with-a-configuration-file.html
+    - title: Setting up shop data
+      url: /docs/dg/dev/data-import/setting-up-shop-data.html
+    - title: Execution order of data importers
+      url: /docs/dg/dev/data-import/execution-order-of-data-importers.html
+    - title: Marketplace data import
+      url: /docs/dg/dev/data-import/marketplace-data-import.html
+    - title: Creating data importers
+      url: /docs/dg/dev/data-import/creating-data-importers.html
+    - title: Importing product data with a single file
+      url: /docs/dg/dev/data-import/importing-product-data-with-a-single-file.html
+    - title: Data importers implementation
+      url: /docs/dg/dev/data-import/data-importers-implementation.html
+    - title: Importing data with the queue data importer
+      url: /docs/dg/dev/data-import/importing-data-with-the-queue-data-importer.html
+    - title: Replacing a default data importer with a queue data importer
+      url: /docs/dg/dev/data-import/replacing-a-default-data-importer-with-a-queue-data-importer.html
+    - title: Data importer speed optimization
+      url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html

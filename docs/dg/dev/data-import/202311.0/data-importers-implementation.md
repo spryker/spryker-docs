@@ -95,11 +95,11 @@ action:
 * `data_entity` represents the name of your data importer.
 * `source` describes the path to your CSV file with data to import. If the source is not specified, then CSV file defined in the module’s `Config` will be used.
 
-Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the `config.yml` file. See [Importing Data](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
+Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the `config.yml` file. See [Importing Data](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
 
 On the project level, you can set a default configuration file path in `DataImportConfig::getDefaultYamlConfigPath()` so this file will be used when `--config` option is not specified, for example, when you run the `./vendor/bin/console data:import` command.
 
-Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* will not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution Order of Data Importers in Demo Shop](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
+Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* will not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution Order of Data Importers in Demo Shop](/docs/dg/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
 
 ## Implementation
 

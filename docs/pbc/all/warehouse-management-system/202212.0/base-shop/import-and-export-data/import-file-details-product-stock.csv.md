@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/import-data/file-details-product-stock.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/scos/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_stock.csv` file to configure [Product Stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) information in your Spryker Demo Shop.

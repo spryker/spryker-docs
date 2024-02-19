@@ -578,6 +578,8 @@ entries:
         url: /docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
       - title: Secure coding practices
         url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
+      - title: Secure coding practices for external packages
+        url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html
       - title: Code style guide
         url: /docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
     - title: Keeping a project upgradable
@@ -737,3 +739,44 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+
+  - title: App Composition Platform
+    url: /docs/dg/dev/acp/acp-overview.html
+    nested:
+      - title: ACP architecture overview
+        url: /docs/dg/dev/acp/acp-architecture-overview.html
+      - title: ACP security assessment
+        url: /docs/dg/dev/acp/aop-security-assessment.html
+      - title: ACP security tips
+        url: /docs/dg/dev/acp/acp-security-tips.html
+      - title: Install ACP catalog
+        url: /docs/dg/dev/acp/app-composition-platform-installation.html
+      - title: Receive ACP messages in SCCOS
+        url: /docs/dg/dev/acp/receive-acp-messages.html
+      - title: Integrate ACP payment apps with Spryker OMS configuration
+        url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
+      - title: Develop an app
+        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
+        nested:
+          - title: App manifest
+            url: /docs/dg/dev/acp/develop-an-app/app-manifest.html
+          - title: App configuration
+            url: /docs/dg/dev/acp/develop-an-app/app-configuration.html
+          - title: App configuration translation
+            url: /docs/dg/dev/acp/develop-an-app/app-configuration-translation.html
+          - title: Sync API
+            url: /docs/dg/dev/acp/develop-an-app/sync-api.html
+          - title: Async API
+            url: /docs/dg/dev/acp/develop-an-app/async-api.html
+          - title: Receive ACP messages from SCCOS
+            url: /docs/dg/dev/acp/receive-acp-messages.html
+          - title: Debug an app with XDebug
+            url: /docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html
+          - title: Connect an app
+            url: /docs/dg/dev/acp/develop-an-app/connect-an-app.html
+          - title: Configuration JSON file
+            url: /docs/dg/dev/acp/develop-an-app/configuration-json-file.html
+          - title: Manifest JSON file
+            url: /docs/dg/dev/acp/develop-an-app/manifest-json-file.html
+          - title: Translation JSON file
+            url: /docs/dg/dev/acp/develop-an-app/translation-json-file.html

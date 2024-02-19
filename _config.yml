@@ -127,17 +127,6 @@ defaults:
        sidebar: "ca_devscu_sidebar"
        role: "dev"
   -
-    scope:
-      path: "docs/acp"
-    values:
-      product: "acp"
-  -
-    scope:
-      path: "docs/acp/user"
-    values:
-      sidebar: "acp_user_sidebar"
-      role: "user"
-  -
      scope:
        path: "docs/dg"
      values:
@@ -218,7 +207,6 @@ sidebars:
   - scos_dev_sidebar
   - scos_user_sidebar
   - sdk_dev_sidebar
-  - acp_user_sidebar
   - pbc_all_sidebar
   - dg_dev_sidebar
 
@@ -250,7 +238,7 @@ algolia:
     - name: 'ca_dev'
       title: 'Managing cloud applications'
     - name: 'ca_devscu'
-      title: 'Upgrading cloud applications'      
+      title: 'Upgrading cloud applications'
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'

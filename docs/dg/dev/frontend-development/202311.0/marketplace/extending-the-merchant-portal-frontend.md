@@ -61,7 +61,7 @@ export class AppModule {}
 
 ## Overriding / creating new angular components
 
-For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/project-structure.html#module-structure) section).
+For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend-project-and-module-structure.html#module-structure) section).
 
 Default `entry.ts` should use the same code as vendor-level `entry.ts`.
 

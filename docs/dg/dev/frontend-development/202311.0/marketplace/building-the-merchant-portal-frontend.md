@@ -25,7 +25,7 @@ Modules for Merchant Portal are split into composer modules, and each module has
 Every module has an entry point called `entry.ts` that is collected during the build as webpack entries and included in the Merchant Portal build as a chunk.
 Those chunk names are taken from the module name and then transformed into a `kebab-case`.
 
-General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/project-structure.html#module-structure).
+General structure of the frontend modules in the Spryker Marketplace can be found in the [Module structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend-project-and-module-structure.html#module-structure).
 
 The frontend of the Merchant Portal is built using the following commands:
 

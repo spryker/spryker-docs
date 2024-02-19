@@ -14,6 +14,6 @@ This section explains how to build and set up the Merchant Portal frontend and a
 * [Angular Components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/angular-components.html)
 * [Angular Services](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/angular-services.html)
 * [Building the project](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html)
-* [Project structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/project-structure.html)
+* [Project structure](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend-project-and-module-structure.html)
 * [Setting up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html)
 * [Web components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/web-components.html)

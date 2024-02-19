@@ -83,7 +83,7 @@ suites:
                 - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
                 - \SprykerTest\Shared\AuthenticationOauth\Helper\AuthenticationOauthHelper
                 - \SprykerTest\Glue\Testify\Helper\GlueBackendApiJsonApiHelper
-                - \SprykerTest\Glue\Testify\Helper\OpenApi3
+                - \SprykerTest\Glue\Testify\Helper\GlueBackendApiOpenApi3Helper
                 - \SprykerTest\Glue\Testify\Helper\JsonPath
                 - \SprykerTest\Shared\Testify\Helper\DependencyHelper
                 - \SprykerTest\Service\Container\Helper\ContainerHelper

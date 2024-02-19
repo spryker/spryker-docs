@@ -280,7 +280,7 @@ class ModuleBackendJsonApiCest
     public function requestGetModule(ModuleBackendApiTester $I): void
     {
         // Arrange
-        $oauthResponseTransfer = $I->haveAuthorizationToBackendAPI($this->fixtures->getUserTransfer());
+        $oauthResponseTransfer = $I->havePasswordAuthorizationToBackendApi($this->fixtures->getUserTransfer());
         $I->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
 
         // Act

@@ -284,12 +284,12 @@ class ModuleBackendJsonApiCest
         $I->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
 
         // Act
-        $I->sendGET(
+        $I->sendJsonApiGet(
             $I->formatUrl(ModuleRestApiConfig::RESOURCE_MODULE),
         );
 
         // Assert
-        $I->seeResponseCodeIs(HttpCode::OK);
+        $I->seeJsonApiResponseCodeIs(HttpCode::OK);
         $I->seeResponseIsJson();
         $I->seeResponseMatchesOpenApiSchema();
     }

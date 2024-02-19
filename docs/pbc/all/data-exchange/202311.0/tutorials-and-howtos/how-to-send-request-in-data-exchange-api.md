@@ -207,7 +207,7 @@ The response contains all columns from the `spy_country` table and the included 
 
 {% info_block infoBox %}
 
-Currently (as of version 202403.0 and earlier), filters don't work with `relations` and are only used to filter the root entity results.
+Currently (as of version 202404.0 and earlier), filters don't work with `relations` and are only used to filter the root entity results.
 
 {% endinfo_block %}
 

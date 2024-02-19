@@ -30,6 +30,8 @@ entries:
         url: /docs/ca/devscu/invite-users-to-spryker-ci.html
       - title: Run
         url: /docs/ca/devscu/run-spryker-code-upgrader.html
+      - title: Finilizing upgrades
+        url: /docs/ca/devscu/finilizing-upgrades.html
       - title: Roll back upgrades
         url: /docs/ca/devscu/roll-back-upgrades.html
       - title: Integrating code releases

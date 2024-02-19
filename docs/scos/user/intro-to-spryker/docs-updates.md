@@ -24,7 +24,7 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
 - [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
 - [ACP architecture overview](/docs/acp/user/intro-to-acp/acp-architecture-overview.html).
-- [Connect an app](/docs/acp/user/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
+- [Connect an app](/docs/dg/dev/acp/develop-an-app/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
 - [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
 - [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.
 - [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
@@ -37,23 +37,23 @@ In January 2024, we have added and updated the following pages:
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Integrate Payone](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html).
-- [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
-- [Install the ACL feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
-- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202403.0/marketplace/install-the-merchant-portal-agent-assist-feature.html).
+- [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+- [Install the ACL feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
+- [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).
 - [Configure Data Exchange API endpoints](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
 - [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
-- [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
-- [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202403.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-- [Install the Agent Assist feature](/docs/pbc/all/user-management/202403.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
-- [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+- [Install Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html).
+- [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202404.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
+- [Install the Agent Assist feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
 - [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
-- [Category Management feature overview](/docs/pbc/all/product-information-management/202403.0/base-shop/feature-overviews/category-management-feature-overview.html).
-- [Developing an app with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html).
-- [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
-- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202403.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
+- [Category Management feature overview](/docs/pbc/all/product-information-management/202311.0/base-shop/feature-overviews/category-management-feature-overview.html).
+- [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html).
+- [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+- [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/202404.0/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 
 For more details about these and other updates to the Spryker docs in January 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
@@ -99,12 +99,11 @@ In December 2023, we have added and updated the following pages:
     - [Click & Collect: Service Points domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-service-points-domain.html).
     - [Click & Collect: Shipment Type Service Point subdomain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-type-service-point-subdomain.html).
     - [Click & Collect: Shipment Types domain](/docs/pbc/all/service-point-management/202311.0/unified-commerce/click-collect-domains/click-collect-shipment-types-domain.html).
-- [Developing an app with Spryker Mini-Framework](/docs/acp/user/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
-- [Configuration JSON file](/docs/acp/user/develop-an-app/code-snippets/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
-- [Manifest JSON file](/docs/acp/user/develop-an-app/code-snippets/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
-- [Translation JSON file](/docs/acp/user/develop-an-app/code-snippets/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
-- [Debug an app with XDebug](/docs/acp/user/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
-- [Set up the message broker](/docs/acp/user/develop-an-app/set-up-the-message-broker.html): to set up the message broker for your ACP app.
+- [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html): Learn the step-by-step process of developing an app using Spryker Mini-Framework.
+- [Configuration JSON file](/docs/dg/dev/acp/develop-an-app/configuration-json-file.html): Learn how to create the configuration JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Manifest JSON file](/docs/dg/dev/acp/develop-an-app/manifest-json-file.html): Learn how to create the manifest JSON file that is necessary to display an app developed with Spryker Mini-Framework.
+- [Translation JSON file](/docs/dg/dev/acp/develop-an-app/translation-json-file.html): Learn how to create the translation JSON file that contains translations for an app developed with Spryker Mini-Framework.
+- [Debug an app with XDebug](/docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html): Learn how to use XDebug for your ACP app.
 - [Email service](/docs/ca/dev/email-service/email-service.html): Learn about the native mail service of the Spryker Cloud Commerce OS.
 - [Email quota restrictions](/docs/ca/dev/email-service/email-quota-restrictions.html): Learn the quotas of the Spryker Cloud Commerce OS email service.
 - [Set up DNS](/docs/ca/dev/set-up-dns.html): Learn how to set up DNS for your SCCOS project.
@@ -118,7 +117,7 @@ In December 2023, we have added and updated the following pages:
 - [Warehouse User Management feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/warehouse-user-management-feature-overview.html): General overview of the Warehouse User Management feature.
 - [Test Glue API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-api.html): Learn how to test Glue API.
 - [Test Glue Backend API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html): Learn how to test Glue Backend API.
-- [Glue API: Search the product catalog](/docs/pbc/all/search/202403.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
+- [Glue API: Search the product catalog](/docs/pbc/all/search/202311.0/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html): Learn how to search the product catalog using Glue API.
 
 ### Updated pages
 
@@ -126,8 +125,8 @@ In December 2023, we have added and updated the following pages:
 - [Create Glue API authorization strategies](/docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
-- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
-- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
+- [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
+- [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html).
 - [Enable Click & Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html): Learn how to enable Click & Collect.
 - [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
@@ -221,8 +220,8 @@ In November 2023, we have added and updated the following pages:
 - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
 - [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
-- [Install Docker prerequisites on MacOS](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
-- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
+- [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
+- [Quickstart guide: Install Spryker on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html).
 
 
 For more details about these and other updates to the Spryker docs in November 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -265,7 +264,7 @@ In October 2023, we have added and updated the following pages:
 - [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
 - [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
@@ -285,7 +284,7 @@ In October 2023, we have added and updated the following pages:
 - [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 - [Install the Shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
-- [System requirements](/docs/scos/dev/system-requirements/202307.0/system-requirements.html).
+- [System requirements](/docs/dg/dev/system-requirements/202307.0/system-requirements.html).
 
 For more details about these and other updates to the Spryker docs in October 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
@@ -392,13 +391,13 @@ In July 2023, we have added and updated the following pages:
 - [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
 - [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
-- [Install Docker prerequisites on Linux](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
+- [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [Payment Service Provider](/docs/pbc/all/payment-service-provider/202212.0/payment-service-provider.html): Different payment methods for your shop.
 - [System requirements](/docs/scos/dev/system-requirements/202304.0/system-requirements.html): This document provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 - [Supported browsers](/docs/scos/user/intro-to-spryker/supported-browsers.html): This document lists browsers supported by Spryker Cloud Commerce OS.
 - [Install the shipment feature](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)
 - [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html)
-- [App manifest](/docs/acp/user/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
+- [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 - [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
 - [Project development guidelines](/docs/dg/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
 - [Handling security issues](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
@@ -499,7 +498,7 @@ In May 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
-- [App manifest](/docs/acp/user/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
+- [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
@@ -516,7 +515,7 @@ In April 2023, we have added and updated the following pages:
 ### New pages
 
 - [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
-- [Updating Spryker](/docs/scos/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
+- [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

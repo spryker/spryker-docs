@@ -31,6 +31,8 @@ entries:
         url: /docs/scu/dev/configure-spryker-code-upgrader.html
       - title: Run SCU
         url: /docs/scu/dev/run-spryker-code-upgrader.html
+      - title: Finilizing upgrades
+        url: /docs/scu/dev/finilizing-upgrades.html
       - title: Change default branch
         url: /docs/scu/dev/change-default-branch.html
       - title: Roll back upgrades

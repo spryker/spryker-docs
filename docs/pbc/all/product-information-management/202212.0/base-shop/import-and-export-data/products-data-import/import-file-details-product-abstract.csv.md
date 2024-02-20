@@ -25,7 +25,7 @@ This document describes the `product_abstract.csv` file to configure [Abstract P
 
 * [category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
 * [glossary.csv](/docs/pbc/all/miscellaneous/{{page.version}}/import-and-export-data/import-file-details-glossary.csv.html)
-* [tax.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html)
+* [tax.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html)
 
 
 

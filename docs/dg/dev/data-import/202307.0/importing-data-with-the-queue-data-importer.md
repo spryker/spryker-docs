@@ -36,7 +36,7 @@ Regular data import is done as a single-step process: data is read from a data s
 Queue data import is designed to be done in two separate steps.
 
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
-2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/dg/dev/data-import/{{site.version}}/tutorial-replace-a-default-data-importer-with-the-queue-data-importer.html).
+2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial: Replacing a default data importer with the queue data importer](/docs/dg/dev/data-import/{{page.version}}/replacing-a-default-data-importer-with-a-queue-data-importer.html).
 
 ## Importing data from CSV to queue
 

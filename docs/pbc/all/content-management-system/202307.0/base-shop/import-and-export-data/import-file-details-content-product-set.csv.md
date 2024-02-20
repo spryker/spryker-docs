@@ -19,7 +19,7 @@ This document describes the `content_product_set.csv` file to configure [Content
 
 ## Import file dependencies
 
-This file has the following dependency: [product_set.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html).
+This file has the following dependency: [product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html).
 
 
 

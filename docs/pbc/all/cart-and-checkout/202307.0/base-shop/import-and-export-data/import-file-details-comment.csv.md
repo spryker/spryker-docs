@@ -36,7 +36,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [customer.csv](/docs/dg/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-customer.csv.html).
+This file has the following dependency: [customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-file-details-customer.csv.html).
 
 ## Import template file and content example
 

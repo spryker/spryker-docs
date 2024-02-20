@@ -1,0 +1,91 @@
+<svg viewBox="-8 -8 274.76953125 509" width= 50% xmlns="http://www.w3.org/2000/svg" id="graph-div">
+    <style>
+        *{text-align:center;}.edge-thickness-normal{stroke-width:2px;}rect{fill:#fff;stroke:#aaa;stroke-width:1px;}.flowchart-link{stroke:#0b0b0b;fill:none;}</style>
+    <g>
+        <marker orient="auto" markerHeight="12" markerWidth="12" markerUnits="userSpaceOnUse"
+            refY="5"
+            refX="10" viewBox="0 0 12 20" class="marker flowchart">
+            <path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath"
+                d="M 0 0 L 10 5 L 0 10 z"></path>
+        </marker>
+        <g class="root">
+            <g class="edgePaths">
+                <path marker-end="url(#flowchart-pointEnd)"
+                    style="fill:none;stroke-width:2px;stroke-dasharray:3;"
+                    class="edge-thickness-normal edge-pattern-dotted flowchart-link LS-app LE-template"
+                    d="M152.11012113764045,39L157.28773115636704,43.166666666666664C162.46534117509364,47.333333333333336,172.82056121254683,55.666666666666664,177.9981712312734,68C183.17578125,80.33333333333333,183.17578125,96.66666666666667,183.17578125,113C183.17578125,129.33333333333334,183.17578125,145.66666666666666,183.17578125,158C183.17578125,170.33333333333334,183.17578125,178.66666666666666,183.17578125,182.83333333333334L183.17578125,187"></path>
+                <path marker-end="url(#flowchart-pointEnd)"
+                    class="edge-thickness-normal edge-pattern-solid flowchart-link LS-app LE-domain"
+                    d="M103.64769136235955,39L98.47008134363296,43.166666666666664C93.29247132490637,47.333333333333336,82.93725128745318,55.666666666666664,77.75964126872658,68C72.58203125,80.33333333333333,72.58203125,96.66666666666667,72.58203125,113C72.58203125,129.33333333333334,72.58203125,145.66666666666666,72.58203125,161.25C72.58203125,176.83333333333334,72.58203125,191.66666666666666,72.58203125,206.5C72.58203125,221.33333333333334,72.58203125,236.16666666666666,77.75964126872658,247.75C82.93725128745318,259.3333333333333,93.29247132490637,267.6666666666667,98.47008134363296,271.8333333333333L103.64769136235955,276"></path>
+                <path marker-end="url(#flowchart-pointEnd)"
+                    class="edge-thickness-normal edge-pattern-solid flowchart-link LS-template LE-domain"
+                    d="M183.17578125,226L183.17578125,230.16666666666666C183.17578125,234.33333333333334,183.17578125,242.66666666666666,177.9981712312734,251C172.82056121254683,259.3333333333333,162.46534117509364,267.6666666666667,157.28773115636704,271.8333333333333L152.11012113764045,276"></path>
+                <path marker-end="url(#flowchart-pointEnd)"
+                    class="edge-thickness-normal edge-pattern-solid flowchart-link LS-domain LE-platform"
+                    d="M104.08760533707866,315L99.00399403089888,319.1666666666667C93.9203827247191,323.3333333333333,83.75316011235955,331.6666666666667,78.66954880617978,340C73.5859375,348.3333333333333,73.5859375,356.6666666666667,73.5859375,360.8333333333333L73.5859375,365"></path>
+                <path marker-end="url(#flowchart-pointEnd)"
+                    class="edge-thickness-normal edge-pattern-solid flowchart-link LS-platform LE-base"
+                    d="M73.5859375,404L73.5859375,408.1666666666667C73.5859375,412.3333333333333,73.5859375,420.6666666666667,78.66954880617978,429C83.75316011235955,437.3333333333333,93.9203827247191,445.6666666666667,99.00399403089888,449.8333333333333L104.08760533707866,454"></path>
+                <path marker-end="url(#flowchart-pointEnd)"
+                    class="edge-thickness-normal edge-pattern-solid flowchart-link LS-domain LE-base"
+                    d="M151.67020716292134,315L156.7538184691011,319.1666666666667C161.8374297752809,323.3333333333333,172.00465238764045,331.6666666666667,177.0882636938202,343.25C182.171875,354.8333333333333,182.171875,369.6666666666667,182.171875,384.5C182.171875,399.3333333333333,182.171875,414.1666666666667,177.0882636938202,425.75C172.00465238764045,437.3333333333333,161.8374297752809,445.6666666666667,156.7538184691011,449.8333333333333L151.67020716292134,454"></path>
+            </g>
+            <g transform="translate(183.17578125, 113)">
+                <g transform="translate(-40.328125, -24)">
+                    <foreignObject height="48" width="80.65625"
+                        style="background-color:hsl(-120, 0%, 100%);"> use presets<br>(e.g. b2c)               </foreignObject>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g class="nodes">
+        <g transform="translate(127.87890625, 19.5)"
+            class="node default app flowchart-label">
+            <rect height="39" width="96.109375" y="-19.5" x="-48.0546875" ry="5" rx="5"
+                class="basic label-container">
+            </rect>
+            <g transform="translate(-40.5546875, -12)">
+                <foreignObject height="24" width="81.109375">
+                    <span class="nodeLabel">Application</span>
+                </foreignObject>
+            </g>
+        </g>
+        <g transform="translate(183.17578125, 206.5)"
+            class="node default template flowchart-label">
+            <rect height="39" width="151.1875" y="-19.5" x="-75.59375" ry="5" rx="5"
+                class="basic label-container"></rect>
+            <g transform="translate(-68.09375, -12)">
+                <foreignObject height="24" width="136.1875">
+                    <span class="nodeLabel">Template packages</span>
+                </foreignObject>
+            </g>
+        </g>
+        <g transform="translate(127.87890625, 295.5)">
+            <rect height="39" width="138.171875" y="-19.5" x="-69.0859375" ry="5" rx="5"
+                class="basic label-container"></rect>
+            <g transform="translate(-61.5859375, -12)">
+                <foreignObject height="24" width="123.171875">
+                    <span class="nodeLabel">Domain packages</span>
+                </foreignObject>
+            </g>
+        </g>
+        <g transform="translate(73.5859375, 384.5)">
+            <rect height="39" width="147.171875" y="-19.5" x="-73.5859375" ry="5" rx="5"
+                class="basic label-container"></rect>
+            <g transform="translate(-66.0859375, -12)">
+                <foreignObject height="24" width="132.171875">
+                    <span class="nodeLabel">Platform packages</span>
+                </foreignObject>
+            </g>
+        </g>
+        <g transform="translate(127.87890625, 473.5)">
+            <rect height="39" width="117.4375" y="-19.5" x="-58.71875" ry="5" rx="5"
+                class="basic label-container"></rect>
+            <g transform="translate(-51.21875, -12)">
+                <foreignObject height="24" width="102.4375">
+                    <span class="nodeLabel">Base packages</span>
+                </foreignObject>
+            </g>
+        </g>
+    </g>
+</svg>

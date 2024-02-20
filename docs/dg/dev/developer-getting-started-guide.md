@@ -46,41 +46,31 @@ For more information about deploy files, see [Deploy file](/docs/scos/dev/the-do
 
 ## 2. Manage modules
 
-A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently.
+A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently. [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies.
 
-{% info_block infoBox %}
+To define your strategy when implementing updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
 
-To better define your strategy when implementing updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
 
-{% endinfo_block %}
-
-[Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies:
+You will use the following commands to manage modules with Composer:
 
 * Install the dependencies listed in `composer.json`:
 ```bash
 composer install
 ```
+
 * Update all the installed modules:
 ```bash
 composer update "spryker/*"
 ```
 
-{% info_block infoBox %}
-
-We recommend running this command weekly to ensure you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up to date with the improvements.
-
-{% endinfo_block %}
+We recommend updating modules weekly to ensure you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up to date with the improvements.
 
 * Update a specific module:
 ```bash
 composer update "spryker/{MODULE_NAME}"
 ```
 
-{% info_block infoBox %}
-
-You can easily keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon for your local Composer tool.
-
-{% endinfo_block %}
+You can keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon.
 
 * Add a new module:
 
@@ -95,10 +85,9 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. [Configure services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html).
 3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
-4. [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
+4. [Configure queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
 5. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores).
 6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
-<!-- 4. Move to the maintenance mode -->
 
 ### Clean up store configuration
 
@@ -166,17 +155,9 @@ You can enable PHPStan on project level by enabling rule level 6:
 vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
 ```
 
-## 6. Configure PhpStorm
+## 6. Configure PhpStorm indexation
 
-If you wish to speed up your work, we recommend configuring PhpStorm.
-
-### Configure plugins
-
-Configure the following plugins.
-
-### Speed up indexation
-
-When you start developing a project, you need to reset it quite often. PhpStorm indexing is can slow it down.
+When you start developing a project, you need to reset it quite often. PhpStorm indexing can slow it down.
 
 To disable cache indexing, in the PhpStorm, right-click the folder and select **Mark Directory As&nbsp;<span aria-label="and then">></span> Excluded**.
 
@@ -188,25 +169,14 @@ It is safe to disable cache indexing for the following files:
 
 ## 7. Configure debugging
 
-Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
+Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
 
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 
-{% info_block infoBox %}
+## 8. Explore Spryker architecture
 
-When in a production environment, Zed must be configured to use a VPN, basic access authentication, or an IP allowlist.
+To learn about Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
-{% endinfo_block %}
-
-## 8. Familiarize yourself with the Spryker architecture
-
-As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
-
-* [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
-* [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/dg/dev/architecture/technology-stack.html): to learn about the technologies we use.
-
-<!---* Introduction to navigating the folder structure, main concepts and namespacing.
-* The project directory
-* The OS directories-->
+* [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html): application layers and code structure.
+* [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html): layers and how various functionality is encapsulated in modules.
+* [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html): Spryker building blocks contained in the application layers.
+* [Technology stack](/docs/dg/dev/architecture/technology-stack.html): technologies used.

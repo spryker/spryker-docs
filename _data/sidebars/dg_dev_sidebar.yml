@@ -341,59 +341,27 @@ entries:
         url: /docs/dg/dev/backend-development/factory/inject-dependencies-within-factories-container-globals.html
 
   - title: Frontend development
-    url: /docs/dg/dev/frontend-development/front-end-development.html
-    include version:
-    - "202212.0"
-    - "202307.0"
-    - "202311.0"
+    url: /docs/dg/dev/frontend-development/frontend-development.html
     nested:
     - title: Zed
       url: /docs/dg/dev/frontend-development/zed/zed-frontend.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
       nested:
       - title: Custom twig functions for Zed
         url: /docs/dg/dev/frontend-development/zed/custom-twig-functions-for-zed.html
-        include version:
-        - "202212.0"
-        - "202307.0"
-        - "202311.0"
       - title: Overriding Webpack, JS, SCSS for ZED on project level
         url: /docs/dg/dev/frontend-development/zed/overriding-webpack-js-scss-for-zed-on-the-project-level.html
-        include version:
-        - "202212.0"
-        - "202307.0"
-        - "202311.0"
       - title: Oryx for Zed
         url: /docs/dg/dev/frontend-development/zed/oryx-for-zed.html
-        include version:
-        - "202212.0"
-        - "202307.0"
-        - "202311.0"
     - title: Yves
       url: /docs/dg/dev/frontend-development/yves/yves-frontend.html
-      include version:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
       nested:
       - title: Yves multi-themes
         url: /docs/dg/dev/frontend-development/yves/yves-multi-themes.html
-        include version:
-        - "202212.0"
-        - "202307.0"
-        - "202311.0"
       - title: Atomic Frontend
         url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-frontend.html
-        include version:
-        - "202212.0"
-        - "202307.0"
-        - "202311.0"
         nested:
         - title: Integrating JQuery into Atomic Frontend
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
         - title: Customization example - Suite Product Details page
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customization-example-suite-product-details-page.html
         - title: Customization example - B2B Product Details page
@@ -430,10 +398,6 @@ entries:
         url: /docs/dg/dev/frontend-development/yves/implement-image-optimization.html
     - title: Oryx
       url: /docs/dg/dev/frontend-development/oryx/oryx.html
-      include_versions:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
       nested:
         - title: Getting started
           nested:
@@ -468,10 +432,6 @@ entries:
               - title: Application plugins
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
           - title: Styling
-            include_versions:
-            - "202212.0"
-            - "202307.0"
-            - "202311.0"
             nested:
               - title: Color system
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/styling/oryx-color-system.html
@@ -551,11 +511,6 @@ entries:
 
     - title: Marketplace
       url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend.html
-      include_versions:
-      - "202204.0"
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
       nested:
         - title: Extend the Marketplace frontend
           url: /docs/dg/dev/frontend-development/marketplace/extend-the-marketplace-frontend.html

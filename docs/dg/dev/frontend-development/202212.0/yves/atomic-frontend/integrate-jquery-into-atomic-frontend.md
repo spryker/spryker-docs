@@ -26,7 +26,7 @@ redirect_from:
 
 related:
   - title: Atomic Frontend - general overview
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/atomic-front-end-general-overview.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/atomic-frontend.html
   - title: Customizing Spryker Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-front-end.html
   - title: Integrating React into Atomic Frontend

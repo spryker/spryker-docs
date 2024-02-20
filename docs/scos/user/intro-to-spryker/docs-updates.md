@@ -345,7 +345,7 @@ In August 2023, we have added and updated the following pages:
 - [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
 - [Oryx: Icon system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
-- [Oryx: Localization](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/oryx-localization.html): Learn how localization is handled in Oryx applications.
+- [Oryx: Localization](/docs/dg/dev/frontend-development/202307.0/oryx/internationalization/oryx-localization.html): Learn how localization is handled in Oryx applications.
 - [Oryx: Typography](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-typography.html): Learn about typography in Oryx.
 - [File manager feature integration guide](/docs/pbc/all/content-management-system/202311.0/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html).
 - [Scheduled Prices feature integration guide](/docs/pbc/all/price-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html).

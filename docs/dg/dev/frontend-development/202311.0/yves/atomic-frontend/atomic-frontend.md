@@ -15,7 +15,7 @@ related:
   - title: Customizing Spryker Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-front-end.html
   - title: Integrating JQuery into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
@@ -524,8 +524,8 @@ export default register(
 The following documents can help you in developing Spryker Atomic Frontend step-by-step:
 
 * [Tutorial: Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-front-end.html)
-* [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/creating-a-component.html)
-* [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
-* [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/extending-a-component.html)
-* [Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
-* [Tutorial: Frontend - Use a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-the-components/using-a-component.html)
+* [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
+* [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
+* [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html)
+* [Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html)
+* [Tutorial: Frontend - Use a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/using-components.html)

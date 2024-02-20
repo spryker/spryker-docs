@@ -81,7 +81,7 @@ export const app = appBuilder()
   .create();
 ```
 
-For more information, see [Application orchestration](/docs/dg/dev/frontend-development/{{page.version}}/oryx/oryx-application-orchestration/oryx-application-orchestration.html).
+For more information, see [Application orchestration](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html).
 
 ### Configuring component option values in experience data
 
@@ -121,7 +121,7 @@ protected override render(): TemplateResult {
 
 ## Using component options
 
-To use component options asynchronously, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/reactivity/signals.html). To simplify the integration in the component logic, `ContentMixin` provides the `$options` signal that can be called in the render logic or other signals.
+To use component options asynchronously, it is important to observe the options and react to updates in the component UI. Oryx provides a [reactive](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/reactivity.html) framework with observable data streams that can update the UI using [signals](/docs/dg/dev/frontend-development/{{page.version}}/oryx/architecture/reactivity/signals.html). To simplify the integration in the component logic, `ContentMixin` provides the `$options` signal that can be called in the render logic or other signals.
 
 The following code shows how to use the `$options` signal. Due to the component option interface, the usage of the signal is type safe.
 

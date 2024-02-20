@@ -30,7 +30,7 @@ related:
   - title: Customizing Spryker Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-frontend.html
   - title: Integrating React into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
 
 This guide aims to illustrate how to use _JQuery_ and any _JQuery_ plugin inside Spryker components.

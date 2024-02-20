@@ -14,7 +14,7 @@ related:
   - title: Integrating JQuery into Atomic Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
 ---
 
 Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles, and behavior of existing components, as well as create components on your own.

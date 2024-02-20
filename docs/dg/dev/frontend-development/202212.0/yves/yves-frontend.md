@@ -11,10 +11,10 @@ redirect_from:
 
 This section contains instructions for frontend Yves developing on the the Spryker Commerce OS. It includes the following components and topics:
 
-* [Yves multi-themes](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-frontend-multi-themes.html)
+* [Yves multi-themes](/docs/dg/dev/frontend-development/{{page.version}}/yves/yves-multi-themes.html)
 * [Atomic frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html)
 * [Frontend assets building and loading](/docs/dg/dev/frontend-development/{{page.version}}/yves/frontend-assets-building-and-loading.html)
 * [Adding and using external libraries in Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/adding-and-using-external-libraries-in-yves.html)
-* [Frontend builder for Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/front-end-builder-for-yves.html)
+* [Frontend builder for Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/frontend-builder-for-yves.html)
 * [Custom Twig functions for Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/custom-twig-functions-for-yves.html)
 * [Multi-theme](/docs/dg/dev/frontend-development/{{page.version}}/yves/multi-theme.html)

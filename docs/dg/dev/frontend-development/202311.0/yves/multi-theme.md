@@ -51,4 +51,4 @@ From now on, besides the default theme, you, as a shop owner, can create and use
 
 Every namespace has a list of all available themes that you need to build and a default theme that is configured as a fallback (in case, the theme you are using now is broken).
 
-To learn how the frontend is being built, use this [Frontend Builder for Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/front-end-builder-for-yves.html).
+To learn how the frontend is being built, use this [Frontend Builder for Yves](/docs/dg/dev/frontend-development/{{page.version}}/yves/frontend-builder-for-yves.html).

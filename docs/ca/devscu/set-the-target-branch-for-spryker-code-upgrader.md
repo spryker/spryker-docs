@@ -27,4 +27,4 @@ Now the Upgrader starts creating PRs for this branch.
 
 ## Next step
 
-[Run the Upgrader](/docs/scu/dev/run-spryker-code-upgrader.html)
+[Run the Upgrader](/docs/ca/devscu/run-spryker-code-upgrader.html)

@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scu/dev/invite-users-to-spryker-ci.html
 ---
 
-After you [get access to your Upgrader workspace](/docs/scu/dev/get-access-to-spryker-code-upgrader.html), you can invite other users.
+After you [get access to your Upgrader workspace](/docs/ca/devscu/get-access-to-spryker-code-upgrader.html), you can invite other users.
 
 To invite users, follow the steps:
 

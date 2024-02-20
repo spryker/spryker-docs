@@ -51,4 +51,4 @@ Repository URL should be in format `https://dev.azure.com/<organization_name>/<p
 
 ## Next steps
 
-[Set the target branch for the Upgrader](/docs/scu/dev/set-the-target-branch-for-spryker-code-upgrader.html)
+[Set the target branch for the Upgrader](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html)

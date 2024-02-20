@@ -7,7 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/run-spryker-code-upgrader.html
 ---
 
-Spryker Code Upgrader runs automatically based on the [configured schedule](/docs/scu/dev/configure-spryker-code-upgrader.html).
+Spryker Code Upgrader runs automatically based on the [configured schedule](/docs/ca/devscu/configure-spryker-code-upgrader.html).
 
 To manually trigger the Upgrader, follow the steps:
 

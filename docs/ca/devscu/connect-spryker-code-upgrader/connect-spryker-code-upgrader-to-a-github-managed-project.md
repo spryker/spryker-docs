@@ -108,4 +108,4 @@ To enable the Upgrader to analyze the project and create PRs, the GitHub persona
 
 ## Next step
 
-[Set the target branch for the Upgrader](/docs/scu/dev/set-the-target-branch-for-spryker-code-upgrader.html)
+[Set the target branch for the Upgrader](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html)

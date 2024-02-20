@@ -31,4 +31,4 @@ Your workspace contains the Spryker Code Upgrader project.
 
 ## Next step
 
-[Connect the Upgrader to your project](/docs/scu/dev/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html)
+[Connect the Upgrader to your project](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html)

@@ -1,33 +1,33 @@
-title: Spryker Code Upgrader (SCU) guides
+title: Spryker Code Upgrader guides
 entries:
   - product: Spryker Code Upgrader
     nested:
       - title: Spryker Code Upgrader
         url: /docs/ca/devscu/spryker-code-upgrader.html
       - title: How it works
-        url: /docs/ca/devscu/how-the-spryker-code-upgrader-works.html
+        url: /docs/ca/devscu/how-spryker-code-upgrader-works.html
       - title: Upgrades in the development workflow
-        url: /docs/ca/devscu/spryker-code-upgrader-in-a-development-workflow.html
+        url: /docs/ca/devscu/developing-with-spryker-code-upgrader.html
       - title: Prepare a project for the Upgrader
-        url: /docs/ca/devscu/connect-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html
+        url: /docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html
       - title: Get access
         url: /docs/ca/devscu/get-access-to-spryker-code-upgrader.html
       - title: Connect your project
         nested:
           - title: Connect a GitHub managed project
-            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-github-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.html
           - title: Connect a project self-hosted with GitLab
-            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html
           - title: Connect a Azure managed project
-            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html
           - title: Connect a GitLab managed project
-            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html
       - title: Set the target branch for PRs
-        url: /docs/ca/devscu/select-target-branch-for-prs.html
+        url: /docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html
       - title: Configure
         url: /docs/ca/devscu/configure-spryker-code-upgrader.html
       - title: Invite users
-        url: /docs/ca/devscu/invite-users-to-spryker-ci.html
+        url: /invite-users-to-a-spryker-code-upgrader-workspace.html
       - title: Run
         url: /docs/ca/devscu/run-spryker-code-upgrader.html
       - title: Finilizing upgrades

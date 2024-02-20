@@ -9,7 +9,7 @@ redirect_from:
 
 Spryker Code Upgrader provides upgrades by creating PRs in your code repository. Connect the Upgrader to your repository using one of the following documents:
 
-* [Connect the Upgrader to a GitHub repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html)
-* [Connect the Upgrader to an Azure repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html)
-* [Connect the Upgrader to a Gitlab repository](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html)
-* [Connect the Upgrader to a repository self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html)
+* [Connect the Upgrader to a GitHub repository](/docs/ca/devscu/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html)
+* [Connect the Upgrader to an Azure repository](/docs/ca/devscu/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html)
+* [Connect the Upgrader to a Gitlab repository](/docs/ca/devscu/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html)
+* [Connect the Upgrader to a repository self-hosted with GitLab](/docs/ca/devscu/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html)

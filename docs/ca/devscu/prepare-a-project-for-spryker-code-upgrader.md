@@ -54,4 +54,4 @@ The Upgrader does not evaluate frontend customizations. You can either move to h
 
 ## Next steps
 
-[Get access to the Upgrader](/docs/scu/dev/get-access-to-spryker-code-upgrader.html)
+[Get access to the Upgrader](/docs/ca/devscu/get-access-to-spryker-code-upgrader.html)

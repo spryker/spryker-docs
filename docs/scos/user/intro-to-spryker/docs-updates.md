@@ -180,7 +180,7 @@ In November 2023, we have added and updated the following pages:
 - [Service Points + Order Management feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-order-management-feature.html).
 - [Service Points + Product Offer feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-product-offer-feature.html).
 - [Service Points + Shipment feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-shipment-feature.html).
-- [A PHP extension is missing from your system](/docs/scu/dev/troubleshooting/a-php-extension-is-missing-from-your-system.html): Learn what to do if your application requires an extension that is not supported by the Spryker Code Upgrader.
+- [A PHP extension is missing from your system](/docs/ca/devscu/troubleshooting/a-php-extension-is-missing-from-your-system.html): Learn what to do if your application requires an extension that is not supported by the Spryker Code Upgrader.
 - [Configure the Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html): Learn how to configure the Akeneo PIM Integration App to import data from your Akeneo PIM into your Spryker Cloud Commerce OS project via the Spryker Middleware powered by Alumio.
     - [Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html).
     - [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
@@ -245,7 +245,7 @@ In October 2023, we have added and updated the following pages:
     - [Oryx: Managing components options](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-managing-component-options.html): Learn how you can manage component options to make the components reusable in different business contexts.
     - [Oryx: Integrating components](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-integrating-components.html)
 - [Oryx: Responsive design system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
-- [Entity does not exist: Pyz prefix](/docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
+- [Entity does not exist: Pyz prefix](/docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
 - [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
@@ -265,7 +265,7 @@ In October 2023, we have added and updated the following pages:
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
-- [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
+- [Spryker Code Upgrader in a development workflow](/docs/ca/devscu/developing-with-spryker-code-upgrader.html).
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
@@ -306,7 +306,7 @@ In September 2023, we have added and updated the following pages:
 
 - [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
 - [Delete stores](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/delete-stores.html): Learn how to delete a store for the Dynamic Multistore feature.
-- [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
+- [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
 - [Bazaarvoice app integration guide](/docs/pbc/all/ratings-reviews/202307.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Algolia app integration guide](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
 - [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
@@ -341,8 +341,8 @@ In August 2023, we have added and updated the following pages:
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
 - [Vertex integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
-- [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
-- [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
+- [Select target branch for PRs](/docs/ca/devscu/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
+- [Configure Spryker Code Upgrader](/docs/ca/devscu/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
 - [Oryx: Icon system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
 - [Oryx: Localization](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html): Learn how localization is handled in Oryx applications.
@@ -469,7 +469,7 @@ In May 2023, we have added and updated the following pages:
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
-- [Change default branch](/docs/scu/dev/change-default-branch.html): Learn how to change the default branch in Spryker CI
+- [Change default branch](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to change the default branch in Spryker CI
 - [Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/oryx.html) documentation:
     - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
     - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
@@ -499,7 +499,7 @@ In May 2023, we have added and updated the following pages:
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
-- [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
+- [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
 - [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn how you can submit an environment provisioning request.
@@ -514,7 +514,7 @@ In April 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
+- [Connect the Upgrader to a project self-hosted with GitLab](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

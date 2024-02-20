@@ -53,4 +53,4 @@ The GitLab access token should have the following repository permissions:
 
 ## Next steps
 
-[Set the target branch for the Upgrader](/docs/scu/dev/set-the-target-branch-for-spryker-code-upgrader.html)
+[Set the target branch for the Upgrader](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html)

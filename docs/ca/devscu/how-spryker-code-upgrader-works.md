@@ -73,4 +73,4 @@ The Upgrader creates a PR using your source code provider API. After the PR is c
 
 ## Next step
 
-[Developing with Spryker Code Upgrader](/docs/scu/dev/developing-with-spryker-code-upgrader.html)
+[Developing with Spryker Code Upgrader](/docs/ca/devscu/developing-with-spryker-code-upgrader.html)

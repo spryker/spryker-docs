@@ -22,7 +22,7 @@ redirect_from:
 
 related:
   - title: Customizing Spryker Frontend
-    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-front-end.html
+    link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/customizing-spryker-frontend.html
   - title: Integrating JQuery into Atomic Frontend
     link: docs/dg/dev/frontend-development/page.version/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
   - title: Integrating React into Atomic Frontend
@@ -98,7 +98,7 @@ Typescript is a superset of Javascript that lets you reinforce the object-orient
 
 {% info_block infoBox %}
 
-If necessary, you can develop in pure Javascript. For details, see [How to Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-front-end.html).
+If necessary, you can develop in pure Javascript. For details, see [How to Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-frontend.html).
 
 {% endinfo_block %}
 
@@ -532,7 +532,7 @@ export default register(
 
 The following documents can help you in developing Spryker Atomic Frontend step-by-step:
 
-* [Tutorial: Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-front-end.html)
+* [Tutorial: Customize Spryker Frontend](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/customizing-spryker-frontend.html)
 * [Tutorial: Frontend - Create a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/creating-components.html)
 * [Tutorial: Frontend - Override a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/overriding-components.html)
 * [Tutorial: Frontend - Extend a Component](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/managing-components/extending-components.html)

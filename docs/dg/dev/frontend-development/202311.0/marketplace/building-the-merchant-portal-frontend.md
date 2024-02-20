@@ -10,7 +10,7 @@ redirect_from:
 
 related:
   - title: Project structure
-    link: docs/dg/dev/frontend-development/page.version/marketplace/project-structure.html
+    link: docs/dg/dev/frontend-development/page.version/marketplace/marketplace-frontend-project-and-module-structure.html
   - title: Setting up the Merchant Portal
     link: docs/dg/dev/frontend-development/page.version/marketplace/set-up-the-merchant-portal.html
 ---

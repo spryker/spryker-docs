@@ -363,27 +363,27 @@ entries:
         - title: Integrating JQuery into Atomic Frontend
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrate-jquery-into-atomic-frontend.html
         - title: Customization example - Suite Product Details page
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customization-example-suite-product-details-page.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/frontend-customization-example-suite-product-details-page.html
         - title: Customization example - B2B Product Details page
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customization-example-b2b-product-details-page.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/frontend-customization-example-b2b-product-details-page.html
         - title: Integrating React into Atomic Frontend
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/integrate-react-into-atomic-frontend.html
         - title: Managing the Components
           nested:
           - title: Creating a component
-            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
+            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/creating-components.html
           - title: Overriding a component
-            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/overriding-components.html
           - title: Extending a component
-            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
+            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/extending-components.html
           - title: Using a component
-            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/using-a-component.html
+            url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-the-components/using-components.html
         - title: Customization example - B2C Product Details page
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customization-example-b2c-product-details-page.html
-        - title: Atomic Frontend - general overview
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/frontend-customization-example-b2c-product-details-page.html
+        - title: Atomic Frontend
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-frontend.html
         - title: Customizing Spryker frontend
-          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customizing-spryker-front-end.html
+          url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customizing-spryker-frontend.html
       - title: Frontend assets building and loading
         url: /docs/dg/dev/frontend-development/yves/frontend-assets-building-and-loading.html
       - title: Adding and using external libraries in Yves
@@ -512,13 +512,8 @@ entries:
     - title: Marketplace
       url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend.html
       nested:
-        - title: Extend the Marketplace frontend
-          url: /docs/dg/dev/frontend-development/marketplace/extend-the-marketplace-frontend.html
-          include_versions:
-          - "202204.0"
-          - "202212.0"
-        - title: Extend the Merchant Portal frontend
-          url: /docs/dg/dev/frontend-development/marketplace/extend-the-merchant-portal-frontend.html
+        - title: Extending the Merchant Portal frontend
+          url: /docs/dg/dev/frontend-development/marketplace/extending-the-merchant-portal-frontend.html
           include_versions:
           - "202307.0"
           - "202311.0"
@@ -698,7 +693,7 @@ entries:
         - title: "Building the Merchant Portal frontend"
           url: /docs/dg/dev/frontend-development/marketplace/building-the-merchant-portal-frontend.html
         - title: "Project structure"
-          url: /docs/dg/dev/frontend-development/marketplace/project-structure.html
+          url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend-project-and-module-structure.html
         - title: "Set up the Merchant Portal"
           url: /docs/dg/dev/frontend-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"

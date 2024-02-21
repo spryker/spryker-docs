@@ -1,10 +1,10 @@
-  - /docs/scos/dev/the-docker-sdk/202212.0/deploy-file/deploy-file.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file.html
 ---
 title: Deploy file
 description: Overview of the deploy file
 template: concept-topic-template
 redirect_from:
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
 related: 
   - title: Deploy file inheritance—common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
@@ -21,11 +21,11 @@ An application usually has a deploy file for each environment. Even though the e
 Deploy file template is a deploy file that contains the most basic configuration of an application or the configuration that's the same for multiple environments. By including a deploy file template into your application's configuration, you avoid defining all the basic and duplicate configuration in the main deploy files.
 
 Docker SDK is shipped with the basic deploy file template: `deploy.base.template.yml`. By default, it works with `dev` and `demo` environments, as well as CI. You can also adjust it to work with the production environment or create a custom template.
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
 
 ### Including deploy file templates
 
-To include a deploy file template into an application's configuration, use the [`imports:`](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#imports) parameter in the main deploy file of the desired environment.
+To include a deploy file template into an application's configuration, use the [`imports:`](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#imports) parameter in the main deploy file of the desired environment.
 
 ```yaml
 imports:
@@ -102,10 +102,10 @@ imports:
 imports:
     base-deploy-file:
         template: deploy.base.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
     project-deploy-file:
         template: deploy.project.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
 ```
 
 * Unnamed array:
@@ -113,9 +113,9 @@ last_updated: Dec 19, 2022
 ```yaml
 imports:
     - template: deploy.base.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
     - template: deploy.project.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
 ```
 
 Unlike file path import, named and unnamed array imports support including the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
@@ -126,11 +126,11 @@ Example of including the same deploy file with different parameters via a named 
 imports:
     project-deploy-file:
         template: deploy.project.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
         parameters: 'stage'
     extended-project-deploy-file:
         template: deploy.project.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
         parameters:
             env_name: 'dev'
 ```
@@ -139,11 +139,11 @@ Example of including the same deploy file with different parameters via an unnam
 
 ```yaml
 - template: deploy.porject.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
   parameters:
       env-name: 'stage'
 - template: deploy.porject.template.yml
-last_updated: Dec 19, 2022
+last_updated: Jul 26, 2023
   parameters:
       env-name: 'dev'
 ```

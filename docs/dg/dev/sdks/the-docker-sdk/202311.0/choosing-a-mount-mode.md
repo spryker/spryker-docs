@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-mount-mode.html
 ---
 title: Choosing a mount mode
 description: Learn about supported mount modes and how to choose one.
@@ -7,10 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-mount-mode
 originalArticleId: b5accb12-910a-4958-b39f-3c4d21d96b95
 redirect_from:
-  - /2021080/docs/choosing-a-mount-mode
-  - /2021080/docs/en/choosing-a-mount-mode
-  - /docs/choosing-a-mount-mode
-  - /docs/en/choosing-a-mount-mode
+  - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-mount-mode.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-mount-mode.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -104,7 +101,7 @@ If the same OS is defined for multiple mount modes, the first mount mode matchin
 
 ## Configuring a mount mode
 
-To configure a mount mode, see [Configuring a mount mode](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-a-mount-mode.html).
+To configure a mount mode, see [Configuring a mount mode](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/configuring-a-mount-mode.html).
 
 ## Synchronization mount modes
 

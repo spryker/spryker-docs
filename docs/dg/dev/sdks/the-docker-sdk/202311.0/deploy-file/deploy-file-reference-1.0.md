@@ -189,7 +189,7 @@ imports:
     - template: {deploy_file_name}
 ```
 
-The files must exist on a [project or base layer](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
+The files must exist on a [project or base layer](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html).
 
 {% info_block infoBox "Merged deploy files" %}
 
@@ -201,7 +201,7 @@ If you include a deploy file, the included deploy file is merged with the origin
 
 ### imports: parameters:
 
-Defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+Defines the [dynamic parameters](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
 imports:
@@ -234,7 +234,7 @@ Affects the included deploy file that it follows in an array of included deploy 
 Defines the configuration of the import:
 
 * `{import_name}: template:`—defines the deploy file to be included into a build  as part of this import.
-* `{import_name}: parameters:`—defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+* `{import_name}: parameters:`—defines the [dynamic parameters](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
 imports:
@@ -262,7 +262,7 @@ imports:
 
 Defines the configuration to be used when parsing the included deploy file.
 
-* `{deploy_file_name}: parameters:`—defines the [dynamic parameters](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
+* `{deploy_file_name}: parameters:`—defines the [dynamic parameters](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html#dynamic-parameters) to be used when parsing the included deploy file. In the included deploy file, the parameter name should be wrapped in `%`.
 
 ```yaml
 version: 1.0
@@ -684,7 +684,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) configuration.
+Defines the [New Relic](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:`—defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:`—defines a New Relic application name. This variable is optional and does not have a default value.

@@ -130,7 +130,7 @@ services:
         engine: chromedriver
 ```        
 
-See [webdriver:](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#webdriver) to learn more about webdriver configuration in the deploy file.
+See [webdriver:](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#webdriver) to learn more about webdriver configuration in the deploy file.
 
 ## Configure Codeception
 

@@ -35,7 +35,7 @@ To configure the local environment, change the following attributes in `deploy.d
 * Domains for the local environment.
 * Domains for the services like RabbitMQ and Jenkins: this helps to keep all project links together.
 
-For more information about deploy files, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html).
+For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html).
 
 ### Vagrant clean-up
 
@@ -191,7 +191,7 @@ It is safe to disable cache indexing for the following files:
 
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
 
 {% info_block infoBox %}
 

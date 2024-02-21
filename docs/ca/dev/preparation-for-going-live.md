@@ -50,8 +50,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Migrate the project's database to MariaDB.
 - Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme exactly matches the examples in the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
-- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+- Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) to use data in S3 Buckets instead of local storage for the project.
 - Connect S3 buckets to correct environments:
   - Production S3 bucket to a production environment.
@@ -96,7 +96,7 @@ Make sure you've addressed all the items from the following checklists.
 - We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes] (/docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
+- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes] (/docs/dg/dev/sdks/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
 - Make sure the DNS names and strategy for your shop are clear. Do the following:
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. For details on how to set up DNS for your application, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
     - Optional: Delegate DNS. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).

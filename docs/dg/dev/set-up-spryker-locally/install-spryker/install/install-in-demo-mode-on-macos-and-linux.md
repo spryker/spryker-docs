@@ -97,7 +97,7 @@ Depending on the hardware performance, the first project launch can take up to *
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Back-Office
 
@@ -105,7 +105,7 @@ The default credentials to access the Back Office are located inside `/src/Pyz/Z
 
 ## RabbitMQ
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. For information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. For information about the Deploy file, see [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 ## Get the list of useful commands
 
@@ -114,7 +114,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
+* [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
+* [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
+* [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html)
 * [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

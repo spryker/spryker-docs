@@ -118,7 +118,7 @@ Styling components in the shadow DOM is a big topic we recommend studying separa
 
 ### 5. Localizing messages
 
-Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/internationalization/oryx-localization.html).
+Components often require some text labels or aria labels to guide the user. To support multiple locales, you can leverage [localization](/docs/dg/dev/frontend-development/{{page.version}}/oryx/internationalization/oryx-localization.html).
 
 Localizations are resolved asynchronously, and require the UI to be rerendered whenever they're loaded or reloaded. `ContentMixin`, which you've used earlier to integrate the component options, provides access to the `i18n` directive. The `i18n` directive is available as a class method. The following example shows how to use it:
 

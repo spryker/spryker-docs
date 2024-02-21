@@ -8,7 +8,7 @@ redirect_from:
 
 ---
 This section explains how to build and set up the Merchant Portal frontend and add additional frontend functionality. It includes the following articles:
-* [Extending the project](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/extend-the-marketplace-frontend.html)
+* [Extending the project](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/extending-the-merchant-portal-frontend.html)
 * [Table design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html)
 * [UI components library](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/ui-components-library/ui-components-library.html)
 * [Angular Components](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/angular-components.html)

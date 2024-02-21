@@ -27,7 +27,7 @@ Also, application orchestration defines how functionality is loaded in an applic
 
 To start using orchestration, you need to import `appBuilder`from `@spryker-oryx/core`. Then, you can add functionality, like features and theme, to your application.
 
-`appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases, instead of using a [preset](/docs/dg/dev/frontend-development/{{page.version}}/oryx/oryx-presets.html), we recommend extending a preset or creating your own feature set.
+`appBuilder` uses a chain pattern where each customization is added using a respective `.with*` method. This is the minimum boilerplate code required for an application to work. Once you start building more complex use cases, instead of using a [preset](/docs/dg/dev/frontend-development/{{page.version}}/oryx/building-applications/oryx-presets.html), we recommend extending a preset or creating your own feature set.
 
 Application builder lets you compose and customize different pieces of functionality. The builder is chainable and pluggable, and it supports the following built-in plugins:
 

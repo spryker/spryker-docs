@@ -9,7 +9,7 @@ entries:
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
     - title: System requirements
-      url: /docs/scos/dev/system-requirements/system-requirements.html
+      url: /docs/dg/dev/system-requirements/system-requirements.html
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:

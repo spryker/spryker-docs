@@ -19,7 +19,7 @@ entries:
           - title: Connect a project self-hosted with GitLab
             url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html
           - title: Connect a Azure managed project
-            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-azure-managed-project.html
+            url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html
           - title: Connect a GitLab managed project
             url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html
       - title: Set the target branch for PRs
@@ -27,7 +27,7 @@ entries:
       - title: Configure
         url: /docs/ca/devscu/configure-spryker-code-upgrader.html
       - title: Invite users
-        url: /invite-users-to-a-spryker-code-upgrader-workspace.html
+        url: /docs/ca/devscu/invite-users-to-a-spryker-code-upgrader-workspace.html
       - title: Run
         url: /docs/ca/devscu/run-spryker-code-upgrader.html
       - title: Finilizing upgrades

@@ -48,7 +48,10 @@ entries:
         - title: Set up a self-signed SSL certificate
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
         - title: Limit the memory usage of WSL2-based projects
-          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html          
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html
+        - title: Configure debugging
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+                             
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
     - title: Manage dependencies with Composer
@@ -487,6 +490,8 @@ entries:
       nested:
         - title: Integrate Zed API for merchant relationships
           url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+    - title: Services
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
     - title: Authorization Enabler
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Basic SEO techniques

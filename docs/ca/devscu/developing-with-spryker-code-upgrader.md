@@ -37,7 +37,7 @@ Following your usual development process, the development team deploys the updat
 
 ## Responsibilities of the development team
 
-* Prepare your project for the Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
+* Prepare your project for the Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html).
 
 * Connect the Upgrader to your code hosting service. For instructions, see [Connect Spryker Code Upgrader to your project](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-your-project.html).
 
@@ -49,4 +49,4 @@ Following your usual development process, the development team deploys the updat
 
 ## Next steps
 
-[Prepare a project for the Upgrader](/docs/ca/devscu/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
+[Prepare a project for the Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html)

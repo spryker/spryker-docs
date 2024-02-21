@@ -210,7 +210,8 @@ Reduce the engineering time needed to integrate a Spryker module release into yo
 [Integrating code releases](/docs/ca/devscu/integrating-code-releases/integrating-code-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/ca/devscu/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Security upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -224,7 +225,7 @@ Reduce the security risks from running outdated software by taking security upda
 [Integrating security releases](/docs/ca/devscu/integrating-code-releases/integrating-security-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/ca/devscu/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Upgradability Evaluator improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

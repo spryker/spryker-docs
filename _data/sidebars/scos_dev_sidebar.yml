@@ -1772,8 +1772,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
-      - title: "HowTo: Set up Spryker with MySQL"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Do better deployments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Hydrate payment methods for an order"

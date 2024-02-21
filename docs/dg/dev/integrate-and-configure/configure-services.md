@@ -28,7 +28,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
   - /docs/scos/dev/the-docker-sdk/202311.0/configure-services.html
-
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
 
 related:
   - title: Deploy File Reference - 1.0

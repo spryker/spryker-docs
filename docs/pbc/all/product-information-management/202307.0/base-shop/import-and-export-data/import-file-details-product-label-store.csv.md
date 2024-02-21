@@ -23,7 +23,7 @@ This document describes the `product_label_store.csv` file to configure [Product
 
 ## Import file dependencies
 
-[product_label.csv](/docs/dg/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html).
+[product_label.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label.csv.html).
 
 
 ## Import file parameters

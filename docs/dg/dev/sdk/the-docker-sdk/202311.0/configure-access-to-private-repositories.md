@@ -1,16 +1,12 @@
-  - /docs/scos/dev/the-docker-sdk/202311.0/configuring-access-to-private-repositories.html
 ---
-title: Configuring access to private repositories
+title: Configure access to private repositories
 description: Configure your local environment to access private repositories.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-access-to-private-repositories
 originalArticleId: 6d136e03-869c-4adf-b8d3-0ea69c2589e0
 redirect_from:
-  - /2021080/docs/configuring-access-to-private-repositories
-  - /2021080/docs/en/configuring-access-to-private-repositories
-  - /docs/configuring-access-to-private-repositories
-  - /docs/en/configuring-access-to-private-repositories
+  - /docs/scos/dev/the-docker-sdk/202311.0/configuring-access-to-private-repositories.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-access-to-private-repositories.html
 related:
   - title: The Docker SDK
@@ -37,11 +33,9 @@ related:
 
 This document describes how to configure an environment to allow the Docker SDK access private repositories.
 
-## In what cases do I need to configure access to private repositories?
-
 You need to configure access to private repositories in the following cases:
 
-1. You have a private repository mentioned in `composer.json`:
+* You have a private repository mentioned in `composer.json`:
 
 ```json
 {
@@ -57,7 +51,7 @@ You need to configure access to private repositories in the following cases:
 }
 ```
 
-2. Running `docker/sdk up` returns an error similar to the following:
+* Running `docker/sdk up` returns an error similar to the following:
 
 ```
 Cloning into '/data/vendor/my-org/my-repo'...
@@ -68,9 +62,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-## Configuring an environment to access private repositories
-
-To configure an environment to access private reporitories:
+## Configure an environment to access private repositories
 
 1. Add the `.known_hosts` file with the list of domains of VCS services into the project root. Example:
 ```
@@ -81,15 +73,13 @@ gitlab.my-org.com
 
 2. Configure authentication of Composer to VCS services using one of the following options:
 
-* [Configuring SSH agent authentication for Composer](#configuring-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
-* [Configuring the Composer authentication environment variable](#configuring-the-composer-authentication-environment-variable). We recommend this option for setting up CI/CD pipelines.
+* [Configure SSH agent authentication for Composer](#configuring-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
+* [Configure the Composer authentication environment variable](#configuring-the-composer-authentication-environment-variable). We recommend this option for setting up CI/CD pipelines.
 
 
-### Configuring SSH agent authentication for Composer
+### Configure SSH agent authentication for Composer
 
-To configure SSH agent:
-
-1. Ensure that `GITHUB_TOKEN` and `COMPOSER_AUTH` environment variables are not set:
+1. Remove the `GITHUB_TOKEN` and `COMPOSER_AUTH` environment variables:
 
 ```bash
 unset GITHUB_TOKEN
@@ -111,9 +101,7 @@ ssh-add -K ~/.ssh/id_rsa
 docker/sdk up --build
 ```
 
-### Configuring the Composer authentication environment variable
-
-To configure the Composer authentication environment variable:
+### Configure the Composer authentication environment variable
 
 1. Create access tokens in your VCS services.
 2. Prepare a `COMPOSER_AUTH` environment variable with the VCS tokens you've created in JSON:

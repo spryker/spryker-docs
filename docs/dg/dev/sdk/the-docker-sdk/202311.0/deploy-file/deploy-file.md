@@ -1,16 +1,17 @@
-  - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file.html
 ---
 title: Deploy file
 description: Overview of the deploy file
 template: concept-topic-template
 last_updated: Nov 21, 2023
-related: 
+related:
   - title: Deploy file inheritance—common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file.html
+- /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file.html
+
 ---
 
 Deploy file is a YAML file used by the Docker SDK to build infrastructure for applications. The deploy file's structure is based on [YAML version 1.2 syntax](https://yaml.org/spec/1.2/spec.html).

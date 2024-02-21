@@ -27,11 +27,12 @@ The Stripe app has the following features:
 
 ## Prerequisites for using the Stripe app
 
-1. You have a Stripe account. Your Stripe account needs to be connected to the Spryker platform account. We will help you with this. Kindly send a message to our [Spryker support team](https://spryker.my.site.com/support/s/).
-2. Your Spryker project is ACP-enabled. For more information on the ACP enablement process, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
-3. You have the required [SCCOS prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html).
-4. Your country is included in the [list of countries supported by Stripe](https://stripe.com/global).
-5. Your business isn't listed among the [prohibited and restricted businesses](https://stripe.com/legal/restricted-businesses).
+1. You have a Stripe Account
+2. Your Stripe Account is connected to the Platform account. Request this link by [creating a case](https://support.spryker.com/s/).
+3. Your Spryker project is ACP-enabled. For more information on the ACP enablement process, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Attention for ACP-enabled projects: Your project setup with ACP must utilize the latest version of our Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the use of the Stripe App. 
+4. You have the required [SCCOS prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html). 
+5. Your country is included in the [list of countries supported by Stripe](https://stripe.com/global).
+6. Your business isn't listed among the [prohibited and restricted businesses](https://stripe.com/legal/restricted-businesses).
 
 
 ## Payment methods

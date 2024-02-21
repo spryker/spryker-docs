@@ -172,7 +172,8 @@ versioned_categories:
       - front-end-development
   dg:
     dev:
-      - frontend-development 
+      - frontend-development
+      - system-requirements
   pbc:
     all:
       - back-office

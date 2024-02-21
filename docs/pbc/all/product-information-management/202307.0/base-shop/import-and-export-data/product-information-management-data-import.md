@@ -9,21 +9,21 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/import-product-catalog-data.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Product Information Management PBC:
 
 
 * [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html)
-* [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
+* [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/products-data-import.html)
 * [Pricing](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-and-export-price-management-data.html)
-* [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
+* [Stocks](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
 
 Within the [Categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/categories-data-import.html) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
 
-The  [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html) section will help you import all data defining the products' properties such as the abstract products, the concrete products, product images, and any type of related attributes which describe the products' properties (e.g., their specifications, colors, sizes, etc.).
+The  [Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/products-data-import.html) section will help you import all data defining the products' properties such as the abstract products, the concrete products, product images, and any type of related attributes which describe the products' properties (e.g., their specifications, colors, sizes, etc.).
 
 In the [Pricing](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-and-export-price-management-data.html) section, you will be able to import the data necessary to set up prices for all the products you would like to sell in your online store, including advanced pricing such as scheduled prices (e.g., for special sales campaigns like Black Friday).
 
-In the  [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html) section, we describe the data import containing the number of product units stored in your warehouses as well as any type of products and services which are never out of stock (e.g., software downloads).
+In the  [Stocks](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html) section, we describe the data import containing the number of product units stored in your warehouses as well as any type of products and services which are never out of stock (e.g., software downloads).
 
 
 {% info_block warningBox "Import order" %}

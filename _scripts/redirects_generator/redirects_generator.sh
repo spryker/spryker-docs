@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/scos/dev/updating-spryker"
+folder_path="docs/scos/dev/data-import"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

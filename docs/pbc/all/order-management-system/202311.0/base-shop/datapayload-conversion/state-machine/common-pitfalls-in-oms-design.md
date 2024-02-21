@@ -172,6 +172,7 @@ The unused state could have a missing transition.
 ## Huge timeouts
 
 **Example:** Export finished is a final state from a business perspective, but not from an OMS perspective(from OMS, the final state is closed). The reason behind this is that the business wants to create a return/refund anytime after the order is completed. In the timeout processor, the system has a configurable value in days(9999 in this example) - to manage how many days an order will be moved to the closed state.
+![huge_timeouts](https://github.com/xartsiomx/spryker-docs/assets/110463030/b3038a9a-564e-47de-9b09-397137d4a02e)
 
 **The issue:** After the order is pushed to export finished for every single order item will be created a record in the spy_oms_event_timeout table. For example, if you have 10k orders per day with 100 items inside, you will end up with approx. 1 million of new records… for nothing. Because of the huge timeout, the system is storing this data for a long time - which is not only a storage issue but also slows down OMS processes.
 
@@ -180,6 +181,7 @@ The unused state could have a missing transition.
 ## Long chain onEnter
 
 **Example:** When recalculation is started by oms:check-condition it will trigger a chain of onEnter events with more than 8 transitions in it.
+![long-chain-on-enter](https://github.com/xartsiomx/spryker-docs/assets/110463030/2cafb0fe-1388-434e-a783-7838535a69e7)
 
 **The issue:** Long chains onEnter events can be “fragile”. It will increase the time of execution, memory consumption as well as the risk of having an error in the middle of the process and ending up with a stuck order item.
 
@@ -188,6 +190,7 @@ The unused state could have a missing transition.
 ## Slow order creation
 
 **The issue:** Order starting processing directly after placement. The checkout endpoint contains the execution of all onEnter transitions in OMS.
+![slow-order-creation](https://github.com/xartsiomx/spryker-docs/assets/110463030/02892077-3d8d-432e-a6a4-281dcdb9824d)
 
 **Solution:** Checkout endpoint logic should finish after the order was created with all items in starting states(new for example). The transition from the new state shouldn’t have an event (Which means it will be processed by oms:check-condition command)
 
@@ -200,8 +203,10 @@ The unused state could have a missing transition.
 ## Saving states (per item transaction)
 
 **Example:** The system has a callback that should move order items from picking started to ready for recalculation. After that, check-condition will move the order further to the recalculation step.
+![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/dd060438-7cd2-4453-9cf4-e08cda243003)
 
 **The issue:** During the last transition in the callback from picking finished to ready for recalculation - Jenkins job started the check-condition command. Because of that check-condition takes not all order items from the order and pushes them forward. Only the next job started executing the remaining order items with the delay, because of that many commands (per Order) were triggered twice.
+![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
 
 **Solution:** This is possible because during the execution of \Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems system stores data per item. It was done like this because Core logic expects that you may have more than 1 order in transition. And to not block all of them due to potential failed orders - executing transactions per item. To change that you should first group your order items per order and after that, you can change transaction behavior - to store all order items per only 1 transaction. In this case, check-condition or any other command can’t take order items partially.
 
@@ -224,17 +229,21 @@ $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: 
 and then create 10 Jenkins jobs for every processor. The console command has the option processor-id where you can define which identifiers will be processed in this job. Assignment of process happens during order creation for every order item.
 You can find more details in this article.
 
-2. Start job more often than once per minute. You may create a wrapper console command that will run check-condition (or another console command) one by one. A few hints for wrapper command:a) Don’t run subprocesses in parallel. It will bring more complexity in logic than profits  b) Run real command (check-condition) in subprocess - it will help with clean-up memory after ending execution.c) Have timeouts for subprocesses and the wrapper. Avoid hard limits with the killing process - it may lead to items stuck in onEnter transitions. Instead - do analyze the previous execution time of subprocesses - should you run a new child process or finish the execution of the wrapper?
+2. Start a job more often than once per minute. You may create a wrapper console command that will run check-condition (or another console command) one by one. A few hints for wrapper command:
+a) Don’t run subprocesses in parallel. It will bring more complexity in logic than profits 
+b) Run real command (check-condition) in subprocess - it will help with clean-up memory after ending execution.
+c) Have timeouts for subprocesses and the wrapper. Avoid hard limits with the killing process - it may lead to items stuck in onEnter transitions. Instead - do analyze the previous execution time of subprocesses - should you run a new child process or finish the execution of the wrapper?
 
 ## PerOrder / PerItem command & condition
 
 **The issue:** Core has different ways of executing the OMS commands (per order and item). However, it doesn’t have such separation for conditions - we have only one option - per item.
+![per-order-or-per-item-command-and-condition](https://github.com/xartsiomx/spryker-docs/assets/110463030/2dbe96ae-0a59-48cb-8653-ee104201f63c)
 
 **Solution:** Extending ConditionInterface without changing the signature.
 1. Create a new interface ConditionPerOrderInterface and extend it from ConditionInterface
 2. Overwrite \Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::checkCondition with the caching mechanism inside (static property) to execute logic only for the first item, for all others - return result from cache.
 
-Obviously, logic inside your ConditionPlugin should be around Order (not Item) - in this case, you have the correct value in the cache. However, the signature allows a developer to create logic around the item.
+Logic inside your ConditionPlugin should be around Order (not Item) - in this case, you have the correct value in the cache. However, the signature allows a developer to create logic around the item.
 
 ## Incorrect event definition
 

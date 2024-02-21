@@ -1747,8 +1747,6 @@ entries:
     - title: Introduction Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:
-      - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
       - title: "Tutorial: Hello world - Spryker Commerce OS"
@@ -1797,8 +1795,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
       - title: "HowTo: Do better deployments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
-      - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
       - title: "Import big databases between environments"
@@ -1821,10 +1817,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
-      - title: "HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
       - title: "HowTo: Set up XDebug profiling"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html
       - title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
@@ -1837,8 +1829,7 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Make a multi-language setup"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html"
-      - title: "HowTo: Split products by stores"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-split-products-by-stores.html
+
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html
     include_versions:

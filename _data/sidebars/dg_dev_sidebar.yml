@@ -47,6 +47,8 @@ entries:
         nested:
         - title: Set up a self-signed SSL certificate
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
+        - title: Limit the memory usage of WSL2-based projects
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html          
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
     - title: Manage dependencies with Composer

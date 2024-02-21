@@ -1026,7 +1026,7 @@ entries:
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
-                - "202404.0"            
+                - "202404.0"
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -3060,18 +3060,20 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Display product groups by color on the Storefront"
+                  - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: "HowTo: Import packaging units"
+                  - title: Import packaging units
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
-                  - title: "HowTo: Integrate and use precise decimal numbers"
+                  - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
-                  - title: "HowTo: Make a product searchable and shown on the Storefront"
+                  - title: Make a product searchable and shown on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-                  - title: "HowTo: Manage a big number of categories"
+                  - title: Manage a big number of categories
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
-                  - title: "HowTo: Render configurable bundle templates on the Storefront"
+                  - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Split products by stores
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html                    
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"

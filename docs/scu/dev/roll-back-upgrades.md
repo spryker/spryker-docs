@@ -2,14 +2,15 @@
 title: Roll back upgrades
 description: How to revert changes provided by Spryker Code Upgrader
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/paas-plus/dev/roll-back-upgrades.html
 ---
 
 To roll back an upgrade, you need to deploy the previous version of the application using the regular deploy process. For instructions, see one of the following documents:
 
-* [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
-* [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)
+* [Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)
+* [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html)
 
 ## Other deployment pipelines
 

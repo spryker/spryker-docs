@@ -1,6 +1,7 @@
 ---
 title: Spryker Code Upgrader in a development workflow
 description: Instructions for integrating Spryker Code Upgrader into a development process
+last_updated: Oct 10, 2023
 template: concept-topic-template
 redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader-in-a-development-workflow.html
@@ -35,13 +36,13 @@ The Upgrader tool does not influence your development process. Your development 
 
 ## Development team responsibilities
 
-* Prepare your project for the Spryker Code Upgrader. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html)
+* Prepare your project for Spryker Code Upgrader. For instructions, see [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
 
-* Connect Spryker Code Upgrader with your code hosting service. [Instructions](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html)
+* Connect Spryker Code Upgrader with your code hosting service. For instructions, see [Onboard to Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html).
 
 * Cover customizations with automated tests.
 
-* Regularly process pull requests that were created by Spryker Code Upgrader.
+* Cover with tests each pull request created by Spryker Code Upgrader. For information about different kinds of tests, see [Testing updates](/docs/dg/dev/updating-spryker/testing-updates.html).
 
 * To continue receiving suggestions from Spryker Code Upgrader, apply major upgrades manually.
 

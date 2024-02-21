@@ -19,7 +19,7 @@ related:
 
 {% info_block infoBox "Info" %}
 
-[Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html) does not support SFTP by default, but the separate [Flysystem Adapter for SFTP module](https://github.com/thephpleague/flysystem-sftp) enables it.
+[Flysystem](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html) does not support SFTP by default, but the separate [Flysystem Adapter for SFTP module](https://github.com/thephpleague/flysystem-sftp) enables it.
 
 {% endinfo_block %}
 

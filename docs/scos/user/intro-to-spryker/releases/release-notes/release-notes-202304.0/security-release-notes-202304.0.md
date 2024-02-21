@@ -112,7 +112,7 @@ composer show spryker/cms # Verify the version
 
     {% info_block infoBox "Info" %}
 
-    The latest release of version 1.0 was in February, 2018. The version is outdated and no longer supported. To update from 1.* to 2.*, see [Upgrade the CmsBlockGui module](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).
+    The latest release of version 1.0 was in February, 2018. The version is outdated and no longer supported. To update from 1.* to 2.*, see [Upgrade the CmsBlockGui module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).
 
     {% endinfo_block %}
 

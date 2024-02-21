@@ -7,7 +7,7 @@ related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Addi product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
   - title: Report documentation issues
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
   - title: Review pull requests

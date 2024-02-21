@@ -2,7 +2,7 @@
 
 ## Upgrading to version 1.1.2
 
-Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-resolvable-class-names-cache).
+Version 1.1.2 boosts the overall Zed and Glue performance by introducing a [cache of unresolved entities for Zed](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-resolvable-class-names-cache).
 
 To upgrade to the new version of the module, enable the following plugins:
 
@@ -67,7 +67,7 @@ That's it! You've upgraded the `EventDispatcher` module to 1.1.2 version.
 
 {% info_block errorBox %}
 
-The following migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+The following migration guide is a part of the [Silex migration effort](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).
 {% endinfo_block %}
 
 To upgrade the module, do the following:

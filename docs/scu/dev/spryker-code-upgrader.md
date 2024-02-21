@@ -2,13 +2,14 @@
 title: Spryker Code Upgrader
 description: Spryker Code Upgrader is a key to easy upgrades
 template: concept-topic-template
+last_updated: Dec 13, 2023
 redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader.html
   - /docs/paas-plus/dev/platform-as-a-service-plus.html
 ---
 
 {% info_block infoBox "Availability" %}
-Provided through PaaS+
+Provided through PaaS+ and in EU region.
 {% endinfo_block %}
 
 Keeping enterprise software up-to-date is a known hurdle, especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security, improvements, patches, and new features.
@@ -25,7 +26,7 @@ The Spryker Code Upgrader addresses the challenges of an application's upgradabi
 
 ## Semi-automated upgrade process
 
-Based on the upgrade schedule (Usually once a week), the Upgrader tool checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a pull request. The pull request contains [minor and patch module versions](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
+Based on the upgrade schedule (Usually once a week), the Upgrader tool checks the connected branch of your application's repository. If new updates were released since your last upgrade, the Upgrader tool creates a pull request. The pull request contains [minor and patch module versions](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) which you need to review and merge. If there are any major updates, the PR will contain instructions for a manual update.
 
 {% info_block infoBox "Upgrade schedule" %}
 

@@ -11,7 +11,7 @@ related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Addi product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
   - title: Report documentation issues
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
   - title: Review pull requests
@@ -60,7 +60,7 @@ To propose changes to the Spryker documentation, take the following steps:
 ![editing-the-document](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/2-editing-a-document.png)
 3. On the **Edit file** tab, edit the document.
 4. To complete your editing and propose changes, in the **Propose changes** section, fill in the following fields:
-   * **Create *[document-name.md]***: Give a meaningful name to your commit.
+   * **Create *[document-name.md]***: Give your commit a name that matches the page title or section you create or edit. For example, if you edit the document called "Cart feature integration guide", your commit must also be named "Cart feature integration guide".
    * **Add an optional extended description...** (optional): Provide an optional detailed description of your commit. For information about commits, see [About commits](https://docs.github.com/en/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/about-commits) in the official GitHub documentation.
 5. Click **Propose changes**.
    This takes you to the **Comparing changes** page.
@@ -70,7 +70,7 @@ To propose changes to the Spryker documentation, take the following steps:
 7. On the **Open a pull request** page, the **Title** field is auto-populated with the name you gave to your commit with the changes proposed in step 5.
 {% info_block infoBox "Renaming pull requests" %}
 
-To rename your pull request, delete the auto-populated title and enter a new one.
+To rename your pull request, delete the auto-populated title and enter a new one. Keep in mind that the pull request's name must correspond to the name of document or section that you create or edt.
 
 {% endinfo_block %}
 

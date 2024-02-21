@@ -2,7 +2,7 @@ name: Build changelog
 on:
   push:
     tags:
-      - "*"
+      - "01.2024"
 
 jobs:
   release:
@@ -24,9 +24,15 @@ jobs:
                 {
                     "title": "## Updated pages",
                     "labels": ["updated"]
+                },
+                {
+                    "title": "## Small changes",
+                    "labels": ["small changes"]
                 }
               ]
             }'
+          fromTag: "12.2023"
+          toTag: "01.2024"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

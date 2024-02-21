@@ -1,7 +1,7 @@
 ---
 title: Choosing a Docker SDK version
 description: Learn how to choose a versioning approach and configure a particular version of Docker SDK for your project.
-last_updated: Apr 03, 2022
+last_updated: Jul 11, 2023
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-docker-sdk-version
 originalArticleId: 18a333a7-2d89-455f-885a-92d24594fb31
@@ -195,4 +195,13 @@ git clone git@github.com:spryker/docker-sdk.git .docker
 cd docker
 git checkout "$(cat ../.git.docker | tr -d '\n\r')"
 cd ..
+```
+
+#### CI validation
+
+If you're using CI, we highly recommend you ensure that the reference and submodule hashes are matching.
+
+The following is an example of what the code can look like:
+```bash
+- git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
 ```

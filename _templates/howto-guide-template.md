@@ -4,7 +4,7 @@ description: {Meta description}
 template: howto-guide-template
 ---
 
-#{Title} <!---in -ing form, e.g. Creating CMS pages)-->
+#{Title} <!---in -ing form, e.g., Creating CMS pages)-->
 
 {Overview}
 <!---Help the readers to determine quickly if the HowTo matches their interests or needs. In a few sentences, summarize the main points of your HowTo. Make sure to include any critical definitions which will help readers evaluate the utility of your HowTo.-->

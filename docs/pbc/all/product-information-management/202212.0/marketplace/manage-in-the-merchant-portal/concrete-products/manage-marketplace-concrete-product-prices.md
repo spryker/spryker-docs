@@ -2,6 +2,7 @@
 title: Manage marketplace concrete product prices
 description: This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Jul 18, 2023
 related:
   - title: Marketplace Product feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-feature-overview.html
@@ -28,13 +29,13 @@ To add a new price for a marketplace concrete product, follow these steps:
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
-4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
   {% info_block infoBox "Note" %}
 
   In order for the business unit to which the customer is assigned to appear in the **Customers** drop-down menu, in the Back Office, create the [merchant relation](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html).
 
-  You can set customer-specific prices for [marketplace products](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), not [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html).
+  You can set customer-specific prices for [marketplace products](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html), not [product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html).
 
   Also, you cannot combine customer-specific prices with volume prices.
 

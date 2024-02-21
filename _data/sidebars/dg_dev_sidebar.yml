@@ -51,7 +51,10 @@ entries:
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html
         - title: Configure debugging
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
-                             
+          nested:
+            - title: Set up XDebug profiling
+              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
+
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
     - title: Manage dependencies with Composer

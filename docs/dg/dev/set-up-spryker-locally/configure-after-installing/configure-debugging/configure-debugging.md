@@ -206,3 +206,7 @@ The [PHPMD](https://github.com/phpmd/phpmd/blob/master/src/bin/phpmd#L29) comman
 docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 ```
+
+## Next step
+
+[Set up XDebug profiling](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html)

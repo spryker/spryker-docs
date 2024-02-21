@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
 ---
 title: "HowTo: Set up stores with multiple locales"
 description: Use the guide to configure different locales for your store.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-setup-stores-with-multiple-locales
 originalArticleId: 500c225f-7bdc-4284-888a-34e45540831b
 redirect_from:
-  - /2021080/docs/ht-setup-stores-with-multiple-locales
-  - /2021080/docs/en/ht-setup-stores-with-multiple-locales
-  - /docs/ht-setup-stores-with-multiple-locales
-  - /docs/en/ht-setup-stores-with-multiple-locales
-  - /v6/docs/ht-setup-stores-with-multiple-locales
-  - /v6/docs/en/ht-setup-stores-with-multiple-locales
-  - /v5/docs/ht-setup-stores-with-multiple-locales
-  - /v5/docs/en/ht-setup-stores-with-multiple-locales
-  - /v4/docs/ht-setup-stores-with-multiple-locales
-  - /v4/docs/en/ht-setup-stores-with-multiple-locales
-  - /v3/docs/ht-setup-stores-with-multiple-locales
-  - /v3/docs/en/ht-setup-stores-with-multiple-locales
-  - /v2/docs/ht-setup-stores-with-multiple-locales
-  - /v2/docs/en/ht-setup-stores-with-multiple-locales
-  - /v1/docs/ht-setup-stores-with-multiple-locales
-  - /v1/docs/en/ht-setup-stores-with-multiple-locales
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
 ---
 
 This document describes the steps to consider when setting up stores with multiple locales.

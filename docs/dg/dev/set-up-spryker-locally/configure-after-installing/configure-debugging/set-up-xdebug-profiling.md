@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Set up XDebug profiling"
+title: Set up XDebug profiling
 description: Learn how to setup XDebug profiling in a local development environment.
 template: howto-guide-templatel
 redirect_from:

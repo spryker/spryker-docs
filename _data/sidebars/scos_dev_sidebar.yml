@@ -1798,8 +1798,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Set up XDebug profiling"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html
       - title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
       - title: "HowTo: Create an Angular module with application"

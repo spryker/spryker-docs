@@ -494,5 +494,5 @@ The proposed solution was developed was tested in a project environment. It has 
 
 
 {% info_block warningBox "Performance monitoring" %}
-Keep in mind that instance performance also depends on other jobs, such as data import and custom plugins. These jobs can significantly affect the overall performance and runtime of your Publish and Synchronize processes. Therefore, always analyze them with [Application Performance Monitoring](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202307.0/configure-services.html#new-relic) or [local application profiling](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
+Keep in mind that instance performance also depends on other jobs, such as data import and custom plugins. These jobs can significantly affect the overall performance and runtime of your Publish and Synchronize processes. Therefore, always analyze them with [Application Performance Monitoring](/docs/dg/dev/sdks/the-docker-sdk/202307.0/configure-services.html#new-relic) or [local application profiling](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
 {% endinfo_block %}

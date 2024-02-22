@@ -30,7 +30,7 @@ config
 │       └── production.yml
 ```
 
-The default recipe for any project is [config/install/docker.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/install/docker.yml). You can define a different recipe in a [deploy](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html) file. The default value is as follows:
+The default recipe for any project is [config/install/docker.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/install/docker.yml). You can define a different recipe in a [deploy](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html) file. The default value is as follows:
 
 ```shell
 pipeline: 'docker'
@@ -68,7 +68,7 @@ A default recipe file can be split into four logical blocks:
     - `scheduler-suspend`: suspend the scheduler.
     - `scheduler-clean`: clean the scheduler.
 
-These sections are part of the [Docker SDK](/docs/scos/dev/the-docker-sdk/{{page.version}}/the-docker-sdk.html) and cannot be renamed.
+These sections are part of the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/the-docker-sdk.html) and cannot be renamed.
 
 ## Customization of recipes
 

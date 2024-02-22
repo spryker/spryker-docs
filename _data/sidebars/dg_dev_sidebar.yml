@@ -536,6 +536,37 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
 
+  - title: SDKs
+    nested:
+    - title: The Docker SDK
+      url: /docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
+      nested:
+      - title: Deploy file
+        url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html
+        nested:
+        - title: Deploy file reference - 1.0
+          url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
+        - title: Deploy file inheritance — common use cases
+          url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
+
+      - title: Choosing a Docker SDK version
+        url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
+      - title: Docker SDK quick start guide
+        url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
+      - title: Choosing a mount mode
+        url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
+      - title: Configuring a mount mode
+        url: /docs/dg/dev/sdks/the-docker-sdk/configuring-a-mount-mode.html
+      - title: Configuring access to private repositories
+        url: /docs/dg/dev/sdks/the-docker-sdk/configuring-access-to-private-repositories.html
+      - title: Docker SDK configuration reference
+        url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
+      - title: Installation recipes of deployment pipelines
+        url: /docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html
+      - title: Docker environment infrastructure
+        url: /docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
+      - title: Running tests with the Docker SDK
+        url: /docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html
 
 
   - title: Architecture

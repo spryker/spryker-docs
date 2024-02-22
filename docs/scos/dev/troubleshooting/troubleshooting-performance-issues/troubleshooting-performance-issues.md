@@ -33,7 +33,7 @@ The ones that we prefer are [New Relic](https://docs.newrelic.com/docs/new-relic
 
 To profile with New Relic, do the following:
 
-1. [Install and configure New Relic](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#new-relic).
+1. [Install and configure New Relic](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html#new-relic).
 
 2. Check if the necessary profiling exists. If it does not exist, reproduce the problem in the necessary environment or request it to be reproduced by the customer.
 Note the following:
@@ -56,12 +56,12 @@ For example, if the problem is with “place-order“ with 25 product items, do 
   ![transaction-filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-filter.png)
   5. Check if you have the necessary action “place-order“ in the resulting list. Click **See transaction table** if needed.
   ![transaction-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/transactions-list.png)
-  
+
 {% info_block infoBox "Issues with transaction grouping" %}
 
 If you have some problems with transaction grouping, check [New Relic transactions grouping by queue names](/docs/dg/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html#group-transactions-by-queue-name).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 2. Repeat for other sections, like *Databases*, *External services*, etc.
 
@@ -71,7 +71,7 @@ For more details, see the [official New Relic website](https://newrelic.com/blog
 
 To profile with Blacfire, do the following:
 
-1. Install and configure [Blackfire](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#blackfire).
+1. Install and configure [Blackfire](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html#blackfire).
 2. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
 3. Review the profiling:
 - Check the **Recommendations** section. It shows some possible solutions.
@@ -96,10 +96,10 @@ Blackfire groups some actions, so after each round of optimization, you will see
 1. Check that you have the latest [performance releases](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html).
 2. Check that you implemented the [performance recommendations](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html).
 3. If your problem is still not solved, analyze profiling as follows:
-  - Select the longest action under profiling. 
-  - Optimize. 
+  - Select the longest action under profiling.
+  - Optimize.
   - Repeat.
 4. Check if your result is still good for future growth. Return to the previous step if needed.
-5. Share your experience: 
+5. Share your experience:
   - [Contribute to public documentation](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html).
   - Share it with [Spryker Community](https://spryker.com/community/).

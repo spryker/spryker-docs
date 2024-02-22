@@ -49,7 +49,7 @@ In January 2024, we have added and updated the following pages:
 - [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
-- [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
+- [Configure services](/docs/dg/dev/sdks/the-docker-sdk/202311.0/configure-services.html).
 - [Category Management feature overview](/docs/pbc/all/product-information-management/202311.0/base-shop/feature-overviews/category-management-feature-overview.html).
 - [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html).
 - [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
@@ -501,7 +501,7 @@ In May 2023, we have added and updated the following pages:
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
-- [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
+- [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn how you can submit an environment provisioning request.
 - [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html): Learn how to configure the Algolia app.
 - [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/integrate-algolia.html): Learn how to integrate the Algolia app.

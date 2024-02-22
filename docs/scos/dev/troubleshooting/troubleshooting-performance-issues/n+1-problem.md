@@ -25,7 +25,7 @@ Change action from *per entity* to *batch of entities*.
 
 ### N+1 problem—external calls in New Relic
 
-For example, suppose there is an order with 42 items. In the [New Relic tool](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#new-relic), do the following: 
+For example, suppose there is an order with 42 items. In the [New Relic tool](/docs/dg/dev/sdks/the-docker-sdk/202212.0/configure-services.html#new-relic), do the following: 
 
 1. Select the desired profiling:
 ![new-relic-profiling](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/new-relic-profiling.png)
@@ -55,7 +55,7 @@ In the cases like these, you need to develop your solution. Some of the most com
 
 ## N+1 problem—DB queries in Blackfire
 
-For example, suppose you add products to cart in a B2B store. In the [Blackfire tool](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#blackfire), do the following:
+For example, suppose you add products to cart in a B2B store. In the [Blackfire tool](/docs/dg/dev/sdks/the-docker-sdk/202212.0/configure-services.html#blackfire), do the following:
 
 1. Go to SQL.
 ![blackfire-sql](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/blackfire-sql.png)

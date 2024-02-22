@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-quick-start-guide.html
 ---
 title: Docker SDK quick start guide
 description: Get started with Spryker Docker SDK.
@@ -7,10 +6,8 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
 originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
 redirect_from:
-  - /2021080/docs/docker-sdk-quick-start-guide
-  - /2021080/docs/en/docker-sdk-quick-start-guide
-  - /docs/docker-sdk-quick-start-guide
-  - /docs/en/docker-sdk-quick-start-guide
+  - /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-quick-start-guide.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -125,6 +122,6 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/dg
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)
+* [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
+* [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/configure-services.html)

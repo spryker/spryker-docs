@@ -10,7 +10,7 @@ related:
   - title: Merchant Category feature overview
     link: docs/pbc/all/merchant-management/page.version/marketplace/merchant-category-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
 ---
 title: "HowTo: Notify about unsupported browsers"
 last_updated: Jun 16, 2021
@@ -6,16 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-notify-about-unsupported-browsers
 originalArticleId: 96206081-8c2e-4086-80d6-94c8e5877ef4
 redirect_from:
-  - /2021080/docs/howto-notify-about-unsupported-browsers
-  - /2021080/docs/en/howto-notify-about-unsupported-browsers
-  - /docs/howto-notify-about-unsupported-browsers
-  - /docs/en/howto-notify-about-unsupported-browsers
-  - /v6/docs/howto-notify-about-unsupported-browsers
-  - /v6/docs/en/howto-notify-about-unsupported-browsers
-  - /v5/docs/howto-notify-about-unsupported-browsers
-  - /v5/docs/en/howto-notify-about-unsupported-browsers
-  - /v4/docs/howto-notify-about-unsupported-browsers
-  - /v4/docs/en/howto-notify-about-unsupported-browsers
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
 ---
 
 To notify your users about an unsupported browser, you can use our `unsupported-browser-popup` component. The component is not provided out of the box. Use the following link to download it:

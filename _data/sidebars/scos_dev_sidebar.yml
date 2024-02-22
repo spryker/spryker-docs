@@ -1356,10 +1356,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
-      - title: "HowTo: Product data from import to frontend view"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
-      - title: "HowTo: enable SFTP for Flysystem"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Create an Angular module with application"

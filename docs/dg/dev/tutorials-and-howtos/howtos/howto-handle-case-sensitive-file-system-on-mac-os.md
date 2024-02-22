@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
 ---
 title: "HowTo: Handle case sensitive file system on Mac OS"
 description: Use the guide to change the case-sensitive file system on Mac OS.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-case-sensitive-file-system-mac
 originalArticleId: e2843984-3d25-4bef-b0d3-d7eb764591bd
 redirect_from:
-  - /2021080/docs/ht-case-sensitive-file-system-mac
-  - /2021080/docs/en/ht-case-sensitive-file-system-mac
-  - /docs/ht-case-sensitive-file-system-mac
-  - /docs/en/ht-case-sensitive-file-system-mac
-  - /v6/docs/ht-case-sensitive-file-system-mac
-  - /v6/docs/en/ht-case-sensitive-file-system-mac
-  - /v5/docs/ht-case-sensitive-file-system-mac
-  - /v5/docs/en/ht-case-sensitive-file-system-mac
-  - /v4/docs/ht-case-sensitive-file-system-mac
-  - /v4/docs/en/ht-case-sensitive-file-system-mac
-  - /v3/docs/ht-case-sensitive-file-system-mac
-  - /v3/docs/en/ht-case-sensitive-file-system-mac
-  - /v2/docs/ht-case-sensitive-file-system-mac
-  - /v2/docs/en/ht-case-sensitive-file-system-mac
-  - /v1/docs/ht-case-sensitive-file-system-mac
-  - /v1/docs/en/ht-case-sensitive-file-system-mac
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
 ---
 
 By default, Mac OS uses a case-insensitive file system to support compatibility with applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are three options on how to change case sensitivity:
@@ -55,7 +39,7 @@ After the disk has been created, you can see it being mounted in Finder already.
 
 You can copy all existing projects to the newly created box. If it is not mounted, double-click the disk image file in Finder. After copying all your projects, you can replace your current project directory with the mount-point for the disk image so that you don't have to adjust any paths you already set up. For details, see the following section.
 
-## mount the disk image at boot automatically 
+## mount the disk image at boot automatically
 
 To avoid manually mounting the disk image every time you restart your system, create a Launch Agent that can take care of this.
 

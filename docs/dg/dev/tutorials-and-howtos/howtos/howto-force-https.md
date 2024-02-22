@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
 ---
 title: "HowTo: Force HTTPS"
 description: Use the guide to configure HTTPs and HTTP for your pages.
@@ -7,29 +6,14 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-force-https
 originalArticleId: ba400e70-5a29-4899-996a-08f3f9bdd793
 redirect_from:
-  - /2021080/docs/ht-force-https
-  - /2021080/docs/en/ht-force-https
-  - /docs/ht-force-https
-  - /docs/en/ht-force-https
-  - /v6/docs/ht-force-https
-  - /v6/docs/en/ht-force-https
-  - /v5/docs/ht-force-https
-  - /v5/docs/en/ht-force-https
-  - /v4/docs/ht-force-https
-  - /v4/docs/en/ht-force-https
-  - /v3/docs/ht-force-https
-  - /v3/docs/en/ht-force-https
-  - /v2/docs/ht-force-https
-  - /v2/docs/en/ht-force-https
-  - /v1/docs/ht-force-https
-  - /v1/docs/en/ht-force-https
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
 ---
 
 This guide shows how you can force to use HTTPS on your pages.
 
 {% info_block infoBox "Load balancer" %}
 
-If your servers are behind a load balancer, and the load balancer is doing the redirects from HTTP to HTTPS, you don't need to further configure the application.
+If your servers are behind a load balancer, and the load balancer is doing the redirects from HTTP to HTTPS, you don't need to configure the application.
 
 {% endinfo_block %}
 

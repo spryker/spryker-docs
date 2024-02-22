@@ -3073,7 +3073,9 @@ entries:
                   - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
                   - title: Split products by stores
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html                    
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
+                  - title: "Product data: From import to frontend views"
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html                        
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"

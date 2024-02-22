@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
 ---
 title: "HowTo: Handle graceful shutdown"
 description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM.
@@ -7,12 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-graceful-shutdown
 originalArticleId: d4a9a278-36a6-490b-8333-c4fdfa5e4e1b
 redirect_from:
-  - /2021080/docs/howto-handle-graceful-shutdown
-  - /2021080/docs/en/howto-handle-graceful-shutdown
-  - /docs/howto-handle-graceful-shutdown
-  - /docs/en/howto-handle-graceful-shutdown
-  - /v6/docs/howto-handle-graceful-shutdown
-  - /v6/docs/en/howto-handle-graceful-shutdown
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
 ---
 
 When a running process is stopped by, for example, signals like `SIGTERM` and `SIGINT`, the process is stopped right away, no matter if it is completed or not. Sometimes, such behavior is not acceptable—for example, in the case of half imported data set.

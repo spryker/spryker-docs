@@ -1,27 +1,11 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
 ---
-title: "HowTo: Product data from import to frontend view"
+title: "Product data: From import to frontend views"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-data-import-frontend
 originalArticleId: 7f644291-3453-4725-a3a3-5a37c38fc567
 redirect_from:
-  - /2021080/docs/ht-product-data-import-frontend
-  - /2021080/docs/en/ht-product-data-import-frontend
-  - /docs/ht-product-data-import-frontend
-  - /docs/en/ht-product-data-import-frontend
-  - /v6/docs/ht-product-data-import-frontend
-  - /v6/docs/en/ht-product-data-import-frontend
-  - /v5/docs/ht-product-data-import-frontend
-  - /v5/docs/en/ht-product-data-import-frontend
-  - /v4/docs/ht-product-data-import-frontend
-  - /v4/docs/en/ht-product-data-import-frontend
-  - /v3/docs/ht-product-data-import-frontend
-  - /v3/docs/en/ht-product-data-import-frontend
-  - /v2/docs/ht-product-data-import-frontend
-  - /v2/docs/en/ht-product-data-import-frontend
-  - /v1/docs/ht-product-data-import-frontend
-  - /v1/docs/en/ht-product-data-import-frontend
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
 ---
 

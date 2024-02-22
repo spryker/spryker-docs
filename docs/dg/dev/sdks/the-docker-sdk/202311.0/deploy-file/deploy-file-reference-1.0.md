@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file-reference-1.0.html
 ---
 title: Deploy file reference - 1.0
 description: Use this reference to create a deploy file for building environment for Spryker in Docker.
@@ -7,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/deploy-file-reference-10
 originalArticleId: 9bba41b4-3fc7-4129-a2b7-8e98d32b5f20
 redirect_from:
-  - /2021080/docs/deploy-file-reference-10
-  - /2021080/docs/en/deploy-file-reference-10
-  - /docs/deploy-file-reference-10
-  - /docs/en/deploy-file-reference-10
+  - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file-reference-1.0.html
   - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file-reference-1.0.html
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
   - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file-reference-1.0.html

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-configuration-reference.html
 ---
 title: Docker SDK configuration reference
 description: Instructions for the most common configuration cases of the Docker SDK.
@@ -11,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-configuration-reference
   - /docs/docker-sdk-configuration-reference
   - /docs/en/docker-sdk-configuration-reference
+  - /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-configuration-reference.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

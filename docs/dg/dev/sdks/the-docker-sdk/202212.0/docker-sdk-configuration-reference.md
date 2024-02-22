@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-configuration-reference.html
 ---
 title: Docker SDK configuration reference
 description: Instructions for the most common configuration cases of the Docker SDK.
@@ -7,10 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-configuration-reference
 originalArticleId: 624e91c2-a207-41b4-957f-98de2a96f90b
 redirect_from:
-  - /2021080/docs/docker-sdk-configuration-reference
-  - /2021080/docs/en/docker-sdk-configuration-reference
-  - /docs/docker-sdk-configuration-reference
-  - /docs/en/docker-sdk-configuration-reference
+- /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-configuration-reference.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-quick-start-guide.html
 ---
 title: Docker SDK quick start guide
 description: Get started with Spryker Docker SDK.
@@ -7,10 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
 originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
 redirect_from:
-  - /2021080/docs/docker-sdk-quick-start-guide
-  - /2021080/docs/en/docker-sdk-quick-start-guide
-  - /docs/docker-sdk-quick-start-guide
-  - /docs/en/docker-sdk-quick-start-guide
+- /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-quick-start-guide.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

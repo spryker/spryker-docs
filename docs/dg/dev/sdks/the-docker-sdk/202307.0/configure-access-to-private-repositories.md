@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/configuring-access-to-private-repositories.html
 ---
 title: Configuring access to private repositories
 description: Configure your local environment to access private repositories.
@@ -11,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/configuring-access-to-private-repositories
   - /docs/configuring-access-to-private-repositories
   - /docs/en/configuring-access-to-private-repositories
+  - /docs/scos/dev/the-docker-sdk/202307.0/configuring-access-to-private-repositories.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

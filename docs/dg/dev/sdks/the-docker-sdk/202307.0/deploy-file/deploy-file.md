@@ -1,11 +1,12 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file.html
 ---
 title: Deploy file
 description: Overview of the deploy file
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file.html
+
 last_updated: Jul 26, 2023
-related: 
+related:
   - title: Deploy file inheritance—common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file reference - 1.0

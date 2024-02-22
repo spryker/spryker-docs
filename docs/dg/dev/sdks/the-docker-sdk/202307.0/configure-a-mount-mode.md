@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/configuring-a-mount-mode.html
 ---
 title: Configuring a mount mode
 description: Learn how to configure a mount mode.
@@ -11,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/configuring-a-mount-mode
   - /docs/configuring-a-mount-mode
   - /docs/en/configuring-a-mount-mode
+  - /docs/scos/dev/the-docker-sdk/202307.0/configuring-a-mount-mode.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -113,7 +114,7 @@ docker/sdk boot
 6. Follow the installation instructions displayed in the grey block of the output of the command you have run in the previous step.
 
 7. Build and run Spryker application based on demo data:
-8. 
+8.
 ```bash
 docker/sdk up --build --data --assets
 ```
@@ -175,7 +176,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     ```
 
     2. Install the following packages to allow apt to access repositories via HTTPS:
-    
+
     ```bash
     sudo apt-get install \
     apt-transport-https \
@@ -201,7 +202,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
     ```
 
     5. Install the latest version of Docker Community Edition:
-    
+
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io
     ```
@@ -245,7 +246,7 @@ To configure docker-sync mount mode on Windows with Windows Subsystem for Linux 
 
     1. In Docker for Windows settings, select **Expose daemon on tcp://localhost:2375 without TLS**.
     2. To update the profile with the environment variable, in your WSL shell, run the command:
-    
+
     ```bash
     echo "export DOCKER_HOST=tcp://127.0.0.1:2375" >> ~/.bashrc
     ```

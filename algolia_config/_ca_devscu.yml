@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'scu_dev'
+  index_name: 'ca_devscu'
   files_to_exclude:
     - index.md
     - 404.md
@@ -7,9 +7,9 @@ algolia:
     - search.md
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
-    - docs/pbc/all/**/*.md
-    - docs/ca/dev/**/*.md
     - docs/fes/dev/**/*.md
+    - docs/pbc/all/**/*.md
     - docs/acp/user/**/*.md
     - docs/sdk/dev/**/*.md
     - docs/dg/dev/**/*.md
+    - docs/ca/dev/**/*.md

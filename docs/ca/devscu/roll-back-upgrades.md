@@ -24,9 +24,3 @@ In general, most of the revert strategies apply the same steps. If you are using
 * [git revert](https://git-scm.com/docs/git-revert).
 
 * [git reset](https://git-scm.com/docs/git-reset).
-
-
-## Support for Spryker CI
-
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).

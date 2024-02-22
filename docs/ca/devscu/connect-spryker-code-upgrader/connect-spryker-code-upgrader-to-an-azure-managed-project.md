@@ -1,5 +1,5 @@
 ---
-title: Connect the Spryker CI to a Azure managed project
+title: Connect Spryker Code Upgrader to an Azure managed project
 description: Learn how to connect Spryker CI to Azure managed project
 template: howto-guide-template
 last_updated: May 9, 2023
@@ -7,9 +7,8 @@ redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-azure-managed-project.html
 ---
 
-## Connect Spryker CI using Azure access token
 
-To connect the Spryker CI manually using a Azure access token, follow the steps below.
+To connect the Spryker Code Upgrader manually using a Azure access token, follow the steps below.
 
 ## Prerequisites
 
@@ -23,7 +22,7 @@ Open **Clone Repository** window in your Azure repository and click on **Generat
 
 Azure access token should have the following repository permissions:
 
-* **Code (Read & write)** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
+**Code (Read & write)** for Spryker Upgrader Service: grants read and write access to the repository to enable the Upgrader to analyze the project and create PRs.
 
 ## Configure the connection in Spryker CI
 
@@ -50,11 +49,6 @@ Repository URL should be in format `https://dev.azure.com/<organization_name>/<p
 
 {% endinfo_block %}
 
-## Support for Spryker CI
-
-* For help with Spryker CI, [contact support](https://spryker.force.com/support/s/).
-* To learn more about Buddy, see their [docs](https://buddy.works/docs).
-
 ## Next steps
 
-[Run Spryker Code Upgrader](/docs/scu/dev/run-spryker-code-upgrader.html)
+[Set the target branch for the Upgrader](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html)

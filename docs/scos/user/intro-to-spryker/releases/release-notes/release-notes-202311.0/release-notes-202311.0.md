@@ -207,10 +207,11 @@ In addition to updating Spryker packages in your repository, with this release, 
 Reduce the engineering time needed to integrate a Spryker module release into your project.
 
 ### Documentation
-[Integrating code releases](/docs/scu/dev/integrating-code-releases/integrating-code-releases.html)
+[Integrating code releases](/docs/ca/devscu/integrating-code-releases/integrating-code-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Security upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -221,10 +222,10 @@ Receive security releases before any other releases offered by Spryker Code Upgr
 Reduce the security risks from running outdated software by taking security updates before other updates.
 
 ### Documentation
-[Integrating security releases](/docs/scu/dev/integrating-code-releases/integrating-security-releases.html)
+[Integrating security releases](/docs/ca/devscu/integrating-code-releases/integrating-security-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Upgradability Evaluator improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -234,7 +235,7 @@ This update offers notifications about critical security issues and vulnerabilit
 Better awareness of security issues and vulnerabilities.
 
 ### Documentation
-- [Handling upgrade warnings](/docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html)
+- [Handling upgrade warnings](/docs/ca/devscu/integrating-code-releases/handling-upgrade-warnings.html)
 - [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html)
 - [NPM checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html)
 - [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)

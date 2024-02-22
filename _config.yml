@@ -122,14 +122,9 @@ defaults:
       role: "dev"
   -
      scope:
-       path: "docs/scu"
+       path: "docs/ca/devscu"
      values:
-       product: "scu"
-  -
-     scope:
-       path: "docs/scu/dev"
-     values:
-       sidebar: "scu_dev_sidebar"
+       sidebar: "ca_devscu_sidebar"
        role: "dev"
   -
      scope:
@@ -212,10 +207,10 @@ versioned_categories:
 
 sidebars:
   - ca_dev_sidebar
+  - ca_devscu_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
   - sdk_dev_sidebar
-  - scu_dev_sidebar
   - pbc_all_sidebar
   - dg_dev_sidebar
 
@@ -245,7 +240,11 @@ algolia:
     - name: 'sdk_dev'
       title: 'SDK Developer'
     - name: 'ca_dev'
-      title: 'Cloud administration'
+      title: 'Managing cloud applications'
+    - name: 'ca_devscu'
+      title: 'Upgrading cloud applications'
+    - name: 'acp_user'
+      title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
     - name: 'dg_dev'

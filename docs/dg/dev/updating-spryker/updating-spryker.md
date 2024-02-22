@@ -18,7 +18,7 @@ Updating your Spryker shop is always an effort. New features, fixes, and updates
 
 This article gives answers to these questions and provides recommendations that will help you make the Spryker update process smoother, easier, and update efforts predictable.
 
-[Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html) addresses the challenges of an application's upgradability and can help you semi-automate updates and make them regular.
+[Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) addresses the challenges of an application's upgradability and can help you semi-automate updates and make them regular.
 
 ## Spryker product structure
 

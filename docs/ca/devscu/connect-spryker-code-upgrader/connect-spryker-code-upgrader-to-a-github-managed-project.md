@@ -1,5 +1,5 @@
 ---
-title: Connect the Spryker CI to a GitHub managed project
+title: Connect Spryker Code Upgrader to a GitHub managed project
 description: Learn how to connect Spryker CI to a GitHub managed project
 template: howto-guide-template
 last_updated: Jul 4, 2023
@@ -7,11 +7,11 @@ redirect_from:
   - /docs/paas-plus/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-gitlab-managed-project.html
 ---
 
-There are two options for connecting Spryker CI to your repository: using Spryker CI's native integration or using an access token.
+There are two options for connecting the Upgrader to your repository: using the native integration or an access token.
 
-## Connect using Spryker CI native integration
+## Connect Spryker Code Upgrader using the native integration
 
-1. In [Spryker CI](/docs/scu/dev/spryker-ci.html), go to **Projects**.
+1. In the Upgrader UI, go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.md/spryker_ci_projects.png)
@@ -51,13 +51,13 @@ There are two options for connecting Spryker CI to your repository: using Spryke
 
 ![Spryker CI GitHub Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.md/spryker_ci_github_repository_selection.png)
 
-## Connect Spryker Code Upgrader using GitHub access token
+## Connect Spryker Code Upgrader using the GitHub access token
 
-To connect the Upgrader manually using a GitHub access token, follow the steps.
+To connect the Upgrader manually using the GitHub access token, take the following steps.
 
-## Prerequisites
+### Prerequisites
 
-[Create a GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+[Create a GitHub access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
 To enable the Upgrader to analyze the project and create PRs, the GitHub personal access token (Fine-grained token) should have the following permissions:
 
@@ -70,10 +70,10 @@ To enable the Upgrader to analyze the project and create PRs, the GitHub persona
 * **Pull requests**: Access: Read and write
 
 
-## Configure the connection in Spryker CI
+### Configure the integration with GitHub
 
 
-1. In Spryker CI, go to **Projects**.
+1. In the Upgrader UI, go to **Projects**.
 2. On the **Projects** page, select the **Spryker Upgrade Service** project.
 
 ![Spryker CI Projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.md/spryker_ci_projects.png)
@@ -105,3 +105,7 @@ To enable the Upgrader to analyze the project and create PRs, the GitHub persona
     This displays the message about a successful update. Now the Upgrader is connected to the repository.
 
 ![Spryker CI GitLab Repository Selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboard-to-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-github-managed-project.md/spryker_ci_github_repository_selection.png)
+
+## Next step
+
+[Set the target branch for the Upgrader](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html)

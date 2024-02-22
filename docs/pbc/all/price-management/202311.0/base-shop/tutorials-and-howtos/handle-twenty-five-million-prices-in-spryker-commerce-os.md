@@ -201,7 +201,7 @@ The following issues related to a slow publish process have been added:
 #### Evaluated solutions
 
 The following solutions were evaluated:
-1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
+1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html).
 2. To fill the `search` table on the insert update operations in the `entity` table, see the [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 

@@ -33,7 +33,7 @@ You can use each content item for different purposes. For example, A *Banner con
 
 A content manager can [create content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
-* [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
+* [Import content items](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html)
 * [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
 * [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
 

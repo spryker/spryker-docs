@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202307.0/base-shop/import-and-export-data/file-details-product-quantity.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_quantity.csv` file to configure [Product Quantity](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) Store information in your Spryker Demo Shop.

@@ -165,6 +165,10 @@ versioned_categories:
       - the-docker-sdk
       - system-requirements
       - front-end-development
+  dg:
+    dev:
+      - data-import
+      - system-requirements
   pbc:
     all:
       - back-office

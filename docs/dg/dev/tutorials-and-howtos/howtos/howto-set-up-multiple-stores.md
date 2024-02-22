@@ -141,7 +141,7 @@ return 'DE';
 ...
 ```
 
-4. To import data for the stores you've added, adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
+4. To import data for the stores you've added, adjust all the [import files and import configuration](/docs/dg/dev/data-import/{{site.version}}/data-importers-implementation.html).
 
 For example, define the import source for the `DE` store you've added:
 

@@ -1,34 +1,31 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
 ---
-title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
+title: Optimizing Jenkins execution
 description: Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 last_updated: Jul 15, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
+
 ---
 
 
-# The Challenge
-
-Our out-of-the-box (OOTB) system requires a specific command (Worker - `queue:worker:start`) to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes are not functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
-
-# Explanation
+Our out-of-the-box (OOTB) system requires a specific command (Worker - `queue:worker:start`) to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes are not functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes.
 
 By default, our system has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it becomes a potentially critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
-Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilization are not generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
+Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilization are not generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores.
 
 There are two potential solutions to address this problem: application optimization and better background job orchestration.
 
-# Proposed Solution
+## Solution
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/OneWorker-diagram.png)
 
-The solution described here is targeted at small to medium projects but can be improved and applied universally. However, it hasn't been fully tested in such conditions yet.
+The solution described here is targeted at small to medium projects but can be improved and applied universally. However, it wasn't fully tested in such conditions.
 
 The proposed solution is to use one Worker (`queue:worker:start`) for all stores, regardless of the number of stores. Instead of executing these steps for one store within one process and having multiple processes for multiple stores, we can have one process that scans all queues for all stores and spawns child processes the same way as the OOTB solution. However, instead of determining the number of processes based on the presence of a single message, we can analyse the total number of messages in the queue to make an informed decision on how many processes should be launched at any given moment.
 
-## The Process Pool
+## The process pool
 
 In computer science, a pool refers to a collection of resources that are kept in memory and ready to use. In this context, we have a fixed-sized pool (fixed-size array) where new processes are only ran if there is space available among the other running processes. This approach allows us to have better control over the number of processes launched by the OOTB solution, resulting in more predictable memory consumption.
 
@@ -41,7 +38,7 @@ The following parameters exist:
 - pool size (default 5-10)
 - free memory buffer - minimum amount of RAM (MB) the system should have in order to spawn a new child process (default 750mb)
 
-## Worker Statistics and Logs
+## Worker statistics and logs
 
 With the proposed solution, we gather better statistics to understand the health of the worker and make informed decisions. We can track the number of tasks executed per queue/store, the distribution of error codes, cycles, and various metrics related to skipping cycles, cooldown, available slots, and memory limitations. These statistics help us monitor performance, identify bottlenecks, and optimize resource allocation.
 
@@ -49,13 +46,13 @@ With the proposed solution, we gather better statistics to understand the health
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/stats-summary.png)
 
-## Error Logging
+## Error logging
 
 In addition to statistics, we also capture the output of children's processes in the standard output of the main worker process. This simplifies troubleshooting by providing logs with store and queue names.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/stats-error-log.png)
 
-## Edge Cases/Limitation
+## Edge cases and limitation
 
 Child processes are killed at the end of each minute, which means those batches that were in progress will be abandoned and will return to the source queue to be processed during the next run. While we didn’t notice any issues with this approach, please note that this is still an experimental approach and may or may not change in the future. The recommendation to mitigate this is to use smaller batches to ensure children processes are running within seconds or up to 10s (rough estimate), to reduce the number of messages that will be retried.
 
@@ -77,7 +74,7 @@ git apply one-worker.diff
 
 This is a custom implementation, which doesn't extend anything and is built based on the ideas described above.
 
-The new implementation provides such features as: 
+The new implementation provides such features as:
 - spawns only single process per loop iteration
 - checks free system memory before each launch
 - ignores processes limits per queue in favour of one limit of simultaneously running processes (process pool size)
@@ -108,19 +105,19 @@ class NewWorker implements WorkerInterface
     protected SplFixedArray $processes;
     // ...
 
-    public function __construct(...) 
+    public function __construct(...)
     {
         // ...
-        // can be configured in config and/or using environment variable QUEUE_ONE_WORKER_POOL_SIZE, 
+        // can be configured in config and/or using environment variable QUEUE_ONE_WORKER_POOL_SIZE,
         // average recommended values are 5-10
-        // defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously 
+        // defines how many PHP processes (`queue:task:start QUEUE-NAME`) allowed to run simultaneously
         // within NewWorker regardless of number of stores or queues
         $this->processes = new SplFixedArray($this->queueConfig->getQueueWorkerMaxProcesses());
     }
 
     public function start(string $command, array $options = []): void
     {
-        // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS 
+        // env var - QUEUE_WORKER_MAX_THRESHOLD_SECONDS
         // default is 60 seconds, 1 minute, it is safe to have it as 1 hour instead
         $maxThreshold = $this->queueConfig->getQueueWorkerMaxThreshold();
 
@@ -129,7 +126,7 @@ class NewWorker implements WorkerInterface
         $delayIntervalMilliseconds = $this->queueConfig->getQueueWorkerInterval();
 
         // when false - there will be an exception thrown if the Worker can't read the system memory info
-        // otherwise - memory info will be returned as 0, so the system will continue to work, but not launching processes 
+        // otherwise - memory info will be returned as 0, so the system will continue to work, but not launching processes
         // because it'll think there is no memory available
         // QUEUE_WORKER_IGNORE_MEM_READ_FAILURE, default = false
         $shouldIgnoreZeroMemory = $this->queueConfig->shouldIgnoreNotDetectedFreeMemory();
@@ -213,7 +210,7 @@ class NewWorker implements WorkerInterface
      * Strategy defines which queue to return for processing,
      * it can have any other custom dependencies to make a decision.
      *
-     * Strategy can be different, we can inject some smart strategy 
+     * Strategy can be different, we can inject some smart strategy
      * which will delegate actual processing to another one depending on something, e.g. store operation times or time zones, etc.
      *
      * @param int $freeIndex
@@ -248,9 +245,9 @@ class NewWorker implements WorkerInterface
 ### System Resource Manager
 
 Available free system memory measured before spawning each child process.
-The system should always have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which is not easily predictable. 
+The system should always have spare resources, because each `queue:task:start ...` command can consume different amount of resources, which is not easily predictable.
 Because of this, this buffer must be set with such limitations in mind.
-    
+
 - to accomodate a new process it is going to launch
 - to leave space for any sporadic memory consumption change of already running processes
 
@@ -317,10 +314,10 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
      */
     private function readSystemMemoryInfo(): string
     {
-        // 
+        //
         $memoryReadProcessTimeout = $this->queueConfig->memoryReadProcessTimeout();
         $memory = @file_get_contents('/proc/meminfo') ?? '';
-        
+
         return $memory ?? 0;
     }
 ```
@@ -329,7 +326,7 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
 ### QueueScanner
 
 This component is responsible for reading information about queues, mainly - amount of messages.
-Key feature here - is cooldown period of default 5 seconds, it means that if all queues are empty, it won't re-scan those right await but will wait (non blocking) until cooldown timeout passes. Obviously it'll add up to 5s delay when new messages appear, but it won't be noticable, and as soon as there are always some messages present - the cooldown timeout is not applied. 
+Key feature here - is cooldown period of default 5 seconds, it means that if all queues are empty, it won't re-scan those right await but will wait (non blocking) until cooldown timeout passes. Obviously it'll add up to 5s delay when new messages appear, but it won't be noticable, and as soon as there are always some messages present - the cooldown timeout is not applied.
 
 <details open>
 <summary>src/Pyz/Zed/Queue/Business/QueueScanner.php</summary>
@@ -397,7 +394,7 @@ class QueueScanner implements QueueScannerInterface
 ```
 </details>
 
-### Customised Process Manager
+### Customized process manager
 
 The idea here is simple - just to add store code as a prefix to a queue name, and without additional code modifications - it'll work with all queues/stores combinations correctly within one Worker.
 
@@ -425,7 +422,7 @@ class ProcessManager extends SprykerProcessManager implements ProcessManagerInte
 ```
 </details>
 
-### Simple Ordered Strategy
+### Simple ordered strategy
 
 And really simple, yet useful - a simple ordered strategy to define any logic to return the next queue to process. It uses a custom `\Pyz\Zed\Queue\Business\Strategy\CountBasedIterator` which provides some additional optional sorting/repeating benefits for more complex strategies, but without additional configuration - works as a simple [ArrayIterator](https://www.php.net/manual/en/class.arrayiterator.php).
 
@@ -477,7 +474,7 @@ class OrderedQueuesStrategy implements QueueProcessingStrategyInterface
 </details>
 
 
-# When to use and when not to use it?
+## When to use and when not to use it?
 
 Currently, this solution proved to be useful for multi-store setup environments with more than 2 stores operated within a single AWS region, although projects with only two stores can benefit from this solution as well.
 
@@ -488,7 +485,7 @@ At the same time, it is worth mentioning that it does not make sense to apply th
 - it can't help much for single-store setups or for multi-store setup where each store is hosted in a different AWS region.
 
 
-# Summary
+## Summary
 
 The proposed solution was developed was tested in a project environment. It has shown positive results, with significant improvements in data-import processing time. While this solution is suitable for small to medium projects, it has the potential to be applied universally. Code Examples can be found in the attached diff files that show the implementation in a project.
 

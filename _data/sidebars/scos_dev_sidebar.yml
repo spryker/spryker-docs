@@ -1338,8 +1338,6 @@ entries:
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
-      - title: "HowTo: Replace key-value storage with database"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
@@ -1358,18 +1356,12 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
-      - title: "HowTo: Replace Spryker module dependencies"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
       - title: "HowTo: Product data from import to frontend view"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
       - title: "HowTo: enable SFTP for Flysystem"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: "HowTo: Reset a Docker environment"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
-      - title: "HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
       - title: "HowTo: Create an Angular module with application"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-an-angular-module-with-application.html
       - title: "HowTo: Set up multiple stores"

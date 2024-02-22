@@ -165,6 +165,9 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/create-a-custom-scheduler.html
       - title: Migrate to Jenkins
         url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
+      - title: Optimizing Jenkins execution
+        url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
+
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html
       nested:
@@ -216,6 +219,9 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+        - title: Bypass the key-value storage
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/bypass-the-key-value-storage.html
+
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html
       - title: Data interaction
@@ -226,7 +232,10 @@ entries:
         - title: Transfer data between Yves and Zed
           url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
-          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html
+        - title: Define the module dependencies - Dependency Provider
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/replace-module-dependencies.html
+
       - title: Create an Order Management System - Spryker Commerce OS
         url: /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
       - title: Queue
@@ -567,6 +576,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
       - title: Running tests with the Docker SDK
         url: /docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html
+      - title: Reset docker environments
+        url: /docs/dg/dev/sdks/the-docker-sdk/reset-docker-environments.html
 
 
   - title: Architecture

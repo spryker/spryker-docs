@@ -160,7 +160,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 
 ## 3. Register the Twig extension you created
 
-To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html) for information on the dependency providers.
+To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
 First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
 

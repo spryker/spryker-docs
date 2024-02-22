@@ -1,38 +1,19 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
 ---
-title: "HowTo: Replace Spryker module dependencies"
+title: Replace module dependencies
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-replace-bundle-dependencies
 originalArticleId: d8499e40-0c83-409c-9c17-1a453d245934
 redirect_from:
-  - /2021080/docs/ht-replace-bundle-dependencies
-  - /2021080/docs/en/ht-replace-bundle-dependencies
-  - /docs/ht-replace-bundle-dependencies
-  - /docs/en/ht-replace-bundle-dependencies
-  - /v6/docs/ht-replace-bundle-dependencies
-  - /v6/docs/en/ht-replace-bundle-dependencies
-  - /v5/docs/ht-replace-bundle-dependencies
-  - /v5/docs/en/ht-replace-bundle-dependencies
-  - /v4/docs/ht-replace-bundle-dependencies
-  - /v4/docs/en/ht-replace-bundle-dependencies
-  - /v3/docs/ht-replace-bundle-dependencies
-  - /v3/docs/en/ht-replace-bundle-dependencies
-  - /v2/docs/ht-replace-bundle-dependencies
-  - /v2/docs/en/ht-replace-bundle-dependencies
-  - /v1/docs/ht-replace-bundle-dependencies
-  - /v1/docs/en/ht-replace-bundle-dependencies
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
 ---
 
 This document describes how to identify module dependencies and replace a dependent module with another one.
 
-Each Spryker module might have several dependent modules that provide communication, utilities, and added functionality. Usually, adjustments are made by our plugin mechanism or class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own or a 3rd party. To do so, there are two steps that you need to follow: replace the module and connect the modules to the new functionality.
+Each Spryker module might have several dependent modules that provide communication, utilities, and added functionality. Usually, adjustments are made by our plugin mechanism or class extensions. However, when introducing a massive functional change, you may need to replace an entire core module with one of your own or a third party. To do so, there are two steps that you need to follow: replace the module and connect the modules to the new functionality.
 
-{% info_block infoBox "Example" %}
 
-A company working with the Payone and Refund modules decides to use a different refund functionality. They can replace the core refund module with their own implementation that satisfies the same interface. This requires replacing the existing refund module with a new refund implementation in the project code. Then, they must reroute the Payone module to communicate with the new refund functionality instead.
-
-{% endinfo_block %}
+This document describes the process using an example. Assume your project uses Payone and Refund modules. You decide to use a different refund functionality, so you want to replace the core refund module with your own implementation that satisfies the same interface. This requires replacing the existing refund module with a new refund implementation in the project code. Then, you need to reroute the Payone module to communicate with the new refund functionality instead.
 
 ## Prerequisites
 

@@ -8,6 +8,7 @@ originalArticleId: a08f126e-9ccc-44ac-91b4-2c00b536ff25
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
+  - /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
 related:
   - title: Spryk
     link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html

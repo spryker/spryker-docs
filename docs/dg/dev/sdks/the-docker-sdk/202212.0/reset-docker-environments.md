@@ -1,5 +1,5 @@
 ---
-title: Reset a Docker environment
+title: Reset Docker environments
 description: Learn how to restart your Spryker in Docker from scratch.
 last_updated: Jun 18, 2021
 template: howto-guide-template

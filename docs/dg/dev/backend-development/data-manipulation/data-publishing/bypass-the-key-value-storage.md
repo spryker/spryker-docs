@@ -1,22 +1,16 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
 ---
-title: "HowTo: Replace key-value storage with database"
+title: Bypass the key-value storage
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
 originalArticleId: 76d0dff6-6837-4f27-a64b-d3eacf7134c7
 redirect_from:
-  - /2021080/docs/howto-replace-key-value-storage-with-database
-  - /2021080/docs/en/howto-replace-key-value-storage-with-database
-  - /docs/howto-replace-key-value-storage-with-database
-  - /docs/en/howto-replace-key-value-storage-with-database
-  - /v6/docs/howto-replace-key-value-storage-with-database
-  - /v6/docs/en/howto-replace-key-value-storage-with-database
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
 ---
 
-One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works by the following:
+One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works as follows:
 * Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
-* Synchronizing that data to fast key-value storage (for example, Redis) with the help of message queues.
+* Synchronizing that data to fast key-value storage, like Redis, with the help of message queues.
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
@@ -54,7 +48,7 @@ Out of the box, the `StorageDatabase` module can work with two RDBS vendors—My
 composer require spryker/storage:3.8.0 spryker/storage-database
 ```
 
-## Configure the storage database (DevOps)
+## Configure the storage database
 
 1. For the key-value storage bypass to work properly, add a set of new configuration values to the environment configuration of a project:
 

@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path="docs/scos/dev/data-import"
+folder_path="docs/scos/dev/front-end-development"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

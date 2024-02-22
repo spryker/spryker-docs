@@ -168,6 +168,7 @@ versioned_categories:
   dg:
     dev:
       - data-import
+      - frontend-development
       - system-requirements
   pbc:
     all:

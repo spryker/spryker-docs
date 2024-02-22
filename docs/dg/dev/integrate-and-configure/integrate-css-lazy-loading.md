@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/frontend-css-lazy-load.html
 ---
 
-To implement [CSS lazy loading for frontend](/docs/scos/dev/front-end-development/{{site.version}}/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:
+To implement [CSS lazy loading for frontend](/docs/dg/dev/frontend-development/{{site.version}}/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:
 
 1. Update the `ShopUi` module to version 1.44.0, and  update the `spryker-shop/shop` dependencies for the `CatalogPage`, `HomePage`, and `ProductDetailPage` modules:
 

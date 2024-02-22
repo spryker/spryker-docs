@@ -342,7 +342,7 @@ In August 2023, we have added and updated the following pages:
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
 - [Vertex integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 - [Select target branch for PRs](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to select a target branch on Spryker CI.
-- [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
+- [Configure Spryker Code Upgrader](/docs/ca/devscu/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
 - [Oryx: Design tokens](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
 - [Oryx: Icon system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
 - [Oryx: Localization](/docs/dg/dev/frontend-development/202307.0/oryx/internationalization/oryx-localization.html): Learn how localization is handled in Oryx applications.

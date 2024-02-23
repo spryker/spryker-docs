@@ -2,6 +2,7 @@
 title: Install the Prices + Marketplace Wishlist Glue API
 description: This document describes how to integrate the Prices + Marketplace Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202307.0/glue/prices-marketplace-wishlist-feature-integration.html
 related:
@@ -22,8 +23,8 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
-| Product Prices API | {{page.version}} |[Glue API: Product Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html) |
+| Marketplace Wishlist | {{page.version}} |[Install Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
+| Product Prices API | {{page.version}} |[Install the Product Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html) |
 
 
 ### 1) Set up behavior

@@ -37,7 +37,7 @@ To set up multiple stores, follow the steps in the following sections:
 
 ### Configure code buckets
 
-Code buckets provide an easy way to execute different business logic in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/scos/dev/architecture/code-buckets.html).
+Code buckets provide an easy way to execute different business logic in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/dg/dev/architecture/code-buckets.html).
 
 ### Configure stores
 
@@ -140,7 +140,7 @@ return 'DE';
 ...
 ```
 
-4. To import data for the stores you've added, adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
+4. To import data for the stores you've added, adjust all the [import files and import configuration](/docs/dg/dev/data-import/{{site.version}}/data-importers-implementation.html).
 
 For example, define the import source for the `DE` store you've added:
 

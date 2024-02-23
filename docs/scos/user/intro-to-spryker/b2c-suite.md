@@ -29,8 +29,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Configurable Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html)
 - [Return Management](/docs/pbc/all/return-management/{{site.version}}/marketplace/marketplace-return-management-feature-overview.html)
 - [Configurable Bundle](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html)
-- [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/comments-feature-overview.html)
-- [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/persistent-cart-sharing-feature-overview.html)
+- [Comments](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/comments-feature-overview.html)
+- [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html)
 - [Scheduled Prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
@@ -68,7 +68,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Product Rating & Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html)
 - [Product Labels](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-labels-feature-overview.html)
 - [Product Lists](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-lists-feature-overview.html)
-- [Non-splittable Products](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html)
+- [Non-splittable Products](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html)
 - [Catalog](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html)
 - [Category Management](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/category-management-feature-overview.html)
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
@@ -81,8 +81,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 ## B2C Demo Shop
 To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
-{% wistia e169fy8miw 960 720 %}
+{% wistia 7ibj2uavig 960 720 %}
 
 To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 
-To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).

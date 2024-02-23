@@ -2,6 +2,7 @@
 title: Marketplace Shipment feature overview
 description: This document contains concept information for the Marketplace Shipment feature.
 template: concept-topic-template
+last_updated: Nov 9, 2023
 redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-shipment-feature-overview.html
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-shipment-feature-walkthrough.html
@@ -41,7 +42,7 @@ On the **Order _[Order ID]_** drawer, every merchant can view only the shipment 
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Marketplace Shipment feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |  |
+| [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |  |
 | [Marketplace Shipment + Cart feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |  |
 | [Marketplace Shipment + Customer feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |   |
 | [Marketplace Shipment + Checkout feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |  |

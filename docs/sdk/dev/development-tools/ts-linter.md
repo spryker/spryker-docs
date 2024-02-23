@@ -43,7 +43,7 @@ related:
 
 {% info_block warningBox "No longer supported" %}
 
-Since the `202307.0` release, this tool is no longer supported and has been replaced by `ESLint`. To migrate to `ESLint`, follow [Migration guide - Switch from TSLint to ESLint](/docs/scos/dev/front-end-development/{{site.version}}/migration-guide-switch-from-tslint-to-eslint.html).
+Since the `202307.0` release, this tool is no longer supported and has been replaced by `ESLint`. To migrate to `ESLint`, follow [Migration guide - Switch from TSLint to ESLint](/docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html).
 
 {% endinfo_block %}
 
@@ -53,7 +53,7 @@ Since the `202307.0` release, this tool is no longer supported and has been repl
 
 ## Installation
 
-For details about how to install the TS Linter for your project, see the [TS Linter integration file](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html).
+For details about how to install the TS Linter for your project, see the [TS Linter integration file](/docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html).
 
 ## Using TS Linter
 

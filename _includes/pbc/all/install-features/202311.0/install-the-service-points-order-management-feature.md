@@ -13,7 +13,7 @@ Install the required features:
 | NAME             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                       |
 |------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Service Points   | {{page.version}} | [Install the Service Points feature](/docs/pbc/all/service-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                         |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
+| Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
 
 ### Set up behavior
 
@@ -284,7 +284,8 @@ Register the following plugins to enable widgets:
 
 | PLUGIN                                      | SPECIFICATION                                               | PREREQUISITES | NAMESPACE                                       |
 |---------------------------------------------|-------------------------------------------------------------|---------------|-------------------------------------------------|
-| SalesServicePointNameForShipmentGroupWidget | Display order service point information on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
+| SalesServicePointNameForShipmentGroupWidget | Displays service points in orders on the Storefront. |               | SprykerShop\Yves\SalesServicePointWidget\Widget |
+| ServicePointNameForShipmentGroupWidget | Displays service points per shipment group on the Storefront. |               | SprykerShop\Yves\ServicePointWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -294,6 +295,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\SalesServicePointWidget\Widget\SalesServicePointNameForShipmentGroupWidget;
+use SprykerShop\Yves\ServicePointWidget\Widget\ServicePointNameForShipmentGroupWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -305,6 +307,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             SalesServicePointNameForShipmentGroupWidget::class,
+            ServicePointNameForShipmentGroupWidget::class,
         ];
     }
 }
@@ -315,12 +318,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Add the widget to a Twig template:
 ```twig
 {% raw %}{%{% endraw %} widget 'SalesServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} widget 'ServicePointNameForShipmentGroupWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-For service point-related orders, make sure the service point name is displayed in the order details.
-
-
-
+Make sure that, in orders with service points, service points are displayed during checkout and in the order details.
 
 
 {% endinfo_block %}

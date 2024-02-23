@@ -7,8 +7,9 @@ algolia:
     - search.md
     - docs/ca/dev/**/*.md
     - docs/scos/dev/**/*.md
-    - docs/scu/dev/**/*.md
     - docs/fes/dev/**/*.md
+    - docs/ca/devscu/**/*.md    
     - docs/pbc/all/**/*.md
     - docs/acp/user/**/*.md
     - docs/sdk/dev/**/*.md
+    - docs/dg/dev/**/*.md

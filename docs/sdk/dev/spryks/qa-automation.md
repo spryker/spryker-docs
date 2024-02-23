@@ -2,6 +2,7 @@
 title: QA automation
 description: QA automation lets you run QA tools and unit tests required by Spryker
 template: howto-guide-template
+last_updated: Nov 10, 2022
 ---
 
 QA automation is a feature that lets you run QA tools such as code style checks, static analysis, and unit tests required by Spryker.

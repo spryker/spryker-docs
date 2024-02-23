@@ -25,11 +25,11 @@ redirect_from:
   - /tutorials/introduction/tutorial-architecture-walkthrough-scos.htm
 related:
   - title: Conceptual overview
-    link: docs/scos/dev/architecture/conceptual-overview.html
+    link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Programming concepts
-    link: docs/scos/dev/architecture/programming-concepts.html
+    link: docs/dg/dev/architecture/programming-concepts.html
   - title: Modules and layers
-    link: docs/scos/dev/architecture/modules-and-layers.html
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 {% info_block infoBox %}
@@ -137,7 +137,7 @@ class HelloSprykerBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-4. Inside the `Business` layer, add your model folder and add a class to handle reversing the string. 
+4. Inside the `Business` layer, add your model folder and add a class to handle reversing the string.
 5. Call the method as `reverseString()`.
 
 {% info_block infoBox "Info" %}
@@ -148,7 +148,7 @@ To reverse the string, you can use the `strrev()` method.
 
 To hook things together, follow these steps:
 
-1. Instantiate an object from your class in the factory and let a facade method use the new factory method to get the needed object. 
+1. Instantiate an object from your class in the factory and let a facade method use the new factory method to get the needed object.
 2. From the object, call the `reverseString()` method.
 
 Your facade method looks like the following example:
@@ -239,7 +239,7 @@ When accessing a URL in Zed UI, the action responds to the requests, and then it
     1. Add a new folder inside the `HelloSpryker` module called `Plugin`.
     2. Inside the `Plugin` folder, add a folder called `Router`.
     3. Add your `RouteProviderPlugin` class with the name `HelloSprykerRouteProviderPlugin`:
-   
+
     ```php
     namespace Pyz\Yves\HelloSpryker\Plugin\Router;
 
@@ -273,8 +273,8 @@ When accessing a URL in Zed UI, the action responds to the requests, and then it
 4. In the application, register `HelloSprykerRouteProviderPlugin`, so the application knows about your controller action.
 5. In the `Router` module, go to the `RouterDependencyProvider::getRouteProvider()` method and add `HelloSprykerRouteProviderPlugin` to the array.
 6. To render your **Hello Spryker** page, add the twig file.
-7. Inside the `HelloSpryker` module, add the following folder structure: `Theme/default/views/index`. 
-    This folder structure reflects your theme and controller names. `default` is the theme name, and `index` is the controller name. 
+7. Inside the `HelloSpryker` module, add the following folder structure: `Theme/default/views/index`.
+    This folder structure reflects your theme and controller names. `default` is the theme name, and `index` is the controller name.
     For every action, there is a template with the same name.
 8. Because your action is called `index`, add a twig file for your action called `index.twig`:
 
@@ -295,7 +295,7 @@ When accessing a URL in Zed UI, the action responds to the requests, and then it
 Transfer objects are a great way to send data from Yves to Zed and to communicate between different objects in general. Transfer object definitions are located in the `Shared` directories because these objects are shared between Yves and Zed.
 
 To add a `HelloSpryker` transfer, follow these steps:
-1. Add a new folder inside `/src/Pyz/Shared` and call it `HelloSpryker`. 
+1. Add a new folder inside `/src/Pyz/Shared` and call it `HelloSpryker`.
 2. Add another folder called `Transfer`.
 3. To define their transfer objects' schemas, XML is used. Therefore, inside the `Transfer` directory, add an XML file and call it `hello_spryker.transfer.xml`.
 4. Add the following transfer schema:
@@ -313,7 +313,7 @@ To add a `HelloSpryker` transfer, follow these steps:
 </transfers>
 ```
 
-5. Run the following command: 
+5. Run the following command:
 ```bash
 console transfer:generate
 ```
@@ -344,7 +344,7 @@ When accessing `https://zed.mysprykershop.com/hello-spryker`, you must get `!rek
 
 ### 4. Build a `HelloSpryker` client to connect Yves to Zed
 
-To connect Yves to Zed, you need a *client*. Building a client for `HelloSpryker` is similar to building a module in Zed or Yves. 
+To connect Yves to Zed, you need a *client*. Building a client for `HelloSpryker` is similar to building a module in Zed or Yves.
 
 To build a client, follow these steps:
 1. Under `/src/Pyz/Client`, add a new folder and call it `HelloSpryker`.
@@ -381,7 +381,7 @@ To build a client, follow these steps:
 	```
 
  4. Add the stub. As the client is calling Zed, create a folder called `Zed` and add the stub inside it:
-    
+
     ```php
     namespace Pyz\Client\HelloSpryker\Zed;
 
@@ -562,9 +562,9 @@ public function indexAction(Request $request)
 
 ### 5. Make the `HelloSpryker` module read from the database
 
-Working with the database means working with the persistence layer in Zed. 
+Working with the database means working with the persistence layer in Zed.
 
-1. Go back to Zed, and inside `HelloSpryker`, add a new folder called `Persistence`. 
+1. Go back to Zed, and inside `HelloSpryker`, add a new folder called `Persistence`.
 2. Inside `Persistence`, add the directories `Propel/Schema`.
 3. Propel uses XML, thus Spryker uses XML as well. Inside the Schema directory, add the database XML schema file and call it `pyz_hello_spryker.schema.xml`:
 
@@ -598,7 +598,7 @@ Open the database and check if the `HelloSpryker` table is there.
 
 {% endinfo_block %}
 
-6. Write the reversed string into the database. 
+6. Write the reversed string into the database.
 7. In the `Business` layer, modify your model to do so after reversing the string:
 
 ```php
@@ -672,8 +672,8 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
 9. Let `IndexController` in Zed read from the database:
 
     1. Add a facade method with a model to read and from the database in the `Business` layer.
-    2. Call the model `StringReader`. 
-    3. From `IndexController` in the communication layer, call the facade method. 
+    2. Call the model `StringReader`.
+    3. From `IndexController` in the communication layer, call the facade method.
     4. To read from the database, inside `StringReader`, inject `HelloSprykerQueryContainer` using `HelloSprykerBusinessFactory`:
 
     ```php

@@ -2,6 +2,7 @@
 title: Edit product relations
 description: Learn how to edit product relations in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 related:
   - title: Create product relations
     link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/create-product-relations.html

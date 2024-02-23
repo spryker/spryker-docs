@@ -30,7 +30,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 ## Prerequisites
 
-You have created a new [module](/docs/scos/dev/back-end-development/extend-spryker/create-modules.html).
+You have created a new [module](/docs/dg/dev/backend-development/extend-spryker/create-modules.html).
 
 ## Create a table
 

@@ -11,16 +11,16 @@ redirect_from:
 
 This document describes how to create a new authorization strategy.
 
-Integrate authorization following the [Integrating Authorization Enabler](/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html) guide.
+Integrate authorization following the [Integrating Authorization Enabler](/docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html) guide.
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization:
 
-<details><summary markdown='span'>AuthorizationStrategyPluginInterface</summary>
+<details><summary markdown='span'>CustomAuthorizationStrategyPlugin implementing AuthorizationStrategyPluginInterface</summary>
 
 ```php
 <?php
 
-namespace Spryker\Client\Customer\Plugin\Authorization;
+namespace Pyz\Client\Customer\Plugin\Authorization;
 
 use Generated\Shared\Transfer\AuthorizationRequestTransfer;
 use Spryker\Client\AuthorizationExtension\Dependency\Plugin\AuthorizationStrategyPluginInterface;
@@ -31,7 +31,7 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
     /**
      * @var string
      */
-    protected const STRATEGY_NAME = 'CustomAuthorizationStrategy';
+    public const STRATEGY_NAME = 'CustomAuthorizationStrategy';
 
     /**
      * {@inheritDoc}
@@ -65,16 +65,18 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
 ```
 </details>
 
-`AuthorizationClient::authorize()` runs the plugin.
+The plugin has to be registered in `\Spryker\Client\Authorization\AuthorizationDependencyProvider::getAuthorizationStrategyPlugins`.
+
+`AuthorizationClient::authorize()` runs the plugins from this stack.
 
 To connect the resources and custom routes with this strategy, they need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
 
-**AuthorizationStrategyAwareResourceRoutePluginInterface**
+**DummyStoresResource implementing AuthorizationStrategyAwareResourceRoutePluginInterface**
 
 ```php
 <?php
 
-namespace Spryker\Glue\DummyStoresApi\Plugin;
+namespace Pyz\Glue\DummyStoresApi\Plugin;
 
 use Generated\Shared\Transfer\RouteAuthorizationConfigTransfer;
 use Spryker\Glue\GlueApplication\Plugin\GlueApplication\AbstractResourcePlugin;
@@ -82,6 +84,7 @@ use Spryker\Glue\GlueApplicationAuthorizationConnectorExtension\Dependency\Plugi
 use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\JsonApiResourceInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Spryker\Client\Customer\Plugin\Authorization\CustomAuthorizationStrategyPlugin;
 
 class DummyStoresResource extends AbstractResourcePlugin implements JsonApiResourceInterface, AuthorizationStrategyAwareResourceRoutePluginInterface
 {
@@ -92,7 +95,7 @@ class DummyStoresResource extends AbstractResourcePlugin implements JsonApiResou
     {
         return [
             Request::METHOD_GET => (new RouteAuthorizationConfigTransfer())
-                ->addStrategy('CustomAuthorizationStrategy')
+                ->addStrategy(CustomAuthorizationStrategyPlugin::STRATEGY_NAME)
                 ->setApiCode('xx01')
                 ->setHttpStatusCode(Response::HTTP_NOT_FOUND)
                 ->setApiMessage('Authorization failed.'),

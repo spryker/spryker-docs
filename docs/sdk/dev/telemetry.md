@@ -2,6 +2,7 @@
 title: Telemetry
 description: Learn about the Spryker SDK telemetry configuration. 
 template: howto-guide-template
+last_updated: Dec 16, 2022
 ---
 # Telemetry
 

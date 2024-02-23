@@ -42,7 +42,7 @@ Install the needed packages for the Merchant Portal with dependencies, see the a
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------- | ----- | ---------- |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
 ### Merchant Portal users
@@ -90,7 +90,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-In case you don't have merchant user data import integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) guide.
+In case you don't have merchant user data import integrated, you can find how to do it in the [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) guide.
 
 
 **data/import/common/common/marketplace/merchant_user.csv**
@@ -336,7 +336,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 ### 5) Separate Login feature setup (security firewalls).
 
-It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project, see [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html).
+It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project, see [Symfony 5 integration](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html).
 
 Install the required modules:
 
@@ -382,10 +382,10 @@ Integrate the following related features:
 
 | FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE   |
 |----------|------------------|------------|
-| Merchant Portal - Marketplace Merchant    | [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)    |
-| Merchant Portal - Marketplace Product   | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)       |
-| Merchant Portal - Marketplace Order Management     |                          | [Merchant Portal - Marketplace Order Management feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html)    |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Merchant    | [Install the Merchant Portal - Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html)    |
+| Merchant Portal - Marketplace Product   | [Install the Merchant Portal - Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html)       |
+| Merchant Portal - Marketplace Order Management     |                          | [Install the Merchant Portal - Marketplace Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html)    |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |                           | [Install the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
 | Merchant Portal - Marketplace Product + Inventory Management  |                           | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)     |
 | Merchant Portal - Marketplace Product Options Management   |                           | [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html)    |
 | Merchant Portal - Marketplace Product + Tax   |                           | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)   |

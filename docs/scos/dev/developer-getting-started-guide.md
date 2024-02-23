@@ -6,17 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
-  - /v1/docs/en/about-the-development-guide
-  - /v4/docs/installation-guide-b2c
-  - /v4/docs/en/installation-guide-b2c
-  - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b  -
-  - /2021080/docs/installation-guide-b2c
-  - /2021080/docs/en/installation-guide-b2c
-  - /docs/installation-guide-b2c
-  - /docs/en/installation-guide-b2c
-  - /dev-getting-started.htm
-  - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
 ---
@@ -34,7 +23,7 @@ You can choose from the following options:
 
 Both Demo Shops can also be expanded with separate features and modules.
 
-To install Spryker, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
+To install Spryker, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
 ### The deploy file
 
@@ -74,7 +63,7 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+When installing and managing module dependencies, we use [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
 
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 * To update all the modules for your project: `composer update "spryker/*"`.
@@ -95,20 +84,20 @@ You can easily keep track of new module versions using the [composer-versions-ch
 
 * To add a new module to your project: `composer require "spryker/module-name"`.
 
-To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
+To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
 ## 3. Configure the environment
 
 To configure and customize your project, you can do the following:
 
-1. Define how to manage the settings in the configuration files with [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
+1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    * [Database](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
-    * [Redis](/docs/scos/dev/set-up-spryker-locally/redis-configuration.html)
+    <!-- * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html) -->
+    * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
-    * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
+    * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
+4. [Schedule tasks](/docs/dg/dev/backend-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ### Store clean-up
@@ -216,10 +205,10 @@ When in a production environment, Zed must be configured to use a VPN, basic acc
 
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
-* [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
-* [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
+* [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
+* [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
+* [Technology stack](/docs/dg/dev/architecture/technology-stack.html): to learn about the technologies we use.
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory

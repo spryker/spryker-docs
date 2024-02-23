@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) feature.
 
 {% info_block errorBox "Included features" %}
 
@@ -24,7 +24,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -431,7 +431,7 @@ Ensure that the OAuth client has been added to the `spy_oauth_client` table by r
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
 
-Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 1. Run the command:
@@ -609,7 +609,7 @@ Ensure the following:
 
 ## Install feature frontend
 
-Follow the steps below to install the [Customer Account Management]([Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)) feature frontend.
+Follow the steps below to install the [Customer Account Management]([Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)) feature frontend.
 
 ### Prerequisites
 
@@ -617,7 +617,7 @@ Overview and install the necessary features before beginning the integration.
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -1001,5 +1001,5 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 | NAME                                           | INSTALLATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
-| Customer Account Management + Order Management | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
+| Customer API	                                  | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
+| Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

@@ -6,6 +6,8 @@ template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-merchant-portal-product-offer-management-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-merchant-portal-product-offer-management-feature-integration.html
+  - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-merchant-portal-product-offer-management-feature.html
+  - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/marketplace-product-offer-feature-integration.html
 related:
   - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html

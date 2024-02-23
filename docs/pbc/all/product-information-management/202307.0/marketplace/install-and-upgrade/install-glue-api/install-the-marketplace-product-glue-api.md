@@ -1,7 +1,8 @@
 ---
-title: "Glue API: Marketplace Product feature integration"
+title: "Install the Marketplace Product Glue API"
 description: This document describes how to integrate the Marketplace Product Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+last_updated: Nov 7, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
   - /docs/marketplace/dev/feature-integration-guides/202307.0/glue/marketplace-product-feature-integration.html

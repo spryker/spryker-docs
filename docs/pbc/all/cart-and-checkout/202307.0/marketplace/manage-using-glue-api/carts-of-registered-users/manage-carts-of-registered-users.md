@@ -2,6 +2,7 @@
 title: Managing carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
@@ -27,7 +28,7 @@ For detailed information about the modules that provide the API functionality an
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
 * [Glue API: Merchant Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html)
 
 ## Create a cart
@@ -2447,9 +2448,9 @@ To retrieve all carts, send the request:
 | company-users |  isDefault | Boolean | Defines if the [company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
 For the attributes of the included resources, see:
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
@@ -4338,10 +4339,10 @@ For the attributes of carts of registered users and included resources, see [Ret
 
 For the attributes of the included resources, see:
 * [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
-* [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html).
+* [Managing gift cards of registered users](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
+* [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)

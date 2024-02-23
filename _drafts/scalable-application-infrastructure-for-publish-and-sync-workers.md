@@ -96,7 +96,7 @@ Symbols:
 
 ## Integrate scalable application infrastructure for publish and sync workers
 
-For instructions, see [Integrate scalable application infrastructure for publish and sync workers](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-scalable-application-infrastructure-for-publish-and-sync-workers).
+For instructions, see [Integrate scalable application infrastructure for publish and sync workers](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-scalable-application-infrastructure-for-publish-and-sync-workers).
 
 ## Implementation details
 

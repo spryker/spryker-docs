@@ -2,6 +2,7 @@
 title: Resolving search engine friendly URLs
 description: Learn how to resolve search engine friendly URLs via Glue API in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 2, 2023
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
@@ -12,7 +13,7 @@ For SEO purposes, Spryker automatically generates SEF URLs for products and cate
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
 * [Retrieve a category tree](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html)
 * [Retrieve a category node](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)
-* [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-cms-pages.html)
+* [Retrieve a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html)
 * [Retrieve a merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#retrieve-a-merchant)
 
 In your development, the endpoints can help you to:
@@ -38,7 +39,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| {% raw %}***{{SEF URL}}***{% endraw %} | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)</li><li>[retrieving category nodes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)</li><li>[Retrieve CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-cms-pages.html)</li><li>[retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)</li></ul>|
+| {% raw %}***{{SEF URL}}***{% endraw %} | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)</li><li>[retrieving category nodes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html)</li><li>[Retrieve CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-cms-pages.html)</li><li>[retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)</li></ul>|
 
 ### Request
 

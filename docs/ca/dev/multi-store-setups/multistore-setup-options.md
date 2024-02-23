@@ -2,8 +2,10 @@
 title: Multi-store setup options
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
+  - /docs/scos/user/introduction-to-the-spryker-commerce-os/multiple-stores/multi-store-setup.html
 related:
   - title: Add and remove databases of stores
     link: docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
@@ -71,7 +73,7 @@ While the search index and key-value storages are shared resources, you can have
 - Centralized third-party integrations.
 
 This is a standard Spryker setup, best suited for the following use cases:
-- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
+- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](/docs/dg/dev/architecture/code-buckets.html) to achieve store-specific business logic.
 - Products, customers, orders, etc., are stored in the same database, making collaborative management across all stores simpler.
 
 On the infrastructure level, applications can't be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:
@@ -85,13 +87,13 @@ The following table provides details on infrastructure for this setup:
 
 <div class="width-100">
 
-| What | How |
-|------|-----|
-| DB     | Shared    |
-| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
-| Spryker Storefront Yves     |Shared     |
-| Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
-| Complexity of rollout     | Low   |
+| What                                                                           | How    |
+| ------------------------------------------------------------------------------ | ------ |
+| DB                                                                             | Shared |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared |
+| Spryker Storefront Yves                                                        | Shared |
+| Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared |
+| Complexity of rollout                                                          | Low    |
 
 </div>
 
@@ -129,13 +131,13 @@ The following table provides details on the infrastructure for this setup:
 
 <div class="width-100">
 
-| What | How |
-|------|-----|
-| DB     | Separate    |
-| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Shared    |
-| Spryker Storefront Yves     |Shared     |
+| What                                                                           | How      |
+| ------------------------------------------------------------------------------ | -------- |
+| DB                                                                             | Separate |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared   |
+| Spryker Storefront Yves                                                        | Shared   |
 | Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Shared   |
-| Complexity of rollout     | Medium   |
+| Complexity of rollout                                                          | Medium   |
 
 </div>
 
@@ -183,13 +185,13 @@ The following table provides details on the infrastructure for this setup:
 
 <div class="width-100">
 
-| What | How |
-|------|-----|
-| DB     | Separate    |
-| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services     | Separate    |
-| Spryker Storefront Yves     |Separate     |
-| Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Separate   |
-| Complexity of rollout     | High   |
+| What                                                                           | How      |
+| ------------------------------------------------------------------------------ | -------- |
+| DB                                                                             | Separate |
+| Key-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Separate |
+| Spryker Storefront Yves                                                        | Separate |
+| Spryker Commerce OS (Backend Gateway Zed + Glue Backend API + Back Office)     | Separate |
+| Complexity of rollout                                                          | High     |
 
 </div>
 
@@ -199,35 +201,35 @@ The following tables contain high-level criteria that sum up the setups describe
 
 **Infrastructure details:**
 
-| What                                                                   | Setup 1 | Setup 2  | Setup 3  |
-|------------------------------------------------------------------------|---------|----------|----------|
-| DB                                                                     | Shared  | Separate | Separate |
+| What                                                                          | Setup 1 | Setup 2  | Setup 3  |
+| ----------------------------------------------------------------------------- | ------- | -------- | -------- |
+| DB                                                                            | Shared  | Separate | Separate |
 | Ke-value storage (Redis) and Elasticsearch (OpenSearch/ElasticCache) services | Shared  | Shared   | Separate |
-| Spryker Storefront Yves                                                | Shared  | Shared   | Separate |
-| Spryker Commerce OS                                                    | Shared  | Shared   | Separate |
-| Complexity of rollout                                                  | Low     | Medium   | High     |
+| Spryker Storefront Yves                                                       | Shared  | Shared   | Separate |
+| Spryker Commerce OS                                                           | Shared  | Shared   | Separate |
+| Complexity of rollout                                                         | Low     | Medium   | High     |
 
 **High-level characteristics:**
 
-| What                                | Setup 1                                                                                 | Setup 2                                                                                                  | Setup 3                                                                                 |
-|-------------------------------------|-----------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------|
-| Stores                              | 1 store or multiple stores                                                               | Multiple stores                                                                                          | Multiple stores                                                                         |
-| ES and Redis                        | Each store has a dedicated index for ES and its own key-value storage namespace (Redis) | Each store has a dedicated index for ES and its own key-value storage namespace (Redis)                  | Each store has a dedicated index for ES and its own key-value storage namespace (Redis) |
-| Database                            | One shared database                                                                     | Virtual separated database per store: you can have cluster sharing same or use different database setups | Separate database per store                                                             |
+| What                                 | Setup 1                                                                                 | Setup 2                                                                                                  | Setup 3                                                                                 |
+| ------------------------------------ | --------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Stores                               | 1 store or multiple stores                                                              | Multiple stores                                                                                          | Multiple stores                                                                         |
+| ES and Redis                         | Each store has a dedicated index for ES and its own key-value storage namespace (Redis) | Each store has a dedicated index for ES and its own key-value storage namespace (Redis)                  | Each store has a dedicated index for ES and its own key-value storage namespace (Redis) |
+| Database                             | One shared database                                                                     | Virtual separated database per store: you can have cluster sharing same or use different database setups | Separate database per store                                                             |
 | AWS regions                          | One region with multiple stores                                                         | One region with multiple stores                                                                          | Allows different regions                                                                |
-| Codebase                            | Shared codebase                                                                         | Shared codebase                                                                                          | Shared or separate codebases (up to a project development team)                         |
-| Code bucket/themes                  | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
-| Centralized third-party integrations  | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
-| Fully independent development teams | Not supported                                                                           | Not supported                                                                                            | Supported (for separate codebases)                                                      |
+| Codebase                             | Shared codebase                                                                         | Shared codebase                                                                                          | Shared or separate codebases (up to a project development team)                         |
+| Code bucket/themes                   | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
+| Centralized third-party integrations | Supported                                                                               | Supported                                                                                                | Supported (for shared codebase)                                                         |
+| Fully independent development teams  | Not supported                                                                           | Not supported                                                                                            | Supported (for separate codebases)                                                      |
 
 
 **Load criteria:**
 
-|  | Page view load (Storefront Yves)  | Backend load (Spryker Commerce OS)  |Database Throughput   |Shared data (customers, orders, etc.)|
-|------|---|---|---|---|
-| SETUP 1    |Normal   | Normal  |Normal  |Yes  |
-| SETUP 2    | Normal/High  | Normal/High   | Normal/High   | No |
-| SETUP 3     | High  | High  |High  |No  |
+|         | Page view load (Storefront Yves) | Backend load (Spryker Commerce OS) | Database Throughput | Shared data (customers, orders, etc.) |
+| ------- | -------------------------------- | ---------------------------------- | ------------------- | ------------------------------------- |
+| SETUP 1 | Normal                           | Normal                             | Normal              | Yes                                   |
+| SETUP 2 | Normal/High                      | Normal/High                        | Normal/High         | No                                    |
+| SETUP 3 | High                             | High                               | High                | No                                    |
 
 
 {% info_block warningBox "High load" %}
@@ -238,11 +240,11 @@ If you anticipate a high load, it's essential to consult and obtain guidance fro
 
 **Limitations:**
 
-|  | Setup 1  | Setup 2  | Setup 3  |
-|------|---|---|---|
-| ACCESSIBILITY     | <ul><li>Data is separated only on the application level.</li><li>Complexity in data separation in the Back Office.</li></ul>  | Full data separation | Full data separation  |
-| MAINTAINABILITY     |<ul><li>Not all features fully support Multi-Store in one database. Some features have to be customized as multi-country</li><li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Import of each country’s data into its own database only, so there is no shared catalog data.</li> <li>New codebase is rolled out to all countries at once.</li></ul>   |<ul><li>Data import has to be executed on all environments.</li><li>It is impossible to roll out the codebase to all regions at the same time.</li></ul>   |
-| PERFORMANCE     |Infrastructure is subject to more frequent scaling up in case of higher loads.   | Infrastructure is subject to more frequent scaling up in case of higher loads.  |Isolated AWS accounts.   |
+|                 | Setup 1                                                                                                                                                                                         | Setup 2                                                                                                                                                                       | Setup 3                                                                                                                                                  |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ACCESSIBILITY   | <ul><li>Data is separated only on the application level.</li><li>Complexity in data separation in the Back Office.</li></ul>                                                                    | Full data separation                                                                                                                                                          | Full data separation                                                                                                                                     |
+| MAINTAINABILITY | <ul><li>Not all features fully support Multi-Store in one database. Some features have to be customized as multi-country</li><li>New codebase is rolled out to all countries at once.</li></ul> | <ul><li>Import of each country’s data into its own database only, so there is no shared catalog data.</li> <li>New codebase is rolled out to all countries at once.</li></ul> | <ul><li>Data import has to be executed on all environments.</li><li>It is impossible to roll out the codebase to all regions at the same time.</li></ul> |
+| PERFORMANCE     | Infrastructure is subject to more frequent scaling up in case of higher loads.                                                                                                                  | Infrastructure is subject to more frequent scaling up in case of higher loads.                                                                                                | Isolated AWS accounts.                                                                                                                                   |
 
 ## Next steps
 

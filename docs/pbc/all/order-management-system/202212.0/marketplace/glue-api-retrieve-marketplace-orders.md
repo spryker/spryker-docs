@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve Marketplace orders"
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
+last_updated: Nov 6, 2023
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/marketplace/glue-api-manage-marketplace-returns.html
@@ -19,7 +20,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Install the Order Management Glue API**](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve all orders
 

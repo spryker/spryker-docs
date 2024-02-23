@@ -122,7 +122,7 @@ Request sample: add an item to a wishlist
 | quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#response).
 
 ### Response
 
@@ -222,9 +222,9 @@ Response sample: add an item to a wishlist
 | productOfferReference | String | |Unique identifier of the product offer. |
 | merchantReference | String  | Unique identifier of the merchant. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
+For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
 ## Update a wishlist item
 
@@ -316,7 +316,7 @@ To update a wishlist item, send the request:
 | quantity  | Integer  | Quantity of the configurable product to update in the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -395,9 +395,9 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 | quantity  | Integer  | Updated configurable product quantity in the wishlist.  |
 | availableQuantity  | Integer  | Configurable product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html#response).
+For attribute descriptions of concrete product availability, see [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#response).
 
 
 ## Delete a wishlist item

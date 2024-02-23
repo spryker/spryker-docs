@@ -12,7 +12,11 @@ entries:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
         nested:
-        - title: Security elease notes 202309.0
+        - title: Security release notes 202312.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+        - title: Release notes 202311.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html
+        - title: Security release notes 202309.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
         - title: Release notes 202307.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html
@@ -36,16 +40,12 @@ entries:
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
           - title: Security release notes 202212.0
             url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
-        - title: Release notes 202211.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html
-        - title: Release notes 202204.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
-    - title: Docs release notes
+    - title: Docs updates
       url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
-      - title: PHP 8.0 as a minimum version for all Spryker projects
+      - title: PHP 8.1 as a minimum version for all Spryker projects
         url: /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
       - title: Supported versions of PHP
         url: /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
@@ -110,7 +110,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
       - title: Back Office for Marketplace Operator
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
-      - title: Merchant onborading
+      - title: Merchant onboarding
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
       - title: Marketplace Storefront
         url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html
@@ -159,7 +159,7 @@ entries:
       - title: Review pull requests
         url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
   - title: Features
     url: /docs/scos/user/features/features.html
     include_versions:

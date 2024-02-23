@@ -8,6 +8,9 @@ originalArticleId: 6d136e03-869c-4adf-b8d3-0ea69c2589e0
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/configuring-access-to-private-repositories.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-access-to-private-repositories.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/configuring-access-to-private-repositories.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/configuring-access-to-private-repositories.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

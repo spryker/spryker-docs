@@ -8,6 +8,9 @@ originalArticleId: c3d69fda-9546-4de8-80e4-cfea6b3be6d0
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/running-tests-with-the-docker-sdk.html
   - /docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/running-tests-with-the-docker-sdk.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/running-tests-with-the-docker-sdk.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

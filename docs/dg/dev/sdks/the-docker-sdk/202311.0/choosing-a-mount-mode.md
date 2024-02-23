@@ -8,6 +8,9 @@ originalArticleId: b5accb12-910a-4958-b39f-3c4d21d96b95
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-mount-mode.html
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-mount-mode.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-mount-mode.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/choosing-a-mount-mode.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

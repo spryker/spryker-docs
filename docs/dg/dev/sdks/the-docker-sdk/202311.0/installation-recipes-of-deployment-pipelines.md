@@ -6,6 +6,9 @@ template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/installation-recipes-of-deployment-pipelines.html
 - /docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html
+- /docs/scos/dev/the-docker-sdk/202307.0/installation-recipes-of-deployment-pipelines.html
+- /docs/scos/dev/the-docker-sdk/202212.0/installation-recipes-of-deployment-pipelines.html
+
 
 ---
 

@@ -6,8 +6,11 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
 originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
 redirect_from:
-  - /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-quick-start-guide.html
-  - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-quick-start-guide.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

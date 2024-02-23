@@ -8,6 +8,9 @@ originalArticleId: 624e91c2-a207-41b4-957f-98de2a96f90b
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-configuration-reference.html
   - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-configuration-reference.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-configuration-reference.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-configuration-reference.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

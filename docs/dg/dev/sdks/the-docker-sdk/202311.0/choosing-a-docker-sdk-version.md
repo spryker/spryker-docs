@@ -8,6 +8,9 @@ originalArticleId: 18a333a7-2d89-455f-885a-92d24594fb31
 redirect_from:
   - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-docker-sdk-version.html
   - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-docker-sdk-version.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-docker-sdk-version.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/choosing-a-docker-sdk-version.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

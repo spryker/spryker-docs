@@ -11,6 +11,7 @@ related:
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file.html
 - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file.html
+- /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file.html
 
 ---
 

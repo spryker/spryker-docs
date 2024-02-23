@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202311.0/running-tests-with-the-docker-sdk.html
 ---
 title: Running tests with the Docker SDK
 description: Learn how to run tests with the Docker SDK.
@@ -7,10 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/running-tests-with-the-docker-sdk
 originalArticleId: c3d69fda-9546-4de8-80e4-cfea6b3be6d0
 redirect_from:
-  - /2021080/docs/running-tests-with-the-docker-sdk
-  - /2021080/docs/en/running-tests-with-the-docker-sdk
-  - /docs/running-tests-with-the-docker-sdk
-  - /docs/en/running-tests-with-the-docker-sdk
+  - /docs/scos/dev/the-docker-sdk/202311.0/running-tests-with-the-docker-sdk.html
   - /docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html
 related:
   - title: The Docker SDK

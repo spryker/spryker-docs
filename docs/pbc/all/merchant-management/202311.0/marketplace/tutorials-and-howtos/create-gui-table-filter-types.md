@@ -60,4 +60,4 @@ Add a new `addFilter***()` method to `Spryker\Shared\GuiTable\Configuration\Buil
     }
 ```
 
-See the [Table Filter extension](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html) to learn more about the Table Filters feature.
+See the [Table Filter extension](/docs/dg/dev/frontend-development/{{site.version}}/marketplace/table-design/table-filter-extension/table-filter-extension.html) to learn more about the Table Filters feature.

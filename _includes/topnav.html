@@ -34,13 +34,13 @@
                                                 {% elsif page.product == 'pbc' and page.role == 'all' %}
                                                 Packages Business Capabilities
                                                 {% elsif page.product == 'ca' and page.role == 'dev' %}
-                                                Cloud administration
+                                                Managing cloud applications
+                                                {% elsif page.product == 'ca' and page.role == 'devscu' %}
+                                                Upgrading cloud applications
                                                 {% elsif page.product == 'scos' and page.role == 'dev' %}
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
-                                                {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
-                                                Spryker Code Upgrader
                                                 {% elsif page.product == 'sdk' and page.role == 'dev' %}
                                                 Spryker SDK
                                                 {% else %}
@@ -86,19 +86,35 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
-                                                Cloud administration
+                                            <li class="dropdown">
+                                                <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                    Cloud administration
+                                                    <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
                                                 </a>
-                                            </li>                                            
+                                                <ul class="main-nav__drop dropdown-menu">
+                                                    <li>
+                                                        <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">Manage applications</span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="/docs/ca/devscu/spryker-code-upgrader.html" class="main-nav__drop-link">
+                                                            <span class="main-nav__drop-link-title">
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
+                                                            </span>
+                                                            <span class="main-nav__drop-link-subtitle">Upgrade applications</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </li>
                                             <li>
                                                 <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
                                                 Spryker SDK
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/scu/dev/spryker-code-upgrader.html" class="main-nav__drop-link">
-                                                Spryker Code Upgrader
                                                 </a>
                                             </li>
                                         </ul>

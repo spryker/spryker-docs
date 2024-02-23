@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-docker-sdk-version.html
 ---
 title: Choosing a Docker SDK version
 description: Learn how to choose a versioning approach and configure a particular version of Docker SDK for your project.
@@ -11,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/choosing-a-docker-sdk-version
   - /docs/choosing-a-docker-sdk-version
   - /docs/en/choosing-a-docker-sdk-version
+  - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-docker-sdk-version.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -69,7 +70,7 @@ Depending on your project requirements, choose one of the versioning approaches:
 
 {% info_block infoBox "Forking the Docker SDK" %}
 
-[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment. 
+[Spryker Cloud Commerce OS](https://cloud.spryker.com/) does not support forks of the Docker SDK. Your project's code must be compatible with the Docker SDK's main branch for a successful deployment.
 
 {% endinfo_block %}
 

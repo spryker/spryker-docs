@@ -1,11 +1,12 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 ---
 title: Deploy file inheritance—common use cases
 description: Examples of using deploy file inheritance
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file-inheritance-common-use-cases.html
+
 last_updated: Jul 26, 2023
-related: 
+related:
   - title: Deploy file reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
   - title: Deploy file
@@ -163,7 +164,7 @@ To enable New Relic with a dedicated deploy file, do the following:
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/enabled-newrelic.yml`.
 
 2. Define New Relic as enabled with the license key defined dynamically:
-   
+
 ```yaml
 docker:
     newrelic:
@@ -291,7 +292,7 @@ To add an application via an included deploy file, do the following:
 1. Create `config/deploy-templates/{DEPLOY_FILE_NAME}`. For example, `config/deploy-templates/merchant-application.yml`.
 
 2. Define the application with the endpoint defined dynamically:
-   
+
 ```yaml
 groups:
     EU:

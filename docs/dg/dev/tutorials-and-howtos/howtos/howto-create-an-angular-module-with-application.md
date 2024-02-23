@@ -20,7 +20,7 @@ You may want to create a new Angular module for a few reasons:
 ## 1) Create an Angular module scaffolding structure
 
 A new Angular module needs a proper scaffolding structure.
-The necessary list of files is provided in the [Project structure document, Module structure section](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/project-structure.html#module-structure).
+The necessary list of files is provided in the [Project structure document, Module structure section](/docs/dg/dev/frontend-development/{{site.version}}/marketplace/marketplace-frontend-project-and-module-structure.html#module-structure).
 Each new Angular module can contain its own set of Twig Web Components.
 
 ## 2) Register aт Angular module

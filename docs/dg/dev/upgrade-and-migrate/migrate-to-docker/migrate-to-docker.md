@@ -110,6 +110,14 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
+## Remove Vagrant files
+
+Remove the following Vagrant files:
+
+* `config/install/development.yml`
+* `config/shared/config_default-development_*.php`
+* `/tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default-development_*.php`
+
 ## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.

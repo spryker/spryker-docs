@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202212.0/docker-environment-infrastructure.html
 ---
 title: Docker environment infrastructure
 last_updated: Jun 16, 2021
@@ -6,10 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-environment-infrastructure
 originalArticleId: e94dd005-cda2-48f8-a224-dea6d6e5ea46
 redirect_from:
-  - /2021080/docs/docker-environment-infrastructure
-  - /2021080/docs/en/docker-environment-infrastructure
-  - /docs/docker-environment-infrastructure
-  - /docs/en/docker-environment-infrastructure
+- /docs/scos/dev/the-docker-sdk/202212.0/docker-environment-infrastructure.html
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

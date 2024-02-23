@@ -1,4 +1,3 @@
-  - /docs/scos/dev/the-docker-sdk/202307.0/docker-environment-infrastructure.html
 ---
 title: Docker environment infrastructure
 last_updated: Jun 16, 2021
@@ -11,6 +10,8 @@ redirect_from:
   - /docs/docker-environment-infrastructure
   - /docs/en/docker-environment-infrastructure
   - /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+  - /docs/scos/dev/the-docker-sdk/202307.0/docker-environment-infrastructure.html
+
 related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html

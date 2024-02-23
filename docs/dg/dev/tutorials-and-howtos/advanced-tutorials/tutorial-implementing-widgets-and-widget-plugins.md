@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
 ---
 title: "Tutorial: Implementing widgets and widget plugins"
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-widgets-widget-plugins
 originalArticleId: 54143dda-1c71-4bb0-b78f-5bf9d56584c1
 redirect_from:
-  - /2021080/docs/t-widgets-widget-plugins
-  - /2021080/docs/en/t-widgets-widget-plugins
-  - /docs/t-widgets-widget-plugins
-  - /docs/en/t-widgets-widget-plugins
-  - /v6/docs/t-widgets-widget-plugins
-  - /v6/docs/en/t-widgets-widget-plugins
-  - /v5/docs/t-widgets-widget-plugins
-  - /v5/docs/en/t-widgets-widget-plugins
-  - /v4/docs/t-widgets-widget-plugins
-  - /v4/docs/en/t-widgets-widget-plugins
-  - /v3/docs/t-widgets-widget-plugins
-  - /v3/docs/en/t-widgets-widget-plugins
-  - /v2/docs/t-widgets-widget-plugins
-  - /v2/docs/en/t-widgets-widget-plugins
-  - /v1/docs/t-widgets-widget-plugins
-  - /v1/docs/en/t-widgets-widget-plugins
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
 ---
 
 This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/dg/dev/backend-development/yves/modular-frontend.html).
@@ -222,7 +206,7 @@ This section is valid only for projects which are running module `spryker/kernel
 
 {% endinfo_block %}
 
-To implement a widget, follow these steps: 
+To implement a widget, follow these steps:
 
 ### 1. Place widget extensions
 

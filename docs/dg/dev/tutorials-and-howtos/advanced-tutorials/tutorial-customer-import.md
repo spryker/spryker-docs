@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
 ---
 title: "Tutorial: Customer import"
 description: Use the guide to extend the Importer module and import customer data using a .CSV file
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-customer-import
 originalArticleId: 3745e837-5a33-4131-9cd2-fbc625020e8d
 redirect_from:
-  - /2021080/docs/t-customer-import
-  - /2021080/docs/en/t-customer-import
-  - /docs/t-customer-import
-  - /docs/en/t-customer-import
-  - /v6/docs/t-customer-import
-  - /v6/docs/en/t-customer-import
-  - /v5/docs/t-customer-import
-  - /v5/docs/en/t-customer-import
-  - /v4/docs/t-customer-import
-  - /v4/docs/en/t-customer-import
-  - /v3/docs/t-customer-import
-  - /v3/docs/en/t-customer-import
-  - /v2/docs/t-customer-import
-  - /v2/docs/en/t-customer-import
-  - /v1/docs/t-customer-import
-  - /v1/docs/en/t-customer-import
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/import-customers/-->

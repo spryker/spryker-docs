@@ -6,6 +6,7 @@ last_updated: Oct 30, 2023
 redirect_from:
   - /docs/scos/dev/feature-integration-guides/202212.0/backend-api-feature-integration.html
   - /docs/scos/dev/technical-enhancement-integration-guides/integrate-zed-api/integrate-zed-api.html
+  - /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
 ---
 
 

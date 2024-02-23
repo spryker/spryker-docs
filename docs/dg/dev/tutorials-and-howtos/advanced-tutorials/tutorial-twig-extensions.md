@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
 ---
 title: "Tutorial: Twig extensions"
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
 originalArticleId: 4a503169-a26b-4a37-bb44-f20b34a81c4e
 redirect_from:
-  - /2021080/docs/t-twig-extensions
-  - /2021080/docs/en/t-twig-extensions
-  - /docs/t-twig-extensions
-  - /docs/en/t-twig-extensions
-  - /v6/docs/t-twig-extensions
-  - /v6/docs/en/t-twig-extensions
-  - /v5/docs/t-twig-extensions
-  - /v5/docs/en/t-twig-extensions
-  - /v4/docs/t-twig-extensions
-  - /v4/docs/en/t-twig-extensions
-  - /v3/docs/t-twig-extensions
-  - /v3/docs/en/t-twig-extensions
-  - /v2/docs/t-twig-extensions
-  - /v2/docs/en/t-twig-extensions
-  - /v1/docs/t-twig-extensions
-  - /v1/docs/en/t-twig-extensions
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
 related:
   - title: "Tutorial: How the define Twig tag is working"
     link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html

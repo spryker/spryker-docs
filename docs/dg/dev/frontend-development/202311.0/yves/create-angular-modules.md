@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create an Angular module with application"
+title: Create Angular modules
 last_updated: Jan 17, 2023
 description: This document shows how to create a new Angular module with the application
 template: howto-guide-template
@@ -9,25 +9,24 @@ redirect_from:
 
 ---
 
-This document describes how to create a new Angular module with the application.
+This document describes how to create an Angular module with the application.
 
-You may want to create a new Angular module for a few reasons:
+Reasons to create a module:
 
-- Create new Angular and Web components on the project level.
-- Extend existing core an Angular module on the project level.
+- Create Angular and web components on the project level.
+- Extend an existing core Angular module on the project level.
 - Override an existing core Angular module on the project level.
 
 ## 1) Create an Angular module scaffolding structure
 
-A new Angular module needs a proper scaffolding structure.
-The necessary list of files is provided in the [Project structure document, Module structure section](/docs/dg/dev/frontend-development/{{site.version}}/marketplace/marketplace-frontend-project-and-module-structure.html#module-structure).
-Each new Angular module can contain its own set of Twig Web Components.
+Based on [Project structure document, Module structure section](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/project-structure.html#module-structure), create the scaffolding structure for the module.
+The module can contain its own set of Twig web components.
 
-## 2) Register aт Angular module
+## 2) Register an Angular module
 
-To register components, a special Angular module is created. The `components.module.ts` file contains a list of all Angular components exposed as Web Components.
+To register components, you need to create a special Angular module. `components.module.ts` contains the list of all Angular components exposed as web components.
 
-1. Register Web Components:
+1. Register web components:
 
 ```ts
 // Registration
@@ -57,11 +56,11 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-By registering and rebuilding this Angular module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web components.
+By registering and rebuilding this Angular module, a new JS bundle is created, which needs to be manually added to the Twig page in order to load web components.
 
 {% info_block warningBox %}
 
-Angular component names are prefixed with `web-` when registered as Web components—for example:
+Angular component names are prefixed with `web-` when registered as web components. Example:
 
 ```ts
 import { Component } from '@angular/core';

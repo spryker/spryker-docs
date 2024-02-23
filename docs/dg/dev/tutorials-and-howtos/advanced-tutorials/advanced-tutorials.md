@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
 ---
 title: Advanced tutorials
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/advanced-tutorials
 originalArticleId: 4465ffa9-2d19-4a26-b418-75670e602604
 redirect_from:
-  - /2021080/docs/advanced-tutorials
-  - /2021080/docs/en/advanced-tutorials
-  - /docs/advanced-tutorials
-  - /docs/en/advanced-tutorials
-  - /v6/docs/advanced-tutorials
-  - /v6/docs/en/advanced-tutorials
-  - /v5/docs/advanced-tutorials
-  - /v5/docs/en/advanced-tutorials
-  - /v4/docs/advanced-tutorials
-  - /v4/docs/en/advanced-tutorials
-  - /v3/docs/advanced-tutorials
-  - /v3/docs/en/advanced-tutorials
-  - /v2/docs/advanced-tutorials
-  - /v2/docs/en/advanced-tutorials
-  - /v1/docs/advanced-tutorials
-  - /v1/docs/en/advanced-tutorials
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
 ---
 
 Advanced tutorials describe advanced Spryker OS activities.

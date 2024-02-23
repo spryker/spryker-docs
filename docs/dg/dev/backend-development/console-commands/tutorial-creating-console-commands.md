@@ -1,28 +1,12 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
 ---
-title: "Tutorial: Console commands"
+title: "Tutorial: Creating console commands"
 description: Use the guide to create and use a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-console-commands
 originalArticleId: f3f329c8-9712-46f1-bed0-a29360c451f6
 redirect_from:
-  - /2021080/docs/t-console-commands
-  - /2021080/docs/en/t-console-commands
-  - /docs/t-console-commands
-  - /docs/en/t-console-commands
-  - /v6/docs/t-console-commands
-  - /v6/docs/en/t-console-commands
-  - /v5/docs/t-console-commands
-  - /v5/docs/en/t-console-commands
-  - /v4/docs/t-console-commands
-  - /v4/docs/en/t-console-commands
-  - /v3/docs/t-console-commands
-  - /v3/docs/en/t-console-commands
-  - /v2/docs/t-console-commands
-  - /v2/docs/en/t-console-commands
-  - /v1/docs/t-console-commands
-  - /v1/docs/en/t-console-commands  
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
 related:
   - title: Console Commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html
@@ -32,7 +16,7 @@ A console command is a PHP class that contains the implementation of a functiona
 
 Spryker offers a wrapper over Symfony’s Console component that makes the implementation and configuration of a console command easier.
 
-## Implementing a new Console command
+## Implementing a new console command
 
 To demonstrate how to use and implement a console command, we will create one that clears the generated files folder and refreshes the application cache. The `UpdateApplicationConsole` will run the following commands in one step:
 

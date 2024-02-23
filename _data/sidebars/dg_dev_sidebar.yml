@@ -108,6 +108,9 @@ entries:
         url: /docs/dg/dev/backend-development/yves/yves-bootstrapping.html
       - title: Yves routes
         url: /docs/dg/dev/backend-development/yves/yves-routes.html
+      - title: Create Angular modules
+        url: /docs/dg/dev/backend-development/yves/create-angular-modules.html
+
     - title: Zed
       url: /docs/dg/dev/backend-development/zed/zed.html
       nested:
@@ -187,10 +190,15 @@ entries:
     - title: Console commands
       url: /docs/dg/dev/backend-development/console-commands/console-commands.html
       nested:
-      - title: Implement a new console command
-        url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
       - title: Get the list of console commands and available options
         url: /docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html
+      - title: Implement console commands
+        url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
+      - title: "Tutorial: Creating console commands"
+        url: /docs/dg/dev/backend-development/console-commands/tutorial-creating-console-commands.html
+
+
+
     - title: Data manipulation
       url: /docs/dg/dev/backend-development/data-manipulation/data-manipulation.html
       nested:
@@ -864,11 +872,7 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
-    - title: Integrate Zed API
-      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
-      nested:
-        - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+
     - title: Services
       url: /docs/dg/dev/integrate-and-configure/configure-services.html
     - title: Authorization Enabler
@@ -912,7 +916,7 @@ entries:
     - title: ARM architecture (M1 chip)
       url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: IE11
-      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html      
+      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
 
   - title: SDKs
     nested:
@@ -1152,8 +1156,15 @@ entries:
     nested:
     - title: Project implementation - Zed API
       url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
+    - title: Integrate Zed API
+      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
+      nested:
+        - title: Integrate Zed API for merchant relationships
+          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
+    - title: "Tutorial: Using Zed API"
+      url: /docs/dg/dev/zed-api/tutorial-using-zed-api.html
     - title: CRUD functionality - Zed API
       url: /docs/dg/dev/zed-api/zed-api-crud-functionality.html
     - title: Processor stack - Zed API

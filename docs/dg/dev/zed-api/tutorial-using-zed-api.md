@@ -1,27 +1,11 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
 ---
-title: "Tutorial: Zed Rest API"
+title: "Tutorial: Using Zed API"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
 originalArticleId: 26d10b63-ffce-4945-9aa0-cd15ecddb4d7
 redirect_from:
-  - /2021080/docs/t-zed-rest-api
-  - /2021080/docs/en/t-zed-rest-api
-  - /docs/t-zed-rest-api
-  - /docs/en/t-zed-rest-api
-  - /v6/docs/t-zed-rest-api
-  - /v6/docs/en/t-zed-rest-api
-  - /v5/docs/t-zed-rest-api
-  - /v5/docs/en/t-zed-rest-api
-  - /v4/docs/t-zed-rest-api
-  - /v4/docs/en/t-zed-rest-api
-  - /v3/docs/t-zed-rest-api
-  - /v3/docs/en/t-zed-rest-api
-  - /v2/docs/t-zed-rest-api
-  - /v2/docs/en/t-zed-rest-api
-  - /v1/docs/t-zed-rest-api
-  - /v1/docs/en/t-zed-rest-api
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
 related:
   - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
@@ -34,9 +18,9 @@ related:
 
 ---
 
-Spryker-based shop exposes module business logic through a simple API in Zed. The API is self-documented and can be easily explored for each module.
+Spryker shops expose module business logic through a simple API in Zed. The API is self-documented and can be easily explored for each module.
 
-This tutorial describes how to:
+This tutorial describes how to the following:
 
 * Create a simple client library to authorize and talk to Zed through API.
 * Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
@@ -53,7 +37,7 @@ Reflection is used here for educational purposes, blindly exposing internal code
 
 {% endinfo_block %}
 
-It is advised to recap the following topics before starting the challenge:
+We recommend recapping the following topics before starting the challenge:
 
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/dg/dev/backend-development/zed/business-layer/facade/facade.html)
@@ -67,9 +51,9 @@ The following code snippets are stripped of doc strings and comments to minimize
 
 {% endinfo_block %}
 
-## 1. Create a simple Zed module with controller
+## 1. Create a Zed module with controller
 
-Create a new module Api in `Pyz/Zed` scope.
+Create a new module Api in the `Pyz/Zed` scope.
 
 It is a good practice to version an API, so create a controller `V1Controller` in this module. At this point, the module contains one file – the controller, and looks as follows:
 
@@ -105,7 +89,7 @@ class V1Controller extends AbstractController
 }
 ```
 
-After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/doc-transfer`.
+After this step log into Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/doc-transfer`.
 
 ## 2. Create a business model to examine facade classes using reflection
 

@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-creating-a-table-view.html
 ---
 title: "Tutorial: Creating a table view"
 description: Use the guide to render data, fetched from the database, in the table.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-create-table-view
 originalArticleId: 0cecd405-174d-49d0-a321-6b705b22bef2
 redirect_from:
-  - /2021080/docs/t-create-table-view
-  - /2021080/docs/en/t-create-table-view
-  - /docs/t-create-table-view
-  - /docs/en/t-create-table-view
-  - /v6/docs/t-create-table-view
-  - /v6/docs/en/t-create-table-view
-  - /v5/docs/t-create-table-view
-  - /v5/docs/en/t-create-table-view
-  - /v4/docs/t-create-table-view
-  - /v4/docs/en/t-create-table-view
-  - /v3/docs/t-create-table-view
-  - /v3/docs/en/t-create-table-view
-  - /v2/docs/t-create-table-view
-  - /v2/docs/en/t-create-table-view
-  - /v1/docs/t-create-table-view
-  - /v1/docs/en/t-create-table-view
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-creating-a-table-view.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/create-table-view/-->

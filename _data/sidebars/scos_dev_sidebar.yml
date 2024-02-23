@@ -918,8 +918,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: "HowTo: Create an Angular module with application"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-an-angular-module-with-application.html
       - title: "HowTo: Set up multiple stores"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
       - title: "HowTo: Set up stores with multiple locales"

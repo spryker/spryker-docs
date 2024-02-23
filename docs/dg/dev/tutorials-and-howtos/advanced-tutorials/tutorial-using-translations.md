@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
 ---
 title: "Tutorial: Using translations"
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
 originalArticleId: ff253743-a10f-4866-8047-a6c8357a88a7
 redirect_from:
-  - /2021080/docs/t-using-translations
-  - /2021080/docs/en/t-using-translations
-  - /docs/t-using-translations
-  - /docs/en/t-using-translations
-  - /v6/docs/t-using-translations
-  - /v6/docs/en/t-using-translations
-  - /v5/docs/t-using-translations
-  - /v5/docs/en/t-using-translations
-  - /v4/docs/t-using-translations
-  - /v4/docs/en/t-using-translations
-  - /v3/docs/t-using-translations
-  - /v3/docs/en/t-using-translations
-  - /v2/docs/t-using-translations
-  - /v2/docs/en/t-using-translations
-  - /v1/docs/t-using-translations
-  - /v1/docs/en/t-using-translations
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/using-translations/-->

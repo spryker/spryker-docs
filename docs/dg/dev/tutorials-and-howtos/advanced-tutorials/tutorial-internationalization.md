@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
 title: "Tutorial: Internationalization"
 last_updated: Jun 16, 2021
@@ -6,22 +5,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
 originalArticleId: ab5fb80c-57d6-44a7-a85f-41034cb5c3be
 redirect_from:
-  - /2021080/docs/t-internationalization
-  - /2021080/docs/en/t-internationalization
-  - /docs/t-internationalization
-  - /docs/en/t-internationalization
-  - /v6/docs/t-internationalization
-  - /v6/docs/en/t-internationalization
-  - /v5/docs/t-internationalization
-  - /v5/docs/en/t-internationalization
-  - /v4/docs/t-internationalization
-  - /v4/docs/en/t-internationalization
-  - /v3/docs/t-internationalization
-  - /v3/docs/en/t-internationalization
-  - /v2/docs/t-internationalization
-  - /v2/docs/en/t-internationalization
-  - /v1/docs/t-internationalization
-  - /v1/docs/en/t-internationalization
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/internationalization/-->

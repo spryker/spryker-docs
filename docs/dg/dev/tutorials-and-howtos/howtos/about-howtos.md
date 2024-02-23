@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
 ---
 title: About HowTos
 description: Use this section to perform tasks related to Spryker Glue Rest API and Spryker features
@@ -7,20 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-tos
 originalArticleId: e48d2c32-082b-4183-8d99-4e4b74c207b3
 redirect_from:
-  - /2021080/docs/how-tos
-  - /2021080/docs/en/how-tos
-  - /docs/how-tos
-  - /docs/en/how-tos
-  - /v6/docs/ht-make-product-shown-on-frontend-by-url
-  - /v6/docs/en/ht-make-product-shown-on-frontend-by-url
-  - /v5/docs/ht-make-product-shown-on-frontend-by-url
-  - /v5/docs/en/ht-make-product-shown-on-frontend-by-url
-  - /v4/docs/ht-make-product-shown-on-frontend-by-url
-  - /v4/docs/en/ht-make-product-shown-on-frontend-by-url
-  - /v2/docs/ht-make-product-shown-on-frontend-by-url
-  - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
-  - /v1/docs/ht-make-product-shown-on-frontend-by-url
-  - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
+- /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
 ---
 
 HowTos are simple step-by-step instructions to guide you through the process of performing a single task. There are three types of HowTos: Feature HowTos, [Glue API HowTos](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html) and miscellaneous *HowTos for developers*.

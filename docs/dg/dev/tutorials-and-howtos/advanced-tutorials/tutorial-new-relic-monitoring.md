@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
 ---
 title: "Tutorial: New Relic monitoring"
 description: Use the guide to learn how to configure a New Relic agent, including on Linux,  and then test it.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-new-relic-monitoring
 originalArticleId: b7ba0c6c-21fb-43ae-abad-e030dccbea98
 redirect_from:
-  - /2021080/docs/t-new-relic-monitoring
-  - /2021080/docs/en/t-new-relic-monitoring
-  - /docs/t-new-relic-monitoring
-  - /docs/en/t-new-relic-monitoring
-  - /v6/docs/t-new-relic-monitoring
-  - /v6/docs/en/t-new-relic-monitoring
-  - /v5/docs/t-new-relic-monitoring
-  - /v5/docs/en/t-new-relic-monitoring
-  - /v4/docs/t-new-relic-monitoring
-  - /v4/docs/en/t-new-relic-monitoring
-  - /v3/docs/t-new-relic-monitoring
-  - /v3/docs/en/t-new-relic-monitoring
-  - /v2/docs/t-new-relic-monitoring
-  - /v2/docs/en/t-new-relic-monitoring
-  - /v1/docs/t-new-relic-monitoring
-  - /v1/docs/en/t-new-relic-monitoring
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
 ---
 
 {% info_block infoBox %}

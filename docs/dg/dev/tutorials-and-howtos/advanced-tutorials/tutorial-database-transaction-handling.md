@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
 ---
 title: "Tutorial: Database transaction handling"
 description: Use the guide to understand how to handle database transactions.
@@ -7,22 +6,7 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-database-transactions
 originalArticleId: a9cf7e3b-bf1d-4e27-9614-478a6dcc5204
 redirect_from:
-  - /2021080/docs/t-database-transactions
-  - /2021080/docs/en/t-database-transactions
-  - /docs/t-database-transactions
-  - /docs/en/t-database-transactions
-  - /v6/docs/t-database-transactions
-  - /v6/docs/en/t-database-transactions
-  - /v5/docs/t-database-transactions
-  - /v5/docs/en/t-database-transactions
-  - /v4/docs/t-database-transactions
-  - /v4/docs/en/t-database-transactions
-  - /v3/docs/t-database-transactions
-  - /v3/docs/en/t-database-transactions
-  - /v2/docs/t-database-transactions
-  - /v2/docs/en/t-database-transactions
-  - /v1/docs/t-database-transactions
-  - /v1/docs/en/t-database-transactions
+- /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
 ---
 
 <!--Used to be: http://spryker.github.io/tutorials/zed/database-transaction-handling/-->

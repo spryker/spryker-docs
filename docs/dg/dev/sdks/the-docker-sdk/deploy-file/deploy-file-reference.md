@@ -18,11 +18,11 @@ redirect_from:
 
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/the-docker-sdk.html
   - title: Deploy file inheritance—common use cases
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/deploy-file/deploy-file.html
 ---
 
 

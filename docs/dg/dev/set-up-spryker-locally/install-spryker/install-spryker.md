@@ -53,4 +53,4 @@ After installation, the instance can be customized further to meet your project 
 The following documents detail these customizations:
 
 * [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference.html)

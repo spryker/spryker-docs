@@ -5,9 +5,9 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
   - title: Deploy file inheritance—common use cases
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
-  - title: Deploy file reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file.html
 - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file.html
@@ -28,7 +28,7 @@ last_updated: Nov 21, 2023
 
 ### Including deploy file templates
 
-To include a deploy file template into an application's configuration, use the [`imports:`](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#imports) parameter in the main deploy file of the desired environment.
+To include a deploy file template into an application's configuration, use the [`imports:`](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference.html#imports) parameter in the main deploy file of the desired environment.
 
 ```yaml
 imports:

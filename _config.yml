@@ -170,7 +170,6 @@ versioned_categories:
       - data-import
       - frontend-development
       - system-requirements
-      - sdks
   pbc:
     all:
       - back-office

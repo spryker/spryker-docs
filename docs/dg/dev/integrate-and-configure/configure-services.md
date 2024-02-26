@@ -31,28 +31,28 @@ redirect_from:
 
 
 related:
-  - title: Deploy File Reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
   - title: The Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/the-docker-sdk.html
   - title: Docker SDK quick start guide
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
   - title: Docker environment infrastructure
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/docker-environment-infrastructure.html
   - title: Docker SDK configuration reference
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
   - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/choosing-a-mount-mode.html
   - title: Configuring a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/configuring-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+    link: docs/dg/dev/sdk/the-docker-sdk/page.version/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/configuring-debugging-in-docker.html
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
 This document describes how to configure services shipped by default.

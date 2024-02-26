@@ -1,4 +1,3 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
 ---
 title: "HowTo: Set up multiple stores"
 description: Learn how to set up multiple stores for your project.
@@ -7,19 +6,12 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multiple-stores
 originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c
 redirect_from:
-  - /2021080/docs/howto-set-up-multiple-stores
-  - /2021080/docs/en/howto-set-up-multiple-stores
-  - /docs/howto-set-up-multiple-stores
-  - /docs/en/howto-set-up-multiple-stores
-  - /v6/docs/howto-set-up-multiple-stores
-  - /v6/docs/en/howto-set-up-multiple-stores
-  - /docs/multiple-stores
-  - /docs/en/multiple-stores
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
 ---
 
 {% info_block warningBox %}
 
-With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html), you can only add stores in the Back Office.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Testing and TDD"
+title: Building tests for test-driven development
 description: Use the tutorial to understand how testing concepts work with Spryker by using the test-driven development approach.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -9,11 +9,11 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
 ---
 
-This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *Test-Driven Development (TDD)* approach.
+This document helps you understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the *test-driven development (TDD)* approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
 
-Using TDD, you will write the test first, see it fails, and then write the string reverser that makes the test pass.
+Using TDD, you will write the test first, see it fail, and then write the string reverser that makes the test pass.
 
 ## 1. Build the test that fails
 
@@ -29,8 +29,6 @@ As you are going to work with Zed, the test module is for Zed:
 
 1. Create a new test module inside the tests directory in you project `tests/PyzTest/Zed` and call it `StringReverser`.
 2. Spryker uses `Codeception` as a testing framework. In `tests/PyzTest/Zed/StringReverser`, using `Codeception`, add the config file for your new module and call it `codeception.yml`. The config looks like this:
-
-**Code sample**
 
 ```php
 namespace: PyzTest\Zed\StringReverser

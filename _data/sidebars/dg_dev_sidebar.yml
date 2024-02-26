@@ -113,7 +113,7 @@ entries:
       - title: Implementing Twig extensions
         url: /docs/dg/dev/backend-development/yves/implementing-twig-extensions.html
       - title: Set up custom response headers
-        url: /docs/dg/dev/backend-development/yves/set-up-custom-response-headers.html        
+        url: /docs/dg/dev/backend-development/yves/set-up-custom-response-headers.html
 
     - title: Zed
       url: /docs/dg/dev/backend-development/zed/zed.html
@@ -995,6 +995,8 @@ entries:
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+    - title: Tutorial: Architectural walkthrough
+      url: /docs/dg/dev/architecture/marketplace-architecture/tutorial-architectural-walkthrough.html
 
   - title: Data import
     url: /docs/dg/dev/data-import/data-import.html
@@ -1107,6 +1109,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
         url: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
+      - title: Building tests for test-driven development
+        url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:
@@ -1152,6 +1156,7 @@ entries:
       url: /docs/dg/dev/guidelines/module-configuration-convention.html
     - title: Security guidelines
       url: /docs/dg/dev/guidelines/security-guidelines.html
+
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:

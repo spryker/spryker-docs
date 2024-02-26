@@ -32,7 +32,7 @@ This tutorial explains the Spryker architecture and how things work altogether. 
 * Add Zed persistence layer in the `HelloSpryker` module to store and get the reversed string to and from the database.
 * Move the functionality that returns the reversed string to a new module (`StringFormat`), then provide the string to the `HelloSpryker` module.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 This means building a dependency from the `HelloSpryker` module to the `StringFormat` module.
 

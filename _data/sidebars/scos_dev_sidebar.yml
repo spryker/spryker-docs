@@ -861,13 +861,10 @@ entries:
       url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
+        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages.html
       - title: "Tutorial: Hello world - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world-spryker-commerce-os.html
-      - title: "Tutorial: Architectural Walkthrough - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-architectural-walkthrough-spryker-commerce-os.html
-      - title: "Tutorial: Testing and TDD - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
+        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world.html
+
     - title: Advanced Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
       nested:

@@ -730,6 +730,8 @@ entries:
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
       url: /docs/dg/dev/frontend-development/define-twig-tag.html
+    - title: Notifying about unsupported browsers
+      url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html      
 
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html

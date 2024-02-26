@@ -108,8 +108,12 @@ entries:
         url: /docs/dg/dev/backend-development/yves/yves-bootstrapping.html
       - title: Yves routes
         url: /docs/dg/dev/backend-development/yves/yves-routes.html
-      - title: Create Angular modules
-        url: /docs/dg/dev/backend-development/yves/create-angular-modules.html
+      - title: Implementing widgets and widget plugins
+        url: /docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html
+      - title: Implementing Twig extensions
+        url: /docs/dg/dev/backend-development/yves/implementing-twig-extensions.html
+      - title: Set up custom response headers
+        url: /docs/dg/dev/backend-development/yves/set-up-custom-response-headers.html        
 
     - title: Zed
       url: /docs/dg/dev/backend-development/zed/zed.html
@@ -159,6 +163,9 @@ entries:
             url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
       - title: Add navigation in the Back Office
         url: /docs/dg/dev/backend-development/zed/add-navigation-in-the-back-office.html
+      - title: Create table views
+        url: /docs/dg/dev/backend-development/zed/create-table-views.html
+
     - title: Cronjobs
       url: /docs/dg/dev/backend-development/cronjobs/cronjobs.html
       nested:
@@ -194,10 +201,6 @@ entries:
         url: /docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html
       - title: Implement console commands
         url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
-      - title: "Tutorial: Creating console commands"
-        url: /docs/dg/dev/backend-development/console-commands/tutorial-creating-console-commands.html
-
-
 
     - title: Data manipulation
       url: /docs/dg/dev/backend-development/data-manipulation/data-manipulation.html
@@ -723,6 +726,10 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
+    - title: Create Angular modules
+      url: /docs/dg/dev/frontend-development/create-angular-modules.html
+    - title: Define Twig tag
+      url: /docs/dg/dev/frontend-development/define-twig-tag.html
 
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
@@ -1012,6 +1019,8 @@ entries:
       url: /docs/dg/dev/data-import/replacing-a-default-data-importer-with-a-queue-data-importer.html
     - title: Data importer speed optimization
       url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
+    - title: Implementing data installers
+      url: /docs/dg/dev/data-import/implementing-data-installers.html
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html

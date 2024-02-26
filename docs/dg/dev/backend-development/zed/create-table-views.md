@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Creating a table view"
+title: Create table views
 description: Use the guide to render data, fetched from the database, in the table.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -9,7 +9,6 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-creating-a-table-view.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/zed/create-table-view/-->
 
 This tutorial explains how to retrieve data from the database and render it in a table.
 
@@ -21,7 +20,8 @@ You have created a new [module](/docs/dg/dev/backend-development/extend-spryker/
 
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:
 
-**Code sample**
+<details>
+  <summary>ProductTable</summary>
 
 ```php
 <?php
@@ -87,6 +87,8 @@ class ProductTable extends AbstractTable
 }
 ```
 
+</details>
+
 ## Create a factory
 
 The factory should be placed in the Communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
@@ -122,7 +124,6 @@ class HelloWorldCommunicationFactory extends AbstractCommunicationFactory
 
 ## Add a Controller action that renders the table
 
-**Code sample**
 
 ```php
 <?php

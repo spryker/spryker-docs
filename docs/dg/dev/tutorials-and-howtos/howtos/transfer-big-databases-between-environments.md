@@ -1,10 +1,11 @@
-  - /docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html
 ---
 title: Transfer big databases between environments
 description: Learn how you can relatively quickly import big data between your environments
 last_updated: April 5, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html
+
 ---
 
 Suppose you have two testing environments, and you need to transfer the data from one environment to another to perform different tests with the same data. If you have little data, you can export it by running the `mysqldump` command locally. However, with large amounts of data, this method can be quite slow. To speed up the transfer, you can run the `mysqldump` command on the Jenkins instance and upload the dump file to AWS S3. With this approach, data stays on the same network with the databases, which significantly speeds up the transfer.

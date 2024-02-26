@@ -8,8 +8,6 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/zed/internationalization/-->
-
 In international business, it is important to fine-tune a shop's behavior according to the country. Topics that differ:
 
 * Design &amp; Layout
@@ -36,11 +34,7 @@ Internationalization is the process of building software so that it supports loc
 
 Localization is adapting the design and layout of your software product so that it displays content that’s adapted to the users culture and language, such as translated text, cultural accepted images, and layout. Its main focus is gathering the necessary resources and follow the conventions that are implemented through internationalization. This means that for each locale that’s supported by the application, the application must have its corresponding resources.
 
-{% info_block infoBox %}
-
 A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: `nl_BE` and `fr_BE`).
-
-{% endinfo_block %}
 
 ## Summary
 

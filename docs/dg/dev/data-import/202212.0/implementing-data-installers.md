@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Customer import"
+title: Implementing data installers
 description: Use the guide to extend the Importer module and import customer data using a .CSV file
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -9,18 +9,13 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/zed/import-customers/-->
-This tutorial describes the steps you need to follow to extend the `Installer` module functionality.
+This document describes how to extend the `Installer` module.
 
-In this example, we’ll import customer data; of course you can update the code in this tutorial to fit your need.
+Customer data is used as an example; you can implement installers for any data.
 
-## Implement customer installer
+## Implement the customer installer
 
-Create the `CustomerInstaller` class under the `src/Pyz/Zed/Customer/Business/Installer/` folder.
-
-Place the following code in the `CustomerInstaller` class:
-
-**Code sample**
+Create `src/Pyz/Zed/Customer/Business/Installer/CustomerInstaller`:
 
 ```php
 <?php
@@ -103,9 +98,7 @@ interface CustomerInstallerInterface
 
 ## Add a method to facade
 
-In the `CustomerFacade`, add a method that calls a new customer installer.
-
-To override the facade, create `CustomerFacade` under the `Pyz\Zed\Customer\Business` folder:
+1. To add the method that calls the customer installer, override the facade by creating `Pyz\Zed\Customer\Business\CustomerFacade`:
 
 ```php
 <?php
@@ -128,7 +121,7 @@ class CustomerFacade extends SprykerCustomerFacade
 }
 ```
 
-Also, you need to override `CustomerBusinessFactory` and `CustomerConfig`:
+2. Override `CustomerBusinessFactory` and `CustomerConfig`:
 
 ```php
 <?php
@@ -160,7 +153,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 
 ## Create the installer plugin
 
-Create the `CustomerInstallerPlugin` installer plugin  which implements `InstallerPluginInterface` under  `Pyz\Zed\Customer\Communication\Plugin\Installer`:
+Create the `CustomerInstallerPlugin` installer plugin which implements `InstallerPluginInterface` under  `Pyz\Zed\Customer\Communication\Plugin\Installer`:
 
 ```php
 <?php
@@ -191,7 +184,7 @@ class CustomerInstallerPlugin extends AbstractPlugin implements InstallerPluginI
 
 ## Register the new data installer plugin
 
-Now, we’re almost ready to test the new data installer; we just need to register it in `InstallerDependencyProvider`:
+Register the data installer plugin in `InstallerDependencyProvider`:
 
 ```php
 <?php
@@ -209,7 +202,9 @@ Now, we’re almost ready to test the new data installer; we just need to regist
 ...
 ```
 
-To test the customer data installer, run the data install from the command line:
+## Run the data installer
+
+To test the customer data installer, run the data installer from the command line:
 
 ```bash
 vendor/bin/console setup:init-db

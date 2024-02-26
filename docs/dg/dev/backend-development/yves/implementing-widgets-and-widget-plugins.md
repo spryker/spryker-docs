@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Implementing widgets and widget plugins"
+title: Implementing widgets and widget plugins
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,7 +12,6 @@ redirect_from:
 This tutorial provides instructions on how to implement widgets and widget plugins into [Modular Frontend](/docs/dg/dev/backend-development/yves/modular-frontend.html).
 
 ## How to implement a widget?
-<a href="#how-to-implement-a-widget"></a>
 
 Each widget implementation is supposed to be designed as components: considering reusability and being able to render them on different Pages.
 

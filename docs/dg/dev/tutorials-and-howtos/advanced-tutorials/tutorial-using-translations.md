@@ -8,7 +8,6 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/yves/using-translations/-->
 The data stored in the key-value storage can be used for multiple purposes:
 
 * URL mappings

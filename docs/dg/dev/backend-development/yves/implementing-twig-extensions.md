@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Twig extensions"
+title: Implementing Twig extensions
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-twig-extensions
@@ -13,20 +13,11 @@ related:
 
 This document shows how to implement a Twig extension. As an example, let's build a filter which can be used for displaying prices.
 
-To implement a Twig extension, do the following:
-
-1. Implement the filter.
-2. Add the twig extension.
-3. Register the new twig extension.
-4. Test your twig extension.
-
-Read on to learn how you can do this.
+To implement a Twig extension, take the following steps.
 
 ## 1. Implement the filter
 
 To implement the filter, add the logic to a dedicated class in the module you’re currently working on:
-
-**Code sample**
 
 ```php
 <?php
@@ -62,7 +53,6 @@ class PriceFilter
 }
 ```
 
-**Code sample**
 
 ```php
 <?php
@@ -84,7 +74,6 @@ class ServiceFactory extends AbstractServiceFactory
 }
 ```
 
-**Code sample**
 
 ```php
 <?php
@@ -107,9 +96,8 @@ class PriceFilterService extends AbstractService implements PriceFilterServiceIn
 
 ## 2. Add the Twig extension
 
-Having implemented the filter, add the Twig extension by creating a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the preceding class.
+Add the Twig extension by creating a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the preceding class.
 
-**Code sample**
 
 ```php
 <?php
@@ -146,7 +134,7 @@ class ExampleTwigExtensionPlugin extends AbstractTwigExtensionPlugin
 
 To be able to use the extension from the Twig templates, the extension must be registered in the `getTwigExtensions()` method from the `TwigDependencyProvider` class. See [Defining the module dependencies: Dependency Provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html) for information on the dependency providers.
 
-First, add a reference to the Twig extension in `TwigDependencyProvider.php`:
+Add a reference to the Twig extension in `TwigDependencyProvider.php`:
 
 ```php
 <?php

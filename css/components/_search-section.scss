@@ -1,5 +1,6 @@
 :root {
     --docsearch-highlight-color: #{$grey};
+    --docsearch-modal-width: 700px;
 }
 
 .search-section {
@@ -197,6 +198,8 @@
     }
 
     &--secondary {
+        flex: 1 1 auto;
+
         @include media('<desktop') {
             display: flex;
             justify-content: flex-end;
@@ -315,7 +318,7 @@
 
     &-Cancel {
         position: absolute;
-        width: 30px;
+        width: 30px; 
         height: 30px;
         font-size: 0;
         top: 13px;

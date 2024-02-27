@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/glue-api-authentication-and-authorization.html
 ---
 title: Glue API authentication and authorization
 description: Information about Glue API authentication and authorization.

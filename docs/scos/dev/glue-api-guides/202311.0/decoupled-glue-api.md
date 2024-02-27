@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/decoupled-glue-api.html
 ---
 title: Decoupled Glue API
 description: Learn about the process of handling API requests through GlueStorefront and GlueBackoffice layers.

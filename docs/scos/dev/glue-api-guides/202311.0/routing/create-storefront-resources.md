@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/routing/create-storefront-resources.html
 ---
 title: Create storefront resources
 description: This guide shows how to create an API endpoint using a resource for the storefront API application.

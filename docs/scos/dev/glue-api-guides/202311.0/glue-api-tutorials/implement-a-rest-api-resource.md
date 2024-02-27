@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-tutorials/implement-a-rest-api-resource.html
 ---
 title: Implement a REST API resource
 description: This document shows how to implement a REST API resource in your project.

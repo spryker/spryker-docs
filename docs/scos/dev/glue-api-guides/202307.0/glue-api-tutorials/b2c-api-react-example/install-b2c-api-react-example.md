@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
 ---
 title: Install B2C API React example
 description: This document describes how to install B2C API Demo Shop to experience the use of Spryker Glue REST API.

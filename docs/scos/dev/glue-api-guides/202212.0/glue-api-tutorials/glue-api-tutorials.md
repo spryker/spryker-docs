@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/glue-api-tutorials/glue-api-tutorials.html
 ---
 title: Glue API tutorials
 description: Glue API tutorials help you achieve your basic goals with the Glue API in terms of its usage and customization

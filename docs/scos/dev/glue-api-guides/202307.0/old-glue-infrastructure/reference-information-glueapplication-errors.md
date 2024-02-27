@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/old-glue-infrastructure/reference-information-glueapplication-errors.html
 ---
 title: Reference information - GlueApplication errors
 description: Find out what common GlueAplication errors you can come across when sending and receiving data via the Glue API.

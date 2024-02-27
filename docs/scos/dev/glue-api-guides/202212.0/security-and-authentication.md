@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/security-and-authentication.html
 ---
 title: Glue API security and authentication
 description: This document describes the authorization mechanism used in Spryker and information about authorization scopes.

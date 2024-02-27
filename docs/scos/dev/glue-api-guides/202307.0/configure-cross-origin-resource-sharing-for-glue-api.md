@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/configure-cross-origin-resource-sharing-for-glue-api.html
 ---
 title: Configure cross-origin resource sharing for Glue API
 last_updated: Jun 16, 2021

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/document-glue-api-endpoints.html
 ---
 title: Document Glue API endpoints
 description: You can enhance the way your resource is described in the OPENAPI v3 schema

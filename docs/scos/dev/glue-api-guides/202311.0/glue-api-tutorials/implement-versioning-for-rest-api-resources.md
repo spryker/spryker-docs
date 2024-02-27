@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
 ---
 title: Implement versioning for REST API resources
 last_updated: Jun 16, 2021

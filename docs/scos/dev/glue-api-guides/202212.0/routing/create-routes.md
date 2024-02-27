@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/routing/create-routes.html
 ---
 title: Create routes
 description: This document describes Create routes

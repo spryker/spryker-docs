@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/glue-api-guides.html
 ---
 title: Glue API guides
 description: Guides for developers working with the Spryker Glue API

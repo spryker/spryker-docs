@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
 ---
 title: B2C API React example
 description: B2C API React example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.

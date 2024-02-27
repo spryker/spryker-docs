@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/glue-rest-api.html
 ---
 title: Glue REST API
 last_updated: Jul 13, 2023

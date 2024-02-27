@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html
 ---
 title: Create Glue API authorization strategies
 description: This document describes how to create a new authorization strategy.

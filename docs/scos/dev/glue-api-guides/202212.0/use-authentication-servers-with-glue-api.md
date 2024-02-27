@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/use-authentication-servers-with-glue-api.html
 ---
 title: Use authentication servers with Glue API
 description: This document describes Use authentication servers with Glue API.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/create-glue-api-resources-with-parent-child-relationships.html
 ---
 title: Create Glue API resources with parent-child relationships
 description: Learn Create Glue API resources with parent-child relationships

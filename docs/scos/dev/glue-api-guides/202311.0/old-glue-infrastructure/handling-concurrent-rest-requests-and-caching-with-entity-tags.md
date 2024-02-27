@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
 ---
 title: Handling concurrent REST requests and caching with entity tags
 description: This article will provide you with information on how to handle concurrent requests and implement client-side caching with the help of entity tags.

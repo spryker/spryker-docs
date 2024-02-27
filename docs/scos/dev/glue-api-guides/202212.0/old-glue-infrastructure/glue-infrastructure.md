@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/glue-infrastructure.html
 ---
 title: Glue infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/backend-and-storefront-api-module-differences.html
 ---
 title: Backend and storefront API module differences
 description: This document describes the difference between the code in a backend and storefront API modules.

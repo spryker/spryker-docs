@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-tutorials/extend-a-rest-api-resource.html
 ---
 title: Extend a REST API resource
 description: This tutorial shows how to extend REST API resources

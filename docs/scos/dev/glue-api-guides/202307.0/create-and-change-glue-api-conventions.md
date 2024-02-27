@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/create-and-change-glue-api-conventions.html
 ---
 title: Create and change Glue API conventions
 description: The Glue infrastructure implements the Convention feature. Through it, you can change the way your API accepts or returns data.

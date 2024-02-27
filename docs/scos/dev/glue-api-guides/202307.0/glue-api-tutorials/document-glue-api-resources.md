@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/glue-api-tutorials/document-glue-api-resources.html
 ---
 title: Document Glue API resources
 description: This guide shows how to document Glue API resources

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html
 ---
 title: REST API Marketplace B2B Demo Shop reference
 description: Reference for the API endpoints in the Spryker B2B Demo Shop Marketplace.

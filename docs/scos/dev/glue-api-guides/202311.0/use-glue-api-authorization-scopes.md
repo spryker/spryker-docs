@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/use-glue-api-authorization-scopes.html
 ---
 title: Use Glue API authorization scopes
 description: This guide describes how to add scopes to the resource and custom route for the storefront API and backend API applications

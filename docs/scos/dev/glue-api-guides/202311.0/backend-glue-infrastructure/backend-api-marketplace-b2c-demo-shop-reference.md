@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
 ---
 title: Backend API Marketplace B2C Demo Shop reference
 description: Reference for the Backend API endpoints in the Spryker B2C Demo Shop Marketplace.

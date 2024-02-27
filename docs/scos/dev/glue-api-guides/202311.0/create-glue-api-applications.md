@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/create-glue-api-applications.html
 ---
 title: Create Glue API applications
 description: This document describes how to create a new API application

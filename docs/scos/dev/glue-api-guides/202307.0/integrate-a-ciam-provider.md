@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/integrate-a-ciam-provider.html
 ---
 title: Integrate a CIAM provider
 description: Learn how to integrate CIAM into a Spryker project

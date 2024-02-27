@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/configure-the-included-section.html
 ---
 title: Configure the included section
 last_updated: Jun 16, 2021

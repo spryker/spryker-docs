@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
 ---
 title: "Glue API: Resolve search engine friendly URLs"
 description: Learn how to resolve search engine friendly URLs via Glue API.

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/rest-api-b2c-demo-shop-reference.html
 ---
 title: REST API B2C Demo Shop reference
 description: This page provides an exhaustive reference for the REST API endpoints present in the Spryker B2C demo Shop by default with the corresponding parameters and data formats.

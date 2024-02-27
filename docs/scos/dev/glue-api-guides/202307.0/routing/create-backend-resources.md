@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/routing/create-backend-resources.html
 ---
 title: Create a backend resource
 description: This guide shows how to create an API endpoint using a resource for the backend API application.

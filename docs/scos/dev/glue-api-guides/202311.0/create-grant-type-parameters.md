@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/create-grant-type-parameters.html
 ---
 title: Create grant type parameters
 description: This document explains how to create the grant type parameters and how to use them in code

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202307.0/create-protected-glue-api-endpoints.html
 ---
 title: Create protected Glue API endpoints
 description: Learn how to create the protected endpoint using a resource for the Storefront and backend API applications.

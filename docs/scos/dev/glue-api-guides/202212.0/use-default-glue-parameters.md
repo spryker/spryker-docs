@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202212.0/use-default-glue-parameters.html
 ---
 title: Use default Glue parameters
 description: This document explains how to pass the parameters and how to use them in code

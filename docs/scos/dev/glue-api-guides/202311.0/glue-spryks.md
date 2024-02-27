@@ -1,3 +1,4 @@
+  - /docs/scos/dev/glue-api-guides/202311.0/glue-spryks.html
 ---
 title: Glue Spryks
 description: This article demonstrates how to manage the Glue REST API layer of Spryker with the help of code automation tools (Spryks).

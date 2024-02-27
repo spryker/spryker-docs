@@ -22,9 +22,11 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ## Eight weeks before go-live
 
-Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
-
 Make sure you've addressed all the items from the following checklists.
+
+### General
+
+Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
 ### Cloud environments
 

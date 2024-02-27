@@ -3052,6 +3052,18 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/censhare-pim.html
                   - title: Akeneo
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo.html
+                  - title: Install and configure Akeneo (Eco module)
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
+                    include_versions:
+                    - "202212.0"
+                    - "202307.0"
+                  - title: Akeneo
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo.html
+                  - title: "Akeneo Connector (Eco module): Console commands"
+                    url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
+                    include_versions:
+                    - "202212.0"
+                    - "202307.0"
                   - title: Xentral
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
               - title: Tutorials and HowTos

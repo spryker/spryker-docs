@@ -6,32 +6,32 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/docker-sdk-quick-start-guide
 originalArticleId: fc087f0f-e526-4519-a015-01022ac5d1f7
 redirect_from:
-  - /2021080/docs/docker-sdk-quick-start-guide
-  - /2021080/docs/en/docker-sdk-quick-start-guide
-  - /docs/docker-sdk-quick-start-guide
-  - /docs/en/docker-sdk-quick-start-guide
-  - /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202311.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202204.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202307.0/docker-sdk-quick-start-guide.html
+- /docs/scos/dev/the-docker-sdk/202212.0/docker-sdk-quick-start-guide.html
+
 related:
   - title: The Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
   - title: Docker environment infrastructure
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
   - title: Docker SDK configuration reference
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
   - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
   - title: Configuring a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
 This document describes how you can quickly set up a local environment with the Docker SDK.
@@ -125,6 +125,6 @@ For solutions to common issues, see [Spryker in Docker troubleshooting](/docs/dg
 
 ## What documents should I use to start developing and configuring my project?
 
-* [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
-* [Configuring services](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+* [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
+* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)

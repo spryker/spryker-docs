@@ -1,68 +1,59 @@
 ---
-title: Configuring debugging in Docker
+title: Configure debugging
 description: Learn how to configure debugging in Docker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-debugging-in-docker
 originalArticleId: e7a98e11-2344-4aa5-b86f-112d95874218
 redirect_from:
-  - /2021080/docs/configuring-debugging-in-docker
-  - /2021080/docs/en/configuring-debugging-in-docker
-  - /docs/configuring-debugging-in-docker
-  - /docs/en/configuring-debugging-in-docker
-  - /docs/debugging-setup
-  - /docs/en/debugging-setup
+  - /docs/scos/dev/the-docker-sdk/202311.0/configuring-debugging-in-docker.html
   - /docs/scos/dev/the-docker-sdk/202204.0/configuring-debugging-in-docker.html
 related:
   - title: The Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
   - title: Docker SDK quick start guide
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
   - title: Docker environment infrastructure
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
   - title: Docker SDK configuration reference
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
   - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
   - title: Configuring a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
-This document describes how to configure debugging of Spryker in Docker.
+This document describes how to configure debugging in a local environment.
 
-[Xdebug](https://xdebug.org) is the default debugging tool for Spryker in Docker. To enable Xdebug, run the command:
+[Xdebug](https://xdebug.org) is the default debugging tool for Spryker in Docker. Enable Xdebug:
 
 ```bash
 docker/sdk {run|start|up} -x
 ```
 
-## Configuring PhpStorm for Xdebug
+## Configure PhpStorm for Xdebug
 
-This section describes how to configure Phpstorm to be used with Xdebug.
+To configure PhpStorm for Xdebug, take the following steps.
 
-### PhpStorm configuration prerequisites
-
-Install the required software:
+### Install the prerequisites
 
 1. [Install PhpStorm](https://www.jetbrains.com/phpstorm/download/#section=mac), [Early Access Program](https://www.jetbrains.com/phpstorm/nextversion/) preferred.
-You can download PHPStorm through the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/).
+You can download PHPStorm using the [Jetbrains Toolbox](https://www.jetbrains.com/toolbox-app/).
 2. [Install Xdebug](https://xdebug.org/docs/install).
-3. Optional: install the [Xdebug browser extension](https://www.jetbrains.com/help/phpstorm/2021.1/browser-debugging-extensions.html). In the extension settings, for **IDE key**, enter `PHPSTORM`.
+3. Optional: Install the [Xdebug browser extension](https://www.jetbrains.com/help/phpstorm/2021.1/browser-debugging-extensions.html). In the extension settings, for **IDE key**, enter `PHPSTORM`.
 
-### Configuring Xdebug
+### Configure Xdebug
 
-To configure Xdebug in PhpStorm:
-
-1. Go to **Preferences** > **PHP** > **Debug**.
-2. In the *Xdebug* section:
+1. In PhpStorm, go to **Preferences** > **PHP** > **Debug**.
+2. In the **Xdebug** section:
 
       1. Depending on your requirements, for **Debug port**, enter one or more ports.
         For example, to support Xdebug 2 and 3, enter `9000,9003`.
@@ -71,7 +62,7 @@ To configure Xdebug in PhpStorm:
 
 ![xdebug-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/xdebug-configuration.png)
 
-3. In the *External connections* section:
+3. In the **External connections** section:
 
       1. For **Max. simultaneous connection**, select **5**.
       2. Clear the **Ignore external connections through unregistered server configurations** and **Break at first line in PHP scripts** checkboxes.
@@ -110,22 +101,20 @@ A breakpoint does not work.
 4. Re-try your breakpoints.
 
 
-## Configuring VSCode for Xdebug
+## Configure VSCode for Xdebug
 
-This section describes how to configure Visual Studio Code (VSCode) to be used with Xdebug.
+To configure VSCode for Xdebug, take the following steps.
 
 
-### VScode configuration prerequisites
-
-Install the required software:
+### Install the prerequisites
 
 1. [Install VScode](https://code.visualstudio.com/download), the [Insiders version](https://code.visualstudio.com/insiders/) preferred.
 2. [Install Xdebug](https://xdebug.org/docs/install).
 3. [Install PHP Debug Extension](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug).
 
-## Set up a new Launch.json
+### Set up a Launch.json
 
-Set up a new `Launch.json`:
+Create a `Launch.json`:
 
 ```json
 {
@@ -156,9 +145,9 @@ Set up a new `Launch.json`:
 
 ## Avoiding timeouts
 
-The default Zed Request timeout is 60 seconds. Debugging requests often take more than 60 seconds to complete. In this case, a browser stops the connection.
+The default Zed request timeout is 60 seconds. Debugging requests often take more than 60 seconds to complete. In this case, a browser stops the connection.
 
-To avoid Zed Request timeouts, adjust your configuration as follows:
+To avoid Zed request timeouts, adjust your configuration as follows:
 
 ```php
 $config[ZedRequestConstants::CLIENT_OPTIONS] = [
@@ -170,7 +159,7 @@ $config[ZedRequestConstants::CLIENT_OPTIONS] = [
 
 {% info_block warningBox "Unlimited timeout" %}
 
-If you set unlimited timeout, this affects all Zed Requests, not only debugging ones.
+If you set unlimited timeout, this affects all Zed requests, not only debugging ones.
 
 {% endinfo_block %}
 

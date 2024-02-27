@@ -32,7 +32,7 @@ image:
 
 ## 2. Set up XDebug configuration
 
-To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
+To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/configuring-debugging-in-docker.html).
 
 ## 3. Bring up your application and start profiling
 

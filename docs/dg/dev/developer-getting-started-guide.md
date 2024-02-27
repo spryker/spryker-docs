@@ -35,7 +35,7 @@ To configure the local environment, change the following attributes in `deploy.d
 * Domains for the local environment.
 * Domains for the services like RabbitMQ and Jenkins: this helps to keep all project links together.
 
-For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html).
+For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html).
 
 ### Update the `readme.md` file
 

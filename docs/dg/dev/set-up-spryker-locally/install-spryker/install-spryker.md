@@ -52,5 +52,5 @@ If you've already selected an installation mode, follow one of the guides below:
 After installation, the instance can be customized further to meet your project requirements.
 The following documents detail these customizations:
 
-* [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html)
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference.html)
+* [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)

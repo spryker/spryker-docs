@@ -51,7 +51,7 @@ In `config/Shared`, adjust or create a configuration file. The name of the file 
 
 ## Set up a deploy file
 
-Set up a [deploy file](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference.html) per your infrastructure requirements using the examples in the table:
+Set up a [deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) per your infrastructure requirements using the examples in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
@@ -102,7 +102,7 @@ Make sure that, in the `hosts` file, all the domains from `deploy.yml` are defin
 
 ## Endpoints
 
-To verify that the migration is successful, make sure you can access the endpoints configured in the deploy file. To learn about the deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference.html).
+To verify that the migration is successful, make sure you can access the endpoints configured in the deploy file. To learn about the deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -125,8 +125,8 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Debugging Setup in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference.html)
-* [Services](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html)
+* [Debugging Setup in Docker](/docs/dg/dev/sdks/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+* [Services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
 * [Self-signed SSL Certificate Setup](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
 * [Adjust Jenkins for a Docker environment](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html)

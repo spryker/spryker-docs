@@ -50,8 +50,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Migrate the project's database to MariaDB.
 - Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme exactly matches the examples in the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
-- [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+- Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) to use data in S3 Buckets instead of local storage for the project.
 - Connect S3 buckets to correct environments:
   - Production S3 bucket to a production environment.

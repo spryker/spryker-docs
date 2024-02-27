@@ -430,7 +430,7 @@ image:
 * To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
 * To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 * To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
+* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>
 
 <details>
@@ -833,7 +833,7 @@ image:
 * To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
 * To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 * To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
+* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>
 
 
@@ -1255,5 +1255,5 @@ image:
 * To learn how to choose the language and to create a basic template for workflow configuration files, see [Quickstart for GitHub Actions](https://help.github.com/en/actions/getting-started-with-github-actions/starting-with-preconfigured-workflow-templates)
 * To learn about encrypted secrets in a workflow on demand, see [Encrypted secrets](https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets)
 * To learn about the Deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
+* To learn about configuring services with the Docker SDK, see [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 </details>

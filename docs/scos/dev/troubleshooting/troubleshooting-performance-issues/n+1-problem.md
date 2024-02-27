@@ -21,11 +21,11 @@ Repeated action per entity.
 
 ## Solution
 
-Change action from *per entity* to *batch of entities*. 
+Change action from *per entity* to *batch of entities*.
 
 ### N+1 problem—external calls in New Relic
 
-For example, suppose there is an order with 42 items. In the [New Relic tool](/docs/dg/dev/sdks/the-docker-sdk/202212.0/configure-services.html#new-relic), do the following: 
+For example, suppose there is an order with 42 items. In the [New Relic tool](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic), do the following:
 
 1. Select the desired profiling:
 ![new-relic-profiling](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/new-relic-profiling.png)
@@ -45,7 +45,7 @@ On `CurlResponse::select` and the request itself we spend 45.70% and 45.49%, so 
 However, these approaches may not always be applicable. For example, in the cases when:
 
 - A 3rd party system does not support bulk operations.
-- You have to make a call right during the order placement. 
+- You have to make a call right during the order placement.
 
 In the cases like these, you need to develop your solution. Some of the most common recommendations include:  
 
@@ -55,7 +55,7 @@ In the cases like these, you need to develop your solution. Some of the most com
 
 ## N+1 problem—DB queries in Blackfire
 
-For example, suppose you add products to cart in a B2B store. In the [Blackfire tool](/docs/dg/dev/sdks/the-docker-sdk/202212.0/configure-services.html#blackfire), do the following:
+For example, suppose you add products to cart in a B2B store. In the [Blackfire tool](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire), do the following:
 
 1. Go to SQL.
 ![blackfire-sql](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n%2B1-problem/blackfire-sql.png)

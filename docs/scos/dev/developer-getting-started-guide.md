@@ -193,7 +193,7 @@ It is safe to disable cache indexing for the following files:
 
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
-* [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
 
 {% info_block infoBox %}
 

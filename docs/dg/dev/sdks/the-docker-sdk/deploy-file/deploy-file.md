@@ -7,7 +7,7 @@ related:
   - title: Deploy file inheritance—common use cases
     link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file reference
-    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file.html
 - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file.html

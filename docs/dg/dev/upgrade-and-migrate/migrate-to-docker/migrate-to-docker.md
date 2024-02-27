@@ -125,8 +125,8 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Debugging Setup in Docker](/docs/dg/dev/sdks/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Debugging Setup in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
 * [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
-* [Services](/docs/dg/dev/sdks/the-docker-sdk/configure-services.html)
+* [Services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 * [Self-signed SSL Certificate Setup](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
 * [Adjust Jenkins for a Docker environment](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html)

@@ -83,7 +83,7 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 ## 3. Configure the environment
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
-2. [Configure services](/docs/dg/dev/sdk/the-docker-sdk/{{site.version}}/configure-services.html).
+2. [Configure services](/docs/dg/dev/sdk/the-docker-sdk/configure-services.html).
 3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
 4. [Configure queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
 5. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores).
@@ -169,7 +169,7 @@ It is safe to disable cache indexing for the following files:
 
 ## 7. Configure debugging
 
-Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging in Docker](/docs/dg/dev/sdk/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
+Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging in Docker](/docs/dg/dev/sdk/the-docker-sdk/configuring-debugging-in-docker.html).
 
 
 ## 8. Explore Spryker architecture

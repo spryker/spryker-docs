@@ -19,17 +19,17 @@ related:
   - title: Docker environment infrastructure
     link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/dg/dev/sdks/the-docker-sdk/configure-services.html
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
   - title: Docker SDK configuration reference
     link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
   - title: Configuring a mount mode
-    link: docs/dg/dev/sdks/the-docker-sdk/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/dg/dev/sdk/the-docker-sdk/page.version/configure-access-to-private-repositories.html
+    link: docs/dg/dev/sdk/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/dg/dev/sdks/the-docker-sdk/configuring-debugging-in-docker.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
@@ -104,7 +104,7 @@ If the same OS is defined for multiple mount modes, the first mount mode matchin
 
 ## Configuring a mount mode
 
-To configure a mount mode, see [Configuring a mount mode](/docs/dg/dev/sdks/the-docker-sdk/configuring-a-mount-mode.html).
+To configure a mount mode, see [Configuring a mount mode](/docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html).
 
 ## Synchronization mount modes
 

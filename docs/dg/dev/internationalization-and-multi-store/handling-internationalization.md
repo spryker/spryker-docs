@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Internationalization"
+title: "Handling internationalization"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-internationalization
@@ -8,19 +8,18 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
 ---
 
-In international business, it is important to fine-tune a shop's behavior according to the country. Topics that differ:
+In international business, it is important to fine-tune a shop's behavior according to the country. Functionality that needs to be configured:
 
-* Design &amp; Layout
-* Currency &amp; price
+* Design and layout
+* Currency and price
 * Tax calculation
 * Languages
 * Expense calculation
 * Available Stocks from a different ERP/client
-* Availability of shipment methods / shipment provider
-* Availability of payment methods / payment provider
-* Order Processing
-* Format of time &amp; number
-* …
+* Availability of shipment methods and providers
+* Availability of payment methods and providers
+* Order processing
+* Format of time and numbers
 
 At the same time, the product import from a PIM system cart calculation and the product structure is identical in all stores. Spryker offers full support to allow localization of the content from its web pages; this is done in an optimized manner that brings speed in rendering the web content.
 
@@ -36,17 +35,17 @@ Localization is adapting the design and layout of your software product so that 
 
 A locale is a parameter that describes the users' language, country, and variant preferences (For example, for Belgium there are two locales available: `nl_BE` and `fr_BE`).
 
-## Summary
+## Approaches to handling internationalization
 
 | CHALLENGE | APPROACH |
 | --- | --- |
-| Design &amp; Layout | Use different templates in the CMS use store concept. |
-| Currency &amp; price | One currency per store, different price types possible. |
+| Design and layout | Use different templates in the CMS use store concept. |
+| Currency and price | One currency per store, different price types possible. |
 | Tax calculation | Different tax sets and rates can be maintained. |
 | Languages | Glossary keys allow translation. Product information can be stored in locale specific attributes of *Product attributes*. Category Information can be stored in locale specific attributes of *Category*. |
 | Expense calculation |  |
 | Availability of stocks | Different stock types can be maintained. |
-| Availability of shipment methods / shipment provider |  |
-| Availability of payment methods / payment provider |  |
+| Availability of shipment methods and providers |  |
+| Availability of payment methods and providers |  |
 | Order Processing | A state machine for every country or region can be defined. |
-| Format of time &amp; number |  |
+| Format of time and numbers |  |

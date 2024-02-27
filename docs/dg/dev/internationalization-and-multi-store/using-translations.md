@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Using translations"
+title: Using translations
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
@@ -11,16 +11,16 @@ redirect_from:
 The data stored in the key-value storage can be used for multiple purposes:
 
 * URL mappings
-* localized product details
-* localized product categories details
+* Localized product details
+* Localized product categories details
 
 ## Using twig translator
 
-Twig Translator uses the data that comes from the Redis key-value storage. The glossary keys store static localized text that’s not likely to be subject of a change (for example, caption of a label).
+Twig Translator uses the data that comes from the Redis key-value storage. The glossary keys store static localized text that’s not likely to be subject of a change, like the caption of a label.
 
 The format of the glossary keys is as follows: `{store}.{locale}.glossary.translation.{glossary_key}`
 
-Example :
+Example:
 
 * **key** : `demo.de_de.glossary.translation.catalog.next`
 * **value** : `weiter`

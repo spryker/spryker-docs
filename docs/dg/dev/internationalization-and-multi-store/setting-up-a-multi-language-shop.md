@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Make a multi-language setup"
+title: Setting up a multi-language shop
 description: This document exmplains multi-language setup details
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -40,11 +40,6 @@ For each store, you can define a set of locales, and the first locale is the def
     ]
 ```
 
-{% info_block infoBox %}
-
-In the previous example, the `en` key is associated with the `en_US` locale.
-
-{% endinfo_block %}
 
 ### URL routing for stores with multiple locales
 
@@ -60,9 +55,9 @@ In Demoshop, for listing the current content of the cart, the following URLs are
 
 #### Routing the URLs
 
-For URL routing, when defining the controllers in your controller provider, you must include the allowed locales for the application.
+For URL routing, when defining the controllers in your controller provider, include the allowed locales for the application.
 
-The allowed locales pattern can be retrieved using `getAllowedLocalesPattern` from the base class of the controller provider—`AbstractYvesControllerProvider`.
+The allowed locales pattern can be retrieved using `getAllowedLocalesPattern` from the base class of the controller provider: `AbstractYvesControllerProvider`.
 
 ```php
 <?php

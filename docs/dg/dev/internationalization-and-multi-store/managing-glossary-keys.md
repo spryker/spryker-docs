@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Managing glossary keys"
+title: "Managing glossary keys"
 description: Glossary keys present two layers of persistence. This topic covers the usage of the functionality for managing the glossary keys.
 last_updated: Aug 10, 2021
 template: howto-guide-template

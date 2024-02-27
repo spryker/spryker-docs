@@ -11,13 +11,13 @@ redirect_from:
 
 This document describes the steps to consider when setting up stores with multiple locales.
 
-## Configure locales for store
-
 {% info_block warningBox %}
 
-With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html) installed, you can only add stores in the Back Office.
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html), you can only add stores in the Back Office.
 
 {% endinfo_block %}
+
+## Configure locales for store
 
 You can find the stores' configuration in the `config/Shared/stores.php` file.
 

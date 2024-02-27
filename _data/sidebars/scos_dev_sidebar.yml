@@ -860,9 +860,7 @@ entries:
     - title: Introduction Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
       nested:
-      - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages.html
-      - title: "Tutorial: Hello world - Spryker Commerce OS"
+      - title: "Tutorial: Hello world"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world.html
 
     - title: Advanced Tutorials
@@ -870,16 +868,9 @@ entries:
       nested:
       - title: "Tutorial: Database transaction handling"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
-      - title: "Tutorial: Internationalization"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
-      - title: "Tutorial: Zed Rest API"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
-      - title: "Tutorial: Managing glossary keys"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
       - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
-      - title: "Tutorial: Console commands"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
+
     - title: HowTos
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
@@ -899,12 +890,7 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-      - title: "HowTo: Set up multiple stores"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
-      - title: "HowTo: Set up stores with multiple locales"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
-      - title: "HowTo: Make a multi-language setup"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/how-to-make-a-multi-language-setup.html"
+
 
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html

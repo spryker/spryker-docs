@@ -76,7 +76,7 @@ gitlab.my-org.com
 
 2. Configure authentication of Composer to VCS services using one of the following options:
 
-* [Configure SSH agent authentication for Composer](#configuring-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
+* [Configure SSH agent authentication for Composer](#configure-ssh-agent-authentication-for-composer). We recommend this option for development purposes.
 * [Configure the Composer authentication environment variable](#configuring-the-composer-authentication-environment-variable). We recommend this option for setting up CI/CD pipelines.
 
 

@@ -26,7 +26,7 @@ related:
   - title: Configuring a mount mode
     link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/dg/dev/sdk/the-docker-sdk/configure-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---

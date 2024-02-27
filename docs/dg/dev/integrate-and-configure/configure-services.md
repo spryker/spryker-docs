@@ -48,7 +48,7 @@ related:
   - title: Configuring a mount mode
     link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/dg/dev/sdk/the-docker-sdk/configure-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
     link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
   - title: Running tests with the Docker SDK
@@ -216,7 +216,7 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch

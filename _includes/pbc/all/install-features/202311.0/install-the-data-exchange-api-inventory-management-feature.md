@@ -71,7 +71,7 @@ COMMIT;
 
 Do the following:
 
-1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) for details on how to do that.
+1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/dg/dev/glue-api/{{page.version}}/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html) for details on how to do that.
 
 2. Send a `PATCH` request. This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided:
 

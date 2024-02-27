@@ -17,7 +17,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-catalog-glue-api.html
 related:
   - title: Searching the product catalog
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
+    link: docs/dg/dev/glue-api/page.version/searching-the-product-catalog.html
 ---
 
 {% include pbc/all/install-features/202311.0/install-glue-api/install-the-catalog-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-catalog-glue-api.md -->

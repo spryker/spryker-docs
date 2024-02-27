@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202212.0/manage-via-glue-api/manage-wishlists-via-glue-api.html
 related:
   - title: Managing wishlist items
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html
+    link: docs/dg/dev/glue-api/page.version/managing-wishlists/managing-wishlist-items.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Wishlist feature overview
@@ -852,4 +852,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 210 | Please enter the name using only letters, numbers, underscores, spaces or dashes.  |
 | 901 | `name` field is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -20,7 +20,7 @@ related:
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
   - title: Retrieve subscriptions to availability notifications
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+    link: docs/dg/dev/glue-api/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-glue-api/install-the-availability-notification-glue-api.md -->

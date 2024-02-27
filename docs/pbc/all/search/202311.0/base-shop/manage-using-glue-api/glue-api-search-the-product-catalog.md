@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
+    link: docs/dg/dev/glue-api/page.version/searching-the-product-catalog.html
   - title: Glue API - Catalog feature integration
     link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - title: Catalog feature overview
@@ -6707,4 +6707,4 @@ For other abstract product attributes, see:
 | 314      | Price mode is invalid.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

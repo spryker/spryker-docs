@@ -12,7 +12,7 @@ related:
   - title: Manage guest carts
     link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+    link: docs/dg/dev/glue-api/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows you to manage guest cart items.
@@ -2632,7 +2632,7 @@ For the attributes of other included resources, see the following:
 * [Gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
 * [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-bundled-products.html)
+*  [Retrieving bundled products](/docs/dg/dev/glue-api/{{site.version}}/managing-products/retrieving-bundled-products.html)
 
 ## Add a configurable bundle to a guest cart
 
@@ -3311,4 +3311,4 @@ If the item is deleted successfully, the endpoint returns the â€œ204 No Contentâ
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

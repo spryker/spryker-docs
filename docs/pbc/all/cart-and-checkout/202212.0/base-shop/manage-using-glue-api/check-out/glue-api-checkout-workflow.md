@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/checking-out/checkout-workflow.html
 related:
   - title: Check out purchases
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/dg/dev/glue-api/page.version/checking-out/checking-out-purchases.html
   - title: Submit checkout data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
+    link: docs/dg/dev/glue-api/page.version/checking-out/submitting-checkout-data.html
   - title: Update payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---

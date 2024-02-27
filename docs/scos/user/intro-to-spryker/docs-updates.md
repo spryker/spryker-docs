@@ -14,12 +14,12 @@ In January 2024, we have added and updated the following pages:
 ### New pages
 
 - [Example modules](/docs/scos/dev/example-modules.html): Explore the use cases and functionality of the Spryker example modules.
-- [Datasource Dependable](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-dependable.html): Learn about the Datasource Dependable service in the components library.
-- [Datasource Trigger Change](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html): Learn about the Datasource Trigger Change service in the components library.
-- [Datasource Trigger Input](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html): Learn about the Datasource Trigger Input service in the components library.
-- [Datasource Trigger](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html): Learn about the Datasource Trigger service in the components library.
-- [Table Column Type Button Action](/docs/scos/dev/front-end-development/202311.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html): Learn about the Table Column Type Button Action in the Components Library.
-- [Actions Confirmation](/docs/scos/dev/front-end-development/202311.0/marketplace/ui-components-library/actions/actions-confirmation.html): Learn about the Actions Confirmation service in the Components Library.
+- [Datasource Dependable](/docs/dg/dev/frontend-development/202311.0/marketplace/ui-components-library/datasources/datasource-dependable.html): Learn about the Datasource Dependable service in the components library.
+- [Datasource Trigger Change](/docs/dg/dev/frontend-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html): Learn about the Datasource Trigger Change service in the components library.
+- [Datasource Trigger Input](/docs/dg/dev/frontend-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html): Learn about the Datasource Trigger Input service in the components library.
+- [Datasource Trigger](/docs/dg/dev/frontend-development/202311.0/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html): Learn about the Datasource Trigger service in the components library.
+- [Table Column Type Button Action](/docs/dg/dev/frontend-development/202311.0/marketplace/table-design/table-column-type-extension/table-column-type-button-action.html): Learn about the Table Column Type Button Action in the Components Library.
+- [Actions Confirmation](/docs/dg/dev/frontend-development/202311.0/marketplace/ui-components-library/actions/actions-confirmation.html): Learn about the Actions Confirmation service in the Components Library.
 - [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Stripe app general overview.
 - [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
 - [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
@@ -27,7 +27,7 @@ In January 2024, we have added and updated the following pages:
 - [Connect an app](/docs/dg/dev/acp/develop-an-app/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
 - [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
 - [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.
-- [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/scos/dev/front-end-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
+- [Directionality in Oryx: Supporting RTL and LTR for applications](/docs/dg/dev/frontend-development/202311.0/oryx/internationalization/oryx-directionality.html): Learn how Oryx supports both right-to-left (RTL) and left-to-right (LTR) directionality. Discover how this feature automatically adjusts layouts, styling, and icons based on the selected direction, enabling developers to create culturally appropriate and accessible user interfaces for global applications.
 
 
 ### Updated pages
@@ -49,7 +49,7 @@ In January 2024, we have added and updated the following pages:
 - [Install the Company Account Glue API](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html).
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
-- [Configure services](/docs/scos/dev/the-docker-sdk/202311.0/configure-services.html).
+- [Configure services](/docs/dg/dev/integrate-and-configure/configure-services.html).
 - [Category Management feature overview](/docs/pbc/all/product-information-management/202311.0/base-shop/feature-overviews/category-management-feature-overview.html).
 - [Developing an app with Spryker Mini-Framework](/docs/dg/dev/acp/develop-an-app/develop-an-app.html).
 - [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
@@ -131,8 +131,8 @@ In December 2023, we have added and updated the following pages:
 - [Enable Click & Collect](/docs/pbc/all/service-point-management/202311.0/unified-commerce/enable-click-collect.html): Learn how to enable Click & Collect.
 - [Service Points Cart + Checkout feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-cart-checkout-feature-overview.html).
 - [Service Points feature overview](/docs/pbc/all/service-point-management/202311.0/unified-commerce/service-points-feature-overview.html).
-- [Set up Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/set-up-oryx.html): Learn how to set up Oryx using a boilerplate project.
-- [Oryx: Packages](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/oryx-packages.html): Learn how to use Oryx packages from npm to ensure easy upgrade to newer versions.
+- [Set up Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/getting-started/set-up-oryx.html): Learn how to set up Oryx using a boilerplate project.
+- [Oryx: Packages](/docs/dg/dev/frontend-development/202311.0/oryx/getting-started/oryx-packages.html): Learn how to use Oryx packages from npm to ensure easy upgrade to newer versions.
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 
 For more details about these and other updates to the Spryker docs in December 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -180,7 +180,7 @@ In November 2023, we have added and updated the following pages:
 - [Service Points + Order Management feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-order-management-feature.html).
 - [Service Points + Product Offer feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-product-offer-feature.html).
 - [Service Points + Shipment feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-shipment-feature.html).
-- [A PHP extension is missing from your system](/docs/scu/dev/troubleshooting/a-php-extension-is-missing-from-your-system.html): Learn what to do if your application requires an extension that is not supported by the Spryker Code Upgrader.
+- [A PHP extension is missing from your system](/docs/ca/devscu/troubleshooting/a-php-extension-is-missing-from-your-system.html): Learn what to do if your application requires an extension that is not supported by the Spryker Code Upgrader.
 - [Configure the Akeneo PIM Integration App](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html): Learn how to configure the Akeneo PIM Integration App to import data from your Akeneo PIM into your Spryker Cloud Commerce OS project via the Spryker Middleware powered by Alumio.
     - [Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html).
     - [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
@@ -216,8 +216,8 @@ In November 2023, we have added and updated the following pages:
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live on Spryker Cloud Commerce OS (SCCOS).
 - [General performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html): Learn how to optimize the server-side execution time for a Spryker project.
 - [Shipment Cart feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-cart-feature.html).
-- [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
-- [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
+- [Set up Oryx](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
+- [Oryx: Boilerplate](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
 - [Shipment + Customer Account Management feature integration guide](/docs/pbc/all/carrier-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-shipment-customer-account-management-feature.html).
 - [Install Docker prerequisites on MacOS](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-macos.html).
@@ -238,14 +238,14 @@ In October 2023, we have added and updated the following pages:
 - [Security release notes 202309.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html).
 - [Upgrade the Chart module](/docs/pbc/all/back-office/202307.0/install-and-upgrade/upgrade-the-chart-module.html): Learn how to upgrade the Chart module from version 1.5.0 to version 1.6.1.
 - Oryx components docs:
-    - [Oryx: Building components](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-building-components.html): Learn about the building blocks of the Oryx applications: the components.
-    - [Oryx: Component types](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-component-types.html): Learn about the Oryx components compared to Atomic design.
-    - [Oryx: Implementing components](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-implementing-components.html): Learn how to create Oryx components.
-    - [Oryx: Providing component definitions](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-providing-component-definitions.html): Learn how how can provide a component definition, which is a prerequisite for a component implementation.
-    - [Oryx: Managing components options](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-managing-component-options.html): Learn how you can manage component options to make the components reusable in different business contexts.
-    - [Oryx: Integrating components](/docs/scos/dev/front-end-development/202307.0/oryx/building-components/oryx-integrating-components.html)
-- [Oryx: Responsive design system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
-- [Entity does not exist: Pyz prefix](/docs/scu/dev/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
+    - [Oryx: Building components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-building-components.html): Learn about the building blocks of the Oryx applications: the components.
+    - [Oryx: Component types](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-component-types.html): Learn about the Oryx components compared to Atomic design.
+    - [Oryx: Implementing components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-implementing-components.html): Learn how to create Oryx components.
+    - [Oryx: Providing component definitions](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-providing-component-definitions.html): Learn how how can provide a component definition, which is a prerequisite for a component implementation.
+    - [Oryx: Managing components options](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-managing-component-options.html): Learn how you can manage component options to make the components reusable in different business contexts.
+    - [Oryx: Integrating components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-integrating-components.html)
+- [Oryx: Responsive design system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
+- [Entity does not exist: Pyz prefix](/docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
 - [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
 - [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
@@ -265,7 +265,7 @@ In October 2023, we have added and updated the following pages:
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
-- [Spryker Code Upgrader in a development workflow](/docs/scu/dev/spryker-code-upgrader-in-a-development-workflow.html).
+- [Spryker Code Upgrader in a development workflow](/docs/ca/devscu/developing-with-spryker-code-upgrader.html).
 - [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): Resolve issues with additional logic in dependency provider
 - [Dead code checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Check if there is dead code that extends core classes in your project.
 - [Minimum allowed shop version](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Learn how to resolve issues with project upgradability when your projects contains old package dependencies that are already not supported.
@@ -306,7 +306,7 @@ In September 2023, we have added and updated the following pages:
 
 - [Dynamic Multistore feature overview](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/dynamic-multistore-feature-overview.html).
 - [Delete stores](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/delete-stores.html): Learn how to delete a store for the Dynamic Multistore feature.
-- [Prepare a project for Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
+- [Prepare a project for Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html): Get your project ready to start using Spryker Code Upgrader.
 - [Bazaarvoice app integration guide](/docs/pbc/all/ratings-reviews/202307.0/third-party-integrations/integrate-bazaarvoice.html).
 - [Algolia app integration guide](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html).
 - [Cart Notes feature integration guide](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/install-and-upgrade/install-features/install-the-cart-notes-feature.html).
@@ -341,12 +341,12 @@ In August 2023, we have added and updated the following pages:
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [HowTo: Set up XDebug profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
 - [Vertex integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
-- [Select target branch for PRs](/docs/scu/dev/select-target-branch-for-prs.html): Learn how to select a target branch on Spryker CI.
-- [Configure Spryker Code Upgrader](/docs/scu/dev/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
-- [Oryx: Design tokens](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
-- [Oryx: Icon system](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
-- [Oryx: Localization](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/oryx-localization.html): Learn how localization is handled in Oryx applications.
-- [Oryx: Typography](/docs/scos/dev/front-end-development/202307.0/oryx/building-applications/styling/oryx-typography.html): Learn about typography in Oryx.
+- [Select target branch for PRs](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to select a target branch on Spryker CI.
+- [Configure Spryker Code Upgrader](/docs/ca/devscu/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.
+- [Oryx: Design tokens](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-design-tokens.html): Learn about the design tokens that provide a centralized and consistent approach for styling components in Oryx applications.
+- [Oryx: Icon system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-icon-system.html): Learn about the icons that provide a consistent design system throughout components in Oryx applications.
+- [Oryx: Localization](/docs/dg/dev/frontend-development/202307.0/oryx/internationalization/oryx-localization.html): Learn how localization is handled in Oryx applications.
+- [Oryx: Typography](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-typography.html): Learn about typography in Oryx.
 - [File manager feature integration guide](/docs/pbc/all/content-management-system/202311.0/base-shop/install-and-upgrade/install-features/install-the-file-manager-feature.html).
 - [Scheduled Prices feature integration guide](/docs/pbc/all/price-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html).
 - [Product Lists feature integration guide](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html).
@@ -370,7 +370,7 @@ For more details about these and other updates to the Spryker docs in August 202
 In July 2023, we have added and updated the following pages:
 
 ### New pages
-- [Oryx: Color system](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
+- [Oryx: Color system](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
 - [Best practises: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
@@ -411,7 +411,7 @@ In June 2023, we have added and updated the following pages:
 
 ### New pages
 - [Security release notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
-- [Oryx: Presets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
+- [Oryx: Presets](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
 - [Backend API - Glue JSON:API Convention integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/install-backend-api-glue-json-api-convention.html).
@@ -419,7 +419,7 @@ In June 2023, we have added and updated the following pages:
     - [File details - shipment_method_shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-method-shipment-type.csv.html).
     - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html).
     - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
-- [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/scos/dev/front-end-development/202212.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html).
+- [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html).
 - [Spryker documentation style guide](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html):
     - [Examples](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html).
     - [Spelling](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html).
@@ -469,39 +469,39 @@ In May 2023, we have added and updated the following pages:
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
 - [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
-- [Change default branch](/docs/scu/dev/change-default-branch.html): Learn how to change the default branch in Spryker CI
-- [Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/oryx.html) documentation:
-    - [Set up Oryx](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
-    - [Oryx: Boilerplate](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
-    - [Oryx: Feature sets](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
-    - [Oryx: Packages](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
-    - [Oryx: Routing](/docs/scos/dev/front-end-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
-    - [Oryx: Versioning](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
-    - [Oryx: Supported browsers](/docs/scos/dev/front-end-development/202212.0/oryx/getting-started/oryx-supported-browsers.html): Learn what browsers Oryx supports.
-    - [Dependency injection](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
-    - [Oryx service layer](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
-    - [Dependency Injection: Using services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
-    - [Dependency Injection: Defining services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
-    - [Dependency Injection: Providing services](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
-    - [Dependency Injection: Advanced strategies](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
-    - [Oryx application orchestration](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html): Orchestration of the Oryx Application.
-    - [Oryx application](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html): Learn about the app of the Oryx Application.
-    - [Oryx application environment](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
-    - [Oryx application feature](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
-    - [Oryx application plugins](/docs/scos/dev/front-end-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
-    - [Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
-    - [Key concepts of Reactivity](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
-    - [Reactive components](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
-    - [Oryx: Integration of backend APIs](/docs/scos/dev/front-end-development/202212.0/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
+- [Change default branch](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to change the default branch in Spryker CI
+- [Oryx](/docs/dg/dev/frontend-development/202212.0/oryx/oryx.html) documentation:
+    - [Set up Oryx](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/set-up-oryx.html): Learn how to set up an environment for developing in the Oryx framework.
+    - [Oryx: Boilerplate](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-boilerplate.html): Create maintainable and upgradeable applications using the Oryx boilerplate.
+    - [Oryx: Feature sets](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-feature-sets.html): Learn what the feature sets in Oryx are all about.
+    - [Oryx: Packages](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-packages.html): Use Oryx packages from npm to ensure you can easily upgrade to newer versions.
+    - [Oryx: Routing](/docs/dg/dev/frontend-development/202212.0/oryx/building-pages/oryx-routing.html): Lear how to set up the Oryx routing.
+    - [Oryx: Versioning](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-versioning.html): Learn about the methods used in Oryx to deliver an advanced application development platform while maintaining stability.
+    - [Oryx: Supported browsers](/docs/dg/dev/frontend-development/202212.0/oryx/getting-started/oryx-supported-browsers.html): Learn what browsers Oryx supports.
+    - [Dependency injection](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/dependency-injection.html): Learn about the dependency injection that lets you customize logic but keep your project upgradable.
+    - [Oryx service layer](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/oryx-service-layer.html): Learn about the service layer in Oryx serves as the foundation for the business logic.
+    - [Dependency Injection: Using services](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-using-services.html): Learn how to inject services and dependencies.
+    - [Dependency Injection: Defining services](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-defining-services.html): Recommended conventions for defining services.
+    - [Dependency Injection: Providing services](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-providing-services.html): Recommended conventions for providing services.
+    - [Dependency Injection: Advanced strategies](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/dependency-injection/dependency-injection-advanced-strategies.html): Strategies for using DI that cover advanced use cases.
+    - [Oryx application orchestration](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-orchestration.html): Orchestration of the Oryx Application.
+    - [Oryx application](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application.html): Learn about the app of the Oryx Application.
+    - [Oryx application environment](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-environment.html): Learn about the environment of the Oryx Application.
+    - [Oryx application feature](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html): Learn about the feature of the Oryx Application.
+    - [Oryx application plugins](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html): Learn about plugins of the Oryx Application.
+    - [Reactivity](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/reactivity/reactivity.html): Learn how Reactivity enables real-time updates.
+    - [Key concepts of Reactivity](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/reactivity/key-concepts-of-reactivity.html): Understand the Reactivity concepts that will help you understand how Oryx works.
+    - [Reactive components](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/reactivity/reactive-components.html): Learn about the reactive components that are built with Lit.
+    - [Oryx: Integration of backend APIs](/docs/dg/dev/frontend-development/202212.0/oryx/architecture/reactivity/oryx-integration-of-backend-apis.html): Compose a frontend application from backend APIs.
 
 
 ### Updated pages
 
 - [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
-- [Spryker Code Upgrader](/docs/scu/dev/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
+- [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
-- [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/202212.0/configuring-debugging-in-docker.html): Learn how to configure debugging in Docker.
+- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn how you can submit an environment provisioning request.
 - [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html): Learn how to configure the Algolia app.
 - [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/integrate-algolia.html): Learn how to integrate the Algolia app.
@@ -514,7 +514,7 @@ In April 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Connect the Upgrader to a project self-hosted with GitLab](/docs/scu/dev/onboard-to-spryker-code-upgrader/connect-spryker-ci-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
+- [Connect the Upgrader to a project self-hosted with GitLab](/docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-project-self-hosted-with-gitlab.html): Learn how to connect the Spryker Code Upgrader manually using a Gitlab CE/EE access token.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html#spryker-product-structure): Learn how and when to update your Spryker project.
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)

@@ -162,7 +162,7 @@ You've set up your Spryker B2C Demo Shop and can now access your applications.
 
 ### Data preparation
 
-With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html).
+With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html).
 
 These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment.
 

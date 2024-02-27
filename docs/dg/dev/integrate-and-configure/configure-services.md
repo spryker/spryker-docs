@@ -19,37 +19,47 @@ redirect_from:
   - /scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html  
   - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
   - /docs/scos/dev/technology-partner-guides/202212.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+  - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
+  - /docs/scos/dev/technical-enhancements/chromium-browser-for-tests.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/configure-services.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/configuring-new-relic-logging.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
+  - /docs/scos/dev/the-docker-sdk/202311.0/configure-services.html
+
 
 related:
-  - title: Deploy File Reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
   - title: The Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
   - title: Docker SDK quick start guide
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
   - title: Docker environment infrastructure
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Docker SDK configuration reference
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
   - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
   - title: Configuring a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
 This document describes how to configure services shipped by default.
 
 ## Prerequisites
 
-1. Install or update the Docker SDK to the latest version:
+Install or update the Docker SDK to the latest version:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
@@ -206,7 +216,7 @@ docker/sdk up --build --data
 
 For more information, see the following documents:
 
-* [Configure Elasticsearch](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
+* [Configure Elasticsearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html)—describes ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html)—provides detailed information about ElasticSearch.
 
 ### Configure ElasticSearch
@@ -480,12 +490,15 @@ composer require spryker-eco/new-relic
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
+    ...
     php:
         ...
         enabled-extensions:
             ...
             - newrelic
+    environment:
+        ...
+        NEWRELIC_CUSTOM_APP_ENVIRONMENT: ENVIRONMENT_VALUE_HERE # staging, dev, production, uat
 ```
 
 2. Push and deploy the changes using one of the following guides:
@@ -527,7 +540,7 @@ docker:
 
 ```yaml
 image:
-    tag: spryker/php:7.4 # the image tag that has been previously used in `image`
+    ...
     php:
         ...
         enabled-extensions:
@@ -539,21 +552,21 @@ image:
 
 By default, in the New Relic dashboard, the APM is displayed as `company-staging-newrelic-app`. To improve visibility, you may want to configure each application as a separate APM. For example, `YVES-DE (docker.dev)`.
 
-To do it, adjust the Monitoring service in `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
+To do it, add the `NewRelicMonitoringExtensionPlugin` by creating the class `src/Pyz/Service/Monitoring/MonitoringDependencyProvider.php`:  
 
 ```php
 <?php declare(strict_types = 1);
-
+​
 /**
  * This file is part of the Spryker Commerce OS.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
-
+​
 namespace Pyz\Service\Monitoring;
-
+​
 use Spryker\Service\Monitoring\MonitoringDependencyProvider as SprykerMonitoringDependencyProvider;
-use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
-
+use Pyz\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin;
+​
 class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
 {
     /**
@@ -564,6 +577,45 @@ class MonitoringDependencyProvider extends SprykerMonitoringDependencyProvider
         return [
             new NewRelicMonitoringExtensionPlugin(),
         ];
+    }
+}
+```
+
+Next, create the class `src/Pyz/Service/NewRelic/Plugin/NewRelicMonitoringExtensionPlugin.php`
+
+```php
+<?php
+​
+/**
+ * MIT License
+ * For full license information, please view the LICENSE file that was distributed with this source code.
+ */
+​
+namespace Pyz\Service\NewRelic\Plugin;
+​
+use SprykerEco\Service\NewRelic\Plugin\NewRelicMonitoringExtensionPlugin as SprykerNewRelicMonitoringExtensionPlugin;
+​
+class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensionPlugin
+{
+    /**
+     * @param string|null $application
+     * @param string|null $store
+     * @param string|null $environment
+     *
+     * @return void
+     */
+    public function setApplicationName(?string $application = null, ?string $store = null, ?string $environment = null): void
+    {
+        if (!$this->isActive) {
+            return;
+        }
+​
+        // Custom application environment name, or use $environment as fallback
+        $environment = getenv('NEWRELIC_CUSTOM_APP_ENVIRONMENT') ?: $environment;
+​
+        $this->application = $application . '-' . $store . ' (' . $environment . ')';
+​
+        newrelic_set_appname($this->application, null, false);
     }
 }
 ```

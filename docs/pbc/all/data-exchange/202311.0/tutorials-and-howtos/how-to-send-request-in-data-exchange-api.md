@@ -100,6 +100,49 @@ Response sample:
 }
 ```
 
+It is also possible to supply multiple values for a field and are filtered as IN condition:
+
+```bash
+GET /dynamic-entity/countries?filter[country.iso2_code]={"in": ["AC","AD", "AE"]} HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+```
+
+Response sample:
+
+```json
+{
+  "data": [
+    {
+      "id_country": 1,
+      "iso2_code": "AC",
+      "iso3_code": "ASC",
+      "name": "Ascension Island",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    },
+    {
+      "id_country": 2,
+      "iso2_code": "AD",
+      "iso3_code": "AND",
+      "name": "Andorra",
+      "postal_code_mandatory": true,
+      "postal_code_regex": "AD\\d{3}"
+    },
+    {
+      "id_country": 3,
+      "iso2_code": "AE",
+      "iso3_code": "ARE",
+      "name": "United Arab Emirates",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    }
+  ]
+}
+```
+
 {% info_block infoBox %}
 
 When you combine multiple filters in a single request, the system applies an `AND` condition to the retrieved results.

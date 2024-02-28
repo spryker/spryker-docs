@@ -100,7 +100,7 @@ Response sample:
 }
 ```
 
-It is also possible to supply multiple values for a field, and they are filtered as IN condition:
+It is also possible to supply multiple values for a field. They are filtered as IN condition:
 
 ```bash
 GET /dynamic-entity/countries?filter[country.iso2_code]={"in": ["AC","AD", "AE"]} HTTP/1.1

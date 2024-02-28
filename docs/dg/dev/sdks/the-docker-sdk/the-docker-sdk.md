@@ -190,7 +190,10 @@ The `docker/sdk export images {tag}` command is only for the baked mode. It does
  - Builds and tags frontend images.
  - Prints information about the built images.
 
+ The `docker/sdk robot-framework {command}` command executes sets of API and UI tests, built on the Robot Framework.
+
 ## Development environment
+
 The following schema illustrates the development environment with the Docker SDK:
 ![development-environment](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/development-environment.png)
 

@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -266,8 +266,8 @@ sku,value
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sku | mandatory | string| 1234 | SKU reference of an abstract gift card product. |
-| value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| sku | ✓ | string| 1234 | SKU reference of an abstract gift card product. |
+| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 ```bash
 console data:import:gift-card-abstract-configuration
@@ -1130,7 +1130,7 @@ Note: You need to complete Feature Frontend integration before you can verify th
 
 ### Prerequisites
 
-To start feature integration, overview and install the necessary features:
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

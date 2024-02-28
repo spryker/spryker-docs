@@ -8,7 +8,7 @@ related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Confirming customer registration
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-confirm-customer-registration.html
   - title: Authenticating as a customer
@@ -25,7 +25,7 @@ related:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 
 ## Create a customer

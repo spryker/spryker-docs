@@ -7,7 +7,7 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202212.0/marketplace-merchant-custom-prices-feature-integration.html
 related:
   - title: Marketplace Merchant Custom Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-custom-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/marketplace/marketplace-merchant-custom-prices-feature-overview.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.
@@ -18,12 +18,12 @@ Follow the steps below to install the Marketplace Merchant Custom Prices feature
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
-| NAME    | VERSION    | INTEGRATION GUIDE    |
+| NAME    | VERSION    | INSTALLATION GUIDE    |
 |----------------|------------------|-------------------|
 | Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
-| Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Product Management | {{page.version}} | [Install the Merchant Portal - Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

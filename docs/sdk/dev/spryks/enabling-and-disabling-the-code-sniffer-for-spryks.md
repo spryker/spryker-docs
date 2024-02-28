@@ -2,6 +2,7 @@
 title: Enabling and disabling the Code Sniffer for Spryks
 description: Find out how you can enable or disable the Code Sniffer when running Spryks
 template: howto-guide-template
+last_updated: Nov 8, 2022
 ---
 
 Before writing files into a project, the [Code Sniffer](https://docs.spryker.com/docs/scos/dev/sdk/development-tools/code-sniffer.html) fixes all the code style issues and imports the missing namespaces. For this reason, use FQCNs everywhere (templates, arguments, etc.).

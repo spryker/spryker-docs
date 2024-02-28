@@ -6,51 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/dev-getting-started
 originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
-  - /2021080/docs/dev-getting-started
-  - /2021080/docs/en/dev-getting-started
-  - /docs/dev-getting-started
-  - /docs/en/dev-getting-started
-  - /v6/docs/dev-getting-started
-  - /v6/docs/en/dev-getting-started
-  - /v5/docs/dev-getting-started
-  - /v5/docs/en/dev-getting-started
-  - /v4/docs/dev-getting-started
-  - /v4/docs/en/dev-getting-started
-  - /v3/docs/dev-getting-started
-  - /v3/docs/en/dev-getting-started
-  - /v2/docs/dev-getting-started
-  - /v2/docs/en/dev-getting-started
-  - /v1/docs/dev-getting-started
-  - /v1/docs/en/dev-getting-started
-  - /2021080/docs/about-the-development-guide
-  - /2021080/docs/en/about-the-development-guide
-  - /docs/about-the-development-guide
-  - /docs/en/about-the-development-guide
-  - /v6/docs/about-the-development-guide
-  - /v6/docs/en/about-the-development-guide
-  - /v5/docs/about-the-development-guide
-  - /v5/docs/en/about-the-development-guide
-  - /v4/docs/about-the-development-guide
-  - /v4/docs/en/about-the-development-guide
-  - /v3/docs/about-the-development-guide
-  - /v3/docs/en/about-the-development-guide
-  - /v2/docs/about-the-development-guide
-  - /v2/docs/en/about-the-development-guide
-  - /v1/docs/about-the-development-guide
-  - /v1/docs/en/about-the-development-guide
-  - /v4/docs/installation-guide-b2c
-  - /v4/docs/en/installation-guide-b2c
-  - /v4/docs/installation-guide-b2b
-  - /v4/docs/en/installation-guide-b2b  -
-  - /2021080/docs/installation-guide-b2c
-  - /2021080/docs/en/installation-guide-b2c
-  - /docs/installation-guide-b2c
-  - /docs/en/installation-guide-b2c
-  - /dev-getting-started.htm
-  - /installation/spryker_in_docker/getting-started-with-docker-201907.htm
+  - /docs/scos/dev/module-migration-guides/about-migration-guides.html
+  - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
 ---
 
-This document guides you into getting started with the Spryker Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
+This document guides you into getting started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access the Spryker community at [CommerceQuest](https://commercequest.space/).
 
 ## 1. Install Spryker
 
@@ -61,20 +21,13 @@ You can choose from the following options:
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
 
-Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
+Both Demo Shops can also be expanded with separate features and modules.
 
-### Install Spryker with Docker
+To install Spryker, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
-When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements.
+### The deploy file
 
-To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
-
-* Make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
-* Once you have the necessary prerequisites set up, you can then [choose your installation mode with your OS](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#installation). You can install docker in modes for Development, Demo, or add it to an existing project.
-
-#### The deploy file
-
-When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+When working with a local environment, you should use the [deploy.dev.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 
@@ -84,16 +37,16 @@ In the default deploy file, change the following attributes:
 * Domains for the local environment
 * Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together
 
-#### Vagrant clean-up
+### Vagrant clean-up
 
-When you use Docker and not the Development Virtual Machine (also called DevVM), you do not need the DevVM’s configuration files. Therefore, you can remove the following files:
+In the past, Vagrant had been used to run Spryker locally. Now that Spryker runs on Docker, you can remove the following Vagrant configuration files:
 
 * `config/install/development.yml`
 * `config_default-development_*.php`
 
-#### Adjust the `readme.md` file
+### Adjust the `readme.md` file
 
-Once your project has been installed, you need to adjust the `readme.md` file in the following ways:
+Once your project has been installed, you need to adjust the `readme.md` file as follows:
 
 * Update the project installation description.
 * Update the repository link.
@@ -110,14 +63,14 @@ To better define your strategy when implementing Spryker updates, learn about ou
 
 {% endinfo_block %}
 
-When installing and managing module dependencies, we use [Composer](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
+When installing and managing module dependencies, we use [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html). Depending on what you want to do, you can run one of the following Composer commands:
 
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
 * To update all the modules for your project: `composer update "spryker/*"`.
 
 {% info_block infoBox %}
 
-We recommend running this command weekly to ensure you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up-to-date with the improvements.
+We recommend running this command weekly to ensure you have the latest fixes. We also recommend [subscribing to our release notes newsletter](https://now.spryker.com/release-notes) to stay up to date with the improvements.
 
 {% endinfo_block %}
 
@@ -131,20 +84,20 @@ You can easily keep track of new module versions using the [composer-versions-ch
 
 * To add a new module to your project: `composer require "spryker/module-name"`.
 
-To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
+To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
 ## 3. Configure the environment
 
-The next step to take once installation has finished and modules set up, you need to configure and customize your Spryker Commerce OS. For this, you can do the following:
+To configure and customize your project, you can do the following:
 
-1. Define how to manage the settings in the configuration files with [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).
+1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. Configure your environment:
-    * [Database](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
-    * [Redis](/docs/scos/dev/setup/redis-configuration.html)
+    <!-- * [Database](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html) -->
+    * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
-    * [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html)
+    * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
 3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
-4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
+4. [Schedule tasks](/docs/dg/dev/backend-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
 ### Store clean-up
@@ -178,12 +131,12 @@ For those stores that you wish to allow, don’t forget to edit `CodeBucketConfi
 ## 4. Configure CI
 
 Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
-* [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
-* [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
-* [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-github-actions.html)
-* [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-gitlab-pipelines.html)
-* [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
-* [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
+* [Deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
+* [Customizing deployment pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
+* [GitHub Actions](/docs/ca/dev/configure-deployment-pipelines/configure-github-actions.html)
+* [Configuring GitLab pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html)
+* [Azure Pipelines](/docs/ca/dev/configure-deployment-pipelines/configure-azure-pipelines.html)
+* [Configuring Bitbucket Pipelines ](/docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html)
 
 ## 5. Configure checkers
 
@@ -240,7 +193,7 @@ It is safe to disable cache indexing for the following files:
 
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
 
 {% info_block infoBox %}
 
@@ -252,10 +205,10 @@ When in a production environment, Zed must be configured to use a VPN, basic acc
 
 As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
-* [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
-* [Modules and layers](/docs/scos/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
-* [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
-* [Technology stack](/docs/scos/dev/architecture/technology-stack.html): to learn about the technologies we use.
+* [Conceptual overview](/docs/dg/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
+* [Modules and layers](/docs/dg/dev/architecture/modules-and-application-layers.html): to learn about layers and how various functionality is encapsulated in modules.
+* [Programming concepts](/docs/dg/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.
+* [Technology stack](/docs/dg/dev/architecture/technology-stack.html): to learn about the technologies we use.
 
 <!---* Introduction to navigating the folder structure, main concepts and namespacing.
 * The project directory

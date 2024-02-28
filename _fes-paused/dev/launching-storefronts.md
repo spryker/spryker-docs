@@ -69,7 +69,7 @@ For more information about Netlify build configuration, see [Get started with bu
 
 ## Connecting SCCOS
 
-In the *Commerce provider* section, you need to connect the Storefront to a [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) environment and select [locales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) and [currencies](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html). Follow the steps below:
+In the *Commerce provider* section, you need to connect the Storefront to a [Spryker Cloud Commerce OS (SCCOS)](/docs/ca/dev/getting-started-with-cloud-administration.html) environment and select [locales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/multi-language-setup.html) and [currencies](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html). Follow the steps below:
 
 1. Select a **SPRYKER ENVIRONMENT** to connect this Storefront to.
 

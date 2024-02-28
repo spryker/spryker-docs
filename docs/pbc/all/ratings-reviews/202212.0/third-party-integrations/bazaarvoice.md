@@ -2,6 +2,7 @@
 title: Bazaarvoice
 description: Find out how you can integrate and use Bazaarvoice in your Spryker shop
 template: howto-guide-template
+last_updated: Jul 11, 2023
 redirect_from:
    - docs/aop/user/apps/bazaarvoice.html
    - docs/acp/user/apps/bazaarvoice.html
@@ -30,9 +31,9 @@ When you connect Bazaarvoice, the app puts JavaScrip tags into your store, and t
 
 {% info_block infoBox "Info" %}
 
-If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+If you have Bazaarvoice integrated, the Spryker default the [Ratings and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
 
 ## Next step
-[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{page.version}/third-party-integrations/integrate-bazaarvoice.html)
+[Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/{{page.version}}/third-party-integrations/integrate-bazaarvoice.html)

@@ -1,5 +1,5 @@
 ---
-title: Integrate the Prices feature
+title: Install the Prices feature
 description: The guide walks you through the process of installing the Volume Prices feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -18,12 +18,12 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
-  - title: Product feature integration
+  - title: Install the Product feature
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202212.0/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-prices-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202212.0/install-the-prices-feature.md -->

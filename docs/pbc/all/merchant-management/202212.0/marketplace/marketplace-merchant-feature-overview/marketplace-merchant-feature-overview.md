@@ -2,6 +2,7 @@
 title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/marketplace/user/features/202212.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
@@ -13,7 +14,7 @@ A *merchant* is a seller of goods or services, either a business or a private 
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#creating-merchants) or [import merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant.csv.html).
+You can [create merchants in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#creating-merchants) or [import merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html).
 
 {% info_block infoBox "Note" %}
 
@@ -76,7 +77,7 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 The information for a merchant profile can be defined:
 
 * By the Marketplace administrator in the Back Office when [creating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#creating-merchants) or [editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#editing-merchants).
-* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-profile-address.csv.html).
+* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
@@ -112,7 +113,7 @@ Marketplace Storefront lets buyers check what merchants are the owners of the of
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the marketplace products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the marketplace products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/pbc/all/search/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation.
+In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/standard-filters-overview.html) documentation.
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 
@@ -134,8 +135,8 @@ Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 | --- | --- | --- |
-|[Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |[Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html) | [File details: merchant.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant.csv.html) |
-|[Glue API: Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-glue-api.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-profile.csv.html) |
-| [Merchant Portal - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-profile-address.csv.html) |
-|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-stock.csv.html) |
-|   |   | [File details: merchant_store.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-store.csv.html)  |
+|[Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |[Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html) | [File details: merchant.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html) |
+|[Install the Marketplace Merchant Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) | [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) |
+| [Install the Merchant Portal - Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html) |
+|     | [Resolving the URL of the merchant page](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html) |
+|   |   | [File details: merchant_store.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-store.csv.html)  |

@@ -53,11 +53,11 @@ Product abstract card:
 
 In the Back Office, a product catalog manager can view what product group an abstract product belongs to.
 
-Also, they can insert product groups into CMS pages using content widgets in the [WYSIWYG editor](/docs/pbc/all/content-management-system/{{page.version}}/content-items-feature-overview.html#content-item-widget).
+Also, they can insert product groups into CMS pages using content widgets in the [WYSIWYG editor](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html#content-item-widget).
 
 ## Creating product groups
 
-Only a developer can create product groups by [importing them](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Only a developer can create product groups by [importing them](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 ## Current constraints
@@ -78,4 +78,4 @@ Check out this video tutorial on product groups:
 
 |INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |
+| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |

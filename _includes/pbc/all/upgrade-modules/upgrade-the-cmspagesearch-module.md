@@ -4,7 +4,7 @@
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html). Prior to upgrading this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810).
+This migration guide is a part of the [Search migration effort](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html). Prior to upgrading this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
 
@@ -84,7 +84,7 @@ Spryker\Zed\CmsPageSearch\Communication\Plugin\Search\CmsDataPageMapBuilder
 
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the `CmsPageSearch` module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the `CmsPageSearch` module introduces the [multi-store functionality](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 To avoid the BC break, a synchronization behavior must be removed.
 

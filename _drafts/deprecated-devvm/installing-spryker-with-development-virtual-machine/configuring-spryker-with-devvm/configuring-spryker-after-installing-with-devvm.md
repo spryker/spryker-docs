@@ -1,5 +1,5 @@
 ---
-title: Configuring Spryker after installing with DevVM
+title: Configure Spryker after installing with DevVM
 description: This article provides post-installation steps and additional info for the Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,16 +22,16 @@ redirect_from:
   - /v2/docs/en/post-installation-steps-and-additional-info
   - /v1/docs/post-installation-steps-and-additional-info
   - /v1/docs/en/post-installation-steps-and-additional-info
-  - /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
+  - /docs/scos/dev/set-up-spryker-locally/post-installation-steps-and-additional-info.html
 related:
   - title: Configuring database servers
-    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
   - title: Updating Node.js in DevVM to the latest version
-    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 
@@ -104,7 +104,7 @@ A common Spryker Project is like a typical web project. There is the project lev
 | PostgreSQL Server | 5432 | Username is `development`, password is `mate20mg`. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/dg/dev/backend-developmentdata-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache module
 
@@ -171,4 +171,4 @@ The first key is responsible for proper call from Yves to Zed, while the second 
 
 ## Upgrading to a newer version
 
-To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html#core-updates).
+To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html#core-updates).

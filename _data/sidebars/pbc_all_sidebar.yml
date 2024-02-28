@@ -2948,7 +2948,7 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
                   - title: product_label.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label.csv.html
-                    - title: product_list_to_category.csv
+                  - title: product_list_to_category.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.html
                   - title: product_list_to_concrete_product.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Handle case sensitive file system on Mac OS"
+title: Switch to a case-sensitive file system on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Do better deployments"
+title: Simulating deployments locally
 description: This document shows how to do better deployments by using your local environment as a preview for how your application will behave when deployed to PaaS
 last_updated: Jul 27, 2022
 template: howto-guide-template
@@ -10,15 +10,13 @@ redirect_from:
 
 Are you about to roll out an important feature to your staging or production environment and want to ensure that everything will work out right? Or you are encountering behavior in your application when it is deployed that does not seem right, and you are wondering how to best debug it? This document provides tips that can help you avoid surprises and help you prepare your project optimally for deployment and build a local development setup with which you can debug more effectively.
 
+To simulate your application behavior and how it looks when deployed to the staging or production environment, bootstrap the `deploy.yml` files used by those environments. The following sections show what needs to be done.
+
 ## Prerequisites
 
 Read access to your codebase.
 
-## Simulate your application
-
-To simulate your application behavior and how it looks when deployed to the staging or production environment, bootstrap the `deploy.yml` files used by those environments. The following sections show what needs to be done.
-
-### Prepare your local hosts file
+## Prepare your local hosts file
 
 In these `deploy.yml` files, you specify the actual endpoint names that determine the URLs under which your environment is reachable. To work locally, point your DNS names to your local development environment by adding host entries in your local `/etc/hosts` file.
 
@@ -28,7 +26,7 @@ Make sure that all endpoints in your `deploy.*.yml` file are referenced there an
 
 {% endinfo_block %}
 
-### Bootstrap with `deploy.yml`
+## Bootstrap with `deploy.yml`
 
 For development purposes, your project has different `deploy.yml` files. However, to simulate the app's behavior, you can use the `deploy.yml` files used during deployment to staging and production environments.
 
@@ -47,7 +45,7 @@ Replace `DEPLOY_FILE.yml` with the YML file of your choice.
 
 It starts up your application, which is reachable through its staging and production URLs and behaves just like it would in your PaaS environments. This setup shows whether your application builds correctly with the deploy files used in the PaaS pipelines and lets you check out the look and feel of your application more authentically.
 
-### Ingest staging or production data
+## Ingest staging or production data
 
 {% info_block warningBox "Mind the database load" %}
 

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Force HTTPS"
+title: Forcing HTTPS
 description: Use the guide to configure HTTPs and HTTP for your pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -19,7 +19,7 @@ If your servers are behind a load balancer, and the load balancer is doing the r
 
 Perform the following steps to configure the application to use HTTPS.
 
-## 1. Force HTTPS for all pages
+## Force HTTPS for all pages
 
 Set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
 
@@ -45,7 +45,7 @@ If the request is not secure and not excluded from HTTPS, the application return
 
 {% endinfo_block %}
 
-## 2. Allow pages to use HTTP
+## Allow pages to use HTTP
 
 You can also allow some of your pages not to use HTTPS.
 

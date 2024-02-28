@@ -64,7 +64,7 @@ To get an order, you can read it from `$glueRequestTransfer->getSortings()`, whi
 
 To add a filter, the client must send `?filter[wishlists.name]=Test&filter[wishlists.quantity]=1`. In SQL, this is equal to `WHERE wishlists.name='Test' AND wishlists.quantity = 1`.
 
-It is also possible to supply multiple values for a field and are filtered as IN condition. For example, `?filter[wishlists.name]={"in": ["Test1","Test2"]}` is equal to `WHERE wishlists.name IN ('Test1', 'Test2')`.
+It is also possible to supply multiple values for a field. Thez are filtered as IN condition. For example, `?filter[wishlists.name]={"in": ["Test1","Test2"]}` is equal to `WHERE wishlists.name IN ('Test1', 'Test2')`.
 
 To use those fields when processing use `$glueRequestTransfer->getFilters()`, this returns an array of `GlueFilterTransfer`. You can loop over it and find filters matching your resource.
 

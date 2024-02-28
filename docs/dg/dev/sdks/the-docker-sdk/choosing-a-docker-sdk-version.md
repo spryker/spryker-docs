@@ -6,35 +6,34 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/choosing-a-docker-sdk-version
 originalArticleId: 18a333a7-2d89-455f-885a-92d24594fb31
 redirect_from:
-  - /2021080/docs/choosing-a-docker-sdk-version
-  - /2021080/docs/en/choosing-a-docker-sdk-version
-  - /docs/choosing-a-docker-sdk-version
-  - /docs/en/choosing-a-docker-sdk-version
+  - /docs/scos/dev/the-docker-sdk/202311.0/choosing-a-docker-sdk-version.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/choosing-a-docker-sdk-version.html
   - /docs/scos/dev/the-docker-sdk/202307.0/choosing-a-docker-sdk-version.html
+  - /docs/scos/dev/the-docker-sdk/202212.0/choosing-a-docker-sdk-version.html
 
 related:
   - title: The Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
   - title: Docker SDK quick start guide
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
   - title: Docker environment infrastructure
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configure-services.html
+    link: docs/dg/dev/integrate-and-configure/configure-services.html
   - title: Docker SDK configuration reference
-    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-configuration-reference.html
+    link: docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
   - title: Choosing a Docker SDK version
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
   - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
   - title: Configuring a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring access to private repositories
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+    link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
 This document describes why and how to select a particular version of the Docker SDK and use it in your project.

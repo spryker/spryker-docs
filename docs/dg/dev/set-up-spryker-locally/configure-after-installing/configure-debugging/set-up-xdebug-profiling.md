@@ -34,7 +34,7 @@ image:
 
 ## 2. Set up XDebug configuration
 
-To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
+To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html).
 
 ## 3. Bring up your application and start profiling
 
@@ -77,4 +77,4 @@ You can also see which one was the most expensive in terms of memory:
 
 ## Next steps
 
-Once you have deployed your application, you can use NewRelic APM to monitor its performance in real-time. If you still haven't done it, see the "New Relic" section in the [Configure services](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) guide.
+Once you have deployed your application, you can use NewRelic APM to monitor its performance in real-time. If you still haven't done it, see the "New Relic" section in the [Configure services](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic) guide.

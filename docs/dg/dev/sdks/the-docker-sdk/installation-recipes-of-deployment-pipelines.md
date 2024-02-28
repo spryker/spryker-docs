@@ -6,6 +6,9 @@ template: howto-guide-template
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/installation-recipes-of-deployment-pipelines.html
 - /docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html
+- /docs/scos/dev/the-docker-sdk/202307.0/installation-recipes-of-deployment-pipelines.html
+- /docs/scos/dev/the-docker-sdk/202212.0/installation-recipes-of-deployment-pipelines.html
+
 
 ---
 
@@ -32,7 +35,7 @@ config
 │       └── production.yml
 ```
 
-The default recipe for any project is [config/install/docker.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/install/docker.yml). You can define a different recipe in a [deploy](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/deploy-file/deploy-file.html) file. The default value is as follows:
+The default recipe for any project is [config/install/docker.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/install/docker.yml). You can define a different recipe in a [deploy](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) file. The default value is as follows:
 
 ```shell
 pipeline: 'docker'
@@ -70,7 +73,7 @@ A default recipe file can be split into four logical blocks:
     - `scheduler-suspend`: suspend the scheduler.
     - `scheduler-clean`: clean the scheduler.
 
-These sections are part of the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/{{page.version}}/the-docker-sdk.html) and cannot be renamed.
+These sections are part of the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html) and cannot be renamed.
 
 ## Customization of recipes
 

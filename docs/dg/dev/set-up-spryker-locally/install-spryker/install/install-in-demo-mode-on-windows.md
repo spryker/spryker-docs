@@ -144,7 +144,7 @@ To ensure that the installation is successful, make sure you can access the foll
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
-To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) to learn about the Deploy file.
 
 {% endinfo_block %}
 
@@ -155,7 +155,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Configuring debugging in Docker](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy file reference - 1.0](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Configuring services](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html)
+* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+* [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 * [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

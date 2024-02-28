@@ -4,13 +4,15 @@ description: Examples of using deploy file inheritance
 template: concept-topic-template
 last_updated: Nov 21, 2023
 related:
-  - title: Deploy file reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
+  - title: Deploy file reference
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
   - title: Deploy file
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
+    link: docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html
 redirect_from:
 - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 - /docs/scos/dev/the-docker-sdk/202311.0/deploy-file/deploy-file-inheritance-common-use-cases.html
+- /docs/scos/dev/the-docker-sdk/202307.0/deploy-file/deploy-file-inheritance-common-use-cases.html
+- /docs/scos/dev/the-docker-sdk/202212.0/deploy-file/deploy-file-inheritance-common-use-cases.html
 
 ---
 

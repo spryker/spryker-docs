@@ -33,7 +33,7 @@ The ones that we prefer are [New Relic](https://docs.newrelic.com/docs/new-relic
 
 To profile with New Relic, do the following:
 
-1. [Install and configure New Relic](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html#new-relic).
+1. [Install and configure New Relic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic).
 
 2. Check if the necessary profiling exists. If it does not exist, reproduce the problem in the necessary environment or request it to be reproduced by the customer.
 Note the following:
@@ -71,7 +71,7 @@ For more details, see the [official New Relic website](https://newrelic.com/blog
 
 To profile with Blacfire, do the following:
 
-1. Install and configure [Blackfire](/docs/dg/dev/sdks/the-docker-sdk/{{site.version}}/configure-services.html#blackfire).
+1. Install and configure [Blackfire](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire).
 2. Reproduce the problem in the necessary environment or request it to be reproduced by the customer. For more details on profiling with Blackfire, see the [official Blackfire website](https://blackfire.io/docs/introduction).
 3. Review the profiling:
 - Check the **Recommendations** section. It shows some possible solutions.

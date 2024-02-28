@@ -935,8 +935,8 @@ entries:
       - title: Deploy file
         url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html
         nested:
-        - title: Deploy file reference - 1.0
-          url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
+        - title: Deploy file reference
+          url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html
         - title: Deploy file inheritance — common use cases
           url: /docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-inheritance-common-use-cases.html
 
@@ -946,10 +946,10 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
       - title: Choosing a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
-      - title: Configuring a mount mode
-        url: /docs/dg/dev/sdks/the-docker-sdk/configuring-a-mount-mode.html
-      - title: Configuring access to private repositories
-        url: /docs/dg/dev/sdks/the-docker-sdk/configuring-access-to-private-repositories.html
+      - title: Configure a mount mode
+        url: /docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
+      - title: Configure access to private repositories
+        url: /docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
       - title: Docker SDK configuration reference
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html
       - title: Installation recipes of deployment pipelines

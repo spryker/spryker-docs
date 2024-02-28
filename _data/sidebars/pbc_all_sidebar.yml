@@ -2929,7 +2929,7 @@ entries:
                       - title: product_option.csv
                         url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html
                       - title: product_option_price.csv
-                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-
+                        url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html
                   - title: configurable_bundle_template_image.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-image.csv.html
                   - title: configurable_bundle_template_slot.csv
@@ -2952,6 +2952,10 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.html
                   - title: product_list_to_concrete_product.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
+                  - title: product_measurement_unit.csv
+                    url: docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit.csv
+                    url: docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
                   - title: product_list.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.html
               - title: Manage in the Back Office
@@ -3372,7 +3376,7 @@ entries:
                   - title: QuoteRequestPage
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
                   - title: QuoteRequestwidget
-                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
           - title: Import and export data
             nested:
               - title: "File details: quote_request.csv"

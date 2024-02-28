@@ -731,7 +731,7 @@ entries:
     - title: Define Twig tag
       url: /docs/dg/dev/frontend-development/define-twig-tag.html
     - title: Notifying about unsupported browsers
-      url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html      
+      url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
@@ -882,12 +882,14 @@ entries:
       - title: Web Profiler Widget for Yves
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
 
-    - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html
+    - title: ARM architecture (M1 chip)
+      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: Authorization Enabler
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Basic SEO techniques
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
+    - title: Graceful shutdown
+      url: /docs/dg/dev/integrate-and-configure/implementing-graceful-shutdown.html
     - title: Cache of unresolved entities for Zed
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
     - title: CSS lazy loading for the frontend
@@ -908,6 +910,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
     - title: Health checks
       url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
+    - title: IE11
+      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
     - title: Multi-database logic
       url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
@@ -920,12 +924,11 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
+    - title: Services
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
-    - title: ARM architecture (M1 chip)
-      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
-    - title: IE11
-      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
+
 
   - title: SDKs
     nested:

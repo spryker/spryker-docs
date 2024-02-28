@@ -884,8 +884,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
       - title: "Import big databases between environments"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html
-      - title: "HowTo: Handle graceful shutdown"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Handle case-sensitive file system on Mac OS"

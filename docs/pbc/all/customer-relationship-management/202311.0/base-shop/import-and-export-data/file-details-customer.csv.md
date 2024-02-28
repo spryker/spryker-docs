@@ -12,12 +12,9 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-customer.csv.html
-<<<<<<<< HEAD:docs/pbc/all/customer-relationship-management/202212.0/import-and-export-data/file-details-customer.csv.md
   - /docs/scos/dev/data-import/202212.0/data-import-categories/commerce-setup/file-details-customer.csv.html
   - /docs/pbc/all/customer-relationship-management/202212.0/import-and-export-data/file-details-customer.csv.html
-========
   - /docs/scos/dev/data-import/202307.0/data-import-categories/commerce-setup/file-details-customer.csv.html
->>>>>>>> master:docs/pbc/all/customer-relationship-management/202307.0/base-shop/import-file-details-customer.csv.md
 related:
   - title: Execution order of data importers in Demo Shop
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html

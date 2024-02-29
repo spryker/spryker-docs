@@ -30,8 +30,7 @@ related:
     link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
     link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
-  - title: Running tests with the Docker SDK
-    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
+
 ---
 
 This document describes how you can quickly set up a local environment with the Docker SDK.

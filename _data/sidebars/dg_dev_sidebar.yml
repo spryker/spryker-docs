@@ -1122,6 +1122,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Building tests for test-driven development
         url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
+      - title: Running tests with Robot Framework
+        url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
       - title: Test helpers
         url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers.html
         nested:

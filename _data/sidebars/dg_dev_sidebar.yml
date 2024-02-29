@@ -1006,7 +1006,7 @@ entries:
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
-    - title: Tutorial: Architectural walkthrough
+    - title: "Tutorial: Architectural walkthrough"
       url: /docs/dg/dev/architecture/marketplace-architecture/tutorial-architectural-walkthrough.html
 
   - title: Data import

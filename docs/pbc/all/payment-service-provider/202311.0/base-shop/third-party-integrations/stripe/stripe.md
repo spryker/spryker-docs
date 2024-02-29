@@ -64,4 +64,4 @@ The Stripe App has limited or no support for the following features:
 - Payment Authorization Timeout: There is currently a one-day timeout for authorizing payments. This means that payment methods such as bank transfers, which are not authorized within this timeframe, will experience a timeout. We recommend extending the timeout from one day to seven days. 
 - Multi-Capture: Partial capture of payment for order items.
 - Payments should always be canceled from Spryker and not from Stripe.
-- Payments can’t be partially cancelled. Reason: we create one payment intent per order and it can either be authorized or fully cancelled .
+- Payments can’t be partially cancelled. Reason: we create one payment intent per order and it can either be authorized or fully cancelled.

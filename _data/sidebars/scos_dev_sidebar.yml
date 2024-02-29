@@ -854,41 +854,6 @@ entries:
     url: /docs/scos/dev/sdk/code-generator.html
     include_versions:
     - "201811.0"
-  - title: Tutorials and HowTos
-    url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
-    nested:
-    - title: Introduction Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/introduction-tutorials.html
-      nested:
-      - title: "Tutorial: Hello world"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world.html
-
-    - title: Advanced Tutorials
-      url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
-      nested:
-      - title: "Tutorial: Database transaction handling"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
-      - title: "Tutorial: Using translations"
-        url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
-
-    - title: HowTos
-      url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
-      nested:
-      - title: "HowTo: Force HTTPS"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Customize HTTP headers in AJAX request"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
-      - title: "HowTo: Do better deployments"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
-      - title: "HowTo: Hydrate payment methods for an order"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
-      - title: "Import big databases between environments"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/transfer-big-databases-between-environments.html
-      - title: "HowTo: Set up database connections"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
-      - title: "HowTo: Handle case-sensitive file system on Mac OS"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
-
 
   - title: Technology partner guides
     url: /docs/scos/dev/technology-partner-guides/technology-partner-guides.html

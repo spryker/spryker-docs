@@ -40,7 +40,7 @@ The following table describes the attributes you enter and select when editing g
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
+| Store relation  | Defines the [stores](/docs/dg/dev/miscellaneous-guides/howtos/howto-set-up-multiple-stores.html) the product is available in.<br>You can select multiple values. |
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |

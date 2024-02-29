@@ -58,7 +58,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Staging S3 bucket to a staging environment. 
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
-  - Implement the recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) where applicable.
+  - Implement the recommended Jenkins [performance and stability improvements](/docs/dg/dev/miscellaneous-guides/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) where applicable.
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
   - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
@@ -71,8 +71,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Testing
 
-- Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode).
-- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/dg/dev/miscellaneous-guides/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode).
+- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/dg/dev/miscellaneous-guides/howtos/howto-debug-payment-integrations-locally.html).
 - Perform User Acceptance Testing (UAT). Besides internal testing, before opening your system publicly, we highly recommend conducting extensive UAT to validate the functionality and user experience from an end-user perspective. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### Search engine optimization (SEO)

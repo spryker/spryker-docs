@@ -7,15 +7,13 @@ originalLink: https://documentation.spryker.com/2021080/docs/howto-set-up-multip
 originalArticleId: 218ea4d5-de80-4aba-96fc-f67a9d13711c
 redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html
+- /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
+
 ---
 
-{% info_block warningBox %}
 
-With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html), you can only add stores in the Back Office.
 
-{% endinfo_block %}
-
-With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
+You can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable—for example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.
 * Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
@@ -23,6 +21,12 @@ With the Spryker Commerce OS, you can create multiple stores per your business r
 * Set up a default store.
 
 For details on all the multi-store infrastructure options, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
+
+{% info_block warningBox %}
+
+With [Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{site.version}}/dynamic-multistore.html), you can only add stores in the Back Office.
+
+{% endinfo_block %}
 
 ## Set up multiple stores
 

@@ -892,6 +892,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/implementing-graceful-shutdown.html
     - title: Cache of unresolved entities for Zed
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
+    - title: Case-sensitive file system on Mac OS
+      url: /docs/dg/dev/integrate-and-configure/howto-handle-case-sensitive-file-system-on-mac-os.html
     - title: CSS lazy loading for the frontend
       url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
     - title: CMS block widgets
@@ -900,6 +902,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Custom location for static assets
       url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
+    - title: Database connections
+      url: /docs/dg/dev/integrate-and-configure/configure-database-connections.html
     - title: Dynamic Yves-Zed tokens
       url: /docs/dg/dev/integrate-and-configure/configure-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
@@ -908,6 +912,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
     - title: Environment configuration enhancement
       url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
+    - title: Forcing HTTPS
+      url: /docs/dg/dev/miscellaneous-guides/howtos/forcing-https.html
     - title: Health checks
       url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
     - title: IE11
@@ -1193,6 +1199,7 @@ entries:
     - title: Zed API (BETA)
       url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
 
+
   - title: Updating Spryker
     url: /docs/dg/dev/updating-spryker/updating-spryker.html
     nested:
@@ -1210,3 +1217,16 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+
+
+  - title: Miscellaneous guides
+    url: /docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html
+    nested:
+      - title: Simulating deployments locally
+        url: /docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html
+      - title: "Tutorial: Hello world"
+        url: /docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html
+      - title: Using database transactions
+        url: /docs/dg/dev/miscellaneous-guides/using-database-transaction.html
+      - title: "Transfer big databases between environments"
+        url: /docs/dg/dev/miscellaneous-guides/transfer-big-databases-between-environments.html

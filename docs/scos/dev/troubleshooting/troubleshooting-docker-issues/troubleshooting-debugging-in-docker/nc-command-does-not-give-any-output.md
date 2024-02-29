@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
 ---
 title: nc command does not give any output
 description: If the nc command does not give any output, contact us

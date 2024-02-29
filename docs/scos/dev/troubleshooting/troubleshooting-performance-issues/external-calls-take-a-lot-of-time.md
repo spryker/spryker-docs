@@ -1,7 +1,9 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-take-a-lot-of-time.html
 ---
 title: External calls take a lot of time
 description: Troubleshoot the performance issue with external calls taking much time
 template: troubleshooting-guide-template
+redirect_from:
 last_updated: Feb 27, 2023
 ---
 

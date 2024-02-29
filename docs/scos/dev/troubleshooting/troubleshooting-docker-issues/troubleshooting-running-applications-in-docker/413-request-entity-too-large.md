@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
 ---
 title: 413 Request Entity Too Large
 description: Learn how to fix the issue 413 Request Entity Too Large

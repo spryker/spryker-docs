@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
 ---
 title: Composer version 2 compatibility issues
 description: Learn how to solve Composer version 2 compatibility issues.

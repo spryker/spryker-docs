@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
 ---
 title: PHP `xdebug` extension is not active in CLI
 description: Learn how to fix the issue when PHP `xdebug` extension is not active in CLI

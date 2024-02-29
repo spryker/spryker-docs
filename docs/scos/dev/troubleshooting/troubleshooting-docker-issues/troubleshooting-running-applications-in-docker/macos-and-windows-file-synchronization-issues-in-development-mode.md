@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
 ---
 title: MacOS and Windows - file synchronization issues in Development mode
 description: Learn how to deal with file synchronization issues in Development mode on MacOS and Windows.

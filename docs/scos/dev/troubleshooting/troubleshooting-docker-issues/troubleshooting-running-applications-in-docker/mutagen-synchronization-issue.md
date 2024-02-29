@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
 ---
 title: Mutagen synchronization issue
 description: Learn how to fix the Mutagen synchronization issue

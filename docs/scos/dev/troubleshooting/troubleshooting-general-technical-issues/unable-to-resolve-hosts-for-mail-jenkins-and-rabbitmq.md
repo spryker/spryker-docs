@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
 ---
 title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
 description: Learn how to fix the issue with unresolved hosts for Mail, Jenkins, and RabbitMQ on Windows

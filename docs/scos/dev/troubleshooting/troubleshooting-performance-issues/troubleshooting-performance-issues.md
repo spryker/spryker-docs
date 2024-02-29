@@ -1,7 +1,9 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
 ---
 title: Troubleshooting performance issues
 description: Learn how you can troubleshoot the most common performance issues
 template: concept-topic-template
+redirect_from:
 last_updated: Feb 22, 2023
 related:
   - title: Performance guidelines

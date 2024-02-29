@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
 ---
 title: The spy_oms_transition_log table takes up too much space
 description: Configure transition logs to be removed automatically.

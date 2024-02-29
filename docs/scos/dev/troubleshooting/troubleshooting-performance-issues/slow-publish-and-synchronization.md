@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
 ---
 title: Slow Publish and Synchronization
 description: Publish and Synchronization is slow on all or some actions.

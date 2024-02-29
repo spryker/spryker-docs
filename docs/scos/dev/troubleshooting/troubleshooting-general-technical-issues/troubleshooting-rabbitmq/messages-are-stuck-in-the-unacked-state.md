@@ -1,8 +1,10 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-in-the-unacked-state.html
 ---
 title: Messages are stuck in the Unacked state
 description: This troubleshooting guide suggests solution strategies for messages that get stuck in the unacked status
 last_updated: Oct 31, 2022
 template: troubleshooting-guide-template
+redirect_from:
 related:
   - title: Messages are moved to error queues
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html

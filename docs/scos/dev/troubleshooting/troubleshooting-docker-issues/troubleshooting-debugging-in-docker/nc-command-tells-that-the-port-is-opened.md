@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
 ---
 title: nc command tells that the port is opened
 description: Learn how to fix the issue when nc command tells that the port is opened

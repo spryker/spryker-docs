@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/a-command-fails-with-a-killed-message.html
 ---
 title: A command fails with a `Killed` message
 description: Learn how to resolve the issue with a command returning a `killed` message.

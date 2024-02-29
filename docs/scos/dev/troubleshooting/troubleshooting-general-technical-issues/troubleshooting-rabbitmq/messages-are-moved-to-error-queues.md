@@ -1,8 +1,10 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html
 ---
 title: Messages are moved to error queues
 description: This troubleshooting guide describes how to approach diagnosing why messages are moved to error queues in RabbitMQ
 last_updated: Oct 31, 2022
 template: troubleshooting-guide-template
+redirect_from:
 related:
   - title: Messages are stuck in the Unacked state
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-in-the-unacked-state.html

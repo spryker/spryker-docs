@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
 ---
 title: Troubleshooting general technical issues
 description: Troubleshoot general technical issues you might encounter when running your Spryker-based project

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
 ---
 title: An application is not reachable via http
 description: Learn how to fix the issue when an application is not reachable via http

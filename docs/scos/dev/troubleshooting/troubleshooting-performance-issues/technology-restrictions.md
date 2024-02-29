@@ -1,7 +1,9 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
 ---
 title: Technology restrictions
 description: Fix the issue with slow actions, parts of the website, or the entire webiste related to technology restrictions.
 template: troubleshooting-guide-template
+redirect_from:
 last_updated: Mar 1, 2023
 ---
 
@@ -32,5 +34,3 @@ In the code, this would look similar to this line:
 ```php
 $this->storageClient->getKeys(self::RESOURCE . ':*');
 ```
-
-

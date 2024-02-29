@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 title: Port is already occupied on host
 description: Learn how to fix the issue when port is already occupied on host

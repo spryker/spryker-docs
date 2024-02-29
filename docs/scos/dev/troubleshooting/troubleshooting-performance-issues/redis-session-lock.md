@@ -1,7 +1,9 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
 ---
 title: Redis session lock
 description: Redis Session Lock
 template: troubleshooting-guide-template
+redirect_from:
 last_updated: Feb 23, 2023
 ---
 

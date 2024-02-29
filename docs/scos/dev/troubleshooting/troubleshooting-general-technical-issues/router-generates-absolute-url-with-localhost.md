@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
 ---
 title: Router generates absolute URL with localhost
 description: Learn how to fix the issue when router generates URLs with an absolute path instead of a relative one

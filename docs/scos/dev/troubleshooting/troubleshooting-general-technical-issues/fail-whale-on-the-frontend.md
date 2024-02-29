@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-frontend.html
 ---
 title: Fail whale on the frontend
 description: The solution for the fail whale on the front end.

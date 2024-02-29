@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
 ---
 title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
 description: The solution to the `Error response from daemon- OCI runtime create failed- .... no such file or directory - unknown.` error

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html
 ---
 title: PHPStan memory issues
 last_updated: Jun 16, 2021

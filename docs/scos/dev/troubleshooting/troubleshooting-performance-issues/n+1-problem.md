@@ -1,7 +1,9 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/n+1-problem.html
 ---
 title: N+1 problem
 description: N+1 problem
 template: troubleshooting-guide-template
+redirect_from:
 last_updated: Mar 7, 2023
 keywords: n1; n one
 ---

@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
 ---
 title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
 description: Learn how to fix an issue when PHP `xdebug` extension is not active when accessing the website via a browser or curl

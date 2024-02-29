@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
 title: Xdebug does not work
 description: Learn how to fix the issue with a non-working Xdebug

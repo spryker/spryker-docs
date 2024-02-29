@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting.html
 ---
 title: Troubleshooting
 description: Learn how you can fix technical issues with Spryker

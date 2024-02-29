@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
 ---
 title: Class Silex/ControllerProviderInterface not found
 description: Learn how to fix the issue when class Silex/ControllerProviderInterface is not found

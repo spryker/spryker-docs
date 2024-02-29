@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
 ---
 title: No data on the Storefront
 description: The solution to the data being absent on the Storefront.

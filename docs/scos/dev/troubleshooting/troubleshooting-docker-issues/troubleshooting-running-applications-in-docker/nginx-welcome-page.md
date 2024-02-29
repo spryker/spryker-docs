@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
 ---
 title: Nginx welcome page
 description: Learn how to fix the issue when you get Nginx welcome page upon opening an application in browser

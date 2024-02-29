@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
 ---
 title: ERROR- remove spryker_logs- volume is in use
 description: The solution to the `ERROR- remove spryker_logs- volume is in use` error.

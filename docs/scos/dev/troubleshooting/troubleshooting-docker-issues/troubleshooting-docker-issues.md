@@ -1,3 +1,4 @@
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
 ---
 title: Troubleshooting Docker issues
 description: Troubleshoot issues you might encounter when you have your Spryker-based project in Docker.

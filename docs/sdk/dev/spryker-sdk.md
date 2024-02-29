@@ -3,7 +3,7 @@ title: Spryker SDK
 description: Learn about the Spryker SDK and how you can use it in your project.
 template: concept-topic-template
 last_updated: Aug 31, 2023
-redirect_from: 
+redirect_from:
     - /docs/sdk/dev/sdk-conventions.com
     - /docs/scos/dev/sdk/sdk.html
 ---
@@ -21,7 +21,7 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 
 ### Manual installation
 - Download the **installer.sh** from the latest release at https://github.com/spryker-sdk/sdk/releases.
-- Run 
+- Run
   ```shell
   installer.sh </path/to/install/sdk/in>
   ```
@@ -43,7 +43,7 @@ echo "Current SDK version: $(spryker-sdk --version)"
 
 ## Getting started
 
-To get an overview on the available capabilities of the Spryker SDK please run **spryker-sdk list**.
+To get an overview on the available capabilities of the Spryker SDK, run **spryker-sdk list**.
 
 Any task can be executed by running **spryker-sdk \<task-id\>** from project root folder.
 Using **bin/console spryker-sdk \<task-id\> -h** will give a description on what options can be passed into the task.

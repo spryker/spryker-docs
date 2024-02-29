@@ -1131,10 +1131,10 @@ entries:
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
       url: /docs/dg/dev/best-practices/coding-best-practices.html
-      
+
 
   - title: Glue API
-    url: /docs/dg/dev/glue-api/glue-api-guides.html
+    url: /docs/dg/dev/glue-api/glue-api.html
     nested:
     - title: Glue Spryks
       url: /docs/dg/dev/glue-api/glue-spryks.html

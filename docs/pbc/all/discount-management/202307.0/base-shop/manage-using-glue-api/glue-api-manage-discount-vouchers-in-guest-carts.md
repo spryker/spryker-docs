@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202307.0/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
 related:
   - title: Manage guest cart items
-    link: docs/dg/dev/glue-api/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
+    link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html
   - title: Managing gift cards of guest users
     link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---

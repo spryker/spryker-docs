@@ -15,7 +15,7 @@ related:
   - title: Manage guest carts
     link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
-    link: docs/dg/dev/glue-api/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows you to manage guest cart items.
@@ -2635,7 +2635,7 @@ For the attributes of other included resources, see the following:
 * [Gift cards of guest users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html)
 * [Retrieving concrete products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
-*  [Retrieving bundled products](/docs/dg/dev/glue-api/{{site.version}}/managing-products/retrieving-bundled-products.html)
+*  [Retrieving bundled products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html)
 
 ## Add a configurable bundle to a guest cart
 

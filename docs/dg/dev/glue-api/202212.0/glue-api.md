@@ -1,14 +1,12 @@
 ---
-title: Glue API guides
+title: Glue API
 description: Guides for developers working with the Spryker Glue API
 template: concept-topic-template
-last_updated: Nov 21, 2023
+last_updated: Aug 2, 2023
 redirect_from:
-  - /docs/scoc/dev/glue-api-guides/202311.0/index.html
-  - /docs/scos/dev/glue-api-guides/202311.0/glue-rest-api.html
-  - /docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html
-  - /docs/scos/dev/glue-api-guides/202204.0/index.html
-  - /docs/scos/dev/glue-api-guides/202311.0/glue-api-guides.html
+  - /docs/scoc/dev/glue-api-guides/{{page.version}}/index.html
+  - /docs/scos/dev/glue-api-guides/202212.0/glue-api-guides.html
+
 
 ---
 * [Decoupled Glue Api](/docs/dg/dev/glue-api/{{page.version}}/decoupled-glue-api.html)

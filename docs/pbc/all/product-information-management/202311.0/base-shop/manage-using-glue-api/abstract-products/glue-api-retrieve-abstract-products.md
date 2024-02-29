@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
 related:
   - title: Retrieve abstract product availability
-    link: docs/dg/dev/glue-api/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products

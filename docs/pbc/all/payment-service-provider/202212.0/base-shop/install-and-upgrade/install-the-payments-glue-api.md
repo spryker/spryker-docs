@@ -14,7 +14,7 @@ related:
   - title: Payments feature walkthrough
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
   - title: Check out purchases
-    link: docs/dg/dev/glue-api/page.version/checking-out/checking-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Updating payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---

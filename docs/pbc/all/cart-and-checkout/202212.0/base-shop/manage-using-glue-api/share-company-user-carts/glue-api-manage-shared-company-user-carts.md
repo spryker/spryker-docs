@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202212.0/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
 related:
   - title: Share company user carts
-    link: docs/dg/dev/glue-api/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-share-company-user-carts.html
   - title: Retrieving cart permission groups
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html
   - title: "Glue API: Authenticating as a company user"

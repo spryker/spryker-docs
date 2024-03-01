@@ -12,8 +12,8 @@ This document describes the `company_user.csv` file to configure information abo
 
 ## Import file dependencies
 
-[File details: company.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company.csv.html)
-[File details: customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-customer.csv.html)
+[File details: company.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-company.csv.html)
+[File details: customer.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/import-and-export-data/file-details-customer.csv.html)
 
 ## Import file parameters
 

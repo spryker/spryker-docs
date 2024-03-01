@@ -86,6 +86,7 @@ task :check_ca do
     /docs\/scos\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
+    /docs\/about\/.+/,
     /docs\/dg\/.+/,
     /docs\/acp\/.+/,
     /docs\/sdk\/.+/
@@ -102,7 +103,7 @@ task :check_scos_dev do
     /docs\/acp\/.+/,
     /docs\/sdk\/.+/,
     /docs\/dg\/.+/,
-    /docs\/scos\/user\/.+/,
+    /docs\/about\/.+/,
     /docs\/pbc\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
@@ -117,7 +118,7 @@ task :check_scos_dev do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_scos_user do
+task :check_about_all do
   options = commonOptions.dup
   options[:ignore_files] = [
     /docs\/ca\/.+/,
@@ -126,16 +127,7 @@ task :check_scos_user do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
-    /docs\/sdk\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202400\.0\/.+/
+    /docs\/sdk\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -144,6 +136,7 @@ task :check_pbc do
   options = commonOptions.dup
   options[:ignore_files] = [
     /docs\/scos\/.+/,
+    /docs\/about\/.+/,
     /docs\/sdk\/.+/,
     /docs\/ca\/.+/,
     /docs\/fes\/.+/,
@@ -165,6 +158,7 @@ task :check_sdk do
     /docs\/scos\/.+/,
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
+    /docs\/about\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
@@ -180,6 +174,7 @@ task :check_dg do
     /docs\/scos\/.+/,
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
+    /docs\/about\/.+/,    
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/sdk\/.+/

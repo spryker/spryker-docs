@@ -8,7 +8,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `company_business_unit.csv` file to configure information about [business units](docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
+This document describes the `company_business_unit.csv` file to configure information about [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 

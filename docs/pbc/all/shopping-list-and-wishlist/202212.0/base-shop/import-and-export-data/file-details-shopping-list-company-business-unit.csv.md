@@ -8,11 +8,11 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `shopping_list_company_business_unit.csv` file to configure [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) sharing with company [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
+This document describes the `shopping_list_company_business_unit.csv` file to configure [shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html) sharing with company [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) in your Spryker shop.
 
 ## Import file dependencies
 
-* [file-details-company-business-unit.csv](docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company-business-unit.csv.html)
+* [file-details-company-business-unit.csv](/docs/pbc/all/customer-relationship-management/{{page.version}}/import-and-export-data/file-details-company-business-unit.csv.html)
 * [shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/import-and-export-data/file-details-shopping-list.csv.html)
 
 ## Import file parameters

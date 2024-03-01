@@ -8,7 +8,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_packaging_unit.csv` file to configure information about [product packaging units](docs/pbc/all/product-information-management/{{page.version}}/feature-overviews/packaging-units-feature-overview.html) in your Spryker shop.
+This document describes the `product_packaging_unit.csv` file to configure information about [product packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) in your Spryker shop.
 
 
 ## Import file dependencies

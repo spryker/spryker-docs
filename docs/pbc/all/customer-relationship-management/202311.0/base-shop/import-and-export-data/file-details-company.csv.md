@@ -8,7 +8,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
+This document describes the `company.csv` file to configure information about [company accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html) in your Spryker shop.
 
 ## Import file parameters
 
@@ -23,8 +23,8 @@ This document describes the `company.csv` file to configure information about [c
 
 | FILE | DESCRIPTION |
 |---|---|
-| [template_company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/template_company.csv)| Import file template with headers only. |
-| [company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/company.csv)| Exemplary import file with the Demo Shop data. |
+| [template_company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/file-details-company.csv.md/template_company.csv)| Import file template with headers only. |
+| [company.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/import-and-export-data/file-details-company.csv.md/file-details-company.csv.md/company.csv)| Exemplary import file with the Demo Shop data. |
 
 
 ## Import file command

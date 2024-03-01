@@ -8,7 +8,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.
+This document describes the `product_measurement_unit.csv` file to configure information about [measurement units](/docs/pbc/all/product-information-management/{{page.verison}}/base-shop/feature-overviews/measurement-units-feature-overview.html) in your Spryker shop.
 
 ## Import file parameters
 

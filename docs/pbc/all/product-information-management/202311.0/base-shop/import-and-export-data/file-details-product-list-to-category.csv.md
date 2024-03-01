@@ -8,7 +8,7 @@ related:
     link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
 ---
 
-This document describes the `product_list_to_category.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.md) and respective categories in your Spryker shop.
+This document describes the `product_list_to_category.csv` file to configure information about [product lists](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html) and respective categories in your Spryker shop.
 
 ## Import file dependencies
 

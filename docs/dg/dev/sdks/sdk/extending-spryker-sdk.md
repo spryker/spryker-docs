@@ -1,32 +1,33 @@
-  - /docs/sdk/dev/extend-the-sdk.html
 ---
-title: Extend the SDK
+title: Extending Spryker SDK
 description: Find out how you can extend the Spryker SDK
 template: howto-guide-template
 last_updated: Jan 13, 2023
 redirect_from:
     - /docs/sdk/dev/extending-the-sdk.html
+    - /docs/sdk/dev/extend-the-sdk.html
+
 ---
-# SDK development
+
 
 The SDK offers different extension points to enable third parties to contribute to the SDK without modifying it.
 
-From simple to complex, the SDK can be extended by:
+From simple to complex, the SDK can be extended as follows:
 
-- Providing additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
-- Providing additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
-- Providing additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
+- Provide additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
+- Provide additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
+- Provide additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
 
 To extend the SDK, follow these steps.
 
-## 1. Implement a new task
+## 1. Implementing a task
 
 A *task* is the execution of a very specific function. For example, executing an external tool through a CLI call is a task.
 
 There are two possibilities when it comes to defining a new task: having it be based on YAML for simple task definitions, or
 an implementation via PHP and Symfony services for specialized purposes.
 
-### Implementation via YAML definition
+### Implementating a task via YAML definition
 
 YAML based tasks need to fulfill a defined structure so you can execute them from the SDK.
 The command defined in the YAML definition can have [placeholders](#implement-placeholders) that you need to define in the placeholder section. Each placeholder needs to map to one [value resolver](#add-a-value-resolver).
@@ -54,7 +55,7 @@ You can add the tasks located in `extension/<your extension name>/Task` to the S
 
 {% endinfo_block %}
 
-### Implementation via a PHP class
+### Implementing a task via a PHP class
 
 If a task is more than just a call to an existing tool, you can implement the task as a PHP class and register it using the Symfony service tagging feature.
 This requires you to make the task a part of the Symfony bundle. To achieve this, follow these steps:
@@ -216,7 +217,7 @@ If your bundle does not have dependencies that differ from the Spryker SDK, you 
 
 For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/sdk/dev/building-flavored-spryker-sdks.html).
 
-## 2. Add a value resolver
+## 2. Adding a value resolver
 
 Most placeholders need a solution to resolve their values during runtime. This can be reading some settings and assembling a value based on the settings content, or any solution that turns a placeholder into a resolved value.
 
@@ -304,7 +305,7 @@ services:
     tags: ['sdk.value_resolver']
 ```
 
-## 3. Add a setting
+## 3. Adding a setting
 
 A bundle can add more settings that value resolvers can then use to create a persistent behavior.
 You can define settings in the `settings.yaml` file and add them to the SDK by calling
@@ -321,7 +322,7 @@ settings:
     values: array|string|integer|float|boolean #serve as default values for initialization
 ```
 
-## 4. Add a new command runner
+## 4. Adding a new command runner
 
 Commands are executed via *command runners*. Each command has a `type` that determines what command runner can execute the command.
 To implement new task types, there must be a new command runner and you need to register it as a Symfony service.
@@ -374,7 +375,7 @@ Optionally, you can overwrite the existing command runners with a more suitable 
     class: <YourNamespace>\CommandRunners\BetterLocalCliRunner
 ```
 
-## 5. Generate a task by a CLI command
+## 5. Generating a task using a CLI command
 
 It might be useful to generate a task by using a CLI command as follows:
 

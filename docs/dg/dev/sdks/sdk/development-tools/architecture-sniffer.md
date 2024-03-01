@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/architecture-sniffer.html
 ---
 title: Architecture Sniffer
 description: Use Architecture Sniffer to ensure the quality of Spryker architecture for both core and project
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/architecture-sniffer
 originalArticleId: 33ab1b5b-fce7-4439-8722-87e5ecd9f3c5
 redirect_from:
-  - /2021080/docs/architecture-sniffer
-  - /2021080/docs/en/architecture-sniffer
-  - /docs/architecture-sniffer
-  - /docs/en/architecture-sniffer
-  - /v6/docs/architecture-sniffer
-  - /v6/docs/en/architecture-sniffer
-  - /v5/docs/architecture-sniffer
-  - /v5/docs/en/architecture-sniffer
-  - /v4/docs/architecture-sniffer
-  - /v4/docs/en/architecture-sniffer
-  - /v3/docs/architecture-sniffer
-  - /v3/docs/en/architecture-sniffer
-  - /v2/docs/architecture-sniffer
-  - /v2/docs/en/architecture-sniffer
-  - /v1/docs/architecture-sniffer
-  - /v1/docs/en/architecture-sniffer
+  - /docs/sdk/dev/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/201811.0/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/201903.0/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/201907.0/development-tools/architecture-sniffer.html

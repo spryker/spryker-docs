@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/phpstan.html
 ---
 title: PHPStan
 description: Learn how to install and use PHPStan, a static code analyzer
@@ -7,20 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/phpstan
 originalArticleId: 91b7f7ec-2097-422c-9a63-4cc7076216e5
 redirect_from:
-  - /2021080/docs/phpstan
-  - /2021080/docs/en/phpstan
-  - /docs/phpstan
-  - /docs/en/phpstan
-  - /v6/docs/phpstan
-  - /v6/docs/en/phpstan
-  - /v5/docs/phpstan
-  - /v5/docs/en/phpstan
-  - /v4/docs/phpstan
-  - /v4/docs/en/phpstan
-  - /v3/docs/phpstan
-  - /v3/docs/en/phpstan
-  - /v2/docs/phpstan
-  - /v2/docs/en/phpstan
+  - /docs/sdk/dev/development-tools/phpstan.html
   - /docs/scos/dev/sdk/201811.0/development-tools/phpstan.html
   - /docs/scos/dev/sdk/201903.0/development-tools/phpstan.html
   - /docs/scos/dev/sdk/201907.0/development-tools/phpstan.html

@@ -1,9 +1,10 @@
-  - /docs/sdk/dev/spryks/checking-and-debugging-spryks.html
 ---
 title: Checking and debugging Spryks
 description: Find out how you can check and debug Spryks
 template: howto-guide-template
 redirect_from:
+- /docs/sdk/dev/spryks/checking-and-debugging-spryks.html
+
 last_updated: Nov 8, 2022
 ---
 

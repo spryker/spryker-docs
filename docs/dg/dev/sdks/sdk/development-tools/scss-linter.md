@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/scss-linter.html
 ---
 title: SCSS linter
 description: Learn about the SCSS linter tool that allows you to find and fix mistakes in the code style.
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/scss-linter
 originalArticleId: 62b2d90c-52f4-4307-b93f-78776f7408aa
 redirect_from:
-  - /2021080/docs/scss-linter
-  - /2021080/docs/en/scss-linter
-  - /docs/scss-linter
-  - /docs/en/scss-linter
-  - /v6/docs/scss-linter
-  - /v6/docs/en/scss-linter
+  - /docs/sdk/dev/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/201811.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/201903.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/201907.0/development-tools/scss-linter.html

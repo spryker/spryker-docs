@@ -1,9 +1,10 @@
-  - /docs/sdk/dev/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
 ---
 title: Enabling and disabling the Code Sniffer for Spryks
 description: Find out how you can enable or disable the Code Sniffer when running Spryks
 template: howto-guide-template
 redirect_from:
+- /docs/sdk/dev/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
+
 last_updated: Nov 8, 2022
 ---
 

@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/code-sniffer.html
 ---
 title: Code Sniffer
 description: With the Code Sniffer tool, you can keep your code clean, find issues, and fix them automatically.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-sniffer
 originalArticleId: 5fd3244a-f387-4188-a8d0-076eb8afe1f1
 redirect_from:
-  - /2021080/docs/code-sniffer
-  - /2021080/docs/en/code-sniffer
-  - /docs/code-sniffer
-  - /docs/en/code-sniffer
-  - /v6/docs/code-sniffer
-  - /v6/docs/en/code-sniffer
-  - /v5/docs/code-sniffer
-  - /v5/docs/en/code-sniffer
-  - /v4/docs/code-sniffer
-  - /v4/docs/en/code-sniffer
-  - /v3/docs/code-sniffer
-  - /v3/docs/en/code-sniffer
-  - /v2/docs/code-sniffer
-  - /v2/docs/en/code-sniffer
-  - /v1/docs/code-sniffer
-  - /v1/docs/en/code-sniffer
+  - /docs/sdk/dev/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/201811.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/201903.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/201907.0/development-tools/code-sniffer.html
@@ -52,7 +36,7 @@ related:
     link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
-To correspond to PSR-2<!-- ](http://www.php-fig.org/psr/psr-2/) check if it works before restoring --> and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
+To correspond to [PSR-2](http://www.php-fig.org/psr/psr-2/) and additional standards, we integrated the well known [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
 
 Code Sniffer is a very powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues, and can also auto-fix the majority of them (when used with the `-f` option).
 

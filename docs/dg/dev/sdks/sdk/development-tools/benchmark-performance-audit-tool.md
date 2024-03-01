@@ -1,18 +1,12 @@
-  - /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html
 ---
-title: Performance audit tool- Benchmark
+title: "Benchmark: Performance audit tool"
 description: The Benchmark tool allows you to assess an application's performance by seeing how long it takes to load a page and how much memory the application consumes during requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/performance-audit-tool-benchmark
 originalArticleId: fb9fef09-646f-4a32-b158-6f544bc45f4e
 redirect_from:
-  - /2021080/docs/performance-audit-tool-benchmark
-  - /2021080/docs/en/performance-audit-tool-benchmark
-  - /docs/performance-audit-tool-benchmark
-  - /docs/en/performance-audit-tool-benchmark
-  - /v6/docs/performance-audit-tool-benchmark
-  - /v6/docs/en/performance-audit-tool-benchmark
+  - /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/201811.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/201903.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/201907.0/development-tools/performance-audit-tool-benchmark.html

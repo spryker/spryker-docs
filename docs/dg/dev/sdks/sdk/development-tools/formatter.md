@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/formatter.html
 ---
 title: Formatter
 description: Learn about the Formatter tool that allows you to find and fix mistakes in the code style.
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/formatter
 originalArticleId: 4a978f53-1a56-4f70-8b91-870e0ac94ab3
 redirect_from:
-  - /2021080/docs/formatter
-  - /2021080/docs/en/formatter
-  - /docs/formatter
-  - /docs/en/formatter
-  - /v6/docs/formatter
-  - /v6/docs/en/formatter
+  - /docs/sdk/dev/development-tools/formatter.html
   - /docs/scos/dev/sdk/201811.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/201903.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/201907.0/development-tools/formatter.html

@@ -1,24 +1,24 @@
-  - /docs/sdk/dev/initialize-and-run-workflows.html
 ---
 title: Initialize and run workflows
-description: Learn about the Spryker SDK telemetry configuration. 
+description: Learn about the Spryker SDK telemetry configuration.
 template: howto-guide-template
 last_updated: Dec 16, 2022
 redirect_from:
     - /docs/scos/dev/sdk/initializing-and-running-workflows.html
+    - /docs/sdk/dev/initialize-and-run-workflows.html
 ---
-# Workflow SDK tool
 
-## How to initialize and run workflows
-
-To initialize a project with a specific workflow, execute the following command:
+Initialize a project with a specific workflow:
 
 ```bash
 spryker-sdk init:sdk:project --workflow={workflowName}
 ```
 
-If the project has already been initialized with the `spryker-sdk init:sdk:project` command, you can manually add workflow to the project config file `{projectDir}/.ssdk/settings`:
+If the project was initialized, it's limited to the workflows specified during initialization.
 
+Add a workflow to an initialized project:
+
+**{PROJECT_FOLDER}/.ssdk/settings**
 ```yaml
 # {projectDir}/.ssdk/settings
 project_key: e9abab71-59f3-e9ff-468c-7a6d28e10724
@@ -26,58 +26,44 @@ workflow:
     - app # app workflow
 ```
 
----
-{% info_block warningBox Project Limits %}
-
-The project is limited to the workflows specified during initialization.
-
-{% endinfo_block %}```
----
-
-To run a workflow, execute the following command in the project directory:
+Run a workflow:
 
 ```bash
 spryker-sdk sdk:workflow:run {workflowName}
 ```
-You can start any workflow by providing its name in the `sdk:workflow:run` command.
-
----
-{% info_block warningBox Identical workflow exclusion %}
 
 Two identical top-level workflows can't run inside the same project.
 
-{% endinfo_block %}```
----
 
-## Commands
+## Workflow commands
 
-There are the following commands for the workflow:
+- List all available workflows:
+```bash
+spryker-sdk sdk:workflow:list
+```
 
-- To list all available workflows:
-  ```bash
-  spryker-sdk sdk:workflow:list
-  ```
-- To generate an .SVG image for a specific workflow:
-  ```bash
-  spryker-sdk sdk:workflow:show {workflowName}
-  ```
-- To initialize project settings with a workflow:
-  ```bash
-  spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
-  ```
-  ---
+- Generate an SVG image for a specific workflow:
+```bash
+spryker-sdk sdk:workflow:show {workflowName}
+```
+
+- Initialize project settings with a workflow:
+```bash
+spryker-sdk sdk:init:project --workflow={workflowName} --workflow={workflowName}
+```
+
 {% info_block warningBox Workflow Initialization %}
 
-If you initialize workflows for the project, you can use only these workflows.
+If you initialize workflows for a project, you can use only these workflows.
 
 {% endinfo_block %}
-  ---
-- To run the workflow process:
-  ```bash
-  spryker-sdk sdk:workflow:run {workflowName}
-  ```
 
-## Configuration reference
+- Run the workflow process:
+```bash
+spryker-sdk sdk:workflow:run {workflowName}
+```
+
+## Workflows configuration reference
 
 In the SDK directory, the workflows are defined in the workflow YAML files, located  either in `config/packages`, or in the configuration of extension bundles.
 

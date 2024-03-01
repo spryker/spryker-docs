@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/spryks/spryks.html
 ---
 title: Spryks
 description: The Spryk code generator is a tool developed to ease the process of generating pieces of code on core and project level.
@@ -8,20 +7,7 @@ keywords: AddModule
 originalLink: https://documentation.spryker.com/2021080/docs/spryk
 originalArticleId: 75d7b12b-6bf1-4ace-a09d-37033947d5e5
 redirect_from:
-  - /2021080/docs/spryk
-  - /2021080/docs/en/spryk
-  - /docs/spryk
-  - /docs/en/spryk
-  - /v6/docs/spryk
-  - /v6/docs/en/spryk
-  - /v5/docs/spryk
-  - /v5/docs/en/spryk
-  - /v4/docs/spryk
-  - /v4/docs/en/spryk
-  - /v3/docs/spryk
-  - /v3/docs/en/spryk
-  - /v2/docs/spryk
-  - /v2/docs/en/spryk
+  - /docs/sdk/dev/spryks/spryks.html
   - /docs/scos/dev/sdk/201811.0/development-tools/spryk-code-generator.html
   - /docs/scos/dev/sdk/201903.0/development-tools/spryk-code-generator.html
   - /docs/scos/dev/sdk/201907.0/development-tools/spryk-code-generator.html
@@ -64,18 +50,18 @@ To install Spryk, do the following:
 ```
 
 2. Run the command:
-  
+
 ```bash
 composer require --dev spryker-sdk/spryk
 ```
 
-## How to use Spryks
+## Using Spryks
 
 There are two interfaces to run the definitions: Spryk Console and SprykGUI.
 
 ### Spryk Console
 
-Spryk Console is based on the Symfony's Console component. To start working with Spryk Console, add it to your `ConsoleDependencyProvider`. 
+Spryk Console is based on the Symfony's Console component. To start working with Spryk Console, add it to your `ConsoleDependencyProvider`.
 There are two commands for Spryk Console: `SprykDumpConsole` and `SprykRunConsole`. The available commands are listed in the table:
 
 <div class="width-100">

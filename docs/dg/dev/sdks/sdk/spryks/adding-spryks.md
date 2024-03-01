@@ -1,13 +1,14 @@
-  - /docs/sdk/dev/spryks/adding-a-new-spryk.html
 ---
-title: Adding a new Spryk
+title: Adding Spryks
 description: Find out how you can add a new Spryk
 template: howto-guide-template
 redirect_from:
+- /docs/sdk/dev/spryks/adding-a-new-spryk.html
+
 last_updated: Nov 10, 2022
 related:
     - title: Spryk configuration reference
-      link: docs/sdk/dev/spryks/spryk-configuration-reference.html	
+      link: docs/sdk/dev/spryks/spryk-configuration-reference.html
 ---
 
 To add a new Spryk, you need to add a YAML configuration file to the `config/spryk/spryks/` directory.
@@ -16,7 +17,7 @@ The `spryk` option defines which builder is used to work with the defined Spryk 
 
 For example, `spryk: Template` uses the `SprykerSdk\Spryk\Model\Spryk\Builder\Template\TemplateSpryk` class to fulfill the Spryk definition.
 
-### The Spryks hierarchy structure
+## The Spryks hierarchy structure
 
 Spryks can depend on other Spryks that are executed before or after the current Spryk. The Spryks hierarchy structure resembles a tree, or even a graph in some cases, that is controlled by the `preSpryks` and `postSpryks` configuration keys.
 
@@ -24,7 +25,7 @@ The best practice to follow is to have a Spryk build only one small structural u
 
 The arguments of the children's Spryks can inherit the values of the same arguments of the parent Spryk. To achieve that, you need to define the `inherit: true` option in the argument definition block. For details about the Spryk file structure and its arguments, see [Spryk configuration reference](/docs/sdk/dev/spryks/spryk-configuration-reference.html#the-root-configuration).
 
-### Overriding arguments in preSpryks or postSpryks
+## Overriding arguments in preSpryks or postSpryks
 
 Overriding is useful for the customization of a used Spryk in the `preSpryks` or `postSpryks` section. You can pass or override arguments here.
 
@@ -63,7 +64,7 @@ postSpryks:
                   value: "App/Registry/ZedControllerDisconnectMethod.php.twig"
 ```
 
-### Conditional Spryks
+## Conditional Spryks
 
 In some cases, you need to run a Spryk only when a specific condition is matched. For example, when one of the passed arguments has a specific value. For these cases, you can use the `condition` option.
 For condition evaluation, the `symfony/expression-language` component is used.
@@ -85,7 +86,7 @@ postSpryks:
                   value: "get{{dependentModule | ucfirst }}{{ dependencyType | ucfirst }}"
               ...
 ```
-### The wrapper Spryk
+## The wrapper Spryk
 
 To merge some Spryks into a bigger structure to enable execution of all of them with a single command, you can use a wrapper Spryk.
 This Spryk only executes `preSpryks` or `postSpryks`, and receives arguments.
@@ -121,7 +122,7 @@ postSpryks:
   ...
 ```
 
-### Best practices
+## Best practices
 
 - Try not to create your own Spryks unless you're sure that you can not customize an existing Spryk to fit your needs.
 - For re-use, try to opt for the basic common Spryks located in `config/spryk/spryks/Spryker/Common/.

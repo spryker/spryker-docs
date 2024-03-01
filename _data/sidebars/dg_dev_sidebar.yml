@@ -50,10 +50,10 @@ entries:
         - title: Limit the memory usage of WSL2-based projects
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html
         - title: Configure debugging
-          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
           nested:
             - title: Set up XDebug profiling
-              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
+              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging/set-up-xdebug-profiling.html
 
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
@@ -893,7 +893,7 @@ entries:
     - title: Cache of unresolved entities for Zed
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
     - title: Case-sensitive file system on Mac OS
-      url: /docs/dg/dev/integrate-and-configure/howto-handle-case-sensitive-file-system-on-mac-os.html
+      url: /docs/dg/dev/integrate-and-configure/switch-to-a-case-sensitive-file-system-on-mac-os.html
     - title: CSS lazy loading for the frontend
       url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
     - title: CMS block widgets
@@ -913,7 +913,7 @@ entries:
     - title: Environment configuration enhancement
       url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
     - title: Forcing HTTPS
-      url: /docs/dg/dev/miscellaneous-guides/howtos/forcing-https.html
+      url: /docs/dg/dev/integrate-and-configure/forcing-https.html
     - title: Health checks
       url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
     - title: IE11
@@ -1007,7 +1007,7 @@ entries:
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
     - title: "Tutorial: Architectural walkthrough"
-      url: /docs/dg/dev/architecture/marketplace-architecture/tutorial-architectural-walkthrough.html
+      url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
 
   - title: Data import
     url: /docs/dg/dev/data-import/data-import.html

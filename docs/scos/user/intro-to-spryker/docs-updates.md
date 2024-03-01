@@ -501,7 +501,7 @@ In May 2023, we have added and updated the following pages:
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.
-- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html): Learn how to configure debugging in Docker.
+- [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html): Learn how to configure debugging in Docker.
 - [Environment provisioning](/docs/ca/dev/environment-provisioning.html): Learn how you can submit an environment provisioning request.
 - [Configure Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/configure-algolia.html): Learn how to configure the Algolia app.
 - [Integrate Algolia](/docs/pbc/all/search/202212.0/base-shop/third-party-integrations/algolia/integrate-algolia.html): Learn how to integrate the Algolia app.

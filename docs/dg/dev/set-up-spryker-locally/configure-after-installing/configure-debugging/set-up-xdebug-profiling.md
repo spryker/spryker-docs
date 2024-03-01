@@ -34,7 +34,7 @@ image:
 
 ## 2. Set up XDebug configuration
 
-To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html).
+To use XDebug with your IDE, configure your IDE so it can connect to your application. For this, see [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html).
 
 ## 3. Bring up your application and start profiling
 

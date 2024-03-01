@@ -14,9 +14,9 @@ The SDK offers different extension points to enable third parties to contribute 
 
 From simple to complex, the SDK can be extended as follows:
 
-- Provide additional [tasks](/docs/sdk/dev/task.html) or [settings](/docs/sdk/dev/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
-- Provide additional tasks, [value resolvers](/docs/sdk/dev/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
-- Provide additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
+- Provide additional [tasks](/docs/dg/dev/sdks/sdk/task.html) or [settings](/docs/dg/dev/sdks/sdk/settings.html) via a YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrating existing tools that come with a standalone executable.
+- Provide additional tasks, [value resolvers](/docs/dg/dev/sdks/sdk/value-resolvers.html), or settings via a PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Task/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example validating the content of a YAML file by using Symfony validators.
+- Provide additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/dg/dev/sdks/sdk/building-flavored-spryker-sdks.html) that includes those dependencies.
 
 To extend the SDK, follow these steps.
 
@@ -215,7 +215,7 @@ services:
 
 If your bundle does not have dependencies that differ from the Spryker SDK, you don't need to register the bundle. Instead, place it into the `extension` directory that is a part of your SDK installation.
 
-For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/sdk/dev/building-flavored-spryker-sdks.html).
+For more complex bundles that require additional dependencies, follow the guidelines in [Building a flavored Spryker SDK](/docs/dg/dev/sdks/sdk/building-flavored-spryker-sdks.html).
 
 ## 2. Adding a value resolver
 

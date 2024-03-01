@@ -87,8 +87,7 @@ task :check_ca do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/acp\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -100,7 +99,6 @@ task :check_scos_dev do
     /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
-    /docs\/sdk\/.+/,
     /docs\/dg\/.+/,
     /docs\/scos\/user\/.+/,
     /docs\/pbc\/.+/,
@@ -126,7 +124,6 @@ task :check_scos_user do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
-    /docs\/sdk\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
@@ -144,7 +141,6 @@ task :check_pbc do
   options = commonOptions.dup
   options[:ignore_files] = [
     /docs\/scos\/.+/,
-    /docs\/sdk\/.+/,
     /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
@@ -159,20 +155,6 @@ task :check_pbc do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_sdk do
-  options = commonOptions.dup
-  options[:ignore_files] = [
-    /docs\/scos\/.+/,
-    /docs\/ca\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/fes\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/dg\/.+/,
-    /docs\/paas-plus\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
 
 task :check_dg do
   options = commonOptions.dup
@@ -181,8 +163,7 @@ task :check_dg do
     /docs\/ca\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/pbc\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

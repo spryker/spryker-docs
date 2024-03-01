@@ -20,7 +20,7 @@ redirect_from:
 
 To follow Spryker's clean and complex architecture, you may need to write a lot of repetitive, boilerplate code. To avoid that tedious work, you can use the *Spryk* code generator, which automatically generates and modifies the required files according to the specified definitions. It also links individual code generation definitions into specific scenarios you need on a daily basis. The definitions are implemented as a set of templates with placeholders to fill out during the execution of the tool, and small pieces of code that are created or modified for each specific definition. The generated code is available for further modification by a developer.
 
-Spryks are written with the help of YAML files. The names of the YAML files also represent the Spryk's name. In most cases, the Spryk YAML file contains arguments that are needed to run the Spryk build. Almost all Spryks need the module name to run properly, and some Spryks require much more arguments. For details about the YAML file structure and arguments, see [Spryk configuration reference](/docs/sdk/dev/spryks/spryk-configuration-reference.html#the-root-configuration).
+Spryks are written with the help of YAML files. The names of the YAML files also represent the Spryk's name. In most cases, the Spryk YAML file contains arguments that are needed to run the Spryk build. Almost all Spryks need the module name to run properly, and some Spryks require much more arguments. For details about the YAML file structure and arguments, see [Spryk configuration reference](/docs/dg/dev/sdks/sdk/spryks/spryk-configuration-reference.html#the-root-configuration).
 
 The majority of Spryks need to execute other Spryks before the called Spryk can run. For example, `Add a Zed Business Facade` needs to have a properly created module before the facade itself can be created. Therefore, Spryks have *pre* and *post* Spryks, and with the call of one Spryk, many things can be and are created.
 
@@ -142,7 +142,7 @@ There are two ways to extend Spryks: by adding new Spryks and by adding Spryk te
 
 You can add your own Spryks by creating a Spryk definition in your project's `config/spryk/spryks/` directory. The tool will find the Spryk definitions in this directory, and the Spryk definitions can be executed as usual.
 
-For more information on adding new Spryks, see [Adding a new Spryk](/docs/sdk/dev/spryks/adding-a-new-spryk.html).
+For more information on adding new Spryks, see [Adding a new Spryk](/docs/dg/dev/sdks/sdk/spryks/adding-a-new-spryk.html).
 
 ### Add Spryk templates
 

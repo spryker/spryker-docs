@@ -8,7 +8,7 @@ redirect_from:
 last_updated: Nov 22, 2022
 ---
 
-The manifest validation feature lets you validate the YAML structure definition of a [task](/docs/sdk/dev/task.html). It checks its structure, types, and related entities.
+The manifest validation feature lets you validate the YAML structure definition of a [task](/docs/dg/dev/sdks/sdk/task.html). It checks its structure, types, and related entities.
 
 Validate the YAML definition of a task:
 
@@ -17,5 +17,5 @@ spryker-sdk sdk:validate:task
 ```
 
 Task validation displays all the errors in the output. For details about the structure of tasks and task sets, see the following documents:
- - [Task structure](/docs/sdk/dev/task.html)
- - [Task set structure](/docs/sdk/dev/task-set.html)
+ - [Task structure](/docs/dg/dev/sdks/sdk/task.html)
+ - [Task set structure](/docs/dg/dev/sdks/sdk/task-set.html)

@@ -9,7 +9,7 @@ last_updated: Nov 22, 2022
 ---
 
 A *task* is the smallest unit for running commands in the SDK.
-You can use the task as a single runnable console command, or you can use it in more complex structures such as [workflows](/docs/sdk/dev/initialize-and-run-workflows.html) or [task sets](/docs/sdk/dev/task-set.html).
+You can use the task as a single runnable console command, or you can use it in more complex structures such as [workflows](/docs/dg/dev/sdks/sdk/initialize-and-run-workflows.html) or [task sets](/docs/dg/dev/sdks/sdk/task-set.html).
 In other words, a task is a commands wrapper that makes the commands extensible, configurable, versionable, and provides a CLI interface for them.
 
 ## Run a task
@@ -92,7 +92,7 @@ lifecycle:
 | `tags`              | no       | The task command. tags.                                                                                                             |
 | `error_message`     | no       | The default command error message that is used in case of non-zero command code return.                                             |
 | `placeholders`      | no       | Command [placeholders](#placeholders)   list.                                                                  |
-| `lifecycle`         | no       | Lifecycle commands list. See [Task lifecycle management](/docs/sdk/dev/task-lifecycle-management.html) for details about the lifecycle.                                                                  |
+| `lifecycle`         | no       | Lifecycle commands list. See [Task lifecycle management](/docs/dg/dev/sdks/sdk/task-lifecycle-management.html) for details about the lifecycle.                                                                  |
 
 #### Placeholders
 
@@ -113,12 +113,12 @@ Update all of the existing tasks:
 sdk:update:all
 ```
 
-After you run this command, [lifecycle events](/docs/sdk/dev/task-lifecycle-management.html) are triggered.
+After you run this command, [lifecycle events](/docs/dg/dev/sdks/sdk/task-lifecycle-management.html) are triggered.
 
 ## Using tasks in the workflows
 
 You can use tasks in workflow transitions. Such tasks must be defined in workflow configuration at `transitions.<transition>.metadata.task`.
-For more information on the workflows, see [Initialize and run workflows](/docs/sdk/dev/initialize-and-run-workflows.html).
+For more information on the workflows, see [Initialize and run workflows](/docs/dg/dev/sdks/sdk/initialize-and-run-workflows.html).
 
 ```yaml
   transitions:

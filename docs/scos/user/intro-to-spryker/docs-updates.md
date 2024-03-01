@@ -520,7 +520,7 @@ In April 2023, we have added and updated the following pages:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
 - [Security release notes 202304.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html)
-- [Releases vs Customization types](/docs/sdk/dev/releases-vs-customization-types.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
+- [Releases vs Customization types](/docs/dg/dev/sdks/sdk/releases-vs-customization-types.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
 
 ### Updated pages
 - [Install the Spryker Core Back Office + Warehouse User Management feature](/docs/pbc/all/back-office/202311.0/unified-commerce/install-and-upgrade/install-the-spryker-core-back-office-warehouse-user-management-feature.html)

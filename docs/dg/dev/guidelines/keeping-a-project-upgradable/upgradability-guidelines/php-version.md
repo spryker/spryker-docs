@@ -12,16 +12,16 @@ This guide describes how to resolve issues surrounding the allowed and consisten
 ## Problem description
 
 The PHP version is declared in different configuration files and used by dependencies.
-You need to be sure that all those items have a PHP versions that are consistent and supported by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
+You need to be sure that all those items have a PHP versions that are consistent and supported by [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html).
 
 PHP versions are checked in:
 - `composer.json`
 - Config deploy files `deploy.**.yml`
-- [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP versions
+- [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html) PHP versions
 
 ## An example of correct code
 
-The PHP version in your deploy files should correspond to the PHP version declared in `composer.json` and the supported PHP version by [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html).
+The PHP version in your deploy files should correspond to the PHP version declared in `composer.json` and the supported PHP version by [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html).
 
 `composer.json`:
 
@@ -52,7 +52,7 @@ image:
 
 ## Example of an evaluator error message
 
-Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `composer.json` file:
+Below is an example of an unsupported [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html) PHP version being used in the `composer.json` file:
 
 ```shell
 ===================
@@ -77,7 +77,7 @@ A `composer.json` file that produces the error message:
 }
 ```
 
-Below is an example of an unsupported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version being used in the `deploy.yml` file.
+Below is an example of an unsupported [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html) PHP version being used in the `deploy.yml` file.
 
 ```bash
 ===================
@@ -148,7 +148,7 @@ Inconsistent PHP versions produce the error message output.
 ## Resolve the error
 
 To resolve the issue:
-1. Use a supported [Spryker SDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html) PHP version.
+1. Use a supported [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html) PHP version.
 2. Make sure that all the files contain the consistent PHP version declaration:
    - `composer.json`
    - Config deploy files `deploy.**.yml`

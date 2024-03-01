@@ -82,4 +82,4 @@ If you face the following issues:
 - pulling the container from the Docker registry,
 - file permissions and ownership on files created by the SDK,
 
-you can build your own container from SDK sources. Refer to [Building flavored Spryker SDKs](/docs/sdk/dev/building-flavored-spryker-sdks.html) for details.
+you can build your own container from SDK sources. Refer to [Building flavored Spryker SDKs](/docs/dg/dev/sdks/sdk/building-flavored-spryker-sdks.html) for details.

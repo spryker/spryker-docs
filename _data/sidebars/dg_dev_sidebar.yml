@@ -53,7 +53,7 @@ entries:
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
           nested:
             - title: Set up XDebug profiling
-              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging/set-up-xdebug-profiling.html
+              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
 
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html

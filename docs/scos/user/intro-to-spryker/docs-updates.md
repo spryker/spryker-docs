@@ -313,8 +313,8 @@ In September 2023, we have added and updated the following pages:
 - [Order management feature integration guide](/docs/pbc/all/order-management-system/202311.0/base-shop/install-features/install-the-order-management-feature.html).
 - [Packaging Units feature integration guide](/docs/pbc/all/product-information-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html).
 - [Push notification feature integration guide](/docs/pbc/all/miscellaneous/202311.0/install-and-upgrade/install-features/install-the-push-notification-feature.html).
-- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/miscellaneous-guides/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html).
-- [HowTo: Import big databases between environments](/docs/dg/dev/miscellaneous-guides/howtos/transfer-big-databases-between-environments.html).
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
+- [HowTo: Import big databases between environments](/docs/dg/dev/miscellaneous-guides/transfer-big-databases-between-environments.html).
 - [Vertex app integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 
 For more details about these and other updates to the Spryker docs in September 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -326,7 +326,7 @@ In August 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/miscellaneous-guides/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html).
 - [Security release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html).
 - [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
@@ -372,7 +372,7 @@ In July 2023, we have added and updated the following pages:
 ### New pages
 - [Oryx: Color system](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
 - [Best practises: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
-- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/miscellaneous-guides/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
+- [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 - [Release notes 202307.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
 - [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html): This document describes how to integrate the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
@@ -466,8 +466,6 @@ In May 2023, we have added and updated the following pages:
     - [Plugin registration with restrictions](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/plugin-registration-with-restrintions.html): Resolve isues related to plugin registration with restrictions.
     - [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Check if your PHP application depends on PHP packages with known security vulnerabilities.
     - [Single plugin argument](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html): Resolve issues related to single plugin arguments inside the dependency provider’s methods.
-- [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.12.0 and earlier](/docs/dg/dev/miscellaneous-guides/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html)
-- [HowTo: Allow Zed SCSS/JS on a project level for `oryx-for-zed` version 2.13.0 and later](/docs/dg/dev/miscellaneous-guides/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html)
 - [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
 - [Change default branch](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to change the default branch in Spryker CI
 - [Oryx](/docs/dg/dev/frontend-development/202212.0/oryx/oryx.html) documentation:
@@ -497,7 +495,7 @@ In May 2023, we have added and updated the following pages:
 
 ### Updated pages
 
-- [HowTo: Set up multiple stores](/docs/dg/dev/miscellaneous-guides/howtos/howto-set-up-multiple-stores.html): Learn how to set up multiple stores.
+- [HowTo: Set up multiple stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html): Learn how to set up multiple stores.
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): Learn about the app manifest files and what necessary information they must contain
 - [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html): Learn how to use the Spryker Code Upgrader to update your project easily.
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html): Our tips on executing the performance testing.

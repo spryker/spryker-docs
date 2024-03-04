@@ -107,4 +107,3 @@ This documentation site contains lots of information on Spryker Commerce OS. Sel
 * [Packaged Business Capabilities](/docs/pbc/all/pbc.html): catalogue of functionality and related guides.
 * [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [Developer Guides](/docs/scos/dev/developer-getting-started-guide.html): technical information and guides for developers.
-* [Tutorials](/docs/dg/dev/miscellaneous-guides/tutorials-and-howtos.html): tutorials and HowTos.

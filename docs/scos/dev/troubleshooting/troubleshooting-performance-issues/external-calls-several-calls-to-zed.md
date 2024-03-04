@@ -1,9 +1,10 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html
 ---
 title: External calls—several calls to Zed
 description: Troubleshoot the performance issue with several external calls to Zed
 template: troubleshooting-guide-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/external-calls-several-calls-to-zed.html
+
 last_updated: Mar 1, 2023
 ---
 

@@ -1,9 +1,10 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html
 ---
 title: Troubleshooting RabbitMQ
 description: Troubleshoot RabbitMQ issues
 template: concept-topic-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html
+
 last_updated: May 2, 2023
 ---
 

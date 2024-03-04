@@ -1,4 +1,3 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 title: Port is already occupied on host
 description: Learn how to fix the issue when port is already occupied on host
@@ -7,25 +6,7 @@ template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/port-is-already-occupied-on-host
 originalArticleId: cf038694-8d04-43cf-adc7-005de29058e2
 redirect_from:
-  - /2021080/docs/port-is-already-occupied-on-host
-  - /2021080/docs/en/port-is-already-occupied-on-host
-  - /docs/port-is-already-occupied-on-host
-  - /docs/en/port-is-already-occupied-on-host
-  - /v6/docs/port-is-already-occupied-on-host
-  - /v6/docs/en/port-is-already-occupied-on-host
-related:
-  - title: 413 Request Entity Too Large
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
-  - title: An application is not reachable via http
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/an-application-is-not-reachable-via-http.html
-  - title: MacOS and Windows - file synchronization issues in Development mode
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
-  - title: Mutagen error
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-error.html
-  - title: Mutagen synchronization issue
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
-  - title: Nginx welcome page
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
+- /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
 ---
 
 ## Description

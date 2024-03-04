@@ -1,10 +1,11 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-without-error-notifications.html
 ---
 title: Messages are stuck without error notifications
 description: This troubleshooting guide describes how to deal with messages that get stuck in queues without visible error notifications
 last_updated: Oct 31, 2022
 template: troubleshooting-guide-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-without-error-notifications.html
+
 related:
   - title: Messages are moved to error queues
     link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-moved-to-error-queues.html

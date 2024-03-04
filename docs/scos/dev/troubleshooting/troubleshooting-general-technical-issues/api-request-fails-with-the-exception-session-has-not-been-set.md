@@ -1,10 +1,11 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
 ---
 title: 'API request fails with the exception: Session has not been set'
 description: Learn how to resolve the issue with an exception that session has not been set.
 last_updated: Jan 24, 2023
 template: troubleshooting-guide-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
+
 ---
 
 Executing an API command leads to the exception `Session has not been set`.

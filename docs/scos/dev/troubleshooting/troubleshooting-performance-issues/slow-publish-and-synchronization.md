@@ -1,4 +1,3 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
 ---
 title: Slow Publish and Synchronization
 description: Publish and Synchronization is slow on all or some actions.
@@ -6,6 +5,8 @@ template: troubleshooting-guide-template
 last_updated: Feb 23, 2023
 redirect_from:
     - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-p-and-s.html
+    - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
+
 related:
     - title: Troubleshooting RabbitMQ
       link: docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/troubleshooting-rabbitmq.html

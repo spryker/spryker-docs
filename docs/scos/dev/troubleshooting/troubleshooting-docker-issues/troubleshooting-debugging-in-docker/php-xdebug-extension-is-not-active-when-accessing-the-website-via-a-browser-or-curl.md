@@ -1,4 +1,3 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
 ---
 title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
 description: Learn how to fix an issue when PHP `xdebug` extension is not active when accessing the website via a browser or curl
@@ -7,17 +6,8 @@ template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
 originalArticleId: eb4a91fe-ab09-4e6f-a591-f942dea005f5
 redirect_from:
-  - /2021080/docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-  - /2021080/docs/en/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-  - /docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-  - /docs/en/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-  - /v6/docs/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
-  - /v6/docs/en/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl
+- /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
 related:
-  - title: nc command does not give any output
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
-  - title: nc command tells that the port is opened
-    link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
   - title: PHP `xdebug` extension is not active in CLI
     link: docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
   - title: Xdebug does not work

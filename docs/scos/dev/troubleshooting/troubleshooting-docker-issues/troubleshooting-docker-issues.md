@@ -1,4 +1,3 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
 ---
 title: Troubleshooting Docker issues
 description: Troubleshoot issues you might encounter when you have your Spryker-based project in Docker.
@@ -7,18 +6,7 @@ template: troubleshooting-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/troubleshooting-spryker-in-docker-issues
 originalArticleId: 86164c2a-2a65-4c15-a36e-3f37d4e8c001
 redirect_from:
-  - /2021080/docs/troubleshooting-spryker-in-docker-issues
-  - /2021080/docs/en/troubleshooting-spryker-in-docker-issues
-  - /docs/troubleshooting-spryker-in-docker-issues
-  - /docs/en/troubleshooting-spryker-in-docker-issues
-  - /v6/docs/troubleshooting-spryker-in-docker-issues
-  - /v6/docs/en/troubleshooting-spryker-in-docker-issues
-  - /v5/docs/spryker-in-docker-troubleshooting
-  - /v5/docs/en/spryker-in-docker-troubleshooting
-  - /v4/docs/spryker-in-docker-troubleshooting
-  - /v4/docs/en/spryker-in-docker-troubleshooting
-  - /v3/docs/spryker-in-docker-troubleshooting
-  - /v3/docs/en/spryker-in-docker-troubleshooting
+  - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
   - /docs/spryker-in-docker-troubleshooting
   - /docs/scos/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-spryker-in-docker-issues.html
 ---

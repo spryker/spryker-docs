@@ -1,4 +1,3 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting.html
 ---
 title: Troubleshooting
 description: Learn how you can fix technical issues with Spryker
@@ -24,6 +23,8 @@ redirect_from:
     - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/exception-connecting-to-redis.html
     - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
     - /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
+    - /docs/scos/dev/troubleshooting/troubleshooting.html
+
 ---
 
 This section gives answers to common troubleshooting questions and includes the following topics:

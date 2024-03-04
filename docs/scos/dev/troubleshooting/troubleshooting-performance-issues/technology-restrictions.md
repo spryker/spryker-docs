@@ -1,9 +1,10 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
 ---
 title: Technology restrictions
 description: Fix the issue with slow actions, parts of the website, or the entire webiste related to technology restrictions.
 template: troubleshooting-guide-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
+
 last_updated: Mar 1, 2023
 ---
 
@@ -17,13 +18,13 @@ A possible cause is technology restriction.
 
 Before using some technology, you need to understand all its advantages and disadvantages.
 
-A good example is Redis. It is fast, but if used incorrectly, it can lead to performance degradation. If we search against `*` or `Wildkey` in Redis with a large DB, we get the following results: 
+A good example is Redis. It is fast, but if used incorrectly, it can lead to performance degradation. If we search against `*` or `Wildkey` in Redis with a large DB, we get the following results:
 
-NewRelic—DB: 
+NewRelic—DB:
 
 ![new-relic-db](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions/new-relic-db.png)
 
-NewRelic—Breakdown: 
+NewRelic—Breakdown:
 
 ![new-relic-breakdown](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions/new-relic-breakdown.png)
 

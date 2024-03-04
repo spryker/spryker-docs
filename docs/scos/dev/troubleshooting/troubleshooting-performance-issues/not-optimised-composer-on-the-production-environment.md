@@ -1,9 +1,10 @@
-  - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
 ---
 title: Not optimized Composer on the production environment
 description: Fix the issue when all pages are slow on the production environment
 template: troubleshooting-guide-template
 redirect_from:
+- /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
+
 last_updated: Mar 1, 2023
 ---
 
@@ -11,7 +12,7 @@ All pages are slow on the production environment.
 
 ## Cause
 
-The possible cause can be an unoptimized Composer for the production environment. 
+The possible cause can be an unoptimized Composer for the production environment.
 
 Here is an example of a profile from [Blackfire](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire):
 
@@ -25,13 +26,13 @@ Optimize the Composer autoloader. Follow the [general performance guidelines](/d
 
 For example, you can run the `dump-autoload` command with `-o ` or `--optimize`.
 
-After running the command defined in the guidelines, the profile can look like this: 
+After running the command defined in the guidelines, the profile can look like this:
 
 ![profile-after-command](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment/profile-after-command.png)
 
 As you can see, the two most time-consuming points are gone.
 
-The comparison view looks like this: 
+The comparison view looks like this:
 
 ![comparison-view](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment/comparison-view.png)
 

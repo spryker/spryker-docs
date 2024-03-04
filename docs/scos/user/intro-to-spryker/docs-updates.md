@@ -30,7 +30,11 @@ In February 2024, we have added and updated the following pages:
 - [File details: shopping_list_item.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-item.csv.html): Configure information about shopping list items via the data import.
 - [File details: shopping_list_company_user.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-company-user.csv.html): Configure information about shopping list company users via the data import.
 - [File details: shopping_list_company_business_unit.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-company-business-unit.csv.html): Configure information about shopping list company business unites via the data import.
-- 
+- [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/202404.0/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html).
+- [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
+- [Secure coding practices for external packages](/docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html).
+- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
+- [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
 
 ## January 2024
 

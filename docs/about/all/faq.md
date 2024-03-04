@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/faq.html
 ---
 title: FAQ
 description: Use the article to get answers to the most popular questions about Spryker.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/faq
 originalArticleId: c0bdf12c-d68d-4dc6-84b3-8087fc55b16c
 redirect_from:
-  - /2021080/docs/faq
-  - /2021080/docs/en/faq
-  - /docs/faq
-  - /docs/en/faq
-  - /v5/docs/faq
-  - /v5/docs/en/faq
-  - /v4/docs/faq
-  - /v4/docs/en/faq
-  - /v3/docs/faq
-  - /v3/docs/en/faq
-  - /v2/docs/faq
-  - /v2/docs/en/faq
-  - /v1/docs/faq
-  - /v1/docs/en/faq
-  - /v6/docs/faq
-  - /v6/docs/en/faq
+- /docs/scos/user/intro-to-spryker/faq.html
 ---
 
 ## Does Spryker have features?
@@ -32,21 +16,21 @@ Yes. Like iOS or macOS, Spryker is an operating system that offers a range of fe
 ## What do you mean when you say "apps"?
 
 By apps, we mean everything that is customer-facing. For example, a B2C or B2B shop system, Alexa voice skill, order status update function, easy repeat-order function, chatbot for customer service, native or web-based mobile customer interface, EDP interfaces, and IoT installations. Apps ensure such types of services as communication between elevators or a message from an industrial saw requesting component replacement or even a booking service.
-    
+
 ## Can third-party items be integrated?
 
 Yes. We refer to third-party integrations as industry partners. They include services for payment, shipment, on-site search, recommendation engines, tracking, social, BI, loyalty, chat, and other services which can be integrated into the OS.
-   
+
 ## Which new trends does your OS support?
 
 As vendors of an operating system, our task is to ensure the quick development of apps. Since ROI timescales shorten increasingly and technology develops in ever quicker succession, it is difficult to look ahead even to 12 months. With this in mind, Spryker provides a starting point from which to develop applications in such areas as voice, chatbots, blockchain, AI, and more.
-   
+
 ## What is Spryker's solution for omnichannel?
-    
+
 In our world, omnichannel is a collection of apps in use—for example, a webshop plus POS plus mobile as one possible combination. Within the operating system, we are trying to offer an increasing number of preinstalled capabilities and demo apps so that every customer can put it to work to reflect their own use case as quickly as possible. To avoid duplicating logic such as search, discount, and payment per individual channel, these items are offered or stored in the operating system. This approach significantly improves cycles of customer-facing apps' building and testing.
-   
+
 ## Is Spryker a shop system?
- 
+
 No. Spryker is an operating system for commerce. In our world, a B2C shop is only one of many apps. Customers who only need one app will probably be able to reach their goals faster with a standard, set-in-stone legacy system.
 
 ## Do I need my own team, or can I work with an agency?

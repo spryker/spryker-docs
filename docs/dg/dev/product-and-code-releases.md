@@ -1,26 +1,15 @@
-  - /docs/scos/user/intro-to-spryker/spryker-release-process.html
 ---
-title: Spryker release process
+title: Product and code releases
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-release-process
 originalArticleId: 3195aac4-0b8e-43a7-b540-0222f567c9fc
 redirect_from:
-  - /2021080/docs/spryker-release-process
-  - /2021080/docs/en/spryker-release-process
-  - /docs/spryker-release-process
-  - /docs/en/spryker-release-process
-  - /v5/docs/spryker-release-process
-  - /v5/docs/en/spryker-release-process
-  - /v4/docs/spryker-release-process
-  - /v4/docs/en/spryker-release-process
-  - /v6/docs/spryker-release-process
-  - /v6/docs/en/spryker-release-process
+- /docs/scos/user/intro-to-spryker/spryker-release-process.html
+
 ---
 
-Spryker has always prided itself on the fast pace of innovation and rapid development of new functionality. New features and enhancements are shipped almost daily.
-
-Many customers benefit from these continuous releases by having immediate access to new, sometimes even beta, versions of the Spryker modules. At the same time, with the growth of our product, we faced a necessity to also have a more structured and organized release approach. To accommodate both the fast pace of innovation and predictability of the upgrade process, we support two types of releases: atomic (code) releases and product releases.
+To accommodate both the fast pace of innovation and predictability of the upgrade process, we support two types of releases: atomic (code) releases and product releases.
 
 ![Product releases flow](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/image2018-8-10_17-10-26.png)
 

@@ -5,6 +5,12 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/scos/dev/developer-getting-started-guide.html
+  - title: B2C Suite
+    url: /docs/dg/dev/b2c-suite.html
+  - title: B2B Suite
+    url: /docs/dg/dev/b2b-suite.html
+  - title: Master Suite
+    url: /docs/dg/dev/master-suite.html
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -1165,3 +1171,6 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+
+  - title: Product and code releases
+    url: /docs/dg/dev/product-and-code-releases.html

@@ -261,7 +261,6 @@ In October 2023, we have added and updated the following pages:
 - [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
 - [Test helpers best practices](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
-- [Configure Data Exchange API endpoints](/docs/dg/dev/glue-api/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
@@ -298,7 +297,7 @@ In September 2023, we have added and updated the following pages:
 - [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
 - [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
-- [Configure Data Exchange API endpoints](/docs/dg/dev/glue-api/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
+
 - [How to send a request in Data Exchange API](/docs/dg/dev/glue-api/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 

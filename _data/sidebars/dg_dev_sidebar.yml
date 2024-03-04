@@ -1248,15 +1248,6 @@ entries:
         - title: Validate REST request format
           url: /docs/dg/dev/glue-api/glue-api-tutorials/validate-rest-request-format.html
 
-    - title: Data Exchange API
-      include_versions:
-      - "202307.0"
-      - "202311.0"
-      nested:
-      - title: How to send a request in Data Exchange API
-        url: /docs/dg/dev/glue-api/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html
-      - title: How to configure Data Exchange API endpoints.
-        url: /docs/dg/dev/glue-api/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html
 
 
   - title: Zed API

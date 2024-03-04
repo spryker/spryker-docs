@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/dg/dev/glue-api/page.version/managing-wishlists/managing-wishlist-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Wishlist feature overview

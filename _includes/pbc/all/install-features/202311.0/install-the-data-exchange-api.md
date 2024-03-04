@@ -639,7 +639,7 @@ vendor/bin/console scheduler:resume
 
 {% info_block warningBox "Verification" %}
 
-1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/dg/dev/glue-api/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
+1. Configure at least one entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html).
 2. Make sure `src\Generated\GlueBackend\Specification\spryker_backend_api.schema.yml` has been generated and contains the corresponding endpoint with correct configurations.
 
 {% endinfo_block %}

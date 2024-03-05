@@ -122,7 +122,7 @@ In December 2023, we have added and updated the following pages:
 ### Updated pages
 
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
-- [Create Glue API authorization strategies](/docs/scos/dev/glue-api-guides/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
+- [Create Glue API authorization strategies](/docs/dg/dev/glue-api/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
 - [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
 - [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
@@ -202,10 +202,10 @@ In November 2023, we have added and updated the following pages:
     - [Step 12: Choose a multi-store setup](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html).
     - [Step 13: Migrate database](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html).
     - [Step 14: Finalize the migration](/docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html).
-- [Backend API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
-- [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
-- [REST API Marketplace B2B Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
-- [REST API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/202311.0/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html).
+- [Backend API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html).
+- [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+- [REST API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
+- [REST API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html).
 - [Release notes 202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html).
 - [Security release notes 202312.0](/docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html).
 
@@ -246,7 +246,7 @@ In October 2023, we have added and updated the following pages:
     - [Oryx: Integrating components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-integrating-components.html)
 - [Oryx: Responsive design system](/docs/dg/dev/frontend-development/202307.0/oryx/building-applications/styling/oryx-responsive-design.html): Learn how to leverage Oryx's Responsive Design system to create user-friendly websites and applications that seamlessly adapt to different screen sizes and devices.
 - [Entity does not exist: Pyz prefix](/docs/ca/devscu/troubleshooting/entity-does-not-exist–pyz-prefix.html): Learn how to resolve the Code Upgrader error issue related to an entity being prefixed with PYZ.
-- [Use API Key authorization](/docs/scos/dev/glue-api-guides/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
+- [Use API Key authorization](/docs/dg/dev/glue-api/202307.0/use-api-key-authorization.html): Learn how to use the API Key authorization mechanism that lets users authenticate themselves with their API Key generated from the Back Office.
 - [Decoupled Glue infrastructure: Integrate the API Key authorization](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html): Learn how to integrate the API Key authorization to Backend API applications.
 - [Test the asynchronous API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html): Learn how to set up and run AsyncAPI tests.
 - [Install the Service Points Cart + Checkout feature](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-cart-checkout-feature.html).
@@ -261,7 +261,6 @@ In October 2023, we have added and updated the following pages:
 - [Test framework](/docs/dg/dev/guidelines/testing-guidelines/test-framework.html): Learn how to set up and configure tests with the Codeception test framework.
 - [Test helpers best practices](/docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
-- [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202307.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): : Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
 - [Updating Spryker](/docs/dg/dev/updating-spryker/updating-spryker.html): Learn how and when to update your Spryker project.
@@ -298,8 +297,8 @@ In September 2023, we have added and updated the following pages:
 - [Container set function](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html): Check how plugins are registered in the dependency provider on the project level.
 - [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
-- [Configure Data Exchange API endpoints](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html).
-- [How to send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html).
+
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 
 ### Updated pages
@@ -389,7 +388,6 @@ In July 2023, we have added and updated the following pages:
 - [Security Release Notes 202306.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
 - [Merchant Users Overview](/docs/pbc/all/merchant-management/202212.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html): Added information about the assignment of groups for the merchant user.
 - [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
-- [How send a request in Data Exchange API](/docs/scos/dev/glue-api-guides/202307.0/data-exchange-api/how-to-guides/how-to-send-request-in-data-exchange-api.html): Added error codes and error code descriptions.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
 - [Install Docker prerequisites on Linux](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-linux.html): Learn about the steps you need to take before you can start working with Spryker in Docker on Linux.
 - [Payment Service Provider](/docs/pbc/all/payment-service-provider/202212.0/payment-service-provider.html): Different payment methods for your shop.

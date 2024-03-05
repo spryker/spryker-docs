@@ -142,7 +142,7 @@ There are two ways to extend Spryks: by adding new Spryks and by adding Spryk te
 
 You can add your own Spryks by creating a Spryk definition in your project's `config/spryk/spryks/` directory. The tool will find the Spryk definitions in this directory, and the Spryk definitions can be executed as usual.
 
-For more information on adding new Spryks, see [Adding a new Spryk](/docs/dg/dev/sdks/sdk/spryks/adding-a-new-spryk.html).
+For more information on adding new Spryks, see [Adding a new Spryk](/docs/dg/dev/sdks/sdk/spryks/adding-spryks.html).
 
 ### Add Spryk templates
 

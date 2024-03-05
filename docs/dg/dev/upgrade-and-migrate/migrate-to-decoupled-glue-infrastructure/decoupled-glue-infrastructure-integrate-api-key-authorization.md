@@ -181,6 +181,6 @@ class AuthorizationDependencyProvider extends SprykerAuthorizationDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Follow the instructions from [Use API Key authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/use-api-key-authorization.html) to check that the API Key authorization has been integrated properly.
+Follow the instructions from [Use API Key authorization](/docs/dg/dev/glue-api/{{site.version}}/use-api-key-authorization.html) to check that the API Key authorization has been integrated properly.
 
 {% endinfo_block %}

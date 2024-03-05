@@ -46,7 +46,7 @@ if [ ! -d "$folder_path" ]; then
 fi
 
 # Specify the root directory to make paths relative to. Must end with `spryker-docs`
-root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"
+root_directory="/Users/oscarwilde/Documents/GitHub/spryker-docs"
 
 # Call the function to process files and subfolders
 process_files "$folder_path" "$root_directory"

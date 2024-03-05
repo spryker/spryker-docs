@@ -96,7 +96,7 @@ To configure and customize your project, you can do the following:
     * [Redis](/docs/dg/dev/set-up-spryker-locally/redis-configuration.html)
     <!---*   [ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html)-->
     * [Queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html)
-3. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
+3. [Configure stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html#configure-stores) depending on your need for one or multiple stores in your online shop.
 4. [Schedule tasks](/docs/dg/dev/backend-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
@@ -193,7 +193,7 @@ It is safe to disable cache indexing for the following files:
 
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
 
-* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
+* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
 
 {% info_block infoBox %}
 

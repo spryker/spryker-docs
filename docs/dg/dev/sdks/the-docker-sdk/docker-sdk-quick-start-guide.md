@@ -29,7 +29,7 @@ related:
   - title: Configuring access to private repositories
     link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
 
 ---
 

@@ -29,7 +29,7 @@ related:
   - title: Configuring a mount mode
     link: docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
   - title: Configuring debugging in Docker
-    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---

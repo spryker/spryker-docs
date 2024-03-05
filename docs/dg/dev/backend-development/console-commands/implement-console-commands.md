@@ -8,6 +8,8 @@ originalArticleId: d43d3867-747d-4323-978a-57b61082bef8
 redirect_from:
   - /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
   - /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
+  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
+
 related:
   - title: Console commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html

@@ -47,8 +47,14 @@ entries:
         nested:
         - title: Set up a self-signed SSL certificate
           url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html
+        - title: Limit the memory usage of WSL2-based projects
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/limit-the-memory-usage-of-wsl2-based-projects.html
         - title: Configure debugging
-          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+          url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
+          nested:
+            - title: Set up XDebug profiling
+              url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html
+
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
     - title: Manage dependencies with Composer
@@ -102,6 +108,13 @@ entries:
         url: /docs/dg/dev/backend-development/yves/yves-bootstrapping.html
       - title: Yves routes
         url: /docs/dg/dev/backend-development/yves/yves-routes.html
+      - title: Implementing widgets and widget plugins
+        url: /docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html
+      - title: Implementing Twig extensions
+        url: /docs/dg/dev/backend-development/yves/implementing-twig-extensions.html
+      - title: Set up custom response headers
+        url: /docs/dg/dev/backend-development/yves/set-up-custom-response-headers.html
+
     - title: Zed
       url: /docs/dg/dev/backend-development/zed/zed.html
       nested:
@@ -150,6 +163,9 @@ entries:
             url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
       - title: Add navigation in the Back Office
         url: /docs/dg/dev/backend-development/zed/add-navigation-in-the-back-office.html
+      - title: Create table views
+        url: /docs/dg/dev/backend-development/zed/create-table-views.html
+
     - title: Cronjobs
       url: /docs/dg/dev/backend-development/cronjobs/cronjobs.html
       nested:
@@ -159,6 +175,9 @@ entries:
         url: /docs/dg/dev/backend-development/cronjobs/create-a-custom-scheduler.html
       - title: Migrate to Jenkins
         url: /docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html
+      - title: Optimizing Jenkins execution
+        url: /docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html
+
     - title: Forms
       url: /docs/dg/dev/backend-development/forms/forms.html
       nested:
@@ -178,10 +197,11 @@ entries:
     - title: Console commands
       url: /docs/dg/dev/backend-development/console-commands/console-commands.html
       nested:
-      - title: Implement a new console command
-        url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
       - title: Get the list of console commands and available options
         url: /docs/dg/dev/backend-development/console-commands/get-the-list-of-console-commands-and-available-options.html
+      - title: Implement console commands
+        url: /docs/dg/dev/backend-development/console-commands/implement-console-commands.html
+
     - title: Data manipulation
       url: /docs/dg/dev/backend-development/data-manipulation/data-manipulation.html
       nested:
@@ -210,6 +230,9 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
+        - title: Bypass the key-value storage
+          url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/bypass-the-key-value-storage.html
+
       - title: Configuration management
         url: /docs/dg/dev/backend-development/data-manipulation/configuration-management.html
       - title: Data interaction
@@ -220,7 +243,10 @@ entries:
         - title: Transfer data between Yves and Zed
           url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
-          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html
+        - title: Define the module dependencies - Dependency Provider
+          url: /docs/dg/dev/backend-development/data-manipulation/data-interaction/replace-module-dependencies.html
+
       - title: Create an Order Management System - Spryker Commerce OS
         url: /docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
       - title: Queue
@@ -700,6 +726,12 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
+    - title: Create Angular modules
+      url: /docs/dg/dev/frontend-development/create-angular-modules.html
+    - title: Define Twig tag
+      url: /docs/dg/dev/frontend-development/define-twig-tag.html
+    - title: Notifying about unsupported browsers
+      url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 
   - title: Upgrade and migrate
     url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
@@ -849,19 +881,19 @@ entries:
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
       - title: Web Profiler Widget for Yves
         url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
-    - title: Integrate Zed API
-      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
-      nested:
-        - title: Integrate Zed API for merchant relationships
-          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
-    - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html
+
+    - title: ARM architecture (M1 chip)
+      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
     - title: Authorization Enabler
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Basic SEO techniques
       url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
+    - title: Graceful shutdown
+      url: /docs/dg/dev/integrate-and-configure/implementing-graceful-shutdown.html
     - title: Cache of unresolved entities for Zed
       url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
+    - title: Case-sensitive file system on Mac OS
+      url: /docs/dg/dev/integrate-and-configure/switch-to-a-case-sensitive-file-system-on-mac-os.html
     - title: CSS lazy loading for the frontend
       url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
     - title: CMS block widgets
@@ -870,6 +902,8 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
     - title: Custom location for static assets
       url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
+    - title: Database connections
+      url: /docs/dg/dev/integrate-and-configure/configure-database-connections.html
     - title: Dynamic Yves-Zed tokens
       url: /docs/dg/dev/integrate-and-configure/configure-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
@@ -878,8 +912,12 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
     - title: Environment configuration enhancement
       url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
+    - title: Forcing HTTPS
+      url: /docs/dg/dev/integrate-and-configure/forcing-https.html
     - title: Health checks
       url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
+    - title: IE11
+      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
     - title: Multi-database logic
       url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
@@ -892,12 +930,11 @@ entries:
       url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
     - title: Separate endpoint bootstraps
       url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
+    - title: Services
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
     - title: Twig and TwigExtension
       url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
-    - title: ARM architecture (M1 chip)
-      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
-    - title: IE11
-      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
+
 
   - title: SDKs
     nested:
@@ -1004,6 +1041,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html
       - title: Running tests with the Docker SDK
         url: /docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html
+      - title: Reset docker environments
+        url: /docs/dg/dev/sdks/the-docker-sdk/reset-docker-environments.html
 
 
   - title: Architecture
@@ -1041,6 +1080,8 @@ entries:
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+    - title: "Tutorial: Architectural walkthrough"
+      url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
 
   - title: Data import
     url: /docs/dg/dev/data-import/data-import.html
@@ -1065,6 +1106,8 @@ entries:
       url: /docs/dg/dev/data-import/replacing-a-default-data-importer-with-a-queue-data-importer.html
     - title: Data importer speed optimization
       url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
+    - title: Implementing data installers
+      url: /docs/dg/dev/data-import/implementing-data-installers.html
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1151,6 +1194,8 @@ entries:
         url: /docs/dg/dev/guidelines/testing-guidelines/test-framework.html
       - title: Setting up tests
         url: /docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html
+      - title: Building tests for test-driven development
+        url: /docs/dg/dev/guidelines/testing-guidelines/building-tests-for-test-driven-devleopment.html
       - title: Running tests with Robot Framework
         url: /docs/dg/dev/guidelines/testing-guidelines/running-tests-with-robot-framework.html
       - title: Test helpers
@@ -1198,6 +1243,7 @@ entries:
       url: /docs/dg/dev/guidelines/module-configuration-convention.html
     - title: Security guidelines
       url: /docs/dg/dev/guidelines/security-guidelines.html
+
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
@@ -1329,8 +1375,15 @@ entries:
     nested:
     - title: Project implementation - Zed API
       url: /docs/dg/dev/zed-api/zed-api-project-implementation.html
+    - title: Integrate Zed API
+      url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api.html
+      nested:
+        - title: Integrate Zed API for merchant relationships
+          url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
+    - title: "Tutorial: Using Zed API"
+      url: /docs/dg/dev/zed-api/tutorial-using-zed-api.html
     - title: CRUD functionality - Zed API
       url: /docs/dg/dev/zed-api/zed-api-crud-functionality.html
     - title: Processor stack - Zed API
@@ -1358,3 +1411,16 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+
+
+  - title: Miscellaneous guides
+    url: /docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html
+    nested:
+      - title: Simulating deployments locally
+        url: /docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html
+      - title: "Tutorial: Hello world"
+        url: /docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html
+      - title: Using database transactions
+        url: /docs/dg/dev/miscellaneous-guides/using-database-transaction.html
+      - title: "Transfer big databases between environments"
+        url: /docs/dg/dev/miscellaneous-guides/transfer-big-databases-between-environments.html

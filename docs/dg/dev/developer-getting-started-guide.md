@@ -87,7 +87,7 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 2. [Configure services](/docs/dg/dev/integrate-and-configure/configure-services.html).
 3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
 4. [Configure queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
-5. [Configure stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html#configure-stores).
+5. [Configure stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html#configure-stores).
 6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
 
 ### Clean up store configuration
@@ -170,7 +170,8 @@ It is safe to disable cache indexing for the following files:
 
 ## 7. Configure debugging
 
-Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html).
+
+Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
 
 
 ## 8. Explore Spryker architecture

@@ -61,34 +61,6 @@ jobs:
 
       - run: bundle exec rake check_ca
 
-  link_validation_check_scos_dev:
-    name: Links validation (check_scos_dev)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_scos_dev-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_scos_dev
-
   link_validation_check_scos_user:
     name: Links validation (check_scos_user)
     needs: jekyll_build
@@ -215,7 +187,7 @@ jobs:
           bundler-cache: true
 
       - run: bundle exec jekyll validate
-      
+
   deploy:
     runs-on: ubuntu-latest
     needs: jekyll_build

@@ -8,6 +8,7 @@ originalArticleId: 79b50d48-6f09-45b0-9e4a-f372e274d462
 redirect_from:
   - /docs/scos/dev/module-migration-guides/about-migration-guides.html
   - /docs/pbc/all/punchout/202307.0/punchout-catalogs-overview.html
+  - /docs/scos/dev/developer-getting-started-guide.html
 ---
 
 This document helps you get started with the Spryker Cloud Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. If you have any questions after following these instructions, you can connect with the Spryker community at [CommerceQuest](https://commercequest.space/).

@@ -8,10 +8,10 @@ redirect_from:
     - /docs/sdk/dev/build-flavored-spryker-sdks.html
 
 ---
-Sometimes, a [simple extendibility](/docs/dg/dev/sdks/sdk/extending-the-sdk.html) and core SDK capabilities are not enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
+Sometimes, a [simple extendibility](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html) and core SDK capabilities are not enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
 You can extend the SDK by adding more Symfony bundles to the SDK and building your own flavored Spryker SDK image.
 
-Besides extending the Spryker SDK through [Yaml definitions](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementation-via-a-php-class). You must add these extensions through a PHP implementation as a composer dependency and register them as Symfony bundles. To achieve this, follow the steps below.
+Besides extending the Spryker SDK through [Yaml definitions](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementing-a-task-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementing-a-task-via-a-php-class). You must add these extensions through a PHP implementation as a composer dependency and register them as Symfony bundles. To achieve this, follow the steps below.
 
 ## 1. Download the SDK source code
 

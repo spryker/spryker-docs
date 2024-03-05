@@ -29,7 +29,7 @@ There are the following event types:
 
 ## Adding events to the tasks created in YAML files
 
-The following examples illustrates how you can add the lifecycle events to [tasks created via a YAML file](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementation-via-yaml-definition):
+The following examples illustrates how you can add the lifecycle events to [tasks created via a YAML file](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementing-a-task-via-yaml-definition):
 
 ```yaml
 ---
@@ -54,4 +54,4 @@ lifecycle:
 
 ## Adding events to the tasks created in PHP classes
 
-A [task implemented in a PHP class](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementation-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk/blob/master/src/Core/Domain/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.
+A [task implemented in a PHP class](/docs/dg/dev/sdks/sdk/extending-spryker-sdk.html#implementing-a-task-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk/blob/master/src/Core/Domain/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.

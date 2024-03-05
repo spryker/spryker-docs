@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
 ---
 title: Security release notes 202309.0
 description: Security release notes for 202309.0
 last_updated: Oct 4, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
+
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -27,7 +28,7 @@ Proper validation controls have been implemented for the files uploaded via the 
 
 ### How to get the fix
 
-To implement a fix for this vulnerability: 
+To implement a fix for this vulnerability:
 
 1. Upgrade the `spryker/file-manager` module version to 2.3.0:
 
@@ -54,7 +55,7 @@ composer show spryker/file-manager-gui # Verify the version
 
 ```bash
 composer require spryker/file-manager-data-import:"~2.1.0"
-composer show spryker/file-manager-data-import # Verify the version 
+composer show spryker/file-manager-data-import # Verify the version
 ```
 
 5. Upgrade the `spryker/price-product-schedule-gui` module version to 2.6.0:
@@ -163,7 +164,7 @@ The login portal was vulnerable to credential stuffing—an attack in which an a
 
 ### Introduced changes
 
-Possibility to limit the number of login attempts performed from a single IP address. 
+Possibility to limit the number of login attempts performed from a single IP address.
 
 ### How to get the fix
 

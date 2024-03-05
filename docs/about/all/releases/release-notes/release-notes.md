@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
 ---
 title: Release Notes
 description: The article describes the release flow of features and enhancements.
@@ -7,6 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/release-notes
 originalArticleId: 2da5568d-0a6b-4d0a-945f-8de92cb69ee1
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
+
 related:
   - title: Release notes 202204.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html

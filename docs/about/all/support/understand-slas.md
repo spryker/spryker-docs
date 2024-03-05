@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/understand-slas.html
 ---
 title: Understand SLAs
 last_updated: Sep 6, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
 originalArticleId: 8cc87de0-43f6-4d9c-b65b-3ec9cad7a38b
 redirect_from:
-  - /2021080/docs/understand-slas
-  - /2021080/docs/en/understand-slas
-  - /docs/understand-slas
-  - /docs/en/understand-slas
-  - /v6/docs/understand-slas
-  - /v6/docs/en/understand-slas
+- /docs/scos/user/intro-to-spryker/support/understand-slas.html
 ---
 
 Like any legal text, Service Level Agreements (SLAs) can be hard to understand for the uninitiated. We strive to keep our SLAs clear and comprehensive, but sometimes it is better to explain some core concepts more verbose.
@@ -39,7 +33,7 @@ To make sure that we resolve the right cases first, we need to triage and priori
 
 ## What you can expect from us
 
-In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time). 
+In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time).
 You can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high-priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter, which ultimately will makes it harder and more bureaucratic for you to work with us.
 
 ### Infrastructure support
@@ -62,4 +56,4 @@ Also, subscribe to our new newsletter (soon to come) and be sure to check out ou
 This is a general recommendation that not only can teach you and your team how to build great shops with Spryker Code, but we offer several courses for all kinds of Spryker stakeholders. Currently, we offer developer courses, business courses, and sales courses with other interesting courses currently being developed.
 
 ### Learn more about how we work
-We are working on being more transparent about how we work internally because we believe it makes working with us easier. To learn about our processes, take a look at the other articles in the Support section of our documentation 
+We are working on being more transparent about how we work internally because we believe it makes working with us easier. To learn about our processes, take a look at the other articles in the Support section of our documentation

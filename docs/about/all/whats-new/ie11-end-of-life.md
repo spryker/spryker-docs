@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
 ---
 title: IE11 end of life
 description: Microsoft announced that the Internet Explorer 11 desktop application would be retired on June 15, 2022, for specific versions of Windows 10. Legacy Internet Explorer-based websites and applications will continue to work with Microsoft Edge’s built-in Internet Explorer mode.
 last_updated: June 8, 2022
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
+
 ---
 
 Microsoft announced that the Internet Explorer 11 (IE11) desktop application would be retired on June 15, 2022, for specific versions of Windows 10. Legacy Internet Explorer-based websites and applications will continue to work with Microsoft Edge’s built-in Internet Explorer mode.

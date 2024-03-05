@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
 ---
 title: Security release notes 202304.0
 description: Security release notes for the Spryker Product release 202304.0
 last_updated: Apr 21, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -105,7 +106,7 @@ composer require spryker/cms:"~7.12.0"
 composer show spryker/cms # Verify the version
 ```
 
-2. Update `spryker/cms-block-gui`: 
+2. Update `spryker/cms-block-gui`:
    * If your version of `spryker/cms-block-gui` is earlier than 2.0.0, update it to version 2.10.0:
     ```bash
     composer require spryker/cms-block-gui:"~2.10.0"
@@ -285,7 +286,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
             CustomerStorageConfig::CUSTOMER_INVALIDATED_SYNC_STORAGE_QUEUE,
         ];
     }
-    
+
     ...
 }
 ```
@@ -426,7 +427,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 In this case, an outdated version of jQuery was used (3.5.1). This version was released on 4 May, 2020 and affected by publicly known vulnerabilities.
 
-### Changes 
+### Changes
 
 Updated JQuery to the required version 3.6.3.
 

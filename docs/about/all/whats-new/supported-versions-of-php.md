@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
 ---
 title: Supported versions of PHP
 description: This document provides information about the PHP versions Spryker supports.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/supported-versions-of-php
 originalArticleId: 9eba7382-df72-44fd-b601-a3de5c592455
 redirect_from:
-  - /2021080/docs/supported-versions-of-php
-  - /2021080/docs/en/supported-versions-of-php
-  - /docs/supported-versions-of-php
-  - /docs/en/supported-versions-of-php
-  - /v5/docs/supported-versions-of-php
-  - /v5/docs/en/supported-versions-of-php
-  - /v4/docs/supported-versions-of-php
-  - /v4/docs/en/supported-versions-of-php
-  - /v3/docs/supported-versions-of-php
-  - /v3/docs/en/supported-versions-of-php
-  - /v2/docs/supported-versions-of-php
-  - /v2/docs/en/supported-versions-of-php
-  - /v1/docs/supported-versions-of-php
-  - /v1/docs/en/supported-versions-of-php
-  - /v6/docs/supported-versions-of-php
-  - /v6/docs/en/supported-versions-of-php
+- /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
 ---
 
 ## PHP 8

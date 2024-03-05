@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
 ---
 title: How to contact Spryker Support
 last_updated: Jun 16, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-contact-spryker-support
 originalArticleId: f9c8d398-7305-4a0c-9dbd-b88d5ce7f988
 redirect_from:
-  - /2021080/docs/how-to-contact-spryker-support
-  - /2021080/docs/en/how-to-contact-spryker-support
-  - /docs/how-to-contact-spryker-support
-  - /docs/en/how-to-contact-spryker-support
-  - /v6/docs/how-to-contact-spryker-support
-  - /v6/docs/en/how-to-contact-spryker-support
+- /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
 related:
   - title: How Spryker Support works
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html

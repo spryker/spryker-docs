@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
 ---
 title: How to share secrets with the Spryker Support Team
 description: Learn how to share secrets with the Spryker Support Team
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-share-secrets-with-the-spryker-support-team
 originalArticleId: a52e18a4-1aee-4f08-a132-82940f1f207e
 redirect_from:
-  - /2021080/docs/how-to-share-secrets-with-the-spryker-support-team
-  - /2021080/docs/en/how-to-share-secrets-with-the-spryker-support-team
-  - /docs/how-to-share-secrets-with-the-spryker-support-team
-  - /docs/en/how-to-share-secrets-with-the-spryker-support-team
-  - /v6/docs/how-to-share-secrets-with-the-spryker-support-team
-  - /v6/docs/en/how-to-share-secrets-with-the-spryker-support-team
+- /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
 ---
 
 This document explains how you can securely share secrets or credentials with the [Spryker Support Team](/docs/scos/user/intro-to-spryker/support/getting-support.html). In general, the safest way to share secrets is not to share them, but if the situation demands it, we ask you to share secrets only the way described in this document.
@@ -29,7 +23,7 @@ Register in our [Slack community](https://spryker.com/support/).
 
 ## Process for sharing the secrets
 
-Stick to the following process when sharing secrets with the Spryker Support Team. 
+Stick to the following process when sharing secrets with the Spryker Support Team.
 
 {% info_block warningBox %}
 
@@ -45,7 +39,7 @@ Do not include information on what the secret content is for—for example, if y
 
 {% endinfo_block %}
 
-2. In the **Case Details**, in the **Link Passphrase** field add the secret link. 
+2. In the **Case Details**, in the **Link Passphrase** field add the secret link.
 3. Create a comment on the case that the team must retrieve the secret link.
 3. The Team retrieves the link and then clears the field and provide a comment.
 4. Add the passphrase to the link in the same—now empty—field.

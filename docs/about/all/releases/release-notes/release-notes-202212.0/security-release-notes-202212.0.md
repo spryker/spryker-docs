@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
 ---
 title: Security release notes 202212.0
 description: Security release notes for the Spryker Product release 202212.0
 last_updated: Dec 21, 2022
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
+
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
@@ -43,7 +44,7 @@ composer update spryker/cms-gui`
 ```
 3. Add `Spryker\Zed\Gui\Communication\Plugin\Form\SanitizeXssTypeExtensionFormPlugin` to `\Pyz\Zed\Form\FormDependencyProvider::getFormPlugins()` on the project level.
 
-## Twig - twig could load a template outside of a configured directory when the filesystem loader was used 
+## Twig - twig could load a template outside of a configured directory when the filesystem loader was used
 There was a vulnerability in PHP package twig/twig. When using the filesystem loader to load templates for which the name is user input, it was possible to use the source or include a statement to read arbitrary files from outside of the templates directory.
 
 **Changes:**
@@ -77,7 +78,7 @@ WishlistPage module:
 spryker/wishlist (8.6.0 or earlier)
 
 **How to get the fix:**
-1. Update the module: 
+1. Update the module:
 ```bash
 `composer update spryker/wishlist`
 ```
@@ -89,18 +90,18 @@ spryker/wishlist (8.6.0 or earlier)
 
 ## User enumeration when creating a customer via the API
 It was possible to enumerate users if creating them via the API. The message in response was "Customer with this email already exists."
- 
+
 **Changes:**
 The response message has been changed as follows: "If this email address is already in use, you will receive a password reset link. Otherwise you must first validate your e-mail address to finish registration. Please check your e-mail."
 
 **Affected modules:**
-No changes. 
+No changes.
 
 **How to get the fix:**
 Update the translation in the `data/import/common/common/glossary.csv for customer.authorization.invalid_account` key.
 
-## ZED token default value can be empty 
-The default Zed tokens could be empty if it was not set during installation. 
+## ZED token default value can be empty
+The default Zed tokens could be empty if it was not set during installation.
 
 **Changes:**
 We've removed the default value `SPRYKER_ZED_REQUEST_TOKEN`. The value has to be set or the fallback value must be properly handled with an exception.
@@ -189,13 +190,13 @@ CustomerPage module:
 - Adjusted `RegisterForm::addLastNameField)` by adding field validation to avoid special characters.
 
 **Affected modules:**
-- spryker/customer (7.45.0 or earlier)	
-- spryker/sales (11.32.0 or earlier)	
-- spryker/user (3.13.6 or earlier)	
+- spryker/customer (7.45.0 or earlier)
+- spryker/sales (11.32.0 or earlier)
+- spryker/user (3.13.6 or earlier)
 
 
 **How to get the fix:**
-1. Update the modules: 
+1. Update the modules:
 ```bash
 composer update spryker/company-user-gui
 ```
@@ -218,7 +219,7 @@ spryker/customer: 7.46.0
 spryker/merchant-profile-merchant-portal-gui: 1.6.0
 spryker/merchant-user-gui: 1.2.0
 spryker/sales: 11.33.0
-spryker/user: 3.14.0	
+spryker/user: 3.14.0
 spryker/user-merchant-portal-gui: 1.6.0
 spryker-shop/company-page: 2.20.0
 spryker-shop/customer-page: 2.39.0
@@ -235,7 +236,7 @@ spryker/application (3.28.0 or earlier)
 
 
 **How to get the fix:**
-1. Update the module: 
+1. Update the module:
 ```bash
 composer update spryker/application
 ```
@@ -255,7 +256,7 @@ Adjusted `GraphController::drawAction()`, so that if format is not supported, an
 - spryker/state-machine (2.15.1 or less)
 
 **How to get the fix:**
-1. Update the following modules: 
+1. Update the following modules:
 ```bash
 composer update spryker/oms
 ```
@@ -278,7 +279,7 @@ CompanyUnitAddressGui module:
 spryker/company-unit-address-gui (1.1.0 or earlier)
 
 **How to get the fix:**
-1. Update the modules: 
+1. Update the modules:
 ```bash
 composer update spryker/company-unit-address-gui
 ```
@@ -322,7 +323,7 @@ codeception/codeception (3.1.3 or less, and 4.0.0 - 4.1.21)
 
 **How to get the fix:**
 1. Change  *codeception/codeception* version to ^4.1.22 in composer.json on the project level.
-2. Update this module: 
+2. Update this module:
 ```bash
 composer update codeception/codeception
 ```
@@ -354,7 +355,7 @@ spryker/gui (3.43.0 or earlier)
 composer update spryker/gui
 ```
 2. Make sure that for the spryker/gui module, the current version is equal to or later than 3.43.1.
-3. Run the following command: 
+3. Run the following command:
 ```bash
 npm list <packagename>
 ```
@@ -429,7 +430,7 @@ spryker/company-role-gui (1.6.1 or earlier)
 **How to get the fix:**
 Update the modules:
 ```bash
-composer update spryker/company-role-gui 
+composer update spryker/company-role-gui
 ```
 Make sure that for the spryker/company-role-gui module, the current version is equal to or later than 1.6.2.
 

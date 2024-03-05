@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
 ---
 title: Security release notes 202306.0
 description: Security release notes for the Spryker Product release 202306.0
@@ -6,19 +5,21 @@ last_updated: Jul 11, 2023
 template: concept-topic-template
 redirect_from:
     - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html
+    - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
+
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
 
 If you need any additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
 
-## Stored XSS in product pages 
+## Stored XSS in product pages
 
 Administrators can place a malicious payload into the description section of new and existing product pages in the Back Office application. This payload is then executed to all users of the shop that visit the affected product pages, resulting in a Cross-Site Scripting (XSS) vulnerability.
 
 ### Affected modules
 
-`spryker/product-management`: 0.19.3-0.19.35 
+`spryker/product-management`: 0.19.3-0.19.35
 
 ### Introduced changes
 
@@ -45,17 +46,17 @@ composer require spryker/product-management:"~0.19.36" spryker/gui:"~3.48.0" spr
 composer show spryker/product-management # Verify the version
 ```
 
-## Cross-company role manipulation 
+## Cross-company role manipulation
 
-Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This was possible due to the possibility to manipulate the company ID parameter included in the HTTP requests of the role creation functionality. 
+Due to missing access validation controls on the backend, an administrator user of a company was able to create and update roles for other companies. This was possible due to the possibility to manipulate the company ID parameter included in the HTTP requests of the role creation functionality.
 
 ### Affected modules
 
-`spryker-shop/company-page`: 1.0.0-2.21.0 
+`spryker-shop/company-page`: 1.0.0-2.21.0
 
 ### Introduced changes
 
-Access validation controls have been implemented to prevent administrators from being able to create and edit roles for other companies. 
+Access validation controls have been implemented to prevent administrators from being able to create and edit roles for other companies.
 
 ### How to get the fix
 
@@ -78,7 +79,7 @@ Attackers were able to bypass the redirect URL validation for URLs provided thro
 
 ### Introduced changes
 
-Additional validation controls have been implemented to prevent an attacker from being able to manipulate the location of the URL redirection. 
+Additional validation controls have been implemented to prevent an attacker from being able to manipulate the location of the URL redirection.
 
 ### How to get the fix
 
@@ -269,7 +270,7 @@ class ErrorHandlerConfig extends SprykerErrorHandlerConfigAlias
 13. Register plugins in `src/Pyz/Yves/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 ```php
-class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
 ...
     protected function getEventDispatcherPlugins(): array
@@ -306,7 +307,7 @@ console transfer:generate
 4. Register plugins in `src/Pyz/Zed/EventDispatcher/EventDispatcherDependencyProvider.php`:
 
 ```php
-class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider 
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
 ...
     protected function getEventDispatcherPlugins(): array
@@ -358,7 +359,7 @@ $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_TT
 $config[SecurityBlockerMerchantPortalConstants::MERCHANT_PORTAL_USER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 ```
 
-7. Add translations to `data/import/common/common/glossary.csv` : 
+7. Add translations to `data/import/common/common/glossary.csv` :
 
 ```csv
 security_blocker_merchant_portal_gui.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
@@ -477,7 +478,7 @@ composer show spryker/merchant-profile-gui # Verify the version
 
 ## Outdated third-party library guzzlehttp/psr7
 
-An outdated version of the `guzzlehttp/psr7` library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could let an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197). 
+An outdated version of the `guzzlehttp/psr7` library was identified to affect Spryker’s applications. The version in use, 2.4.3, was affected by a publicly known vulnerability that could let an attacker sneak in a newline (\n) into both the header names and values (CVE-2023-29197).
 
 ### Affected modules
 
@@ -546,7 +547,7 @@ The following security-related HTTP headers can be implemented:
 
 ### How to get the fix
 
-To implement a fix for this vulnerability: 
+To implement a fix for this vulnerability:
 
 1. Update the `event-dispatcher`, `glue-backend-api-application`, `glue-storefront-api-application`, `HTTP`, and `merchant-portal-application` modules:
 

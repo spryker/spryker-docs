@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/escalations.html
 ---
 title: Escalations
 last_updated: Oct 25, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/case-escalation
 originalArticleId: 42b43d4c-fb40-4663-a210-1bdea01b4b22
 redirect_from:
-  - /2021080/docs/case-escalation
-  - /2021080/docs/en/case-escalation
-  - /docs/case-escalation
-  - /docs/en/case-escalation
-  - /v6/docs/case-escalation
-  - /v6/docs/en/case-escalation
+- /docs/scos/user/intro-to-spryker/support/escalations.html
 ---
 
 You might wonder how we manage escalations. Let's start with how we define escalations at Spryker.

@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/docs-updates.html
 ---
 title: Docs updates
 description: Spryker docs release notes
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Jan 5, 2024
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
+- /docs/scos/user/intro-to-spryker/docs-updates.html
+
 ---
 
 ## January 2024

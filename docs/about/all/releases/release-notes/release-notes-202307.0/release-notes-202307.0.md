@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html
 ---
 title: Release notes 202307.0
 description: Release notes for the Spryker SCOS release 202307.0
 last_updated: Jul 31, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html
+
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.

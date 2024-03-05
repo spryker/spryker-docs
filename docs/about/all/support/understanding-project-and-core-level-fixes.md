@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
 ---
 title: Understanding Project and Core Level Fixes
 last_updated: Jun 16, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes
 originalArticleId: cbc63cb1-4eb5-4d96-903a-b0eade141458
 redirect_from:
-  - /2021080/docs/understanding-project-and-core-level-fixes
-  - /2021080/docs/en/understanding-project-and-core-level-fixes
-  - /docs/understanding-project-and-core-level-fixes
-  - /docs/en/understanding-project-and-core-level-fixes
-  - /v6/docs/understanding-project-and-core-level-fixes
-  - /v6/docs/en/understanding-project-and-core-level-fixes
+- /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
 ---
 
 This document explains the differences between project and core level fixes to problems and bugs.

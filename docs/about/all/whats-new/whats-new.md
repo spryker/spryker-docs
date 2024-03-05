@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
 ---
 title: What's new
 description: This article contains information about what’s new and changed in the Spryker Commerce OS.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/whats-new
 originalArticleId: 630e2d18-944a-4623-95ac-761984d1eedb
 redirect_from:
-  - /2021080/docs/whats-new
-  - /2021080/docs/en/whats-new
-  - /docs/whats-new
-  - /docs/en/whats-new
-  - /v5/docs/whats-new
-  - /v5/docs/en/whats-new
-  - /v4/docs/whats-new
-  - /v4/docs/en/whats-new
-  - /v3/docs/whats-new
-  - /v3/docs/en/whats-new
-  - /v2/docs/whats-new
-  - /v2/docs/en/whats-new
-  - /v1/docs/whats-new
-  - /v1/docs/en/whats-new
-  - /v6/docs/whats-new
-  - /v6/docs/en/whats-new
+  - /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
   - /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
 ---
 

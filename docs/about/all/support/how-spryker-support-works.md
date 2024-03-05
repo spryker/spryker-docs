@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
 ---
 title: How Spryker Support works
 last_updated: Jun 16, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-spryker-support-works-1
 originalArticleId: 2923122e-fde2-4893-98df-1375f8cc7742
 redirect_from:
-  - /2021080/docs/how-spryker-support-works-1
-  - /2021080/docs/en/how-spryker-support-works-1
-  - /docs/how-spryker-support-works-1
-  - /docs/en/how-spryker-support-works-1
-  - /v6/docs/how-spryker-support-works-1
-  - /v6/docs/en/how-spryker-support-works-1
+- /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
 related:
   - title: How to get the most out of Spryker Support
     link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html

@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/case-escalation.html
 ---
 title: Case escalation
 last_updated: Sep 6, 2021
@@ -7,7 +6,7 @@ originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/
 originalArticleId: af927b8c-2fc0-46ab-a54d-4ae83d18ca89
 redirect_from:
   - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
-  - /2021080/docs/en/case-priorities
+  - /docs/scos/user/intro-to-spryker/support/case-escalation.html
   - /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
 ---
 

@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
 ---
 title: Guidelines for new GDPR rules
 description: GDPR contains rules relating to the protection and control of personal data.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/guidelines-for-new-gdpr-rules
 originalArticleId: 256c82f9-5bae-4788-ab23-1ed7398edb1a
 redirect_from:
-  - /2021080/docs/guidelines-for-new-gdpr-rules
-  - /2021080/docs/en/guidelines-for-new-gdpr-rules
-  - /docs/guidelines-for-new-gdpr-rules
-  - /docs/en/guidelines-for-new-gdpr-rules
-  - /v6/docs/guidelines-for-new-gdpr-rules
-  - /v6/docs/en/guidelines-for-new-gdpr-rules
-  - /v5/docs/guidelines-for-new-gdpr-rules
-  - /v5/docs/en/guidelines-for-new-gdpr-rules
-  - /v4/docs/guidelines-for-new-gdpr-rules
-  - /v4/docs/en/guidelines-for-new-gdpr-rules
-  - /v3/docs/guidelines-for-new-gdpr-rules
-  - /v3/docs/en/guidelines-for-new-gdpr-rules
-  - /v2/docs/guidelines-for-new-gdpr-rules
-  - /v2/docs/en/guidelines-for-new-gdpr-rules
-  - /v1/docs/guidelines-for-new-gdpr-rules
-  - /v1/docs/en/guidelines-for-new-gdpr-rules
+- /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
 ---
 
 {% info_block errorBox %}

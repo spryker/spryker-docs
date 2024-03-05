@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 ---
 title: How to use the Support Portal
 last_updated: Sep 28, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
 originalArticleId: b215730b-98ee-4661-8281-c45104e51044
 redirect_from:
-  - /2021080/docs/how-to-use-the-support-portal
-  - /2021080/docs/en/how-to-use-the-support-portal
-  - /docs/how-to-use-the-support-portal
-  - /docs/en/how-to-use-the-support-portal
-  - /v6/docs/how-to-use-the-support-portal
-  - /v6/docs/en/how-to-use-the-support-portal
+- /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 related:
   - title: How Spryker Support works
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html

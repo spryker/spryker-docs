@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
 ---
 title: Security updates
 description: Learn about the security updates that happened to the Spryker Commerce OS.
@@ -7,6 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-updates
 originalArticleId: 52f64151-dd88-406c-8408-9c08d9c0bb2d
 redirect_from:
+- /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
+
 related:
   - title: Security release notes 202306.0
     link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html

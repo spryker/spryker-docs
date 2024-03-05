@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
 ---
 title: How to get the most out of Spryker Support
 last_updated: Jun 16, 2021
@@ -6,12 +5,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support
 originalArticleId: 3ab286da-5f06-4035-bc52-0b0237ed410f
 redirect_from:
-  - /2021080/docs/how-to-get-the-most-out-of-spryker-support
-  - /2021080/docs/en/how-to-get-the-most-out-of-spryker-support
-  - /docs/how-to-get-the-most-out-of-spryker-support
-  - /docs/en/how-to-get-the-most-out-of-spryker-support
-  - /v6/docs/how-to-get-the-most-out-of-spryker-support
-  - /v6/docs/en/how-to-get-the-most-out-of-spryker-support
+- /docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
 related:
   - title: How Spryker Support works
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html

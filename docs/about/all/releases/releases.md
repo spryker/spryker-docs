@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/releases/releases.html
 ---
 title: Releases
 description: This section contains the notes for each release made by Spryker.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/releases
 originalArticleId: e2f76a3b-1e2e-4c57-8812-bf46dac54b10
 redirect_from:
-  - /2021080/docs/releases
-  - /2021080/docs/en/releases
-  - /docs/releases
-  - /docs/en/releases
-  - /v5/docs/releases
-  - /v5/docs/en/releases
-  - /v4/docs/releases
-  - /v4/docs/en/releases
-  - /v3/docs/releases
-  - /v3/docs/en/releases
-  - /v2/docs/releases
-  - /v2/docs/en/releases
-  - /v1/docs/releases
-  - /v1/docs/en/releases
-  - /v6/docs/releases
-  - /v6/docs/en/releases
+  - /docs/scos/user/intro-to-spryker/releases/releases.html
   - /docs/scos/user/intro-to-spryker/releases/releases-archive.html
   - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-1-2017.html
   - /docs/scos/user/intro-to-spryker/releases/archive/2017/release-notes-april-2-2017.html

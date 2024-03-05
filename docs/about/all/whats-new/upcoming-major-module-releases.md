@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
 ---
 title: Upcoming major module releases
 description: Learn what modules and when will have the next major versions release
@@ -7,12 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/upcoming-major-module-releases
 originalArticleId: e02b704f-db3a-4c76-a522-b81e326b0c08
 redirect_from:
-  - /2021080/docs/upcoming-major-module-releases
-  - /2021080/docs/en/upcoming-major-module-releases
-  - /docs/upcoming-major-module-releases
-  - /docs/en/upcoming-major-module-releases
-  - /v6/docs/upcoming-major-module-releases
-  - /v6/docs/en/upcoming-major-module-releases
+  - /docs/scos/user/intro-to-spryker/whats-new/upcoming-major-module-releases.html
   - /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 ---
 

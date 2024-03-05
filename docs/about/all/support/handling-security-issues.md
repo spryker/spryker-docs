@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
 ---
 title: Handling security issues
 description: Use this article to learn how to report a security issue and to understand how we handle these reports.
@@ -7,22 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/handling-security-issues
 originalArticleId: f4e006a1-e49e-4d54-beac-f0cbea5ebff2
 redirect_from:
-  - /2021080/docs/handling-security-issues
-  - /2021080/docs/en/handling-security-issues
-  - /docs/handling-security-issues
-  - /docs/en/handling-security-issues
-  - /v5/docs/handling-security-issues
-  - /v5/docs/en/handling-security-issues
-  - /v4/docs/handling-security-issues
-  - /v4/docs/en/handling-security-issues
-  - /v3/docs/handling-security-issues
-  - /v3/docs/en/handling-security-issues
-  - /v2/docs/handling-security-issues
-  - /v2/docs/en/handling-security-issues
-  - /v1/docs/handling-security-issues
-  - /v1/docs/en/handling-security-issues
-  - /v6/docs/handling-security-issues
-  - /v6/docs/en/handling-security-issues
+- /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
 ---
 
 If you find a security issue in a Spryker product, please report it to us.

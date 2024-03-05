@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
 ---
 title: PHP 8.1 as the minimum version for all Spryker projects
 description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.1 as the minimum version.
 last_updated: November 22, 2022
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
+
 ---
 
 

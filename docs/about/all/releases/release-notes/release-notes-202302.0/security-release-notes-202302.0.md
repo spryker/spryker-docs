@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
 ---
 title: Security release notes 202302.0
 description: Security release notes for the Spryker Product release 202302.0
 last_updated: Mar 21, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
+
 ---
 
 This document describes the security-related issues we have recently resolved. All issues are listed by description and affected modules.
@@ -88,7 +89,7 @@ composer require spryker/sales:"~11.<your-minor>.<your-patch>"
 composer show spryker/sales # Verify the version
 ```
 
-When upgrading your `spryker/sales` module next time, consider selecting your next version according to the following guidelines. 
+When upgrading your `spryker/sales` module next time, consider selecting your next version according to the following guidelines.
 
 ### Upgrade on spryker/sales module versions 11.36.0 or later
 

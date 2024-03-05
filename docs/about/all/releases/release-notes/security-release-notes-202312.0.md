@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
 ---
 title: Security release notes 202312.0
 description: Security release notes for 202312.0
 last_updated: Dec 18, 2023
 template: concept-topic-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+
 ---
 
 The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.

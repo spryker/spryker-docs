@@ -1,4 +1,3 @@
-  - /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
 ---
 title: Merchant Portal
 description: This document describes the peculiarities of the Merchant Portal application.
@@ -6,6 +5,8 @@ template: concept-topic-template
 last_updated: Dec 4, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
+  - /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
+
 ---
 
 The Merchant Portal is a section from the Back office for the [Marketplace merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html). After [installation](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html), the Merchant Portal is accessible via the this link: `http://mp.de.spryker.local/security-merchant-portal-gui/login`.

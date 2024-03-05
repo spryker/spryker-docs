@@ -298,7 +298,7 @@ In September 2023, we have added and updated the following pages:
 - [Ignore evaluation errors](/docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html): Configure the evaluator to ignore some errors.
 - [Spryker dev packages checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html): Check if all your Spryker packages have valid version constraints to prevent issues with Spryker Code Upgrader.
 
-- [How to send a request in Data Exchange API](/docs/dg/dev/glue-api/202307.0/dynamic-data-api/how-to-guides/how-to-send-request-in-data-exchange-api.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
 - [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api.html).
 
 ### Updated pages

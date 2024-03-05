@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202307.0/base-shop/manage-using-glue-api/manage-availability-notifications.html
 related:
   - title: Retrieve subscriptions to availability notifications
-    link: docs/dg/dev/glue-api/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
 ---
 
 *Availability Notification* allows registered and guest customers to subscribe to availability notifications for an unavailable product so that when the product is back in stock, they could receive a notification.

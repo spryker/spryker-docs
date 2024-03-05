@@ -72,7 +72,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 ### Testing
 
 - Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html).
-- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/dg/dev/miscellaneous-guides/howtos/howto-debug-payment-integrations-locally.html).
+- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/debug-payment-integrations-locally.html).
 - Perform User Acceptance Testing (UAT). Besides internal testing, before opening your system publicly, we highly recommend conducting extensive UAT to validate the functionality and user experience from an end-user perspective. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### Search engine optimization (SEO)

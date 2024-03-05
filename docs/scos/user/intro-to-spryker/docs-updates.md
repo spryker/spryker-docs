@@ -339,7 +339,7 @@ In August 2023, we have added and updated the following pages:
     - [Dynamic Multistore + CMS feature integration guide](/docs/pbc/all/dynamic-multistore/202307.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cms-feature.html).
 - [Service Points + Customer Account Management feature integration guide](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-service-points-feature.html).
 - [Npm checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html): Learn how you can identify security vulnerabilities in the npm dependencies with the Npm checker.
-- [HowTo: Set up XDebug profiling](/docs/dg/dev/miscellaneous-guides/howtos/howto-setup-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
+- [HowTo: Set up XDebug profiling](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html): Learn how to set up XDebug profiling in a local development environment.
 - [Vertex integration guide](/docs/pbc/all/tax-management/202311.0/base-shop/vertex/install-vertex.html).
 - [Select target branch for PRs](/docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html): Learn how to select a target branch on Spryker CI.
 - [Configure Spryker Code Upgrader](/docs/ca/devscu/configure-spryker-code-upgrader.html): Learn how to configure the Spryker Code Upgrader.

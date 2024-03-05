@@ -209,7 +209,7 @@ To implement a widget, follow these steps:
 
 ### 1. Place widget extensions
 
-In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget) section.
+In the module you are planning to extend, find the extension point in the twig templates and place the necessary twig widget function(s). See the [How to implement a Widget](#how-to-implement-a-widget) section.
 
 **@MyPage/views/foo/foo-bar.twig**
 
@@ -345,9 +345,9 @@ In the widget template, the parameters are accessible through the `_widget` twig
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#activate-a-widget-to-be-available-globally)
+* [Activate a widget in a Controller action](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-in-a-controller-action)
+* [Activate a widget in another widget](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-in-another-widget)
+* [Activate a widget to be available globally](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-to-be-available-globally)
 
 ### Activate a widget in a controller action
 

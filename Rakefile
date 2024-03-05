@@ -182,7 +182,9 @@ task :check_dg do
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/sdk\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

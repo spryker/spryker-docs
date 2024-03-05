@@ -1,4 +1,3 @@
-  - /docs/sdk/dev/development-tools/ts-linter.html
 ---
 title: TS linter
 description: Learn about the SCSS Linter tool that lets you find and fix mistakes in the code style.
@@ -21,6 +20,8 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/development-tools/ts-linter.html
   - /docs/scos/dev/sdk/202108.0/development-tools/ts-linter.html
   - /docs/scos/dev/sdk/development-tools/ts-linter.html
+  - /docs/sdk/dev/development-tools/ts-linter.html
+
 related:
   - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html

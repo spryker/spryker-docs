@@ -1345,7 +1345,7 @@ entries:
         - title: Validate REST request format
           url: /docs/dg/dev/glue-api/glue-api-tutorials/validate-rest-request-format.html
 
-          
+
   - title: Zed API
     url: /docs/dg/dev/zed-api/zed-api.html
     nested:
@@ -1380,3 +1380,10 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+
+  - title: Code contribution guide
+    url: /docs/dg/dev/code-contribution-guide.html 
+  - title: Code generator
+    url: /docs/dg/dev/code-generator.html
+  - title: Example modules
+    url: /docs/dg/dev/example-modules.html

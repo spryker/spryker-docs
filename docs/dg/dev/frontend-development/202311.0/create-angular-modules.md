@@ -19,7 +19,7 @@ Reasons to create a module:
 
 ## 1) Create an Angular module scaffolding structure
 
-Based on [Project structure document, Module structure section](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/project-structure.html#module-structure), create the scaffolding structure for the module.
+Based on [Project structure document, Module structure section](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/marketplace-frontend-project-and-module-structure.html#module-structure), create the scaffolding structure for the module.
 The module can contain its own set of Twig web components.
 
 ## 2) Register an Angular module

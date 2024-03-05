@@ -14,7 +14,7 @@ redirect_from:
 Miscellaneous guides are a collection of guides that don't fit under any specific category. Documents in this section:
 
 
-* [Customizing HTTP headers in AJAX requests](/docs/dg/dev/miscellaneous-guides/customizing-http-headers-in-ajax-requests.html)
-* [Forcing HTTPS](/docs/dg/dev/miscellaneous-guides/forcing-https.html)
-* [HowTo: Set up your store with multiple locals](/docs/dg/dev/miscellaneous-guides/customizing-http-headers-in-ajax-requests.html)
-* [HowTo: Set up Spryker with MySQL database](/docs/dg/dev/miscellaneous-guides/customizing-http-headers-in-ajax-requests.html)
+* [Simulating deployments locally](/docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html)
+* [Transfer big databases between environments](/docs/dg/dev/miscellaneous-guides/transfer-big-databases-between-environments.html)
+* [Tutorial: Hello World](/docs/dg/dev/miscellaneous-guides/tutorial-hello-world.html)
+* [Using database transactions](/docs/dg/dev/miscellaneous-guides/using-database-transaction.html)

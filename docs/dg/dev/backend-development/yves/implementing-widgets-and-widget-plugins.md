@@ -345,9 +345,9 @@ In the widget template, the parameters are accessible through the `_widget` twig
 
 There are three ways of activating a widget, depending on their scope where they need to be rendered:
 
-* [Activate a widget in a Controller action](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-in-a-controller-action)
-* [Activate a widget in another widget](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-in-another-widget)
-* [Activate a widget to be available globally](/docs/dg/dev/miscellaneous-guides/advanced-tutorials/#activate-a-widget-to-be-available-globally)
+* [Activate a widget in a Controller action](#activate-a-widget-in-a-controller-action)
+* [Activate a widget in another widget](#activate-a-widget-in-another-widget)
+* [Activate a widget to be available globally](#activate-a-widget-to-be-available-globally)
 
 ### Activate a widget in a controller action
 

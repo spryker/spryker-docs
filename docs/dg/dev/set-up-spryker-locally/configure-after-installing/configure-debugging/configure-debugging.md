@@ -209,4 +209,4 @@ PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 
 ## Next step
 
-[Set up XDebug profiling](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging/set-up-xdebug-profiling.html)
+[Set up XDebug profiling](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html)

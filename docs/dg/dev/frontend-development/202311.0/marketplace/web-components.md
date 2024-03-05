@@ -69,4 +69,4 @@ import { SomeComponentModule } from './some-component/some-component.module';
 export class ComponentsModule {}
 ```
 
-The complete process of creating a new module and registering it as a web component can be found in the [How-To: Create a new Angular module with application](/docs/dg/dev/miscellaneous-guides/howtos/howto-create-an-angular-module-with-application.html).
+The complete process of creating a new module and registering it as a web component can be found in the [How-To: Create a new Angular module with application](/docs/dg/dev/frontend-development/{{page.version}}/create-angular-modules.html).

@@ -1,5 +1,5 @@
 ---
-title: How to get the most out of Spryker Support
+title: Getting the most out of Spryker Support
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-get-the-most-out-of-spryker-support
@@ -36,7 +36,7 @@ If you are not sure how you can whitelist these email addresses, forward this re
 
 -->
 
-## Include all the intel
+## Provide all the information
 
 The goal of every ambitious support team is to increase the number of tickets that can be solved with the first engagement. The ideal support case is opened with all the information needed to assess, reproduce, and solve the problem. The first response can then already include the solution to the problem.
 

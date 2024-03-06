@@ -812,6 +812,8 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to PHP 8.1
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html        
       - title: Upgrade to Symfony 5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
       - title: Upgrade to Symfony 6
@@ -1420,6 +1422,8 @@ entries:
 
   - title: Product and code releases
     url: /docs/dg/dev/product-and-code-releases.html
+  - title: Supported versions of PHP
+    url: /docs/dg/dev/supported-versions-of-php.html
 
   - title: Miscellaneous guides
     url: /docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html

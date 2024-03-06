@@ -8,12 +8,10 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/escalations.html
 ---
 
-You might wonder how we manage escalations. Let's start with how we define escalations at Spryker.
-
-## What is an escalation?
 An escalation is a situation that usually involves a partner or customer having an urgent or especially important problem that cannot immediately be solved to the satisfaction of everyone involved, and the problem is escalated to senior leadership or other departments in an effort to resolve the problem.
 
-### Example of a situation leading up to an escalation
+## Example of a situation leading up to an escalation
+
 Customer A discovers a problem with Spryker that has a significant impact on their plans to launch a new feature next week. They open a support case with Spryker. The support representative dealing with the case informs the customer that they have verified the bug, and a report has been filed with development to fix the bug. The mention that the bug is most likely to be fixed within 3-4 weeks, which conflicts with the customer's feature release.
 
 While Support always tries to accommodate the plans of customers and partners, this might not always be possible. Naturally, this leads to frustration, and company A might feel the need to reach out to their account manager, partner manager, customer success manager, or even a member of Spryker leadership to force or at least expedite problem resolution that way.
@@ -21,15 +19,18 @@ While Support always tries to accommodate the plans of customers and partners, t
 While this strategy might feel like the right thing to do (we need to do something right?), it produces suboptimal results and consumes resources, nerves, and time. It also puts a strain on the relationship with the customer or partner and often introduces a lot of emotions that can stand in the way of orderly resolution.
 
 ## How do we want to deal with escalations?
+
 In Support, we acknowledge that we cannot always produce a satisfying result. We do not always get it right, and sometimes our hands might simply be tied. Escalations happen, and it is important for us to steer them into a constructive and orderly direction right away that ensures:
 1. It is easy for a customer or partner to escalate an issue.
 2. The customer's or partner's problem is evaluated by the right audience.
 3. The stakeholders align quickly to find a feasible strategy going forward.
 
-### How can I initiate an escalation?
+### Initiate an escalation
+
 Creating an [Emergency Case](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html#emergencies) always starts an escalation. You will receive an email notifying you that an escalation has been started.
 
-### Process
+### The escalation process
+
 The escalation process is designed in a way to create visibility for the right audience and is built in a robust way to ensure quality standards. Facing a problem with significant business impact is stressful and we tried to build a streamlined process that is easy to follow for partners and customers and easy to operate for our support reps. An escalation has seven statuses. The customer and partner receive email notifications when the status changes.
 
 `STARTED`. A customer or partner has created an emergency case. Internal stakeholders are informed and began evaluating the information provided. In cases where the Emergency Case option is misused, the Escalation is canceled, and the requester is informed about it.
@@ -43,6 +44,7 @@ The escalation process is designed in a way to create visibility for the right a
 After a valid escalation is over, Post Mortem is held and the results are shared with the partner and customer. The point of this is to make it less likely that a similar situation that causes an escalation likely can occur in the future. If the escalation was caused by infrastructure problems in production systems, a technical Root Cause Analysis (RCA) will also be shared.
 
 ### What we ask from you during an escalation
+
 This is the most effective way to bring your issue to the attention of a broad audience. We ask you to not misuse this option to expedite regular bug resolution or case processing. It makes several people in Spryker very busy and might therefore even have the opposite effect.
 
 When you start an escalation, refrain from contacting other Spryker personnel about the same issue on different channels. This introduces confusion and information asymmetry which reduces the effectiveness of this process significantly.

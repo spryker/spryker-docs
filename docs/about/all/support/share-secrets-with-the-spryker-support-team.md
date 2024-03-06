@@ -1,5 +1,5 @@
 ---
-title: How to share secrets with the Spryker Support Team
+title: Share secrets with the Spryker Support Team
 description: Learn how to share secrets with the Spryker Support Team
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -19,17 +19,10 @@ Spryker employees never ask for credentials. We delete and don’t work with any
 
 ## Prerequisites
 
-Register in our [Slack community](https://spryker.com/support/).
+* Register in our [Slack community](https://spryker.com/support/).
+* Open a support case.
 
 ## Process for sharing the secrets
-
-Stick to the following process when sharing secrets with the Spryker Support Team.
-
-{% info_block warningBox %}
-
-Having an active related case is a prerequesite to sharing a secret with the team.
-
-{% endinfo_block %}
 
 1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.
 

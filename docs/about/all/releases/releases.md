@@ -30,6 +30,8 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-february-1-2018.html
   - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-march-2018.html
   - /docs/scos/user/intro-to-spryker/releases/archive/2018/release-notes-april-2018.html
+  - /docs/scos/user/intro-to-spryker/whats-new/security-updates.html
+
 ---
 
 This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.

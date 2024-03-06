@@ -1,5 +1,5 @@
 ---
-title: How to contact Spryker Support
+title: Contacting Spryker Support
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-contact-spryker-support

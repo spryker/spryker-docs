@@ -1,5 +1,5 @@
 ---
-title: How to use the Support Portal
+title: Using the Support Portal
 last_updated: Sep 28, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/how-to-use-the-support-portal
@@ -13,9 +13,7 @@ related:
     link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
 ---
 
-## Overview
-
-This document describes how to use the support portal to create and manage your cases
+This document describes how to use the support portal to create and manage your cases.
 
 ## Prerequisites
 

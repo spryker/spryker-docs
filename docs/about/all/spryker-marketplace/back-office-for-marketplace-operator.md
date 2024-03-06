@@ -9,11 +9,11 @@ redirect_from:
 
 ---
 
-A *marketplace operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent a marketplace operator and manage the store. We call such users as [marketplace administrators](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)).  
+A *marketplace operator* is a company that owns the marketplace. In a marketplace business model, one or more of such a company's employees represent a marketplace operator and manage the store. We call such users [marketplace administrators](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator). Depending on the marketplace model, the marketplace operator either manages only other merchants' orders or also sells products as a [main merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html).
 
 ## Merchant management
 
-Merchant accounts are created in the Back Office, and a [marketplace administrator](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants** section of the Back Office, a marketplace operator manages merchants, that is:
+Merchant accounts are created in the Back Office, and a [marketplace administrator](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#marketplace-administrator) is required to facilitate their creation. In the **Marketplace&nbsp;<span aria-label="and then">></span> Merchants** section of the Back Office, a marketplace operator manages merchants as follows:
 
 * Creates merchants
 * Edits merchants

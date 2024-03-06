@@ -2,10 +2,39 @@
 title: Docs updates
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Jan 5, 2024
+last_updated: Feb 4, 2024
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 ---
+## February 2024
+
+In February 2024, we have added and updated the following pages:
+
+### New pages
+
+- [File details: company_business_unit.csv](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/import-and-export-data/file-details-company-business-unit.csv.html): Configure information about company business units via the data import.
+- [File details: company_user.csv](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/import-and-export-data/file-details-company-user.csv.html): Configure information about company business users via the data import.
+- [File details: company.csv](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/import-and-export-data/file-details-company.csv.html): Configure information about company via the data import.
+- [File details: customer.csv](/docs/pbc/all/customer-relationship-management/202311.0/base-shop/import-and-export-data/file-details-customer.csv.html): Configure information about customers via the data import.
+- [File details: configurable_bundle_template.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html): configure information about configurable bundle templates via the data import.
+- [File details: configurable_bundle_template_image.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-configurable-bundle-template-image.csv.html): configure information about configurable bundle templates' image via the data import.
+- [File details: configurable_bundle_template_slot.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.html): configure information about configurable bundle templates' slots via the data import.
+- [File details: product_list.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-list.csv.html): Configure information about product lists via the data import.
+- [File details: product_list_to_category.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-list-to-category.csv.html): Configure information about product lists and respective categories via the data import.
+- [File details: product_list_to_concrete_product.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html): Configure configurable product assignments for product lists via the data import.
+- [File details: product_measurement_unit.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html): Configure information about product measurement units via the data import.
+- [File details: product_packaging_unit.csv](/docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html): Configure information about product packaging units via the data import.
+- [File details: quote_request.csv](/docs/pbc/all/request-for-quote/202311.0/import-and-export-data/file-details-quote-request.csv.html): Configure information about quote requests via the data import.
+- [File details: quote_request_version.csv](/docs/pbc/all/request-for-quote/202311.0/import-and-export-data/file-details-quote-request-version.csv.html): Configure information about quote request versions via the data import.
+- [File details: shopping_list.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list.csv.html): Configure information about shopping lists via the data import.
+- [File details: shopping_list_item.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-item.csv.html): Configure information about shopping list items via the data import.
+- [File details: shopping_list_company_user.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-company-user.csv.html): Configure information about shopping list company users via the data import.
+- [File details: shopping_list_company_business_unit.csv](/docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/import-and-export-data/file-details-shopping-list-company-business-unit.csv.html): Configure information about shopping list company business unites via the data import.
+- [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/202404.0/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html).
+- [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
+- [Secure coding practices for external packages](/docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html).
+- [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
+- [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
 
 ## January 2024
 

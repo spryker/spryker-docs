@@ -938,7 +938,81 @@ entries:
 
   - title: SDKs
     nested:
-    - title: The Docker SDK
+    - title: SDK
+      url: /docs/dg/dev/sdks/sdk/spryker-sdk.html
+      nested:
+      - title: Task
+        url: /docs/dg/dev/sdks/sdk/task.html
+      - title: Task set
+        url: /docs/dg/dev/sdks/sdk/task-set.html
+      - title: Task lifecycle management
+        url: /docs/dg/dev/sdks/sdk/task-lifecycle-management.html
+      - title: Settings
+        url: /docs/dg/dev/sdks/sdk/spryker-sdk-settings.html
+      - title: Value resolvers
+        url: /docs/dg/dev/sdks/sdk/value-resolvers.html
+      - title: Extend the SDK
+        url: /docs/dg/dev/sdks/sdk/extending-spryker-sdk.html
+      - title: Build flavored Spryker SDKs
+        url: /docs/dg/dev/sdks/sdk/build-flavored-spryker-sdks.html
+      - title: Develop the SDK
+        url: /docs/dg/dev/sdks/sdk/developing-with-spryker-sdk.html
+      - title: Integrate SDK commands to PhpStorm command line tools
+        url: /docs/dg/dev/sdks/sdk/integrate-spryker-sdk-commands-into-php-storm-command-line-tools.html
+      - title: Initialize and run workflows
+        url: /docs/dg/dev/sdks/sdk/initialize-and-run-workflows.html
+      - title: Releases vs. customization types
+        url: /docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html
+      - title: Telemetry
+        url: /docs/dg/dev/sdks/sdk/telemetry.html
+      - title: Profiler
+        url: /docs/dg/dev/sdks/sdk/enable-and-run-the-profiler.html
+      - title: Manifest validation
+        url: /docs/dg/dev/sdks/sdk/manifest-validation.html
+      - title: Spryks
+        url: /docs/dg/dev/sdks/sdk/spryks/spryks.html
+        nested:
+        - title: Adding a new Spryk
+          url: /docs/dg/dev/sdks/sdk/spryks/adding-spryks.html
+        - title: Spryk configuration reference
+          url: /docs/dg/dev/sdks/sdk/spryks/spryk-configuration-reference.html
+        - title: Checking and debugging Spryks
+          url: /docs/dg/dev/sdks/sdk/spryks/checking-and-debugging-spryks.html
+        - title: Enabling and disabling the Code Sniffer for Spryks
+          url: /docs/dg/dev/sdks/sdk/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
+        - title: QA automation
+          url: /docs/dg/dev/sdks/sdk/spryks/spryks-qa-automation.html
+        - title: FileResolver
+          url: /docs/dg/dev/sdks/sdk/spryks/fileresolver.html
+      - title: Development tools
+        url: /docs/dg/dev/sdks/sdk/development-tools/development-tools.html
+        nested:
+        - title: Architecture Sniffer
+          url: /docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html
+        - title: Code Sniffer
+          url: /docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html
+        - title: Performance audit tool- Benchmark
+          url: /docs/dg/dev/sdks/sdk/development-tools/benchmark-performance-audit-tool.html
+        - title: PHPStan
+          url: /docs/dg/dev/sdks/sdk/development-tools/phpstan.html
+        - title: Static Security Checker
+          url: /docs/dg/dev/sdks/sdk/development-tools/static-security-checker.html
+        - title: Tooling config file
+          url: /docs/dg/dev/sdks/sdk/development-tools/tooling-configuration-file.html
+        - title: Formatter
+          url: /docs/dg/dev/sdks/sdk/development-tools/formatter.html
+        - title: SCSS linter
+          url: /docs/dg/dev/sdks/sdk/development-tools/scss-linter.html
+        - title: TS linter
+          url: /docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
+        - title: VCS connector
+          url: /docs/dg/dev/sdks/sdk/vcs-connector.html
+      - title: Troubleshooting
+        nested:
+          - title: spryker-sdk command not found
+            url: /docs/dg/dev/sdks/sdk/troubleshooting/spryker-sdk-command-not-found.html
+
+    - title: Docker SDK
       url: /docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html
       nested:
       - title: Deploy file
@@ -1047,6 +1121,8 @@ entries:
         url: /docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
       - title: Secure coding practices
         url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
+      - title: Secure coding practices for external packages
+        url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html
       - title: Code style guide
         url: /docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
     - title: Keeping a project upgradable

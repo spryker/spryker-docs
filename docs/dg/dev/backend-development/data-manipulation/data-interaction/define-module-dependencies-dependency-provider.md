@@ -171,4 +171,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-For details, see [Spryk](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

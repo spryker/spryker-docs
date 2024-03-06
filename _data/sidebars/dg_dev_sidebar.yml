@@ -1318,7 +1318,7 @@ entries:
       - title: Technology restrictions
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
     - title: Troubleshooting Spryker in Docker issues
-      url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-spryker-in-docker-issues.html
+      url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
       nested:
       - title: Troubleshooting debugging in Docker
         nested:

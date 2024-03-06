@@ -99,17 +99,6 @@ defaults:
       sidebar: "scos_user_sidebar"
       role: "user"
   -
-     scope:
-       path: "docs/sdk"
-     values:
-       product: "sdk"
-  -
-     scope:
-       path: "docs/sdk/dev"
-     values:
-       sidebar: "sdk_dev_sidebar"
-       role: "dev"
-  -
     scope:
       path: "docs/ca"
     values:
@@ -212,7 +201,6 @@ sidebars:
   - ca_devscu_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
-  - sdk_dev_sidebar
   - pbc_all_sidebar
   - dg_dev_sidebar
 

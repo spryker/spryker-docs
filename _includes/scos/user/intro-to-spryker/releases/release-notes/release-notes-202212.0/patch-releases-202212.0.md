@@ -18,7 +18,7 @@ The patch release 202212.0-p1 includes the following changes:
 - Updated CodeSniffer package to the latest version.
 - Raised project code standards and updated code respectively.
 
-[Code Sniffer](/docs/sdk/dev/development-tools/code-sniffer.html) is a powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues and can also auto-fix the majority of them.
+[Code Sniffer](/docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html) is a powerful tool that helps to keep your code clean and prevent simple mistakes. The Sniffer can find all existing issues and can also auto-fix the majority of them.
 
 ### GitHub release pages:
 

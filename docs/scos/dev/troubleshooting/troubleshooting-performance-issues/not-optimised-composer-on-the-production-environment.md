@@ -2,6 +2,7 @@
 title: Not optimized Composer on the production environment
 description: Fix the issue when all pages are slow on the production environment
 template: troubleshooting-guide-template
+last_updated: Mar 1, 2023
 ---
 
 All pages are slow on the production environment.
@@ -10,7 +11,7 @@ All pages are slow on the production environment.
 
 The possible cause can be an unoptimized Composer for the production environment. 
 
-Here is an example of a profile from [Blackfire](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#blackfire):
+Here is an example of a profile from [Blackfire](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire):
 
 ![blackfire-profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment/blackfire-profile.png)
 
@@ -18,7 +19,7 @@ As can be seen, there are many *file_exists* checks and *findFilewithExtension* 
 
 ## Solution
 
-Optimize the Composer autoloader. Follow the [general performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation) and [Composer guidelines](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation).
+Optimize the Composer autoloader. Follow the [general performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html#opcache-activation) and [Composer guidelines](https://getcomposer.org/doc/articles/autoloader-optimization.md#optimization-level-1-class-map-generation).
 
 For example, you can run the `dump-autoload` command with `-o ` or `--optimize`.
 

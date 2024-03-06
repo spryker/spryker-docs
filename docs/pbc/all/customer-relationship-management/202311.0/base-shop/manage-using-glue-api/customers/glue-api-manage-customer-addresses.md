@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/managing-customer-addresses.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html
@@ -423,7 +424,7 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 | 412 | No address ID provided. |
 | 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

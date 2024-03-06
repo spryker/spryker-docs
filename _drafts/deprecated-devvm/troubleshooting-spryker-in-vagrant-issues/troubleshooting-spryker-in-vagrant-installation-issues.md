@@ -25,11 +25,11 @@ redirect_from:
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 
-When you [install Spryker with Vagrant](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html), you might encounter issues when you build up the virtual machine, set up applications and services, or perform other installation-related actions. The following sections can help you troubleshoot these types of issues.
+When you [install Spryker with Vagrant](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html), you might encounter issues when you build up the virtual machine, set up applications and services, or perform other installation-related actions. The following sections can help you troubleshoot these types of issues.
 
 ## Topics
 

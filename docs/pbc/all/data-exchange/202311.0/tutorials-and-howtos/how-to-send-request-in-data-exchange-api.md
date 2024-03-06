@@ -16,7 +16,7 @@ This document describes how to interact with databases using the Data Exchange A
 ## Prerequisites
 
 * [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html)
-* [Configure the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)
+* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:
@@ -93,6 +93,49 @@ Response sample:
       "iso2_code": "AA",
       "iso3_code": "UUD",
       "name": "Create",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    }
+  ]
+}
+```
+
+It is also possible to supply multiple values for a field. They are filtered as IN condition:
+
+```bash
+GET /dynamic-entity/countries?filter[country.iso2_code]={"in": ["AC","AD", "AE"]} HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+```
+
+Response sample:
+
+```json
+{
+  "data": [
+    {
+      "id_country": 1,
+      "iso2_code": "AC",
+      "iso3_code": "ASC",
+      "name": "Ascension Island",
+      "postal_code_mandatory": false,
+      "postal_code_regex": null
+    },
+    {
+      "id_country": 2,
+      "iso2_code": "AD",
+      "iso3_code": "AND",
+      "name": "Andorra",
+      "postal_code_mandatory": true,
+      "postal_code_regex": "AD\\d{3}"
+    },
+    {
+      "id_country": 3,
+      "iso2_code": "AE",
+      "iso3_code": "ARE",
+      "name": "United Arab Emirates",
       "postal_code_mandatory": false,
       "postal_code_regex": null
     }
@@ -207,7 +250,7 @@ The response contains all columns from the `spy_country` table and the included 
 
 {% info_block infoBox %}
 
-Currently (as of version 202403.0 and earlier), filters don't work with `relations` and are only used to filter the root entity results.
+Currently (as of version 202404.0 and earlier), filters don't work with `relations` and are only used to filter the root entity results.
 
 {% endinfo_block %}
 
@@ -465,6 +508,100 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
+### Sending `POST`, `PATCH`б and `PUT` requests with relationships
+
+To create or update an entity along with its related entities, you need to include the relationships directly in 
+the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 
+and its child entities.
+
+{% info_block infoBox %}
+
+Currently, our system doesn't support `many-to-many` relationships for POST, PATCH, and PUT requests. 
+Only `one-to-one` and `one-to-many` relationships are allowed. This means that each child entity can be associated 
+with only one parent entity.
+
+{% endinfo_block %}
+
+The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array. 
+Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
+
+For correct processing, make sure that related entities are defined with existing relation names. Also, organize them in alignment with their hierarchical relationships in the database, corresponding to the relationships defined in tables like `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping`:
+
+- `spy_dynamic_entity_configuration_relation` specifies the relationships between parent and child entities. Each record links a parent entity to a child entity.
+- `spy_dynamic_entity_configuration_relation_field_mapping` contains the field mappings between related entities.
+
+The hierarchical relationships are primarily defined by the foreign key references in these tables. 
+For example, `spy_dynamic_entity_configuration_relation` uses foreign keys to establish connections between 
+parent and child configurations in `spy_dynamic_entity_configuration`.
+
+Incorrect or non-existent relation names or a misalignment in the hierarchy leads to processing errors.
+For a detailed list of potential errors, see [Error codes](#error-codes).
+
+For POST, PATCH, and PUT requests the payload must accurately reflect the entity relationships. 
+Make sure that each entity in the request includes its corresponding related entities, structured as nested objects within the payload.
+
+```bash
+POST /dynamic-entity/countries HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+Content-Length: 245
+
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00"
+            }
+      ]
+    }
+  ]
+}
+```
+
+Response sample:
+
+```json
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "postal_code_mandatory": null,
+      "postal_code_regex": null,
+      "id_country": 1,
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00",
+                "id_country_tax_rate": 1,
+                "fk_country": 1
+            }
+      ]
+    }
+  ]
+}
+```
+
+The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table, 
+as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName` 
+as the key, providing a comprehensive view of the table’s data in the API response.
+
+{% info_block infoBox %}
+
+For POST and PUT requests, which are used to create new entities, child entities receive their foreign key reference 
+to the parent entity only after the parent entity is created. The system automatically assigns the foreign key 
+to the child entities based on the newly created parent entity's ID.
+
+{% endinfo_block %}
+
 #### Error codes
 
 Bellow, you can find a list of error codes that you can receive when sending `GET`, `POST`, `PATCH` or `PUT` requests.
@@ -484,3 +621,4 @@ Bellow, you can find a list of error codes that you can receive when sending `GE
 | 1311       | The provided `field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                          |
 | 1312       | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
 | 1313       | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                        |
+| 1314       | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                       |

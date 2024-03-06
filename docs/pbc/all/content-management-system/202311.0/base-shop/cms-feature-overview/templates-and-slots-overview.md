@@ -11,6 +11,7 @@ redirect_from:
   - /docs/templates-and-slots-overview
   - /docs/en/templates-and-slots-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/templates-and-slots-overview.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 *Templates and Slots* lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
@@ -138,7 +139,7 @@ A template with slots can be applied to any page. Even though a content manager 
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
-The correlation between templates and slots is defined by importing template and slot lists into the database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into the database. Learn how to [import these lists](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -214,12 +215,12 @@ For product details page type, you can use the Product ID or Category ID identif
 
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html).
 
 
 A content manager can define visibility conditions by [selecting pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
-A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
+A developer can [import visibility conditions](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html).
 
 ## Slot widget
 Slot widget is used to fetch content from a content provider and render it on specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:

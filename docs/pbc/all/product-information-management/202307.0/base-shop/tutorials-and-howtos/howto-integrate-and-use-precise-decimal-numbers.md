@@ -49,7 +49,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about working with Data Transfer Objects, see [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
+For more information about working with Data Transfer Objects, see [Create, use, and extend the transfer objects](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
 
 ## Create a decimal value object
 

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/adding-scheduled-prices-to-abstract-products
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
 ---
 
 This doc describes how to add scheduled prices to abstract products and product bundles in the Back Office.
@@ -52,7 +53,7 @@ If you want to add more than five scheduled prices, it might be quicker to [impo
 | --- | --- |
 | ABSTRACT SKU | Unique identifier of an abstract product to import the scheduled price for. The field is disabled because you are adding the scheduled price to a particular abstract product. |
 | CONCRETE SKU | Unique identifier of a concrete product to import the scheduled price for. The field is disabled because you are adding a scheduled price to a particular abstract product. |
-| STORE | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price will be displayed. If you want to add the scheduled price for multiple stores, you can repeat the full procedure for all of the needed stores.  |
+| STORE | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the scheduled price will be displayed. If you want to add the scheduled price for multiple stores, you can repeat the full procedure for all of the needed stores.  |
 | CURRENCY | Currency in which the scheduled price is defined. If you want to add the scheduled price for multiple currencies, you can repeat the full procedure for all of the needed currencies.  |
 | NET PRICE | Net value of the product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**. |
 | GROSS PRICE |Gross value of product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**.  |

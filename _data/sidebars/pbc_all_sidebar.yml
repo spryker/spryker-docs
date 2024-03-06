@@ -86,7 +86,7 @@ entries:
                   - title: Install the Shipment Glue API
                     url: /docs/pbc/all/carrier-management/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/manage-carrier-companies-and-delivery-methods-in-the-back-office.html
                 nested:
                   - title: Add carrier companies
                     url: /docs/pbc/all/carrier-management/base-shop/manage-in-the-back-office/add-carrier-companies.html
@@ -391,7 +391,7 @@ entries:
                   - title: File details - sales_order_threshold.csv
                     url: /docs/pbc/all/cart-and-checkout/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/manage-thresholds-the-back-office.html
                 nested:
                   - title: Define global thresholds
                     url: /docs/pbc/all/cart-and-checkout/base-shop/manage-in-the-back-office/define-global-thresholds.html
@@ -449,6 +449,8 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/enable-guest-checkout-in-the-b2b-demo-shop.html
                   - title: Implement a customer approval process based on a generic state machine
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html
+                  - title: Handling carts with a big number of items
+                    url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html
                   - title: "Tutorial: Checkout and step engine"
                     url: /docs/pbc/all/cart-and-checkout/base-shop/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
                   - title: "Tutorial: Calculator plugin"
@@ -635,8 +637,6 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
                       - title: ProductSetGui
                         url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html
-                        include_versions:
-                        - "202204.0"
                   - title: Category CMS blocks
                     url: /docs/pbc/all/content-management-system/base-shop/install-and-upgrade/install-category-cms-blocks.html
                   - title: Product CMS blocks
@@ -697,7 +697,7 @@ entries:
                   - title: Retrieve navigation trees
                     url: /docs/pbc/all/content-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-content-in-the-back-office.html
                 nested:
                   - title: "Best practices: Add content to the Storefront pages using templates and slots"
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/best-practices-add-content-to-the-storefront-pages-using-templates-and-slots.html
@@ -921,7 +921,7 @@ entries:
               - title: Customer Access feature overview
                 url: /docs/pbc/all/customer-relationship-management/base-shop/customer-access-feature-overview.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/customer-relationship-management/base-shop/manage-in-the-back-office/manage-companies-and-customers-in-the-back-office.html
                 nested:
                   - title: Manage customers
                     nested:
@@ -1002,8 +1002,16 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html
                   - title: "Customer module overview: reference information"
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
-              - title: "File details: customer.csv"
-                url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
+              - title: Import and export data
+                nested:
+                  - title: company_business_unit.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company-business-unit.csv.html
+                  - title: company_user.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company-user.csv.html
+                  - title: company.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company.csv.html
+                  - title: customer.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer.csv.html
           - title: Marketplace
             nested:
               - title: Install the Customer Account Management + Merchant Switcher feature
@@ -1019,10 +1027,14 @@ entries:
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
                 include_versions:
                 - "202311.0"
-              - title: Data Exchange API + Inventory Management
+              - title: Data Exchange API + Inventory Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
                 include_versions:
                 - "202311.0"
+              - title: Data Exchange API + Category Management feature
+                url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
+                include_versions:
+                - "202404.0"
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -1105,7 +1117,7 @@ entries:
                   - title: Upgrade the DiscountSalesAggregatorConnector module
                     url: /docs/pbc/all/discount-management/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/manage-discounts-in-the-back-office.html
                 nested:
                   - title: "Best practices: Promote products with discounts"
                     url: /docs/pbc/all/discount-management/base-shop/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
@@ -1173,7 +1185,7 @@ entries:
                     nested:
                       - title: Dynamic Multistore
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
-                      - title: Dynamic Multistore + Avalability Notification
+                      - title: Dynamic Multistore + Availability Notification
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
                       - title: Dynamic Multistore + Cart
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-cart-feature.html
@@ -1351,7 +1363,7 @@ entries:
                         url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 
               - title: Manage in the Back Office
-                url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchants-in-the-back-office.html
                 nested:
                   - title: Create merchants
                     url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/create-merchants.html
@@ -1462,6 +1474,23 @@ entries:
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
+                - "202311.0"
+                nested:
+                  - title: Manage merchants
+                    nested:
+                      - title: Create merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
+                      - title: Edit merchants
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
+                  - title: Manage merchant users
+                    nested:
+                      - title: Create merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html
+                      - title: Edit merchant users
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
+                include_versions:
                 - "202212.0"
                 - "202307.0"
                 nested:
@@ -1470,11 +1499,15 @@ entries:
                   - title: Manage merchants users
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
               - title: Manage in the Merchant Portal
+                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
                 nested:
                   - title: Manage merchant's performance data
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html
                   - title: Manage merchant account details and settings
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
+                  - title: Edit merchant profiles
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html
+
               - title: Manage using Glue API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html
                 nested:
@@ -1484,8 +1517,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-addresses.html
                   - title: Retrieve merchant opening hours
                     url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/glue-api-retrieve-merchant-opening-hours.html
-              - title: Edit merchant profiles
-                url: /docs/pbc/all/merchant-management/marketplace/edit-merchant-profiles.html
+
               - title: Tutorials and HowTos
                 nested:
                   - title: Create GUI modules
@@ -1586,6 +1618,7 @@ entries:
               - title: "Import file details: glossary.csv"
                 url: /docs/pbc/all/miscellaneous/import-and-export-data/import-file-details-glossary.csv.html
           - title: Manage in the Back Office
+            url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/manage-translations-in-the-back-office.html
             nested:
               - title: Add translations
                 url: /docs/pbc/all/miscellaneous/manage-in-the-back-office/add-translations.html
@@ -1805,6 +1838,18 @@ entries:
                 url: /docs/pbc/all/offer-management/marketplace/manage-merchant-product-offers.html
               - title: Manage product offers in the Merchant Portal
                 url: /docs/pbc/all/offer-management/marketplace/manage-product-offers.html
+                include_versions:
+                - "202212.0"
+                - "202307.0"
+              - title: Manage product offers in the Merchant Portal
+                url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/manage-product-offers-in-the-merchant-portal.html
+                include_versions:
+                - "202311.0"
+                nested:
+                  - title: Create product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
+                  - title: Edit product offers
+                    url: /docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.html
               - title: Retrieve product offers using Glue API
                 url: /docs/pbc/all/offer-management/marketplace/glue-api-retrieve-product-offers.html
               - title: Render merchant product offers on the Storefront
@@ -1942,13 +1987,13 @@ entries:
                   - title: Split delivery migration concept
                     url: /docs/pbc/all/order-management-system/base-shop/install-and-upgrade/split-delivery-migration-concept.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/manage-orders-in-the-back-office.html
                 nested:
                   - title: Orders
                     nested:
                       - title: Change the state of order items
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/change-the-state-of-order-items.html
-                      - title: Commente orders
+                      - title: Comment orders
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/comment-orders.html
                       - title: Create returns
                         url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/orders/create-returns.html
@@ -1976,7 +2021,7 @@ entries:
                     url: /docs/pbc/all/order-management-system/base-shop/manage-in-the-back-office/view-the-order-matrix.html
               - title: "Glue API: Retrieve orders"
                 url: /docs/pbc/all/order-management-system/base-shop/glue-api-retrieve-orders.html
-              - title: Domain model and relationsips
+              - title: Domain model and relationships
                 nested:
                   - title: "Custom Order Reference: module relations"
                     url: /docs/pbc/all/order-management-system/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html
@@ -2214,9 +2259,11 @@ entries:
                       - title: Integration in the Back Office
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
                         nested:
-                          - title: Integrate
+                          - title: Integrate Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
-                          - title: Disconnect
+                          - title: Configure Payone
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html
+                          - title: Disconnect Payone
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
@@ -2370,6 +2417,15 @@ entries:
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay.html
                           - title: Invoice
                             url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-invoice-payment-method-for-ratepay.html
+                  - title: Stripe
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/stripe.html
+                    nested:
+                      - title: SCCOS prerequisites for Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
+                      - title: Manage Stripe configurations in the ACP catalog
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html
+                      - title: Project guidelines for Stripe
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html
                   - title: Unzer
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/unzer/unzer.html
                     nested:
@@ -2826,10 +2882,6 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html
                       - title: Stock
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html
-                      - title: StockSalesConnector
-                        url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stocksalesconnector-module.html
-                        include_versions:
-                        - "202204.0"
                       - title: Touch
                         url: /docs/pbc/all/product-information-management/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
 
@@ -2878,6 +2930,12 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html
                       - title: product_option_price.csv
                         url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html
+                  - title: configurable_bundle_template_image.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-image.csv.html
+                  - title: configurable_bundle_template_slot.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.html
+                  - title: configurable_bundle_template.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html
                   - title: product_alternative.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html
                   - title: product_concrete_pre_configuration.csv
@@ -2890,6 +2948,16 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
                   - title: product_label.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label.csv.html
+                  - title: product_list_to_category.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.html
+                  - title: product_list_to_concrete_product.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
+                  - title: product_measurement_unit.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
+                  - title: product_list.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -3016,18 +3084,22 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Display product groups by color on the Storefront"
+                  - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: "HowTo: Import packaging units"
+                  - title: Import packaging units
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
-                  - title: "HowTo: Integrate and use precise decimal numbers"
+                  - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
-                  - title: "HowTo: Make a product searchable and shown on the Storefront"
+                  - title: Make a product searchable and shown on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-                  - title: "HowTo: Manage a big number of categories"
+                  - title: Manage a big number of categories
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
-                  - title: "HowTo: Render configurable bundle templates on the Storefront"
+                  - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Split products by stores
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
+                  - title: "Product data: From import to frontend views"
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html                        
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"
@@ -3143,7 +3215,7 @@ entries:
                         nested:
                           - title: Create abstract products
                             url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/create-abstract-products.html
-                          - title: Edit absract products
+                          - title: Edit abstract products
                             url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html
                       - title: Create product variants
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/create-product-variants.html
@@ -3309,6 +3381,12 @@ entries:
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
                   - title: QuoteRequestwidget
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
+          - title: Import and export data
+            nested:
+              - title: "File details: quote_request.csv"
+                url: /docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request.csv.html
+              - title: "File details: quote_request_version.csv"
+                url: /docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request-version.csv.html
           - title: Module relations
             url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
           - title: Use cases
@@ -3499,6 +3577,7 @@ entries:
                       include_versions:
                       - "202212.0"
                       - "202307.0"
+                      - "202311.0"
                     - title: Disconnect Algolia
                       url: /docs/pbc/all/search/base-shop/third-party-integrations/algolia/disconnect-algolia.html
               - title: Best practices
@@ -3651,6 +3730,16 @@ entries:
                     url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html
               - title: Wishlist feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.html
+              - title: Import and export data
+                nested:
+                  - title: shopping_list_company_business_unit.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-company-business-unit.csv.html
+                  - title: shopping_list_company_user.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-company-user.csv.html
+                  - title: shopping_list_item.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-item.csv.html
+                  - title: shopping_list.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list.csv.html
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -3812,6 +3901,15 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         include_versions:
                         - "202311.0"
+                        nested:
+                          - title: Integrate the connector module
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html
+                            include_versions:
+                            - "202311.0"
+                          - title: Integrate Vertex
+                            url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
+                            include_versions:
+                            - "202311.0"
                       - title: Configure Vertex
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
                         include_versions:
@@ -3909,6 +4007,23 @@ entries:
                         url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
               - title: "Persistence ACL feature: Domain model and relationships"
                 url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
+              - title: Merchant Portal Agent Assist feature overview
+                url: /docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview.html
+                include_versions:
+                - "202404.0"
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Merchant Portal Agent Assist feature
+                    url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
+                    include_versions:
+                    - "202404.0"
+              - title: Manage in the Back Office
+                nested:
+                  - title: Create users
+                    url: /docs/pbc/all/user-management/marketplace/manage-in-the-back-office/create-users.html
+                    include_versions:
+                    - "202404.0"
+
 
       - title: Warehouse Management System
         url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
@@ -4060,7 +4175,7 @@ entries:
                       - title: Warehouse User Management
                         url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
               - title: Set up Fulfillment App
-                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html                  
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html
               - title: "Back Office: Assign and deassign warehouses from warehouse users"
                 url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
               - title: "Fulfillment App: Fulfill orders"

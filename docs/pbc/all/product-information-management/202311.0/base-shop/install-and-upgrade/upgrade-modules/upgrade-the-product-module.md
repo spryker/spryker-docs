@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-product.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-product.html
   - /docs/scos/dev/module-migration-guides/migration-guide-product.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
 related:
   - title: Migration guide - Collector
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html

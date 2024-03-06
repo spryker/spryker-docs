@@ -60,7 +60,7 @@ To redeem the gift card code, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -177,7 +177,7 @@ To remove the gift card code from the cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -203,4 +203,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | 3302 | Incorrect voucher code or the voucher cannot be applied. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

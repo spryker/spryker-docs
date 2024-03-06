@@ -2,6 +2,7 @@
 title: "Marketplace Order Management feature: Domain model and relationships"
 description: The Marketplace Order Management feature lets Marketplace customers place orders.
 template: feature-walkthrough-template
+last_updated: Sep 21, 2023
 related:
     - title: MerchantOms
       link: docs/pbc/all/order-management-system/page.version/marketplace/merchant-oms.html
@@ -17,7 +18,7 @@ related:
 
 
 *Marketplace Order Management* enables splitting orders into merchant orders and letting product offers be bought directly from a Storefront.
-The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. To learn more about the core Marketplace objects, see [Marketplace domain model](/docs/scos/dev/architecture/marketplace-architecture/marketplace-domain-model.html).
+The orders are designed to be used by the Marketplace operator, while the merchant orders are always connected to a merchant. To learn more about the core Marketplace objects, see [Marketplace domain model](/docs/dg/dev/architecture/marketplace-architecture/marketplace-domain-model.html).
 
 By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can decide when to create merchant orders out of an order in your project. By default, it is created by `CreateMerchantOrdersCommandPlugin`.
 

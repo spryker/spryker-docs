@@ -2,6 +2,7 @@
 title: Marketplace concept
 description: This document describes what a Marketplace is in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Sep 21, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
   - /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html

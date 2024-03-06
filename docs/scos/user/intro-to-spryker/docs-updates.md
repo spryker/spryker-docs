@@ -35,6 +35,18 @@ In February 2024, we have added and updated the following pages:
 - [Secure coding practices for external packages](/docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html).
 - [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html).
 - [Finilizing upgrades](/docs/ca/devscu/finilizing-upgrades.html): Learn how you can make sure everything works correctly after upgrading a module.
+- [Manage Stripe configurations in the ACP catalog](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/manage-stripe-configurations-in-the-acp-catalog.html).
+- [Project guidelines for the Stripe app](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/project-guidelines-for-stripe.html).
+
+### Updated pages
+
+- [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): General information about Stripe as an ACP app.
+- [Architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html).
+- [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html).
+- [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/202311.0/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html).
+- [Use default Glue parameters](/docs/scos/dev/glue-api-guides/202311.0/use-default-glue-parameters.html).
+
+For more details about these and other updates to the Spryker docs in February 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
 
 ## January 2024
 

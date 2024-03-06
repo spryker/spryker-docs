@@ -1002,8 +1002,16 @@ entries:
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html
                   - title: "Customer module overview: reference information"
                     url: /docs/pbc/all/customer-relationship-management/base-shop/domain-model-and-relationships/customer-module-overview-reference-information.html
-              - title: "File details: customer.csv"
-                url: /docs/pbc/all/customer-relationship-management/base-shop/import-file-details-customer.csv.html
+              - title: Import and export data
+                nested:
+                  - title: company_business_unit.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company-business-unit.csv.html
+                  - title: company_user.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company-user.csv.html
+                  - title: company.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-company.csv.html
+                  - title: customer.csv
+                    url: /docs/pbc/all/customer-relationship-management/base-shop/import-and-export-data/file-details-customer.csv.html
           - title: Marketplace
             nested:
               - title: Install the Customer Account Management + Merchant Switcher feature
@@ -1026,7 +1034,7 @@ entries:
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
-                - "202404.0"            
+                - "202404.0"
           - title: Tutorials and HowTos
             nested:
               - title: Configure Data Exchange API endpoints
@@ -2922,6 +2930,12 @@ entries:
                         url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html
                       - title: product_option_price.csv
                         url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html
+                  - title: configurable_bundle_template_image.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-image.csv.html
+                  - title: configurable_bundle_template_slot.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template-slot.csv.html
+                  - title: configurable_bundle_template.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-configurable-bundle-template.csv.html
                   - title: product_alternative.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html
                   - title: product_concrete_pre_configuration.csv
@@ -2934,6 +2948,16 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html
                   - title: product_label.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-label.csv.html
+                  - title: product_list_to_category.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-category.csv.html
+                  - title: product_list_to_concrete_product.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
+                  - title: product_measurement_unit.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
+                  - title: product_list.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list.csv.html
               - title: Manage in the Back Office
                 url: /docs/pbc/all/product-information-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
                 nested:
@@ -3060,18 +3084,22 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/third-party-integrations/xentral.html
               - title: Tutorials and HowTos
                 nested:
-                  - title: "HowTo: Display product groups by color on the Storefront"
+                  - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: "HowTo: Import packaging units"
+                  - title: Import packaging units
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
-                  - title: "HowTo: Integrate and use precise decimal numbers"
+                  - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
-                  - title: "HowTo: Make a product searchable and shown on the Storefront"
+                  - title: Make a product searchable and shown on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-                  - title: "HowTo: Manage a big number of categories"
+                  - title: Manage a big number of categories
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
-                  - title: "HowTo: Render configurable bundle templates on the Storefront"
+                  - title: Render configurable bundle templates on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
+                  - title: Split products by stores
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
+                  - title: "Product data: From import to frontend views"
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html                        
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"
@@ -3353,6 +3381,12 @@ entries:
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
                   - title: QuoteRequestwidget
                     url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
+          - title: Import and export data
+            nested:
+              - title: "File details: quote_request.csv"
+                url: /docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request.csv.html
+              - title: "File details: quote_request_version.csv"
+                url: /docs/pbc/all/request-for-quote/import-and-export-data/file-details-quote-request-version.csv.html
           - title: Module relations
             url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
           - title: Use cases
@@ -3696,6 +3730,16 @@ entries:
                     url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview/shopping-list-widget-overview.html
               - title: Wishlist feature overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/wishlist-feature-overview.html
+              - title: Import and export data
+                nested:
+                  - title: shopping_list_company_business_unit.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-company-business-unit.csv.html
+                  - title: shopping_list_company_user.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-company-user.csv.html
+                  - title: shopping_list_item.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list-item.csv.html
+                  - title: shopping_list.csv
+                    url: /docs/pbc/all/shopping-list-and-wishlist/base-shop/import-and-export-data/file-details-shopping-list.csv.html
               - title: Install and upgrade
                 nested:
                   - title: Install features

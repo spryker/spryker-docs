@@ -148,4 +148,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterfaceMethod`: Add Zed Persistence Entity Manager Interface Method.
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerMethod`: Add Zed Persistence Entity Manager Method.
 
-For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

@@ -136,24 +136,24 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
 #### Documentation
 
 * General concept documentation
-  * [Decoupled Glue API](/docs/scos/dev/glue-api-guides/202307.0/decoupled-glue-api.html)
+  * [Decoupled Glue API](/docs/dg/dev/glue-api/202307.0/decoupled-glue-api.html)
 * How-to documentation:
-  * [Create storefront resources](/docs/scos/dev/glue-api-guides/202307.0/routing/create-storefront-resources.html)
-  * [Create backend resources](/docs/scos/dev/glue-api-guides/202307.0/routing/create-backend-resources.html)
-  * [How to create resources with parent-child relationships](/docs/scos/dev/glue-api-guides/202307.0/create-glue-api-resources-with-parent-child-relationships.html)
-  * [Create routes](/docs/scos/dev/glue-api-guides/202307.0/routing/create-routes.html)
-  * [ and Storefront API module differences](/docs/scos/dev/glue-api-guides/202307.0/backend-and-storefront-api-module-differences.html)
-  * [How to use default Glue parameters](/docs/scos/dev/glue-api-guides/202307.0/use-default-glue-parameters.html)
-  * [How to create a JSON API relationship](/docs/scos/dev/glue-api-guides/202307.0/create-json-api-relationships.html)
-  * [How to document Glue API endpoints](/docs/scos/dev/glue-api-guides/202307.0/document-glue-api-endpoints.html)
-  * [How to create authorization strategies](/docs/scos/dev/glue-api-guides/202307.0/create-glue-api-authorization-strategies.html)
-  * [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/202307.0/use-glue-api-authorization-scopes.html)
-  * [How to create protected endpoints](/docs/scos/dev/glue-api-guides/202307.0/create-protected-glue-api-endpoints.html)
-  * [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/202307.0/create-and-change-glue-api-conventions.html)
-  * [How to create grant type parameters](/docs/scos/dev/glue-api-guides/202307.0/create-grant-type-parameters.html)
-  * [How to use an authentication server](/docs/scos/dev/glue-api-guides/202307.0/use-authentication-servers-with-glue-api.html)
-  * [Authentication and authorization](/docs/scos/dev/glue-api-guides/202307.0/authentication-and-authorization.html)
-  * [Security and authentication](/docs/scos/dev/glue-api-guides/202307.0/security-and-authentication.html)
+  * [Create storefront resources](/docs/dg/dev/glue-api/202307.0/routing/create-storefront-resources.html)
+  * [Create backend resources](/docs/dg/dev/glue-api/202307.0/routing/create-backend-resources.html)
+  * [How to create resources with parent-child relationships](/docs/dg/dev/glue-api/202307.0/create-glue-api-resources-with-parent-child-relationships.html)
+  * [Create routes](/docs/dg/dev/glue-api/202307.0/routing/create-routes.html)
+  * [ and Storefront API module differences](/docs/dg/dev/glue-api/202307.0/backend-and-storefront-api-module-differences.html)
+  * [How to use default Glue parameters](/docs/dg/dev/glue-api/202307.0/use-default-glue-parameters.html)
+  * [How to create a JSON API relationship](/docs/dg/dev/glue-api/202307.0/create-json-api-relationships.html)
+  * [How to document Glue API endpoints](/docs/dg/dev/glue-api/202307.0/document-glue-api-endpoints.html)
+  * [How to create authorization strategies](/docs/dg/dev/glue-api/202307.0/create-glue-api-authorization-strategies.html)
+  * [How to use Glue API authorization scopes](/docs/dg/dev/glue-api/202307.0/use-glue-api-authorization-scopes.html)
+  * [How to create protected endpoints](/docs/dg/dev/glue-api/202307.0/create-protected-glue-api-endpoints.html)
+  * [Create and change Glue API conventions](/docs/dg/dev/glue-api/202307.0/create-and-change-glue-api-conventions.html)
+  * [How to create grant type parameters](/docs/dg/dev/glue-api/202307.0/create-grant-type-parameters.html)
+  * [How to use an authentication server](/docs/dg/dev/glue-api/202307.0/use-authentication-servers-with-glue-api.html)
+  * [Authentication and authorization](/docs/dg/dev/glue-api/202307.0/authentication-and-authorization.html)
+  * [Security and authentication](/docs/dg/dev/glue-api/202307.0/security-and-authentication.html)
 
 ### [Framework] Configure OAuth 2.0 clients on install <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

@@ -23,7 +23,12 @@ redirect_from:
   - /v1/docs/verriding-webpack-js-scss-for-zed-on-project-level
   - /v1/docs/en/verriding-webpack-js-scss-for-zed-on-project-level
   - /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.12.0-and-earlier.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project-for-oryx-for-zed-2.13.0-and-later.html
   - /docs/scos/dev/front-end-development/202212.0/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
+
+
 
 ---
 

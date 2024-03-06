@@ -30,7 +30,7 @@ Out of the box it provides generators for Yves, Zed, Client, Service and Shared 
 
 {% info_block errorBox %}
 
-Check out our new code generation tool [Spryk](/docs/sdk/dev/spryks/spryks.html).
+Check out our new code generation tool [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
 
 {% endinfo_block %}
 

@@ -11,7 +11,7 @@ All pages are slow on the production environment.
 
 The possible cause can be an unoptimized Composer for the production environment. 
 
-Here is an example of a profile from [Blackfire](/docs/scos/dev/the-docker-sdk/202212.0/configure-services.html#blackfire):
+Here is an example of a profile from [Blackfire](/docs/dg/dev/integrate-and-configure/configure-services.html#blackfire):
 
 ![blackfire-profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment/blackfire-profile.png)
 

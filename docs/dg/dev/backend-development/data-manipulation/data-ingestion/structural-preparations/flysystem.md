@@ -7,6 +7,8 @@ originalLink: https://documentation.spryker.com/2021080/docs/flysystem
 originalArticleId: b68c1798-4db1-4a2b-87bf-b54d4052a741
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-sftp-for-flysystem.html
+
 ---
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.
@@ -462,3 +464,9 @@ class FlysystemDependencyProvider extends AbstractBundleDependencyProvider
 To overwrite `buildFilesystemCollection()`, make sure to carry over this behavior. Otherwise, implement the `Flysystem` plugin loading and configuration on your own.
 
 {% endinfo_block %}
+
+## Enable SFTP
+
+Flysystem does not support SFTP by default, but the separate [Flysystem Adapter for SFTP module](https://github.com/thephpleague/flysystem-sftp) enables it.
+
+To enable SFTP for Flysystem, implement `FlysystemFilesystemBuilderPluginInterface` and add it to `\Pyz\Service\Flysystem\FlysystemDependencyProvider::addFilesystemBuilderPluginCollection`.

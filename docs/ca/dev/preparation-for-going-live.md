@@ -28,7 +28,7 @@ Make sure you've addressed all the items from the following checklists.
 
 ### Cloud environments
 
-- Connected systems are checked and prepared:
+- Connected systems are checked and prepared (project adjustments):
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that there is a network diagram that can be used to explain the setup quickly if the need arises.
     - Make sure that routing works as expected, and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.

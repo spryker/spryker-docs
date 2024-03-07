@@ -44,7 +44,7 @@ console oms:check-timeout -p 1,2,3 -l 10000
 ```
 {% info_block warningBox %}
 
-Processor identifiers distribution across the tasks should have in mind even distribution of the simulateneously processed orders.
+Processor identifiers distribution across the tasks should consider even distribution of the simulateneously processed orders.
 
 Option `-p` works only with a store name passed via option `--store-name` (or a short `-s`) or a limit via option `--limit` (or a short `-l`).
 

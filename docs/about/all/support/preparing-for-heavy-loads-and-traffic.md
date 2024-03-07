@@ -1,5 +1,5 @@
 ---
-title: Special- Prepare for a busy season
+title: Preparing for heavy loads and traffic
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/special-prepare-for-a-busy-season

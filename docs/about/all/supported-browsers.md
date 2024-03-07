@@ -10,13 +10,13 @@ redirect_from:
   - /docs/marketplace/dev/setup/202212.0/marketplace-supported-browsers.html
   - /docs/marketplace/dev/setup/202204.0/marketplace-supported-browsers.html
   - /docs/scos/user/intro-to-spryker/supported-browsers.html
-  
----
 
+---
+Spryker Cloud Commerce OS supports the following browsers.
 
 ## Base shop supported browsers
 
-The Spryker Commerce OS supports the following browsers for all frontend-related projects and products—[B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html):
+[B2B suite](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C suite](/docs/scos/user/intro-to-spryker/b2c-suite.html), and [Master suite](/docs/scos/user/intro-to-spryker/master-suite.html) support the following browsers:
 
 | DESKTOP: BACK OFFICE AND STOREFRONT | MOBILE: STOREFRONT | TABLET: STOREFRONT |
 | --- | --- | --- |
@@ -24,6 +24,8 @@ The Spryker Commerce OS supports the following browsers for all frontend-related
 
 
 ## Marketplace supported browsers
+
+[Marketplace B2C suite](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html) and [Marketplace B2B suite](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html) suite support the following browsers:
 
 | DESKTOP (MARKETPLACE AND MERCHANT PORTAL) | MOBILE (MARKETPLACE ONLY) | TABLET (MARKETPLACE AND MERCHANT PORTAL) |
 | --- | --- | --- |

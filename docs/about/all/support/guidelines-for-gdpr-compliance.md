@@ -1,5 +1,5 @@
 ---
-title: Guidelines for new GDPR rules
+title: Guidelines for GDPR compliance
 description: GDPR contains rules relating to the protection and control of personal data.
 last_updated: Jun 16, 2021
 template: concept-topic-template

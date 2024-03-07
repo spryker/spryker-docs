@@ -1,5 +1,5 @@
 ---
-title: Understanding ticket status
+title: Support ticket statuses
 last_updated: Oct 8, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-ticket-status
@@ -52,5 +52,5 @@ Before getting processed, most bug tickets spend some time in the `New` status. 
 
 For Cloud tickets, we are currently starting a Beta Test where we communicate ETAs to our partners and customers. These ETAs are not binding delivery dates but should serve as a rough indicator of when we can finish a particular task. These ETAs are communicated by a status notification (email) and are listed in the case detail view on the support portals.
 
-## How are bug tickets prioritized?
+## Prioritizing bug tickets
 In general, bugs that impact many customers, business, and security receive the highest priority and are regularly put on the top of the queue. However, even if things are not clear-cut, we take the prioritization of bug tickets very seriously. We have a team comprised of members of various teams, such as Customer Success, Support, and Engineering, meeting weekly to make sure prioritization is evaluated regularly and from different perspectives.

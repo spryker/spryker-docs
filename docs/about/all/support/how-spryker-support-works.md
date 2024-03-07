@@ -7,8 +7,8 @@ originalArticleId: 2923122e-fde2-4893-98df-1375f8cc7742
 redirect_from:
 - /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
 related:
-  - title: How to get the most out of Spryker Support
-    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  - title: Getting the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
   - title: How to use the Support Portal
     link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 ---

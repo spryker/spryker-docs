@@ -12,8 +12,8 @@ related:
     link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
   - title: How Spryker Support works
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
-  - title: How to get the most out of Spryker Support
-    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  - title: Getting the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
 
 ---
 

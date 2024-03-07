@@ -1,5 +1,5 @@
 ---
-title: Intro to Spryker
+title: About Spryker
 description: High-level overview of Spryker Cloud Commerce OS
 last_updated: Sep 9, 2021
 template: concept-topic-template

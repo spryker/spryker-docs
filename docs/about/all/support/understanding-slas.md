@@ -1,5 +1,5 @@
 ---
-title: Understand SLAs
+title: Understanding SLAs
 last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understand-slas
@@ -26,7 +26,7 @@ At Spryker people from around the world work together to provide outstanding pro
 If you discover a problem with Spryker Software, please let us know immediately. Avoid ignoring a problem that you find, or work around it without reporting it to us. Not only would this prevent us from making our software better, but your workaround might not be maintainable and could cause you problems with upgradability or reduce your flexibility sometime in the future.
 
 ### Bring the right information
-Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [How to get the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html).
+Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [Getting the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html).
 
 ### Assess business impact realistically
 To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to do this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation of what business impact is and how priorities work have a look into this [article](/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized).

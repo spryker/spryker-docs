@@ -1,5 +1,5 @@
 ---
-title: Understanding Project and Core Level Fixes
+title: Project-level and core-level fixes
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/understanding-project-and-core-level-fixes

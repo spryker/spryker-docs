@@ -7,7 +7,7 @@ entries:
     url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
     nested:
     - title: Releases
-      url: /docs/scos/user/intro-to-spryker/releases/releases.html
+      url: /docs/scos/user/intro-to-spryker/releases/product-and-code-releases.html
       nested:
       - title: Release notes
         url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
@@ -61,16 +61,16 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
       - title: How to use the Support Portal
         url: /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
-      - title: How to share secrets with the Spryker Support Team
-        url: /docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html
+      - title: Share secrets with the Spryker Support Team
+        url: /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
       - title: Understanding ticket status
         url: /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
       - title: Handling security issues
         url: /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
       - title: Guidelines for new GDPR rules
         url: /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
-      - title: How to get the most out of Spryker Support
-        url: /docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+      - title: Getting the most out of Spryker Support
+        url: /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
       - title: Understand SLAs
         url: /docs/scos/user/intro-to-spryker/support/understand-slas.html
       - title: Escalations

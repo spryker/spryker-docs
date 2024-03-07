@@ -9,8 +9,8 @@ redirect_from:
 related:
   - title: How Spryker Support works
     link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
-  - title: How to get the most out of Spryker Support
-    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  - title: Getting the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
 ---
 
 This document describes how to use the support portal to create and manage your cases.
@@ -18,11 +18,11 @@ This document describes how to use the support portal to create and manage your 
 ## Prerequisites
 
 You already have a customer login provisioned for you. If you do not have an account yet, request one using this form.
-You can log in to the[ support portal](https://support.spryker.com) by using the login button on the top right.
+You can log in to the [support portal](https://support.spryker.com) by using the login button on the top right.
 
 ## Create new cases
 
-To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [How to share secrets with the Spryker Support Team](/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
+To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [Share secrets with the Spryker Support Team](/docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html).
 
 ### Questions
 

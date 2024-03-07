@@ -1,5 +1,5 @@
 ---
-title: Case escalation
+title: Prioritizing support cases
 last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
@@ -10,15 +10,15 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
 ---
 
-## How does Spryker prioritize cases?
-While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create cases, you can already indicate how urgent a case is for you by choosing the correct case type and business impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:
+
+While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create a case, you can indicate how urgent it's for you by choosing the correct case type and business impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:
 * The business impact specified by the partner/customer and the explanation provided for it
 * The subject matter
 * The overall state and context of the project
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-Prioritization is only one aspect that influences how fast your case is solved. To learn important tips about what you can do to speed up resolution times, see [How to get the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html).
+Prioritization is only one aspect that influences how fast your case is solved. To learn important tips about what you can do to speed up resolution times, see [Getting the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html).
 
 {% endinfo_block %}
 
@@ -28,7 +28,7 @@ By specifying the business impact, you can tell us directly how severely an issu
 
 *P1—Urgent*: this is reserved for outages on production environments, security incidents, or issues that directly impact the normal flow of your business and for which you were not able to find an appropriate workaround.
 Here are some examples of cases with P1 business impact:
-* Your Spryker Shop is no longer reachable.
+* Your shop is no longer reachable.
 * You suspect that there is a security flaw that is actively being exploited.
 * It is no longer possible for customers to use your shop in an intended way, and this impacts your revenue.
 * An issue blocks you from going live with your shop.

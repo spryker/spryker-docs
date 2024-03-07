@@ -1,5 +1,5 @@
 ---
-title: Escalations
+title: Support case escalations
 last_updated: Oct 25, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/case-escalation

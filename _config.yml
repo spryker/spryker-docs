@@ -1,4 +1,4 @@
-version: "202307.0"
+version: "202311.0"
 
 repository: spryker/spryker-docs
 
@@ -99,49 +99,33 @@ defaults:
       sidebar: "scos_user_sidebar"
       role: "user"
   -
-     scope:
-       path: "docs/sdk"
-     values:
-       product: "sdk"
-  -
-     scope:
-       path: "docs/sdk/dev"
-     values:
-       sidebar: "sdk_dev_sidebar"
-       role: "dev"
+    scope:
+      path: "docs/ca"
+    values:
+      product: "ca"
   -
     scope:
-      path: "docs/cloud"
+      path: "docs/ca/dev"
     values:
-      product: "cloud"
-  -
-    scope:
-      path: "docs/cloud/dev"
-    values:
-      sidebar: "cloud_dev_sidebar"
+      sidebar: "ca_dev_sidebar"
       role: "dev"
   -
-    scope:
-      path: "docs/acp"
-    values:
-      product: "acp"
-  -
-    scope:
-      path: "docs/acp/user"
-    values:
-      sidebar: "acp_user_sidebar"
-      role: "user"
-  -
      scope:
-       path: "docs/scu"
+       path: "docs/ca/devscu"
      values:
-       product: "scu"
-  -
-     scope:
-       path: "docs/scu/dev"
-     values:
-       sidebar: "scu_dev_sidebar"
+       sidebar: "ca_devscu_sidebar"
        role: "dev"
+  -
+     scope:
+       path: "docs/dg"
+     values:
+       product: "dg"
+  -
+    scope:
+      path: "docs/dg/dev"
+    values:
+      sidebar: "dg_dev_sidebar"
+      role: "dev"
   -
      scope:
        path: "docs/pbc"
@@ -155,34 +139,27 @@ defaults:
       role: "all"
 
 versions:
-  '202204.0': '202204.0'
   '202212.0': '202212.0'
   '202307.0': '202307.0'
-  '202400.0': 'Winter release'
+  '202311.0': '202311.0'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
   scos:
-    user:
-      - features
-      - back-office-user-guides
-      - technology-partners
-      - shop-user-guides
-      - overview-of-features
     dev:
-      - feature-walkthroughs
       - feature-integration-guides
       - data-import
       - data-export
       - glue-api-guides
-      - technology-partner-integration-guides
       - the-docker-sdk
-      - migration-and-integration
-      - legacy-demoshop
-      - technology-partner-guides
-      - devops-migration-guides
       - system-requirements
       - front-end-development
+  dg:
+    dev:
+      - data-import
+      - frontend-development
+      - system-requirements
+      - glue-api
   pbc:
     all:
       - back-office
@@ -190,6 +167,7 @@ versioned_categories:
       - carrier-management
       - content-management-system
       - customer-relationship-management
+      - data-exchange
       - discount-management
       - dynamic-multistore
       - emails
@@ -208,7 +186,7 @@ versioned_categories:
       - ratings-reviews
       - request-for-quote
       - search
-      - service-points
+      - service-point-management
       - shopping-list-and-wishlist
       - tax-management
       - user-management
@@ -216,17 +194,15 @@ versioned_categories:
       - warehouse-picking
 
 
-
 # these are defaults used for the front matter for these file types
 
 sidebars:
-  - cloud_dev_sidebar
+  - ca_dev_sidebar
+  - ca_devscu_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
-  - sdk_dev_sidebar
-  - acp_user_sidebar
-  - scu_dev_sidebar
   - pbc_all_sidebar
+  - dg_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -253,12 +229,16 @@ algolia:
       title: 'SCOS Developer'
     - name: 'sdk_dev'
       title: 'SDK Developer'
-    - name: 'cloud_dev'
-      title: 'Cloud Developer'
+    - name: 'ca_dev'
+      title: 'Managing cloud applications'
+    - name: 'ca_devscu'
+      title: 'Upgrading cloud applications'
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'dg_dev'
+      title: 'Development'
 sass:
     sass_dir: css
     style: compressed

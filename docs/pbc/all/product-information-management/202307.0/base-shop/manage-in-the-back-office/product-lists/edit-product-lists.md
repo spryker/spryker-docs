@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-lists
 originalArticleId: 18628b05-d26f-469a-a201-d74c1a235cf8
 redirect_from:
-  - /2021080/docs/managing-product-lists
-  - /2021080/docs/en/managing-product-lists
-  - /docs/managing-product-lists
-  - /docs/en/managing-product-lists
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/product-lists/managing-product-lists.html  
 ---
@@ -78,7 +75,7 @@ If products are already assigned to a list, and you import products, the existin
 1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
 2. Click **Choose File**.
 3. Select the file with the list you want to import.
-    To learn about the format of the file, see [File details - content_product_abstract_list.csv](/docs/scos/dev/data-import/202307.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html).
+    To learn about the format of the file, see ["Import file details: content_product_abstract_list.csv"](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html).
 4. Click **Save**.
     The page refreshes with a success message displayed. The list is displayed in the **Products in the list** subtab.
 

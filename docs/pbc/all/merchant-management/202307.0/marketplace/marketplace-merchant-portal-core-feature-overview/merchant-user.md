@@ -2,6 +2,7 @@
 title: Merchant User
 description: Merchant User in Merchant Portal.
 template: concept-topic-template
+last_updated: Oct 20, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 ---
@@ -36,5 +37,5 @@ The following diagram illustrates merchant user relations:
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-data/file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
+| | |[File details: merchant_user.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html) |[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html)|
 | | | |[Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)|

@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Define doc folder paths
-FOLDERS=("docs/acp/user" "docs/cloud/dev" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
+FOLDERS=("docs/acp/user" "docs/ca/dev" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
 
 # Define sidebar file paths
-SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/cloud_dev_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/scos_dev_sidebar.yml" "_data/sidebars/scos_user_sidebar.yml" "_data/sidebars/scu_dev_sidebar.yml" "_data/sidebars/sdk_dev_sidebar.yml")
+SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/scos_dev_sidebar.yml" "_data/sidebars/scos_user_sidebar.yml" "_data/sidebars/scu_dev_sidebar.yml" "_data/sidebars/sdk_dev_sidebar.yml")
 
 # Define sidebar titles
-TITLES=("ACP User" "Cloud Dev" "Marketplace Dev" "Marketplace User" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
+TITLES=("ACP User" "Cloud Dev" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"

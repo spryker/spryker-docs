@@ -3,13 +3,15 @@ title: "Import file details: merchant_product_offer.csv"
 last_updated: Feb 26, 2021
 description: This document describes the `merchant_product_offer.csv` file to configure merchant product offer information in your Spryker shop.
 template: import-file-template
+redirect_from:
+- /docs/pbc/all/offer-management/202307.0/marketplace/import-and-export-data/file-details-merchant-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_product_offer.csv` file to configure [merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
@@ -17,8 +19,8 @@ This document describes the `merchant_product_offer.csv` file to configure [merc
 
 ## Import file dependencies
 
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
-- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
+- [product_concrete.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html)
 
 
 ## Import file parameters

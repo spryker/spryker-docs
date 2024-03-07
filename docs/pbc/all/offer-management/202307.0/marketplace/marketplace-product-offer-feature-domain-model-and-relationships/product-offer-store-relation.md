@@ -2,6 +2,7 @@
 title: "Product Offer store relation: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer relation with stores in the Spryker Marketplace.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Product offer has the many-to-many relation with stores. It means that the same offer can be available in multiple stores at the same time.

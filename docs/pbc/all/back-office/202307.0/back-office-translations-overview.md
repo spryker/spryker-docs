@@ -1,6 +1,7 @@
 ---
 title: Back Office Translations overview
 template: concept-topic-template
+last_updated: Oct 18, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/back-office-translations-overview
 redirect_from:
   - /2021080/docs/back-office-translations-overview
@@ -14,7 +15,7 @@ The *Back Office Translations* feature introduces a way to translate the Adminis
 
 There are two ways to assign a language to a user account: from the **Create new User** page of the **User Control&nbsp;<span aria-label="and then">></span> User** section or from the **Edit User** page of **User Control&nbsp;<span aria-label="and then">></span> User section** if the user is already created. Once the account language is changed, the respective user sees that their interface is translated into the corresponding language upon their next login.
 
-Translations are added by means of uploading CSV extension files to the folders of the target modules-`data/translation/Zed/{ModuleName}/{locale_code}.csv`
+Translations are added by means of uploading CSV extension files to the folders of the target modules `src/Pyz/Zed/Translator/data/{ModuleName}/{locale_code}.csv`
 
 The following are file name examples:
 

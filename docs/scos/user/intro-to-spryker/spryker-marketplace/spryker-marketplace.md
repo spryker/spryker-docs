@@ -2,6 +2,7 @@
 title: Spryker Marketplace
 description: This document is an overview of Spryker Marketplace
 template: concept-topic-template
+last_updated: Sep 25, 2023
 redirect_from:
   - /docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-concept.html
   - /docs/marketplace/user/intro-to-spryker-marketplace/intro-to-spryker-marketplace.html
@@ -30,7 +31,7 @@ For new projects, we provide [B2C](/docs/scos/user/intro-to-spryker/spryker-mark
 
 Even if you don't need marketplace features at first, but you are going to use them in the future, the Demo Marketplaces are still the best starting point. You can just ignore the marketplace features until you actually want to use them.
 
-To learn how to install B2C or B2B Demo Marketplace, see [Set up Spryker locally](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+To learn how to install B2C or B2B Demo Marketplace, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 ## Can I upgrade to marketplace from a regular B2B or B2C shop?
 

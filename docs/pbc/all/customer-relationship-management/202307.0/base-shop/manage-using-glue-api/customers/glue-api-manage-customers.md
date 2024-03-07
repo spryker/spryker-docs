@@ -6,13 +6,10 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customers-via-glue-api
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
 redirect_from:
-  - /2021080/docs/managing-customers-via-glue-api
-  - /2021080/docs/en/managing-customers-via-glue-api
-  - /docs/managing-customers-via-glue-api
-  - /docs/en/managing-customers-via-glue-api
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-customers/managing-customers.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/managing-customers.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -31,7 +28,7 @@ related:
   - title: Managing customer addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
@@ -321,7 +318,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html).
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 
@@ -338,11 +335,11 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 420 | The password character set is invalid. |
 | 422 | `newPassword` and `confirmPassword` values are not identic. |
 | 802 | Request is unauthorized. |
-| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
+| 901 | Indicates one of the following reasons:<ul><li>Terms of service were not accepted. Note that if you don't have the [REST Request Format](/docs/dg/dev/glue-api/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html) validation enabled, then you will recieve the `422` status code instead of the `901` error code.</li><li> `newPassword` and `confirmPassword` are not specified.</li><li>Password length is invalid (it should be from 8 to 64 characters).</li></ul> |
 | 4606 | Request is unauthorized.|
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

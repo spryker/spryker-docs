@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/confirming-customer-registration
 originalArticleId: ce75d090-7be3-4d28-98a2-4ea49eb0d00c
 redirect_from:
-  - /2021080/docs/confirming-customer-registration
-  - /2021080/docs/en/confirming-customer-registration
-  - /docs/confirming-customer-registration
-  - /docs/en/confirming-customer-registration
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/confirming-customer-registration.html
@@ -32,7 +28,7 @@ related:
   - title: Managing customer addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
@@ -41,7 +37,7 @@ After a customer has been created (to create a customer, see [Customers](/docs/p
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html).
 
 ## Confirm customer registration
 
@@ -82,7 +78,7 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next Steps
 

@@ -21,24 +21,23 @@ redirect_from:
   - /docs/scos/user/features/202200.0/tax-feature-overview.html
   - /docs/scos/user/features/202307.0/tax-feature-overview.html
   - /docs/pbc/all/tax-management/tax-management.html
-  - /docs/pbc/all/tax-management/202307.0/base-shop/tax-feature-overview.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/tax-feature-overview.html
 ---
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html).
+The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-sets.html) or [import tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) or [import tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html) into your project.
 
 Tax sets can be applied to an abstract product, product option, and shipment:
 
 
 | ENTITY | DEFINE TAX SETS IN THE BACK OFFICE  | IMPORT TAX SETS |
 | --- | --- | --- |
-| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
-| Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html) |
-| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+| Abstract product | [Define prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
+| Product option | [Creating a product option](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-in-the-back-office/product-options/create-product-options.html) | [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html) |
+| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
 
 ## International tax rates and sets
 
@@ -67,13 +66,13 @@ Avalara is mostly meant for the USA.
 
 {% endinfo_block %}
 
-To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/install-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
+To use Avalara, [set up the AvaTax platform](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update) for your application and [integrate Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/install-avalara.html) into your project. Once you do that, you can [apply Avalara tax codes](https://help.avalara.com/Avalara_AvaTax_Update/Avalara_tax_codes) to automate tax calculations for your shop.
 
 You can set the Avalara tax codes for the following entities by importing the codes:
 
-* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html).
-* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/file-details-product-option.csv.html).
-* Shipment: For details about import, see [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html).
+* Abstract product: For details about import, see [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html).
+* Product option: For details about import, see [File details: product_option.csv](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html).
+* Shipment: For details about import, see [File details: shipment.csv](/docs/pbc/all/tax-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html).
 
 {% info_block infoBox %}
 
@@ -109,16 +108,16 @@ The capability has the following functional constraints:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html) |
-| [Edit tax rates](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/edit-tax-rates.html) |
-| [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-sets.html) |
-| [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/edit-tax-sets.html) |
+| [Create tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html) |
+| [Edit tax rates](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-rates.html) |
+| [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html) |
+| [Edit tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/edit-tax-sets.html) |
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Integrate the Tax Glue API](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/install-and-upgrade/install-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html) |
-| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html) |
-| | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
-| | | | [Import tax sets for product options](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/import-and-export-data/import-file-details-product-option.csv.html) |
+| [Integrate the Tax Glue API](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/install-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html) |
+| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-abstract.csv.html) |
+| | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-shipment.csv.html) |
+| | | | [Import tax sets for product options](/docs/pbc/all/tax-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-option.csv.html) |

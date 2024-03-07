@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Alternative Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -13,8 +13,8 @@ Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -255,7 +255,7 @@ concrete_sku,alternative_product_concrete_sku,alternative_product_abstract_sku
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
-|  concrete_sku | mandatory | string | 420566 | SKU of concrete product which will have alternative products. |
+|  concrete_sku | ✓ | string | 420566 | SKU of concrete product which will have alternative products. |
 |  alternative_product_concrete_sku | optional | string | 420565 | SKU of the concrete alternative product. |
 |  alternative_product_abstract_sku | optional | string | M1000785 | SKU of the abstract alternative product. |
 
@@ -412,8 +412,8 @@ Install the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 |---|---|---|
-| Product | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -511,7 +511,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |
@@ -524,6 +524,6 @@ Make sure that the following widgets have been registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by reimporting [product_label_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 {% endinfo_block %}

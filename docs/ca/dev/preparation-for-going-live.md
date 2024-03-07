@@ -37,8 +37,8 @@ Let us know all the details of your go-live plan. Reach out to your Partner or C
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that there is a network diagram that can be used to explain the setup quickly if the need arises.
     - Make sure that routing works as expected, and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.
-- Denial-of-service (DDOS) prevention or mitigation is checked and implemented:
-    - Check your concepts for Denial-of-service (DOS) and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
+- Denial-of-service (DOS) and Distributed Denial-of-service (DDOS) prevention or mitigation is checked and implemented:
+    - Check your concepts for DOS and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention in the Back office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - The DNS strategy is defined. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
 
@@ -59,8 +59,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 - [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) to use data in S3 Buckets instead of local storage for the project.
 - Connect S3 buckets to correct environments:
-  - Production S3 bucket to a production environment.
-  - Staging S3 bucket to a staging environment.
+  - Connect Production S3 bucket to a production environment.
+  - Connect Staging S3 bucket to a staging environment. 
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Implement the recommended Jenkins [performance and stability improvements](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html) where applicable.
@@ -101,7 +101,7 @@ Make sure you've addressed all the items from the following checklists.
 - We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes] (/docs/dg/dev/sdks/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes).
+- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/scos/dev/the-docker-sdk/{{site.version}}/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
 - Make sure the DNS names and strategy for your shop are clear. Do the following:
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. For details on how to set up DNS for your application, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
     - Optional: Delegate DNS. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).

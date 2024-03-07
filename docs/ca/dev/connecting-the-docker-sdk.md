@@ -21,7 +21,7 @@ This is an optional tool locally, but we highly recommend installing it to make 
 
 Analyze your project's architecture and determine the Docker SDK version to use.
 
-Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+Before deploying code to the cloud, you must define the Docker SDK version in `.git.docker`. For instructions, see [Choosing a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
 
 {% info_block infoBox "Forking the Docker SDK" %}
 

@@ -543,6 +543,9 @@ entries:
             - title: Directionality
               url: /docs/dg/dev/frontend-development/oryx/internationalization/oryx-directionality.html
 
+        - title: Contribute to Oryx
+          url: /docs/dg/dev/frontend-development/oryx/contribute-to-oryx.html
+
     - title: Marketplace
       url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend.html
       nested:
@@ -1129,6 +1132,8 @@ entries:
         url: /docs/dg/dev/guidelines/coding-guidelines/code-architecture-guide.html
       - title: Secure coding practices
         url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices.html
+      - title: Secure coding practices for external packages
+        url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html
       - title: Code style guide
         url: /docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
     - title: Keeping a project upgradable

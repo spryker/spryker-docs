@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-return-reasons
 originalArticleId: 469a4a94-e7b3-4c0c-a814-837f20bdc9e4
 redirect_from:
-  - /2021080/docs/retrieving-return-reasons
-  - /2021080/docs/en/retrieving-return-reasons
-  - /docs/retrieving-return-reasons
-  - /docs/en/retrieving-return-reasons
   - /docs/pbc/all/return-management/202307.0/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
@@ -89,4 +85,4 @@ Request sample: retrieve return reasons
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

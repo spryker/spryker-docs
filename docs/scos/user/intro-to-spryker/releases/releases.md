@@ -66,5 +66,5 @@ To receive the security updates, please request the subsription at [support@spry
 
 ## Next steps
 
-* [Checking for newer versions](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html)
+* [Checking for newer versions](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html)
 * [Release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html)

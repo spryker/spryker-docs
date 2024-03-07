@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-users
 originalArticleId: 4c9db88b-8496-4989-aff3-d0a676bf1a94
 redirect_from:
-  - /2021080/docs/retrieving-company-users
-  - /2021080/docs/en/retrieving-company-users
-  - /docs/retrieving-company-users
-  - /docs/en/retrieving-company-users
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/retrieving-company-users.html
@@ -145,8 +141,8 @@ To retrieve information about a company user, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5 | Retrieve the company user with unique identifier `e1019900-88c4-5582-af83-2c1ea8775ac5`. |
-| GET https://glue.mysprykershop.com/company-users/min?include=companies,company-business-units,company-roles | Retrieve company users and related companies, business units, and roles. |
+| `GET https://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5` | Retrieve the company user with unique identifier `e1019900-88c4-5582-af83-2c1ea8775ac5`. |
+| `GET https://glue.mysprykershop.com/company-users/min?include=companies,company-business-units,company-roles` | Retrieve company users and related companies, business units, and roles. |
 
 ### Response
 
@@ -370,7 +366,7 @@ To retrieve information about a company user, send the request:
 | 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1404 | Specified company user is not found or does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

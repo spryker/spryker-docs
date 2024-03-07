@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202212.0/product-information-pimerp/akeneo.html
 related:
   - title: Akeneo — Console commands
-    link: docs/scos/dev/technology-partner-guides/page.version/product-information-pimerp/akeneo/akeneo-console-commands.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
   - title: Installing and configuring Akeneo
     link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html
 ---
@@ -38,7 +38,7 @@ YOUR ADVANTAGES:
 ## Related Developer guides
 
 * [Installing and configuring Akeneo](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html)
-* [Akeneo — Console commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/akeneo-console-commands.html)
+* [Akeneo — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
 
 
 ---

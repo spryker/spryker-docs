@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-company-roles
 originalArticleId: 91e7d4fb-7088-4249-bb24-c146c3a63ea4
 redirect_from:
-  - /2021080/docs/retrieving-company-roles
-  - /2021080/docs/en/retrieving-company-roles
-  - /docs/retrieving-company-roles
-  - /docs/en/retrieving-company-roles
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-roles.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-roles.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/retrieving-company-roles.html
@@ -64,9 +60,9 @@ To retrieve a company role, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-roles/mine | Retrieve all the company roles of the current authenticated company user. |
-| GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376 | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376`. |
-| GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376` with related companies included. |
+| `GET https://glue.mysprykershop.com/company-roles/mine` | Retrieve all the company roles of the current authenticated company user. |
+| `GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376` | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376`. |
+| `GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies` | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376` with related companies included. |
 
 #### Response
 
@@ -176,7 +172,7 @@ To retrieve a company role, send the request:
 | 2101 | Company role is not found. |
 | 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

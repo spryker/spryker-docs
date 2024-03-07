@@ -2,6 +2,7 @@
 title: Marketplace Return Management feature overview
 description: This document contains concept information for the Marketplace Return Management feature.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 related:
   - title: Managing marketplace returns
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
@@ -80,7 +81,7 @@ Merchants process their returns in the Merchant Portal. For details about how to
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES      | GLUE API GUIDES     |
+| INSTALLATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |
-| [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
-| [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              
+| [Install the Marketplace Return Management feature](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
+| [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              

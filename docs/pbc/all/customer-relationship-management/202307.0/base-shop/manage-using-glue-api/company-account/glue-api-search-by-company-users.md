@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-company-users
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:
-  - /2021080/docs/searching-by-company-users
-  - /2021080/docs/en/searching-by-company-users
-  - /docs/searching-by-company-users
-  - /docs/en/searching-by-company-users
   - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/searching-by-company-users.html
 related:
   - title: Retrieving companies
@@ -64,8 +60,8 @@ To retrieve company users of the current authenticated customer, send the reques
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-users/mine | Retrieve all the company users the current authenticated customer can authenticate as. |
-| GET https://glue.mysprykershop.com/company-users/mine?include=companies,company-business-units,company-roles | Retrieve all the company users the current authenticated customer can authenticate as. Include information about the company and business unit each company user belongs to. Include information about the roles of each company user. |
+| `GET https://glue.mysprykershop.com/company-users/mine` | Retrieve all the company users the current authenticated customer can authenticate as. |
+| `GET https://glue.mysprykershop.com/company-users/mine?include=companies,company-business-units,company-roles` | Retrieve all the company users the current authenticated customer can authenticate as. Include information about the company and business unit each company user belongs to. Include information about the roles of each company user. |
 
 ### Response
 
@@ -314,7 +310,7 @@ To retrieve company users of the current authenticated customer, send the reques
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

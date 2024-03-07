@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-addresses-via-glue-api
 originalArticleId: 83f855ab-83ed-4a69-a087-196f88c0007b
 redirect_from:
-  - /2021080/docs/managing-customer-addresses-via-glue-api
-  - /2021080/docs/en/managing-customer-addresses-via-glue-api
-  - /docs/managing-customer-addresses-via-glue-api
-  - /docs/en/managing-customer-addresses-via-glue-api
   - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html
@@ -41,7 +37,7 @@ related:
   - title: Managing customer passwords
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-customer-passwords.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
@@ -427,13 +423,13 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 | 412 | No address ID provided. |
 | 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
 * [Manage orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
 * [Manage customer authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html)

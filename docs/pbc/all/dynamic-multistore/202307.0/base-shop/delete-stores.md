@@ -3,6 +3,7 @@ title: Delete stores
 description: This document shows how to delete a store
 past_updated: Jun 26, 2023
 template: howto-guide-template
+last_updated: Oct 6, 2023
 ---
 
 This document describes how to delete stores.
@@ -35,7 +36,7 @@ On the technical side, removing a store helps with the following:
 
 ## Back up the database
 
-Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html).
+Back up the store's database and make sure it's recoverable. For instructions, see [Create and restore database backups](/docs/ca/dev/create-and-restore-database-backups.html).
 
 ## Suspend Publish and Sync
 
@@ -44,7 +45,7 @@ Back up the store's database and make sure it's recoverable. For instructions, s
 vendor/bin/console maintenance:enable
 ```
 
-For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
+For more information about maintenance mode, see [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html).
 
 2. Check the number of messaged in RabbitMQ. If there are too many, wait for them to be processed.
 

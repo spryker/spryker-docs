@@ -6,10 +6,7 @@ template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-lists-catalog-feature-integration
 originalArticleId: 14356b81-71a8-46ba-93b0-ef5d376fc290
 redirect_from:
-  - /2021080/docs/product-lists-catalog-feature-integration
-  - /2021080/docs/en/product-lists-catalog-feature-integration
-  - /docs/product-lists-catalog-feature-integration
-  - /docs/en/product-lists-catalog-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202108.0/product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/product-lists-catalog-feature-integration.html
 related:
   - title: Merchant Product Restrictions feature integration

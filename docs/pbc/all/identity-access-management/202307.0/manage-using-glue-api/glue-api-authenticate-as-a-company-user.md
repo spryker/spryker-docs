@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-a-company-user
 originalArticleId: 90ca8812-0b3c-473d-bcd7-b12805da2070
 redirect_from:
-  - /2021080/docs/authenticating-as-a-company-user
-  - /2021080/docs/en/authenticating-as-a-company-user
-  - /docs/authenticating-as-a-company-user
-  - /docs/en/authenticating-as-a-company-user
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/authenticating-as-a-company-user.html
@@ -112,7 +108,7 @@ Request sample: authenticate as a company user
 | 002 | Authentication token is missing. |
 | 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

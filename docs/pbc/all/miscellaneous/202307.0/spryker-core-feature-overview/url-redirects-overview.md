@@ -4,11 +4,13 @@ last_updated: Aug 20, 2021
 description: With URL redirects, you can create content redirects and increase your store's search engine visibility
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/user/back-office-user-guides/202005.0/content/redirects/redirects.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/spryker-core-feature-walkthrough/url-redirects-overview.html
   - /docs/scos/dev/feature-walkthroughs/202212.0/spryker-core-feature-walkthrough/url-redirects-overview.html
 ---
 
 With the URL redirects, you can create content redirects and increase your store's search engine visibility. Redirects can be store-internal or external and can reflect various HTTP status codes that play a major role in search engine ranking. Besides, redirects for the changed product, CMS pages, categories URLs are auto-generated.
-A URL redirect is a special entity that consists of a source URL (which is provided by the `spy_url database` table), a target URL, and an HTTP status code stored in the `spy_url_redirect` database table. Redirects are exported to the key-value storage with collectors and are matched with StorageRouter the same way as described in the [URL](/docs/scos/dev/back-end-development/yves/url.html) document. `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demo Shop, sends a redirect response to the target URL with the given status code.
+A URL redirect is a special entity that consists of a source URL (which is provided by the `spy_url database` table), a target URL, and an HTTP status code stored in the `spy_url_redirect` database table. Redirects are exported to the key-value storage with collectors and are matched with StorageRouter the same way as described in the [URL](/docs/dg/dev/backend-development/yves/url.html) document. `\Pyz\Yves\Redirect\Controller\RedirectController` in the Demo Shop, sends a redirect response to the target URL with the given status code.
 
 ## Manual redirects
 

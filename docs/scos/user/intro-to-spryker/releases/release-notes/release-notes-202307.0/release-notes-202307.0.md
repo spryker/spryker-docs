@@ -23,22 +23,22 @@ Trace your request execution flow to find bottlenecks and optimize your code. Th
 
 #### Documentation
 
-[Integrate profiler module](/docs/scos/dev/technical-enhancement-integration-guides/Integrate-profiler-module.html#prerequisites)
+[Integrate profiler module](/docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html#prerequisites)
 
 ### [Spryker Code Upgrader] Upgrader Compliance Evaluator <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 Make sure your code is compliant and simple to upgrade with Spryker Code Upgrader. This tool allows your team to evaluate your project code and highlight potential issues. Fixing these issues simplifies your upgrading experience.
 
-* [Detecting dead code](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Reducing dead code is important for maintenance and upgrade because otherwise, your teams invest time in maintaining the code that is not used.
-* [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/security.html): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
-* [Minimal version check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Spryker Code Upgrader is available for customers from SCOS version 2022.04.
-* [PHP versions check](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): We verify that you use the same version of PHP in composer.json, deploy*.yml, and your runtime to maintain consistency and prevent possible incompatibilities when installing dependencies. For instance, if you are using PHP 8.1 during development or upgrades, but your production system is running on PHP 7.4. Additionally, we check for the minimal PHP version, which is PHP 7.4. Keep in mind that the minimal version will be upgraded to 8.0 in the future, as 7.4 has reached its end of life.
+* [Detecting dead code](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html): Reducing dead code is important for maintenance and upgrade because otherwise, your teams invest time in maintaining the code that is not used.
+* [Security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): We let you know about known vulnerabilities in third-party packages so that your team keeps them up-to-date.
+* [Minimal version check](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html): Spryker Code Upgrader is available for customers from SCOS version 2022.04.
+* [PHP versions check](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/php-version.html): We verify that you use the same version of PHP in composer.json, deploy*.yml, and your runtime to maintain consistency and prevent possible incompatibilities when installing dependencies. For instance, if you are using PHP 8.1 during development or upgrades, but your production system is running on PHP 7.4. Additionally, we check for the minimal PHP version, which is PHP 7.4. Keep in mind that the minimal version will be upgraded to 8.0 in the future, as 7.4 has reached its end of life.
 
 These are the structural code validator of dependency providers:
 
-* [Additional logic in dependency provider](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): From an architectural standpoint, dependency providers must contain no business logic. Otherwise, the dependency providers are harder to maintain.
-* [Flatter arrays in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
-* [Simple plugin instantiation in dependency providers](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
+* [Additional logic in dependency provider](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html): From an architectural standpoint, dependency providers must contain no business logic. Otherwise, the dependency providers are harder to maintain.
+* [Flatter arrays in dependency providers](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): It is recommended to have flat arrays of plugins in dependency providers, as it simplifies the upgrade process.
+* [Simple plugin instantiation in dependency providers](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/multidimensional-array.html): Plugins should be easy to instantiate and have minimal injected dependencies. Otherwise, the leakage of business logic into dependency providers makes maintenance more complex.
 
 Example of the violation report:
 ```bash
@@ -54,8 +54,8 @@ Target:  Pyz/Zed/Single/Communication/Plugin/SinglePlugin
 
 #### Documentation
 
-* [Run the evaluator tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html)
-* [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)
+* [Run the evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html)
+* [Upgradability guidelines](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html)
 
 
 ### [ACP App] Algolia App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -133,24 +133,24 @@ Glue as an API stays the same, but the main module carrying the infrastructure f
 #### Documentation
 
 * General concept documentation
-  * [Decoupled Glue API](/docs/scos/dev/glue-api-guides/202307.0/decoupled-glue-api.html)
+  * [Decoupled Glue API](/docs/dg/dev/glue-api/202307.0/decoupled-glue-api.html)
 * How-to documentation:
-  * [Create storefront resources](/docs/scos/dev/glue-api-guides/202307.0/routing/create-storefront-resources.html)
-  * [Create backend resources](/docs/scos/dev/glue-api-guides/202307.0/routing/create-backend-resources.html)
-  * [How to create resources with parent-child relationships](/docs/scos/dev/glue-api-guides/202307.0/create-glue-api-resources-with-parent-child-relationships.html)
-  * [Create routes](/docs/scos/dev/glue-api-guides/202307.0/routing/create-routes.html)
-  * [ and Storefront API module differences](/docs/scos/dev/glue-api-guides/202307.0/backend-and-storefront-api-module-differences.html)
-  * [How to use default Glue parameters](/docs/scos/dev/glue-api-guides/202307.0/use-default-glue-parameters.html)
-  * [How to create a JSON API relationship](/docs/scos/dev/glue-api-guides/202307.0/create-json-api-relationships.html)
-  * [How to document Glue API endpoints](/docs/scos/dev/glue-api-guides/202307.0/document-glue-api-endpoints.html)
-  * [How to create authorization strategies](/docs/scos/dev/glue-api-guides/202307.0/create-glue-api-authorization-strategies.html)
-  * [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/202307.0/use-glue-api-authorization-scopes.html)
-  * [How to create protected endpoints](/docs/scos/dev/glue-api-guides/202307.0/create-protected-glue-api-endpoints.html)
-  * [Create and change Glue API conventions](/docs/scos/dev/glue-api-guides/202307.0/create-and-change-glue-api-conventions.html)
-  * [How to create grant type parameters](/docs/scos/dev/glue-api-guides/202307.0/create-grant-type-parameters.html)
-  * [How to use an authentication server](/docs/scos/dev/glue-api-guides/202307.0/use-authentication-servers-with-glue-api.html)
-  * [Authentication and authorization](/docs/scos/dev/glue-api-guides/202307.0/authentication-and-authorization.html)
-  * [Security and authentication](/docs/scos/dev/glue-api-guides/202307.0/security-and-authentication.html)
+  * [Create storefront resources](/docs/dg/dev/glue-api/202307.0/routing/create-storefront-resources.html)
+  * [Create backend resources](/docs/dg/dev/glue-api/202307.0/routing/create-backend-resources.html)
+  * [How to create resources with parent-child relationships](/docs/dg/dev/glue-api/202307.0/create-glue-api-resources-with-parent-child-relationships.html)
+  * [Create routes](/docs/dg/dev/glue-api/202307.0/routing/create-routes.html)
+  * [ and Storefront API module differences](/docs/dg/dev/glue-api/202307.0/backend-and-storefront-api-module-differences.html)
+  * [How to use default Glue parameters](/docs/dg/dev/glue-api/202307.0/use-default-glue-parameters.html)
+  * [How to create a JSON API relationship](/docs/dg/dev/glue-api/202307.0/create-json-api-relationships.html)
+  * [How to document Glue API endpoints](/docs/dg/dev/glue-api/202307.0/document-glue-api-endpoints.html)
+  * [How to create authorization strategies](/docs/dg/dev/glue-api/202307.0/create-glue-api-authorization-strategies.html)
+  * [How to use Glue API authorization scopes](/docs/dg/dev/glue-api/202307.0/use-glue-api-authorization-scopes.html)
+  * [How to create protected endpoints](/docs/dg/dev/glue-api/202307.0/create-protected-glue-api-endpoints.html)
+  * [Create and change Glue API conventions](/docs/dg/dev/glue-api/202307.0/create-and-change-glue-api-conventions.html)
+  * [How to create grant type parameters](/docs/dg/dev/glue-api/202307.0/create-grant-type-parameters.html)
+  * [How to use an authentication server](/docs/dg/dev/glue-api/202307.0/use-authentication-servers-with-glue-api.html)
+  * [Authentication and authorization](/docs/dg/dev/glue-api/202307.0/authentication-and-authorization.html)
+  * [Security and authentication](/docs/dg/dev/glue-api/202307.0/security-and-authentication.html)
 
 ### [Framework] Configure OAuth 2.0 clients on install <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -172,7 +172,7 @@ Searching our tables in the back office can cause serious pain for business user
 
 #### Documentation
 
-[Create and configure Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html)
+[Create and configure Zed tables](/docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html)
 
 ### [Framework] Replace Swift Mailer / Swift Mailer library <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -208,8 +208,8 @@ Turn on and off the maintenance mode of an application using a dedicated pipelin
 
 #### Documentation
 
-* [Enable and disable maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
-* [Configure access to applications in maintenance mode](/docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
+* [Enable and disable maintenance mode](/docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html)
+* [Configure access to applications in maintenance mode](/docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html)
 
 ### [Cloud Self-Service] Environment variables management <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -219,7 +219,7 @@ Manage environment variables and secrets of applications using a UI without havi
 
 #### Documentation
 
-[Add variables in the Parameter Store](/docs/cloud/dev/spryker-cloud-commerce-os/add-variables-in-the-parameter-store.html)
+[Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
 
 ### [Cloud Observability] Infrastructure Health Check Monitoring Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -261,9 +261,6 @@ Infrastructure Health Check Monitoring Dashboard: Elasticsearch example:
 
 ![elasticsearch-example](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/elasticsearch-example.png)
 
-**Technical prerequisites:**
-
-As a prerequisite for the New Relic Application Monitoring Performance (APM) integration, which is also an optional additional feature, it must be active.
 
 ### [Cloud Observability] Pipeline Success Dashboard <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
@@ -289,16 +286,14 @@ Pipeline Success Dashboard example:
 
 ![pipeline-success-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.md/pipeline-success-dashboard.png)
 
-**Technical prerequisites**: The Pipeline Success Dashboard feature is *not* a part of Spryker's base offering and is an *optional* additional feature. As a prerequisite, New Relic APM integration, which is also an optional additional feature, needs to be active.
-
 ### [Core Commerce] Upgraded Angular to v15 and Node.js to v18 <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 To maintain the stability and longevity of our platform, we have migrated to Angular v15 and Node.js v18, which are actively supported by their respective communities. This ensures continued support and leveraging of these versions' latest features and improvements. No infrastructure changes are required on your end before performing the upgrade.
 
 #### Documentation
 
-* [Upgrade to Angular v15](/docs/scos/dev/migration-concepts/upgrade-to-angular-15.html)
-* [Upgrade to Node.js v18](/docs/scos/dev/front-end-development/202307.0/migration-guide-upgrade-nodejs-to-v18-and-npm-to-v9.html)
+* [Upgrade to Angular v15](/docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html)
+* [Upgrade to Node.js v18](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html)
 
 ### [Composable Storefront] Early Access release
 
@@ -317,7 +312,7 @@ If you are interested in being part of Spryker's Composable Storefront Early Acc
 **Business benefit**: Spryker Composable Storefront allows Spryker customers to implement and customize a decoupled storefront quickly. It offers Spryker customers a future-proof, agile, and scalable solution.
 #### Documentation
 
-[Oryx](/docs/scos/dev/front-end-development/202307.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/202307.0/oryx/oryx.html)
 
 ### [Dynamic Multistore] Early Access release
 

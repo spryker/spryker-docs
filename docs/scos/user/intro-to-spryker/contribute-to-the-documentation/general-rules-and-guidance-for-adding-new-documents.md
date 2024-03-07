@@ -10,7 +10,7 @@ related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Add product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-product-sections-to-the-documentation.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
   - title: Edit documentation via pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
   - title: Report documentation issues
@@ -57,14 +57,14 @@ To keep our docs consistent, we have templates for all types of documents. The t
 | TEMPLATE   | DESCRIPTION  |
 | ---------------- | ---------------- |
 | [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html) or [Merchant Portal user guides](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html). |
-| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/scos/dev/front-end-development/{{site.version}}/marketplace/angular-components.html). |
+| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/dg/dev/frontend-development/{{site.version}}/marketplace/angular-components.html). |
 | [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/pbc/all/user-management/{{site.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
 | [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html). |
-| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/import-and-export-data/export-file-details-orders.csv.html). |
-| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant-category.csv.html). |
+| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/import-and-export-data/orders-data-export/export-file-details-orders.csv.html). |
+| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant-category.csv.html). |
 | [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-merchantgui-module.html#upgrading-from-version-1-to-version-2). |
 | [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
-| [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html). |
+| [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/tutorials-and-howtos/add-additional-countries-to-checkout.html). |
 | [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
 {% info_block warningBox "Warning" %}
@@ -90,7 +90,7 @@ redirect_from:
 related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
-  - title: Sales Data Export feature integration
+  - title: Install the Sales Data Export feature
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html
 ---
 ```

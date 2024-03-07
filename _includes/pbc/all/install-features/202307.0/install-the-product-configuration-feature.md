@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) feature.
 
 
 ## Install feature core
@@ -11,15 +11,15 @@ Follow the steps below to install the Product Configuration feature core.
 
 Install the required features:
 
-| NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                    |
+| NAME                 | VERSION          | INSTALLATION GUIDE                                                                                                                                    |
 |----------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                 |
-| Product              | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                           |
+| Spryker Core         | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                 |
+| Product              | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                           |
 | Cart                 | {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                                 |
-| Order Management     | {{page.version}} | [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)         |
+| Order Management     | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)         |
 | Checkout             | {{page.version}} | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                         |
 | Prices               | {{page.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
-| Inventory Management | {{page.version}} | [Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) |
+| Inventory Management | {{page.version}} | [Inventory management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Wishlist             | {{page.version}} ||
 | ShoppingList         | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)             |
 
@@ -1452,10 +1452,10 @@ Follow the steps below to install the feature frontend.
 
 Overview and install the necessary features before beginning the integration step.
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
 
 ### 1) Install the required modules using Composer
 
@@ -1782,7 +1782,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET                                            | VERIFICATION                                                                                                                                                                          |
 |---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1820,10 +1820,10 @@ Follow the steps below to install an exemplary date-time product configurator.
 
 Overview and install the necessary features before beginning the integration step.
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                    |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product      | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product      | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)           |
 
 ### 1) Install the required modules using Composer
 

@@ -2,6 +2,7 @@
 title: Manage items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:
@@ -19,7 +20,7 @@ For detailed information about the modules that provide the API functionality an
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [GLUE API: Merchant Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
+* [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html
 
 
@@ -1594,7 +1595,7 @@ It is the responsibility of the API Client to track whether the selected items a
 For the attributes of the included resources, see:
 * [Retrieving measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 * [Create a cart](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
 * [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
 * [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
 * [Retrieving product availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/glue-api-retrieve-product-offer-availability.html#product-offer-availability-response-attributes)
@@ -1769,7 +1770,7 @@ Request sample: change item quantity
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html).
+For the attributes of the included resources, see [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html).
 
 ## Remove items from a registered user's cart
 
@@ -1822,4 +1823,4 @@ If the item is deleted successfully, the endpoint returns theÂ `204 No Content`Â
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -204,6 +204,6 @@ Make sure you've addressed all the items from the following checklists:
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 
-If your go-live date is close and you need help with any of the described tasks, contact us by your onboarding case *right away*.
+If your go-live date is close and you need help with any of the described tasks, contact us via your Partner or Customer Success Manager *right away*.
 
 {% endinfo_block %}

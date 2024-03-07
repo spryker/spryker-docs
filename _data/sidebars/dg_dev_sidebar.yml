@@ -537,6 +537,9 @@ entries:
             - title: Directionality
               url: /docs/dg/dev/frontend-development/oryx/internationalization/oryx-directionality.html
 
+        - title: Contribute to Oryx
+          url: /docs/dg/dev/frontend-development/oryx/contribute-to-oryx.html
+
     - title: Marketplace
       url: /docs/dg/dev/frontend-development/marketplace/marketplace-frontend.html
       nested:

@@ -13,6 +13,7 @@ redirect_from:
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
 The preparation steps listed here are mandatory as they are crucial for the success of your go-live. We strongly encourage you to complete these steps if they are applicable to your project, as we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
+
 {% endinfo_block %}
 
 
@@ -28,7 +29,7 @@ Make sure you've addressed all the items from the following checklists.
 
 Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
-{% endinfo_block %
+{% endinfo_block %}
 
 ### Cloud environments
 

@@ -9,7 +9,7 @@ redirect_from:
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
 
-For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/scos/dev/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 ## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Fulfillment App <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 

@@ -1,5 +1,5 @@
 ---
-title: General rules and guidance for adding documents
+title: General rules and guidance for adding docs
 description: Learn how to style and format your docs.
 last_updated: Jul 18, 2022
 template: concept-topic-template

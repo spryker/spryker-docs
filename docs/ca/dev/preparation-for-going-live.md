@@ -71,7 +71,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
   - Install all the [security updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
   - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
-- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for new GDPR rules](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html).
+- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 
 ### Testing

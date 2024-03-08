@@ -1,5 +1,5 @@
 ---
-title: Report documentation issues
+title: Report docs issues
 description: Learn how to report an issue with Spryker docs.
 last_updated: Jul 18, 2022
 template: howto-guide-template

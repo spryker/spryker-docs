@@ -1,10 +1,11 @@
-  - /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
 ---
-title: Edit the documentation locally
+title: Edit the docs locally
 description: Learn how edit the documentation on your machine.
 last_updated: Jan 23, 2023
 template: howto-guide-template
 redirect_from:
+- /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
+
 ---
 
 

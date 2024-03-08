@@ -1,5 +1,5 @@
 ---
-title: Add and edit diagrams in the documentation
+title: Add and edit diagrams in the docs
 description: Learn how to add and edit diagrams.net diagrams in Spryker documentation.
 last_updated: Dec 22, 2022
 template: howto-guide-template

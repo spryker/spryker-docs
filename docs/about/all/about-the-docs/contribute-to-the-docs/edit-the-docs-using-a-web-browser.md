@@ -1,5 +1,5 @@
 ---
-title: Edit the documentation using only a web browser
+title: Edit the docs using a web browser
 description: Learn how you can propose changes to the Spryker docs
 last_updated: Jul 18, 2022
 template: howto-guide-template

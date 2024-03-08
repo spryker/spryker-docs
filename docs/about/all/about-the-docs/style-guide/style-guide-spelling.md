@@ -1,5 +1,5 @@
 ---
-title: Spelling
+title: "Style guide: Spelling"
 description: Guidance for spelling in Spryker documentation
 last_updated: Mar 23, 2023
 template: concept-topic-template

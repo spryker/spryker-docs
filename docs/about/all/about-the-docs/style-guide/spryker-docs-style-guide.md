@@ -1,5 +1,5 @@
 ---
-title: Spryker documentation style guide
+title: Spryker docs style guide
 description:
 last_updated: Mar 23, 2023
 template: concept-topic-template

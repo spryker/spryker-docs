@@ -1,5 +1,5 @@
 ---
-title: Run the documentation locally
+title: Run the docs locally
 description: Find out how you can build the Spryker documentation site
 last_updated: Jul 18, 2022
 template: howto-guide-template

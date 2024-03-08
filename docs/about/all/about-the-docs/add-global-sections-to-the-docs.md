@@ -1,5 +1,5 @@
 ---
-title: Add global sections to the documentation
+title: Add global sections to the docs
 description: Learn how to add a new global section to Spryker docs.
 last_updated: Jul 18, 2022
 template: howto-guide-template
@@ -291,4 +291,4 @@ task :check_mp_dev do
 ...  
 ```
 
-After you merge the PR and it's deployed to master, you will be able to search across the new section.
+After you merge the PR and it's deployed to master, you will see the added section on the website.

@@ -41,8 +41,6 @@
                                                 SCOS developer guide
                                                 {% elsif page.product == 'scos' and page.role == 'user' %}
                                                 SCOS users guide
-                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
-                                                Spryker SDK
                                                 {% else %}
                                                 Select a guide
                                                 {% endif %}
@@ -112,11 +110,6 @@
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
-                                                Spryker SDK
-                                                </a>
-                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -126,30 +119,15 @@
                     </div>
 
 
-                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
-                        <div class="search-popup">
-                            <div class="search-popup__inner">
-                                <div class="search-popup__content">
-                                    <a href="#" class="search-popup__close js-search-popup-close" aria-label="search popup close"><i class="icon-arrow-left"></i></a>
-                                    <div class="main-header__search">
-                                        <i class="main-header__search-icon icon-search"></i>
-                                        {% include search/{{ site.search | default "default" }}_deprecated-quicksearch.html %}
-                                    </div>
-                                </div>
-                                <div class="search-popup__footer">
-                                    <a href="/search" class="search-popup__more">Show all results</a>
-                                </div>
-                            </div>
+                    {% if page.url != "/index.html" and page.url != "/search/" %}
+                        <div class="search-section-panel search-section-panel--secondary main-header__search">
+                            {% include search/{{ site.search | default "default" }}-quicksearch.html %}
                         </div>
                     {% endif %}
 
                 </div>
                 <div class="main-header__right">
-                    {% if page.url != "/search/" %}
-                        <a href="#" class="main-header__search-opener js-search-popup-opener" aria-label="search popup opener"><i class="icon-search"></i></a>
-                    {% endif %}
-
-                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
+                    {% if page.url != "/index.html" and page.url != "/search/" %}
                         <div class="header-switcher">
                             {% if site.github_editme_path %}
                                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button main-header__button button--small header-switcher__sticky" role="button"><i class="icon-github"></i> Edit on GitHub</a>

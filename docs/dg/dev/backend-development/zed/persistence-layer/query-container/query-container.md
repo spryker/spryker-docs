@@ -56,7 +56,7 @@ To generate the related code, you can use the following definitions:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery`: Add Zed Persistence Propel Abstract Query
 
-For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
 
 ## Next steps
 

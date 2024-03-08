@@ -81,7 +81,7 @@ To remove a marketplace concrete product's price, follow these steps:
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
 | Customer | Defines whether the price will be applied to all customers or a specific one. If **Default** is selected, the price will be applied to all customers.   |
-| Store          | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the price will be displayed. |
+| Store          | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the concrete product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |

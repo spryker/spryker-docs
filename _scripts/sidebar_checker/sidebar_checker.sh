@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Define doc folder paths
-FOLDERS=("docs/acp/user" "docs/ca/dev" "docs/pbc/all" "docs/scos/dev" "docs/scos/user" "docs/scu/dev" "docs/sdk/dev")
+FOLDERS=("docs/ca/dev" "docs/pbc/all" "docs/about/all" "docs/ca/devscu" "docs/dg/dev")
 
 # Define sidebar file paths
-SIDEBARS=("_data/sidebars/acp_user_sidebar.yml" "_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/scos_dev_sidebar.yml" "_data/sidebars/scos_user_sidebar.yml" "_data/sidebars/scu_dev_sidebar.yml" "_data/sidebars/sdk_dev_sidebar.yml")
+SIDEBARS=("_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/ca_devscu_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/dg_dev_sidebar.yml" "_data/sidebars/about_all_sidebar.yml")
 
 # Define sidebar titles
 TITLES=("ACP User" "Cloud Dev" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")

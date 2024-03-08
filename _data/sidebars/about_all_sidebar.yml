@@ -2,46 +2,36 @@ title: About Spryker
 entries:
   - product: About Spryker
     nested:
-      - title:
-  - title: Intro to Spryker
-    url: /docs/scos/user/intro-to-spryker/intro-to-spryker.html
-    nested:
+    - title: About Spryker
+      url: /docs/about/all/about-spryker.html
     - title: Releases
       url: /docs/scos/user/intro-to-spryker/releases/product-and-code-releases.html
       nested:
-      - title: Release notes
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html
+      - title: Security release notes 202312.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+      - title: Release notes 202311.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0.html
+      - title: Security release notes 202309.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
+      - title: Release notes 202307.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0.html
         nested:
-        - title: Security release notes 202312.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
-        - title: Release notes 202311.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html
-        - title: Security release notes 202309.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
-        - title: Release notes 202307.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html
-          nested:
         - title: Security release notes 202307.0
           url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html
-        - title: Security release notes 202306.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
-        - title: Release notes 202304.0
-          nested:
-          - title: Security release notes 202304.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
-        - title: Release notes 202302.0
-          nested:
-          - title: Security release notes 202302.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
-        - title: Release notes 202212.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
-          nested:
-          - title: Patch releases 202212.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
-          - title: Security release notes 202212.0
-            url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
-    - title: Docs updates
-      url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
+      - title: Security release notes 202306.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
+      - title: Security release notes 202304.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+      - title: Security release notes 202302.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
+      - title: Release notes 202212.0
+        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
+        nested:
+        - title: Patch releases 202212.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
+        - title: Security release notes 202212.0
+          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
+
     - title: Security audit reports
       nested:
       - title: 2019.11 - Security audit by SektionEins
@@ -49,15 +39,17 @@ entries:
       - title: 2020.11 - Penetration test by Port Zero (executive summary)
         url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
 
+    - title: Docs updates
+      url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
+
     - title: Support
+      url: /docs/scos/user/intro-to-spryker/support/getting-support.html
       nested:
       - title: How Spryker Support works
         url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
-      - title: Case escalation
+      - title: Support case escalation
         url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
-      - title: Getting support
-        url: /docs/scos/user/intro-to-spryker/support/getting-support.html
-      - title: Special- Prepare for a busy season
+      - title: Preparing for heavy loads and traffic
         url: /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
       - title: How to use the Support Portal
         url: /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
@@ -67,7 +59,7 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
       - title: Handling security issues
         url: /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
-      - title: Guidelines for new GDPR rules
+      - title: Guidelines for GDPR compliance
         url: /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
       - title: Getting the most out of Spryker Support
         url: /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html

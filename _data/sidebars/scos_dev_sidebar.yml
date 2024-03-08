@@ -950,6 +950,8 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
       - title: PHPStan memory issues
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html
+      - title: Prices filter and sorting doesn't work on Frontend
+        url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/prices-filter-and-sorting-does-t-work-on-frontend.html
       - title: ProcessTimedOutException after queue-task-start
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/processtimedoutexception-after-queue-task-start.html
       - title: RuntimeException - Failed to execute regex - PREG_JIT_STACKLIMIT_ERROR

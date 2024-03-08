@@ -15,6 +15,7 @@ redirect_from:
   - /v6/docs/howto-display-product-groups-by-color-on-the-storefront
   - /v6/docs/en/howto-display-product-groups-by-color-on-the-storefront
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
 ---
 
 To enhance the visual shopping experience of your customers, you can use product groups. A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups feature overview](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-groups-feature-overview.html).

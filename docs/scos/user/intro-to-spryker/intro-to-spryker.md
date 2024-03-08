@@ -103,8 +103,7 @@ Apart from that, if your business case does not fit in one of the proposed model
 This documentation site contains lots of information on Spryker Commerce OS. Select one of the topics below depending on what you want to do next:
 
 * [What's new](/docs/scos/user/intro-to-spryker/whats-new/whats-new.html): general information about Spryker, news, and release notes.
-* [Setup](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html): installation of Spryker.
+* [Setup](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html): installation of Spryker.
 * [Packaged Business Capabilities](/docs/pbc/all/pbc.html): catalogue of functionality and related guides.
-* [Glue REST API](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
+* [Glue REST API](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.
 * [Developer Guides](/docs/scos/dev/developer-getting-started-guide.html): technical information and guides for developers.
-* [Tutorials](/docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html): tutorials and HowTos.

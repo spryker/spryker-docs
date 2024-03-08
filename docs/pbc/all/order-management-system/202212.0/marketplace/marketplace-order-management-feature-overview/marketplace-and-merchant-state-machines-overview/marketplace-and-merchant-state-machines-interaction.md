@@ -2,6 +2,7 @@
 title: Marketplace and merchant state machines interaction
 description: This document contains details about how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Aug 7, 2023
 related:
   - title: Marketplace and merchant state machines overview
     link: docs/marketplace/user/features/202204.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html

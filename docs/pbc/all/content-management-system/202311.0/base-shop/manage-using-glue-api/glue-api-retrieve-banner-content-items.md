@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-content-items/retrieving-banner-content-items.html
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-banner-content-items.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-banner-content-items.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html
 related:
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
@@ -83,4 +84,4 @@ Response sample: retrieve a banner content item
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

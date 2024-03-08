@@ -7,6 +7,7 @@ originalArticleId: dee3b189-78b2-4dd2-ae97-45506831a9b8
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/integrating-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/integrate-computop.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/integrating-computop.html
 ---
 
 {% info_block errorBox %}

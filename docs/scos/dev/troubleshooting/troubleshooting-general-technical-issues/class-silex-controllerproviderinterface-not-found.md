@@ -52,4 +52,4 @@ The current version (1.0.4) of this module uses `SprykerShop\Yves\CheckoutPage\P
 
 ## Solution
 
-Until a new version of this module is provided, users can work around this issue by overriding `EasycreditController` and using `CheckoutPageRouteProviderPlugin` instead of `CheckoutPageControllerPlugin`. Also, see [Silex replacement](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+Until a new version of this module is provided, users can work around this issue by overriding `EasycreditController` and using `CheckoutPageRouteProviderPlugin` instead of `CheckoutPageControllerPlugin`. Also, see [Silex replacement](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).

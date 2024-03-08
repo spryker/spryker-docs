@@ -28,7 +28,7 @@ The merchant onboarding process consists of the following steps:
 4. The merchant [creates products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/manage-products-in-the-merchant-portal.html) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-product-offers.html) in the Merchant Portal. Alternatively, the operator can help the merchant set up the process for automatically importing products and offers from a CSV template or the merchant's PIM or ERP system.
 5. The operator decides what kind of payment process to implement—for example, whether or not to use a *Payment Service Provider (PSP)*.
 6. An order management process for fulfillment, shipping, and returns is established for merchants through the [Spryker State Machine](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/state-machine-cookbook/state-machine-cookbook.html).
-7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator [activates merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and their products and offers in the Back Office. Everything can be activated through a [data importer](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) as well.
+7. The operator conducts a final check on the merchant's public profile, products, and offer quality. The operator [activates merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) and their products and offers in the Back Office. Everything can be activated through a [data importer](/docs/dg/dev/data-import/{{site.version}}/data-importers-implementation.html) as well.
 
 Each step is described in the following sections.
 
@@ -58,7 +58,7 @@ The official relationship between the operator and merchant can be established b
 1. In the Back Office, navigate to **Marketplace&nbsp;<span aria-label="and then">></span> Merchants**.
 2. On the **Overview of Merchants** page that opens, in the **Actions** column, click **Approve Access**.
 
-By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers.
+By [approving the merchant](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html), the operator enables merchant users to access the Merchant Portal to complete their public-facing profile and create products and offers.
 Then, the operator needs to create a merchant admin user based on data provided through the registration form, such as the email or first and last name of the contact person. For this, the operator finds a merchant user in the Back Office, in **Merchant&nbsp;<span aria-label="and then">></span> Users** and assigns them the required permissions.
 The email with the password is automatically sent to access the Merchant Portal later on. The operator can also create more user accounts for the merchant if required.
 
@@ -78,7 +78,7 @@ In the Merchant Portal, merchants can [create and update products](/docs/pbc/all
 
 Based on the product volume, we recommend the following:
 - If the number of products to be created or edited is small, merchants can use the interface in the [Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html).
-- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html).
+- For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html).
 
 {% endinfo_block %}
 
@@ -130,7 +130,7 @@ The following diagram shows an example of a simple State Machine workflow, where
 The following steps are taken by the operator:
 
 1. Do a final check of the merchant's public profile, products, and offer quality.
-2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) and [approve products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers) in the Back Office.
+2. [Activate merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) and [approve products](/docs/pbc/all/product-information-management/{{site.version}}/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-products.html#activating-and-deactivating-a-concrete-product) and [offers](/docs/pbc/all/offer-management/{{site.version}}/marketplace/manage-merchant-product-offers.html#approving-or-denying-offers) in the Back Office.
 3. Optional: Activate and approve products and offers through the data importer.
 4. Optional: To optimize the product and offer approval process, define specific rules per merchant.
 

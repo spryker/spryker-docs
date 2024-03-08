@@ -2,6 +2,7 @@
 title: "Glue API: Update warehouse user assignments"
 description: Learn how to update warehouse user assignments using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 7, 2023
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you make a user warehouse assignment active or inactive.
@@ -18,11 +19,12 @@ For detailed information about the modules that provide the API functionality an
 
 ---
 `PATCH` **/warehouse-user-assignments/*{% raw %}{{warehouse_user_assignment_id}}{% endraw %}***
+
 ---
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the warehouse user assignment to update. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
+| ***{% raw %}{{warehouse_user_assignment_id}}{% endraw %}*** | ID of the warehouse user assignment to update. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
 
 ### Request
 
@@ -57,7 +59,7 @@ Request sample:
 
 ### Response
 
-<details open>
+<details>
   <summary>Response sample: Update the warehouse user assignment.</summary>
 
 ```json
@@ -83,7 +85,7 @@ Request sample:
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: Update the warehouse user assignment. Include the user information in the response.</summary>
 
 ```json
@@ -146,4 +148,4 @@ Request sample:
 | --- | --- |
 | 5201 | The warehouse user assignment with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

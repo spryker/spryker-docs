@@ -1,6 +1,7 @@
 ---
 title: Seven Senders — API requests
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-api-requests.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/seven-senders-api-requests.html

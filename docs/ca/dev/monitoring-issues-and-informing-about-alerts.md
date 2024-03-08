@@ -2,11 +2,12 @@
 title: Monitoring issues and informing about alerts
 DESCRIPTION: Learn how issues with environments are monitored and how customers are informed about alerts on SCCOS
 template: concept-topic-template
+last_updated: Feb 07, 2024
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
 ---
 
-Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This document explains in details how monitoring and alerting works on Spryker Cloud Commerce OS.
+Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. If an issue occurs, this team takes action autonomously and informs you about any further actions needed on their or your side. This document explains how monitoring and alerting works.
 
 ## What is monitored?
 
@@ -16,13 +17,14 @@ The following alerts are configured by default for all environments.
 
 <div class="width-100">
 
-|NAME OF METRIC   | DESCRIPTION  |
+| NAME OF METRIC   | DESCRIPTION  |
 |---|---|
-|External monitor: HTTP check Yves/Zed /health-check (Draft)   | Checks if Yves and Zed health-check endpoints provide an expected response.  |
-| 200 responses on Yves / Glue in ALB  | Checks whether Yves and GLUE provide 200 OK response to application load balancer.  |
-| 200 responses on Zed in ALB  | Checks whether ZED endpoint provides 200 OK response to application load balancer.  |
-| AVG Response time in ms  | Checks the page response time and runs on a pre-set threshold.  |
-| ALB 5XX response codes | Checks the status codes the application load balancer receives from the load balanced applications for the 5XX status codes.  |
+| External monitor: HTTP check Yves/Zed /health-check (Draft)   | Checks if Yves and Zed health-check endpoints provide an expected response.  |
+| 200 responses on Yves / Glue in ALB  | Checks if Yves and GLUE provide the 200 OK response to the application load balancer.  |
+| 200 responses on Zed in ALB  | Checks if the Zed endpoint provides the 200 OK response to the application load balancer.  |
+| AVG Response time in ms  | Checks page response time and runs on a pre-set threshold.  |
+| ALB 5XX response codes | Checks if the application load balancer receives 5XX status codes from the load-balanced applications.  |
+| ALB Healthy Hosts in Target Group | Sends health checks to the registered targets.  |
 
 </div>
 
@@ -34,7 +36,8 @@ The following alerts are configured by default for all environments.
 |---|---|
 | ElastiCache Status  | Checks the status of ‘ElastiCache for Redis’.  |
 | Redis is not used by any service  | Checks whether ElastiCache is used.  |
-| Redis is full  | Alerts the standby team when Redis runs out of memory and is swapping above 50MB of data, the amount of free memory on the host is running low, and when keys are evicted due to memory constraints.   |
+| Redis available Memory  | Checks if Redis free memory on the host is running low.  |
+| Redis High CPU  | Checks if the Redis service is high on CPU usage.  |
 
 </div>
 
@@ -44,7 +47,9 @@ The following alerts are configured by default for all environments.
 
 | NAME OF METRIC  | DESCRIPTION  |
 |---|---|
-| ES cluster status  | Checks the status of the Elasticsearch Cluster.  |  
+| ES Cluster Status  | Checks the status of the Elasticsearch cluster.  |  
+| ES available storage  | Checks the available storage of the Elasticsearch cluster.  |  
+| ES High CPU  | Checks if the Elasticsearch service is high on CPU usage.  |  
 
 </div>
 
@@ -54,8 +59,11 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-|RDS DB connections   | Checks if there are active connections to RDS.  |
-| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO Credits.  |   
+| RDS Status  | Checks the status of the RDS.  |   
+| RDS IO Credits  | Checks if the RDS instance is running low or is running out of IO credits.  |   
+| RDS available storage  | Checks available storage of RDS.  |
+| RDS High CPU   | Checks if the RDS service is high on CPU usage.  |
+
 
 </div>
 
@@ -65,9 +73,12 @@ The following alerts are configured by default for all environments.
 
 |  NAME OF METRIC | DESCRIPTION  |
 |---|---|
-| Jenkins Failed Jobs  | Checks if there are failed jobs on Jenkins.  |
+| Jenkins Status  | Checks the status of Jenkins.  |
 | Scheduler disk is 90% filled  | Alerts the monitoring team once Jenkins disk utilization is at 90% or above.  |
-| Jenkins container can't be deployed  | Checks whether there are deployment failures of the Jenkins container.   |
+| Scheduler inode usage is above 90%  | Alerts the monitoring team once Jenkins inode utilization is at 90% or above.  |
+| Jenkins container can't be deployed  | Checks if there are deployment failures of the Jenkins container.   |
+| Jenkins High CPU  | Checks if the Jenkins service is high on CPU usage.   |
+| Jenkins High Memory  | Checks if the Jenkins service is high on memory usage. |
 
 </div>
 
@@ -78,9 +89,25 @@ The following alerts are configured by default for all environments.
 | NAME OF METRIC  | DESCRIPTION  |  
 |---|---|
 | RabbitMQ web page isn't accessible  | Checks if RabbitMQ web UI is reachable.  |
-| RMQ: status by host  | Checks if the host that RabbitMQ is running on is online.  |
-| RMQ: disk alarms (Draft)  | Checks the status of the storage that is attached the instance that RabbitMQ is running on.  |
-| RMQ: memory alarms  | Checks memory utilization on the RabbitMQ instance.   |
+| RMQ: status by host  | Checks if the RabbitMQ host is reachable.  |
+| RMQ: disk alarms  | Checks the status of the storage attached to the instance which RabbitMQ is running on.  |
+| RMQ: memory alarms  | Checks the memory utilization on the RabbitMQ instance.   |
+| RMQ: missing queues  | Checks for missing queues on the RabbitMQ instance.   |
+| RMQ: High CPU  | Checks if the RabbitMQ service is high on CPU usage.   |
+
+</div>
+
+### Elastic Container Services (ECS)
+
+<div class="width-100">
+
+| NAME OF METRIC  | DESCRIPTION  |  
+|---|---|
+| ECS Service Status  | Checks the status of all ECS services.  |
+| ECS Service High CPU  | Checks if the ECS service is high on CPU usage.  |
+| ECS Service High Memory  | Checks if the ECS service is high on memory usage.  |
+| ECS Service Auto-Scaling  | Monitors the activity of the ECS service auto-scaling.  |
+
 
 </div>
 
@@ -90,20 +117,18 @@ The following alerts are configured by default for all environments.
 
 | NAME OF METRIC  | DESCRIPTION  |  
 |---|---|
-| ECR Image scan results  | Spryker scans images that are used during the application build process. If high severity vulnerabilities are discovered, an alert is triggered.  |
+| ECR Image scan results  | Scans the images used for the application build process. If high severity vulnerabilities are discovered, an alert is triggered.  |
 
 </div>
 
 ## In what cases do we contact you?
 
-Most of the alerts that we receive are temporary states and do not constitute a real problem. However, there are alert patterns that require us to take action. Here we differentiate between acutely critical issues in production environments and staging or test environments. We focus on critical infrastructure problems in the production environments.
+Most alerts we receive are temporary states and aren't a real problem. However, some alert patterns require us to take action. There is a difference between critical issues in production environments and staging or test environments. We focus on critical infrastructure problems in production environments.
 
-If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the alert requires an action, the team decides if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the Case Detail view under Ticket Status.
+If there is an alert, the monitoring team looks for a likely explanation, like a temporary deployment error. If the team needs to take an action, they decide if it requires consent or cooperation from your side. If cooperation or consent is needed, they will contact the responsible person by opening an alert case. If a Solution Partner is responsible, you can track the status of these alert cases and the tickets in the Partner Portal. We update them on a daily basis in the **Case Detail** view under **Ticket Status**.
 
-If it is possible to resolve the problem on our own, we solve it. In case of  downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
-
-To sum up, we proactively inform you about infrastructure issues where your collaboration is necessary. In case of an emergency, we keep you in the loop by sharing our diagnosis, options for action, and after the issue is resolved, a root cause analysis.
+If it's possible to resolve an issue on our own, we'll do it. In case of a downtime or severe service degradation, we inform you about the incident via a case and a Root Cause Analysis [RCA] report.
 
 ## Want more insights?
 
-We offer New Relic APM, so you can also monitor applications and configure alerts  and monitoring to fulfill your needs. If you want to use New Relic APM, [contact support](https://spryker.force.com/support/s/).
+We offer New Relic APM, so you can also monitor applications and configure alerts and monitoring to fulfill your needs. To request an offer for New Relic APM, [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-promotional-items.html  
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/manage-discounts-via-glue-api.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/manage-discounts-via-glue-api.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-manage-discounts.html
 related:
   - title: Promotions and Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html

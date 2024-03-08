@@ -3,6 +3,8 @@ title: "Measurement Units feature: Module relations"
 last_updated: Aug 13, 2021
 description: The Measurement Units feature lets you sell products by any unit of measure defined by in the Back Office
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/measurement-units-feature-module-relations.html
 ---
 
 The following schema illustrates relations between alternative products:

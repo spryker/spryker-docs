@@ -2,6 +2,7 @@
 title: Create and edit product offers
 description: Learn how to create and edit product offers in the Merchant Portal
 template: back-office-user-guide-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/pbc/all/offer-management/202307.0/marketplace/manage-product-offers.html
 related:

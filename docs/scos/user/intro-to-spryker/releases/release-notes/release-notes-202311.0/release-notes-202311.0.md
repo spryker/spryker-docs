@@ -3,6 +3,8 @@ title: Release notes 202311.0
 description: Release notes for the Spryker SCOS release 202311.0
 last_updated: Nov 7, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202204.0/release-notes-202204.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
@@ -26,7 +28,7 @@ The fulfillment App includes the following features:
 - Rapidly customize and scale with a flexibly built app.
 
 ### Documentation
-[Fulfillment App feature overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-feature-overview.html)
+[Fulfillment App overview](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/fulfillment-app-overview.html)
 
 
 ## <span class="inline-img">![core-commerce](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Commerce+OS_128.png)</span> Click&Collect <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -166,7 +168,7 @@ Simplified and faster enablement of ACP for SCCOS, as well as improved scalabili
 [ACP overview](/docs/acp/user/intro-to-acp/acp-overview.html)
 
 ### Technical prerequisites
-[Install the ACP catalog](/docs/acp/user/intro-to-acp/acp-overview.html#installing-the-acp-catalog)
+[Install the ACP catalog](/docs/dg/dev/acp/app-composition-platform-installation.html)
 
 ## <span class="inline-img">![acp](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_App+Orchestration+Platform_128.png)</span> Vertex app <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 Staying up-to-date with ever-changing tax rules and rates can require a lot of resources. Spryker, through the Vertex integration, offers a means for businesses to automate tax calculation and centralize sales taxes on their transactions.
@@ -205,10 +207,11 @@ In addition to updating Spryker packages in your repository, with this release, 
 Reduce the engineering time needed to integrate a Spryker module release into your project.
 
 ### Documentation
-[Integrating code releases](/docs/scu/dev/integrating-code-releases/integrating-code-releases.html)
+[Integrating code releases](/docs/ca/devscu/integrating-code-releases/integrating-code-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Security upgrades <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -219,10 +222,10 @@ Receive security releases before any other releases offered by Spryker Code Upgr
 Reduce the security risks from running outdated software by taking security updates before other updates.
 
 ### Documentation
-[Integrating security releases](/docs/scu/dev/integrating-code-releases/integrating-security-releases.html)
+[Integrating security releases](/docs/ca/devscu/integrating-code-releases/integrating-security-releases.html)
 
 ### Technical prerequisites
-Connect to [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/onboard-to-spryker-code-upgrader.html) service to receive security updates semi-automatically.
+Connect to [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html) service to receive security updates semi-automatically.
 
 ## <span class="inline-img">![code-upgrader](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/code-upgrader.png)</span> Upgradability Evaluator improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -232,13 +235,13 @@ This update offers notifications about critical security issues and vulnerabilit
 Better awareness of security issues and vulnerabilities.
 
 ### Documentation
-- [Handling upgrade warnings](/docs/scu/dev/integrating-code-releases/handling-upgrade-warnings.html)
-- [Spryker security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html)
-- [NPM checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html)
-- [Open-source vulnerabilities checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)
+- [Handling upgrade warnings](/docs/ca/devscu/integrating-code-releases/handling-upgrade-warnings.html)
+- [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html)
+- [NPM checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/npm-checker.html)
+- [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html)
 
 ### Technical prerequisites
-Install and run [Upgrader compliance Evaluator](/docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) to detect security issues.
+Install and run [Upgrader compliance Evaluator](/docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html) to detect security issues.
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Oryx Framework <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -251,10 +254,10 @@ Save time and effort with Oryx Framework. Spryker’s purpose-built framework le
 [Oryx in 90 seconds videos](https://www.youtube.com/playlist?list=PLJooqCSo73Sj9r_632NRtr-O0zuY7eHPb)
 
 ### Documentation:
-[Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/oryx.html)
 
 ### Technical prerequisites:
-Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/getting-started/set-up-oryx.html).
+Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. For installation instructions, see [Set up Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/getting-started/set-up-oryx.html).
 
 ## <span class="inline-img">![composable-frontend](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Composable+Storefront_128.png)</span> Composable Storefront: Additional foundation features - EA (early access) <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -269,7 +272,7 @@ Provides commonplace features out-of-the-box for future-proof, agile, scalable, 
 Composable Storefront is part of the Oryx framework. Oryx provides the features, and the presets for the various applications that you can create with Oryx, such as a Composable Storefront or Fulfillment App.
 
 ### Documentation
-[Oryx](/docs/scos/dev/front-end-development/202311.0/oryx/oryx.html)
+[Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/oryx.html)
 
 ### Technical prerequisites:
 Oryx can be installed on your local machine and requires a Node.js or a compatible Javascript runtime and an npm runtime. See Set up Oryx for more information on the installation.

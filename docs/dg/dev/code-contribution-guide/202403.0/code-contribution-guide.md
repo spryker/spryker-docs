@@ -39,11 +39,6 @@ If we cannot merge a PR due to our release process, we manually introduce the ch
 Please note that pull requests without a signed Contribution License Agreement will not be merged until this requirement is fulfilled.
 We believe that this process will help maintain the integrity of our projects and protect the interests of all contributors.
 
-## Mono-repository
-
-The opened PRs are processed using a special workflow since the Spryker repositories are mainly developed via a mono-repository solution:
-<div style="text-align:center;"><img src="contribution-mono-repository.png" alt="code-contirubtion.png"></div>
-
 
 ## When will you process my request?
 

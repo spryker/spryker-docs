@@ -13,6 +13,7 @@ redirect_from:
 {% info_block warningBox "Jarvis deprecation" %}
 
 Jarvis is not actively supported anymore.
+Recommendations for using the [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html).
 
 {% endinfo_block %}
 

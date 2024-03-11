@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Reduce Jenkins execution without P&S and data importers refactoring"
+title: Reduce Jenkins execution without P&S and data importers refactoring
 description: Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
 last_updated: Jul 15, 2023
 template: howto-guide-template
@@ -7,11 +7,11 @@ redirect_from:
 - /docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html
 ---
 
-By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes are not functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
+By default, the system requires the `queue:worker:start` command to be continuously running for each store to process queues and ensure the propagation of information. In addition to this command, there are other commands such as OMS processing, import, export, and more. When these processes aren't functioning or running slowly, there is a delay in data changes being reflected on the frontend, causing dissatisfaction among customers and leading to disruption of business processes. 
 
 By default, Spryker has a limit of two Jenkins executors for each environment. This limit is usually not a problem for single-store setups, but it can be a critical issue when there are multiple stores. Without increasing this limit, processing becomes slow because only two Workers are scanning queues and running tasks at a time, while other Workers for different stores have to wait. On top of this, even when some stores don't have messages to process, we still need to run a Worker just for scanning purposes, which occupies Jenkins executors, CPU time, and memory.
 
-Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU utilization aren't generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
+Increasing the number of processes per queue can lead to issues such as Jenkins hanging, crashing, or becoming unresponsive. Although memory consumption and CPU usage aren't generally high (around 20-30%), there can be spikes in memory consumption due to a random combination of several workers simultaneously processing heavy messages for multiple stores. 
 
 There are two potential solutions to address this problem that can be implemented simultaneously: application optimization and better background job orchestration.
 
@@ -36,7 +36,7 @@ The background job orchestration solution was developed and tested in a project 
 
 {% info_block warningBox "Performance monitoring" %}
 
-Keep in mind that instance performance also depends on other jobs, such as data import and custom plugins. These jobs can significantly affect the overall performance and runtime of your Publish and Synchronize processes. Therefore, always analyze them with [Application Performance Monitoring](https://docs.spryker.com/docs/scos/dev/the-docker-sdk/202307.0/configure-services.html#new-relic) or [local application profiling](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
+Keep in mind that instance performance also depends on other jobs, such as data import and custom plugins. These jobs can significantly affect the overall performance and runtime of your Publish and Synchronize processes. Therefore, always analyze them with [Application Performance Monitoring](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic) or [local application profiling](/docs/scos/dev/tutorials-and-howtos/howtos/howto-setup-xdebug-profiling.html).
 
 {% endinfo_block %}
 
@@ -76,7 +76,7 @@ Child processes are killed at the end of each minute, which means those batches 
 
 There are two ways to implement the background job orchestration:
 
-1. Applying a patch, although it may require conflict resolution since it is applied on the project level, and each project may have unique customizations already in place. See [these diffs]((https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff)) for an example implementation. 
+1. Applying a patch, although it may require conflict resolution since it is applied on the project level, and each project may have unique customizations already in place. See [these diffs](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-cost-without-refactoring/one-worker.diff) for an example implementation. 
 
 ```bash
 git apply one-worker.diff

@@ -10,10 +10,11 @@ redirect_from:
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
+<!-- Remove this doc until the end of 2024 -->
+
 {% info_block warningBox "Jarvis deprecation" %}
 
-Jarvis is not actively supported anymore.
-Recommendations for using the [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html).
+Jarvis is not actively supported. For upgrading your projects, use [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html).
 
 {% endinfo_block %}
 

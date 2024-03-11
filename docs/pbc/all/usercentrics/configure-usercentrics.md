@@ -102,6 +102,15 @@ To use Usercentrics with the Google Tag Manager, make sure the following applies
 
 - In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For details about how to do that, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
 
+### Data Processing Services with Usercentrics
+
+If you already have integrations like [Google Analytics](https://developers.google.com/analytics) or other data processing services set up in your store, you can ensure compliance by following these steps:
+
+- Go to **Service Settings <span aria-label="and then">></span> Data Processing Services**  in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
+- Under "Data Processing Service," select the appropriate service from the list.
+- Apply additional configurations according to your specific use case.
+
+
 ## Configure Usercentrics
 
 To configure Usercentrics, do the following:

@@ -50,7 +50,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Application
 
-- Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/release-notes/release-notes.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
+- Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
 - Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).

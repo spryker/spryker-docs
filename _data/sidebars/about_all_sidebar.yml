@@ -8,29 +8,29 @@ entries:
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
       - title: Security release notes 202312.0
-        url: /docs/about/all/releases/release-notes/security-release-notes-202312.0.html
+        url: /docs/about/all/releases/security-release-notes-202312.0.html
       - title: Release notes 202311.0
-        url: /docs/about/all/releases/release-notes/release-notes-202311.0.html
+        url: /docs/about/all/releases/release-notes-202311.0.html
       - title: Security release notes 202309.0
-        url: /docs/about/all/releases/release-notes/security-release-notes-202309.0.html
+        url: /docs/about/all/releases/security-release-notes-202309.0.html
       - title: Release notes 202307.0
-        url: /docs/about/all/releases/release-notes/release-notes-202307.0.html
+        url: /docs/about/all/releases/release-notes-202307.0.html
         nested:
         - title: Security release notes 202307.0
-          url: /docs/about/all/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html
+          url: /docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html
       - title: Security release notes 202306.0
-        url: /docs/about/all/releases/release-notes/security-release-notes-202306.0.html
+        url: /docs/about/all/releases/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
-        url: /docs/about/all/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+        url: /docs/about/all/releases/release-notes-202304.0/security-release-notes-202304.0.html
       - title: Security release notes 202302.0
-        url: /docs/about/all/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
+        url: /docs/about/all/releases/release-notes-202302.0/security-release-notes-202302.0.html
       - title: Release notes 202212.0
-        url: /docs/about/all/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
+        url: /docs/about/all/releases/release-notes-202212.0/release-notes-202212.0.html
         nested:
         - title: Patch releases 202212.0
-          url: /docs/about/all/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
+          url: /docs/about/all/releases/release-notes-202212.0/patch-releases-202212.0.html
         - title: Security release notes 202212.0
-          url: /docs/about/all/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
+          url: /docs/about/all/releases/release-notes-202212.0/security-release-notes-202212.0.html
 
     - title: Security audit reports
       nested:

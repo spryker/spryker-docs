@@ -7,40 +7,47 @@ redirect_from:
 last_updated: March 11, 2024
 ---
 
-This checklist will help you implement Spryker’s best practices, enhancing the stability and performance of the Jenkins component in your Spryker PaaS environment. Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the check list. If you have concerns or questions about iy, raise them with Spryker Support.
+This checklist is designed to help you implement Spryker’s best practices, to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment. Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
 
-- Configure a maximum of 2 executors.
-- Set your PHP memory_limit to be less than 2GB.
-- Implement batch processing (guidelines are here and here) in your importers and be aware of the maximum memory consumption.
+- Configure a maximum of two executors.
+- Set your PHP `memory_limit` value to be less than 2 GB.
+- Implement batch processing (guidelines are here and here) in your importers and be mindful of the maximum memory consumption.
 - Fine-tune the chunk size of the queues you work with.
-- Ensure that your theoretical maximum memory demand (for all planned parallel processes) remains below the memory allocation of your Jenkins instance.
-- Verify that every PHP job you run consumes less memory than your specified PHP memory limit. No “PHP Fatal error: Out of memory” errors should occur.
-- Ensure that no jobs are configured with a non-default memory limit or without any memory limit at all in jenkins.php (e.g., php -d memory_limit=-1 vendor/bin/console ...).
-- Avoid spawning an excessive number of workers (not more than 2 per queue).
+- Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
+- Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error “PHP Fatal error: Out of memory”.
+- Make sure that no jobs are configured with a non-default memory limit or without any memory limit at all in `jenkins.php`. For example,`php -d memory_limit=-1 vendor/bin/console ...`.
+- Avoid spawning an excessive number of worker. There should be no more than two workers per queue.
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
 - In a standard-sized non-production environment, run lengthy imports and sync processes lasting more than 1-2 hours.
 - Refer to troubleshooting instructions for further assistance.
-- Be prepared to lose manually created jobs; ensure that all critical jobs are persisted in your project (jenkins.php).
+- Be prepared to lose manually created jobs. Make sure that all critical jobs are persisted in your project (jenkins.php).
 
 ## Theoretical max memory demand and memory constraints
-In Spryker, Jenkins plays a central role in executing jobs for your application. These jobs can be CLI commands, such as `vendor/bin/console queue:worker:start`. On Spryker PaaS, unlike as in local developer environments, these commands are currently not executed in a separate CLI container but run inside the Jenkins Docker container. This is a significant difference that can cause issues related to memory constraints. Let us explore:
-On your local development machine, you might have noticed that the CLI container, by default, will consume as much RAM as it requires until your machine can no longer provide more. While this behavior is convenient, it unfortunately conceals potential issues related to memory consumption in your jobs. This can lead to Jenkins instability when your application is deployed on Spryker PaaS. When deployed on Spryker PaaS, your jobs must “fit” within several memory constraints as explained in more detail in this [article](https://docs.spryker.com/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 
-![Memory Constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
+In Spryker, Jenkins plays a central role in executing jobs for your application. These jobs can be CLI commands, such as `vendor/bin/console queue:worker:start`. On Spryker PaaS, unlike local developer environments, these commands are currently not executed in a separate CLI container but run inside the Jenkins Docker container. This is a significant difference that can cause issues related to memory constraints.
+For example, on your local development machine, you might have noticed that the CLI container, by default, consumes as much RAM as it needs until your machine can no longer provide more. While this behavior is convenient, it conceals potential issues related to memory consumption in your jobs. This can lead to Jenkins instability when your application is deployed on Spryker PaaS. When deployed on Spryker PaaS, your jobs must adhere to several memory constraints as explained in [Best practices: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 
-n a nutshell: In the above diagram, we want to showcase the different memory constraints you will need to pay attention to to maximise Jenkins stability.
+The following diagram showcases different memory constraints you should consider to maximize Jenkins stability.
 
-It is important to understand that each Jenkins executor can run one PHP job (that can potentially spawn multiple PHP threads (child processes) -  each capable of consuming RAM up to memory_limit). 
-Especially the `vendor/bin/console queue:worker:start` CLI command is often configured to have multiple “workers” (or threads). OOTB it is often the most RAM-intensive job, so we will use it as an example going forward:
+![memory-constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
 
-It is crucial that the combined theoretical max memory consumption, which can be estimated by using the formula below, is below the total RAM supply of the Jenkins Container. OOTB, the Jenkins container is configured in a way to make the best use of the total memory supply of its host. You can calculate the Jenkins Container’s available RAM, by deducting 750MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
-Note: We have swap enabled in most environments in an effort to  help with instability introduced by excessive memory demand. While this should theoretically help reducing the impact of memory spikes, it has significant impact on performance. To avoid swapping, keep your theoretic RAM demand within the aforementioned constraints
+Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads (child processes). Each executor can consume RAM up to `memory_limit` value. 
+The `vendor/bin/console queue:worker:start` CLI command, in particular, is often configured to have multiple workers or threads and is typically the most RAM-intensive job. Hence, we will use it as an example moving forward.
+
+It is crucial to ensure that the combined theoretical max memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container’s available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
+
+{% info_block infoBox "Info" %}
+
+In most environments, we have swap enabled to mitigate instability caused by excessive memory demand. While this theoretically helps reduce the impact of memory spikes, it significantly affects performance. To avoid swapping, make sure that your theoretical RAM demand remains within the aforementioned constraints.
+
+{% endinfo_block %}
 
 Formula to estimate your max theoretical RAM demand:
-Number of Executors x (Max Workers and Threads spawned by heaviest Job * memory_limit) = Theoretical max RAM Demand
 
-As you can see by the multiplicative nature of the threads and executors, you can easily reach a surprisingly high theoretical max RAM demand. Of course, you will need to be very unlucky to actually consume this amount - you would need to be in a situation where you have multiple your heaviest jobs run in parallel and consume up to memory_limit at the same time), but calculating it is a good exercise as keeping your theoretical max RAM Demand below the memory supply will increase stability tremendously as it virtually eliminates the risk of Jenkins crashing due to exhausting its memory supply. This today is the single most common root cause for Jenkins service degradations and outages.
+Number of executors x (maximum workers and threads spawned by heaviest job * memory_limit) = Theoretical max RAM Demand
+
+As you can see from the multiplicative nature of the threads and executors, you can easily reach a surprisingly high theoretical max RAM demand. However, it's unlikely that you will actually consume this amount. You would need to have multiple heaviest jobs running in parallel and consuming up to the `memory_limit simultaneously`. Nevertheless, calculating it is good practice, as keeping your theoretical maximum RAM demand below the memory supply significantly increases stability as it virtually eliminates the risk of Jenkins crashing due to exhausting its memory supply. This is currently the most common root cause of Jenkins service degradation and outages.
 
 ### To Dos
 - My theoretical max memory demand is below the Memory allocation of my Jenkins Instance

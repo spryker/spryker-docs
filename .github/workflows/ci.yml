@@ -33,6 +33,34 @@ jobs:
           name: build-result
           path: result.tar.gz
 
+  link_validation_check_about:
+    name: Links validation (check_about)
+    needs: jekyll_build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.2.2
+          bundler-cache: true
+
+      - name: Cache HTMLProofer
+        id: cache-htmlproofer
+        uses: actions/cache@v2
+        with:
+          path: tmp/.htmlproofer
+          key: ${{ runner.os }}-check_about_all-htmlproofer
+
+      - uses: actions/download-artifact@v2
+
+      - name: Unpack artifacts
+        run: tar -xf build-result/result.tar.gz
+
+      - run: bundle exec rake check_about          
+
   link_validation_check_ca:
     name: Links validation (check_ca)
     needs: jekyll_build

@@ -9,4 +9,4 @@ redirect_from:
 
 ---
 
-{% include scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.md %} <!-- To edit, see /_includes/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.md-->
+{% include scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-release-notes-202212.0.md %} <!-- To edit, see /_includes/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-release-notes-202212.0.md-->

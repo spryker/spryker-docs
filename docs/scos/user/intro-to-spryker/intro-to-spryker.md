@@ -1,7 +1,7 @@
 ---
 title: Intro to Spryker
 description: The Spryker Commerce OS or SCOS is a completely modular, API-first, headless commerce technology for transactional business models in a B2B or B2C context.
-last_updated: Sep 9, 2021
+last_updated: Mar 4, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/about-spryker
 originalArticleId: 0798f4ee-6a6b-46ed-baa8-e7e885700585

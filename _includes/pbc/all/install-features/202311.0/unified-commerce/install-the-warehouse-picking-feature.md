@@ -329,7 +329,7 @@ class GlueBackendApiApplicationAuthorizationConnectorConfig extends SprykerGlueB
 
 {% endinfo_block %}
 
-## Configure the push notification provider
+### Configure the push notification provider
 
 Add the configuration:
 
@@ -443,7 +443,7 @@ Make sure the defined picking list strategies have been imported to the `spy_sto
 
 {% endinfo_block %}
 
-## 4) Add translations
+## 5) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -480,7 +480,7 @@ picking_list_push_notification.validation.warehouse_entity_not_found,Lager nicht
 console data:import glossary
 ```
 
-## 5) Set up behavior
+## 6) Set up behavior
 
 1. Enable the following behaviors by registering the plugins:
 

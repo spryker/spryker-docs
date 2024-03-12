@@ -10,24 +10,24 @@ last_updated: March 11, 2024
 This checklist will help you implement Spryker’s best practices, enhancing the stability and performance of the Jenkins component in your Spryker PaaS environment. Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the check list. If you have concerns or questions about iy, raise them with Spryker Support.
 
 
-- [ ] Configure a maximum of 2 executors.
-- [ ] Set your PHP memory_limit to be less than 2GB.
-- [ ] Implement batch processing (guidelines are here and here) in your importers and be aware of the maximum memory consumption.
-- [ ] Fine-tune the chunk size of the queues you work with.
-- [ ] Ensure that your theoretical maximum memory demand (for all planned parallel processes) remains below the memory allocation of your Jenkins instance.
-- [ ] Verify that every PHP job you run consumes less memory than your specified PHP memory limit. No “PHP Fatal error: Out of memory” errors should occur.
-- [ ] Ensure that no jobs are configured with a non-default memory limit or without any memory limit at all in jenkins.php (e.g., php -d memory_limit=-1 vendor/bin/console ...).
-- [ ] Avoid spawning an excessive number of workers (not more than 2 per queue).
-- [ ] Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
-- [ ] In a standard-sized non-production environment, run lengthy imports and sync processes lasting more than 1-2 hours.
-- [ ] Refer to troubleshooting instructions for further assistance.
-- [ ] Be prepared to lose manually created jobs; ensure that all critical jobs are persisted in your project (jenkins.php).
+- Configure a maximum of 2 executors.
+- Set your PHP memory_limit to be less than 2GB.
+- Implement batch processing (guidelines are here and here) in your importers and be aware of the maximum memory consumption.
+- Fine-tune the chunk size of the queues you work with.
+- Ensure that your theoretical maximum memory demand (for all planned parallel processes) remains below the memory allocation of your Jenkins instance.
+- Verify that every PHP job you run consumes less memory than your specified PHP memory limit. No “PHP Fatal error: Out of memory” errors should occur.
+- Ensure that no jobs are configured with a non-default memory limit or without any memory limit at all in jenkins.php (e.g., php -d memory_limit=-1 vendor/bin/console ...).
+- Avoid spawning an excessive number of workers (not more than 2 per queue).
+- Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
+- In a standard-sized non-production environment, run lengthy imports and sync processes lasting more than 1-2 hours.
+- Refer to troubleshooting instructions for further assistance.
+- Be prepared to lose manually created jobs; ensure that all critical jobs are persisted in your project (jenkins.php).
 
 ## Theoretical max memory demand and memory constraints
 In Spryker, Jenkins plays a central role in executing jobs for your application. These jobs can be CLI commands, such as `vendor/bin/console queue:worker:start`. On Spryker PaaS, unlike as in local developer environments, these commands are currently not executed in a separate CLI container but run inside the Jenkins Docker container. This is a significant difference that can cause issues related to memory constraints. Let us explore:
 On your local development machine, you might have noticed that the CLI container, by default, will consume as much RAM as it requires until your machine can no longer provide more. While this behavior is convenient, it unfortunately conceals potential issues related to memory consumption in your jobs. This can lead to Jenkins instability when your application is deployed on Spryker PaaS. When deployed on Spryker PaaS, your jobs must “fit” within several memory constraints as explained in more detail in this [article](https://docs.spryker.com/docs/ca/dev/best-practices/best-practises-jenkins-stability.html).
 
-![Memory Constraints](https://s3.console.aws.amazon.com/s3/buckets/spryker?region=eu-central-1&bucketType=general&prefix=docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/)
+![Memory Constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
 
 n a nutshell: In the above diagram, we want to showcase the different memory constraints you will need to pay attention to to maximise Jenkins stability.
 
@@ -43,10 +43,10 @@ Number of Executors x (Max Workers and Threads spawned by heaviest Job * memory_
 As you can see by the multiplicative nature of the threads and executors, you can easily reach a surprisingly high theoretical max RAM demand. Of course, you will need to be very unlucky to actually consume this amount - you would need to be in a situation where you have multiple your heaviest jobs run in parallel and consume up to memory_limit at the same time), but calculating it is a good exercise as keeping your theoretical max RAM Demand below the memory supply will increase stability tremendously as it virtually eliminates the risk of Jenkins crashing due to exhausting its memory supply. This today is the single most common root cause for Jenkins service degradations and outages.
 
 ### To Dos
-- [ ] My theoretical max memory demand is below the Memory allocation of my Jenkins Instance
-- [ ] Every PHP Job I am running consumes less than my specified PHP memory limit.
-- [ ] I have configured my php memory_limit to be less than 2GB
-- [ ] I have configured a maximum of 2 executors
+- My theoretical max memory demand is below the Memory allocation of my Jenkins Instance
+- Every PHP Job I am running consumes less than my specified PHP memory limit.
+- I have configured my php memory_limit to be less than 2GB
+- I have configured a maximum of 2 executors
 
 Additional Info: If you are running multiple stores, you might notice that jobs “pile up” with only 2 executors configured. This is because adding stores usually duplicates all jobs. While most jobs are executed quickly and Jenkins cycles through these jobs quickly enough, the queue:worker:start jobs might take longer and can lead to some shops not propagating messages in a timely manner. To work around this circumstance, we have published this article, that helps you process all queues by just using a [single executor slot](https://docs.spryker.com/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html).
 
@@ -93,13 +93,13 @@ Here, stopping heavy jobs for 2-3 hours will often allow CPU credits to be recov
 If you are regularly running into the aforementioned issues or simply need to run sustained high load on your non production systems, please discuss upgrading your environment with your Account Manager. All packages above standard generally run with instance types that do not require credits for CPU performance. 
 
 ### ToDos
-- [ ] I am not spawning an excess amount of workers (not more than 2 per queue)
-- [ ] I have profiled my jobs locally and know their normal memory demand with the data it is expected to interact with
-- [ ] When on a Standard sized non production environment: I am running lengthy imports and sync processes with a duration of more than 1-2hs
-- [ ] I have implemented batch processing in my importers and know what the maximum memory consumption of my importer is
-- [ ] I have configured in the chunk size of the queues i am working so that they are compatible with the memory constraint of my environment
+- I am not spawning an excess amount of workers (not more than 2 per queue)
+- I have profiled my jobs locally and know their normal memory demand with the data it is expected to interact with
+- When on a Standard sized non production environment: I am running lengthy imports and sync processes with a duration of more than 1-2hs
+- I have implemented batch processing in my importers and know what the maximum memory consumption of my importer is
+- I have configured in the chunk size of the queues i am working so that they are compatible with the memory constraint of my environment
 
 ## Jenkins job configuration
 With all the prep work down listed above, you should already see a significant improvement in Jenkins stability. To further improve the resilience of your setup, we gathered the following general recommendations for you.
 When the Jenkins host crashes and needs to be re-provisioned, it is likely that all manually created jobs are lost. This is why we are recommending to persist important jobs in [code](https://docs.spryker.com/docs/dg/dev/backend-development/cronjobs/cronjobs.html#using-cronjob-schedulers), so that when vendor/bin/console scheduler:setup is run during recovery, all your important jobs are installed back.
-- [ ] I am OK with losing my manually created jobs and have all important jobs persisted in my project
+- I am OK with losing my manually created jobs and have all important jobs persisted in my project

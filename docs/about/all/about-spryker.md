@@ -74,7 +74,7 @@ Being a managed cloud platform, Spryker lets you develop applications without sp
 
 We take care of the infrastructure security and provide you with guidelines for keeping your project secure. Our 24/7 support team monitors your applications and informs you about potential issues to avoid downtimes.  
 
-### Benefits of cloud
+### Benefits of cloud infrastructure
 
 * Infrastructure scales with your project and traffic
 * Increased speed

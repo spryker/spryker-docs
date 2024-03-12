@@ -93,7 +93,7 @@ task :check_ca do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_about_all do
+task :check_about do
   options = commonOptions.dup
   options[:ignore_files] = [
     /docs\/ca\/.+/,

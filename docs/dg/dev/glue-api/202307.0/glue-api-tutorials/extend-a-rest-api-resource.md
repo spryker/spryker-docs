@@ -46,7 +46,7 @@ The following guide relies on your knowledge of the structure of the Glue REST A
 
 {% info_block infoBox %}
 
-If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) installed, all the required components are available out of the box.
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#demo-shops) installed, all the required components are available out of the box.
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 

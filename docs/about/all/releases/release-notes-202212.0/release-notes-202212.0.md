@@ -12,7 +12,7 @@ redirect_from:
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and enhancements.
 
-For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/scos/dev/developer-getting-started-guide.html).
+For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 ## Spryker Commerce OS
 

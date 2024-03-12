@@ -33,7 +33,7 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 
 ## Prerequisites
 
-* [Install Spryker project locally](/docs/scos/dev/developer-getting-started-guide.html#install-spryker)
+* [Install Spryker project locally](/docs/dg/dev/development-getting-started-guide.html#install-spryker)
 * [Install Node.js](https://nodejs.org/en/download)
 
 ## Install Spryker Jarvis

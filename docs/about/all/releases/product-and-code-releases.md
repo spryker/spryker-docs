@@ -74,4 +74,4 @@ To receive the security updates, please request the subsription at [support@spry
 
 ## Next steps
 
-* [Release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html)
+* [Release notes](/docs/about/all/releases/release-notes/release-notes.html)

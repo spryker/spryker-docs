@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/b2b-suite.html
 related:
   - title: B2C Suite
-    link: docs/scos/user/intro-to-spryker/b2c-suite.html
+    link: docs/about/all/b2c-suite.html
 ---
 
 The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:

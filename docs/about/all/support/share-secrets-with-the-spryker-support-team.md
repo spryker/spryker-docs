@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
 ---
 
-This document explains how you can securely share secrets or credentials with the [Spryker Support Team](/docs/scos/user/intro-to-spryker/support/getting-support.html). In general, the safest way to share secrets is not to share them, but if the situation demands it, we ask you to share secrets only the way described in this document.
+This document explains how you can securely share secrets or credentials with the [Spryker Support Team](/docs/about/all/support/getting-support.html). In general, the safest way to share secrets is not to share them, but if the situation demands it, we ask you to share secrets only the way described in this document.
 
 {% info_block warningBox %}
 

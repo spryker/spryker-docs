@@ -154,7 +154,7 @@ This involves additional migration effort because of a required upgrade to PHP 8
 
 {% endinfo_block %}
 
-To upgrade to PHP 8.0, see [Supported versions of PHP](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html).
+To upgrade to PHP 8.0, see [Supported versions of PHP](/docs/about/all/whats-new/supported-versions-of-php.html).
 
 Ensure that you have the security fix applied to the PHP8 version.
 

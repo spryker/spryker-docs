@@ -26,14 +26,14 @@ At Spryker people from around the world work together to provide outstanding pro
 If you discover a problem with Spryker Software, please let us know immediately. Avoid ignoring a problem that you find, or work around it without reporting it to us. Not only would this prevent us from making our software better, but your workaround might not be maintainable and could cause you problems with upgradability or reduce your flexibility sometime in the future.
 
 ### Bring the right information
-Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [Getting the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html).
+Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [Getting the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html).
 
 ### Assess business impact realistically
-To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to do this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation of what business impact is and how priorities work have a look into this [article](/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized).
+To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to do this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation of what business impact is and how priorities work have a look into this [article](/docs/about/all/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized).
 
 ## What you can expect from us
 
-In our SLAs, we guarantee certain [First Response Times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time).
+In our SLAs, we guarantee certain [First Response Times](/docs/about/all/support/how-spryker-support-works.html#first-response-time).
 You can expect us to react to your cases within the time that is specified in your SLA. While we work to resolve high-priority issues as fast as possible, we do not and cannot guarantee resolution times for the issues you open with us because of the breadth of cases we offer to work on. Guaranteeing resolution times would make it necessary for us to make the definition of the cases we accept stricter, which ultimately will makes it harder and more bureaucratic for you to work with us.
 
 ### Infrastructure support

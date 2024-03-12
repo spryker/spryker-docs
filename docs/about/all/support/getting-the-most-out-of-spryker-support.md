@@ -8,16 +8,16 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
 related:
   - title: How Spryker Support works
-    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+    link: docs/about/all/support/how-spryker-support-works.html
   - title: How to use the Support Portal
-    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
+    link: docs/about/all/support/how-to-use-the-support-portal.html
 ---
 
 We are very proud to have outstanding First Response Times (currently, they average around 35 minutes in busy weeks). However, a first response seldom immediately includes the solution to your problem. So how can we shorten Case Resolution Time?
 
-There are many of factors influencing [case resolution time](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#case-resolution-time). Some of them are determined by internal Spryker factor conditions, like availability of developer and engineering resources; others are external. One of these external factors is the question whether a case is immediately actionable. If a case contains all the information necessary for us to get working on it, it will be solved faster. How can you help us in this regard? Let's take a look at the form that is used to open a case with us:
+There are many of factors influencing [case resolution time](/docs/about/all/support/how-spryker-support-works.html#case-resolution-time). Some of them are determined by internal Spryker factor conditions, like availability of developer and engineering resources; others are external. One of these external factors is the question whether a case is immediately actionable. If a case contains all the information necessary for us to get working on it, it will be solved faster. How can you help us in this regard? Let's take a look at the form that is used to open a case with us:
 
-We are very proud to have outstanding [first response times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time) (currently they average at around 35 Minutes in busy weeks), however, a first response does seldom immediately include the solution to your problem. So how can we shorten case resolution Time?
+We are very proud to have outstanding [first response times](/docs/about/all/support/how-spryker-support-works.html#first-response-time) (currently they average at around 35 Minutes in busy weeks), however, a first response does seldom immediately include the solution to your problem. So how can we shorten case resolution Time?
 
 ## Whitelist our email addresses
 

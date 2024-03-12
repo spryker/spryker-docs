@@ -8,9 +8,9 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
+    link: docs/about/all/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Edit documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
+    link: docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
 ---
 
 We are using [diagrams.net](https://www.diagrams.net/) to create and collaborate on diagrams. diagrams.net provides both a web and desktop applications. To download the latest desktop version, go to [diagrams.net](https://www.diagrams.net/) and click **Download**. Alternatively, you can work on diagrams in a [web app](https://app.diagrams.net/). You can store diagrams in any suitable source.
@@ -24,7 +24,7 @@ After creating a diagram, to embed it into a document, do the following:
     This generates code for embedding the diagram.
 3. To copy the code, click **Copy**.
 4. Open the document you want to add the diagram to in an editor.
-    For instructions about editing the documentation, see [Edit documentation via pull requests](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html).
+    For instructions about editing the documentation, see [Edit documentation via pull requests](/docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html).
 5. Paste the code into the needed place of a document and submit a PR.
     After the PR is merged, the diagram appears on the page.
 
@@ -40,7 +40,7 @@ After creating a diagram, to embed it into a document, do the following:
     This generates code for embedding the diagram.
 6. To copy the code, click **Copy**.
 7. Open the document containing the original diagram in an editor.
-        For instructions about editing the documentation, see [Edit documentation via pull requests](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html).
+        For instructions about editing the documentation, see [Edit documentation via pull requests](/docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html).
 8. Replace the original code with the one you've copied.
 9. Submit a PR with the changes.
     After the PR is merged, the updated diagram appears on the page.

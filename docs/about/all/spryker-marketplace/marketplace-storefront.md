@@ -9,7 +9,7 @@ redirect_from:
 
 ---
 
-*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
+*Marketplace Storefront* is a web application designed for the [marketplace business model](/docs/about/all/spryker-marketplace/marketplace-concept.html). Based on the regular Storefront, it supports all [Spryker Commerce OS](/docs/about/all/intro-to-spryker.html) features. Marketplace functionality lets buyers browse for products and view and purchase them across different merchants.
 
 In most sections of the Marketplace Storefront, customers can see who the seller of a product or offer is.
 
@@ -122,4 +122,4 @@ For an example, see the [Spryker merchant profile](https://www.de.b2c-marketplac
 
 ## Read next
 
-[Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html)
+[Merchant Portal](/docs/about/all/spryker-marketplace/marketplace-storefront.html)

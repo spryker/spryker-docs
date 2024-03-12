@@ -18,7 +18,7 @@ While we are trying to solve cases on time, we need to triage and prioritize cas
 
 {% info_block infoBox "" %}
 
-Prioritization is only one aspect that influences how fast your case is solved. To learn important tips about what you can do to speed up resolution times, see [Getting the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html).
+Prioritization is only one aspect that influences how fast your case is solved. To learn important tips about what you can do to speed up resolution times, see [Getting the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html).
 
 {% endinfo_block %}
 

@@ -11,17 +11,17 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
+    link: docs/about/all/contribute-to-the-documentation/build-the-documentation-site.html
   - title: Edit documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
+    link: docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
   - title: Report documentation issues
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
+    link: docs/about/all/contribute-to-the-documentation/report-documentation-issues.html
   - title: Review pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
+    link: docs/about/all/contribute-to-the-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/style-formatting-general-rules.html
+    link: docs/about/all/contribute-to-the-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
+    link: docs/about/all/contribute-to-the-documentation/markdown-syntax.html
 ---
 
 This document describes how to add global sections to the documentation, like the existing Development or Cloud administration sections.
@@ -38,7 +38,7 @@ In the `/docs` directory, create a folder for the section per role. In this exam
 
 In `_data/sidebars`, create sidebars for the new section per role: `{product_name}_{role}_sidebar.yml`. For the *acp* section with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
-To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html#sidebars).
+To learn how to populate sidebar files, see [Sidebars](/docs/about/all/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html#sidebars).
 
 ## 3. Update the configuration
 

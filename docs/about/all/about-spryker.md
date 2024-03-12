@@ -71,11 +71,11 @@ SCOS is split into four different layers:
 
 ## Spryker B2B and B2C Demo Shops
 
-Our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html) showcase Spryker functionality and help you choose the best possible starting point and set of features based on your business needs. The Demo Shops pose a clear starting point and upgrade path for everything you base your project on. We ship our B2B/B2C Demo Shops as a part of the product, covered by the same commercial license and the same support and LTS (long-term support) rules as individual Spryker Commerce OS modules.
+Our [B2B](/docs/about/all/b2b-suite.html) and [B2C Demo Shops](/docs/about/all/b2c-suite.html) showcase Spryker functionality and help you choose the best possible starting point and set of features based on your business needs. The Demo Shops pose a clear starting point and upgrade path for everything you base your project on. We ship our B2B/B2C Demo Shops as a part of the product, covered by the same commercial license and the same support and LTS (long-term support) rules as individual Spryker Commerce OS modules.
 
 ## I am a new customer, where should I start?
 
-The recommended starting points for all standard commerce projects are our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html#b2b-demo-shop) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html#b2c-demo-shop). We have taken the time to identify the best combination of modules and functionalities for each particular business type and to keep development as lean as possible. Thus, the only thing that remains is to identify your business requirements and select the shop that fits your needs best.
+The recommended starting points for all standard commerce projects are our [B2B](/docs/about/all/b2b-suite.html#b2b-demo-shop) and [B2C Demo Shops](/docs/about/all/b2c-suite.html#b2c-demo-shop). We have taken the time to identify the best combination of modules and functionalities for each particular business type and to keep development as lean as possible. Thus, the only thing that remains is to identify your business requirements and select the shop that fits your needs best.
 
 Apart from that, if your business case does not fit in one of the proposed models, you can start building your project by cherry-picking the modules you need. Since they are released under a commercial license with stable and predictable release cycles, you can build your e-commerce business with reliance and certainty. Our engineers make sure that each module is reliable, backward compatible, and fully regression-tested, and all our releases are supported with an LTS flag (12 months).
 
@@ -83,7 +83,7 @@ Apart from that, if your business case does not fit in one of the proposed model
 
 Select one of the topics below depending on what you want to do next:
 
-* [What's new](/docs/scos/user/intro-to-spryker/whats-new/whats-new.html): general information about Spryker, news, and release notes.
+* [What's new](/docs/about/all/whats-new/whats-new.html): general information about Spryker, news, and release notes.
 * [Setup](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html): installation of Spryker.
 * [Packaged Business Capabilities](/docs/pbc/all/pbc.html): catalogue of functionality and related guides.
 * [Glue REST API](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/glue-rest-api.html): Spryker Glue REST API overview, reference, and features.

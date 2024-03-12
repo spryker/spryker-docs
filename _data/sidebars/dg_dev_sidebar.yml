@@ -1517,8 +1517,6 @@ entries:
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
 
-  - title: Product and code releases
-    url: /docs/dg/dev/product-and-code-releases.html
   - title: Supported versions of PHP
     url: /docs/dg/dev/supported-versions-of-php.html
 

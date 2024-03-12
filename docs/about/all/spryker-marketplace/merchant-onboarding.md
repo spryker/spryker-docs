@@ -10,11 +10,11 @@ last_updated: Mar 29, 2023
 ---
 
 This document describes how to onboard merchants.
-Once created and approved, merchants become official marketplace members and can create products and offers to sell, fulfill orders and manage their profile in [Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html).
+Once created and approved, merchants become official marketplace members and can create products and offers to sell, fulfill orders and manage their profile in [Merchant Portal](/docs/about/all/spryker-marketplace/merchant-portal.html).
 
 There are two primary roles: *operator* and *merchant*:
-* An [operator](/docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
-* A [merchant](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
+* An [operator](/docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html) is a company that owns and administers the platform.
+* A [merchant](/docs/about/all/spryker-marketplace/marketplace-personas.html#merchant-user) is a business entity or individual that sells products on the operator's platform. The operator is responsible and engaged with the merchants to determine how they conduct their operations on the platform. The operator can be a merchant as well.
 
 The merchant onboarding process consists of seven steps. Each step requires specific actions that merchants, operators, or both need to take.
 
@@ -79,7 +79,7 @@ In the Merchant Portal, merchants can [create and update products](/docs/pbc/all
 {% info_block infoBox %}
 
 Based on the product volume, we recommend the following:
-- If the number of products to be created or edited is small, merchants can use the interface in the [Merchant Portal](/docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html).
+- If the number of products to be created or edited is small, merchants can use the interface in the [Merchant Portal](/docs/about/all/spryker-marketplace/merchant-portal.html).
 - For large volumes, use a file and data importers or integrate with the merchant PIM or ERP system through the [Spryker Middleware](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html).
 
 {% endinfo_block %}

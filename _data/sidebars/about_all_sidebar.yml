@@ -5,130 +5,130 @@ entries:
     - title: About Spryker
       url: /docs/about/all/about-spryker.html
     - title: Releases
-      url: /docs/scos/user/intro-to-spryker/releases/product-and-code-releases.html
+      url: /docs/about/all/releases/product-and-code-releases.html
       nested:
       - title: Security release notes 202312.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202312.0.html
+        url: /docs/about/all/releases/release-notes/security-release-notes-202312.0.html
       - title: Release notes 202311.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0.html
+        url: /docs/about/all/releases/release-notes/release-notes-202311.0.html
       - title: Security release notes 202309.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202309.0.html
+        url: /docs/about/all/releases/release-notes/security-release-notes-202309.0.html
       - title: Release notes 202307.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0.html
+        url: /docs/about/all/releases/release-notes/release-notes-202307.0.html
         nested:
         - title: Security release notes 202307.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html
+          url: /docs/about/all/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html
       - title: Security release notes 202306.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/security-release-notes-202306.0.html
+        url: /docs/about/all/releases/release-notes/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
+        url: /docs/about/all/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html
       - title: Security release notes 202302.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
+        url: /docs/about/all/releases/release-notes/release-notes-202302.0/security-release-notes-202302.0.html
       - title: Release notes 202212.0
-        url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
+        url: /docs/about/all/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html
         nested:
         - title: Patch releases 202212.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
+          url: /docs/about/all/releases/release-notes/release-notes-202212.0/patch-releases-202212.0.html
         - title: Security release notes 202212.0
-          url: /docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
+          url: /docs/about/all/releases/release-notes/release-notes-202212.0/security-release-notes-202212.0.html
 
     - title: Security audit reports
       nested:
       - title: 2019.11 - Security audit by SektionEins
-        url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
+        url: /docs/about/all/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
       - title: 2020.11 - Penetration test by Port Zero (executive summary)
-        url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
+        url: /docs/about/all/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
 
     - title: Docs updates
-      url: /docs/scos/user/intro-to-spryker/docs-release-notes.html
+      url: /docs/about/all/docs-release-notes.html
 
     - title: Support
-      url: /docs/scos/user/intro-to-spryker/support/getting-support.html
+      url: /docs/about/all/support/getting-support.html
       nested:
       - title: How Spryker Support works
-        url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+        url: /docs/about/all/support/how-spryker-support-works.html
       - title: Support case escalation
-        url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
+        url: /docs/about/all/support/case-escalation.html
       - title: Preparing for heavy loads and traffic
-        url: /docs/scos/user/intro-to-spryker/support/special-prepare-for-a-busy-season.html
+        url: /docs/about/all/support/special-prepare-for-a-busy-season.html
       - title: How to use the Support Portal
-        url: /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
+        url: /docs/about/all/support/how-to-use-the-support-portal.html
       - title: Share secrets with the Spryker Support Team
-        url: /docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html
+        url: /docs/about/all/support/share-secrets-with-the-spryker-support-team.html
       - title: Understanding ticket status
-        url: /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html
+        url: /docs/about/all/support/understanding-ticket-status.html
       - title: Handling security issues
-        url: /docs/scos/user/intro-to-spryker/support/handling-security-issues.html
+        url: /docs/about/all/support/handling-security-issues.html
       - title: Guidelines for GDPR compliance
-        url: /docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html
+        url: /docs/about/all/support/guidelines-for-new-gdpr-rules.html
       - title: Getting the most out of Spryker Support
-        url: /docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
+        url: /docs/about/all/support/getting-the-most-out-of-spryker-support.html
       - title: Understand SLAs
-        url: /docs/scos/user/intro-to-spryker/support/understand-slas.html
+        url: /docs/about/all/support/understand-slas.html
       - title: Escalations
-        url: /docs/scos/user/intro-to-spryker/support/escalations.html
+        url: /docs/about/all/support/escalations.html
       - title: How to contact Spryker Support
-        url: /docs/scos/user/intro-to-spryker/support/how-to-contact-spryker-support.html
+        url: /docs/about/all/support/how-to-contact-spryker-support.html
       - title: Understanding Project and Core Level Fixes
-        url: /docs/scos/user/intro-to-spryker/support/understanding-project-and-core-level-fixes.html
+        url: /docs/about/all/support/understanding-project-and-core-level-fixes.html
 
     - title: Supported browsers
-      url: /docs/scos/user/intro-to-spryker/supported-browsers.html
+      url: /docs/about/all/supported-browsers.html
     - title: Spryker Marketplace
-      url: /docs/scos/user/intro-to-spryker/spryker-marketplace/spryker-marketplace.html
+      url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:
       - title: Marketplace concept
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html
+        url: /docs/about/all/spryker-marketplace/marketplace-concept.html
       - title: Marketplace personas
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-personas.html
+        url: /docs/about/all/spryker-marketplace/marketplace-personas.html
       - title: Back Office for Marketplace Operator
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/back-office-for-marketplace-operator.html
+        url: /docs/about/all/spryker-marketplace/back-office-for-marketplace-operator.html
       - title: Merchant onboarding
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-onboarding.html
+        url: /docs/about/all/spryker-marketplace/merchant-onboarding.html
       - title: Marketplace Storefront
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-storefront.html
+        url: /docs/about/all/spryker-marketplace/marketplace-storefront.html
       - title: Merchant Portal
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/merchant-portal.html
+        url: /docs/about/all/spryker-marketplace/merchant-portal.html
       - title: Marketplace B2C Suite
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html
+        url: /docs/about/all/spryker-marketplace/marketplace-b2c-suite.html
       - title: Marketplace B2B Suite
-        url: /docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html
+        url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
 
     - title: Spryker Academy
-      url: /docs/scos/user/intro-to-spryker/spryker-academy.html
+      url: /docs/about/all/spryker-academy.html
     - title: Contribute to the documentation
-      url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html
+      url: /docs/about/all/contribute-to-the-documentation/contribute-to-the-documentation.html
       nested:
       - title: Edit the documentation via pull requests
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
+        url: /docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
       - title: Edit the documentation locally
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/edit-the-documentation-locally.html
+        url: /docs/about/all/contribute-to-the-documentation/edit-the-documentation-locally.html
       - title: General rules and guidance for adding new documents
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html
+        url: /docs/about/all/contribute-to-the-documentation/general-rules-and-guidance-for-adding-new-documents.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/markdown-syntax.html
+        url: /docs/about/all/contribute-to-the-documentation/markdown-syntax.html
       - title: Spryker documentation style guide
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html
+        url: /docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html
         nested:
           - title: Examples
-            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html
+            url: /docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html
           - title: Spelling
-            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html
+            url: /docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html
           - title: Word list
-            url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/spryker-documentation-style-guide/word-list.html
+            url: /docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/word-list.html
 
       - title: Add and edit diagrams
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
+        url: /docs/about/all/contribute-to-the-documentation/add-and-edit-diagrams-in-the-documentation.html
       - title: Install recommended VS Code extensions
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/install-recommended-vs-code-extensions.html
+        url: /docs/about/all/contribute-to-the-documentation/install-recommended-vs-code-extensions.html
       - title: Report documentation issues
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/report-documentation-issues.html
+        url: /docs/about/all/contribute-to-the-documentation/report-documentation-issues.html
       - title: Build the documentation site
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html
+        url: /docs/about/all/contribute-to-the-documentation/build-the-documentation-site.html
       - title: Review pull requests
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/review-pull-requests.html
+        url: /docs/about/all/contribute-to-the-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
+        url: /docs/about/all/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
 
 
 

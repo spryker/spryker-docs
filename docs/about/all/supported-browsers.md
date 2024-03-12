@@ -16,7 +16,7 @@ Spryker Cloud Commerce OS supports the following browsers.
 
 ## Base shop supported browsers
 
-[B2B suite](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C suite](/docs/scos/user/intro-to-spryker/b2c-suite.html), and [Master suite](/docs/scos/user/intro-to-spryker/master-suite.html) support the following browsers:
+[B2B suite](/docs/about/all/b2b-suite.html), [B2C suite](/docs/about/all/b2c-suite.html), and [Master suite](/docs/about/all/master-suite.html) support the following browsers:
 
 | DESKTOP: BACK OFFICE AND STOREFRONT | MOBILE: STOREFRONT | TABLET: STOREFRONT |
 | --- | --- | --- |

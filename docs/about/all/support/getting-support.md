@@ -11,18 +11,18 @@ redirect_from:
 
 related:
   - title: How to use the Support Portal
-    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
+    link: docs/about/all/support/how-to-use-the-support-portal.html
   - title: How Spryker Support works
-    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+    link: docs/about/all/support/how-spryker-support-works.html
   - title: Getting the most out of Spryker Support
-    link: docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
+    link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 
 ---
 
-If you need technical help for issues that can't be resolved with the help of the docs, you can always count on our support team. If your case is not an emergency, take the time to learn [How Spryker Support works](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html) and [how to get the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html). Both documents give valuable insights into the inner workings of Spryker Support and let you help us to provide an excellent support experience for you.
+If you need technical help for issues that can't be resolved with the help of the docs, you can always count on our support team. If your case is not an emergency, take the time to learn [How Spryker Support works](/docs/about/all/support/how-spryker-support-works.html) and [how to get the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html). Both documents give valuable insights into the inner workings of Spryker Support and let you help us to provide an excellent support experience for you.
 
 
 Depending on the types of issues, there are several ways to report them and request support from us:
 * For bug reports and product issues, feel free to create a case for our support team at the [support portal](https://support.spryker.com).
-* For security-related issues, follow the instructions at [Security Support](/docs/scos/user/intro-to-spryker/support/handling-security-issues.html).
+* For security-related issues, follow the instructions at [Security Support](/docs/about/all/support/handling-security-issues.html).
 * For general discussions of Spryker-related questions, join the Spryker community at [CommerceQuest](https://commercequest.space/).

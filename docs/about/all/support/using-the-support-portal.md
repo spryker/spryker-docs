@@ -8,9 +8,9 @@ redirect_from:
 - /docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 related:
   - title: How Spryker Support works
-    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+    link: docs/about/all/support/how-spryker-support-works.html
   - title: Getting the most out of Spryker Support
-    link: docs/scos/user/intro-to-spryker/support/getting-the-most-out-of-spryker-support.html
+    link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
 ---
 
 This document describes how to use the support portal to create and manage your cases.
@@ -22,7 +22,7 @@ You can log in to the [support portal](https://support.spryker.com) by using the
 
 ## Create new cases
 
-To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [Share secrets with the Spryker Support Team](/docs/scos/user/intro-to-spryker/support/share-secrets-with-the-spryker-support-team.html).
+To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [Share secrets with the Spryker Support Team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
 ### Questions
 
@@ -34,7 +34,7 @@ Problems can be reports suspecting a bug or issues with our hosting. Please make
 
 ### Emergencies
 
-Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/scos/user/intro-to-spryker/support/escalations.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
+Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/escalations.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
 ### Platform change requests
 

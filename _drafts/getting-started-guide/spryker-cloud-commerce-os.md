@@ -68,13 +68,14 @@ Glue API enables you to integrate any external systems and touchpoints, making y
 
 ## Demo Shops
 
-Demo Shops are fully functional shops with collections of features that match different business models. They serve as a starting point and let you quickly get started with the development of your project. 
+Demo Shops are fully functional shops with collections of features that match different business models. They serve as a starting point and let you quickly get started with the development of your project.
 
 If you want to check out how Spryker works, Demo Shops also take a short amount of time to install them on your machine. The following Demo Shops are available:
 
 * [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html)
 * [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-*
+* [Marketplace B2B Suite](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
+* [Marketplace B2C Suite](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
 
 Demo Shops are covered by the same commercial license and the same support and long-term support rules as individual modules.
 

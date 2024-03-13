@@ -40,6 +40,7 @@ However, our team only tested the following payment methods:
 - Cards: including Visa and Mastercard
 - Debit card
 - Bank transfer
+- PayPal
 - Klarna
 - Apple Pay
 - Google Pay

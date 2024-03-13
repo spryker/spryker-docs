@@ -54,30 +54,11 @@ This document outlines Spryker recommendations for the code architecture.
 
 ## Tools
 
-We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.
+We use our [Project Architecture Sniffer Tool](https://github.com/spryker/project-architecture-sniffer) to assert a certain quality of Spryker architecture for project.
 
-## Running the tool
+The Project Architecture Sniffer is a tool equipped with rules specifically developed for Spryker Projects. 
+These rules are categorized into priority levels ranging from Critical to Minor, each indicating the severity of the issues detected. 
+The recommendation is to set a minimum priority of 3 by default for both local and continuous integration (CI) checks. 
+The tool comprises adapted PHPMD rules, adapted Spryker Architecture sniffer rules, and additional Project Architecture sniffer rules. 
 
-The sniffer can find a lot of violations and report them:
-
-```php
-$ vendor/bin/console code:sniff:architecture
-
-// Sniff a specific subfolder of your project - with verbose output
-$ vendor/bin/console code:sniff:architecture src/Pyz/Zed -v
-
-// Sniff a specific module
-$ vendor/bin/console code:sniff:architecture -m Customer
-```
-
-Tip: `c:s:a` can be used as a shortcut.
-
-**Additional options**:
-
-* -p: Priority [1 (highest), 2 (medium), 3 (experimental)] (defaults to 2)
-* -s: Strict (to also report those nodes with a @SuppressWarnings annotation)
-* -d: Dry-run, only output the command to be run
-
-Run –help or -h to get help about usage of all options available.
-
-See the [architecture sniffer](https://github.com/spryker/architecture-sniffer) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.
+See the [architecture sniffer](https://github.com/spryker/project-architecture-sniffer/blob/main/README.md) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.

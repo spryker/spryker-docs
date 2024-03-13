@@ -1,5 +1,5 @@
 ---
-title: Jenkins stability checklist
+title: Jenkins operational best practices handbook
 description: Checklist for improved Jenkins stability
 template: best-practices-guide-template
 redirect_from:
@@ -12,15 +12,14 @@ This checklist is designed to help you implement Spryker’s best practices to e
 
 - Configure a maximum of two executors.
 - Set your PHP `memory_limit` value to be less than 2 GB.
-- Implement batch processing (guidelines are here and here) in your importers and be mindful of maximum memory consumption.
+- Implement batch processing in your importers and be mindful of maximum memory consumption. For the implementation details, see [Data import optimization guidelines](/docs/dg/dev/data-import/202311.0/data-import-optimization-guidelines.html) and [Integrate elastic computing](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html).
 - Fine-tune the chunk size of the queues you work with.
 - Make sure that your theoretical maximum memory demand for all planned parallel processes remains below the memory allocation of your Jenkins instance.
 - Verify that every PHP job you run consumes less memory than your specified PHP memory limit. There shouldn't be the error “PHP Fatal error: Out of memory”.
 - Make sure that no jobs are configured with a non-default memory limit or without any memory limit at all in `jenkins.php`. For example,`php -d memory_limit=-1 vendor/bin/console ...`.
 - Avoid spawning an excessive number of workers. There should be no more than two workers per queue.
 - Profile your jobs locally to understand their normal memory demand, especially when interacting with data.
-- In a standard-sized non-production environment, run lengthy imports and sync processes lasting more than 1-2 hours.
-- Refer to troubleshooting instructions for further assistance.
+- In a standard-sized non-production environment, don't run lengthy imports and sync processes lasting more than 1-2 hours.
 - Be prepared to lose manually created jobs. Make sure that all critical jobs are persisted in your project (jenkins.php).
 
 ## Theoretical max memory demand and memory constraints

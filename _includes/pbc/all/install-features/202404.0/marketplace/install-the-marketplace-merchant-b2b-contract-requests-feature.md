@@ -1,0 +1,214 @@
+
+This document describes how to install Merchant Portal Merchant B2B Contract Requests feature.
+
+## Install feature core
+
+### Prerequisites
+
+Install the required features:
+
+| NAME                             | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                        |
+|----------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Merchant Portal Core | {{page.version}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
+| Merchant B2B Contract Requests   | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)                    |
+
+### 1) Install the required modules using Composer
+
+Run the following command(s) to install the required modules:
+
+```bash
+composer require spryker-feature/marketplace-merchant-contract-requests: "{{page.version}}" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules were installed:
+
+| MODULE                                         | EXPECTED DIRECTORY                                           |
+|------------------------------------------------|--------------------------------------------------------------|
+| MerchantRelationRequestMerchantPortalGui       | vendor/spryker/merchant-relation-request-merchant-portal-gui |
+
+{% endinfo_block %}
+
+### 2) Set up transfer objects
+
+Run the following commands to generate transfer changes:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied in transfer objects:
+
+| Transfer                                       | Type   | Event   | Path                                                                                 |
+|------------------------------------------------|--------|---------|--------------------------------------------------------------------------------------|
+| MerchantRelationRequestTableCriteria           | class  | created | src/Generated/Shared/Transfer/MerchantRelationRequestTableCriteriaTransfer           |
+| MerchantRelationRequestFormActionConfiguration | class  | created | src/Generated/Shared/Transfer/MerchantRelationRequestFormActionConfigurationTransfer |
+
+{% endinfo_block %}
+
+### 3) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                                         | SPECIFICATION                                                                                                | PREREQUISITES | NAMESPACE                                                                                                       |
+|--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------|
+| IsOpenForRelationRequestOnlineProfileMerchantProfileFormExpanderPlugin         | Expands OnlineProfileMerchantProfileForm with the field that determines merchant relation request allowance. |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantProfileMerchantPortalGui      |
+| MerchantNotificationOfMerchantRelationRequestCreationMailTypeBuilderPlugin     | Builds the `MailTransfer` with data for merchant notification mail.                                          |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\Mail                                  |
+| MerchantNotificationMerchantRelationRequestPostCreatePlugin                    | Sends notification to merchant after merchant relation request is created.                                   |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationRequest               |
+| MerchantRelationRequestMerchantRelationshipMerchantDashboardCardExpanderPlugin | Expands provided `MerchantDashboardCardTransfer` with Merchant relation request data.                        |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationshipMerchantPortalGui |
+
+**src/Pyz/Zed/MerchantProfileMerchantPortalGui/MerchantProfileMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantProfileMerchantPortalGui;
+
+use Spryker\Zed\MerchantProfileMerchantPortalGui\MerchantProfileMerchantPortalGuiDependencyProvider as SprykerMerchantProfileMerchantPortalGuiDependencyProvider;
+use Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantProfileMerchantPortalGui\IsOpenForRelationRequestOnlineProfileMerchantProfileFormExpanderPlugin;
+
+class MerchantProfileMerchantPortalGuiDependencyProvider extends SprykerMerchantProfileMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MerchantProfileMerchantPortalGuiExtension\Dependency\Plugin\OnlineProfileMerchantProfileFormExpanderPluginInterface>
+     */
+    protected function getOnlineProfileMerchantProfileFormExpanderPlugins(): array
+    {
+        return [
+            new IsOpenForRelationRequestOnlineProfileMerchantProfileFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Merchant Portal, go to **Merchant Profile**. 
+On the **Profile** page, go to **Online Profile** tab and make sure you can see the `Allow merchant relation requests` checkbox.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed/MerchantRelationshipMerchantPortalGui/MerchantRelationshipMerchantPortalGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantRelationshipMerchantPortalGui;
+
+use Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationshipMerchantPortalGui\MerchantRelationRequestMerchantRelationshipMerchantDashboardCardExpanderPlugin;
+use Spryker\Zed\MerchantRelationshipMerchantPortalGui\MerchantRelationshipMerchantPortalGuiDependencyProvider as SprykerMerchantRelationshipMerchantPortalGuiDependencyProvider;
+
+class MerchantRelationshipMerchantPortalGuiDependencyProvider extends SprykerMerchantRelationshipMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MerchantRelationshipMerchantPortalGuiExtension\Dependency\Plugin\MerchantRelationshipMerchantDashboardCardExpanderPluginInterface>
+     */
+    protected function getMerchantRelationshipMerchantDashboardCardExpanderPlugins(): array
+    {
+        return [
+            new MerchantRelationRequestMerchantRelationshipMerchantDashboardCardExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure that on **B2B Contracts** pane you can see the **Merchant Relation Requests** section and **Manage Pending Requests** button.
+
+{% endinfo_block %}
+
+**src/Pyz/Zed\Mail/MailDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Mail;
+
+use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
+use Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\Mail\MerchantNotificationOfMerchantRelationRequestCreationMailTypeBuilderPlugin;
+
+class MailDependencyProvider extends SprykerMailDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface>
+     */
+    protected function getMailTypeBuilderPlugins(): array
+    {
+        return [
+            new MerchantNotificationOfMerchantRelationRequestCreationMailTypeBuilderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/MerchantRelationRequest/MerchantRelationRequestDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantRelationRequest;
+
+use Spryker\Zed\MerchantRelationRequest\MerchantRelationRequestDependencyProvider as SprykerMerchantRelationRequestDependencyProvider;
+use Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationRequest\MerchantNotificationMerchantRelationRequestPostCreatePlugin;
+
+class MerchantRelationRequestDependencyProvider extends SprykerMerchantRelationRequestDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MerchantRelationRequestExtension\Dependency\Plugin\MerchantRelationRequestPostCreatePluginInterface>
+     */
+    protected function getMerchantRelationRequestPostCreatePlugins(): array
+    {
+        return [
+            new MerchantNotificationMerchantRelationRequestPostCreatePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that when merchant relation request is created, merchant receives a notification email.
+
+{% endinfo_block %}
+
+### 4) Configure navigation
+
+1. Add the `MerchantRelationRequestMerchantPortalGui` section to `navigation.xml`:
+
+**config/Zed/navigation.xml**
+
+```xml
+<?xml version="1.0"?>
+<config>
+    <b2b-contracts>
+        <label>B2B Contracts</label>
+        <title>B2B Contracts</title>
+        <icon>contracts</icon>
+        <pages>
+            <merchant-relation-request-merchant-portal-gui>
+                <label>Merchant Relation Requests</label>
+                <title>Merchant Relation Requests</title>
+                <bundle>merchant-relation-request-merchant-portal-gui</bundle>
+                <controller>merchant-relation-requests</controller>
+                <action>index</action>
+            </merchant-relation-request-merchant-portal-gui>
+        </pages>
+    </b2b-contracts>
+</config>
+```
+
+2. Build the navigation cache:
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Log in to the Merchant Portal. Make sure there are **B2B Contracts** and **Merchant Relation Requests** navigation menu items.
+
+{% endinfo_block %}

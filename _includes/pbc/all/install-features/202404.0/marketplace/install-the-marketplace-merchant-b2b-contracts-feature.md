@@ -31,7 +31,84 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+### 2) Set up the configuration
+
+Add the following configuration:
+
+| CONFIGURATION                  | SPECIFICATION                                                                                           | NAMESPACE   |
+|--------------------------------|---------------------------------------------------------------------------------------------------------|-------------|
+| AclConfig::getInstallerRules() | The default ACL rules that are added to the respective database table after executing `setup:init-db`.  | Pyz\Zed\Acl |
+
+<details>
+<summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
+
+```php
+<?php
+
+namespace Pyz\Zed\Acl;
+
+use Spryker\Shared\Acl\AclConstants;
+use Spryker\Zed\Acl\AclConfig as SprykerAclConfig;
+
+class AclConfig extends SprykerAclConfig
+{
+    /**
+     * @var string
+     */
+    protected const RULE_TYPE_DENY = 'deny';
+
+    /**
+     * @return array<array<string, mixed>>
+     */
+    public function getInstallerRules(): array
+    {
+        $installerRules = parent::getInstallerRules();
+        $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
+
+        return $installerRules;
+    }
+
+    /**
+     * @param array<array<string, mixed>> $installerRules
+     *
+     * @return array<array<string, mixed>>
+     */
+    protected function addMerchantPortalInstallerRules(array $installerRules): array
+    {
+        $bundleNames = [
+            'merchant-relationship-merchant-portal-gui',
+        ];
+
+        foreach ($bundleNames as $bundleName) {
+            $installerRules[] = [
+                'bundle' => $bundleName,
+                'controller' => AclConstants::VALIDATOR_WILDCARD,
+                'action' => AclConstants::VALIDATOR_WILDCARD,
+                'type' => static::RULE_TYPE_DENY,
+                'role' => AclConstants::ROOT_ROLE,
+            ];
+        }
+        return $installerRules;
+    }
+}
+```
+</details>
+
+
+2. Execute the registered installer plugins:
+
+```bash
+console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+* Make sure the page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+
+{% endinfo_block %}
+
+### 3) Set up transfer objects
 
 Run the following commands to generate transfer changes:
 
@@ -49,7 +126,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -87,7 +164,7 @@ In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sur
 
 {% endinfo_block %}
 
-### 4) Configure navigation
+### 5) Configure navigation
 
 1. Add the `MerchantRelationshipMerchantPortalGui` section to `navigation.xml`:
 

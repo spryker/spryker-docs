@@ -36,7 +36,7 @@ The ACP has the following advantages:
 
 ## Installing the ACP catalog
 
-With the Spryker product release [202212.0](/docs/about/all/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
+With the Spryker product release [202212.0](/docs/about/all/releases/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet.
 
 You can access the ACP catalog only if you are a SCCOS customer and have additionally been enabled for ACP, which means that your SCCOS is properly set up and registered with the ACP. Check [ACP installation](/docs/acp/user/app-composition-platform-installation.html) for details on how to install and enable the ACP catalog for your version of SCCOS.
 

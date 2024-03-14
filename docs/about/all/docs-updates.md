@@ -166,7 +166,7 @@ In December 2023, we have added and updated the following pages:
 - [Decoupled Glue infrastructure: Integrate the authentication](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html): Learn how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
 - [Create Glue API authorization strategies](/docs/dg/dev/glue-api/202311.0/create-glue-api-authorization-strategies.html): Learn how to create a new authorization strategy.
 - [Preparation for going live](/docs/ca/dev/preparation-for-going-live.html): Learn how to prepare a Spryker project for going live.
-- [Security release notes 202312.0](/docs/about/all/releases/release-notes/security-release-notes-202312.0.html).
+- [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
 - [Checkout feature overview](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html).
 - [Install the Checkout Glue API](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html).
 - [Shipment feature overview](/docs/pbc/all/carrier-management/202311.0/base-shop/shipment-feature-overview.html).
@@ -248,8 +248,8 @@ In November 2023, we have added and updated the following pages:
 - [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
 - [REST API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html).
-- [Release notes 202311.0](/docs/about/all/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html).
-- [Security release notes 202312.0](/docs/about/all/releases/release-notes/security-release-notes-202312.0.html).
+- [Release notes 202311.0](/docs/about/all/releases/release-notes-202311.0/release-notes-202311.0.html).
+- [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
 
 ### Updated pages
 
@@ -277,7 +277,7 @@ In October 2023, we have added and updated the following pages:
 - [Data Exchange](/docs/pbc/all/data-exchange/202311.0/data-exchange.html): Get an overview of the Data Exchange features: Data Importers and Data Exporters, Data Exchange API, Spryker Middleware powered by Alumio.
 - [Data Exchange FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html).
 - [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
-- [Security release notes 202309.0](/docs/about/all/releases/release-notes/security-release-notes-202309.0.html).
+- [Security release notes 202309.0](/docs/about/all/releases/security-release-notes-202309.0.html).
 - [Upgrade the Chart module](/docs/pbc/all/back-office/202307.0/install-and-upgrade/upgrade-the-chart-module.html): Learn how to upgrade the Chart module from version 1.5.0 to version 1.6.1.
 - Oryx components docs:
     - [Oryx: Building components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-building-components.html): Learn about the building blocks of the Oryx applications: the components.
@@ -368,8 +368,8 @@ In August 2023, we have added and updated the following pages:
 ### New pages
 
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html): Learn how to save Jenkins-related costs or speed up background jobs processing by implementing a single custom worker for all stores.
-- [Release notes 202307.0](/docs/about/all/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html).
-- [Security release notes 202307.0](/docs/about/all/releases/release-notes/release-notes-202307.0/security-release-notes-202307.0.html).
+- [Release notes 202307.0](/docs/about/all/releases/release-notes-202307.0/release-notes-202307.0.html).
+- [Security release notes 202307.0](/docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html).
 - [Spryker security checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html): Learn how to check for security fixes in the Spryker modules.
 - [Open-source vulnerabilities checker](/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/open-source-vulnerabilities.html): Learn how to check if your PHP application depends on PHP packages with known security vulnerabilities.
 - [Dynamic multistore docs](/docs/pbc/all/dynamic-multistore/202307.0/dynamic-multistore.html):
@@ -414,7 +414,7 @@ In July 2023, we have added and updated the following pages:
 - [Oryx: Color system](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/styling/oryx-color-system.html): Documentation on colors in Oryx.
 - [Best practises: Jenkins stability](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html): Best practices for maintaining Jenkins stability.
 - [HowTo: Reduce Jenkins execution by up to 80% without P&S and Data importers refactoring](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html): Save Jenkins-related costs or speed up background jobs processing by implementing a single custom Worker for all stores.
-- [Release notes 202307.0](/docs/about/all/releases/release-notes/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
+- [Release notes 202307.0](/docs/about/all/releases/release-notes-202307.0/release-notes-202307.0.html): Release notes for the Spryker SCOS release 202307.0
 - [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/202307.0/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html): This document describes how to integrate the [Product Rating and Reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/ratings-and-reviews.html) Glue API feature into a Spryker project.
 - [Configure Usercentrics](/docs/pbc/all/usercentrics/configure-usercentrics.html): Find out how you can configure Usercentrics in your Spryker shop.
 - [Ratings and Reviews data import](/docs/pbc/all/ratings-reviews/202204.0/import-and-export-data/ratings-and-reviews-data-import.html): Details about data import files for the Ratings and Reviews PBC.
@@ -427,7 +427,7 @@ In July 2023, we have added and updated the following pages:
 - [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html): Find out how you can integrate Usercentrics in your Spryker shop.
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html): [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store.
 - [Adding variables in the parameter store](/docs/ca/dev/add-variables-in-the-parameter-store.html): Added reserved variable sub-section and removed deprecated text.
-- [Security Release Notes 202306.0](/docs/about/all/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
+- [Security Release Notes 202306.0](/docs/about/all/releases/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
 - [Merchant Users Overview](/docs/pbc/all/merchant-management/202212.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html): Added information about the assignment of groups for the merchant user.
 - [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
@@ -450,7 +450,7 @@ For more details about these and other updates to the Spryker docs in July 2023,
 In June 2023, we have added and updated the following pages:
 
 ### New pages
-- [Security release notes 202306.0](/docs/about/all/releases/release-notes/release-notes-202306.0/security-release-notes-202306.0.html).
+- [Security release notes 202306.0](/docs/about/all/releases/release-notes-202306.0/security-release-notes-202306.0.html).
 - [Oryx: Presets](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
@@ -557,7 +557,7 @@ In April 2023, we have added and updated the following pages:
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-- [Security release notes 202304.0](/docs/about/all/releases/release-notes/release-notes-202304.0/security-release-notes-202304.0.html)
+- [Security release notes 202304.0](/docs/about/all/releases/release-notes-202304.0/security-release-notes-202304.0.html)
 - [Releases vs Customization types](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
 
 ### Updated pages

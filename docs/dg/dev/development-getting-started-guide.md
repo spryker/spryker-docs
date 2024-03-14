@@ -49,7 +49,7 @@ For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the
 
 A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently. [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies.
 
-To define your strategy when implementing updates, learn about our [module and feature release process](/docs/about/all/spryker-release-process.html).
+To define your strategy when implementing updates, learn about our [module and feature release process](/docs/about/all/releases/product-and-code-releases.html).
 
 
 You will use the following commands to manage modules with Composer:

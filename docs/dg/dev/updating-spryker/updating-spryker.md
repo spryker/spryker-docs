@@ -40,7 +40,7 @@ Schematically, the Spryker product structure looks like this:
 The most typical reasons to update modules or features are the following:
 * There are important security or bug fixes that have been introduced recently.
 * You want a new specific feature or module in your project, which requires a newer version of your modules.
-* Your project has been started shortly before a new [product release](/docs/about/all/spryker-release-process.html#product-releases).
+* Your project has been started shortly before a new [product release](/docs/about/all/releases/product-and-code-releases.html#product-releases).
 * You experience some issues with the shop that you would like to report or consult about.
 * If you plan to extend your shop in future with new features from the ones that exist in Spryker or are coming out soon, your project should be always up to date. It will ease the new feature installation and reduce the migration efforts, allowing you to get the desired functionality faster.
 

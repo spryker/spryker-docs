@@ -16,9 +16,14 @@ Business users: Check out changes during the early stages of development.
 
 ## Installation guides
 
+The installation guides are provided later in the getting started guide, so you can keep reading or jump over to installing Spryker locally:
 
 * Engineers installing for the first time: [Install Spryker](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html)
 
 * Engineers experienced with Spryker: [Quickstart guides: Install Spryker](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html)
 
 * Business users: [Quickstart guides: Install Spryker](/docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html)
+
+## Next step of the getting started
+
+[Adding functionality]

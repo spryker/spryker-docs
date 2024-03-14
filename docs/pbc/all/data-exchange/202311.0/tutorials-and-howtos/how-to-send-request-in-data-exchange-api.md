@@ -508,7 +508,7 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
-### Sending `POST`, `PATCH`б and `PUT` requests with relationships
+### Sending `POST`, `PATCH` and `PUT` requests with relationships
 
 To create or update an entity along with its related entities, you need to include the relationships directly in 
 the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 

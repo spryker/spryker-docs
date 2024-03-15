@@ -1,5 +1,5 @@
 ---
-title: "Best practises: Jenkins stability"
+title: "Best practices: Jenkins stability"
 description: Improve the stability of the scheduler component.
 template: best-practices-guide-template
 redirect_from:

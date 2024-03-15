@@ -149,14 +149,8 @@ Request sample: retrieve tax sets
 ```
 </details>
 
-<a name="tax-sets-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Tax set name |
-| restTaxRates.name | Tax rate name |
-| restTaxRates.rate | Tax rate |
-| restTaxRates.country | Applicable country for the tax rate |
 
 ## Possible errors
 

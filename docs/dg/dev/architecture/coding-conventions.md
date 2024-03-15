@@ -661,7 +661,7 @@ See [Propel Documentation - Active Record Class](#https://propelorm.org/document
 **Conventions**
 - `Entity` base classes MUST NOT be defined manually but generated via [Persistence Schema](#persistence-schema). 
 - `Entities` MUST be instantiated and used only from the [Entity Manager](#entity-manager) of the same module.
-- `Entities` MUST NOT leak outside the module's persistence layer (as they are heavy, stateful, module specific objects).
+- `Entities` MUST NOT leak to any facade's level (as they are heavy, stateful, module specific objects).
 - `Entities` MUST be implemented according to the 3-tier class hierarchy (see in description & example) to support extension from Propel and SCOS.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
@@ -671,6 +671,7 @@ See [Propel Documentation - Active Record Class](#https://propelorm.org/document
 **Guidelines**
 - A typical use-case is to define `preSave()` or `postSave()` methods in the `Entity` object.
 - It is recommended to define manager classes instead of overloading the `Entity` with complex or context-specific logic.
+- `Entities` SHOULD NOT leak outside the module's persistence layer.
 
 **Example**
 

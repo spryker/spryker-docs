@@ -3,15 +3,15 @@
 # Documentation structure
 
 ## Development Use-Cases
-Understanding the development scenarios in which our framework can be utilized is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
+Understanding the development scenarios in which Spryker Commerce Operating System (SCOS) can be utilized is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
 
 - Project Development: If you are developing a project, you will need to adhere to specific project development rules to ensure smooth integration.
 - Boilerplate and Accelerator Contribution: Contributing to boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.
-- Module Contribution: For those contributing to modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across the framework.
+- Module Contribution: For those contributing to modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
 
 ## Directive Classification
 Throughout this documentation, you will encounter two types of directives:
-- Convention: These are mandatory requirements that contributors must adhere to in order to enable specific framework features or ensure proper application responses.
+- Convention: These are mandatory requirements that contributors must adhere to in order to enable specific SCOS features or ensure proper application responses.
 - Guideline: While not mandatory, following these guidelines is highly recommended. Doing so promotes long-term code maintainability and facilitates smoother development processes.
 
 # Applications
@@ -333,8 +333,33 @@ An application layer can have four logical layers with clear purpose and communi
 - **Business Layer**: contains the business logic of a module
 - **Persistence Layer**: contains queries, entities and the schema of a module
 
-Layer responsibilities
-__TBD__
+## Presentation Layer responsibilities
+- Responsible for handling the user interface (UI) presentation.
+- Contains Twig templates, JavaScript (JS), and Cascading Style Sheets (CSS) files.
+- Handles user interactions and input validations on the client side.
+- Interacts with the [Communication Layer](#communication-layer-responsibilities) to retrieve necessary data for display.
+
+## Communication Layer responsibilities
+- Acts as an intermediary between the [Presentation Layer](#presentation-layer-responsibilities) and the [Business Layer](#business-layer-responsibilities).
+- Contains [controllers](#controller) responsible for handling HTTP requests and responses.
+- Contains [plugins](#plugin) responsible for flexible, overarching requests and responses.
+- Manages form processing and validation.
+- Handles [routing and dispatching requests](#provider--router) to appropriate [controllers](#controller).
+- Interacts with the [Business Layer](#business-layer-responsibilities) to perform business operations.
+
+## Business Layer responsibilities
+- Contains the main business logic.
+- Implements business rules and processes.
+- Performs data manipulation, calculations, and validation.
+- Interacts with the [Persistence Layer](#persistence-layer-responsibilities) to read and write data.
+- Independent of the user interface and communication protocols.
+
+## Persistence Layer responsibilities
+- Responsible for data storage and retrieval.
+- Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
+- Handles database operations such as CRUD (`Create`, `Read`, `Update`, `Delete`).
+- Ensures data integrity and security.
+- Interacts with the [Business Layer](#business-layer-responsibilities) to provide data access for business operations.
 
 # Components
 
@@ -350,10 +375,10 @@ __TBD__
 ## Client facade
 **Description**
 
-The Client is the internal API of Client application layer, and represents the only entry point to the Client Application.
-The Client follows the [facade design pattern](#facade-design-pattern).
+The `Client` is the internal API of [Client application layer](#client), and represents the only entry point to the [Client Application](#applications).
+The `Client` follows the [facade design pattern](#facade-design-pattern).
 
-There are domain entity specific Clients like CatalogClient, CartClient, SalesClient, etc. and there are four generic Clients SearchClient, SessionClient, StorageClient and ZedClient.
+There are domain entity specific `Clients` like `CatalogClient`, `CartClient`, `SalesClient`, etc. and there are four generic `Clients` `SearchClient`, `SessionClient`, `StorageClient` and `ZedClient`.
 
 **Conventions**
 - Naming: `[Module]Client.php`.
@@ -384,8 +409,9 @@ class ConfigurableBundleCartClient extends Spryker\Client\Kernel\AbstractClient 
             ->addConfiguredBundleToCart($createConfiguredBundleRequestTransfer);
     }
 }
+```
 
-
+```php
 namespace Spryker\Client\ConfigurableBundleCart;
 
 interface ConfigurableBundleCartClientInterface
@@ -414,10 +440,10 @@ interface ConfigurableBundleCartClientInterface
 
 **Description**
 
-Represents the application access point for any kind of HTTP communication with end-users or other applications.
+Application access point for any kind of HTTP communication with end-users or other applications.
 
 Responsibilities of a controller are
-- to adapt the received input data to the underlaying layers (syntactical validation, delegation),
+- to adapt the received input data to the underlying layers (syntactical validation, delegation),
 - delegate the processing of the input data,
 - and to adapt the results of processing to the expected output format (eg: add flash messages, set response format, trigger redirect).
 
@@ -426,17 +452,18 @@ Responsibilities of a controller are
   - The `Gateway` controller name is reserved for the `Gateway Controller` behaviour (see [Gateway Controller](#gateway-controller)).
   - The `Index` controller name is reserved for the default controller, which serves as the default controller during request controller resolution.
   - The `index` action name is reserved for the default action during request action resolution.
-- Public methods are considered as an `Action` and therefore MUST use the `Action` suffix.
+- `Public` methods are considered as an `Action` and therefore MUST use the `Action` suffix.
 - Action methods MUST have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
 - Received data MUST be [syntactically validated](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Action method parameters can be freely chosen.
+- `Public` methods can be non-action.<br/>
+- Action method parameters can be freely chosen, and can access system or request parameters in any preferred way.<br/>
 </details>
 
 **Guideline**
-- Actions SHOULD NOT contain any logic that is outside the regular responsibilities of a controller (see Controller description).
-- Controller has an inherited `castId()` method that MAY be used for casting numerical IDs.
+- Actions should not contain any logic that is outside the regular responsibilities of a `Controller` (see `Controller` description above).
+- `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
 
 **Example**
 ```php
@@ -477,7 +504,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 **Description**
 
-Injects required dependencies to a module layer. Typically these are [facades](#facade-design-pattern) or [plugins](#plugin).
+Injects required dependencies to a module layer. Typically, these are [facades](#facade-design-pattern) or [plugins](#plugin).
 
 **Conventions**
 - Naming: `[Module]DependencyProvider.php`
@@ -490,23 +517,23 @@ public function provideDependencies(Container $container)
 public function provideBackendDependencies(Container $container)
 public function provideServiceLayerDependencies(Container $container)
 ```
-- Only three type of methods MUST be defined, either `public provide*()`, `protected get*()`, or `protected add*()`.
+- Only three type of methods MUST be defined, either `public provide*(Container $container)`, `protected get*(Container $container)`, or `protected add*(Container $container)`.
   - Each `provide*()` method MUST
-      - have the `Container` as arugment,
       - call its parent `provide*()` method,
       - and call only `add*()` methods.
   - Each `add*()` method MUST only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).
       - Setting dependency using the `container::set()` MUST be paired with late-binding closure definition to decouple instantiation.
   - Each `get*()` method MUST actually source the corresponding dependency.
-      - Plugin sourcing methods MUST be named as `get[PluginInterfaceName]Plugins()`.
-- All constants MUST be public (to decrease conflicts in definition for being a public API class).
+      - Plugin sourcing methods MUST be named as `get[PluginInterfaceName]Plugins(Container $container)`.
+- All constants MUST be `public` (to decrease conflicts in definition for being a public API class).
   - Each dependency MUST be defined using a class constant.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Constants can have any access modifier, they are not limited to `public`. <br/>
 - Methods can have any access modifier. <br/>
 - `provide*()` methods can call other methods than `add*()`. <br/>
-- `add*()` methods can introduce more dependency to the Container.
+- `add*()` methods can introduce more dependency to the `Container`.<br/>
+- The `Container $container` argument can be introduced on need-to-have basis instead of being always mandatory.
 </details>
 
 <details><summary markdown='span'>Additional Conventions for Module Development</summary>
@@ -627,7 +654,7 @@ Active record object which represents a row in a table. `Entities` have getter a
 Each `Entity` has a generated identical [Entity Transfer Object](#transfer-object) which can be used during interaction with other layers.
 Each database table definition results as the creation of an `Entity` by Propel, into the `src/Orm` directory.
 
-**3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a framework class to enable adding functionality on framework level (see example below).
+**3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module class to enable adding functionality on SCOS module level (see example below).
 
 See [Propel Documentation - Active Record Class](#https://propelorm.org/documentation/reference/active-record.html)
 
@@ -635,10 +662,10 @@ See [Propel Documentation - Active Record Class](#https://propelorm.org/document
 - `Entity` base classes MUST NOT be defined manually but generated via [Persistence Schema](#persistence-schema). 
 - `Entities` MUST be instantiated and used only from the [Entity Manager](#entity-manager) of the same module.
 - `Entities` MUST NOT leak outside the module's persistence layer (as they are heavy, stateful, module specific objects).
-- `Entities` MUST be implemented according to the 3-tier class hierarchy (see in description & example) to support extension from Propel and Spryker Framework.
+- `Entities` MUST be implemented according to the 3-tier class hierarchy (see in description & example) to support extension from Propel and SCOS.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- The 3-tier class hierarchy is NOT applicable for database tables that are independent to Spryker framework.
+- The 3-tier class hierarchy is NOT applicable for database tables that are independent to SCOS features.
 </details>
 
 **Guidelines**
@@ -657,7 +684,7 @@ namespace Orm\Zed\ConfigurableBundle\Persistence\Base;
 abstract class SpyConfigurableBundleTemplate implements Propel\Runtime\ActiveRecord\ActiveRecordInterface {...}
 ```
 
-The middle level class generated in a Spryker module, containing the framework functionality.
+The middle level class generated in a Spryker module, containing the SCOS module functionality.
 ```php
 namespace Spryker\Zed\ConfigurableBundle\Persistence\Propel;
 
@@ -829,7 +856,7 @@ Factories do NOT define/implement interface as practically they are never fully 
 
 **Description**
 
-`Gateway Controller` is special, reserved controller (see [Controllers](#controller)) in the framework, that serves as an entry point in `Zed` for serving `Client` requests (see [Zed Stub](#zed-stub) for more details).
+`Gateway Controller` is special, reserved controller (see [Controllers](#controller)) in SCOS, that serves as an entry point in `Zed` for serving `Client` requests (see [Zed Stub](#zed-stub) for more details).
 
 **Conventions**
 - `Gateway Controller` actions MUST define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
@@ -1021,7 +1048,7 @@ The schema file defines the module's tables and columns (see [Propel Documentati
   - The field MUST be eventually unique across the table (until the unique value is provided, the business logic MAY NOT operate appropriately).
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- The table prefix (`spy_`) can be chosen freely if compatibility with framework is not desired.
+- The table prefix (`spy_`) can be chosen freely if compatibility with SCOS featuresis not desired.
 </details>
 
 **Guidelines**
@@ -1201,7 +1228,7 @@ A widget represents a part of a webpage in Yves which can be reused.
 
 **Convention**
 - A widget MUST contain only lightweight, render related logic.
-- A widget MUST have a unique name across the framework.
+- A widget MUST have a unique name across SCOS features.
 - When Widget call is implemented, it MUST be considered that a widget is always optionally enabled.
 - A widget MUST NOT implement an interface.
 
@@ -1311,7 +1338,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 - The plugin MUST implement a [Plugin Interface](#plugin-interface) which is provided by an extension module.
 
 **Guidelines**
-- Plugin name should be unique and give and overview about the behaviour that the plugin delivers (consider developers searching a plugin in a catalog across the framework only by plugin name).
+- Plugin name should be unique and give and overview about the behaviour that the plugin delivers (consider developers searching a plugin in a catalog across SCOS features only by plugin name).
 
 **Example**
 

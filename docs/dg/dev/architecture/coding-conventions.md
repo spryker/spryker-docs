@@ -1,18 +1,45 @@
 # Table of Content
 
+- [Client facade](#client-facade)
+- [Controller](#controller)
+- [Dependency Provider](#dependency-provider)
+- [Entity](#entity)
+- [Entity Manager](#entity-manager)
+- [Facade](#facade)
+- [Facade design pattern](#facade-design-pattern)
+- [Factory](#factory)
+- [Gateway Controller](#gateway-controller)
+- [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
+- [Model](#model)
+- [Module Configurations](#module-configurations)
+- [Navigation.XML](#navigationxml)
+- [Permission Plugin](#permission-plugin)
+- [Persistence Schema](#persistence-schema)
+- [Provider / Router](#provider--router)
+- [Query Container facade](#query-container-facade)
+- [Repository](#repository)
+- [Service facade](#service-facade)
+- [Theme](#theme)
+- [Transfer Object](#transfer-object)
+- [Widget](#widget)
+- [Zed Stub](#zed-stub)
+- [Bridge](#bridge)
+- [Plugin](#plugin)
+- [Plugin Interface](#plugin-interface)
+
 # Documentation structure
 
 ## Development Use-Cases
 Understanding the development scenarios in which Spryker Commerce Operating System (SCOS) can be utilized is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
 
-- Project Development: If you are developing a project, you will need to adhere to specific project development rules to ensure smooth integration.
-- Boilerplate and Accelerator Contribution: Contributing to boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.
-- Module Contribution: For those contributing to modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
+- **Project Development**: If you are developing a project, you will need to adhere to specific project development guidelines to ensure smooth integration.
+- **Boilerplate and Accelerator Contribution**: Contributing to boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.
+- **Module Contribution**: For those contributing to modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
 
 ## Directive Classification
 Throughout this documentation, you will encounter two types of directives:
-- Convention: These are mandatory requirements that contributors must adhere to in order to enable specific SCOS features or ensure proper application responses.
-- Guideline: While not mandatory, following these guidelines is highly recommended. Doing so promotes long-term code maintainability and facilitates smoother development processes.
+- **Convention**: These are mandatory requirements that contributors must adhere to in order to enable specific SCOS features or ensure proper application responses.
+- **Guideline**: While not mandatory, following these guidelines is highly recommended. Doing so promotes long-term code maintainability and facilitates smoother development processes.
 
 # Applications
 Spryker utilises application layers into applications to enable constructing the necessary application architecture for the specific business requirements to provide a quick project start, and long-term maintainability.
@@ -23,16 +50,16 @@ Spryker utilises application layers into applications to enable constructing the
 Spryker organises responsibilities/functionalities over a set of application layers (see [Conceptual Overview](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html)) to enable flexible business logic orchestration across the applications.
 
 The application layers are aggregations of layers (see [Modules and Application Layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html))
-- Zed: is a **multi-layer composition** of the 4 layers: Presentation Layer, Communication Layer, Business Layer, Persistence Layer
-- Yves: is a **single-layered** Presentation Layer merged with Communication Layer.
-- Glue: is a **single-layered** Communication Layer.
-- Client: is a **single-layered** Communication Layer.
-- Service: is a **single-layered**, overarching Business Layer.
-- Shared: is a layer-overarching, stateless, abstraction library.
+- **Zed**: is a **multi-layer composition** of the 4 layers: `Presentation Layer`, `Communication Layer`, `Business Layer`, `Persistence Layer`.
+- **Yves**: is a **single-layered** `Presentation Layer` merged with `Communication Layer`.
+- **Glue**: is a **single-layered** `Communication Layer`.
+- **Client**: is a **single-layered** `Communication Layer`.
+- **Service**: is a **single-layered**, overarching `Business Layer`.
+- **Shared**: is a layer-overarching, stateless, abstraction library.
 
 ## Zed
 
-Zed serves as the backend application layer responsible for housing all business logic and persisting data.
+`Zed` serves as the backend application layer responsible for housing all business logic and persisting data.
 ```
 [Organization]
 └── Zed
@@ -92,15 +119,22 @@ Zed serves as the backend application layer responsible for housing all business
         │           └── [table_prefix].schema.xml
         │
         ├── Dependency
+        │   ├── Client
+        │   │   ├── [Module]To[Module]ClientBridge.php
+        │   │   └── [Module]To[Module]ClientInterface.php          
         │   ├── Facade
         │   │   ├── [Module]To[Module]FacadeBridge.php
         │   │   └── [Module]To[Module]FacadeInterface.php
+        │   ├── Service
+        │   │   ├── [Module]To[Module]ServiceBridge.php
+        │   │   └── [Module]To[Module]ServiceInterface.php      
         │   └── Plugin
         │       └── [Name]PluginInterface.php
         │                
         ├── [Module]Config.php
         └── [Module]DependencyProvider.php
 ```
+
 Used components
 - [Bridge](#bridge)
 - [Config](#module-configurations)
@@ -119,11 +153,8 @@ Used components
 - [Repository](#repository)
 - [Schema](#persistence-schema)
 
-← [Back to Application Layers](#application-layers)
-
-
 ## Yves
-Yves application layer provides a lightweight Shop Application.
+`Yves` application layer provides a lightweight Shop Application.
 
 ```
 [Organization]
@@ -139,6 +170,9 @@ Yves application layer provides a lightweight Shop Application.
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
+        │   ├── Service
+        │   │   ├── [Module]To[Module]ServiceBridge.php
+        │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
         │       └── [Name]PluginInterface.php
         ├── Plugin
@@ -148,17 +182,23 @@ Yves application layer provides a lightweight Shop Application.
         │   └── [ConsumerModule]
         │       └── [Name]Plugin.php
         ├── Theme
-        │   └── [default]
+        │   └── ["default"|theme]
         │       ├── components
         │       │   │── organisms
-        │       │   │   └── [name]
+        │       │   │   └── [organism-name]
+        │       │   │       └── [organism-name].twig
         │       │   │── atoms
-        │       │   │   └── [name]
+        │       │   │   └── [atom-name]
+        │       │   │       └── [atom-name].twig
         │       │   └── molecules
-        │       │       └── [name]
+        │       │       └── [molecule-name]
+        │       │           └── [molecule-name].twig
+        │       ├── templates
+        │       │   └── [page-layout-name]
+        │       │       └── [page-layout-name].twig
         │       └── views
         │           └── [name-of-controller]
-        │               └── [name-of-action].twig
+        │               └── [name-of-action].twig        
         ├── Widget
         │   └── [Name]Widget.php
         ├── [Module]Config.php
@@ -179,11 +219,9 @@ Used components
 - [Theme](#theme)
 - [Widget](#widget)
 
-← [Back to Application Layers](#application-layers)
-
 ## Glue
 
-The Glue application layer serves as a conduit for providing data access points through APIs.
+The `Glue` application layer serves as a conduit for providing data access points through APIs.
 It acts as an interface for external systems to interact with the application's data.
 
 ```
@@ -191,7 +229,8 @@ It acts as an interface for external systems to interact with the application's 
 └── Glue
     └── [Module]
         ├── Controller
-        │   └── [Name]Controller.php
+        │   ├── IndexController.php        
+        │   └── [Name]Controller.php                
         ├── [CustomDirectory]
         │   ├── [ModelName]Interface.php
         │   └── [ModelName].php        
@@ -199,6 +238,9 @@ It acts as an interface for external systems to interact with the application's 
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
+        │   ├── Service
+        │   │   ├── [Module]To[Module]ServiceBridge.php
+        │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
         │       └── [Name]PluginInterface.php
         ├── Plugin
@@ -222,14 +264,12 @@ Used components
 - [Model](#model)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
 
-← [Back to Application Layers](#application-layers)
-
 ## Client
 
-A lightweight application layer that handles all data access, such as
+`Client` is a lightweight application layer that handles all data access, such as
 - Persistence access (such as Key-Value Storage (Redis), Search (Elasticsearch)),
-- Yves Sessions,
-- Zed as a data-source (RPC),
+- Yves sessions,
+- `Zed` as a data-source (RPC),
 - 3rd party communication.
 
 Note: Backend database access is an exception for performance streamlining.
@@ -245,6 +285,9 @@ Note: Backend database access is an exception for performance streamlining.
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
+        │   ├── Service
+        │   │   ├── [Module]To[Module]ServiceBridge.php
+        │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
         │       └── [Name]PluginInterface.php            
         ├── Plugin
@@ -272,13 +315,11 @@ Used components
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
 - [Zed Stub](#zed-stub)
 
-← [Back to Application Layers](#application-layers)
-
 ## Service
 
-The Service layer encapsulates a multi-purpose library that can be utilized across various application layers, such as Yves or Zed application layers.
-A Service primarily consists of reusable lightweight stateless business logic components.
-Due to its deployment across all applications, a Service is constrained to accessing data providers that are available universally. For instance, the backend database is not accessible from storefront applications by default.
+The `Service` application layer encapsulates a multipurpose library that can be utilized across various application layers, such as `Yves` or `Zed` application layers.
+A `Service` primarily consists of reusable lightweight stateless business logic components.
+Due to its deployment across all applications, a `Service` is constrained to accessing data providers that are available universally (for instance, the backend database is not accessible from storefront applications by default).
 
 ```
 [Organization]
@@ -293,6 +334,7 @@ Due to its deployment across all applications, a Service is constrained to acces
         ├── [Module]ServiceInterface.php
         └── [Module]Service.php
 ```
+
 Used components
 - [Config](#module-configurations)
 - [Dependency Provider](#dependency-provider)
@@ -301,29 +343,26 @@ Used components
 - [Model](#model)
 - [Service facade](#service-facade)
 
-← [Back to Application Layers](#application-layers)
-
 ## Shared
 
-The Shared library contains code that is designed to be utilized across different application layers and modules.
-The Shared library is intended to facilitate the sharing of code among various application layers and modules.
-To ensure compatibility and versatility across different application architecture setups, any content within the Shared library must be free of application layer-specific elements. Therefore, the use of factories is not permitted within the Shared library.
+The `Shared` library contains code that is designed to be utilized across different application layers and modules.
+The `Shared` library is intended to facilitate the sharing of code among various application layers and modules.
+To ensure compatibility and versatility across different application architecture setups, any content within the `Shared` library must be free of application layer-specific elements. Therefore, the use of [Factories](#factory) is not permitted within the `Shared` library.
 
 ```
 [Organization]
 └── Shared
     └── [Module]
         ├── Transfer
-        │   └── [module].transfer.xml
+        │   └── [module_name].transfer.xml
         ├── [Module]Constants.php
         └── [Module]Config.php
 ```
+
 Used components
 - [Config](#module-configurations)
 - [Constants](#module-configurations)
 - [Transfer](#transfer-object)
-
-← [Back to Application Layers](#application-layers)
 
 # Layers
 
@@ -365,24 +404,31 @@ An application layer can have four logical layers with clear purpose and communi
 
 **Conventions**
 - The components MUST be placed according to the corresponding [application layer’s](#application-layers) directory architecture  in order to come in effect.
-- The components MUST be extended from the [application layer](#application-layers) corresponding abstract class in `Kernel` module, or from the extended class.
+- The components MUST inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
 - The components MUST be stateless to be deterministic and easy to comprehend.
 
 <details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- The components MUST be extended __only__ from the application-layer corresponding abstract class in `Kernel` module.<br/>
+- The components MUST be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
 </details>
 
 ## Client facade
+
+```
+[Organization]
+└── Client
+    └── [Module]
+        ├── [Module]ClientInterface.php
+        └── [Module]Client.php         
+```
+
 **Description**
 
-The `Client` is the internal API of [Client application layer](#client), and represents the only entry point to the [Client Application](#applications).
-The `Client` follows the [facade design pattern](#facade-design-pattern).
+The `Client` is the internal API of [Client application layer](#client), and acts as the only entry point to the [Client Application](#applications).
 
-There are domain entity specific `Clients` like `CatalogClient`, `CartClient`, `SalesClient`, etc. and there are four generic `Clients` `SearchClient`, `SessionClient`, `StorageClient` and `ZedClient`.
+There are four generic `Clients` as `SearchClient`, `SessionClient`, `StorageClient` and `ZedClient`.
 
 **Conventions**
-- Naming: `[Module]Client.php`.
-- Additionally, the [facade design pattern](#facade-design-pattern) conventions apply.
+- The `Client` follows the [facade design pattern](#facade-design-pattern) and its conventions.
 
 **Example**
 ```php
@@ -438,20 +484,44 @@ interface ConfigurableBundleCartClientInterface
 
 ## Controller
 
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       └── Communication
+│           └── Controller
+│               ├── IndexController.php
+│               ├── GatewayController.php
+│               └── [Name]Controller.php
+│
+├── Yves
+│   └── [Module]
+│       └── Controller
+│           ├── IndexController.php
+│           └── [Name]Controller.php    
+│
+└── Glue
+    └── [Module]
+        └── Controller
+            ├── IndexController.php        
+            └── [Name]Controller.php                      
+```
 **Description**
 
-Application access point for any kind of HTTP communication with end-users or other applications.
+`Controllers` and `Actions` are application access points for any kind of HTTP communication with end-users or other applications.
 
 Responsibilities of a controller are
 - to adapt the received input data to the underlying layers (syntactical validation, delegation),
 - delegate the processing of the input data,
 - and to adapt the results of processing to the expected output format (eg: add flash messages, set response format, trigger redirect).
 
+The `Gateway` controller name is reserved for the [Gateway Controller](#gateway-controller).
+
+The `Index` controller name acts as the default controller during request controller resolution.
+
+The `index` action name acts as the default action during request action resolution.
+
 **Conventions**
-- Naming: `[ControllerName]Controller.php::[actionName]Action()`.
-  - The `Gateway` controller name is reserved for the `Gateway Controller` behaviour (see [Gateway Controller](#gateway-controller)).
-  - The `Index` controller name is reserved for the default controller, which serves as the default controller during request controller resolution.
-  - The `index` action name is reserved for the default action during request action resolution.
 - `Public` methods are considered as an `Action` and therefore MUST use the `Action` suffix.
 - Action methods MUST have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
 - Received data MUST be [syntactically validated](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
@@ -462,8 +532,10 @@ Responsibilities of a controller are
 </details>
 
 **Guideline**
-- Actions should not contain any logic that is outside the regular responsibilities of a `Controller` (see `Controller` description above).
+- `Actions` should not contain any logic that is outside the regular responsibilities of a `Controller` (see description above).
 - `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
+- The inherited `getFactory()` method grants access to the [Factory](#factory) layer.
+- The inherited `getFacade()` or `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
 
 **Example**
 ```php
@@ -502,13 +574,44 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 ## Dependency Provider
 
+```
+[Organization]
+├── Zed
+│   └── [Module]        
+│       ├── [Module]Config.php
+│       └── [Module]DependencyProvider.php
+├── Yves
+│   └── [Module]        
+│       ├── [Module]Config.php
+│       └── [Module]DependencyProvider.php
+├── Glue
+│   └── [Module]        
+│       ├── [Module]Config.php
+│       └── [Module]DependencyProvider.php
+├── Client
+│   └── [Module]        
+│       ├── [Module]Config.php
+│       └── [Module]DependencyProvider.php
+└── Service
+    └── [Module]        
+        ├── [Module]Config.php
+        └── [Module]DependencyProvider.php
+```
+
 **Description**
 
-Injects required dependencies to a module layer. Typically, these are [facades](#facade-design-pattern) or [plugins](#plugin).
+Injects required dependencies to a module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin). 
+
+Dependency injection is orchestrated through a `provide-add-get` structure (see example below).
+- The `provide` method is the highest level that holds only `add` calls without any additional logic.
+- The `add` method is the middle level that injects the dependencies into the dependency container using a class constant and a late-binding instantiating closure.
+- The `get` method is the lowest level that sources the dependency.
 
 **Conventions**
-- Naming: `[Module]DependencyProvider.php`.
-- Dependencies MUST be wired through the layer corresponding inherited method:
+- All class constants MUST be `public` (to decrease conflicts in definition for being a public API class).
+- Each dependency MUST be defined using a class constant.
+- Setting dependency using the `container::set()` MUST be paired with late-binding closure definition to decouple instantiation.
+- Dependencies MUST be wired through the target layer corresponding inherited method:
 ```php
 public function provideCommunicationLayerDependencies(Container $container)
 public function provideBusinessLayerDependencies(Container $container)
@@ -517,22 +620,28 @@ public function provideDependencies(Container $container)
 public function provideBackendDependencies(Container $container)
 public function provideServiceLayerDependencies(Container $container)
 ```
-- Only three type of methods MUST be defined, either `public provide*(Container $container)`, `protected get*(Container $container)`, or `protected add*(Container $container)`.
-  - Each `provide*()` method MUST
-      - call its parent `provide*()` method,
-      - and call only `add*()` methods.
-  - Each `add*()` method MUST only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).
-      - Setting dependency using the `container::set()` MUST be paired with late-binding closure definition to decouple instantiation.
-  - Each `get*()` method MUST actually source the corresponding dependency.
-      - Plugin sourcing methods MUST be named as `get[PluginInterfaceName]Plugins(Container $container)`.
-- All constants MUST be `public` (to decrease conflicts in definition for being a public API class).
-  - Each dependency MUST be defined using a class constant.
+- Only three type of methods CAN be defined, either `provide`, `get`, or `add`.
+```php
+public function provide*Dependencies(Container $container)
+```
+- `Provide` methods MUST call their parent `provide` method.
+- `Provide` methods MUST only call `add` methods.
+
+```php
+protected function add*(Container $container)
+```
+- `Add` methods MUST only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).
+
+```php
+protected function get[Dependency](Container $container)
+protected function get[PluginInterfaceName]Plugins(Container $container)
+```
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Constants can have any access modifier, they are not limited to `public`. <br/>
 - Methods can have any access modifier. <br/>
-- `provide*()` methods can call other methods than `add*()`. <br/>
-- `add*()` methods can introduce more dependency to the `Container`.<br/>
+- `Provide` methods can call other methods than `add`. <br/>
+- `Add` methods can introduce more dependency to the `Container`.<br/>
 - The `Container $container` argument can be introduced on need-to-have basis instead of being always mandatory.
 </details>
 
@@ -648,13 +757,40 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
 
 ## Entity
 
+```
+src
+├── Generated
+│   └── Shared
+│       └── Transfer
+│           └── [EntityName]EntityTransfer.php
+│
+├── Orm
+│   └── Zed   
+│       └── [ModuleName]   
+│           ├── Base
+│           │   ├── [EntityName].php
+│           │   └── [EntityName]Query.php 
+│           ├── Map
+│           │   └── [EntityName]TableMap.php
+│           ├── [EntityName].php
+│           └── [EntityName]Query.php
+│
+└── [Organisation]
+    └── Zed
+        └── [ModuleName]
+            └── Persistence
+                └── Propel
+                    ├── Abstract[EntityName].php
+                    └── Abstract[EntityName]Query.php
+```
+
 **Description**
 
 Active record object which represents a row in a table. `Entities` have getter and setter methods to access the underlying data.
 Each `Entity` has a generated identical [Entity Transfer Object](#transfer-object) which can be used during interaction with other layers.
-Each database table definition results as the creation of an `Entity` by Propel, into the `src/Orm` directory.
+Each database table definition results as the creation of an `Entity` by Propel.
 
-**3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module class to enable adding functionality on SCOS module level (see example below).
+**3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module abstract class to enable adding functionality from SCOS module level (see example below).
 
 See [Propel Documentation - Active Record Class](#https://propelorm.org/documentation/reference/active-record.html)
 
@@ -671,7 +807,7 @@ See [Propel Documentation - Active Record Class](#https://propelorm.org/document
 **Guidelines**
 - A typical use-case is to define `preSave()` or `postSave()` methods in the `Entity` object.
 - It is recommended to define manager classes instead of overloading the `Entity` with complex or context-specific logic.
-- `Entities` SHOULD NOT leak outside the module's persistence layer.
+- `Entities` should not leak outside the module's persistence layer.
 
 **Example**
 
@@ -701,15 +837,23 @@ class SpyConfigurableBundleTemplate extends Spryker\Zed\ConfigurableBundle\Persi
 
 ## Entity Manager
 
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Persistence
+            ├── [Module]EntityManagerInterface.php
+            └── [Module]EntityManager.php
+```
+
 **Description**
 
 Persists [Entities](#entity) by using their internal saving mechanism.
 The `Entity Manager` can be accessed from the same module's [business layer](#business-layer-responsibilities).
 
 **Conventions**
-- Naming: `[Module]EntityManager.php`.
-- The repository class MUST define and implement an interface (`[Model]EntityManagerInterface.php`) that holds the specification of each `public` method.
-- Public methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`
+- The repository class MUST define and implement an interface that holds the specification of each `public` method.
+- `Public` methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`
 - Creating, updating and deleting functions MUST be separated by concern even if they use overlapping internal methods.
 - Only [Transfer Objects](#transfer-object) MUST be used as input parameters.
 - Methods MUST return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).
@@ -721,14 +865,21 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 
 ## Facade
 
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Business
+            ├── [Module]Facade.php
+            └── [Module]FacadeInterface.php      
+```
+
 **Description**
 
-The `Facade` is the internal API of [Bussiness layer](#business-layer-responsibilities).
-The `Facade` follows the [facade design pattern](#facade-design-pattern).
+The `Facade` is the internal API of [Business layer](#business-layer-responsibilities).
 
 **Conventions**
-- Naming: `[Module]Facade.php`.
-- Additionally, the [facade design pattern](#facade-design-pattern) conventions apply.
+- The `Facade` follows the [facade design pattern](#facade-design-pattern) and its conventions.
 
 **Example**
 
@@ -789,6 +940,9 @@ interface ConfigurableBundleFacadeInterface
 ```
 
 ## Facade design pattern
+
+__TBD__
+
 **Description**
 
 Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](#https://en.wikipedia.org/wiki/Facade_pattern).
@@ -821,6 +975,7 @@ The facade provides functionality for other layers and/or modules. The functiona
 __TBD__ (Note: Service is not serving data => no CRUD)
 
 **Guidelines**
+- The inherited `getFactory()` can be used to instantiate the underlying classes.
 - The methods MAY throw exceptions.
 - Single-item-flow methods SHOULD be avoided as they are NOT scalable.
 - Multi-item-flow methods SHOULD operate in batches to be scalable.
@@ -838,53 +993,153 @@ __TBD__ (Note: Service is not serving data => no CRUD)
 
 ## Factory
 
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       ├── Communication
+│       │   └── [Module]CommunicationFactory.php
+│       │
+│       ├── Business
+│       │   └── [Module]BusinessFactory.php
+│       │
+│       └── Persistence
+│           └── [Module]PersistenceFactory.php
+├── Yves
+│   └── [Module]
+│       └── [Module]Factory.php
+├── Glue
+│   └── [Module]
+│       └── [Module]Factory.php
+├── Client
+│   └── [Module]
+│       └── [Module]Factory.php
+└── Service
+    └── [Module]
+        └── [Module]ServiceFactory.php
+```
+
 **Description**
 
-The responsibility of a `Factory` is to instantiate classes of a module and inject module dependencies during instantiation.
+The responsibility of a `Factory` is to instantiate classes of a layer and inject dependencies during instantiation.
 
 **Conventions**
 - `Factories` MUST NOT define/implement interface as practically they are never fully replaced.
 - `Factories` MUST orchestrate the instantiation of objects in solitude (without reaching out to class-external logic).
-- `Factory` methods MUST either instantiate one new object and named as `create[Class]()`, or wire the dependencies and named as `get[Class]()`.
-- `Factory` methods MUST be `public`.
-- `Factory` methods MUST use the constants defined in [dependency provider](#dependency-provider) when reaching out to module dependencies.
+- Factory methods MUST either instantiate one new object and named as `create[Class]()`, or wire the dependencies and named as `get[Class]()`.
+- Factory methods MUST be `public`.
+- Factory methods MUST use the constants defined in [dependency provider](#dependency-provider) when reaching out to module dependencies.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Methods can define/implement interfaces on demand.
-- Methods can instantiate and write dependencies in one step, but this case MUST be named as `get[Class]()`.
-- Methods can have any access modifier.
+- Factory methods can define/implement interfaces on demand.<br/>
+- Factory methods can instantiate and write dependencies in one step, but this case MUST be named as `get[Class]()`.<br/>
+- Factory methods can have any access modifier.
 </details>
 
 ## Gateway Controller
+
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Communication
+            └── Controller
+                └── GatewayController.php
+```
 
 **Description**
 
 `Gateway Controller` is special, reserved `Controller` (see [Controllers](#controller)) in SCOS, that serves as an entry point in [Zed](#zed) for serving [Client](#client) requests (see [Zed Stub](#zed-stub) for more details).
 
 **Conventions**
-- `Gateway Controller` actions MUST define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
+- Gateway controller actions MUST define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
+- `Gateway Controllers` follow the [Controller](#controller) conventions.
 
 ## Mapper / Expander / Hydrator
 
 **Description**
 
-To differentiate between the recurring cases of data mapping, and unify naming, this convention aligns the terminology.
+To differentiate between the recurring cases of data mapping, and to provide a clear separation of concerns, the following terms are introduced:
 - `Mappers` are lightweight transforming functions that adjust one specific data structure to another in solitude (without the need of reaching out for additional data than the provided input).
-  - `Persistance Mapper` stands for a `Mapper` that transforms [propel entity](#entity) or [entity transfers object](#transfer-object) into generic [transfer objects](#transfer-object).
+  - `Persistance Mapper` stands for `Mappers` in [Persistence layer](#persistence-layer-responsibilities), typically transforming [propel entities](#entity), [entity transfers objects](#transfer-object), or generic [transfer objects](#transfer-object).
 - `Expanders` are focusing on sourcing additional data into the provided input - restructuring may also happen.
 
 **Conventions**
 - `Mapper` methods MUST be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.
-  - `Mappers` MUST be free of any business logic, only structural mapping logic is allowed.
+  - `Mappers` MUST be free of any logic other than structural.
     - `Mappers` MUST NOT have data resolving (eg: remote calls, database lazy load) logic as they are utilised in high-batch processing scenarios.
-  - `Mapping` MAY have multiple source entities if it still does NOT violate structural-mapping-only directive.
+  - `Mappers` MAY have multiple source entities if it still does NOT violate structural-mapping-only directive.
   - `Mappers` MUST NOT use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#service-facade).
-  - `Persistence Mappers` MUST be in [Persistence layer](#zed) only and named as `[Module|Entity]Mapper.php`.
+  - `Persistence Mappers` MUST be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.
 - `Expander` methods MUST be named as `expand[With<AdditionalDataExplainer>]($targetEntity)`.
 - The `hydrator/hydration` keywords MUST NOT be used but instead `Mapper` or `Expander`.
 
 **Guidelines**
 - It is recommended to NOT define interface for `Persistence Mappers`.
+
+**Examples**
+
+```php
+namespace Spryker\Zed\ConfigurableBundle\Persistence\Propel\Mapper;
+
+class ConfigurableBundleMapper
+{
+    /**
+     * @param \Propel\Runtime\Collection\Collection $configurableBundleTemplateEntities
+     *
+     * @return \Generated\Shared\Transfer\ConfigurableBundleTemplateCollectionTransfer
+     */
+    public function mapTemplateEntityCollectionToTemplateTransferCollection(
+        Collection $configurableBundleTemplateEntities
+    ): ConfigurableBundleTemplateCollectionTransfer {
+        $configurableBundleTemplateCollectionTransfer = new ConfigurableBundleTemplateCollectionTransfer();
+
+        foreach ($configurableBundleTemplateEntities as $configurableBundleTemplateEntity) {
+            $configurableBundleTemplateTransfer = $this->mapTemplateEntityToTemplateTransfer(
+                $configurableBundleTemplateEntity,
+                new ConfigurableBundleTemplateTransfer(),
+            );
+
+            $configurableBundleTemplateCollectionTransfer->addConfigurableBundleTemplate($configurableBundleTemplateTransfer);
+        }
+
+        return $configurableBundleTemplateCollectionTransfer;
+    }
+}
+```
+
+```php
+namespace Spryker\Client\ProductReview\ProductViewExpander;
+
+class ProductViewExpander implements ProductViewExpanderInterface
+{
+    public function __construct(
+        ProductReviewSummaryCalculatorInterface $productReviewSummaryCalculator,
+        ProductReviewSearchReaderInterface $productReviewSearchReader
+    ) {
+        $this->productReviewSummaryCalculator = $productReviewSummaryCalculator;
+        $this->productReviewSearchReader = $productReviewSearchReader;
+    }
+
+    public function expandProductViewWithProductReviewData(
+        ProductViewTransfer $productViewTransfer,
+        ProductReviewSearchRequestTransfer $productReviewSearchRequestTransfer
+    ): ProductViewTransfer {
+        $productReviews = $this->productReviewSearchReader->findProductReviews($productReviewSearchRequestTransfer);
+
+        if (!isset($productReviews[static::KEY_RATING_AGGREGATION])) {
+            return $productViewTransfer;
+        }
+
+        $productReviewSummaryTransfer = $this->productReviewSummaryCalculator
+            ->calculate($this->createRatingAggregationTransfer($productReviews));
+
+        $productViewTransfer->setRating($productReviewSummaryTransfer);
+
+        return $productViewTransfer;
+    }
+}
+```
 
 ## Model
 

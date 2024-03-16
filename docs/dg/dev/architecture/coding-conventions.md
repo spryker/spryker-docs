@@ -1164,6 +1164,7 @@ Models encapsulate logic and can be utilized across various layers within the ap
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Dependencies can be referred directly via class.
+- It is recommended to NOT define interface for `Models` without project specific reason.
 </details>
 
 ## Module Configurations
@@ -1217,13 +1218,14 @@ interface OmsConstants
 **Description**
 
 Module entries of the Backoffice navigation panel.
-The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v4/icon/files-o).
+The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v4/).
 
 **Example**
 - The below example adds navigation elements, under the already existing `product` navigation element (defined in another module).
 - The `pages` reserved node holds the navigation items.
 - The navigation items are defined within a logical node (`configurable-bundle-templates`) according to business requirements.
 - The `bundle` identifies in which `module` the processing `controller` is located.
+- The `icon` is the [Font Awesome Icon](#https://fontawesome.com/v4/) name.
 ```xml
 <?xml version="1.0"?>
 <config>
@@ -1232,6 +1234,7 @@ The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v
       <configurable-bundle-templates>
         <label>Configurable Bundle Templates</label>
         <title>Configurable Bundle Templates</title>
+        <icon>fa-files-o</icon>
         <bundle>configurable-bundle-gui</bundle>
         <controller>template</controller>
         <action>index</action>
@@ -1303,7 +1306,8 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 - Table definitions MUST include the `phpName` attribute.
 - Table foreign key MUST follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`).
 - Table foreign key definitions MUST include the `phpName` attribute.
-- Tables with sensitive primary key (eg: `spy_order` ID gives information about submitted order count) MUST include `uuid` field for public access purpose.
+- Tables with sensitive primary key  MUST include `uuid` field for public access purpose.
+- The `uuid` field MUST be defined for external communication to uniquely identify records (eg: `spy_order` ID gives information about submitted order count).
   - The field MAY be `null` by default.
   - The field MUST be eventually unique across the table (until the unique value is provided, the business logic MAY NOT operate appropriately).
 
@@ -1371,7 +1375,7 @@ Providers are used during the bootstrap of [Yves](#yves). There are three types 
 - **Router** - Resolves a path into a module, [Controller and Action](#controller).
 
 **Conventions**
-- All providers and routers MUST be registered in `[Module]/Yves/ShopApplication/YvesBootstrap.php` (see [Silex Documentation about Providers](#https://symfony.com/blog/the-end-of-silex/doc/1.3/providers.html))
+- All providers and routers MUST be registered in `[Module]/Yves/ShopApplication/YvesBootstrap.php`.
 - A `Controller Provider` MUST extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Service Provider` MUST implement `\Silex\ServiceProviderInterface and may extend \Spryker\Yves\Kernel\AbstractPlugin`.
 - A `Router` MUST extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.

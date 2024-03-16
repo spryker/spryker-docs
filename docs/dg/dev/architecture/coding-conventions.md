@@ -81,7 +81,7 @@ The application layers are aggregations of layers (see [Modules and Application 
         │   ├── Exception
         │   ├── Plugin
         │   │   └── [ConsumerModule]
-        │   │       └── [Name]Plugin.php
+        │   │       └── [PluginName]Plugin.php
         │   ├── Form
         │   │   ├── [Name]Form.php
         │   │   └── DataProvider
@@ -116,7 +116,7 @@ The application layers are aggregations of layers (see [Modules and Application 
         │       ├── Mapper
         │       │   └── [Module|Entity]Mapper.php
         │       └── Schema
-        │           └── [table_prefix].schema.xml
+        │           └── [organization_name]_[domain_name].schema.xml
         │
         ├── Dependency
         │   ├── Client
@@ -129,7 +129,7 @@ The application layers are aggregations of layers (see [Modules and Application 
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php      
         │   └── Plugin
-        │       └── [Name]PluginInterface.php
+        │       └── [PluginInterfaceName]PluginInterface.php
         │                
         ├── [Module]Config.php
         └── [Module]DependencyProvider.php
@@ -174,13 +174,14 @@ Used components
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
-        │       └── [Name]PluginInterface.php
+        │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
         │   ├── Provider
         │   │   ├── [Name]ControllerProvider.php
         │   │   └── [Name]ServiceProvider.php
         │   └── [ConsumerModule]
-        │       └── [Name]Plugin.php
+        │       ├── [PluginName]Plugin.php
+        │       └── [RouterName]Plugin.php
         ├── Theme
         │   └── ["default"|theme]
         │       ├── components
@@ -242,13 +243,13 @@ It acts as an interface for external systems to interact with the application's 
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
-        │       └── [Name]PluginInterface.php
+        │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
         │   ├── Provider
         │   │   ├── [Name]ControllerProvider.php
         │   │   └── [Name]ServiceProvider.php
         │   └── [ConsumerModule]
-        │       └── [Name]Plugin.php
+        │       └── [PluginName]Plugin.php
         ├── [Module]Config.php
         ├── [Module]DependencyProvider.php
         └── [Module]Factory.php
@@ -289,10 +290,10 @@ Note: Backend database access is an exception for performance streamlining.
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php           
         │   └── Plugin
-        │       └── [Name]PluginInterface.php            
+        │       └── [PluginInterfaceName]PluginInterface.php            
         ├── Plugin
         │   └── [ConsumerModule]
-        │       └── [Name]Plugin.php
+        │       └── [PluginName]Plugin.php
         ├── Zed
         │   ├── [Module]Stub.php
         │   └── [Module]StubInterface.php
@@ -1143,20 +1144,54 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 ## Model
 
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       ├── Communication
+│       │   └── [CustomDirectory]
+│       │       ├── [ModelName]Interface.php
+│       │       └── [ModelName].php   
+│       └── Business
+│           └── [CustomDirectory]
+│               ├── [ModelName]Interface.php
+│               └── [ModelName].php  
+├── Yves
+│   └── [Module]
+│       └── [CustomDirectory]
+│           ├── [ModelName]Interface.php
+│           └── [ModelName].php   
+├── Glue
+│   └── [Module]
+│       └── [CustomDirectory]
+│           ├── [ModelName]Interface.php
+│           └── [ModelName].php    
+├── Client
+│   └── [Module]
+│       └── [CustomDirectory]
+│           ├── [ModelName]Interface.php
+│           └── [ModelName].php                
+└── Service
+    └── [Module]
+        └── [CustomDirectory]
+            ├── [ModelName]Interface.php
+            └── [ModelName].php    
+```
+
 **Description**
 
-Models encapsulate logic and can be utilized across various layers within the application architecture, within to boundaries of each [layer's specific responsibilities](#layers).
-- [Communication layer](#application-layers) models are present in [Yves](#yves), [Glue](#glue), [Client](#client).
-- [Business layer](#application-layers) models are present in [Zed](#zed), [Service](#service).
-- [Persistence layer](#application-layers) models are present in [Zed](#zed).
+`Models` encapsulate logic and can be utilized across various layers within the application architecture, within to boundaries of each [layer's specific responsibilities](#layers).
+- [Communication layer](#communication-layer-responsibilities) `Models` are present in [Yves](#yves), [Glue](#glue), and [Client](#client).
+- [Business layer](#business-layer-responsibilities) `Models` are present in [Zed](#zed) and [Service](#service).
+- [Persistence layer](#persistence-layer-responsibilities) `Models` are present in [Zed](#zed).
 
 **Conventions**
 
 - Each model class MUST define and implement an interface (`[ModelName]Interface.php`) that holds the specification of each `public` method.
 - Dependencies MUST be injected via constructor.
   - `Models` MUST NOT instantiate any object but [Transfer Objects](#transfer-object).
-- Dependencies MUST be referred by interface.
-- Dependencies MUST be from the same module, either `models`, [Repository](#repository), [Entity Manager](#entity-manager), [Config](#module-configurations), or [Bridge wrapped facade](#bridge).
+- Dependencies MUST be referred/used/defined by interface.
+- Dependencies MUST be from the same module, either `Models`, [Repository](#repository), [Entity Manager](#entity-manager), [Config](#module-configurations), or [Bridge wrapped facades](#bridge).
   - `Models` MUST NOT interact directly with other module's `Models` (eg: via inheritance, shared constants, instantiation, etc.).
 - `Models` MUST be grouped under a folder by activity (eg: `Writers/ProductWriter.php`, `Readers/ProductReader.php`).
 - `Models` MUST NOT be named using generic words, such as `Executor`, `Handler`, or `Worker`.
@@ -1165,25 +1200,57 @@ Models encapsulate logic and can be utilized across various layers within the ap
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Dependencies can be referred directly via class.
 - It is recommended to NOT define interface for `Models` without project specific reason.
+- Facades can be directly used as dependency, `Bridge` wrapping is NOT recommended.
 </details>
 
 ## Module Configurations
+
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       └── [Module]Config.php
+├── Yves
+│   └── [Module]
+│       └── [Module]Config.php  
+├── Glue
+│   └── [Module]
+│       └── [Module]Config.php    
+├── Client
+│   └── [Module]
+│       └── [Module]Config.php   
+├── Service
+│   └── [Module]      
+│       └── [Module]Config.php
+└── Shared
+    └── [Module]
+        ├── [Module]Constants.php
+        └── [Module]Config.php       
+```
 
 **Description**
 - **Module configuration**: module specific, environment independent configuration in `[Module]Config.php.`
 - **Environment configuration**: configuration keys in `[Module]Constants.php` that can be controlled per environment via `config_default.php`.
 
 The `module configuration` class can access the `environment configuration` values via `$this->get('key')`.
-The `module configuration` is strictly defined in `Shared` application layer only, yet can be accessed from any [application layer](#application-layers) using the layer specific `Config`.
+
+When `module configuration` is defined in [Shared](#shared) application layer, it can be accessed from any other [application layer](#application-layers) using the [application layer](#application-layers) specific `Config`.
+
+When `module configuration` is defined in another [application layer](#application-layers) than [Shared](#shared), they are dedicated and accessible to that single [application layer](#application-layers) only.
 
 **Conventions**
 
-- Module configuration
-  - Getter methods (prefixed with `get`) MUST be defined to retrieve configuration values.
+- `Module configuration`
+  - Getter methods (prefixed with `get`) MUST be defined to retrieve configuration values, instead of accessing values via constants directly (this enables a more flexible extension structure, and an easier to control access tracking).
     - `Protected` constants MAY also be defined to support the getter methods (example: to enable cross-module referencing via `@uses`).
-- Environment configuration
+- `Environment configuration`
   - constants MUST be always `public` and have specification about their purpose.
   - constants MUST contain the same UPPERCASE value as the key is + properly prefixed with MODULE_NAME (see example below).
+
+<details><summary markdown='span'>Additional Conventions for Project Development</summary>
+- `Module configuration` constants can be defined with any access modifier.
+- `Environment configuration` constants can be defined with any access modifier.
+</details>
 
 <details><summary markdown='span'>Additional Conventions for Boilerplate, Accelerator, and Module Development</summary>
 - The module configuration relays exclusively on `static::` to support extension.
@@ -1214,6 +1281,14 @@ interface OmsConstants
 
 
 ## Navigation.XML
+
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Communication              
+            └── navigation.xml   
+```
 
 **Description**
 
@@ -1257,9 +1332,34 @@ The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v
 
 ## Permission Plugin
 
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       └── Communication
+│           └── Plugin
+│               └── [ConsumerModule]
+│                   └── [PluginName]Plugin.php
+├── Yves
+│   └── [Module]
+│       └── Plugin
+│           └── [ConsumerModule]
+│               └── [PluginName]Plugin.php
+├── Glue
+│   └── [Module]
+│       └── Plugin
+│           └── [ConsumerModule]
+│               └── [PluginName]Plugin.php    
+└── Client
+    └── [Module]        
+        └── Plugin
+            └── [ConsumerModule]
+                └── [PluginName]Plugin.php        
+```
+
 **Description**
 
-Permission plugins are a way to put a scope on the usage of an application during a request lifecycle.
+`Permission Plugins` are a way to put a scope on the usage of an application during a request lifecycle.
 
 **Conventions**
 
@@ -1295,24 +1395,34 @@ use PermissionAwareTrait;
 
 ## Persistence Schema
 
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Persistence
+            └── Propel
+                └── Schema
+                    └── spy_[domain_name].schema.xml
+```
+
 **Description**
 
-The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](#https://propelorm.org/documentation/reference/schema.html)).
+The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](#https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business domains, each representing a module overarching group that encapsulates related domain entities.
 
 **Conventions**
 
-- Table name MUST follow the format `spy_[module_name]_[domain_entity_name]` (eg: `spy_customer_address`, `spy_customer_address_book`).
-- Tables MUST have an integer ID primary key, following the format `id_[module_name]_[domain_entity_name]` (eg: `id_customer_address`, `id_customer_address_book`).
+- Table name MUST follow the format `spy_[domain_entity_name]` (eg: `spy_customer_address`, `spy_customer_address_book`).
+- Tables MUST have an integer ID primary key, following the format `id_[domain_entity_name]` (eg: `id_customer_address`, `id_customer_address_book`).
 - Table definitions MUST include the `phpName` attribute.
 - Table foreign key MUST follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`).
 - Table foreign key definitions MUST include the `phpName` attribute.
-- Tables with sensitive primary key  MUST include `uuid` field for public access purpose.
-- The `uuid` field MUST be defined for external communication to uniquely identify records (eg: `spy_order` ID gives information about submitted order count).
+- The `uuid` field MUST be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).
   - The field MAY be `null` by default.
   - The field MUST be eventually unique across the table (until the unique value is provided, the business logic MAY NOT operate appropriately).
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - The table prefix (`spy_`) can be chosen freely if compatibility with SCOS features is not desired.
+- Schema file prefix (`spy_`) can be freely chosen if compatibility with SCOS features is not desired.
 </details>
 
 **Guidelines**
@@ -1367,15 +1477,28 @@ Injecting columns from `Product` to a `Url` domain by defining `spy_url.schema.x
 
 ## Provider / Router
 
+```
+[Organization]
+└── Yves
+    └── [Module]  
+        └── Plugin
+            ├── Provider
+            │   ├── [Name]ControllerProvider.php
+            │   └── [Name]ServiceProvider.php
+            └── [ConsumerModule]
+                └── [RouterName]Plugin.php
+```
+
+
 **Description**
 
-Providers are used during the bootstrap of [Yves](#yves). There are three types of providers:
-- **Controller Provider** - Registers [Controllers](#controller) of a module and binds them to a path.
-- **Service Provider** - Represents a cross-functional service (eg: a validator).
-- **Router** - Resolves a path into a module, [Controller and Action](#controller).
+`Providers` and `Routers` are used during the bootstrap of [Yves](#applications) application. There are three types of them:
+- **Controller Provider** - Registers [Yves](#applications) [Controllers](#controller) of a module and binds them to a path.
+- **Service Provider** - Represents a cross-functional [Yves](#applications) service (eg: a validator).
+- **Router** - Resolves a path into a [Yves](#applications) [Controller and Action](#controller).
 
 **Conventions**
-- All providers and routers MUST be registered in `[Module]/Yves/ShopApplication/YvesBootstrap.php`.
+- All `providers` and `routers` MUST be registered in `\[Organization]\Yves\ShopApplication\YvesBootstrap.php`.
 - A `Controller Provider` MUST extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Service Provider` MUST implement `\Silex\ServiceProviderInterface and may extend \Spryker\Yves\Kernel\AbstractPlugin`.
 - A `Router` MUST extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
@@ -1383,15 +1506,21 @@ Providers are used during the bootstrap of [Yves](#yves). There are three types 
 
 ## Query Container facade
 
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Persistence
+            └── [Module]QueryContainer.php
+```
+
 **Description**
 
 The `Query Container` is the internal API of [Persistence layer](#persistence-layer-responsibilities), and represents and entry point to database access.
-The `Query Container` follows the [facade design pattern](#facade-design-pattern).
 The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of `Query Container` concept.
 
 **Conventions**
-- Naming: `[Module]QueryContainer.php`.
-- Additionally, the [facade design pattern](#facade-design-pattern) conventions apply.
+- The `Query Container` follows the [facade design pattern](#facade-design-pattern) and its conventions.
 - New `QueryContainer` functionality MUST NOT be introduced but through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
@@ -1400,6 +1529,15 @@ The more advanced and modular [Entity Manager](#entity-manager) and [Repository]
 
 ## Repository
 
+```
+[Organization]
+└── Zed
+    └── [Module]
+        └── Persistence
+            ├── [Module]Repository.php      
+            └── [Module]RepositoryInterface.php
+```
+
 **Descriptions**
 
 Executes queries and returns the results as [Transfer Objects](#transfer-object) or native types.
@@ -1407,8 +1545,7 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 
 **Conventions**
 
-- Naming: `[Module]Repository.php`
-- The `Repository` class MUST define and implement an interface (`[Model]RepositoryInterface.php`) that holds the specification of each method.
+- The `Repository` class MUST define and implement an interface (`[Model]RepositoryInterface.php`) that holds the specification of each `public` method.
 - `Public` methods MUST receive and return [Transfer Objects](#transfer-object) only.
 - Hidden, hard dependencies appearing through `join` MUST be defined via `@module [RemoteModule1][,[...]]` tag (see example below).
 - The methods MUST return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).
@@ -1431,30 +1568,75 @@ The `Repository` can be accessed from the same module's [Communication](#communi
   }
 ```
 
-
 ## Service facade
+
+```
+[Organization]
+└── Service
+    └── [Module]
+        ├── [Module]Service.php
+        └── [Module]ServiceInterface.php
+```
 
 **Description**
 
 The `Service` is the internal API of [Service application layer](#service), and represents the only entry point to the [Service Application](#applications).
-The `Service` follows the [facade design pattern](#facade-design-pattern).
 
 **Conventions**
-- Naming: `[Module]Service.php`.
-- Additionally, the [facade design pattern](#facade-design-pattern) conventions apply.
+- The `Service` follows the [facade design pattern](#facade-design-pattern) and its conventions.
 
 ## Theme
+
+```
+[Organization]
+└── Yves
+    └── [Module]
+        └── Theme
+            └── ["default"|theme]
+                ├── components
+                │   │── organisms
+                │   │   └── [organism-name]
+                │   │       └── [organism-name].twig
+                │   │── atoms
+                │   │   └── [atom-name]
+                │   │       └── [atom-name].twig
+                │   └── molecules
+                │       └── [molecule-name]
+                │           └── [molecule-name].twig
+                ├── templates
+                │   └── [page-layout-name]
+                │       └── [page-layout-name].twig
+                └── views
+                    └── [name-of-controller]
+                        └── [name-of-action].twig    
+```
 
 **Description**
 
 [Yves application layer](#yves) can have one or multiple themes that define the overall look and feel.
+
 SCOS implements the concept of [atomic web design](#https://bradfrost.com/blog/post/atomic-web-design/).
-[Yves application layer](#yves) provides only 1-level theme inheritance: current theme > default theme.
-- Current theme: a single theme defined on a project level (eg: `b2b-theme`, `b2c-theme`).
-- Default theme: a theme provided by default and used in the `boilerplate implementations`. Used for incremental project updates (start from default and change frontend components one-by-one) and a graceful fallback in case SCOS delivers a new functionality that does not have own frontend in a project.
-A `Theme` may contain `views`, `templates` or `components` (`atoms`, `molecules`, or `organisms`).
+
+[Yves application layer](#yves) provides only 1-level theme inheritance: `current theme` > `default theme`.
+- **Current theme**: a single theme defined on a project level (eg: `b2b-theme`, `b2c-theme`).
+- **Default theme**: a theme provided by default and used in the `boilerplate implementations`. Used for incremental project updates (start from default and change frontend components one-by-one) and a graceful fallback in case SCOS delivers a new functionality that does not have own frontend in a project.
+A `Theme` may contain `views`, `templates`, or `components` (`atoms`, `molecules`, or `organisms`).
 
 ## Transfer Object
+
+```
+src
+├── Generated
+│   └── Shared
+│       └── Transfer
+│           ├── [EntityName]EntityTransfer.php
+│           └── [Name]Transfer.php
+└── [Organisation]
+    └── Shared
+        └── [Module]
+            └── Transfer
+                └── [module_name].transfer.xml   
+```
 
 **Description**
 
@@ -1465,30 +1647,55 @@ They are described in module specific XML files and then autogenerated into the 
 For every defined table in [Peristence Schema](#persistence-schema) a matching `EntityTransfer` `Transfer Object` will be generated with `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), thus `Entity Transfers` should be used primarily during layer or module overarching communication.
 
 **Conventions**
-
-- Naming: `[module-name].transfer.xml`.
+- `Transfer Objects` MUST be defined in the transfer XML file.
 - **Backend API module** transfer names MUST use plural entity name with `BackendApiAttributes` suffix.
 - **Storefront API module** transfer names MUST use plural entity name with `Api` suffix.
 - `EntityTransfers` MUST NOT be defined manually but rather will be generated automatically based on [Peristence Schema](#persistence-schema) definitions.
 - A module can only use those `Transfer Objects` and their properties which are declared in the same module (transfer definitions accessed through composer dependencies are considered as violation).
 
 **Guidelines**
-- They can be instantiated directly anywhere (not just via `Factory`).
+- They can be instantiated directly anywhere (not just via [Factory](#factory)).
 
 **Examples**
 - **BAPI resource names**: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
 - **SAPI resource names**: `PickingListsApiAttributes` for picking list, `PickingListItemsApiAttributes` for picking list items.
 
+```
+<?xml version="1.0"?>
+<transfers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="spryker:transfer-01" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="ConfigurableBundleTemplate">
+        <property name="idConfigurableBundleTemplate" type="int"/>
+        <property name="uuid" type="string"/>
+        <property name="name" type="string"/>
+        <property name="isActive" type="bool"/>
+        <property name="translations" type="ConfigurableBundleTemplateTranslation[]" singular="translation"/>
+        <property name="productImageSets" type="ProductImageSet[]" singular="productImageSet"/>
+    </transfer>
+</transfers>
+```
 
 ## Widget
 
+```
+[Organization]
+└── Yves
+    └── [Module]
+        ├── Plugin
+        │   └── [ConsumerModule]
+        │       ├── [PluginName]Plugin.php
+        │       └── [RouterName]Plugin.php      
+        └── Widget
+            └── [Name]Widget.php
+```
+
 **Description**
 
-A `Widget` is a reusable part of a webpage in [Yves](#applications). Widgets are meant to provide functionality in a decoupled, modular and configurable way, relaying in backend as well.
+A `Widget` is a reusable part of a webpage in [Yves](#yves) application layer. `Widgets` are meant to provide functionality in a decoupled, modular and configurable way.
 
 **Convention**
-- A `Widget` MUST contain only lightweight, render related logic.
-  - `Widget` MUST use factory to execute complex logic or access additional data.
+- A `Widget` MUST contain only lightweight, display related logic.
+  - `Widget` MUST use [Factory](#factory) to execute complex logic or access additional data.
 - A `Widget` MUST have a unique name across SCOS features.
 - When `Widget` call is implemented, it MUST be considered that a `Widget` is always optionally enabled.
 - A `Widget` MUST NOT implement an interface.
@@ -1498,19 +1705,72 @@ A `Widget` is a reusable part of a webpage in [Yves](#applications). Widgets are
 </details>
 
 <details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- `Widget` module MUST NOT appear as dependency (as it goes against the basic concept of the optional widgets).
+- `Widget` module MUST NOT appear as dependency (as it goes against the basic concept of the optional widgets).<br/>
 - Implementing a widget MUST happen in a widget module.
 </details>
 
 **Guidelines**
-- Widget modules MAY contain only frontend components (templates, atoms, molecules, organisms, etc.) without widget class.
+- Widget modules can contain only frontend components (templates, atoms, molecules, organisms, etc.) without widget class.<br/
 - The widget class receives the input/rendering parameters via its constructor.
+
+```php
+namespace SprykerShop\Yves\CurrencyWidget\Widget;
+
+class CurrencyWidget extends \Spryker\Yves\Kernel\Widget\AbstractWidget
+{
+    public function __construct()
+    {
+        $this->addParameter('currencies', $this->getCurrencies())
+            ->addParameter('currentCurrency', $this->getCurrentCurrency());
+    }
+
+    public static function getName(): string
+    {
+        return 'CurrencyWidget';
+    }
+
+    public static function getTemplate(): string
+    {
+        return '@CurrencyWidget/views/currency-switcher/currency-switcher.twig';
+    }
+
+    /**
+     * @return array<\Generated\Shared\Transfer\CurrencyTransfer>
+     */
+    protected function getCurrencies(): array
+    {
+        $currencyClient = $this->getFactory()->getCurrencyClient();
+        $availableCurrencyCodes = $currencyClient->getCurrencyIsoCodes();
+
+        $currencies = [];
+        foreach ($availableCurrencyCodes as $currency) {
+            $currencies[$currency] = $currencyClient->fromIsoCode($currency);
+        }
+
+        return $currencies;
+    }
+
+    protected function getCurrentCurrency(): string
+    {
+        return $this->getFactory()->getCurrencyClient()->getCurrent()->getCodeOrFail();
+    }
+}
+```
 
 ## Zed Stub
 
+```
+[Organization]
+└── Client
+    └── [Module]
+        └── Zed
+            ├── [Module]Stub.php
+            └── [Module]StubInterface.php
+```
+
 **Description**
 
-A `Zed Stub` is a class which defines interactions between [Yves application layer](#yves) (or [Glue application layer](#glue)) and [Zed application layer](#applications). Under the hood, the `Zed Stub` makes RPC calls to [Zed application layer](#zed).
+A `Zed Stub` is a class which defines interactions between [Yves application layer](#yves) (or [Glue application layer](#glue)) and [Zed application layer](#zed). Under the hood, the `Zed Stub` makes RPC calls to [Zed application layer](#zed).
 
 **Conventions**
 - The `Zed Stub` call's endpoints MUST be implemented in a [Zed application](#applications) [GatewayController](#gateway-controller) of the receiving module.
@@ -1520,16 +1780,93 @@ A `Zed Stub` is a class which defines interactions between [Yves application lay
 - `Zed Stub` methods MUST add a `@uses` tag with the targeted [GatewayController](#gateway-controller) action in the docblock to enable easy code flow tracking.
 - `Zed Stub` MUST be a descendant of `\Spryker\Client\ZedRequest\Stub\ZedRequestStub`.
 
+```php
+namespace Spryker\Client\ConfigurableBundleCartsRestApi\Zed;
+
+class ConfigurableBundleCartsRestApiZedStub implements ConfigurableBundleCartsRestApiZedStubInterface
+{
+    /**
+     * @var \Spryker\Client\ConfigurableBundleCartsRestApi\Dependency\Client\ConfigurableBundleCartsRestApiToZedRequestClientInterface
+     */
+    protected $zedRequestClient;
+
+    public function __construct(ConfigurableBundleCartsRestApiToZedRequestClientInterface $zedRequestClient)
+    {
+        $this->zedRequestClient = $zedRequestClient;
+    }
+
+    /**
+     * @uses \Spryker\Zed\ConfigurableBundleCartsRestApi\Communication\Controller\GatewayController::addConfiguredBundleAction()
+     *
+     * @param \Generated\Shared\Transfer\CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer
+     *
+     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
+     */
+    public function addConfiguredBundle(CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer): QuoteResponseTransfer
+    {
+        /** @var \Generated\Shared\Transfer\QuoteResponseTransfer $quoteResponseTransfer */
+        $quoteResponseTransfer = $this->zedRequestClient->call(
+            '/configurable-bundle-carts-rest-api/gateway/add-configured-bundle',
+            $createConfiguredBundleRequestTransfer,
+        );
+
+        return $quoteResponseTransfer;
+    }
+```
+
 # Module Contribution Components
 
 The components below are necessity in module developments for modularity but recommended to avoid in Project or Boilerplate development.
 
 **Conventions**
 - The components MUST be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to come in effect.
-- The components MUST be extended __only__ from the [application layer](#application-layers) corresponding Abstract class in `Kernel` module.
+- The components MUST be extended __only__ from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
 - The components MUST be stateless to be deterministic and easy to comprehend.
 
 ## Bridge
+
+```
+[Organization]
+├── Zed
+│   └── [Module]
+│       └── Dependency
+│           ├── Client
+│           │   ├── [Module]To[Module]ClientBridge.php
+│           │   └── [Module]To[Module]ClientInterface.php          
+│           ├── Facade
+│           │   ├── [Module]To[Module]FacadeBridge.php
+│           │   └── [Module]To[Module]FacadeInterface.php
+│           └── Service
+│               ├── [Module]To[Module]ServiceBridge.php
+│               └── [Module]To[Module]ServiceInterface.php    
+├── Yves
+│   └── [Module]             
+│       └── Dependency
+│           ├── Client
+│           │   ├── [Module]To[Module]ClientBridge.php
+│           │   └── [Module]To[Module]ClientInterface.php
+│           └── Service
+│               ├── [Module]To[Module]ServiceBridge.php
+│               └── [Module]To[Module]ServiceInterface.php      
+├── Glue
+│   └── [Module]    
+│       └── Dependency
+│           ├── Client
+│           │   ├── [Module]To[Module]ClientBridge.php
+│           │   └── [Module]To[Module]ClientInterface.php
+│           └── Service
+│               ├── [Module]To[Module]ServiceBridge.php
+│               └── [Module]To[Module]ServiceInterface.php    
+└── Client
+    └── [Module]      
+        └── Dependency
+            ├── Client
+            │   ├── [Module]To[Module]ClientBridge.php
+            │   └── [Module]To[Module]ClientInterface.php
+            └── Service
+                ├── [Module]To[Module]ServiceBridge.php
+                └── [Module]To[Module]ServiceInterface.php  
+```
 
 **Description**
 
@@ -1539,8 +1876,6 @@ Challenges arise when a facade from another module seeks to implement the friend
 
 **Conventions**
 
-- Naming: `[CurrentModule]To[FacadeOwnerModule]FacadeBridge.php`.
-- `Bridges` and their interfaces are defined in the corresponding `Dependency\[Service|Client|Facade]\` directory.
 - The bridge class MUST define and implement an interface (`[CurrentModule]To[FacadeOwnerModule][Service|Client|Facade]Interface.php`) that holds the specification of each `public` method (mind the missing bridge word!).
 - `Bridges` MUST contain only the delegation logic to the friend facade method.
 - The `Bridge` constructor MUST NOT contain parameters to avoid coupling to a specific class.
@@ -1584,6 +1919,51 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ## Plugin
 
+```
+[Organization]
+├── Zed
+│   ├── [Module]
+│   │    └── Communication
+│   │        └── Plugin
+│   │            └── [ConsumerModule]
+│   │                └── [PluginName]Plugin.php
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+├── Yves
+│   ├── [Module]
+│   │   └── Plugin
+│   │       └── [ConsumerModule]
+│   │           └── [PluginName]Plugin.php
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+├── Glue
+│   ├── [Module]
+│   │   └── Plugin
+│   │       └── [ConsumerModule]
+│   │           └── [PluginName]Plugin.php    
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+└── Client
+    ├── [Module]        
+    │   └── Plugin
+    │       └── [ConsumerModule]
+    │           └── [PluginName]Plugin.php    
+    └── [ConsumerModule]Extension
+        └── Dependency
+            └── Plugin
+                └── [PluginInterfaceName]PluginInterface.php
+
+```
+
 **Description**
 - `Plugins` are classes which are used to realize Inversion-Of-Control - instead of a direct call to another module's [facade](#facade-design-pattern), a `plugin` can be provided as an optional and configurable class.
 - `Plugins` are the only classes that can be instantiated across modules.
@@ -1610,6 +1990,51 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ## Plugin Interface
 
+```
+[Organization]
+├── Zed
+│   ├── [Module]
+│   │    └── Communication
+│   │        └── Plugin
+│   │            └── [ConsumerModule]
+│   │                └── [PluginName]Plugin.php
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+├── Yves
+│   ├── [Module]
+│   │   └── Plugin
+│   │       └── [ConsumerModule]
+│   │           └── [PluginName]Plugin.php
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+├── Glue
+│   ├── [Module]
+│   │   └── Plugin
+│   │       └── [ConsumerModule]
+│   │           └── [PluginName]Plugin.php    
+│   └── [ConsumerModule]Extension
+│       └── Dependency
+│           └── Plugin
+│               └── [PluginInterfaceName]PluginInterface.php
+│
+└── Client
+    ├── [Module]        
+    │   └── Plugin
+    │       └── [ConsumerModule]
+    │           └── [PluginName]Plugin.php    
+    └── [ConsumerModule]Extension
+        └── Dependency
+            └── Plugin
+                └── [PluginInterfaceName]PluginInterface.php
+
+```
+
 **Description**
 
 - Modules which consume [Plugins](#plugin) need to define their requirements with an interface.
@@ -1617,7 +2042,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 There are three modules involved:
 
-1. **Plugin definer** (aka extension module): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module.
+1. **Plugin definer** (aka **extension module**): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module.
 2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
 3. **Plugin providers**: The modules that implement a [Plugin](#plugin) (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
 

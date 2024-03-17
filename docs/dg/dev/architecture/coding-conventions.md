@@ -9,6 +9,7 @@
 - [Facade design pattern](#facade-design-pattern)
 - [Factory](#factory)
 - [Gateway Controller](#gateway-controller)
+- [Layout](#layout)
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Model](#model)
 - [Module Configurations](#module-configurations)
@@ -17,6 +18,7 @@
 - [Persistence Schema](#persistence-schema)
 - [Provider / Router](#provider--router)
 - [Query Container facade](#query-container-facade)
+- [Query Object](#query-object)
 - [Repository](#repository)
 - [Service facade](#service-facade)
 - [Theme](#theme)
@@ -65,8 +67,8 @@ The application layers are aggregations of layers (see [Modules and Application 
 └── Zed
     └── [Module]
         ├── Presentation
-        │   ├── _layout
-        │   │   └── layout.twig
+        │   ├── Layout
+        │   │   └── [layout-name].twig
         │   └── [name-of-controller]
         │       └── [name-of-action].twig
         │    
@@ -145,11 +147,13 @@ Used components
 - [Facade](#facade)
 - [Factory](#factory)
 - [Gateway Controller](#gateway-controller)
+- [Layout](#layout)
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Models](#model)
 - [navigation.xml](#navigationxml)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
 - [Query Container](#query-container-facade)
+- [Query Object](#query-object)
 - [Repository](#repository)
 - [Schema](#persistence-schema)
 
@@ -195,8 +199,10 @@ Used components
         │       │       └── [molecule-name]
         │       │           └── [molecule-name].twig
         │       ├── templates
-        │       │   └── [page-layout-name]
-        │       │       └── [page-layout-name].twig
+        │       │   ├── page-layout-[page-layout-name]
+        │       │   │   └── page-layout-[page-layout-name].twig
+        │       │   └── [template-name]
+        │       │       └── [template-name].twig
         │       └── views
         │           └── [name-of-controller]
         │               └── [name-of-action].twig        
@@ -213,10 +219,12 @@ Used components
 - [Controller](#controller)
 - [Dependency Provider](#dependency-provider)
 - [Factory](#factory)
+- [Layout](#layout) 
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Model](#model)
 - [Provider / Router](#provider--router)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
+- [Templates](#theme)
 - [Theme](#theme)
 - [Widget](#widget)
 
@@ -767,7 +775,7 @@ src
 │
 ├── Orm
 │   └── Zed   
-│       └── [ModuleName]   
+│       └── [DomainName]   
 │           ├── Base
 │           │   ├── [EntityName].php
 │           │   └── [EntityName]Query.php 
@@ -794,12 +802,14 @@ Each database table definition results as the creation of an `Entity` by Propel.
 **3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module abstract class to enable adding functionality from SCOS module level (see example below).
 
 See [Propel Documentation - Active Record Class](#https://propelorm.org/documentation/reference/active-record.html)
+See more details on domains in [Persistence Schema](#persistence-schema).
 
 **Conventions**
 - `Entity` base classes MUST NOT be defined manually but generated via [Persistence Schema](#persistence-schema). 
 - `Entities` MUST be instantiated and used only from the [Entity Manager](#entity-manager) of the same module.
 - `Entities` MUST NOT leak to any facade's level (as they are heavy, stateful, module specific objects).
 - `Entities` MUST be implemented according to the 3-tier class hierarchy (see in description & example) to support extension from Propel and SCOS.
+- `Entities` MUST use [Query Objects](#query-object) for database operations.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - The 3-tier class hierarchy is NOT applicable for database tables that are independent to SCOS features.
@@ -853,11 +863,11 @@ Persists [Entities](#entity) by using their internal saving mechanism.
 The `Entity Manager` can be accessed from the same module's [business layer](#business-layer-responsibilities).
 
 **Conventions**
-- The repository class MUST define and implement an interface that holds the specification of each `public` method.
-- `Public` methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`
+- The entity manager class MUST define and implement an interface that holds the specification of each `public` method.
+- Entity manager `public` methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`
 - Creating, updating and deleting functions MUST be separated by concern even if they use overlapping internal methods.
-- Only [Transfer Objects](#transfer-object) MUST be used as input parameters.
-- Methods MUST return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).
+- Entity manager methods MUST receive only [Transfer Objects](#transfer-object) as input parameters.
+- Entity manager methods MUST return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - It is recommended to NOT define or maintain `Entity Manager` interfaces.<br/>
@@ -1055,6 +1065,30 @@ The responsibility of a `Factory` is to instantiate classes of a layer and injec
 **Conventions**
 - Gateway controller actions MUST define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
 - `Gateway Controllers` follow the [Controller](#controller) conventions.
+
+## Layout
+
+```
+[Organization]
+├── Yves
+│   └── [Module]
+│       └── Theme
+│           └── ["default"|theme]
+│               └── templates
+│                   ├── page-layout-[page-layout-name]
+│                   │   └── page-layout-[page-layout-name].twig
+│                   └── [template-name]
+│                       └── [template-name].twig                
+└── Zed
+    └── [Module]
+        └── Presentation
+            └── Layout
+                └── [layout-name].twig
+```
+
+**Description**
+Layouts are the skeleton of the page, and they define the structure of the page.
+
 
 ## Mapper / Expander / Hydrator
 
@@ -1407,7 +1441,7 @@ use PermissionAwareTrait;
 
 **Description**
 
-The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](#https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business domains, each representing a module overarching group that encapsulates related domain entities.
+The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](#https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business `domains`, each representing a module overarching group that encapsulates related domain entities.
 
 **Conventions**
 
@@ -1427,7 +1461,7 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 
 **Guidelines**
 - `PhpName` is usually the CamelCase version of the "SQL name" (eg: `<table name="spy_customer" phpName="SpyCustomer">`).
-- A module (eg: `Product` module) may inject columns into a table which belong to another module (eg: `Url` module). This case is usually used if the direction of a relation is opposed to the direction of the dependency. For this scenario, the injector module will contain a separate, foreign module schema definition file (eg: `Product` module will contain `spy_url.schema.xml` next to `spy_product.schema.xml` that defines the injected columns into the `Url` domain) (see below in examples).
+- A module (eg: `Product` module) may inject columns into a table which belong to another module (eg: `Url` module). This case is usually used if the direction of a relation is opposed to the direction of the dependency. For this scenario, the injector module will contain a separate, foreign module schema definition file (eg: `Product` module will contain `spy_url.schema.xml` next to `spy_product.schema.xml` that defines the injected columns into the `Url` `domain`) (see below in examples).
 - The `database` element's `package` and `namespace` attributes describe for generation the placement and namespace of generated files.
 
 **Example**
@@ -1461,7 +1495,7 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 
 ```
 
-Injecting columns from `Product` to a `Url` domain by defining `spy_url.schema.xml` schema file in `Product` module.
+Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema.xml` schema file in `Product` module.
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
@@ -1527,6 +1561,56 @@ The more advanced and modular [Entity Manager](#entity-manager) and [Repository]
 - `QueryContainers` can be used/developed further, but it is recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
 </details>
 
+## Query Object
+
+```
+src
+├── Orm
+│   └── Zed   
+│       └── [DomainName]   
+│           ├── Base
+│           │   └── [EntityName]Query.php 
+│           └── [EntityName]Query.php
+│
+└── [Organisation]
+    └── Zed
+        └── [ModuleName]
+            └── Persistence
+                └── Propel
+                    └── Abstract[EntityName]Query.php
+```
+
+**Description**
+
+Enables to write queries to the related table in an SQL engine agnostic way.
+`Query Objects` can be instantiated and used only from the [Repository](#repository) and [Entity Manager](#entity-manager) of the definer module(s).
+
+See [Propel Documentation - Query Class](#https://propelorm.org/documentation/reference/model-criteria.html)
+See more details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
+
+**Convention**
+
+- Hidden, hard dependencies appearing through `join` MUST be defined via `@module [RemoteModule1][,[...]]` tag (see example below).
+
+**Example**
+
+In the below example, the `SpyProductQuery` is part of the `Product` `domain` while `SpyUrl` belongs to `Url` `domain` and `SpyProductComment` belongs to `ProductComment` `domain`.
+
+```php
+  /**
+   * @module Url,ProductComment
+   */
+  public function exampleMethod()
+  {
+      $query = new SpyProductQuery();
+      $query
+        ->joinSpyUrl()
+        ->joinSpyProductComment();
+      ...
+  }
+```
+
+
 ## Repository
 
 ```
@@ -1540,33 +1624,16 @@ The more advanced and modular [Entity Manager](#entity-manager) and [Repository]
 
 **Descriptions**
 
-Executes queries and returns the results as [Transfer Objects](#transfer-object) or native types.
+Responsible for retrieving data from database by executing queries and returning the results as [Transfer Objects](#transfer-object) or native types.
 The `Repository` can be accessed from the same module's [Communication](#communication-layer-responsibilities) and [Business Layers](#business-layer-responsibilities).
 
 **Conventions**
 
 - The `Repository` class MUST define and implement an interface (`[Model]RepositoryInterface.php`) that holds the specification of each `public` method.
 - `Public` methods MUST receive and return [Transfer Objects](#transfer-object) only.
-- Hidden, hard dependencies appearing through `join` MUST be defined via `@module [RemoteModule1][,[...]]` tag (see example below).
 - The methods MUST return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).
-
-**Example**
-
-```php
-  namespace Spryker\Zed\Product\Persistence;
-  
-  /**
-   * @module Url,ProductComment
-   */
-  public function findProduct()
-  {
-      $query = new SpyProductQuery();
-      $query
-        ->joinSpyUrl()
-        ->joinSpyProductComment();
-      ...
-  }
-```
+- `Repositories` MUST use [Query Objects](#query-object) to retrieve data from the database.
+- `Repostiories` MUST NOT alter the data in the database, only retrieve it.
 
 ## Service facade
 
@@ -1604,8 +1671,10 @@ The `Service` is the internal API of [Service application layer](#service), and 
                 │       └── [molecule-name]
                 │           └── [molecule-name].twig
                 ├── templates
-                │   └── [page-layout-name]
-                │       └── [page-layout-name].twig
+                │   ├── page-layout-[page-layout-name]
+                │   │   └── page-layout-[page-layout-name].twig
+                │   └── [template-name]
+                │       └── [template-name].twig                
                 └── views
                     └── [name-of-controller]
                         └── [name-of-action].twig    
@@ -1621,6 +1690,10 @@ SCOS implements the concept of [atomic web design](#https://bradfrost.com/blog/p
 - **Current theme**: a single theme defined on a project level (eg: `b2b-theme`, `b2c-theme`).
 - **Default theme**: a theme provided by default and used in the `boilerplate implementations`. Used for incremental project updates (start from default and change frontend components one-by-one) and a graceful fallback in case SCOS delivers a new functionality that does not have own frontend in a project.
 A `Theme` may contain `views`, `templates`, or `components` (`atoms`, `molecules`, or `organisms`).
+- **Views**: are the templates for the [Controllers](#controller) and [Widgets](#widget).
+- **Templates**: are reusable templates, such as page [Layouts](#layout).
+- **Components**: are reusable parts of the UI, further divided into `atoms`, `molecules`, and `organisms`.
+
 
 ## Transfer Object
 

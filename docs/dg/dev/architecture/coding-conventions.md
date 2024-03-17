@@ -375,7 +375,7 @@ Used components
 
 # Layers
 
-An application layer can have four logical layers with clear purpose and communication rules.
+An application layer can have up to four logical layers with clear purpose and communication rules.
 - **Presentation Layer**: contains twig-templates, JS and CSS files
 - **Communication Layer**: contains controllers, forms, tables and plugins
 - **Business Layer**: contains the business logic of a module

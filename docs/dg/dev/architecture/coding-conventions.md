@@ -383,7 +383,7 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ## Presentation Layer responsibilities
 - Responsible for handling the user interface (UI) presentation.
-- Contains Twig templates, JavaScript (JS), and Cascading Style Sheets (CSS) files.
+- Contains frontend elements, such as HTML, Twig templates, JavaScript (JS), TypeScript, Cascading Style Sheets (CSS) files, and so on.
 - Handles user interactions and input validations on the client side.
 - Interacts with the [Communication Layer](#communication-layer-responsibilities) to retrieve necessary data for display.
 
@@ -407,7 +407,6 @@ An application layer can have up to four logical layers with clear purpose and c
 - Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
 - Handles database operations such as CRUD (`Create`, `Read`, `Update`, `Delete`).
 - Ensures data integrity and security.
-- Interacts with the [Business Layer](#business-layer-responsibilities) to provide data access for business operations.
 
 # Components
 

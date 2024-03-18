@@ -5,21 +5,7 @@ last_updated: July 3, 2023
 template: howto-guide-template
 ---
 
-Once you have [integrated the Usercentrics app](/docs/pbc/all/usercentrics/integrate-usercentrics.html), you can configure it.
-
 Based on the tracking tools used in your Storefronts, you can define different sets of tracking tool configurations, called *Settings* in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/). You can use these different settings for different countries of your Storefronts, depending on their legal requirements for user consent and data privacy. Every setting has its unique setting ID. To comply with the legislation of each country you have in your shop, you can configure which setting ID is to be used in which Spryker store.
-
-{% info_block warningBox "Tracking tools integration" %}
-
-Make sure you have integrated the necessary tracking tools to your stores independently of Spryker's Usercentrics integration and *before* you start configuring them in Usercentrics.
-
-{% endinfo_block %}
-
-{% info_block infoBox "Info" %}
-
-The integration of Usercentrics requires the injection of a JavaScript source file and a few headers into every Spryker store page, together with the setting ID. Each Spryker store can have only one Usercentrics setting ID. Different stores can use the same setting ID. For example, all European stores that need to be GDPR compliant use the same setting ID.
-
-{% endinfo_block %}
 
 To manage your users' consent to the tracking tools or data processing services, you can use Usercentrics support of default tracking tools or integrate the custom ones:
 
@@ -29,32 +15,33 @@ The tracking tools you defined in Usercentrics are displayed on the Storefront i
 
 With Usercentrics, you don't need to program the cookie consent dialogs or add their JavaScript code to every single page of your store. Instead, you can configure the dialog in the Usercentrics portal, and it automatically adds the dialog to your store. You can achieve this with the [Smart Data Protector setting](#smart-data-protector) from Usercentrics.
 
+{% info_block infoBox "" %}
+
+The integration of Usercentrics requires the injection of a JavaScript source file and a few headers into every Spryker store page, together with the setting ID. Each Spryker store can have only one Usercentrics setting ID. Different stores can use the same setting ID. For example, all European stores that need to be GDPR compliant use the same setting ID.
+
+{% endinfo_block %}
 
 ## Prerequisites
 
-To start using Usercentrics for your shop, you need an account with Usercentrics. You can create the account on the [Usercentrics website](https://usercentrics.com/free-trial-web/).
+* Create a Usercentrics account on the [Usercentrics website](https://usercentrics.com/free-trial-web/).
+* Integrate the [Usercentrics app](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
+* Integrate the necessary tracking tools to your stores independently of Spryker's Usercentrics integration.
+
 
 ## Connect Usercentrics
 
-To connect Usercentics to your store, follow these steps:
-
-1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
+1. In the Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Usercentrics**.
-   This takes you to the Usercentrics app details page.
-3. In the top right corner of the Usercentrics app details page, click **Connect app**.
-   This displays a message about the successful integration of the app. The Usercentrics app's status changes to *Connection pending*.
-
-That's it. You have connected the Usercentrics app to your store. Now, you need to configure it.
+   This opens the Usercentrics app details page.
+3. Click **Connect app**.
+   This displays a message about the successful integration of the app. The Usercentrics app's status changes to **Connection pending**.
 
 ## Configuration settings
 
-There are three ways to integrate Usecentrics: by direct integration, by the Usercentrics Smart Data Protector, and integration with Google Tag Manager. In the Spryker Back Office, you can select either Smart Data Protector or Google Tag Manager. At the same time, the Smart Data Protector is the preferred and default setting. If you are not using a third-party tracking management tool like [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) and want a code-free integration, we recommend integrating Usercentrics via Smart Data Protector.
-
-{% info_block infoBox "Info" %}
+There are three ways to integrate Usecentrics: by direct integration, by the Usercentrics Smart Data Protector, and integration with Google Tag Manager. In the Back Office, you can select either Smart Data Protector or Google Tag Manager. If you are not using a third-party tracking management tool like [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) and want a code-free integration, we recommend integrating  via Smart Data Protector.
 
 All of the three approaches require you to get the setting ID for your store in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/) and configure the data processing services on page **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services**.
 
-{% endinfo_block %}
 
 ### Direct integration
 

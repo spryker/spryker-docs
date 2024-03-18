@@ -40,7 +40,7 @@ Recommended: `/home/jdoe/workspace/project`.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
 
-4. Clone *one* of the [Demo Shops](/docs/about/all/intro-to-spryker.html#demo-shops):
+4. Clone *one* of the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops):
 
     * B2C Demo Shop:
 

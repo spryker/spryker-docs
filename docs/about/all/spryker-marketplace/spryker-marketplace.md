@@ -14,7 +14,7 @@ redirect_from:
 
 In this section, you will find all the information about Spryker Marketplace and how to start developing one.
 
-If you are new to Spryker, first see our [Intro to Spryker](/docs/about/all/intro-to-spryker.html).
+If you are new to Spryker, first see our [Intro to Spryker](/docs/about/all/about-spryker.html).
 
 ## Overview of Spryker Marketplace
 

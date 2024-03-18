@@ -248,7 +248,7 @@ In November 2023, we have added and updated the following pages:
 - [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 - [REST API Marketplace B2B Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2b-demo-shop-reference.html).
 - [REST API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/202311.0/old-glue-infrastructure/rest-api-marketplace-b2c-demo-shop-reference.html).
-- [Release notes 202311.0](/docs/about/all/releases/release-notes-202311.0/release-notes-202311.0.html).
+- [Release notes 202311.0](/docs/about/all/releases/release-notes-202311.0.html).
 - [Security release notes 202312.0](/docs/about/all/releases/security-release-notes-202312.0.html).
 
 ### Updated pages

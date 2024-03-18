@@ -515,8 +515,8 @@ merchant_relation_request_page.merchant_relation_request.actions.view,View,en_US
 merchant_relation_request_page.merchant_relation_request.actions.view,Sicht,de_DE
 merchant_relation_request_page.merchant_relation_request.empty_business_units.error,At least one business unit must be assigned to a user,en_US
 merchant_relation_request_page.merchant_relation_request.empty_business_units.error,Einem Benutzer muss mindestens eine Geschäftseinheit zugeordnet sein,de_DE
-merchant_relation_request.merchant_relation_request.success.canceled,Merchant relation request canceled successfully.,en_US
-merchant_relation_request.merchant_relation_request.success.canceled,Die Anfrage zur Händlerbeziehung wurde erfolgreich abgebrochen.,de_DE
+merchant_relation_request_page.merchant_relation_request.success.canceled,Merchant relation request canceled successfully.,en_US
+merchant_relation_request_page.merchant_relation_request.success.canceled,Die Anfrage zur Händlerbeziehung wurde erfolgreich abgebrochen.,de_DE
 merchant_relation_request.validation.company_user_access_denied,Access denied.,en_US
 merchant_relation_request.validation.company_user_access_denied,Zugriff verweigert.,de_DE
 merchant_relation_request.validation.merchant_not_found,Merchant not found.,en_US

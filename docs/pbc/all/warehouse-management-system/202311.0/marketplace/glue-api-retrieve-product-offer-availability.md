@@ -66,13 +66,8 @@ Response sample: retrieve availability of a product offer
 }
 ```
 
-<a name="product-offer-availability-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
-|ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|
-| isNeverOutOfStock          |  Boolean         | Shows if the product offer is never out of stock.          |
-| availability          | Boolean          |Defines if the product offer is available.           |
-| quantity          | Integer          |Stock of the product offer.           |
 
 
 ## Possible errors

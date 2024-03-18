@@ -775,8 +775,8 @@ entries:
                     nested:
                       - title: Create CMS redirects
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html
-                      - title: Manage CMS redirects
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/manage-cms-redirects.html
+                      - title: Edit CMS redirects
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/edit-cms-redirects.html
                   - title: Manage file list
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-file-list.html
                   - title: Manage file tree
@@ -3099,7 +3099,7 @@ entries:
                   - title: Split products by stores
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
                   - title: "Product data: From import to frontend views"
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html                        
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"

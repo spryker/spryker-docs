@@ -10,7 +10,7 @@ related:
   - title: Getting the most out of Spryker Support
     link: docs/about/all/support/getting-the-most-out-of-spryker-support.html
   - title: How to use the Support Portal
-    link: docs/about/all/support/how-to-use-the-support-portal.html
+    link: docs/about/all/support/using-the-support-portal.html
 ---
 
 We believe that you can only deliver great support when you are on the same page as your customers. Being transparent about our performance metrics and processes is a necessary step towards that.

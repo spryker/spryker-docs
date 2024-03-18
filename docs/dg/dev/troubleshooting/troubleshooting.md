@@ -36,4 +36,4 @@ If you can not find answer to your questions and require technical support, you 
 
 * [How Spryker support works](/docs/about/all/support/how-spryker-support-works.html)
 * [How to get the most out of support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html)
-* [Understanding ticket status](/docs/about/all/support/understanding-ticket-status.html)
+* [Understanding ticket status](/docs/about/all/support/support-ticket-statuses.html)

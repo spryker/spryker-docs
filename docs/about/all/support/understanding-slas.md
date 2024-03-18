@@ -29,7 +29,7 @@ If you discover a problem with Spryker Software, please let us know immediately.
 Ensure that every case you open with us includes the information we need to work on it. To learn what info matters most, see [Getting the most out of Spryker Support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html).
 
 ### Assess business impact realistically
-To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to do this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation of what business impact is and how priorities work have a look into this [article](/docs/about/all/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized).
+To make sure that we resolve the right cases first, we need to triage and prioritize. You can help us to do this better if you assess and specify the business impact of your problem appropriately. For a more detailed explanation of what business impact is and how priorities work have a look into this [article](/docs/about/all/support/support-ticket-statuses.html#how-are-bug-tickets-prioritized).
 
 ## What you can expect from us
 

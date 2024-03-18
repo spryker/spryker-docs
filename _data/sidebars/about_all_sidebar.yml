@@ -52,11 +52,11 @@ entries:
       - title: Preparing for heavy loads and traffic
         url: /docs/about/all/support/special-prepare-for-a-busy-season.html
       - title: How to use the Support Portal
-        url: /docs/about/all/support/how-to-use-the-support-portal.html
+        url: /docs/about/all/support/using-the-support-portal.html
       - title: Share secrets with the Spryker Support Team
         url: /docs/about/all/support/share-secrets-with-the-spryker-support-team.html
       - title: Understanding ticket status
-        url: /docs/about/all/support/understanding-ticket-status.html
+        url: /docs/about/all/support/support-ticket-statuses.html
       - title: Handling security issues
         url: /docs/about/all/support/handling-security-issues.html
       - title: Guidelines for GDPR compliance
@@ -97,7 +97,7 @@ entries:
     - title: Spryker Academy
       url: /docs/about/all/spryker-academy.html
     - title: Contribute to the documentation
-      url: /docs/about/all/contribute-to-the-documentation/contribute-to-the-documentation.html
+      url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
       nested:
       - title: Edit the documentation via pull requests
         url: /docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html

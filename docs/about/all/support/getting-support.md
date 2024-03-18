@@ -11,7 +11,7 @@ redirect_from:
 
 related:
   - title: How to use the Support Portal
-    link: docs/about/all/support/how-to-use-the-support-portal.html
+    link: docs/about/all/support/using-the-support-portal.html
   - title: How Spryker Support works
     link: docs/about/all/support/how-spryker-support-works.html
   - title: Getting the most out of Spryker Support

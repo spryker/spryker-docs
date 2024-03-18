@@ -10,7 +10,7 @@ related:
   - title: How Spryker Support works
     link: docs/about/all/support/how-spryker-support-works.html
   - title: How to use the Support Portal
-    link: docs/about/all/support/how-to-use-the-support-portal.html
+    link: docs/about/all/support/using-the-support-portal.html
 ---
 
 We are very proud to have outstanding First Response Times (currently, they average around 35 minutes in busy weeks). However, a first response seldom immediately includes the solution to your problem. So how can we shorten Case Resolution Time?

@@ -9,17 +9,17 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/about/all/contribute-to-the-documentation/build-the-documentation-site.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/build-the-documentation-site.html
   - title: Add product sections to the documentation
-    link: docs/about/all/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-documentation.html
   - title: Edit documentation via pull requests
-    link: docs/about/all/contribute-to-the-documentation/edit-documentation-via-pull-requests.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
   - title: Report documentation issues
-    link: docs/about/all/contribute-to-the-documentation/report-documentation-issues.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/report-documentation-issues.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/about/all/contribute-to-the-documentation/style-formatting-general-rules.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/about/all/contribute-to-the-documentation/markdown-syntax.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html
 ---
 
 When someone requests your review of a pull request, you get an email about the request. <!--Also, a message with the review request is displayed on the pull request page:IMAGE-->

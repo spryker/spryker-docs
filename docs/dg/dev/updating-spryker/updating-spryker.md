@@ -50,7 +50,7 @@ The more outdated your module versions become, the more effort will be needed to
 
 {% endinfo_block %}
 
-The most *reasonable strategy* of staying up to date is sticking to the Spryker release cycle and updating modules whenever there is a new release announcement. To get notified about releases,  [subscribe to the release notes](/docs/about/all/releases/releases.html). During the active development phase, it makes sense to do updates more often, for example, monthly.
+The most *reasonable strategy* of staying up to date is sticking to the Spryker release cycle and updating modules whenever there is a new release announcement. To get notified about releases,  [subscribe to the release notes](/docs/about/all/releases/product-and-code-releases.html). During the active development phase, it makes sense to do updates more often, for example, monthly.
 
 ## Spryker Safari materials
 

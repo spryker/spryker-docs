@@ -440,7 +440,7 @@ In July 2023, we have added and updated the following pages:
 - [App manifest](/docs/dg/dev/acp/develop-an-app/app-manifest.html): App Manifest is a set of JSON files that contain all the necessary information to register an application in the Application Tenant Registry Service and to display information about the application in the Application Catalog.
 - [Development strategies](/docs/dg/dev/backend-development/extend-spryker/development-strategies.html): Development strategies that you can use when building a Spryker project.
 - [Project development guidelines](/docs/dg/dev/guidelines/project-development-guidelines.html): This document describes the strategies a project team can take while building a Spryker-based project.
-- [Handling security issues](/docs/about/all/support/handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
+- [Handling security issues](/docs/about/all/support/reporting-and-handling-security-issues.html): Use this document to learn how to report a security issue and to understand how we handle these reports.     
 - [Install the Measurement Units feature](/docs/pbc/all/product-information-management/202307.0/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html): The guide describes how to integrate the [Measurement Units](/docs/pbc/all/product-information-management/202307.0/base-shop/feature-overviews/measurement-units-feature-overview.html) feature into your project.
 
 For more details about these and other updates to the Spryker docs in July 2023, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
@@ -460,9 +460,9 @@ In June 2023, we have added and updated the following pages:
     - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html).
     - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 - [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html).
-- [Spryker documentation style guide](/docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/spryker-documentation-style-guide.html):
-    - [Examples](/docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/examples.html).
-    - [Spelling](/docs/about/all/contribute-to-the-documentation/spryker-documentation-style-guide/spelling.html).
+- [Spryker documentation style guide](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spryker-documentation-style-guide.html):
+    - [Examples](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/examples.html).
+    - [Spelling](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spelling.html).
 
 ## Updated pages
 - [Environments overview](/docs/ca/dev/environments-overview.html).
@@ -491,7 +491,7 @@ In May 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Docs release notes](/docs/about/all/docs-release-notes.html)
+- [Docs release notes](/docs/about/all/docs-updates.html)
 - Multistore documentation:
     - [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multi-store environment.
     - [Checklist for a new store implementation](/docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.
@@ -557,7 +557,7 @@ In April 2023, we have added and updated the following pages:
 - Warehouse picking feature integration guides:
     - [Install the Warehouse picking feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
     - [Install the Warehouse picking + Product feature](/docs/pbc/all/warehouse-management-system/202311.0/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html)
-- [Security release notes 202304.0](/docs/about/all/releases/release-notes-202304.0/security-release-notes-202304.0.html)
+- [Security release notes 202304.0](/docs/about/all/releases/security-release-notes-202304.0.html)
 - [Releases vs Customization types](/docs/dg/dev/sdks/sdk/customization-strategies-and-upgradability.html): Learn about the customization strategies and release types you can use to integrate releases and customize your project.
 
 ### Updated pages

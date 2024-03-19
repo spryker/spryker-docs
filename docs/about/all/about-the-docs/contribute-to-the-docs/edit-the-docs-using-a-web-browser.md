@@ -11,24 +11,24 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/about/all/contribute-to-the-documentation/build-the-documentation-site.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/build-the-documentation-site.html
   - title: Addi product sections to the documentation
-    link: docs/about/all/contribute-to-the-documentation/add-global-sections-to-the-documentation.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-documentation.html
   - title: Report documentation issues
-    link: docs/about/all/contribute-to-the-documentation/report-documentation-issues.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/report-documentation-issues.html
   - title: Review pull requests
-    link: docs/about/all/contribute-to-the-documentation/review-pull-requests.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/about/all/contribute-to-the-documentation/style-formatting-general-rules.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/about/all/contribute-to-the-documentation/markdown-syntax.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html
 ---
 
 The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://github.com/spryker/spryker-docs) repository. Therefore, to contribute to the Spryker documents, you have to use GitHub. For more information about what GitHub is, see [About Git](https://docs.github.com/en/get-started/using-git/about-git).
 
 {% info_block infoBox "Info" %}
 
-We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/contribute-to-the-documentation/markdown-syntax.html).
+We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html).
 
 {% endinfo_block %}
 
@@ -36,7 +36,7 @@ This instruction explains how to contribute to the Spryker documentation by crea
 
 {% info_block infoBox "Info" %}
 
-For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/about/all/contribute-to-the-documentation/style-formatting-general-rules.html).
+For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html).
 
 
 Note that Spryker documentation is written in US English.

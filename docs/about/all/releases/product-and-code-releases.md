@@ -70,7 +70,7 @@ To join our release notes mailing list, subscribe here:
 
 <div class="hubspot-form js-hubspot-form" data-portal-id="2770802" data-form-id="b4d730db-d20e-4bb4-bd80-4cd7c9a2dc21" id="hubspot-1"></div>
 
-To receive the security updates, please request the subsription at [support@spryker.com](mailto:support@spryker.com).
+To receive the security updates, request a subscription at [support@spryker.com](mailto:support@spryker.com).
 
 ## Next steps
 

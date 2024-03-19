@@ -34,7 +34,7 @@ Problems can be reports suspecting a bug or issues with our hosting. Please make
 
 ### Emergencies
 
-Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/escalations.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
+Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
 ### Platform change requests
 

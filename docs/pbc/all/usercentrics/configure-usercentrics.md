@@ -5,38 +5,40 @@ last_updated: July 3, 2023
 template: howto-guide-template
 ---
 
-Based on the tracking tools used in your Storefronts, you can define different sets of tracking tool configurations, called *Settings* in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/). You can use these different settings for different countries of your Storefronts, depending on their legal requirements for user consent and data privacy. Every setting has its unique setting ID, so you can have comply with the legislation of different countries on a per-store basis.
+Based on the tracking tools used in each of your Storefronts, you can define different sets of tracking tool configurations, called *settings* in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/). Every configuration is identified by a unique setting ID. The setting ID lets you add a cookie consent dialog with the defined configuration to a store. By adding different setting IDs to different stores, you can comply with the legislation of different countries on a per-store basis. Each store can have only one setting ID, while the same ID can be used in different stores. For example, all European stores that need to be GDPR compliant can use the same setting ID.
 
-To be GDPR compliant, you need to inject the Usercentrics cookies consent dialog into *every* page. If an external CMS is connected to your Spryker project, you need to inject the cookies consent dialog into the pages in that system too. as no single root place of injection is usually available.
-Having separate CMS pages outside of the Spryker store requires additional configuration in the external CMS and has to be done independently of the Spryker SCCOS.
+To be GDPR compliant, you need to inject the Usercentrics cookies consent dialog into *every* page. Because there usually isn't a single root place of injection available, if an external CMS is connected to your Spryker project, you need to separately inject the dialog into the pages in that system too.
 
-To manage your users' consent to the tracking tools or data processing services, you can use Usercentrics support of default tracking tools or integrate the custom ones:
+Usercentrics supports some tracking tools and data processing services by default, but you can integrate custom ones too:
 
 ![usercentrics-services](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/usercentrics-services.png)
 
-The tracking tools you defined in Usercentrics are displayed on the Storefront in the Usercentrics cookie consent dialog so users can consent to which tracking tools they agree.
+To integrate a custom service, you will need to manually configure it in the Usercentrics Admin Interface. Also, if you manually integrate Usercentrics into your Spryker project, you will need to adjust the integration to enable the custom service. For more information about custom services, see [Usercentrics documentation on custom data processing services](https://usercentrics.atlassian.net/servicedesk/customer/portal/2/article/185794627).
 
-With Usercentrics, you don't need to program the cookie consent dialogs or add their JavaScript code to every single page of your store. Instead, you can configure the dialog in the Usercentrics portal, and it automatically adds the dialog to your store. You can achieve this with the [Smart Data Protector setting](#smart-data-protector) from Usercentrics.
 
-{% info_block infoBox "" %}
+Once Usercentrics is set up, a cookie consent dialog similar to the follow is displayed on every Storefront page:
 
-The integration of Usercentrics requires the injection of a JavaScript source file and a few headers into every Spryker store page, together with the setting ID. Each Spryker store can have only one Usercentrics setting ID. Different stores can use the same setting ID. For example, all European stores that need to be GDPR compliant use the same setting ID.
+![usecentrics-basic-cookie-consent-popup](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/usercentrics/usercentrics-popup.png)
 
-{% endinfo_block %}
+When customers click on **More** in the dialog, they can consent to or reject each individual tool and service:
 
-{% info_block infoBox "" %}
-
-Every data processing service not supported by Usercentrics by default requires a custom manual configuration in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/) and corresponding adaption as for the [Direct Integration](#direct-integration) case. For more information about the custom services, see [Usercentrics documentation on custom data processing services](https://usercentrics.atlassian.net/servicedesk/customer/portal/2/article/185794627).
-
-{% endinfo_block %}
-
+![usercentrics-cookie-consent-details-popup](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/usercentrics/usercentrics-details-popup.png)
 
 
 ## Prerequisites
 
-* Create a Usercentrics account on the [Usercentrics website](https://usercentrics.com/free-trial-web/).
-* Integrate the [Usercentrics app](/docs/pbc/all/usercentrics/integrate-usercentrics.html)
-* Integrate the necessary tracking tools to your stores independently of Spryker's Usercentrics integration.
+* [Create a Usercentrics account](https://usercentrics.com/free-trial-web/).
+* [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html).
+* Integrate and configure the necessary tracking tools in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
+
+
+### Configure data processing services in Usercentrics
+
+1. In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings <span aria-label="and then">></span> Data Processing Services**.
+2. Under **Data Processing Service**, select a services used by your store.
+3. Apply additional configurations according to your use case.
+4. Repeat steps 2-3 until you define all the services used in your store.
+
 
 
 ## Connect Usercentrics
@@ -46,19 +48,17 @@ Every data processing service not supported by Usercentrics by default requires 
 3. Click **Connect app**.
    This displays a message about the successful integration of the app. The Usercentrics app's status changes to **Connection pending**.
 
-## Integrating Usercentrics
+## Integrating Usercentrics into frontend
 
-There are three ways to integrate Usecentrics:
-* A manual integration
-* Usercentrics Smart Data Protector
-* Google Tag Manager
+There are three ways to integrate Usecentrics into frontend:
+* Manually
+* Using the [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector)
+* With [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager)
 
-In the Back Office, you can select either Smart Data Protector or Google Tag Manager. If you are not using a third-party tracking management tool like [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) and want a code-free integration, we recommend integrating via Smart Data Protector.
-
-All of the three approaches require you to get the setting ID for your store in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/) and configure the data processing services in **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services**.
+If you are not using a third-party tracking management tool, like Google Tag Manager, and want a code-free integration, we recommend integrating using the Smart Data Protector.
 
 
-### Integrating manually
+### Integrating Usercentrics manually
 
 ACP does not support a direct integration, so you won't be able to manage Usercentrics in the Back Office.
 
@@ -76,30 +76,23 @@ To integrate manually, you need to do the following:
 
 For more details about the manual integration, see [Direct integration of Usercentrics into your website](https://docs.usercentrics.com/#/direct-implementation-guide).
 
-### Recommended: Integrating using Smart Data Protector
+### Recommended: Integrating Usercentrics using the Smart Data Protector
 
-The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services and activates them only for customers that give their consent to do so.
+The [Usercentrics Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services and activates them only for customers that give their consent to do so.
 
-To integrate Usercentrics using Smart Data Protector, you need to inject the Usercentrics JavaScript tag with the setting ID and Smart Data Protector JavaScript code. Once you set up data processing services, Smart Data Protector automatically manages all the tracking tools, and no manual work is required from your side.
+With the Smart Data Protector, you don't need to program the cookie consent dialogs or JavaScript code to each page. Instead, you can configure the dialog in the Usercentrics Admin Interface, and it's automatically added to your store's pages.
 
-### Integrating using Google Tag Manager
+To integrate Usercentrics using Smart Data Protector, you need to inject the Usercentrics JavaScript tag with the setting ID and Smart Data Protector JavaScript code.
 
-If [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) is integrated, to use the technology legally, you need the cookie consent dialog to appear in your stores. You can achieve that by using the Google Tag Manager with Usercentrics.
+### Integrating Usercentrics with Google Tag Manager
+
+If [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) is integrated, you can use Usercentrics to display a cookie consent dialog with the services and tools configured in Google Tag Manager.
 
 To use Usercentrics with the Google Tag Manager, do the following:
 
 - In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the data processing services you have in Google Tag Manager.
 
 - In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For instructions, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).
-
-### Data Processing Services with Usercentrics
-
-If you have integrations like [Google Analytics](https://developers.google.com/analytics) or other data processing services, you can ensure compliance by following these steps:
-
-1. In the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings <span aria-label="and then">></span> Data Processing Services**.
-2. Under **Data Processing Service**, select the needed service.
-3. Apply additional configurations according to your use case.
-
 
 ## Configure Usercentrics
 
@@ -119,11 +112,3 @@ If you have integrations like [Google Analytics](https://developers.google.com/a
 ![usercentrics-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/configure-usercentrics/usercentrics-configuration.png)
 
 The drawer closes with a success message displayed. On the **App Composition Platform Catalog** page, the app's status changes to **Connected**. The cookie consent dialog should be displayed on every Storefront page.
-
-This is how the basic Usercentrics cookie consent dialog may look like in a Spryker store:
-
-![usecentrics-basic-cookie-consent-popup](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/usercentrics/usercentrics-popup.png)
-
-When users click on **More** in the basic cookie consent dialog, they can see the apps and websites that use tracking cookies in your store. Here they can accept or reject tracking cookies of the individual apps and websites:
-
-![usercentrics-cookie-consent-details-popup](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/usercentrics/usercentrics-details-popup.png)

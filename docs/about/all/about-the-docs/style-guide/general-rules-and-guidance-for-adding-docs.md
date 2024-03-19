@@ -10,17 +10,17 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/build-the-documentation-site.html
+    link: docs/about/all/about-the-docs/run-the-docs-locally.html
   - title: Add product sections to the documentation
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-documentation.html
+    link: docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
   - title: Edit documentation via pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
   - title: Report documentation issues
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/report-documentation-issues.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
   - title: Review pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
   - title: Markdown syntax
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html
+    link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
 
 This document describes the directory structure, templates, front matter, and versioning of Spryker documentation.
@@ -33,7 +33,7 @@ The main directory for holding all the documents is [docs](https://github.com/sp
 
 ## Creating documents and categories
 
-We use [Markdown (.md)](https://en.wikipedia.org/wiki/Markdown) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory. For details about how this directory is organized, see [Directory structure](#directory-structure). You can use any text editor for creating the files in Markdown, like [VSCode](https://code.visualstudio.com). For information about specific Markdown syntax for documentation, see [Markdown syntax](/docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html).
+We use [Markdown (.md)](https://en.wikipedia.org/wiki/Markdown) to write documents. All documents reside in the [docs](https://github.com/spryker/spryker-docs/tree/master/docs) directory. For details about how this directory is organized, see [Directory structure](#directory-structure). You can use any text editor for creating the files in Markdown, like [VSCode](https://code.visualstudio.com). For information about specific Markdown syntax for documentation, see [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html).
 
 You can create new pages in any documentation category or sub-category under the *realm* directories (`user`, `dev`). You can also create directories for new categories under the *realm* directories.
 

@@ -7,7 +7,7 @@ FOLDERS=("docs/ca/dev" "docs/pbc/all" "docs/about/all" "docs/ca/devscu" "docs/dg
 SIDEBARS=("_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/ca_devscu_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/dg_dev_sidebar.yml" "_data/sidebars/about_all_sidebar.yml")
 
 # Define sidebar titles
-TITLES=("ACP User" "Cloud Dev" "PBC All" "SCOS Dev" "SCOS User" "SCU Dev" "SDK Dev")
+TITLES=("CA Dev" "CA Devscu" "PBC All" "DG Dev" "About All")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"

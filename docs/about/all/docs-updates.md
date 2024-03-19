@@ -460,9 +460,9 @@ In June 2023, we have added and updated the following pages:
     - [File details - shipment_type_store.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type-store.csv.html).
     - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 - [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html).
-- [Spryker documentation style guide](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spryker-documentation-style-guide.html):
-    - [Examples](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/examples.html).
-    - [Spelling](/docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spelling.html).
+- [Spryker documentation style guide](/docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html):
+    - [Examples](/docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/examples.html).
+    - [Spelling](/docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/spelling.html).
 
 ## Updated pages
 - [Environments overview](/docs/ca/dev/environments-overview.html).

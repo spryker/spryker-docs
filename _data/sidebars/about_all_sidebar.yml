@@ -102,29 +102,29 @@ entries:
       - title: General rules and guidance for adding new documents
         url: /docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html
       - title: Markdown syntax
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/markdown-syntax.html
+        url: /docs/about/all/about-the-docs/style-guide/markdown-syntax.html
       - title: Spryker documentation style guide
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spryker-documentation-style-guide.html
+        url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html
         nested:
           - title: Examples
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/examples.html
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/examples.html
           - title: Spelling
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/spelling.html
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/spelling.html
           - title: Word list
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/spryker-documentation-style-guide/word-list.html
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/word-list.html
 
       - title: Add and edit diagrams
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-documentation.html
+        url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
       - title: Install recommended VS Code extensions
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
+        url: /docs/about/all/about-the-docs/install-recommended-vs-code-extensions.html
       - title: Report documentation issues
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-documentation-issues.html
+        url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
       - title: Build the documentation site
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/build-the-documentation-site.html
+        url: /docs/about/all/about-the-docs/run-the-docs-locally.html
       - title: Review pull requests
         url: /docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-documentation.html
+        url: /docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
 
 
 

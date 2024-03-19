@@ -52,7 +52,7 @@ Our Spryker Community on [CommerceQuest](https://commercequest.space/), a vibran
 
 Also, subscribe to our new newsletter (soon to come) and be sure to check out our Technical News Page (soon to come), for the latest important news.
 
-### Enroll in the Spryker Academy
+### Enroll in the Spryker Safari
 This is a general recommendation that not only can teach you and your team how to build great shops with Spryker Code, but we offer several courses for all kinds of Spryker stakeholders. Currently, we offer developer courses, business courses, and sales courses with other interesting courses currently being developed.
 
 ### Learn more about how we work

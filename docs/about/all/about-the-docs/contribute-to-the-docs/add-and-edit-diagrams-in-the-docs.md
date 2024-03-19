@@ -8,7 +8,7 @@ redirect_from:
 
 related:
   - title: Build the documentation site
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/build-the-documentation-site.html
+    link: docs/about/all/about-the-docs/run-the-docs-locally.html
   - title: Edit documentation via pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
 ---

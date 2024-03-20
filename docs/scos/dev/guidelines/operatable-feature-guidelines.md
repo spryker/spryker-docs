@@ -18,9 +18,7 @@ to maintain the performance and reliability of the applications.
 
 {% info_block warningBox "Warning" %}
 
-This page contains guidelines for project development, not a list of strict requirements. While it is suggested that
-development teams consider these recommendations, they are not hard requirements that must be followed. The purpose of these guidelines 
-is to help development teams achieve high quality software.
+This page offers guidelines - not strict requirements - for project development, serving as a template and starting point, with the aim of assisting development teams in realizing high-quality software. To achieve a smoothly working concept, it's crucial to align the actual requirements and commitments with all involved parties.
 
 {% endinfo_block %}
 

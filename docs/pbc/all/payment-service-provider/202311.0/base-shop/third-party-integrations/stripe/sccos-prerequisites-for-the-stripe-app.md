@@ -2,7 +2,7 @@
 title: SCCOS prerequisites for the Stripe app
 description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
 draft: true
-last_updated: Jan 31, 2024
+last_updated: Mar 20, 2024
 template: howto-guide-template
 related:
   - title: Stripe
@@ -80,6 +80,9 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentRefundFailedTransfer::class => 'payment-events',
     PaymentCanceledTransfer::class => 'payment-events',
     PaymentCancellationFailedTransfer::class => 'payment-events',
+    
+    # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
+    PaymentCreatedTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -106,6 +109,7 @@ namespace Pyz\Zed\MessageBroker;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -119,6 +123,9 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             # These plugins are handling messages sent from Stripe app to your project.
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
+            
+            # [Optional] This plugin is handling the `PaymentCreated` messages sent from Stripe App.
+            new PaymentCreatedMessageHandlerPlugin(),
         ];
     }
 }

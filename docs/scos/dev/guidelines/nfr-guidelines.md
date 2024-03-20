@@ -1,6 +1,6 @@
 ---
-title: Project Development Non-Functional Requirement guidelines
-description: Guidelines for defining and implementing Non-Functional Requirements (NFRs) to ensure the technical success of a project.
+title: Project Operational and Deployment Non-Functional Requirement Guidelines
+description: Guidelines for defining and implementing Operational and Deployment Non-Functional Requirements (NFRs) to ensure the technical success of a project.
 last_updated: 
 template: concept-topic-template
 related:
@@ -15,10 +15,10 @@ related:
 ---
 
 Non-Functional Requirements (NFRs) are one of the core tools for architects and developers to describe how the system under development supposed to work from technical perspective.
-Defining NFRs can be as important as defining functional requirements, which are usually done by business people (i.e. Product Owners). Missing out on them usually result in
+Defining NFRs can be as important as defining functional requirements, which are usually done by business (i.e. Product Owners). Missing out on them usually result in
 too late realization of certain unintended behavior that costs a lot of resources/money for the projects to deal with.
 
-## NFR guidelines
+## Project Operational & Deployment NFR guidelines
 There are several factors that can impact the success of NFR definition in a project. One key factor is the involvement of all relevant stakeholders, 
 including architects, developers, business analysts, and end users. Ensuring that all of these parties are involved in the NFR definition 
 process can help to ensure that all relevant requirements are captured and that there is a shared understanding of the technical 
@@ -37,7 +37,7 @@ NFRs can help to ensure that the system being developed continues to meet the te
 
 {% info_block warningBox "Warning" %}
 
-Below you can find several generic NFRs grouped by QAs. In this list, we have provided a starting point for common NFRs that MAY be relevant
+Below you can find several generic NFRs grouped by quality. In this list, we have provided a starting point for common NFRs that MAY be relevant
 to your project. Not all of these NFRs may be applicable in every case, so you SHOULD use this list as a guide or template to help to start
 with your own NFRs. Be sure to tailor the list to the specific requirements and constraints of your project, and to prioritize and organize
 the NFRs in a logical manner.
@@ -47,7 +47,7 @@ the NFRs in a logical manner.
 ### Availability
 Software architecture & design must ensure that there is no negative impact on application availability.
 
-Example NFRs:
+Example fulfilment of NFRs:
 * Avoid designing the application to limit its own start-up or shut-down.
   * Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
   * Avoid using flags or other mechanisms to block the application from starting.
@@ -58,7 +58,7 @@ Example NFRs:
   * For example, if using PHP-FPM, ensure that the number of worker processes is sufficient to handle the expected workload without overloading the system.
 
 ### Security
-* Make sure to define and follow your own team's [Security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
+* Make sure to define and follow your own project's [Security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
 
 ### Deployability
 * The same release candidate / branch MUST be re-deployable without side-effects.
@@ -73,11 +73,6 @@ The rollback scripts MUST NOT break the behaviour of current system.
 
 * Rollback script elements MUST be configured according to your project setup following the Rollback Pipeline process.
 * The deployed (version N+1) application can rollback current version (N+1) data structures # constants and data sets to previous version (N) without causing downtime.
-
-### Deployability, Rollback-ability, Consistency, Monitor-ability
-* During deployment and rollback processes, only one asynchronous task MUST be allowed to run at a time.
-* The asynchronous task runner MUST report for monitoring: start & end.
-* Application MUST report a failed async migration by throwing an error event to New Relic (or other similar systems in use).
 
 ### Performance
 * Zed UI average load performance should be under 450ms.

@@ -39,9 +39,6 @@ entries:
       - title: 2020.11 - Penetration test by Port Zero (executive summary)
         url: /docs/about/all/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
 
-    - title: Docs updates
-      url: /docs/about/all/docs-updates.html
-
     - title: Support
       url: /docs/about/all/support/getting-support.html
       nested:
@@ -92,13 +89,25 @@ entries:
       - title: Marketplace B2B Suite
         url: /docs/about/all/spryker-marketplace/marketplace-b2b-suite.html
 
-    - title: Contribute to the documentation
-      url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
+    - title: About the docs
+      url: /docs/about/all/about-the-docs/about-spryker-docs.html
       nested:
-      - title: Edit the documentation via pull requests
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
-      - title: Edit the documentation locally
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
+      - title: Docs updates
+        url: /docs/about/all/about-the-docs/docs-updates.html
+      - title: Contribute
+        url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
+        nested:
+          - title: Edit the docs using a web browser
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
+          - title: Edit the docs locally
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
+          - title: Add and edit diagrams
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+          - title: Report docs issues
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
+          - title: Review pull requests
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
+
       - title: General rules and guidance for adding new documents
         url: /docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html
       - title: Markdown syntax
@@ -113,16 +122,15 @@ entries:
           - title: Word list
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/word-list.html
 
-      - title: Add and edit diagrams
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
+
+
       - title: Install recommended VS Code extensions
         url: /docs/about/all/about-the-docs/install-recommended-vs-code-extensions.html
-      - title: Report documentation issues
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
+
       - title: Build the documentation site
         url: /docs/about/all/about-the-docs/run-the-docs-locally.html
-      - title: Review pull requests
-        url: /docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
+
       - title: Add product sections to the documentation
         url: /docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
 

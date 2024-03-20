@@ -33,17 +33,20 @@ Company user can request a merchant relation from a merchant. Once the merchant 
 
 Company user can initiate the creation of a merchant relation by creating a merchant relation request on the Storefront. The company user can create the relation request either from the merchant page by clicking **Send request**, from the Product Details page by clicking **Merchant Relation Request** under the name of the merchant selling the product, or from the *Merchant Relation Requests* page by clicking **Create request**.
 
-In the merchant relation request form, the company user has to specify the business units they want to create the merchant relation for, and the business unit owner - which is the business unit that will have the formal contract for this relation. Optionally, the company user also leave a message for the merchant.
-After the company user submitted the relation request, it appears on the *Merchant Relation Requests* page with *Pending* status. Once the merchant approves or denies the relation requests, its status changes to *Approved* or *Denied*.
+In the merchant relation request form, the company user has to specify the business units they want to create the merchant relation for, and the business unit owner - the business unit that will have the formal contract for this relation. Optionally, the company user also leave a message for the merchant.
+After the company user submitted the relation request, it appears on the *Merchant Relation Requests* page with *Pending* status. Once the merchant approves or rejects the relation requests, its status changes to *Approved* or *Rejected*.
 
-The company user can view details of the created merchant details request and cancel pending merchant relations requests. [QUESTION: CAN THEY CANCEL JUST PENDING REQUESTS, OR APPROVED AS WELL] However, they cannot edit the submitted requests.
+The company user can view details of the created merchant details request and cancel pending merchant relations requests. However, they cannot edit the submitted requests.
 
 ### Merchant relation request approval by a merchant or marketplace operator
 
 Once the company user submitted the merchant relation request, the merchant receives a notification via the email.
+The merchant can approve or reject the merchant relation request. They can also leave comments for the company that requested the relation, as well as internal comments that only merchant and their users can view.
+
+For details on how merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-relations-in-merchant-portal/manage-merchant-relation-requests.html).
 
 
-The establishment of a merhant and buyer relations begins with creation of the relation request by a buyer, or company user. After the company user has submitted the relation request, the merchant or marketplace operator can either approve or reject the relation.
+The establishment of a merchant and buyer relations begins with creation of the relation request by a buyer, or company user. After the company user has submitted the relation request, the merchant or marketplace operator can either approve or reject the relation.
 
 ## Creation of the relation request by a company user
 

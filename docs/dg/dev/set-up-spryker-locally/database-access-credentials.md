@@ -25,7 +25,7 @@ PostgreSQL database:
 * `user` - `spryker`
 * `pw` - `secret`
 
-You can change the credentials in the [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+You can change the credentials in the [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 You can find the credentials in your project with this command:
 

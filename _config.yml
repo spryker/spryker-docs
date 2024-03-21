@@ -88,27 +88,10 @@ defaults:
       product: "scos"
   -
     scope:
-      path: "docs/scos/dev"
-    values:
-      sidebar: "scos_dev_sidebar"
-      role: "dev"
-  -
-    scope:
       path: "docs/scos/user"
     values:
       sidebar: "scos_user_sidebar"
       role: "user"
-  -
-     scope:
-       path: "docs/sdk"
-     values:
-       product: "sdk"
-  -
-     scope:
-       path: "docs/sdk/dev"
-     values:
-       sidebar: "sdk_dev_sidebar"
-       role: "dev"
   -
     scope:
       path: "docs/ca"
@@ -156,20 +139,12 @@ versions:
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
-  scos:
-    dev:
-      - feature-integration-guides
-      - data-import
-      - data-export
-      - glue-api-guides
-      - the-docker-sdk
-      - system-requirements
-      - front-end-development
   dg:
     dev:
       - data-import
       - frontend-development
       - system-requirements
+      - glue-api
   pbc:
     all:
       - back-office
@@ -209,9 +184,7 @@ versioned_categories:
 sidebars:
   - ca_dev_sidebar
   - ca_devscu_sidebar
-  - scos_dev_sidebar
   - scos_user_sidebar
-  - sdk_dev_sidebar
   - pbc_all_sidebar
   - dg_dev_sidebar
 

@@ -87,32 +87,7 @@ task :check_ca do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/sdk\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-
-task :check_scos_dev do
-  options = commonOptions.dup
-  options[:ignore_files] = [
-    /docs\/ca\/.+/,
-    /docs\/fes\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/sdk\/.+/,
-    /docs\/dg\/.+/,
-    /docs\/scos\/user\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202204\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202400\.0\/.+/
+    /docs\/acp\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -126,7 +101,6 @@ task :check_scos_user do
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
     /docs\/dg\/.+/,
-    /docs\/sdk\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
@@ -144,7 +118,6 @@ task :check_pbc do
   options = commonOptions.dup
   options[:ignore_files] = [
     /docs\/scos\/.+/,
-    /docs\/sdk\/.+/,
     /docs\/ca\/.+/,
     /docs\/fes\/.+/,
     /docs\/acp\/.+/,
@@ -159,20 +132,6 @@ task :check_pbc do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_sdk do
-  options = commonOptions.dup
-  options[:ignore_files] = [
-    /docs\/scos\/.+/,
-    /docs\/ca\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/fes\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/dg\/.+/,
-    /docs\/paas-plus\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
 
 task :check_dg do
   options = commonOptions.dup
@@ -182,7 +141,8 @@ task :check_dg do
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

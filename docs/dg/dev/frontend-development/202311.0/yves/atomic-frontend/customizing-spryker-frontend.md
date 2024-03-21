@@ -1,5 +1,5 @@
 ---
-title: Customizing Spryker Frontend
+title: Customizing Spryker frontend
 description: This guide reviews customizing Spryker UI on each of these levels.
 last_updated: Aug 31, 2022
 template: howto-guide-template

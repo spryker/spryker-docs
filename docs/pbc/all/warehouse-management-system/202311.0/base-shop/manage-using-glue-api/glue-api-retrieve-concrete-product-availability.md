@@ -19,9 +19,9 @@ related:
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
   - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 ---
 
 This endpoint allows retrieving availability of concrete products.
@@ -80,13 +80,8 @@ Request sample: retrieve availability of a concrete product
 ```
 </details>
 
-<a name="concrete-product-availability-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
 
-| FIELD | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| availability | Boolean | Boolean to inform about the availability. |
-| quantity|Integer|Available stock (all warehouses aggregated). |
-| isNeverOutOfStock | Boolean | A boolean to show if this is a product that is never out of stock. |
 
 
 ## Possible errors
@@ -97,4 +92,4 @@ Request sample: retrieve availability of a concrete product
 | 306 | Availability is not found. |
 | 312 | Concrete product sku is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

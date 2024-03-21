@@ -61,34 +61,6 @@ jobs:
 
       - run: bundle exec rake check_ca
 
-  link_validation_check_scos_dev:
-    name: Links validation (check_scos_dev)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_scos_dev-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_scos_dev
-
   link_validation_check_scos_user:
     name: Links validation (check_scos_user)
     needs: jekyll_build
@@ -145,34 +117,6 @@ jobs:
 
       - run: bundle exec rake check_pbc
 
-  link_validation_check_sdk:
-    name: Links validation (check_sdk)
-    needs: jekyll_build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - name: Cache HTMLProofer
-        id: cache-htmlproofer
-        uses: actions/cache@v2
-        with:
-          path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_sdk-htmlproofer
-
-      - uses: actions/download-artifact@v2
-
-      - name: Unpack artifacts
-        run: tar -xf build-result/result.tar.gz
-
-      - run: bundle exec rake check_sdk
-
   link_validation_check_dg:
     name: Links validation (check_dg)
     needs: jekyll_build
@@ -215,45 +159,6 @@ jobs:
           bundler-cache: true
 
       - run: bundle exec jekyll validate
-
-  algolia_search:
-    name: Push pages to Algolia
-    runs-on: ubuntu-latest
-
-    if: github.ref == 'refs/heads/master'
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.2.2
-          bundler-cache: true
-
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_ca_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_ca_devscu.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scos_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scos_user.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_pbc_all.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_sdk_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_scu_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_dg_dev.yml
-        env: # Or as an environment variable
-          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
 
   deploy:
     runs-on: ubuntu-latest

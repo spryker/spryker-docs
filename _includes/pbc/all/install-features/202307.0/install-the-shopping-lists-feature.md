@@ -457,7 +457,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 	}
 }
 ```
-
+ 
 Run the following console command to execute registered installer plugins and install infrastructural data:
 
 ```bash

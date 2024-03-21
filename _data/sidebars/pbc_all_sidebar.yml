@@ -753,10 +753,10 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
                       - title: Add content items to CMS pages
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
-                      - title: Manage CMS page versions
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
-                      - title: Manage CMS pages
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
+                      - title: View CMS pages and history
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
+                      - title: Preview CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html
                   - title: Product sets
                     nested:
                       - title: Create product sets
@@ -1742,8 +1742,6 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
                 - title: Usercentrics
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
-                - title: New Relic
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
       - title: Offer Management

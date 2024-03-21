@@ -136,7 +136,7 @@ By changing `isSynchronizationEnabled` to false, you disable the synchronization
 </database>
 ```
 
-{% endinfo_block %}
+In the case of using the Health check module functionality for publish and sync, the next files must be created:
 
 **src/Pyz/Zed/PublishAndSynchronizeHealthCheckSearch/Persistence/Propel/Schema/spy_publish_and_synchronize_health_check_search.schema.xml**
 
@@ -163,6 +163,11 @@ By changing `isSynchronizationEnabled` to false, you disable the synchronization
     </table>
 </database>
 ```
+
+{% endinfo_block %}
+
+
+
 
 3. To apply all the changes to entities, install command and sync for storage data:
 
@@ -314,15 +319,16 @@ To use MySQL or MariaDB, replace `Spryker\Client\StorageDatabase\Plugin\PostgreS
 
 {% endinfo_block %}
 
-## Remove store queues initialization
+## Remove storage queues initialization
 
 {% info_block infoBox %}
 
-This step is not mandatory for feature enablement, but it will improve the speed of message processing, as workers will not spend time checking queues that will be always empty.
+This step is not mandatory for feature enablement, but it will improve the speed of message processing, as workers will not spend time checking queues that are always empty.
 
 {% endinfo_block %}
 
-The latest versions of Spryker define separate queues for each search and storage message processing group. As we disabled synchronization behavior for storage, we don't need storage-related queues. To do this we need to remove all `_SYNC_STORAGE_QUEUE`(except `PublishAndSynchronizeHealthCheckStorageConfig::SYNC_STORAGE_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK`) constants from `\Pyz\Client\RabbitMq\RabbitMqConfig::getSynchronizationQueueConfiguration`.  Please take a look at the examples of constants for removal in the next code snippet. 
+The latest versions of Spryker define separate queues for each search and storage message processing group. As synchronization behavior for storage was disabled, there is no need for storage-related queues. 
+To remove them, all `_SYNC_STORAGE_QUEUE`(except `PublishAndSynchronizeHealthCheckStorageConfig::SYNC_STORAGE_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK`) constant must be removed from `\Pyz\Client\RabbitMq\RabbitMqConfig::getSynchronizationQueueConfiguration`. Examples of constants for removal in the next code snippet.
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 

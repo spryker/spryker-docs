@@ -166,9 +166,6 @@ In the case of using the Health check module functionality for publish and sync,
 
 {% endinfo_block %}
 
-
-
-
 3. To apply all the changes to entities, install command and sync for storage data:
 
 ```bash

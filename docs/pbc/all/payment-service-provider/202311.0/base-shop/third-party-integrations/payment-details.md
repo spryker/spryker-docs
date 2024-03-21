@@ -1,27 +1,27 @@
 ---
-title: Payment details of third party integrations
-description: Find out about how to use payment details from a third-party payment service provider in your Spryker shop.
+title: Retrieve and use payment details from third-party payment providers
+description: Learn how to retrieve and use payment details from a third-party payment service providers
 draft: true
 last_updated: Mar 20, 2024
 template: howto-guide-template
-
 ---
+
 This document gives an overview of how to use payment details from a third-party payment service provider in your Spryker Shop.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 The steps listed is this document are only necessary if your Spryker shop doesn't contain the packages (or their versions are outdated) and configurations below.
 
 {% endinfo_block %}
 
 
-## 1. Required packages
+1. Install the required modules using Composer:
 
-> composer require spryker/sales-payment-detail
+```bash
+composer require spryker/sales-payment-detail
+```
 
-## 2. Configure shared configs
-
-Your project probably already contains the following code in `config/Shared/config_default.php` already. If not, add it:
+2. Add or update the shared configs in `config/Shared/config_default.php`:
 
 ```php
 //...
@@ -40,9 +40,7 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 
 ```
 
-## 3. Configure the Message Broker dependency provider
-
-Your project probably already contains the following code in `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php` already. If not, add it:
+3. Add or update the config of the message broker dependency provider in `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
 
 ```php
 
@@ -60,7 +58,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     {
         return [
             //...
-           
+
             # This plugin is handling the `PaymentCreated` messages sent from any Payment App that supports this feature.
             new PaymentCreatedMessageHandlerPlugin(),
         ];
@@ -69,9 +67,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-## 4. Configure channels in Message Broker configuration
-
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+4. Add or update the config of the message broker channels in `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
 ```php
 namespace Pyz\Zed\MessageBroker;
@@ -97,6 +93,6 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ## 5. Usage
 
-When you use a third-party payment service provider which supports this feature you will receive asynchronous messages about the payment when it is created. When you want to use this data of the `spy_sales_payment_detail` table you need to join the data from this table with the entity you are fetching from the database where this payment detail is related to.
+When payment is creating using a third-party payment service provider which supports this feature, you will receive asynchronous messages about the payment. When you want to use this data of the `spy_sales_payment_detail` table, you need to combine the data from this table with the entity you are fetching from the database where this payment detail is related to.
 
-When the payment is used in the normal order process, the payment detail can be joined by using the `spy_sales_order.order_reference` and the `spy_sales_payment_detail.entity_reference`.
+When the payment is used in the normal order process, the payment detail can be combined by using `spy_sales_order.order_reference` and `spy_sales_payment_detail.entity_reference`.

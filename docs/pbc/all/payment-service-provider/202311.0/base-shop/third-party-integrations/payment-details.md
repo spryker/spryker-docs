@@ -97,6 +97,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ## 5. Usage
 
-When you use a third-party payment service provider which supports this feature you will receive asynchronous messages about the payment when it is created. When you want to use this data of the `spy_sales_payment_detail` table you need to join the data from this table with the entity you are fetching from the database where this payment detail is related to.
+When you use a third-party payment service provider which supports this feature you will receive asynchronous messages about the payment when it is created. 
+
+When you want to use the data of the `spy_sales_payment_detail` table you need to join the data from this table with the entity you are fetching from the database where this payment detail is related to.
 
 When the payment is used in the normal order process, the payment detail can be joined by using the `spy_sales_order.order_reference` and the `spy_sales_payment_detail.entity_reference`.

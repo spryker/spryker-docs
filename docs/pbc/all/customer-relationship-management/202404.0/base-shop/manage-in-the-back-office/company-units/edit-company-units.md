@@ -12,7 +12,7 @@ related:
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
 ---
 
-Learn how to edit company units in the Back Office. Additionally, this is the only way to add  addresses to company units.
+This document describes how to edit company units in the Back Office. You can add addresses to company units only when editing them.
 
 
 ## Prerequisites

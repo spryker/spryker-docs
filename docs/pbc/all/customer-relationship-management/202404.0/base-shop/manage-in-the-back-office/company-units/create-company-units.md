@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
 ---
 
-This document describes how to create company units.
+This document describes how to create company units in the Back Office.
 
 ## Prerequisites
 
@@ -52,4 +52,4 @@ This document describes how to create company units.
 
 ## Next steps
 
-Add addresses to the company unit. For instructions, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html)
+To add addresses to the company unit, see [Edit company units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html).

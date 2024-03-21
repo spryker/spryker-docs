@@ -965,7 +965,7 @@ return.create_return.validation.items_error,Für dieses Set der Artikel kann die
 
 2. Import data:
 
-``bash
+```bash
 console data:import:glossary
 ```
 

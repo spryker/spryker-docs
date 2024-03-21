@@ -132,7 +132,7 @@ To retrieve general information about an abstract product, send the request:
 {% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 
-For the attributes of abstract product availability, see [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
+{% include pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
 
 ## Possible errors
 

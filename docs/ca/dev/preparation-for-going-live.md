@@ -60,7 +60,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) to use data in S3 Buckets instead of local storage for the project.
 - Connect S3 buckets to correct environments:
   - Connect Production S3 bucket to a production environment.
-  - Connect Staging S3 bucket to a staging environment. 
+  - Connect Staging S3 bucket to a staging environment.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Complete the [Jenekins Stability Checklist](/docs/ca/dev/best-practices/jenkins-stability-checklist.html)

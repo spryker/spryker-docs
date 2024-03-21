@@ -1,7 +1,7 @@
 ---
 title: View CMS pages and history
 description: The guide provides instructions on how to view CMS page versions, roll back to a specific version or view SEO information in the Back Office.
-last_updated: Jun 18, 2021
+last_updated: Mar 4, 2024
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-cms-page-versions
 originalArticleId: 0110b8f0-26d9-41b8-99f7-1fc55efba8be
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-page-versions.html
   - docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/pages/manage-cms-page-versions.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
+  - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
 related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

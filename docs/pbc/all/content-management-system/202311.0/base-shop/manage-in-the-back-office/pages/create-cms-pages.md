@@ -17,10 +17,6 @@ redirect_from:
 related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
-  - title: Editing CMS Pages
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
-  - title: Managing CMS Page Versions
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
 ---
 
 A CMS page is an independent page of your shop, such as Terms and Conditions, About Us, or Contact Us.

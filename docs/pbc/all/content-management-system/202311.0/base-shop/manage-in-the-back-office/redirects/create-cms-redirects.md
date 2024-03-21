@@ -1,7 +1,7 @@
 ---
 title: Create CMS redirects
 description: The guide provides instructions for shop owners on how to create CMS redirects in the Back Office.
-last_updated: Jul 9, 2021
+last_updated: Mar 4, 2024
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-cms-redirects
 originalArticleId: 296658bd-56e5-4408-b66b-ffaa2298ce9e

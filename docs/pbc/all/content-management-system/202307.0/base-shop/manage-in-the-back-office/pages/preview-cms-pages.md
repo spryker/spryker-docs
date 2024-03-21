@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/managing-cms-pages
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-pages.html
   - docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/pages/manage-cms-pages.html
+  - /docs/pbc/all/content-management-system/202212.0/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
+
 related:
   - title: CMS Page overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

@@ -754,6 +754,20 @@ Make sure the order items that transit from status `shipped` to `waiting for ret
 
 {% endinfo_block %}
 
+### Update BackOffice navigation
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that you see section Sales >> Returns in the left menu.
+
+{% endinfo_block %}
+
+
+
 ## Install feature frontend
 
 Follow the steps below to install the feature front end.

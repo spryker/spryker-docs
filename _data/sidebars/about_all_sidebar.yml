@@ -97,43 +97,36 @@ entries:
       - title: Contribute
         url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
         nested:
-          - title: Edit the docs using a web browser
+          - title: Edit using a web browser
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
-          - title: Edit the docs locally
+          - title: Edit locally
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
           - title: Add and edit diagrams
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
-          - title: Report docs issues
+          - title: Report issues
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
           - title: Review pull requests
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
+          - title: Add global sections
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
+          - title: Install recommended VS Code extensions
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
 
-      - title: General rules and guidance for adding new documents
-        url: /docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html
-      - title: Markdown syntax
-        url: /docs/about/all/about-the-docs/style-guide/markdown-syntax.html
-      - title: Spryker documentation style guide
+      - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html
         nested:
           - title: Examples
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/examples.html
+            url: /docs/about/all/about-the-docs/style-guide/style-guide-examples.html
           - title: Spelling
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/spelling.html
+            url: /docs/about/all/about-the-docs/style-guide/style-guide-spelling.html
           - title: Word list
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/word-list.html
+            url: /docs/about/all/about-the-docs/style-guide/word-list.html
+          - title: General rules and guidance for adding docs
+            url: /docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html
+          - title: Markdown syntax
+            url: /docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 
-url: /docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html
-
-
-      - title: Install recommended VS Code extensions
-        url: /docs/about/all/about-the-docs/install-recommended-vs-code-extensions.html
-
-      - title: Build the documentation site
+      - title: Run the docs locally
         url: /docs/about/all/about-the-docs/run-the-docs-locally.html
-
-      - title: Add product sections to the documentation
-        url: /docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
-
-
 
 ...

@@ -9,13 +9,11 @@ redirect_from:
 keywords: acp
 ---
 
-The App Composition Platform (ACP) lets Spryker Cloud Commerce Operating System (SCCOS) customers connect, configure, and use the available third-party services via apps, in their application with the click of a button, with no or low development efforts from their side.
+The App Composition Platform (ACP) enables Spryker Cloud Commerce Operating System (SCCOS) customers connect, configure, and use the available third-party services available on the platform in their Spryker projects with zero or low development efforts required from their side.
 
-![ACP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
+Projects can save development time by using any of the zero to low-code OOTB third-party integrations provided via the App Composition Platform. 
 
-<a name="supported-apps"></a>
-
-The following apps are supported:
+Integrations for the following Apps are currently available on the Platform:
 
 - [Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html), a Tax Compliance Platform
 - [Algolia](/docs/pbc/all/search/202307.0/base-shop/third-party-integrations/algolia/integrate-algolia.html), a Search Engine
@@ -24,44 +22,31 @@ The following apps are supported:
 - [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html), a platform for User-Generated Content (UGC)
 - [Stripe](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/stripe.html), a financial infrastructure platform that enables businesses to accept payments
 
-Spryker builds all integrations of the apps and provides them in a secure and no-code way for the SCCOS.
+Business users who are looking to learn more about the App Composition Platform can read more [here](https://spryker.com/app-composition-platform/#/)
 
-The ACP has the following advantages:
+## Getting Started with ACP
+The App Composition platform (ACP) comprises of 3 major components:
+1. App Catalog: This is an interface where we list all the available Apps available via the ACP. The App Catalog provides details about an integration, enables users connect to the App Composition Platform and add configurations to connect to a 3rd Party Application. It can be accessed via the Spryker Backoffice. A read-only version of the Catalog can be [viewed here](https://product.spryker.com/features/acp/acp-catalog/#/catalog)
+2. App Composition Platform & Infrastructure: The underlying platform for ACP facilitates how Spryker projects communicate with 3rd party integrations via the App Composition Platform.
+3. ACP Apps: These are integrations provided Out-of-the-Box by Spryker via the App Composition Platform. Spryker offers a range of zero to low-code applications. 
 
-- Quick, no-code integrations
-- Fully functional trials
-- Consumption-based billing
-- Contains only approved and secure apps
-- Always up-to-date apps
+### Accessing the Read-Only ACP Catalog from the Backoffice
+In 2022, we introduced the App Composition Platform, which includes the read-only version of the ACP Catalog. This feature is readily available from the Backoffice for SCCOS customers on Spryker version **202212.0**. An updated version of the ACP Catalog was also introduced in 2023. See the [release note](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html#documentation-2)
 
-## Installing the ACP catalog
-
-With the Spryker product release [202212.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202212.0/release-notes-202212.0.html) the ACP catalog is integrated into the Back Office by default, but not registered with ACP yet. 
-
-You can access the ACP catalog only if you are a SCCOS customer and have additionally been enabled for ACP, which means that your SCCOS is properly set up and registered with the ACP. Check [ACP installation](/docs/acp/user/app-composition-platform-installation.html) for details on how to install and enable the ACP catalog for your version of SCCOS.
-
-{% info_block warningBox "Info" %}
-
-The actions and level of effort required to make your project ACP-ready may vary depending on the update status of your SCCOS module versions.
-
-{% endinfo_block %}
+Customers who are on a previous version of Spryker and would like to access the read-only version of the ACP Catalog can do so by installing the module below:
+* `spryker/app-catalog-gui: ^1.4.1` or later
 
 
-## Using an app from the ACP catalog
+## Becoming Registered for ACP
+To use ACP Apps on your Spryker project, the customer project needs to be registered. The registration process helps to prepare your project for seamless communication with 3rd Party Apps provided via the App Composition Platform. The registration process is divided into 2 steps:
+1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready)
+2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Do contact us via our [support portal](https://support.spryker.com/s/) once step 1 is completed. 
 
-In most cases, to try an app from the ACP catalog, you do the following:
+### Notes
+Our team will like to guide you through the registration process if you have any questions. Do send us a message in case you have any [questions](https://support.spryker.com/s/)
 
-1. In the ACP catalog, select the necessary app and connect it to your shop by clicking the **Connect app** button on the app details page. You are redirected to the configuration page of the newly connected app. You can find a link to the app provider's website if you need to register with them.
-2. You obtain the necessary credentials on the app provider's website.
-3. In the Spryker ACP catalog, on the selected app details page, you click **Configure** and enter the credentials obtained from the app provider. Here you also make necessary settings for the app.
 
-{% info_block infoBox "Info" %}
-
-Make sure you check the configuration guidelines for the app you need because additional settings in the Back Office might be required for individual apps to run.
-
-{% endinfo_block %}
-
-That's it! You are all set to try the app out.
-
-## Next steps
-To start integrating and using the ACP apps, first, [make your project ACP-ready and install ACP](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).
+## Read Also
+1. [SCCOS Dependencies required for ACP](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).
+2. [ACP security assessment](/docs/dg/dev/acp/aop-security-assessment.html#acp-security)
+3. [ACP Best Practices & FAQ](/docs/dg/dev/acp/acp-security-tips.html)

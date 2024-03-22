@@ -60,7 +60,7 @@ The configuration of the table must be done with the following methods:
 * Set up captions for the table headers (`setHeader()`)
 * Set up searchable fields (`setSearchable()`)
 * Set up sortable fields (`setSortable()`)
-* Set up raw fields—for fields containing HTML markup that should not be escaped (`addRawColumn`)
+* Set up raw fields — for fields containing HTML markup that should not be escaped (`addRawColumn`)
 
 **Code sample:**
 
@@ -87,8 +87,6 @@ protected function configure(TableConfiguration $config)
 
     $config->addRawColumn('URL');
 
-    $this->persistFilters($config);
-
     return $config;
 }
 ```
@@ -100,16 +98,7 @@ To configure the field on which the table is sorted by default when it's initial
 ```php
 <?php
 
-$config->setDefaultSortColumnIndex(5);
-```
-
-You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet)—for example:
-
-```php
-<?php
-
-$config->setDefaultSortDirection(
-    \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
+$config->setDefaultSortField(SpySalesOrderTableMap::COL_CREATED_ATб \Spryker\Zed\Gui\Communication\Table\TableConfiguration::SORT_DESC);
 ```
 
 ### Configure search by columns

@@ -18,7 +18,7 @@ related:
   - title: Report documentation issues
     link: docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
   - title: Review pull requests
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
   - title: Markdown syntax
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---

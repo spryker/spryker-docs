@@ -15,7 +15,7 @@ related:
   - title: Edit documentation via pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
   - title: Review pull requests
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/review-pull-requests.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
   - title: Style, syntax, formatting, and general rules
     link: docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html
   - title: Markdown syntax

@@ -9,7 +9,7 @@ Spryker docs are your one-stop hub for all the information about Spryker Cloud C
 
 ## The source of truth
 
-When it comes to knowledge sharing, we rely on the docs as the main source of truth. Both external and internal users refer to the docs when developing projects, designing [Spryker Safari courses](https://safari.spryker.com/learn), creating new or customizing the existing functionality.
+When it comes to knowledge sharing, we rely on the docs as the main source of truth. Both external and internal users refer to the docs when developing projects, designing [Spryker Safari courses](https://safari.spryker.com/), creating new or customizing the existing functionality.
 
 ## Owned by the Spryker community
 

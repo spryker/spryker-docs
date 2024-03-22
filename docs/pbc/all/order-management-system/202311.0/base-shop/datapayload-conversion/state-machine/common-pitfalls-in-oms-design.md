@@ -1,7 +1,7 @@
 ---
 title: Common pitfalls in OMS design
 description: This document explains the common pitfalls in OMS design in the Spryker Commerce OS.
-last_updated: Jan 13, 2022
+last_updated: Mar 24, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
@@ -196,56 +196,54 @@ The unused state may have a missing transition.
 
 **Issue:** In most cases, if you have an order item stuck during the `onEnter` transition, there is an unexpected error during execution.
 
-I highly recommend checking those issues individually and properly fixing them.
-
 **Solution 1:** If you are not in a hurry, we recommend checking and fixing each issue individually.
 
-**Solution 1:** Use this solution if you have many stuck items and you need to fix them quickly. Create a console command that triggers `onEnter` events. We recommend creating a list of OMS states which you want to check and move order items from. Set limits for orders (not items!) and time windows. For example, check stuck order items only if their last state update was after two hours.
+**Solution 2:** Use this solution if you have many stuck items and you need to fix them quickly. Create a console command that triggers `onEnter` events. We recommend creating a list of OMS states which you want to check and move order items from. Set limits for orders (not items!) and time windows. For example, check stuck order items only if their last state update was after two hours.
 
-## Saving states (per item transaction)
+## Saving states per item transaction
 
-**Example:** The system has a callback that should move order items from picking started to ready for recalculation. After that, check-condition will move the order further to the recalculation step.
+**Example:** The system has a callback that moves order items from `picking started` to `ready for recalculation`. After that, a check-condition moves the order to the `recalculation` step.
 ![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/dd060438-7cd2-4453-9cf4-e08cda243003)
 
-**Issue:** During the last transition in the callback from picking finished to ready for recalculation - Jenkins job started the check-condition command. Because of that check-condition takes not all order items from the order and pushes them forward. Only the next job started executing the remaining order items with the delay, because of that many commands (per Order) were triggered twice.
+**Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts  the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
 
-**Solution:** This is possible because during the execution of \Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems system stores data per item. It was done like this because Core logic expects that you may have more than 1 order in transition. And to not block all of them due to potential failed orders - executing transactions per item. To change that you should first group your order items per order and after that, you can change transaction behavior - to store all order items per only 1 transaction. In this case, check-condition or any other command can’t take order items partially.
+**Solution:** This is possible because during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them due to a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
 
 ## LockedStateMachine
 
-**Example:** In case when multiple processes can push forward an order (callback from third-party & console command) it’s recommended to use LockedStateMachine. Important to understand:
+**Example:** When multiple processes can push forward an order (callback from third-party & console command) it’s recommended to use LockedStateMachine:
 
-1. It implements the same interface as common StateMachine and has locks for all methods except the check-condition command. The reason behind - you shouldn’t have any conflict inside the execution of the check-condition command.
+1. It implements the same interface as common StateMachine and has locks for all methods except the `check-condition` command. The `check-condition` command shouldn’t have any conflicts during the execution.
 
-2. Lock works based on MySQL table spy_state_machine_lock - and because it is MySQL sometimes you can face deadlocks (you have to handle them properly) and it takes more time to work with than memory storage (redis for example). Also locking works on the order item level, but in most cases more efficient will be used on the order level.
+2. Locks are based on the `spy_state_machine_lock` table - and because it is MySQL sometimes you can face deadlocks (you have to handle them properly) and it takes more time to work with than memory storage (redis for example). Also locking works on the order item level, but in most cases more efficient will be used on the order level.
 
-## Speed-up oms:check-condition (parallel execution & run often than once per minute)
+## Speed up oms:check-condition: parallel execution & run often than once per minute)
 
-**Example:** When execution for check-condition once per minute is not enough for business, you can increase frequency with two approaches:
+**Example:** When the execution of `check-condition` once per minute is not enough, you can increase the frequency as follows:
 
-1. Do that more in more threads. For example, you can increase the number of threads in your config
-```php
-$config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: if you change this value do not forget to update the number of Jenkins jobs in jenkins.php
-```
-and then create 10 Jenkins jobs for every processor. The console command has the option processor-id where you can define which identifiers will be processed in this job. Assignment of process happens during order creation for every order item.
-You can find more details in this article.
+* Increase the number of threads:
+  1. Update the config:
+    ```php
+    $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: if you change this value do not forget to update the number of Jenkins jobs in jenkins.php
+    ```
+  2. Create ten Jenkins jobs for every processor. Use the `processor-id` option to define which identifiers to process in a job. Processes are assigned when orders order items are created. You can find more details in this article.
 
-2. Start a job more often than once per minute. You may create a wrapper console command that will run check-condition (or another console command) one by one. A few hints for wrapper command:
-a) Don’t run subprocesses in parallel. It will bring more complexity in logic than profits
-b) Run real command (check-condition) in subprocess - it will help with clean-up memory after ending execution.
-c) Have timeouts for subprocesses and the wrapper. Avoid hard limits with the killing process - it may lead to items stuck in onEnter transitions. Instead - do analyze the previous execution time of subprocesses - should you run a new child process or finish the execution of the wrapper?
+* Create a wrapper console command that runs `check-condition` or any other needed command one by one. Tips for the wrapper command:
+  * Don’t run subprocesses in parallel because it results in more complexity in logic than profits.
+  * Run the real command (check-condition) in a subprocess to speed up memory cleanup after the execution.
+  * Implement timeouts for subprocesses and the wrapper. To prevent items from being stuck in `onEnter` transitions, avoid hard limits with the killing process. Instead, analyze the execution time of subprocesses to figure out if you should run a new child process or finish the execution of the wrapper.
 
-## PerOrder / PerItem command & condition
+## PerOrder or PerItem command & condition
 
-**Issue:** Core has different ways of executing the OMS commands (per order and item). However, it doesn’t have such separation for conditions - we have only one option - per item.
+**Issue:** Core has different ways of executing the OMS commands: per order and per item. However, for conditions, OMS commands are executed only per item.
 ![per-order-or-per-item-command-and-condition](https://github.com/xartsiomx/spryker-docs/assets/110463030/2dbe96ae-0a59-48cb-8653-ee104201f63c)
 
-**Solution:** Extending ConditionInterface without changing the signature.
-1. Create a new interface ConditionPerOrderInterface and extend it from ConditionInterface
-2. Overwrite \Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::checkCondition with the caching mechanism inside (static property) to execute logic only for the first item, for all others - return result from cache.
+**Solution:** Extend `ConditionInterface` without changing the signature:
+1. Create a new interface `ConditionPerOrderInterface` and extend it from `ConditionInterface`.
+2. Overwrite `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::checkCondition` with the caching mechanism inside a  static property to execute the logic only for the first item and return results from cache for the rest of the items.
 
-Logic inside your ConditionPlugin should be around Order (not Item) - in this case, you have the correct value in the cache. However, the signature allows a developer to create logic around the item.
+The logic in the `ConditionPlugin` should be around Order (not Item) - in this case, you have the correct value in the cache. However, the signature allows a developer to create logic around the item.
 
 
 

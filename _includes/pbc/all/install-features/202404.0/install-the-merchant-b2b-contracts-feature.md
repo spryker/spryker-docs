@@ -374,9 +374,10 @@ composer require spryker-feature/merchant-contracts: "{{page.version}}" --update
 
 Make sure that the following modules are installed:
 
-| MODULE                   | EXPECTED DIRECTORY                             |
-|--------------------------|------------------------------------------------|
-| MerchantRelationshipPage | vendor/spryker-shop/merchant-relationship-page |
+| MODULE                     | EXPECTED DIRECTORY                               |
+|----------------------------|--------------------------------------------------|
+| MerchantRelationshipPage   | vendor/spryker-shop/merchant-relationship-page   |
+| MerchantRelationshipWidget | vendor/spryker-shop/merchant-relationship-widget |
 
 {% endinfo_block %}
 
@@ -399,6 +400,8 @@ merchant_relationship_page.table.header.actions,Actions,en_US
 merchant_relationship_page.table.header.actions,Aktion,de_DE
 merchant_relationship_page.table.action.view,View,en_US
 merchant_relationship_page.table.action.view,Ansehen,de_DE
+merchant_relationship_widget.merchant_relationship_links_list.view,View,en_US
+merchant_relationship_widget.merchant_relationship_links_list.view,Anzeigen,de_DE
 company.account.merchant_relations,Merchant Relations,en_US
 company.account.merchant_relations,Händlerbeziehungen,de_DE
 merchant_relationship_page.table.filter.apply,Apply,en_US
@@ -415,6 +418,8 @@ merchant_relationship_page.merchant_relationsip_detail.business_unit_owner,Busin
 merchant_relationship_page.merchant_relationsip_detail.business_unit_owner,Inhaber der Geschäftseinheit,de_DE
 merchant_relationship_page.merchant_relationsip_detail.business_units,Business Units,en_US
 merchant_relationship_page.merchant_relationsip_detail.business_units,Geschäftseinheiten,de_DE
+merchant_relationship_page.merchant_relationsip_detail.view,View,en_US
+merchant_relationship_page.merchant_relationsip_detail.view,Ansehen,de_DE
 merchant_relationship_page.merchant_relationship.business_unit_owner,Business Unit Owner,en_US
 merchant_relationship_page.merchant_relationship.business_unit_owner,Inhaber der Geschäftseinheit,de_DE
 merchant_relationship_page.merchant_relationship.business_unit_owner.placeholder,Select Business Unit Owner,en_US
@@ -477,9 +482,10 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 To enable widgets, register the following plugins:
 
-| PLUGIN                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                        |
-|------------------------------------|------------------------------------------------------------|---------------|--------------------------------------------------|
-| MerchantRelationshipMenuItemWidget | Adds `Merchant Relations` item to company navigation menu. |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
+| PLUGIN                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                          |
+|------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------|
+| MerchantRelationshipLinkListWidget | Adds links to `Merchant Relations` detail pages.           |               | SprykerShop\Yves\MerchantRelationshipWidget\Widget |
+| MerchantRelationshipMenuItemWidget | Adds `Merchant Relations` item to company navigation menu. |               | SprykerShop\Yves\MerchantRelationshipWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -488,7 +494,8 @@ To enable widgets, register the following plugins:
 
 namespace Pyz\Yves\ShopApplication;
 
-use SprykerShop\Yves\MerchantRelationshipPage\Widget\MerchantRelationshipMenuItemWidget;
+use SprykerShop\Yves\MerchantRelationshipWidget\Widget\MerchantRelationshipLinkListWidget;
+use SprykerShop\Yves\MerchantRelationshipWidget\Widget\MerchantRelationshipMenuItemWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -499,6 +506,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
+            MerchantRelationshipLinkListWidget::class,
             MerchantRelationshipMenuItemWidget::class,
         ];
     }
@@ -511,8 +519,10 @@ Verify the following widgets have been registered by adding the respective code 
 
 | WIDGET                             | VERIFICATION                                                                                                                                                           |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 | MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
-Make sure that you can see `Merchant Relations` menu item in the company navigation menu.
+* Make sure that you can see links to `Merchant Relations` detail pages. 
+* Make sure that you can see `Merchant Relations` menu item.
 
 {% endinfo_block %}

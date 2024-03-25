@@ -111,13 +111,13 @@ Append glossary according to your configuration:
 
 ```yaml
 merchant_relation_request.mail.merchant_relation_request_status_change.subject,"The status of your merchant relation request has been changed.",en_US
-merchant_relation_request.mail.merchant_relation_request_status_change.subject,Der Status Ihrer Händlerbeziehung-Anfrage wurde geändert.,de_DE
+merchant_relation_request.mail.merchant_relation_request_status_change.subject,Der Status Ihrer Händlerbeziehungsanfrage wurde geändert.,de_DE
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.salutation,"Hello %first_name% %last_name%,",en_US
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.salutation,"Hallo %first_name% %last_name%,",de_DE
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.main_text,"Merchant %merchant_name% changed the status of your merchant relation request to %status%. Please review it in your Company Account.",en_US
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.main_text,"Händler %merchant_name% hat den Status Ihrer Händlerbeziehungsanfrage in %status% geändert. Bitte überprüfen Sie es in Ihrem Firmenkonto.",de_DE
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.button,View merchant relation request,en_US
-merchant_relation_request.mail.trans.merchant_relation_request_status_change.button,Händlerbeziehung-Anfrage anzeigen,de_DE
+merchant_relation_request.mail.trans.merchant_relation_request_status_change.button,Händlerbeziehungsanfrage anzeigen,de_DE
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.decision_note_title,Comment from Merchant,en_US
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.decision_note_title,Anmerkung vom Händler,de_DE
 ```
@@ -487,6 +487,8 @@ merchant_relation_request_page.merchant_relation_request.actions.cancel,Cancel,e
 merchant_relation_request_page.merchant_relation_request.actions.cancel,Stornieren,de_DE
 merchant_relation_request_page.merchant_relation_request.actions.back,Back,en_US
 merchant_relation_request_page.merchant_relation_request.actions.back,Zurück,de_DE
+merchant_relation_request_page.merchant_relation_request.actions.send_request,Submit Request,en_US
+merchant_relation_request_page.merchant_relation_request.actions.send_request,Anfrage einreichen,de_DE
 merchant_relation_request_page.merchant_relation_request.submit,Submit Request,en_US
 merchant_relation_request_page.merchant_relation_request.submit,Anfrage absenden,de_DE
 merchant_relation_request_page.merchant_relation_request.request_note,Message to the Merchant,en_US
@@ -532,11 +534,11 @@ merchant_relation_request_page.merchant_relation_request.status.placeholder,Stat
 merchant_relation_request_page.merchant_relation_request.status.pending,Pending ,en_US
 merchant_relation_request_page.merchant_relation_request.status.pending,Ausstehend,de_DE
 merchant_relation_request_page.merchant_relation_request.status.canceled,Canceled ,en_US
-merchant_relation_request_page.merchant_relation_request.status.canceled,Abgesagt,de_DE
+merchant_relation_request_page.merchant_relation_request.status.canceled,Storniert,de_DE
 merchant_relation_request_page.merchant_relation_request.status.rejected,Rejected ,en_US
 merchant_relation_request_page.merchant_relation_request.status.rejected,Abgelehnt,de_DE
 merchant_relation_request_page.merchant_relation_request.status.approved,Approved ,en_US
-merchant_relation_request_page.merchant_relation_request.status.approved,Bestätigt,de_DE
+merchant_relation_request_page.merchant_relation_request.status.approved,Genehmigt,de_DE
 merchant_relation_request_page.merchant_relation_request.request_note_label,Message from the user,en_US
 merchant_relation_request_page.merchant_relation_request.request_note_label,Nachricht vom Benutzer,de_DE
 merchant_relation_request_page.merchant_relation_request.decision_note_label,Message to the user,en_US
@@ -579,8 +581,6 @@ merchant_relation_request_page.merchant_relation_request_detail.notification.des
 merchant_relation_request_page.merchant_relation_request_detail.notification.description.approved,Die folgenden Händlerbeziehungen wurden erstellt.,de_DE
 merchant_relation_request_page.merchant_relation_request_detail.notification.description.rejected,Your merchant relation request was rejected.,en_US
 merchant_relation_request_page.merchant_relation_request_detail.notification.description.rejected,Ihre Anfrage zur Händlerbeziehung wurde abgelehnt.,de_DE
-merchant_relation_request_page.merchant_relation_request_detail.notification.merchant_view,View,en_US
-merchant_relation_request_page.merchant_relation_request_detail.notification.merchant_view,Anzeigen,de_DE
 merchant_relation_request_page.merchant_relation_request_detail.labels.company,Company,en_US
 merchant_relation_request_page.merchant_relation_request_detail.labels.company,Unternehmen,de_DE
 ```

@@ -1406,7 +1406,7 @@ entries:
         include_versions:
         - "202212.0"
       - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
+        url: /docs/dg/dev/glue-api/202212.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
         - "202307.0"

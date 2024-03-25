@@ -213,6 +213,10 @@ Debug mode is configured with the following:
 
 *Remove all the demo data from the environment*. A project should only use the real data that will be used after going live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. Also, make sure to set strong passwords when creating new admin users.
 
+## ACL configuration
+
+* Make sure that, acl configuration to suit your requirements and restrict access to sensitive data. For more information, see [ACL configuration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
+
 ## Summary
 
 To sum up, the main points to keep the data secure are the following:

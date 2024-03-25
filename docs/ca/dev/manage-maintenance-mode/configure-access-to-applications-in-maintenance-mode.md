@@ -48,7 +48,7 @@ groups:
             ...
 ```
 
-For more information about the deploy file configuration, see [groups: applications:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#groups-applications).
+For more information about the deploy file configuration, see [groups: applications:](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications).
 
 
 ## Define allowlisted IP addresses
@@ -67,7 +67,7 @@ docker:
               - 192.0.2.1
  ```
 
-For more information about the deploy file configuration, see [docker: maintenance: whitelist: ips:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#docker-maintenance-whitelist-ips).
+For more information about the deploy file configuration, see [docker: maintenance: whitelist: ips:](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#docker-maintenance-whitelist-ips).
 
 
 ## Deploy the changes

@@ -11,4 +11,4 @@ This section contains a collection of articles describing how data interaction h
 
 * [Transfer data between Yves and Zed](/docs/dg/dev/backend-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html)
 
-* [Define the module dependencies – dependency provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html)
+* [Define the module dependencies – dependency provider](/docs/dg/dev/backend-development/data-manipulation/data-interaction/define-module-dependencies-dependency-provider.html)

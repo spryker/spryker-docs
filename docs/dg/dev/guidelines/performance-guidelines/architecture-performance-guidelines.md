@@ -110,7 +110,7 @@ For example, to display products in the Spryker shop, we need to import and prop
 
 For data import of large files, it's also important to use bulk processing. Therefore, consider importing data into the database with chunks of 1000+ elements. The same applies to triggering events. Using bulk processing saves a lot of time for communication with the database and queues.
 
-For more information about improving data import performance, see [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
+For more information about improving data import performance, see [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html).
 
 Features affected by the ORM approach:
 
@@ -240,7 +240,7 @@ One can avoid using the unnecessary transitions by:
 Make sure to check the following articles on how to optimize the performance of your application:
 
 - [Performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html)
-- [Data importer speed optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html)
+- [Data importer speed optimization](/docs/dg/dev/data-import/{{site.version}}/data-import-optimization-guidelines.html)
 - [Integrating multi-queue publish structure](/docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html)
 - [Performance testing in staging environments](/docs/ca/dev/performance-testing-in-staging-enivronments.html)
 
@@ -261,7 +261,7 @@ Every shop should always be ready for high traffic and serve as many users as po
 
 ### Monitoring and profiling
 
-We strongly recommend our customers enable APM systems for their projects. Spryker supports [Newrelic](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html) as the default monitoring system.
+We strongly recommend our customers enable APM systems for their projects. Spryker supports [Newrelic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic) as the default monitoring system.
 
 ### Performance CI
 

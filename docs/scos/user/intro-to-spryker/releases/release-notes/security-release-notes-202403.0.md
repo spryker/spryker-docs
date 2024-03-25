@@ -5,13 +5,13 @@ last_updated: Mar 26, 2024
 template: concept-topic-template
 ---
 
-The following information pertains to security-related issues that have been recently resolved. All issues are listed by description and affected modules.
+The following information pertains to security-related issues that have been recently resolved.
 
-If you need any additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
+For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
 
-## Privilege escalation through the 'adding users to companies' function
+## Privilege escalation through the "adding users to companies" function
 
-Due to an access controls vulnerability in the `adding users to companies` function, it was possible for attackers with access to the vulnerable functionality of a company to create admin users to another company.
+Due to an access controls vulnerability in the "adding users to companies" function, it was possible for attackers with access to the vulnerable functionality of a company to create admin users to another company.
 
 ### Affected modules
 
@@ -28,7 +28,7 @@ composer show spryker-shop/company-page # Verify the version
 
 ## User enumeration using response content
 
-When changing the email address, based on the application's response to the provided email, it was possible to identify whether an account with the provided email existed in the system. This information could be leveraged for attacks like phishing campaigns and password brute forcing.
+When changing the email address, based on the application's response to a provided email, it was possible to identify whether an account with the provided email existed in the system. This information could be leveraged for attacks like phishing campaigns and password brute forcing.
 
 ### Affected modules
 

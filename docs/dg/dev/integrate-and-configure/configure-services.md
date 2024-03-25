@@ -29,6 +29,10 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
   - /docs/scos/dev/the-docker-sdk/202311.0/configure-services.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
+  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/new-relic.html
+  - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
 
 related:
   - title: Deploy file reference

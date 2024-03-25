@@ -83,7 +83,7 @@ suites:
                 - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
                 - \SprykerTest\Shared\AuthenticationOauth\Helper\AuthenticationOauthHelper
                 - \SprykerTest\Glue\Testify\Helper\GlueBackendApiJsonApiHelper
-                - \SprykerTest\Glue\Testify\Helper\OpenApi3
+                - \SprykerTest\Glue\Testify\Helper\GlueBackendApiOpenApi3Helper
                 - \SprykerTest\Glue\Testify\Helper\JsonPath
                 - \SprykerTest\Shared\Testify\Helper\DependencyHelper
                 - \SprykerTest\Service\Container\Helper\ContainerHelper
@@ -181,9 +181,9 @@ class ModuleBackendJsonApiFixtures implements FixturesBuilderInterface, Fixtures
     protected UserTransfer $userTransfer;
 
     /**
-     * @return mixed
+     * @return \Generated\Shared\Transfer\UserTransfer
      */
-    public function getUserTransfer()
+    public function getUserTransfer(): UserTransfer
     {
         return $this->userTransfer;
     }
@@ -280,16 +280,16 @@ class ModuleBackendJsonApiCest
     public function requestGetModule(ModuleBackendApiTester $I): void
     {
         // Arrange
-        $oauthResponseTransfer = $I->haveAuthorizationToBackendAPI($this->fixtures->getUserTransfer());
+        $oauthResponseTransfer = $I->havePasswordAuthorizationToBackendApi($this->fixtures->getUserTransfer());
         $I->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
 
         // Act
-        $I->sendGET(
+        $I->sendJsonApiGet(
             $I->formatUrl(ModuleRestApiConfig::RESOURCE_MODULE),
         );
 
         // Assert
-        $I->seeResponseCodeIs(HttpCode::OK);
+        $I->seeJsonApiResponseCodeIs(HttpCode::OK);
         $I->seeResponseIsJson();
         $I->seeResponseMatchesOpenApiSchema();
     }

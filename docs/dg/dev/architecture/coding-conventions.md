@@ -440,19 +440,18 @@ The `Index` controller name acts as the default controller during request contro
 The `index` action name acts as the default action during request action resolution.
 
 **Conventions**
-- `Public` methods are considered as an `Action` and therefore MUST use the `Action` suffix.
-- Action methods MUST have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
-- `Controller` MUST orchestrate [syntactical validation](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.
+- Action methods are required to be suffixed with `Action` and be `public` in order to be accessible, and straight forward define the entry points of the `Controller`.
 
-<details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- `Public` methods can be non-action.<br/>
-- Action method parameters can be freely chosen, and can access system or request parameters in any preferred way.<br/>
+<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+- Only action methods can be `public` for simplicity.<br/>
+- Action methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.<br/>
+- Action methods are required to orchestrate [syntactical validation](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.<br/>
+- Action methods can not contain any logic directly that is outside the regular responsibilities of a `Controller` (see `description` above).
 </details>
 
 **Guideline**
-- `Actions` should not contain any logic that is outside the regular responsibilities of a `Controller` (see description above).
 - `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
-- The inherited `getFactory()` method grants access to the [Factory](#factory) layer.
+- The inherited `getFactory()` method grants access to the [Factory](#factory).
 - The inherited `getFacade()` or `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
 
 **Example**
@@ -515,16 +514,38 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 Injects required dependencies to a module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin). 
 
-Dependency injection is orchestrated through a `provide-add-get` structure (see example below).
+Dependency injection is orchestrated through a `provide-add-get` structure (see `examples` below).
 - The `provide` method is the highest level that holds only `add` calls without any additional logic.
 - The `add` method is the middle level that injects the dependencies into the dependency container using a class constant and a late-binding instantiating closure.
 - The `get` method is the lowest level that sources the dependency.
 
 **Conventions**
-- All class constants MUST be `public` (to decrease conflicts in definition for being a public API class, to allow referring to them from [Factory](#factory)).
-- Setting dependency using the `container::set()` MUST be paired with late-binding closure definition to decouple instantiation.
-- Dependencies that require individual instances per injection MUST use `Container::factory()` method additionally (eg: [Query Objects](#query-object), see examples below).
-- Dependencies MUST be wired through the target layer corresponding inherited method:
+- Setting dependency using the `container::set()` needs to be paired with late-binding closure definition to decouple instantiation.
+- Dependencies that require individual instances per injection need to use `Container::factory()` method additionally to ensure expected behaviour (eg: [Query Objects](#query-object), see `examples` below).
+- `Provide` methods need to call their parent `provide` method to inject the parent level dependencies.
+- Only three type of methods can be defined, either `provide`, `get`, or `add`.
+```php
+function provide*Dependencies(Container $container)
+function add[Dependency](Container $container)
+function add[PluginInterfaceName]Plugins(Container $container)
+function get[Dependency](Container $container)
+function get[PluginInterfaceName]Plugins(Container $container)
+```
+
+<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+- All class constants are required to be `public` (to decrease conflicts in definition for being a public API class, to allow referring to them from [Factory](#factory)).<br/>
+- `Add`, `provide`, and `get` methods must have `Container $container` as the only argument.<br/>
+- `Provide` methods can only call `add` methods.<br/>
+- `Add` and `get` methods need to be `protected`.<br/>
+- `Add` methods can only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).<br/>
+- [Facades](#facade-design-pattern) are required to be wrapped into a [Bridge](#bridge) to avoid coupling another module.<br/>
+- [Plugins](#plugin) can not be wired on module level.<br/>
+- [Plugin](#plugin) defining `get` methods are required to be tagged with `@api` tag.<br/>
+</details>
+
+**Guidelines**
+- Dependency constant names should be descriptive and follow the `[COMPONENT_NAME]_[MODULE_NAME]` or `PLUGINS_[PLUGIN_INTERFACE_NAME]` pattern, with a name matching its value (see in example).
+- Dependencies need to be wired through the target layer corresponding inherited method to be accessible via the corresponding [Factory](#factory):
 ```php
 public function provideCommunicationLayerDependencies(Container $container)
 public function provideBusinessLayerDependencies(Container $container)
@@ -533,40 +554,6 @@ public function provideDependencies(Container $container)
 public function provideBackendDependencies(Container $container)
 public function provideServiceLayerDependencies(Container $container)
 ```
-- Only three type of methods CAN be defined, either `provide`, `get`, or `add`.
-```php
-public function provide*Dependencies(Container $container)
-```
-- `Provide` methods MUST call their parent `provide` method.
-- `Provide` methods MUST only call `add` methods.
-
-```php
-protected function add*(Container $container)
-```
-- `Add` methods MUST only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).
-
-```php
-protected function get[Dependency](Container $container)
-protected function get[PluginInterfaceName]Plugins(Container $container)
-```
-
-**Guidelines**
-- Dependency constant names should be descriptive and follow the `[COMPONENT_NAME]_[MODULE_NAME]` or `PLUGINS_[PLUGIN_INTERFACE_NAME]` pattern, with a name matching value (see in example).
-
-<details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Constants can have any access modifier, they are not limited to `public`. <br/>
-- Methods can have any access modifier. <br/>
-- `Provide` methods can call other methods than `add`. <br/>
-- `Add` methods can introduce more dependency to the `Container`.<br/>
-- The `Container $container` argument can be introduced on need-to-have basis instead of being always mandatory.
-</details>
-
-<details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- [Facades](#facade-design-pattern) MUST be wrapped into a [Bridge](#bridge) to avoid coupling another module.<br/>
-- [Plugins](#plugin) MUST NOT be wired on module level.<br/>
-- [Plugin](#plugin) defining methods MUST be tagged with `@api` tag as they are considered module API. <br/>
-</details>
-
 
 **Examples**
 
@@ -1922,21 +1909,19 @@ The components below are essential in `core module development` for the purpose 
 
 **Description**
 
-According to the Interface Segregation Principle, every module defines an interface for each external class it relies upon. To decouple and encapsulate these dependencies effectively, we utilize `Bridges`. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be utilized.
-
-Challenges arise when a facade from another module seeks to implement the friend facade interface. This scenario introduces cross-module coupling between the facade and the implemented friend facade interface. To mitigate this issue, we employ the `Bridge pattern`. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
+According to the Interface Segregation Principle, every module defines an interface for each external class it relies upon. To decouple and encapsulate these dependencies effectively, we utilize `Bridges`. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be utilized. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
 
 **Conventions**
 
-- The bridge class MUST define and implement an interface (`[CurrentModule]To[FacadeOwnerModule][Service|Client|Facade]Interface.php`) that holds the specification of each `public` method (mind the missing bridge word!).
-- `Bridges` MUST contain only the delegation logic to the friend facade method.
-- The `Bridge` constructor MUST NOT contain parameters to avoid coupling to a specific class.
-- `Bridge` classes and interfaces MUST be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no mixed, no x|y).
+- The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method (mind the missing `bridge` suffix word in the interface name).
+- `Bridges` must contain only the delegation logic to the friend method.
+- The `Bridge` constructor can not have parameters to avoid coupling to a specific class.
+- `Bridge` classes and interfaces need to be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no `mixed`, no `x|y`).
 
 **Guidelines**
-- Bridge vs adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a SCOS facade. Adapters are used when the remote class' life-cycle is independent to SCOS or there is a huge technical difference between the adaptee and adaptor.
-- During `Bridge` definitions, type definition mistakes in remote facades become more visible. In these cases, be aware of the cascading effect of changing/restricting an argument type in public API when you consider such changes.
-- `QueryContainer` and `Facade` dependencies are only available in those `Glue` application layers where the application layer has access to database.
+- Bridge vs adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a SCOS [facade](#facade-design-pattern). Adapters are used when the remote class' life-cycle is independent to SCOS or there is a huge technical difference between the adaptee and adaptor.
+- During `Bridge` definitions, type definition mistakes in remote [facades](#facade-design-pattern) become more visible. In these cases, be aware of the cascading effect of changing/restricting an argument type in [facades](#facade-design-pattern) when you consider such changes.
+- [QueryContainer](#facade-design-pattern) and [Facade](#facade-design-pattern) dependencies are only available in those [Glue](#glue) application layers where the application layer has access to database.
 
 **Example**
 
@@ -1945,7 +1930,8 @@ namespace Spryker\Zed\Product\Business;
 
 interface ProductFacadeInterface
 {
-public function addProduct(ProductAbstractTransfer $productAbstractTransfer, array $productConcreteCollection): int;
+    public function addProduct(ProductAbstractTransfer $productAbstractTransfer, array $productConcreteCollection): int;
+}
 ```
 
 ```php
@@ -2019,17 +2005,17 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 **Description**
 - `Plugins` are classes which are used to realize Inversion-Of-Control - instead of a direct call to another module's [facade](#facade-design-pattern), a `plugin` can be provided as an optional and configurable class.
-- `Plugins` are the only classes that can be instantiated cross modules (usually via the [Dependency Provider](#dependency-provider) and/or [Factory](#factory)).
+- `Plugins` are the only classes that can be instantiated cross modules (normally via the [Dependency Provider](#dependency-provider)).
 - See more details about the implementation in [Plugin Interface](#plugin-interface) component, and instantiation in [Dependency Provider](#dependency-provider).
 
 **Conventions**
-- The `Plugin` MUST NOT contain business logic but delegates to the underlying [facade](#facade-design-pattern).
-- Plugin method names MUST use words `pre` and `post` instead of `before`, `after`.
-- Plugin class names MUST use words `pre`, `post`, `create`, `update`, `delete`, instead of `creator`, `updater`, `deleter`.
-- The `Plugin` MUST implement a [Plugin Interface](#plugin-interface) which is provided by an extension module.
+- `Plugins` can not contain business logic but delegate to the underlying [facade](#facade-design-pattern).
+- `Plugin` method names need to use words `pre` and `post` instead of `before`, `after`.
+- `Plugin` class names need to use words `pre`, `post`, `create`, `update`, `delete`, instead of `creator`, `updater`, `deleter`.
+- `Plugin` classes need to implement a [Plugin Interface](#plugin-interface) which is provided by an `extension module`.
 
 **Guidelines**
-- Plugin name should be unique and give and overview about the behaviour that the `Plugin` delivers (consider developers searching a `Plugin` in a catalog across SCOS features only by plugin name).
+- `Plugin` class name should be unique and give and overview about the behaviour that the `Plugin` delivers (consider developers searching a `Plugin` in a catalog across SCOS features only by plugin class name).
 
 **Example**
 
@@ -2095,23 +2081,22 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 There are three modules involved:
 
-1. **Plugin definer** (aka **extension module**): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module.
-2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
-3. **Plugin providers**: The modules that implement a [Plugin](#plugin) (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
+1. **Plugin definer** (aka **extension module**): The module that defines and holds the `Plugin Interface` (example: `CompanyPostCreatePluginInterface` in `CompanyExtension` module).
+2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
+3. **Plugin providers**: The modules that implement a [Plugin](#plugin) thus provide extension for the given extension point (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
 
 **Conventions**
-- `Plugin interfaces` MUST be defined in extension modules.
-  - `Extension modules` MUST be suffixed with `Extension` and follow regular module architecture.
-  - `Extension modules` MUST NOT contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).
-- `Plugin Interface` MUST have a class specification with plugin-stack details.
-- Plugin interface methods MUST receive input items as collection for scalability.
+- `Plugin interfaces` need to be defined in extension modules.
+  - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.
+  - `Extension modules` can not contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).
+- `Plugin interface` methods need to receive input items as collection for scalability reasons.
 
 **Guidelines**
 
-- Operations on single items in plugin stack is forbidden, except for the following reasons:
+- Operations on single items in plugin stack methods is not feasible, except for the following reasons:
   - it is strictly and inevitably a single-item flow.
   - the items go in FIFO order and there is no other way to use a collection instead.
-- Plugin interface class specification SHOULD explain:
+- Plugin interface class specification should explain:
   - how the [Plugins](#plugin) will be used,
   - what are the typical use-cases of a [Plugin](#plugin).
 

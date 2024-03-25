@@ -822,9 +822,9 @@ entries:
       - title: Upgrade to Webpack v5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
       - title: Upgrade to Stylelint 16 and css-loader 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
-      - title: Upgrade Node.js to v18 and npm to v9
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
+      - title: Upgrade Node.js to v18 and npm to v9
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
       - title: Migrate from TSLint to ESLint
         url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
       - title: Migrate from Yarn to npm

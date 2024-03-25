@@ -1,7 +1,6 @@
 ---
-title: SCCOS prerequisites for the Stripe app
+title: Install and configure the Stripe app prerequisites
 description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
-draft: true
 last_updated: Mar 20, 2024
 template: howto-guide-template
 related:
@@ -13,22 +12,21 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
 
 ---
-This document gives an overview of the SCCOS prerequisites required for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html) to function in your Spryker Shop.
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), follow the steps:
 
-{% info_block infoBox "Info" %}
+1. Create a Stripe account.
+2. Connect your Stripe account to the Spryker Platform account. Request this link by [creating a support case](https://support.spryker.com/s/).
+3. Enable ACP in your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Make sure you are using the latest version of our Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the Stripe app.
+4. Make sure [your countries are supported by Stripe](https://stripe.com/global).
+5. Make sure [your business is not restricted by Stripe](https://stripe.com/legal/restricted-businesses).
 
-The steps listed is this document are only necessary if your Spryker shop doesn't contain the packages (or their versions are outdated) and configurations below.
+1. Install the required packages.
+    To check the list of required packages, in the Back Office, go to **Apps**>**Stripe**.
 
-{% endinfo_block %}
+2. Add or update the shared configs:
 
-
-## 1. Required packages
-
-The Stripe app catalog page lists specific packages that must be installed or upgraded before you can use the Stripe app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Stripe**. Ensure that your installation meets these requirements.
-
-## 2. Configure shared configs
-
-Your project probably already contains the following code in `config/Shared/config_default.php` already. If not, add it:
+<details>
+  <summary>config/Shared/config_default.php</summary>
 
 ```php
 //...
@@ -80,7 +78,7 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentRefundFailedTransfer::class => 'payment-events',
     PaymentCanceledTransfer::class => 'payment-events',
     PaymentCancellationFailedTransfer::class => 'payment-events',
-    
+
     # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
     PaymentCreatedTransfer::class => 'payment-events',
 ];
@@ -98,9 +96,9 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
 
 ```
 
-## 3. Configure the Message Broker dependency provider
+</details>
 
-Your project probably already contains the following code in `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php` already. If not, add it:
+3. In `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`, add or update the config of the Message Broker dependency provider:
 
 ```php
 
@@ -123,7 +121,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             # These plugins are handling messages sent from Stripe app to your project.
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
-            
+
             # [Optional] This plugin is handling the `PaymentCreated` messages sent from Stripe App.
             new PaymentCreatedMessageHandlerPlugin(),
         ];
@@ -132,9 +130,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-## 4. Configure channels in Message Broker configuration
-
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+4. In `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`, add or updated the channels config in the message broker config:
 
 ```php
 namespace Pyz\Zed\MessageBroker;
@@ -159,8 +155,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-## 5. Configure the Order State Machine (OMS)
-Your project is likely to have the following in `src/Pyz/Zed/Oms/OmsDependencyProvider.php` already. If not, add it:
+5. In in `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, add or updated the OMS config:
+
 
 ```php
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
@@ -182,7 +178,7 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
              // These two commands will be also supported soon by ACP Stripe app.
              $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
              $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
-            
+
              return $commandCollection;
         });
 

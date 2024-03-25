@@ -37,12 +37,12 @@ Before configuring Stripe in the ACP catalog, make sure you have met these prere
 9. Optionally: In *Payment page title*, enter your shop name. This name will be displayed on the *Payment* page as a merchant label for the payee.
 ![stripe-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/stripe/configure-stripe/stripe-configuration.png)
 10. Click **Save**.
-If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. 
+If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**.
 11. Activate Stripe in your store's Back office, in **Administration** -> **Payment methods**. For details, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
 
 ## Disconnect the Stripe App
 
-Disconnecting the Stripe app from your store makes it unavailable to your customers as a payment option. 
+Disconnecting the Stripe app from your store makes it unavailable to your customers as a payment option.
 
 {% info_block infoBox "Info" %}
 
@@ -55,11 +55,3 @@ To disconnect the Stripe app from your store, do the following:
 2. Click **Stripe**.
 3. On the Stripe app details page, next to the **Configure** button, hold the pointer over <span class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png)</span> and click **Disconnect**.
 4. In the message that appears, click **Disconnect**. This removes the Stripe configurations from the Back Office and from the Storefront.
-
-{% info_block infoBox "Info" %}
-
-If you want to use the Stripe app after the disconnection, you will need to reconnect the App.
-
-{% endinfo_block %}
-
-

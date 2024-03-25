@@ -1,33 +1,10 @@
-# Table of Content
+{% info_block infoBox "Info" %}
 
-- [Client facade](#client-facade)
-- [Controller](#controller)
-- [Dependency Provider](#dependency-provider)
-- [Entity](#entity)
-- [Entity Manager](#entity-manager)
-- [Facade](#facade)
-- [Facade design pattern](#facade-design-pattern)
-- [Factory](#factory)
-- [Gateway Controller](#gateway-controller)
-- [Layout](#layout)
-- [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
-- [Model](#model)
-- [Module Configurations](#module-configurations)
-- [Navigation.XML](#navigationxml)
-- [Permission Plugin](#permission-plugin)
-- [Persistence Schema](#persistence-schema)
-- [Provider / Router](#provider--router)
-- [Query Container facade](#query-container-facade)
-- [Query Object](#query-object)
-- [Repository](#repository)
-- [Service facade](#service-facade)
-- [Theme](#theme)
-- [Transfer Object](#transfer-object)
-- [Widget](#widget)
-- [Zed Stub](#zed-stub)
-- [Bridge](#bridge)
-- [Plugin](#plugin)
-- [Plugin Interface](#plugin-interface)
+This document serves as a dynamic resource intended to provide an overview of our conventions and guidelines. We acknowledge that the technology landscape is ever-evolving, and as such, this document is subject to continuous refinement and improvement.
+
+Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker Commerce Operating System (SCOS). We encourage you to contribute your insights and recommendations by proposing changes through our designated channels.
+
+{% endinfo_block %}
 
 # Documentation structure
 
@@ -36,7 +13,7 @@ Understanding the development scenarios in which Spryker Commerce Operating Syst
 
 - **Project Development**: If you are developing a project, you will need to adhere to specific project development guidelines to ensure smooth integration.
 - **Boilerplate and Accelerator Contribution**: Contributing to boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.
-- **Module Contribution**: For those contributing to modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
+- **Module Contribution**: For those contributing to Spryker modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
 
 ## Directive Classification
 Throughout this documentation, you will encounter two types of directives:
@@ -45,23 +22,24 @@ Throughout this documentation, you will encounter two types of directives:
 
 # Applications
 Spryker utilises application layers into applications to enable constructing the necessary application architecture for the specific business requirements to provide a quick project start, and long-term maintainability.
-- Backend applications (eg: Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal) typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
-- Storefront applications (eg: Yves, Configurator, Glue, GlueStorefront) typically use the Yves-, Glue-, Client-, Service- and Shared application layers.
+- Backend applications (eg: Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console) typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
+- Storefront applications (eg: Yves, Configurator, Glue, GlueStorefront, Console) typically use the Yves-, Glue-, Client-, Service- and Shared application layers.
 
 # Application Layers
 Spryker organises responsibilities/functionalities over a set of application layers (see [Conceptual Overview](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html)) to enable flexible business logic orchestration across the applications.
 
-The application layers are aggregations of layers (see [Modules and Application Layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html))
-- **Zed**: is a **multi-layer composition** of the 4 layers: `Presentation Layer`, `Communication Layer`, `Business Layer`, `Persistence Layer`.
-- **Yves**: is a **single-layered** `Presentation Layer` merged with `Communication Layer`.
-- **Glue**: is a **single-layered** `Communication Layer`.
-- **Client**: is a **single-layered** `Communication Layer`.
-- **Service**: is a **single-layered**, overarching `Business Layer`.
+The application layers are aggregations of layers (see [Modules and Application Layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html)). Some application-layers are multi-layered and organising their components in layer directories, while others are flat-layered and merging their components in the same directory.
+- **Glue**: is a **flat-layered** `Communication Layer`.
+- **Client**: is a **flat-layered** `Communication Layer`.
+- **Service**: is a **flat-layered**, overarching `Business Layer`.
+- **Yves**: is a **flat-layered** `Presentation Layer` merged with `Communication Layer`.
+- **Zed**: is a **multi-layered** of the 4 layers: `Presentation Layer`, `Communication Layer`, `Business Layer`, `Persistence Layer`.
 - **Shared**: is a layer-overarching, stateless, abstraction library.
 
 ## Zed
 
-`Zed` serves as the backend application layer responsible for housing all business logic and persisting data.
+`Zed` serves as the backend application layer responsible for housing all business logic, persisting data and backend UI (eg: backoffice).
+
 ```
 [Organization]
 └── Zed
@@ -97,10 +75,7 @@ The application layers are aggregations of layers (see [Modules and Application 
         │   ├── [CustomDirectory]
         │   │   ├── [ModelName]Interface.php
         │   │   └── [ModelName].php        
-        │   ├── Exception
-        │   ├── Installer
-        │   │   ├── [Module]InstallerInterface.php
-        │   │   └── [Module]Installer.php        
+        │   ├── Exception   
         │   ├── [Module]BusinessFactory.php
         │   ├── [Module]Facade.php
         │   └── [Module]FacadeInterface.php
@@ -127,6 +102,9 @@ The application layers are aggregations of layers (see [Modules and Application 
         │   ├── Facade
         │   │   ├── [Module]To[Module]FacadeBridge.php
         │   │   └── [Module]To[Module]FacadeInterface.php
+        │   ├── QueryContainer
+        │   │   ├── [Module]To[Module]QueryContainerBridge.php
+        │   │   └── [Module]To[Module]QueryContainerInterface.php      
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php      
@@ -144,7 +122,7 @@ Used components
 - [Dependency Provider](#dependency-provider)
 - [Entity](#entity)
 - [Entity Manager](#entity-manager)
-- [Facade](#facade)
+- [Facade](#facade-design-pattern)
 - [Factory](#factory)
 - [Gateway Controller](#gateway-controller)
 - [Layout](#layout)
@@ -152,7 +130,7 @@ Used components
 - [Models](#model)
 - [navigation.xml](#navigationxml)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
-- [Query Container](#query-container-facade)
+- [Query Container](#facade-design-pattern)
 - [Query Object](#query-object)
 - [Repository](#repository)
 - [Schema](#persistence-schema)
@@ -181,8 +159,7 @@ Used components
         │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
         │   ├── Provider
-        │   │   ├── [Name]ControllerProvider.php
-        │   │   └── [Name]ServiceProvider.php
+        │   │   └── [Name]ControllerProvider.php
         │   └── [ConsumerModule]
         │       ├── [PluginName]Plugin.php
         │       └── [RouterName]Plugin.php
@@ -247,6 +224,12 @@ It acts as an interface for external systems to interact with the application's 
         │   ├── Client
         │   │   ├── [Module]To[Module]ClientBridge.php
         │   │   └── [Module]To[Module]ClientInterface.php
+        │   ├── Facade
+        │   │   ├── [Module]To[Module]FacadeBridge.php
+        │   │   └── [Module]To[Module]FacadeInterface.php
+        │   ├── QueryContainer
+        │   │   ├── [Module]To[Module]QueryContainerBridge.php
+        │   │   └── [Module]To[Module]QueryContainerInterface.php      
         │   ├── Service
         │   │   ├── [Module]To[Module]ServiceBridge.php
         │   │   └── [Module]To[Module]ServiceInterface.php           
@@ -254,8 +237,7 @@ It acts as an interface for external systems to interact with the application's 
         │       └── [PluginInterfaceName]PluginInterface.php
         ├── Plugin
         │   ├── Provider
-        │   │   ├── [Name]ControllerProvider.php
-        │   │   └── [Name]ServiceProvider.php
+        │   │   └── [Name]ControllerProvider.php
         │   └── [ConsumerModule]
         │       └── [PluginName]Plugin.php
         ├── [Module]Config.php
@@ -276,8 +258,7 @@ Used components
 ## Client
 
 `Client` is a lightweight application layer that handles all data access, such as
-- Persistence access (such as Key-Value Storage (Redis), Search (Elasticsearch)),
-- Yves sessions,
+- Persistence access (such as Key-Value Storage (Redis), Search (Elasticsearch), Yves sessions),
 - `Zed` as a data-source (RPC),
 - 3rd party communication.
 
@@ -305,7 +286,6 @@ Note: Backend database access is an exception for performance streamlining.
         ├── Zed
         │   ├── [Module]Stub.php
         │   └── [Module]StubInterface.php
-        ├── [CustomDirectory]
         ├── [Module]ClientInterface.php
         ├── [Module]Client.php
         ├── [Module]Config.php
@@ -315,7 +295,7 @@ Note: Backend database access is an exception for performance streamlining.
 
 Used components
 - [Bridge](#bridge)
-- [Client facade](#client-facade)
+- [Client facade](#facade-design-pattern)
 - [Config](#module-configurations)
 - [Dependency Provider](#dependency-provider)
 - [Factory](#factory)
@@ -326,7 +306,7 @@ Used components
 
 ## Service
 
-The `Service` application layer encapsulates a multipurpose library that can be utilized across various application layers, such as `Yves` or `Zed` application layers.
+The `Service` application layer encapsulates a multipurpose library that can be utilized across various application layers, such as `Yves`, `Client`, `Glue` or `Zed` application layers.
 A `Service` primarily consists of reusable lightweight stateless business logic components.
 Due to its deployment across all applications, a `Service` is constrained to accessing data providers that are available universally (for instance, the backend database is not accessible from storefront applications by default).
 
@@ -350,11 +330,11 @@ Used components
 - [Factory](#factory)
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Model](#model)
-- [Service facade](#service-facade)
+- [Service facade](#facade-design-pattern)
 
 ## Shared
 
-The `Shared` library contains code that is designed to be utilized across different application layers and modules.
+The `Shared` library contains code and configuration that is designed to be utilized across any application layer and module.
 The `Shared` library is intended to facilitate the sharing of code among various application layers and modules.
 To ensure compatibility and versatility across different application architecture setups, any content within the `Shared` library must be free of application layer-specific elements. Therefore, the use of [Factories](#factory) is not permitted within the `Shared` library.
 
@@ -376,14 +356,14 @@ Used components
 # Layers
 
 An application layer can have up to four logical layers with clear purpose and communication rules.
-- **Presentation Layer**: contains twig-templates, JS and CSS files
-- **Communication Layer**: contains controllers, forms, tables and plugins
+- **Presentation Layer**: contains frontend assets (such as twig-templates, JS, CSS files, etc.)
+- **Communication Layer**: contains controllers, console commands, forms, tables and plugins.
 - **Business Layer**: contains the business logic of a module
-- **Persistence Layer**: contains queries, entities and the schema of a module
+- **Persistence Layer**: contains repository, entity manager, simple data mappers and the schema of entities.
 
 ## Presentation Layer responsibilities
 - Responsible for handling the user interface (UI) presentation.
-- Contains frontend elements, such as HTML, Twig templates, JavaScript (JS), TypeScript, Cascading Style Sheets (CSS) files, and so on.
+- Contains frontend assets, such as HTML, Twig templates, JavaScript (JS), TypeScript, Cascading Style Sheets (CSS) files, and so on.
 - Handles user interactions and input validations on the client side.
 - Interacts with the [Communication Layer](#communication-layer-responsibilities) to retrieve necessary data for display.
 
@@ -391,6 +371,7 @@ An application layer can have up to four logical layers with clear purpose and c
 - Acts as an intermediary between the [Presentation Layer](#presentation-layer-responsibilities) and the [Business Layer](#business-layer-responsibilities).
 - Contains [controllers](#controller) responsible for handling HTTP requests and responses.
 - Contains [plugins](#plugin) responsible for flexible, overarching requests and responses.
+- Contains console commands.
 - Manages form processing and validation.
 - Handles [routing and dispatching requests](#provider--router) to appropriate [controllers](#controller).
 - Interacts with the [Business Layer](#business-layer-responsibilities) to perform business operations.
@@ -407,6 +388,7 @@ An application layer can have up to four logical layers with clear purpose and c
 - Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
 - Handles database operations such as CRUD (`Create`, `Read`, `Update`, `Delete`).
 - Ensures data integrity and security.
+- Map DB entities into business data transfer objects.
 
 # Components
 
@@ -418,77 +400,6 @@ An application layer can have up to four logical layers with clear purpose and c
 <details><summary markdown='span'>Additional Conventions for Module Development</summary>
 - The components MUST be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
 </details>
-
-## Client facade
-
-```
-[Organization]
-└── Client
-    └── [Module]
-        ├── [Module]ClientInterface.php
-        └── [Module]Client.php         
-```
-
-**Description**
-
-The `Client` is the internal API of [Client application layer](#client), and acts as the only entry point to the [Client Application](#applications).
-
-There are four generic `Clients` as `SearchClient`, `SessionClient`, `StorageClient` and `ZedClient`.
-
-**Conventions**
-- The `Client` follows the [facade design pattern](#facade-design-pattern) and its conventions.
-
-**Example**
-```php
-namespace Spryker\Client\ConfigurableBundleCart;
-
-/**
- * @method \Spryker\Client\ConfigurableBundleCart\ConfigurableBundleCartFactory getFactory()
- */
-class ConfigurableBundleCartClient extends Spryker\Client\Kernel\AbstractClient implements ConfigurableBundleCartClientInterface
-{
-    /**
-     * {@inheritDoc}
-     *
-     * @api
-     *
-     * @param \Generated\Shared\Transfer\CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
-    public function addConfiguredBundle(CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer): QuoteResponseTransfer
-    {
-        return $this->getFactory()
-            ->createConfiguredBundleCartAdder()
-            ->addConfiguredBundleToCart($createConfiguredBundleRequestTransfer);
-    }
-}
-```
-
-```php
-namespace Spryker\Client\ConfigurableBundleCart;
-
-interface ConfigurableBundleCartClientInterface
-{
-    /**
-     * Specification:
-     * - Adds configured bundle to the cart.
-     * - Requires `configuredBundle.quantity` property to control amount of configured bundles put to cart.
-     * - Requires `configuredBundle.template.uuid` property to populate configurable bundle template related data.
-     * - Requires `items` property with `sku`, `quantity` and `configuredBundleItem.slot.uuid` properties to define how many
-     * items were added in total to a specific slot.
-     * - Returns QuoteResponseTransfer.
-     *
-     * @api
-     *
-     * @param \Generated\Shared\Transfer\CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
-    public function addConfiguredBundle(CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer): QuoteResponseTransfer;
-}
-```
-
 
 ## Controller
 
@@ -532,7 +443,7 @@ The `index` action name acts as the default action during request action resolut
 **Conventions**
 - `Public` methods are considered as an `Action` and therefore MUST use the `Action` suffix.
 - Action methods MUST have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
-- Received data MUST be [syntactically validated](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
+- `Controller` MUST orchestrate [syntactical validation](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - `Public` methods can be non-action.<br/>
@@ -586,23 +497,18 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 [Organization]
 ├── Zed
 │   └── [Module]        
-│       ├── [Module]Config.php
 │       └── [Module]DependencyProvider.php
 ├── Yves
 │   └── [Module]        
-│       ├── [Module]Config.php
 │       └── [Module]DependencyProvider.php
 ├── Glue
 │   └── [Module]        
-│       ├── [Module]Config.php
 │       └── [Module]DependencyProvider.php
 ├── Client
 │   └── [Module]        
-│       ├── [Module]Config.php
 │       └── [Module]DependencyProvider.php
 └── Service
     └── [Module]        
-        ├── [Module]Config.php
         └── [Module]DependencyProvider.php
 ```
 
@@ -616,9 +522,9 @@ Dependency injection is orchestrated through a `provide-add-get` structure (see 
 - The `get` method is the lowest level that sources the dependency.
 
 **Conventions**
-- All class constants MUST be `public` (to decrease conflicts in definition for being a public API class).
-- Each dependency MUST be defined using a class constant.
+- All class constants MUST be `public` (to decrease conflicts in definition for being a public API class, to allow referring to them from [Factory](#factory)).
 - Setting dependency using the `container::set()` MUST be paired with late-binding closure definition to decouple instantiation.
+- Dependencies that require individual instances per injection MUST use `Container::factory()` method additionally (eg: [Query Objects](#query-object), see examples below).
 - Dependencies MUST be wired through the target layer corresponding inherited method:
 ```php
 public function provideCommunicationLayerDependencies(Container $container)
@@ -645,6 +551,9 @@ protected function get[Dependency](Container $container)
 protected function get[PluginInterfaceName]Plugins(Container $container)
 ```
 
+**Guidelines**
+- Dependency constant names should be descriptive and follow the `[COMPONENT_NAME]_[MODULE_NAME]` or `PLUGINS_[PLUGIN_INTERFACE_NAME]` pattern, with a name matching value (see in example).
+
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Constants can have any access modifier, they are not limited to `public`. <br/>
 - Methods can have any access modifier. <br/>
@@ -661,6 +570,35 @@ protected function get[PluginInterfaceName]Plugins(Container $container)
 
 
 **Examples**
+
+```php
+namespace Spryker\Zed\Agent;
+
+use Orm\Zed\User\Persistence\SpyUserQuery;
+use Spryker\Zed\Kernel\Container;
+
+class AgentDependencyProvider extends Spryker\Zed\Kernel\AbstractBundleDependencyProvider
+{
+    public const PROPEL_QUERY_USER = 'PROPEL_QUERY_USER';
+
+    public function providePersistenceLayerDependencies(Container $container)
+    {
+        $container = $this->addUserPropelQuery($container);
+
+        return $container;
+    }
+
+    protected function addUserPropelQuery(Container $container): Container
+    {
+        $container->set(static::PROPEL_QUERY_USER, $container->factory(function (): SpyUserQuery {
+            return SpyUserQuery::create();
+        }));
+
+        return $container;
+    }
+}
+```
+
 ```php
 <?php
 
@@ -863,35 +801,144 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 
 **Conventions**
 - The entity manager class MUST define and implement an interface that holds the specification of each `public` method.
-- Entity manager `public` methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`
+- Entity manager `public` methods MUST have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`.
 - Creating, updating and deleting functions MUST be separated by concern even if they use overlapping internal methods.
 - Entity manager methods MUST receive only [Transfer Objects](#transfer-object) as input parameters.
 - Entity manager methods MUST return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - It is recommended to NOT define or maintain `Entity Manager` interfaces.<br/>
-- Methods can use also native php types as input argument or result value (although it is NOT recommended due it leads to granular methods).
+- Methods can use also native php types as input argument or result value (although it is NOT recommended due it leads to granular methods).<br/>
+- Solutions in `Entity manager` can consider to use raw SQL queries for performance reasons, but this will also remove all Propel ORM benefits (eg: triggering events, etc.), thus it should be used with caution.<br/>
 </details>
 
-## Facade
+## Facade design pattern
 
 ```
 [Organization]
+├── Client
+│   └── [Module]
+│       ├── [Module]ClientInterface.php
+│       └── [Module]Client.php        
+├── Service
+│   └── [Module]
+│       ├── [Module]Service.php
+│       └── [Module]ServiceInterface.php 
 └── Zed
     └── [Module]
-        └── Business
-            ├── [Module]Facade.php
-            └── [Module]FacadeInterface.php      
+        ├── Business
+        │   ├── [Module]Facade.php
+        │   └── [Module]FacadeInterface.php    
+        └── Persistence
+            └── [Module]QueryContainer.php                   
 ```
 
 **Description**
 
-The `Facade` is the internal API of [Business layer](#business-layer-responsibilities).
+Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](#https://en.wikipedia.org/wiki/Facade_pattern).
+
+There are currently four components that use the facade design pattern:
+- The `Facade` is the API of [Business layer](#business-layer-responsibilities).
+- The `Client` is the API of [Client application layer](#client), and acts as the only entry point to the [Client Application](#applications).
+- The `Service` is the API of [Service application layer](#service), and represents the only entry point to the [Service Application](#applications).
+- The `Query Container` is the API of [Persistence layer](#persistence-layer-responsibilities), and represents and entry point to database access. The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of `Query Container` concept.
+
+The facade provides functionality for other layers and/or modules. The functionality behind the facade normally accesses the sibling functionality directly and not from the facade.
 
 **Conventions**
-- The `Facade` follows the [facade design pattern](#facade-design-pattern) and its conventions.
+
+- The inherited `getFactory()` MUST be used to instantiate the underlying classes.
+- The methods MUST contain only the delegation to the underlying [model](#model).
+  - Underlying classes MUST be instantiated using the inherited `getFactory()` factory access.
+- All methods MUST be `public` and stand for an outsourced function.
+- All methods MUST have [Transfer Objects](#transfer-object) or native types as argument and return value.
+- Each facade class MUST define and implement an interface that holds the specification of each `public` method.
+  - The specification is considered the semantic contract of the method - all significant behaviour MUST be highlighted.
+- The methods MUST have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).
+- Multi-item-flow methods MUST 
+  - receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
+  - return a [Transfer Object](#transfer-object) collection with the following naming pattern `[DomainEntity][Collection|CollectionResponse]Transfer`.
+  - declare the `Create` and `Update` CUD methods per entity as follows: `[create|update][DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`
+  - declare the `Delete` CUD method as follows: `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer;`
+- Multi-item-flow `Create` and `Update` methods MUST
+  - support the transactional entity manipulation, and document it in facade specification.
+- New `QueryContainer` functionality MUST NOT be introduced but through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
+
+__TBD__ (Note: Service is not serving data => no CRUD)
+
+**Guidelines**
+- Single-item-flow methods SHOULD be avoided as they are NOT scalable.
+- Multi-item-flow methods SHOULD operate in batches to be scalable.
+- Multi-item-flow `Create` and `Update` methods SHOULD return a list of entities + error list.
+
+<details><summary markdown='span'>Additional Conventions for Boilerplate Development and Accelerator Development</summary>
+- Instantiation can happen with other methods than `getFactory()` (eg: `new`, `create`, `make`, etc.).<br/>
+</details>
+
+<details><summary markdown='span'>Additional Conventions for Project Development</summary>
+- Instantiation can happen with other methods than `getFactory()` (eg: `new`, `create`, `make`, etc.).<br/>
+- Definition of interface without purpose is NOT recommended. <br/>
+- Specification of each method MUST be included in the facade class instead.
+- `QueryContainers` can be used/developed further, but it is highly recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
+</details>
+
+<details><summary markdown='span'>Additional Conventions for Module Development</summary>
+- All methods MUST add `@api`, and `{@inheritdoc}` tags on their method documentation. <br/>
+- Single-item-flow methods MUST be avoided as they are NOT scalable.<br/>
+- Multi-item-flow `Create` and `Update` methods MUST return a list of entities + error list.
+</details>
+
 
 **Example**
+```php
+namespace Spryker\Client\ConfigurableBundleCart;
+
+/**
+ * @method \Spryker\Client\ConfigurableBundleCart\ConfigurableBundleCartFactory getFactory()
+ */
+class ConfigurableBundleCartClient extends Spryker\Client\Kernel\AbstractClient implements ConfigurableBundleCartClientInterface
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer
+     *
+     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
+     */
+    public function addConfiguredBundle(CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer): QuoteResponseTransfer
+    {
+        return $this->getFactory()
+            ->createConfiguredBundleCartAdder()
+            ->addConfiguredBundleToCart($createConfiguredBundleRequestTransfer);
+    }
+}
+```
+
+```php
+namespace Spryker\Client\ConfigurableBundleCart;
+
+interface ConfigurableBundleCartClientInterface
+{
+    /**
+     * Specification:
+     * - Adds configured bundle to the cart.
+     * - Requires `configuredBundle.quantity` property to control amount of configured bundles put to cart.
+     * - Requires `configuredBundle.template.uuid` property to populate configurable bundle template related data.
+     * - Requires `items` property with `sku`, `quantity` and `configuredBundleItem.slot.uuid` properties to define how many
+     * items were added in total to a specific slot.
+     * - Returns QuoteResponseTransfer.
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer
+     *
+     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
+     */
+    public function addConfiguredBundle(CreateConfiguredBundleRequestTransfer $createConfiguredBundleRequestTransfer): QuoteResponseTransfer;
+}
+```
 
 ```php
 namespace Spryker\Zed\ConfigurableBundle\Business;
@@ -949,57 +996,9 @@ interface ConfigurableBundleFacadeInterface
 }
 ```
 
-## Facade design pattern
 
-__TBD__
 
-**Description**
 
-Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](#https://en.wikipedia.org/wiki/Facade_pattern).
-
-There are currently four components that use the facade design pattern:
-- The [Facade](#facade) component that is the facade of the `Business layer`.
-- The [Client](#client-facade) facade component that is the facade of the `Client application layer`.
-- The [Service](#service-facade) facade component that is the facade of the `Service application layer`.
-- The [Query Container](#query-container-facade) facade component that is an overarching facade of the `Persistence layer`.
-
-The facade provides functionality for other layers and/or modules. The functionality behind the facade normally accesses the sibling functionality directly and not from the facade.
-
-**Conventions**
-
-- The methods MUST contain only the delegation to the underlying [model](#model).
-  - Underlying classes MUST be instantiated using the inherited `getFactory()` factory access.
-- All methods MUST be `public` and stand for an outsourced function.
-- All methods MUST have [Transfer Objects](#transfer-object) or native types as argument and return value.
-- Each facade class MUST define and implement an interface that holds the specification of each `public` method.
-  - The specification is considered the semantic contract of the method - all significant behaviour MUST be highlighted.
-- The methods MUST have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).
-- Multi-item-flow methods MUST 
-  - receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
-  - return a [Transfer Object](#transfer-object) collection with the following naming pattern `[DomainEntity][Collection|CollectionResponse]Transfer`.
-  - declare the `Create` and `Update` CUD methods per entity as follows: `[create|update][DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`
-  - declare the `Delete` CUD method as follows: `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer;`
-- Multi-item-flow `Create` and `Update` methods MUST
-  - support the transactional entity manipulation, and document it in facade specification.
-
-__TBD__ (Note: Service is not serving data => no CRUD)
-
-**Guidelines**
-- The inherited `getFactory()` can be used to instantiate the underlying classes.
-- The methods MAY throw exceptions.
-- Single-item-flow methods SHOULD be avoided as they are NOT scalable.
-- Multi-item-flow methods SHOULD operate in batches to be scalable.
-- Multi-item-flow `Create` and `Update` methods SHOULD return a list of entities + error list.
-
-<details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Definition of interface is NOT recommended. <br/>
-- Specification of each method MUST be included in the facade class instead.
-</details>
-
-<details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- All methods MUST add `@api`, and `{@inheritdoc}` tags on their method documentation. <br/>
-- Single-item-flow methods MUST be avoided as they are NOT scalable.
-</details>
 
 ## Factory
 
@@ -1031,7 +1030,7 @@ __TBD__ (Note: Service is not serving data => no CRUD)
 
 **Description**
 
-The responsibility of a `Factory` is to instantiate classes of a layer and inject dependencies during instantiation.
+The responsibility of a `Factory` is to instantiate classes and inject dependencies during instantiation.
 
 **Conventions**
 - `Factories` MUST NOT define/implement interface as practically they are never fully replaced.
@@ -1041,7 +1040,7 @@ The responsibility of a `Factory` is to instantiate classes of a layer and injec
 - Factory methods MUST use the constants defined in [dependency provider](#dependency-provider) when reaching out to module dependencies.
 
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Factory methods can define/implement interfaces on demand.<br/>
+- `Factories` can define/implement interfaces on demand.<br/>
 - Factory methods can instantiate and write dependencies in one step, but this case MUST be named as `get[Class]()`.<br/>
 - Factory methods can have any access modifier.
 </details>
@@ -1059,7 +1058,7 @@ The responsibility of a `Factory` is to instantiate classes of a layer and injec
 
 **Description**
 
-`Gateway Controller` is special, reserved `Controller` (see [Controllers](#controller)) in SCOS, that serves as an entry point in [Zed](#zed) for serving [Client](#client) requests (see [Zed Stub](#zed-stub) for more details).
+`Gateway Controller` is special, reserved `Controller` (see [Controllers](#controller)) in SCOS, that serves as an entry point in [Zed](#zed) for serving remote application [Client](#client) requests (see [Zed Stub](#zed-stub) for more details).
 
 **Conventions**
 - Gateway controller actions MUST define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
@@ -1103,7 +1102,7 @@ To differentiate between the recurring cases of data mapping, and to provide a c
   - `Mappers` MUST be free of any logic other than structural.
     - `Mappers` MUST NOT have data resolving (eg: remote calls, database lazy load) logic as they are utilised in high-batch processing scenarios.
   - `Mappers` MAY have multiple source entities if it still does NOT violate structural-mapping-only directive.
-  - `Mappers` MUST NOT use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#service-facade).
+  - `Mappers` MUST NOT use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#facade-design-pattern).
   - `Persistence Mappers` MUST be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.
 - `Expander` methods MUST be named as `expand[With<AdditionalDataExplainer>]($targetEntity)`.
 - The `hydrator/hydration` keywords MUST NOT be used but instead `Mapper` or `Expander`.
@@ -1233,7 +1232,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 <details><summary markdown='span'>Additional Conventions for Project Development</summary>
 - Dependencies can be referred directly via class.
 - It is recommended to NOT define interface for `Models` without project specific reason.
-- Facades can be directly used as dependency, `Bridge` wrapping is NOT recommended.
+- Facades can be directly used as dependency, use of `Bridge` wrapping is NOT recommended without a project specific reason.
 </details>
 
 ## Module Configurations
@@ -1403,12 +1402,18 @@ The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v
 - When using one of the traits in a [Model](#model), use a `protected` constant string to reference the `Permission Plugin` that will be used in the [Model](#model). As an annotation for this string you should add `@uses` annotation to the `PermissionPlugin::KEY` string that you will compare against (see in example below).
 - The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait allows the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
 
+
+<details><summary markdown='span'>Additional Guidelines for Project Development</summary>
+- When using one of the traits in a [Model](#model), refer directly to the remote `Permission Plugin` key string when possible, instead of defining a local constant.
+</details>
+
+
 **Example**
 
 ```php
 class QuotePermissionChecker implements QuotePermissionCheckerInterface
 {
-use PermissionAwareTrait;
+    use PermissionAwareTrait;
 
     /**
      * @uses \Spryker\Client\SharedCart\Plugin\ReadSharedCartPermissionPlugin::KEY
@@ -1444,10 +1449,10 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 
 **Conventions**
 
-- Table name MUST follow the format `spy_[domain_entity_name]` (eg: `spy_customer_address`, `spy_customer_address_book`).
+- Table name MUST follow the format `spy_[domain_entity_name]` for business entities, `spy_[domain_entity_name]_to_[domain_entity_name]` for relations, `spy_[domain_entity_name]_search` for Search entities, and `spy_[domain_entity_name]_storage` for Storage entities  (eg: `spy_customer_address`, `spy_customer_address_book`, `spy_cms_slot_to_cms_slot_template`, `spy_configurable_bundle_template_image_storage`, `spy_configurable_bundle_template_page_search`).
 - Tables MUST have an integer ID primary key, following the format `id_[domain_entity_name]` (eg: `id_customer_address`, `id_customer_address_book`).
-- Table definitions MUST include the `phpName` attribute.
-- Table foreign key MUST follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`).
+- Table foreign key column MUST follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`)
+  - Exception can be to the case if the same table is referred multiple times, in which case the follow-up foreign key columns MUST be named as `fk_[custom_connection_name]` .
 - Table foreign key definitions MUST include the `phpName` attribute.
 - The `uuid` field MUST be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).
   - The field MAY be `null` by default.
@@ -1500,11 +1505,12 @@ Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
 
     <table name="spy_url">
-        <column name="fk_resource_product_abstract" type="INTEGER"/>
-        <foreign-key name="spy_url-fk_resource_product_abstract" foreignTable="spy_product_abstract" phpName="SpyProduct" onDelete="CASCADE">
-            <reference foreign="id_product_abstract" local="fk_resource_product_abstract"/>
+        <column name="fk_product_abstract" type="INTEGER"/>
+        <foreign-key name="spy_url-fk_product_abstract" foreignTable="spy_product_abstract" phpName="SpyProduct" onDelete="CASCADE">
+            <reference foreign="id_product_abstract" local="fk_product_abstract"/>
         </foreign-key>
     </table>
+  
 </database>
 ```
 
@@ -1516,8 +1522,7 @@ Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema
     └── [Module]  
         └── Plugin
             ├── Provider
-            │   ├── [Name]ControllerProvider.php
-            │   └── [Name]ServiceProvider.php
+            │   └── [Name]ControllerProvider.php
             └── [ConsumerModule]
                 └── [RouterName]Plugin.php
 ```
@@ -1527,38 +1532,14 @@ Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema
 
 `Providers` and `Routers` are used during the bootstrap of [Yves](#applications) application. There are three types of them:
 - **Controller Provider** - Registers [Yves](#applications) [Controllers](#controller) of a module and binds them to a path.
-- **Service Provider** - Represents a cross-functional [Yves](#applications) service (eg: a validator).
 - **Router** - Resolves a path into a [Yves](#applications) [Controller and Action](#controller).
 
+Controllers in `Zed` application layer are autowired and do not require manual registration. An `ExampleController::indexAction()` in `ExampleModule` can be accessed via `/example-module/example/index` URI.
+
 **Conventions**
-- All `providers` and `routers` MUST be registered in `\[Organization]\Yves\ShopApplication\YvesBootstrap.php`.
 - A `Controller Provider` MUST extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
-- A `Service Provider` MUST implement `\Silex\ServiceProviderInterface and may extend \Spryker\Yves\Kernel\AbstractPlugin`.
 - A `Router` MUST extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
 - A provider is classified as a [Plugin](#plugin) and so the plugin's conventions apply.
-
-## Query Container facade
-
-```
-[Organization]
-└── Zed
-    └── [Module]
-        └── Persistence
-            └── [Module]QueryContainer.php
-```
-
-**Description**
-
-The `Query Container` is the internal API of [Persistence layer](#persistence-layer-responsibilities), and represents and entry point to database access.
-The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of `Query Container` concept.
-
-**Conventions**
-- The `Query Container` follows the [facade design pattern](#facade-design-pattern) and its conventions.
-- New `QueryContainer` functionality MUST NOT be introduced but through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
-
-<details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- `QueryContainers` can be used/developed further, but it is recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
-</details>
 
 ## Query Object
 
@@ -1634,22 +1615,9 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 - `Repositories` MUST use [Query Objects](#query-object) to retrieve data from the database.
 - `Repostiories` MUST NOT alter the data in the database, only retrieve it.
 
-## Service facade
-
-```
-[Organization]
-└── Service
-    └── [Module]
-        ├── [Module]Service.php
-        └── [Module]ServiceInterface.php
-```
-
-**Description**
-
-The `Service` is the internal API of [Service application layer](#service), and represents the only entry point to the [Service Application](#applications).
-
-**Conventions**
-- The `Service` follows the [facade design pattern](#facade-design-pattern) and its conventions.
+<details><summary markdown='span'>Additional Conventions for Project Development</summary>
+- Methods can use native PHP types as input arguments or result values, although this is not recommended as it leads to granular methods.
+</details>
 
 ## Theme
 
@@ -1714,7 +1682,7 @@ src
 
 `Transfer Objects` are pure data transfer objects (DTO) with getters and setters.
 They can be used in all [applications](#applications) and all [layers](#layers).
-They are described in module specific XML files and then autogenerated into the `src/Generated/Shared/Transfer` directory.
+Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
 
 For every defined table in [Peristence Schema](#persistence-schema) a matching `EntityTransfer` `Transfer Object` will be generated with `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), thus `Entity Transfers` should be used primarily during layer or module overarching communication.
 
@@ -1724,6 +1692,10 @@ For every defined table in [Peristence Schema](#persistence-schema) a matching `
 - **Storefront API module** transfer names MUST use plural entity name with `Api` suffix.
 - `EntityTransfers` MUST NOT be defined manually but rather will be generated automatically based on [Peristence Schema](#persistence-schema) definitions.
 - A module can only use those `Transfer Objects` and their properties which are declared in the same module (transfer definitions accessed through composer dependencies are considered as violation).
+
+<details><summary markdown='span'>Additional Conventions for Project Development</summary>
+- Module may use any transfer object.
+</details>
 
 **Guidelines**
 - They can be instantiated directly anywhere (not just via [Factory](#factory)).
@@ -1908,9 +1880,12 @@ The components below are necessity in module developments for modularity but rec
 │           ├── Facade
 │           │   ├── [Module]To[Module]FacadeBridge.php
 │           │   └── [Module]To[Module]FacadeInterface.php
-│           └── Service
-│               ├── [Module]To[Module]ServiceBridge.php
-│               └── [Module]To[Module]ServiceInterface.php    
+│           ├── Service
+│           │   ├── [Module]To[Module]ServiceBridge.php
+│           │   └── [Module]To[Module]ServiceInterface.php    
+│           └── QueryContainer
+│               ├── [Module]To[Module]QueryContainerBridge.php
+│               └── [Module]To[Module]QueryContainerInterface.php    
 ├── Yves
 │   └── [Module]             
 │       └── Dependency
@@ -1926,9 +1901,15 @@ The components below are necessity in module developments for modularity but rec
 │           ├── Client
 │           │   ├── [Module]To[Module]ClientBridge.php
 │           │   └── [Module]To[Module]ClientInterface.php
-│           └── Service
-│               ├── [Module]To[Module]ServiceBridge.php
-│               └── [Module]To[Module]ServiceInterface.php    
+│           ├── Facade
+│           │   ├── [Module]To[Module]FacadeBridge.php
+│           │   └── [Module]To[Module]FacadeInterface.php
+│           ├── Service
+│           │   ├── [Module]To[Module]ServiceBridge.php
+│           │   └── [Module]To[Module]ServiceInterface.php    
+│           └── QueryContainer
+│               ├── [Module]To[Module]QueryContainerBridge.php
+│               └── [Module]To[Module]QueryContainerInterface.php    
 └── Client
     └── [Module]      
         └── Dependency
@@ -1942,7 +1923,7 @@ The components below are necessity in module developments for modularity but rec
 
 **Description**
 
-According to the Interface Segregation Principle, every module defines an interface for each external class it relies upon. To decouple and encapsulate these dependencies effectively, we utilize `Bridges`. These `Bridges` serve to wrap dependencies such as [Facade](#facade), [Client](#client-facade), [Service](#service-facade), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be utilized.
+According to the Interface Segregation Principle, every module defines an interface for each external class it relies upon. To decouple and encapsulate these dependencies effectively, we utilize `Bridges`. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be utilized.
 
 Challenges arise when a facade from another module seeks to implement the friend facade interface. This scenario introduces cross-module coupling between the facade and the implemented friend facade interface. To mitigate this issue, we employ the `Bridge pattern`. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
 
@@ -1956,6 +1937,7 @@ Challenges arise when a facade from another module seeks to implement the friend
 **Guidelines**
 - Bridge vs adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a SCOS facade. Adapters are used when the remote class' life-cycle is independent to SCOS or there is a huge technical difference between the adaptee and adaptor.
 - During `Bridge` definitions, type definition mistakes in remote facades become more visible. In these cases, be aware of the cascading effect of changing/restricting an argument type in public API when you consider such changes.
+- `QueryContainer` and `Facade` dependencies are only available in those `Glue` application layers where the application layer has access to database.
 
 **Example**
 
@@ -2038,7 +2020,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 **Description**
 - `Plugins` are classes which are used to realize Inversion-Of-Control - instead of a direct call to another module's [facade](#facade-design-pattern), a `plugin` can be provided as an optional and configurable class.
-- `Plugins` are the only classes that can be instantiated across modules.
+- `Plugins` are the only classes that can be instantiated cross modules (usually via the [Dependency Provider](#dependency-provider) and/or [Factory](#factory)).
 - See more details about the implementation in [Plugin Interface](#plugin-interface) component, and instantiation in [Dependency Provider](#dependency-provider).
 
 **Conventions**
@@ -2131,7 +2113,7 @@ There are three modules involved:
   - it is strictly and inevitably a single-item flow.
   - the items go in FIFO order and there is no other way to use a collection instead.
 - Plugin interface class specification SHOULD explain:
-  - how the [Plugins](#plugin)) will be used,
+  - how the [Plugins](#plugin) will be used,
   - what are the typical use-cases of a [Plugin](#plugin).
 
 **Example**

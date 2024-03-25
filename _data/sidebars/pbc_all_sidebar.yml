@@ -2183,6 +2183,8 @@ entries:
                 url: /docs/pbc/all/payment-service-provider/base-shop/hydrate-payment-methods-for-an-order.html
               - title: Interact with third party payment providers using Glue API
                 url: /docs/pbc/all/payment-service-provider/base-shop/interact-with-third-party-payment-providers-using-glue-api.html
+              - title: Retrieve and use payment details from third-party PSPs
+                url: /docs/pbc/all/payment-service-provider/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html                
               - title: "Payments feature: Domain model and relationships"
                 url: /docs/pbc/all/payment-service-provider/base-shop/payments-feature-domain-model-and-relationships.html
               - title: Domain model and relationships

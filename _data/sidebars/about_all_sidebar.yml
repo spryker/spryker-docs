@@ -31,6 +31,8 @@ entries:
           url: /docs/about/all/releases/release-notes-202212.0/patch-release-notes-202212.0.html
         - title: Security release notes 202212.0
           url: /docs/about/all/releases/release-notes-202212.0/security-release-notes-202212.0.html
+      - title: Release notes 202211.0
+        url: /docs/about/all/releases/release-notes-202211.0.html
 
     - title: Security audit reports
       nested:
@@ -64,11 +66,20 @@ entries:
         url: /docs/about/all/support/understanding-slas.html
       - title: Escalations
         url: /docs/about/all/support/support-case-escalations.html
-      - title: Understanding Project and Core Level Fixes
+      - title: Prioritizing support cases
+        url: /docs/about/all/support/prioritzing-support-cases.html
+      - title: Understanding project and core level fixes
         url: /docs/about/all/support/project-level-and-core-level-fixes.html
 
     - title: Supported browsers
       url: /docs/about/all/supported-browsers.html
+    - title: Master Suite
+      url: /docs/about/all/master-suite.html
+    - title: B2C Suite
+      url: /docs/about/all/b2c-suite.html
+    - title: B2B Suite
+      url: /docs/about/all/b2b-suite.html
+
     - title: Spryker Marketplace
       url: /docs/about/all/spryker-marketplace/spryker-marketplace.html
       nested:

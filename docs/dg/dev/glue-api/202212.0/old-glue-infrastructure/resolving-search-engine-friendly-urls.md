@@ -6,13 +6,19 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/resolving-search-engine-friendly-urls
 originalArticleId: 41034f7a-96b3-47d8-80ab-6ef8c62b8a4b
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
-  - /docs/scos/dev/glue-api-guides/202212.0/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
+  - /2021080/docs/resolving-search-engine-friendly-urls
+  - /2021080/docs/en/resolving-search-engine-friendly-urls
+  - /docs/resolving-search-engine-friendly-urls
+  - /docs/en/resolving-search-engine-friendly-urls
+  - /docs/scos/dev/glue-api-guides/202307.0/resolving-search-engine-friendly-urls.html
+  - /docs/scos/dev/glue-api-guides/202307.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
 
 related:
   - title: Install the Spryker Core Glue API
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html
 ---
+
+<!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->
 
 {% info_block warningBox %}
 

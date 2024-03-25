@@ -1300,7 +1300,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
       - title: Error response from daemon - OCI runtime create failed - .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
-
+      - title: Prices filter and sorting doesn't work on Frontend
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/prices-filter-and-sorting-does-t-work-on-frontend.html
       - title: Router generates absolute URL with localhost
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
       - title: No data on the Storefront
@@ -1408,6 +1409,7 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: "Marketplace: Resolve search engine friendly URLs"
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors
@@ -1575,4 +1577,4 @@ entries:
   - title: Example modules
     url: /docs/dg/dev/example-modules.html
   - title: Supported versions of PHP
-    url: /docs/dg/dev/supported-versions-of-php.html    
+    url: /docs/dg/dev/supported-versions-of-php.html

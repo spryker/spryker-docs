@@ -64,7 +64,6 @@ In January 2024, we have added and updated the following pages:
 - [Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Stripe app general overview.
 - [Integrate Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html): Learn how to install Stripe.
 - [Configure Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/configure-stripe.html): Learn how to configure Stripe in the Back Office.
-- [ACP architecture overview](/docs/acp/user/intro-to-acp/acp-architecture-overview.html).
 - [Connect an app](/docs/dg/dev/acp/develop-an-app/connect-an-app.html): Learn how to connect, configure, and disconnect an ACP app using AppRegistry.
 - [Receive ACP messages](/docs/acp/user/receive-acp-messages.html): Learn how to receive ACP messages in SCCOS.
 - [Handling carts with a big number of items](/docs/pbc/all/cart-and-checkout/202311.0/base-shop/tutorials-and-howtos/handling-carts-with-a-big-number-of-items.html): Learn about the challenges related to big carts and how to solve them.

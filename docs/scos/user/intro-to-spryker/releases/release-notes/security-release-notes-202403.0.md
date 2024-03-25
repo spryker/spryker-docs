@@ -9,38 +9,34 @@ The following information pertains to security-related issues that have been rec
 
 If you need any additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, inform us through [security@spryker.com](mailto:security@spryker.com).
 
-## Privilege Escalation via 'Adding Users to Companies' Function
+## Privilege escalation through the 'adding users to companies' function
 
-Due to an access controls vulnerability in the `adding users to companies` function, it was possible for attackers with access to the vulnerable functionality of a company to create Admin users to another company. This could result in targeting the other company after having granted themselves with elevated privileges.
+Due to an access controls vulnerability in the `adding users to companies` function, it was possible for attackers with access to the vulnerable functionality of a company to create admin users to another company.
 
 ### Affected modules
 
-* `spryker-shop/company-page`: 1.0.0 - 2.24.0
+`spryker-shop/company-page`: 1.0.0 - 2.24.0
 
-### How to get the fix
+### Fix the vulnerability
 
-To implement the fix for this vulnerability, update the `spryker-shop/company-page` module as follows:
-
-Upgrade the `spryker-shop/company-page` module to version to 2.25.0:
+Upgrade the `spryker-shop/company-page` module to version 2.25.0 or higher:
 
 ```bash
 composer update spryker-shop/company-page
 composer show spryker-shop/company-page # Verify the version
 ```
 
-## User Enumeration via Response Content
+## User enumeration using response content
 
-A user enumeration vulnerability was affecting the change email functionality due to different responses by the application when the provided email existed in the database. A potential attacker can leverage this vulnerability in order to determine valid user accounts which could then be used for other attacks, such as phishing campaigns and password brute-forcing.
+When changing the email address, based on the application's response to the provided email, it was possible to identify whether an account with the provided email existed in the system. This information could be leveraged for attacks like phishing campaigns and password brute forcing.
 
 ### Affected modules
 
-* `spryker/user-merchant-portal-gui`: 1.0.0 - 2.5.0
+`spryker/user-merchant-portal-gui`: 1.0.0 - 2.5.0
 
-### How to get the fix
+### Fix the vulnerability
 
-To implement the fix for this vulnerability, update the `UserMerchantPortalGui` module as follows:
-
-1. Upgrade the `spryker/user-merchant-portal-gui` module to version to 2.6.0:
+1. Upgrade the `spryker/user-merchant-portal-gui` module to version 2.6.0:
 
 ```bash
 composer require spryker/user-merchant-portal-gui:"~2.6.0"
@@ -70,23 +66,21 @@ class UserMerchantPortalGuiConfig extends SprykerUserMerchantPortalGuiConfig
 }
 ```
 
-## Re-authentication missing from change email functionality
+## Reauthentication missing from change email functionality
 
-Merchant users of the application were able to change the email of their account without confirmation that they are the legitimate users. Requiring re-authentication for sensitive functionalities is considered an additional protection against attacks targeting the modification of users' emails. These functionalities could be targeted remotely in combination with cross-site request forgery (CSRF) or clickjacking vulnerabilities.
+Merchant users were able to change the email of their account without authentication. Requiring reauthentication for sensitive functionalities is an additional protection against attacks targeting the modification of users' details. These functionalities could be targeted remotely in combination with cross-site request forgery (CSRF) or clickjacking vulnerabilities.
 
 ### Affected modules
 
-* `spryker/user-merchant-portal-gui`: 1.0.0 - 2.4.0
+`spryker/user-merchant-portal-gui`: 1.0.0 - 2.4.0
 
 ### Introduced changes
 
-Re-authentication was added as an additional protection against attacks targeting the functionality of changing a user's email. 
+Reauthentication was added as an additional protection against attacks targeting the functionality of changing a user's email.
 
-### How to get the fix
+### Fix the vulnerability
 
-To implement the fix for this vulnerability, update the `UserMerchantPortalGui` module as follows:
-
-1. Upgrade the `spryker/user-merchant-portal-gui` module to version to 2.5.0:
+1. Upgrade the `spryker/user-merchant-portal-gui` module to version 2.5.0:
 
 ```bash
 composer require spryker/user-merchant-portal-gui:"~2.5.0"
@@ -116,7 +110,7 @@ class UserMerchantPortalGuiConfig extends SprykerUserMerchantPortalGuiConfig
 }
 ```
 
-3. Rebuild Merchant Portal frontend:
+3. Rebuild the Merchant Portal frontend:
 
 ```bash
 console frontend:mp:build.
@@ -128,31 +122,35 @@ console frontend:mp:build.
 console router:cache:warm-up:merchant-portal
 ```
 
-5. Clear the cache:
+5. Clear cache:
 
 ```bash
 console cache:empty-all
 ```
 
-## SameSite attribute added to Storefront and Backoffice cookies 
+## SameSite attribute added to Storefront and Backoffice cookies
 
-SameSite prevents the browser from sending the cookie along with cross-site requests. The main goal is to mitigate the risk of cross-origin information leakage. It also provides some protection against cross-site request forgery attacks.
+SameSite prevents the browser from sending the cookie along with cross-site requests. This mitigates the risk of cross-origin information leakage. It also provides protection against cross-site request forgery attacks.
 
 ### Introduced changes
 
 The SameSite attribute was added to the cookies of the Storefront and Backoffice applications.
 
-### How to get the fix
+### Fix the vulnerability
 
-Add the following lines on the project level:
+Add the following configuration on the project level:
 
-```bash
-$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = getenv('SPRYKER_YVES_SESSION_COOKIE_SAMESITE') ?: Cookie::SAMESITE_LAX; 
+```text
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = getenv('SPRYKER_YVES_SESSION_COOKIE_SAMESITE') ?: Cookie::SAMESITE_LAX;
 $config[SessionConstants::ZED_SESSION_COOKIE_SAMESITE] = getenv('SPRYKER_ZED_SESSION_COOKIE_SAMESITE') ?: Cookie::SAMESITE_STRICT;
 ```
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "Payment provider redirects" %}
 
-Please note that some payment providers can perform POST redirect requests. In this case, the value for `$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE]` should be set to `Cookie::SAMESITE_STRICT`.
+If an integrated payment provider needs to perform `POST` redirect requests, the configuration for Storefront should be as follows:
+
+```text
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = getenv('SPRYKER_YVES_SESSION_COOKIE_SAMESITE') ?: Cookie::SAMESITE_STRICT;
+```
 
 {% endinfo_block %}

@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # Define doc folder paths
-FOLDERS=("docs/ca/dev" "docs/pbc/all" "docs/about/all" "docs/ca/devscu" "docs/dg/dev")
+FOLDERS=("docs/about/all" "docs/ca/dev" "docs/ca/devscu" "docs/dg/dev" "docs/pbc/all")
 
 # Define sidebar file paths
-SIDEBARS=("_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/ca_devscu_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml" "_data/sidebars/dg_dev_sidebar.yml" "_data/sidebars/about_all_sidebar.yml")
+SIDEBARS=("_data/sidebars/about_all_sidebar.yml" "_data/sidebars/ca_dev_sidebar.yml" "_data/sidebars/ca_devscu_sidebar.yml" "_data/sidebars/dg_dev_sidebar.yml" "_data/sidebars/pbc_all_sidebar.yml")
 
 # Define sidebar titles
-TITLES=("CA Dev" "CA Devscu" "PBC All" "DG Dev" "About All")
+TITLES=("About All" "CA Dev" "CA Devscu" "DG Dev" "PBC All")
 
 # Define output file path
 OUTPUT_FILE="_scripts/sidebar_checker/missing-documents.yml"

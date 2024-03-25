@@ -13,13 +13,11 @@ related:
   - title: Build the documentation site
     link: docs/about/all/about-the-docs/run-the-docs-locally.html
   - title: Addi product sections to the documentation
-    link: docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
   - title: Report documentation issues
     link: docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
   - title: Review pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/review-docs-pull-requests.html
-  - title: Style, syntax, formatting, and general rules
-    link: docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html
   - title: Markdown syntax
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
@@ -33,16 +31,6 @@ We write the Spryker documentation using Markdown. If you don’t know Markdown 
 {% endinfo_block %}
 
 This instruction explains how to contribute to the Spryker documentation by creating [pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) on GitHub.
-
-{% info_block infoBox "Info" %}
-
-For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html).
-
-
-Note that Spryker documentation is written in US English.
-
-
-{% endinfo_block %}
 
 ## Prerequisites
 

@@ -61,7 +61,7 @@ At this point, you are most likely to know which document you want to edit. To f
 
 1. Open the document you want to edit in an editor.
 2. Add the needed changes.
-    You'd help us a lot by following [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html) and [general rules](/docs/about/all/about-the-docs/contribute-to-the-docs/style-formatting-general-rules.html), but it's completely optional. We are grateful for your contribution in any form.
+    You'd help us a lot by following [Markdown syntax](/docs/about/all/about-the-docs/style-guide/markdown-syntax.html) and [general rules](/docs/about/all/about-the-docs/style-guide/general-rules-and-guidance-for-adding-docs.html), but it's completely optional. We are grateful for your contribution in any form.
 3. Save the edited document.
 4. In GitHub Desktop, double-check your changes in the **Changes** tab.
 5. Below the list of edited files, enter the name and description of your changes. The name of your fist commit will be used as the pull request's name.

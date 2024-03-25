@@ -12,7 +12,7 @@ related:
   - title: Build the documentation site
     link: docs/about/all/about-the-docs/run-the-docs-locally.html
   - title: Add product sections to the documentation
-    link: docs/about/all/about-the-docs/add-global-sections-to-the-docs.html
+    link: docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
   - title: Edit documentation via pull requests
     link: docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-using-a-web-browser.html
   - title: Report documentation issues

@@ -427,7 +427,7 @@ In July 2023, we have added and updated the following pages:
 - [Integrate Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html): Find out how you can integrate Usercentrics in your Spryker shop.
 - [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html): [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store.
 - [Adding variables in the parameter store](/docs/ca/dev/add-variables-in-the-parameter-store.html): Added reserved variable sub-section and removed deprecated text.
-- [Security Release Notes 202306.0](/docs/about/all/releases/release-notes-202306.0/security-release-notes-202306.0.html): Added missing security HTTP headers.
+- [Security Release Notes 202306.0](/docs/about/all/releases/security-release-notes-202306.0.html): Added missing security HTTP headers.
 - [Merchant Users Overview](/docs/pbc/all/merchant-management/202212.0/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html): Added information about the assignment of groups for the merchant user.
 - [Handle data with Publish and Synchronization](/docs/dg/dev/backend-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html): Publish and Synchronization (P&S) lets you export data from Spryker backend (Zed) to external endpoints.
 - [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202307.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html): Updated code sample.
@@ -450,7 +450,7 @@ For more details about these and other updates to the Spryker docs in July 2023,
 In June 2023, we have added and updated the following pages:
 
 ### New pages
-- [Security release notes 202306.0](/docs/about/all/releases/release-notes-202306.0/security-release-notes-202306.0.html).
+- [Security release notes 202306.0](/docs/about/all/releases/security-release-notes-202306.0.html).
 - [Oryx: Presets](/docs/dg/dev/frontend-development/202212.0/oryx/building-applications/oryx-presets.html): Learn how you can use presets to install predefined applications.
 - [Service Points feature integration guide](/docs/pbc/all/service-point-management/202311.0/unified-commerce/install-features/install-the-service-points-feature.html).
 - [Shipment + Service Points feature integration guide](/docs/pbc/all/carrier-management/202311.0/unified-commerce/install-features/install-the-shipment-service-points-feature.html).
@@ -461,7 +461,7 @@ In June 2023, we have added and updated the following pages:
     - [File details - shipment_type.csv](/docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/import-file-details-shipment-type.csv.html).
 - [Migration guide - Upgrade Node.js to v18 and npm to v9](/docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html).
 - [Spryker documentation style guide](/docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html):
-    - [Examples](/docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/examples.html).
+    - [Examples](/docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/style-guide-examples.html).
     - [Spelling](/docs/about/all/about-the-docs/contribute-to-the-docs/style-guide/spelling.html).
 
 ## Updated pages
@@ -491,7 +491,7 @@ In May 2023, we have added and updated the following pages:
 
 ### New pages
 
-- [Docs release notes](/docs/about/all/docs-updates.html)
+- [Docs release notes](/docs/about/all/about-the-docs/docs-updates.html)
 - Multistore documentation:
     - [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html): Learn about all the setup options you have for a multi-store environment.
     - [Checklist for a new store implementation](/docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html): Overview of the high-level tasks and responsibilities of Spryker and Customer when setting up a new store.

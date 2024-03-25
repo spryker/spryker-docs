@@ -820,57 +820,56 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 
 Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](#https://en.wikipedia.org/wiki/Facade_pattern).
 
-There are currently four components that use the facade design pattern:
+There are currently four components that use the facade design pattern, thus referred as facades:
 - The `Facade` is the API of [Business layer](#business-layer-responsibilities).
 - The `Client` is the API of [Client application layer](#client), and acts as the only entry point to the [Client Application](#applications).
 - The `Service` is the API of [Service application layer](#service), and represents the only entry point to the [Service Application](#applications).
 - The `Query Container` is the API of [Persistence layer](#persistence-layer-responsibilities), and represents and entry point to database access. The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of `Query Container` concept.
 
-The facade provides functionality for other layers and/or modules. The functionality behind the facade normally accesses the sibling functionality directly and not from the facade.
+The facades provide functionality for other layers and/or modules. The functionality behind the facade normally accesses other sibling functionality directly and not from the facade (eg: [Models](#model)  call their sibling [Models](#model) as a dependency, rather than through the `facade`).
 
 **Conventions**
 
-- The inherited `getFactory()` MUST be used to instantiate the underlying classes.
-- The methods MUST contain only the delegation to the underlying [model](#model).
-  - Underlying classes MUST be instantiated using the inherited `getFactory()` factory access.
-- All methods MUST be `public` and stand for an outsourced function.
-- All methods MUST have [Transfer Objects](#transfer-object) or native types as argument and return value.
-- Each facade class MUST define and implement an interface that holds the specification of each `public` method.
-  - The specification is considered the semantic contract of the method - all significant behaviour MUST be highlighted.
-- The methods MUST have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).
-- Multi-item-flow methods MUST 
-  - receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
-  - return a [Transfer Object](#transfer-object) collection with the following naming pattern `[DomainEntity][Collection|CollectionResponse]Transfer`.
-  - declare the `Create` and `Update` CUD methods per entity as follows: `[create|update][DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`
-  - declare the `Delete` CUD method as follows: `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer;`
-- Multi-item-flow `Create` and `Update` methods MUST
-  - support the transactional entity manipulation, and document it in facade specification.
-- New `QueryContainer` functionality MUST NOT be introduced but through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
-
-__TBD__ (Note: Service is not serving data => no CRUD)
+Generic conventions
+- The inherited `getFactory()` method needs to be used to instantiate the underlying classes.
+- The methods need to contain only the delegation to the underlying [model](#model).
+- All methods need to be `public` and stand for an outsourced function of the underlying functionality.
+- All methods need to have [Transfer Objects](#transfer-object) or native types as argument and return value.
+- Each facade method needs to define a `Specification` (on class or interface level).
+  - The `Specification` is considered the semantic contract of the method - all significant behaviour needs to be highlighted.
+- The methods need to have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).
+- `Query Containers` can be used/developed further, but it is highly recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
 
 **Guidelines**
-- Single-item-flow methods SHOULD be avoided as they are NOT scalable.
-- Multi-item-flow methods SHOULD operate in batches to be scalable.
-- Multi-item-flow `Create` and `Update` methods SHOULD return a list of entities + error list.
+- The `Service` functionalities are commonly used to transform data, thus `CUD` conventions are usually not applicable. 
+- Single-item-flow methods should be avoided as they are not scalable.
 
-<details><summary markdown='span'>Additional Conventions for Boilerplate Development and Accelerator Development</summary>
-- Instantiation can happen with other methods than `getFactory()` (eg: `new`, `create`, `make`, etc.).<br/>
+<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+- Each facade class needs to define and implement an interface that holds the `Specification` of each `public` method.<br/>
+- All facade class methods need to add `@api`, and `{@inheritdoc}` tags on their method documentation. <br/>
+- New `QueryContainer` functionality can not be added but implemented through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.<br/>
+- Single-item-flow methods need to be avoided unless one of the reasons apply:<br/>
+  - there is only a single-entity flow ever, proven by the business cases.<br/>
+  - the items need to go in FIFO order and there is no way to use a collection instead.<br/>
+- Multi-item-flow methods need to <br/>
+  - receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.<br/>
+  - return a [Transfer Object](#transfer-object) collection with the following naming pattern `[DomainEntity][Collection|CollectionResponse]Transfer`.<br/>
+- Create-Update-Delete (`CUD`) directives:<br/>
+  - `Create` method needs to be defined as `create[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
+  - `Update` method needs to be defined as `update[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
+  - `Delete` method needs to be defined as `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
+  - `Create` and `Update` methods need to be implemented for each business entity (`Delete` is optional on-demand).<br/>
+  - `CUD` methods can not have additional arguments except the above defined.<br/>
+  - `[DomainEntity]CollectionRequestTransfer` and `[DomainEntity]CollectionDeleteCriteriaTransfer` objects need to support transactional entity manipulation that is defaulted to true and documented in facade function specification.<br/>
+  - `[DomainEntity]CollectionRequestTransfer` should support bulk operations.<br/>
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` should contain only arrays of attributes to filter the deletion of entities by.<br/>
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` need to use `IN` the operation to filter deletion of entities (each item in the array of the filled attributes will cause deletion of 1 entity).<br/>
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` attributes that support deleting need to be mentioned in facade specification.<br/>
+  - `[DomainEntity]CollectionResponseTransfer` should contain a returned list of entities and error list.<br/>
+    - if the entity manipulation function operation was fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.<br/>
+    - if the entity manipulation function operation was not successful and the request is transactional, the error list must contain the error that caused the transaction rollback, the error must point out the entity that caused the rollback, the entities after the error must not be manipulated, and the response entity list must reflect the state of the database after the rollback.<br/>
+    - if the entity manipulation function operation was not successful and the request is not transactional, the error list must contain all errors, each error must point out the related entity that caused that error, and the response entity list must reflect the state of the database after the rollback.<br/>
 </details>
-
-<details><summary markdown='span'>Additional Conventions for Project Development</summary>
-- Instantiation can happen with other methods than `getFactory()` (eg: `new`, `create`, `make`, etc.).<br/>
-- Definition of interface without purpose is NOT recommended. <br/>
-- Specification of each method MUST be included in the facade class instead.
-- `QueryContainers` can be used/developed further, but it is highly recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
-</details>
-
-<details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- All methods MUST add `@api`, and `{@inheritdoc}` tags on their method documentation. <br/>
-- Single-item-flow methods MUST be avoided as they are NOT scalable.<br/>
-- Multi-item-flow `Create` and `Update` methods MUST return a list of entities + error list.
-</details>
-
 
 **Example**
 ```php

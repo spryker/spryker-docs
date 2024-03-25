@@ -1,6 +1,6 @@
 ---
-title: App Composition Platform installation
-description: Learn how to install the App Orchestration Platform.
+title: SCCOS Dependencies Required for the App Composition Platform
+description: Learn about the technical prerequisites required for the App Composition Platform registration.
 template: concept-topic-template
 last_updated: Jan 09, 2024
 redirect_from:
@@ -8,54 +8,44 @@ redirect_from:
     - /docs/acp/user/app-composition-platform-installation.html
 ---
 
-This document describes how you can make your project ACP-ready and how you install ACP.
+As described in the [ACP Overview documentation](/docs/dg/dev/acp/acp-overview.html), the ACP registration process is divided into 2 steps which are:
+1. Project update to include SCCOS dependencies
+2. Infrastructure Configuration: this step is handled by Spryker
 
-# Installing ACP in SCCOS
+This document provides a setp-by-step guide on how to update your Spryker project with required SCCOS dependencies needed for the App Composition Platform.
+
+
+# Getting your SCCOS project ready for ACP
 
 {% info_block warningBox "Prerequisite" %}
 
-To be eligible for ACP, your project must be hosted in the Spryker Cloud.
+Do note that your project must be hosted in the Spryker Cloud for you to be registered on the App Composition Platform.
 
 {% endinfo_block %}
 
-The ACP catalog is integrated into the Back Office and contains the list of applications you can connect to your shop.
 
-You can access the ACP catalog only if you are a SCCOS customer and have been enabled for ACP. This means that your SCCOS environment needs to be properly set up and registered with ACP.
-
-The installation process of ACP on SCCOS is also called *ACP enablement*. It involves multiple steps that require actions from both you and Spryker. The first step implies making your SCCOS project *ACP-ready*, meaning that the required ACP modules are up-to-date and the SCCOS Cloud environment is configured correctly. The second step is making your project *ACP-enabled* by registering your SCCOS project with the Spryker's ACP. This enables the ACP Catalog in the Back Office to interact with ACP, allowing you to browse, connect, and configure ACP applications for use with SCCOS.
-
-The following diagram illustrates the different steps of the ACP enablement process and outlines the responsibilities for executing them.
-
-<div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2023-05-24T14:49:42.621Z\&quot; agent=\&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36\&quot; etag=\&quot;Qukq0BDP7WyFCnFGgsy6\&quot; version=\&quot;21.3.3\&quot;&gt;\n  &lt;diagram name=\&quot;Страница 1\&quot; id=\&quot;0AxMdV5PH_cISPjeI29k\&quot;&gt;\n    &lt;mxGraphModel dx=\&quot;2474\&quot; dy=\&quot;1116\&quot; grid=\&quot;1\&quot; gridSize=\&quot;10\&quot; guides=\&quot;1\&quot; tooltips=\&quot;1\&quot; connect=\&quot;1\&quot; arrows=\&quot;1\&quot; fold=\&quot;1\&quot; page=\&quot;0\&quot; pageScale=\&quot;1\&quot; pageWidth=\&quot;827\&quot; pageHeight=\&quot;1169\&quot; math=\&quot;0\&quot; shadow=\&quot;0\&quot;&gt;\n      &lt;root&gt;\n        &lt;mxCell id=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;1\&quot; parent=\&quot;0\&quot; /&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-32\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer/SI&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;132\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-33\&quot; value=\&quot;&amp;lt;b&amp;gt;&amp;lt;font color=&amp;quot;#ffffff&amp;quot;&amp;gt;Spryker (OPS/ACP)&amp;lt;/font&amp;gt;&amp;lt;/b&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1ebea0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;-80\&quot; y=\&quot;252\&quot; width=\&quot;80\&quot; height=\&quot;80\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-34\&quot; value=\&quot;\&quot; style=\&quot;endArrow=none;dashed=1;html=1;rounded=0;\&quot; parent=\&quot;1\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;332\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;41\&quot; y=\&quot;132\&quot; as=\&quot;targetPoint\&quot; /&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-50\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-35\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCCOS is updated to the latest module versions required for ACP and Apps&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;80\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-51\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-36\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCCOS is configured to activate ACP catalog in the Back Office&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;190\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;fknyoAEU52s9SkgYHo2v-4\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-37\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCCOS environment variable keys are prepared&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;132\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;LKxQeUD1ZAAE0P82jiso-6\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; value=\&quot;&amp;lt;span style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color);&amp;quot;&amp;gt;&amp;lt;font style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCCOS environment variable keys are configured&amp;lt;/font&amp;gt;&amp;lt;/span&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#EB553c;strokeColor=#eb553c;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;132\&quot; width=\&quot;90\&quot; height=\&quot;90\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;SCCOS is &amp;quot;&amp;lt;b&amp;gt;ACP-ready&amp;lt;/b&amp;gt;&amp;quot;&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;520\&quot; y=\&quot;128\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-56\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; value=\&quot;&amp;lt;font color=&amp;quot;#ffffff&amp;quot; style=&amp;quot;font-size: 9px;&amp;quot;&amp;gt;SCCOS is &amp;quot;&amp;lt;/font&amp;gt;&amp;lt;b style=&amp;quot;--tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: rgb(59 130 246 / 0.5); --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; border-color: var(--border-color); color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;ACP-enabled&amp;lt;/b&amp;gt;&amp;lt;span style=&amp;quot;color: rgb(255, 255, 255); font-size: 9px;&amp;quot;&amp;gt;&amp;quot;&amp;lt;/span&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;670\&quot; y=\&quot;129\&quot; width=\&quot;110\&quot; height=\&quot;98\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-45\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;&amp;amp;nbsp;&amp;lt;b&amp;gt;ACP&amp;lt;br&amp;gt;&amp;amp;nbsp;catalog&amp;lt;/b&amp;gt; can be fully used with SCCOS&amp;lt;/font&amp;gt;\&quot; style=\&quot;rhombus;whiteSpace=wrap;html=1;fillColor=#EB553C;strokeColor=#EB553C;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;810\&quot; y=\&quot;124\&quot; width=\&quot;110\&quot; height=\&quot;108\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;fknyoAEU52s9SkgYHo2v-5\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-46\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Customer Cloud Infrastructure is updated with ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;300\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-61\&quot; value=\&quot;\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-38\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-47\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Values for Customer env variables are created based on Customer&amp;#39;s Cloud ACP components&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;align=center;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;410\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-60\&quot; style=\&quot;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-43\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry relative=\&quot;1\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; value=\&quot;&amp;lt;font style=&amp;quot;font-size: 9px;&amp;quot; color=&amp;quot;#ffffff&amp;quot;&amp;gt;Register Customer SCCOS with ACP&amp;lt;/font&amp;gt;\&quot; style=\&quot;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1EBEA0;strokeColor=#1EBEA0;\&quot; parent=\&quot;1\&quot; vertex=\&quot;1\&quot;&gt;\n          &lt;mxGeometry x=\&quot;600\&quot; y=\&quot;252\&quot; width=\&quot;88\&quot; height=\&quot;88\&quot; as=\&quot;geometry\&quot; /&gt;\n        &lt;/mxCell&gt;\n        &lt;mxCell id=\&quot;AaxAhCZwYhS3f6JuZ0fs-59\&quot; value=\&quot;\&quot; style=\&quot;endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;\&quot; parent=\&quot;1\&quot; source=\&quot;AaxAhCZwYhS3f6JuZ0fs-40\&quot; target=\&quot;AaxAhCZwYhS3f6JuZ0fs-48\&quot; edge=\&quot;1\&quot;&gt;\n          &lt;mxGeometry width=\&quot;50\&quot; height=\&quot;50\&quot; relative=\&quot;1\&quot; as=\&quot;geometry\&quot;&gt;\n            &lt;mxPoint x=\&quot;540\&quot; y=\&quot;282\&quot; as=\&quot;sourcePoint\&quot; /&gt;\n            &lt;mxPoint x=\&quot;560\&quot; y=\&quot;292\&quot; as=\&quot;targetPoint\&quot; /&gt;\n            &lt;Array as=\&quot;points\&quot;&gt;\n              &lt;mxPoint x=\&quot;575\&quot; y=\&quot;296\&quot; /&gt;\n            &lt;/Array&gt;\n          &lt;/mxGeometry&gt;\n        &lt;/mxCell&gt;\n      &lt;/root&gt;\n    &lt;/mxGraphModel&gt;\n  &lt;/diagram&gt;\n&lt;/mxfile&gt;\n&quot;}"></div>
-<script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-
-{% info_block warningBox "Info" %}
-
-The actions and level of effort required to make your project ACP-ready may vary depending on the update status of your SCCOS module versions. However, the process of making your project ACP-enabled is always handled by Spryker.
-
-{% endinfo_block %}
-
-## Getting SCCOS ACP-ready
-
-To make your project ACP-ready, different update steps are necessary depending on the template version on which your project was started:
-
-- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) requiere updates.
+## SCCOS Dependencies for projects on SCCOS product release 202311.0 or later
 
 - SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later: you can skip the configuration step described in this document.
 
+
+## SCCOS Dependencies for projects on other versions 
+- SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) requiere updates.
+
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), our team may need to examine your project and provide more support during the upgrade process. Do [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
-### Module updates for ACP
 
-To get your project ACP-ready, it is important to make sure that your project modules are updated to the necessary versions.
+### Dependency 1: Module updates for ACP
+
+To get your project ACP-ready, it is important to make sure that your project modules are updated to the required versions.
 
 #### ACP modules
 
-Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerc OS product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
 * `spryker/message-broker: ^1.10.0` or later
@@ -63,11 +53,11 @@ Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-sp
 * `spryker/session: ^4.15.1` or later
 * `spryker/oauth-client: ^1.4.0` or later
 
-#### App modules
+#### ACP App modules
 
 {% info_block warningBox "Apps- and PBC-specific modules" %}
 
-Depending on the specific ACP apps or [PBCs](/docs/pbc/all/pbc.html#acp-app-composition-platform-apps) you intend to use through ACP, you need to add or update the modules for each respective app or PBC as explained in the corresponding app guide.
+Depending on the specific ACP Apps you intend to use through ACP, you need to add or update the modules for each respective app as explained in the corresponding app guide.
 
 {% endinfo_block %}
 
@@ -75,7 +65,7 @@ The Spryker ACP Apps are continuously enhanced and improved with new versions. T
 
 For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each app integration guide.
 
-### Configure SCCOS
+### Dependency 2: Code chnages in SCCOS
 
 {% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 
@@ -340,14 +330,21 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
 ```
 </details>
 
-## Next steps after the ACP-readiness
+## Next steps after updating your project with required SCCOS dependencies
 
 After configuring the files and updating all modules, the SCCOS codebase is now up-to-date. Once redeployed, your environment will be ACP-ready.
 
-The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. The ACP enablement step is fully handled by Spryker and implies the registration of your ACP-ready SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
+The next step is to get your newly updated and deployed ACP-ready SCCOS environment ACP-enabled. In this step, Spryker registers SCCOS environment with ACP by connecting it with the ACP App-Tenant-Registry-Service (ATRS) as well as the Event Platform (EP) so that the ACP catalog is able to work with SCCOS.
 
 To get your project ACP-enabled, contact the [Spryker support](https://spryker.com/support/).
 
 Once all the steps of the ACP-enablement process are completed, the ACP catalog appears in the Back Office:
 
 ![acp-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
+
+
+{% info_block infoBox "Using ACP Apps" %}
+
+Do note that after getting your project enabled and registered for ACP, there may be specific requirements needed for different ACP Apps. Kindly check the App page more for information
+
+{% endinfo_block %}

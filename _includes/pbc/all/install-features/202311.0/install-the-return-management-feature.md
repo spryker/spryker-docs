@@ -754,7 +754,7 @@ Make sure the order items that transit from status `shipped` to `waiting for ret
 
 {% endinfo_block %}
 
-### Update BackOffice navigation
+### Update Back Office navigation
 
 ```bash
 console navigation:build-cache
@@ -762,7 +762,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you see section Sales >> Returns in the left menu.
+Make sure that the **Sales > Returns** navigation item is displayed.
 
 {% endinfo_block %}
 

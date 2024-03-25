@@ -49,8 +49,8 @@ entries:
         nested:
         - title: "Best practises: Jenkins stability"
           url: /docs/ca/dev/best-practices/best-practises-jenkins-stability.html
-        - title: Jenkins stability checklist
-          url: /docs/ca/dev/best-practices/jenkins-stability-checklist.html
+        - title: Jenkins operational best practices handbook
+          url: /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode

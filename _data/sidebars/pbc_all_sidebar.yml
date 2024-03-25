@@ -753,10 +753,10 @@ entries:
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
                       - title: Add content items to CMS pages
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/add-content-items-to-cms-pages.html
-                      - title: Manage CMS page versions
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-page-versions.html
-                      - title: Manage CMS pages
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html
+                      - title: View CMS pages and history
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html
+                      - title: Preview CMS pages
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html
                   - title: Product sets
                     nested:
                       - title: Create product sets
@@ -775,8 +775,8 @@ entries:
                     nested:
                       - title: Create CMS redirects
                         url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/create-cms-redirects.html
-                      - title: Manage CMS redirects
-                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/manage-cms-redirects.html
+                      - title: Edit CMS redirects
+                        url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/redirects/edit-cms-redirects.html
                   - title: Manage file list
                     url: /docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/manage-file-list.html
                   - title: Manage file tree
@@ -1742,8 +1742,6 @@ entries:
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/data-virtuality.html
                 - title: Usercentrics
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/usercentrics.html
-                - title: New Relic
-                  url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
                 - title: Mindcurv
                   url: /docs/pbc/all/miscellaneous/third-party-integrations/operational-tools-monitoring-legal/mindcurv.html
       - title: Offer Management
@@ -3099,7 +3097,7 @@ entries:
                   - title: Split products by stores
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/split-products-by-stores.html
                   - title: "Product data: From import to frontend views"
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html                        
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/product-data-from-import-to-frontend-views.html
                   - title: "Tutorial: Product challenge solution"
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/tutorial-product-challenge-solution.html
                   - title: "Tutorial: Product"

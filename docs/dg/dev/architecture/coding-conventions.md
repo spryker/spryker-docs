@@ -12,8 +12,8 @@ Your feedback and suggestions are highly valued to enhance the accuracy, relevan
 Understanding the development scenarios in which Spryker Commerce Operating System (SCOS) can be utilized is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
 
 - **Project Development**: If you are developing a project, you will need to adhere to specific project development guidelines to ensure smooth integration.
-- **Boilerplate and Accelerator Contribution**: Contributing to boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.
-- **Module Contribution**: For those contributing to Spryker modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across SCOS.
+- **Module Development**: Contributing 3rd-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions. These guidelines are stricter than `Project Development`, as such functionalities should be re-usable on multiple projects in different contexts.
+- **Core Module Development**: For those contributing to Spryker modules, there are specialised rules to follow within the module folders. This ensures consistency and compatibility across product lines based on SCOS Framework. These requirements are the strictest in order to be re-usable on multiple projects in different business verticals (B2C, B2B, Marketplace, Unified Commerce, etc.), and ensure stability of module API used by Spryker development ecosystem and community.
 
 ## Directive Classification
 Throughout this documentation, you will encounter two types of directives:
@@ -381,24 +381,23 @@ An application layer can have up to four logical layers with clear purpose and c
 - Implements business rules and processes.
 - Performs data manipulation, calculations, and validation.
 - Interacts with the [Persistence Layer](#persistence-layer-responsibilities) to read and write data.
-- Independent of the user interface and communication protocols.
 
 ## Persistence Layer responsibilities
 - Responsible for data storage and retrieval.
 - Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
 - Handles database operations such as CRUD (`Create`, `Read`, `Update`, `Delete`).
 - Ensures data integrity and security.
-- Map DB entities into business data transfer objects.
+- Maps database entities into business data transfer objects.
 
 # Components
 
 **Conventions**
-- The components MUST be placed according to the corresponding [application layer’s](#application-layers) directory architecture  in order to come in effect.
-- The components MUST inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
-- The components MUST be stateless to be deterministic and easy to comprehend.
+- The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
+- The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
+- The components need to be stateless to be deterministic and easy to comprehend.
 
 <details><summary markdown='span'>Additional Conventions for Module Development</summary>
-- The components MUST be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
+- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
 </details>
 
 ## Controller
@@ -1858,14 +1857,14 @@ class ConfigurableBundleCartsRestApiZedStub implements ConfigurableBundleCartsRe
     }
 ```
 
-# Module Contribution Components
+# Core Module Development Components
 
-The components below are necessity in module developments for modularity but recommended to avoid in Project or Boilerplate development.
+The components below are essential in `core module development` for the purpose of modularity and customisability. For `project development` and `module development` these components are recommended on need to have basis (consider implementing these components based on their relevance to your business or technical requirements).
 
 **Conventions**
-- The components MUST be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to come in effect.
-- The components MUST be extended __only__ from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
-- The components MUST be stateless to be deterministic and easy to comprehend.
+- The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
+- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
+- The components need to be stateless to be deterministic and easy to comprehend.
 
 ## Bridge
 

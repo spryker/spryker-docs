@@ -88,8 +88,8 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ## Using payment details from third-party PSPs
 
-When a third-party PSP supports this feature, you will receive asynchronous messages about the payment when it is created.
+When a third-party PSP supports this feature, your shop receives asynchronous messages about each payment when it's created.
 
-When you want to use the data of the `spy_sales_payment_detail` table you need to combine the data from the table with the entity you are fetching from the database where this payment detail is related to.
+To use the data of the `spy_sales_payment_detail` table, you need to combine the data from the table with the entity you are fetching from the database to which this payment detail is related.
 
 When the payment is used in the normal order process, the payment detail can be combined by using `spy_sales_order.order_reference` and `spy_sales_payment_detail.entity_reference`.

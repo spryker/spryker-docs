@@ -1,4 +1,3 @@
-
 This document describes how to install Merchant Portal Merchant B2B Contracts feature.
 
 ## Install feature core
@@ -35,9 +34,9 @@ Make sure that the following modules were installed:
 
 Add the following configuration:
 
-| CONFIGURATION                  | SPECIFICATION                                                                                           | NAMESPACE   |
-|--------------------------------|---------------------------------------------------------------------------------------------------------|-------------|
-| AclConfig::getInstallerRules() | The default ACL rules that are added to the respective database table after executing `setup:init-db`.  | Pyz\Zed\Acl |
+| CONFIGURATION                  | SPECIFICATION                                                                                          | NAMESPACE   |
+|--------------------------------|--------------------------------------------------------------------------------------------------------|-------------|
+| AclConfig::getInstallerRules() | The default ACL rules that are added to the respective database table after executing `setup:init-db`. | Pyz\Zed\Acl |
 
 <details>
 <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
@@ -92,8 +91,8 @@ class AclConfig extends SprykerAclConfig
     }
 }
 ```
-</details>
 
+</details>
 
 2. Execute the registered installer plugins:
 
@@ -103,8 +102,10 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
-* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+* Make sure the page is available for Merchant Portal
+  users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+* Make sure Back Office users don't have access
+  to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
 
 {% endinfo_block %}
 
@@ -120,9 +121,9 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| Transfer                                      | Type   | Event   | Path                                                                                |
-|-----------------------------------------------|--------|---------|-------------------------------------------------------------------------------------|
-| MerchantRelationshipTableCriteria             | class  | created | src/Generated/Shared/Transfer/MerchantRelationshipTableCriteriaTransfer             |
+| Transfer                          | Type  | Event   | Path                                                                    |
+|-----------------------------------|-------|---------|-------------------------------------------------------------------------|
+| MerchantRelationshipTableCriteria | class | created | src/Generated/Shared/Transfer/MerchantRelationshipTableCriteriaTransfer |
 
 {% endinfo_block %}
 
@@ -130,9 +131,9 @@ Make sure that the following changes have been applied in transfer objects:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                             | SPECIFICATION                                                                                         | PREREQUISITES | NAMESPACE                                                                                |
-|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
-| MerchantRelationshipMerchantDashboardCardPlugin                    | Adds Merchant relation card to the merchant dashboard.                                                |               | Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Plugin\AclMerchantPortal |
+| PLUGIN                                          | SPECIFICATION                                          | PREREQUISITES | NAMESPACE                                                                                         |
+|-------------------------------------------------|--------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
+| MerchantRelationshipMerchantDashboardCardPlugin | Adds Merchant relation card to the merchant dashboard. |               | Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -160,7 +161,8 @@ class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerch
 
 {% info_block warningBox "Verification" %}
 
-In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure the **B2B Contracts** pane is displayed.
+In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure the **B2B Contracts** pane is
+displayed.
 
 {% endinfo_block %}
 

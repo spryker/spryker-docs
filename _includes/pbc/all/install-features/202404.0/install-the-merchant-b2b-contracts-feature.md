@@ -108,8 +108,8 @@ Append glossary according to your configuration:
 **src/data/import/glossary.csv**
 
 ```yaml
-merchant_relationship.mail.merchant_relationship_delete.subject,Your merchant relation was terminated.,en_US
-merchant_relationship.mail.merchant_relationship_delete.subject,Ihre Händlerbeziehung wurde beendet.,de_DE
+merchant_relationship.mail.trans.merchant_relationship_delete.subject,Your merchant relation was terminated.,en_US
+merchant_relationship.mail.trans.merchant_relationship_delete.subject,Ihre Händlerbeziehung wurde beendet.,de_DE
 merchant_relationship.mail.trans.merchant_relationship_delete.salutation,"Hello,",en_US
 merchant_relationship.mail.trans.merchant_relationship_delete.salutation,"Hallo,",de_DE
 merchant_relationship.mail.trans.merchant_relationship_delete.main_text,"Merchant %merchant_name% terminated your merchant relation. Please get in touch with the merchant in case of questions.",en_US

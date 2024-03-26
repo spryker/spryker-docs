@@ -3,15 +3,11 @@ title: Install and configure Stripe prerequisites
 description: Learn how to prepare your project for Stripe
 last_updated: Mar 20, 2024
 template: howto-guide-template
-related:
-  - title: Stripe
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
-/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
-
+- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
 ---
 
 To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.

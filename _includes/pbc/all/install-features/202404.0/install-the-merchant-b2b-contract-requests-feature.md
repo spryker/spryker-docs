@@ -2,6 +2,8 @@ This document describes how to install the Merchant B2B Contract Requests featur
 
 ## Install feature core
 
+To install the Merchant B2B Contract Requests feature core, take the following steps.
+
 ### Prerequisites
 
 Install the required features:
@@ -13,9 +15,9 @@ Install the required features:
 | Merchant B2B Contracts    | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
 | Spryker Core              | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer
 
 ```bash
 composer require spryker-feature/merchant-contract-requests: "{{page.version}}" --update-with-dependencies
@@ -23,7 +25,7 @@ composer require spryker-feature/merchant-contract-requests: "{{page.version}}" 
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE                           | EXPECTED DIRECTORY                                 |
 |----------------------------------|----------------------------------------------------|
@@ -35,11 +37,9 @@ Make sure that the following modules were installed:
 
 ### 2) Set up the configuration
 
-Add the following configuration:
-
 | CONFIGURATION                                | SPECIFICATION                                        | NAMESPACE                            |
 |----------------------------------------------|------------------------------------------------------|--------------------------------------|
-| MerchantRelationshipConstants::BASE_URL_YVES | Defines base URL for Yves including scheme and port. | Spryker\Shared\MerchantRelationship  |
+| MerchantRelationshipConstants::BASE_URL_YVES | Defines the base URL for Yves including scheme and port. | Spryker\Shared\MerchantRelationship  |
 
 **config/Shared/config_default.php**
 

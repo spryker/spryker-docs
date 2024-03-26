@@ -215,7 +215,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -530,7 +530,7 @@ console data:import shopping-list
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list` table.
+Make sure that, in the database, the configured data is added to the `spy_shopping_list` table.
 
 {% endinfo_block %}
 
@@ -623,7 +623,7 @@ console data:import shopping-list-item
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_item` table.
+Make sure that, in the database, the configured data is added to the `spy_shopping_list_item` table.
 
 {% endinfo_block %}
 
@@ -693,7 +693,7 @@ console data:import shopping-list-company-user
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_company_user` table.
+Make sure that, in the database, the configured data is added to the `spy_shopping_list_company_user` table.
 
 {% endinfo_block %}
 
@@ -757,7 +757,7 @@ console data:import shopping-list-company-business-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_company_busines_unit` table.
+Make sure that, in the database, the configured data is added to the `spy_shopping_list_company_busines_unit` table.
 
 {% endinfo_block %}
 
@@ -1250,7 +1250,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

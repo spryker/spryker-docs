@@ -247,7 +247,7 @@ shelldata:console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

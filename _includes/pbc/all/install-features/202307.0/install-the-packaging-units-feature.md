@@ -467,7 +467,7 @@ console data:import product-packaging-unit-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_product_packaging_unit_type` table.
+Make sure that, in the database, the configured data has been added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 

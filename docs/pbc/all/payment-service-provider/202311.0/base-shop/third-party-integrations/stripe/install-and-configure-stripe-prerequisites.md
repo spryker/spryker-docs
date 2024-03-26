@@ -1,6 +1,6 @@
 ---
-title: Install and configure the Stripe app prerequisites
-description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
+title: Install and configure Stripe prerequisites
+description: Learn how to prepare your project for Stripe
 last_updated: Mar 20, 2024
 template: howto-guide-template
 related:
@@ -10,15 +10,25 @@ redirect_from:
 - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
 - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
+/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html
 
 ---
-To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), follow the steps:
 
-1. Create a Stripe account.
-2. Connect your Stripe account to the Spryker Platform account. Request this link by [creating a support case](https://support.spryker.com/s/).
-3. Enable ACP in your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Make sure you are using the latest version of our Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the Stripe app.
-4. Make sure [your countries are supported by Stripe](https://stripe.com/global).
-5. Make sure [your business is not restricted by Stripe](https://stripe.com/legal/restricted-businesses).
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
+
+
+## Fulfill Stripe's prerequisites
+
+* Create a Stripe account.
+* Make sure [your countries are supported by Stripe](https://stripe.com/global).
+* Make sure [your business is not restricted by Stripe](https://stripe.com/legal/restricted-businesses).
+
+## Fulfill ACP prerequisites
+
+* Connect your Stripe account to the Spryker Platform account. Request this link by [creating a support case](https://support.spryker.com/s/).
+* Enable ACP in your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html). Make sure you are using the latest version of the Message Bus. We'll verify this during onboarding, and a migration may be necessary to enable the Stripe app.
+
+## Install packages and add configuration
 
 1. Install the required packages.
     To check the list of required packages, in the Back Office, go to **Apps**>**Stripe**.
@@ -188,4 +198,5 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
 ```
 
 ## Next step
+
 [Configure Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html)

@@ -1,11 +1,8 @@
 ---
 title: Stripe
 description: Stripe technology partner
-last_updated: Jan 31, 2024
+last_updated: Mar 24, 2024
 template: concept-topic-template
-related:
-  - title: Install Stripe
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/install-stripe.html
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.

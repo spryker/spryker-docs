@@ -114,7 +114,7 @@ persistent_cart_share_page.preview,Preview: %title%,en_US
 persistent_cart_share_page.preview,Vorschau: %title%,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

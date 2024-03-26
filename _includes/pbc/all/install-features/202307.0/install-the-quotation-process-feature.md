@@ -246,7 +246,7 @@ quote_request.update.validation.error.wrong_valid_until,The validity date of thi
 quote_request.update.validation.error.wrong_valid_until,"Das Gültigkeitsdatum dieser Angebotsanfrage ist bereits abgelaufen. Bitte ändern Sie das Datum, um es an den Kunden zu senden.",de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -618,7 +618,7 @@ quote_request_page.quote_request.item,%count% artikel,de_DE
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

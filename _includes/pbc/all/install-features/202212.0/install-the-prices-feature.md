@@ -116,7 +116,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import price-product
@@ -261,7 +261,7 @@ page.detail.volume_price.price,Price,en_US
 page.detail.volume_price.price,Preis,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

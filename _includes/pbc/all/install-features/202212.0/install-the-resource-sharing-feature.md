@@ -111,7 +111,7 @@ resource-share.link.error.no-route,Redirect route should not be empty.,en_US
 resource-share.link.error.no-route,Redirect Route kann nicht leer sein.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

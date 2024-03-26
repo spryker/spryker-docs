@@ -1281,7 +1281,7 @@ store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

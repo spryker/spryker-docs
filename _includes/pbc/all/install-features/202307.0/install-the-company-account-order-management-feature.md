@@ -81,7 +81,7 @@ permission.name.SeeBusinessUnitOrdersPermissionPlugin,View Business Unit orders,
 permission.name.SeeBusinessUnitOrdersPermissionPlugin,Bestellungen von Geschäftsbereichen anzeigen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -332,7 +332,7 @@ customer.order.company_user,Company User,en_US
 customer.order.company_user,Firmenbenutzer,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

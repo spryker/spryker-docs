@@ -199,7 +199,7 @@ measurement_units.standard.length.centimetre.name,Centimeter,de_DE
 measurement_units.standard.length.feet.name,Fuß,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -445,7 +445,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-unit
@@ -508,7 +508,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-base-unit
@@ -588,7 +588,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit
@@ -701,7 +701,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit-store
@@ -965,7 +965,7 @@ cart.item.sales_unit.not_found,Sales unit is not found for product with SKU '%sk
 cart.item.sales_unit.not_found,Verkaufseinheit wird für Produkt mit SKU '%sku%' nicht gefunden.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

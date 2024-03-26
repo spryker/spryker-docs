@@ -207,7 +207,7 @@ customer.account.shopping_list_item.error.product_not_active,Product is not acti
 customer.account.shopping_list_item.error.product_not_active,Produkt ist nicht aktiv,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -522,7 +522,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list
@@ -615,7 +615,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list-item
@@ -684,7 +684,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 
 ```bash
@@ -749,7 +749,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list-company-business-unit
@@ -1242,7 +1242,7 @@ product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

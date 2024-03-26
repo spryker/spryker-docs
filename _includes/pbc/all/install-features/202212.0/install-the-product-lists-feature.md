@@ -219,7 +219,7 @@ product-cart.info.restricted-product.removed,"Unavailable item %sku% was removed
 product-cart.info.restricted-product.removed,"Der nicht verfügbare Artikel% sku% wurde aus Ihrem Einkaufswagen entfernt.",de_DE
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -498,7 +498,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list
@@ -563,7 +563,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Run the following console command to import data:
+4. Import data:
 
 ```bash
 console data:import product-list-category
@@ -660,7 +660,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list-product-concrete

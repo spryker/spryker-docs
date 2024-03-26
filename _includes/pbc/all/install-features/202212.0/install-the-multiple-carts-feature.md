@@ -86,7 +86,7 @@ multi_cart.cart.set_default.success,"Cart '%quote%' was successfully set as acti
 multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf aktiv gesetzt.",de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -172,7 +172,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import multi-cart
@@ -570,7 +570,7 @@ multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 ```bash
 console data:import glossary
 ```

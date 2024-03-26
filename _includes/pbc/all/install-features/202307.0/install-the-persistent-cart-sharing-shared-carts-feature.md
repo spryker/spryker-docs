@@ -130,7 +130,7 @@ shared_cart.resource_share.strategy.success.cart_share_access_updated,Access lev
 shared_cart.resource_share.strategy.success.cart_share_access_updated,Zugriffsebene wurde aktualisiert.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

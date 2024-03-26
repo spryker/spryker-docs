@@ -264,7 +264,7 @@ checkout.payment.provider.Unzer,Unzer,en_US
 checkout.payment.provider.Unzer,Unzer,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

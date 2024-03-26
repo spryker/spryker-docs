@@ -143,7 +143,7 @@ comment.validation.error.comment_tag_not_available,Comment tag not available.,en
 comment.validation.error.comment_tag_not_available,Kommentar-Tag nicht verfügbar.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -264,7 +264,7 @@ comment_widget.tags.important,Important,en_US
 comment_widget.tags.important,Wichtig,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

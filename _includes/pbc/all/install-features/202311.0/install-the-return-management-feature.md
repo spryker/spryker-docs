@@ -292,7 +292,7 @@ return.return_reasons.no_longer_needed.name,No longer needed,en_US
 return.return_reasons.no_longer_needed.name,Nicht mehr benötigt,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

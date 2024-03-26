@@ -150,7 +150,7 @@ customer.account.shopping_list.remove_all,Remove all,en_US
 customer.account.shopping_list.remove_all,Alles entfernen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```yaml
 console data:import glossary

@@ -286,7 +286,7 @@ configurable_bundle.template_slots.slot-6.name,Slot 6,en_US
 configurable_bundle.template_slots.slot-6.name,Slot 6,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -723,7 +723,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import configurable-bundle-template

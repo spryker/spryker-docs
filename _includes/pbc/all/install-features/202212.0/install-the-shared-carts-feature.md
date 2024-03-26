@@ -83,7 +83,7 @@ shared_cart.share.error.already_exist,Cart was already shared with this customer
 shared_cart.share.error.already_exist,Der Warenkorb wurde bereits mit diesem Kunden geteilt,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -253,7 +253,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shared-cart
@@ -657,7 +657,7 @@ shared_cart_page.dismiss.success,Shopping cart was dismissed successfully.,en_US
 shared_cart_page.dismiss.success,Warenkorb wurde erfolgreich abgelehnt.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

@@ -376,7 +376,7 @@ customer.access.cannot_see_price,Please login to see the price,en_US
 customer.access.cannot_see_price,Bitte melden Sie sich an um den Preis zu sehen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

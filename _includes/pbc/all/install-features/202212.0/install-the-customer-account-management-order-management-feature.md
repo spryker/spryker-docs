@@ -73,7 +73,7 @@ customer.order_history.reset_all,Reset All,en_US
 customer.order_history.reset_all,Alles zurücksetzen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

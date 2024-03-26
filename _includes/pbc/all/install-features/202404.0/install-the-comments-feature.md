@@ -53,7 +53,7 @@ use Spryker\Shared\Comment\CommentConfig as SprykerCommentConfig;
 class CommentConfig extends SprykerCommentConfig
 {
 	/**
-	 * @return list<string>
+	 * @return list<String>
 	 */
 	public function getAvailableCommentTags(): array
 	{
@@ -97,7 +97,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes were applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY            | TYPE  | EVENT   |
 |----------------------------|-------|---------|
@@ -110,7 +110,7 @@ Make sure that the following changes were applied by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                             | TYPE  | EVENT   | PATH                                                               |
 |--------------------------------------|-------|---------|--------------------------------------------------------------------|
@@ -126,7 +126,7 @@ Make sure that the following changes in transfer objects:
 
 ### 4) Add translations
 
-Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -145,7 +145,7 @@ comment.validation.error.comment_tag_not_available,Comment tag not available.,en
 comment.validation.error.comment_tag_not_available,Kommentar-Tag nicht verfügbar.,de_DE
 ```
 
-Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -153,17 +153,17 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 5) Import data
 
+Import the following data.
+
 #### Import merchant relationships
 
-The following imported entities will be used as merchant relationships in Spryker OS.
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare data according to your requirements using our demo data:
 
 **data/import/common/DE/comment.csv**
 
@@ -184,14 +184,14 @@ message--11,quote,quote-76,DE--34,"I will approve this purchase this time. Howev
 
 | COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE              | DATA EXPLANATION                                |
 |--------------------|----------|-----------|---------------------------|-------------------------------------------------|
-| message_key        | ✓        | string    | message--1                | A reference used for the comment data import.   |
-| owner_type         | ✓        | string    | quote                     | Name of comment owner.                          |
-| owner_key          | ✓        | string    | quote-1                   | Comment owner ID.                               |
-| customer_reference | ✓        | string    | DE--1                     | A reference to the customer who left a comment. |
-| message            | ✓        | string    | "Comment text"            | Comment text.                                   |
-| tags               | optional | string    | ["delivery","important"]  | Comment tags.                                   |
+| message_key        | ✓        | String    | message--1                | A reference used for the comment data import.   |
+| owner_type         | ✓        | String    | quote                     | Comment owner name.                          |
+| owner_key          | ✓        | String    | quote-1                   | Comment owner ID.                               |
+| customer_reference | ✓        | String    | DE--1                     | A reference to the customer who left a comment. |
+| message            | ✓        | String    | "Comment text"            | Comment text.                                   |
+| tags               |          | String    | ["delivery","important"]  | Comment tags.                                   |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN                  | SPECIFICATION                           | PREREQUISITES | NAMESPACE                                          |
 |-------------------------|-----------------------------------------|---------------|----------------------------------------------------|
@@ -221,7 +221,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import comment
@@ -243,8 +243,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                        | SPECIFICATION                                                                        | PREREQUISITES | NAMESPACE                                        |
 |-----------------------------------------------|--------------------------------------------------------------------------------------|---------------|--------------------------------------------------|
-| CustomerCommentAuthorValidationStrategyPlugin | Validates if customer with provided ID exists and this comments belongs to customer. |               | Spryker\Zed\Comment\Communication\Plugin\Comment |
-| CommentThreadQuoteExpanderPlugin              | Expands `QuoteTransfer` with comment thread.                                         |               | Spryker\Zed\Comment\Communication\Plugin\Quote   |
+| CustomerCommentAuthorValidationStrategyPlugin | Validates if a customer with the provided ID exists and if the comment belongs to them. |               | Spryker\Zed\Comment\Communication\Plugin\Comment |
+| CommentThreadQuoteExpanderPlugin              | Expands `QuoteTransfer` with a comment thread.                                         |               | Spryker\Zed\Comment\Communication\Plugin\Quote   |
 
 **src/Pyz/Zed/Comment/CommentDependencyProvider.php**
 
@@ -296,9 +296,10 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Log in to Yves and open your cart.
-* Write a comment and press **Add** button.
-* Make sure that you can see customer's information under the saved comment after the page is reloaded.
+1. On the Storefront, log in as a customer.
+2. Add a comment.
+3. Reload the page.
+ 	Make sure that you can see customer's information under the added comment.
 
 {% endinfo_block %}
 
@@ -306,7 +307,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME                        | VERSION          |
 |-----------------------------|------------------|
@@ -372,7 +373,7 @@ comment_widget.tags.important,Important,en_US
 comment_widget.tags.important,Wichtig,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -380,7 +381,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -445,7 +446,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**
-	 * @return list<string>
+	 * @return list<String>
 	 */
 	protected function getGlobalWidgets(): array
 	{

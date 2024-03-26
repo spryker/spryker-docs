@@ -1,19 +1,15 @@
 This document describes how to install the Company Account + Merchant B2B Contracts feature.
 
-## Install feature core
-
-Follow the steps below to install the Company Account + Merchant B2B Contracts feature.
-
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                   | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Company Account        | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
 | Merchant B2B Contracts | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)                 |
 
-### 1) Set up behavior
+## 1) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -48,11 +44,8 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 
 {% info_block warningBox "Verification" %}
 
-**Merchant Portal**
-
-* Log in to the Merchant Portal.
-* Go to **B2B Contracts** > **Merchant Relations** and select any merchant relation.
-* Make sure that in **Company Details** section you can see Business Units with their names and addresses.
+1. In the Merchant Portal, go to **B2B Contracts** > **Merchant Relations**.
+2. Select a merchant relation.
+    Make sure that, in the **Company Details** section, business units with their names and addresses are displayed.
 
 {% endinfo_block %}
-

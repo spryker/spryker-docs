@@ -82,7 +82,7 @@ $config[CustomerConstants::CUSTOMER_SECURED_PATTERN] = '(^(/en|/de)?/comment($|/
 
 {% info_block warningBox "Verification" %}
 
-Make sure that accessing `mysprykershop.com/comment` with a guest user redirects to login page.
+Make sure that accessing `https://mysprykershop.com/comment` with a guest user redirects to the login page.
 
 {% endinfo_block %}
 

@@ -13,9 +13,9 @@ Install the required features:
 | ----------- | ------ | --------------|
 | Merchant Opening Hours | {{page.version}}  | [Install the Merchant Opening Hours feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-opening-hours-rest-api:"^1.0.0"

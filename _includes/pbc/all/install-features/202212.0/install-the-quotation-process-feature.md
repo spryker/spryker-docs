@@ -15,7 +15,7 @@ Install the required features:
 | Persistent Cart | {{page.version}} |
 | Agent Assist | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 
@@ -417,7 +417,7 @@ Install the required features:
 | Persistent Cart | {{page.version}} |
 |Agent Assist  | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

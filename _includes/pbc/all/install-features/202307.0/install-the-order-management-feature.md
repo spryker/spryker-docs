@@ -31,7 +31,7 @@ Install the required features:
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
 | Persistent Cart | {{page.version}} |  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
@@ -1098,7 +1098,7 @@ To start the feature integration, overview and install the necessary features.
 | Checkout                    | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies

@@ -24,9 +24,9 @@ To start the feature integration, overview and install the necessary features:
 
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/company-user-auth-rest-api:"^2.0.0" spryker/oauth-company-user:"^2.0.0" spryker/oauth-permission:"^1.2.0" spryker/companies-rest-api:"^1.1.0" spryker/company-business-units-rest-api:"^1.2.0" spryker/company-business-unit-addresses-rest-api:"^1.1.0" spryker/company-roles-rest-api:"^1.1.0" spryker/company-users-rest-api:"^2.2.0" --update-with-dependencies

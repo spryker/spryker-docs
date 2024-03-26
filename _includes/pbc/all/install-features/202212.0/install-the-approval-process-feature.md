@@ -18,7 +18,7 @@ To start feature integration, review and install the necessary features:
 | Checkout | {{page.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
 | Spryker Core | {{page.version}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
@@ -409,9 +409,9 @@ To start feature integration, review and install the necessary features:
 | Spryker Core | {{page.version}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 | Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies

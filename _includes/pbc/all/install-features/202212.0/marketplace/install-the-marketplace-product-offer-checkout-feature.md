@@ -17,9 +17,9 @@ Install the required features:
 | Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-offer: "^0.6.1" --update-with-dependencies

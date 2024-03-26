@@ -25,9 +25,9 @@ Install the required features:
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require "spryker/customers-rest-api":"^1.13.0" "spryker/auth-rest-api":"^2.12.0" "spryker/oauth":"^1.6.0" "spryker/oauth-revoke":"^1.0.0" "spryker/oauth-customer-connector:"^1.4.0" --update-with-dependencies

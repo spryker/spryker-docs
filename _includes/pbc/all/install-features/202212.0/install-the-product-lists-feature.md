@@ -12,9 +12,9 @@ Install the required features:
 | Product | {{page.version}}  |
 | Category Management | {{page.version}} |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-lists:"{{page.version}}" --update-with-dependencies

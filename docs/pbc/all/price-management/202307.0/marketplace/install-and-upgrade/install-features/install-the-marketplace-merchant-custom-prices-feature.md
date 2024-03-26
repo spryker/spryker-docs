@@ -25,9 +25,9 @@ Install the required features:
 | Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Install the Merchant Portal - Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.version}}" --with-dependencies

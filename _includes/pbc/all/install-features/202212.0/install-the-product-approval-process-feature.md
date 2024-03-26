@@ -20,7 +20,7 @@ Install the required features:
 
 ### 1) Install the required modules using Сomposer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-approval-process:"{{page.version}}" --update-with-dependencies

@@ -12,7 +12,7 @@ To start feature integration, overview, and install the necessary features:
 | Spryker Core | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

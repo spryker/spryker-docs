@@ -11,7 +11,7 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Order Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 
@@ -766,7 +766,7 @@ Overview and install the necessary features before beginning the integration ste
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

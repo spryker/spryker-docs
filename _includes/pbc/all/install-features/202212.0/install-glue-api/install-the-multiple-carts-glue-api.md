@@ -11,7 +11,7 @@ Install the required features:
 | Multiple Carts | {{page.version}} | Install the Multiple Carts feature |
 | Cart | {{page.version}} | Cart feature integration |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

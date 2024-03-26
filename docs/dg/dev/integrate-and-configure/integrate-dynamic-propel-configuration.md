@@ -29,7 +29,7 @@ Ensure that the related features are installed:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

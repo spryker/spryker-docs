@@ -11,7 +11,7 @@ To start feature integration, overview, and install the necessary features:
 | Product Options | {{page.version}} | Feature |
 | Spryker Core | {{page.version}} | [Feature API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

@@ -25,9 +25,9 @@ To start feature integration, integrate the required features and Glue APIs:
 | Merchants and Merchant Relations | {{site.version}}  | [Merchants and Merchant Relations feature integration](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchants-and-merchant-relations-feature.html) |
 | Spryker Core                    | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                        |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-relationship-api:"^0.1.0" --update-with-dependencies

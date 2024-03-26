@@ -13,7 +13,7 @@ Please overview and install the necessary features before beginning the integrat
 | Catalog | {{page.version}} |
 | Customer | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 

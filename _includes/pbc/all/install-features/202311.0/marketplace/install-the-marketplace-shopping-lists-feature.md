@@ -13,9 +13,9 @@ Install the required features:
 | Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html)  |
 | Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-shopping-lists:"{{page.version}}" --update-with-dependencies

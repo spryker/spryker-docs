@@ -12,7 +12,7 @@ Install the required features:
 | Product | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Content Item | {{page.version}} |  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

@@ -14,7 +14,7 @@ Install the required features:
 |Company Account|{{page.version}}|
 |Spryker Core|{{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 
@@ -565,7 +565,7 @@ Please review and install the necessary features before beginning the integratio
 |Multiple Carts|{{page.version}}|
 |Spryker Core|{{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

@@ -11,7 +11,7 @@ Install the required features:
 | Product Lists | {{page.version}} |
 | Merchant | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

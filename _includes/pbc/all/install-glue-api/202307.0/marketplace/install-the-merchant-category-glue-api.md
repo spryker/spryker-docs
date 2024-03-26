@@ -15,9 +15,9 @@ Install the required features:
 | Spryker Core   | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant Category | {{page.version}}  | [Install the Marketplace Merchant Category feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-category-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-categories-rest-api:"^1.0.0" --update-with-dependencies

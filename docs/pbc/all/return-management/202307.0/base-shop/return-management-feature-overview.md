@@ -112,7 +112,7 @@ The feature has the following functional constraints which are going to be resol
 
 To install the return management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies

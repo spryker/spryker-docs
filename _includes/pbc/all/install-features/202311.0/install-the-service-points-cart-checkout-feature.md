@@ -11,7 +11,7 @@ Install the required features:
 | Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
 | Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                                               |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 We offer an example of Click & Collect service point cart replacement strategies. To use them, install the following module:
 

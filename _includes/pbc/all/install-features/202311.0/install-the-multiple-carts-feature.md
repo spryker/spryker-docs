@@ -18,7 +18,7 @@ Install the required features:
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -474,7 +474,7 @@ Install the required features:
 | Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies

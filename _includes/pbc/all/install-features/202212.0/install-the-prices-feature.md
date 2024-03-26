@@ -17,7 +17,7 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 
@@ -229,7 +229,7 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core E-commerce | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

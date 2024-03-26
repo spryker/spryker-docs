@@ -15,7 +15,7 @@ To start feature integration, integrate the required features:
 | Product Offer Service Points Availability | {{page.version}} | [Install the Product Offer Service Points Availability feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-product-offer-service-points-availability-feature.html) |
 | Shipment                                  | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                                     |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-offer-shipment-availability: "{{page.version}}" --update-with-dependencies

@@ -12,7 +12,7 @@ Install the required features:
 | Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

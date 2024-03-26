@@ -16,7 +16,7 @@ Install the required features:
 | Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
@@ -442,7 +442,7 @@ Install the required features:
 | Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies

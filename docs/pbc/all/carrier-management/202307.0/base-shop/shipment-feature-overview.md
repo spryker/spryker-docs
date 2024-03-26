@@ -41,7 +41,7 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 ## Install Carrier Management
 
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies

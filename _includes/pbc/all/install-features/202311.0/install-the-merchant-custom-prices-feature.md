@@ -14,7 +14,7 @@ Install the required features:
 | Prices | {{page.version}} |
 | Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 Run the following command to install the required modules:
 
 ```bash

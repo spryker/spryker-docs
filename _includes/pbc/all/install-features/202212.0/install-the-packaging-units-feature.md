@@ -14,7 +14,7 @@ Install the required features:
 | Product | {{page.version}} |
 | Measurement Units | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -911,7 +911,7 @@ Install the required features:
 | Measurement Units | {{page.version}} |
 | Non-splittable Products | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 

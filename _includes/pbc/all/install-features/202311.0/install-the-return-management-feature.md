@@ -754,6 +754,20 @@ Make sure the order items that transit from status `shipped` to `waiting for ret
 
 {% endinfo_block %}
 
+### Update Back Office navigation
+
+```bash
+console navigation:build-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the **Sales > Returns** navigation item is displayed.
+
+{% endinfo_block %}
+
+
+
 ## Install feature frontend
 
 Follow the steps below to install the feature front end.
@@ -965,7 +979,7 @@ return.create_return.validation.items_error,Für dieses Set der Artikel kann die
 
 2. Import data:
 
-``bash
+```bash
 console data:import:glossary
 ```
 

@@ -104,5 +104,5 @@ Blackfire groups some actions, so after each round of optimization, you will see
   - Repeat.
 4. Check if your result is still good for future growth. Return to the previous step if needed.
 5. Share your experience:
-  - [Contribute to public documentation](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/contribute-to-the-documentation.html).
+  - [Contribute to public documentation](/docs/about/all/about-the-docs/contribute-to-the-docs/contribute-to-the-docs.html).
   - Share it with [Spryker Community](https://spryker.com/community/).

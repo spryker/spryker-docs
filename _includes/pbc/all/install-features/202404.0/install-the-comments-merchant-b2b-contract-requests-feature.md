@@ -6,16 +6,16 @@ Follow the steps below to install the Comments + Merchant B2B Contract Requests 
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |--------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Comments                       | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)                              |
 | Merchant B2B Contract Requests | {{page.version}} | [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/comment-merchant-relation-request-connector: "^1.0.0" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker/comment-merchant-relation-request-connector: "^1.0.0" -
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                                  | EXPECTED DIRECTORY                                         |
 |-----------------------------------------|------------------------------------------------------------|

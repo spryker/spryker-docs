@@ -67,7 +67,7 @@ Make sure that the following changes have been applied in the database:
 | spy_sales_order_invoice                | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                          | TYPE     | EVENT   | PATH                                                               |
 |---------------------------------------------------|----------|---------|--------------------------------------------------------------------|

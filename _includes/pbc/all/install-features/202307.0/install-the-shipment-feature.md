@@ -60,7 +60,7 @@ Make sure that the following changes have been applied by checking your database
 |---------------------------|-------|---------|
 | spy_shipment_method_store | table | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                                | Type   | Event   | Path                                                                  |
 |-----------------------------------------|--------|---------|-----------------------------------------------------------------------|

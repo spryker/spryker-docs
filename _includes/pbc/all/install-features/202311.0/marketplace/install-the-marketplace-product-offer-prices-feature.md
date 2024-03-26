@@ -78,7 +78,7 @@ Verify that the following changes have been implemented by checking your databas
 | spy_price_product_offer | table | created |
 | spy_product_concrete_product_offer_price_storage | table | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|

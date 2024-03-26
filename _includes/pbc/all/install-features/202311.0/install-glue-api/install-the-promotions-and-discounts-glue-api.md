@@ -36,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console propel:install

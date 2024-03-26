@@ -83,7 +83,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorage      | \Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\AbstractSpyProductOfferServiceStorage      |
 | \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorageQuery | \Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\AbstractSpyProductOfferServiceStorageQuery |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                  | TYPE  | EVENT   | PATH                                                                            |
 |-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|

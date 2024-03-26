@@ -88,7 +88,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ProductReviewSearch\Persistence\SpyProductReviewSearch                | \Spryker\Zed\ProductReviewSearch\Persistence\Propel\AbstractSpyProductReviewSearch                |
 | \Orm\Zed\ProductReviewSearch\Persistence\SpyProductReviewSearchQuery           | \Spryker\Zed\ProductReviewSearch\Persistence\Propel\AbstractSpyProductReviewSearchQuery           |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                       | TYPE  | EVENT   | PATH                                                                 |
 |--------------------------------|-------|---------|----------------------------------------------------------------------|

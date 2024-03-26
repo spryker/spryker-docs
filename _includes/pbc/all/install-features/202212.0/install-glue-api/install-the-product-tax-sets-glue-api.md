@@ -44,7 +44,7 @@ Make sure that the following changes have been applied by checking your database
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |

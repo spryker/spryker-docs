@@ -33,7 +33,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|

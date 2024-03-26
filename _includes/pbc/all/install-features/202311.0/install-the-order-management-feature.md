@@ -77,7 +77,7 @@ Make sure that the following changes have been applied in the database:
 | spy_sales_expense.uuid                 | column | created |
 | spy_sales_order_item_metadata.uuid     | column | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                          | TYPE     | EVENT   | PATH                                                                 |
 |---------------------------------------------------|----------|---------|----------------------------------------------------------------------|

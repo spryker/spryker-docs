@@ -104,7 +104,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_product_alternative_storage | table | created |
 | spy_product_replacement_for_storage | table | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |

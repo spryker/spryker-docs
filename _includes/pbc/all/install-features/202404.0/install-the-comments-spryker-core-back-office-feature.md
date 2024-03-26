@@ -1,21 +1,17 @@
 This document describes how to install the Comments + Spryker Core Back Office feature.
 
-## Install feature core
-
-Follow the steps below to install the Comments + Spryker Core Back Office feature.
-
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Comments                 | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)      |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/comment-user-connector: "^1.0.0" --update-with-dependencies
@@ -23,7 +19,7 @@ composer require spryker/comment-user-connector: "^1.0.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                         | EXPECTED DIRECTORY                               |
 |--------------------------------|--------------------------------------------------|
@@ -33,7 +29,7 @@ Make sure that the following modules were installed:
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -42,7 +38,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY     | TYPE   | EVENT   |
 |---------------------|--------|---------|
@@ -52,7 +48,7 @@ Make sure that the following changes by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer       | Type     | Event   | Path                                          |
 |----------------|----------|---------|-----------------------------------------------|
@@ -67,7 +63,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                    | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                     |
 |-------------------------------------------|-----------------------------------------------------------------------------------|---------------|---------------------------------------------------------------|
-| UserCommentAuthorValidationStrategyPlugin | Validates comment author when `CommentTransfer.fkUser` is provided.               |               | Spryker\Zed\CommentUserConnector\Communication\Plugin\Comment |
+| UserCommentAuthorValidationStrategyPlugin | Validates a comment author when `CommentTransfer.fkUser` is provided.               |               | Spryker\Zed\CommentUserConnector\Communication\Plugin\Comment |
 | UserCommentExpanderPlugin                 | Expands `CommentTransfer` with `UserTransfer` if `CommentTransfer.fkUser` is set. |               | Spryker\Zed\CommentUserConnector\Communication\Plugin\Comment |
 
 **src/Pyz/Zed/Comment/CommentDependencyProvider.php**
@@ -107,9 +103,11 @@ class CommentDependencyProvider extends SprykerCommentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Log in to Back Office.
-* Go to **Marketplace** > **Merchant Relations** and press **Edit** button on any merchant relation.
-* Write a comment and press **Save** button.
-* Make sure that you can see user's information under the saved comment.
+1. In the Back Office, go to **Marketplace** > **Merchant Relations**.
+2. Click **Edit** next to a merchant relation.
+3. Write a comment and click **Save**.
+    Make sure the user's information is displayed under the saved comment.
+
+
 
 {% endinfo_block %}

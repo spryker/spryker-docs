@@ -99,6 +99,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
                 "zone.js": "~0.14.4"
             },
             "devDependencies": {
+                "@angular-devkit/build-angular": "~17.3.2",
                 "@angular-builders/custom-webpack": "~17.0.1",
                 "@angular-eslint/eslint-plugin": "~17.3.0",
                 "@angular-eslint/eslint-plugin-template": "~17.3.0",
@@ -125,9 +126,6 @@ Before starting the migration, make sure that stylelint and css-loader were upda
                 "reflect-metadata": "~0.2.1",
                 "tslib": "~2.6.2",
                 "typescript": "~5.4.2",
-            },
-            "overrides": {
-                "webpack-dev-middleware": "6.1.2"
             }
         }
         ```

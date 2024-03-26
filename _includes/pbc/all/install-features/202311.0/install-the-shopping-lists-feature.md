@@ -27,7 +27,7 @@ composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -1021,7 +1021,7 @@ composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

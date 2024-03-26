@@ -35,7 +35,7 @@ composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.vers
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE     | EXPECTED DIRECTORY       |
 |------------------|------------------|

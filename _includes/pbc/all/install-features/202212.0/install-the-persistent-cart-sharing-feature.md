@@ -21,7 +21,7 @@ composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --u
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -72,7 +72,7 @@ composer require spryker-feature/persistent-cart-sharing: "{{page.version}}" --u
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

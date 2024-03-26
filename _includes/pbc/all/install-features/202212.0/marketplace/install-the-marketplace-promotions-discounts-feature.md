@@ -26,7 +26,7 @@ composer require spryker-feature/marketplace-promotions-discounts:"{{page.versio
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | - | - |

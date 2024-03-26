@@ -21,7 +21,7 @@ composer require spryker-feature/merchant-contracts: "{{page.version}}" --update
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

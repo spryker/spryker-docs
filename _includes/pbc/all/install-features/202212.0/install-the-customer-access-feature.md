@@ -20,7 +20,7 @@ composer require spryker-feature/customer-access:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

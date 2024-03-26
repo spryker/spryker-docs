@@ -27,7 +27,7 @@ composer require spryker/product-offer: "^0.6.1" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|

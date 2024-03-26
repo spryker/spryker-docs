@@ -19,7 +19,7 @@ composer require spryker-feature/comments: "{{page.version}}" --update-with-depe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -214,7 +214,7 @@ composer require spryker-feature/comments: "^201907.0" --update-with-dependencie
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

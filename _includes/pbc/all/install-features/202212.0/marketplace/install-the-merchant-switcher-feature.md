@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-switcher --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE         | EXPECTED DIRECTORY        |
 | --------------- | ------------------------ |
@@ -73,7 +73,7 @@ composer require spryker-shop/merchant-switcher-widget --update-with-dependencie
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | ----------- | -------------- |

@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-opening-hours
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
+Make sure the following modules have been installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
 
 {% endinfo_block %}
 

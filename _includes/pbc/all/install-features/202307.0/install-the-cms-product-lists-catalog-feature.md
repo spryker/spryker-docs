@@ -23,7 +23,7 @@ composer require spryker/customer-catalog:"^1.0.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

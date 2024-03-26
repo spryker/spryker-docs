@@ -27,7 +27,7 @@ composer require spryker-feature/prices: "^{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | NAME | VERSION |
 | --- | --- |
@@ -239,7 +239,7 @@ composer require spryker-feature/prices: "^{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

@@ -21,7 +21,7 @@ composer require spryker/product-options-rest-api"^1.0.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

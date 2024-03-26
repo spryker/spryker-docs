@@ -27,7 +27,7 @@ composer require spryker/navigations-rest-api:"^2.0.0" spryker/navigations-categ
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

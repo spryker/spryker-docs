@@ -6,16 +6,16 @@ Follow the steps below to install the Comments feature.
 
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                     |
 |-----------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+To install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker-feature/comments: "{{page.version}}" --update-with-depe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE            | EXPECTED DIRECTORY                 |
 |-------------------|------------------------------------|
@@ -38,8 +38,8 @@ Add the following configuration to your project:
 
 | CONFIGURATION                                                          | SPECIFICATION                                      | NAMESPACE          |
 |------------------------------------------------------------------------|----------------------------------------------------|--------------------|
-| CommentConfig::getAvailableCommentTags()                               | Used to allow saving comment tags to the database. | Pyz\Shared\Comment |
-| A regular expression (See below in `config/Shared/config_default.php`) | Used to close access for not logged customers.     | None               |
+| CommentConfig::getAvailableCommentTags()                               | Allows saving comment tags to the database. | Pyz\Shared\Comment |
+| See the regular expression in `config/Shared/config_default.php`. | Blocks access for customers that are not logged in.     | None               |
 
 **src/Pyz/Zed/Comment/CommentConfig.php**
 
@@ -67,7 +67,7 @@ class CommentConfig extends SprykerCommentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you add/remove comment tag (listed in config to comment is allowed.)
+Make sure that when you add or remove a comment tag (listed in config to comment is allowed.)
 
 {% endinfo_block %}
 

@@ -30,7 +30,7 @@ To do that, you need to create content items, insert them into CMS blocks, assig
 
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
+All the content used in this guide is shipped by default in our [B2B Demo Shop](/docs/about/all/b2b-suite.html) and [B2C Demo Shop](/docs/about/all/b2c-suite.html).
 
 {% endinfo_block %}
 

@@ -40,7 +40,7 @@ As a result, the transactions are displayed as follows:
 
 ## Integrate New Relic transactions grouping by queue names
 
-For instructions, see [Integrate New Relic transactions grouping by queue names](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-ram-aware-batch-processing).
+For instructions, see [Integrate New Relic transactions grouping by queue names](/docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html#integrate-new-relic-monitoring).
 
 ## Implementation details
 

@@ -10,9 +10,9 @@ Install the required features:
 |---|---|
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/customer-access:"{{page.version}}" --update-with-dependencies
@@ -20,7 +20,7 @@ composer require spryker-feature/customer-access:"{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -96,7 +96,7 @@ Adjust the schema definition so entity changes will trigger events.
 </database>
  ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -376,7 +376,7 @@ customer.access.cannot_see_price,Please login to see the price,en_US
 customer.access.cannot_see_price,Bitte melden Sie sich an um den Preis zu sehen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -384,6 +384,6 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}

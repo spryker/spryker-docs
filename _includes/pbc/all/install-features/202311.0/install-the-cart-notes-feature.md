@@ -15,7 +15,7 @@ To start feature integration, integrate the required feature:
 |------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/install-the-order-management-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cart-notes:"{{page.version}}" --update-with-dependencies

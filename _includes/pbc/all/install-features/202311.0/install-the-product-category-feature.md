@@ -16,7 +16,7 @@ Install the required features:
 | Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
 | Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)                         |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -669,7 +669,7 @@ Install the required features:
 | Product             | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                         |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies

@@ -17,9 +17,9 @@ Install the required features:
 | Mailing &amp; Notifications | {{page.version}} |
 | Promotions &amp; Discounts | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
@@ -1138,9 +1138,9 @@ Install the required features:
 | Cart | {{page.version}} |
 | Checkout | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies

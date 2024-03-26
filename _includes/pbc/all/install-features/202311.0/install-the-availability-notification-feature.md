@@ -18,7 +18,7 @@ Install the required features:
 | Product                   | {{site.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
 | Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
@@ -346,7 +346,7 @@ To start feature integration, integrate the required feature:
 | Product                   | {{site.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
 | Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies

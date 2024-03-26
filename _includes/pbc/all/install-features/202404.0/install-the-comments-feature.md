@@ -323,7 +323,7 @@ composer require spryker-feature/comments: "{{page.version}}" --update-with-depe
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                           |
 |------------------------|----------------------------------------------|
@@ -334,7 +334,7 @@ Make sure that the following modules were installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -373,7 +373,7 @@ comment_widget.tags.important,Important,en_US
 comment_widget.tags.important,Wichtig,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -381,11 +381,13 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 3) Enable controllers
+
+Enable the following controllers.
 
 #### Route List
 
@@ -421,13 +423,13 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the `CommentWidgetRouteProviderPlugin`, log in as a customer and open the link: `mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`<br>Make sure that the error flash message was shown.
+Log in as a customer and open `https://mysprykershop.com/comment/0adafdf4-cb26-477d-850d-b26412fbd382/tag/add?returnUrl=/cart`. Make sure that the error flash message is displayed.
 
 {% endinfo_block %}
 
 ### 4) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN              | SPECIFICATION      | PREREQUISITES | NAMESPACE                             |
 |---------------------|--------------------|---------------|---------------------------------------|
@@ -457,7 +459,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -465,7 +467,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widget was registered:
+Make sure that the following widget has been registered:
 
 | MODULE              | TEST                                                                                                                                                                                         |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

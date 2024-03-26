@@ -65,7 +65,7 @@ The Spryker ACP Apps are continuously enhanced and improved with new versions. T
 
 For each app you wish to use, ensure that you have the latest app-related SCOS modules installed. You can find this information in each app integration guide.
 
-### Dependency 2: Code chnages in SCCOS
+### Dependency 2: Code changes in SCCOS
 
 {% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 

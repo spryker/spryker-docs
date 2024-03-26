@@ -26,7 +26,7 @@ Make sure that the following modules have been installed:
 |`ProductsProductTaxSetsResourceRelationship`  | `vendor/spryker/products-product-tax-sets-resource-relationship` |
 </div></section>
 
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up database schema and transfer objects
 Run the following command to apply database changes and generate entity and transfer changes:
 
 ```bash

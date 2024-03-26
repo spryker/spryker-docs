@@ -126,7 +126,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-4. Run the following commands to apply database changes and generate entity and transfer changes:
+4. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install

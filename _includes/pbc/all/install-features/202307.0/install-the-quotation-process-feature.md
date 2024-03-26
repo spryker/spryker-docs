@@ -162,7 +162,7 @@ Make sure that `http://mysprykershop.com/quote-request` with not authenticated u
 
 ### 2) Set up the database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install

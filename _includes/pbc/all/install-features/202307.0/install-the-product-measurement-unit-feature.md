@@ -81,7 +81,7 @@ Adjust the schema definition so entity changes will trigger events.
  </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install

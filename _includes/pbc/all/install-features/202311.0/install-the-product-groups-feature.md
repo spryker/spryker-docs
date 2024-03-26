@@ -83,7 +83,7 @@ Make sure that the following modules have been installed:
 ```
 
 
-3. Run the following commands to apply database changes and generate entity and transfer changes:
+3. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install

@@ -501,7 +501,7 @@ Also check queue `sync.storage.store` in the RabbitMQ.
 </database>
 ```
 
-2. Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install

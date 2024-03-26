@@ -33,7 +33,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                              | Type     | Event   | Path                                                          |
 |---------------------------------------|----------|---------|---------------------------------------------------------------|
@@ -56,8 +56,8 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | SPECIFICATION                                                                          | PREREQUISITES | NAMESPACE                                                                                        |
 |---------------------------------------------------------|----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------------|
-| CommentThreadMerchantRelationRequestExpanderPlugin      | Populates `MerchantRelationRequestTransfer.commentThread` with related comment thread. |               | Spryker\Zed\CommentMerchantRelationRequestConnector\Communication\Plugin\MerchantRelationRequest |
-| CopyCommentThreadToMerchantRelationshipPostCreatePlugin | Copies comment thread from merchant relation request to merchant relationship.         |               | Spryker\Zed\CommentMerchantRelationRequestConnector\Communication\Plugin\MerchantRelationship    |
+| CommentThreadMerchantRelationRequestExpanderPlugin      | Populates `MerchantRelationRequestTransfer.commentThread` with a related comment thread. |               | Spryker\Zed\CommentMerchantRelationRequestConnector\Communication\Plugin\MerchantRelationRequest |
+| CopyCommentThreadToMerchantRelationshipPostCreatePlugin | Copies a comment thread from a merchant relation request to a merchant relationship.         |               | Spryker\Zed\CommentMerchantRelationRequestConnector\Communication\Plugin\MerchantRelationship    |
 
 **src/Pyz/Zed/MerchantRelationRequest/MerchantRelationRequestDependencyProvider.php**
 
@@ -85,9 +85,9 @@ class MerchantRelationRequestDependencyProvider extends SprykerMerchantRelationR
 
 {% info_block warningBox "Verification" %}
 
-* Log in to the Merchant Portal.
-* Go to **B2B Contracts** > **Merchant Relation Requests** and select any merchant relation request.
-* Make sure you can see, add, edit and delete comments.
+1. In the Merchant Portal, go to **B2B Contracts** > **Merchant Relation Requests**
+2. Select a merchant relation request.
+  Make sure you can see, add, edit and delete comments.
 
 {% endinfo_block %}
 
@@ -117,10 +117,11 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 
 {% info_block warningBox "Verification" %}
 
-* Log in to the Merchant Portal.
-* Go to **B2B Contracts** > **Merchant Relation Requests** and select pending merchant relation request.
-* Add some comments and then approve merchant relation request.
-* Go to **B2B Contracts** > **Merchant Relations** and select newly created merchant relation.
-* Make sure you can see the comments copied from the merchant relation request.
+1. In the Merchant Portal, go to **B2B Contracts** > **Merchant Relation Requests**.
+2. Select a pending merchant relation request.
+3. Add some comments.
+4. Approve the merchant relation request.
+5. Go to **B2B Contracts** > **Merchant Relations** and select the merchant relation you've created.
+    Make sure you can see the comments copied from the merchant relation request.
 
 {% endinfo_block %}

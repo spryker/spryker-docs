@@ -314,9 +314,9 @@ Install the required features:
 | Spryker Core                | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies

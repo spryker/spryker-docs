@@ -1,21 +1,17 @@
 This document describes how to install the Comments + Merchant B2B Contracts feature.
 
-## Install feature core
-
-Follow the steps below to install the Comments + Merchant B2B Contracts feature.
-
 ## Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME                                | VERSION          | INSTALLATION GUIDE                                                                                                                                                             |
 |-------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Comments                            | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)              |
 | Merchant B2B Contracts              | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/comment-merchant-relationship-connector: "^1.0.0" --update-with-dependencies
@@ -23,7 +19,7 @@ composer require spryker/comment-merchant-relationship-connector: "^1.0.0" --upd
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                               | EXPECTED DIRECTORY                                     |
 |--------------------------------------|--------------------------------------------------------|
@@ -31,9 +27,9 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-### 2) Set up transfer objects
+## 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -41,7 +37,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                           | Type     | Event   | Path                                                       |
 |------------------------------------|----------|---------|------------------------------------------------------------|
@@ -49,13 +45,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+## 3) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                          | SPECIFICATION                                                                       | PREREQUISITES | NAMESPACE                                                                                  |
 |-------------------------------------------------|-------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------------|
-| CommentThreadMerchantRelationshipExpanderPlugin | Populates `MerchantRelationshipTransfer.commentThread` with related comment thread. |               | Spryker\Zed\CommentMerchantRelationshipConnector\Communication\Plugin\MerchantRelationship |
+| CommentThreadMerchantRelationshipExpanderPlugin | Populates `MerchantRelationshipTransfer.commentThread` with a related comment thread. |               | Spryker\Zed\CommentMerchantRelationshipConnector\Communication\Plugin\MerchantRelationship |
 
 **src/Pyz/Zed/MerchantRelationship/MerchantRelationshipDependencyProvider.php**
 
@@ -83,17 +79,12 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 
 {% info_block warningBox "Verification" %}
 
-**Back Office**
+1. In the Back Office, go to **Marketplace** > **Merchant Relations**
+2. Click **Edit** next to any merchant relation.
+    Make sure you can see, add, edit, and delete comments.
 
-* Log in to the Back Office.
-* Go to **Marketplace** > **Merchant Relations** and press **Edit** button on any merchant relation.
-* Make sure you can see, add, edit and delete comments.
-
-**Merchant Portal**
-
-* Log in to the Merchant Portal.
-* Go to **B2B Contracts** > **Merchant Relations** and select any merchant relation.
-* Make sure you can see, add, edit and delete comments.
+1. In the Merchant Portal, go to **B2B Contracts** > **Merchant Relations**
+2. Select a merchant relation.
+    Make sure you can see, add, edit, and delete comments.
 
 {% endinfo_block %}
-

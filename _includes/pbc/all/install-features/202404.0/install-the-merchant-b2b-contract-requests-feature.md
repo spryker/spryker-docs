@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-contract-requests: "{{page.version}}" 
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                           | EXPECTED DIRECTORY                                 |
 |----------------------------------|----------------------------------------------------|
@@ -59,7 +59,7 @@ $config[MerchantRelationRequestConstants::BASE_URL_YVES] = sprintf(
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -68,7 +68,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY                                          | TYPE   | EVENT   |
 |----------------------------------------------------------|--------|---------|
@@ -103,9 +103,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 4) Add translations
 
-Add translations as follows:
-
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -122,7 +120,7 @@ merchant_relation_request.mail.trans.merchant_relation_request_status_change.dec
 merchant_relation_request.mail.trans.merchant_relation_request_status_change.decision_note_title,Anmerkung vom Händler,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -130,13 +128,13 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
 ### 5) Import data
 
-1. Adjust the `merchant.csv` file with new column `is_open_for_relation_request`:
+1. Add the `is_open_for_relation_request` column to the `merchant.csv` file:
 
 **data/import/common/common/merchant.csv**
 
@@ -153,7 +151,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 
 | COLUMN                       | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                |
 |------------------------------|----------|-----------|--------------|-------------------------------------------------|
-| is_open_for_relation_request | optional | boolean   | 1            | Determines merchant relation request allowance. |
+| is_open_for_relation_request | optional | boolean   | 1            | Determines a merchant relation request allowance. |
 
 2. Import data:
 
@@ -206,7 +204,7 @@ class CompanyBusinessUnitDependencyProvider extends SprykerCompanyBusinessUnitDe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a Company Business Unit is being deleted, all related Merchant Relation Requests are deleted as well.
+Make sure that, when a company business unit is deleted, all related merchant relation requests are deleted too.
 
 {% endinfo_block %}
 
@@ -236,7 +234,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a Company User is being deleted, all Merchant Relation Requests initiated by this user are deleted as well.
+Make sure that, when a company user is deleted, all merchant relation requests initiated by the user are deleted too.
 
 {% endinfo_block %}
 
@@ -291,7 +289,7 @@ class MerchantRelationRequestDependencyProvider extends SprykerMerchantRelationR
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you change the status of the merchant relationship request, the notification email is sent to email address of company user who initiated the request.
+Make sure that, when you change the status of a merchant relationship request, the notification email is sent to the email address of the company user who initiated the request.
 
 {% endinfo_block %}
 
@@ -321,8 +319,10 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Log in as a Company Admin and navigate to `http://www.mysprykershop.com/en/company/company-role`.
-Press **Edit** button for some role and make sure that you are able to assign **Send Merchant Relation Request** permission
+1. Log in as a company admin.
+2. Go to `https://www.mysprykershop.com/en/company/company-role.
+3. Click **Edit** next to a role.
+    Make sure you can assign the **Send Merchant Relation Request** permission.
 
 {% endinfo_block %}
 
@@ -352,8 +352,8 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Log in to Back Office and navigate to `Marketplace` > `Merchants`.
-Press **Edit** button for some merchant or press **Create Merchant** button and make sure that you see **Allow merchant relation requests** checkbox in the form.
+1. In the Back Office, go to **Marketplace** > **Merchants**.
+2. Press **Edit** button for some merchant or press **Create Merchant** button and make sure that you see **Allow merchant relation requests** checkbox in the form.
 
 {% endinfo_block %}
 

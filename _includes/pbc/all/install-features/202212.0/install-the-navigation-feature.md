@@ -25,7 +25,7 @@ To start the feature integration, review and install the necessary features:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/navigation:"{{page.version}}" --update-with-dependencies
@@ -217,7 +217,7 @@ To start the feature integration, review, and install the necessary features:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/navigation:"{{page.version}}" --update-with-dependencies

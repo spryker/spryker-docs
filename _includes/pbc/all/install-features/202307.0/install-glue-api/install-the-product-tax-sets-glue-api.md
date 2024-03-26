@@ -11,7 +11,7 @@ Install the required features:
 | Tax | 201903.0 | |
 
 ### 1) Install the required modules
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-tax-sets-rest-api:"^1.0.6" spryker/products-product-tax-sets-resource-relationship:"^1.0.0" --update-with-dependencies

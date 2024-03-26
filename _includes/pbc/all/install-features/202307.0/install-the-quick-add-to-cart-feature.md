@@ -14,7 +14,7 @@ To start the feature integration, overview and install the necessary features:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
@@ -138,7 +138,7 @@ To start feature integration, review and install the necessary features:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies

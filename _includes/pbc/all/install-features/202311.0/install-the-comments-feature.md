@@ -11,7 +11,7 @@ Install the required features:
 | Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
@@ -207,7 +207,7 @@ Please overview and install the necessary features before beginning the integrat
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "^201907.0" --update-with-dependencies

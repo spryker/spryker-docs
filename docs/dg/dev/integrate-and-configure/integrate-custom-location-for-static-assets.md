@@ -30,7 +30,7 @@ To start the integration, overview and install the necessary feature:
 
 ### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies

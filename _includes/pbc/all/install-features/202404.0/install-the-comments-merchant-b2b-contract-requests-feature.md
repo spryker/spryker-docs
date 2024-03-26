@@ -2,7 +2,7 @@ This document describes how to install the Comments + Merchant B2B Contract Requ
 
 ## Install feature core
 
-Follow the steps below to install the Comments + Merchant B2B Contract Requests feature.
+Follow the steps below to install the Comments + Merchant B2B Contract Requests feature core.
 
 ## Prerequisites
 
@@ -124,4 +124,3 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 * Make sure you can see the comments copied from the merchant relation request.
 
 {% endinfo_block %}
-

@@ -161,7 +161,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-5. In in `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, add or updated the OMS config:
+5. In `src/Pyz/Zed/Oms/OmsDependencyProvider.php`, add or update the OMS config:
 
 
 ```php
@@ -189,6 +189,30 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
         });
 
         return $container;
+    }
+
+```
+
+6. In `src/Pyz/Zed/Payment/PaymentDependencyProvider.php`, add or update the following plugins:
+
+
+```php
+// ...
+
+use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAuthorizeRequestExpanderPlugin;
+
+
+    // ...
+
+    /**
+     * @return array<int, \Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentAuthorizeRequestExpanderPluginInterface>
+     */
+    protected function getPaymentAuthorizeRequestExpanderPlugins(): array
+    {
+        return [
+            //...
+            new AccessTokenPaymentAuthorizeRequestExpanderPlugin(),
+        ];
     }
 
 ```

@@ -50,4 +50,4 @@ The Stripe App has limited or no support for the following features:
 
 ## Next step
 
-[Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-the-stripe-app-prerequisites.html)
+[Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)

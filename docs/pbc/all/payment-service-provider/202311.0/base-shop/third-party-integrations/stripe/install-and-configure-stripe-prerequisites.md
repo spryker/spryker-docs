@@ -195,4 +195,4 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
 
 ## Next step
 
-[Configure Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html)
+[Connect and configure Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html)

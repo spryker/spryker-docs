@@ -18,7 +18,7 @@ Install the required features:
 | Marketplace Merchant | {{page.version}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Acl                  | {{page.version}}  | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
@@ -763,7 +763,7 @@ Spryker requirements: If you want to integrate the builder, update the following
 | Gui | >= 3.30.2 |
 | Product Relation | >= 2.4.3  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^2.1.0" --update-with-dependencies

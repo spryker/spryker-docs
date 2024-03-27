@@ -24,9 +24,9 @@ To start the integration of the feature, overview and install the necessary feat
 | Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html)  |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide one or more console commands with the exact, latest version numbers of all required modules. If the Composer command contains modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/documentation-generator-api:"^1.0.0" spryker/documentation-generator-open-api:"^1.0.0" --update-with-dependencies

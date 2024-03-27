@@ -811,6 +811,8 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to Angular 17
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
       - title: Upgrade to PHP 8.1
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
       - title: Upgrade to Symfony 5
@@ -819,6 +821,8 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
       - title: Upgrade to Webpack v5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+      - title: Upgrade to Stylelint 16 and css-loader 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
       - title: Upgrade Node.js to v18 and npm to v9
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
       - title: Migrate from TSLint to ESLint

@@ -304,7 +304,7 @@ class MerchantRelationshipDependencyProvider extends SprykerMerchantRelationship
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you delete a merchant relationship, the notification email is sent to owner company business unit email address.
+Make sure that, when you delete a merchant relationship, a notification email is sent to the email address of the company business unit's owner.
 
 {% endinfo_block %}
 
@@ -342,13 +342,13 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the Back Office. Make sure there is the **Merchant Relations** navigation menu item under the **Marketplace** menu item.
+Log into the Back Office. Make sure there is a **Marketplace**>**Merchant Relations** navigation menu item.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
-Follow these steps to install feature frontend
+Take the following steps to install the feature frontend.
 
 ### Prerequisites
 

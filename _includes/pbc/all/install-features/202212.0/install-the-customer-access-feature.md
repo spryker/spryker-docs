@@ -359,7 +359,7 @@ Make sure that everything works fine (checks should be done for not logged-in cu
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|

@@ -690,7 +690,7 @@ Follow these steps to install feature frontend
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

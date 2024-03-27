@@ -2,6 +2,8 @@ This document describes how to install the [Merchant B2B Contracts](docs/pbc/all
 
 ## Install feature core
 
+Take the following steps to install the feature core.
+
 ### Prerequisites
 
 Install the required features:
@@ -13,9 +15,9 @@ Install the required features:
 | Merchant                  | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
 | Spryker Core              | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-contracts: "{{page.version}}" --update-with-dependencies
@@ -23,7 +25,7 @@ composer require spryker-feature/merchant-contracts: "{{page.version}}" --update
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE                         | EXPECTED DIRECTORY                               |
 |--------------------------------|--------------------------------------------------|
@@ -36,11 +38,9 @@ Make sure that the following modules were installed:
 
 ### 2) Set up the configuration
 
-Add the following configuration:
-
 | CONFIGURATION                                | SPECIFICATION                                        | NAMESPACE                            |
 |----------------------------------------------|------------------------------------------------------|--------------------------------------|
-| MerchantRelationshipConstants::BASE_URL_YVES | Defines base URL for Yves including scheme and port. | Spryker\Shared\MerchantRelationship  |
+| MerchantRelationshipConstants::BASE_URL_YVES | Defines the base URL for Yves including scheme and port. | Spryker\Shared\MerchantRelationship  |
 
 **config/Shared/config_default.php**
 
@@ -59,7 +59,7 @@ $config[MerchantRelationshipConstants::BASE_URL_YVES] = sprintf(
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -68,7 +68,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                                    | TYPE  |
 |----------------------------------------------------|-------|
@@ -79,7 +79,7 @@ Make sure that the following changes by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                                      | Type   | Event   | Path                                                                                |
 |-----------------------------------------------|--------|---------|-------------------------------------------------------------------------------------|
@@ -101,9 +101,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 4) Add translations
 
-Add translations as follows:
-
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -118,7 +116,7 @@ merchant_relationship.mail.trans.merchant_relationship_delete.link,Contact merch
 merchant_relationship.mail.trans.merchant_relationship_delete.link,Händler kontaktieren,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -126,17 +124,17 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
 ### 5) Import data
 
+Import the following data.
+
 #### Import merchant relationships
 
-The following imported entities will be used as merchant relationships in Spryker OS.
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare data according to your requirements using our demo data:
 
 **data/import/common/common/merchant_relationship.csv**
 
@@ -168,12 +166,12 @@ mr-011,restrictions-merchant,Sales,Sales;Sales-under-400
 
 | COLUMN                              | REQUIRED | DATA TYPE | DATA EXAMPLE                              | DATA EXPLANATION                                                                                                |
 |-------------------------------------|----------|-----------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| merchant_relation_key               | optional | string    | mr-002                                    | A reference used for the merchant relationship data import.                                                     |
-| merchant_key                        | ✓        | string    | kudu-merchant-1                           | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |
-| company_business_unit_owner_key     | ✓        | string    | test-business-unit-1                      | A reference used to define a Company Business Unit of the contract (relationship) between it and a Merchant.    |
-| company_business_unit_assignee_keys | optional | string    | test-business-unit-1;test-business-unit-2 | A reference to the assigned business units, on which this contract is applied.                                  |
+| merchant_relation_key               |          | String    | mr-002                                    | A reference used for the merchant relationship data import.                                                     |
+| merchant_key                        | ✓        | String    | kudu-merchant-1                           | A reference used to define the merchant of the contract (relationship) between him and the company business unit. |
+| company_business_unit_owner_key     | ✓        | String    | test-business-unit-1                      | A reference used to define the company business unit of the contract (relationship) between it and a merchant.    |
+| company_business_unit_assignee_keys |          | String    | test-business-unit-1;test-business-unit-2 | A reference to the assigned business units this contract is applied to.                                  |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN                               | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                       |
 |--------------------------------------|-------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -203,7 +201,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import merchant-relationship
@@ -211,7 +209,7 @@ console data:import merchant-relationship
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_merchant_relationship` table in the database.
+Make sure the configured data has been added to the `spy_merchant_relationship` table.
 
 {% endinfo_block %}
 
@@ -221,9 +219,9 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                              | SPECIFICATION                                                                                          | PREREQUISITES                                                                                                                   | NAMESPACE                                                                  |
 |---------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------|
-| MerchantRelationshipHydratePlugin                                   | Expands company user transfers, which has a company business unit with the merchant relationship data. | Expects, that company users have an assigned company business unit, which will be expanded with the merchant relationship data. | Spryker\Zed\MerchantRelationship\Communication\Plugin\CompanyUser          |
-| MerchantRelationshipDeleteMailTypeBuilderPlugin                     | Builds the `MailTransfer` with data for merchant relationship delete mail.                             |                                                                                                                                 | Spryker\Zed\MerchantRelationship\Communication\Plugin\Mail                 |
-| CompanyBusinessUnitNotificationMerchantRelationshipPostDeletePlugin | Sends a notification email about deleted merchant relationships to company business units.             |                                                                                                                                 | Spryker\Zed\MerchantRelationship\Communication\Plugin\MerchantRelationship |
+| MerchantRelationshipHydratePlugin                                   | Expands that company user transfers that have a company business unit with the merchant relationship data. | Expects company users to have an assigned company business unit, which will be expanded with the merchant relationship data. | Spryker\Zed\MerchantRelationship\Communication\Plugin\CompanyUser          |
+| MerchantRelationshipDeleteMailTypeBuilderPlugin                     | Builds the `MailTransfer` with the data for the merchant relationship delete email.                             |                                                                                                                                 | Spryker\Zed\MerchantRelationship\Communication\Plugin\Mail                 |
+| CompanyBusinessUnitNotificationMerchantRelationshipPostDeletePlugin | Sends notification emails about deleted merchant relationships to company business units.             |                                                                                                                                 | Spryker\Zed\MerchantRelationship\Communication\Plugin\MerchantRelationship |
 
 **src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php**
 
@@ -251,7 +249,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a Merchant Relationship is being created, `CompanyBusinessUnit.merchantRelationships` property of assigned business units contains merchant relationship data, when logged in as a company user of the assigned business unit.
+Make sure that, when a merchant relationship is being created, the `CompanyBusinessUnit.merchantRelationships` property of assigned business units contains merchant relationship data, when logged in as a company user of the assigned business unit.
 
 {% endinfo_block %}
 
@@ -362,7 +360,7 @@ Overview and install the necessary features before beginning the integration ste
 | Merchant        | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                             |
 | Spryker Core    | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Install the required modules:
 
@@ -442,7 +440,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -522,7 +520,7 @@ Verify the following widgets have been registered by adding the respective code 
 | MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 | MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
-* Make sure that you can see links to `Merchant Relations` detail pages. 
+* Make sure that you can see links to `Merchant Relations` detail pages.
 * Make sure that you can see `Merchant Relations` menu item.
 
 {% endinfo_block %}

@@ -17,7 +17,7 @@ composer require spryker/merchant-relationship-product-lists-rest-api:"^0.1.0" -
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE                                  | EXPECTED DIRECTORY                                          |
 |-----------------------------------------|-------------------------------------------------------------|

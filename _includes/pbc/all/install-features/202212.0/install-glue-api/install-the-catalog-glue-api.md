@@ -24,7 +24,7 @@ composer require spryker/catalog-search-rest-api:"^2.1.2" spryker/catalog-search
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

@@ -47,7 +47,7 @@ composer require spryker-feature/measurement-units:"{{page.version}}" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -926,7 +926,7 @@ composer require spryker-feature/measurement-units: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

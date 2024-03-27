@@ -259,7 +259,7 @@ Follow the steps below to install Product group feature front end.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

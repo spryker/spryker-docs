@@ -46,7 +46,7 @@ composer require spryker-feature/measurement-units:"{{page.version}}" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -113,7 +113,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -925,7 +925,7 @@ composer require spryker-feature/measurement-units: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

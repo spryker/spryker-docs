@@ -321,7 +321,7 @@ console data:import:category-template
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data is added to the `spy_category_template` table.
+Make sure that, in the database, the configured data has been added to the `spy_category_template` table.
 
 {% endinfo_block %}
 

@@ -105,7 +105,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -359,7 +359,7 @@ Make sure that everything works fine (checks should be done for not logged-in cu
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 |---|---|

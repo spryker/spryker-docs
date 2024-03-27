@@ -324,7 +324,7 @@ Import data:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data is added to the `spy_price_product_merchant_relationship` table.
+Make sure that, in the database, the configured data has been added to the `spy_price_product_merchant_relationship` table.
 
 {% endinfo_block %}
 

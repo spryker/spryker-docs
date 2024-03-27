@@ -14,9 +14,9 @@ Overview and install the necessary features.
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
@@ -1232,9 +1232,9 @@ Overview and install the following features.
 | Category | {{page.version}} |
 | Spryker Core | {{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies

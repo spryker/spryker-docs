@@ -27,9 +27,9 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Tax | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
@@ -51,7 +51,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -527,9 +527,9 @@ Overview and install the necessary features before beginning the integration ste
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies

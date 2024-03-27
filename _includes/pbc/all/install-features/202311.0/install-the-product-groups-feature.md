@@ -13,9 +13,9 @@ Install the required features:
 | Product | {{page.version}} |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
@@ -83,7 +83,7 @@ Make sure that the following modules have been installed:
 ```
 
 
-3. Run the following commands to apply database changes and generate entity and transfer changes:
+3. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -267,9 +267,9 @@ Overview and install the necessary features before beginning the integration ste
 | Spryker Core | {{page.version}} |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies

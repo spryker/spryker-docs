@@ -277,7 +277,7 @@ Follow the steps below to install the Product feature frontend.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NANE | VERSION | INSTALLATION GUIDE|
 | --- | --- | --- |

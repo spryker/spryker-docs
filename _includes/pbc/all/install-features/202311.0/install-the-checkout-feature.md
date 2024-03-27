@@ -521,7 +521,7 @@ Follow the steps below to install the Checkout feature front end.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |

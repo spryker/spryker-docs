@@ -17,7 +17,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Install the required modules using Composer
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-contract-requests: "{{page.version}}" --update-with-dependencies
@@ -151,7 +151,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 
 | COLUMN                       | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                |
 |------------------------------|----------|-----------|--------------|-------------------------------------------------|
-| is_open_for_relation_request | optional | boolean   | 1            | Determines a merchant relation request allowance. |
+| is_open_for_relation_request |  | boolean   | 1            | Defines a merchant relation request allowance. |
 
 2. Import data:
 
@@ -171,12 +171,12 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                         | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                        |
 |--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------|
-| MerchantRelationRequestCompanyBusinessUnitPreDeletePlugin                      | Deletes merchant relation request entities and related merchant relation request to company business unit entities when company business unit is deleted. |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyBusinessUnit     |
-| MerchantRelationRequestCompanyUserPreDeletePlugin                              | Deletes merchant relation request entities and related merchant relation request to company business unit entities when compny user is deleted.           |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyUser             |
-| MerchantRelationRequestStatusChangeMailTypeBuilderPlugin                       | Builds the `MailTransfer` with data for merchant relation request status change mail.                                                                     |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\Mail                    |
-| StatusChangeCompanyUserNotificationMerchantRelationshipRequestPostUpdatePlugin | Sends a notification to the company user who initiated the request to the merchant that the request status has been changed.                              |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\MerchantRelationRequest |
-| CreateMerchantRelationRequestPermissionPlugin                                  | Checks if the customer is allowed to create merchant relation requests.                                                                                   |               | Spryker\Client\MerchantRelationRequest\Plugin\Permission                         |
-| IsOpenForRelationRequestMerchantFormExpanderPlugin                             | Expands `MerchantCreateForm` with the field that determines merchant relation request allowance.                                                          |               | Spryker\Zed\MerchantRelationRequestGui\Communication\Plugin\MerchantGui          |
+| MerchantRelationRequestCompanyBusinessUnitPreDeletePlugin                      | When a company business unit is deleted, deletes merchant relation request entities and the related merchant relation request to company business unit entities.  |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyBusinessUnit     |
+| MerchantRelationRequestCompanyUserPreDeletePlugin                              | When a company user is deleted, deletes merchant relation request entities and the related merchant relation request to company business unit entities.            |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\CompanyUser             |
+| MerchantRelationRequestStatusChangeMailTypeBuilderPlugin                       | Builds `MailTransfer` with the data for the merchant relation request status change email.     |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\Mail                    |
+| StatusChangeCompanyUserNotificationMerchantRelationshipRequestPostUpdatePlugin | Sends a status change notification email to the company user who initiated the request to the merchant.                              |               | Spryker\Zed\MerchantRelationRequest\Communication\Plugin\MerchantRelationRequest |
+| CreateMerchantRelationRequestPermissionPlugin                                  | Checks if a customer is allowed to create merchant relation requests.                                                                                   |               | Spryker\Client\MerchantRelationRequest\Plugin\Permission                         |
+| IsOpenForRelationRequestMerchantFormExpanderPlugin                             | Expands `MerchantCreateForm` with the field that defines the merchant relation request allowance.              |               | Spryker\Zed\MerchantRelationRequestGui\Communication\Plugin\MerchantGui          |
 
 **src/Pyz/Zed/CompanyBusinessUnit/CompanyBusinessUnitDependencyProvider.php**
 

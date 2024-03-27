@@ -352,7 +352,7 @@ Take the following steps to install the feature frontend.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                                                                             |
 |-----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -362,7 +362,7 @@ Overview and install the necessary features before beginning the integration ste
 
 ### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-contracts: "{{page.version}}" --update-with-dependencies
@@ -370,7 +370,7 @@ composer require spryker-feature/merchant-contracts: "{{page.version}}" --update
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE                     | EXPECTED DIRECTORY                               |
 |----------------------------|--------------------------------------------------|
@@ -381,9 +381,10 @@ Make sure that the following modules are installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+<details>
+  <summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 merchant_relationship_page.table.header.merchant,Merchant,en_US
@@ -432,7 +433,9 @@ merchant_relationship_page.merchant_relationship.reset_all,Reset All,en_US
 merchant_relationship_page.merchant_relationship.reset_all,Alles zurücksetzen,de_DE
 ```
 
-Import data:
+</details>
+
+2 Import data:
 
 ```bash
 console data:import glossary
@@ -483,7 +486,7 @@ To enable widgets, register the following plugins:
 | PLUGIN                             | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                          |
 |------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------|
 | MerchantRelationshipLinkListWidget | Adds links to `Merchant Relations` detail pages.           |               | SprykerShop\Yves\MerchantRelationshipWidget\Widget |
-| MerchantRelationshipMenuItemWidget | Adds `Merchant Relations` item to company navigation menu. |               | SprykerShop\Yves\MerchantRelationshipWidget\Widget |
+| MerchantRelationshipMenuItemWidget | Adds the `Merchant Relations` item to the company navigation menu. |               | SprykerShop\Yves\MerchantRelationshipWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

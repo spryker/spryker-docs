@@ -67,7 +67,11 @@ class CommentConfig extends SprykerCommentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you add or remove a comment tag (listed in config to comment is allowed.)
+The comments feature provides a capabilities to extend the list of available comment tags. 
+The comment tags are used to categorize comments and make them easier to find.
+You can add or remove comment tags by changing the `getAvailableCommentTags()` method in the `CommentConfig` class.
+After extending the list of available comment tags, you can use them in the Storefront on the cart page.
+New comment tags will be available in the dropdown list on the cart page.
 
 {% endinfo_block %}
 
@@ -472,5 +476,12 @@ Make sure that the following widget has been registered:
 | MODULE              | TEST                                                                                                                                                                                         |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CommentThreadWidget | You can check availability in twig `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
+
+The comment threads support several entities:
+- Cart 
+- Order
+
+Ensure that comments added to the cart page are displayed in the comment section.
+Also, the comment thread has to be displayed on the customer's order details page after successful checkout.
 
 {% endinfo_block %}

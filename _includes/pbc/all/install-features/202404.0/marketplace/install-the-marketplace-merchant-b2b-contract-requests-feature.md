@@ -105,7 +105,7 @@ console setup:init-db
 
 ## 3) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -113,7 +113,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                                       | Type   | Event   | Path                                                                                 |
 |------------------------------------------------|--------|---------|--------------------------------------------------------------------------------------|
@@ -128,10 +128,10 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                         | SPECIFICATION                                                                                                | PREREQUISITES | NAMESPACE                                                                                                       |
 |--------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------------------------------|
-| IsOpenForRelationRequestOnlineProfileMerchantProfileFormExpanderPlugin         | Expands OnlineProfileMerchantProfileForm with the field that determines merchant relation request allowance. |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantProfileMerchantPortalGui      |
-| MerchantNotificationOfMerchantRelationRequestCreationMailTypeBuilderPlugin     | Builds the `MailTransfer` with data for merchant notification mail.                                          |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\Mail                                  |
-| MerchantNotificationMerchantRelationRequestPostCreatePlugin                    | Sends notification to merchant after merchant relation request is created.                                   |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationRequest               |
-| MerchantRelationRequestMerchantRelationshipMerchantDashboardCardExpanderPlugin | Expands provided `MerchantDashboardCardTransfer` with Merchant relation request data.                        |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationshipMerchantPortalGui |
+| IsOpenForRelationRequestOnlineProfileMerchantProfileFormExpanderPlugin         | Expands `OnlineProfileMerchantProfileForm` with the field that defines the merchant relation request allowance. |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantProfileMerchantPortalGui      |
+| MerchantNotificationOfMerchantRelationRequestCreationMailTypeBuilderPlugin     | Builds `MailTransfer` with the data for the  merchant notification mail.                                          |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\Mail                                  |
+| MerchantNotificationMerchantRelationRequestPostCreatePlugin                    | After a merchant relation request is created, sends a notification to the merchant.                                   |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationRequest               |
+| MerchantRelationRequestMerchantRelationshipMerchantDashboardCardExpanderPlugin | Expands the provided `MerchantDashboardCardTransfer` with merchant relation request data.                        |               | Spryker\Zed\MerchantRelationRequestMerchantPortalGui\Communication\Plugin\MerchantRelationshipMerchantPortalGui |
 
 **src/Pyz/Zed/MerchantProfileMerchantPortalGui/MerchantProfileMerchantPortalGuiDependencyProvider.php**
 
@@ -159,8 +159,9 @@ class MerchantProfileMerchantPortalGuiDependencyProvider extends SprykerMerchant
 
 {% info_block warningBox "Verification" %}
 
-In the Merchant Portal, go to **Merchant Profile**.
-On the **Profile** page, go to **Online Profile** tab and make sure you can see the `Allow merchant relation requests` checkbox.
+1. In the Merchant Portal, go to **Merchant Profile**.
+2. On the **Profile** page, click the **Online Profile** tab.
+  Make sure the **Allow merchant relation requests** checkbox is displayed.
 
 {% endinfo_block %}
 
@@ -190,7 +191,7 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends SprykerMer
 
 {% info_block warningBox "Verification" %}
 
-In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure that on **B2B Contracts** pane you can see the **Merchant Relation Requests** section and **Manage Pending Requests** button.
+In the Merchant Portal, go to **Dashboard**. On the **Dashboard** page, make sure that in the **B2B Contracts** pane, the **Merchant Relation Requests** section and the **Manage Pending Requests** button are displayed.
 
 {% endinfo_block %}
 
@@ -244,7 +245,7 @@ class MerchantRelationRequestDependencyProvider extends SprykerMerchantRelationR
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when merchant relation request is created, merchant receives a notification email.
+Make sure that, when a merchant relation request is created, the merchant receives a notification email.
 
 {% endinfo_block %}
 
@@ -282,6 +283,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the Merchant Portal. Make sure there are **B2B Contracts** and **Merchant Relation Requests** navigation menu items.
+In the Merchant Portal, make sure the **B2B Contracts** and **Merchant Relation Requests** navigation menu items are displayed.
 
 {% endinfo_block %}

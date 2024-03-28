@@ -15,6 +15,7 @@ redirect_from:
   - /docs/product-relations
   - /docs/en/product-relations
   - /docs/scos/user/features/202200.0/product-relations-feature-overview.html
+  - /docs/scos/user/features/202204.0/product-relations-feature-overview.html
 ---
 
 The _Product Relations_ feature lets product catalog managers create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes:
@@ -116,7 +117,7 @@ A developer can do the following:
 
 ## Store relation
 
-A product catalog manager can define the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) each product relation is displayed in.
+A product catalog manager can define the [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) each product relation is displayed in.
 
 If no store relation is defined for a product relation, it is not displayed on Storefront.
 

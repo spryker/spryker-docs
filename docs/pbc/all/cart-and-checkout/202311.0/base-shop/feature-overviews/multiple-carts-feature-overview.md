@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/multiple-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/multiple-carts-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/multiple-carts-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/multiple-carts-feature-overview.html
 ---
 
 Sometimes customers need more than one shopping cart, such as one for daily purchases and another one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
@@ -119,7 +120,7 @@ On the storefront, company users can perform the following actions by using the 
 * To add a customer order reference to an order, see [Custom Order Reference feature overview](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html).
 
 
-This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html).
+This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/docs/about/all/b2b-suite.html).
 
 {% wistia s776wlo9ds 960 720 %}
 

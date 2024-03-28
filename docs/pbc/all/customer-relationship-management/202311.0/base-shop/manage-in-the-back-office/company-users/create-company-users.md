@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-users.html
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/customer/company-account/managing-company-users.html
+  - /docs/scos/user/back-office-user-guides/202204.0/customer/company-users/create-company-users.html
 related:
   - title: Edit company roles
     link: docs/scos/user/back-office-user-guides/202204.0/customer/company-users/edit-company-users.html

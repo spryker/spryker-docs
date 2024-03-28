@@ -25,7 +25,7 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/inventory-management:"{{page.version}}" --update-with-dependencies
@@ -639,7 +639,7 @@ To start integration, integrate the required features:
 |------------------------|------------------|-------------------------------------------------------------------|
 | Inventory Management   | {{page.version}} | [Inventory Mamagement feature integration](#install-feature-core) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/product-warehouse-allocation-example:"^0.3.0" --update-with-dependencies
@@ -810,4 +810,3 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
 |--------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Inventory Management API |                                  | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)                |
 | Alternative Products     |                                  | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html) |
-| Order Management         |                                  | [Order Management + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-inventory-management-feature-integration.html)               |

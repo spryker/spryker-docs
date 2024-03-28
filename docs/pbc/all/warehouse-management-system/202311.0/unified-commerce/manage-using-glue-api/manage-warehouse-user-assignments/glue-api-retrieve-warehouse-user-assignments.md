@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve warehouse user assignments"
 description: Learn how to retrieve warehouse user assignments using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 7, 2023
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you retrieve warehouse user assignments.
@@ -16,7 +17,8 @@ For detailed information about the modules that provide the API functionality an
 ## Retrieve warehouse user assignments
 
 ---
-`GET` **/warehouse-user-assignments***
+`GET` **/warehouse-user-assignments**
+
 ---
 
 ### Request
@@ -44,7 +46,7 @@ For detailed information about the modules that provide the API functionality an
 
 ### Response
 
-<details open>
+<details>
   <summary>Retrieve all warehouse user assignments</summary>
 
 ```json
@@ -107,7 +109,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve all warehouse user assignments with the information about authenticated user</summary>
 
 ```json
@@ -214,7 +216,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve warehouse user assignment of the user with the specified ID</summary>
 
 ```json
@@ -262,7 +264,7 @@ For detailed information about the modules that provide the API functionality an
 </details>
 
 
-<details open>
+<details>
   <summary>Retrieve the warehouse user assignment with the specified ID</summary>
 
 ```json
@@ -293,7 +295,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve inactive warehouse user assignments</summary>
 
 ```json
@@ -340,7 +342,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve warehouse user assignments with the warehouse with the specified ID.</summary>
 
 ```json
@@ -371,7 +373,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve inactive warehouse user assignments of the user with the specified ID.</summary>
 
 ```json
@@ -427,11 +429,12 @@ For detailed information about the modules that provide the API functionality an
 
 ---
 `GET` **/warehouse-user-assignments/*{% raw %}{{warehouse_user_assignment_id}}{% endraw %}***
+
 ---
 
 | PATH PARAMETER | DESCRIPTION |
 | - | - |
-| ***{{warehouse_user_assignment_id}}*** | ID of the user warehouse assignment to retrieve. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
+| ***{% raw %}{{warehouse_user_assignment_id}}{% endraw %}*** | ID of the user warehouse assignment to retrieve. You get it when [creating a warehouse user assignment](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html) |
 
 ### Request
 
@@ -454,7 +457,7 @@ For detailed information about the modules that provide the API functionality an
 ### Response
 
 
-<details open>
+<details>
   <summary>Retrieve a warehouse user assignment</summary>
 
 ```json
@@ -480,7 +483,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Retrieve a warehouse user assignment with user information included</summary>
 
 ```json
@@ -543,4 +546,4 @@ For detailed information about the modules that provide the API functionality an
 | --- | --- |
 | 5201 | The warehouse user assignment with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

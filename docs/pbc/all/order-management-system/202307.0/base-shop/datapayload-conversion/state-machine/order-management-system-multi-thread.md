@@ -44,9 +44,9 @@ console oms:check-timeout -p 1,2,3 -l 10000
 ```
 {% info_block warningBox %}
 
-If you have a large database, for performance reasons, it is not recommended to specify several comma-separated processor identifiers.
+Processor identifiers distribution across the tasks should consider even distribution of the simulateneously processed orders.
 
-To have the `-p` option applied, you need to use store the name by the `-s` option or limit by `-l`.
+Option `-p` works only with a store name passed via option `--store-name` (or a short `-s`) or a limit via option `--limit` (or a short `-l`).
 
 {% endinfo_block %}
 
@@ -116,4 +116,5 @@ $jobs[] = [
 Regarding performance, there are a few things to keep in mind when running the OMS commands:
 
 * The limit options: commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
+
 * You can specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.

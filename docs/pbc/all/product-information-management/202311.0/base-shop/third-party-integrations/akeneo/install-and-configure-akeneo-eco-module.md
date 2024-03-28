@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
   - /docs/scos/dev/technology-partner-guides/202311.0/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html 
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 related:
   - title: Akeneo
     link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo.html
@@ -379,7 +380,7 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
 }
 ```
 
-You can change default data mappers and translators for overriding keys or values. By default, Akeneo Connector Eco module has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
+You can change default data mappers and translators for overriding keys or values. By default, Akeneo Connector Eco module has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html) for more details.
 
 You also need to take care of that data that is to be written to the database. Two approaches can be used for that.
 

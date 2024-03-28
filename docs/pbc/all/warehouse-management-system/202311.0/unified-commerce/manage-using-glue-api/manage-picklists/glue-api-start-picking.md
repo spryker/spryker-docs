@@ -2,6 +2,7 @@
 title: "Glue API: Start picking"
 description: Learn how to start picking using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 7, 2023
 ---
 
 This endpoint lets you start picking.
@@ -44,7 +45,7 @@ For detailed information about the modules that provide the API functionality an
 
 ### Response
 
-<details open>
+<details>
   <summary>Response sample: Start picking the picklist with the specified ID.</summary>
 
 ```json
@@ -66,7 +67,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Response sample: Start picking the picklist with the specified ID. Include information about the authenticated user.</summary>
 
 ```json
@@ -112,7 +113,7 @@ For detailed information about the modules that provide the API functionality an
 
 </details>
 
-<details open>
+<details>
   <summary>Pick an item in the picklist with the specified ID. Include information about the warehouse the order is fulfilled in.</summary>
 
 ```json
@@ -171,4 +172,4 @@ For detailed information about the modules that provide the API functionality an
 |-|-|
 | 5303 | The picklist with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

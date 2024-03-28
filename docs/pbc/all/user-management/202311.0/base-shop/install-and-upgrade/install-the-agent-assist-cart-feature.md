@@ -10,6 +10,7 @@ redirect_from:
   - /docs/agent-assist-cart-feature-integration
   - /docs/en/agent-assist-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/agent-assist-cart-feature-integration.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/install-and-upgrade/install-the-agent-assist-cart-feature.html
 related:
   - title: Install the Agent Assist Glue API
     link: docs/pbc/all/user-management/page.version/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html

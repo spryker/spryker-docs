@@ -2,7 +2,7 @@
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 
@@ -90,7 +90,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 namespace Pyz\Yves\Application;
 
 use Spryker\Yves\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
-use Spryker\Yves\Http\Plugin\Application\HttpApplicationPlugin;
+use Spryker\Yves\Http\Plugin\Application\YvesHttpApplicationPlugin;
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
@@ -103,7 +103,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 	{
 		return [
 			...
-			new HttpApplicationPlugin(),
+			new YvesHttpApplicationPlugin(),
    			...
 		];
 	}

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/category-filters-overview
   - /docs/en/category-filters-overview
   - /docs/pbc/all/search/202311.0/search-feature-overview/search-feature-overview/category-filters-overview.html
+  - /docs/scos/user/features/202204.0/search-feature-overview/category-filters-overview.html
 ---
 
 To help your customers locate items in your shop more easily, you can add customizable *category filters* to the catalog pages or simply fall back to the standard category filters. You can add, rearrange and define filters for any given parameter in the category tree, such as price or brand.

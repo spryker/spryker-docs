@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/category-image-feature-integration
   - /docs/category-image-feature-integration
   - /docs/en/category-image-feature-integration
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html
 related:
   - title: Product image management
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html

@@ -11,9 +11,9 @@ Install the required features:
 | Spryker Core | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | CMS          | {{page.version}}  | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/cms-pages-rest-api spryker/content-product-abstract-lists-rest-api spryker/cms-pages-content-banners-resource-relationship --update-with-dependencies

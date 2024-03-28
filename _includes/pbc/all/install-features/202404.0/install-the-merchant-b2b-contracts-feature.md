@@ -249,7 +249,9 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when a merchant relationship is being created, the `CompanyBusinessUnit.merchantRelationships` property of assigned business units contains merchant relationship data, when logged in as a company user of the assigned business unit.
+When a new merchant relationship is being established, there is a property called `CompanyBusinessUnit.merchantRelationships` in the assigned business units. 
+This property should be updated with the data of the newly created merchant relationship. 
+This update should be verified while you are logged in as a company user who is a member of the assigned business unit.
 
 {% endinfo_block %}
 
@@ -523,8 +525,8 @@ Verify the following widgets have been registered by adding the respective code 
 | MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 | MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
 
-* Make sure that you can see links to `Merchant Relations` detail pages.
-* Make sure that you can see `Merchant Relations` menu item.
+* Make sure that you can see `Merchant Relations` menu item under the `My Company` section.
+* Make sure that you can see links to the `Merchant Relations` detail pages in `Merchant Relation Requests >> View` page under the `My Company` section.
 
 {% endinfo_block %}
 

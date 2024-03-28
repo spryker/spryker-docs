@@ -527,3 +527,30 @@ Verify the following widgets have been registered by adding the respective code 
 * Make sure that you can see `Merchant Relations` menu item.
 
 {% endinfo_block %}
+
+### 5) Breadcrumpbs adjustment.
+
+In case that `vendor/spryker-shop/company-page/src/SprykerShop/Yves/CompanyPage/Theme/default/templates/page-layout-company` were overrided on project level, in `page-layout-company`template `breadcrumbs` should be adjusted to the following one.
+
+```twig
+{% block breadcrumbs %}
+    {% set breadcrumbs = [] %}
+
+    {% block breadcrumbsContent %}
+        {% set breadcrumbBase = [{
+            label: 'company.account.page-title' | trans,
+            url: url('company/overview'),
+        }] %}
+
+        {% set breadcrumbsList = data.currentBreadcrumb ? breadcrumbBase | merge([{
+            label: data.currentBreadcrumb | trans
+        }]) : breadcrumbBase | merge(breadcrumbs) %}
+
+        {% include molecule('breadcrumb') with {
+            data: {
+                steps: breadcrumbsList,
+            }
+        } only %}
+    {% endblock %}
+{% endblock %}
+```

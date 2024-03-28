@@ -432,7 +432,8 @@ Make sure that the following modules are installed:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+<details>
+  <summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 merchant_relation_request.validation.status_not_pending,New requests can only be made if the current status is pending.,en_US
@@ -585,7 +586,9 @@ merchant_relation_request_page.merchant_relation_request_detail.labels.company,C
 merchant_relation_request_page.merchant_relation_request_detail.labels.company,Unternehmen,de_DE
 ```
 
-Import data:
+</details>
+
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -593,7 +596,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -635,9 +638,9 @@ To enable widgets, register the following plugins:
 
 | PLUGIN                                    | SPECIFICATION                                                                            | PREREQUISITES | NAMESPACE                                        |
 |-------------------------------------------|------------------------------------------------------------------------------------------|---------------|--------------------------------------------------|
-| MerchantRelationRequestCreateButtonWidget | Adds `Send Request` button to initiate creation of merchant relation request.            |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
-| MerchantRelationRequestCreateLinkWidget   | Adds `Merchant Relation Request` link to initiate creation of merchant relation request. |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
-| MerchantRelationRequestMenuItemWidget     | Adds `Merchant Relation Requests` item to company navigation menu.                       |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
+| MerchantRelationRequestCreateButtonWidget | Adds the `Send Request` button to initiate the creation of a merchant relation request.            |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
+| MerchantRelationRequestCreateLinkWidget   | Adds the `Merchant Relation Request` link to initiate the creation of a merchant relation request. |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
+| MerchantRelationRequestMenuItemWidget     | Adds the `Merchant Relation Requests` item to the company navigation menu.                       |               | SprykerShop\Yves\MerchantRelationshipPage\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -671,14 +674,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Verify the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET                                    | VERIFICATION                                                                                                                                                                  |
-|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MerchantRelationRequestCreateButtonWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestCreateButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| MerchantRelationRequestCreateLinkWidget   | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestCreateLinkWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`   |
-| MerchantRelationRequestMenuItemWidget     | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`     |
+| WIDGET                                    | CODE TO ADD                                                                                                                                                                  | VERIFICATION |
+|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
+| MerchantRelationRequestCreateButtonWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestCreateButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | The **Send Request** button is displayed. |
+| MerchantRelationRequestCreateLinkWidget   | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestCreateLinkWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`   | The `Merchant Relation Request` link is displayed. |
+| MerchantRelationRequestMenuItemWidget     | `{% raw %}{%{% endraw %} widget 'MerchantRelationRequestMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`     | The `Merchant Relation Requests` menu item is displayed in the company navigation menu. |
 
-* Make sure you can see `Send Request` button on the page.
-* Make sure that you can see `Merchant Relation Request` link on the page.
-* Make sure that you can see `Merchant Relation Requests` menu item in the company navigation menu.
 
 {% endinfo_block %}

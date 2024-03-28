@@ -67,11 +67,8 @@ class CommentConfig extends SprykerCommentConfig
 
 {% info_block warningBox "Verification" %}
 
-The comments feature provides a capabilities to extend the list of available comment tags. 
-The comment tags are used to categorize comments and make them easier to find.
-You can add or remove comment tags by changing the `getAvailableCommentTags()` method in the `CommentConfig` class.
-After extending the list of available comment tags, you can use them in the Storefront on the cart page.
-New comment tags will be available in the dropdown list on the cart page.
+1. Add or remove a comment tag by changing the `getAvailableCommentTags()` method in the `CommentConfig` class.
+2. On the **Cart** page, verify that the comment tag you've added or removed is now available or not available respectively.
 
 {% endinfo_block %}
 
@@ -471,17 +468,8 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widget has been registered:
+Verify the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| MODULE              | TEST                                                                                                                                                                                         |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CommentThreadWidget | You can check availability in twig `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-
-The comment threads support several entities:
-- Cart 
-- Order
-
-Ensure that comments added to the cart page are displayed in the comment section.
-Also, the comment thread has to be displayed on the customer's order details page after successful checkout.
-
-{% endinfo_block %}
+| MODULE              | TEST                                                                                                                                                                                         | VERIFICATION |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
+| CommentThreadWidget | `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Add a comment on the **Cart** page. Submit the order. Go to the order details page and make sure the comment threat you've added is displayed. |

@@ -1,9 +1,7 @@
 
 This document describes how to install Merchant Portal Merchant B2B Contract Requests feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -12,9 +10,7 @@ Install the required features:
 | Marketplace Merchant Portal Core | {{page.version}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 | Merchant B2B Contract Requests   | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)                    |
 
-### 1) Install the required modules
-
-Install the required modules using Composer:
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchant-contract-requests: "{{page.version}}" --update-with-dependencies
@@ -30,7 +26,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+## 2) Set up the configuration
 
 Add the following configuration:
 
@@ -102,12 +98,12 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
-* Make sure Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
+* The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
+* Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relation-request-merchant-portal-gui/merchant-relation-requests`.
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Run the following commands to generate transfer changes:
 
@@ -126,7 +122,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+## 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -163,7 +159,7 @@ class MerchantProfileMerchantPortalGuiDependencyProvider extends SprykerMerchant
 
 {% info_block warningBox "Verification" %}
 
-In the Merchant Portal, go to **Merchant Profile**. 
+In the Merchant Portal, go to **Merchant Profile**.
 On the **Profile** page, go to **Online Profile** tab and make sure you can see the `Allow merchant relation requests` checkbox.
 
 {% endinfo_block %}
@@ -252,7 +248,7 @@ Make sure that when merchant relation request is created, merchant receives a no
 
 {% endinfo_block %}
 
-### 5) Configure navigation
+## 5) Configure navigation
 
 1. Add the `MerchantRelationRequestMerchantPortalGui` section to `navigation.xml`:
 

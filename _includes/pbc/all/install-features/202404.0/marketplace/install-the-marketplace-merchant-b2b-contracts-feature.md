@@ -1,8 +1,6 @@
 This document describes how to install Merchant Portal Merchant B2B Contracts feature.
 
-## Install feature core
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -11,9 +9,7 @@ Install the required features:
 | Marketplace Merchant Portal Core | {{page.version}} | [Install the Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 | Merchant B2B Contracts           | {{page.version}} | [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)                            |
 
-### 1) Install the required modules
-
-Install the required modules using Composer:
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchant-contracts: "{{page.version}}" --update-with-dependencies
@@ -30,9 +26,9 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up the configuration
+## 2) Set up the configuration
 
-Add the following configuration:
+1. Add the following configuration:
 
 | CONFIGURATION                  | SPECIFICATION                                                                                          | NAMESPACE   |
 |--------------------------------|--------------------------------------------------------------------------------------------------------|-------------|
@@ -102,16 +98,14 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-* Make sure the page is available for Merchant Portal
-  users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
-* Make sure Back Office users don't have access
-  to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+* The following page is available for Merchant Portal users: `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
+* Back Office users don't have access to `https://mp.mysprykershop.com/merchant-relationship-merchant-portal-gui/merchant-relationship`.
 
 {% endinfo_block %}
 
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -119,7 +113,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                          | Type  | Event   | Path                                                                    |
 |-----------------------------------|-------|---------|-------------------------------------------------------------------------|
@@ -127,13 +121,13 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+## 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                          | SPECIFICATION                                          | PREREQUISITES | NAMESPACE                                                                                         |
 |-------------------------------------------------|--------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------------|
-| MerchantRelationshipMerchantDashboardCardPlugin | Adds Merchant relation card to the merchant dashboard. |               | Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
+| MerchantRelationshipMerchantDashboardCardPlugin | Adds the merchant relation card to the merchant dashboard. |               | Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Plugin\DashboardMerchantPortalGui |
 
 **src/Pyz/Zed/DashboardMerchantPortalGui/DashboardMerchantPortalGuiDependencyProvider.php**
 
@@ -166,7 +160,7 @@ displayed.
 
 {% endinfo_block %}
 
-### 5) Configure navigation
+## 5) Configure navigation
 
 1. Add the `MerchantRelationshipMerchantPortalGui` section to `navigation.xml`:
 
@@ -200,6 +194,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Log in to the Merchant Portal. Make sure there are **B2B Contracts** and **Merchant Relations** navigation menu items.
+In the Merchant Portal, make sure **B2B Contracts** and **Merchant Relations** navigation menu items are displayed.
 
 {% endinfo_block %}

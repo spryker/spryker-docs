@@ -683,9 +683,9 @@ Verify the following widgets have been registered by adding the respective code 
 
 {% endinfo_block %}
 
-### 5) Breadcrumpbs adjustment.
+### 5) Update breadcrumbs
 
-In case that `vendor/spryker-shop/company-page/src/SprykerShop/Yves/CompanyPage/Theme/default/templates/page-layout-company` were overrided on project level, in `page-layout-company`template `breadcrumbs` should be adjusted to the following one.
+If `vendor/spryker-shop/company-page/src/SprykerShop/Yves/CompanyPage/Theme/default/templates/page-layout-company` is overridden on the project level, in the `page-layout-company` template, update the breadcrumbs as follows:
 
 ```twig
 {% block breadcrumbs %}

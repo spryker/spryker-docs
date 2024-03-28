@@ -249,9 +249,9 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-When a new merchant relationship is being established, there is a property called `CompanyBusinessUnit.merchantRelationships` in the assigned business units. 
-This property should be updated with the data of the newly created merchant relationship. 
-This update should be verified while you are logged in as a company user who is a member of the assigned business unit.
+1. Create a merchant relationship.
+2. Log in as a company user who's a member of the business unit assigned to the relationship.
+    Make sure the `CompanyBusinessUnit.merchantRelationships` property was updated with the merchant relationship data.
 
 {% endinfo_block %}
 
@@ -520,13 +520,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 Verify the following widgets have been registered by adding the respective code snippets to a Twig template:
 
-| WIDGET                             | VERIFICATION                                                                                                                                                           |
-|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-| MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` |
-
-* Make sure that you can see `Merchant Relations` menu item under the `My Company` section.
-* Make sure that you can see links to the `Merchant Relations` detail pages in `Merchant Relation Requests >> View` page under the `My Company` section.
+| WIDGET                             | TEST                                                                                                                                                           | VERIFICATION |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
+| MerchantRelationshipLinkListWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipLinkListWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | The `Merchant Relations` menu item is displayed under the `My Company` section. |
+| MerchantRelationshipMenuItemWidget | `{% raw %}{%{% endraw %} widget 'MerchantRelationshipMenuItemWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Go to **Merchant Relation Requests** > **View**. Make sure that, under the **My Company** section, the links to the merchant relations detail pages are displayed.
 
 {% endinfo_block %}
 

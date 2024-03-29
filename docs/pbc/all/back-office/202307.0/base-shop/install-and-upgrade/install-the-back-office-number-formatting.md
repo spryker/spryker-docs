@@ -5,6 +5,7 @@ template: howto-guide-template
 last_updated: Aug 30, 2022
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
+  - /docs/pbc/all/back-office/202307.0/howto-add-support-of-number-formatting-in-the-back-office.html
 ---
 
 This document explains how to add support of number formatting in the Back Office UI.
@@ -21,9 +22,9 @@ To add support of number formatting in the Back Office, integrate the following 
 | Product + Order Management|   | {{site.version}} | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
 | Shipment   |   | {{site.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                           |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/util-number spryker/money-gui

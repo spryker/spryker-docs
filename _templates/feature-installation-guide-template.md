@@ -26,7 +26,7 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {installation guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 <!--When "composer require" includes a "Spryker Feature" (github.com/spryker-feature), then it always needs to be "dev-master" version. For regular modules, use regular versions.-->
@@ -442,10 +442,10 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {integration guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 {command to install the required modules}

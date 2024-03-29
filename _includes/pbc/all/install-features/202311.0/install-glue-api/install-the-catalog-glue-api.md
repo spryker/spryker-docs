@@ -14,7 +14,7 @@ Install the required features:
 | Product | {{page.version}} | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Catalog + Price | {{page.version}} |  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -24,7 +24,7 @@ composer require spryker/catalog-search-rest-api:"^2.1.2" spryker/catalog-search
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

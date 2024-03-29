@@ -276,7 +276,7 @@ class ProductConcretePropelDataSetWriter implements DataSetWriterInterface
 }
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import product-concrete

@@ -278,7 +278,7 @@ In October 2023, we have added and updated the following pages:
 - [Data Exchange FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html).
 - [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
 - [Security release notes 202309.0](/docs/about/all/releases/security-release-notes-202309.0.html).
-- [Upgrade the Chart module](/docs/pbc/all/back-office/202307.0/install-and-upgrade/upgrade-the-chart-module.html): Learn how to upgrade the Chart module from version 1.5.0 to version 1.6.1.
+
 - Oryx components docs:
     - [Oryx: Building components](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-building-components.html): Learn about the building blocks of the Oryx applications: the components.
     - [Oryx: Component types](/docs/dg/dev/frontend-development/202307.0/oryx/building-components/oryx-component-types.html): Learn about the Oryx components compared to Atomic design.

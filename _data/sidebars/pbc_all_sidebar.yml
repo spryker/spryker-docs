@@ -33,7 +33,7 @@ entries:
                 - "202311.0"
                 nested:
                   - title: "HowTo: Configure timezone in the Back Office"
-                    url: /docs/pbc/all/back-office/base-shop/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
+                    url: /docs/pbc/all/back-office/base-shop/tutorials-and-howtos/howto-configure-timezone-in-the-backoffice.html
                     include_versions:
                     - "202311.0"
 
@@ -1452,11 +1452,11 @@ entries:
                       - title: Marketplace Merchant B2B Contract Requests
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html
                         include_versions:
-                        - "202404.0"                        
+                        - "202404.0"
                       - title: Marketplace Merchant B2B Contracts
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contracts-feature.html
                         include_versions:
-                        - "202404.0"                        
+                        - "202404.0"
                       - title: Marketplace Merchant Portal Core
                         url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
                       - title: Marketplace Merchant Portal Core + Dynamic Multistore

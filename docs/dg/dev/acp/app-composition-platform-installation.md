@@ -309,9 +309,9 @@ Make sure that you have no deprecated plugins enabled. Ideally, the content of e
 
 namespace Pyz\Zed\OauthClient;
 
-use Spryker\Zed\MessageBroker\Communication\Plugin\OauthClient\TenantIdentifierAccessTokenRequestExpanderPlugin;
 use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\Auth0OauthAccessTokenProviderPlugin;
 use Spryker\Zed\OauthAuth0\Communication\Plugin\OauthClient\CacheKeySeedAccessTokenRequestExpanderPlugin;
+use Spryker\Zed\OauthClient\Communication\Plugin\OauthClient\TenantIdentifierAccessTokenRequestExpanderPlugin;
 use Spryker\Zed\OauthClient\OauthClientDependencyProvider as SprykerOauthClientDependencyProvider;
 
 class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider

@@ -67,8 +67,7 @@ class CommentConfig extends SprykerCommentConfig
 
 {% info_block warningBox "Verification" %}
 
-1. Add or remove a comment tag by changing the `getAvailableCommentTags()` method in the `CommentConfig` class.
-2. On the **Cart** page, verify that the comment tag you've added or removed is now available or not available respectively.
+Make sure that the comment tags defined in the `getAvailableCommentTags()` method of the `CommentConfig` class are available on the **Cart** page.
 
 {% endinfo_block %}
 
@@ -472,7 +471,7 @@ Verify the following widgets have been registered by adding the respective code 
 
 | MODULE              | TEST                                                                                                                                                                                         | VERIFICATION |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| - |
-| CommentThreadWidget | `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Add a comment on the **Cart** page. Submit the order. Go to the order details page and make sure the comment threat you've added is displayed. |
+| CommentThreadWidget | `{% raw %}{%{% endraw %} widget 'CommentThreadWidget' args \[...\] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}` | Add a comment on the **Cart** page. Submit the order. Go to the order details page and make sure the comment you've added is displayed in the order. |
 
 
 {% endinfo_block %}

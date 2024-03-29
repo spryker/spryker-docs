@@ -250,7 +250,7 @@ class CompanyUserDependencyProvider extends SprykerCompanyUserDependencyProvider
 {% info_block warningBox "Verification" %}
 
 1. Create a merchant relationship.
-2. Log in as a company user who's a member of the business unit assigned to the relationship. 
+2. Log in as a company user who's a member of the business unit assigned to the relationship.
 3. Use the following code snippet to verify that the merchant relationship data is available in the company user transfer:
 
 ```php
@@ -261,7 +261,7 @@ $companyUserTransfer = $this->companyUserFacade->findCompanyUserById($idCompanyU
 dd($companyUserTransfer->getCompanyBusinessUnit()->getMerchantRelationships());
 
 ```
-4.Make sure the `CompanyBusinessUnit.merchantRelationships` property was updated with the merchant relationship data.
+4. Make sure the `CompanyBusinessUnit.merchantRelationships` property was updated with the merchant relationship data.
 
 {% endinfo_block %}
 

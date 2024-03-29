@@ -1,5 +1,5 @@
 ---
-title: Comments feature integration
+title: Install the Comments feature
 description: The guide walks you through the process of installing the Comments feature into your project.
 last_updated: Mar 13, 2024
 template: feature-integration-guide-template

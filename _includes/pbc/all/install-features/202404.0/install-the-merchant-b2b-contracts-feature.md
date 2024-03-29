@@ -542,7 +542,7 @@ Verify the following widgets have been registered by adding the respective code 
 If `vendor/spryker-shop/company-page/src/SprykerShop/Yves/CompanyPage/Theme/default/templates/page-layout-company` is overridden on the project level, in the `page-layout-company` template, update the breadcrumbs as follows:
 
 ```twig
-{% block breadcrumbs %}
+{% raw %}{% block breadcrumbs %}
     {% set breadcrumbs = [] %}
 
     {% block breadcrumbsContent %}
@@ -561,5 +561,5 @@ If `vendor/spryker-shop/company-page/src/SprykerShop/Yves/CompanyPage/Theme/defa
             }
         } only %}
     {% endblock %}
-{% endblock %}
+{% endblock %}{% endraw %}
 ```

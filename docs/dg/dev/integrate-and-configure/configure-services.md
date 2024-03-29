@@ -28,7 +28,11 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
   - /docs/scos/dev/the-docker-sdk/202311.0/configure-services.html
-
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
+  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/new-relic.html
+  - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
 
 related:
   - title: Deploy file reference
@@ -50,7 +54,7 @@ related:
   - title: Configuring access to private repositories
     link: docs/dg/dev/sdks/the-docker-sdk/configure-access-to-private-repositories.html
   - title: Configuring debugging in Docker
-    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html
+    link: docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html
   - title: Running tests with the Docker SDK
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
@@ -508,7 +512,7 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html).
   We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
@@ -518,7 +522,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/about/all/support/using-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 

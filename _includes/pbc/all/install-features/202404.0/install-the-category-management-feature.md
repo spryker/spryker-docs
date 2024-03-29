@@ -14,7 +14,7 @@ Install the required feature:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
@@ -1227,7 +1227,7 @@ Install the required features:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies

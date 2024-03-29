@@ -168,4 +168,4 @@ You might use the following definitions to generate related code:
 * `console spryk:run AddGlueConfigMethod`: Adds a new method to the Glue module config.
 * `console spryk:run AddClientConfig`: Adds a new module config to the Client application.
 * `console spryk:run AddClientConfigMethod`: Adds a new method to the Client module config.
-* `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation
+* `console spryk:run AddSharedConstantsInterface`: Adds a Shared Constants Interface. For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation

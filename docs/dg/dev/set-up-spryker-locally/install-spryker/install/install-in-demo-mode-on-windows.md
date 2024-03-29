@@ -28,7 +28,7 @@ Depending on the needed WSL version, follow one of the guides:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) and navigate into its folder:
+4. Clone *one* of the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
 
     * B2C Demo Shop:
 
@@ -155,7 +155,7 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging.html)
+* [Configuring debugging in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
 * [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
 * [Configuring services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 * [Set up a self-signed SSL certificate](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)

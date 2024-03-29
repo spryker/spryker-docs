@@ -16,7 +16,7 @@ This document describes how to interact with databases using the Data Exchange A
 ## Prerequisites
 
 * [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html)
-* [Configure the Data Exchange API](/docs/scos/dev/glue-api-guides/{{page.version}}/data-exchange-api/how-to-guides/how-to-configure-data-exchange-api.html)
+* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:
@@ -508,7 +508,7 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
-### Sending `POST`, `PATCH`б and `PUT` requests with relationships
+### Sending `POST`, `PATCH` and `PUT` requests with relationships
 
 To create or update an entity along with its related entities, you need to include the relationships directly in 
 the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 

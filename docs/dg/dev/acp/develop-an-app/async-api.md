@@ -22,7 +22,7 @@ With this extension, the code generator parses your schema file and generates th
 
 ## Schema version
 
-Via the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html), a minimal Async API file is created when you want to work with asynchronous messages. The created schema file uses the Async API specification version 2.4.0. This version is currently set as default and can only be changed manually after the file was created.
+Via the [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html), a minimal Async API file is created when you want to work with asynchronous messages. The created schema file uses the Async API specification version 2.4.0. This version is currently set as default and can only be changed manually after the file was created.
 
-You can also use the Async API SDK without the [Spryker SDK](/docs/sdk/dev/spryker-sdk.html). For more information about the Async API package, see [Async API README file](https://github.com/spryker-sdk/async-api/).  
+You can also use the Async API SDK without the [Spryker SDK](/docs/dg/dev/sdks/sdk/spryker-sdk.html). For more information about the Async API package, see [Async API README file](https://github.com/spryker-sdk/async-api/).  
  

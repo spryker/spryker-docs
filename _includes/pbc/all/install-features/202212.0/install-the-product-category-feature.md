@@ -18,7 +18,7 @@ Install the required features:
 
 ### 1) Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
@@ -638,9 +638,9 @@ Overview and install the following features.
 |Spryker Core | {{page.version}} |
 |Category | master | Product | {{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies

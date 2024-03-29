@@ -35,7 +35,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 {% endinfo_block %}
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.
+To install the Demo Shop for [B2B](/docs/about/all/b2b-suite.html) or [B2C](/docs/about/all/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.
 
 ## 1. Install prerequisites
 
@@ -252,6 +252,6 @@ Back Office credentials:
 
 ## Next steps
 
-* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+* [Troubleshooting installation issues](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
 
 * [Configure Spryker after installing with DevVM](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)

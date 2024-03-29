@@ -66,13 +66,8 @@ Response sample: retrieve availability of a product offer
 }
 ```
 
-<a name="product-offer-availability-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
-|ATTRIBUTE  |TYPE  |DESCRIPTION  |
-|---------|---------|---------|
-| isNeverOutOfStock          |  Boolean         | Shows if the product offer is never out of stock.          |
-| availability          | Boolean          |Defines if the product offer is available.           |
-| quantity          | Integer          |Stock of the product offer.           |
 
 
 ## Possible errors
@@ -82,4 +77,4 @@ Response sample: retrieve availability of a product offer
 | 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

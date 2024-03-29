@@ -68,12 +68,7 @@ Response sample: retrieve availability of an abstract product
 }
 ```
 
-<a name="abstract-product-availability-response-attributes"></a>
-
-| FIELD | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| availability | Boolean | Boolean to inform about the availability |
-| quantity | Integer | Available stock (all warehouses aggregated) |
+{% include pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
 
 
 ## Possible errors
@@ -83,4 +78,4 @@ Response sample: retrieve availability of an abstract product
 | 305 | Availability is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

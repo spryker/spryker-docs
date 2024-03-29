@@ -73,7 +73,7 @@ class GiftCardConfig extends SprykerGiftCardConfig
 
 {% info_block warningBox "Verification" %}
 
-When you finish the [Setup Behaviour](#install-the-required-modules-using-composer) step, make sure that the `NoShipment` shipment method is selected automatically while ordering only a gift card.
+When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure that the `NoShipment` shipment method is selected automatically while ordering only a gift card.
 
 {% endinfo_block %}
 
@@ -171,7 +171,7 @@ class SalesConfig extends SprykerSalesConfig
 ```
 
 {% info_block warningBox "Verification" %}
-When you finish the [Setup Behaviour](#install-the-required-modules-using-composer) step, make sure the following:
+When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure the following:
 * The `NoPayment01` state machine is activated successfully.
 * When using a gift card to cover an entire order, the configured order state machine is used—for example, `Nopayment01`.
 * You can't use denied payment methods when using a gift card.

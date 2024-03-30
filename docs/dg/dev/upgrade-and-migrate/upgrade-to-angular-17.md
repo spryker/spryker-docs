@@ -73,7 +73,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
 
 1. In `package.json`, do the following:
 
-   1. Update or add the following dependencies and change commands:
+   1. Change npm scripts::
 
         ```json
         {
@@ -83,21 +83,35 @@ Before starting the migration, make sure that stylelint and css-loader were upda
                 "mp:build:production": "nx build --configuration production",
                 "mp:lint": "nx lint --no-eslintrc",
                 "mp:test": "nx test",
-            },
-            "dependencies": {
-                "@angular/animations": "~17.3.0",
-                "@angular/cdk": "~17.3.0",
-                "@angular/common": "~17.3.0",
-                "@angular/compiler": "~17.3.0",
-                "@angular/core": "~17.3.0",
-                "@angular/elements": "~17.3.0",
-                "@angular/forms": "~17.3.0",
-                "@angular/platform-browser": "~17.3.0",
-                "@angular/platform-browser-dynamic": "~17.3.0",
-                "@angular/router": "~17.3.0",
-                "rxjs": "~7.8.1",
-                "zone.js": "~0.14.4"
-            },
+            }
+        }
+        ```
+
+    3. Update or add the following dependencies:
+
+    ```json
+    {
+        "dependencies": {
+            "@angular/animations": "~17.3.0",
+            "@angular/cdk": "~17.3.0",
+            "@angular/common": "~17.3.0",
+            "@angular/compiler": "~17.3.0",
+            "@angular/core": "~17.3.0",
+            "@angular/elements": "~17.3.0",
+            "@angular/forms": "~17.3.0",
+            "@angular/platform-browser": "~17.3.0",
+            "@angular/platform-browser-dynamic": "~17.3.0",
+            "@angular/router": "~17.3.0",
+            "rxjs": "~7.8.1",
+            "zone.js": "~0.14.4"
+        }
+    }
+    ```
+
+    3. Update or add the following dev dependencies:
+
+        ```json
+        {
             "devDependencies": {
                 "@angular-devkit/build-angular": "~17.3.2",
                 "@angular-builders/custom-webpack": "~17.0.1",
@@ -130,7 +144,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
         ```
 
-   2. Remove the following dependencies:
+   4. Remove the following dependencies:
 
         ```json
         {
@@ -148,18 +162,18 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
         ```
 
-3. Update and install package dependencies:
+    5. Update and install package dependencies:
 
-```bash
-rm -rf node_modules
-npm install
-```
+    ```bash
+    rm -rf node_modules
+    npm install
+    ```
 
-{% info_block warningBox "Verification" %}
+    {% info_block warningBox "Verification" %}
 
-Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+    Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
 
-{% endinfo_block %}
+    {% endinfo_block %}
 
 ## 4) Update Angular configuration
 

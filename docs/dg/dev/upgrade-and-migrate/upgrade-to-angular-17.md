@@ -73,7 +73,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
 
 1. In `package.json`, do the following:
 
-   1. Change npm scripts::
+   1. Adjust npm scripts::
 
         ```json
         {

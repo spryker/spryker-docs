@@ -81,6 +81,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
                 "mp:build": "nx build",
                 "mp:build:watch": "nx build --watch",
                 "mp:build:production": "nx build --configuration production",
+                "mp:stylelint": "node ./frontend/merchant-portal/stylelint.mjs",
                 "mp:lint": "nx lint --no-eslintrc",
                 "mp:test": "nx test",
             }

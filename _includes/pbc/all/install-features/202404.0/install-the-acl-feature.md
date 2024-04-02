@@ -9,7 +9,7 @@ Install the required features:
 | Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies

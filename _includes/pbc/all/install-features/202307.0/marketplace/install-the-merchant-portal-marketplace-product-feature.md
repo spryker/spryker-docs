@@ -17,9 +17,9 @@ Install the required features:
 | Marketplace Inventory Management  | dev-master | [Install the Marketplace Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-merchant-portal-gui:"^1.0.0" --update-with-dependencies
@@ -46,7 +46,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|

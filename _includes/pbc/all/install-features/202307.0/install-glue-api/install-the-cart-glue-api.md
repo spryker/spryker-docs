@@ -14,7 +14,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Cart                   | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                             |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Install the required module:
 

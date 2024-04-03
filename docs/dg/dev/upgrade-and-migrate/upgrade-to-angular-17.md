@@ -170,11 +170,11 @@ Before starting the migration, make sure that stylelint and css-loader were upda
     npm install
     ```
 
-    {% info_block warningBox "Verification" %}
+{% info_block warningBox "Verification" %}
 
-    Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
 
-    {% endinfo_block %}
+{% endinfo_block %}
 
 ## 4) Update Angular configuration
 

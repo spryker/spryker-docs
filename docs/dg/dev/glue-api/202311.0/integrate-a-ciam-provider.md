@@ -24,7 +24,7 @@ There is a ready PHP-based library that provides JWT decoding such as [firebase/
 
 ## Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 {% info_block infoBox %}
 

@@ -41,17 +41,17 @@ The marketplace modules must correspond to the following versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
-| AgentSecurityMerchantPortalGui              | >= 2.0.0  |
-| AgentDashboardMerchantPortalGui             | >= 2.0.0  |
-| DashboardMerchantPortalGui                  | >= 2.0.0  |
-| GuiTable                                    | >= 2.0.0  |
-| MerchantProfileMerchantPortalGui            | >= 2.0.0  |
-| ProductMerchantPortalGui                    | >= 3.0.0  |
-| ProductOfferMerchantPortalGui               | >= 2.0.0  |
-| SalesMerchantPortalGui                      | >= 2.0.0  |
-| SecurityMerchantPortalGui                   | >= 2.0.0  |
-| UserMerchantPortalGui                       | >= 2.0.0  |
-| ZedUi                                       | >= 2.0.0  |
+| AgentSecurityMerchantPortalGui              | >= 3.0.0  |
+| AgentDashboardMerchantPortalGui             | >= 3.0.0  |
+| DashboardMerchantPortalGui                  | >= 3.0.0  |
+| GuiTable                                    | >= 3.0.0  |
+| MerchantProfileMerchantPortalGui             | >= 3.0.0  |
+| ProductMerchantPortalGui                    | >= 4.0.0  |
+| ProductOfferMerchantPortalGui               | >= 3.0.0  |
+| SalesMerchantPortalGui                      | >= 3.0.0  |
+| SecurityMerchantPortalGui                   | >= 3.0.0  |
+| UserMerchantPortalGui                       | >= 3.0.0  |
+| ZedUi                                       | >= 3.0.0  |
 
 If not, update module versions manually or by using the following command:
 

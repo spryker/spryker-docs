@@ -474,13 +474,13 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-and delete additional js injecting in module `layout_file_name twig` file.
+and delete additional js injecting in module `layout_file_name twig` file. (e.g delete the whole block below)
 
 ```twig
 {% raw %}{% block footerJs %}
     {{ view.importJsBundle('agent-dashboard-merchant-portal-gui', importConfig) }}
     {{ parent() }}
-{% endblock %} <= delete the whole this block
+{% endblock %}{% endraw %}
 ```
 
 

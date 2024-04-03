@@ -246,7 +246,8 @@ Before starting the migration, make sure that stylelint and css-loader were upda
     ```js
         const { readFileSync } = require('fs');
 
-        const MP_SINGLE_ENTRY_MARKER = 'spy/merchant-portal';
+        const MP_SINGLE_ENTRY = 'spy/merchant-portal';
+        const MP_SINGLE_ENTRY_MARKER = `${MP_SINGLE_ENTRY}:single-entry-marker`;
 
         async function getMPEntryPointsMap() {
             const singleEntryNames = new Map();
@@ -271,7 +272,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
             const core = await entryPointsMap(ROOT_SPRYKER_CORE_DIR, MP_CORE_ENTRY_POINT_FILE);
             const project = await entryPointsMap(ROOT_SPRYKER_PROJECT_DIR, MP_PROJECT_ENTRY_POINT_FILE);
 
-            return { ...core, ...project, [MP_SINGLE_ENTRY_MARKER]: [...singleEntryNames.values()] };
+            return { ...core, ...project, [MP_SINGLE_ENTRY]: [...singleEntryNames.values()] };
         }
     ```
 

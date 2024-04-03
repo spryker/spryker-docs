@@ -389,7 +389,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
                         }
                     ],
                     "styles": [
-                        "vendor/spryker/spryker/Bundles/ZedUi/src/Spryker/Zed/ZedUi/Presentation/Components/styles.less",
+                        "vendor/spryker/zed-ui/src/Spryker/Zed/ZedUi/Presentation/Components/styles.less",
                         "src/Pyz/Zed/ZedUi/Presentation/Components/styles.less"
                     ],
                     "scripts": []

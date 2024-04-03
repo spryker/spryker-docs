@@ -19,8 +19,6 @@ Upgrade to the latest major version of Angular to get the most recent bug fixes 
 
 Keep in mind that updating to Angular v17 results in incompatibility with older versions of Angular. Therefore, a major release is necessary for these modules:
 
-- `AgentSecurityMerchantPortalGui`
-- `AgentDashboardMerchantPortalGui`
 - `DashboardMerchantPortalGui`
 - `GuiTable`
 - `MerchantProfileMerchantPortalGui`
@@ -41,8 +39,6 @@ The marketplace modules must correspond to the following versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
-| AgentSecurityMerchantPortalGui              | >= 3.0.0  |
-| AgentDashboardMerchantPortalGui             | >= 3.0.0  |
 | DashboardMerchantPortalGui                  | >= 3.0.0  |
 | GuiTable                                    | >= 3.0.0  |
 | MerchantProfileMerchantPortalGui             | >= 3.0.0  |
@@ -56,7 +52,7 @@ The marketplace modules must correspond to the following versions:
 If not, update module versions manually or by using the following command:
 
 ```bash
-composer update spryker/agent-dashboard-merchant-portal-gui spryker/agent-security-merchant-portal-gui spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
+composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
 ```
 
 2. Regenerate the data transfer object:

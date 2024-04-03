@@ -170,11 +170,11 @@ Before starting the migration, make sure that stylelint and css-loader were upda
     npm install
     ```
 
-{% info_block warningBox "Verification" %}
+    {% info_block warningBox "Verification" %}
 
-Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
+    Ensure that the `package-lock.json` file and the `node_modules` folder have been updated.
 
-{% endinfo_block %}
+    {% endinfo_block %}
 
 ## 4) Update Angular configuration
 
@@ -477,10 +477,10 @@ registerNgModule(ComponentsModule);
 and delete additional js injecting in module `layout_file_name twig` file.
 
 ```twig
-{% block footerJs %}
+{% raw %}{% block footerJs %}
     {{ view.importJsBundle('agent-dashboard-merchant-portal-gui', importConfig) }}
     {{ parent() }}
-{% endblock %} <= delete whole this block
+{% endblock %} <= delete the whole this block
 ```
 
 

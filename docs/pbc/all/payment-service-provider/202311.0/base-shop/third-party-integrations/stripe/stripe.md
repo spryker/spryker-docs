@@ -30,6 +30,7 @@ However, our team only tested the following payment methods:
 - Cards: including Visa and Mastercard
 - Debit card
 - Bank transfer: supported in some regions, see [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers)
+- PayPal
 - Klarna
 - Apple Pay
 - Google Pay

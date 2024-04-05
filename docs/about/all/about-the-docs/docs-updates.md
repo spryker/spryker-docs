@@ -2,12 +2,29 @@
 title: Docs updates
 description: Spryker docs release notes
 template: concept-topic-template
-last_updated: Feb 4, 2024
+last_updated: Apr 4, 2024
 redirect_from:
 - /docs/scos/user/intro-to-spryker/docs-release-notes.html
 - /docs/scos/user/intro-to-spryker/docs-updates.html
 
 ---
+
+## March 2024
+
+In March 2024, we have added and updated the following pages:
+
+### New pages
+
+- [Contribute to Oryx](/docs/dg/dev/frontend-development/202311.0/oryx/contribute-to-oryx.html): Learn how you can contribute to the development of the Oryx frontend framework.
+- [Jenkins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html): Implement Spryker’s best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
+- [Security release notes 202403.0](/docs/about/all/releases/security-release-notes-202403.0.html).
+- [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/202311.0/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html):  how to retrieve and use payment details from third-party payment service providers (PSPs).
+- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html).
+- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html).
+- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html).
+- [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/202404.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html).
+- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
+
 ## February 2024
 
 In February 2024, we have added and updated the following pages:

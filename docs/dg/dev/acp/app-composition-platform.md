@@ -6,12 +6,20 @@ last_updated: Dec 15, 2023
 redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
     - /docs/acp/user/intro-to-acp/acp-overview.html
+    - /docs/dg/dev/acp/acp-overview.html
 keywords: acp
+related:
+    - title: SCCOS Dependencies required for ACP
+      link: docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready
+    - title: ACP security assessment
+      link: docs/dg/dev/acp/aop-security-assessment.html
+    - title: ACP Best Practices & FAQ
+      link: docs/dg/dev/acp/acp-security-tips.htm
 ---
 
-App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](/https://spryker.com/app-composition-platform/#/)
+App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](/https://spryker.com/app-composition-platform/#/).
 
-ACP supports the following integrations.
+ACP supports the following integrations:
 
 | INTEGRATION | DESCRIPTION |
 | - | - |
@@ -25,27 +33,26 @@ ACP supports the following integrations.
 ## Getting started with ACP
 
 ACP consists of the following components:
-* App Catalog: This is an interface where we list all the available Apps available via the ACP. The App Catalog provides details about an integration, enables users connect to the App Composition Platform and add configurations to connect to a 3rd Party Application. It can be accessed via the Spryker Backoffice. A read-only version of the Catalog can be [viewed here](https://product.spryker.com/features/acp/acp-catalog/#/catalog)
-*  App Composition Platform & Infrastructure: The underlying platform for ACP facilitates how Spryker projects communicate with 3rd party integrations via the App Composition Platform.
-*  ACP Apps: These are integrations provided Out-of-the-Box by Spryker via the App Composition Platform. Spryker offers a range of zero to low-code applications.
+* App Catalog: Interface where all the apps available via the ACP are listed. The App Catalog provides details about an integration, enables users connect to the ACP and add configurations to connect to a third-party app. It can be accessed via the Spryker Back Office. You can view the read-only version of the ACP Catalog in the [Spryker Product Portal](https://product.spryker.com/features/acp/acp-catalog/#/catalog).
+*  App Composition Platform & Infrastructure: The underlying platform for the ACP facilitates defining how Spryker projects communicate with third-party integrations via the ACP.
+*  ACP apps: Integrations provided by Spryker by default via the ACP. Spryker offers a range of zero to low-code applications.
 
-### Accessing the Read-Only ACP Catalog from the Backoffice
-In 2022, we introduced the App Composition Platform, which includes the read-only version of the ACP Catalog. This feature is readily available from the Backoffice for SCCOS customers on Spryker version **202212.0**. An updated version of the ACP Catalog was also introduced in 2023. See the [release note](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-{{page.version}}release-notes-202311.0.html#documentation-2)
+### Accessing the read-Only ACP Catalog from the Back Office
 
-Customers who are on a previous version of Spryker and would like to access the read-only version of the ACP Catalog can do so by installing the module below:
-* `spryker/app-catalog-gui: ^1.4.1` or later
+In 2022, we introduced the App Composition Platform, which includes the read-only version of the ACP Catalog. This feature is readily available from the Back Office for SCCOS customers on Spryker version **202212.0**. An updated version of the ACP Catalog was also introduced in 2023. See the [release note](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-{{page.version}}release-notes-202311.0.html#documentation-2) for details.
 
-
-## Becoming Registered for ACP
-To use ACP Apps on your Spryker project, the customer project needs to be registered. The registration process helps to prepare your project for seamless communication with 3rd Party Apps provided via the App Composition Platform. The registration process is divided into 2 steps:
-1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready)
-2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Do contact us via our [support portal](https://support.spryker.com/s/) once step 1 is completed.
-
-### Notes
-Our team will like to guide you through the registration process if you have any questions. Do send us a message in case you have any [questions](https://support.spryker.com/s/)
+Customers who are on an earlier version of Spryker and would like to access the read-only version of the ACP Catalog can do so by installing the module `spryker/app-catalog-gui: ^1.4.1` or the later version of it.
 
 
-## Read Also
-1. [SCCOS Dependencies required for ACP](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).
-2. [ACP security assessment](/docs/dg/dev/acp/aop-security-assessment.html#acp-security)
-3. [ACP Best Practices & FAQ](/docs/dg/dev/acp/acp-security-tips.html)
+## Becoming registered for ACP
+
+To use ACP apps on your Spryker project, your project needs to be registered. The registration process helps to prepare your project for seamless communication with the third-party apps provided via the ACP. The registration process includes 2 steps:
+1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).
+2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Once step 1 is completed, contact us via the [support portal](https://support.spryker.com/s/).
+
+{% info_block infoBox "Info" %}
+
+Our team will guide you through the registration process if needed. If you have any questions, [send us a message](https://support.spryker.com/s/).
+
+{% endinfo_block %}
+

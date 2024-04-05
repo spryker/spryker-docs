@@ -25,6 +25,17 @@ In March 2024, we have added and updated the following pages:
 - [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/202404.0/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html).
 - [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202404.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html).
 
+### Updated pages
+
+- [Order management system multi-thread](/docs/pbc/all/order-management-system/202311.0/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html)
+- [Reduce Jenkins execution without P&S and data importers refactoring](/docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html)
+- [Code contribution guide](/docs/dg/dev/code-contribution-guide.html)
+- [Create company units](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/manage-in-the-back-office/company-units/create-company-units.html)
+- [Edit company units](/docs/pbc/all/customer-relationship-management/202404.0/base-shop/manage-in-the-back-office/company-units/edit-company-units.html)
+- [Test Glue Backend API](/docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-glue-backend-api.html)
+
+For more details about these and other updates to the Spryker docs in March 2024, refer to the [docs release notes page on GitHub](https://github.com/spryker/spryker-docs/releases).
+
 ## February 2024
 
 In February 2024, we have added and updated the following pages:

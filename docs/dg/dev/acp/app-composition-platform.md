@@ -13,8 +13,8 @@ related:
       link: docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready
     - title: ACP security assessment
       link: docs/dg/dev/acp/aop-security-assessment.html
-    - title: ACP Best Practices & FAQ
-      link: docs/dg/dev/acp/acp-security-tips.htm
+    - title: ACP security tips
+      link: docs/dg/dev/acp/acp-security-tips.html
 ---
 
 App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](/https://spryker.com/app-composition-platform/#/).
@@ -23,8 +23,8 @@ ACP supports the following integrations:
 
 | INTEGRATION | DESCRIPTION |
 | - | - |
-| [Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}base-shop/third-party-integrations/vertex/vertex.html) | Tax compliance. |
-| [Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) | Search engine. |
+| [Vertex](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/vertex/vertex.html) | Tax compliance. |
+| [Algolia](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html) | Search engine. |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/integrate-payone.html) | Payment service provider. |
 | [Usercentrics](/docs/pbc/all/usercentrics/integrate-usercentrics.html) | Consent management platform. |
 | [Bazaarvoice](/docs/pbc/all/ratings-reviews/{{site.version}}/third-party-integrations/integrate-bazaarvoice.html) | Platform for user-generated content. |
@@ -39,9 +39,9 @@ ACP consists of the following components:
 
 ### Accessing the read-Only ACP Catalog from the Back Office
 
-In 2022, we introduced the App Composition Platform, which includes the read-only version of the ACP Catalog. This feature is readily available from the Back Office for SCCOS customers on Spryker version **202212.0**. An updated version of the ACP Catalog was also introduced in 2023. See the [release note](https://docs.spryker.com/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-{{page.version}}release-notes-202311.0.html#documentation-2) for details.
+In 2022, we introduced the App Composition Platform, which includes the read-only version of the ACP Catalog. This feature is readily available from the Back Office for SCCOS customers on Spryker version **202212.0**. An updated version of the ACP Catalog was also introduced in 2023.
 
-Customers who are on an earlier version of Spryker and would like to access the read-only version of the ACP Catalog can do so by installing the module `spryker/app-catalog-gui: ^1.4.1` or the later version of it.
+If you are on an earlier version of Spryker and would like to access the read-only version of the ACP Catalog, you can do so by installing the module `spryker/app-catalog-gui: ^1.4.1` or a later version of it.
 
 
 ## Becoming registered for ACP

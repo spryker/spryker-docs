@@ -17,7 +17,7 @@ related:
       link: docs/dg/dev/acp/acp-security-tips.html
 ---
 
-App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](/https://spryker.com/app-composition-platform/#/).
+App Composition Platform (ACP) enables you to connect, configure, and use the available third-party services with zero or low development effort. For business information about ACP, see [Spryker App Composition Platform](https://spryker.com/app-composition-platform/#/).
 
 ACP supports the following integrations:
 

@@ -14,11 +14,19 @@ related:
   link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
+{% info_block warningBox "Warning" %}
+
+This document provides a set of guidelines for project development, intended as a flexible template and starting point for development teams striving for high-quality software. While these guidelines offer a default ruleset, it's imperative to tailor them to meet the specific requirements and commitments of each project. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
+
+Below you can find several generic NFRs grouped by quality, acting as a starting point for your project. Be sure to tailor the list to the specific requirements and constraints of your project, and to prioritize and organize the NFRs in a logical manner.
+
+{% endinfo_block %}
+
+# Project Operational & Deployment NFR guidelines
 Non-Functional Requirements (NFRs) are one of the core tools for architects and developers to describe how the system under development supposed to work from technical perspective.
 Defining NFRs can be as important as defining functional requirements, which are usually done by business (i.e. Product Owners). Missing out on them usually result in
 too late realization of certain unintended behavior that costs a lot of resources/money for the projects to deal with.
 
-## Project Operational & Deployment NFR guidelines
 There are several factors that can impact the success of NFR definition in a project. One key factor is the involvement of all relevant stakeholders, 
 including architects, developers, business analysts, and end users. Ensuring that all of these parties are involved in the NFR definition 
 process can help to ensure that all relevant requirements are captured and that there is a shared understanding of the technical 
@@ -33,21 +41,11 @@ Finally, it is important to regularly review and update NFRs as the project prog
 the NFRs may also need to be adjusted to reflect changes in the project's goals and objectives. Regularly revisiting and updating 
 NFRs can help to ensure that the system being developed continues to meet the technical and functional needs of the business and end users.
 
-## Template for Generic NFRs for Projects.
 
-{% info_block warningBox "Warning" %}
 
-Below you can find several generic NFRs grouped by quality. In this list, we have provided a starting point for common NFRs that MAY be relevant
-to your project. Not all of these NFRs may be applicable in every case, so you SHOULD use this list as a guide or template to help to start
-with your own NFRs. Be sure to tailor the list to the specific requirements and constraints of your project, and to prioritize and organize
-the NFRs in a logical manner.
-
-{% endinfo_block %}
-
-### Availability
+# Availability
 Software architecture & design must ensure that there is no negative impact on application availability.
 
-Example fulfilment of NFRs:
 * Avoid designing the application to limit its own start-up or shut-down.
   * Avoid design patterns or coding practices that cause the application to exit unexpectedly in the middle of execution.
   * Avoid using flags or other mechanisms to block the application from starting.
@@ -57,24 +55,24 @@ Example fulfilment of NFRs:
 * Align resource consumption with expected workloads.
   * For example, if using PHP-FPM, ensure that the number of worker processes is sufficient to handle the expected workload without overloading the system.
 
-### Security
+# Security
 * Make sure to define and follow your own project's [Security best practices](/docs/scos/dev/guidelines/security-guidelines.html).
 
-### Deployability
-* The same release candidate / branch MUST be re-deployable without side-effects.
-* The deploy scripts MUST NOT break the behaviour of the current system.
-  * Deploy script elements MUST be configured according to your project setup following the [Deployment Pipeline](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) process.
-  * The to-be deployed (version N+1) application MUST upgrade the data structures and constants and data sets without causing downtime and without failing or losing/compromising any (version N+1 or N) functionality.
-  * The to-be deployed (version N+1) message consumers MUST be BC with the present (<N+1) messages and broker structure.
+# Deployability
+* The same release candidate / branch must be re-deployable without side-effects.
+* The deploy scripts must not break the behaviour of the current system.
+  * Deploy script elements must be configured according to your project setup following the [Deployment Pipeline](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html) process.
+  * The to-be deployed (version N+1) application must upgrade the data structures and constants and data sets without causing downtime and without failing or losing/compromising any (version N+1 or N) functionality.
+  * The to-be deployed (version N+1) message consumers must be BC with the present (<N+1) messages and broker structure.
   * The deployed (version N+1) application CAN clean up obsolete data structures # constants and data sets if it causes no downtime, unless it's breaking version N.
   
-### Rollback-ability
-The rollback scripts MUST NOT break the behaviour of current system.
+# Rollback-ability
+The rollback scripts must not break the behaviour of current system.
 
-* Rollback script elements MUST be configured according to your project setup following the Rollback Pipeline process.
+* Rollback script elements must be configured according to your project setup following the Rollback Pipeline process.
 * The deployed (version N+1) application can rollback current version (N+1) data structures # constants and data sets to previous version (N) without causing downtime.
 
-### Performance
+# Performance
 * Zed UI average load performance should be under 450ms.
 * Glue GET requests with subsequent Zed requests on average should be under 180ms.
 * Glue GET requests without subsequent Zed requests on average should be under 140ms.

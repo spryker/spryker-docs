@@ -5,50 +5,58 @@ last_updated: March 15, 2024
 template: concept-topic-template
 ---
 
-In a Marketplace business model, the partnership is usually based on contracts, or relations, between sellers and buyers.
-The B2B Merchant Contracts feature allows for the creation and management of such relations and relation requests.
+In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. Both features Marketplace Merchant B2B Contracts and Marketplace Merchant B2B Contract Requests allow for the creation and management of such relation and relation requests. Based on merchant relations, you can define buyer-specific [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) and [products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), as well as [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).
 
-In the context of the Marketplace relations, there are three key actors: marketplace operator, merchant, and buyer:
+In the context of merchant relations in a Marketplace, there are three key actors: marketplace operator, merchant, and buyer:
 
-* The marketplace operator owns the platform and acts as a broker between merchants and buyers.
-* The merchants are sellers usually represented by a [company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company).
-* The buyers are often [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
+* The marketplace operator owns the platform and acts as a broker between merchants and buyers..
+* The [merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) are sellers in the marketplace.
+* The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchants. Individual employees of the business units are called *company users*. 
 
-There are two ways to initiate a merchant relation:
+There are two ways to establish a merchant relation:
+- Marketplace operator manually creates a merchant relation in the Back Office.
+- Company user submits a relation request on the Storefront. The merchant relation is created once the merchant or marketplace operator approves this request.
 
-- Merchant or marketplace operator creates the merchant relation in the Back Office.
-- Company user creates a relation request on the Storefront. Once the merchant approves the request, the relation is created.
 
-## Creation of a merchant relation in a Back Office by a merchant or a marketplace operator
+## Creation of a merchant relation by a marketplace operator
 
-A merchant or a marketplace operator can create a merchant relation in the Back Office. For details on how to do that, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relations\create-merchant-relations.html).
+A marketplace operator can create a merchant relation in the Back Office. For details on how to do that, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relations/create-merchant-relations.html).
 
-After the relation has been created in the Back Office, it appears on the Storefront on *My Company -> Merchant relations* page of the company user.
+After a relation has been created in the Back Office, it appears on the Storefront in *My Company -> Merchant Relations* and in the Merchant Portal in *B2B Contracts -> Merchant Relations*.
 
-## Initiation of the merchant relation by a company user
+{% info_block infoBox "Info" %}
 
-Company user can request a merchant relation from a merchant. Once the merchant approves the request, the merchant relation is created.
+Merchants can't create a merchant relation in the Merchant Portal. Instead, merchants can ask their buyers to initiate a merchant relation request as described in the following section.
+
+{% endinfo_block %}
+
+## Initiation of a merchant relation by a company user
+
+Company user can request a merchant relation from a merchant. Once a merchant approves the request, the merchant relation is automatically created.
 
 ### Merchant relation request creation by a company user
 
 Company user can initiate the merchant relation by creating a merchant relation request on the Storefront. There are several ways for a company user to create the relation request:
-- From the merchant page, by clicking **Send request**.
-- From the Product Details page, by clicking **Merchant Relation Request** under the name of the merchant selling the product.
-- From the *Merchant Relation Requests* page, by clicking **Create request**.
+- From the merchant profile page, by clicking **Send request**.
+- From the product details page, by clicking **Merchant Relation Request** under the name of the merchant selling the product.
+- From the *Company Account page*, in *Merchant Relation Requests*, by clicking **Create request** and selecting the relevant merchant.
 
-In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner - the business unit that will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant.
-After the company user submits the relation request, it appears on the *Merchant Relation Requests* page with *Pending* status. Once the merchant approves or rejects the relation requests, its status changes to *Approved* or *Rejected*.
-
-The company user can view details of the created merchant request and cancel pending merchant relations requests. However, they cannot edit the submitted requests.
+In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with a *Pending* status on the *Company Account* page. 
+The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront, on the *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 
 ### Merchant relation request approval by a merchant or marketplace operator
 
-Once the company user submits the merchant relation request, the merchant receives a notification via email.
-The merchant can approve or reject the merchant relation request. They can leave comments for the company that requested the relation. Merchant can also leave internal comments that only the merchant and their users can view and respond to.
+When a company user creates a request, the merchant receives a notification via email and can start processing this request.
+The merchant can leave notes for the company that requested the relation. Merchant can also leave internal comments that only their merchant users can view and respond to.
+Once the merchant approves or rejects a relation request, its status changes to *Approved* or *Rejected*. The company user receives the email about the status change of the request. 
 
 For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-relations-in-merchant-portal/manage-merchant-relation-requests.html).
 
-Even though usually it's a merchant who approves or rejects a merchant relation request, a marketplace operator can also do this from the Back Office. For details on how they can do this, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-relations-in-merchant-portal/manage-merchant-relation-requests.html).
+Even though it's usually a merchant who approves or rejects a merchant relation request, a marketplace operator can also process the merchant relation request from the Back Office. For details on how they can do this, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-relations-in-merchant-portal/manage-merchant-relation-requests.html).
 
 
-With the merchant relations, the merchants can assign [specific product prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/marketplace-merchant-custom-prices-feature-overview.html) and [product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/marketplace-product-offer-prices-feature-overview.html) to the buyer with whom the merchant has the relation.
+## Automatic creation of a merchant relation
+Based on the data in a request, one or multiple merchant relations are automatically created for approved requests and displayed in the Back Office, in the Merchant Portal, and on the Storefront.
+
+## Merchant relations in business operations 
+Based on merchant relations, you can assign buyer-specific product prices in the [Back Office](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) and in the [Merchant Portal](https://docs.spryker.com/docs/pbc/all/price-management/202311.0/marketplace/marketplace-merchant-custom-prices-feature-overview.html). You can also define [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.

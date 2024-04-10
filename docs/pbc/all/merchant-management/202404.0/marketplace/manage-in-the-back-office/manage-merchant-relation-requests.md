@@ -21,7 +21,7 @@ To approve or reject a merchant relation request, do the following:
 6. Optional: To create a separate merchant relation per each business unit, check the respective check box.
 7. Confirm approval or rejection of the merchant request. 
 
-![approve-reject-merchant-relations-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchants/manage-merchant-relation-requests/approve-reject-merchant-relations-in-back-office.png)
+![bo-request-details.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/bo-request-details.png)
 
 ## View merchant relations created from merchant relation requests
 

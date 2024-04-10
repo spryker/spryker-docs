@@ -7,7 +7,7 @@ related:
   - title: Conceptual Overview
     link: docs/dg/dev/architecture/conceptual-overview.html
   - title: Modules and Application Layers
-    link: docs/dg/dev/architecture/modules-and-application-layers.htm
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
 {% info_block infoBox "Info" %}

@@ -1061,6 +1061,8 @@ entries:
       url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
+    - title: Architectural Convention Reference
+      url: /docs/dg/dev/architecture/architectural-convention-reference.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:

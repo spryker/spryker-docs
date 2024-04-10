@@ -1,3 +1,29 @@
+---
+title: Architectural Convention Reference
+description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
+last_updated: Apr 10, 2024
+template: concept-topic-template
+related:
+  - title: Atomic Web Design
+    link: https://bradfrost.com/blog/post/atomic-web-design/
+  - title: Conceptual Overview
+    link: docs/dg/dev/architecture/conceptual-overview.html
+  - title: Facade Design Pattern
+    link: https://en.wikipedia.org/wiki/Facade_pattern
+  - title: Font Awesome Icons Library
+    link: https://fontawesome.com/v4/
+  - title: Modules and Application Layers
+    link: docs/dg/dev/architecture/modules-and-application-layers.html
+  - title: Propel Documentation - Active Record Class
+    link: https://propelorm.org/documentation/reference/active-record.html
+  - title: Propel Documentation - Query Class
+    link: https://propelorm.org/documentation/reference/model-criteria.html
+  - title: Propel Documentation - Schema XML
+    link: https://propelorm.org/documentation/reference/schema.html
+  - title: Syntactical Validation
+    link: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+---
+
 {% info_block infoBox "Info" %}
 
 This document serves as a dynamic resource intended to provide an overview of our conventions and guidelines. We acknowledge that the technology landscape is ever-evolving, and as such, this document is subject to continuous refinement and improvement.
@@ -457,7 +483,7 @@ The `index` action name acts as the default action during request action resolut
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
 - Only `Action` methods can be `public` for simplicity.<br/>
 - `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.<br/>
-- `Action` methods are required to orchestrate [syntactical validation](#https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.<br/>
+- `Action` methods are required to orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.<br/>
 - `Action` methods can not contain any logic directly that is outside the regular responsibilities of a `Controller` (see `description` above).
 </details>
 
@@ -736,7 +762,7 @@ Each database table definition results as the creation of an `Entity` by Propel.
 
 **3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module abstract class to enable adding functionality from SCOS module level (see `examples` below).
 
-See [Propel Documentation - Active Record Class](#https://propelorm.org/documentation/reference/active-record.html).
+See [Propel Documentation - Active Record Class](https://propelorm.org/documentation/reference/active-record.html).
 
 See more details on domains in [Persistence Schema](#persistence-schema).
 
@@ -838,7 +864,7 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 
 **Description**
 
-Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](#https://en.wikipedia.org/wiki/Facade_pattern).
+Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern).
 
 There are currently four components that use the facade design pattern, thus referred as facades:
 - The `Facade` is the API of [Business layer](#business-layer-responsibilities).
@@ -1320,14 +1346,14 @@ interface OmsConstants
 **Description**
 
 Module entries of the Backoffice navigation panel.
-The icons are taken from [Font Awesome Icons Library](#https://fontawesome.com/v4/).
+The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4/).
 
 **Example**
 - The below example adds navigation elements, under the already existing `product` navigation element (defined in another module).
 - The `pages` reserved node holds the navigation items.
 - The navigation items are defined within a logical node (`configurable-bundle-templates`) according to business requirements.
 - The `bundle` identifies in which `module` the processing `controller` is located.
-- The `icon` is the [Font Awesome Icon](#https://fontawesome.com/v4/) name.
+- The `icon` is the [Font Awesome Icon](https://fontawesome.com/v4/) name.
 ```xml
 <?xml version="1.0"?>
 <config>
@@ -1439,7 +1465,7 @@ class QuotePermissionChecker implements QuotePermissionCheckerInterface
 
 **Description**
 
-The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](#https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business `domains`, each representing a module overarching group that encapsulates related domain entities.
+The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business `domains`, each representing a module overarching group that encapsulates related domain entities.
 
 **Conventions**
 
@@ -1559,7 +1585,7 @@ src
 Enables to write queries to the related table in an SQL engine agnostic way.
 `Query Objects` can be instantiated and used only from the [Repository](#repository) and [Entity Manager](#entity-manager) of the definer module(s).
 
-See [Propel Documentation - Query Class](#https://propelorm.org/documentation/reference/model-criteria.html)
+See [Propel Documentation - Query Class](https://propelorm.org/documentation/reference/model-criteria.html)
 
 See more details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
 
@@ -1655,7 +1681,7 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 
 [Yves application layer](#yves) can have one or multiple themes that define the overall look and feel.
 
-SCOS implements the concept of [atomic web design](#https://bradfrost.com/blog/post/atomic-web-design/).
+SCOS implements the concept of [atomic web design](https://bradfrost.com/blog/post/atomic-web-design/).
 
 [Yves application layer](#yves) provides only 1-level theme inheritance: `current theme` > `default theme`.
 - **Current theme**: a single theme defined on a project level (eg: `b2b-theme`, `b2c-theme`).

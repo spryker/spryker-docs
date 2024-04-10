@@ -43,6 +43,20 @@ For the approved merchant relation requests, you can view the merchant relations
 
 This takes you to *Merchant relations* page with the merchant relation.
 
+## View merchant relations created from merchant relation requests
+
+For the approved merchant relation requests, you can view the merchant relations created from them. Do the following:
+1. Click **Merchant Relation Requests** and select the approved relation request.
+2. In the top right corner of the form with the request details, click **Merchant Relations.**
+
+IMAGE
+
+This takes you to the *Merchant Relations* page with the respective merchant relations.
+
+## What's next
+
+[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-relations-in-merchant-portal/manage-merchant-relations.html)
+
 
 
 

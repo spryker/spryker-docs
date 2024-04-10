@@ -1,5 +1,5 @@
 ---
-title: Merchant B2B Contracts feature overview
+title: Marketplace Merchant B2B Contracts and Contract Requests features overview
 description: In the context of Spryker Marketplace, there can be three key figures- company user and merchant, that can set up relations.
 last_updated: March 15, 2024
 template: concept-topic-template

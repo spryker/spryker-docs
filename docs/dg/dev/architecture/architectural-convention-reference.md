@@ -4,24 +4,10 @@ description: The Spryker framework includes a diverse range of components design
 last_updated: Apr 10, 2024
 template: concept-topic-template
 related:
-  - title: Atomic Web Design
-    link: https://bradfrost.com/blog/post/atomic-web-design/
   - title: Conceptual Overview
     link: docs/dg/dev/architecture/conceptual-overview.html
-  - title: Facade Design Pattern
-    link: https://en.wikipedia.org/wiki/Facade_pattern
-  - title: Font Awesome Icons Library
-    link: https://fontawesome.com/v4/
   - title: Modules and Application Layers
-    link: docs/dg/dev/architecture/modules-and-application-layers.html
-  - title: Propel Documentation - Active Record Class
-    link: https://propelorm.org/documentation/reference/active-record.html
-  - title: Propel Documentation - Query Class
-    link: https://propelorm.org/documentation/reference/model-criteria.html
-  - title: Propel Documentation - Schema XML
-    link: https://propelorm.org/documentation/reference/schema.html
-  - title: Syntactical Validation
-    link: https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html
+    link: docs/dg/dev/architecture/modules-and-application-layers.htm
 ---
 
 {% info_block infoBox "Info" %}

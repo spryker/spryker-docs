@@ -21,7 +21,7 @@ Install the required features:
 | Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)|
 | Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-the-promotions-and-discounts-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
@@ -73,7 +73,7 @@ class GiftCardConfig extends SprykerGiftCardConfig
 
 {% info_block warningBox "Verification" %}
 
-When you finish the [Setup Behaviour](#install-the-required-modules-using-composer) step, make sure that the `NoShipment` shipment method is selected automatically while ordering only a gift card.
+When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure that the `NoShipment` shipment method is selected automatically while ordering only a gift card.
 
 {% endinfo_block %}
 
@@ -171,7 +171,7 @@ class SalesConfig extends SprykerSalesConfig
 ```
 
 {% info_block warningBox "Verification" %}
-When you finish the [Setup Behaviour](#install-the-required-modules-using-composer) step, make sure the following:
+When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure the following:
 * The `NoPayment01` state machine is activated successfully.
 * When using a gift card to cover an entire order, the configured order state machine is used—for example, `Nopayment01`.
 * You can't use denied payment methods when using a gift card.
@@ -1164,7 +1164,7 @@ Install the required features:
 | Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 | Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
@@ -1250,7 +1250,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

@@ -7,9 +7,9 @@ template: back-office-user-guide-template
 
 This document describes how to manage merchant relations in the Merchant Portal.
 
-To manage merchant relations, go to B2B Contracts -> Merchant Relations. Click the relation you want to manage.
+To manage merchant relations, go to **B2B Contracts -> Merchant Relations**. Click the relation you want to manage.
 
-![manage_relations_mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-merchant-portal/manage-merchant-relations/merchant-relations-mp.png)
+![manage_relations_mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relations/merchant-relations-mp.png)
 
 To edit a merchant relation:
 
@@ -18,4 +18,4 @@ To edit a merchant relation:
 
 You can also delete a merchant relation. Deletion removes the merchant relation from the Merchant Portal, the Back Office, and from the buyer’s Storefront. To delete a merchant relation, click **Delete** and confirm deletion.
 
-![merchant-relations-mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-merchant-portal/manage-merchant-relations/mp-relation-details.png)
+![merchant-relations-mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relations/mp-relation-details.png)

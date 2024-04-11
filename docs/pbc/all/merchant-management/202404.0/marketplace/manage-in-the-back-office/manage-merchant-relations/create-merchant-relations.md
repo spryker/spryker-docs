@@ -1,8 +1,8 @@
 ---
 title: Create merchant relations
 description: Learn how to create merchant relations in the Back Office
-last_updated: Jun 16, 2021
 template: back-office-user-guide-template
+last_updated: Nov 17, 2023
 ---
 
 This document describes how to create merchant relations in the Back Office.

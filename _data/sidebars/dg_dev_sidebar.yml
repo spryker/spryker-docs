@@ -1521,6 +1521,7 @@ entries:
 
   - title: App Composition Platform
     url: /docs/dg/dev/acp/app-composition-platform.html
+    nested:
       - title: ACP security assessment
         url: /docs/dg/dev/acp/aop-security-assessment.html
       - title: ACP security tips

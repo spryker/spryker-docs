@@ -10,7 +10,7 @@ redirect_from:
 keywords: acp
 related:
     - title: SCCOS Dependencies required for ACP
-      link: docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready
+      link: docs/dg/dev/acp/app-composition-platform-installation.html
     - title: ACP security assessment
       link: docs/dg/dev/acp/aop-security-assessment.html
     - title: ACP security tips

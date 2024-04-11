@@ -1520,8 +1520,7 @@ entries:
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
 
   - title: App Composition Platform
-    url: /docs/dg/dev/acp/acp-overview.html
-    nested:
+    url: /docs/dg/dev/acp/app-composition-platform.html
       - title: ACP security assessment
         url: /docs/dg/dev/acp/aop-security-assessment.html
       - title: ACP security tips

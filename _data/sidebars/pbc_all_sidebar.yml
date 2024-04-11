@@ -1492,22 +1492,22 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html
                       - title: Edit merchant users
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html    
-                  title: Manage merchant relations
-                  include_versions:
-                    - "202404.0"
-                  nested:
-                    - title: Create merchant relations
-                      url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/create-merchant-relations.html
-                      include_versions:
+                  - title: Manage merchant relations
+                    include_versions:
                       - "202404.0"
-                    - title: Edit merchant relations
-                      url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/edit-merchant-relations.html
-                      include_versions:
-                      - "202404.0"
-                    - title: Manage merchant relation requests
-                      url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relation-requests.html
-                      include_versions:
-                      - "202404.0"
+                    nested:
+                      - title: Create merchant relations
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/create-merchant-relations.html
+                        include_versions:
+                        - "202404.0"
+                      - title: Edit merchant relations
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/edit-merchant-relations.html
+                        include_versions:
+                        - "202404.0"
+                      - title: Manage merchant relation requests
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relation-requests.html
+                        include_versions:
+                        - "202404.0"
               - title: Manage in the Merchant Portal
                 nested:
                   - title: Manage merchant relation requests

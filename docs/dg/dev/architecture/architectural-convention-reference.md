@@ -410,18 +410,24 @@ An application layer can have up to four logical layers with clear purpose and c
 - The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
 <details><summary markdown='span'>Additional Conventions for Core Module Development</summary>
+
 - The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
+
 </details>
 
 **Guidelines**
 - The components should be stateless to be deterministic and easy to comprehend.
 
 <details><summary markdown='span'>Additional Guidelines for Project Development</summary>
+
 - It is recommended for each component to consider the conventions and guidelines of Module Development and Core Module Development as they may offer solutions for long-term requirements or recurring issues.<br/>
+
 </details>
 
 <details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
+
 - The components are required to be stateless to be deterministic and easy to comprehend.<br/>
+
 </details>
 
 ## Controller
@@ -467,10 +473,12 @@ The `index` action name acts as the default action during request action resolut
 - `Action` methods are required to be suffixed with `Action` and be `public` in order to be accessible, and straight forward define the entry points of the `Controller`.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - Only `Action` methods can be `public` for simplicity.<br/>
 - `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.<br/>
 - `Action` methods are required to orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.<br/>
 - `Action` methods can not contain any logic directly that is outside the regular responsibilities of a `Controller` (see `description` above).
+
 </details>
 
 **Guideline**
@@ -558,6 +566,7 @@ public function provideServiceLayerDependencies(Container $container)
 ```
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - Only three type of methods can be defined, either `provide`, `get`, or `add`.<br/>
 ```php
 function provide*Dependencies(Container $container)
@@ -574,6 +583,7 @@ function get[PluginInterfaceName]Plugins(Container $container)
 - [Facades](#facade-design-pattern) are required to be wrapped into a [Bridge](#bridge) to avoid coupling another module.<br/>
 - [Plugins](#plugin) can not be wired on module level.<br/>
 - [Plugin](#plugin) defining `get` methods are required to be tagged with `@api` tag.<br/>
+
 </details>
 
 **Guidelines**
@@ -758,7 +768,9 @@ See more details on domains in [Persistence Schema](#persistence-schema).
 - `Entities` are required to be implemented according to the 3-tier class hierarchy (see in `description` and `examples`) to support extension from Propel and SCOS.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - `Entities` can be instantiated in the [Persistance Layer](#persistence-layer-responsibilities) only.
+
 </details>
 
 **Guidelines**
@@ -812,19 +824,23 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Entity manager` `public` methods need to have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`.<br/>
 - Creating, updating and deleting functions need to be separated by concern even if they use overlapping internal methods.<br/>
 - The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
 - `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.<br/>
 - `Entity manager` methods need to return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).<br/>
 -`Entitie manager` needs to utilise [Entities](#entity) and/or [Query Objects](#query-object) for database operations (raw SQL usage is not feasible).<br/>
+
 </details>
 
 **Guidelines**
 - No generic guidelines.
 
 <details><summary markdown='span'>Guidelines for Project Development</summary>
+
 - Solutions in `Entity manager` can consider to use raw SQL queries for performance reasons, but this will also remove all Propel ORM benefits (eg: triggering events, etc.), thus it should be used with caution.<br/>
+
 </details>
 
 ## Facade design pattern
@@ -864,6 +880,7 @@ The facades provide functionality for other layers and/or modules. The functiona
 - All methods need to have [Transfer Objects](#transfer-object) or native types as argument and return value.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - The methods need to have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).<br/>
 - The inherited `getFactory()` method needs to be used to instantiate the underlying classes.<br/>
 - The methods need to contain only the delegation to the underlying [model](#model).<br/>
@@ -893,6 +910,7 @@ The facades provide functionality for other layers and/or modules. The functiona
     - if the entity manipulation function operation was fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.<br/>
     - if the entity manipulation function operation was not successful and the request is transactional, the error list must contain the error that caused the transaction rollback, the error must point out the entity that caused the rollback, the entities after the error must not be manipulated, and the response entity list must reflect the state of the database after the rollback.<br/>
     - if the entity manipulation function operation was not successful and the request is not transactional, the error list must contain all errors, each error must point out the related entity that caused that error, and the response entity list must reflect the state of the database after the rollback.<br/>
+
 </details>
 
 **Guidelines**
@@ -900,7 +918,9 @@ The facades provide functionality for other layers and/or modules. The functiona
 - Single-item-flow methods should be avoided as they are not scalable.
 
 <details><summary markdown='span'>Additional Guidelines for Project Development</summary>
+
 - `Query Containers` can be used/developed further, but it is highly recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.<br/>
+
 </details>
 
 **Example**
@@ -1046,11 +1066,13 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Factories` need to orchestrate the instantiation of objects in solitude (without reaching out to class-external logic).<br/>
 - `Factory` classes must not define/implement interface as practically they are never fully replaced and offer no benefit.<br/>
 - `Factory` methods need to be `public`.<br/>
 - `Factory` methods need to either instantiate one new object and named as `create[Class]()`, or wire the dependencies and named as `get[Class]()`.<br/>
 - `Factory` methods need to use the constants defined in [dependency provider](#dependency-provider) when reaching out to module dependencies.<br/>
+
 </details>
 
 
@@ -1111,6 +1133,7 @@ To differentiate between the recurring cases of data mapping, and to provide a c
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Mapper` methods need to be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.<br/>
   - `Mappers` need to be free of any logic other than structuring directives.<br/>
     - `Mappers` can not have data resolving (eg: remote calls, database lazy load) logic as they are utilised in high-batch processing scenarios.<br/>
@@ -1119,6 +1142,7 @@ To differentiate between the recurring cases of data mapping, and to provide a c
   - `Persistence Mappers` need to be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.<br/>
 - `Expander` methods need to be named as `expand[With<description>]($targetEntity)`.<br/>
 - The `hydrator/hydration` keywords can not be used but instead `Mapper` or `Expander`.<br/>
+
 </details>
 
 **Examples**
@@ -1233,6 +1257,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
   - `Models` can not interact directly with other module's `Models` (eg: via inheritance, shared constants, instantiation, etc.).
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - `Model` dependencies need to be injected via constructor.<br/>
 - `Models` can not instantiate any object but [Transfer Objects](#transfer-object).<br/>
 - `Models` need to be grouped under a folder by activity (eg: `Writers/ProductWriter.php`, `Readers/ProductReader.php`).<br/>
@@ -1240,6 +1265,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 - Each `Model` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
 - `Model` dependencies needs to be referred/used/defined by an interface (instead of class).<br/>
 - `Model` methods can not be `private`.<br/>
+
 </details>
 
 ## Module Configurations
@@ -1281,6 +1307,7 @@ When `module configuration` is defined in another [application layer](#applicati
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Module configuration`<br/>
   - Getter methods (prefixed with `get`) need to be defined to retrieve configuration values, instead of accessing values via constants directly (this enables a more flexible extension structure, and an easier to control access tracking).<br/>
     - Constants can also be defined to support the getter methods (example: to enable cross-module referencing via `@uses`).<br/>
@@ -1290,13 +1317,16 @@ When `module configuration` is defined in another [application layer](#applicati
 - `Module configuration` constants need to be `protected`.<br/>
 - The `module configuration` relays exclusively on `static::` to support extension.<br/>
 - `Environment configuration` constants need to be `public`.<br/>
+
 </details>
 
 **Guidelines**
 - No generic guidelines.
 
 <details><summary markdown='span'>Guidelines for Module Development and Core Module Development</summary>
+
 - `Protected` items are not recommended in `module configuration` as they tend to create backward compatibility problems on project extensions.<br/>
+
 </details>
 
 **Examples**
@@ -1410,7 +1440,9 @@ The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4
 - The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait allows the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
 
 <details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
+
 - When using one of the traits in a [Model](#model), use a `protected` constant string to reference the `Permission Plugin` that will be used in the [Model](#model). As an annotation for this string you should add `@uses` annotation to the `PermissionPlugin::KEY` string that you will compare against (see in `examples` below).
+
 </details>
 
 
@@ -1461,12 +1493,14 @@ The schema file defines the module's tables and columns (see [Propel Documentati
   - Exception can be to the case if the same table is referred multiple times, in which case the follow-up foreign key columns need to be named as `fk_[custom_connection_name]` .
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - The table `[org]` prefix needs to be `spy_`.<br/>
 - The schema file `[org]` prefix needs to be `spy_`.
 - The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).<br/>
   - The field can be `null` by default.<br/>
   - The field needs to be eventually unique across the table (until the unique value is provided, the business logic may not operate appropriately).<br/>
 - Table foreign key definitions needs to include the `phpName` attribute.<br/>
+
 </details>
 
 **Guidelines**
@@ -1579,7 +1613,9 @@ See more details on the 3-tier class hierarchy in [Entity](#entity), and domains
 - No generic conventions.
  
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - Hidden, hard dependencies appearing through `join` need to be defined via `@module [RemoteModule1][,[...]]` tag (see `examples` below).
+
 </details>
 
 **Example**
@@ -1621,18 +1657,22 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Repostiories` can not alter the data in the database, only retrieve it.<br/>
 - `Repositories` need to use [Entities](#entity) and/or [Query Objects](#query-object) to retrieve data from the database.<br/>
 - The `Repository` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
 - `Public` methods need to receive and return [Transfer Objects](#transfer-object) only.<br/>
 - `Public` methods need to return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).<br/>
+
 </details>
 
 **Guidelines**
 - No generic guidelines.
 
 <details><summary markdown='span'>Guidelines for Project Development</summary>
+
 - Methods can use native PHP types as input arguments or result values, although this is not recommended as it leads to granular methods.
+
 </details>
 
 ## Theme
@@ -1711,7 +1751,9 @@ For every defined table in [Peristence Schema](#persistence-schema) a matching `
   - The `Entity` suffix is reserved for the auto-generated `EntityTransfers` and must not be used in manual transfer definitions to avoid collision.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - A module can only use those `Transfer Objects` and their properties which are declared in the same module (transfer definitions accessed through composer dependencies are considered as violation).
+
 </details>
 
 **Guidelines**
@@ -1758,11 +1800,13 @@ A `Widget` is a reusable part of a webpage in [Yves](#yves) application layer. `
 - A `Widget` needs to have a unique name across all features.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - A `Widget` needs to contain only lightweight, display related logic.<br/>
   - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.<br/>
 - `Widget` module can not appear as dependency (as it goes against the basic concept of the optional widgets).<br/>
 - Implementing a `Widget` needs to happen in a widget module.<br/>
 - When `Widget` call is implemented, it needs to be considered that a `Widget` is always optionally enabled.<br/>
+
 </details>
 
 **Guidelines**
@@ -1833,10 +1877,12 @@ A `Zed Stub` is a class which defines interactions between [Yves](#yves)/[Glue](
 - `Zed Stubs` need to be a descendant of `\Spryker\Client\ZedRequest\Stub\ZedRequestStub`.
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - The `Zed Stub` methods need to contain only delegation but no additional logic.<br/>
 - `Zed Stub` methods need to be `public`.<br/>
 - `Zed Stub` methods need to use [Transfer Objects](#transfer-object) as input and output parameter.<br/>
 - `Zed Stub` methods need to add a `@uses` tag with the targeted [Gateway Controller](#gateway-controller) action in the docblock to enable easy code flow tracking.<br/>
+
 </details>
 
 ```php
@@ -1882,18 +1928,24 @@ The components below are essential in `core module development` for the purpose 
 - The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
 <details><summary markdown='span'>Additional Conventions for Core Module Development</summary>
+
 - The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
+
 </details>
 
 **Guidelines**
 - The components should be stateless to be deterministic and easy to comprehend.
 
 <details><summary markdown='span'>Additional Guidelines for Project Development</summary>
+
 - It is recommended for each component to consider the conventions and guidelines of Module Development and Core Module Development as they may offer solutions for long-term requirements or recurring issues.<br/>
+
 </details>
 
 <details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
+
 - The components are required to be stateless to be deterministic and easy to comprehend.<br/>
+
 </details>
 
 ## Bridge
@@ -1959,9 +2011,11 @@ According to the Interface Segregation Principle, every module defines an interf
 - The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method (mind the missing `bridge` suffix word in the interface name).
 
 <details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+
 - `Bridges` must contain only the delegation logic to the friend method.<br/>
 - The `Bridge` constructor can not have parameters to avoid coupling to a specific class.<br/>
 - `Bridge` classes and interfaces need to be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no `mixed`, no `x|y`).<br/>
+
 </details>
 
 **Guidelines**
@@ -2058,10 +2112,12 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 - No generic convention.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Plugins` can not contain business logic but delegate to the underlying [facade](#facade-design-pattern).
 - `Plugin` method names need to use words `pre` and `post` instead of `before`, `after`.
 - `Plugin` class names need to use words `pre`, `post`, `create`, `update`, `delete`, instead of `creator`, `updater`, `deleter`.
 - `Plugin` classes need to implement a [Plugin Interface](#plugin-interface) which is provided by an `extension module`.
+
 </details>
 
 **Guidelines**
@@ -2139,10 +2195,12 @@ There are three modules involved:
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
 - `Plugin interfaces` need to be defined in extension modules.<br/>
   - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.<br/>
   - `Extension modules` can not contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).<br/>
 - `Plugin interface` methods need to receive input items as collection for scalability reasons.<br/>
+
 </details>
 
 **Guidelines**

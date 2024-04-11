@@ -1528,7 +1528,7 @@ entries:
         url: /docs/dg/dev/acp/aop-security-assessment.html
       - title: ACP security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
-      - title: SCCOS Dependencies Required for the ACP
+      - title: SCCOS dependencies required for the ACP
         url: /docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html
       - title: Receive ACP messages in SCCOS
         url: /docs/dg/dev/acp/receive-acp-messages.html

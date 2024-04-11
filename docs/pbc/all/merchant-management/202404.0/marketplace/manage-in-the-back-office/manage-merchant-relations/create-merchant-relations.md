@@ -3,8 +3,6 @@ title: Create merchant relations
 description: Learn how to create merchant relations in the Back Office
 last_updated: Jun 16, 2021
 template: back-office-user-guide-template
-  - title: Merchants and Merchant Relations feature overview
-    link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-b2b-contracts-feature-overview.html
 ---
 
 This document describes how to create merchant relations in the Back Office.

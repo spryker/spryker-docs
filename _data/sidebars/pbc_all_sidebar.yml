@@ -1515,7 +1515,7 @@ entries:
                     include_versions:
                     - "202404.0"
                   - title: Manage merchant relations
-                    url: docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
                     include_versions:
                     - "202404.0"     
               - title: Manage in the Back Office

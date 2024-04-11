@@ -1,5 +1,5 @@
 ---
-title: SCCOS Dependencies Required for the App Composition Platform
+title: SCCOS dependencies required for the App Composition Platform
 description: Learn about the technical prerequisites required for the App Composition Platform registration.
 template: concept-topic-template
 last_updated: Jan 09, 2024
@@ -25,11 +25,11 @@ For you to be registered on the App Composition Platform, your project must be h
 {% endinfo_block %}
 
 
-## SCCOS Dependencies for projects on SCCOS product release 202311.0 or later
+## SCCOS dependencies for projects on SCCOS product release 202311.0 or later
 
 If your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can proceed to [Dependency 1: Module updates for ACP](#dependency-1-module-updates-for-acp).
 
-## SCCOS Dependencies for projects on earlier versions 
+## SCCOS dependencies for projects on earlier versions 
 SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) require updates.
 
 {% info_block infoBox "Product version earlier than 202311.0" %}

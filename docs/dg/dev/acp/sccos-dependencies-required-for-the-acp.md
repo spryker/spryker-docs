@@ -27,7 +27,7 @@ For you to be registered on the App Composition Platform, your project must be h
 
 ## SCCOS Dependencies for projects on SCCOS product release 202311.0 or later
 
-if your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later: you can skip the configuration described in this document.
+If your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can proceed to [Dependency 1: Module updates for ACP](#dependency-1-module-updates-for-acp).
 
 ## SCCOS Dependencies for projects on earlier versions 
 SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) require updates.
@@ -44,7 +44,7 @@ To get your project ACP-ready, make sure that your project modules are updated t
 
 #### ACP modules
 
-Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. However, you should still make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. However, make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
 * `spryker/message-broker: ^1.10.0` or later
@@ -60,9 +60,9 @@ Depending on the specific ACP apps you intend to use through ACP, you need to ad
 
 {% endinfo_block %}
 
-The Spryker ACP apps are continuously enhanced and improved with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCCOS modules to take full advantage of the latest app feature updates.
+The Spryker ACP apps are continuously enhanced with new versions. Though you don't have to update the apps themselves, it might be at times necessary to perform minor updates of the app-related SCCOS modules to take full advantage of the latest app feature updates.
 
-For each app you wish to use, ensure that you have the latest app-related SCCOS modules installed. You can find this information in each app integration guide.
+For each app you wish to use, make sure that you have the latest app-related SCCOS modules installed. You can find this information in each app integration guide.
 
 ### Dependency 2: Code changes in SCCOS
 
@@ -344,6 +344,6 @@ Once all the steps of the ACP-enablement process are completed, the ACP catalog 
 
 {% info_block infoBox "Using ACP Apps" %}
 
-Do note that after getting your project enabled and registered for ACP, there may be specific requirements needed for different ACP Apps. Kindly check the App page more for information
+After getting your project enabled and registered for ACP, there may be specific requirements needed for different ACP apps. Check the App page more for information.
 
 {% endinfo_block %}

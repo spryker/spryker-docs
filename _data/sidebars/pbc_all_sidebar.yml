@@ -1358,6 +1358,7 @@ entries:
         - "202212.0"
         - "202307.0"
         - "202311.0"
+        - "202404.0"
         nested:
           - title: Base shop
             nested:
@@ -1529,6 +1530,7 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
                 - "202311.0"
+                - "202404.0"
                 nested:
                   - title: Manage merchants
                     nested:
@@ -1559,6 +1561,8 @@ entries:
                         include_versions:
                         - "202404.0"
               - title: Manage in the Merchant Portal
+                include_versions:
+                - "202404.0"
                 nested:
                   - title: Manage merchant relation requests
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html

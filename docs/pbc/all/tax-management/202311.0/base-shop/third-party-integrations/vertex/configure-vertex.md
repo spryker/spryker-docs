@@ -49,7 +49,7 @@ To ensure accuracy and compliance with tax laws, We highly recommend thoroughly 
 
 {% endinfo_block %}
 
-Once you have configured Vertex, the taxes are calculated in real-time in the checkout. The respective note appears on the checkout page.
+Once you have configured Vertex, the taxes are calculated in real time in the checkout. The respective note appears on the checkout page.
 
 ![vertex_checkout_page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex_checkout_page.png)
 

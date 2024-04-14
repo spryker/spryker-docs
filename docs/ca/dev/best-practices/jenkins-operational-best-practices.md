@@ -1,13 +1,15 @@
 ---
-title: Jenkins operational best practices handbook
+title: Jenkins operational best practices
 description: Checklist for improved Jenkins stability
 template: best-practices-guide-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/best-practices/best-practises-jenkins-stability.html
+  - /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
 last_updated: March 11, 2024
 ---
 
-This checklist is designed to help you implement Spryker’s best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment. Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the checklist. If you have concerns or questions about it, raise them with Spryker Support.
+This document will help you implement Spryker’s best practices to enhance the stability and performance of the Jenkins component in your Spryker PaaS environment.
+Before raising issues about Jenkins performance and stability with Spryker, make sure you have fully completed the following checklist. If you have concerns or questions about it, raise them with Spryker Support.
 
 
 - Configure a maximum of two executors.
@@ -31,10 +33,10 @@ The following diagram showcases different memory constraints you should consider
 
 ![memory-constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
 
-Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads (child processes). Each executor can consume RAM up to `memory_limit` value. 
+Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each executor can consume RAM up to `memory_limit` value. 
 The `vendor/bin/console queue:worker:start` CLI command, in particular, is often configured to have multiple workers or threads and is typically the most RAM-intensive job. Hence, we will use it as an example moving forward.
 
-It is crucial to ensure that the combined theoretical max memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container’s available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
+It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container’s available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 
 
 {% info_block infoBox "Info" %}
 
@@ -42,7 +44,7 @@ In most environments, we have swap enabled to mitigate instability caused by exc
 
 {% endinfo_block %}
 
-Formula to estimate your max theoretical RAM demand:
+Formula to estimate your maximum theoretical RAM demand:
 
 Number of executors x (maximum workers and threads spawned by heaviest job * memory_limit) = Theoretical max RAM Demand
 
@@ -125,7 +127,4 @@ Make sure the following criteria are met:
 With all the preparation work listed in this document, you should already notice a significant improvement in Jenkins stability. To further enhance the resilience of your setup, we have gathered the following general recommendations for you.
 
 When the Jenkins host crashes and requires re-provisioning, there is a risk of losing all manually created jobs. To mitigate this risk, we recommend persisting important jobs in code. This ensures that when `vendor/bin/console scheduler:setup` is executed during recovery, all your critical jobs are reinstalled.
-
-- You are comfortable with losing your manually created jobs and have all important jobs persisted in your project.
-
 

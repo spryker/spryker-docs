@@ -1358,6 +1358,7 @@ entries:
         - "202212.0"
         - "202307.0"
         - "202311.0"
+        - "202404.0"
         nested:
           - title: Base shop
             nested:
@@ -1443,6 +1444,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html
               - title: Merchant Category feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
+              - title: Merchant B2B Contracts and Contact Requests features overview
+                url: /docs/pbc/all/merchant-management/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html
+                include_versions:
+                - "202404.0"
               - title: Install and upgrade
                 nested:
                   - title: Install features
@@ -1525,6 +1530,7 @@ entries:
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
                 - "202311.0"
+                - "202404.0"
                 nested:
                   - title: Manage merchants
                     nested:
@@ -1537,7 +1543,35 @@ entries:
                       - title: Create merchant users
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html
                       - title: Edit merchant users
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html    
+                  - title: Manage merchant relations
+                    include_versions:
+                      - "202404.0"
+                    nested:
+                      - title: Create merchant relations
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/create-merchant-relations.html
+                        include_versions:
+                        - "202404.0"
+                      - title: Edit merchant relations
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/edit-merchant-relations.html
+                        include_versions:
+                        - "202404.0"
+                      - title: Manage merchant relation requests
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relation-requests.html
+                        include_versions:
+                        - "202404.0"
+              - title: Manage in the Merchant Portal
+                include_versions:
+                - "202404.0"
+                nested:
+                  - title: Manage merchant relation requests
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html
+                    include_versions:
+                    - "202404.0"
+                  - title: Manage merchant relations
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
+                    include_versions:
+                    - "202404.0"     
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:

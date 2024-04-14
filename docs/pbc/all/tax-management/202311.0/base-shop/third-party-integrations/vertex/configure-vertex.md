@@ -45,7 +45,7 @@ Vertex expects to receive the Company Code you have set in Vertex from Spryker a
 
 {% info_block warningBox "Test the configuration" %}
 
-To ensure accuracy and compliance with tax laws, We highly recommend thoroughly testing the Vertex integration.
+To ensure accuracy and compliance with tax laws, we highly recommend thoroughly testing the Vertex integration.
 
 {% endinfo_block %}
 

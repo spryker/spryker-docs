@@ -8,7 +8,7 @@ This document describes how to upgrade Styleling to v16 and css-loader to v6.
 
 *Estimated migration time: 30m*
 
-## Update configuration files
+To upgrade Styleling to v16 and css-loader to v6, update configuration files:
 
 1. In `package.json`, do the following:
    - Update or add dependencies and engines.

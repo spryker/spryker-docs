@@ -64,7 +64,7 @@ Module configuration is extendable on project level. For the module configuratio
 * It or its parent has to extend AbstractBundleConfig of the corresponding layer.
 * Required values are defined in protected constants so it can be extended, but outside access is disabled.
 * Getter methods are introduced for constant access, so extended values are used on demand.
-* protected constants are used via static:: to support extension.
+* Protected constants are used via static:: to support extension.
 
 Module configuration is split into two categories:
 

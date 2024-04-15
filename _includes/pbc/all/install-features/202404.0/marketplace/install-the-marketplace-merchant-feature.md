@@ -152,8 +152,6 @@ Enable the following behaviors by registering the plugins:
 | SyncMerchantUsersStatusMerchantPostUpdatePlugin      | Updates merchant users status by merchant status on merchant update.                                     |               | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant               |
 | MerchantUserTabMerchantFormTabExpanderPlugin         | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information.  |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands the merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
-| MerchantProductOfferStorageExpanderPlugin            | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
-| MerchantProductOfferStorageFilterPlugin              | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
 | MerchantUserTwigPlugin                               | Adds the 'merchantName' global Twig variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
@@ -279,60 +277,6 @@ Make sure that, on the **Edit Merchant: `merchant_id`** page in the Back Office,
 * **Merchant Profile**
 * **Legal Information**
 * **Merchant User**
-
-{% endinfo_block %}
-
-**src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\ProductOfferStorage;
-
-use Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage\MerchantProductOfferStorageExpanderPlugin;
-use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
-
-class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageExpanderPluginInterface>
-     */
-    protected function getProductOfferStorageExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductOfferStorageExpanderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductOfferStorage;
-
-use Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage\MerchantProductOfferStorageFilterPlugin;
-use Spryker\Zed\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
-
-class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageFilterPluginInterface>
-     */
-    protected function getProductOfferStorageFilterPlugins(): array
-    {
-        return [
-            new MerchantProductOfferStorageFilterPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that, when you retrieve a product offer from storage, you can see the merchant transfer property.
 
 {% endinfo_block %}
 
@@ -977,7 +921,6 @@ To verify `SoldByMerchantWidget` has been registered, make sure the **Sold by me
 | PLUGIN                            | SPECIFICATION                                                                                                                                | PREREQUISITES                                                         | NAMESPACE                             |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|
 | MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://mysprykershop.com/merchant/{merchantReference}`.                                           |                                                                       | SprykerShop\Yves\MerchantPage\Plugin  |
-| UrlStorageMerchantMapperPlugin    | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
 
@@ -1002,36 +945,6 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
     }
 }
 ```
-
-**src/Pyz/Client/UrlStorage/UrlStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\UrlStorage;
-
-use Spryker\Client\MerchantStorage\Plugin\UrlStorageMerchantMapperPlugin;
-use Spryker\Client\UrlStorage\UrlStorageDependencyProvider as SprykerUrlDependencyProvider;
-
-class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\UrlStorage\Dependency\Plugin\UrlStorageResourceMapperPluginInterface>
-     */
-    protected function getUrlStorageResourceMapperPlugins()
-    {
-        return [
-            new UrlStorageMerchantMapperPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure the merchant page is accessible at `https://mysprykershop/de/merchant/spryker`.
-
-{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 

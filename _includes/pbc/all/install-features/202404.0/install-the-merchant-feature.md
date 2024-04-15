@@ -254,10 +254,13 @@ This step publishes tables on change (create, edit) to `spy_merchant_profile_sto
 
 1. Set up event listeners and publishers:
 
-| PLUGIN                         | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                          |
-|--------------------------------|---------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
-| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
-| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table.              |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
+| PLUGIN                                    | SPECIFICATION                                                                                                                           | PREREQUISITES                                                         | NAMESPACE                                                                                          |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| MerchantPublisherTriggerPlugin            | Registers the publishers that publish merchant entity changes to storage.                                                               |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
+| MerchantStoragePublisherPlugin            | Publishes merchant data to the `spy_merchant_storage` table.                                                                            |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
+| MerchantProductOfferStorageExpanderPlugin | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                                             |                                                                       | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage                                          |
+| MerchantProductOfferStorageFilterPlugin   | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                                                |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage                               |
+| UrlStorageMerchantMapperPlugin            | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin                                                              |
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
 
@@ -293,6 +296,91 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
 }
 ```
+
+**src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\ProductOfferStorage;
+
+use Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage\MerchantProductOfferStorageExpanderPlugin;
+use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
+
+class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageExpanderPluginInterface>
+     */
+    protected function getProductOfferStorageExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferStorageExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductOfferStorage;
+
+use Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage\MerchantProductOfferStorageFilterPlugin;
+use Spryker\Zed\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
+
+class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageFilterPluginInterface>
+     */
+    protected function getProductOfferStorageFilterPlugins(): array
+    {
+        return [
+            new MerchantProductOfferStorageFilterPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that, when you retrieve a product offer from storage, you can see the merchant transfer property.
+
+{% endinfo_block %}
+
+
+**src/Pyz/Client/UrlStorage/UrlStorageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\UrlStorage;
+
+use Spryker\Client\MerchantStorage\Plugin\UrlStorageMerchantMapperPlugin;
+use Spryker\Client\UrlStorage\UrlStorageDependencyProvider as SprykerUrlDependencyProvider;
+
+class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\UrlStorage\Dependency\Plugin\UrlStorageResourceMapperPluginInterface>
+     */
+    protected function getUrlStorageResourceMapperPlugins()
+    {
+        return [
+            new UrlStorageMerchantMapperPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the merchant page is accessible at `https://mysprykershop/de/merchant/spryker`.
+
+{% endinfo_block %}
 
 2. Register synchronization and synchronization error queues:
 

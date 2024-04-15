@@ -17,7 +17,7 @@ Install the required features:
 | Product | {{site.version}}  | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 | Category Management | {{site.version}} | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-lists:"{{site.version}}" --update-with-dependencies

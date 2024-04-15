@@ -11,9 +11,9 @@ To start feature integration, overview, and install the necessary features:
 | Product Options | {{page.version}} | Feature |
 | Spryker Core | {{page.version}} | [Feature API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-options-rest-api"^1.0.0" --update-with-dependencies
@@ -21,7 +21,7 @@ composer require spryker/product-options-rest-api"^1.0.0" --update-with-dependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -39,7 +39,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |

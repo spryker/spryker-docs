@@ -80,13 +80,8 @@ Request sample: retrieve availability of a concrete product
 ```
 </details>
 
-<a name="concrete-product-availability-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
 
-| FIELD | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| availability | Boolean | Boolean to inform about the availability. |
-| quantity|Integer|Available stock (all warehouses aggregated). |
-| isNeverOutOfStock | Boolean | A boolean to show if this is a product that is never out of stock. |
 
 
 ## Possible errors

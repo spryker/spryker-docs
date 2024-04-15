@@ -15,7 +15,7 @@ Install the required features:
 |----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core   | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/glue-backend-api-application-glue-json-api-convention-connector:"^1.0.0" --update-with-dependencies

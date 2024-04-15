@@ -12,7 +12,7 @@ Install the required features:
 | Product Label | {{page.version}} | |
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -32,7 +32,7 @@ Make sure that the following module is installed:
 
 ## 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

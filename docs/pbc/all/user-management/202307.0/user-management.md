@@ -32,7 +32,7 @@ For more details about the agent assist feature, see the [Agent assist feature o
 
 To install the User Management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```

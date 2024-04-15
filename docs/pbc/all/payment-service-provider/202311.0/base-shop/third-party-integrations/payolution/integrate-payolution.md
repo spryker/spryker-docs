@@ -7,6 +7,7 @@ originalArticleId: d071cda2-3ca2-41b2-afbb-a9cdcdb09b5e
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/payolution/integrating-payolution.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/integrate-payolution.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/integrating-payolution.html
 related:
   - title: Installing and configuring Payolution
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/install-and-configure-payolution.html

@@ -8,6 +8,7 @@ originalArticleId: 5e090a05-3c2f-43d4-9775-8d9c212f3923
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/enable-filtering-of-payment-methods-for-adyen.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
 related:
   - title: Installing and configuring Adyen
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/install-and-configure-adyen.html

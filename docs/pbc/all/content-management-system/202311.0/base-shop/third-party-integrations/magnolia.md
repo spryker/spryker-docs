@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/magnolia-cms
   - /docs/scos/user/technology-partners/202311.0/content-management/magnolia.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/magnolia.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/magnolia.html
 ---
 
 ## Partner Information

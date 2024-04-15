@@ -10,9 +10,9 @@ Install the required features:
 |-|-|
 | Development Tools | {{page.version}} |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 ```bash
 composer require "spryker/documentation-generator-rest-api":"^1.12.1" --update-with-dependencies
 ```

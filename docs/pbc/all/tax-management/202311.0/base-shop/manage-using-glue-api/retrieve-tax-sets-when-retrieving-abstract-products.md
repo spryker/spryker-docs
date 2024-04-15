@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/tax-management/202311.0/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
 ---
 
 This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
@@ -108,7 +109,7 @@ For detailed information on the modules that provide the API functionality and r
 
 {% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-For the attributes of tax sets, see [Retrieve tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-using-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes).
+{% include pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
 ## Possible errors
 

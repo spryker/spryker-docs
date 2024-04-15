@@ -2,6 +2,7 @@
 title: Jenkins does not restart
 description: This article describes how to troubleshoot the most common problems with the jenkins scheulder
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/jenkins-does-not-restart.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html

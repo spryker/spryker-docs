@@ -14,6 +14,7 @@ redirect_from:
   - /docs/alternative-products
   - /docs/scos/user/features/202311.0/alternative-products-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/alternative-products-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/alternative-products-feature-overview.html
 ---
 
 Suggesting product alternatives is a great way to ease the user’s product finding process. Instead of browsing the product catalog, product alternatives let customers jump from one product page to the next until they find a relevant item.

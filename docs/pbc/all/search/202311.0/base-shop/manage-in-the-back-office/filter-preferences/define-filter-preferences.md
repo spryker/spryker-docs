@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-filter-preferences
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-filter-preferences.html
   - /docs/pbc/all/search/202311.0/manage-in-the-back-office/filter-preferences/define-filter-preferences.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/filter-preferences/define-filter-preferences.html
 related:
   - title: Standard filters overview
     link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/standard-filters-overview.html

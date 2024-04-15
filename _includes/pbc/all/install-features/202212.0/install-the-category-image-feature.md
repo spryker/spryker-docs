@@ -16,7 +16,7 @@ Please overview and install the necessary features before beginning the integrat
 | Category | {{page.version}} | |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
@@ -24,7 +24,7 @@ composer require spryker-feature/category-image:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -284,7 +284,7 @@ console data:import:category-template
 
 {% info_block warningBox “Verification” %}
 
-Make sure that in the database the configured data is added to the `spy_category_template` table.
+Make sure that, in the database, the configured data has been added to the `spy_category_template` table.
 {% endinfo_block %}
 
 ### 5) Set up behavior
@@ -403,7 +403,7 @@ Install the required features:
 | Category | {{page.version}} | |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies

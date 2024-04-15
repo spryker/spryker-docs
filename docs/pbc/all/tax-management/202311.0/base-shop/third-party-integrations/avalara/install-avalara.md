@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara.html
   - /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
   - /docs/pbc/all/tax-management/202212.0/base-shop/third-party-integrations/integrate-avalara.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/integrate-avalara.html
 ---
 
 To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](https://github.com/spryker-eco/avalara-tax) module.
@@ -30,9 +31,9 @@ To enable the Avalara partner integration, use the [spryker-eco/avalara-tax](htt
 | Inventory Management | master | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 |Glue API: Checkout  | master | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-eco/avalara-tax:"^0.1.0" --update-with-dependencies
@@ -115,7 +116,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

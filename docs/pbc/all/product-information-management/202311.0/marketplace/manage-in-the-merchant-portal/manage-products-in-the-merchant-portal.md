@@ -1,5 +1,5 @@
 ---
-title: Manage products in the merchant portal
+title: Manage products in the Merchant Portal
 last_updated: Apr 4, 2023
 description: This section describes how to manage abstract and concrete products.
 template: back-office-user-guide-template
@@ -7,9 +7,10 @@ redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202311.0/products/products.html
 ---
 
-In this section, you can learn how to manage abstract and concrete products.
 
-For specific instructions, see the following guides:
+{% include pbc/all/manage-in-the-merchant-portal/log-into-the-merchant-portal.md %} <!-- To edit, see /_includes/pbc/all/manage-in-the-merchant-portal/log-into-the-merchant-portal.md -->
+
+## Next steps
 
 * Abstract products guides:
   * [Creating marketplace abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html)

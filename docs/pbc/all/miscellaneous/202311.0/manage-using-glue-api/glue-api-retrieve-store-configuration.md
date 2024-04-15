@@ -8,6 +8,7 @@ originalArticleId: 555482d7-5661-42bc-86c7-382a702172ab
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
   - /docs/scos/dev/glue-api-guides/202212.0/retrieving-store-configuration.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-store-configuration.html
   - /docs/pbc/all/miscellaneous/202311.0/glue-api-retrieve-store-configuration.html
 ---
 
@@ -115,4 +116,4 @@ Request sample: retrieve stores
 | iso2Code | String | Iso 2 code for the region. |
 | name | String | Region name. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

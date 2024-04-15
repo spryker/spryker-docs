@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202001.0/content/slots/slots.html
   - /docs/scos/user/back-office-user-guides/202108.0/content/slots/managing-slots.html
   - /docs/pbc/all/content-management-system/202311.0/manage-in-the-back-office/manage-slots.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-slots.html
 related:
   - title: Templates & Slots feature overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html

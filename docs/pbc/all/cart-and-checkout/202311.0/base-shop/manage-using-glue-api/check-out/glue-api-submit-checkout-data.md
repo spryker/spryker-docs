@@ -9,9 +9,10 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202009.0/checking-out/submitting-checkout-data.html
   - /docs/scos/dev/glue-api-guides/202311.0/checking-out/submitting-checkout-data.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/check-out/submit-checkout-data.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html
 related:
   - title: Check out purchases
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Update payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---
@@ -295,7 +296,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/submit-checkout-data-request-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md -->
 
 
 ### Response
@@ -1143,7 +1144,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/submit-checkout-data-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

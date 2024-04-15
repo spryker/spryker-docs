@@ -2,8 +2,10 @@
 title: Marketplace Product feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-product-feature-overview.html
+  - /docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html
 related:
   - title: Creating marketplace abstract product
     link: docs/pbc/all/product-information-management/page.version/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.html
@@ -24,7 +26,7 @@ Merchants can let other merchants create offers for their unique products. This 
 The marketplace products are displayed on the Storefront when the following conditions are met:
 
 1. The product status is *Active*.
-2. The merchant who owns the product is [*Active*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
+2. The merchant who owns the product is *Active*.
 3. The product visibility state is *Online*.
 4. The product is defined for the current store.
 5. The product has stock or is always in stock.

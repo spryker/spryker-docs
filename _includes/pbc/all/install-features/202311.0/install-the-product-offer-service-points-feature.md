@@ -13,9 +13,9 @@ Install the required features:
 | NAME           | VERSION          | INSTALLATION GUIDE                                                                                                                                                                        |
 |----------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Product Offer  | {{page.version}} | [Product Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
-| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/servcie-points/{{page.version}}/install-and-upgrade/install-the-service-points-feature.html)                                                 |
+| Service Points | {{page.version}} | [Service Points feature integration](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-feature.html)                                                 |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-offer-service-points: "{{page.version}}" --update-with-dependencies
@@ -83,7 +83,7 @@ Make sure that propel entities have been generated successfully by checking thei
 | \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorage      | \Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\AbstractSpyProductOfferServiceStorage      |
 | \Orm\Zed\ProductOfferServicePointStorage\Persistence\SpyProductOfferServiceStorageQuery | \Spryker\Zed\ProductOfferServicePointStorage\Persistence\Propel\AbstractSpyProductOfferServiceStorageQuery |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                  | TYPE  | EVENT   | PATH                                                                            |
 |-------------------------------------------|-------|---------|---------------------------------------------------------------------------------|

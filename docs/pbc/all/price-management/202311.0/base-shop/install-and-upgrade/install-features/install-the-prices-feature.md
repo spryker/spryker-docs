@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/prices-feature-integration.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
 related:
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html

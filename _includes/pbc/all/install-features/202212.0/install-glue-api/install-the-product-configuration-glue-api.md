@@ -20,9 +20,9 @@ To start feature integration, integrate the required features and Glue APIs:
 | Order Management API  | {{page.version}} | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 | Product Configuration | {{page.version}} | [Product Configuration feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                   |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer install spryker/product-configurations-rest-api:"^1.0.0" spryker/product-configurations-price-product-volumes-rest-api:"^1.0.0" spryker/product-configuration-wishlists-rest-api:"^1.0.0" spryker/product-configuration-shopping-lists-rest-api:"^1.0.0" --update-with-dependencies

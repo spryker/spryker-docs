@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-group-cart-feature-integration
   - /docs/en/product-group-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/product-group-cart-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
 related:
   - title: Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html

@@ -2,6 +2,7 @@
 title: Tutorial — Troubleshooting unavailable Yves or Glue
 description: Learn how to troubleshoot unavailable Yves or Glue
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html
 ---

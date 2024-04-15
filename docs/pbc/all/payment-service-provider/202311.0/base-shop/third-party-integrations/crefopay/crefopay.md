@@ -1,10 +1,12 @@
 ---
 title: CrefoPay
 template: concept-topic-template
+last_updated: Nov 21, 2023
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/crefopay.html
     - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/crefopay/crefopay.html
     - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/crefopay/crefopay.html
+    - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/crefopay/crefopay.html
 ---
 
 `SprykerEco.CrefoPay` [spryker-eco/crefo-pay](https://github.com/spryker-eco/crefo-pay) module provides integration of Spryker e-commerce system with the CrefoPay technology partner. It requires `SprykerEco.CrefoPayApi` [spryker-eco/crefo-pay-api](https://github.com/spryker-eco/crefo-pay-api) module that provides the REST Client for making API calls to CrefoPay Payment Provider.

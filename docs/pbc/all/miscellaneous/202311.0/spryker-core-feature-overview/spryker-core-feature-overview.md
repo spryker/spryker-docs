@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/user/features/201811.0/spryker-core-feature-overview/spryker-core-feature-overview.html
   - /docs/scos/user/features/202212.0/spryker-core-feature-overview/spryker-core-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
 The Spryker Core feature is the very basis of all the functionality in Spryker.
@@ -22,6 +24,6 @@ The Spryker Core feature is the very basis of all the functionality in Spryker.
 
 |INSTALLATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES|
 |---------|---------|---------|
-| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  | [Tutorial: Managing glossary key](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html)  | [How translations are managed](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/how-translations-are-managed.html) |
+| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  | [Tutorial: Managing glossary key](/docs/dg/dev/internationalization-and-multi-store/managing-glossary-keys.html)  | [How translations are managed](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/how-translations-are-managed.html) |
 |   |   | [URL redirects overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/url-redirects-overview.html)  |
 |   |   | [Vault for Tokens overview](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/vault-for-tokens-overview.html)  |

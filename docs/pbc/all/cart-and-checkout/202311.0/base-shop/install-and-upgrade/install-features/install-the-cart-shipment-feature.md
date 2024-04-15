@@ -3,6 +3,8 @@ title: Install the Cart + Shipment feature
 description: Learn how to install the Cart + Shipment feature in a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
+redirect_from:
+- /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-shipment-feature.html
 ---
 
 

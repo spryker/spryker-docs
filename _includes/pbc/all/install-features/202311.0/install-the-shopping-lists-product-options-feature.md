@@ -29,7 +29,7 @@ Verify that the following modules were installed:
 
 ### 2) Set up the database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```yaml
 console propel:install
@@ -150,7 +150,7 @@ customer.account.shopping_list.remove_all,Remove all,en_US
 customer.account.shopping_list.remove_all,Alles entfernen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```yaml
 console data:import glossary
@@ -158,7 +158,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

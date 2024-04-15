@@ -3,6 +3,8 @@ title: "Order Management feature: Domain model and relationships"
 last_updated: Aug 18, 2021
 description: The Order Management feature adds a collection of functionalities that let you see the quantity of the order items, their status, and how long they exist.
 template: concept-topic-template
+redirect_from:
+- /docs/scos/dev/feature-walkthroughs/202204.0/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 
 The following schema illustrates the module relations of the Custom Order Reference feature:

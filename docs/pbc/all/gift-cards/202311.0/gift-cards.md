@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202311.0/gift-cards-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202311.0/gift-cards-feature-walkthrough.html
+  - /docs/pbc/all/gift-cards/202204.0/gift-cards.html
 ---
 
 The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.

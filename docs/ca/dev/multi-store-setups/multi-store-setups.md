@@ -2,6 +2,7 @@
 title: Multi-store setups
 description: Types of multi-store setups in Spryker Cloud Commerce OS
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
 ---

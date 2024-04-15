@@ -14,7 +14,7 @@ Install the required features:
 |Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
 Product| {{page.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 

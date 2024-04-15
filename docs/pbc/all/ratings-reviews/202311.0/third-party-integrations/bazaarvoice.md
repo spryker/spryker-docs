@@ -2,10 +2,12 @@
 title: Bazaarvoice
 description: Find out how you can integrate and use Bazaarvoice in your Spryker shop
 template: howto-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
    - docs/aop/user/apps/bazaarvoice.html
    - docs/acp/user/apps/bazaarvoice.html
    - docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html  
+   - /docs/pbc/all/ratings-reviews/202204.0/third-party-integrations/bazaarvoice.html
 ---
 
 ![Bazaarvoice](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice/bazaarvoice.png)

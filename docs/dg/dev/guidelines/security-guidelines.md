@@ -237,4 +237,4 @@ To sum up, the main points to keep the data secure are the following:
 * Check the Spryker configuration and change default authentication parameters like users and passwords.
 * Keep systems and applications up to date.
 * Make sure that exceptions are not shown and debug mode is disabled on production.
-* Make sure that keys data is taken from the secure environment variables and is not embedded into the configuration files.
+* Make sure that the keys data is taken from secure environment variables and is not embedded into the configuration files.

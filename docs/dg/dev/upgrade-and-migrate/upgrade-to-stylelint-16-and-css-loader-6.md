@@ -1,16 +1,18 @@
 ---
 title: Upgrade to Stylelint 16 and css-loader 6
-description: Use the guide to update versions of the Stylelint and css-loader.
+description: Learn how to update versions of the Stylelint and css-loader.
 template: module-migration-guide-template
 ---
 
-This document provides instructions for upgrading Styleling to v16 and css-loader to v6.
+This document describes how to upgrade Styleling to v16 and css-loader to v6.
 
 *Estimated migration time: 30m*
 
 ## Update configuration files
 
-1. In `package.json`, update or add dependencies and engines and adjust commands:
+1. In `package.json`, do the following:
+   - Update or add dependencies and engines.
+   - Adjust the commands.
 
 ```json
 {
@@ -42,7 +44,7 @@ npm install
     "optimize-css-assets-webpack-plugin": "x.x.x"
 ```
 
-3. In `frontend/configs/development.js`, update the webpack config: add url `false` option for `css-loader`.
+3. In `frontend/configs/development.js`, update the webpack config: add the URL `false` option for `css-loader`:
 
 ```js
 ....
@@ -56,7 +58,7 @@ npm install
 ....
 ```
 
-3. In `frontend/configs/production.js`, update the webpack config: replace `OptimizeCSSAssetsPlugin` to `CssMinimizerPlugin`.
+4. In `frontend/configs/production.js`, update the webpack config by replacing `OptimizeCSSAssetsPlugin` with `CssMinimizerPlugin`:
 
 ```js
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
@@ -79,7 +81,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 }
 ```
 
-4. Rename `stylelint.js` into `stylelint.mjs` in `frontend/merchant-portal` folder and change inside file commonjs require's to es imports and drop `syntax` option.
+5. In the `frontend/merchant-portal` folder, do the following:
+   - Rename `stylelint.js` to `stylelint.mjs`.
+   - In the file, change `commonjs require's` to `ES imports`.
+   - Drop the `syntax` option.
 
 ```js
 import commandLineParser from 'commander';
@@ -94,7 +99,10 @@ stylelint
     })
 ```
 
-5. Rename `stylelint.js` into `stylelint.mjs` in `frontend/libs` folder and change inside file commonjs require's to es imports and drop adjust lint options option.
+6. In the `frontend/libs` folder, do the following:
+   - Rename `stylelint.js` to `stylelint.mjs`.
+   - In the file, change `commonjs require's` to `ES imports`.
+   - Drop the `adjust lint options` option.
 
 ```js
 import commandLineParser from 'commander';
@@ -110,7 +118,7 @@ stylelint
     })
 ```
 
-6. Add in the root of the project `.stylelintrc.js` file with following content.
+7. Add the `.stylelintrc.js` file with the following content to the root of the project:
 
 ```js
 module.exports = {
@@ -132,7 +140,7 @@ module.exports = {
 };
 ```
 
-7. In `.stylelintrc.mp.js` add additional config into extends option and disable multiple rules:
+8. In `.stylelintrc.mp.js`, add additional config to the `extends` option and disable multiple rules:
 
 ```json
 module.exports = {

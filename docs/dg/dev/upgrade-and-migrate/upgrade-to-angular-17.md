@@ -25,11 +25,11 @@ However, updating to Angular v17 results in incompatibility with older versions 
 
 *Estimated migration time: 2h*
 
-To upgarde to Angular v17, follow these steps.
+To upgrade to Angular v17, follow these steps.
 
 ## Prerequisites
 
-Before starting the migration, update Stylelint and css-loader as described in the [Stylelint migration guide](/docs/dg/dev/upgrade-to-stylelint-16-and-css-loader-6.html).
+Before starting the migration, update Stylelint and css-loader as described in the [Stylelint migration guide](/docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html).
 
 
 ## 1) Update modules
@@ -271,7 +271,7 @@ In `package.json`, do the following:
         }
     ```
 
-    6. In `webpack.config.ts`, add the `publicPath` config value:
+    7. In `webpack.config.ts`, add the `publicPath` config value:
 
     ```ts
         export default async (...): Promise<webpack.Configuration> => {
@@ -454,7 +454,7 @@ In `package.json`, do the following:
 
 ## 5) Manual Spryker module updating
 
-If you can't update the modules automatically with the `composer update` command, you have to update all angular dependencies in the root of module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).
+If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).
 
 To add a single entry point support, add `// spy/merchant-portal:single-entry-marker` line in the `entry.ts` file, for example, like this:
 
@@ -466,7 +466,7 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-Delete additional JS injecting in the module `layout_file_name twig` file. For example, delete the whole block below)
+Delete additional JS injecting in the module `layout_file_name twig` file. For example, delete the whole block below:
 
 ```twig
 {% raw %}{% block footerJs %}

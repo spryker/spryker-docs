@@ -5,6 +5,7 @@ description: This document explains how to choose and implement the most suitabl
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
 ---
 
 In a multi-store environment, you can manage relationships between warehouses, stores, and databases in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature.
@@ -68,7 +69,7 @@ There is a console command to export all reservations: `/Spryker/Zed/Oms/Communi
 
 {% info_block infoBox "" %}
 
-This is the default scenario implemented in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html).
+This is the default scenario implemented in the [Spryker Demo Shops](/docs/about/all/about-spryker.html).
 
 {% endinfo_block %}
 

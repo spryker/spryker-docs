@@ -9,9 +9,10 @@ redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
   - /docs/pbc/all/carrier-management/202311.0/import-and-export-data/file-details-shipment-method-store.csv.html
   - /docs/pbc/all/carrier-management/202311.0/base-shop/import-and-export-data/file-details-shipment-method-store.csv.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/import-and-export-data/import-file-details-shipment-method-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `shipment_method_store.csv` file to configure [Shipment Method](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) and Store relation to be added to your Spryker Demo Shop.

@@ -13,9 +13,9 @@ To start feature integration, overview, and install the necessary features:
 | Spryker Core | {{page.version}} |
 | cell | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
@@ -553,15 +553,15 @@ Follow the steps below to install the feature front end.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
 | Spryker Core | {{page.version}} |
 | Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require "spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies

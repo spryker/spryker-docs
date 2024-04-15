@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-orders.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
@@ -1210,9 +1211,9 @@ To retrieve detailed information on an order, send the request:
 ```    
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-an-order-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-an-order-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/orders-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-an-order-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-an-order-response-attributes-of-included-resources.md -->
+{% include pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md -->
 
 ## Possible errors
 
@@ -1222,4 +1223,4 @@ To retrieve detailed information on an order, send the request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-product-labels
   - /docs/en/managing-product-labels
   - /docs/scos/user/back-office-user-guides/202311.0/merchandising/product-labels/view-product-labels.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-labels/view-product-labels.html
 related:
   - title: Create product labels
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/product-labels/create-product-labels.html

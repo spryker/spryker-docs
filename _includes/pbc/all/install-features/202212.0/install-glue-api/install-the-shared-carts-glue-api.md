@@ -13,9 +13,9 @@ To start feature integration, overview and install the following features and Gl
 | Cart |  {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Uuid generation console | {{page.version}} | [Uuid Generation Console feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/uuid-generation-console-feature-integration.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/shared-carts-rest-api:"^1.2.0" spryker/cart-permission-groups-rest-api:"^1.2.0" --update-with-dependencies
@@ -47,7 +47,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH |
 | -  | - | - | - |
@@ -109,7 +109,7 @@ The result should be 0 records.
 
 * `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
+For more details, see the `configure` function in [Resource Routing](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-infrastructure.html).
 
 {% endinfo_block %}
 

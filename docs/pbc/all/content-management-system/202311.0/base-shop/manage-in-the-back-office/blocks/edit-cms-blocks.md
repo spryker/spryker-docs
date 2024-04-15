@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-cms-blocks
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/managing-cms-blocks.html
   - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/managing-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-cms-blocks.html
 related:
   - title: CMS blocks overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html

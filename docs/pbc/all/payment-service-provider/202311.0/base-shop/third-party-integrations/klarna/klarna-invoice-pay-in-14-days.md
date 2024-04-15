@@ -8,6 +8,7 @@ originalArticleId: dcff76cb-ec18-41d9-bd2f-b0e1713e8508
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/klarna/klarna-invoice-pay-in-14-days.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/klarna/klarna-invoice-pay-in-14-days.html
 related:
   - title: Klarna
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/klarna/klarna.html

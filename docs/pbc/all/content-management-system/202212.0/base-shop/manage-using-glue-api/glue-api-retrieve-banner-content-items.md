@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202212.0/manage-using-glue-api/retrieve-banner-content-items.html
 related:
   - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+    link: docs/dg/dev/glue-api/page.version/rest-api-reference.html
   - title: Content Items feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/content-items-feature-overview.html
 ---
@@ -89,4 +89,4 @@ Response sample: retrieve a banner content item
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

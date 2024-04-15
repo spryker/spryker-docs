@@ -2,6 +2,7 @@
 title: Disconnect Bazaarvoice
 description: Find out how you can disconnect Bazaarvoice in your Spryker shop
 template: howto-guide-template 
+last_updated: Jul 25, 2023
 ---
 
 You can always disconnect the Bazaarvoice app from your store. For example, after the trial period, you might decide not to continue with the app. 

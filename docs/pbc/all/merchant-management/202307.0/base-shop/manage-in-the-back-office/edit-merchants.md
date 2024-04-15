@@ -2,6 +2,7 @@
 title: Edit merchants
 description: Learn how to edit merchants in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 23, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/marketplace/merchants-and-merchant-relations/managing-merchants.html
   - /docs/scos/user/back-office-user-guides/202307.0/marketplace/merchants/edit-merchants.html

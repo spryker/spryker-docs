@@ -8,6 +8,7 @@ originalArticleId: 5b1cfc2a-7960-4d1c-96e5-1243473d3d50
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/payolution-request-flow.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payolution/payolution-request-flow.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/payolution/payolution-request-flow.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/payolution/integrate-the-invoice-payment-method-for-payolution.html

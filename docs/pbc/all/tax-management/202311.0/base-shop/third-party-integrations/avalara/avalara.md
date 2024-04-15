@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/avalara/avalara.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/avalara.html
 ---
 
 ![Avalara-hero](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/Avalara/avalara-hero.png)

@@ -2,6 +2,7 @@
 title: Release notes
 description: New features and enhancements for Spryker Cloud Commerce OS.
 template: howto-guide-template
+last_updated: Oct 17, 2023
 originalLink: https://cloud.spryker.com/docs/release-notes
 originalArticleId: eee5e8bc-dd95-4b51-91f4-203962a2e8af
 redirect_from:
@@ -132,12 +133,12 @@ Increased the stability of Jenkins deployment. This update addresses critical is
 
 ## February 2021
 
-* **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/scos/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
+* **Documentation about Docker SDK installation on Windows**: updated Docker prerequisites for Windows with instructions for WSL2. See [Installing Docker prerequisites on Windows](/docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html).
 
 * **Documentation about Onboarding deliverables**: updated the cloud administration getting started page with the deliverables provided after the onboarding. See [Getting started with cloud administration](/docs/ca/dev/getting-started-with-cloud-administration.html).
 
 * **Documentation about GitLab**: published the instructions on connecting a GitLab repository to the CD Pipeline. See [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository).
 
-* **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
+* **Documentation about Docker SDK**: published new and updated existing pages covering the following Docker SDK topics: deploy file reference, choosing a version, quick start guide, installation, services, modes overview, mount options, debugging, running tests, and troubleshooting. See [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
 
 * **Load and stress test tool**: released a tool that contains predefined Spryker-specific test scenarios. The tool is based on [Gatling.io](http://gatling.io/) and can be used as a package integrated into a Spryker project or as a standalone package.

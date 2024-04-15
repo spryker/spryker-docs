@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve merchants"
 description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Jan 12, 2024
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202311.0/merchants/retrieving-merchants.html
 related:
@@ -28,7 +29,7 @@ To retrieve all merchants, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
 {% endinfo_block %}
 
@@ -339,7 +340,7 @@ To retrieve a merchant, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
 {% endinfo_block %}
 
@@ -651,9 +652,9 @@ Retrieve merchant information as a relationship when sending the following reque
 * [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

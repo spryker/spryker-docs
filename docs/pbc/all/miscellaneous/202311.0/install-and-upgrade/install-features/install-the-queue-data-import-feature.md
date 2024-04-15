@@ -11,6 +11,7 @@ redirect_from:
   - /docs/queue-data-import-feature-integration
   - /docs/en/queue-data-import-feature-integration
   - /docs/scos/dev/feature-integration-guides/202212.0/queue-data-import-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/queue-data-import-feature-integration.html
 related:
   - title: Data import
     link: docs/scos/dev/sdk/data-import.html

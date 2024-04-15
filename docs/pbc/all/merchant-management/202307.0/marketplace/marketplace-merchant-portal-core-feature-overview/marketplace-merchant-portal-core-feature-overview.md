@@ -2,6 +2,7 @@
 title: Marketplace Merchant Portal Core feature overview
 description: Marketplace MerchantPortal Core enables server configuration and the basic functionality of the Merchant Portal such as secure login.
 template: concept-topic-template
+last_updated: Oct 20, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
@@ -10,7 +11,7 @@ The Marketplace Merchant Portal Core enables server configuration and basic func
 
 
 
-To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/scos/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
+To learn more about the Marketplace Application, see [Marketplace Application Composition](/docs/dg/dev/architecture/marketplace-architecture/marketplace-application-composition.html).
 
 
 Login and logout in the Merchant Portal are provided by the `SecurityMerchantPortalGui` module, which also provides the `MerchantUserSecurityPlugin` for extending the Merchant Portal firewall.
@@ -65,7 +66,7 @@ The `GuiTable` frontend component knows how to create the table itself, where to
 
 {% info_block warningBox "Table design" %}
 
-To learn more about table design, see [Table design](/docs/scos/dev/front-end-development/{{page.version}}/marketplace/table-design/table-design.html).
+To learn more about table design, see [Table design](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/table-design/table-design.html).
 
 {% endinfo_block %}
 

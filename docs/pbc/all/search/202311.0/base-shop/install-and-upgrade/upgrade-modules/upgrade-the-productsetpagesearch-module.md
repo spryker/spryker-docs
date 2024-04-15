@@ -10,5 +10,6 @@ redirect_from:
   - /docs/migration-guide-productsetpagesearch
   - /docs/en/migration-guide-productsetpagesearch
   - /docs/scos/dev/module-migration-guides/migration-guide-productsetpagesearch.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetpagesearch-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md -->

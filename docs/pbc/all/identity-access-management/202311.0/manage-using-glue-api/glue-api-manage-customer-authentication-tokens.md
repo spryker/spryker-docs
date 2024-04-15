@@ -7,6 +7,7 @@ originalArticleId: a0374f0f-170f-446e-aadd-32dbe7c1526a
 redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -142,7 +143,7 @@ The tokens are marked as expired on the date and time of the request. You can co
 | --- | --- |
 | 004 | Failed to refresh the token. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

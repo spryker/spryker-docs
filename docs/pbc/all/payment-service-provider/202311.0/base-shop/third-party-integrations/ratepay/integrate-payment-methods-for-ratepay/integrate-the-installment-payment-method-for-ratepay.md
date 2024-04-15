@@ -8,6 +8,7 @@ originalArticleId: 3fe65872-d5b3-4c95-8757-6ae7ee0b2d87
 redirect_from:
   - /docs/scos/user/technology-partners/202311.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-installment-payment-method-for-ratepay
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay/integrating-the-installment-payment-method-for-ratepay.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

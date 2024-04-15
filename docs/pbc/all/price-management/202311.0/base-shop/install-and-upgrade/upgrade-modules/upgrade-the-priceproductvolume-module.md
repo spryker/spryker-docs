@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductvolume.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-priceproductvolume.html
   - /module_migration_guides/mg-price-product-volume.htm
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
 
 ---
 

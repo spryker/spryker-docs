@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
   - /docs/scos/user/features/202311.0/inventory-management-feature-overview.html
   - /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html  
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/inventory-management-feature-overview.html
 ---
 
 The *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
@@ -65,7 +66,7 @@ Schematically, the process looks like this:
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
 * Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
-* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
+* Importing the quantities of items stored in each of the warehouses. For details, see [Import file details: product_stock.csv](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html).
 
 ## Availability management
 

@@ -2,7 +2,10 @@
 title: Marketplace and merchant state machines interaction
 description: This document contains details about how the Marketplace and merchant state machines interact with each other in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Aug 7, 2023
 related:
+  - title: Marketplace and merchant state machines overview
+    link: docs/marketplace/user/features/202204.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Marketplace and merchant state machines overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace Order Management feature overview
@@ -29,8 +32,8 @@ The process starts when a customer places an order. The Marketplace order obtain
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE | APPLICATION | STATUS |
-| ------------------------ | -------------- | ------------------- |
+| ROLE                      | APPLICATION     | STATUS               |
+| ------------------------- | --------------- | -------------------- |
 | Marketplace administrator | Back Office     | New                  |
 | Merchant                  | Merchant Portal | N/A                  |
 | Customer                  | Storefront      | Confirmed / Accepted |
@@ -42,9 +45,9 @@ Once the Marketplace administrator receives the payment, the state of the market
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE   | APPLICATION | STATUS  |
-| ------------------------ | -------------- | ---------- |
-| Marketplace administrator | Back Office     | Paid   |
+| ROLE                      | APPLICATION     | STATUS      |
+| ------------------------- | --------------- | ----------- |
+| Marketplace administrator | Back Office     | Paid        |
 | Merchant                  | Merchant Portal | N/A         |
 | Customer                  | Storefront      | In Progress |
 
@@ -64,11 +67,11 @@ The Marketplace administrator can also cancel the order under exceptional circum
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE                  | APPLICATION | STATUS |
-| ------------------------ | -------------- | --------- |
-| Marketplace administrator | Back Office     | Canceled   |
-| Merchant                  | Merchant Portal | N/A        |
-| Customer                  | Storefront      | Canceled   |
+| ROLE                      | APPLICATION     | STATUS   |
+| ------------------------- | --------------- | -------- |
+| Marketplace administrator | Back Office     | Canceled |
+| Merchant                  | Merchant Portal | N/A      |
+| Customer                  | Storefront      | Canceled |
 
 ## Order item’s status progress: Refunded
 When the order is canceled after the payment has been made, the Marketplace administrator has to refund the payment for the canceled order to the customer in full or partially. Once the refund has been made, the state of the Marketplace order item becomes *Refunded*. After issuing the refund, the Marketplace policies set time to elapse before the state of the order is automatically transferred to *Closed*.
@@ -77,11 +80,11 @@ When the order is canceled after the payment has been made, the Marketplace admi
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE                  | APPLICATION | STATUS |
-| ------------------------ | -------------- | --------- |
-| Marketplace administrator | Back Office     | Refunded   |
-| Merchant                  | Merchant Portal | N/A        |
-| Customer                  | Storefront      | Refunded   |
+| ROLE                      | APPLICATION     | STATUS   |
+| ------------------------- | --------------- | -------- |
+| Marketplace administrator | Back Office     | Refunded |
+| Merchant                  | Merchant Portal | N/A      |
+| Customer                  | Storefront      | Refunded |
 
 ## Order item’s status progress: Sent to Merchant
 When the system has payment confirmation, it performs the operations to split the marketplace order into one or several merchant orders. The state of the marketplace order item becomes *Sent to Merchant*. The merchant orders are created, and each of the items that they contain shows a state according to each Merchant’s state machine. The first state is *New*.
@@ -90,11 +93,11 @@ When the system has payment confirmation, it performs the operations to split th
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE   | APPLICATION | STATUS |
-| ----------------- | -------------- | --------- |
-| Marketplace administrator | Back Office   | Sent to Merchant |
-| Merchant      | Merchant Portal | New |
-| Customer   | Storefront      | In Progress      |
+| ROLE                      | APPLICATION     | STATUS           |
+| ------------------------- | --------------- | ---------------- |
+| Marketplace administrator | Back Office     | Sent to Merchant |
+| Merchant                  | Merchant Portal | New              |
+| Customer                  | Storefront      | In Progress      |
 
 ## Order item’s status progress: Canceled by Merchant
 Merchant can cancel the order for various reasons. The state of the merchant order item, in this case, will change to *Canceled by Merchant*. The Marketplace administrator also sees the updated state in the Back Office.
@@ -103,11 +106,11 @@ Merchant can cancel the order for various reasons. The state of the merchant ord
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE       | APPLICATION | STATUS |
-| ----------- | -------------- | --------- |
-| Marketplace administrator | Back Office    | Canceled   |
-| Merchant       | Merchant Portal | Canceled by Merchant|
-| Customer    | Storefront      | Canceled    |
+| ROLE                      | APPLICATION     | STATUS               |
+| ------------------------- | --------------- | -------------------- |
+| Marketplace administrator | Back Office     | Canceled             |
+| Merchant                  | Merchant Portal | Canceled by Merchant |
+| Customer                  | Storefront      | Canceled             |
 
 ## Order item’s status progress: Shipped by Merchant
 The merchant ships the item to the customer's address. To input this information on Merchant Portal, the merchant triggers the event manually (the **Shipped** action button) or by importing of the new state via a CSV file. The item’s state on the merchant state machine moves to *Shipped*. The Marketplace administrator also needs to make use of this info. They need to see that the item was also shipped in the Marketplace state machine.
@@ -116,11 +119,11 @@ The merchant ships the item to the customer's address. To input this information
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE   | APPLICATION | STATUS |
-| ------------- | -------------- | --------- |
-| Marketplace administrator | Back Office     | Shipped by Merchant  |
-| Merchant       | Merchant Portal | Shipped  |
-| Customer  | Storefront   | Shipped Expected by \<date\> |
+| ROLE                      | APPLICATION     | STATUS                       |
+| ------------------------- | --------------- | ---------------------------- |
+| Marketplace administrator | Back Office     | Shipped by Merchant          |
+| Merchant                  | Merchant Portal | Shipped                      |
+| Customer                  | Storefront      | Shipped Expected by \<date\> |
 
 ## Order item’s status progress: Delivered
 After the shipment, the merchant tracks the delivery with the shipment carrier. When the item is delivered, the carrier notifies the merchant. The merchant triggers the *Deliver* event manually (**Delivered** action button) or automatically by uploading a CSV with the new state to the Merchant Portal. The Marketplace administrator also needs to be aware of this information. The state is also updated on the Marketplace state machine.
@@ -129,10 +132,10 @@ After the shipment, the merchant tracks the delivery with the shipment carrier. 
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE   | APPLICATION | STATUS |
-| ------------- | -------------- | --------- |
-| Marketplace administrator | Back Office     | Delivered           |
-| Merchant                  | Merchant Portal | Delivered           |
+| ROLE                      | APPLICATION     | STATUS                |
+| ------------------------- | --------------- | --------------------- |
+| Marketplace administrator | Back Office     | Delivered             |
+| Merchant                  | Merchant Portal | Delivered             |
 | Customer                  | Storefront      | Delivered on \<date\> |
 
 ## Order item’s status progress: Closed
@@ -142,8 +145,8 @@ Marketplace applies a series of policies that let customers return items during 
 
 The following table provides an overview of the statuses that are displayed at this step:
 
-| ROLE     | APPLICATION| STATUS      |
-| --------- | ------------- | --------------- |
-| Marketplace administrator | Back Office     | Delivered           |
-| Merchant   | Merchant Portal | Delivered   |
-| Customer    | Storefront      | Delivered on \<date\> |
+| ROLE                      | APPLICATION     | STATUS                |
+| ------------------------- | --------------- | --------------------- |
+| Marketplace administrator | Back Office     | Delivered             |
+| Merchant                  | Merchant Portal | Delivered             |
+| Customer                  | Storefront      | Delivered on \<date\> |

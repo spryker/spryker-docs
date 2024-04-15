@@ -198,9 +198,9 @@ Install the required features:
 | Catalog | {{page.version}} |
 | Cms | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:"{{page.version}}" spryker-shop/tabs-widget-extension:"^1.0.0" --update-with-dependencies
@@ -208,7 +208,7 @@ composer require spryker-feature/catalog:"{{page.version}}" spryker-feature/cms:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -247,7 +247,7 @@ shelldata:console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

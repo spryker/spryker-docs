@@ -10,6 +10,7 @@ redirect_from:
   - /docs/custom-order-reference-module-relations
   - /docs/en/custom-order-reference-module-relations
   - /docs/scos/dev/feature-walkthroughs/202311.0/order-management-feature-walkthrough/custom-order-reference-module-relations.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/order-management-feature-walkthrough/custom-order-reference-module-relations.html
 ---
 
 The module relations for the [Custom Order Reference](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/order-management-feature-overview/custom-order-reference-overview.html) feature can be represented like this:

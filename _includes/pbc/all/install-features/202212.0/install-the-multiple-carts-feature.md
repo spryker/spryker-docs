@@ -12,9 +12,9 @@ Install the required features:
 | Persistent Cart | {{page.version}} |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -33,7 +33,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -86,7 +86,7 @@ multi_cart.cart.set_default.success,"Cart '%quote%' was successfully set as acti
 multi_cart.cart.set_default.success,"Warenkorb '%quote%' wurde erfolgreich auf aktiv gesetzt.",de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -172,7 +172,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import multi-cart
@@ -441,9 +441,9 @@ Please overview and install the necessary features before beginning the integrat
 | Persistent Cart | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -570,14 +570,14 @@ multi_cart_widget.cart.was-deleted-before,This cart was already deleted,en_US
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 ```bash
 console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

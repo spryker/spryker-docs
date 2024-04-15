@@ -4,20 +4,14 @@ description: Use the guide to update versions of the Angular and related modules
 template: module-migration-guide-template
 ---
 
-## Upgrading Angular from version 15.* to version 17.*
+This document describes how to upgrade Angular to version 17 in your Spryker project.
 
-This document provides instructions for upgrading Angular to version 17 in your Spryker project.
-
-## Overview
-
-Our current version of Angular is v15.
-Angular v15 should be deprecated on 2024-05-18, according to the [policy](https://angular.io/guide/releases#support-policy-and-schedule).
+Spryker's current version of Angular is v15. However, Angular v15 should be deprecated on 2024-05-18, according to the [Angular Support policy and schedule](https://angular.io/guide/releases#support-policy-and-schedule).
 The current stable version of Angular is v17.
 
+We recommend upgrading to the latest major version of Angular to get the most recent bug fixes and security updates. Additionally, the upgrade optimizes both runtime performance and tooling.
 
-Upgrade to the latest major version of Angular to get the most recent bug fixes and security updates. Additionally, this will lead to optimization in both runtime performance and tooling.
-
-Keep in mind that updating to Angular v17 results in incompatibility with older versions of Angular. Therefore, a major release is necessary for these modules:
+However, updating to Angular v17 results in incompatibility with older versions of Angular. Therefore, a major release is necessary for the following modules:
 
 - `DashboardMerchantPortalGui`
 - `GuiTable`
@@ -31,11 +25,16 @@ Keep in mind that updating to Angular v17 results in incompatibility with older 
 
 *Estimated migration time: 2h*
 
-### 1) Update modules
+To upgarde to Angular v17, follow these steps.
 
-1. Upgrade modules to the new version:
+## Prerequisites
 
-The marketplace modules must correspond to the following versions:
+Before starting the migration, update Stylelint and css-loader as described in the [Stylelint migration guide](/docs/dg/dev/upgrade-to-stylelint-16-and-css-loader-6.html).
+
+
+## 1) Update modules
+
+1. Check if the following Marketplace modules in your project have the new versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
@@ -49,7 +48,7 @@ The marketplace modules must correspond to the following versions:
 | UserMerchantPortalGui                       | >= 3.0.0  |
 | ZedUi                                       | >= 3.0.0  |
 
-If not, update module versions manually or by using the following command:
+If they don't, update the module versions manually or by using the following command:
 
 ```bash
 composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/user-merchant-portal-gui spryker/zed-ui
@@ -61,15 +60,11 @@ composer update spryker/dashboard-merchant-portal-gui spryker/gui-table spryker/
 console transfer:generate
 ```
 
-## 2) Update Stylelint and css-loader
+## 2) Update npm dependencies
 
-Before starting the migration, make sure that stylelint and css-loader were updated by this doc: [Stylelint migration guide](/docs/dg/dev/upgrade-to-stylelint-16-and-css-loader-6.html) is required.
+In `package.json`, do the following:
 
-## 3) Update npm dependencies
-
-1. In `package.json`, do the following:
-
-   1. Adjust npm scripts::
+   1. Adjust the npm scripts::
 
         ```json
         {
@@ -84,7 +79,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
         ```
 
-    3. Update or add the following dependencies:
+    2. Update or add the following dependencies:
 
     ```json
     {
@@ -159,7 +154,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
         ```
 
-    5. Update and install package dependencies:
+    5. Update and install the package dependencies:
 
     ```bash
     rm -rf node_modules
@@ -172,11 +167,11 @@ Before starting the migration, make sure that stylelint and css-loader were upda
 
     {% endinfo_block %}
 
-## 4) Update Angular configuration
+## 4) Update the Angular configuration
 
-1. In `frontend/merchant-portal` folder, do the following:
+1. In the `frontend/merchant-portal` folder, do the following:
 
-   1. In `jest.config.ts` change resolver from `nrwl` to `nx`:
+   1. In `jest.config.ts`, change the resolver from `nrwl` to `nx`:
 
         ```ts
            export default {
@@ -186,20 +181,20 @@ Before starting the migration, make sure that stylelint and css-loader were upda
             } 
         ```
 
-   2. In `jest.preset.js`, change nxPreset from nrwl to nx:
+   2. In `jest.preset.js`, change `nxPreset` from `nrwl` to `nx`:
 
         ```js
             const nxPreset = require('@nx/jest/preset').default;
         ```
 
-   3. In `test-setup.ts`, Replace `core-js/features/reflect` import to `reflect-metadata/lite`:
+   3. In `test-setup.ts`, replace `core-js/features/reflect` import to `reflect-metadata/lite`:
 
         ```ts
             import 'reflect-metadata/lite';
             import 'jest-preset-angular/setup-jest';
         ```
 
-   4. In `tsconfig.spec.json`, change compileOptions to following:
+   4. In `tsconfig.spec.json`, change `compileOptions` to the following:
 
         ```json
         {
@@ -241,7 +236,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
 
     ```
 
-    6. In `entry-points.js`, update `getMPEntryPointsMap` function to add possibility one entry build:
+    6. In `entry-points.js`, update `getMPEntryPointsMap` function to add the possibility of one entry build:
 
     ```js
         const { readFileSync } = require('fs');
@@ -276,7 +271,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
     ```
 
-    6. In `webpack.config.ts`, add `publicPath` config value:
+    6. In `webpack.config.ts`, add the `publicPath` config value:
 
     ```ts
         export default async (...): Promise<webpack.Configuration> => {
@@ -288,14 +283,14 @@ Before starting the migration, make sure that stylelint and css-loader were upda
         }
     ```
 
-2. In root of project
+2. In the root of the project, do the following:
 
    1. Add `.nx/cache` to `.gitignore` and `.prettierignore`.
     ```text
         .nx/cache
     ```
    2. Delete `angular.json`.
-   3. Add `target` option into `tsconfig.mp.json`:
+   3. Add the `target` option to `tsconfig.mp.json`:
 
    ```json
     {
@@ -307,7 +302,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
     }
    ```
 
-   4. In `.eslintrc.mp.json` move `ts` configuration into overrides section and replace plugin and disable some rules.
+   4. In `.eslintrc.mp.json`, move `ts` configuration to the overrides section. Replace the plugin and disable some rules:
 
    ```json
     {
@@ -351,7 +346,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
    ```
 
 
-   5. Add `project.json` with following configuration:
+   5. Add `project.json` with the following configuration:
 
    ```json
    {
@@ -449,7 +444,7 @@ Before starting the migration, make sure that stylelint and css-loader were upda
     }
    ```
 
-   6. In `deploy.yml` update npm to `10` version.
+   6. In `deploy.yml`, update npm to version `10`:
 
    ```yml
     ...
@@ -459,9 +454,9 @@ Before starting the migration, make sure that stylelint and css-loader were upda
 
 ## 5) Manual Spryker module updating
 
-In order that you are not able to run composer update you have to update all angular dependencies in the root of module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to next `major.0.0` version (e.g .` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`)
+If you can't update the modules automatically with the `composer update` command, you have to update all angular dependencies in the root of module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).
 
-For adding single entry point support add `// spy/merchant-portal:single-entry-marker` line in the entry.ts file e.g:
+To add a single entry point support, add `// spy/merchant-portal:single-entry-marker` line in the `entry.ts` file, for example, like this:
 
 ```ts
 // spy/merchant-portal:single-entry-marker
@@ -471,7 +466,7 @@ import { ComponentsModule } from './app/components.module';
 registerNgModule(ComponentsModule);
 ```
 
-and delete additional js injecting in module `layout_file_name twig` file. (e.g delete the whole block below)
+Delete additional JS injecting in the module `layout_file_name twig` file. For example, delete the whole block below)
 
 ```twig
 {% raw %}{% block footerJs %}

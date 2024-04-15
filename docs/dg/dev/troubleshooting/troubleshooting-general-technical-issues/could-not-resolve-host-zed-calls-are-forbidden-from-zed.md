@@ -1,6 +1,6 @@
 ---
-title: Exception with zed.calls.are.forbidden.from.zed
-description: The solution for the zed.calls.are.forbidden.from.zed .
+title: Could not resolve host zed.calls.are.forbidden.from.zed
+description: The solution for the zed.calls.are.forbidden.from.zed
 last_updated: Nov 24, 2023
 template: troubleshooting-guide-template
 related:

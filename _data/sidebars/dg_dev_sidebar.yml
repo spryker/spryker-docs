@@ -1288,6 +1288,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
       - title: Composer version 2 compatibility issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
+      - title: Could not resolve host zed.calls.are.forbidden.from.zed
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/could-not-resolve-host-zed-calls-are-forbidden-from-zed.html        
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
       - title: PHPStan memory issues

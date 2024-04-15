@@ -213,11 +213,9 @@ Debug mode is configured with the following:
 
 *Remove all the demo data from the environment*. A project should only use the real data that will be used after going live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. Also, make sure to set strong passwords when creating new admin users.
 
-## OAuth related configurations
+## OAuth configuration
 
-In the previous versions of demoshops, we used both for development and production code directly embedded security configuration, see section OAUTH in the config_default and config/Shared/common/config_oauth-development.php, if applicable.
-
-Nowdays we strongly recommend using environment variables to set values, for example:
+We recommend using environment variables to define security configuration. Example:
 ```php
 $config[OauthConstants::PRIVATE_KEY_PATH] = getenv('SPRYKER_OAUTH_KEY_PRIVATE');
 $config[OauthConstants::PUBLIC_KEY_PATH]

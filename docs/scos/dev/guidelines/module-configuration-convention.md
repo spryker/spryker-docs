@@ -117,8 +117,8 @@ Storage unchangeable constants (like queue name, error queue name, resource name
 
 ### Shared Environment Configuration
 
-In rare cases, some environment variable should be accessible in different modules.
-We recommend to create seaprate environment configuration, preferably with the same key name, for each module and use chained assignment of the value.
+In rare cases, some environment variable is used in several modules.
+We recommend to create a separate environment configuration for each module, preferably with the same key name, and use chained assignment of the value.
 
 ```php
 interface ModuleNameConstants

@@ -52,7 +52,7 @@ Once the merchant approves or rejects a relation request, its status changes to 
 
 For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
 
-Even though it's usually a merchant who approves or rejects a merchant relation request, a marketplace operator can also process the merchant relation request from the Back Office. For details on how they can do this, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
+Even though it's usually a merchant who approves or rejects a merchant relation request, a marketplace operator can also process the merchant relation request from the Back Office. For details on how they can do this, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relation-requests.html).
 
 
 ## Automatic creation of a merchant relation

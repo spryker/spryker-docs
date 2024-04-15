@@ -16,7 +16,7 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Create a merchant relation
 
-1. Go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**.
+1. Go to **B2B Contracts&nbsp;<span aria-label="and then">></span> Merchant Relations**.
 2. On the **Overview of Merchant relation** page, click **Add Merchant relation**.
 3. On the **Create Merchant Relation** page, select a **MERCHANT**.
 4. Select a **COMPANY**.

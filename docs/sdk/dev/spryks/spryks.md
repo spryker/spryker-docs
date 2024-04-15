@@ -119,7 +119,7 @@ module
 organization     
 theme 
 ```
-Knowing which enables you to run this Spryk in a non-interactive mode:
+Knowing these parameters enables you to run this Spryk in a non-interactive mode:
 ```bash
 console spryk:run AddYvesPage --controller=Test --controllerMethod=index --mode=project --module=Test --organization=Pyz --theme=default
 ```

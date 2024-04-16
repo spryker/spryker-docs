@@ -12,7 +12,7 @@ To start feature integration, review and install the necessary features:
 | Product | {{page.version}} |
 | Price | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -156,7 +156,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import:product-price-schedule

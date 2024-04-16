@@ -1,5 +1,5 @@
 ---
-title: Architectural Convention Reference
+title: Architectural convention reference
 description: The Spryker framework includes a diverse range of components designed to address common challenges and streamline development processes. These components establish conventions and guidelines to ensure appropriate application responses.
 last_updated: Apr 10, 2024
 template: concept-topic-template
@@ -10,51 +10,56 @@ related:
     link: docs/dg/dev/architecture/modules-and-application-layers.html
 ---
 
-{% info_block infoBox "Info" %}
 
 This document serves as a dynamic resource intended to provide an overview of our conventions and guidelines. We acknowledge that the technology landscape is ever-evolving, and as such, this document is subject to continuous refinement and improvement.
 
-Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker Commerce Operating System (SCOS). We encourage you to contribute your insights and recommendations by proposing changes through our designated channels.
+Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker. We encourage you to contribute your insights and recommendations by proposing changes through our designated channels.
 
-{% endinfo_block %}
+## Documentation structure
 
-# Documentation structure
+### Development Use-Cases
 
-## Development Use-Cases
-Understanding the development scenarios in which Spryker Commerce Operating System (SCOS) can be utilized is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
+Understanding the development scenarios in which Spryker can be used is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
 
-- **Project Development**: If you are developing a project, you will need to adhere to specific project development guidelines to ensure smooth integration.
-- **Module Development**: Contributing 3rd-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions. These guidelines are stricter than `Project Development`, as such functionalities should be re-usable on multiple projects in different contexts.
-- **Core Module Development**: For those contributing to Spryker modules, there are specialised rules to follow within the module folders. This ensures consistency and compatibility across product lines based on SCOS Framework. These requirements are the strictest in order to be re-usable on multiple projects in different business verticals (B2C, B2B, Marketplace, Unified Commerce, etc.), and ensure stability of module API used by Spryker development ecosystem and community.
+- **Project development**: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
+- **Module development**: Contributing third-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.  Because such functionalities should be reusable on multiple projects in different contexts, these guidelines are more strict than *Project Development*.
+- **Module development**: Contributing third-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions. Because such functionalities should be reusable on multiple projects in different contexts, these guidelines are more strict than *Project Development*.
+- **Core module development**: For those contributing to Spryker modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across product lines based on the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, Unified Commerce, and ensure the stability of module API used by Spryker development ecosystem and community.
 
-Our guidelines and conventions for each component begin with generic instructions applicable to all development use-cases. Following this, you will find specific details to the more specialized versions of development use-cases.
+Our guidelines and conventions for each component begin with generic instructions applicable to all development use cases. Following this, you will find specific details to the more specialized versions of development use cases.
 
-## Directive Classification
-Throughout this documentation, you will encounter two types of directives:
-- **Convention**: These are mandatory requirements that contributors must adhere to in order to enable specific SCOS features or ensure proper application responses.
-- **Guideline**: While not mandatory, following these guidelines is highly recommended. Doing so promotes long-term code maintainability and facilitates smoother development processes.
+### Directive Classification
 
-# Applications
-Spryker utilises application layers into applications to enable constructing the necessary application architecture for the specific business requirements to provide a quick project start, and long-term maintainability.
-- Backend applications (eg: Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console) typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
-- Storefront applications (eg: Yves, Configurator, Glue, GlueStorefront, Console) typically use the Yves-, Glue-, Client-, Service- and Shared application layers.
+There are two types of directives:
+- **Convention**: These are mandatory requirements that contributors must adhere to enable specific Spryker features and ensure proper application responses.
+- **Guideline**: While not mandatory, following these guidelines is highly recommended to promote long-term code maintainability and facilitate smoother development processes.
 
-# Application Layers
-Spryker organises responsibilities/functionalities over a set of application layers (see [Conceptual Overview](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html)) to enable flexible business logic orchestration across the applications.
+## Applications
 
-The application layers are aggregations of layers (see [Modules and Application Layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html)). Some application-layers are multi-layered and organising their components in layer directories, while others are flat-layered and merging their components in the same directory.
-- **Glue**: is a **flat-layered** `Communication Layer`.
-- **Client**: is a **flat-layered** `Communication Layer`.
-- **Service**: is a **flat-layered**, overarching `Business Layer`.
-- **Yves**: is a **flat-layered** `Presentation Layer` merged with `Communication Layer`.
-- **Zed**: is a **multi-layered** of the 4 layers: `Presentation Layer`, `Communication Layer`, `Business Layer`, `Persistence Layer`.
-- **Shared**: is a layer-overarching, stateless, abstraction library.
+Spryker uses application layers to enable constructing the necessary application architecture for the specific business requirements to provide a quick project start and long-term maintainability.
+- Backend applications, like Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
+- Storefront applications, like Yves, Configurator, Glue, GlueStorefront, Console, typically use the Yves-, Glue-, Client-, Service- and Shared application layers.
 
-## Zed
+## Application Layers
 
-`Zed` serves as the backend application layer responsible for housing all business logic, persisting data and backend UI (eg: backoffice).
+Spryker organizes responsibilities and functionalities over a set of [application layers](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html) to enable flexible business logic orchestration across the applications.
 
-```
+The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
+
+| APPLICATION LAYER | LAYERING | LAYER |
+| Glue |  flat-layered | Communication layer |
+| Client |  flat-layered | Communication layer |
+| Service |  flat-layered | Overarching Business layer |
+| Yves |  flat-layered |  Presentation layer merged with Communication layer |
+| Zed |  multi-layered | Presentation, Communication, Business, and Persistence layers |
+
+The Shared application layer is a layer-overarching, stateless, abstraction library.
+
+### Zed
+
+Zed serves as the backend application layer responsible for housing all business logic, persisting data and backend UI, like the Back Office.
+
+```text
 [Organization]
 └── Zed
     └── [Module]
@@ -129,28 +134,29 @@ The application layers are aggregations of layers (see [Modules and Application 
         └── [Module]DependencyProvider.php
 ```
 
-Used components
+Used components:
 - [Bridge](#bridge)
 - [Config](#module-configurations)
 - [Controller](#controller)
-- [Dependency Provider](#dependency-provider)
+- [Dependency provider](#dependency-provider)
 - [Entity](#entity)
 - [Entity Manager](#entity-manager)
 - [Facade](#facade-design-pattern)
 - [Factory](#factory)
-- [Gateway Controller](#gateway-controller)
+- [Gateway controller](#gateway-controller)
 - [Layout](#layout)
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Models](#model)
 - [navigation.xml](#navigationxml)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
-- [Query Container](#facade-design-pattern)
-- [Query Object](#query-object)
+- [Query container](#facade-design-pattern)
+- [Query object](#query-object)
 - [Repository](#repository)
 - [Schema](#persistence-schema)
 
-## Yves
-`Yves` application layer provides a lightweight Shop Application.
+### Yves
+
+Yves application layer provides a lightweight Shop Application.
 
 ```
 [Organization]
@@ -204,13 +210,13 @@ Used components
         └── [Module]Factory.php
 ```
 
-Used components
+Used components:
 - [Bridge](#bridge)
 - [Config](#module-configurations)
 - [Controller](#controller)
 - [Dependency Provider](#dependency-provider)
 - [Factory](#factory)
-- [Layout](#layout) 
+- [Layout](#layout)
 - [Mapper / Expander / Hydrator](#mapper--expander--hydrator)
 - [Model](#model)
 - [Provider / Router](#provider--router)
@@ -219,9 +225,9 @@ Used components
 - [Theme](#theme)
 - [Widget](#widget)
 
-## Glue
+### Glue
 
-The `Glue` application layer serves as a conduit for providing data access points through APIs.
+The Glue application layer serves as a conduit for providing data access points through APIs.
 It acts as an interface for external systems to interact with the application's data.
 
 ```
@@ -259,7 +265,7 @@ It acts as an interface for external systems to interact with the application's 
         └── [Module]Factory.php
 ```
 
-Used components
+Used components:
 - [Bridge](#bridge)
 - [Config](#module-configurations)
 - [Controller](#controller)
@@ -269,16 +275,20 @@ Used components
 - [Model](#model)
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
 
-## Client
+### Client
 
-`Client` is a lightweight application layer that handles all data access, such as
-- Persistence access (such as Key-Value Storage (Redis), Search (Elasticsearch), Yves sessions),
-- `Zed` as a data-source (RPC),
-- 3rd party communication.
+Client is a lightweight application layer that handles all data access, such as the following:
+- Persistence access: key-value storage (Redis), Search (Elasticsearch), Yves sessions
+- Zed as a data-source (RPC)
+- third-party communication
 
-Note: Backend database access is an exception for performance streamlining.
+{% info_block infoBox %}
 
-```
+Backend database access is an exception for performance streamlining.
+
+{% endinfo_block %}
+
+```text
 [Organization]
 └── Client
     └── [Module]
@@ -307,7 +317,7 @@ Note: Backend database access is an exception for performance streamlining.
         └── [Module]Factory.php
 ```
 
-Used components
+Used components:
 - [Bridge](#bridge)
 - [Client facade](#facade-design-pattern)
 - [Config](#module-configurations)
@@ -318,13 +328,13 @@ Used components
 - [Plugin](#plugin), [Plugin Interface](#plugin-interface)
 - [Zed Stub](#zed-stub)
 
-## Service
+### Service
 
-The `Service` application layer encapsulates a multipurpose library that can be utilized across various application layers, such as `Yves`, `Client`, `Glue` or `Zed` application layers.
-A `Service` primarily consists of reusable lightweight stateless business logic components.
-Due to its deployment across all applications, a `Service` is constrained to accessing data providers that are available universally (for instance, the backend database is not accessible from storefront applications by default).
+The Service application layer is multipurpose library that can be used across various application layers, such as Yves, Client, Glue, or Zed.
 
-```
+A service primarily consists of reusable lightweight stateless business logic components. Due to its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
+
+```text
 [Organization]
 └── Service
     └── [Module]
@@ -338,7 +348,7 @@ Due to its deployment across all applications, a `Service` is constrained to acc
         └── [Module]Service.php
 ```
 
-Used components
+Used components:
 - [Config](#module-configurations)
 - [Dependency Provider](#dependency-provider)
 - [Factory](#factory)
@@ -346,13 +356,13 @@ Used components
 - [Model](#model)
 - [Service facade](#facade-design-pattern)
 
-## Shared
+### Shared
 
-The `Shared` library contains code and configuration that is designed to be utilized across any application layer and module.
-The `Shared` library is intended to facilitate the sharing of code among various application layers and modules.
-To ensure compatibility and versatility across different application architecture setups, any content within the `Shared` library must be free of application layer-specific elements. Therefore, the use of [Factories](#factory) is not permitted within the `Shared` library.
+The Shared library contains code and configuration that's used across any application layer and module. It facilitates the sharing of code among application layers and modules.
 
-```
+To ensure compatibility and versatility across different application architecture setups, any content within the Shared library must be free of application layer-specific elements. So, [factories](#factory) are not allowed in the `Shared` library.
+
+```text
 [Organization]
 └── Shared
     └── [Module]
@@ -362,75 +372,68 @@ To ensure compatibility and versatility across different application architectur
         └── [Module]Config.php
 ```
 
-Used components
+Used components:
 - [Config](#module-configurations)
 - [Constants](#module-configurations)
 - [Transfer](#transfer-object)
 
-# Layers
+## Layers
 
-An application layer can have up to four logical layers with clear purpose and communication rules.
-- **Presentation Layer**: contains frontend assets (such as twig-templates, JS, CSS files, etc.)
-- **Communication Layer**: contains controllers, console commands, forms, tables and plugins.
-- **Business Layer**: contains the business logic of a module
-- **Persistence Layer**: contains repository, entity manager, simple data mappers and the schema of entities.
+An application layer can have up to four logical layers with clear purpose and communication rules:
+- Presentation layer: contains frontend assets, like twig templates, JS, or CSS files.
+- Communication layer: contains controllers, console commands, forms, tables, and plugins.
+- Business layer: contains the business logic of a module.
+- Persistence layer: contains repository, entity manager, simple data mappers, and the schema of entities.
 
-## Presentation Layer responsibilities
-- Responsible for handling the user interface (UI) presentation.
-- Contains frontend assets, such as HTML, Twig templates, JavaScript (JS), TypeScript, Cascading Style Sheets (CSS) files, and so on.
+### Presentation layer responsibilities
+
+- Handles the UI presentation.
+- Contains frontend assets, like HTML, Twig templates, JS, TypeScript, or CSS files.
 - Handles user interactions and input validations on the client side.
-- Interacts with the [Communication Layer](#communication-layer-responsibilities) to retrieve necessary data for display.
+- Interacts with the [Communication layer](#communication-layer-responsibilities) to retrieve necessary data for display.
 
-## Communication Layer responsibilities
-- Acts as an intermediary between the [Presentation Layer](#presentation-layer-responsibilities) and the [Business Layer](#business-layer-responsibilities).
+### Communication layer responsibilities
+
+- Acts as an intermediary between the [Presentation layer](#presentation-layer-responsibilities) and the [Business layer](#business-layer-responsibilities).
 - Contains [controllers](#controller) responsible for handling HTTP requests and responses.
 - Contains [plugins](#plugin) responsible for flexible, overarching requests and responses.
 - Contains console commands.
 - Manages form processing and validation.
 - Handles [routing and dispatching requests](#provider--router) to appropriate [controllers](#controller).
-- Interacts with the [Business Layer](#business-layer-responsibilities) to perform business operations.
+- Interacts with the [Business layer](#business-layer-responsibilities) to perform business operations.
 
-## Business Layer responsibilities
+### Business layer responsibilities
+
 - Contains the main business logic.
 - Implements business rules and processes.
 - Performs data manipulation, calculations, and validation.
 - Interacts with the [Persistence Layer](#persistence-layer-responsibilities) to read and write data.
 
-## Persistence Layer responsibilities
+### Persistence Layer responsibilities
+
 - Responsible for data storage and retrieval.
 - Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
-- Handles database operations such as CRUD (`Create`, `Read`, `Update`, `Delete`).
+- Handles database operations such as CRUD: create, read, update, delete.
 - Ensures data integrity and security.
 - Maps database entities into business data transfer objects.
 
-# Components
+## Components
 
 **Conventions**
 - The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
-- The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
-
-<details><summary markdown='span'>Additional Conventions for Core Module Development</summary>
-
-- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
+- The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
+- For core module development: The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in the `Kernel` module.<br/>
 
 </details>
 
 **Guidelines**
 - The components should be stateless to be deterministic and easy to comprehend.
-
-<details><summary markdown='span'>Additional Guidelines for Project Development</summary>
-
-- It is recommended for each component to consider the conventions and guidelines of Module Development and Core Module Development as they may offer solutions for long-term requirements or recurring issues.<br/>
+- Project development: Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
+- Module development and Core module development: The components are required to be stateless to be deterministic and easy to comprehend.
 
 </details>
 
-<details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
-
-- The components are required to be stateless to be deterministic and easy to comprehend.<br/>
-
-</details>
-
-## Controller
+### Controller
 
 ```
 [Organization]
@@ -472,7 +475,7 @@ The `index` action name acts as the default action during request action resolut
 **Conventions**
 - `Action` methods are required to be suffixed with `Action` and be `public` in order to be accessible, and straight forward define the entry points of the `Controller`.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - Only `Action` methods can be `public` for simplicity.<br/>
 - `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.<br/>
@@ -502,7 +505,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
      * @var string
      */
     protected const PARAM_ID_CONFIGURABLE_BUNDLE_TEMPLATE = 'id-configurable-bundle-template';
-    
+
     /**
      * @param \Symfony\Component\HttpFoundation\Request $request
      *
@@ -521,7 +524,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 }
 ```
 
-## Dependency Provider
+### Dependency Provider
 
 ```
 [Organization]
@@ -544,7 +547,7 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
 
 **Description**
 
-Injects required dependencies to a module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin). 
+Injects required dependencies to a module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin).
 
 Dependency injection is orchestrated through a `provide-add-get` structure (see `examples` below).
 - The `provide` method is the highest level that holds only `add` calls without any additional logic.
@@ -565,7 +568,7 @@ public function provideBackendDependencies(Container $container)
 public function provideServiceLayerDependencies(Container $container)
 ```
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - Only three type of methods can be defined, either `provide`, `get`, or `add`.<br/>
 ```php
@@ -635,7 +638,7 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
      * @var string
      */
     public const FACADE_GLOSSARY = 'FACADE_GLOSSARY';
-    
+
     /**
      * @var string
      */
@@ -692,7 +695,7 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
 
         return $container;
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -721,7 +724,7 @@ class ConfigurableBundleDependencyProvider extends Spryker\Zed\ConfigurableBundl
 }
 ```
 
-## Entity
+### Entity
 
 ```
 src
@@ -735,7 +738,7 @@ src
 │       └── [DomainName]   
 │           ├── Base
 │           │   ├── [EntityName].php
-│           │   └── [EntityName]Query.php 
+│           │   └── [EntityName]Query.php
 │           ├── Map
 │           │   └── [EntityName]TableMap.php
 │           ├── [EntityName].php
@@ -763,11 +766,11 @@ See [Propel Documentation - Active Record Class](https://propelorm.org/documenta
 See more details on domains in [Persistence Schema](#persistence-schema).
 
 **Conventions**
-- `Entity` classes need to be generated via [Persistence Schema](#persistence-schema). 
+- `Entity` classes need to be generated via [Persistence Schema](#persistence-schema).
 - `Entities` can not leak to any [facade](#facade-design-pattern)'s level (as they are heavy, stateful, module specific objects).
 - `Entities` are required to be implemented according to the 3-tier class hierarchy (see in `description` and `examples`) to support extension from Propel and SCOS.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - `Entities` can be instantiated in the [Persistance Layer](#persistence-layer-responsibilities) only.
 
@@ -780,7 +783,7 @@ See more details on domains in [Persistence Schema](#persistence-schema).
 
 **Examples**
 
-The lowest level class generated by Propel, containing the base Propel functionality. 
+The lowest level class generated by Propel, containing the base Propel functionality.
 ```php
 namespace Orm\Zed\ConfigurableBundle\Persistence\Base;
 
@@ -823,7 +826,7 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Entity manager` `public` methods need to have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`.<br/>
 - Creating, updating and deleting functions need to be separated by concern even if they use overlapping internal methods.<br/>
@@ -843,7 +846,7 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 
 </details>
 
-## Facade design pattern
+### Facade design pattern
 
 ```
 [Organization]
@@ -854,7 +857,7 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
 ├── Service
 │   └── [Module]
 │       ├── [Module]Service.php
-│       └── [Module]ServiceInterface.php 
+│       └── [Module]ServiceInterface.php
 └── Zed
     └── [Module]
         ├── Business
@@ -879,7 +882,7 @@ The facades provide functionality for other layers and/or modules. The functiona
 **Conventions**
 - All methods need to have [Transfer Objects](#transfer-object) or native types as argument and return value.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - The methods need to have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).<br/>
 - The inherited `getFactory()` method needs to be used to instantiate the underlying classes.<br/>
@@ -1030,7 +1033,7 @@ interface ConfigurableBundleFacadeInterface
 }
 ```
 
-## Factory
+### Factory
 
 ```
 [Organization]
@@ -1065,7 +1068,7 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Factories` need to orchestrate the instantiation of objects in solitude (without reaching out to class-external logic).<br/>
 - `Factory` classes must not define/implement interface as practically they are never fully replaced and offer no benefit.<br/>
@@ -1076,7 +1079,7 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
 </details>
 
 
-## Gateway Controller
+### Gateway Controller
 
 ```
 [Organization]
@@ -1095,7 +1098,7 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
 - `Gateway Controller` actions must define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
 - `Gateway Controllers` follow the [Controller](#controller) conventions.
 
-## Layout
+### Layout
 
 ```
 [Organization]
@@ -1120,7 +1123,7 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
 Layouts are the skeleton of the page, and they define the structure of the page.
 
 
-## Mapper / Expander / Hydrator
+### Mapper / Expander / Hydrator
 
 **Description**
 
@@ -1132,7 +1135,7 @@ To differentiate between the recurring cases of data mapping, and to provide a c
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Mapper` methods need to be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.<br/>
   - `Mappers` need to be free of any logic other than structuring directives.<br/>
@@ -1209,7 +1212,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 }
 ```
 
-## Model
+### Model
 
 ```
 [Organization]
@@ -1256,7 +1259,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 - `Model` dependencies can be [facades](#facade-design-pattern) or from the same module, either `Models`, [Repository](#repository), [Entity Manager](#entity-manager) or [Config](#module-configurations).
   - `Models` can not interact directly with other module's `Models` (eg: via inheritance, shared constants, instantiation, etc.).
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - `Model` dependencies need to be injected via constructor.<br/>
 - `Models` can not instantiate any object but [Transfer Objects](#transfer-object).<br/>
@@ -1268,7 +1271,7 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 </details>
 
-## Module Configurations
+### Module Configurations
 
 ```
 [Organization]
@@ -1306,7 +1309,7 @@ When `module configuration` is defined in another [application layer](#applicati
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Module configuration`<br/>
   - Getter methods (prefixed with `get`) need to be defined to retrieve configuration values, instead of accessing values via constants directly (this enables a more flexible extension structure, and an easier to control access tracking).<br/>
@@ -1323,7 +1326,7 @@ When `module configuration` is defined in another [application layer](#applicati
 **Guidelines**
 - No generic guidelines.
 
-<details><summary markdown='span'>Guidelines for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Guidelines for Module development and Core module development</summary>
 
 - `Protected` items are not recommended in `module configuration` as they tend to create backward compatibility problems on project extensions.<br/>
 
@@ -1349,7 +1352,7 @@ interface OmsConstants
 ```
 
 
-## Navigation.XML
+### Navigation.XML
 
 ```
 [Organization]
@@ -1399,7 +1402,7 @@ The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4
 </config>
 ```
 
-## Permission Plugin
+### Permission Plugin
 
 ```
 [Organization]
@@ -1439,7 +1442,7 @@ The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4
 - When using one of the traits in a [Model](#model), refer directly to the remote `Permission Plugin` key string when possible, instead of defining a local constant.
 - The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait allows the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
 
-<details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Guidelines for Module development and Core module development</summary>
 
 - When using one of the traits in a [Model](#model), use a `protected` constant string to reference the `Permission Plugin` that will be used in the [Model](#model). As an annotation for this string you should add `@uses` annotation to the `PermissionPlugin::KEY` string that you will compare against (see in `examples` below).
 
@@ -1469,7 +1472,7 @@ class QuotePermissionChecker implements QuotePermissionCheckerInterface
     }
 ```
 
-## Persistence Schema
+### Persistence Schema
 
 ```
 [Organization]
@@ -1492,7 +1495,7 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 - Table foreign key column needs to follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`)
   - Exception can be to the case if the same table is referred multiple times, in which case the follow-up foreign key columns need to be named as `fk_[custom_connection_name]` .
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - The table `[org]` prefix needs to be `spy_`.<br/>
 - The schema file `[org]` prefix needs to be `spy_`.
@@ -1550,11 +1553,11 @@ Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema
             <reference foreign="id_product_abstract" local="fk_product_abstract"/>
         </foreign-key>
     </table>
-  
+
 </database>
 ```
 
-## Provider / Router
+### Provider / Router
 
 ```
 [Organization]
@@ -1581,7 +1584,7 @@ Controllers in [Zed](#zed) application layer are autowired and do not require ma
 - A `Router` needs to extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
 - A `providers` are `routers` are classified as a [Plugin](#plugin) and so the plugin's conventions apply.
 
-## Query Object
+### Query Object
 
 ```
 src
@@ -1589,7 +1592,7 @@ src
 │   └── Zed   
 │       └── [DomainName]   
 │           ├── Base
-│           │   └── [EntityName]Query.php 
+│           │   └── [EntityName]Query.php
 │           └── [EntityName]Query.php
 │
 └── [Organisation]
@@ -1611,8 +1614,8 @@ See more details on the 3-tier class hierarchy in [Entity](#entity), and domains
 
 **Convention**
 - No generic conventions.
- 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - Hidden, hard dependencies appearing through `join` need to be defined via `@module [RemoteModule1][,[...]]` tag (see `examples` below).
 
@@ -1637,7 +1640,7 @@ In the below example, the `SpyProductQuery` is part of the `Product` `domain` wh
 ```
 
 
-## Repository
+### Repository
 
 ```
 [Organization]
@@ -1651,12 +1654,12 @@ In the below example, the `SpyProductQuery` is part of the `Product` `domain` wh
 **Descriptions**
 
 Responsible for retrieving data from database by executing queries and returning the results as [Transfer Objects](#transfer-object) or native types.
-The `Repository` can be accessed from the same module's [Communication](#communication-layer-responsibilities) and [Business Layers](#business-layer-responsibilities).
+The `Repository` can be accessed from the same module's [Communication](#communication-layer-responsibilities) and [Business layers](#business-layer-responsibilities).
 
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Repostiories` can not alter the data in the database, only retrieve it.<br/>
 - `Repositories` need to use [Entities](#entity) and/or [Query Objects](#query-object) to retrieve data from the database.<br/>
@@ -1675,7 +1678,7 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 
 </details>
 
-## Theme
+### Theme
 
 ```
 [Organization]
@@ -1718,7 +1721,7 @@ A `Theme` may contain `views`, `templates`, or `components` (`atoms`, `molecules
 - **Components**: are reusable parts of the UI, further divided into `atoms`, `molecules`, and `organisms`.
 
 
-## Transfer Object
+### Transfer Object
 
 ```
 src
@@ -1750,7 +1753,7 @@ For every defined table in [Peristence Schema](#persistence-schema) a matching `
 - `EntityTransfers` must not be defined manually but rather will be generated automatically based on [Peristence Schema](#persistence-schema) definitions.
   - The `Entity` suffix is reserved for the auto-generated `EntityTransfers` and must not be used in manual transfer definitions to avoid collision.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - A module can only use those `Transfer Objects` and their properties which are declared in the same module (transfer definitions accessed through composer dependencies are considered as violation).
 
@@ -1778,7 +1781,7 @@ For every defined table in [Peristence Schema](#persistence-schema) a matching `
 </transfers>
 ```
 
-## Widget
+### Widget
 
 ```
 [Organization]
@@ -1799,7 +1802,7 @@ A `Widget` is a reusable part of a webpage in [Yves](#yves) application layer. `
 **Convention**
 - A `Widget` needs to have a unique name across all features.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - A `Widget` needs to contain only lightweight, display related logic.<br/>
   - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.<br/>
@@ -1857,7 +1860,7 @@ class CurrencyWidget extends \Spryker\Yves\Kernel\Widget\AbstractWidget
 }
 ```
 
-## Zed Stub
+### Zed Stub
 
 ```
 [Organization]
@@ -1876,7 +1879,7 @@ A `Zed Stub` is a class which defines interactions between [Yves](#yves)/[Glue](
 - The `Zed Stub` call's endpoints need to be implemented in a [Zed application](#applications) [Gateway Controller](#gateway-controller) of the receiving module.
 - `Zed Stubs` need to be a descendant of `\Spryker\Client\ZedRequest\Stub\ZedRequestStub`.
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - The `Zed Stub` methods need to contain only delegation but no additional logic.<br/>
 - `Zed Stub` methods need to be `public`.<br/>
@@ -1919,7 +1922,7 @@ class ConfigurableBundleCartsRestApiZedStub implements ConfigurableBundleCartsRe
     }
 ```
 
-# Core Module Development Components
+## Core module development Components
 
 The components below are essential in `core module development` for the purpose of modularity and customisability. For `project development` and `module development` these components are recommended on need to have basis (consider implementing these components based on their relevance to your business or technical requirements).
 
@@ -1927,7 +1930,7 @@ The components below are essential in `core module development` for the purpose 
 - The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
 - The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
-<details><summary markdown='span'>Additional Conventions for Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Core module development</summary>
 
 - The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
 
@@ -1938,17 +1941,17 @@ The components below are essential in `core module development` for the purpose 
 
 <details><summary markdown='span'>Additional Guidelines for Project Development</summary>
 
-- It is recommended for each component to consider the conventions and guidelines of Module Development and Core Module Development as they may offer solutions for long-term requirements or recurring issues.<br/>
+- It is recommended for each component to consider the conventions and guidelines of Module development and Core module development as they may offer solutions for long-term requirements or recurring issues.<br/>
 
 </details>
 
-<details><summary markdown='span'>Additional Guidelines for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Guidelines for Module development and Core module development</summary>
 
 - The components are required to be stateless to be deterministic and easy to comprehend.<br/>
 
 </details>
 
-## Bridge
+### Bridge
 
 ```
 [Organization]
@@ -2010,7 +2013,7 @@ According to the Interface Segregation Principle, every module defines an interf
 
 - The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method (mind the missing `bridge` suffix word in the interface name).
 
-<details><summary markdown='span'>Additional Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
 - `Bridges` must contain only the delegation logic to the friend method.<br/>
 - The `Bridge` constructor can not have parameters to avoid coupling to a specific class.<br/>
@@ -2056,7 +2059,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 }
 ```
 
-## Plugin
+### Plugin
 
 ```
 [Organization]
@@ -2111,7 +2114,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 **Conventions**
 - No generic convention.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Plugins` can not contain business logic but delegate to the underlying [facade](#facade-design-pattern).
 - `Plugin` method names need to use words `pre` and `post` instead of `before`, `after`.
@@ -2133,7 +2136,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
   class ZipZapPlugin extends AbstractPlugin implements FooPluginInterface, BarPluginInterface {}
 ```
 
-## Plugin Interface
+### Plugin Interface
 
 ```
 [Organization]
@@ -2194,7 +2197,7 @@ There are three modules involved:
 **Conventions**
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module Development and Core Module Development</summary>
+<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
 - `Plugin interfaces` need to be defined in extension modules.<br/>
   - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.<br/>

@@ -893,7 +893,7 @@ Make sure that when you create and process a return for merchant order items, it
 
 | Marketplace SM     | Default Merchant SM     | Main Merchant SM
 | -------- | ------------------- | ---------- |
-| Used by Operator	 | Used by 3rd-party Merchant	 | Used by Main Merchant
+| Used by Operator	 | Used by third-party Merchant	 | Used by Main Merchant
 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	  | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return	 | start-return (can be started by entering in the Return Flow, it is not manually executable as a button) --> waiting for return
 | execute return --> returned   | execute return (manually executable) --> returned 	 | execute return (manually executable) --> returned
 | refund --> refunded		  | refund (manually executable) --> refunded	 | refund (manually executable) --> refunded

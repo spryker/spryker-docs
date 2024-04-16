@@ -28,6 +28,8 @@ Spryker Cloud Commerce OS supports the following version control systems:
 * [Bitbucket](https://bitbucket.org/)
 * [GitLab](https://gitlab.com/)
 
+Spryker Cloud also offers support for all the Git repositories that support AWS CodeCommit push mirroring. In this case similar to GitLab setup you can configure all the commits from your version control system are mirrored to Spryker Cloud Commerce OS and can be consumed by our pipelines to build and deploy your Spryker Cloud Commerce OS system.
+
 We recommend mapping your branches to environments as follows:
 
 | Environment | Branch |

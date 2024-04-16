@@ -5,7 +5,7 @@ last_updated: Nov 3 2023
 template: howto-guide-template
 ---
 
-Once you have [integrated the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
+Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To configure Vertex, do the following:
 
 {% info_block infoBox "Company code" %}
 
-Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
+Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
 
 
 {% endinfo_block %}
@@ -45,7 +45,7 @@ Vertex expects to receive the Company Code you have set in Vertex from Spryker a
 
 {% info_block warningBox "Test the configuration" %}
 
-To ensure accuracy and compiance with tax laws, We highly recommend to thoroughly test the Vertex integration.
+To ensure accuracy and compliance with tax laws, we highly recommend thoroughly testing the Vertex integration.
 
 {% endinfo_block %}
 
@@ -53,9 +53,9 @@ Once you have configured Vertex, the taxes are calculated in real time in the ch
 
 ![vertex_checkout_page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex_checkout_page.png)
 
-On the Storefront, the tax amount is displayed at the checkout summary page.
+On the Storefront, the tax amount is displayed on the checkout summary page.
 
-In the Back Office, the taxes are displayed at the order details page.
+In the Back Office, the taxes are displayed on the order details page.
 
 If you enabled invoice saving in Vertex in your configuration, you can view the taxes processed by Vertex for the Spryker order on the Vertex platform. Do the following:
 

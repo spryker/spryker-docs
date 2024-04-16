@@ -61,7 +61,7 @@ All merchants allowed to sell their products in your stores must have Unzer cred
 | UNZER PRIVATE KEY | Unique private key which Unzer provides to a project to accept payments. The key is store-specific. |
 | UNZER PUBLIC KEY (MAIN MERCHANT CREDENTIALS) | Unique public key which Unzer provides to each merchant to accept payments. The key is merchant-specific. |
 | UNZER PRIVATE KEY (MAIN MERCHANT CREDENTIALS) | Unique private key which Unzer provides to each merchant to accept payments. The key is merchant-specific. |
-| STORE RELATION | Defines [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the Unzer payment method will be available in. |
+| STORE RELATION | Defines [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) the Unzer payment method will be available in. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
 | PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the status `payment completed`. |
 

@@ -2,6 +2,7 @@
 title: "Marketplace Product feature: Domain model and relationships"
 description: A Marketplace Product feature adds merchant information to the product that a merchant sells.
 template: feature-walkthrough-template
+last_updated: May 12, 2023
 ---
 
 The *Marketplace Product* feature provides a relation between Products and Merchants.

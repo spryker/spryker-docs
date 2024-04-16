@@ -30,7 +30,7 @@ related:
     link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
-To install [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) without Docker, follow the steps below.
+To install [B2B Demo Shop](/docs/about/all/b2b-suite.html) or [B2C Demo Shop](/docs/about/all/b2c-suite.html) without Docker, follow the steps below.
 
 ### Minimum requirements
 
@@ -243,4 +243,4 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 ## Next steps:
 
-* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+* [Troubleshooting installation issues](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)

@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-store-relation-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-products-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/multi-store-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/multi-store-products-feature-integration.html
 related:
   - title: Migration Guide - Collector
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html

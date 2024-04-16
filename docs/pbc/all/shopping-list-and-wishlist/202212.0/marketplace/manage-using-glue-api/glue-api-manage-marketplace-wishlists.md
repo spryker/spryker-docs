@@ -2,6 +2,7 @@
 title: "Glue API: Manage marketplace wishlists"
 description: Retrieve details about wishlists and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
+last_updated: Nov 16, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201811.0/wishlists/managing-wishlists.html
   - /docs/marketplace/dev/glue-api-guides/201903.0/wishlists/managing-wishlists.html
@@ -2316,4 +2317,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204  | Cannot update the wishlist.                   |
 | 205  | Cannot remove the wishlist.                   |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

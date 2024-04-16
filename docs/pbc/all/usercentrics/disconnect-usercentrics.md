@@ -2,6 +2,7 @@
 title: Disconnect Usercentrics
 description: Find out how you can disconnect Usercentrics from your Spryker shop
 template: howto-guide-template
+last_updated: Sep 13, 2022
 ---
 Disconnecting the app permanently deletes all the existing Usercentrics configs.
 

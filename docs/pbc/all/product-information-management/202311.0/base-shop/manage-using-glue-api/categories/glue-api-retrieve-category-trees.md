@@ -8,6 +8,7 @@ originalArticleId: 058b2860-6041-49c4-8d02-dd236447c329
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-categories/retrieving-category-trees.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
 related:
   - title: Retrieving category nodes
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
@@ -172,7 +173,7 @@ Request sample: retrieve a category tree
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |
 | name | String | Name of category associated with the node |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

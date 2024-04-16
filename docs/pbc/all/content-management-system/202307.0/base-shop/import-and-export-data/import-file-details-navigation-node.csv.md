@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-navigation-node.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/navigation/create-navigation-nodes.html#reference-information-navigation-node-types) information in your Spryker Demo Shop.

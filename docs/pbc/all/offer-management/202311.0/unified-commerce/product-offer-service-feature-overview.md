@@ -2,6 +2,7 @@
 title: Product Offer Service feature overview
 description: General overview of the Product Offer Service feature
 template: concept-topic-template
+last_updated: Nov 30, 2023
 ---
 
 The *Product Offer Service* feature lets you assign service point services to product offers. Multiple services can be assigned to a product offer as long as the services belong to the same service point.

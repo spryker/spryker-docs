@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202212.0/taxes/avalara-tax-product-options-feature-integration.html
   - /docs/scos/dev/technology-partner-guides/202212.0/taxes/avalara/integrating-avalara-tax-product-options.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/avalara/install-avalara-product-options.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/third-party-integrations/integrate-avalara-tax-product-options.html
 ---
 
 To enable the Avalara + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
@@ -28,7 +29,7 @@ Install the necessary features:
 
 ### Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-eco/avalara-tax-product-option:"^0.1.0" --update-with-dependencies

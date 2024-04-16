@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html
 ---
 
 This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
@@ -724,4 +725,4 @@ For the attributes of the other included resources, see the docs:
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -5,6 +5,7 @@ template: feature-walkthrough-template
 last_updated: Jun 16, 2021
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/quotation-process-feature-walkthrough/quotation-process-module-relations.html
+  - /docs/pbc/all/request-for-quote/202204.0/quotation-process-module-relations.html
 ---
 
 On this page, you can find the module relations for the [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html) feature.

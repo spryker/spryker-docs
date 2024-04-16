@@ -26,9 +26,9 @@ Install the required features:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.6.0" --update-with-dependencies
@@ -431,7 +431,7 @@ Ensure that the OAuth client has been added to the `spy_oauth_client` table by r
 SELECT * FROM spy_oauth_client WHERE identifier = 'some-client-identifier';
 ```
 
-Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
+Ensure you can obtain the customer OAuth access token with customer credentials or customer reference. For details, see [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html).
 
 Ensure that `OauthRefreshTokenRemoverPlugin` is set up correctly:
 1. Run the command:
@@ -619,9 +619,9 @@ Overview and install the necessary features before beginning the integration.
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies
@@ -1001,5 +1001,5 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 
 | NAME                                           | INSTALLATION GUIDE                                                                                                                                                                                      |
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer API	                                  | [Glue API: Customer Account Management feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
+| Customer API	                                  | [Install the Customer Account Management Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-account-management-glue-api.html)       |
 | Customer Account Management + Order Management | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |

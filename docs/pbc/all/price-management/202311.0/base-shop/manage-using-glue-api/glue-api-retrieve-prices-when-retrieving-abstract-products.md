@@ -5,6 +5,7 @@ last_updated: Aug 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/price-management/202311.0/base-shop/manage-using-glue-api/retrieve-prices-when-retrieving-abstract-products.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-prices-when-retrieving-abstract-products.html
 ---
 
 This document describes how to retrieve prices when retrieving abstract products. To retrieve full information about abstract products, see [Retrieve abstract products](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html).
@@ -263,7 +264,7 @@ To retrieve general information about an abstract product, send the request:
 
 <a name="abstract-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 
 For the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html).

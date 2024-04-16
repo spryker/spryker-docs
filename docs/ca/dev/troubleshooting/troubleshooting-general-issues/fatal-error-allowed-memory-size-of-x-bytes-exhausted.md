@@ -2,6 +2,7 @@
 title: 'Fatal error: Allowed memory size of x bytes exhausted'
 description: Solution to the error about exhausted memory
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/fatal-error-allowed-memory-size-of-x-bytes-exhausted.html
 ---
@@ -20,7 +21,7 @@ PHP Fatal error: Out of memory (allocated x) (tried to allocate x bytes) in {FIL
 
 ## Solution
 
-Increase `memory_limit` as described in [image: php:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#image-php).
+Increase `memory_limit` as described in [image: php:](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#image-php).
 
 
 {% info_block infoBox "Memory limit for a single command" %}

@@ -2,6 +2,7 @@
 title: Manage items in carts of registered users
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:
@@ -1822,4 +1823,4 @@ If the item is deleted successfully, the endpoint returns theÂ `204 No Content`Â
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

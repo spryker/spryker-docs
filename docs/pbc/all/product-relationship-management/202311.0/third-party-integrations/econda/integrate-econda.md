@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scod/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-integration-into-project.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
   - /docs/scos/dev/technology-partner-guides/202311.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
 ---
 
 To integrate Econda, do the following.
@@ -26,7 +27,7 @@ Please refer to [Econda](http://www.econda.de/) documentation on how to customiz
 
 Some examples can be found at [https://www.econda.de/](https://www.econda.de/)
 
-Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/scos/dev/front-end-development/{{page.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html).
+Details on how to work with Javascript and templates in Spryker can be found in the [Front-End guide](/docs/dg/dev/frontend-development/{{page.version}}/yves/atomic-frontend/atomic-frontend.html).
 
 Econda module uses collectors to [export data to CSV](/docs/pbc/all/product-relationship-management/{{page.version}}/third-party-integrations/econda/export-econda-data.html). Please read more about Collectors.
 

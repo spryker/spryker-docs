@@ -5,6 +5,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 redirect_from:
     - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
+    - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html
 ---
 
 This document desribes how to integrate Inxmail.

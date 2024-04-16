@@ -5,6 +5,7 @@ last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -152,7 +153,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html#product-reviews-response-attributes)
@@ -164,4 +165,4 @@ For the attributes product reviews, see [Retrieve product reviews](/docs/pbc/all
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

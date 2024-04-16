@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductstorage.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-priceproductstorage.html  
   - /module_migration_guides/mg-price-product-storage.htm
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproductstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductstorage-module.md -->

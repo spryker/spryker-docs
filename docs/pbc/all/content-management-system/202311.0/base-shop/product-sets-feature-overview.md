@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202311.0/product-sets-feature-overview.html
   - /docs/pbc/all/content-management-system/202311.0/product-sets-feature-overview.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/product-sets-feature-overview.html
 ---
 
 The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
@@ -51,4 +52,4 @@ The feature has the following functional constraints which are going to be resol
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|
-| [Product Sets feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-sets-feature-integration.html)  | [File details: product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html) |
+| [Product Sets feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-sets-feature-integration.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html) |

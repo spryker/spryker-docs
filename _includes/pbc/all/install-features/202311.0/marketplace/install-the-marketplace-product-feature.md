@@ -16,7 +16,7 @@ Install the required features:
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Product   | {{page.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-product:"{{page.version}}" --update-with-dependencies
@@ -86,7 +86,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE     | EVENT | PATH                                                            |
 | ----------------- |----------| ------ |-----------------------------------------------------------------|
@@ -353,7 +353,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant and contains merchant names. Indexes can be accessed by any Elasticsearch client—for example, Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
+Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant and contains merchant names. Indexes can be accessed by any Elasticsearch client—for example, Kibana. For Docker configuration details, see [Configuring services](/docs/dg/dev/backend-development/messages-and-errors/registering-a-new-service.html).
 
 {% endinfo_block %}
 

@@ -379,7 +379,7 @@ class ProductAbstractStep extends ProductAbstractHydratorStep
 }
 ```
 
-You can change default data mappers and translators for overriding keys or values. By default, Akeneo Connector Eco module has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html) for more details.
+You can change default data mappers and translators for overriding keys or values. By default, Akeneo Connector Eco module has a list of predefined mappers, translators and validators for each  import type, but it can be adjusted to meet your requirements. Check the [middleware documentation](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html) for more details.
 
 You also need to take care of that data that is to be written to the database. Two approaches can be used for that.
 

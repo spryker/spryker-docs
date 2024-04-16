@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/return-management-f
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
 redirect_from:
   - /docs/scos/user/features/202108.0/return-management-feature-overview/return-management-feature-overview.html
+  - /docs/pbc/all/return-management/202204.0/base-shop/return-management-feature-overview.html
 ---
 
 The *Return Management* capability lets you create and manage returns for a sales order.
@@ -112,7 +113,7 @@ The feature has the following functional constraints which are going to be resol
 
 To install the return management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies

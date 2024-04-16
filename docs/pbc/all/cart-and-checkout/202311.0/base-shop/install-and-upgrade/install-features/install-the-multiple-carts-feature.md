@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/multiple-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/multiple-carts-feature-integration.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html
 related:
   - title: Multiple Carts feature overview
     link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html

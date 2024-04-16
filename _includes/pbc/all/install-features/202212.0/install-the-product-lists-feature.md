@@ -12,9 +12,9 @@ Install the required features:
 | Product | {{page.version}}  |
 | Category Management | {{page.version}} |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-lists:"{{page.version}}" --update-with-dependencies
@@ -126,7 +126,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-4. Run the following commands to apply database changes and generate entity and transfer changes:
+4. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -219,7 +219,7 @@ product-cart.info.restricted-product.removed,"Unavailable item %sku% was removed
 product-cart.info.restricted-product.removed,"Der nicht verfügbare Artikel% sku% wurde aus Ihrem Einkaufswagen entfernt.",de_DE
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -498,7 +498,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list
@@ -563,7 +563,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Run the following console command to import data:
+4. Import data:
 
 ```bash
 console data:import product-list-category
@@ -660,7 +660,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list-product-concrete

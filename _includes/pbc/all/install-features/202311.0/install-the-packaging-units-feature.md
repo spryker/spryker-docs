@@ -19,7 +19,7 @@ Install the required features:
 | Product              | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                       |
 | Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
@@ -462,7 +462,7 @@ console data:import product-packaging-unit-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_product_packaging_unit_type` table.
+Make sure that, in the database, the configured data has been added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 
@@ -976,7 +976,7 @@ Install the required features:
 | Measurement Units       | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 | Non-splittable Products | {{page.version}} |                                                                                                                                                                                                  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies

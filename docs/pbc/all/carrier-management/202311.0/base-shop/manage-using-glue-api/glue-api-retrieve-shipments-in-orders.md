@@ -5,6 +5,7 @@ last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/carrier-management/202311.0/base-shop/manage-via-glue-api/retrieve-shipments-in-orders.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-shipments-in-orders.html
 ---
 
 This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html)
@@ -354,4 +355,4 @@ To retrieve detailed information about an order, send the following request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

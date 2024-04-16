@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/ht-add-new-shipment-method-2
   - /v1/docs/en/ht-add-new-shipment-method-2
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html

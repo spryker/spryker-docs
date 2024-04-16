@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-glossary
   - /docs/scos/user/back-office-user-guides/202200.0/administration/glossary/managing-glossary.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/glossary/managing-glossary.html  
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/glossary/add-translations.html
 ---
 
 To add a translation in the Back Office, follow the steps:

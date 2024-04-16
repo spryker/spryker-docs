@@ -37,7 +37,7 @@ To continue feature integration, overview and install or update the required fea
 |Spryker Core  | {{page.version}} |
 
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
@@ -45,7 +45,7 @@ composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -501,7 +501,7 @@ Also check queue `sync.storage.store` in the RabbitMQ.
 </database>
 ```
 
-2. Run the following commands to apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -541,7 +541,7 @@ Note: Don't forget to start scheduler after the verification.
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -1250,9 +1250,9 @@ Install the required features:
 | --- | --- |
 |Spryker Core  | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
@@ -1260,7 +1260,7 @@ composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -1281,7 +1281,7 @@ store_widget.switcher.store,Store:,en_US
 store_widget.switcher.store,Shop:,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -1289,7 +1289,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

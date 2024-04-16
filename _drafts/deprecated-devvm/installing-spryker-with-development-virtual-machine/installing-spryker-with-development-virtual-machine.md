@@ -15,7 +15,7 @@ related:
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon discontinue the support of DevVM. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+We will soon discontinue the support of DevVM. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 
@@ -32,15 +32,15 @@ Before you start installing DevVM, make sure to fulfill the [DevVM system requir
 
 To install Spryker, follow one of the guides below:
 
-* [Installing Spryker with DevVM on MacOS and Linux](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)
-* [Installing Spryker with DevVM on Windows](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html)
+* [Installing Spryker with DevVM on MacOS and Linux](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html)
+* [Installing Spryker with DevVM on Windows](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html)
 
 
 ## Configuration
 
 Once you have a running instance, the following documents will help you adjust the project to your requirements:
 
-* [Configure Spryker after installing with DevVM](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)
-* [Updating Node.js in DevVM to the latest version](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html)
-* [Configuring database servers](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
-* [Configuring debugging in DevVM](/docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
+* [Configure Spryker after installing with DevVM](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)
+* [Updating Node.js in DevVM to the latest version](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html)
+* [Configuring database servers](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html)
+* [Configuring debugging in DevVM](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)

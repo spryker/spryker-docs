@@ -269,7 +269,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     /**
      * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface>
      */
-    protected function getCalculableObjectExpanderPluginCollection(): array
+    protected function getCalculableObjectTaxAppExpanderPlugins(): array
     {
         return [       
             # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
@@ -285,7 +285,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     /**
      * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface>
      */
-    protected function getOrderExpanderPluginCollection(): array
+    protected function getOrderTaxAppExpanderPlugins(): array
     {
         return [
             # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.

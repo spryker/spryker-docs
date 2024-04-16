@@ -2,6 +2,7 @@
 title: Managing parameters in the Parameter Store
 description: Learn how to manage parameters in the Parameter Store.
 template: howto-guide-template
+last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/managing-parameters-in-the-parameter-store
 originalArticleId: 2047c84c-bd7b-4bce-9203-08945367ad46
 redirect_from:

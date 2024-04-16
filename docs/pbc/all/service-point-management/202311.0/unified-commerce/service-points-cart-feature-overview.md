@@ -2,6 +2,7 @@
 title: Service Points Cart feature overview
 description: General overview of the Service Points Cart feature
 template: concept-topic-template
+last_updated: Dec 4, 2023
 ---
 
 This feature lets customers select service points for items in cart.

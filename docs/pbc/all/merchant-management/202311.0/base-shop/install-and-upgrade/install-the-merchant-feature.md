@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/merchant-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/merchant-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/merchant-feature-integration.html
 related:
   - title: Order Thresholds
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html

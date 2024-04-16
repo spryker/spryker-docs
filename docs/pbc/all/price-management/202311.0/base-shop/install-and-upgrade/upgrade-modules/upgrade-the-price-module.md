@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-price.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-price.html
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-price.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 related:
   - title: Upgrade the MultiCurrency
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html

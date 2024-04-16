@@ -2,6 +2,7 @@
 title: "Marketplace Wishlist feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Wishlist feature.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 ---
 
 With the *Marketplace Wishlist* feature, the customers can track and save merchant offers and products they wish to purchase through the wishlist. The customers can create multiple wishlists and customize their names.

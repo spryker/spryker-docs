@@ -3,6 +3,8 @@ title: Return Management
 description: The Return Management capability lets you and merchants process returns
 last_updated: Apr 3, 2023
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/return-management/202204.0/return-management.html
 ---
 
 The *Return Management* capability lets you create and manage returns for sales orders.

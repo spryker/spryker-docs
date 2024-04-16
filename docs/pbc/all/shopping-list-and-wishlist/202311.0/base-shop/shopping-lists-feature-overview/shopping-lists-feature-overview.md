@@ -17,7 +17,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shopping-lists-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html    
+  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html   
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html 
 ---
 
 A *shopping list* is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.

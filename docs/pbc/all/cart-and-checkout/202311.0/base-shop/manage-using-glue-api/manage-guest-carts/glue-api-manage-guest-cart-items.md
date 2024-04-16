@@ -8,11 +8,12 @@ originalArticleId: 55c07d5d-006b-4f81-99b1-92c6a8124688
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/guest-carts/managing-guest-cart-items.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html
 related:
   - title: Manage guest carts
     link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
   - title: Managing gift cards of guest users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+    link: docs/pbc/all/gift-cards/page.version/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows you to manage guest cart items.
@@ -3320,4 +3321,4 @@ If the item is deleted successfully, the endpoint returns the â€œ204 No Contentâ
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/carrier-management/202307.0/base-shop/import-and-export-data/file-details-shipment-price.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `shipment_price.csv` file to configure the [Shipment Price](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/shipment-feature-overview.html) information in your Spryker Demo Shop.

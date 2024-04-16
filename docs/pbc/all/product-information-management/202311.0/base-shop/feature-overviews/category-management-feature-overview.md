@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/category-management-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/category-management-feature-walkthrough.html
   - /docs/pbc/all/product-information-management/202311.0/feature-overviews/category-management-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/category-management-feature-overview.html
 ---
 
 A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html) from the Back Office or [import stores for categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/assign-products-to-categories.html).
@@ -70,7 +71,7 @@ The Category Management feature has the following functional constraints, which 
 * A store can only be linked to one root category tree, but in the future, a store can have multiple root category trees.
 * Category URLs are locale-dependent.
 * Category URLs are available in all the stores that share the same locales.
-* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), you can still filter the products using the price range filter.
+* Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/about/all/b2b-suite.html). However, in the [B2C demo shop](/docs/about/all/b2c-suite.html), you can still filter the products using the price range filter.
 
 ## Related Business User documents
 

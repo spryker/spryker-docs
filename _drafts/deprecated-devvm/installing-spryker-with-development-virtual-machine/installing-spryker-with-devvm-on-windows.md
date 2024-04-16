@@ -35,7 +35,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 {% endinfo_block %}
 
-To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.
+To install the Demo Shop for [B2B](/docs/about/all/b2b-suite.html) or [B2C](/docs/about/all/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.
 
 ## 1. Install prerequisites
 

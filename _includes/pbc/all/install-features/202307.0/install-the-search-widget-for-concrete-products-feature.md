@@ -16,7 +16,7 @@ To start the feature integration, overview and install the necessary features:
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -29,7 +29,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -76,7 +76,7 @@ product-quantity.notification.quantity.interval.failed,The ordered quantity was 
 product-quantity.notification.quantity.interval.failed,Die bestellte Anzahl erfüllt nicht die Anforderungen für dieses Produkt. Intervallgröße ist %step%.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -84,7 +84,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

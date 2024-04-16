@@ -28,7 +28,7 @@ Depending on the needed WSL version, follow one of the guides:
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
-4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#demo-shops) and navigate into its folder:
+4. Clone *one* of the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops) and navigate into its folder:
 
     * B2C Demo Shop:
 

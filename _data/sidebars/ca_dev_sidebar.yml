@@ -49,8 +49,8 @@ entries:
         nested:
         - title: "Best practises: Jenkins stability"
           url: /docs/ca/dev/best-practices/best-practises-jenkins-stability.html
-        - title: Jenkins operational best practices handbook
-          url: /docs/ca/dev/best-practices/jenkins-operational-best-practices-handbook.html
+        - title: Jenkins operational best practices
+          url: /docs/ca/dev/best-practices/jenkins-operational-best-practices.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode
@@ -71,6 +71,8 @@ entries:
             url: /docs/ca/dev/security/check-ecr-image-scan-results.html
           - title: Generate access keys
             url: /docs/ca/dev/security/generate-access-keys.html
+          - title: Penetration testing
+            url: /docs/ca/dev/security/penetration-testing.html            
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
       - title: Configure deployment pipelines

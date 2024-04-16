@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/adding-product-alternatives
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/products/manage-product-variants/add-product-alternatives.html
 related:
   - title: Alternative Products feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/alternative-products-feature-overview.html

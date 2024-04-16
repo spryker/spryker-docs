@@ -2,6 +2,7 @@
 title: Deployment pipelines
 description: Deployment pipelines consist of three configurable stages.
 template: howto-guide-template
+last_updated: Nov 30, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:
@@ -34,8 +35,6 @@ _Normal deploy_ is a pipeline that includes all the stages of a complete CI/CD f
 
 _Destructive deploy_ is a pipeline that includes all the stages of a complete CI/CD flow. You can set it to run automatically on version control system updates. The `install` stage of this pipeline resets all the data in applications. Use it for initial or non-production deployments.
 
-{Deploy name and description}
-
 ## Deployment stages
 
 
@@ -61,12 +60,12 @@ Deploy file name depends on the project and environment you are working with.
 {% endinfo_block %}
 
 
-The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
+The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
 
 ```yaml
 ...
 image:
-  tag: spryker/php:7.3-alpine3.12
+  tag: spryker/php:8.0-alpine3.16
   environment:
     SPRYKER_DEFAULT_STORE: "US"
     SPRYKER_ACTIVE_STORES: "US"

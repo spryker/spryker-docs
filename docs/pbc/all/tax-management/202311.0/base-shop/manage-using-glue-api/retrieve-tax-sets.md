@@ -8,14 +8,13 @@ originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/manage-via-glue-api/retrieve-tax-sets.html
-  - /docs/pbc/all/tax-management/202311.0/base-shop/manage-using-glue-api/retrieve-tax-sets.html
-  - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-using-glue-api/retrieve-tax-sets.html
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/base-shop/manage-using-glue-api/retrieve-tax-sets.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/manage-using-glue-api/retrieve-tax-sets.html
 related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving image sets of abstract products
@@ -150,14 +149,8 @@ Request sample: retrieve tax sets
 ```
 </details>
 
-<a name="tax-sets-response-attributes"></a>
+{% include pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Tax set name |
-| restTaxRates.name | Tax rate name |
-| restTaxRates.rate | Tax rate |
-| restTaxRates.country | Applicable country for the tax rate |
 
 ## Possible errors
 
@@ -166,4 +159,4 @@ Request sample: retrieve tax sets
 | 310 | Could not get tax set, product abstract with provided id not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

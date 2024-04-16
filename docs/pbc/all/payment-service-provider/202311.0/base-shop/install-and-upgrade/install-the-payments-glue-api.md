@@ -8,13 +8,14 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-payments-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-payments-feature-integration.html
   - /docs/pbc/all/payment-service-provider/202311.0/install-and-upgrade/install-the-payments-glue-api.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html
 related:
   - title: Payments feature integration
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/install-the-payments-feature.html
   - title: Payments feature walkthrough
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
   - title: Check out purchases
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Updating payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---

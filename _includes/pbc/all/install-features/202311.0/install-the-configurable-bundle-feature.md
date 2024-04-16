@@ -13,9 +13,9 @@ To start feature integration, overview, and install the necessary features:
 | Product | {{page.version}} |
 | Product Lists	 | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker-feature/configurable-bundle:"^{{page.version}}" --updat
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -104,7 +104,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -128,7 +128,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -286,7 +286,7 @@ configurable_bundle.template_slots.slot-6.name,Slot 6,en_US
 configurable_bundle.template_slots.slot-6.name,Slot 6,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -294,7 +294,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -723,7 +723,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import configurable-bundle-template
@@ -1156,9 +1156,9 @@ Please overview and install the necessary features before beginning the integrat
 | Product | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
@@ -1166,7 +1166,7 @@ composer require spryker-feature/configurable-bundle: "^{{page.version}}" --upda
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

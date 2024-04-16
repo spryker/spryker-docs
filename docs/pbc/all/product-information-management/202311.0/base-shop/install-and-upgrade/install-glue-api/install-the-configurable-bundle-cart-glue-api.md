@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-configurable-bundle-cart-feature-integration
   - /docs/en/glue-api-configurable-bundle-cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-configurable-bundle-cart-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
 related:
   - title: Glue API - Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html

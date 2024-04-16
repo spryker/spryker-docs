@@ -2,6 +2,7 @@
 title: Deployment in states
 description: States of applications during deployment and how they affect its behaviour.
 template: howto-guide-template
+last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:

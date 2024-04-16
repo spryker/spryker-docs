@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
   - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
 related:
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
@@ -88,4 +89,4 @@ There is an alternative way to retrieve subscriptions to availability notificati
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

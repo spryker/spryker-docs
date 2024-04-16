@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
 ---
 
-By default, AvailabilityStorage is configured to trigger a [P&S event](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) when product status changes from `available` to `not available` and the other way around.
+By default, AvailabilityStorage is configured to trigger a [P&S event](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) when product status changes from `available` to `not available` and the other way around.
 
 To configure the events to be triggered when product amount, follow the steps:
 

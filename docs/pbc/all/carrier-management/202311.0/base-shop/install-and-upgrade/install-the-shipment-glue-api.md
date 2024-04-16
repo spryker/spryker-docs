@@ -1,5 +1,5 @@
 ---
-title: Integrate the Shipment Glue API
+title: Install the Shipment Glue API
 last_updated: Dec 14, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shipment-feature-integration
@@ -15,11 +15,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-shipment-feature-integration.html  
   - /docs/pbc/all/carrier-management/202311.0/install-and-upgrade/install-glue-api/install-the-shipment-glue-api.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/install-and-upgrade/install-the-shipment-glue-api.html
 related:
   - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
   - title: Check out purchases
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
 ---

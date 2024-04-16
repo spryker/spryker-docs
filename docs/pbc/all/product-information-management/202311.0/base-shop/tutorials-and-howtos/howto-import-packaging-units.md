@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/howto-import-packaging-units
   - /v4/docs/howto-import-packaging-units
   - /v4/docs/en/howto-import-packaging-units
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
 related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html

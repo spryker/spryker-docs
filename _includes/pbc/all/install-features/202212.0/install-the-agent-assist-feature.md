@@ -18,7 +18,7 @@ Install the required features:
 
 ### 1) Install the required modules using composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
@@ -46,7 +46,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:
+Make sure the following changes have been applied in the database::
 
 | DATABASE ENTITY     | TYPE   | EVENT   |
 |---------------------|--------|---------|
@@ -148,7 +148,7 @@ Install the required features:
 |--------------|------------------|
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies

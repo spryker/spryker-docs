@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/product-groups-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/product-groups-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/product-groups-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html
 ---
 
 {% include pbc/all/install-features/202311.0/install-the-product-groups-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-groups-feature.md -->

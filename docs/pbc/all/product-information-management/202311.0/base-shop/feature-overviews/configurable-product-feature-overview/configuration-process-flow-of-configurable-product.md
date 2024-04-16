@@ -7,6 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html
 ---
 
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:

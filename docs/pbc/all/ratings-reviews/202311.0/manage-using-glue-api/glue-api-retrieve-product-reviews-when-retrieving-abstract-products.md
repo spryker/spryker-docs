@@ -5,6 +5,7 @@ last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/ratings-reviews/202311.0/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+  - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-retrieve-product-reviews-when-retrieving-abstract-products.html
 ---
 
 This endpoint allows retrieving general information about abstract products.
@@ -170,7 +171,7 @@ To retrieve general information about an abstract product, send the request:
 
 <a name="abstract-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-an-abstract-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 For the attributes of product reviews resources, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/{{site.version}}/manage-using-glue-api/glue-api-manage-product-reviews.html#product-reviews-response-attributes).
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/navigation-module-integration
   - /docs/en/navigation-module-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/navigation-module-integration.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-the-navigation-module.html
 ---
 
 {% include pbc/all/install-features/202311.0/install-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-navigation-module.md -->

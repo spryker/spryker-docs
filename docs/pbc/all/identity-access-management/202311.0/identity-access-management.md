@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/202005.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/202204.0/logging-in-to-the-back-office.html
+  - /docs/pbc/all/identity-access-management/202204.0/identity-access-management.html
 ---
 
 The Identity Access Management capability enables all types of users in a Spryker shop to create and manage accounts. Different levels of security let users manage the access of other users.
@@ -66,7 +67,7 @@ If a user logs in with an SSO but does not have a Back Office account, the user 
 
 ## Glue API authentication
 
-For details about Glue API authentication, see [Glue API authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html)
+For details about Glue API authentication, see [Glue API authentication and authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html)
 
 ## Current constraints
 
@@ -80,14 +81,15 @@ Each of the identity managers is an ECO module that must be developed separately
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/scos/dev/glue-api-guides/{{page.version}}/security-and-authentication.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/dg/dev/glue-api/{{page.version}}/security-and-authentication.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |
 | | [Authenticate as a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html) |
 | | [Manage customer authentication tokens via OAuth 2.0](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html) |
 | | [Manage customer authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html) |
+| | [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html) |
 | | [Authenticating as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) |
 | | [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html) |
 | | [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html) |

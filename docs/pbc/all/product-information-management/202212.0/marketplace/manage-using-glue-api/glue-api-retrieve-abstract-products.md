@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve abstract products"
 description: This glue API document describes how to retrieve general information about abstract products and related resources in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 16, 2023
 related:
   - title: Retrieving abstract products in abstract product lists
     link: docs/marketplace/dev/glue-api-guides/page.version/content-items/retrieving-abstract-products-in-abstract-product-lists.html
@@ -1497,4 +1498,4 @@ For the attributes of other included resources, see:
 | 301 |  Abstract product is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

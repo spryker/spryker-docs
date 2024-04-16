@@ -2,6 +2,7 @@
 title: Tax Management
 description: Tax Management PBC lets you define tax rates for different stores and products
 template: concept-topic-template
+last_updated: Dec 5, 2023
 ---
 
 The default Spryker Tax Management capability lets you manage taxes per store, product, and country.
@@ -16,4 +17,4 @@ We recommend using the Spryker OOTB Tax Capability if the following applies:
 - You want to manually manage changes in Tax Rates.
 - You do not want to send or record invoices in an external tax system.
 
-However, if you need a solution that would automatically calculate taxes in near real-time, taking into account country-specific tax rates, laws, rules, etc., we recommend using the [Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) or [Avalara](/docs/pbc/all/tax-management/{{page.versoin}}/base-shop/third-party-integrations/avalara/avalara.html) instead of the default Spryker Tax Management capability.
+However, if you need a solution that would automatically calculate taxes in near real-time, taking into account country-specific tax rates, laws, rules, etc., we recommend using the [Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) or [Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/avalara.html) instead of the default Spryker Tax Management capability.

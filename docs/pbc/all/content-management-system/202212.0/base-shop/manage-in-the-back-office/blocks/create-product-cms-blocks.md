@@ -10,7 +10,7 @@ related:
 
 ## Prerequisites
 
-* [Install product CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html).
+* [Install product CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-product-cms-blocks.html).
 
 * Create the abstract products whose pages you want to show the block on. For instructions, see [Create abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 

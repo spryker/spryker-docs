@@ -2,22 +2,25 @@
 title: "Unified Commerce: Create and edit product offers"
 description: Learn how to create and edit product offers in the Merchant Portal
 template: back-office-user-guide-template
+last_updated: Jan 19, 2024
 ---
 
 This document describes how to create and edit product offers in the Merchant Portal.
 
 ## Prerequisites
 
-To start managing product offers, in the Merchant Portal, go to **Offers**.
+* To start managing product offers, in the Merchant Portal, go to **Offers**.
 
-Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-create-and-edit-product-offers) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product offer
 
 1. On the **Offers** page, click **Add Offer**.
     This opens the **Create Offer** page.
+
 2. In the **List of Products** pane, select the product to create an offer for.
-  The **Create Offer** drawer opens.
+    This opens the **Create Offer** drawer.
+
 3. Optional: To make the offer active after creating it, select **Offer is Active**.
 4. Optional: Enter a **Merchant SKU**.
 5. Select one or more **Stores**.
@@ -28,10 +31,11 @@ Review the [reference information](#reference-information-create-and-edit-produc
   2. Select a **STORE**.
   3. Select a **CURRENCY**.
   4. Optional: Enter any of the prices:
-    * **NET DEFAULT**
-    * **GROSS DEFAULT**
-    * **NET ORIGINAL**
-    * **GROSS ORIGINAL**
+      * **NET DEFAULT**
+      * **GROSS DEFAULT**
+      * **NET ORIGINAL**
+      * **GROSS ORIGINAL**
+
   5. Optional: Enter a **VOLUME QUANTITY**.
   6. Repeat steps 1-5 until you add all the needed prices.
 9. Optional: Select **Validity Dates**.
@@ -39,6 +43,7 @@ Review the [reference information](#reference-information-create-and-edit-produc
 11. Select one or more **SERVICES**.
 12. Optional: Select one or more **Shipment Types**.
 13. Scroll up and click **Create**.
+
     This reloads the page with a success message displayed. The created offer is displayed in the list.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
@@ -57,6 +62,9 @@ Review the [reference information](#reference-information-create-and-edit-produc
 ## Reference information: Create and edit product offers
 
 {% include pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md %} <!-- To edit, see _includes/pbc/all/manage-in-the-merchant-portal/offer-management/reference-information-create-and-edit-product-offers.md -->
+
+| ATTRIBUTE     | DESCRIPTION |
+| --- | --- |
 | SERVICE POINT | Location in which this offer is provided. |
 | SERVICES | Services that are provided for this offer in the **SERVICE POINT**. |
 | Shipment Types | Types of shipment available for this offer. |

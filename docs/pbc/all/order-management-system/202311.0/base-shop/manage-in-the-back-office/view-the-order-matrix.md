@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202204.0/sales/order-matrix/viewing-the-order-matrix.html
   - /docs/scos/user/back-office-user-guides/202311.0/sales/order-matrix/viewing-the-order-matrix.html
+  - /docs/scos/user/back-office-user-guides/202204.0/sales/view-the-order-matrix.html
 related:
   - title: Order Management feature overview
     link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html

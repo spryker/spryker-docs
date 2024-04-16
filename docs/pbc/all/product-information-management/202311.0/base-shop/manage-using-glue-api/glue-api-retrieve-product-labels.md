@@ -8,6 +8,7 @@ originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
   - title: Glue API - Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
@@ -92,4 +93,4 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

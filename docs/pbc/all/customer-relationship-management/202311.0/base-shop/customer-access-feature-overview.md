@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
   - /docs/scos/user/features/202311.0/customer-access-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/customer-access-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/customer-access-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/customer-access-feature-overview.html
 ---
 
 _Customer Access_ lets store administrators define whether certain information is visible to logged-out users.
@@ -61,5 +63,5 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 |INSTALLATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Customer access feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html) | [Retrieving protected resources](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html)  | [Managing customer access to Glue API resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html) |
+| [Customer access feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-access-feature.html) | [Retrieving protected resources](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-retrieve-protected-resources.html)  | [Managing customer access to Glue API resources](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/manage-customer-access-to-glue-api-resources.html) |
 | [Glue API Customer access feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) | | |

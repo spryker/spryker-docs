@@ -2,6 +2,7 @@
 title: Configuring GitLab pipelines
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
 template: howto-guide-template
+last_updated: Dec 4, 2023
 originalLink: https://cloud.spryker.com/docs/configuring-gitlab-pipelines
 originalArticleId: ed39b199-299a-4ad0-87c0-b259c5c171f0
 redirect_from:
@@ -16,7 +17,7 @@ This document describes how to configure continuous integration using GitLab Pip
 ## What is GitLab Pipelines?
 GitLab pipelines automate steps in the SDLC like builds, tests, and deployments. When a team takes advantage of automated pipelines, they simplify the handoff process and decrease the chance of human error, creating faster iterations and better quality code. Everyone can see where code is in the process and identify problems long before they make it to production.
 
-For more information on Gitlab Pipelines, see [GitLab CI/CD](https://docs.gitlab.com/ee/ci/README.html).
+For more information on Gitlab Pipelines, see [GitLab CI/CD](https://docs.gitlab.com/ee/ci/pipelines/).
 
 ## Prerequisites
 In the repository root, create the CI/CD configuration file: `.gitlab-ci.yml`.

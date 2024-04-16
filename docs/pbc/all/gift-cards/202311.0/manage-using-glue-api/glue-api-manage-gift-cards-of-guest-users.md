@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/manage-gift-cards-of-guest-users.html
+  - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-manage-gift-cards-of-guest-users.html
 ---
 
 [Gift card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
@@ -194,4 +195,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

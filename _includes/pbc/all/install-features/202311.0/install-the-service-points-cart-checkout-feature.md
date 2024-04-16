@@ -8,10 +8,10 @@ Install the required features:
 
 | NAME                | VERSION           | INSTALLATION GUIDE                                                                                                                                                          |
 |---------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-points/{{page.version}}/unified-commerce/install-and-upgrade/install-the-service-points-cart-feature.html) |
+| Service Points Cart | {{page.version}}  | [Install the Service Points Cart feature](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/install-features/install-the-service-points-cart-feature.html) |
 | Checkout            | {{page.version}}  | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)                                               |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 We offer an example of Click & Collect service point cart replacement strategies. To use them, install the following module:
 
@@ -39,7 +39,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                         | TYPE  | EVENT   | PATH                                                                   |
 |----------------------------------|-------|---------|------------------------------------------------------------------------|

@@ -12,10 +12,10 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |-----------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account ManagemenT | {{page.version}} | [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Customer Account ManagemenT | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Agent Assist                | {{page.version}} | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                               |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/oauth-agent-connector:"^1.0.0" --update-with-dependencies

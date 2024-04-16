@@ -2,6 +2,7 @@
 title: Marketplace Product Offer Prices feature overview
 description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
 template: feature-overview-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-product-offer-prices-feature-walkthrough.html
 ---

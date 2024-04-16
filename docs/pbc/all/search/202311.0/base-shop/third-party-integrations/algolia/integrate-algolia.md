@@ -20,10 +20,6 @@ Before integrating Algolia, ensure the following prerequisites are met:
 - The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
-(The picture above is just an example. You can only find the fresh list of required modules by visiting the Algolia app page in the App Catalog.)
-
-Make sure that your installation meets these requirements.
-
 ## Integrate Algolia
 
 To integrate Algolia, follow these steps.
@@ -142,7 +138,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -154,7 +150,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SuggestionSearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -166,7 +162,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -182,7 +178,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -506,17 +502,17 @@ class ProductConfig extends SprykerProductConfig
 
 {% info_block warningBox "Warning" %}
 
-If your project has project-specific functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists from the methods above when you need to send updated data to Algolia.
+If your project has project-specific functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists from the prior methods when you need to send updated data to Algolia.
 
 Examples of such functionality include:
 - A custom functionality in the Back Office
 - Custom data import
 - Integration with some middleware when product or product-related data is updated in Spryker
 
-Keep in mind, that to trigger custom events in Spryker you need to use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods. You can also use existing events for this:
+To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` method. Also, you can use the existing events:
 
- - `ProductEvents::PRODUCT_CONCRETE_UPDATE` (for one product)
- - `ProductEvents::PRODUCT_ABSTRACT_UPDATE` (for multiple products assigned to one abstract product)
+ - For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
+ - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
 {% endinfo_block %}
 

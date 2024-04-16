@@ -2,6 +2,7 @@
 title: Generate access keys
 description: Learn how to generate access keys for your AWS account.
 template: howto-guide-template
+last_updated: Jan 19, 2024
 originalLink: https://cloud.spryker.com/docs/generating-access-keys
 originalArticleId: 624eb34a-4e28-40ec-a9cb-663ae1524d33
 redirect_from:

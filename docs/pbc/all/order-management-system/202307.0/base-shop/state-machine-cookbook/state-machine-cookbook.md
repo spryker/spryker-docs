@@ -2,6 +2,7 @@
 title: State machine cookbook
 description: State machine fundamentals and how to build a state machine
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook.html
 related:

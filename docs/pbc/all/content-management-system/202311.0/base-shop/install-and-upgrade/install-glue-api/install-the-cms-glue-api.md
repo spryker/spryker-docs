@@ -11,7 +11,9 @@ redirect_from:
   - /docs/en/glue-api-cms-feature-integration-guide
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-cms-feature-integration.html  
+  - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-cms-feature-integration.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
+---  
 related:
   - title: Install the CMS feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html

@@ -5,6 +5,8 @@ last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/authenticating-as-an-agent-assist
 originalArticleId: 33952f89-fed4-4e33-95f4-79e969752e9d
+redirect_from:
+- /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
@@ -101,7 +103,7 @@ Note that depending on the Login feature configuration for your project, too man
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

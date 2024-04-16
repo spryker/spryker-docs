@@ -2,6 +2,7 @@
 title: "Glue API: Pick picklist items"
 description: Learn how to pick picklist items using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 7, 2023
 ---
 
 This endpoint lets you pick picklist items.
@@ -285,4 +286,4 @@ For detailed information about the modules that provide the API functionality an
 | 5303 | The picklist with the specified ID doesn't exist.  |
 | 5304 | The picklist item with the specified ID doesn't exist.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

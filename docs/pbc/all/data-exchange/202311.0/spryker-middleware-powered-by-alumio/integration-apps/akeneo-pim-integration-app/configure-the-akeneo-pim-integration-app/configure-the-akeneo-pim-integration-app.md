@@ -2,6 +2,7 @@
 title: Configure the Akeneo PIM Integration App
 description: Learn how you can configure the Akeneo PIM Integration App in the Spryker Middleware powered by Alumio
 template: concept-topic-template
+last_updated: Nov 10, 2023
 ---
 
 This section describes how to configure the Akeneo PIM Integration App to import data from your Akeneo PIM into your Spryker Cloud Commerce OS project via the Spryker Middleware powered by Alumio.

@@ -10,6 +10,7 @@ redirect_from:
   - /docs/email-as-a-cms-block-overview
   - /docs/en/email-as-a-cms-block-overview
   - /docs/scos/user/features/202311.0/cms-feature-overview/email-as-a-cms-block-overview.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
 Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
@@ -54,7 +55,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default email templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/about/all/about-spryker.html#demo-shops).
 
 The following table contains the list of the default email templates, their Email CMS Blocks, and their purpose.
 

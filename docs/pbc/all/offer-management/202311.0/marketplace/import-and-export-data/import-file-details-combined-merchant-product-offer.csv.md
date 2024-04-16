@@ -11,14 +11,14 @@ related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 {% info_block infoBox "" %}
 
-To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
+To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 

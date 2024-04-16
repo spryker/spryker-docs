@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-configurable-bundle-templates
   - /docs/en/managing-configurable-bundle-templates
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/configurable-bundle-templates/edit-configurable-bundle-templates.html
 related:
   - title: Create configurable bundle templates
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html

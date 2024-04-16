@@ -2,6 +2,7 @@
 title: Edit product offers
 description: Learn how to edit product offers in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Jan 9, 2024
 related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html

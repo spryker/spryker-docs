@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/managing-roles
   - /docs/scos/user/back-office-user-guides/202311.0/users/roles-groups-and-users/managing-roles.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-user-roles/creating-user-roles.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html
 related:
   - title: Editing user roles
     link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html

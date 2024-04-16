@@ -12,9 +12,9 @@ Install the required features:
 |-|-|-|
 | Marketplace Product Offer | {{page.version}} |[Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 ```bash
 composer require spryker/merchant-product-offers-rest-api:"^1.1.0" --update-with-dependencies
 ```
@@ -39,7 +39,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|

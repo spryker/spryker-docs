@@ -1,54 +1,57 @@
 ---
 title: Stripe
 description: Stripe technology partner
-last_updated: Jan 31, 2024
+last_updated: Mar 24, 2024
 template: concept-topic-template
-related:
-  - title: Install Stripe
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/install-stripe.html
 ---
 
 [Stripe](https://stripe.com/en-de) is a financial infrastructure platform that enables businesses to accept payments, grow their revenue, and accelerate new business opportunities.
 
-The Stripe integration in Spryker is a part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs. 
+The Stripe integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
 
 ## Supported business models
-The Stripe App supports the business-to-business (B2B) and business-to-consumer (B2C) models.
 
-## Prerequisites for using the Stripe app
+The Stripe App supports B2B and B2C models.
 
-1. Your country is included in the [list of countries supported by Stripe](https://stripe.com/global).
-2. Your business isn't listed among the [prohibited and restricted businesses](https://stripe.com/legal/restricted-businesses).
-3. Your Spryker project is ACP-enabled. For more information on the ACP enablement process, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
-4. You have a Stripe account, and you have been onboarded to the Spryker platform with it. Spryker manages the onboarding process. For details, contact the [Spryker support team](https://spryker.my.site.com/support/s/).
-Once you have been onboarded to the platform, you will have access to your account ID on the Stripe dashboard. The account ID is necessary to connect your project to the Stripe App. For more information on the Stripe account ID, see the [Stripe documentation](https://stripe.com/docs/payments/account).
+## Stripe features
 
-## Setting up the Stripe app
+- Interface within the Spryker ACP catalog to connect with Stripe: You can connect to Stripe from the App Composition Platform.
+- Easy switch between Test and Live modes: You can test payments in either mode.
+- Responsive Redirect Payment Page: Once a connection is set up between Spryker and Stripe, upon checkout, end users are redirected to a Spryker-hosted payment page where they can view activated payment methods. This works both on the web and mobile.
+- Viewing the activated payment methods in the Stripe dashboard.
+- GLUE API support: Support for customers using Spryker headless.
+- Authorize payments and capture later: The default OMS configuration lets you authorize cards and capture the order amount either after shipping or based on the established business logic.
+- Default OMS Configuration: We provide a default OMS configuration that you can use as an example or modify to align with your business logic.
 
-To set up Stripe on your project, do the following:
-1. [Install Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-stripe.html).
-2. [Configure and Connect Stripe in the Back Office](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/configure-stripe.html).
+## Stripe payment methods
 
-## Supported payment methods
-The Stripe app supports the following payment methods:
-- Cards: Visa and Mastercard
+The Stripe app supports all payments enabled by Stripe in your region. For more information, see [Payment methods in Stripe](https://stripe.com/docs/payments/payment-methods/overview).
+However, our team only tested the following payment methods:
+- Cards: including Visa and Mastercard
 - Debit card
-- Bank transfer 
-
-{% info_block infoBox "Bank transfers" %}
-
-Keep in mind following about bank transfers in Stripe:
-1. Stripe supports bank transfers in specific regions. For details on this payment method, see the Stripe documentation on [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers).
-2. Stripe provides some best practices for bank transfers. For example, if a business in EU wants to receive a transfer from a customer in Switzerland, it is recommended to make the transfer in Euro, not in CHF. For details, see [Stripe’s Payment Method Factsheet](https://stripe.com/ie/guides/payment-methods-guide#4-payment-methods-fact-sheets).
-
-{% endinfo_block %}
-
-- SEPA direct debit
-- iDEAL
+- Bank transfer: supported in some regions, see [Bank transfer payments](https://stripe.com/docs/payments/bank-transfers)
+- PayPal
 - Klarna
+- Apple Pay
+- Google Pay
+- Direct Debit (SEPA) / Sofortüberweisung
+- iDEAL
+- Link
+- Przelewy24
+- Giropay
 
-For more information about payment methods available in Stripe and regional peculiarities, see the Stripe documentation [Payment methods overview](https://stripe.com/docs/payments/payment-methods/overview).
 
 ## Current limitations
-1. Refunds: The refund process using the Spryker OMS currently isn't supported.
-2. Multi-Capture: Multi-Capture enables businesses to capture money paid for an order multiple times. Stripe offers it only to customers who use the IC+ pricing model. For details on the pricing model, see the Stripe documentation [Understanding Blended & Interchange+ pricing](https://support.stripe.com/questions/understanding-blended-interchange-pricing).
+
+The Stripe App has limited or no support for the following features:
+- Refunds and payment cancellation: Handling refunds and payment cancellation via the Spryker OMS.
+- Payment authorization and capture: The current logic works with separate authorization and capture. Hence, all payment methods go through this transition.
+- Payment authorization timeout: There is currently a one day timeout for authorizing payments. Payment methods, like bank transfers, which are not authorized within this timeframe, will experience a timeout. We recommend extending the timeout from one day to seven days.
+- Multi-capture: Partial capture of payment for order items.
+- Payments can be properly canceled only from the the Back Office and not from the Stripe Dashboard.
+- Payments can’t be partially canceled. We create one payment intent per order and it can either be authorized or fully cancelled.
+- When you cancel an item on the order details page, all order items are canceled.
+
+## Next step
+
+[Install and configure the Stripe App prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)

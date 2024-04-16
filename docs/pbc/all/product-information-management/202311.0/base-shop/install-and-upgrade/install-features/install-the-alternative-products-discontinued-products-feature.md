@@ -11,6 +11,7 @@ redirect_from:
   - /docs/alternative-products-discontinued-products-feature-integration
   - /docs/en/alternative-products-discontinued-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/202311.0/alternative-products-discontinued-products-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
 ---
 
 {% include pbc/all/install-features/202311.0/install-the-alternative-products-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-discontinued-products-feature.md -->

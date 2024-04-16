@@ -10,6 +10,7 @@ redirect_from:
   - /docs/censhare-pim
   - /docs/en/censhare-pim
   - /docs/scos/user/technology-partners/202311.0/product-information-pimerp/censhare-pim.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/third-party-integrations/censhare-pim.html
 ---
 
 ## Partner Information

@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
 related:
   - title: Retrieving companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
@@ -108,7 +109,7 @@ Request sample: authenticate as a company user
 | 002 | Authentication token is missing. |
 | 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

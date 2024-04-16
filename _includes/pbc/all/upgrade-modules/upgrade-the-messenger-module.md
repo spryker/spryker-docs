@@ -1,7 +1,7 @@
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 

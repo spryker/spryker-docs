@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/wishlist-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/wishlist-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/wishlist-feature-walkthrough.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/wishlist-feature-overview.html
 ---
 
 With the *Wishlist* feature, you can help your customers track and save items for later purchase through multiple wishlists, which are connected to the customers' accounts.

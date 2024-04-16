@@ -8,6 +8,7 @@ originalArticleId: 42fb6510-84dc-425f-902d-e5fd7436cd3a
 redirect_from:
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-define-the-maxiumum-size-of-content-fields.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-the-maximum-size-of-content-fields.html
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html

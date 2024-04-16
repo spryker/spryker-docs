@@ -637,7 +637,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
-    protected function getProductExportPlugins(): array
+    protected function getProductMessageBrokerPlugins(): array
     {
         return [
             new ProductConcreteExportedMessageBrokerPublisherPlugin(),

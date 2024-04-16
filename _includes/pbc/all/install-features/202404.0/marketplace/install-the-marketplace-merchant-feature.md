@@ -38,7 +38,7 @@ Make sure the following modules have been installed:
 ### 2) Set up database schema and transfer objects
 
 
-2. Apply database changes, generate entity and transfer changes:
+1. Apply database changes, generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -57,7 +57,7 @@ Make sure the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-Generate transfer changes:
+2. Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -422,7 +422,7 @@ Make sure there is the **Marketplace** button in the Back Office navigation.
 
 To import data follow the steps in the following sections.
 
-### Import merchant profile data
+#### Import merchant profile data
 
 1. Prepare merchant profile data according to your requirements using the demo data:
 
@@ -539,7 +539,7 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
-### Import merchant users
+#### Import merchant users
 
 1. Prepare merchant user data according to your requirements using the demo data:
 

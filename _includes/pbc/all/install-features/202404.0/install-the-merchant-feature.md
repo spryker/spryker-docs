@@ -58,7 +58,7 @@ Make sure the following modules have been installed:
       </table>
 
   </database>
-  
+
 ```
 
 2. Apply database changes, generate entity and transfer changes:
@@ -70,7 +70,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database
+Make sure the following changes have been applied in the database:
 
 | DATABASE SECURITY    | TYPE | EVENT |
 |----------------------|-|-|
@@ -118,7 +118,7 @@ console translator:generate-cache
 
 ## 4) Import merchants data
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **data/import/common/common/marketplace/merchant.csv**
 
@@ -136,12 +136,12 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 | COLUMN | REQUIRED | DATA TYPE | DATA TYPE | DATA EXPLANATION |
 |-|-|-|-|-|
 | merchant_reference | &check; | string | MER000006 | Non-database identifier for a merchant. |
-| merchant_name | &check; | string | Sony Experts | Merchant profile page url for the de_DE locale. |
+| merchant_name | &check; | string | Sony Experts | Merchant profile page URL for the de_DE locale. |
 | registration_number |  | string | HYY 134306 | Official registration number as a legal entity of the merchant. |
-| status | &check; | string | approved | Status of the merchant in the system, a status pseudo state machine can be configured to allow for transitions, but this is the initial status for a merchant while importing. |
+| status | &check; | string | approved | Status of the merchant in the system. A status pseudo state machine can be configured to allow for transitions, but this is the initial status for a merchant while importing. |
 | email | &check; | string | michele@sony-experts.com | Email to contact the merchant. |
-| is_active |  | boolean | 1 | Sets if the merchant is active in the system (Value changeable in future, initial value for import.) |
-| url | optional(per locale) | string | /de/merchant/sony-experts | Unique storefront identifier for a merchant's page. |
+| is_active |  | boolean | 1 | Defines if the merchant is active. |
+| url | optional(per locale) | string | /de/merchant/sony-experts | Unique Storefront identifier for a merchant's page. |
 
 **data/import/common/common/marketplace/merchant_store.csv**
 
@@ -161,12 +161,12 @@ MER000007,DE
 | merchant_reference | &check; | string | MER000006 | Merchant identifier. |
 | store_name | &check; | string | DE | Store name to which the merchant will be assigned. |
 
-Register the following plugins to enable data import:
+2. Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantDataImportPlugin | Imports merchant data into the database. |  | Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantDataImportPlugin |
-| MerchantStoreDataImportPlugin | Imports merchant store assignment into the database. | MerchantDataImportPlugin | Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin |
+| MerchantStoreDataImportPlugin | Imports merchant store assignments into the database. | MerchantDataImportPlugin | Spryker\Zed\MerchantDataImport\Communication\Plugin\MerchantStoreDataImportPlugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -191,7 +191,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import merchant
@@ -200,7 +200,7 @@ console data:import merchant-store
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the data has been added to the `spy_merchant` and `spy_merchant_store` tables in the database.
+Make sure that the data has been added to the `spy_merchant` and `spy_merchant_store` tables.
 
 {% endinfo_block %}
 
@@ -210,7 +210,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| StoreRelationToggleFormTypePlugin | Adds the store relation toggle form to the MerchantGui Merchant creation/editing form. |  | Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin |
+| StoreRelationToggleFormTypePlugin | Adds the store relation toggle form to the MerchantGui Merchant creation and editing forms. |  | Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin |
 
 **current/src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php**
 
@@ -242,7 +242,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the merchant edit and create forms contain a *Store* toggle form that enables the ability to add a merchant to specific stores.
+Make sure that the merchant edit and create forms contain a **Store** toggle form.
 
 {% endinfo_block %}
 
@@ -250,13 +250,13 @@ Make sure that the merchant edit and create forms contain a *Store* toggle form 
 
 This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
 
-#### Configure export to Redis
+### Configure export to Redis
 
 1. Set up event listeners and publishers:
 
 | PLUGIN                                    | SPECIFICATION                                                                                                                           | PREREQUISITES                                                         | NAMESPACE                                                                                          |
 |-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
-| MerchantPublisherTriggerPlugin            | Registers the publishers that publish merchant entity changes to storage.                                                               |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
+| MerchantPublisherTriggerPlugin            | Registers the publishers that publish merchant entity changes to the storage.                                                               |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
 | MerchantStoragePublisherPlugin            | Publishes merchant data to the `spy_merchant_storage` table.                                                                            |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
 | MerchantProductOfferStorageExpanderPlugin | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                                             |                                                                       | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage                                          |
 | MerchantProductOfferStorageFilterPlugin   | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                                                |                                                                       | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage                               |
@@ -475,7 +475,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-4. Set up re-generate and re-sync features:
+4. Set up regenerate and resync features:
 
 | PLUGIN                            | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                        |
 |-----------------------------------|---------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
@@ -507,12 +507,12 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when merchant profile entities are created or updated through ORM, they are exported to Redis accordingly.
+Make sure that, when merchant profile entities are created or updated through ORM, they are exported to Redis accordingly.
 
 {% endinfo_block %}
 
 
-##### Configure export to Elastica
+#### Configure export to Elastica
 
 This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
 
@@ -574,7 +574,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 | PLUGIN                                           | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with the Elastica search and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 ```php
@@ -603,7 +603,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-4. Setup re-generate and re-sync features:
+4. Set up regenerate and resync features:
 
 | PLUGIN                                          | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
 |-------------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -692,7 +692,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 | PLUGIN                                     | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                |
 |--------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
 | PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search.                                      |               | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin                   | Allows searching to filter out merchants that do not belong to the current store. |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander  |
+| StoreQueryExpanderPlugin                   | Allows searching to filter out merchants that don't belong to the current store. |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander  |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
@@ -720,7 +720,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 }
 ```
 
-8. Add the `merchant` resource to the supported search sources:
+8. Add the `merchant` source to the supported search sources:
 
 **src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
 
@@ -741,7 +741,7 @@ class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
+Make sure that, when merchant entities are created or updated through ORM, they're exported to Elastica accordingly.
 
 | TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
 |---------------|-------------------------------------|
@@ -895,4 +895,3 @@ Make sure that, when merchant entities are created or updated through ORM, they 
 ```
 
 </details>
-

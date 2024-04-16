@@ -5,6 +5,7 @@ description: The Merchant Product Restrictions feature lets merchants define wha
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
 ---
 
 

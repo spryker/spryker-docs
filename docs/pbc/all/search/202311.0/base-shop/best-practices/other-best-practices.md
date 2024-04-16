@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/other-best-practices  
   - /v1/docs/other-best-practices
   - /v1/docs/en/other-best-practices
+  - /docs/pbc/all/search/202212.0/best-practices/other-best-practices.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/base-shop/best-practices/data-driven-ranking.html
@@ -88,17 +89,17 @@ The query looks very similar to a normal faceted navigation, except that it sear
 
 A usage-driven search schema and document structure puts more burden on importers because document attributes must be duplicated in multiple fields with varying formats. To handle this additional complexity and keep the import code maintainable, we recommend to explicitly decide which attributes to put in which field; ideally as data—for example, in a database table and ideally as part of an already existing attribute management system:
 
-| ATTRIBUTE  | FULL TEXT | FULL TEXT BOOSTED | STRING FACET | NUMBER FACET | COMPLETION TERMS | SUGGESTION TERMS | SEARCH RESULT DATA |
-| ------------- | --------- | ----------- | ------------ | ------------ | ------------- | ----------- | ------------- |
-| description            | &check;         |                   |              |              |                  |                  |                    |
-| manufacturer           |           | &check;                 | &check;            |              | &check;                | &check;                | &check;                  |
-| name                   |           | &check;                 |              |              | &check;                | &check;                | &check;                  |
-| sku                    |           | &check;                 |              |              |                  |                  | &check;                  |
-| hammer_weight          | &check;         |                   | &check;            |              | &check;                |                  |                    |
-| hammer_handle_length   | &check;         |                   |              | &check;            |                  |                  |                    |
-| hammer_handle_material | &check;         |                   | &check;            |              | &check;                |                  |                    |
-| preview_image          |           |                   |              |              |                  |                  | &check;                  |
-| url                    |           |                   |              |              |                  |                  | &check;                  |
+| ATTRIBUTE              | FULL TEXT | FULL TEXT BOOSTED | STRING FACET | NUMBER FACET | COMPLETION TERMS | SUGGESTION TERMS | SEARCH RESULT DATA |
+| ---------------------- | --------- | ----------------- | ------------ | ------------ | ---------------- | ---------------- | ------------------ |
+| description            | &check;   |                   |              |              |                  |                  |                    |
+| manufacturer           |           | &check;           | &check;      |              | &check;          | &check;          | &check;            |
+| name                   |           | &check;           |              |              | &check;          | &check;          | &check;            |
+| sku                    |           | &check;           |              |              |                  |                  | &check;            |
+| hammer_weight          | &check;   |                   | &check;      |              | &check;          |                  |                    |
+| hammer_handle_length   | &check;   |                   |              | &check;      |                  |                  |                    |
+| hammer_handle_material | &check;   |                   | &check;      |              | &check;          |                  |                    |
+| preview_image          |           |                   |              |              |                  |                  | &check;            |
+| url                    |           |                   |              |              |                  |                  | &check;            |
 
 Bonus points for providing a user interface for this purpose. It allows category or product managers to make fine-grained conscious decisions on how to use certain attributes in search. For example, a numeric attribute `hammer_weight` can be used as a string facet and completion term, whereas another numeric attribute `hammer_handle_length` can only be used as a number facet.
 
@@ -112,19 +113,19 @@ Rather helpful are concrete examples of expected and actual behavior from a user
 
 This is an excerpt of the actual input we got from various stakeholders at Contorion:
 
-| SEARCH TERM   | ISSUE / EXPECTED RESULT   | DEV COMMENT    |
-| -------------- | ----------------- | ---------------- |
-| makita             | I expect standard power tools on top (for example, drilling machines), not a jacket and laser. | Enhance WHF.                                                  |
-| akkuschrauber      | I expect more search word suggestions, not just Akkuschrauber-Set. | PM: In specification.                                         |
-| schleifscheibe     | No top sellers on top.                                        | Add all categories, add popularity score to category ranking. |
-| latt hammer        | Decompounder (I believe) not working correctly–must return _Latthammers_ first. | Decompunder works perfect, but we might need to recalibrate the search a little bit. |
-| blindnietwerkzeug  | Only returns products called _Blindnietwerkzeug_ but no Blindnietzange or Blindnietmutter-Handgerät | Add tokens to list.                                    |
-| bohrmaschine bosch | Top categories must be the ones that actually have _Bohrmaschine_ as their name, not _Bohrständer_ and stuff like that. | Fixed      |      |            |                |
-| tiefenmesschieber  | Customers missing an _s_ don't get any results for _TiefenmesSschieber_. | Very hard to fix.                                             |
-| bügelmessschraube  | Doesn't find the right products because products are abbreviated as _Bügelmessschr_. | Product data issue.                                           |
-| klopapier          | Synonym for _Toilettenpapier_.                                | Set up synonyms yourself.                              |
-| duebel             | Doesn't find products when _ä_ is _ae_–that must work for all _Umlaute_. | Fixed                                                        |
-| Fein               | Fein electronics, since they are an A brand.                  | There is a ticket for manufacturer boost in the backlog.      |
-| Handwaschpaste     | Doesn't find category.                                        | bug                                                          |
+| SEARCH TERM        | ISSUE / EXPECTED RESULT                                                                                                 | DEV COMMENT                                                                          |
+| ------------------ | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| makita             | I expect standard power tools on top (for example, drilling machines), not a jacket and laser.                          | Enhance WHF.                                                                         |
+| akkuschrauber      | I expect more search word suggestions, not just Akkuschrauber-Set.                                                      | PM: In specification.                                                                |
+| schleifscheibe     | No top sellers on top.                                                                                                  | Add all categories, add popularity score to category ranking.                        |
+| latt hammer        | Decompounder (I believe) not working correctly–must return _Latthammers_ first.                                         | Decompunder works perfect, but we might need to recalibrate the search a little bit. |
+| blindnietwerkzeug  | Only returns products called _Blindnietwerkzeug_ but no Blindnietzange or Blindnietmutter-Handgerät                     | Add tokens to list.                                                                  |
+| bohrmaschine bosch | Top categories must be the ones that actually have _Bohrmaschine_ as their name, not _Bohrständer_ and stuff like that. | Fixed                                                                                |  |  |  |
+| tiefenmesschieber  | Customers missing an _s_ don't get any results for _TiefenmesSschieber_.                                                | Very hard to fix.                                                                    |
+| bügelmessschraube  | Doesn't find the right products because products are abbreviated as _Bügelmessschr_.                                    | Product data issue.                                                                  |
+| klopapier          | Synonym for _Toilettenpapier_.                                                                                          | Set up synonyms yourself.                                                            |
+| duebel             | Doesn't find products when _ä_ is _ae_–that must work for all _Umlaute_.                                                | Fixed                                                                                |
+| Fein               | Fein electronics, since they are an A brand.                                                                            | There is a ticket for manufacturer boost in the backlog.                             |
+| Handwaschpaste     | Doesn't find category.                                                                                                  | bug                                                                                  |
 
 *A final remark*: Search problems are very often data quality problems. Search cannot fix issues of missing attributes, bad product descriptions, or wrong categorizations. In general: the better the underlying document material, the better the search experience.

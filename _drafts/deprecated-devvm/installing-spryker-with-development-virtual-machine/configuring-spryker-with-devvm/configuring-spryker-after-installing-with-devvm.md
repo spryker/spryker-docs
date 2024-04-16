@@ -31,7 +31,7 @@ related:
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/set-up-spryker-locally/set-up-spryker-locally.html).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 
@@ -104,7 +104,7 @@ A common Spryker Project is like a typical web project. There is the project lev
 | PostgreSQL Server | 5432 | Username is `development`, password is `mate20mg`. |
 | Redis | 10009 | You can explore Redis with Redis Desktop Manager or a similar tool. |
 | Mailcatcher|1080|Catches all the mails that are sent during development in the Dev VM.|
-|Management UI|15672|See [Default Queue Engine](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
+|Management UI|15672|See [Default Queue Engine](/docs/dg/dev/backend-developmentdata-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache module
 
@@ -171,4 +171,4 @@ The first key is responsible for proper call from Yves to Zed, while the second 
 
 ## Upgrading to a newer version
 
-To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html#core-updates).
+To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html#core-updates).

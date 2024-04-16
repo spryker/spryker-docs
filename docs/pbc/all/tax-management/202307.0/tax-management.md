@@ -2,6 +2,7 @@
 title: Tax Management
 description: Tax Management PBC lets you manage your tax rules for different stores and products
 template: concept-topic-template
+last_updated: Oct 10, 2023
 redirect_from: 
     
 ---

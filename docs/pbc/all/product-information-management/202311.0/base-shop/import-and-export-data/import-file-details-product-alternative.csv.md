@@ -7,9 +7,10 @@ originalArticleId: cda20a75-66a5-4c07-a130-74725e5e5da0
 redirect_from:
   - /docs/scos/dev/data-import/202311.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/import-and-export-data/file-details-product-alternative.csv.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html) information in your Spryker Demo Shop.

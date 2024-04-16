@@ -8,12 +8,13 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/billpay/billpay.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html
 related:
   - title: Billpay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/billpay/billpay.html
 ---
 
-Refer to [Billpay payment information](https://www.billpay.de/en/klarna-group-for-business/) for information about payment methods.
+Refer to [Billpay payment information](https://www.billpay.de/en/) for information about payment methods.
 
 The identity and credit check are checked within a single "pre-authorize" call after summary page was submitted.
 This may lead to the "rejection" of the order.

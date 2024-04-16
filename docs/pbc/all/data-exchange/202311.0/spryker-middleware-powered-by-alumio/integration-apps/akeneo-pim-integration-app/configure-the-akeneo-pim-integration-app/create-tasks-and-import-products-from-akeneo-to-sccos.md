@@ -2,6 +2,7 @@
 title: Create tasks and import products from Akeneo to SCCOS
 description: Test the configuration, create tasks, schedulers and run the import of products from Akeneo to SCCOS
 template: howto-guide-template
+last_updated: Nov 10, 2023
 ---
 
 After you have [configured the data integration path between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html), you have to test the created configuration, create tasks and, optionally, schedulers for running the import.

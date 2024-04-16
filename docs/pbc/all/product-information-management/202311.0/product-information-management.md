@@ -2,10 +2,12 @@
 title: Product Information Management
 description: The capability for managing product catalogs
 template: concept-topic-template
+last_updated: Nov 21, 2023
 last_udpated: Aug 16, 2023
 redirect_from:
   - /docs/pbc/all/product-information-management/202212.0/base-shop/feature-overviews/pim-feature-overviews.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/feature-overviews/pim-feature-overviews.html
+  - /docs/pbc/all/product-information-management/202204.0/product-information-management.html
 ---
 
 The Product Information Management (PIM) capability lets you build a rich product catalog using flexible management tools.

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/pbc/all/gift-cards/202307.0/import-and-export-data/import-of-gift-cards.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Gift Cards PBC:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Gift Cards PBC:
 
 * [gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html): allows you to load information about the different types of gift cards.
 * [gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/{{site.version}}/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html): allows you to define the amount of money for each gift card.  

@@ -1,11 +1,13 @@
 ---
 title: Seven Senders — Persistence layer
 template: concept-topic-template
+last_updated: Nov 17, 2023
 date: May 25, 2022
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-persistance-layer.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/seven-senders-persistance-layer.html
   - /docs/scos/dev/technology-partner-guides/202311.0/shipment/seven-senders/seven-senders-persistance-layer.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/third-party-integrations/seven-senders/seven-senders-persistance-layer.html
 
 ---
 

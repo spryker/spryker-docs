@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/prices-feature-walkthrough/prices-feature-walkthrough.html
   - /docs/scos/user/features/202108.0/prices-feature-overview/prices-feature-overview.html
   - /docs/scos/user/features/202005.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/prices-feature-overview/prices-feature-overview.html
 ---
 
 The *Prices* feature enables Back Office users to set prices for products and manage them effectively.
@@ -88,5 +89,5 @@ The following diagram summarizes the logic for retrieving the price for a produc
 
 | INSTALLATION GUIDES  | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
-| [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) | [Retrieving abstract product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html) | [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html) | [HowTo: Handle twenty five million prices in Spryker Commerce OS](/docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html) | [Money module: reference information](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/money-module-reference-information.html) |
+| [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) | [Retrieving abstract product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html) | [File details: product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html) | [HowTo: Handle twenty five million prices in Spryker Commerce OS](/docs/pbc/all/price-management/{{page.version}}/base-shop/tutorials-and-howtos/handle-twenty-five-million-prices-in-spryker-commerce-os.html) | [Money module: reference information](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/money-module-reference-information.html) |
 | [Install the Product Price Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html) | [Retrieving concrete product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html) |  |  | [PriceProduct module details: reference information](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html) |

@@ -11,7 +11,7 @@ related:
   - title: Marketplace Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/marketplace-product-options-feature-overview.html).

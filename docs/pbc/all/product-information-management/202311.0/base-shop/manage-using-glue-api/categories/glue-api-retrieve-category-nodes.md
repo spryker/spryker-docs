@@ -8,6 +8,7 @@ originalArticleId: 1e544fa3-90d1-449f-8d32-54a18f9b2631
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-categories/retrieving-category-nodes.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-nodes.html
 related:
   - title: Retrieving category trees
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html
@@ -139,4 +140,4 @@ Request sample: retrieve a category node
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

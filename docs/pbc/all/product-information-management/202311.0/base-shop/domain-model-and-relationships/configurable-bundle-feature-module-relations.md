@@ -3,6 +3,8 @@ title: "Configurable Bundle feature: Module relations"
 last_updated: Aug 12, 2021
 description: The Configurable Bundle feature lets you create a configurable list of items.
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/configurable-bundle-feature-module-relations.html
 ---
 
 The following schemas illustrate module relations in the Configurable Bundle feature:

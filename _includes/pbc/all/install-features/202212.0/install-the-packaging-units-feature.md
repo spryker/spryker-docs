@@ -14,8 +14,8 @@ Install the required features:
 | Product | {{page.version}} |
 | Measurement Units | {{page.version}} |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
@@ -226,7 +226,7 @@ packaging_unit_type.pack_mixed.name,Mixed Screws boxes,en_US
 packaging_unit_type.pack_mixed.name,Gemischte Schraubenkästen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -426,7 +426,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-packaging-unit-type
@@ -434,7 +434,7 @@ console data:import product-packaging-unit-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_product_packaging_unit_type` table.
+Make sure that, in the database, the configured data has been added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 
@@ -498,7 +498,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-packaging-unit
@@ -911,9 +911,9 @@ Install the required features:
 | Measurement Units | {{page.version}} |
 | Non-splittable Products | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies
@@ -970,7 +970,7 @@ measurement_units.recommendation.suggestion,Would you like to add,en_US
 measurement_units.recommendation.suggestion,Was würden Sie gerne hinzufügen? ,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

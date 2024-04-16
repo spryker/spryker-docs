@@ -12,7 +12,7 @@ redirect_from:
 
 ## Partner Information
 
-[ABOUT BILLPAY](https://www.billpay.de/de/)
+[ABOUT BILLPAY](https://www.billpay.de/en/)
 
 BillPay is the DACH market leader for the preferred, local payment methods Invoice, Direct Debit and Installments, making real-time financing decisions with 100% liability shift, so merchants carry zero risk.As only a bank account is required, these payment methods ensure full customer reach. In addition, BillPay's solution is multi-channel so orders can be placed online, through mobile web apps, at the POS or over-the-phone.
 
@@ -47,7 +47,7 @@ You will also need your Merchant ID, Portal ID and security key - all provided b
 
 Additional important information can be found in the Billpay documentation - [https://www.billpay.de/en/shopintegration/techdocs/](https://www.billpay.de/en/shopintegration/techdocs/).
 
-To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html).
+To integrate Billpay make sure you familiar with concept of [Extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html).
 
 ## Installation
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/payments-feature-overview.html
   - /docs/pbc/all/payment-service-provider/202311.0/payments-feature-overview.html
   - /docs/pbc/all/payment-service-provider/202311.0/payments-feature-overview.html
+  - /docs/scos/user/features/202204.0/payments-feature-overview.html
 ---
 
 The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
@@ -49,7 +50,7 @@ The Spryker Commerce OS supports the integration of the following payment provid
 ## Dummy payment
 
 By default, Spryker provides the [DummyPayment](https://github.com/spryker/dummy-payment) module, which has credit card and invoice payments implemented. You can use these implemented payment methods or refer to the DummyPayment module when implementing additional payment methods in your project.
-For details about implementing a new payment method, see [how to implement the Direct Debit payment method](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html). Based on the examples in these documents, you can implement other payment methods for your projects.
+For details about implementing a new payment method, see [how to implement the Direct Debit payment method](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html). Based on the examples in these documents, you can implement other payment methods for your projects.
 
 ## Payment methods in the Back Office
 
@@ -87,5 +88,5 @@ Hydrating payment methods for an order
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
 | [Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html) | [Payment migration guide](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-payment-module.html) | [Update payment data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html) | [File details: payment_method.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [HowTo: Hydrate payment methods for an order](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/hydrate-payment-methods-for-an-order.html) | |
-|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html) |  |
+|  |  |  | [File details: payment_method_store.csv](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html) | [Implementing Direct Debit Payment](/docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html) |  |
 |  |  |  |  | [Interact with third party payment providers using Glue API](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/interact-with-third-party-payment-providers-using-glue-api.html) |  |

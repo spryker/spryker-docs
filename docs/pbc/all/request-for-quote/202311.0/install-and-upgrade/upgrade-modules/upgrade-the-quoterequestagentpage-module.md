@@ -23,6 +23,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quoterequestagentpage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestagentpage.html
   - /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
+  - /docs/pbc/all/request-for-quote/202204.0/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-quoterequestagentpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quoterequestagentpage-module.md -->

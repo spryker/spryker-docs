@@ -49,7 +49,7 @@ Module configuration is extendable on project level. For the module configuratio
 * It or its parent has to extend AbstractBundleConfig of the corresponding layer.
 * Required values are defined in protected constants so it can be extended, but outside access is disabled.
 * Getter methods are introduced for constant access, so extended values are used on demand.
-* Protected constants are used via static:: to support extension.
+* Protected constants are used via `static::` to support extension.
 
 Module configuration is split into two categories:
 
@@ -100,10 +100,9 @@ Storage unchangeable constants (like queue name, error queue name, resource name
 
 {% endinfo_block %}
 
-### Shared Environment Configuration
+### Shared environment configuration
 
-In rare cases, some environment variable is used in several modules.
-We recommend to create a separate environment configuration for each module, preferably with the same key name, and use chained assignment of the value.
+In some cases, an environment variable is used in several modules. We recommend creating a separate environment configuration for each module, preferably with the same key name, and use a chained assignment of the value.
 
 ```php
 interface ModuleNameConstants
@@ -119,7 +118,7 @@ interface AnotherNameConstants
 }
 ```
 
-And here comes **config/Shared/config_*.php**
+**config/Shared/config_*.php**
 ```php
  $config[ModuleNameConstants::EXAMPLE_KEY] =
  $config[AnotherNameConstants::EXAMPLE_KEY] = 'some-shared-value';

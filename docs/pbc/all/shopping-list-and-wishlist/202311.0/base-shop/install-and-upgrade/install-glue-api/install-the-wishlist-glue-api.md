@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-wishlist-feature-integration.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/install-the-wishlist-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html
 
 related:
   - title: Managing wishlists

@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-customer-carts.html
 ---
 
 This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html).
@@ -349,4 +350,4 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

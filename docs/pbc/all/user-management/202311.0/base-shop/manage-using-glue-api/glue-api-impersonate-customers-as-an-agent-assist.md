@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/impersonating-custo
 originalArticleId: 603fa249-5eab-42d0-93c3-3c09f75da9d0
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
     link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
@@ -94,7 +95,7 @@ Request sample: impersonate a customer
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| tokenType | String | Type of the [authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html). Set this type when sending a request with the token. |
+| tokenType | String | Type of the [authentication token](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html). Set this type when sending a request with the token. |
 | expiresIn | Integer | The time in seconds in which the token expires. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the impersonated customer. |
 | refreshToken | String | Token used to [refresh](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html#refresh-an-authentication-token) the `accessToken`. |
@@ -107,7 +108,7 @@ Request sample: impersonate a customer
 | 4103 | Action is available to an agent user only. |
 | 4104  | Failed to impersonate a customer. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

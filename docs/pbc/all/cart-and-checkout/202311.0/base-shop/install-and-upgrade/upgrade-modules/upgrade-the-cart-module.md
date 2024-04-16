@@ -33,6 +33,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-cart.html  
   - /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-cart-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cart-module.md -->

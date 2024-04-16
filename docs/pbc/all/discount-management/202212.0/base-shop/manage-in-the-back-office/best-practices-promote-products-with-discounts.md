@@ -2,6 +2,7 @@
 title: "Best practices: Promote products with discounts"
 description: Learn how to promote products using discounts.
 template: back-office-user-guide-template
+last_updated: May 4, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202212.0/merchandising/discount/best-practices-promote-products-with-discounts.html
   - /docs/pbc/all/discount-management/202212.0/manage-in-the-back-office/best-practices-promote-products-with-discounts.html  

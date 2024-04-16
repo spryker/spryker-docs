@@ -3,6 +3,8 @@ title: Edit placeholders in CMS blocks
 description: Learn how to edit placeholders in CMS blocks in the Back Office.
 last_updated: May 11, 2022
 template: back-office-user-guide-template
+redirect_from:
+- /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
 related:
   - title: CMS blocks overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html

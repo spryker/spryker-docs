@@ -3,6 +3,8 @@ title: Users Management
 description: User Management capability lets you manage Back Office users.
 last_updated: Aug 20, 2021
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/user-management/202204.0/user-management.html
 ---
 
 The *User Management* capability lets you create and manage Back Office users and their permissions.
@@ -32,7 +34,7 @@ For more details about the agent assist feature, see the [Agent assist feature o
 
 To install the User Management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```

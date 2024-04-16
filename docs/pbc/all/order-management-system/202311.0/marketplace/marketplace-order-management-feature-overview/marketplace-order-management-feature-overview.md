@@ -2,6 +2,7 @@
 title: Marketplace Order Management feature overview
 description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 21, 2023
 related:
   - title: Marketplace order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html

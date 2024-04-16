@@ -8,6 +8,7 @@ originalArticleId: 9800fd79-ab57-4778-a68e-50b23236a3cc
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-using-glue-api/manage-shopping-list-items-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html
 
 related:
   - title: Managing shopping lists
@@ -664,4 +665,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 1504 | Specified shopping list item is not found. |
 | 1508 | Concrete product is not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -8,7 +8,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202307.0/data-import-categories/catalog-setup/categories/categories.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to categories:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to categories:
 
 * [category.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html): allows you to import all relevant information about the categories such as categories names, key, descriptions and additional settings like activating them or allowing customers to search for them.
 * [category_template.csv:](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html) allows you to import any category templates.

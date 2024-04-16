@@ -19,7 +19,7 @@ To enable the support of Fulfillment App in your project, install the following 
 
 ## Install Fulfillment App
 
-For instructions on installing Fulfillment App, see [Set up Oryx](/docs/scos/dev/front-end-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
+For instructions on installing Fulfillment App, see [Set up Oryx](/docs/dg/dev/frontend-development/{{page.version}}/oryx/getting-started/set-up-oryx.html).
 
 ## Connect Fulfillment App
 

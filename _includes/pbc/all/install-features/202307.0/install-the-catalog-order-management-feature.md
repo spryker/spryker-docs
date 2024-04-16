@@ -6,7 +6,7 @@ This document describes how to install the Catalog + Order Management feature co
 
 Follow the steps below to install the Catalog + Order Management feature connector's core.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```shell
 composer require spryker/sales-product-connector:"^1.6.0" --update-with-dependencies
@@ -35,7 +35,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER           | TYPE     | EVENT   | PATH                                            |
 | ----------------- | ------- | ------ | --------------------------------------------- |

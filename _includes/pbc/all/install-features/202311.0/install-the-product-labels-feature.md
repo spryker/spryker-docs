@@ -16,7 +16,7 @@ Install the required features:
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                               |
 | Product      | {{site.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
@@ -564,7 +564,7 @@ Install the required features:
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Product | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies

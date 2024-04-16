@@ -18,7 +18,7 @@ Install the required features:
 | Product      | {{page.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
@@ -306,7 +306,7 @@ To start feature integration, integrate the required feature:
 | Product      | {{page.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
@@ -378,7 +378,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

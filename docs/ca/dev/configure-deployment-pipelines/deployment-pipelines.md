@@ -2,6 +2,7 @@
 title: Deployment pipelines
 description: Deployment pipelines consist of three configurable stages.
 template: howto-guide-template
+last_updated: Nov 30, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:
@@ -59,7 +60,7 @@ Deploy file name depends on the project and environment you are working with.
 {% endinfo_block %}
 
 
-The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
+The variables in the `image: environment:` section of `deploy.yml` are injected into the Docker image built with [Spryker Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html).
 
 ```yaml
 ...

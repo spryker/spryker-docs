@@ -32,6 +32,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202311.0/migration-guide-shoppinglist.html  
   - /module_migration_guides/mg-shopping-list.htm
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/base-shop/install-and-upgrade/upgrade-the-shoppinglist-module.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shoppinglist-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglist-module.md -->

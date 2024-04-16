@@ -2,6 +2,7 @@
 title: Tutorial — Troubleshooting failed Jenkins jobs
 description: Learn how to troubleshoot Jenkins jobs issues
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-failed-jenkins-jobs.html
 ---

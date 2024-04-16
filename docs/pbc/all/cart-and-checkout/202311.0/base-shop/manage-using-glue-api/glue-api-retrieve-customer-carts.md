@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/retrieving-customer-carts.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
 related:
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
@@ -1615,4 +1616,4 @@ For the attributes of the included resources, see:
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

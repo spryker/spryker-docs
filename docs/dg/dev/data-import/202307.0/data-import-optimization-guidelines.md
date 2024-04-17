@@ -123,7 +123,7 @@ Let's say you already started to work with the batch operation, one of the chall
 
 ### Database vendor approach
 
-Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features we like is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you are inserting or updating big amounts of data, like millions of millions, use CTE as a replaceable for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#demo-shops).
+Spryker supports PostgreSQL, MySQL, and MariaDB. When working with databases, it's good to know their related features. For example, one of the great features we like is [CTE](https://www.postgresql.org/docs/9.1/queries-with.html). If you are inserting or updating big amounts of data, like millions of millions, use CTE as a replaceable for multiple inserts and updates. You can find examples of implementations in our [Demo Shops](/docs/about/all/about-spryker.html#demo-shops).
 
 ## Rules for Publish and Synchronize
 

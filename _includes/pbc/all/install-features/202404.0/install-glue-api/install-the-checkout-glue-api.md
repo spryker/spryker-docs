@@ -337,7 +337,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                             | TYPE     | EVENT       | PATH                                                                         |
 |------------------------------------------------------|----------|-------------|------------------------------------------------------------------------------|

@@ -10,9 +10,9 @@ Install the required features:
 | --- | --- | ---  |
 | Category Management | {{page.version}} | {{page.version}}|
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/cms-slot-block-category-connector:"^1.0.0" spryker/cms-slot-block-category-gui:"^1.0.0" --update-with-dependencies

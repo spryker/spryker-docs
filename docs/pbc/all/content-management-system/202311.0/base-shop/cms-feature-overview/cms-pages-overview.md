@@ -58,9 +58,9 @@ With the CMS Pages feature, you can:
 |BACK OFFICE USER GUIDES|
 |---|
 | [Create a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)  |
-| [Manage CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)  |
+| [View CMS pages and history](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/view-cms-pages-and-history.html)  |
 | [Edit CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html)  |
-| [Manage versions of a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html)  |
+| [Preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html)  |
 
 
 ## See next

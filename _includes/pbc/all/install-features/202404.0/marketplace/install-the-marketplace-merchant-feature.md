@@ -14,7 +14,7 @@ Install the required features:
 | Spryker Core                   | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                               |
 | Merchant                       | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                                        |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
@@ -29,39 +29,16 @@ Make sure the following modules have been installed:
 | MerchantProfile           | vendor/spryker/merchant-profile             |
 | MerchantProfileDataImport | vendor/spryker/merchant-profile-data-import |
 | MerchantProfileGui        | vendor/spryker/merchant-profile-gui         |
-| MerchantSearch            | vendor/spryker/merchant-search              |
-| MerchantSearchExtension   | vendor/spryker/merchant-search-extension    |
 | MerchantUser              | vendor/spryker/merchant-user                |
 | MerchantUserGui           | vendor/spryker/merchant-user-gui            |
-| MerchantStorage           | vendor/spryker/merchant-storage             |
 | OauthMerchantUser         | vendor/spryker/oauth-merchant-user          |
 
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
 
-1. Adjust the schema definition so entity changes trigger events:
 
-**src/Pyz/Zed/MerchantSearch/Persistence/Propel/Schema/spy_merchant_search.schema.xml**
-
-```xml
-<?xml version="1.0"?>
-  <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-            xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" name="zed"
-            namespace="Orm\Zed\MerchantSearch\Persistence"
-            package="src.Orm.Zed.MerchantSearch.Persistence">
-
-      <table name="spy_merchant_search">
-          <behavior name="synchronization">
-              <parameter name="queue_pool" value="synchronizationPool"/>
-          </behavior>
-      </table>
-
-  </database>
-
-```
-
-2. Apply database changes, generate entity and transfer changes:
+1. Apply database changes, generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -75,14 +52,12 @@ Make sure the following changes have occurred in the database:
 
 | DATABASE ENTITY      | TYPE  | EVENT   |
 |----------------------|-------|---------|
-| spy_merchant_storage | table | created |
-| spy_merchant_search  | table | created |
 | spy_merchant_profile | table | created |
 | spy_merchant_user    | table | created |
 
 {% endinfo_block %}
 
-Generate transfer changes:
+2. Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -99,14 +74,10 @@ Make sure the following changes have occurred in transfer objects:
 | MerchantProfileCriteria                    | class    | Created | src/Generated/Shared/Transfer/MerchantProfileCriteriaTransfer                    |
 | MerchantProfileGlossaryAttributeValues     | class    | Created | src/Generated/Shared/Transfer/MerchantProfileGlossaryAttributeValuesTransfer     |
 | MerchantProfileLocalizedGlossaryAttributes | class    | Created | src/Generated/Shared/Transfer/MerchantProfileLocalizedGlossaryAttributesTransfer |
-| MerchantSearch                             | class    | Created | src/Generated/Shared/Transfer/MerchantSearchTransfer                             |
-| MerchantSearchCollection                   | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer                   |
 | MerchantUser                               | class    | Created | src/Generated/Shared/Transfer/MerchantUserTransfer                               |
 | MerchantUserCriteria                       | class    | Created | src/Generated/Shared/Transfer/MerchantUserCriteriaTransfer                       |
 | MerchantUserResponse                       | class    | Created | src/Generated/Shared/Transfer/MerchantUserResponseTransfer                       |
 | SpyMerchantProfileEntity                   | class    | Created | src/Generated/Shared/Transfer/SpyMerchantProfileEntityTransfer                   |
-| SpyMerchantSearchEntity                    | class    | Created | src/Generated/Shared/Transfer/SpyMerchantSearchEntityTransfer                    |
-| SpyMerchantStorageEntity                   | class    | Created | src/Generated/Shared/Transfer/SpyMerchantStorageEntityTransfer                   |
 | SpyMerchantUserEntity                      | class    | Created | src/Generated/Shared/Transfer/SpyMerchantUserEntityTransfer                      |
 | UrlStorage.fkResourceMerchant              | property | Created | src/Generated/Shared/Transfer/UrlStorageTransfer                                 |
 
@@ -181,8 +152,6 @@ Enable the following behaviors by registering the plugins:
 | SyncMerchantUsersStatusMerchantPostUpdatePlugin      | Updates merchant users status by merchant status on merchant update.                                     |               | Spryker\Zed\MerchantUser\Communication\Plugin\Merchant               |
 | MerchantUserTabMerchantFormTabExpanderPlugin         | Adds an extra tab to merchant edit and create forms for editing and creating merchant user information.  |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands the merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui         |
-| MerchantProductOfferStorageExpanderPlugin            | Returns the `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage            |
-| MerchantProductOfferStorageFilterPlugin              | Filters the `ProductOfferCollection` transfer object by an active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
 | MerchantUserTwigPlugin                               | Adds the 'merchantName' global Twig variable.                                                                |               | Spryker\Zed\MerchantUser\Communication\Plugin\Twig                   |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
@@ -308,60 +277,6 @@ Make sure that, on the **Edit Merchant: `merchant_id`** page in the Back Office,
 * **Merchant Profile**
 * **Legal Information**
 * **Merchant User**
-
-{% endinfo_block %}
-
-**src/Pyz/Client/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\ProductOfferStorage;
-
-use Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage\MerchantProductOfferStorageExpanderPlugin;
-use Spryker\Client\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
-
-class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageExpanderPluginInterface>
-     */
-    protected function getProductOfferStorageExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductOfferStorageExpanderPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Zed/ProductOfferStorage/ProductOfferStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\ProductOfferStorage;
-
-use Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage\MerchantProductOfferStorageFilterPlugin;
-use Spryker\Zed\ProductOfferStorage\ProductOfferStorageDependencyProvider as SprykerProductOfferStorageDependencyProvider;
-
-class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ProductOfferStorageExtension\Dependency\Plugin\ProductOfferStorageFilterPluginInterface>
-     */
-    protected function getProductOfferStorageFilterPlugins(): array
-    {
-        return [
-            new MerchantProductOfferStorageFilterPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that, when you retrieve a product offer from storage, you can see the merchant transfer property.
 
 {% endinfo_block %}
 
@@ -502,614 +417,12 @@ Make sure there is the **Marketplace** button in the Back Office navigation.
 
 {% endinfo_block %}
 
-### 7) Configure export to Redis and Elasticsearch
 
-This step publishes tables on change (create, edit) to `spy_merchant_profile_storage` and synchronizes data to Storage.
-
-#### Configure export to Redis
-
-1. Set up event listeners and publishers:
-
-| PLUGIN                         | SPECIFICATION                                                             | PREREQUISITES | NAMESPACE                                                                                          |
-|--------------------------------|---------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
-| MerchantPublisherTriggerPlugin | Registers the publishers that publish merchant entity changes to storage. |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin          |
-| MerchantStoragePublisherPlugin | Publishes merchant data to the `spy_merchant_storage` table.              |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin |
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\MerchantPublisherTriggerPlugin;
-use Spryker\Zed\MerchantStorage\Communication\Plugin\Publisher\Merchant\MerchantStoragePublisherPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-   /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-     */
-    protected function getPublisherPlugins(): array
-    {
-        return [
-            new MerchantStoragePublisherPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface>
-     */
-    protected function getPublisherTriggerPlugins(): array
-    {
-        return [
-            new MerchantPublisherTriggerPlugin(),
-        ];
-    }
-}
-```
-
-2. Register synchronization and synchronization error queues:
-
-**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Client\RabbitMq;
-
-use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
-use Spryker\Shared\MerchantStorage\MerchantStorageConfig;
-
-/**
- * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
- */
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    /**
-     *  QueueNameFoo, // Queue => QueueNameFoo, (Queue and error queue will be created: QueueNameFoo and QueueNameFoo.error)
-     *  QueueNameBar => [
-     *       RoutingKeyFoo => QueueNameBaz, // (Additional queues can be defined by several routing keys)
-     *   ],
-     *
-     * @see https://www.rabbitmq.com/tutorials/amqp-concepts.html
-     *
-     * @return array
-     */
-    protected function getQueueConfiguration(): array
-    {
-        return [        
-            MerchantStorageConfig::MERCHANT_SYNC_STORAGE_QUEUE,
-        ];
-    }
-}
-
-```
-
-3. Configure message processors:
-
-| PLUGIN                                            | SPECIFICATION                                                                                                        | PREREQUISITES | NAMESPACE                                              |
-|---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all merchant profile messages to synchronize with Redis and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
-
-**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantStorage;
-
-use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\MerchantStorage\MerchantStorageConfig as BaseMerchantStorageConfig;
-
-class MerchantStorageConfig extends BaseMerchantStorageConfig
-{
-    /**
-     * @return string|null
-     */
-    public function getMerchantSynchronizationPoolName(): ?string
-    {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
-    }
-}
-```
-
-**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Queue;
-
-use Spryker\Shared\MerchantStorage\MerchantStorageConfig;
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
-use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin;
-
-class QueueDependencyProvider extends SprykerDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
-     */
-    protected function getProcessorMessagePlugins(Container $container)
-    {
-        return [
-            MerchantStorageConfig::MERCHANT_SYNC_STORAGE_QUEUE => new SynchronizationStorageQueueMessageProcessorPlugin(),
-        ];
-    }
-}
-```
-
-4. Set up re-generate and re-sync features:
-
-| PLUGIN                            | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                        |
-|-----------------------------------|---------------------------------------------------------------------------------|---------------|------------------------------------------------------------------|
-| MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |               | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
-
-**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Synchronization;
-
-use Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization\MerchantSynchronizationDataPlugin;
-use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
-
-class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
-     */
-    protected function getSynchronizationDataPlugins(): array
-    {
-        return [
-            new MerchantSynchronizationDataPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that when merchant profile entities are created or updated through ORM, they are exported to Redis accordingly.
-
-{% endinfo_block %}
-
-
-##### Configure export to Elastica
-
-This step publishes tables on change (create, edit) to `spy_merchant_search` and synchronizes the data to Search.
-
-1. Set up event listeners and publishers by registering the plugins:
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\Merchant\MerchantWritePublisherPlugin;
-use Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\Merchant\MerchantDeletePublisherPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-   /**
-     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
-     */
-    protected function getPublisherPlugins(): array
-    {
-        return [
-            new MerchantWritePublisherPlugin(),
-            new MerchantDeletePublisherPlugin(),
-        ];
-    }
-}
-```
-
-2. Register a synchronization queue:
-
-**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Client\RabbitMq;
-
-use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
-use Spryker\Shared\MerchantSearch\MerchantSearchConfig;
-
-class RabbitMqConfig extends SprykerRabbitMqConfig
-{
-    /**
-     * @return array
-     */
-    protected function getQueueConfiguration(): array
-    {
-        return [
-            MerchantSearchConfig::SYNC_SEARCH_MERCHANT,
-        ];
-    }
-}
-```
-
-3. Configure message processors:
-
-| PLUGIN                                           | SPECIFICATION                                                                                               | PREREQUISITES | NAMESPACE                                              |
-|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| SynchronizationSearchQueueMessageProcessorPlugin | Configures merchant messages to sync with Elastica search and marks messages as failed in case of an error. |               | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
-
-**src/Pyz/Zed/Queue/QueueDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Zed\Queue;
-
-use Spryker\Shared\MerchantSearch\MerchantSearchConfig;
-use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Queue\QueueDependencyProvider as SprykerDependencyProvider;
-use Spryker\Zed\Synchronization\Communication\Plugin\Queue\SynchronizationSearchQueueMessageProcessorPlugin;
-
-class QueueDependencyProvider extends SprykerDependencyProvider
-{
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
-     */
-    protected function getProcessorMessagePlugins(Container $container)
-    {
-        return [
-            MerchantSearchConfig::SYNC_SEARCH_MERCHANT => new SynchronizationSearchQueueMessageProcessorPlugin(),
-        ];
-    }
-}
-```
-
-4. Setup re-generate and re-sync features:
-
-| PLUGIN                                          | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
-|-------------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. |               | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
-
-**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Synchronization;
-
-use Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization\MerchantSynchronizationDataBulkRepositoryPlugin;
-use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSynchronizationDependencyProvider;
-
-class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
-     */
-    protected function getSynchronizationDataPlugins(): array
-    {
-        return [
-            new MerchantSynchronizationDataBulkRepositoryPlugin(),
-        ];
-    }
-}
-```
-
-5. Configure a synchronization pool name:
-
-**src/Pyz/Zed/MerchantSearch/MerchantSearchConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\MerchantSearch;
-
-use Pyz\Zed\Synchronization\SynchronizationConfig;
-use Spryker\Zed\MerchantSearch\MerchantSearchConfig as SprykerMerchantSearchConfig;
-
-class MerchantSearchConfig extends SprykerMerchantSearchConfig
-{
-    /**
-     * @return string|null
-     */
-    public function getMerchantSearchSynchronizationPoolName(): ?string
-    {
-        return SynchronizationConfig::DEFAULT_SYNCHRONIZATION_POOL_NAME;
-    }
-}
-```
-
-6. Set up result formatters:
-
-| PLUGIN                              | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                           |
-|-------------------------------------|-----------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer. |               |  Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
-
-**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter\MerchantSearchResultFormatterPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>
-     */
-    protected function getMerchantSearchResultFormatterPlugins(): array
-    {
-        return [
-            new MerchantSearchResultFormatterPlugin(),
-        ];
-    }
-}
-```
-
-7. Set up query expanders:
-
-| PLUGIN                                     | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                |
-|--------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search.                                      |               | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
-| StoreQueryExpanderPlugin                   | Allows searching to filter out merchants that do not belong to the current store. |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander  |
-
-**src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\MerchantSearch;
-
-use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMerchantSearchDependencyProvider;
-use Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query\PaginatedMerchantSearchQueryExpanderPlugin;
-use Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin;
-
-class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function getMerchantSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new PaginatedMerchantSearchQueryExpanderPlugin(),
-            new StoreQueryExpanderPlugin(),
-        ];
-    }
-}
-```
-
-8. Add the `merchant` resource to the supported search sources:
-
-**src/Pyz/Shared/SearchElasticsearch/SearchElasticsearchConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Shared\SearchElasticsearch;
-
-use Spryker\Shared\SearchElasticsearch\SearchElasticsearchConfig as SprykerSearchElasticsearchConfig;
-
-class SearchElasticsearchConfig extends SprykerSearchElasticsearchConfig
-{
-    protected const SUPPORTED_SOURCE_IDENTIFIERS = [
-        'merchant',
-    ];
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that, when merchant entities are created or updated through ORM, they are exported to Elastica accordingly.
-
-| TARGET ENTITY | EXAMPLE OF EXPECTED DATA IDENTIFIER |
-|---------------|-------------------------------------|
-| Merchant      | merchant:1                          |
-
-{% endinfo_block %}
-
-<details>
-<summary markdown='span'>Example of the expected data fragment</summary>
-
- ```json
-
- {
-  "idMerchant": 1,
-  "name": "Sony Experts",
-  "registrationNumber": "HYY 134306",
-  "email": "michele@sony-experts.com",
-  "status": "approved",
-  "isActive": true,
-  "merchantReference": "MER000006",
-  "fkStateMachineProcess": 1,
-  "storeRelation": {
-    "idEntity": 1,
-    "idStores": [
-      1
-    ],
-    "stores": [
-      {
-        "availableLocaleIsoCodes": [],
-        "queuePools": [],
-        "storesWithSharedPersistence": [],
-        "idStore": 1,
-        "name": "DE",
-        "defaultCurrencyIsoCode": null,
-        "availableCurrencyIsoCodes": [],
-        "selectedCurrencyIsoCode": null,
-        "timezone": null,
-        "countries": []
-      }
-    ]
-  },
-  "addressCollection": null,
-  "merchantProfile": {
-    "idMerchantProfile": 3,
-    "contactPersonRole": "Brand Manager",
-    "contactPersonTitle": "Ms",
-    "contactPersonFirstName": "Michele",
-    "contactPersonLastName": "Nemeth",
-    "contactPersonPhone": "030/123456789",
-    "logoUrl": "https://d2s0ynfc62ej12.cloudfront.net/merchant/sonyexperts-logo.png",
-    "publicEmail": "support@sony-experts.com",
-    "publicPhone": "+49 30 234567691",
-    "descriptionGlossaryKey": "merchant.description_glossary_key.1",
-    "bannerUrlGlossaryKey": "merchant.banner_url_glossary_key.1",
-    "deliveryTimeGlossaryKey": "merchant.delivery_time_glossary_key.1",
-    "termsConditionsGlossaryKey": "merchant.terms_conditions_glossary_key.1",
-    "cancellationPolicyGlossaryKey": "merchant.cancellation_policy_glossary_key.1",
-    "imprintGlossaryKey": "merchant.imprint_glossary_key.1",
-    "dataPrivacyGlossaryKey": "merchant.data_privacy_glossary_key.1",
-    "fkMerchant": 1,
-    "merchantName": "Sony Experts",
-    "latitude": "11.547788",
-    "longitude": "48.131058",
-    "faxNumber": "+49 30 234567600",
-    "merchantReference": "MER000006",
-    "bannerUrl": null,
-    "addressCollection": {
-      "addresses": [
-        {
-          "idMerchantProfileAddress": 3,
-          "fkCountry": 60,
-          "countryName": "Germany",
-          "address1": "Matthias-Pschorr-Straße",
-          "address2": "1",
-          "address3": "",
-          "city": "München",
-          "zipCode": "80336",
-          "email": null,
-          "fkMerchantProfile": 3
-        }
-      ]
-    },
-    "merchantProfileLocalizedGlossaryAttributes": []
-  },
-  "urlCollection": [
-    {
-      "url": "/de/merchant/sony-experts",
-      "resourceType": null,
-      "resourceId": null,
-      "fkLocale": 46,
-      "idUrl": 505,
-      "fkResourceCategorynode": null,
-      "fkRedirect": null,
-      "fkResourcePage": null,
-      "fkResourceRedirect": null,
-      "fkResourceMerchant": 1,
-      "urlPrefix": null,
-      "localeName": "de_DE",
-      "fkResourceProductAbstract": null,
-      "fkResourceProductSet": null,
-      "itemType": null,
-      "itemId": null,
-      "fkProductAbstract": null,
-      "fkCategorynode": null,
-      "fkPage": null
-    },
-    {
-      "url": "/en/merchant/sony-experts",
-      "resourceType": null,
-      "resourceId": null,
-      "fkLocale": 66,
-      "idUrl": 506,
-      "fkResourceCategorynode": null,
-      "fkRedirect": null,
-      "fkResourcePage": null,
-      "fkResourceRedirect": null,
-      "fkResourceMerchant": 1,
-      "urlPrefix": null,
-      "localeName": "en_US",
-      "fkResourceProductAbstract": null,
-      "fkResourceProductSet": null,
-      "itemType": null,
-      "itemId": null,
-      "fkProductAbstract": null,
-      "fkCategorynode": null,
-      "fkPage": null
-    }
-  ],
-  "categories": [
-    {
-      "idCategory": 2,
-      "categoryKey": "cameras-and-camcorder",
-      "isActive": true,
-      "isInMenu": true,
-      "isClickable": true,
-      "isSearchable": true,
-      "name": null,
-      "url": null,
-      "imageName": null,
-      "categoryImageName": null,
-      "metaTitle": null,
-      "metaDescription": null,
-      "metaKeywords": null,
-      "fkCategoryTemplate": 1,
-      "idCmsBlocks": [],
-      "categoryNode": null,
-      "nodeCollection": null,
-      "parentCategoryNode": null,
-      "localizedAttributes": [
-        {
-          "name": "Kameras & Camcorders",
-          "url": null,
-          "metaTitle": "Kameras & Camcorders",
-          "metaDescription": "Kameras & Camcorders",
-          "metaKeywords": "Kameras & Camcorders",
-          "locale": {
-            "idLocale": 46,
-            "localeName": "de_DE",
-            "name": null,
-            "isActive": true
-          },
-          "image": null
-        },
-        {
-          "name": "Cameras & Camcordersshhhhjjj",
-          "url": null,
-          "metaTitle": "Cameras & Camcorders",
-          "metaDescription": "Cameras & Camcorders",
-          "metaKeywords": "Cameras & Camcorders",
-          "locale": {
-            "idLocale": 66,
-            "localeName": "en_US",
-            "name": null,
-            "isActive": true
-          },
-          "image": null
-        }
-      ],
-      "extraParents": [],
-      "imageSets": []
-    }
-  ],
-  "stocks": [
-    {
-      "idStock": 7,
-      "name": "Sony Experts MER000006 Warehouse 1",
-      "isActive": true,
-      "storeRelation": null
-    }
-  ]
-}
-```
-
-</details>
-
-### 8) Import data
+### 7) Import data
 
 To import data follow the steps in the following sections.
 
-### Import merchant profile data
+#### Import merchant profile data
 
 1. Prepare merchant profile data according to your requirements using the demo data:
 
@@ -1226,7 +539,7 @@ console data:import merchant-profile
 console data:import merchant-profile-address
 ```
 
-### Import merchant users
+#### Import merchant users
 
 1. Prepare merchant user data according to your requirements using the demo data:
 
@@ -1497,7 +810,7 @@ Install the required features:
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
@@ -1608,7 +921,6 @@ To verify `SoldByMerchantWidget` has been registered, make sure the **Sold by me
 | PLUGIN                            | SPECIFICATION                                                                                                                                | PREREQUISITES                                                         | NAMESPACE                             |
 |-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|
 | MerchantPageResourceCreatorPlugin | Allows accessing a merchant page at `https://mysprykershop.com/merchant/{merchantReference}`.                                           |                                                                       | SprykerShop\Yves\MerchantPage\Plugin  |
-| UrlStorageMerchantMapperPlugin    | Provides access to merchant storage data in the controller related to the `https://mysprykershop.com/merchant/{merchantReference}` URL. | Publish URL storage data to Redis by running `console sync:data url`. | Spryker\Client\MerchantStorage\Plugin |
 
 **src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
 
@@ -1633,36 +945,6 @@ class StorageRouterDependencyProvider extends SprykerShopStorageRouterDependency
     }
 }
 ```
-
-**src/Pyz/Client/UrlStorage/UrlStorageDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\UrlStorage;
-
-use Spryker\Client\MerchantStorage\Plugin\UrlStorageMerchantMapperPlugin;
-use Spryker\Client\UrlStorage\UrlStorageDependencyProvider as SprykerUrlDependencyProvider;
-
-class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Client\UrlStorage\Dependency\Plugin\UrlStorageResourceMapperPluginInterface>
-     */
-    protected function getUrlStorageResourceMapperPlugins()
-    {
-        return [
-            new UrlStorageMerchantMapperPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure the merchant page is accessible at `https://mysprykershop/de/merchant/spryker`.
-
-{% endinfo_block %}
 
 2. Enable Javascript and CSS changes:
 

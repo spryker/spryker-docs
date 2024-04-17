@@ -2,6 +2,7 @@
 title: Search
 description: Search PBC lets you manage the search on the Storefront
 template: concept-topic-template
+last_updated: Jun 22, 2023
 ---
 
 Merchant Management lets you manage the search on the Storefront and Glue API search.

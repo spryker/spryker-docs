@@ -12,5 +12,6 @@ redirect_from:
   - /docs/en/migration-guide-categorygui
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorygui.html
   - /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-categorygui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-categorygui-module.md -->

@@ -40,7 +40,7 @@ console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                  | TYPE  | EVENT   | PATH                                                            |
 |---------------------------|-------|---------|-----------------------------------------------------------------|
@@ -161,7 +161,7 @@ Follow the steps below to install the feature frontend.
 
 ### Prerequisites
 
-To start feature integration, integrate the required features:
+Install the required features:
 
 | NAME     | VERSION          | 
 |----------|------------------|

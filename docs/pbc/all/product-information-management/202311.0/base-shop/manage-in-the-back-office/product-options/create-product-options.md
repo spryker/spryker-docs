@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/creating-product-options.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/product-options/creating-product-options.html  
   - /docs/scos/user/back-office-user-guides/202005.0/catalog/product-options/create-product-options.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-in-the-back-office/product-options/create-product-options.html
 related:
   - title: Product Options feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-options-feature-overview.html

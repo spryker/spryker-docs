@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/category-management-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html
 related:
   - title: Install the Category Management Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-category-management-feature-integration.html

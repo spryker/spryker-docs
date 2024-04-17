@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/confirming-customer-registration.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/confirming-customer-registration.html
+  - /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -78,7 +79,7 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next Steps
 

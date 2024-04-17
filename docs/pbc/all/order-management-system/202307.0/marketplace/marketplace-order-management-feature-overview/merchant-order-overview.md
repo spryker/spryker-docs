@@ -2,6 +2,7 @@
 title: Merchant order overview
 description: This document contains concept information for the Merchant order feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Aug 7, 2023
 related:
   - title: Marketplace Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html

@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/define-positions-for-category-cms-blocks.html
 ---
 
 
@@ -22,7 +23,7 @@ By default, we provide the following positions: "Top", "Middle", "Bottom". To de
 
 ## Prerequisites
 
-[Install category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html)
+[Install category CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-category-cms-blocks.html)
 
 
 ## Configure custom block positions

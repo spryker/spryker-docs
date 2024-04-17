@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-companies.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/retrieving-companies.html
 related:
   - title: Retrieving company roles
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
@@ -106,7 +107,7 @@ To retrieve information about a company, send the request:
 | 1801 | Specified company is not found, or the current authenticated company user does not have access to it. |
 | 1803 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

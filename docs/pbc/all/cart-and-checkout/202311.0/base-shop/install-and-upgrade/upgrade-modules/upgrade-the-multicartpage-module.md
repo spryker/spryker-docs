@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multicartpage.html
   - /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
   - /module_migration_guides/mg-multi-cart-page.htm
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-multicartpage-module.html
 related:
   - title: Multiple Carts per User Feature Overview
     link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html

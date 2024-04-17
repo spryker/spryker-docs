@@ -28,7 +28,7 @@ Install the required features:
 
 ### 1) Install required modules using Сomposer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/dummy-marketplace-payment:^0.2.2 --update-with-dependencies

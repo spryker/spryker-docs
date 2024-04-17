@@ -2,6 +2,7 @@
 title: Add and remove databases of stores
 description: Learn how to add and remove databases of stores
 template: howto-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
 ---

@@ -3,6 +3,8 @@ title: Create abstract product list content items
 description: Learn how to create abstract product list content items in the Back Office.
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
+redirect_from:
+- /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/content-items/create-abstract-product-list-content-items.html
 ---
 
 This topic describes how to create abstract product list content items in the Back Office.

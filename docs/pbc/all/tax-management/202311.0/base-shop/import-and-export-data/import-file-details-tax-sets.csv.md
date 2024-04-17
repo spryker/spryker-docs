@@ -13,6 +13,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/import-and-export-data/import-file-details-tax-sets.csv.html
   - /docs/pbc/all/tax-management/202311.0/spryker-tax/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/import-and-export-data/import-file-details-tax-sets.csv.html
 ---
 
 This document describes the `tax.csv` file to configure the [tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html) information in your Spryker Demo Shop.

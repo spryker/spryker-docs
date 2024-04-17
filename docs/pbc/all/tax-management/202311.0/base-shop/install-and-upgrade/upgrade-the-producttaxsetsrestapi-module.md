@@ -14,6 +14,7 @@ redirect_from:
   - /docs/pbc/all/tax-management/202311.0/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
   - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+  - /docs/pbc/all/tax-management/202204.0/base-shop/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-producttaxsetsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-producttaxsetsrestapi-module.md -->

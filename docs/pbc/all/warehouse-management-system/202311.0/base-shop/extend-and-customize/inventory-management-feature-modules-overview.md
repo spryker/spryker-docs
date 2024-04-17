@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - /docs/pbc/all/warehouse-management-system/extend-and-customize/inventory-management-feature-modules-overview.html
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/extend-and-customize/inventory-management-feature-modules-overview.html
 ---
 
 This document describes the modules of the Inventory Management feature.
@@ -35,7 +36,7 @@ Sample payment state machine with `reserved` flags:
 
 ## AvailabilityStorage
 
-`AvailabilityStorage` publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+`AvailabilityStorage` publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Events are generated in the following cases:
 

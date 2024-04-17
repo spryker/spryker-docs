@@ -30,7 +30,7 @@ composer require spryker/payments-rest-api:"1.1.0" --update-with-dependencies
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

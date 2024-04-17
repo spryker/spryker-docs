@@ -7,11 +7,11 @@ redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/minimum-allowed-shop-version.html
 ---
 
-The *Minimum allowed shop version* check makes sure that the project uses one of the supported product releases by the [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html).
+The *Minimum allowed shop version* check makes sure that the project uses one of the supported product releases by the [Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html).
 
 ## Problem description
 
-To enable smooth upgradability of the project using the [Spryker Code Upgrader](/docs/scu/dev/onboard-to-spryker-code-upgrader/prepare-a-project-for-spryker-code-upgrader.html), it is essential for the project to adhere to the minimum required Spryker product release.
+To enable smooth upgradability of the project using the [Spryker Code Upgrader](/docs/ca/devscu/prepare-a-project-for-spryker-code-upgrader.html), it is essential for the project to adhere to the minimum required Spryker product release.
 
 In case the project does not utilize the feature packages, it is necessary to ensure that the corresponding Spryker module versions are used.
 

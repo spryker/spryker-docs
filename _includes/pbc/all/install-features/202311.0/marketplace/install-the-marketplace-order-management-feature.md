@@ -20,7 +20,7 @@ Install the required features:
 
 ### 1) Install required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-order-management:"{{page.version}}" --update-with-dependencies

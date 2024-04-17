@@ -15,12 +15,12 @@ related:
   - title: Project development guidelines
     link: docs/scos/dev/guidelines/project-development-guidelines.html
   - title: Data importer speed optimization
-    link: docs/scos/dev/data-import/page.version/data-importer-speed-optimization.html
+    link: docs/dg/dev/data-import/page.version/data-import-optimization-guidelines.html
 ---
 
 One of the most important questions addressed during project development is “How to bring data in my project?”. Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
 
-The simplest way to bring data to a project is to leverage [Data importers](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html) and [P&S](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data importers overview and implementation](/docs/dg/dev/guidelines/data-processing-guidelines.html) for the list of available importers.
+The simplest way to bring data to a project is to leverage [Data importers](/docs/dg/dev/data-import/{{site.version}}/creating-data-importers.html) and [P&S](/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data importers overview and implementation](/docs/dg/dev/guidelines/data-processing-guidelines.html) for the list of available importers.
 
 ## Strategies and concepts
 
@@ -57,7 +57,7 @@ When writing in batches, there can be data inconsistency, which will be discover
 
 ### Using queues
 
-Data processing has higher impacts on IO resources. To scale this process and take advantage of parallel processing, the use of Queues would be an ideal option to prioritize and buffer the data for asynchronous processing. Queues will allow multiple processes to consume the data messages and process them in different machines or clouds. Spryker has the [Queue DataImporter readers](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html), so projects can integrate and use this feature for data processing.
+Data processing has higher impacts on IO resources. To scale this process and take advantage of parallel processing, the use of Queues would be an ideal option to prioritize and buffer the data for asynchronous processing. Queues will allow multiple processes to consume the data messages and process them in different machines or clouds. Spryker has the [Queue DataImporter readers](/docs/dg/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html), so projects can integrate and use this feature for data processing.
 
 {% info_block infoBox "Note" %}
 

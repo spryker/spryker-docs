@@ -38,7 +38,7 @@ A developer can create and edit the content items by importing them.
 The schema below shows the module relations of the content item data importers:
 ![Banner Content Item Data Importers module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Types%3A+Module+Relations/banner-data-importers-module-relations.png)
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html) for more details.
 
 ***
 
@@ -57,7 +57,7 @@ The schema below shows the module relations of the Abstract product list content
 
 A developer can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html) for more details.
 
 ### Abstract Product List API
 
@@ -76,7 +76,7 @@ The schema below shows the module relations of the Product set content item and 
 
 Developers can create and update the content items by importing them.
 
-See [Data Importers Overview and Implementation](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html) for more details.
+See [Data Importers Overview and Implementation](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html) for more details.
 
 ***
 
@@ -97,6 +97,6 @@ The schema shows the module relations of the Navigation content item:
 
 ### Navigation data importer
 
-A developer can create and edit navigation content items by [importing](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
+A developer can create and edit navigation content items by [importing](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
 
 See [File details: content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) for more details.

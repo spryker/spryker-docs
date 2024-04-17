@@ -283,7 +283,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
-| quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
+| quantity | String | &check; | Specifies the number of items to place on the cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | salesUnit | Object |  | A list of attributes defining the sales unit to be used for item amount calculation. |
 | salesUnit.id | Integer |  | The unique ID of the sales units to calculate the item amount in. |
 | salesUnit.amount | Integer |  | The amount of the product in the defined sales units.  |
@@ -2506,7 +2506,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 | quantity | Integer | &check; | The number of the configurable bundles to add. |
 | templateUuid | String | &check; | The unique ID of the configurable bundle template. To get it, [retrieve all configurable bundle templates](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html#retrieve-all-configurable-bundle-templates). |
 | sku | String | &check; | Specifies the SKU of a product to add to the cart. To use promotions, specify the SKU of a product being promoted. Concrete product SKU required. |
-| quantity | Integer | &check; | Specifies the number of items to add to the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
+| quantity | Integer | &check; | Specifies the number of items to add to the cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
 | slotUuid | String | &check; | The unique ID of the slot in the configurable bundle. |
 
 ### Response
@@ -3248,4 +3248,4 @@ If the item is deleted successfully, the endpoint returns the â€œ204 No Contentâ
 | 4006 | The configured bundle cannot be updated. |
 | 4007 | The configured bundle cannot be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

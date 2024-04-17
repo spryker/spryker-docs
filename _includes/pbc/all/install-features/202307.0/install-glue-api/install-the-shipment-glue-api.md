@@ -19,9 +19,9 @@ Install the required features:
 | Glue API: Glue Application      | {{page.version}}  | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Glue API: Order Management | {{page.version}}  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/shipments-rest-api:"1.6.0" --update-with-dependencies
@@ -47,7 +47,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                   | TYPE     | EVENT   | PATH                                                                         |
 |--------------------------------------------|----------|---------|------------------------------------------------------------------------------|
@@ -114,7 +114,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

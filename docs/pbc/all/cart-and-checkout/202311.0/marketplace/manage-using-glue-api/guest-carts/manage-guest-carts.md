@@ -1931,6 +1931,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | product-offers| merchantReference | String  | Merchant Reference assigned to every Merchant. |
 | product-offers  | isDefault | Boolean | Defines whether the Product Offer is default or not. |
 
+{% include pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
 For the attributes of other included resources, see:
 * [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html)
@@ -1941,7 +1942,6 @@ For the attributes of other included resources, see:
 * [Retrieve product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 * [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/glue-api-retrieve-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving product offers](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
 
 ## Assign a guest cart to a registered customer
@@ -2136,4 +2136,4 @@ In a *single cart* environment, items from the guest cart have been added to t
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

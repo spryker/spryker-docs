@@ -8,7 +8,7 @@ redirect_from:
 - /docs/pbc/all/product-information-management/202204.0/base-shop/import-and-export-data/product-options/product-options-data-import.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to product options:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to product options:
 
 * [product_option.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html): allows you to define product options, like insurance, warranty or gift wrapping, and its abstract products.
 * [product_option_price.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html): allows you to define the net and gross prices for each product option.  

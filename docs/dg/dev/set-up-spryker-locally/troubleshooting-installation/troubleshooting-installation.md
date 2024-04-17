@@ -9,7 +9,7 @@ redirect_from:
 
 ---
 
-This section includes guidance for problems related to issues you might encounter when installing Spryker.  
+This section describes common issues and solutions related to installing Spryker locally.
 
 ## Topics
 

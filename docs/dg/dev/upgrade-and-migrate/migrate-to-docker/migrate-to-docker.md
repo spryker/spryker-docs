@@ -51,7 +51,7 @@ In `config/Shared`, adjust or create a configuration file. The name of the file 
 
 ## Set up a deploy file
 
-Set up a [deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) per your infrastructure requirements using the examples in the table:
+Set up a [deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) per your infrastructure requirements using the examples in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
@@ -102,13 +102,21 @@ Make sure that, in the `hosts` file, all the domains from `deploy.yml` are defin
 
 ## Endpoints
 
-To verify that the migration is successful, make sure you can access the endpoints configured in the deploy file. To learn about the deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
+To verify that the migration is successful, make sure you can access the endpoints configured in the deploy file. To learn about the deploy file, see [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html).
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
 To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`.
 
 {% endinfo_block %}
+
+## Remove Vagrant files
+
+Remove the following Vagrant files:
+
+* `config/install/development.yml`
+* `config/shared/config_default-development_*.php`
+* `/tests/PyzTest/Zed/Console/_data/cli_sandbox/config/Shared/config_default-development_*.php`
 
 ## Get the list of useful commands
 
@@ -117,8 +125,8 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/troubleshooting-installation.html)
-* [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html)
+* [Debugging Setup in Docker](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html)
+* [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html)
+* [Services](/docs/dg/dev/integrate-and-configure/configure-services.html)
 * [Self-signed SSL Certificate Setup](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/set-up-a-self-signed-ssl-certificate.html)
 * [Adjust Jenkins for a Docker environment](/docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html)

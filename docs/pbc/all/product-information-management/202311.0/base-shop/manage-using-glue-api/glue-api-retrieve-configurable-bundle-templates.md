@@ -8,6 +8,7 @@ originalArticleId: 7d42fcee-0edb-4f80-826c-988162b30119
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-configurable-bundle-templates.html  
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-configurable-bundle-templates.html
 related:
   - title: Configurable Bundle feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/configurable-bundle-feature-overview.html
@@ -744,7 +745,7 @@ For the attributes of other included resources, see:
 
 ## Possible errors
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Other management options
 

@@ -31,7 +31,7 @@ A *shipment type* is a way in which a customer receives an order after placing i
 
 Shipment types are used by service points. For more information about service points, see [Service Points feature overview](/docs/pbc/all/service-point-management/{{page.version}}/unified-commerce/service-points-feature-overview.html).
 
-To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/scos/dev/glue-api-guides/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
+To add service types using Glue API, see [Backend API Marketplace B2C Demo Shop reference](/docs/dg/dev/glue-api/{{page.version}}/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html).
 
 To import shipment types, see [Import file details: shipment_type.csv](/docs/pbc/all/carrier-management/{{page.version}}/unified-commerce/import-and-export-data/import-file-details-shipment-type.csv.html).
 
@@ -70,6 +70,12 @@ Additional behaviors can be attached to a shipment method from the Back Office b
 Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit and their preferred currency selection.
 
 You can give shipment discounts based on the carrier, shipment method, or cart value. Intricate calculations let you freely define a set of rules to be applied to the various discount options.
+
+## Current constraints
+
+* Product catalog can't be filtered by a shipment type.
+* Customers can't add products with preselected shipment types to cart. They can select shipment types only during checkout.
+* If a product is added to cart without a product offer attached to it, this product can be purchased only with the *Delivery* shipment type.
 
 
 ## Related Business User documents

@@ -14,9 +14,9 @@ Install the required features:
 |Company Account|{{page.version}}|
 |Spryker Core|{{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
@@ -56,7 +56,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -83,7 +83,7 @@ shared_cart.share.error.already_exist,Cart was already shared with this customer
 shared_cart.share.error.already_exist,Der Warenkorb wurde bereits mit diesem Kunden geteilt,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -253,7 +253,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shared-cart
@@ -565,9 +565,9 @@ Please review and install the necessary features before beginning the integratio
 |Multiple Carts|{{page.version}}|
 |Spryker Core|{{page.version}}|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
@@ -657,7 +657,7 @@ shared_cart_page.dismiss.success,Shopping cart was dismissed successfully.,en_US
 shared_cart_page.dismiss.success,Warenkorb wurde erfolgreich abgelehnt.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -665,7 +665,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

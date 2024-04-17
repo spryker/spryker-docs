@@ -49,6 +49,8 @@ entries:
         nested:
         - title: "Best practises: Jenkins stability"
           url: /docs/ca/dev/best-practices/best-practises-jenkins-stability.html
+        - title: Jenkins operational best practices
+          url: /docs/ca/dev/best-practices/jenkins-operational-best-practices.html
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode
@@ -69,6 +71,8 @@ entries:
             url: /docs/ca/dev/security/check-ecr-image-scan-results.html
           - title: Generate access keys
             url: /docs/ca/dev/security/generate-access-keys.html
+          - title: Penetration testing
+            url: /docs/ca/dev/security/penetration-testing.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
       - title: Configure deployment pipelines
@@ -90,7 +94,7 @@ entries:
             url: /docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html
       - title: Configure data import from an S3 bucket
         url: /docs/ca/dev/configure-data-import-from-an-s3-bucket.html
-      - title: Create and restore databse backups
+      - title: Create and restore database backups
         url: /docs/ca/dev/create-and-restore-database-backups.html
       - title: Add variables in the Parameter Store
         url: /docs/ca/dev/add-variables-in-the-parameter-store.html
@@ -130,6 +134,9 @@ entries:
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/deployment-fails-due-to-a-failed-docker-authentication.html
               - title: Jenkins does not restart
                 url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/jenkins-does-not-restart.html
+              - title: Product label NEW doesn't exist
+                url: /docs/ca/dev/troubleshooting/troubleshooting-deployment-issues/product-label-new-doesnt-exist.html
+
           - title: Troubleshooting general issues
             url: /docs/ca/dev/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html
             nested:

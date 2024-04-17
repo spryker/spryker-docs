@@ -2,6 +2,7 @@
 title: "Glue API: Create warehouse user assignments"
 description: Learn how to create warehouse user assignments using Glue API
 template: glue-api-storefront-guide-template
+last_updated: Dec 14, 2023
 ---
 
 A warehouse user can have multiple warehouses assigned to them. However, because a user can be physically present only in one warehouse, a single warehouse assignment can be active for them at a time. This endpoint lets you create active and inactive warehouse user assignments.
@@ -16,9 +17,9 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a warehouse user assignment
 
----
+***
 `POST` **/warehouse-user-assignments**
----
+***
 
 ### Request
 
@@ -152,4 +153,4 @@ Request sample:
 | --- | --- |
 | 5201 | The provided user or warehouse ID is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

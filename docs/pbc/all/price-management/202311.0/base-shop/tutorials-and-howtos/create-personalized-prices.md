@@ -7,6 +7,7 @@ originalArticleId: f196671d-6261-40e4-b405-0f0eda110b7b
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
   - /docs/pbc/all/price-management/202311.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/tutorials-and-howtos/howto-create-personalized-prices.html
 ---
 
 This document describes the steps to consider when implementing personalized prices for customer groups.
@@ -24,7 +25,7 @@ There are several steps to consider when implementing special prices based on wh
 
 ## Extend the Customer module
 
-The `spy_customer` table must be extended on the project side to include the group ID. For more information about extending the database schema, see [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+The `spy_customer` table must be extended on the project side to include the group ID. For more information about extending the database schema, see [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 The `spy_customer` table must be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 

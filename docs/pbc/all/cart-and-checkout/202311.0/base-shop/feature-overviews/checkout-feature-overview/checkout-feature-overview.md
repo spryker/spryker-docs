@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/checkout-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.
@@ -43,4 +44,4 @@ With order thresholds, you can do the following:
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|
 | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |
+| [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html) |   |

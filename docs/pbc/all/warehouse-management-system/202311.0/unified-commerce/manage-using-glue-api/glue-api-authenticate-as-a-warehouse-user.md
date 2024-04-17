@@ -9,14 +9,13 @@ This endpoint allows authenticating as a warehouse user. Warehouse users need to
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
+[Install the Warehouse User Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html).
 
 ## Authenticate as a warehouse user
 
----
+***
 `POST` **/warehouse-tokens**
-
----
+***
 
 ### Request
 
@@ -28,7 +27,7 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as a Back Office user</summary>
+<details><summary markdown='span'>Response sample: authenticate as a warehouse user</summary>
 
 ```json
 [
@@ -56,4 +55,4 @@ Request sample: `POST http://glue-backend.mysprykershop.com/warehouse-tokens`
 | --- | --- |
 | 001 | The provided access token is invalid. To get an access token, see [Authenticate as a Back Office user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-back-office-user.html). |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

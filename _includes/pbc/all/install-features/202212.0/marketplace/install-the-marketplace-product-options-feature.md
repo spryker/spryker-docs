@@ -16,7 +16,7 @@ Install the required features:
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 1) Install the required modules:
 

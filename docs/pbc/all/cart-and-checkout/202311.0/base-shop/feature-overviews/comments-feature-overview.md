@@ -8,6 +8,7 @@ originalArticleId: ba9714ca-0500-40fc-b573-c352bc04bff2
 redirect_from:
   - /docs/scos/user/features/202311.0/comments-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/comments-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/comments-feature-overview.html
 ---
 
 The *Comments* feature provides the ability for online owners to add the comments widget. The widget lets the customers leave comments, special requests, or instructions to any entity in the Spryker shop and tag these comments depending on your project specification.
@@ -77,6 +78,6 @@ Company users can perform the following actions using the Comments widget on the
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
-| [Comments feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-comment.csv.html)  |
+| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-comment.csv.html)  |
 | [Comments + persistent cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
 | [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/comments-order-management-feature-integration.html) |

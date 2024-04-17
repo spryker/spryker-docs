@@ -3,6 +3,8 @@ title: "Use cases: Request for Quote processes"
 description: This document describes the use cases for Requests for Quote.
 last_updated: Nov 15, 2022
 template: concept-topic-template
+redirect_from:
+- /docs/pbc/all/request-for-quote/202204.0/use-cases-request-for-quote-processes.html
 ---
 
 

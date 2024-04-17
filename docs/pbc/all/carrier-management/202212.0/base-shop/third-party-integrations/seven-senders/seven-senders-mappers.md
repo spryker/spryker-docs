@@ -1,6 +1,7 @@
 ---
 title: Seven Senders — Mappers
 template: concept-topic-template
+last_updated: Apr 5, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202212.0/shipment/seven-senders/seven-senders-mappers.html
 

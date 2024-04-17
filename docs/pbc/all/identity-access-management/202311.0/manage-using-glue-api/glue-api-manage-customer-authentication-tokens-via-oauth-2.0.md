@@ -5,6 +5,8 @@ last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-customer-authentication-tokens-via-oauth-20
 originalArticleId: 4fe6c88f-3879-4f9f-bb91-c6a867d120fa
+redirect_from:
+- /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-manage-customer-authentication-tokens-via-oauth-2.0.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html
@@ -143,4 +145,4 @@ To refresh an authentication token, send the request:
 | invalid_request | The refresh token is invalid. |
 | invalid_grant | The provided authorization grant or refresh token is invalid, expired, or revoked. The provided authorization grant or refresh token does not match the redirection URI used in the authorization request, or was issued to another client. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

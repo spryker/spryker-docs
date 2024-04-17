@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve product offers"
 description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
+last_updated: Nov 21, 2023
 related:
   - title: Retrieving product offer prices
     link: docs/pbc/all/price-management/page.version/marketplace/glue-api-retrieve-product-offer-prices.html
@@ -251,10 +252,10 @@ To retrieve the product offers, send the request:
 | merchantReference | String   | Unique identifier of the merchant. |
 | isDefault         | Boolean  | Defines if the product offer is [default](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html#product-offers-on-the-product-details-page) for the concrete product. |
 
+{% include pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
 For the response attributes of the other included resources, see the following:
 * [Retrieve product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieve product offer availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/glue-api-retrieve-product-offer-availability.html#product-offer-availability-response-attributes)
 * [Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html#merchants-response-attributes)
 
 
@@ -278,4 +279,4 @@ You can use the product offers resource as follows:
 | 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

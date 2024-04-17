@@ -12,5 +12,6 @@ redirect_from:
   - /docs/en/quick-order-measurement-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-measurement-units-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/quick-add-to-cart-measurement-units-feature-integration.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
 ---
 {% include pbc/all/install-features/202311.0/install-the-quick-add-to-cart-measurement-units-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-quick-add-to-cart-measurement-units-feature.md -->

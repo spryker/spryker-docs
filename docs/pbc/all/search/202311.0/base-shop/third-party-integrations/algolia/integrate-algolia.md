@@ -2,7 +2,7 @@
 title: Integrate Algolia
 description: Find out how you can integrate Algolia into your Spryker shop
 template: howto-guide-template
-last_updated: Sep 13, 2023
+last_updated: Jan 09, 2024
 redirect_from:
 - /docs/pbc/all/search/202400.0/base-shop/third-party-integrations/integrate-algolia.html
 - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/integrate-algolia.html
@@ -15,24 +15,20 @@ This document describes how to integrate [Algolia](/docs/pbc/all/search/{{page.v
 
 Before integrating Algolia, ensure the following prerequisites are met:
 
-- Make sure your project is [ACP-enabled](/docs/acp/user/app-composition-platform-installation.html).
+- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 
-- The Algolia app catalog page lists specific packages which must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
+- The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
-
-Ensure that your installation meets these requirements.
 
 ## Integrate Algolia
 
-Follow these steps to integrate Algolia.
+To integrate Algolia, follow these steps.
 
 ### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
 
 ```php
-//...
-
 use Generated\Shared\Transfer\InitializeProductExportTransfer;
 use Generated\Shared\Transfer\ProductCreatedTransfer;
 use Generated\Shared\Transfer\ProductDeletedTransfer;
@@ -40,11 +36,18 @@ use Generated\Shared\Transfer\ProductExportedTransfer;
 use Generated\Shared\Transfer\ProductUpdatedTransfer;
 use Generated\Shared\Transfer\SearchEndpointAvailableTransfer;
 use Generated\Shared\Transfer\SearchEndpointRemovedTransfer;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
+use Spryker\Shared\Product\ProductConstants;
+use Spryker\Shared\SearchHttp\SearchHttpConstants;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
 //...
 
-$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] =
-$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+$config[SearchHttpConstants::TENANT_IDENTIFIER]
+    = $config[ProductConstants::TENANT_IDENTIFIER]
+    = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     ProductExportedTransfer::class => 'product-events',
     ProductCreatedTransfer::class => 'product-events',
@@ -55,22 +58,15 @@ $config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
     SearchEndpointRemovedTransfer::class => 'search-commands',
 ];
 
-$config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'product-events' => 'http',
+    'product-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'search-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...
-    'product-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-    'search-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
-];
-
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    //...
-    'product-events' => 'http',
+    'product-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
 ```
@@ -142,7 +138,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -154,7 +150,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SuggestionSearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -166,7 +162,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -182,7 +178,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -204,6 +200,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             SearchHttpConfig::TYPE_SEARCH_HTTP => [
                 new BasicSearchHttpQueryExpanderPlugin(),
                 new ProductPriceSearchHttpQueryExpanderPlugin(),
+                new MerchantReferenceSearchHttpQueryExpanderPlugin(), (only for marketplace)
                 new FacetSearchHttpQueryExpanderPlugin(),
             ],
         ];
@@ -315,6 +312,7 @@ namespace Pyz\Client\SearchHttp;
 use Spryker\Client\Catalog\Plugin\ConfigTransferBuilder\CategoryFacetConfigTransferBuilderPlugin;
 use Spryker\Client\Catalog\Plugin\SearchHttp\CatalogSearchHttpConfigBuilderPlugin;
 use Spryker\Client\CatalogPriceProductConnector\Plugin\ConfigTransferBuilder\PriceFacetConfigTransferBuilderPlugin;
+use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantProductMerchantNameSearchConfigExpanderPlugin;
 use Spryker\Client\ProductLabelStorage\Plugin\ProductLabelFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductReview\Plugin\RatingFacetConfigTransferBuilderPlugin;
 use Spryker\Client\ProductSearchConfigStorage\Plugin\Config\ProductSearchConfigExpanderPlugin;
@@ -352,6 +350,7 @@ class SearchHttpDependencyProvider extends SprykerSearchHttpDependencyProvider
     {
         return [
             new ProductSearchConfigExpanderPlugin(),
+            new MerchantProductMerchantNameSearchConfigExpanderPlugin(), # for marketplace only
         ];
     }
 }
@@ -364,6 +363,7 @@ Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProv
 ```php
 //...
 
+use Spryker\Zed\Merchant\Communication\Plugin\MessageBroker\MerchantMessageHandlerPlugin;
 use Spryker\Zed\Product\Communication\Plugin\MessageBroker\InitializeProductExportMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointAvailableMessageHandlerPlugin;
 use Spryker\Zed\SearchHttp\Communication\Plugin\MessageBroker\SearchEndpointRemovedMessageHandlerPlugin;
@@ -383,6 +383,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
           //...
           new ProductExportMessageHandlerPlugin(),
           new SearchEndpointMessageHandlerPlugin(),
+          new MerchantMessageHandlerPlugin(), # for marketplace only
       ];
   }
 
@@ -419,7 +420,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Adjust Product configuration in `Zed`
 
-Because of Algolia product search index syncronization is triggerd by internal Spryker events, it's required to provide a list of events for enabling product data syncronization.
+Because Algolia product search index synchronization is triggered by internal Spryker events, it's required to provide a list of events for enabling product data synchronization.
 Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
@@ -427,7 +428,6 @@ Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
 use Spryker\Zed\PriceProduct\Dependency\PriceProductEvents;
-use Spryker\Zed\Product\Dependency\ProductEvents;
 use Spryker\Zed\Product\ProductConfig as SprykerProductConfig;
 use Spryker\Zed\ProductCategory\Dependency\ProductCategoryEvents;
 use Spryker\Zed\ProductImage\Dependency\ProductImageEvents;
@@ -446,13 +446,27 @@ class ProductConfig extends SprykerProductConfig
      */
     public function getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(): array
     {
-        return [
-            ProductEvents::PRODUCT_ABSTRACT_PUBLISH,
+        return array_merge(parent::getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(), [
             ProductCategoryEvents::PRODUCT_CATEGORY_PUBLISH,
-            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_ABSTRACT_PUBLISH,
+            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_CREATE,
+            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_DELETE,
+
+            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_CREATE,
+            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_DELETE,
+
             PriceProductEvents::PRICE_ABSTRACT_PUBLISH,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
+
             ProductReviewEvents::PRODUCT_ABSTRACT_REVIEW_PUBLISH,
-        ];
+            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_CREATE,
+            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_UPDATE,
+
+            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_ABSTRACT_PUBLISH,
+
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
+        ]);
     }
 
     /**
@@ -462,13 +476,24 @@ class ProductConfig extends SprykerProductConfig
      */
     public function getProductUpdateMessageBrokerPublisherSubscribedEvents(): array
     {
-        return [
-            ProductEvents::ENTITY_SPY_PRODUCT_UPDATE,
-            ProductEvents::PRODUCT_CONCRETE_UPDATE,
-            ProductEvents::PRODUCT_CONCRETE_PUBLISH,
+        return array_merge(parent::getProductUpdateMessageBrokerPublisherSubscribedEvents(), [
             ProductBundleStorageConfig::PRODUCT_BUNDLE_PUBLISH,
+            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_CREATE,
+            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_UPDATE,
+
             ProductImageEvents::PRODUCT_IMAGE_PRODUCT_CONCRETE_PUBLISH,
-        ];
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_UPDATE,
+
+            PriceProductEvents::PRICE_CONCRETE_PUBLISH,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
+
+            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_CREATE,
+            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_UPDATE,
+        ]);
     }
 
     //...
@@ -477,14 +502,17 @@ class ProductConfig extends SprykerProductConfig
 
 {% info_block warningBox "Warning" %}
 
-If your project has project-speciific functionality where abstract or concrete products are created, updated or deleted, add the necessary events to the list for when you need to send updated data to Algolia.
+If your project has project-specific functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists from the prior methods when you need to send updated data to Algolia.
 
 Examples of such functionality include:
 - A custom functionality in the Back Office
 - Custom data import
 - Integration with some middleware when product or product-related data is updated in Spryker
 
-Keep int mind, that to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
+To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` method. Also, you can use the existing events:
+
+ - For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
+ - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
 {% endinfo_block %}
 
@@ -586,6 +614,8 @@ use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteCreatedMes
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteDeletedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteExportedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteUpdatedMessageBrokerPublisherPlugin;
+use Spryker\Zed\ProductCategory\Communication\Plugin\Publisher\ProductCategoryProductUpdatedEventTriggerPlugin;
+use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
 
 //...
 
@@ -600,14 +630,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return array_merge(
             //...
-            $this->getProductExportPlugins(),
+            $this->getProductMessageBrokerPlugins(),
         );
     }
 
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
-    protected function getProductExportPlugins(): array
+    protected function getProductMessageBrokerPlugins(): array
     {
         return [
             new ProductConcreteExportedMessageBrokerPublisherPlugin(),
@@ -615,6 +645,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductConcreteUpdatedMessageBrokerPublisherPlugin(),
             new ProductConcreteDeletedMessageBrokerPublisherPlugin(),
             new ProductAbstractUpdatedMessageBrokerPublisherPlugin(),
+            new ProductCategoryProductUpdatedEventTriggerPlugin(),
+            new ProductLabelProductUpdatedEventTriggerPlugin(),
         ];
     }
 
@@ -676,25 +708,9 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 }
 ```
 
-### Console command for receiving messages
+### Receive ACP messages
 
-Receive messages from the channel:
-
-```bash
-console message-broker:consume
-```
-
-This command must be executed periodically. To achieve this, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
-
-```php
-$jobs[] = [
-    'name' => 'message-broker-consume-channels',
-    'command' => '$PHP_BIN vendor/bin/console message-broker:consume --time-limit=15 --sleep=5',
-    'schedule' => '* * * * *',
-    'enable' => true,
-    'stores' => $allStores,
-];
-```
+Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
 
 ## Additional information on Algolia integration
 

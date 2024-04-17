@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-product-relations
   - /docs/creating-product-relations
   - /docs/en/creating-product-relations
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-relations/create-product-relations.html
 related:
   - title: Edit product relations
     link: docs/pbc/all/product-relationship-management/page.version/manage-in-the-back-office/edit-product-relations.html

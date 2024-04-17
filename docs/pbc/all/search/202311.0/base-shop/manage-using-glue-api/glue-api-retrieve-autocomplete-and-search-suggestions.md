@@ -8,9 +8,10 @@ originalArticleId: 31e2cfd0-e6e5-46ee-96a9-93ae816d6761
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-autocomplete-and-search-suggestions.html
   - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-autocomplete-and-search-suggestions.html
 related:
   - title: Searching the product catalog
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
+    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
 ---
 
 In addition to [catalog search](/docs/pbc/all/search/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
@@ -234,10 +235,4 @@ To retrieve a search suggestion, send the request:
 | abstractProducts.images.externalUrlSmall | String | URL of the product's preview image. |
 | abstractProducts.images.externalUrlLarg | String | URL of the product's large image. |
 
-{% info_block infoBox "SEO-friendly URLs" %}
-
-The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/resolving-search-engine-friendly-urls.html).
-
-{% endinfo_block %}
-
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

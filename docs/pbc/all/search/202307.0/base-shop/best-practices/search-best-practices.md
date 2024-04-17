@@ -2,6 +2,7 @@
 title: Search best practices
 description: A collection of best practices for Spryker Commerce OS Search.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/best-practices/search-best-practices/search-best-practices.html
 ---

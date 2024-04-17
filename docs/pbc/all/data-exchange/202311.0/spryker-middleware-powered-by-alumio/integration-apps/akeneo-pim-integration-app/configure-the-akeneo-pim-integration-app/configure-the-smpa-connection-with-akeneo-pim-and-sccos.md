@@ -2,6 +2,7 @@
 title: Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS
 description: Create clients for Akeneo and Spryker in the Spryker Middleware Powered by Alumio
 template: howto-guide-template
+last_updated: Nov 10, 2023
 ---
 To start importing products from Akeneo to your Spryker project using the Spryker Middleware powered by Alumio, you need to connect Spryker Middleware powered by Alumio with Akeneo and SCCOS. 
 

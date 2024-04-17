@@ -8,6 +8,7 @@ originalArticleId: 835c1e16-904a-4ed9-82c8-50244c7b0ff2
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/activating-and-deactivating-users.html
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/creating-users.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/create-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
@@ -57,5 +58,5 @@ This opens the **Users** page with the success message displayed. The created us
 | LAST NAME | User's last name. |
 | ASSIGNED GROUPS | User groups to assign this user to. User groups define what areas and actions the user will have access to. To learn how to create user groups, see [Create user groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 | AGENT | Defines if this user is an [agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) |
-| WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-feature-overview.html). |
+| WAREHOUSE USER| Defines if this user works in a warehouse to [fulfill orders](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/fulfillment-app-overview.html). |
 | INTERFACE LANGUAGE | Defines the interface language of the Back Office for this user. |

@@ -80,9 +80,9 @@ Request sample: `GET https://glue-backend.mysprykershop.com/service-points`
 
 ## Retrieve a service type
 
----
+***
 `GET` {% raw %}**/service-types/*{{service_type_id}}***{% endraw %}
----
+***
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
@@ -125,4 +125,4 @@ Request sample: https://glue-backend.mysprykershop.com/service-types/7a263a50-12
 | --- | --- |
 | 5418 | The service type with the specified ID doesn't exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

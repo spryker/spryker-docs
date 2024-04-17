@@ -2,6 +2,7 @@
 title: Set up a notifications for 5xx errors
 description: Learn how to set up notifications for 5xx errors via SNS
 template: howto-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/setting-up-notifications-for-5xx-errors.html
 ---

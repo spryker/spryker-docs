@@ -2,6 +2,7 @@
 title: Manage guest cart items
 description: Retrieve details about guest cart items and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 related:
   - title: Managing guest carts
     link: docs/pbc/all/cart-and-checkout/page.version/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html
@@ -1859,4 +1860,4 @@ If the item is deleted successfully, the endpoint returns theÂ "204 No Content"Â
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

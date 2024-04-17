@@ -60,7 +60,7 @@ If you need to modify the CSV column mapping for any reason, you will have to ex
 
 ### Console
 
-To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](/docs/scos/dev/back-end-development/console-commands/console-commands.html).
+To export the products and categories using the queries we made before, we must register the `FactFinderSdk` console command in [Console](/docs/dg/dev/backend-development/console-commands/console-commands.html).
 
 The `FactFinderSdk` module already includes everything though you will need to add `FactFinderSdkExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like below:
 ```php

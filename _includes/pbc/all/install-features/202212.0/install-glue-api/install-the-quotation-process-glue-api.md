@@ -17,9 +17,9 @@ To start feature integration, integrate the required features and Glue APIs:
 | Quotation Process   | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/quote-requests-rest-api:"^0.1.4" spryker/quote-request-agents-rest-api:"^0.3.0" --update-with-dependencies

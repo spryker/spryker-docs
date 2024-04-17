@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/ht-manage-a-big-number-of-categories-201903
   - /v2/docs/en/ht-manage-a-big-number-of-categories-201903
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
 ---
 
 ## Overview

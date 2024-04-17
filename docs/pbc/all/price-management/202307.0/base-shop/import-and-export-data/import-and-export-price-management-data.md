@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202307.0/base-shop/import-and-export-data/import-of-prices.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Price Management PBC:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Price Management PBC:
 
 * [product_price.csv](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html): allows you to define the price-related information for each product. This data defines the price type, whether is gross or net, its value, the store and currency to which the price applies, and other price data (for example, volumes price).
 

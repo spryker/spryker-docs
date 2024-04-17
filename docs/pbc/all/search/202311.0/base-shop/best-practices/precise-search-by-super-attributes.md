@@ -13,6 +13,7 @@ redirect_from:
   - /docs/en/precise-search-by-super-attributes
   - /v6/docs/precise-search-by-super-attributes
   - /v6/docs/en/precise-search-by-super-attributes
+  - /docs/pbc/all/search/202212.0/best-practices/precise-search-by-super-attributes.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/base-shop/best-practices/data-driven-ranking.html

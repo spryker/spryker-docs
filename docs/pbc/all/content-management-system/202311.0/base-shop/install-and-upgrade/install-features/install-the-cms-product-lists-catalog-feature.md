@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/cms-product-lists-catalog-feature-integration.html
   - /docs/pbc/all/content-management-system/202311.0/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
 related:
   - title: Product Lists feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html

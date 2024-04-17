@@ -5,6 +5,7 @@ last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
 redirect_from:
 - /docs/pbc/all/warehouse-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
+- /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -116,9 +117,9 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="retrieve-a-concrete-product-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/retrieve-a-concrete-product-response-attributes.md -->
+{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-For the attributes of concrete product availability, see [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes).
+{% include pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-product-availabilities-response-attributes.md -->
 
 
 ## Possible errors
@@ -128,4 +129,4 @@ For the attributes of concrete product availability, see [Retrieve availability 
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

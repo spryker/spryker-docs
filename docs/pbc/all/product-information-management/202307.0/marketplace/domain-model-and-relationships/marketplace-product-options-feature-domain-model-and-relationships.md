@@ -2,6 +2,7 @@
 title: "Marketplace Product Options feature: Domain model and relationships"
 description: Marketplace Product Options lets merchants create their product option groups and values.
 template: feature-walkthrough-template
+last_updated: Oct 20, 2023
 ---
 
 The *Marketplace Product Options* feature lets merchants create their product option groups and values. Currently, you can [import product options](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html) where you specify the merchant reference.

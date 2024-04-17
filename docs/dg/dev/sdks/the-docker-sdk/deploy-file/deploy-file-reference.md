@@ -554,6 +554,7 @@ Optional parameters for `application:`:
 {% info_block infoBox %}
 
 To disable the validation of request body size against this parameter, set it to `0`. We do not recommended disabling it.
+When using Spryker PaaS, increasing the number of workers for your application needs to be coordinated with our Operations team, as your infrastructure needs to be adjusted. Please note that increasing workers should be thoroughly tested beforehand and might have drastic impact on your application's resource requirements. Please use a Infrastrucute Change Request (Change to existing Parameter Store Variable) to request this change.
 
 {% endinfo_block %}
 

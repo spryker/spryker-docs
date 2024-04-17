@@ -85,7 +85,7 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::TECHNICAL_CANCEL_ACTION_URL` | string | URL for the technical cancellation API call. |
 | `AdyenApiConstants::ADJUST_AUTHORIZATION_ACTION_URL` | string | URL for the API call to adjust the authorized amount. |
 
-## Specific Configuration
+## Specific configuration
 
 Also, you have to add payment methods to the State Machine (OMS), Domain Whitelist and Session Frontend configuration:
 
@@ -126,7 +126,7 @@ Also, you have to add payment methods to the State Machine (OMS), Domain Whiteli
  ];
  ```
 
-Based on Adyen API version you have to configure Session Frontend:
+Based on the Adyen API version, you need to configure Session Frontend:
 ```php
  // >>> SESSION FRONTEND
  ...

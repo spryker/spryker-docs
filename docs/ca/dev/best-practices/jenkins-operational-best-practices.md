@@ -33,7 +33,7 @@ The following diagram showcases different memory constraints you should consider
 
 ![memory-constraints](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/jenkins-stability-checklist/memory_constraints.png)
 
-Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each executor can consume RAM up to `memory_limit` value. 
+Keep in mind that each Jenkins executor can run one PHP job, which may potentially spawn multiple PHP threads or child processes. Each process can consume RAM up to `memory_limit` value. 
 The `vendor/bin/console queue:worker:start` CLI command, in particular, is often configured to have multiple workers or threads and is typically the most RAM-intensive job. Hence, we will use it as an example moving forward.
 
 It is crucial to ensure that the combined theoretical maximum memory consumption, estimated using the formula below, is below the total RAM supply of the Jenkins container. By default, the Jenkins container is configured to optimize the use of the total memory supply of its host. You can calculate the Jenkins container’s available RAM by deducting 750 MB from the Jenkins memory allocation of your infrastructure package listed in our Service Description. 

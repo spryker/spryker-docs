@@ -10,7 +10,7 @@ redirect_from:
 keywords: acp
 related:
     - title: SCCOS Dependencies required for ACP
-      link: docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready
+      link: docs/dg/dev/acp/app-composition-platform-installation.html
     - title: ACP security assessment
       link: docs/dg/dev/acp/aop-security-assessment.html
     - title: ACP security tips
@@ -47,7 +47,7 @@ If you are on an earlier version of Spryker and would like to access the read-on
 ## Becoming registered for ACP
 
 To use ACP apps on your Spryker project, your project needs to be registered. The registration process helps to prepare your project for seamless communication with the third-party apps provided via the ACP. The registration process includes 2 steps:
-1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/app-composition-platform-installation.html#getting-sccos-acp-ready).
+1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
 2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Once step 1 is completed, contact us via the [support portal](https://support.spryker.com/s/).
 
 {% info_block infoBox "Info" %}

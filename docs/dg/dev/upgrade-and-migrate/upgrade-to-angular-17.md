@@ -444,14 +444,6 @@ In `package.json`, do the following:
     }
    ```
 
-   6. In `deploy.yml`, update npm to version `10`:
-
-   ```yml
-    ...
-        npm: 10
-    ...
-   ```
-
 ## 4) Manual Spryker module updating
 
 If you can't update the modules automatically with the `composer update` command, update all angular dependencies in the root of the module inside `package.json` to `^17.3.0` version and all `@spryker/*` dependencies to the next `major.0.0` version, for example, ` 1.1.0 => ^2.0.0`,` 0.1.4 => ^1.0.0`).

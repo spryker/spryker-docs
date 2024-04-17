@@ -63,7 +63,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Connect Staging S3 bucket to a staging environment.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
-  - Complete the [Jenekins Stability Checklist](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
+  - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
   - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).

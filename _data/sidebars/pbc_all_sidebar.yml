@@ -282,6 +282,8 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-shipment-feature.html
                       - title: Checkout
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
+                      - title: Checkout + Non-splittable Products
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-non-splittable-products-feature.html
                       - title: Checkout + Quotation Process
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
                       - title: Checkout + Workflow

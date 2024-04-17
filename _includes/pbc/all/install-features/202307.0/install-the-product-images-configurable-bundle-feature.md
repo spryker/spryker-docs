@@ -34,7 +34,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -53,7 +53,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -268,8 +268,8 @@ t000002,product_image_set_4
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| product_image_set_key | mandatory | string | product_image_set_1 | Internal data import identifier for the product image set. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_image_set_key | ✓ | string | product_image_set_1 | Internal data import identifier for the product image set. |
 
 {% info_block warningBox "Verification" %}
 
@@ -316,7 +316,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import configurable-bundle-template-image

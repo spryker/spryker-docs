@@ -19,9 +19,9 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-rest-api:^3.0.0" --update-with-dependencies
@@ -39,7 +39,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -59,7 +59,7 @@ Make sure that the following changes have been applied by checking your database
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -96,10 +96,10 @@ dummyPaymentCreditCard,Credit Card,dummyPayment,Dummy Payment,1
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| payment_method_key | mandatory | string | dummyPaymentInvoice | Key of a payment method. |
-| payment_method_name | mandatory | string | Invoice | Name of a payment method. |
-| payment_provider_key | mandatory | string | dummyPayment | Key of a payment provider. |
-| payment_provider_name | mandatory | string | Dummy Payment | Name of a payment provider. |
+| payment_method_key | ✓ | string | dummyPaymentInvoice | Key of a payment method. |
+| payment_method_name | ✓ | string | Invoice | Name of a payment method. |
+| payment_provider_key | ✓ | string | dummyPayment | Key of a payment provider. |
+| payment_provider_name | ✓ | string | Dummy Payment | Name of a payment provider. |
 | is_active | optional | boolean | 1 | Indicates if this payment method is available. |
 
 **data/import/payment_method_store.csv**
@@ -116,8 +116,8 @@ dummyPaymentCreditCard,US
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| payment_method_key | mandatory | string | dummyPaymentInvoice | Key of the existing payment method. |
-| store | mandatory | string | DE |Name of the existing store. |
+| payment_method_key | ✓ | string | dummyPaymentInvoice | Key of the existing payment method. |
+| store | ✓ | string | DE |Name of the existing store. |
 
 Register the following plugin data import plugins:
 
@@ -185,7 +185,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import:payment-method

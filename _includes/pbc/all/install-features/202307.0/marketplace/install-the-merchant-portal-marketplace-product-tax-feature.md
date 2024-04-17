@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
+This document describes how to install the Merchant Portal - Marketplace Product + Tax feature.
 
 ## Install feature core
 
@@ -9,15 +9,15 @@ Follow the steps below to install the Merchant Portal - Marketplace Product + Ta
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html) |
+| Marketplace Product | {{page.version}} | [Install the Marketplace Product feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-feature.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 | Tax | {{page.version}} | [Tax feature integration](https://github.com/spryker-feature/tax)
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/tax-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
@@ -43,7 +43,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT | PATH  |
 |-|-|-|-|

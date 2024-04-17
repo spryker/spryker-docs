@@ -16,9 +16,9 @@ related:
   - title: Retrieving abstract products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html
   - title: Retrieve abstract product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---
@@ -102,4 +102,4 @@ Request sample: retrieve image sets of an abstract product
 | 303 | Can't find abstract product image sets. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

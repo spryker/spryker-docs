@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Merchant Opening Hours feature into a Spryker project.
+This document describes how to install the Merchant Opening Hours feature.
 
 ## Install feature core
 
@@ -10,14 +10,14 @@ Follow the steps below to install the Merchant Opening Hours feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
+| Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
 
-###  1) Install the required modules using Composer
+###  1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-opening-hours
@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-opening-hours
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
+Make sure the following modules have been installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
 
 {% endinfo_block %}
 
@@ -545,13 +545,13 @@ Follow the steps below to install the Merchant Opening Hours feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} | [Spryker Core](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 If installed before, not needed.
 
@@ -632,7 +632,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the spy_glossary table.
+Make sure that, in the database, the configured data has been added to the spy_glossary table.
 
 {% endinfo_block %}
 
@@ -684,8 +684,8 @@ Make sure that the following widget was registered:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE |  REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Merchant Opening Hours API |  | [Glue API: Merchant Opening Hours feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html) |
+| Merchant Opening Hours API |  | [Install the Merchant Opening Hours Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-merchant-category-glue-api.html) |

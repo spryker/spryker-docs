@@ -14,8 +14,8 @@ Install the required features:
 | Product | {{page.version}} |
 | Measurement Units | {{page.version}} |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
@@ -226,7 +226,7 @@ packaging_unit_type.pack_mixed.name,Mixed Screws boxes,en_US
 packaging_unit_type.pack_mixed.name,Gemischte Schraubenkästen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -426,7 +426,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-packaging-unit-type
@@ -434,7 +434,7 @@ console data:import product-packaging-unit-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_product_packaging_unit_type` table.
+Make sure that, in the database, the configured data has been added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 
@@ -458,11 +458,11 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 <div>
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| concrete_sku | mandatory | string | 218_123 |Concrete product SKU of packaging unit. |
-| lead_product_sku | mandatory | string | 1 | Lead product concrete SKU. |
-| packaging_unit_type_name | mandatory | string | packaging_unit_type.ring_500.name | Type a name of the current concrete product. |
+| concrete_sku | ✓ | string | 218_123 |Concrete product SKU of packaging unit. |
+| lead_product_sku | ✓ | string | 1 | Lead product concrete SKU. |
+| packaging_unit_type_name | ✓ | string | packaging_unit_type.ring_500.name | Type a name of the current concrete product. |
 | default_amount | optional | positive integer | 5 | <ul><li>Defines how many lead products should be sold together with each quantity of the current product concrete.</li><li>Effective only if the current concrete product `has_lead_product = 1`.</li></ul> |
-| is_amount_variable | mandatory | bool integer | 1 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul> |
+| is_amount_variable | ✓ | bool integer | 1 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul> |
 | amount_min | optional | positive integer | 3 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul> |
 | amount_max | optional | positive integer | 5 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul> |
 | amount_interval | optional | positive integer | 2 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9|
@@ -498,7 +498,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-packaging-unit
@@ -911,9 +911,9 @@ Install the required features:
 | Measurement Units | {{page.version}} |
 | Non-splittable Products | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies
@@ -970,7 +970,7 @@ measurement_units.recommendation.suggestion,Would you like to add,en_US
 measurement_units.recommendation.suggestion,Was würden Sie gerne hinzufügen? ,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary

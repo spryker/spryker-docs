@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Agent Assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -10,15 +10,15 @@ Follow the steps below to install the Agent Assist feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                                               |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                                               |
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                            |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                            |
 | Product      | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 | Cart         | {{page.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                                  |
 
 ### 1) Install the required modules using composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
@@ -26,7 +26,7 @@ composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE   | EXPECTED DIRECTORY       |
 |----------|--------------------------|
@@ -46,7 +46,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:
+Make sure the following changes have been applied in the database::
 
 | DATABASE ENTITY     | TYPE   | EVENT   |
 |---------------------|--------|---------|
@@ -148,7 +148,7 @@ Install the required features:
 |--------------|------------------|
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
@@ -156,7 +156,7 @@ composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                 | EXPECTED DIRECTORY                           |
 |------------------------|----------------------------------------------|

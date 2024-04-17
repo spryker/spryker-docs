@@ -7,8 +7,8 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
 ---
 
-Before proceeding with the provisioning of your Spryker PaaS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
-Once you are logged in to the Spryker Support Portal, you can submit the [environment provisioning request](https://support.spryker.com/s/hosting-change-requests/change-request-new-environment).
+Before proceeding with the provisioning of your Spryker Cloud Commerce OS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
+Once you are logged in to the Spryker Support Portal, you can submit an [Infrastructure Change Request/Access Management Case](https://support.spryker.com/s/case-funnel-problem) selecting that you want to "Create a new Environment". 
 
 {% info_block warningBox %}
 
@@ -99,7 +99,7 @@ Similar to project names, you can't switch between these models after the enviro
 
 The repository is the place where the customer's Spryker application code resides. Spryker supports only GitHub, GitLab, and Bitbucket code hosting services. If the customer code base isn't ready, the Spryker team provisions the environment with the previously chosen Demo Dhop model from the most recent release using GitHub.
 
-GitHub: If the customer uses GitHub, provide a link to the GitHub repository, including a branch and a valid GitHub token. This allows code pipelines to access the repository. Ensure that you securely share the GitHub token according to [Spryker recommendations](/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
+GitHub: If the customer uses GitHub, provide a link to the GitHub repository, including a branch and a valid GitHub token. This allows code pipelines to access the repository. Ensure that you securely share the GitHub token according to [Spryker recommendations](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
 GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines isn't supported. Therefore, we have to enable the codecommit feature during provisioning. Connections with pipelines can be established only after the environment is provisioned. If possible, grant GitLab or Bitbucket access to the Spryker engineer working on this request. If not, we'll use your deploy file along with the Spryker Demo Shop during provisioning. For detailed information about the connection process, see [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository) section in "Connecting a code repository".
 
@@ -111,7 +111,7 @@ We can share the required credentials mentioned in the preceding documentation o
 
 ### Deploy file
 
-The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. If the customer provides their own repository, a deploy file must be provided. For Demo Shop deployments, Spryker Cloud Ops prepares the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demo Shops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html). The most relevant deploy file that you can use as a reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each Demo Shop repository has its respective deploy file template. Adjust this according to your requirements and preferences following the preceding documentation and share it with Spryker.
+The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. If the customer provides their own repository, a deploy file must be provided. For Demo Shop deployments, Spryker Cloud Ops prepares the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demo Shops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html). The most relevant deploy file that you can use as a reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each Demo Shop repository has its respective deploy file template. Adjust this according to your requirements and preferences following the preceding documentation and share it with Spryker.
 
 ## Domains
 

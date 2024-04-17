@@ -2,7 +2,7 @@
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 
@@ -34,7 +34,7 @@ composer require spryker/security
 namespace Pyz\Yves\ShopApplication;
 
 
-use Spryker\Yves\Security\Plugin\Application\SecurityApplicationPlugin;
+use Spryker\Yves\Security\Plugin\Application\YvesSecurityApplicationPlugin;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -46,7 +46,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             ...
-            new SecurityApplicationPlugin(),
+            new YvesSecurityApplicationPlugin(),
             ...
         ];
     }
@@ -62,10 +62,10 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 namespace Pyz\Yves\Security;
 
-use Spryker\Yves\Security\Plugin\Security\RememberMeSecurityPlugin;
 use Spryker\Yves\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use SprykerShop\Yves\AgentPage\Plugin\Security\AgentPageSecurityPlugin;
-use SprykerShop\Yves\CustomerPage\Plugin\Security\CustomerPageSecurityPlugin;
+use SprykerShop\Yves\AgentPage\Plugin\Security\YvesAgentPageSecurityPlugin;
+use SprykerShop\Yves\CustomerPage\Plugin\Security\CustomerRememberMeSecurityPlugin;
+use SprykerShop\Yves\CustomerPage\Plugin\Security\YvesCustomerPageSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
@@ -75,9 +75,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
     protected function getSecurityPlugins(): array
     {
         return [
-            new RememberMeSecurityPlugin(),
-            new AgentPageSecurityPlugin(),
-            new CustomerPageSecurityPlugin(),
+            new CustomerRememberMeSecurityPlugin(),
+            new YvesAgentPageSecurityPlugin(),
+            new YvesCustomerPageSecurityPlugin(),
         ];
     }
 }

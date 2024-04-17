@@ -33,12 +33,12 @@ related:
   - title: Managing customer addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
 
@@ -133,13 +133,13 @@ Note that depending on the Login feature configuration for your project, too man
 | 003 | Failed to log in the user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/pbc/all/gift-cards/{{page.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 * [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html)
 * [Manage orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html)
 * [Managing customer authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-authentication-tokens.html)

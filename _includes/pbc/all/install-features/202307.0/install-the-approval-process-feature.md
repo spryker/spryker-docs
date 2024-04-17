@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/approval-process-feature-overview.html) into a Spryker project.
+This document describes how to install the [Approval Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/approval-process-feature-overview.html).
 
 ## Install feature core
 
@@ -11,14 +11,14 @@ Follow the steps below to install the Approval Proces feature core.
 
 To start feature integration, review and install the necessary features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
 | Checkout | {{page.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Spryker Core | {{page.version}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
@@ -69,7 +69,7 @@ Make sure that the configuration returns the billing address and payment keys.
 
 {% endinfo_block %}
 
-If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/multiple-carts-feature-overview.html), add the following configuration to your project:
+If you are using [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html), add the following configuration to your project:
 
 **src/Pyz/Client/MultiCart/MultiCartConfig.php**
 
@@ -114,7 +114,7 @@ Make sure that the following changes have been applied by checking your database
 | --- | --- | --- |
 | spy_quote_approval | table | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -401,17 +401,17 @@ Follow the steps below to install the Approval Proces feature frontend.
 
 To start feature integration, review and install the necessary features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Company Account | {{page.version}}|[Company Account feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)|
 | Shared Carts | {{page.version}} |[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)|
 | Checkout | {{page.version}} |[Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)|
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Spryker Core | {{page.version}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 | Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies

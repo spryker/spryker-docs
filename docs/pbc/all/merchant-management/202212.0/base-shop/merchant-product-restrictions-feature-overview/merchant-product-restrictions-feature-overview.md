@@ -50,4 +50,4 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 | INSTALLATION GUIDES |
 |---------|
 | [Merchant B2B Contracts feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html) |
-| [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |
+| [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html) |

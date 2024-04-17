@@ -108,13 +108,18 @@ $config[UnzerConstants::UNZER_CHARGE_RETURN_URL] = 'https://mysprykershop/unzer/
 
 ### Add payment methods to State Machine and Domain Whitelist configuration
 
-You must add payment methods to the State Machine (OMS) and Domain Whitelist configuration:
+Add payment methods to the State Machine (OMS), Domain Whitelist, and Session Frontend configuration:
 
 ```php
 
 $config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
     'payment.unzer.com',
 ]);
+
+ // >>> SESSION FRONTEND
+...
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_LAX; // Allows to redirect customers from Unzer back to the shop via a `GET` request.
+...
 
 $config[OmsConstants::PROCESS_LOCATION] = [
     ...

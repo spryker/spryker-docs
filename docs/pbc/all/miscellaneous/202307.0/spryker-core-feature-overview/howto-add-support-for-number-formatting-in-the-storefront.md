@@ -13,13 +13,13 @@ Number formats can vary by locales. For example, if in the DE locale there is a 
 
 To add support for number formatting in the Storefront, integrate the required features:
 
-| NAME                                   | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
+| NAME                                   | VERSION          | INSTALLATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                           | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
+| Spryker Core                           | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/util-number
@@ -27,7 +27,7 @@ composer require spryker/util-number
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE     | EXPECTED DIRECTORY          |
 |------------|-----------------------------|

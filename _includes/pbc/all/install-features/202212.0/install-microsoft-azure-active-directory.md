@@ -1,6 +1,6 @@
 
 
-This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.
+This page describes the Microsoft Azure Active Directory and how to integrate it.
 
 ## General information
 
@@ -20,14 +20,14 @@ To start the feature integration:
 1. Overview and install the necessary features:
 
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command(s) to install the required modules:
 
@@ -37,7 +37,7 @@ composer require spryker-eco/oauth-azure:"^1.0.0" --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

@@ -7,7 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/importing-product-d
 originalArticleId: 589f1dde-2516-4dc9-af6a-a9b171b6442e
 redirect_from:
   - /docs/scos/dev/data-import/2022012.0/importing-product-data-with-a-single-file.html
-  - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/import-product-data-with-a-single-file.html
 ---
 
 Besides importing product-related data with multiple .csv files, like [product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html), [product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html), [product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html), [product_price.csv](/docs/pbc/all/price-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html), etc., you can use a single product data import file, which allows you to import all main product information that needs to be added or updated, at once. This bulk product data import ability might be especially useful if you:
@@ -18,7 +17,7 @@ Besides importing product-related data with multiple .csv files, like [product_a
 
 {% info_block warningBox "Prerequisites" %}
 
-Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html#implementation-overview) in your project.
+Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html#implementation-overview) in your project.
 
 {% endinfo_block %}
 

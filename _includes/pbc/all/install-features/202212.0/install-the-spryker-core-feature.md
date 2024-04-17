@@ -1,4 +1,4 @@
-This document describes how to integrate the Spryker Core feature into a Spryker project.
+This document describes how to install the Spryker Core feature.
 
 {% info_block infoBox "Influded features" %}
 
@@ -15,7 +15,7 @@ The current feature integration guide only adds the following functionalities:
 
 Follow the steps below to install the Spryker Core feature core.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -662,7 +662,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 Follow the steps below to install the front end of the Spryker Core feature.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 

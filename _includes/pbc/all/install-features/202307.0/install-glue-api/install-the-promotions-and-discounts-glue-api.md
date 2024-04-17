@@ -6,15 +6,15 @@ Follow the steps below to install Promotions & Discounts feature API.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-labels-rest-api:"^1.1.0" --update-with-dependencies
@@ -36,7 +36,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up database schema and transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console propel:install

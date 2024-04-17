@@ -78,10 +78,10 @@ shipment_type_key,service_type_key
 pickup,pickup
 ```
 
-| COLUMN            | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                 |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                 |
 |-------------------|-----------|-----------|--------------|----------------------------------|
-| shipment_type_key | mandatory | string    | pickup       | Unique key of the shipment type. |
-| service_type_key  | mandatory | string    | pickup       | Unique key of the service type.  |
+| shipment_type_key | ✓ | string    | pickup       | Unique key of the shipment type. |
+| service_type_key  | ✓ | string    | pickup       | Unique key of the service type.  |
 
 2. Enable data imports in your configuration file—for example:
 
@@ -173,10 +173,10 @@ Make sure that entities have been imported into the `spy_shipment_type_service_t
 
 1. Enable the expanding of shipment type storage data with the service type by registering the following plugins:
 
-| PLUGIN                                       | SPECIFICATION                                                                                                       | PREREQUISITES | NAMESPACE                                                                     |
-|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer` with the service type data by `ShipmentTypeStorageTransfer.servicetype.uuid`. |               | Spryker\Client\ShipmentTypeServicePoint\Plugin\ShipmentTypeStorage            |
-| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer.serviceType` with the service type UUID.                                       |               | Spryker\Zed\ShipmentTypeServicePoint\Communication\Plugin\ShipmentTypeStorage |
+| PLUGIN                                       | SPECIFICATION                                                                                                       | PREREQUISITES | NAMESPACE                                                                            |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------------------|
+| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer` with the service type data by `ShipmentTypeStorageTransfer.servicetype.uuid`. |               | Spryker\Client\ShipmentTypeServicePointStorage\Plugin\ShipmentTypeStorage            |
+| ServiceTypeShipmentTypeStorageExpanderPlugin | Expands `ShipmentTypeStorageTransfer.serviceType` with the service type UUID.                                       |               | Spryker\Zed\ShipmentTypeServicePointStorage\Communication\Plugin\ShipmentTypeStorage |
 
 **src/Pyz/Client/ShipmentTypeStorage/ShipmentTypeStorageDependencyProvider.php**
 
@@ -185,7 +185,7 @@ Make sure that entities have been imported into the `spy_shipment_type_service_t
 
 namespace Pyz\Client\ShipmentTypeStorage;
 
-use Spryker\Client\ShipmentTypeServicePoint\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin;
+use Spryker\Client\ShipmentTypeServicePointStorage\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin;
 use Spryker\Client\ShipmentTypeStorage\ShipmentTypeStorageDependencyProvider as SprykerShipmentTypeStorageDependencyProvider;
 
 class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDependencyProvider
@@ -209,7 +209,7 @@ class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDe
 
 namespace Pyz\Zed\ShipmentTypeStorage;
 
-use Spryker\Zed\ShipmentTypeServicePoint\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin;
+use Spryker\Zed\ShipmentTypeServicePointStorage\Communication\Plugin\ShipmentTypeStorage\ServiceTypeShipmentTypeStorageExpanderPlugin;
 use Spryker\Zed\ShipmentTypeStorage\ShipmentTypeStorageDependencyProvider as SprykerShipmentTypeStorageDependencyProvider;
 
 class ShipmentTypeStorageDependencyProvider extends SprykerShipmentTypeStorageDependencyProvider

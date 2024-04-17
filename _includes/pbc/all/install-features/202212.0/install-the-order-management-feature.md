@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Order Management feature into a Spryker project.
+This document describes how to install the Order Management feature.
 
 {% info_block warningBox "Included features" %}
 
@@ -28,9 +28,9 @@ Install the required features:
 | Order Management        | {{page.version}} |
 | Persistent Cart         | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}r" --update-with-dependencies
@@ -71,7 +71,7 @@ Make sure that the following changes have been applied in the database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE     | EVENT   | PATH  |
 | --------------------- | ------- | ------ | ---------------- |
@@ -1110,9 +1110,9 @@ To start the feature integration, overview and install the necessary features.
 | Checkout                    | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
@@ -1318,17 +1318,17 @@ To make sure that you’ve registered the widget, log in as a customer on the St
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
 Integrate the following related features:
 
-| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
+| FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE   |
 | ---------------------- | ------------- | ---------------- |
-| Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
-| Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
-| Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html) |
-| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
-| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
+| Install the Comments + Order Management feature              |                                  | [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |
+| Install the Order Management Glue API               |                                  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
+| Install the Company Account + Order Management feature       |                                  | [Install the Company Account + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html) |
+| Install the Product + Order Management feature               |                                  | [Install the Product + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
+| Install the Customer Account Management + Order Management feature |                                  | [Install the Customer Account Management + Order Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-order-management-feature.html) |
 | Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |
-| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
-| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |
+| Install the Product + Order Management feature                      |                                  | [Install the Product + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
+| Install the Product Options + Order Management feature                       |                                  | [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |

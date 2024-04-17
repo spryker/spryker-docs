@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the Category Image feature into a Spryker project.
+This document describes how to install the Category Image feature.
 
 ## Install feature core
 
@@ -11,12 +11,12 @@ Follow the steps below to install the Category Image feature core.
 
 Please overview and install the necessary features before beginning the integration step.
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
@@ -24,7 +24,7 @@ composer require spryker-feature/category-image:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -273,8 +273,8 @@ template_name,template_path
 
 | COLUMN | IS REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| template_name | mandatory | string | My category template | A human readable name of the category template. |
-| template_path | mandatory | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
+| template_name | ✓ | string | My category template | A human readable name of the category template. |
+| template_path | ✓ | string | @ModuleName/path/to/category/template.twig | Category template path that is used to display a category page. |
 
 2. Import data:
 
@@ -284,7 +284,7 @@ console data:import:category-template
 
 {% info_block warningBox “Verification” %}
 
-Make sure that in the database the configured data is added to the `spy_category_template` table.
+Make sure that, in the database, the configured data has been added to the `spy_category_template` table.
 {% endinfo_block %}
 
 ### 5) Set up behavior
@@ -398,12 +398,12 @@ Follow the steps below to install the Category Image feature frontend.
 
 Install the required features:
 
-| NAME           | VERSION           | INTEGRATION GUIDE |
+| NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
 | Category | {{page.version}} | |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
@@ -453,7 +453,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |

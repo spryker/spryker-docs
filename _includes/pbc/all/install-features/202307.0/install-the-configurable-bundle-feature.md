@@ -13,9 +13,9 @@ To start feature integration, overview, and install the necessary features:
 | Product | {{page.version}} |
 | Product Lists	 | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker-feature/configurable-bundle:"^{{page.version}}" --updat
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -104,7 +104,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -128,7 +128,7 @@ Make sure that the following changes have been applied by checking your database
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -286,7 +286,7 @@ configurable_bundle.template_slots.slot-6.name,Slot 6,en_US
 configurable_bundle.template_slots.slot-6.name,Slot 6,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -294,7 +294,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -668,10 +668,10 @@ t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smart
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
 | configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
-| configurable_bundle_template_name | mandatory | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
-| configurable_bundle_template_is_active | mandatory | bool | 1 | `IsActive` flag for the configurable bundle name. |
+| configurable_bundle_template_name | ✓ | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
+| configurable_bundle_template_is_active | ✓ | bool | 1 | `IsActive` flag for the configurable bundle name. |
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template_slot.csv**
 
@@ -687,11 +687,11 @@ s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| configurable_bundle_template_slot_key | mandatory | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
-| configurable_bundle_template_slot_name | mandatory | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
+| configurable_bundle_template_slot_key | ✓ | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
+| configurable_bundle_template_slot_name | ✓ | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
 | configurable_bundle_template_slot_uuid | optional | string | 332b40ac-a789-57ce-bec0-23d8dddd71eb |Unique identifier for the configurable bundle template slot.  |
-| configurable_bundle_template_key | mandatory | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| product_list_key | mandatory | string | pl-009 | The ID of the product list for allowed products of the slot. |
+| configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
+| product_list_key | ✓ | string | pl-009 | The ID of the product list for allowed products of the slot. |
 
 Register the following plugins to enable data import:
 
@@ -723,7 +723,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import configurable-bundle-template
@@ -1156,9 +1156,9 @@ Please overview and install the necessary features before beginning the integrat
 | Product | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
@@ -1166,7 +1166,7 @@ composer require spryker-feature/configurable-bundle: "^{{page.version}}" --upda
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -1263,7 +1263,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

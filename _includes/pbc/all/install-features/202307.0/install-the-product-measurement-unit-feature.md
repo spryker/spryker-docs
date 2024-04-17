@@ -13,9 +13,9 @@ Install the required features:
 |Order Management| {{page.version}} |
 |Spryker Core| {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/measurement-units:"{{page.version}}" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker-feature/measurement-units:"{{page.version}}" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -81,7 +81,7 @@ Adjust the schema definition so entity changes will trigger events.
  </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -90,7 +90,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -176,7 +176,7 @@ measurement_units.standard.length.centimetre.name,Centimeter,de_DE
 measurement_units.standard.length.feet.name,Fuß,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -184,7 +184,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -422,7 +422,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-unit
@@ -456,7 +456,7 @@ ITEM,218
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| code | mandatory | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
+| code | ✓ | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
 |abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
 Register the following plugin to enable data import:
 
@@ -485,7 +485,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-base-unit
@@ -530,7 +530,7 @@ sales_unit_19,218_1232,ITEM,1,1,1,1
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sales_unit_key | mandatory | unique, string | sales_unit_1 | A unique identifier that allows referring to this record from other data importers. |
+| sales_unit_key | ✓ | unique, string | sales_unit_1 | A unique identifier that allows referring to this record from other data importers. |
 |concrete_sku|mandatory|string|215_123|An already existing product concrete SKU.|
 |code|mandatory|string|METR	|An already existing measurement unit code that will be used to convert back and forth with the base unit defined in product abstract.|
 |conversion|mandatory|float, empty|5|<p>A custom multiplier that is used to calculate base unit. This field can be empty if both base and sales unit code is defined in the general [conversion ratios](https://github.com/spryker/util-measurement-unit-conversion/blob/1ae26cf8e629d25157e273097941bde438a24ddc/src/Spryker/Service/UtilMeasurementUnitConversion/UtilMeasurementUnitConversionConfig.php).</p><p>Example: 5 means that 1 quantity of this sales unit represents 5 of the base unit.</p>|
@@ -565,7 +565,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit
@@ -678,7 +678,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit-store
@@ -892,9 +892,9 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core E-commerce | {{page.version}} |
 |Checkout| {{page.version}} |
 |   |   |
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/measurement-units: "{{page.version}}" --update-with-dependencies
@@ -902,7 +902,7 @@ composer require spryker-feature/measurement-units: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -942,7 +942,7 @@ cart.item.sales_unit.not_found,Sales unit is not found for product with SKU '%sk
 cart.item.sales_unit.not_found,Verkaufseinheit wird für Produkt mit SKU '%sku%' nicht gefunden.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -950,7 +950,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -1025,7 +1025,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

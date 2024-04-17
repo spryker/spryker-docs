@@ -618,7 +618,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -1320,4 +1320,4 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 301 | Abstract product is not found. |
 | 311 | Abstract product ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -2,6 +2,7 @@
 title: Marketplace Product Offer Prices feature overview
 description: The Marketplace Product Offer Prices feature lets Marketplace merchants set prices for product offers.
 template: feature-overview-template
+last_updated: Nov 10, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202212.0/marketplace-product-offer-prices-feature-walkthrough.html
 ---
@@ -30,5 +31,5 @@ To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
-| [Marketplace Product Offer Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)          | [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html)           |
+| [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html)          | [Retrieving product offer prices](/docs/pbc/all/price-management/{{page.version}}/marketplace/glue-api-retrieve-product-offer-prices.html)          | [File details: price-product-offer.csv](/docs/pbc/all/price-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-price-product-offer.csv.html)           |
 |[Glue API: Marketplace Product Offer Prices integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)           |           |           |

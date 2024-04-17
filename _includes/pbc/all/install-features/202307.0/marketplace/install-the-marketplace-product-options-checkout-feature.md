@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Product Options + Checkout feature into a Spryker project.
+This document describes how to install the Marketplace Product Options + Checkout feature.
 
 
 ## Install feature core
@@ -11,7 +11,7 @@ Follow the steps below to install the Marketplace Product Options + Checkout fea
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Product Options| {{page.version}}      | [Marketplace Product Options feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html) |
 | Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |

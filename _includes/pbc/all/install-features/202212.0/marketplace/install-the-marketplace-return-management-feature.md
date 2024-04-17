@@ -1,4 +1,4 @@
-This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
+This document describes how to install the Marketplace Return Management feature.
 
 ## Install feature core
 
@@ -8,7 +8,7 @@ Follow the steps below to install the Marketplace Return Management feature core
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) |
@@ -17,7 +17,7 @@ Install the required features:
 ### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
@@ -1016,7 +1016,7 @@ Follow the steps below to install the Marketplace return management feature fron
 
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
@@ -1080,7 +1080,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure that the following widgets have been registered by adding the respective code snippets to a Twig template:
+Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET | VERIFICATION |
 | ---------------- | ----------------- |
@@ -1094,8 +1094,8 @@ Make sure that the following widgets have been registered by adding the respecti
 console frontend:yves:build
 ```
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |
+| Marketplace Return Management API | | [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |

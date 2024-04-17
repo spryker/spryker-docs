@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
+This document describes how to install the Marketplace Shipment feature.
 
 ## Install feature core
 
@@ -10,15 +10,15 @@ Follow the steps below to install the Marketplace Shipment feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Merchant | {{page.version}} | [Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
+| Merchant | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
+| Shipment | {{page.version}} | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-shipment:"{{page.version}}" --update-with-dependencies
@@ -26,7 +26,7 @@ composer require spryker-feature/marketplace-shipment:"{{page.version}}" --updat
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
@@ -135,9 +135,9 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 }
 ```
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE| INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE| INSTALLATION GUIDE |
 |-|-|-|
 | Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
 | Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |

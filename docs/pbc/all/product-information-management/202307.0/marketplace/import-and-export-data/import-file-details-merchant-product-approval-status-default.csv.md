@@ -2,6 +2,7 @@
 title: "Import file details: merchant_product_approval_status_default.csv"
 description: This document describes the merchant_product_approval_status_default.csv file to configure default merchant products approval statuses in your Spryker shop.
 template: import-file-template
+last_updated: Oct 25, 2023
 redirect_from:
   - /docs/pbc/all/product-information-management/202307.0/marketplace/import-and-export-data/file-details-merchant-product-approval-status-default.csv.html
 related:
@@ -10,7 +11,7 @@ related:
   - title: Marketplace Product Approval Process feature overview
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-approval-process-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_product_approval_status_default.csv` file to configure default merchant products approval statuses in your Spryker shop.

@@ -19,13 +19,13 @@ Follow the steps below to install the feature core.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE |
+| NAME         | VERSION          | INSTALLATION GUIDE |
 |--------------|------------------|-------------------|
-| Spryker Core | {{page.version}} |[Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Spryker Core | {{page.version}} |[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
@@ -60,7 +60,7 @@ Make sure that the following changes have been applied by checking your database
 |---------------------------|-------|---------|
 | spy_shipment_method_store | table | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer                                | Type   | Event   | Path                                                                  |
 |-----------------------------------------|--------|---------|-----------------------------------------------------------------------|
@@ -110,8 +110,8 @@ spryker_no_shipment,US
 
 | COLUMN              | REQUIRED | DATA TYPE | DATA EXAMPLE                    | DATA EXPLANATION                    |
 |---------------------|-----------|-----------|---------------------------------|-------------------------------------|
-| shipment_method_key | mandatory | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
-| store               | mandatory | string    | DE                              | Name of an existing store.          |
+| shipment_method_key | ✓ | string    | spryker_dummy_shipment-standard | Key of an existing shipping method. |
+| store               | ✓ | string    | DE                              | Name of an existing store.          |
 
 Register the following data import plugins:
 

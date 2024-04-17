@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Alternative Products + Product Labels feature into a Spryker project.
+This document describes how to install the Alternative Products + Product Labels feature.
 
 ## Install feature core
 
@@ -10,14 +10,14 @@ Follow the steps below to install the Alternative Products + Product Labels feat
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 |Alternative Products| {{page.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html)|
 |Product Labels| {{page.version}} | [Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```yaml
 composer require spryker/product-alternative-product-label-connector:"^1.0.0" --update-with-dependencies

@@ -31,14 +31,14 @@ related:
   - title: Managing customer addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/customers/glue-api-manage-customer-addresses.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/retrieve-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-customer-carts.html
 ---
 
 This endpoint allows retrieving a customer’s orders.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html).
 
 ## Retrieve customer’s orders
 
@@ -133,4 +133,4 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

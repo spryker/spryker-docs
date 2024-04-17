@@ -1,21 +1,21 @@
 
 
-This document describes how to install the Inventory Management feature API into a Spryker project.
+This document describes how to install the Inventory Management feature API.
 
 ## Prerequisites
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core| {{page.version}}| [Glue API: Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)|
+| Spryker Core| {{page.version}}| [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)|
 | Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 |Inventory Management| {{page.version}} | |
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 ```bash
 composer require spryker/product-availabilities-rest-api:"^2.0.0" --update-with-dependencies
 ```

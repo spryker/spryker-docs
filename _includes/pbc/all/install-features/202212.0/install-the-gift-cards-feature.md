@@ -17,9 +17,9 @@ Install the required features:
 | Mailing &amp; Notifications | {{page.version}} |
 | Promotions &amp; Discounts | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
@@ -266,8 +266,8 @@ sku,value
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| sku | mandatory | string| 1234 | SKU reference of an abstract gift card product. |
-| value | mandatory | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| sku | ✓ | string| 1234 | SKU reference of an abstract gift card product. |
+| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
 
 ```bash
 console data:import:gift-card-abstract-configuration
@@ -1138,9 +1138,9 @@ Install the required features:
 | Cart | {{page.version}} |
 | Checkout | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
@@ -1226,7 +1226,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

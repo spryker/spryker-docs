@@ -14,7 +14,7 @@ Install the required features:
 | Prices | {{page.version}} |
 | Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 Run the following command to install the required modules:
 
 ```bash
@@ -281,12 +281,12 @@ mr-003,,051_30107816,DEFAULT,DE,CHF,12533,10333
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-|merchant_relation_key | mandatory | string | mr-001 | Unique identifier used to identify a merchant contract. |
+|merchant_relation_key | ✓ | string | mr-001 | Unique identifier used to identify a merchant contract. |
 | abstract_sku | mandatory (optional if `concrete_sku` provided) | string(unique) | 051 | Existing abstract product SKU to assign to the product list. |
 | concrete_sku | mandatory (optional if `abstract_sku` provided) | string(unique) | 051_29567823 | Existing concrete product SKU to assign to the product list. |
-| price_type | mandatory | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
-| store | mandatory | string | DE | Store name. |
-| currency | mandatory | string | EUR | Currency ISO code. |
+| price_type | ✓ | string | DEFAULT | Name of the price type. By default it's 'DEFAULT', but could be project specific (strike, sale, ...). |
+| store | ✓ | string | DE | Store name. |
+| currency | ✓ | string | EUR | Currency ISO code. |
 | price_net | optional | number | 100 | Net price in cents. |
 | price_gross | optional | number | 120 | Gross price in cents. |
 
@@ -316,15 +316,15 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
-Run the following console command to import data:
+Import data:
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_price_product_merchant_relationship` table.
+Make sure that, in the database, the configured data has been added to the `spy_price_product_merchant_relationship` table.
 
 {% endinfo_block %}
 

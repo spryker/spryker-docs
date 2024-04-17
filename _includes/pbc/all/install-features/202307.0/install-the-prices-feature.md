@@ -17,9 +17,9 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
@@ -27,7 +27,7 @@ composer require spryker-feature/prices: "^{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | NAME | VERSION |
 | --- | --- |
@@ -38,7 +38,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -82,11 +82,11 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,price_
 |---|---|---|---|---|
 |  abstract_sku | optional | string | 193 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
 |  concrete_sku | optional | string | 117_29890338 | Either `abstract_sku` or `concrete_sku` should be present to attach the given prices to the correct product |
-|  price_type | mandatory | string | DEFAULT |  |
-|  store | mandatory | string | DE | Store in which the specific product has that specific price |
-|  currency | mandatory | string | EUR | The currency in which the specific product has that specific price |
-|  value_net | mandatory | integer | 10200 | The net (before tax) price in cents |
-|  value_gross | mandatory | integer | 12000 | The gross (after tax) price in cents |
+|  price_type | ✓ | string | DEFAULT |  |
+|  store | ✓ | string | DE | Store in which the specific product has that specific price |
+|  currency | ✓ | string | EUR | The currency in which the specific product has that specific price |
+|  value_net | ✓ | integer | 10200 | The net (before tax) price in cents |
+|  value_gross | ✓ | integer | 12000 | The gross (after tax) price in cents |
 |  price_data.volume_prices | optional | json string |  `"[{""quantity"":5,""net_price"":150,""gross_price"":165}]"` | A json description of the prices when the quantity changes (volume based pricing). In the example given, the product bought, when it has a quantity of less than 5, it uses the normal price, but uses this Volume Price when the quantity is greater than 5 |
 
 Register the following plugin to enable data import:
@@ -116,7 +116,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import price-product
@@ -229,9 +229,9 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core E-commerce | {{page.version}} |
 | Prices | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
@@ -239,7 +239,7 @@ composer require spryker-feature/prices: "^{{page.version}}" --update-with-depen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -261,7 +261,7 @@ page.detail.volume_price.price,Price,en_US
 page.detail.volume_price.price,Preis,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -269,7 +269,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -310,7 +310,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets were registered:
+Make sure the following widgets were registered:
 
 | MODULE | TEST |
 | --- | --- |

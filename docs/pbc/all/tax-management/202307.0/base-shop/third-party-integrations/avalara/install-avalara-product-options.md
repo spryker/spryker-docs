@@ -28,7 +28,7 @@ Install the necessary features:
 
 ### Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-eco/avalara-tax-product-option:"^0.1.0" --update-with-dependencies
@@ -37,7 +37,7 @@ composer require spryker-eco/avalara-tax-product-option:"^0.1.0" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 |MODULE | EXPECTED DIRECTORY |
 | --- | --- |

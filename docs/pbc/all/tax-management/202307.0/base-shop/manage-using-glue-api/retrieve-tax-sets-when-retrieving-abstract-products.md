@@ -5,7 +5,6 @@ last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/tax-management/202307.0/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
-  - /docs/pbc/all/tax-management/202307.0/base-shop/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
   - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/manage-using-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
 ---
 

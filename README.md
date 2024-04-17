@@ -13,7 +13,7 @@ To build the documentation site with Docker, run this command:
 
 ## Contribute
 
-For the specific Markdown syntax we use in documentation, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html). For the general style, syntax, and formatting rules, see [Style, syntax, formatting, and general rules](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html).
+For the specific Markdown syntax we use in documentation, see [Markdown syntax](/docs/about/all/contributing-to-documentation/markdown-syntax.html). For the general style, syntax, and formatting rules, see [Style, syntax, formatting, and general rules](/docs/about/all/contributing-to-documentation/style-formatting-general-rules.html).
 
 To suggest changes, follow the steps:
 

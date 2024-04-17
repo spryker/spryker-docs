@@ -1,7 +1,7 @@
 
 
 
-This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
+This integration guide provides steps on how to integrate the ACL feature.
 
 ## Install feature core
 
@@ -11,14 +11,14 @@ Follow the steps below to install the ACL feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE        |
+| NAME | VERSION | INSTALLATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Spryker Core         | {{page.version}}      | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core Back Office | {{page.version}}      | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
@@ -66,7 +66,7 @@ Verify that the following changes have been applied by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE | EVENT | PATH  |
 | ----------------- | ----- | ------ | -------------------------- |

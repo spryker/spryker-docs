@@ -1,6 +1,6 @@
 
 
-This document describes how to integrate the Product Lists feature into a Spryker project.
+This document describes how to install the Product Lists feature.
 
 ## Prerequisites
 
@@ -12,9 +12,9 @@ Install the required features:
 | Product | {{page.version}}  |
 | Category Management | {{page.version}} |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-lists:"{{page.version}}" --update-with-dependencies
@@ -126,7 +126,7 @@ Set up database schema and transfer objects:
  </database>
 ```
 
-4. Run the following commands to apply database changes and generate entity and transfer changes:
+4. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -219,7 +219,7 @@ product-cart.info.restricted-product.removed,"Unavailable item %sku% was removed
 product-cart.info.restricted-product.removed,"Der nicht verfügbare Artikel% sku% wurde aus Ihrem Einkaufswagen entfernt.",de_DE
 ```
 
-2. Run the following console command to import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -463,7 +463,7 @@ Import product lists:
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string (unique) | pl-001 | Unique identifier used to identify a product list. |
+| product_list_key | ✓ | string (unique) | pl-001 | Unique identifier used to identify a product list. |
 |name|mandatory|string|All computers|Custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
 |type|mandatory|string ("blacklist"/"whitelist")|whitelist|Defines whether the list is a blacklist or a whitelist.|
 
@@ -498,7 +498,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list
@@ -530,7 +530,7 @@ pl-008,smartwatches
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer|An existing category identifier to be assigned to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -563,7 +563,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-4. Run the following console command to import data:
+4. Import data:
 
 ```bash
 console data:import product-list-category
@@ -627,7 +627,7 @@ pl-007,177_25913296
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -660,7 +660,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-3. Run the following console command to import data:
+3. Import data:
 
 ```bash
 console data:import product-list-product-concrete

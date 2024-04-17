@@ -11,9 +11,9 @@ Install the required features:
 | Merchant | {{page.version}} |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-contracts: "{{page.version}}" --update-with-dependencies
@@ -21,7 +21,7 @@ composer require spryker-feature/merchant-contracts: "{{page.version}}" --update
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -34,7 +34,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -43,7 +43,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE |
 | --- | --- |
@@ -54,7 +54,7 @@ Make sure that the following changes by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -103,8 +103,8 @@ mr-011,restrictions-merchant,Sales,Sales;Sales-under-400
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 |---|---|---|---|---|
 |  merchant_relation_key | optional | string | mr-002 | A reference used for the merchant relationship data import. |
-|  merchant_key | mandatory | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |
-|  company_business_unit_owner_key | mandatory | string | test-business-unit-1 | A reference used to define a Company Business Unit of the contract (relationship) between it and a Merchant. |
+|  merchant_key | ✓ | string | kudu-merchant-1 | A reference used to define a Merchant of the contract (relationship) between him and the company business unit. |
+|  company_business_unit_owner_key | ✓ | string | test-business-unit-1 | A reference used to define a Company Business Unit of the contract (relationship) between it and a Merchant. |
 |  company_business_unit_assignee_keys | optional | string | test-business-unit-1;test-business-unit-2 | A reference to the assigned business units, on which this contract is applied. |
 
 Register the following plugin to enable data import:
@@ -137,7 +137,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-relationship

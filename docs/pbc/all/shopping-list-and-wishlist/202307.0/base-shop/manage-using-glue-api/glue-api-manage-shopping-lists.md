@@ -5,10 +5,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-shopping-lists
 originalArticleId: 23652c0f-92b4-45c1-9053-905389353411
 redirect_from:
-  - /2021080/docs/managing-shopping-lists
-  - /2021080/docs/en/managing-shopping-lists
-  - /docs/managing-shopping-lists
-  - /docs/en/managing-shopping-lists
   - /docs/scos/dev/glue-api-guides/202307.0/managing-shopping-lists/managing-shopping-lists.html
   - /docs/pbc/all/shopping-list-and-wishlist/202307.0/manage-using-glue-api/manage-shopping-lists-via-glue-api.html
 related:
@@ -856,4 +852,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -1,5 +1,5 @@
 
-This document describes how to integrate the Merchant Portal - Marketplace Product + Inventory Management feature into a Spryker project.
+This document describes how to install the Merchant Portal - Marketplace Product + Inventory Management feature.
 
 ## Install feature core
 
@@ -9,14 +9,14 @@ Follow the steps below to install the Merchant Portal - Marketplace Product + In
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |-|-|-|
-| Merchant Portal Marketplace Product | master | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
-| Marketplace Inventory Management | master | [Marketplace Inventory Management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html)  |
+| Merchant Portal Marketplace Product | master | [Install the Merchant Portal - Marketplace Product feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Marketplace Inventory Management | master | [Install the Marketplace Inventory Management feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-inventory-management-feature.html)  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/availability-merchant-portal-gui:"^1.0.0" --update-with-dependencies

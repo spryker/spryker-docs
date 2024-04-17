@@ -130,3 +130,7 @@ Stripe,Pay Online with Stripe,en_US
 ```bash
 console data:import glossary
 ```
+
+## Retrieving & using payment details from Stripe
+
+Details about how to use payment details such as the payment reference on your project are provided [here](https://docs.spryker.com/docs/pbc/all/payment-service-provider/202311.0/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html#configure-payment-details-to-be-retrieved)

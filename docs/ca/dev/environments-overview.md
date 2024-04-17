@@ -25,10 +25,12 @@ We offer environments that serve different purposes. These environments are non-
 A Dev environment is a non-production environment that is usually used to test code that just left your development team, or is used in the development process directly through continuous deployment. It is not designed to handle load tests and large datasets. The development environment does not provide autoscaling and and can only be scaled up upon request.
 
 ### Staging (STAGE)
-This environment is a non production environment that is usually used to host a snapshot of the Dev environment, or a stable version of your code that is deployed to production eventually. You can use your staging environment to do testing to see how your code behaves in a production environment. However, staging is not of the same size as production, and a subset of data and expected traffic must be considered while running the test. When demoing your shop, this environment is used regularly. The staging environment provides limited autoscaling capabilities and can only be scaled up upon request.
+
+This environment is a non-production environment that is usually used to host a snapshot of the Dev environment, or a stable version of your code that is deployed to production eventually. You can use your staging environment to do testing to see how your code behaves in a production environment. However, staging is not of the same size as production, and a subset of data and expected traffic must be considered while running tests. This environment is regularly used for demos. The staging environment provides limited autoscaling capabilities and can only be scaled up upon request.
 
 ### Production-Like (PROD-LIKE)
-Set up exactly like a PROD Environment. It is intended to carry out temporary load testing and other connected activities in order to ensure that those activities are performed in an Environment that behaves exactly like the PROD Environment but is only available for a short time period to perform the necessary test.
+
+This environment is set up exactly like a PROD environment. It's designed to carry out temporary load testing and related activities in an environment similar to PROD. This makes deployments to PROD more predictable and prevents issues. PROD-LIKE behaves exactly like PROD, but it's only available for a short time period to perform the necessary tests.
 
 ### Production (PROD)
 

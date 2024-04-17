@@ -14,7 +14,7 @@ Install the required features:
 | Prices | {{page.version}} |
 | Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 Run the following command to install the required modules:
 
 ```bash
@@ -316,15 +316,15 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
-Run the following console command to import data:
+Import data:
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_price_product_merchant_relationship` table.
+Make sure that, in the database, the configured data has been added to the `spy_price_product_merchant_relationship` table.
 
 {% endinfo_block %}
 

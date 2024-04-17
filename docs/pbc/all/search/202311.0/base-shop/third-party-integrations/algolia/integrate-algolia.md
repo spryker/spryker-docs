@@ -20,8 +20,6 @@ Before integrating Algolia, ensure the following prerequisites are met:
 - The Algolia app catalog page lists specific packages that must be installed or upgraded before you can use the Algolia app. To check the list of the necessary packages, in the Back Office, go to **Apps**-> **Algolia**.
 ![list-of-algolia-modules](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/algolia/integrate-algolia/list-of-algolia-modules.png)
 
-Make sure that your installation meets these requirements.
-
 ## Integrate Algolia
 
 To integrate Algolia, follow these steps.
@@ -140,7 +138,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -152,7 +150,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new SuggestionSearchHttpQueryPlugin(),
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -164,7 +162,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @return array<string, array<\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface>>
      */
@@ -180,7 +178,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             ],
         ];
     }
-    
+
     /**
      * @phpstan-return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface>
      *
@@ -422,7 +420,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 #### Adjust Product configuration in `Zed`
 
-Because of Algolia product search index syncronization is triggerd by internal Spryker events, it's required to provide a list of events for enabling product data syncronization.
+Because Algolia product search index synchronization is triggered by internal Spryker events, it's required to provide a list of events for enabling product data synchronization.
 Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 ```php
@@ -430,7 +428,6 @@ Add the following code to `src/Pyz/Zed/Product/ProductConfig.php`:
 
 use Spryker\Shared\ProductBundleStorage\ProductBundleStorageConfig;
 use Spryker\Zed\PriceProduct\Dependency\PriceProductEvents;
-use Spryker\Zed\Product\Dependency\ProductEvents;
 use Spryker\Zed\Product\ProductConfig as SprykerProductConfig;
 use Spryker\Zed\ProductCategory\Dependency\ProductCategoryEvents;
 use Spryker\Zed\ProductImage\Dependency\ProductImageEvents;
@@ -449,13 +446,27 @@ class ProductConfig extends SprykerProductConfig
      */
     public function getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(): array
     {
-        return [
-            ProductEvents::PRODUCT_ABSTRACT_PUBLISH,
+        return array_merge(parent::getProductAbstractUpdateMessageBrokerPublisherSubscribedEvents(), [
             ProductCategoryEvents::PRODUCT_CATEGORY_PUBLISH,
-            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_ABSTRACT_PUBLISH,
+            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_CREATE,
+            ProductCategoryEvents::ENTITY_SPY_PRODUCT_CATEGORY_DELETE,
+
+            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_CREATE,
+            ProductLabelEvents::ENTITY_SPY_PRODUCT_LABEL_PRODUCT_ABSTRACT_DELETE,
+
             PriceProductEvents::PRICE_ABSTRACT_PUBLISH,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
+
             ProductReviewEvents::PRODUCT_ABSTRACT_REVIEW_PUBLISH,
-        ];
+            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_CREATE,
+            ProductReviewEvents::ENTITY_SPY_PRODUCT_REVIEW_UPDATE,
+
+            ProductImageEvents::PRODUCT_IMAGE_PRODUCT_ABSTRACT_PUBLISH,
+
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
+        ]);
     }
 
     /**
@@ -465,13 +476,24 @@ class ProductConfig extends SprykerProductConfig
      */
     public function getProductUpdateMessageBrokerPublisherSubscribedEvents(): array
     {
-        return [
-            ProductEvents::ENTITY_SPY_PRODUCT_UPDATE,
-            ProductEvents::PRODUCT_CONCRETE_UPDATE,
-            ProductEvents::PRODUCT_CONCRETE_PUBLISH,
+        return array_merge(parent::getProductUpdateMessageBrokerPublisherSubscribedEvents(), [
             ProductBundleStorageConfig::PRODUCT_BUNDLE_PUBLISH,
+            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_CREATE,
+            ProductBundleStorageConfig::ENTITY_SPY_PRODUCT_BUNDLE_UPDATE,
+
             ProductImageEvents::PRODUCT_IMAGE_PRODUCT_CONCRETE_PUBLISH,
-        ];
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_UPDATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_CREATE,
+            ProductImageEvents::ENTITY_SPY_PRODUCT_IMAGE_SET_TO_PRODUCT_IMAGE_UPDATE,
+
+            PriceProductEvents::PRICE_CONCRETE_PUBLISH,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_CREATE,
+            PriceProductEvents::ENTITY_SPY_PRICE_PRODUCT_UPDATE,
+
+            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_CREATE,
+            ProductSearchEvents::ENTITY_SPY_PRODUCT_SEARCH_UPDATE,
+        ]);
     }
 
     //...
@@ -480,14 +502,17 @@ class ProductConfig extends SprykerProductConfig
 
 {% info_block warningBox "Warning" %}
 
-If your project has project-speciific functionality where abstract or concrete products are created, updated or deleted, add the necessary events to the list for when you need to send updated data to Algolia.
+If your project has project-specific functionality where abstract or concrete products are created, updated, or deleted, add the necessary events to the lists from the prior methods when you need to send updated data to Algolia.
 
 Examples of such functionality include:
 - A custom functionality in the Back Office
 - Custom data import
 - Integration with some middleware when product or product-related data is updated in Spryker
 
-Keep int mind, that to trigger custom events in Spryker you need to use `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` methods.
+To trigger custom events in Spryker, use the `EventFacade::trigger('event-name', $payload)` or `EventFacade::triggerBulk('event-name', $payloads)` method. Also, you can use the existing events:
+
+ - For one product: `ProductEvents::PRODUCT_CONCRETE_UPDATE`
+ - For multiple products assigned to one abstract product: `ProductEvents::PRODUCT_ABSTRACT_UPDATE`
 
 {% endinfo_block %}
 
@@ -589,6 +614,8 @@ use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteCreatedMes
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteDeletedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteExportedMessageBrokerPublisherPlugin;
 use Spryker\Zed\Product\Communication\Plugin\Publisher\ProductConcreteUpdatedMessageBrokerPublisherPlugin;
+use Spryker\Zed\ProductCategory\Communication\Plugin\Publisher\ProductCategoryProductUpdatedEventTriggerPlugin;
+use Spryker\Zed\ProductLabel\Communication\Plugin\Publisher\ProductLabelProductUpdatedEventTriggerPlugin;
 
 //...
 
@@ -603,14 +630,14 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return array_merge(
             //...
-            $this->getProductExportPlugins(),
+            $this->getProductMessageBrokerPlugins(),
         );
     }
 
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
-    protected function getProductExportPlugins(): array
+    protected function getProductMessageBrokerPlugins(): array
     {
         return [
             new ProductConcreteExportedMessageBrokerPublisherPlugin(),
@@ -618,6 +645,8 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             new ProductConcreteUpdatedMessageBrokerPublisherPlugin(),
             new ProductConcreteDeletedMessageBrokerPublisherPlugin(),
             new ProductAbstractUpdatedMessageBrokerPublisherPlugin(),
+            new ProductCategoryProductUpdatedEventTriggerPlugin(),
+            new ProductLabelProductUpdatedEventTriggerPlugin(),
         ];
     }
 

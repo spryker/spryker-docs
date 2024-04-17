@@ -811,12 +811,18 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to Angular 17
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+      - title: Upgrade to PHP 8.1
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
       - title: Upgrade to Symfony 5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
       - title: Upgrade to Symfony 6
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
       - title: Upgrade to Webpack v5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+      - title: Upgrade to Stylelint 16 and css-loader 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
       - title: Upgrade Node.js to v18 and npm to v9
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
       - title: Migrate from TSLint to ESLint
@@ -1059,6 +1065,8 @@ entries:
       url: /docs/dg/dev/architecture/conceptual-overview.html
     - title: Modules and application layers
       url: /docs/dg/dev/architecture/modules-and-application-layers.html
+    - title: Architectural Convention Reference
+      url: /docs/dg/dev/architecture/architectural-convention-reference.html
     - title: Module API
       url: /docs/dg/dev/architecture/module-api/module-api.html
       nested:
@@ -1284,6 +1292,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
       - title: Composer version 2 compatibility issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
+      - title: Could not resolve host zed.calls.are.forbidden.from.zed
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/could-not-resolve-host-zed-calls-are-forbidden-from-zed.html        
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
       - title: PHPStan memory issues
@@ -1298,7 +1308,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
       - title: Error response from daemon - OCI runtime create failed - .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
-
+      - title: Prices filter and sorting doesn't work on Frontend
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/prices-filter-and-sorting-does-t-work-on-frontend.html
       - title: Router generates absolute URL with localhost
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/router-generates-absolute-url-with-localhost.html
       - title: No data on the Storefront
@@ -1403,9 +1414,10 @@ entries:
         include_versions:
         - "202212.0"
       - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-api-resolve-search-engine-friendly-urls.html
+        url: /docs/dg/dev/glue-api/202212.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
         include_versions:
         - "202212.0"
+        - "202307.0"
       - title: "Marketplace: Resolve search engine friendly URLs"
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors
@@ -1516,14 +1528,14 @@ entries:
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
 
   - title: App Composition Platform
-    url: /docs/dg/dev/acp/acp-overview.html
+    url: /docs/dg/dev/acp/app-composition-platform.html
     nested:
       - title: ACP security assessment
         url: /docs/dg/dev/acp/aop-security-assessment.html
       - title: ACP security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
-      - title: Install ACP catalog
-        url: /docs/dg/dev/acp/app-composition-platform-installation.html
+      - title: SCCOS dependencies required for the ACP
+        url: /docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html
       - title: Receive ACP messages in SCCOS
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
@@ -1572,3 +1584,5 @@ entries:
     url: /docs/dg/dev/code-generator.html
   - title: Example modules
     url: /docs/dg/dev/example-modules.html
+  - title: Supported versions of PHP
+    url: /docs/dg/dev/supported-versions-of-php.html

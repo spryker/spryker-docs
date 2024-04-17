@@ -112,7 +112,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 
 {% info_block infoBox %}
 
-By changing `isSynchronizationEnabled` to false, you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
+1. By changing `isSynchronizationEnabled` to false, you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
 
 **spy_product_page_search.schema.xml**
 
@@ -131,7 +131,7 @@ By changing `isSynchronizationEnabled` to false, you disable the synchronization
 </database>
 ```
 
-In the case of using the Health check module functionality for publish and sync, the next files must be created:
+2. If you are using the health check module functionality for publish and sync, create the following files:
 
 **src/Pyz/Zed/PublishAndSynchronizeHealthCheckSearch/Persistence/Propel/Schema/spy_publish_and_synchronize_health_check_search.schema.xml**
 
@@ -311,16 +311,13 @@ To use MySQL or MariaDB, replace `Spryker\Client\StorageDatabase\Plugin\PostgreS
 
 {% endinfo_block %}
 
-## Remove storage queues initialization
+## Optional: Remove storage queues initialization
 
-{% info_block infoBox %}
+Removing the initialization of storage queues improves the speed of message processing because workers don't spend time checking queues that are always empty.
 
-This step is not mandatory for feature enablement, but it will improve the speed of message processing, as workers will not spend time checking queues that are always empty.
+The latest versions of Spryker define separate queues for each search and storage message processing group. Because synchronization behavior for storage was disabled, storage-related queues aren't needed.
 
-{% endinfo_block %}
-
-The latest versions of Spryker define separate queues for each search and storage message processing group. As synchronization behavior for storage was disabled, there is no need for storage-related queues. 
-To remove them, all `_SYNC_STORAGE_QUEUE`(except `PublishAndSynchronizeHealthCheckStorageConfig::SYNC_STORAGE_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK`) constant must be removed from `\Pyz\Client\RabbitMq\RabbitMqConfig::getSynchronizationQueueConfiguration`. Examples of constants for removal in the next code snippet.
+To remove them, in `\Pyz\Client\RabbitMq\RabbitMqConfig::getSynchronizationQueueConfiguration`, remove all `_SYNC_STORAGE_QUEUE` constats except for `PublishAndSynchronizeHealthCheckStorageConfig::SYNC_STORAGE_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK`. Examples of constants to remove:
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 

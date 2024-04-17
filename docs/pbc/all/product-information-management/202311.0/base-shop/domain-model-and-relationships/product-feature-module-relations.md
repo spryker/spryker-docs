@@ -5,6 +5,7 @@ description: The Product feature lets you create products, manage their characte
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/features/202311.0/product-feature-overview/product-feature-overview.html
+- /docs/pbc/all/product-information-management/202204.0/base-shop/domain-model-and-relationships/product-feature-module-relations.html
 ---
 
 The following diagram shows the relations between abstract products and product variants on the Storefront:

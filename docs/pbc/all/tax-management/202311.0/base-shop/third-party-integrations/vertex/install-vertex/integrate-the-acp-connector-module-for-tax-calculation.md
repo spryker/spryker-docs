@@ -19,37 +19,38 @@ To integrate the connector module for the Vertex app, follow these steps.
 Add the following config to `config/Shared/config_default.php`:
 
 ```php
-// ...
-
 use Generated\Shared\Transfer\ConfigureTaxAppTransfer;
 use Generated\Shared\Transfer\DeleteTaxAppTransfer;
 use Generated\Shared\Transfer\SubmitPaymentTaxInvoiceTransfer;
+use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\TaxApp\TaxAppConstants;
 use Spryker\Zed\OauthAuth0\OauthAuth0Config;
+use Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
-// ...
+//...
+$config[TaxAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
-    // ...
+    //...
     ConfigureTaxAppTransfer::class => 'tax-commands',
     DeleteTaxAppTransfer::class => 'tax-commands',
     SubmitPaymentTaxInvoiceTransfer::class => 'payment-tax-invoice-commands',
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
-    // ...
-
-    'tax-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    //...
+    'tax-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
-    // ...
-
-    'payment-tax-invoice-commands' => 'http',
+$config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
+    //...
+    'payment-tax-invoice-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-// ...
-
+// ----------------------------------------------------------------------------
+// ------------------------------ OAUTH ---------------------------------------
+// ----------------------------------------------------------------------------
+//...
 $config[TaxAppConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDER_NAME;
 $config[TaxAppConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
@@ -60,13 +61,13 @@ $config[TaxAppConstants::OAUTH_OPTION_AUDIENCE] = 'aop-app';
 Update `src/Pyz/Zed/Calculation/CalculationDependencyProvider.php` as follows:
 
 ```php
-// ...
+//...
 
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\ItemDiscountAmountFullAggregatorPlugin;
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceToPayAggregatorPlugin;
 use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
-// ...
+//...
 
     /**
      * @param \Spryker\Zed\Kernel\Container $container
@@ -77,7 +78,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
     {
         /** @var array<\Spryker\Zed\Calculation\Dependency\Plugin\CalculationPluginInterface> $pluginStack */
         $pluginStack = [
-            // ...
+            //...
 
             # Suggested plugins order is shown.
 
@@ -89,7 +90,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
             new PriceToPayAggregatorPlugin(),
 
-            // ...
+            //...
         ];
 
         return $pluginStack;
@@ -103,7 +104,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
     protected function getOrderCalculatorPluginStack(Container $container): array
     {
         return [
-            // ...
+            //...
 
             # Suggested plugins order is shown.
 
@@ -115,11 +116,11 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Calculation\TaxAppCalculationPlugin;
 
             new PriceToPayAggregatorPlugin(),
 
-            // ...
+            //...
         ];
     }
 
-// ...
+//...
 ```
 
 {% info_block infoBox "Updating from TaxApp module version <=0.2.3" %}
@@ -133,7 +134,7 @@ Previously, we recommended to disable the default tax calculation plugins. This 
 Create or update `src/Pyz/Zed/TaxApp/TaxAppDependencyProvider.php` as follows:
 
 ```php
-// ...
+//...
 
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\ItemTaxAmountFullAggregatorPlugin;
 use Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceToPayAggregatorPlugin;
@@ -141,7 +142,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxAmountAfterCancellationCa
 use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxAmountCalculatorPlugin;
 use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlugin;
 
-// ...
+//...
 
     /**
      * {@inheritDoc}
@@ -177,7 +178,7 @@ use Spryker\Zed\Tax\Communication\Plugin\Calculator\TaxRateAverageAggregatorPlug
         ];
     }
     
-// ...
+//...
 ```
 
 In general, `getFallbackQuoteCalculationPlugins()` and `getFallbackOrderCalculationPlugins()` methods should contain the tax calculation plugins, which are replaced by `TaxAppCalculationPlugin` in `\Pyz\Zed\Calculation\CalculationDependencyProvider`.
@@ -217,7 +218,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            // ...
+            //...
 
             # This widget is replacing Spryker default tax display in cart summary page with text stating that tax amount will be calculated during checkout process.
             CartSummaryHideTaxAmountWidget::class,
@@ -263,7 +264,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     public function getMessageHandlerPlugins(): array
     {
         return [
-            // ...
+            //...
 
             # This plugin is handling messages sent from Vertex app to SCCOS.
             new TaxAppMessageHandlerPlugin(),
@@ -273,7 +274,33 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 
 ```
 
-### 5. Optional: Sending tax invoices to Vertex and handling refunds
+### 5. Configure channels in `MessageBroker` configuration
+
+Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+
+```php
+namespace Pyz\Zed\MessageBroker;
+
+use Spryker\Zed\MessageBroker\MessageBrokerConfig as SprykerMessageBrokerConfig;
+
+class MessageBrokerConfig extends SprykerMessageBrokerConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getDefaultWorkerChannels(): array
+    {
+        return [
+            //...
+            'tax-commands',
+        ];
+    }
+
+    //...
+}
+```
+
+### 6. Optional: Sending tax invoices to Vertex and handling refunds
 
 Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example:
 
@@ -341,12 +368,12 @@ Configure payment `config/Zed/oms/{your_payment_oms}.xml`as in the following exa
 Add the config to `src/Pyz/Zed/Oms/OmsDependencyProvider.php`:
 
 ```php
-// ...
+//...
 
 use Spryker\Zed\TaxApp\Communication\Plugin\Oms\Command\SubmitPaymentTaxInvoicePlugin;
 use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin;
 
-// ...
+//...
 
     # This configuration is necessary for Invoice functionality
     /**
@@ -358,11 +385,11 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
     {
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
 
-             // ...
+             //...
 
              $commandCollection->add(new SubmitPaymentTaxInvoicePlugin(), 'TaxApp/SubmitPaymentTaxInvoice');
 
-             // ...
+             //...
 
              return $commandCollection;
         });
@@ -370,7 +397,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
         return $container;
     }
     
-// ...
+//...
     
     # This configuration is necessary for Refund functionality
     /**
@@ -383,7 +410,7 @@ use Spryker\Zed\TaxApp\Communication\Plugin\Oms\OrderRefundedEventListenerPlugin
         ];
     }
     
-// ...
+//...
 ```
 
 This configuration of `getOmsEventTriggeredListenerPlugins` method is required to ensure that the correct tax amount will be used during the refund process.

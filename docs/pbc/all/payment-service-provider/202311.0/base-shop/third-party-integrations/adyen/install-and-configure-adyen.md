@@ -8,6 +8,7 @@ originalArticleId: 2966816e-71e5-4460-8366-ce775e0712a9
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/adyen/installing-and-configuring-adyen.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/adyen/install-and-configure-adyen.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/adyen/installing-and-configuring-adyen.html
 related:
   - title: Integrating Adyen
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/adyen/integrate-adyen.html
@@ -85,9 +86,9 @@ The table below describes all general configuration keys and their values.
 | `AdyenApiConstants::TECHNICAL_CANCEL_ACTION_URL` | string | URL for the technical cancellation API call. |
 | `AdyenApiConstants::ADJUST_AUTHORIZATION_ACTION_URL` | string | URL for the API call to adjust the authorized amount. |
 
-## Specific Configuration
+## Specific configuration
 
-Also, you have to add payment methods to the State Machine (OMS), Domain Whitelist and Session Frontend configuration:
+1. Also, you need to add payment methods to the State Machine (OMS), Domain Whitelist, and Session Frontend configuration:
 
 ```php
   $config[KernelConstants::DOMAIN_WHITELIST] = array_merge($trustedHosts, [
@@ -129,6 +130,15 @@ Also, you have to add payment methods to the State Machine (OMS), Domain Whiteli
  AdyenConfig::ADYEN_WE_CHAT_PAY => 'AdyenWeChatPay01',
  ];
  ```
+
+2. Based on the Adyen API version, you need to configure Session Frontend:
+```php
+ // >>> SESSION FRONTEND
+ ...
+ $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_LAX; // Checkout API v67 and later (https://docs.adyen.com/online-payments/3d-secure/redirect-3ds2/web-drop-in/#handle-the-redirect)
+ $config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_NONE; // Checkout API v66 and earlier. (https://docs.adyen.com/online-payments/3d-secure/redirect-3ds2/web-drop-in/#handle-the-redirect)
+ ...
+```
 
 ## Notifications
 

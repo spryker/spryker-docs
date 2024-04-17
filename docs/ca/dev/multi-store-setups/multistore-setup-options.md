@@ -2,6 +2,7 @@
 title: Multi-store setup options
 description: Learn about all the setup options you have for a multi-store environment.
 template: howto-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multistore-setup-options.html
   - /docs/scos/user/introduction-to-the-spryker-commerce-os/multiple-stores/multi-store-setup.html
@@ -72,7 +73,7 @@ While the search index and key-value storages are shared resources, you can have
 - Centralized third-party integrations.
 
 This is a standard Spryker setup, best suited for the following use cases:
-- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](https://docs.spryker.com/docs/scos/dev/architecture/code-buckets.html) to achieve store-specific business logic.
+- Your multi-shop system mostly uses the same business logic. Any differences are insignificant and can be covered within the code. Any updates to the business logic apply to all stores. If necessary, you can use, you can use [code buckets](/docs/dg/dev/architecture/code-buckets.html) to achieve store-specific business logic.
 - Products, customers, orders, etc., are stored in the same database, making collaborative management across all stores simpler.
 
 On the infrastructure level, applications can't be scaled or deployed independently since all cloud resources are shared. Here are some other infrastructure-related points to keep in mind:
@@ -247,5 +248,5 @@ If you anticipate a high load, it's essential to consult and obtain guidance fro
 
 ## Next steps
 
-- [Implement a new store for your multi-store environment](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
+- [Implement a new store for your multi-store environment](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html)
 - [Check your and Spryker's tasks when setting up a new store](/docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html)

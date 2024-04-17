@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/styla
   - /docs/scos/user/technology-partners/202311.0/content-management/styla.html
   - /docs/pbc/all/content-management-system/202311.0/third-party-integrations/styla.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/third-party-integrations/styla.html
 ---
 
 ## Partner Information

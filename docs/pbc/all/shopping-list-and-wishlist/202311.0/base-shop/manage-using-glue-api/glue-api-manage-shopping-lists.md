@@ -7,6 +7,7 @@ originalArticleId: 23652c0f-92b4-45c1-9053-905389353411
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-shopping-lists/managing-shopping-lists.html
   - /docs/pbc/all/shopping-list-and-wishlist/202311.0/manage-using-glue-api/manage-shopping-lists-via-glue-api.html
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
       link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html
@@ -855,4 +856,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1503 | Specified shopping list is not found. |
 | 1506 | Shopping list with given name already exists. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

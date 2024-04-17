@@ -2,6 +2,7 @@
 title: Create GUI modules
 description: This articles provides details how to create a new GUI module
 template: howto-guide-template
+last_updated: Aug 23, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-create-gui-module.html
 related:

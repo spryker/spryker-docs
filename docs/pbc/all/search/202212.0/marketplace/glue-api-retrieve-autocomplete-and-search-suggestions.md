@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve autocomplete and search suggestions"
 description: This document provides information about which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
+last_updated: Jul 21, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202212.0/retrieving-autocomplete-and-search-suggestions.html
 related:
@@ -1802,7 +1803,7 @@ To retrieve a search suggestion, send the request:
 
 {% info_block infoBox "SEO-friendly URLs" %}
 
-The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information about how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/resolving-search-engine-friendly-urls.html).
+The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information about how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/resolving-search-engine-friendly-urls.html).
 
 {% endinfo_block %}
 
@@ -1812,4 +1813,4 @@ Although CMS pages also expose the `url` parameter, resolving of CMS page SEF UR
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

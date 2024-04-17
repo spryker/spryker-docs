@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
   - /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+  - /docs/pbc/all/price-management/202204.0/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html
 ---
 
 This document describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module.

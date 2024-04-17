@@ -2,6 +2,7 @@
 title: Data Exchange FAQ
 description: 
 template: concept-topic-template
+last_updated: Oct 18, 2023
 ---
 ## Spryker Middleware powered by Alumio
 

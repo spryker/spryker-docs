@@ -14,6 +14,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/configurable-product-feature-overview/configurable-product-feature-overview.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
   - /docs/pbc/all/product-information-management/202311.0/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html
 ---
 
 The *Configurable Product* feature introduces a new type of product, a configurable product, that customers can customize.

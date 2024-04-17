@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-orders.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-orders.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-customers/retrieving-customer-orders.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/retrieving-customer-orders.html
 related:
   - title: Retrieving orders
     link: docs/pbc/all/order-management-system/page.version/base-shop/glue-api-retrieve-orders.html
@@ -133,4 +134,4 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 | 402 | Customer with the specified ID was not found. |
 | 802 | Request is unauthorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

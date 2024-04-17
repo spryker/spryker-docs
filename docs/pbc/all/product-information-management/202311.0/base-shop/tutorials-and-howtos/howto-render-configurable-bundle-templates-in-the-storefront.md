@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/en/howto-rendering-configurable-bundles-in-the-storefront
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
 ---
 
 The configurable bundle functionality is implemented by 3 widgets:

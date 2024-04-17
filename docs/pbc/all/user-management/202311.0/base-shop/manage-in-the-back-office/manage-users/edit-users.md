@@ -1,9 +1,11 @@
 ---
-title: Editing users
+title: Edit users
 description: Learn how to edit users in the Back Office
 template: back-office-user-guide-template
+last_updated: Jan 4, 2024
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/editing-users.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/edit-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html

@@ -6,6 +6,7 @@ template: glue-api-storefront-guide-template
 redirect_from:
   - /docs/pbc/all/discount-management/202311.0/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
   - /docs/pbc/all/discount-management/202311.0/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+  - /docs/pbc/all/discount-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html
 ---
 
 This document describes how to retrieve cart rules, vouchers, and promotional items in carts of registered users. For full information on the endpoint, see [Managing carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html).
@@ -607,4 +608,4 @@ For the attributes of carts of registered users and included resources, see [Ret
 | 115 | Unauthorized cart action. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

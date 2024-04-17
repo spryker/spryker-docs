@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-content-of-emails-via-cms-blocks
   - /docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/scos/user/back-office-user-guides/202311.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
 related:
   - title: Email as a CMS block
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
@@ -62,8 +63,8 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 
 ## Reference information: Create an email CMS block
 
-| ATTRIBUTE  | DESCRIPTION: EMAIL CMS BLOCK |
-| --- | --- | --- |
+| ATTRIBUTE | DESCRIPTION: EMAIL CMS BLOCK |
+| --- | --- |
 | STORE RELATION | Irrelevant. |
 | TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
 | NAME | The name should correspond to the name defined in the email template the block will be assigned to. |

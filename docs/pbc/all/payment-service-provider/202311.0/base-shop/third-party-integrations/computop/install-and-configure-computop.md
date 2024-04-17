@@ -8,6 +8,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/scos/dev/technology-partner-guides/202311.0/payment-partners/computop/installing-and-configuring-computop.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/computop/install-and-configure-computop.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html
 ---
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.
@@ -60,7 +61,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 	...
     'www.computop-paygate.com', // A trusted Computop domain, required for redirects to third-party services.
 ];
-$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = 'none'; // Allows to redirect customers from Computop back to the shop via a `POST` request.
+$config[SessionConstants::YVES_SESSION_COOKIE_SAMESITE] = Cookie::SAMESITE_NONE; // Allows to redirect customers from Computop back to the shop via a `POST` request. (https://developer.computop.com/display/EN/Third-party-cookies+-+Browser+cookies+and+session+handling)
 
 // Credantials
 $config[ComputopApiConstants::MERCHANT_ID] = 'Computop merchant identifier';

@@ -58,7 +58,7 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| STORE RELATION  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in. |
+| STORE RELATION  | Defines the [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) the product will be available in. |
 | SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
 | NAME | Name that will be displayed for the product on the Storefront. |
 | DESCRIPTION | Description that will be displayed for the product on the Storefront. |

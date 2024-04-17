@@ -11,6 +11,7 @@ redirect_from:
   - /docs/category-filter-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/category-filters-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/category-filters-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-category-filters-feature.html
 related:
   - title: Managing Category Filters
     link: docs/pbc/all/search/page.version/base-shop/manage-in-the-back-office/category-filters/assign-and-deassign-filters-from-categories.html

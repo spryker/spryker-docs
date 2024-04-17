@@ -15,9 +15,9 @@ Install the required features:
 | Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html)
 
-###  1) Install the required modules using Composer
+###  1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-opening-hours
@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-opening-hours
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
+Make sure the following modules have been installed: `ModuleExpected DirectoryMerchantOpeningHoursspryker/merchant-opening-hoursMerchantOpeningHoursDataImportspryker/merchant-opening-hours-data-importMerchantOpeningHoursStoragespryker/merchant-opening-hours-storageWeekdaySchedulespryker/weekday-schedule`
 
 {% endinfo_block %}
 
@@ -551,7 +551,7 @@ Install the required features:
 
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 If installed before, not needed.
 
@@ -632,7 +632,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the spy_glossary table.
+Make sure that, in the database, the configured data has been added to the spy_glossary table.
 
 {% endinfo_block %}
 

@@ -2,6 +2,7 @@
 title: Marketplace Product feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/user/features/202307.0/marketplace-product-feature-overview.html
 related:

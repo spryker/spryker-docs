@@ -15,7 +15,16 @@ To disconnect the Algolia app from your store, do the following:
 1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Algolia**.
 3. On the Algolia app details page, next to the **Configure** button, select **<span class="inline-img">![disconnect-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png)</span><span aria-label="and then">></span> Disconnect**.
-4. In the message that appears, click **Disconnect**. This disables the Algolia app for your store, indices will not be deleted from Algolia so you can access previously collected data from your Spryker shop.
+4. In the message that appears, click **Disconnect**.
+  This disables the Algolia app for your store.
+
+{% info_block infoBox "Algolia indexes" %}
+
+When disconnecting Algolia, indexes aren't deleted from Algolia, so you can access previously collected data from your Spryker shop.
+
+{% endinfo_block %}
+
+
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

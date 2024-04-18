@@ -137,7 +137,8 @@ task :check_dg do
     /docs\/pbc\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202212\.0\/.+/,
     /docs\/dg\/\w+\/[\w-]+\/202307\.0\/.+/,
-    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/
+    /docs\/dg\/\w+\/[\w-]+\/202404\.0\/.+/,
+    /docs\/dg\/\w+\/[\w-]+\/202407\.0\/.+/    
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

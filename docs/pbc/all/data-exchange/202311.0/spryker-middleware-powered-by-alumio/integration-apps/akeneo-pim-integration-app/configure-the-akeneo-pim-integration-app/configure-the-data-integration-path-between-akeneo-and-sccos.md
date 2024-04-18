@@ -25,6 +25,8 @@ To create the incoming configuration, do the following:
 5. In the *Subscriber* field, select the *HTTP subscriber*. You may also select the *Akeneo subscriber*, however, in this document, we consider the settings for the *HTTP subscriber*.
 6. In the *Request URL*, specify the URL to a specific product or the URL to a list of products. The URL should include just the path after `akeneo.com`, as the base path to the Akeneo environment is already specified in the HTTP client you created. For example, if the actual path to a specific product you want to import from Akeneo is `https://test.cloud.akeneo.com/api/rest/v1/producs/1234567890`, the path to specify in the *Request URL* field is `/api/rest/v1/producs/1234567890`. 
 
+<a name="batch-products-import"></a> 
+
 {% info_block infoBox "Batch products import" %}
 
 If you want to import products in batch, say 100 products from page `https://test.cloud.akeneo.com//api/rest/v1/products`, the path you should specify is `/api/rest/v1/products?limit=100`. If you don't specify the limit value in the URL for batch import, by default, 10 products are imported. If you want to import all the products, do the following:

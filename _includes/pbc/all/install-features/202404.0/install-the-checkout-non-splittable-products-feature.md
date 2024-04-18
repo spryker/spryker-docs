@@ -2,11 +2,7 @@
 
 This document describes how to install the Checkout + Non-splittable Products feature.
 
-## Install feature core
-
-Follow the steps below to install the Checkout + Non-splittable Products feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -53,9 +49,9 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-* Add any product to the cart with quantity ≥ 5 and begin the checkout process.
-* Add product quantity restrictions (Min Qty = 1, Max Qty = 4, Qty Interval = 1) for this product via data import.
-* Proceed with checkout and go to the summary page.
-* Check that you see an error message that the product maximum quantity is exceeded and `Place Order` button is disabled. 
+1. Add any product to the cart with quantity ≥ 5 and begin the checkout process.
+2. Add product quantity restrictions for this product via data import: Min Qty = 1, Max Qty = 4, Qty Interval = 1.
+3. Proceed with checkout and go to the summary page.
+On the summary page, make sure the error about the maximum product quantity being exceeded is displayed. And the `Place Order` button should be disabled. 
 
 {% endinfo_block %}

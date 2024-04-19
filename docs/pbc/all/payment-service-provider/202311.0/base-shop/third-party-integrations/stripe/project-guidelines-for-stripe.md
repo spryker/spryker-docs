@@ -22,7 +22,7 @@ The complete default payment OMS configuration is available at `vendor/spryker/s
 
 The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page. 
+The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page.
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
@@ -103,7 +103,7 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
             ...
         }
     {% endembed %}
-{% endfor %} 
+{% endfor %}
 {% endraw %}       
 ```
 
@@ -130,3 +130,7 @@ Stripe,Pay Online with Stripe,en_US
 ```bash
 console data:import glossary
 ```
+
+## Retrieving and using payment details from Stripe
+
+For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)

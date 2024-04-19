@@ -10,6 +10,10 @@ entries:
     nested:
     - title: System requirements
       url: /docs/dg/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+      - "202311.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
@@ -811,6 +815,8 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to Angular 17
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
       - title: Upgrade to PHP 8.1
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
       - title: Upgrade to Symfony 5
@@ -819,6 +825,8 @@ entries:
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
       - title: Upgrade to Webpack v5
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+      - title: Upgrade to Stylelint 16 and css-loader 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
       - title: Upgrade Node.js to v18 and npm to v9
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
       - title: Migrate from TSLint to ESLint
@@ -1288,6 +1296,8 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/api-request-fails-with-the-exception-session-has-not-been-set.html
       - title: Composer version 2 compatibility issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
+      - title: Could not resolve host zed.calls.are.forbidden.from.zed
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/could-not-resolve-host-zed-calls-are-forbidden-from-zed.html
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
       - title: PHPStan memory issues

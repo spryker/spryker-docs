@@ -94,7 +94,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:
+Make sure the following changes have been applied in the database::
 
 | DATABASE ENTITY                         | TYPE    | EVENT   |
 |-----------------------------------------|---------|---------|

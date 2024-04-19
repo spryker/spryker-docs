@@ -282,6 +282,10 @@ entries:
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-cart-shipment-feature.html
                       - title: Checkout
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
+                      - title: Checkout + Non-splittable Products
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-non-splittable-products-feature.html
+                        include_versions:
+                        - "202404.0"
                       - title: Checkout + Quotation Process
                         url: /docs/pbc/all/cart-and-checkout/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
                       - title: Checkout + Workflow
@@ -1543,35 +1547,24 @@ entries:
                       - title: Create merchant users
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/create-merchant-users.html
                       - title: Edit merchant users
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html    
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users/edit-merchant-users.html
                   - title: Manage merchant relations
                     include_versions:
                       - "202404.0"
                     nested:
                       - title: Create merchant relations
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/create-merchant-relations.html
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/create-merchant-relations.html
                         include_versions:
                         - "202404.0"
                       - title: Edit merchant relations
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/edit-merchant-relations.html
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/edit-merchant-relations.html
                         include_versions:
                         - "202404.0"
                       - title: Manage merchant relation requests
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relation-requests.html
+                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html
                         include_versions:
                         - "202404.0"
-              - title: Manage in the Merchant Portal
-                include_versions:
-                - "202404.0"
-                nested:
-                  - title: Manage merchant relation requests
-                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html
-                    include_versions:
-                    - "202404.0"
-                  - title: Manage merchant relations
-                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
-                    include_versions:
-                    - "202404.0"     
+
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
                 include_versions:
@@ -1591,6 +1584,14 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html
                   - title: Edit merchant profiles
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html
+                  - title: Manage merchant relation requests
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html
+                    include_versions:
+                    - "202404.0"
+                  - title: Manage merchant relations
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
+                    include_versions:
+                    - "202404.0"
 
               - title: Manage using Glue API
                 url: /docs/pbc/all/merchant-management/marketplace/manage-using-glue-api/manage-merchants-using-glue-api.html

@@ -27,7 +27,7 @@ For you to be registered on the App Composition Platform, your project must be h
 
 ## SCCOS dependencies for projects on SCCOS product release 202311.0 or later
 
-If your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can proceed to [Dependency 1: Module updates for ACP](#dependency-1-module-updates-for-acp).
+If your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can proceed to [Next steps after updating your project with required SCCOS dependencies](#next-steps-after-updating-your-project-with-required-sccos-dependencies).
 
 ## SCCOS dependencies for projects on earlier versions 
 SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) require updates.
@@ -44,7 +44,7 @@ To get your project ACP-ready, make sure that your project modules are updated t
 
 #### ACP modules
 
-Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. However, make sure that your Spryker project uses the latest versions of the following modules:
+Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. If you project's version is earlier than 202311.0, make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
 * `spryker/message-broker: ^1.10.0` or later

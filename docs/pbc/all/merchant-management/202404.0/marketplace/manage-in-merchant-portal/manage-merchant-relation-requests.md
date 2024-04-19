@@ -4,13 +4,13 @@ description: Learn how to approve, deny, and process merchant relation requests 
 last_updated: Mar 19, 2024
 template: back-office-user-guide-template
 ---
-This document describes how to process the [merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-b2b-contracts-feature-overview.html)) created by a company user.
+This document describes how to process the [merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-b2b-contracts-feature-overview.html) created by a company user.
 
 ## Approve or reject merchant relation requests
 
 Once a company user creates a merchant relation request, it appears in the Merchant Portal in *B2B Contracts -> Merchant Relation Requests*.
 
-![view-merchant-relation-requests-mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-merchant-portal/manage-merchant-relation-requests/view-merchant-relation-requests-mp.png)
+![view-merchant-relation-requests-mp](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relation-requests/view-merchant-relation-requests-mp.png)
 
 To approve or reject the merchant request, do the following:
 
@@ -28,7 +28,7 @@ If you approved the merchant relation, it appears on the *Merchant relations* pa
 
 You can also manage merchant requests from the Dashboard. Go to the *B2B Contracts* widget and click **Manage Pending Requests**.
 
-![mp-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-merchant-portal/manage-merchant-relation-requests/mp-dashboard.png)
+![mp-dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relation-requests/mp-dashboard.png)
 
 {% endinfo_block %}
 
@@ -41,7 +41,7 @@ For the approved merchant relation requests, you can view the merchant relations
 1. Click **Merchant Relation Requests** and select the approved relation request.
 2. In the top right corner of the form with the request details, click **Merchant Relations.**
 
-![view-merchant-relation-from-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-merchant-portal/manage-merchant-relation-requests/view-merchant-relation-from-request.png)
+![view-merchant-relation-from-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-relations-in-merchant-portal/manage-merchant-relation-requests/view-merchant-relation-from-request.png)
 
 This takes you to the *Merchant Relations* page with the respective merchant relations.
 

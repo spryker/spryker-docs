@@ -112,7 +112,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 
 {% info_block infoBox %}
 
-By changing `isSynchronizationEnabled` to false, you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
+1. By changing `isSynchronizationEnabled` to false, you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
 
 **spy_product_page_search.schema.xml**
 
@@ -128,6 +128,34 @@ By changing `isSynchronizationEnabled` to false, you disable the synchronization
         </behavior>
     </table>
 
+</database>
+```
+
+2. If you are using the health check module functionality for publish and sync, create the following files:
+
+**src/Pyz/Zed/PublishAndSynchronizeHealthCheckSearch/Persistence/Propel/Schema/spy_publish_and_synchronize_health_check_search.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\PublishAndSynchronizeHealthCheckSearch\Persistence" package="src.Orm.Zed.PublishAndSynchronizeHealthCheckSearch.Persistence">
+    <table name="spy_publish_and_synchronize_health_check_search">
+        <behavior name="synchronization">
+            <parameter name="synchronization_enabled" value="true"/>
+        </behavior>
+    </table>
+</database>
+```
+
+**src/Pyz/Zed/PublishAndSynchronizeHealthCheckStorage/Persistence/Propel/Schema/spy_publish_and_synchronize_health_check_storage.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\PublishAndSynchronizeHealthCheckStorage\Persistence" package="src.Orm.Zed.PublishAndSynchronizeHealthCheckStorage.Persistence">
+    <table name="spy_publish_and_synchronize_health_check_storage">
+        <behavior name="synchronization">
+            <parameter name="synchronization_enabled" value="true"/>
+        </behavior>
+    </table>
 </database>
 ```
 
@@ -165,6 +193,8 @@ class StorageConfig extends SprykerStorageConfig
 
 5. Disable cache and concurrent requests for Glue if you have it:
 
+**src/Pyz/Glue/EntityTagsRestApi/EntityTagsRestApiConfig.php**
+
 ```php
 <?php
 
@@ -189,7 +219,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 
 For example, by default (with no mappings) the key `product_concrete:de_de:1` is translated into `spy_product_concrete_storage`. The default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix—`product_concrete` in this case. You can adjust the process of resolving the table name if you need to do so. If, in the preceding example, the data for the key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo`, configure the corresponding mapping instead:
 
-**Pyz\Client\StorageDatabase\StorageDatabaseConfig**
+**src/Pyz/Client/StorageDatabase/StorageDatabaseConfig.php**
 
 ```php
 <?php
@@ -222,7 +252,7 @@ The top-level key here, `product_concrete`, is the resource key prefix. Any tabl
 
 Adjust the Storage module's dependency provider:
 
-**Pyz\Client\StorageDatabase\StorageDatabaseConfig**
+**src/Pyz/Client/Storage/StorageDependencyProvider.php**
 
 ```php
 <?php
@@ -249,7 +279,7 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 
 Out of the box, Spryker can interact with storage databases provided by two vendors: *PostgresSQL* and *MySQL*. To use PostgresSQL as the storage database engine, add the following dependency provider to the project:
 
-**Pyz\Client\StorageDatabase\StorageDatabaseDependencyProvider**
+**src/Pyz/Client/StorageDatabase/StorageDatabaseDependencyProvider.php**
 
 ```php
 <?php
@@ -280,3 +310,59 @@ class StorageDatabaseDependencyProvider extends SprykerStorageDatabaseDependency
 To use MySQL or MariaDB, replace `Spryker\Client\StorageDatabase\Plugin\PostgreSqlStorageReaderProviderPlugin` with `Spryker\Client\StorageDatabase\Plugin\MySqlStorageReaderPlugin`.
 
 {% endinfo_block %}
+
+## Optional: Remove storage queues initialization
+
+Removing the initialization of storage queues improves the speed of message processing because workers don't spend time checking queues that are always empty.
+
+The latest versions of Spryker define separate queues for each search and storage message processing group. Because synchronization behavior for storage was disabled, storage-related queues aren't needed.
+
+To remove them, in `\Pyz\Client\RabbitMq\RabbitMqConfig::getSynchronizationQueueConfiguration`, remove all `_SYNC_STORAGE_QUEUE` constats except for `PublishAndSynchronizeHealthCheckStorageConfig::SYNC_STORAGE_PUBLISH_AND_SYNCHRONIZE_HEALTH_CHECK`. Examples of constants to remove:
+
+**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Client\RabbitMq;
+
+use Spryker\Client\RabbitMq\RabbitMqConfig as SprykerRabbitMqConfig;
+
+class RabbitMqConfig extends SprykerRabbitMqConfig
+{
+    protected function getSynchronizationQueueConfiguration(): array
+    {
+        return [
+            GlossaryStorageConfig::SYNC_STORAGE_TRANSLATION,
+            UrlStorageConstants::URL_SYNC_STORAGE_QUEUE,
+            AvailabilityStorageConstants::AVAILABILITY_SYNC_STORAGE_QUEUE,
+            CustomerAccessStorageConstants::CUSTOMER_ACCESS_SYNC_STORAGE_QUEUE,
+            CustomerStorageConfig::CUSTOMER_INVALIDATED_SYNC_STORAGE_QUEUE,
+            CategoryStorageConstants::CATEGORY_SYNC_STORAGE_QUEUE,
+            ProductStorageConstants::PRODUCT_SYNC_STORAGE_QUEUE,
+            PriceProductStorageConstants::PRICE_SYNC_STORAGE_QUEUE,
+            ProductPackagingUnitStorageConfig::PRODUCT_PACKAGING_UNIT_SYNC_STORAGE_QUEUE,
+            ConfigurableBundleStorageConfig::CONFIGURABLE_BUNDLE_SYNC_STORAGE_QUEUE,
+            CmsStorageConstants::CMS_SYNC_STORAGE_QUEUE,
+            FileManagerStorageConstants::FILE_SYNC_STORAGE_QUEUE,
+            ShoppingListStorageConfig::SHOPPING_LIST_SYNC_STORAGE_QUEUE,
+            CompanyUserStorageConfig::COMPANY_USER_SYNC_STORAGE_QUEUE,
+            ContentStorageConfig::CONTENT_SYNC_STORAGE_QUEUE,
+            TaxProductStorageConfig::PRODUCT_ABSTRACT_TAX_SET_SYNC_STORAGE_QUEUE,
+            TaxStorageConfig::TAX_SET_SYNC_STORAGE_QUEUE,
+            MerchantStorageConfig::MERCHANT_SYNC_STORAGE_QUEUE,
+            MerchantOpeningHoursStorageConfig::MERCHANT_OPENING_HOURS_SYNC_STORAGE_QUEUE,
+            ProductOfferStorageConfig::PRODUCT_OFFER_SYNC_STORAGE_QUEUE,
+            PriceProductOfferStorageConfig::PRICE_PRODUCT_OFFER_OFFER_SYNC_STORAGE_QUEUE,
+            ProductOfferAvailabilityStorageConfig::PRODUCT_OFFER_AVAILABILITY_SYNC_STORAGE_QUEUE,
+            ProductConfigurationStorageConfig::PRODUCT_CONFIGURATION_SYNC_STORAGE_QUEUE,
+            StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE,
+            AssetStorageConfig::ASSET_SYNC_STORAGE_QUEUE,
+            ServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_SERVICE_POINT,
+            ShipmentTypeStorageConfig::QUEUE_NAME_SYNC_STORAGE_SHIPMENT_TYPE,
+            ProductOfferServicePointStorageConfig::QUEUE_NAME_SYNC_STORAGE_PRODUCT_OFFER_SERVICE,
+            ProductOfferShipmentTypeStorageConfig::PRODUCT_OFFER_SHIPMENT_TYPE_SYNC_STORAGE_QUEUE,
+        ];
+    }
+}
+```

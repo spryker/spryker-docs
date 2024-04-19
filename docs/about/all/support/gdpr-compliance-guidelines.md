@@ -19,8 +19,6 @@ In terms of functionality, compliance is supported, for example, through a custo
 
 The following guidelines describe how to make your Spryker projects compliant in the context of Spryker functionality. The guidelines don't replace official legal consulting, which we advise taking for each company. If your project has third-party and own integrations with infrastructure, like database, log files, CRM, or mail providers, you need to oversee GDPR compliance of those connections too.
 
-## General GDPR e-commerce guidelines
-
 |  WHAT TO DO | HOW | WHEN |
 | --- | --- | --- |
 |  Collect only what you need. | <ul><li>Only ask customers for the data necessary for processing a request. Avoid collecting as much as you can without a reason.</li><li> Review your forms, such as registration forms, subscription forms, contact forms, log files, and third-party integrations. Assess if you can justify each piece of information you collect.</li></ul> | During project implementation and before going live. Reassess regularly. |

@@ -32,3 +32,7 @@ This is how the Agent Assist in Merchant Portal feature works in the Merchant Po
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview/agent-merchant-in-merchant-portal.mp4" type="video/mp4">
   </video>
 </figure>
+
+## Related Developer Documents
+
+[Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-the-merchant-portal-agent-assist-feature.html)

@@ -33,8 +33,6 @@ You can also manage merchant requests from the Dashboard. Go to the *B2B Contrac
 {% endinfo_block %}
 
 
-This takes you to *Merchant relations* page with the merchant relation.
-
 ## View merchant relations created from merchant relation requests
 
 For the approved merchant relation requests, you can view the merchant relations created from them. Do the following:

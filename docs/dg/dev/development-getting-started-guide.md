@@ -19,10 +19,10 @@ Spryker Demo Shops are a good starting point for any project. They are shipped w
 
 You can choose from the following options:
 
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html)
-* [Marketplace B2C Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
-* [Marketplace B2B Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
+* [B2C Demo Shop](/docs/about/all/b2c-suite.html)
+* [B2B Demo Shop](/docs/about/all//b2b-suite.html)
+* [Marketplace B2C Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
+* [Marketplace B2B Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
 
 You can run Spryker on MacOS, Linux, and Windows with WSL1 or WSL2. For installation instructions, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
@@ -49,7 +49,7 @@ For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the
 
 A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently. [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies.
 
-To define your strategy when implementing updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
+To define your strategy when implementing updates, learn about our [module and feature release process](/docs/about/all/releases/product-and-code-releases.html).
 
 
 You will use the following commands to manage modules with Composer:

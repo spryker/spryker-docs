@@ -302,7 +302,7 @@ For example, configure `isCreatable: false` for `iso3_code` and send the same re
 ```json
 [
   {
-    "message": "Modification of immutable field `iso3_code` is prohibited.",
+    "message": "Modification of immutable field `countries[0].iso3_code` is prohibited.",
     "status": 400,
     "code": "1304"
   }
@@ -315,7 +315,7 @@ Certain database-specific configurations may result in issues independent of ent
 ```json
 [
     {
-        "message": "Failed to persist the data. Please verify the provided data and try again. Entry is duplicated.",
+        "message": "Failed to persist the data for `countries[0].iso2_code`. Please verify the provided data and try again. Entry is duplicated.",
         "status": 400,
         "code": "1309"
     }
@@ -391,7 +391,7 @@ For example, configure `isCreatable: false` for `iso3_code` and send the same re
 ```json
 [
   {
-    "message": "Modification of immutable field `iso3_code` is prohibited.",
+    "message": "Modification of immutable field `countries[0].iso3_code` is prohibited.",
     "status": 400,
     "code": "1304"
   }
@@ -405,7 +405,7 @@ If `id_country` is not provided, the following is returned:
 ```json
 [
   {
-    "message": "Incomplete Request - missing identifier.",
+    "message": "Incomplete Request - missing identifier for `countries[0]`.",
     "status": 400,
     "code": "1310"
   }
@@ -417,7 +417,7 @@ If `id_country` is not found, the following is returned:
 ```json
 [
   {
-    "message": "The entity could not be found in the database.",
+    "message": "The entity `countries[0]` could not be found in the database.",
     "status": 404,
     "code": "1303"
   }
@@ -508,7 +508,7 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
-### Sending `POST`, `PATCH`б and `PUT` requests with relationships
+### Sending `POST`, `PATCH` and `PUT` requests with relationships
 
 To create or update an entity along with its related entities, you need to include the relationships directly in 
 the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 
@@ -609,16 +609,16 @@ Bellow, you can find a list of error codes that you can receive when sending `GE
 | Error code | Message                                                                                                                                          | Description                                                                                                                                                                                                                                                                                                         |
 | --- |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1301 | Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: `{'data':[{...},{...},..]}` | The request body is not valid. Please review the data format for validity. Ensure that the data is provided in the correct format. An example request body would be: `{'data':[{...data entity...},{...data entity...},...]}`. `data` If the data format is invalid or missing, an error message will be displayed. |
-| 1302 | Failed to persist the data. Please verify the provided data and try again.                                                                       | The data could not be persisted in the database. Please verify the provided data entities and try again.                                                                                                                                                                                                            |
-| 1303 | The entity could not be found in the database.                                                                                                   | The requested entity could not be found in the database for retrieval or update.                                                                                                                                                                                                                                    |
-| 1304 | Modification of immutable field `field` is prohibited.                                                                                           | The field is prohibited from being modified. Check the configuration for this field.                                                                                                                                                                                                                         |
-| 1305 | Invalid data type for field: `field`                                                                                                             | The specified field has an incorrect type. Check the configuration for this field and correct the value.                                                                                                                                                                                                     |
-| 1306 | Invalid data value for field: `field`, row number: `row`. Field rules: `validation rules`.                                                       | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`.                                                                                  |
-| 1307 | The required field must not be empty. Field: `field`                                                                                             | The specified field is required according to the configuration. The field wasn't provided. Check the data you are sending and try again.                                                                                                                                                                    |
+| 1302 | Failed to persist the data for `entity[index].field`. Please verify the provided data and try again.                                                                       | The data could not be persisted in the database. Please verify the provided data entities and try again.                                                                                                                                                                                                            |
+| 1303 | The entity `entity[index]` could not be found in the database.                                                                                                   | The requested entity could not be found in the database for retrieval or update.                                                                                                                                                                                                                                    |
+| 1304 | Modification of immutable field `entity[index].field` is prohibited.                                                                                           | The field is prohibited from being modified. Check the configuration for this field.                                                                                                                                                                                                                         |
+| 1305 | Invalid data type `entity[index]` for field: `field`                                                                                                             | The specified field has an incorrect type. Check the configuration for this field and correct the value.                                                                                                                                                                                                     |
+| 1306 | Invalid data value `entity[index]` for field: `field`. Field rules: `validation rules`.                                                       | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`.                                                                                  |
+| 1307 | The required field must not be empty. Field: `entity[index].field`                                                                                             | The specified field is required according to the configuration. The field wasn't provided. Check the data you are sending and try again.                                                                                                                                                                    |
 | 1308 | Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request.                      | The entity couldn't be found using the provided identifier, and a new identifier cannot be persisted. Update your request accordingly or check configuration for the identifier field.                                                                                                                          |
-| 1309 | Failed to persist the data. Please verify the provided data and try again. Entry is duplicated.                                                  | Failed to persist the data. Verify the provided data and try again. This error may occur if a record with the same information already exists in the database.                                                                                                                                               |
-| 1310 | Incomplete Request - missing identifier.                                                                                                         | The request is incomplete. The identifier is missing. Check the request and try again.                                                                                                                                                                                                                       |
-| 1311       | The provided `field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                          |
-| 1312       | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
-| 1313       | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                        |
-| 1314       | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                       |
+| 1309 | Failed to persist the data `entity[index].field`. Please verify the provided data and try again. Entry is duplicated.                                                  | Failed to persist the data. Verify the provided data and try again. This error may occur if a record with the same information already exists in the database.                                                                                                                                               |
+| 1310 | Incomplete Request - missing identifier for `entity[index]`.                                                                                                         | The request is incomplete. The identifier is missing. Check the request and try again.                                                                                                                                                                                                                       |
+| 1311 | The provided `entity[index].field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                          |
+| 1312 | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
+| 1313 | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                        |
+| 1314 | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                       |

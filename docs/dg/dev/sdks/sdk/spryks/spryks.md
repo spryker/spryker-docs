@@ -93,6 +93,32 @@ We recommend installing it as a development dependency, since changes in the cod
 
 Once SprykGUI is installed, you can navigate to it through the Back Office. There, you can find the list of all the available definitions, and after you have clicked on one of them, the form where you can enter the arguments appears.
 
+### Non-interactive mode
+
+After running `console spryk:dump {SPRYK NAME}`, you get a list of options required for the chosen Spryk:
+```bash
+╰─$ console spryk:dump AddYvesPage
+ List of all "AddYvesPage" options:
+Option           
+controller       
+controllerMethod
+mode             
+module           
+organization     
+theme
+```
+
+Knowing these parameters enables you to run this Spryk in a non-interactive mode:
+```bash
+console spryk:run AddYvesPage --controller=Test --controllerMethod=index --mode=project --module=Test --organization=Pyz --theme=default
+```
+{% info_block infobox %}
+
+Some Spryks have interactive arguments, like interface name, which can't be passed as a command line argument.
+
+{% endinfo_block %}
+
+
 ## Core and Project modes
 
 The difference between the Core and Project modes is the place where your code is generated.

@@ -9,7 +9,7 @@ redirect_from:
 
 When you know that you need to update your project, you need to decide if you want to do updates on the *feature* or the *module* level.
 
-Features are released every several month as part of [Product Releases](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases). Modules updates are released as frequently as several times per day and are part of [Code Releases](/docs/scos/user/intro-to-spryker/spryker-release-process.html#atomic-code-releases).
+Features are released every several month as part of [Product Releases](/docs/about/all/releases/product-and-code-releases.html#product-releases). Modules updates are released as frequently as several times per day and are part of [Code Releases](/docs/about/all/releases/product-and-code-releases.html#atomic-code-releases).
 
 The table below shows when it might be more relevant for you to make updates at the feature level and when at the module level.
 

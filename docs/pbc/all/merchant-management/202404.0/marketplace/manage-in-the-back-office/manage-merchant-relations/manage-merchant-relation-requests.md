@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 last_updated: Mar 26, 2024
 ---
 
-A marketplace operator can view, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](docs\pbc\all\merchant-management\{{page.version}}\marketplace\merchant-b2b-contracts-and-contract-requests-features-overview#initiation-of-the-merchant-relation-by-a-company-user).
+A marketplace operator can view, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview#initiation-of-the-merchant-relation-by-a-company-user).
 
 Once a company user creates a merchant relation request, it appears in *Marketplace -> Merchant Relation Requests*.
 

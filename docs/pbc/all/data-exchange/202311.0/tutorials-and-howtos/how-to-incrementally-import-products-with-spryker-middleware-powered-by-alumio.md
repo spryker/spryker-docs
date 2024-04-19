@@ -5,11 +5,18 @@ last_updated: Apr 18, 2024
 template: howto-guide-template
 ---
 
-This document describes how to make incremental import of products that have recently been updated. Following the described procedure, you can import products updates that are maximum 1 day old.
+This document describes how to import products that have recently been updated. Following the described procedure, you can import only products that have been updated maximum one day ago.
 
 To run the incremental import of products, follow this steps.
 
-## 1. Create an incoming configuration
+## 1. Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS
+
+If you create the new configuration, follow the procedure described in [Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html). If you update the existing configuration, skip this step and go to [3. Create an incoming configuration](#3-create-an-incoming-configuration)
+
+## 2. Configure data mapping between Akeneo and SCCOS
+If you create the new configuration, follow the procedure described in [If you create the new configuration, follow the procedure described in](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html). If you update the existing configuration, skip this step and go to [3. Create an incoming configuration](#3-create-an-incoming-configuration).
+
+## 3. Create an incoming configuration
 
 1. In Spryker Middleware powered by Alumio, go to **Connections -> Incoming** and click the + sign.
 2. In *Name*, enter the name of your configuration. As you are entering the name, the identifier will be populated automatically based on the name.
@@ -30,6 +37,7 @@ First part:
     3. In *Data transformers* -> *Configurations* -> *Key*, enter *lastTimestamp*.
 
     IMAGE
+<a name="step-10"></a>
 Second part:
     1. In *Manage name*, select *Get an entity from storage*. 
     2. In *Storage*, provide the name of the new storage. For example, `[Default] Akeneo to Spryker - Products - update lastTimestamp`.
@@ -54,7 +62,7 @@ Third part:
     6. Leave *Input format*, *Output timezone* and *Input timezone* with the default `Automatic` value. 
 
     IMAGE
-## 2. Create an outgoing connection
+## 4. Create an outgoing connection
 
 For the incremental import to work, you need to update your outgoing connection with an additional entity transformer with two data transformers in it.
 
@@ -75,3 +83,12 @@ To create the transformer, do the following:
 12. Select *String: Cut*.
 13. In *Start*, enter `0`.
 14. In *Length*, enter `19`.
+
+IMAGE
+15. In *Manage name and description*, select `Data, transform using mappers and conditions`. This is the second data transformer in the entity transformer.
+16. In *Data transformers* -> *Manage name*, select `Save entity to storate`.
+17. In *Storage*, select the name of storage you created when establishing the incoming configuration at [step 10](#step-10). In our example, it is `[Default] Akeneo to Spryker - Products - update lastTimestamp`.
+18. In *Storage entity identifier*, enter `lastTimestamp`.
+19. In *Source*, enter `lastTimestamp`.
+
+## 5. Define the route

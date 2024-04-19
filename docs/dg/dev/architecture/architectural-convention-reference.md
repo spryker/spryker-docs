@@ -280,7 +280,7 @@ Used components:
 Client is a lightweight application layer that handles all data access, such as the following:
 - Persistence access: key-value storage (Redis), Search (Elasticsearch), Yves sessions
 - Zed as a data-source (RPC)
-- third-party communication
+- Third-party communication
 
 {% info_block infoBox %}
 
@@ -380,7 +380,7 @@ Used components:
 ## Layers
 
 An application layer can have up to four logical layers with clear purpose and communication rules:
-- Presentation layer: contains frontend assets, like twig templates, JS, or CSS files.
+- Presentation layer: contains frontend assets, like Twig templates, JS, or CSS files.
 - Communication layer: contains controllers, console commands, forms, tables, and plugins.
 - Business layer: contains the business logic of a module.
 - Persistence layer: contains repository, entity manager, simple data mappers, and the schema of entities.
@@ -419,19 +419,17 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ## Components
 
-**Conventions**
+Conventions:
 - The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
 - The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
 - For core module development: The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in the `Kernel` module.<br/>
 
-</details>
 
-**Guidelines**
+Guidelines:
 - The components should be stateless to be deterministic and easy to comprehend.
 - Project development: Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
 - Module development and Core module development: The components are required to be stateless to be deterministic and easy to comprehend.
 
-</details>
 
 ### Controller
 
@@ -457,14 +455,13 @@ An application layer can have up to four logical layers with clear purpose and c
             ├── IndexController.php        
             └── [Name]Controller.php                      
 ```
-**Description**
 
 `Controllers` and `Actions` are application access points for any kind of HTTP communication with end-users or other applications.
 
-Responsibilities of a controller are
-- to adapt the received input data to the underlying layers (syntactical validation, delegation),
-- delegate the processing of the input data,
-- and to adapt the results of processing to the expected output format (eg: add flash messages, set response format, trigger redirect).
+Responsibilities of a controller are as follows:
+- Adapt the received input data to the underlying layers: syntactical validation, delegation.
+- Delegate the processing of the input data.
+- Adapt the results of processing to the expected output format. For example, add flash messages, set a response format, trigger a redirect.
 
 The `Gateway` controller name is reserved for the [Gateway Controller](#gateway-controller).
 
@@ -472,24 +469,22 @@ The `Index` controller name acts as the default controller during request contro
 
 The `index` action name acts as the default action during request action resolution.
 
-**Conventions**
-- `Action` methods are required to be suffixed with `Action` and be `public` in order to be accessible, and straight forward define the entry points of the `Controller`.
-
-<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
-
-- Only `Action` methods can be `public` for simplicity.<br/>
-- `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.<br/>
-- `Action` methods are required to orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.<br/>
-- `Action` methods can not contain any logic directly that is outside the regular responsibilities of a `Controller` (see `description` above).
+Conventions:
+- `Action` methods are required to be suffixed with `Action` and be `public` in order to be accessible. They need to define the entry points of the `Controller` in a straight-forward manner.
+- Module development and Core module development:
+  - Only `Action` methods can be `public` for simplicity.
+  - `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
+  - `Action` methods are required to orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.
+  - `Action` methods can't contain any logic directly that is outside the regular responsibilities of a `Controller`.
 
 </details>
 
-**Guideline**
+Guidelines:
 - `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
 - The inherited `getFactory()` method grants access to the [Factory](#factory).
 - The inherited `getFacade()` or `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
 
-**Example**
+Example:
 ```php
 <?php
 
@@ -545,20 +540,20 @@ class TemplateController extends Spryker\Zed\ConfigurableBundleGui\Communication
         └── [Module]DependencyProvider.php
 ```
 
-**Description**
 
-Injects required dependencies to a module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin).
+Injects required dependencies into the module application layer. Typically, dependencies are [facades](#facade-design-pattern) or [plugins](#plugin).
 
-Dependency injection is orchestrated through a `provide-add-get` structure (see `examples` below).
+Dependency injection is orchestrated through a `provide-add-get` structure. See the following examples.
+
 - The `provide` method is the highest level that holds only `add` calls without any additional logic.
 - The `add` method is the middle level that injects the dependencies into the dependency container using a class constant and a late-binding instantiating closure.
 - The `get` method is the lowest level that sources the dependency.
 
-**Conventions**
-- Setting dependency using the `container::set()` needs to be paired with late-binding closure definition to decouple instantiation.
-- Dependencies that require individual instances per injection need to use `Container::factory()` method additionally to ensure expected behaviour (eg: [Query Objects](#query-object), see `examples` below).
-- `Provide` methods need to call their parent `provide` method to inject the parent level dependencies.
-- Dependencies need to be wired through the target layer corresponding inherited method to be accessible later via the corresponding [Factory](#factory):
+Conventions:
+- Setting a dependency using the `container::set()` needs to be paired with late-binding closure definition to decouple instantiation.
+- Dependencies that require individual instances per injection need to additionally use the `Container::factory()` method to ensure expected behavior. For example, [Query Objects](#query-object). See the following examples.
+- `Provide` methods need to call their parent `provide` method to inject the parent-level dependencies.
+- Dependencies need to be wired through the target layer corresponding to the inherited method to be accessible via the corresponding [Factory](#factory):
 ```php
 public function provideCommunicationLayerDependencies(Container $container)
 public function provideBusinessLayerDependencies(Container $container)
@@ -568,7 +563,7 @@ public function provideBackendDependencies(Container $container)
 public function provideServiceLayerDependencies(Container $container)
 ```
 
-<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
+- Module development and Core module development:
 
 - Only three type of methods can be defined, either `provide`, `get`, or `add`.<br/>
 ```php

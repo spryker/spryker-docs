@@ -47,8 +47,8 @@ Third part:
     IMAGE 
 11. Apply *Then apply transformer*. Populate the fields as follows:
     1. In *Manage name*, select *Value setter*.
-    2. In key, enter *LastTimestamp*.
-    3. In *Value* select *string* and enter the value `-1 day`.
+    2. In *Key*, enter *LastTimestamp*.
+    3. In *Value*, select *string* and enter the placeholder `-1 day`.
     4. In *Mappers*, select *Format: Date*.
     5. In *Mappers* -> *Output for*mat*, enter `Y-m-d H:i:s`.
     6. Leave *Input format*, *Output timezone* and *Input timezone* with the default `Automatic` value. 
@@ -56,7 +56,7 @@ Third part:
     IMAGE
 ## 2. Create an outgoing connection
 
-For the incremental import to work, you need to update your outgoing connection with an additional transformer.
+For the incremental import to work, you need to update your outgoing connection with an additional entity transformer with two data transformers in it.
 
 To create the transformer, do the following:
 
@@ -64,4 +64,14 @@ To create the transformer, do the following:
 2. In *Name*, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
 3. Optional: In Description, add the description of your transformer.
 4. To activate the entity transformer, set the status to Enabled.
-5. In *Settings*, select `Data, transform using mappers and conditions`.
+5. In *Settings*, select `Chain multiple entity transformers`.
+6. In *Manage name and description*, select `Data, transform using mappers and conditions`. This is the first data transformer in the entity transformer.
+6. In *Data transformers* -> *Manage name*, select `Value setter`.
+7. In *Configurations* -> *Key*, select `lastTimestamp*. 
+8. In *Value*, select *string* and enter the placeholder `&{updated}`
+9. In *Mappers*, select `String: Replace`.
+10. In *Search*, enter `T`.
+11. Leave the *Replace* field empty.
+12. Select *String: Cut*.
+13. In *Start*, enter `0`.
+14. In *Length*, enter `19`.

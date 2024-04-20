@@ -12,7 +12,7 @@ redirect_from:
 
 As described in the [App Composition Platform](/docs/dg/dev/acp/acp-overview.html), the App Composition Platform (ACP) registration process includes two steps:
 1. Project update to include SCCOS dependencies
-2. Infrastructure configuration, which is is handled by Spryker.
+2. Infrastructure configuration, which is handled by Spryker.
 
 This document describes how to update your Spryker project with required SCCOS dependencies needed for the ACP.
 

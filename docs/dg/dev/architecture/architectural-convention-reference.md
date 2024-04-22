@@ -28,7 +28,7 @@ Understanding the development scenarios in which Spryker can be used is crucial 
 
 Our guidelines and conventions for each component begin with generic instructions applicable to all development use cases. Following this, you will find specific details to the more specialized versions of development use cases.
 
-### Directive Classification
+### Directive classification
 
 There are two types of directives:
 - **Convention**: These are mandatory requirements that contributors must adhere to enable specific Spryker features and ensure proper application responses.
@@ -422,7 +422,7 @@ An application layer can have up to four logical layers with clear purpose and c
 Conventions:
 - The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
 - The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
-- For core module development: The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in the `Kernel` module.<br/>
+- For core module development: The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in the `Kernel` module.
 
 
 Guidelines:
@@ -565,7 +565,7 @@ public function provideServiceLayerDependencies(Container $container)
 
 - Module development and Core module development:
 
-- Only three type of methods can be defined, either `provide`, `get`, or `add`.<br/>
+- Only three type of methods can be defined, either `provide`, `get`, or `add`.
 ```php
 function provide*Dependencies(Container $container)
 function add[Dependency](Container $container)
@@ -573,14 +573,14 @@ function add[PluginInterfaceName]Plugins(Container $container)
 function get[Dependency](Container $container)
 function get[PluginInterfaceName]Plugins(Container $container)
 ```
-- All class constants are required to be `public` (to decrease conflicts in definition for being a public API class, to allow referring to them from [Factory](#factory)).<br/>
-- `Add`, `provide`, and `get` methods must have `Container $container` as the only argument.<br/>
-- `Provide` methods can only call `add` methods.<br/>
-- `Add` and `get` methods need to be `protected`.<br/>
-- `Add` methods can only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).<br/>
-- [Facades](#facade-design-pattern) are required to be wrapped into a [Bridge](#bridge) to avoid coupling another module.<br/>
-- [Plugins](#plugin) can not be wired on module level.<br/>
-- [Plugin](#plugin) defining `get` methods are required to be tagged with `@api` tag.<br/>
+- All class constants are required to be `public` (to decrease conflicts in definition for being a public API class, to allow referring to them from [Factory](#factory)).
+- `Add`, `provide`, and `get` methods must have `Container $container` as the only argument.
+- `Provide` methods can only call `add` methods.
+- `Add` and `get` methods need to be `protected`.
+- `Add` methods can only introduce one dependency to the `Container` (a plugin-stack is considered one dependency in this respect).
+- [Facades](#facade-design-pattern) are required to be wrapped into a [Bridge](#bridge) to avoid coupling another module.
+- [Plugins](#plugin) can not be wired on module level.
+- [Plugin](#plugin) defining `get` methods are required to be tagged with `@api` tag.
 
 </details>
 
@@ -748,35 +748,36 @@ src
                     └── Abstract[EntityName]Query.php
 ```
 
-**Description**
+#### Description
 
-Active record object which represents a row in a table. `Entities` have getter and setter methods to access the underlying data.
-Each `Entity` has a generated identical [Entity Transfer Object](#transfer-object) which can be used during interaction with other layers.
-Each database table definition results as the creation of an `Entity` by Propel.
+An active record object that represents a row in a table. `Entities` have getter and setter methods to access the underlying data.
+Each `Entity` has a generated identical [Entity Transfer Object](#transfer-object), which can be used during the interaction with other layers.
+Each database table definition results in the creation of an `Entity` by Propel.
 
-**3-tier class hierarchy**: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module abstract class to enable adding functionality from SCOS module level (see `examples` below).
+3-tier class hierarchy: The Propel generated 2-tier `Entity` class hierarchy is injected in the middle with a SCOS module abstract class to enable adding functionality from SCOS module level. Examples follow.
 
-See [Propel Documentation - Active Record Class](https://propelorm.org/documentation/reference/active-record.html).
+See [Active Record Class in the Propel documentation](https://propelorm.org/documentation/reference/active-record.html).
 
-See more details on domains in [Persistence Schema](#persistence-schema).
+For more details on domains, see [Persistence Schema](#persistence-schema).
 
-**Conventions**
+#### Conventions
 - `Entity` classes need to be generated via [Persistence Schema](#persistence-schema).
-- `Entities` can not leak to any [facade](#facade-design-pattern)'s level (as they are heavy, stateful, module specific objects).
-- `Entities` are required to be implemented according to the 3-tier class hierarchy (see in `description` and `examples`) to support extension from Propel and SCOS.
+- `Entities` can't leak to any [facade](#facade-design-pattern)'s level. That's because they are heavy, stateful, module-specific objects.
+- `Entities` must be implemented according to the 3-tier class hierarchy to support extension from Propel and SCOS. For more context, see the description and examples.
 
-<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
+<details>
+  <summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Entities` can be instantiated in the [Persistance Layer](#persistence-layer-responsibilities) only.
+- `Entities` can be instantiated only in the [Persistance Layer](#persistence-layer-responsibilities).
 
 </details>
 
-**Guidelines**
-- A typical use-case is to define `preSave()` or `postSave()` methods in the `Entity` object.
-- It is recommended to define manager classes instead of overloading the `Entity` with complex or context-specific logic.
+#### Guidelines
+- A typical use case is to define `preSave()` or `postSave()` methods in the `Entity` object.
+- We recommend defining manager classes instead of overloading the `Entity` with complex or context-specific logic.
 - `Entities` should not leak outside the module's persistence layer.
 
-**Examples**
+#### Examples
 
 The lowest level class generated by Propel, containing the base Propel functionality.
 ```php
@@ -813,31 +814,32 @@ class SpyConfigurableBundleTemplate extends Spryker\Zed\ConfigurableBundle\Persi
             └── [Module]EntityManager.php
 ```
 
-**Description**
+### Description
 
 Persists [Entities](#entity) by using their internal saving mechanism and/or collaborating with [Query Objects](#query-object).
 The `Entity Manager` can be accessed from the same module's [business layer](#business-layer-responsibilities).
 
-**Conventions**
-- No generic conventions.
+### Conventions
+
+No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Entity manager` `public` methods need to have a functionality describing prefix, such as `create*()`, `delete*()`, `update*()`.<br/>
-- Creating, updating and deleting functions need to be separated by concern even if they use overlapping internal methods.<br/>
-- The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
-- `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.<br/>
-- `Entity manager` methods need to return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).<br/>
--`Entitie manager` needs to utilise [Entities](#entity) and/or [Query Objects](#query-object) for database operations (raw SQL usage is not feasible).<br/>
+- `Entity manager` `public` methods need to have a functionality describing prefix, such as `create*()`, `delete*()`, or `update*()`.
+- Creating, updating, and deleting functions need to be separated by concern, even if they use overlapping internal methods.
+- The `Entity manager` class needs to define and implement an interface that holds the specification of each `public` method.
+- `Entity manager` methods need to receive only [Transfer Objects](#transfer-object) as input parameters.
+- `Entity manager` methods need to return `void` or the saved object(s) as [Transfer Object(s)](#transfer-object).
+-`Entitie manager` needs to use [Entities](#entity) and/or [Query Objects](#query-object) for database operations because raw SQL usage is not feasible.
 
 </details>
 
-**Guidelines**
-- No generic guidelines.
+### Guidelines
+No generic guidelines.
 
-<details><summary markdown='span'>Guidelines for Project Development</summary>
+<details><summary markdown='span'>Guidelines for project development</summary>
 
-- Solutions in `Entity manager` can consider to use raw SQL queries for performance reasons, but this will also remove all Propel ORM benefits (eg: triggering events, etc.), thus it should be used with caution.<br/>
+- Solutions in `Entity manager` can consider to use raw SQL queries for performance reasons, but this also remove all Propel ORM benefits like triggering events. Use with caution.
 
 </details>
 
@@ -862,66 +864,69 @@ The `Entity Manager` can be accessed from the same module's [business layer](#bu
             └── [Module]QueryContainer.php                   
 ```
 
-**Description**
+#### Description
 
 Spryker defines the facade design pattern as the primary entry point for layers following the [standard facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern).
 
-There are currently four components that use the facade design pattern, thus referred as facades:
+There are four components that use the facade design pattern, referred to as facades:
 - The `Facade` is the API of [Business layer](#business-layer-responsibilities).
-- The `Client` is the API of [Client application layer](#client), and acts as the only entry point to the [Client Application](#applications).
-- The `Service` is the API of [Service application layer](#service), and represents the only entry point to the [Service Application](#applications).
-- The `Query Container` is the API of [Persistence layer](#persistence-layer-responsibilities), and represents and entry point to database access. The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of `Query Container` concept.
+- The `Client` is the API of [Client application layer](#client) and acts as the only entry point to the [Client Application](#applications).
+- The `Service` is the API of [Service application layer](#service) and represents the only entry point to the [Service Application](#applications).
+- The `Query Container` is the API of [Persistence layer](#persistence-layer-responsibilities) and represents an entry point to database access. The more advanced and modular [Entity Manager](#entity-manager) and [Repository](#repository) pattern was introduced to counter the problems of cross-module leaks of the `Query Container` concept.
 
-The facades provide functionality for other layers and/or modules. The functionality behind the facade normally accesses other sibling functionality directly and not from the facade (eg: [Models](#model)  call their sibling [Models](#model) as a dependency, rather than through the `facade`).
+The facades provide functionality for other layers and modules. The functionality behind the facade normally accesses other sibling functionality directly and not from the facade. For example, [Models](#model) call their sibling [Models](#model) as a dependency rather than through the `facade`.
 
-**Conventions**
-- All methods need to have [Transfer Objects](#transfer-object) or native types as argument and return value.
+#### Conventions
+- All methods need to have [Transfer Objects](#transfer-object) or native types as an argument and return a value.
 
-<details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
+<details><summary markdown='span'>Conventions for module development and core module development</summary>
 
-- The methods need to have descriptive name that describes the use-case and allows easy selection for readers (eg: `addToCart()`, `saveOrder()`, `triggerEvent()`).<br/>
-- The inherited `getFactory()` method needs to be used to instantiate the underlying classes.<br/>
-- The methods need to contain only the delegation to the underlying [model](#model).<br/>
-- All methods need to be `public` and stand for an outsourced function of the underlying functionality.<br/>
-- Each facade class needs to define and implement an interface that holds the `Specification` of each `public` method.<br/>
-  - The `Specification` is considered the semantic contract of the method - all significant behaviour needs to be highlighted.<br/>
-- All facade class methods need to add `@api`, and `{@inheritdoc}` tags on their method documentation. <br/>
-- New `QueryContainer` functionality can not be added but implemented through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.<br/>
-- Single-item-flow methods need to be avoided unless one of the reasons apply:<br/>
-  - there is only a single-entity flow ever, proven by the business cases.<br/>
-  - the items need to go in FIFO order and there is no way to use a collection instead.<br/>
-- Multi-item-flow methods need to <br/>
-  - receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.<br/>
-  - return a [Transfer Object](#transfer-object) collection with the following naming pattern `[DomainEntity][Collection|CollectionResponse]Transfer`.<br/>
-- Create-Update-Delete (`CUD`) directives:<br/>
-  - `Create` method needs to be defined as `create[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
-  - `Update` method needs to be defined as `update[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
-  - `Delete` method needs to be defined as `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer`.<br/>
-  - `Create` and `Update` methods need to be implemented for each business entity (`Delete` is optional on-demand).<br/>
-  - `CUD` methods can not have additional arguments except the above defined.<br/>
-  - `[DomainEntity]CollectionRequestTransfer` and `[DomainEntity]CollectionDeleteCriteriaTransfer` objects need to support transactional entity manipulation that is defaulted to true and documented in facade function specification.<br/>
-  - `[DomainEntity]CollectionRequestTransfer` should support bulk operations.<br/>
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` should contain only arrays of attributes to filter the deletion of entities by.<br/>
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` need to use `IN` the operation to filter deletion of entities (each item in the array of the filled attributes will cause deletion of 1 entity).<br/>
-  - `[DomainEntity]CollectionDeleteCriteriaTransfer` attributes that support deleting need to be mentioned in facade specification.<br/>
-  - `[DomainEntity]CollectionResponseTransfer` should contain a returned list of entities and error list.<br/>
-    - if the entity manipulation function operation was fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.<br/>
-    - if the entity manipulation function operation was not successful and the request is transactional, the error list must contain the error that caused the transaction rollback, the error must point out the entity that caused the rollback, the entities after the error must not be manipulated, and the response entity list must reflect the state of the database after the rollback.<br/>
-    - if the entity manipulation function operation was not successful and the request is not transactional, the error list must contain all errors, each error must point out the related entity that caused that error, and the response entity list must reflect the state of the database after the rollback.<br/>
-
-</details>
-
-**Guidelines**
-- The `Service` facade functionalities are commonly used to transform data, thus Create-Update-Delete (`CUD`) directives are usually not applicable.
-- Single-item-flow methods should be avoided as they are not scalable.
-
-<details><summary markdown='span'>Additional Guidelines for Project Development</summary>
-
-- `Query Containers` can be used/developed further, but it is highly recommended to transition toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.<br/>
+- Methods need to have a descriptive name that describes the use case and enables readers to easily select them. Examples:
+  - `addToCart()`
+  - `saveOrder()`
+  - `triggerEvent()`
+- The inherited `getFactory()` method needs to be used to instantiate the underlying classes.
+- Methods need to contain only the delegation to the underlying [model](#model).
+- Methods need to be `public` and stand for an outsourced function of the underlying functionality.
+- Each facade class needs to define and implement an interface that holds the `Specification` of each `public` method.
+  - The `Specification` is considered the semantic contract of the method - all significant behavior needs to be highlighted.
+- All facade class methods need to add `@api` and `{@inheritdoc}` tags to their method documentation.
+- New `QueryContainer` functionality can't be added but implemented through the advanced [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
+- Single-item-flow methods need to be avoided unless one of the reasons apply:
+  - There is only a single-entity flow ever, proven by the business cases.
+  - The items need to go in FIFO order, and there is no way to use a collection instead.
+- Multi-item-flow methods need to do the following:
+  - Receive a [Transfer Object](#transfer-object) collection as input with the following naming pattern: `[DomainEntity]Collection[Request|Criteria|TypedCriteria|TypedRequest]Transfer`.
+  - Return a [Transfer Object](#transfer-object) collection with the following naming pattern: `[DomainEntity][Collection|CollectionResponse]Transfer`.
+- Create-Update-Delete (CUD) directives:
+  - `Create` method needs to be defined as `create[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
+  - `Update` method needs to be defined as `update[DomainEntity]Collection([DomainEntity]CollectionRequestTransfer): [DomainEntity]CollectionResponseTransfer`.
+  - `Delete` method needs to be defined as `delete[DomainEntity]Collection([DomainEntity]CollectionDeleteCriteriaTransfer): [DomainEntity]CollectionResponseTransfer`.
+  - `Create` and `Update` methods need to be implemented for each business entity. `Delete` is optional and can be implemented on demand.
+  - CUD methods can't have any other arguments except the prior defined.
+  - `[DomainEntity]CollectionRequestTransfer` and `[DomainEntity]CollectionDeleteCriteriaTransfer` objects need to support transactional entity manipulation that's defaulted to true and documented in the facade function specification.
+  - `[DomainEntity]CollectionRequestTransfer` should support bulk operations.
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` should contain only arrays of attributes to filter the deletion of entities by.
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` need to use `IN` the operation to filter the deletion of entities. Each item in the array of the filled attributes causes the deletion of one entity.
+  - `[DomainEntity]CollectionDeleteCriteriaTransfer` attributes that support deleting need to be mentioned in facade specification.
+  - `[DomainEntity]CollectionResponseTransfer` should contain a returned list of entities and an error list.
+    - If the entity manipulation function operation is fully successful, the error list must be empty and the entity list must contain all entities that were manipulated.
+    - If the entity manipulation function operation isn't successful, and the request is transactional, the error list must contain the error that caused the transaction rollback. The error must point out the entity that caused the rollback. The entities after the error must not be manipulated.The response entity list must reflect the state of the database after the rollback.
+    - If the entity manipulation function operation isn't successful and the request isn't transactional, the error list must contain all errors. Each error must point out the related entity that caused that error. The response entity list must reflect the state of the database after the rollback.
 
 </details>
 
-**Example**
+#### Guidelines
+- The `Service` facade functionalities are commonly used to transform data, so CUD directives are usually not applicable.
+- Avoid Single-item-flow methods because they aren't scalable.
+
+<details><summary markdown='span'>Additional guidelines for project development</summary>
+
+- You can use and further develop `Query Containers`; but we highly recommend transitioning toward the [Entity Manager](#entity-manager) and [Repository](#repository) pattern.
+
+</details>
+
+#### Examples
 ```php
 namespace Spryker\Client\ConfigurableBundleCart;
 
@@ -1056,20 +1061,20 @@ interface ConfigurableBundleFacadeInterface
         └── [Module]ServiceFactory.php
 ```
 
-**Description**
+#### Description
 
 The responsibility of a `Factory` is to instantiate classes and inject dependencies during instantiation.
 
-**Conventions**
+#### Conventions
 - No generic conventions.
 
-<details><summary markdown='span'>Conventions for Module development and Core module development</summary>
+<details><summary markdown='span'>Conventions for module development and core module development</summary>
 
-- `Factories` need to orchestrate the instantiation of objects in solitude (without reaching out to class-external logic).<br/>
-- `Factory` classes must not define/implement interface as practically they are never fully replaced and offer no benefit.<br/>
-- `Factory` methods need to be `public`.<br/>
-- `Factory` methods need to either instantiate one new object and named as `create[Class]()`, or wire the dependencies and named as `get[Class]()`.<br/>
-- `Factory` methods need to use the constants defined in [dependency provider](#dependency-provider) when reaching out to module dependencies.<br/>
+- `Factories` need to orchestrate the instantiation of objects in solitude, that is without reaching out to class-external logic.
+- `Factory` classes must not define and implement interfaces because they are never fully replaced and offer no benefit.
+- `Factory` methods need to be `public`.
+- `Factory` methods need to either instantiate one new object and be named as `create[Class]()` or wire the dependencies and be named as `get[Class]()`.
+- When reaching out to module dependencies, `Factory` methods need to use the constants defined in [dependency provider](#dependency-provider).
 
 </details>
 
@@ -1085,12 +1090,12 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
                 └── GatewayController.php
 ```
 
-**Description**
+#### Description
 
-`Gateway Controller` is special, reserved [Controller](#controller) in SCOS, that serves as an entry point in [Zed](#zed) for serving remote application [Client](#client) requests (see [Zed Stub](#zed-stub) for more details).
+`Gateway Controller` is special reserved [Controller](#controller) in SCOS that serves as an entry point in [Zed](#zed) for serving remote application [Client](#client) requests. For more details, see [Zed Stub](#zed-stub).
 
-**Conventions**
-- `Gateway Controller` actions must define a single [transfer object](#transfer-object) as argument, and another/same [transfer object](#transfer-object) for return.
+#### Conventions
+- `Gateway Controller` actions must define a single [transfer object](#transfer-object) as an argument, and another or the same [transfer object](#transfer-object) for return.
 - `Gateway Controllers` follow the [Controller](#controller) conventions.
 
 ### Layout
@@ -1113,9 +1118,9 @@ The responsibility of a `Factory` is to instantiate classes and inject dependenc
                 └── [layout-name].twig
 ```
 
-**Description**
+#### Description
 
-Layouts are the skeleton of the page, and they define the structure of the page.
+A Layout is the skeleton of a page and defines its structure.
 
 
 ### Mapper / Expander / Hydrator
@@ -1132,14 +1137,14 @@ To differentiate between the recurring cases of data mapping, and to provide a c
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Mapper` methods need to be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.<br/>
-  - `Mappers` need to be free of any logic other than structuring directives.<br/>
-    - `Mappers` can not have data resolving (eg: remote calls, database lazy load) logic as they are utilised in high-batch processing scenarios.<br/>
-  - `Mappers` can have multiple source entities if it still does not violate structural-mapping-only directive.<br/>
-  - `Mappers` can not use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#facade-design-pattern).<br/>
-  - `Persistence Mappers` need to be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.<br/>
-- `Expander` methods need to be named as `expand[With<description>]($targetEntity)`.<br/>
-- The `hydrator/hydration` keywords can not be used but instead `Mapper` or `Expander`.<br/>
+- `Mapper` methods need to be named as `map[<SourceEntityName>[To<TargetEntityName>]]($sourceEntity, $targetEntity)`.
+  - `Mappers` need to be free of any logic other than structuring directives.
+    - `Mappers` can not have data resolving (eg: remote calls, database lazy load) logic as they are utilised in high-batch processing scenarios.
+  - `Mappers` can have multiple source entities if it still does not violate structural-mapping-only directive.
+  - `Mappers` can not use dependencies except [module configurations](#module-configurations), other `mappers`, or lightweight [Service calls](#facade-design-pattern).
+  - `Persistence Mappers` need to be in [Persistence layer](#zed) only and named as `[Entity]Mapper.php` or `[Module]Mapper.php`.
+- `Expander` methods need to be named as `expand[With<description>]($targetEntity)`.
+- The `hydrator/hydration` keywords can not be used but instead `Mapper` or `Expander`.
 
 </details>
 
@@ -1256,13 +1261,13 @@ class ProductViewExpander implements ProductViewExpanderInterface
 
 <details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
-- `Model` dependencies need to be injected via constructor.<br/>
-- `Models` can not instantiate any object but [Transfer Objects](#transfer-object).<br/>
-- `Models` need to be grouped under a folder by activity (eg: `Writers/ProductWriter.php`, `Readers/ProductReader.php`).<br/>
-- `Models` can not be named using generic words, such as `Executor`, `Handler`, or `Worker`.<br/>
-- Each `Model` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
-- `Model` dependencies needs to be referred/used/defined by an interface (instead of class).<br/>
-- `Model` methods can not be `private`.<br/>
+- `Model` dependencies need to be injected via constructor.
+- `Models` can not instantiate any object but [Transfer Objects](#transfer-object).
+- `Models` need to be grouped under a folder by activity (eg: `Writers/ProductWriter.php`, `Readers/ProductReader.php`).
+- `Models` can not be named using generic words, such as `Executor`, `Handler`, or `Worker`.
+- Each `Model` class needs to define and implement an interface that holds the specification of each `public` method.
+- `Model` dependencies needs to be referred/used/defined by an interface (instead of class).
+- `Model` methods can not be `private`.
 
 </details>
 
@@ -1306,15 +1311,15 @@ When `module configuration` is defined in another [application layer](#applicati
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Module configuration`<br/>
-  - Getter methods (prefixed with `get`) need to be defined to retrieve configuration values, instead of accessing values via constants directly (this enables a more flexible extension structure, and an easier to control access tracking).<br/>
-    - Constants can also be defined to support the getter methods (example: to enable cross-module referencing via `@uses`).<br/>
-- `Environment configuration`<br/>
-  - constants need to have specification about their purpose.<br/>
-  - constants need to contain the same UPPERCASE value as the key is + properly prefixed with MODULE_NAME (see `examples` below).<br/>
-- `Module configuration` constants need to be `protected`.<br/>
-- The `module configuration` relays exclusively on `static::` to support extension.<br/>
-- `Environment configuration` constants need to be `public`.<br/>
+- `Module configuration`
+  - Getter methods (prefixed with `get`) need to be defined to retrieve configuration values, instead of accessing values via constants directly (this enables a more flexible extension structure, and an easier to control access tracking).
+    - Constants can also be defined to support the getter methods (example: to enable cross-module referencing via `@uses`).
+- `Environment configuration`
+  - constants need to have specification about their purpose.
+  - constants need to contain the same UPPERCASE value as the key is + properly prefixed with MODULE_NAME (see `examples` below).
+- `Module configuration` constants need to be `protected`.
+- The `module configuration` relays exclusively on `static::` to support extension.
+- `Environment configuration` constants need to be `public`.
 
 </details>
 
@@ -1323,7 +1328,7 @@ When `module configuration` is defined in another [application layer](#applicati
 
 <details><summary markdown='span'>Guidelines for Module development and Core module development</summary>
 
-- `Protected` items are not recommended in `module configuration` as they tend to create backward compatibility problems on project extensions.<br/>
+- `Protected` items are not recommended in `module configuration` as they tend to create backward compatibility problems on project extensions.
 
 </details>
 
@@ -1492,12 +1497,12 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 
 <details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
-- The table `[org]` prefix needs to be `spy_`.<br/>
+- The table `[org]` prefix needs to be `spy_`.
 - The schema file `[org]` prefix needs to be `spy_`.
-- The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).<br/>
-  - The field can be `null` by default.<br/>
-  - The field needs to be eventually unique across the table (until the unique value is provided, the business logic may not operate appropriately).<br/>
-- Table foreign key definitions needs to include the `phpName` attribute.<br/>
+- The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).
+  - The field can be `null` by default.
+  - The field needs to be eventually unique across the table (until the unique value is provided, the business logic may not operate appropriately).
+- Table foreign key definitions needs to include the `phpName` attribute.
 
 </details>
 
@@ -1656,11 +1661,11 @@ The `Repository` can be accessed from the same module's [Communication](#communi
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Repostiories` can not alter the data in the database, only retrieve it.<br/>
-- `Repositories` need to use [Entities](#entity) and/or [Query Objects](#query-object) to retrieve data from the database.<br/>
-- The `Repository` class needs to define and implement an interface that holds the specification of each `public` method.<br/>
-- `Public` methods need to receive and return [Transfer Objects](#transfer-object) only.<br/>
-- `Public` methods need to return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).<br/>
+- `Repostiories` can not alter the data in the database, only retrieve it.
+- `Repositories` need to use [Entities](#entity) and/or [Query Objects](#query-object) to retrieve data from the database.
+- The `Repository` class needs to define and implement an interface that holds the specification of each `public` method.
+- `Public` methods need to receive and return [Transfer Objects](#transfer-object) only.
+- `Public` methods need to return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).
 
 </details>
 
@@ -1799,11 +1804,11 @@ A `Widget` is a reusable part of a webpage in [Yves](#yves) application layer. `
 
 <details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
-- A `Widget` needs to contain only lightweight, display related logic.<br/>
-  - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.<br/>
-- `Widget` module can not appear as dependency (as it goes against the basic concept of the optional widgets).<br/>
-- Implementing a `Widget` needs to happen in a widget module.<br/>
-- When `Widget` call is implemented, it needs to be considered that a `Widget` is always optionally enabled.<br/>
+- A `Widget` needs to contain only lightweight, display related logic.
+  - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
+- `Widget` module can not appear as dependency (as it goes against the basic concept of the optional widgets).
+- Implementing a `Widget` needs to happen in a widget module.
+- When `Widget` call is implemented, it needs to be considered that a `Widget` is always optionally enabled.
 
 </details>
 
@@ -1876,10 +1881,10 @@ A `Zed Stub` is a class which defines interactions between [Yves](#yves)/[Glue](
 
 <details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
-- The `Zed Stub` methods need to contain only delegation but no additional logic.<br/>
-- `Zed Stub` methods need to be `public`.<br/>
-- `Zed Stub` methods need to use [Transfer Objects](#transfer-object) as input and output parameter.<br/>
-- `Zed Stub` methods need to add a `@uses` tag with the targeted [Gateway Controller](#gateway-controller) action in the docblock to enable easy code flow tracking.<br/>
+- The `Zed Stub` methods need to contain only delegation but no additional logic.
+- `Zed Stub` methods need to be `public`.
+- `Zed Stub` methods need to use [Transfer Objects](#transfer-object) as input and output parameter.
+- `Zed Stub` methods need to add a `@uses` tag with the targeted [Gateway Controller](#gateway-controller) action in the docblock to enable easy code flow tracking.
 
 </details>
 
@@ -1927,7 +1932,7 @@ The components below are essential in `core module development` for the purpose 
 
 <details><summary markdown='span'>Additional Conventions for Core module development</summary>
 
-- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.<br/>
+- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
 
 </details>
 
@@ -1936,13 +1941,13 @@ The components below are essential in `core module development` for the purpose 
 
 <details><summary markdown='span'>Additional Guidelines for Project Development</summary>
 
-- It is recommended for each component to consider the conventions and guidelines of Module development and Core module development as they may offer solutions for long-term requirements or recurring issues.<br/>
+- It is recommended for each component to consider the conventions and guidelines of Module development and Core module development as they may offer solutions for long-term requirements or recurring issues.
 
 </details>
 
 <details><summary markdown='span'>Additional Guidelines for Module development and Core module development</summary>
 
-- The components are required to be stateless to be deterministic and easy to comprehend.<br/>
+- The components are required to be stateless to be deterministic and easy to comprehend.
 
 </details>
 
@@ -2010,9 +2015,9 @@ According to the Interface Segregation Principle, every module defines an interf
 
 <details><summary markdown='span'>Additional Conventions for Module development and Core module development</summary>
 
-- `Bridges` must contain only the delegation logic to the friend method.<br/>
-- The `Bridge` constructor can not have parameters to avoid coupling to a specific class.<br/>
-- `Bridge` classes and interfaces need to be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no `mixed`, no `x|y`).<br/>
+- `Bridges` must contain only the delegation logic to the friend method.
+- The `Bridge` constructor can not have parameters to avoid coupling to a specific class.
+- `Bridge` classes and interfaces need to be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no `mixed`, no `x|y`).
 
 </details>
 
@@ -2194,10 +2199,10 @@ There are three modules involved:
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
 
-- `Plugin interfaces` need to be defined in extension modules.<br/>
-  - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.<br/>
-  - `Extension modules` can not contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).<br/>
-- `Plugin interface` methods need to receive input items as collection for scalability reasons.<br/>
+- `Plugin interfaces` need to be defined in extension modules.
+  - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.
+  - `Extension modules` can not contain anything else but `Plugin Interfaces` and [Shared application layer](#shared).
+- `Plugin interface` methods need to receive input items as collection for scalability reasons.
 
 </details>
 

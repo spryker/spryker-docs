@@ -16,7 +16,7 @@ Here are some examples of when Marketplace operator users could assist merchants
 
 ## Setting up a Merchant Agent
 
-To act as a Merchant Agent, the Marketplace Operator user must have the Agent permissions assigned to them in the Back Office. See [Create users](https://docs.google.com/document/d/1v0qAe-1czx4mm4MQDtFwkdc1_HIiobK8NJPRXLOsziw/edit) for information on how to do that.
+To act as a Merchant Agent, the Marketplace Operator user must have the Agent permissions assigned to them in the Back Office. See [Create users](/docs/pbc/all/user-management/202404.0/marketplace/manage-in-the-back-office/create-users.html) for information on how to do that.
 
 ![merchant-agent-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview/agent-merchant-in-bo.png)
 
@@ -32,3 +32,7 @@ This is how the Agent Assist in Merchant Portal feature works in the Merchant Po
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview/agent-merchant-in-merchant-portal.mp4" type="video/mp4">
   </video>
 </figure>
+
+## Related Developer Documents
+
+[Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-the-merchant-portal-agent-assist-feature.html)

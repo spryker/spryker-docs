@@ -63,7 +63,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Connect Staging S3 bucket to a staging environment.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
-  - Implement the recommended Jenkins [performance and stability improvements](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html) where applicable.
+  - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
   - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
@@ -71,7 +71,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
   - Install all the [security updates](/docs/about/all/releases/product-and-code-releases.html) from all Spryker packages.
   - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
-- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/guidelines-for-gdpr-compliance.html).
+- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 
 ### Testing

@@ -553,7 +553,9 @@ Optional parameters for `application:`:
 
 {% info_block infoBox %}
 
-To disable the validation of request body size against this parameter, set it to `0`. We do not recommended disabling it.
+* To disable the validation of request body size against this parameter, set it to `0`. We do not recommended disabling it.
+
+* In cloud environments, increasing the number of workers requires infrastructure changes. Increasing the number of workers should be thoroughly tested beforehand and may have drastic impact on your application's resource requirements. Coordinate this change with our Operations team using the Infrastrucute Change Request (Change to existing Parameter Store Variable).
 
 {% endinfo_block %}
 

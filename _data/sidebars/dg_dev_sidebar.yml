@@ -1266,6 +1266,17 @@ entries:
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
+    - title: Project NFR Templates
+      url: /docs/dg/dev/best-practices/project-nfr-templates/project-nfr-templates.html
+      nested:
+        - title: NFR guidelines
+          url: /docs/dg/dev/best-practices/project-nfr-templates/nfr-guidelines.html
+        - title: Monitorable Process Guidelines
+          url: /docs/dg/dev/best-practices/project-nfr-templates/monitorable-process-guidelines.html
+        - title: Operatable Feature Guidelines
+          url: /docs/dg/dev/best-practices/project-nfr-templates/operatable-feature-guidelines.html
+        - title: Process Documentation Guidelines
+          url: /docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html
     - title: Basic SEO techniques to use in your project
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices

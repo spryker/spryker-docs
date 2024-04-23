@@ -10,12 +10,12 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 ## Upgrading from version 1.* to version 2.*
 
-There are new functionalities and changes that were added in this new module release. First of all, the changes imply implementation of the Price Dimension concept as well as adding of Service layer with PriceProductService. See [PriceProduct module details: Reference information](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) for details.
+There are new functionalities and changes that were added in this new module release. First of all, the changes imply implementation of the Price Dimension concept as well as adding of Service layer with PriceProductService. See [PriceProduct module details: Reference information](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html) for details.
 
 In the previous version of the PriceProduct module, a product had only one price per store (and multi-currency) with gross and net amounts.
-By adding the [Price dimension](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) concept to the new release, you can set specific prices for each customer separately. Having logged in, a user with these specific prices will see another prices in Catalog and will be able to buy products for  their own price.
+By adding the [Price dimension](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/priceproduct-module-details-reference-information.html) concept to the new release, you can set specific prices for each customer separately. Having logged in, a user with these specific prices will see another prices in Catalog and will be able to buy products for  their own price.
 
-To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 Prices from price dimensions could be stored not only in DB, but also in Storage. Therefore, the update of the PriceProductStorage module was necessary. The new version 2.0.0 of the PriceProduct module already supports price dimensions and has Default Price Dimension implemented.
 
 To migrate the changes to the module, do the following:

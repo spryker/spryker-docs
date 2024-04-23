@@ -1,0 +1,18 @@
+# Folders to exclude:
+201811.0
+201903.0
+201907.0
+202001.0
+202005.0
+202009.0
+202108.0
+202204.0
+202212.0
+202400.0
+drafts-dev
+
+# Documents to exclude:
+docs/scos/user/overview-of-features/202204.0/overview-of-features.md
+docs/scos/user/overview-of-features/202212.0/overview-of-features.md
+index.md
+docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.md

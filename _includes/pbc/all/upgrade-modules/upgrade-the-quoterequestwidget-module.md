@@ -8,7 +8,7 @@ The only major change of the `QuoteRequestWidget` 2.x.x is the dependency update
 
 To migrate do the following:
 
-1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html).
+1. Update `spryker/quote-request` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html).
 2. Update `spryker-shop/quote-request-widget:^2.0.0`
 
 ```bash

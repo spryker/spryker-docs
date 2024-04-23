@@ -8,7 +8,7 @@ The only major change of `QuoteRequestAgentWidget` 2.x.x is the dependency updat
 
 To migrate, do the following:
 
-1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html).
+1. Update `spryker/quote-request-agent` to version ^2.0.0 by following the steps from [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html).
 2. Update `spryker-shop/quote-request-agent-widget:^2.0.0`
 
 ```bash

@@ -54,7 +54,7 @@ Applies to all application components.
 * **Audit Trail**: While it's recommended to log the audit trails of significant entity changes, these logs should not be sent to the regular log system due to the sensitive nature of the data typically involved in authentication and authorization.
 
 ## Log levels
-The following log levels (based on Syslog [RFC 5424](#https://datatracker.ietf.org/doc/html/rfc5424)) must be utilised appropriately during application workflows to allow easy track down particular problems / investigations 
+The following log levels (based on Syslog [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424)) must be utilised appropriately during application workflows to allow easy track down particular problems / investigations 
 in the System. A wrong category selection may de-rail a fellow inspector.
 
 | Level | Description |
@@ -76,7 +76,7 @@ A log entry must always answer the following items and follow the below describe
 * **what** has happened and/or why has it happened
 * **result** of event (exception, success details, information details)
 
-Log structure example (consider using [CloudWatch](#https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and/or [Cloud Handler](#https://github.com/maxbanton/cwh) recommendations):
+Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and/or [Cloud Handler](https://github.com/maxbanton/cwh) recommendations):
 ```JSON
 {
   "actor": {
@@ -236,5 +236,5 @@ Each metric represents a condition of system attributes. There can be many of th
   * The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
   * Communication durations with remote services must be recorded to understand whether the local process is delayed for a good reason.
 * Critical metrics, along with their threshold values, must be highlighted in the 
-[Operational guidelines](docs/scos/dev/guidelines/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
+[Operational guidelines](/docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
 * Deployment and rollback flows may generate metrics to enable tracking and interaction with these processes.

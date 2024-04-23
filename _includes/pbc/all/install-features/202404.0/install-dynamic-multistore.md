@@ -72,7 +72,8 @@ Make sure the following modules have been installed:
 
 Before the introduction of dynamic store, configuration settings were maintained in the file `config/Shared/stores.php`. With the activation of dynamic store, these settings are now managed in the database, rendering the files `config/Shared/stores.php` and `config/Shared/default_store.php` obsolete.
 
-The default configuration will be imported using new data import modules, including StoreDataImport, LocaleDataImport, and CountryDataImport. These modules will populate the necessary configuration details in the database.
+The default configuration will be imported using new data import modules, including StoreDataImport, LocaleDataImport, CountryDataImport, and other feature-related imports for instance such as CurrencyDataImport. 
+These modules will populate the necessary configuration details in the database, ensuring a comprehensive migration of all relevant data.
 
 {% endinfo_block %}
 
@@ -408,7 +409,8 @@ Run the following commands:
 vendor/bin/console scheduler:clean 
 ```
 
-Ensure that Jenkins jobs per store have been removed.
+Ensure that Jenkins jobs per store have been removed. 
+If any jobs have not been automatically removed, they have to be manually deleted.
 
 ```bash
 vendor/bin/console scheduler:setup 
@@ -634,7 +636,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, when a store created, updated, or deleted with local and country data.  And it is exported to or removed from Redis.
+Ensure that whenever a store’s data is created, updated or deleted — including local and country information — it is correctly exported to or removed from Redis.
 
 Storage type: Redis
 Target entity: Store
@@ -732,9 +734,9 @@ Make sure that:
 
 
 2. Update the following import action files with the following action:
-    * `data/import/common/commerce_setup_import_config_{REGION\_STORE}.yml`
-    * `data/import/local/full\_{REGION\_STORE}.yml`
-    * `data/import/production/full\_{SPRYKER\_STORE}.yml`
+    * `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
+    * `data/import/local/full\_{REGION\STORE}.yml`
+    * `data/import/production/full\_{SPRYKER\STORE}.yml`
 
 ```yaml
 data_import:
@@ -1288,9 +1290,10 @@ Make sure that, in the database, the configured data are added to the `spy_gloss
 
 Add the following configuration to your project:
 
-| CONFIGURATION | SPECIFICATION | NAMESPACE |
-| --- | --- | --- |
+| CONFIGURATION                       | SPECIFICATION | NAMESPACE |
+|-------------------------------------| --- | --- |
 | RouterConfig::getAllowedLanguages() |  Returns a list of supported languages for Route manipulation. Will be used to strip of language information from a route before a route is matched. | Spryker\Yves\Router |
+| RouterConfig::getAllowedStores()    |  Returns a list of supported stores for Route manipulation. Will be used to strip of store information from a route before a route is matched. | Spryker\Yves\Router |
 
 
 **src/Pyz/Yves/Router/RouterConfig.php**
@@ -1316,6 +1319,14 @@ class RouterConfig extends SprykerRouterConfig
     public function getAllowedLanguages(): array
     {
         return (new Container())->getLocator()->locale()->client()->getAllowedLanguages();
+    }
+    
+    /**
+     * @return array<string>
+     */
+    public function getAllowedStores(): array
+    {
+        return (new Container())->getLocator()->storeStorage()->client()->getStoreNames();
     }
 }
 ```

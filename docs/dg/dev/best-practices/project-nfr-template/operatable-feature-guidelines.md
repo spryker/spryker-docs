@@ -1,15 +1,15 @@
 ---
 title: Operatable feature guidelines
 description: Guidelines for enabling application operation.
-last_updated: 
+last_updated: April 23, 2024
 template: concept-topic-template
 related:
-- title: NFR guidelines
-  link: docs/scos/dev/guidelines/nfr-guidelines.html
-- title: Process documentation guidelines
-  link: docs/scos/dev/guidelines/process-documentation-guidelines.html
-- title: Monitorable process guidelines
-  link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
+  - title: NFR guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/nfr-guidelines.html
+  - title: Process documentation guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/process-documentation-guidelines.html
+  - title: Monitorable process guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/monitorable-process-guidelines.html
 ---
 
 {% info_block warningBox "Warning" %}

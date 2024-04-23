@@ -1,15 +1,15 @@
 ---
 title: Process documentation guidelines
 description: Process documentation guidelines to improve communication and ensure smooth deployment of applications within cross-functional teams.
-last_updated: 
+last_updated: April 23, 2024
 template: concept-topic-template
 related:
-- title: NFR guidelines
-  link: docs/scos/dev/guidelines/nfr-guidelines.html
-- title: Operatable feature guidelines
-  link: docs/scos/dev/guidelines/operatable-feature-guidelines.html
-- title: Monitorable process guidelines
-  link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
+  - title: NFR guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/nfr-guidelines.html
+  - title: Operatable feature guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/operatable-feature-guidelines.html
+  - title: Monitorable process guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/monitorable-process-guidelines.html
 ---
 
 {% info_block warningBox "Warning" %}

@@ -1,15 +1,15 @@
 ---
 title: Monitorable process guidelines
 description: Guidelines for log generation and metric generation to enable Operations Teams to track and correlate issues in operated and deployed applications.
-last_updated:
+last_updated: April 23, 2024
 template: concept-topic-template
 related:
-- title: NFR guidelines
-  link: docs/scos/dev/guidelines/nfr-guidelines.html
-- title: Operatable feature guidelines
-  link: docs/scos/dev/guidelines/operatable-feature-guidelines.html
-- title: Process documentation guidelines
-  link: docs/scos/dev/guidelines/process-documentation-guidelines.html
+  - title: NFR guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/nfr-guidelines.html
+  - title: Operatable feature guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/operatable-feature-guidelines.html
+  - title: Process documentation guidelines
+    link: docs/dg/dev/best-practices/project-nfr-template/process-documentation-guidelines.html
 ---
 
 {% info_block warningBox "Warning" %}

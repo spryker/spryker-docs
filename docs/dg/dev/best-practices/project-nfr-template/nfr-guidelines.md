@@ -1,17 +1,17 @@
 ---
 title: Project Operational and Deployment Non-Functional Requirement Guidelines
 description: Guidelines for defining and implementing Operational and Deployment Non-Functional Requirements (NFRs) to ensure the technical success of a project.
-last_updated: 
+last_updated: April 23, 2024
 template: concept-topic-template
 related:
 - title: Operatable feature guidelines
-  link: docs/scos/dev/guidelines/operatable-feature-guidelines.html
+  link: docs/dg/dev/best-practices/project-nfr-template/operatable-feature-guidelines.html
 - title: Process documentation guidelines
-  link: docs/scos/dev/guidelines/process-documentation-guidelines.html
+  link: docs/dg/dev/best-practices/project-nfr-template/process-documentation-guidelines.html
 - title: Monitorable process guidelines
-  link: docs/scos/dev/guidelines/monitorable-process-guidelines.html
+  link: docs/dg/dev/best-practices/project-nfr-template/monitorable-process-guidelines.html
 - title: Architecture performance guidelines
-  link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+  link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---
 
 {% info_block warningBox "Warning" %}

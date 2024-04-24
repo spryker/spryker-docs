@@ -1,15 +1,15 @@
 ---
 title: Manage merchant relation requests
-description: Learn how a marketplace operator can manage merchant relation requests in the Back Office
+description: Learn how a Back Office user can manage merchant relation requests in the Back Office
 template: back-office-user-guide-template
 last_updated: Mar 26, 2024
 ---
 
-A marketplace operator can view, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview#initiation-of-the-merchant-relation-by-a-company-user).
+A Back Office user can view, edit, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html#initiation-of-the-merchant-relation-by-a-company-user).
 
 Once a company user creates a merchant relation request, it appears in *B2B Contracts -> Merchant Relation Requests*.
 
-![merchant-relation-requests-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
+![merchant-relation-requests-in-back-office]https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
 
 To approve or reject a merchant relation request, do the following:
 
@@ -36,5 +36,4 @@ This takes you to *Overview of the Merchant relation* page with the merchant rel
 
 ## What's next
 
-[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relations/edit-merchant-relations.html)
-
+[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html)

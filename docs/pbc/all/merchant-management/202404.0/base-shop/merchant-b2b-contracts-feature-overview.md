@@ -3,8 +3,6 @@ title: Merchant B2B Contracts feature overview
 description: In the context of Spryker B2B eCommerce platform, there can be three key figures- marketplace owner, merchant, and buyer.
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: https://documentation.spryker.com/2021080/docs/merchant-b2b-contracts-feature-overview
-originalArticleId: 5cc762f1-aee0-4f60-8030-14cc53e7cb6c
 redirect_from:
   - /2021080/docs/merchant-b2b-contracts-feature-overview
   - /2021080/docs/en/merchant-b2b-contracts-feature-overview
@@ -15,10 +13,10 @@ redirect_from:
   - /docs/scos/user/features/202204.0/merchant-b2b-contracts-feature-overview.html
 ---
 
-In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. Both features Merchant B2B Contracts and Merchant B2B Contract Requests allow for the creation and management of such relation and relation requests. Based on merchant relations, you can define buyer-specific [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html) and [products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), as well as [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).
+In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. Both features Merchant B2B Contracts and Merchant B2B Contract Requests allow for the creation and management of such relation and relation requests. Based on merchant relations, you can define buyer-specific [prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/merchant-custom-prices-feature-overview.html), [products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).
 In the context of merchant relations in a Shop, there are two key actors: the merchant and the buyer:
 - A merchant is a seller usually represented by a company that owns the platform.
-- The buyers are represented through [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchant. Individual employees of the business units are called *company users*.
+- The buyers are represented by [business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) of [companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html#company) that purchase products or services from the merchant. Individual employees of the business units are called *company users*.
 
 There are two ways to establish a merchant relation:
 
@@ -27,10 +25,8 @@ There are two ways to establish a merchant relation:
 
 ## Creation of a merchant relation in the Back Office
 
-Merchant can create a merchant relation in the Back Office. For details on how to do that, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
+Merchants can create a merchant relation in the Back Office. For details on how to do that, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html).
 After a relation has been created in the Back Office, it appears on the Storefront in *My Company -> Merchant Relations*.
-Initiation of a merchant relation by a company user
-Company user can request a merchant relation from the merchant. Once the merchant approves the request, the merchant relation is automatically created.
 
 ## Initiation of a merchant relation by a company user
 
@@ -39,7 +35,7 @@ Company user can request a merchant relation from the merchant. Once the merchan
 ### Merchant relation request creation by a company user
 
 Company user can initiate the merchant relation by placing a request on the Storefront from the *Merchant Relation Requests* page in the Company Account by clicking **Create request**.
-In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with a Pending status on the Company Account page. 
+In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have a formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the *Pending* status on the *Company Account* page. 
 The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on еру *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 
 ## Merchant relation request approval by a merchant
@@ -55,15 +51,6 @@ Based on the data in a request, one or multiple merchant relations are automatic
 
 ## Merchant relations in business operations 
 Based on merchant relations, you can assign [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), [product prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
-
-## Related Business User documents
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchants.html)  |
-| [Edit merchants](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchants.html)  |
-| [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)  |
-| [Edit merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html)  |
 
 ## Related Developer documents
 

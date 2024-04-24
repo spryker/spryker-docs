@@ -186,7 +186,7 @@ We have been dependant on a deprecated library, Swift Mailer, in our email-sendi
 #### Documentation
 
 * [Tutorial: Sending an email](/docs/pbc/all/emails/202307.0/tutorial-sending-an-email.html)
-* [Emails](/docs/pbc/all/emails/202212.0/emails.html)
+* [Emails](/docs/pbc/all/emails/202307.0/emails.html)
 * [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/202307.0/howto-create-and-register-a-mail-type-builder-plugin.html)
 * [HowTo: Create and register a mail provider](/docs/pbc/all/emails/202307.0/howto-create-and-register-a-mail-provider.html)
 

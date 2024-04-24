@@ -1362,12 +1362,27 @@ entries:
                   - title: Upgrade the Merchant module
                     url: /docs/pbc/all/merchant-management/base-shop/install-and-upgrade/upgrade-the-merchant-module.html
 
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchants-in-the-back-office.html
+                nested:
+                  - title: Create merchants
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/create-merchants.html
+                  - title: Edit merchants
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/edit-merchants.html
+                  - title: Create merchant relations
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/create-merchant-relations.html
+                  - title: Edit merchant relations
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/edit-merchant-relations.html
+                  - title: Manage merchant relation requests
+                    url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchant-relation-requests.html
+
               - title: Domain model and relationships
                 nested:
                   - title: Merchant B2B Contracts
                     url: /docs/pbc/all/merchant-management/base-shop/domain-model-and-relationships/merchant-b2b-contracts-feature-domain-model.html
                   - title: Merchant Product Restrictions
                     url: /docs/pbc/all/merchant-management/base-shop/domain-model-and-relationships/merchant-product-restrictions-feature-domain-model.html
+
           - title: Marketplace
             nested:
               - title: Marketplace Merchant feature overview
@@ -1377,6 +1392,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/main-merchant.html
                   - title: Merchant users overview
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
+
               - title: Merchant Opening Hours feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-opening-hours-feature-overview.html
               - title: Marketplace Merchant Portal Core feature overview
@@ -1388,6 +1404,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-portal-core-feature-overview/merchant-user.html
                   - title: Persistence ACL configuration
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html
+
               - title: Merchant Category feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Merchant B2B Contracts and Contact Requests features overview
@@ -1504,17 +1521,6 @@ entries:
                         include_versions:
                         - "202404.0"
 
-              - title: Manage in the Back Office
-                url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
-                nested:
-                  - title: Manage merchants
-                    nested:
-                      - title: Create merchants
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
-                      - title: Edit merchants
-                        url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html
-                  - title: Manage merchants users
-                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-users.html
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
                 nested:

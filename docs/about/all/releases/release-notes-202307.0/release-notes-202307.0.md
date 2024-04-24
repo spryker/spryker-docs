@@ -165,7 +165,7 @@ Allows for the creation of multiple OAuth 2.0 clients, so the business can allow
 
 #### Documentation
 
-[Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+[Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
 ### [Framework] Catalog Back Office Performance Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

@@ -18,7 +18,7 @@ The following session handlers are currently available:
 
 * File
 * Couchbase
-* MySql
+* MySql (**OUTDATED!**)
 * Redis
 * Redis (locking)
 
@@ -33,6 +33,12 @@ Session handlers can be configured per environment using one of the configuratio
 * `\Spryker\Shared\Session\SessionConfig::SESSION_HANDLER_MYSQL`
 * `\Spryker\Shared\SessionRedis\SessionRedisConfig::SESSION_HANDLER_REDIS`
 * `\Spryker\Shared\SessionRedis\SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING`
+
+{% info_block warningBox "Session with DB" %}
+
+Currently, DB session handler is outdated and not applicable. However, it is possible to achieve desired results by custom implementation following all interface requirements.
+
+{% endinfo_block %}
 
 ## Locked sessions with Redis
 

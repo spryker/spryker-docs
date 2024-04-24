@@ -1418,6 +1418,8 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
         include_versions:
         - "202307.0"
+      - title: Handling concurrent REST requests and caching with entity tags
+        url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
       - title: "Marketplace: Resolve search engine friendly URLs"
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors

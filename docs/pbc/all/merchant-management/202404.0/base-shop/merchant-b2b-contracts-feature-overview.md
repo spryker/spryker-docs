@@ -36,7 +36,6 @@ Company user can request a merchant relation from the merchant. Once the merchan
 
 Company user can request a merchant relation from the merchant. Once the merchant approves the request, the merchant relation is automatically created.
 
-
 ### Merchant relation request creation by a company user
 
 Company user can initiate the merchant relation by placing a request on the Storefront from the *Merchant Relation Requests* page in the Company Account by clicking **Create request**.

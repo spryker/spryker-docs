@@ -1,24 +1,17 @@
 ---
 title: "Glue API: Search the product catalog"
-description: This article provides a bunch of sample requests to be used to achieve the implementation of search options and gives explanations of request values.
-last_updated: Dec 19, 2023
+description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
-originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
+last_updated: Nov 21, 2023
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202311.0/searching-the-product-catalog.html
-  - /docs/pbc/all/search/202311.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
+  - /docs/marketplace/dev/glue-api-guides/202311.0/searching-the-product-catalog.html
+  - /docs/scos/dev/glue-api-guides/202001.0/searching-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
-  - title: Glue API - Catalog feature integration
-    link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
-  - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
-
 In your development, this endpoint can help you to:
 
 * Implement catalog search functionality, including the category tree, facets, and pagination.
@@ -26,69 +19,71 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
+- [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html)
 
 ## Search by products
 
 To search by products, send the request:
 
-***
-`GET` **/catalog-search**
-***
+---
+`GET` /**catalog-search**
+
+---
 
 ### Request
 
-| QUERY PARAMETER    | DESCRIPTION                                                                                                                                          | POSSIBLE VALUES                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| include            | Adds resource relationships to the request                                                                                                           | abstract-products                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| q                  | Restricts the returned items to the values of the provided parameters                                                                                | <ul><li>{% raw %}{{{% endraw %}null{% raw %}}}{% endraw %} (empty)</li><li>{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}abstract_product_name{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}</li><li>{% raw %}{{{% endraw %}product_attribute{% raw %}}}{% endraw %} (for example, brand, color, etc.)—to provide multiple product attributes, use `+`</li></ul> |
-| price[min]         | Restricts the returned items to products with prices matching or above the provided value. `price[min]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}minimum_price{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                              |
-| price[max]         | Restricts the returned items to products with prices matching or below the provided value. `price[max]=10` equals to 1000 cents or 10 monetary units | {% raw %}{{{% endraw %}maximum_price{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                              |
-| priceMode          | Returns the prices defined for the price mode value provided. Useful if your store is configured with multiple price modes.                          | {% raw %}{{{% endraw %}price_mode_name{% raw %}}}{% endraw %}<br>Spryker provides two price modes by default: `GROSS_MODE` and `NET_MODE`. For more information, see [Configuration of price modes and types](/docs/pbc/all/price-management/{{page.version}}/base-shop/extend-and-customize/configuration-of-price-modes-and-types.html).                                                                                                                               |
-| brand              | Specifies the product brand                                                                                                                          | {% raw %}{{{% endraw %}brand_name{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| label              | Specifies the product label                                                                                                                          | {% raw %}{{{% endraw %}label{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| weight             | Specifies the product weight                                                                                                                         | {% raw %}{{{% endraw %}weight{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| color              | Specifies the product color                                                                                                                          | {% raw %}{{{% endraw %}color{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| storage_capacity[] | Specifies the storage capacity of a product                                                                                                          | {% raw %}{{{% endraw %}storage_capacity{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                           |
-| rating[min]        | Specifies the minimum rating of a product                                                                                                            | {% raw %}{{{% endraw %}rating{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| category           | Specifies the category to search the products in                                                                                                     | {% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}<br>For the category node IDs, [retrieve the category tree](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/categories/glue-api-retrieve-category-trees.html).                                                                                                                                                                                               |
-| currency           | Sets a currency                                                                                                                                      | {% raw %}{{{% endraw %}currency{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| sort               | Sorts the search results                                                                                                                             | For the list of possible values, run the catalog search request and find the list in the `sortParamNames` array.<br>For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting).                                                                                                                                                                                                                                                            |
-| page               | Sets the number of the search results page from which the results are retrieved                                                                      | {% raw %}{{{% endraw %}page_number{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                                |
-| ipp                | Sets the number of products per page                                                                                                                 | {% raw %}{{{% endraw %}number_of_products{% raw %}}}{% endraw %}                                                                                                                                                                                                                                                                                                                                                                                                         |
+| QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
+| ------------------- | ---------------- | ----------------------- |
+| include   | Adds resource relationships to the request.      | abstract-products   |
+| q | Restricts the set of the returned items to the provided parameter value. | <ul><li>{% raw %}{{null}}{% endraw %} (empty)</li><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{product_attribute}}{% endraw %} (brand, color)—to provide multiple product attributes, use `+`</li></ul> |
+| price[min]   | Specifies minimum prices of the products     | {% raw %}{{minimum_price}}{% endraw %}  |
+| price[max]   | Specifies maximum prices of the products  | {% raw %}{{maximum_price}}{% endraw %}  |
+| brand  | Specifies the product brand   | {% raw %}{{brand_name}}{% endraw %} |
+| label   | Specifies the product label  | {% raw %}{{label}}{% endraw %} |
+| weight  | Specifies the product weight  | {% raw %}{{weight}}{% endraw %} |
+| color  | Specifies the product color  | {% raw %}{{color}}{% endraw %}     |
+| storage_capacity[]  | Specifies the storage capacity of a product  |{% raw %}{{storage_capacity}}{% endraw %}   |
+| rating[min]   | Specifies the minimum rating of a product   | {% raw %}{{rating}}{% endraw %}   |
+| category  | Specifies the category to search the products in  | {% raw %}{{category_node_id}}{% endraw %}For the category node IDs, retrieve the category tree. |
+| currency   | Sets a currency    | {% raw %}{{currency}}{% endraw %}    |
+| sort  | Sorts the search results   | For the list of possible values, run the [catalog search request and find the list under sortParamNames in the response. For the default Spryker Demo Shop sorting parameters, see [Sorting parameters](#sorting). |
+| page  | Sets the number of the search results page from which the results are retrieved | {% raw %}{{page_number}}{% endraw %}    |
+| ipp   | Sets the number of products per page  | {% raw %}{{number_of_products}}{% endraw %}  |
+| merchant_name | Filters the results by a merchant name.  | {% raw %}{{merchnat_name}}{% endraw %}  |
 
-| REQUEST                                                                                            | USAGE                                                                                                                                                   |
-|----------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `GET https://glue.mysprykershop.com/catalog-search`                                                | Search for all available products.                                                                                                                      |
-| `GET https://glue.mysprykershop.com/catalog-search?q=`                                             | Search for all available products.                                                                                                                      |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058`                                          | Search for an abstract product by SKU *058*.                                                                                                            |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products`                | Search for an abstract product by SKU *058* with the included product details.                                                                          |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade`                             | Search for an abstract product by *Acer Liquid Jade* name.                                                                                              |
-| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504`                                | Search for a concrete product by SKU *058_261755504*.                                                                                                   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony+red`                                     | Search for products by multiple attributes (brand *Sony* and *red* color).                                                                              |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150` | Search for products within a minimum (*99.99*) and maximum (*150*) price range.                                                                         |
-| `GET https://glue.mysprykershop.com/catalog-search?q=sony`                                         | Search for products of the *Sony* brand.                                                                                                                |
-| `GET https://glue.mysprykershop.com/catalog-search?priceMode=NET_MODE`                             | Specify that you want returned only prices defined in `NET_MODE`.                                                                                       |
-| `GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE %`                     | Search for products with the *NEW* and *SALE*  labels.                                                                                                  |
-| `GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g`                                  | Search for products by the *45 g* weight.                                                                                                               |
-| `GET https://glue.mysprykershop.com/catalog-search?color[]=Blue`                                   | Search for products by the *Blue* color.                                                                                                                |
-| `GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB`                       | Search for products by the *32 GB* storage capacity.                                                                                                    |
-| `GET https://glue.mysprykershop.com/catalog-search?rating[min]=4`                                  | Search for products by the rating *4*.                                                                                                                  |
-| `GET https://glue.mysprykershop.com/catalog-search?category=6`                                     | Search for products by the category node ID *6*.                                                                                                        |
-| `GET https://glue.mysprykershop.com/catalog-search?currency=CHF`                                   | Define the *CHF* currency for the search result products.                                                                                               |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc`                           | Set sorting order ascending.                                                                                                                            |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc`                          | Set sorting order descending.                                                                                                                           |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating`                             | Sort found products by rating.                                                                                                                          |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc`                          | Sort found products by price ascending.                                                                                                                 |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity`                         | Sort found products by popularity. <br> Available only in the [Master Suite](/docs/about/all/master-suite.html) for now.   |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3`                                  | Set a page to retrieve the search results from.                                                                                                         |
-| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24`                                  | Set number of products per page.                                                                                                                        |
-| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker`                          | Filter the results by Merchant name. <br> Available only with the Marketplace.** |
 
+| REQUEST   | USAGE     |
+| --------------- | -------------- |
+| `GET https://glue.mysprykershop.com/catalog-search?q=`       | Search for all available products.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058`       | Search for an abstract product by SKU *058*.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058&include=abstract-products` | Search for an abstract product by SKU *058* with the included product details. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Acer Liquid Jade` | Search for an abstract product by *Acer Liquid Jade* name.    |
+| `GET https://glue.mysprykershop.com/catalog-search?q=058_261755504` | Search for a concrete product by SKU *058_261755504*.  |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony+red` | Search for products by multiple attributes (brand *Sony* and *red* color). |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony&price%5Bmin%5D=99.99&price%5Bmax%5D=150` | Search for products within a minimum (*99.99*) and maximum (*150*) price range. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=sony`   | Search for products of the *Sony* brand.   |
+| `GET https://glue.mysprykershop.com/catalog-search?label[]=NEW&label[]=SALE %` | Search for products with the *NEW* and *SALE*  labels.  |
+| `GET https://glue.mysprykershop.com/catalog-search?weight[]=45 g` |  Search for products by the *45 g* weight.  |
+| `GET https://glue.mysprykershop.com/catalog-search?color[]=Blue` | Search for products by the *Blue* color.   |
+| `GET https://glue.mysprykershop.com/catalog-search?storage_capacity[]=32 GB` | Search for products by the *32 GB* storage capacity. |
+| `GET https://glue.mysprykershop.com/catalog-search?rating[min]=4` | Search for products by the rating *4*.     |
+| `GET https://glue.mysprykershop.com/catalog-search?category=6` | Search for products by the category node ID *6*.     |
+| `GET https://glue.mysprykershop.com/catalog-search?currency=CHF` | Define the *CHF* currency for the search result products.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_asc` | Set sorting order ascending.  |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc` | Set sorting order descending.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=rating` | Sort the found products by rating.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&sort=price_asc` | Sort the found products by price ascending.   |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&page=3` | Set a page to retrieve the search results from. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=Sony&ipp=24` | Set a number of products per page.   |
+| `GET https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker` | Filter the results by the *Spryker* merchant name. |
+| `GET https://glue.mysprykershop.com/catalog-search?q=001&include=abstract-products,concrete-products,product-offers/` | Search for a product by SKU `001` including its concrete products and product offers.
 ### Response
 
+
 <details>
-<summary markdown='span'>Response sample: empty search criteria</summary>
+<summary markdown='span'>Response sample: search for all available products</summary>
 
 ```json
 {
@@ -104,16 +99,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -446,11 +439,290 @@ To search by products, send the request:
     }
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search for an abstract product</summary>
+<summary markdown='span'>Response sample: search for an abstract product by SKU</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "catalog-search",
+            "id": null,
+            "attributes": {
+                "spellingSuggestion": null,
+                "sort": {
+                    "sortParamNames": [
+                        "rating",
+                        "name_asc",
+                        "name_desc",
+                        "price_asc",
+                        "price_desc"
+                    ],
+                    "sortParamLocalizedNames": {
+                        "rating": "Sort by product ratings",
+                        "name_asc": "Sort by name ascending",
+                        "name_desc": "Sort by name descending",
+                        "price_asc": "Sort by price ascending",
+                        "price_desc": "Sort by price descending"
+                    },
+                    "currentSortParam": null,
+                    "currentSortOrder": null
+                },
+                "pagination": {
+                    "numFound": 1,
+                    "currentPage": 1,
+                    "maxPage": 1,
+                    "currentItemsPerPage": 10,
+                    "config": {
+                        "parameterName": "page",
+                        "itemsPerPageParameterName": "ipp",
+                        "defaultItemsPerPage": 10,
+                        "validItemsPerPageOptions": [
+                            12,
+                            24,
+                            36
+                        ]
+                    }
+                },
+                "abstractProducts": [
+                    {
+                        "abstractSku": "058",
+                        "price": 26432,
+                        "abstractName": "Acer Liquid Jade",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 26432,
+                                "DEFAULT": 26432
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/img_24245592_medium_1483521161_4318_9985.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/24245592-2688.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "valueFacets": [
+                    {
+                        "name": "category",
+                        "localizedName": "Categories",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": 1,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 11,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 12,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 14,
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "category",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "localizedName": "Product Labels",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "label",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "color",
+                        "localizedName": "Color",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "White",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "color",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "storage_capacity",
+                        "localizedName": "Storage Capacity",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "storage_capacity",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "brand",
+                        "localizedName": "Brand",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Acer",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "brand",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "touchscreen",
+                        "localizedName": "Touchscreen",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "touchscreen",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "weight",
+                        "localizedName": "Weight",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "weight",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "merchant_name",
+                        "localizedName": "Merchant",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Spryker",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "merchant_name",
+                            "isMultiValued": true
+                        }
+                    }
+                ],
+                "rangeFacets": [
+                    {
+                        "name": "price-DEFAULT-EUR-GROSS_MODE",
+                        "localizedName": "Price range",
+                        "min": 26432,
+                        "max": 26432,
+                        "activeMin": 26432,
+                        "activeMax": 26432,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "price",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "localizedName": "Product Ratings",
+                        "min": 0,
+                        "max": 0,
+                        "activeMin": 0,
+                        "activeMax": 0,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "rating",
+                            "isMultiValued": false
+                        }
+                    }
+                ],
+                "categoryTreeFilter": [
+                    {
+                        "nodeId": 5,
+                        "name": "Computer",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 6,
+                                "name": "Notebooks",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 7,
+                                "name": "Pc's/Workstations",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 8,
+                                "name": "Tablets",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                   ...
+                    {
+                        "nodeId": 16,
+                        "name": "Fish",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 18,
+                                "name": "Vegetables",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.69.demo-spryker.com:80/catalog-search?q=058"
+            }
+        }
+    ],
+    "links": {
+        "self": "glue.mysprykershop.com/catalog-search?q=058",
+        "last": "glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12"
+    }
+}
+```
+
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: search for an abstract product by SKU with the included abstract product details</summary>
 
 ```json
 {
@@ -466,8 +738,7 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
@@ -475,285 +746,6 @@ To search by products, send the request:
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
                         "price_desc": "Sort by price descending"
-                    },
-                    "currentSortParam": null,
-                    "currentSortOrder": null
-                },
-                "pagination": {
-                    "numFound": 1,
-                    "currentPage": 1,
-                    "maxPage": 1,
-                    "currentItemsPerPage": 10,
-                    "config": {
-                        "parameterName": "page",
-                        "itemsPerPageParameterName": "ipp",
-                        "defaultItemsPerPage": 10,
-                        "validItemsPerPageOptions": [
-                            12,
-                            24,
-                            36
-                        ]
-                    }
-                },
-                "abstractProducts": [
-                    {
-                        "abstractSku": "058",
-                        "price": 26432,
-                        "abstractName": "Acer Liquid Jade",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "EUR",
-                                    "symbol": "€",
-                                    "name": "Euro"
-                                },
-                                "grossAmount": 26432,
-                                "DEFAULT": 26432
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/img_24245592_medium_1483521161_4318_9985.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/24245592-2688.jpg"
-                            }
-                        ]
-                    }
-                ],
-                "valueFacets": [
-                    {
-                        "name": "category",
-                        "localizedName": "Categories",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": 1,
-                                "doc_count": 1
-                            },
-                            {
-                                "value": 11,
-                                "doc_count": 1
-                            },
-                            {
-                                "value": 12,
-                                "doc_count": 1
-                            },
-                            {
-                                "value": 14,
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "category",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "label",
-                        "localizedName": "Product Labels",
-                        "docCount": null,
-                        "values": [],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "label",
-                            "isMultiValued": true
-                        }
-                    },
-                    {
-                        "name": "color",
-                        "localizedName": "Color",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": "White",
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "color",
-                            "isMultiValued": true
-                        }
-                    },
-                    {
-                        "name": "storage_capacity",
-                        "localizedName": "Storage Capacity",
-                        "docCount": null,
-                        "values": [],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "storage_capacity",
-                            "isMultiValued": true
-                        }
-                    },
-                    {
-                        "name": "brand",
-                        "localizedName": "Brand",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": "Acer",
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "brand",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "touchscreen",
-                        "localizedName": "Touchscreen",
-                        "docCount": null,
-                        "values": [],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "touchscreen",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "weight",
-                        "localizedName": "Weight",
-                        "docCount": null,
-                        "values": [],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "weight",
-                            "isMultiValued": true
-                        }
-                    },
-                    {
-                        "name": "merchant_name",
-                        "localizedName": "Merchant",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": "Spryker",
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "merchant_name",
-                            "isMultiValued": true
-                        }
-                    }
-                ],
-                "rangeFacets": [
-                    {
-                        "name": "price-DEFAULT-EUR-GROSS_MODE",
-                        "localizedName": "Price range",
-                        "min": 26432,
-                        "max": 26432,
-                        "activeMin": 26432,
-                        "activeMax": 26432,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "price",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "rating",
-                        "localizedName": "Product Ratings",
-                        "min": 0,
-                        "max": 0,
-                        "activeMin": 0,
-                        "activeMax": 0,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "rating",
-                            "isMultiValued": false
-                        }
-                    }
-                ],
-                "categoryTreeFilter": [
-                    {
-                        "nodeId": 5,
-                        "name": "Computer",
-                        "docCount": 0,
-                        "children": [
-                            {
-                                "nodeId": 6,
-                                "name": "Notebooks",
-                                "docCount": 0,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 7,
-                                "name": "Pc's/Workstations",
-                                "docCount": 0,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 8,
-                                "name": "Tablets",
-                                "docCount": 0,
-                                "children": []
-                            }
-                        ]
-                    },
-                   ...
-                    {
-                        "nodeId": 16,
-                        "name": "Fish",
-                        "docCount": 0,
-                        "children": [
-                            {
-                                "nodeId": 18,
-                                "name": "Vegetables",
-                                "docCount": 0,
-                                "children": []
-                            }
-                        ]
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/catalog-search?q=058"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue.mysprykershop.com/catalog-search?q=058",
-        "last": "https://glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12",
-        "first": "https://glue.mysprykershop.com/catalog-search?q=058&page[offset]=0&page[limit]=12"
-    }
-}
-```
-</details>
-
-
-<details>
-<summary markdown='span'>Response sample: search for an abstract product with the included abstract product details</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "catalog-search",
-            "id": null,
-            "attributes": {
-                "spellingSuggestion": null,
-                "sort": {
-                    "sortParamNames": [
-                        "rating",
-                        "name_asc",
-                        "name_desc",
-                        "price_asc",
-                        "price_desc",
-                        "popularity"
-                    ],
-                    "sortParamLocalizedNames": {
-                        "rating": "Sort by product ratings",
-                        "name_asc": "Sort by name ascending",
-                        "name_desc": "Sort by name descending",
-                        "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -1130,11 +1122,12 @@ To search by products, send the request:
     ]
 }
 ```
+
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample: search for a concrete product</summary>
+<summary markdown='span'>Response sample: search for a concrete product by SKU</summary>
 
 ```json
 {
@@ -1150,16 +1143,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -1413,7 +1404,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for n item using multiple product attributes in search request</summary>
+<summary markdown='span'>Response sample: search for products by multiple attributes</summary>
 
 ```json
 {
@@ -1429,16 +1420,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -1832,7 +1821,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item with minimum and maximum price range</summary>
+<summary markdown='span'>Response sample: search for products within a minimum and maximum price range</summary>
 
 ```json
 {
@@ -1848,16 +1837,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -2205,7 +2192,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by brand</summary>
+<summary markdown='span'>Response sample: search for products by brand</summary>
 
 ```json
 {
@@ -2221,16 +2208,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -2526,7 +2511,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by labels</summary>
+<summary markdown='span'>Response sample: search for products by labels</summary>
 
 ```json
 {
@@ -2542,16 +2527,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -2815,7 +2798,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by weight</summary>
+<summary markdown='span'>Response sample: search for products by weight</summary>
 
 ```json
 {
@@ -2831,16 +2814,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -3134,7 +3115,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by color</summary>
+<summary markdown='span'>Response sample: search for products by color</summary>
 
 ```json
 {
@@ -3150,16 +3131,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -3490,7 +3469,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response: search for an item by storage capacity</summary>
+<summary markdown='span'>Response: search for products by storage capacity</summary>
 
 ```json
 {
@@ -3506,16 +3485,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -3763,7 +3740,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by rating</summary>
+<summary markdown='span'>Response sample: search for products by rating</summary>
 
 ```json
 {
@@ -3779,16 +3756,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -3997,9 +3972,9 @@ To search by products, send the request:
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/catalog-search?rating[min]=4",
-        "last": "https://glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12",
-        "first": "https://glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12"
+        "self": "glue.mysprykershop.com/catalog-search?rating[min]=4",
+        "last": "glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12",
+        "first": "glue.mysprykershop.com/catalog-search?rating[min]=4&page[offset]=0&page[limit]=12"
     }
 }
 ```
@@ -4007,7 +3982,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an item by category</summary>
+<summary markdown='span'>Response sample: search for products by the category node ID</summary>
 
 ```json
 {
@@ -4023,16 +3998,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -4221,7 +4194,234 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set the search results currency</summary>
+<summary markdown='span'>Response sample: define the currency for the search result products</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "catalog-search",
+            "id": null,
+            "attributes": {
+                "spellingSuggestion": null,
+                "sort": {
+                    "sortParamNames": [
+                        "rating",
+                        "name_asc",
+                        "name_desc",
+                        "price_asc",
+                        "price_desc"
+                    ],
+                    "sortParamLocalizedNames": {
+                        "rating": "Sort by product ratings",
+                        "name_asc": "Sort by name ascending",
+                        "name_desc": "Sort by name descending",
+                        "price_asc": "Sort by price ascending",
+                        "price_desc": "Sort by price descending"
+                    },
+                    "currentSortParam": null,
+                    "currentSortOrder": null
+                },
+                "pagination": {
+                    "numFound": 220,
+                    "currentPage": 1,
+                    "maxPage": 22,
+                    "currentItemsPerPage": 10,
+                    "config": {
+                        "parameterName": "page",
+                        "itemsPerPageParameterName": "ipp",
+                        "defaultItemsPerPage": 10,
+                        "validItemsPerPageOptions": [
+                            12,
+                            24,
+                            36
+                        ]
+                    }
+                },
+                "abstractProducts": [
+                    {
+                        "abstractSku": "060",
+                        "price": 48113,
+                        "abstractName": "Acer Liquid Jade",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "CHF",
+                                    "symbol": "CHF",
+                                    "name": "Swiss Franc"
+                                },
+                                "grossAmount": 48113,
+                                "DEFAULT": 48113
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/26027598-6953.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/26027598-6953.jpg"
+                            }
+                        ]
+                    },
+                  ...
+                            {
+                                "priceTypeName": "ORIGINAL",
+                                "currency": {
+                                    "code": "CHF",
+                                    "symbol": "CHF",
+                                    "name": "Swiss Franc"
+                                },
+                                "grossAmount": 47150,
+                                "ORIGINAL": 47150
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/30021637_4678.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/gallery/30021637_4678.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "valueFacets": [
+                    {
+                        "name": "category",
+                        "localizedName": "Categories",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": 1,
+                                "doc_count": 220
+                            },
+                           ...
+                            {
+                                "value": 17,
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "category",
+                            "isMultiValued": false
+                        }
+                    },
+                   ...
+                    {
+                        "name": "merchant_name",
+                        "localizedName": "Merchant",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Spryker",
+                                "doc_count": 110
+                            },
+                            {
+                                "value": "Video King",
+                                "doc_count": 66
+                            },
+                            {
+                                "value": "Budget Cameras",
+                                "doc_count": 37
+                            },
+                            {
+                                "value": "Sony Experts",
+                                "doc_count": 26
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "merchant_name",
+                            "isMultiValued": true
+                        }
+                    }
+                ],
+                "rangeFacets": [
+                    {
+                        "name": "price-DEFAULT-CHF-GROSS_MODE",
+                        "localizedName": "Price range",
+                        "min": 0,
+                        "max": 397554,
+                        "activeMin": 0,
+                        "activeMax": 397554,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "price",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "localizedName": "Product Ratings",
+                        "min": 4,
+                        "max": 5,
+                        "activeMin": 4,
+                        "activeMax": 5,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "rating",
+                            "isMultiValued": false
+                        }
+                    }
+                ],
+                "categoryTreeFilter": [
+                    {
+                        "nodeId": 5,
+                        "name": "Computer",
+                        "docCount": 72,
+                        "children": [
+                            {
+                                "nodeId": 6,
+                                "name": "Notebooks",
+                                "docCount": 24,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 7,
+                                "name": "Pc's/Workstations",
+                                "docCount": 20,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 8,
+                                "name": "Tablets",
+                                "docCount": 28,
+                                "children": []
+                            }
+                        ]
+                    },
+                    ...
+                    {
+                        "nodeId": 16,
+                        "name": "Fish",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 18,
+                                "name": "Vegetables",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/catalog-search?currency=CHF"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.mysprykershop.com/catalog-search?currency=CHF",
+        "last": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=216&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=0&page[limit]=12",
+        "next": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=12&page[limit]=12"
+    }
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Response sample: set sorting order ascending in the search results</summary>
 
 ```json
 {
@@ -4237,8 +4437,7 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
@@ -4246,235 +4445,6 @@ To search by products, send the request:
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
                         "price_desc": "Sort by price descending"
-                    },
-                    "currentSortParam": null,
-                    "currentSortOrder": null
-                },
-                "pagination": {
-                    "numFound": 220,
-                    "currentPage": 1,
-                    "maxPage": 22,
-                    "currentItemsPerPage": 10,
-                    "config": {
-                        "parameterName": "page",
-                        "itemsPerPageParameterName": "ipp",
-                        "defaultItemsPerPage": 10,
-                        "validItemsPerPageOptions": [
-                            12,
-                            24,
-                            36
-                        ]
-                    }
-                },
-                "abstractProducts": [
-                    {
-                        "abstractSku": "060",
-                        "price": 48113,
-                        "abstractName": "Acer Liquid Jade",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "CHF",
-                                    "symbol": "CHF",
-                                    "name": "Swiss Franc"
-                                },
-                                "grossAmount": 48113,
-                                "DEFAULT": 48113
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/26027598-6953.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/26027598-6953.jpg"
-                            }
-                        ]
-                    },
-                  ...
-                            {
-                                "priceTypeName": "ORIGINAL",
-                                "currency": {
-                                    "code": "CHF",
-                                    "symbol": "CHF",
-                                    "name": "Swiss Franc"
-                                },
-                                "grossAmount": 47150,
-                                "ORIGINAL": 47150
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/30021637_4678.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/gallery/30021637_4678.jpg"
-                            }
-                        ]
-                    }
-                ],
-                "valueFacets": [
-                    {
-                        "name": "category",
-                        "localizedName": "Categories",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": 1,
-                                "doc_count": 220
-                            },
-                           ...
-                            {
-                                "value": 17,
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "category",
-                            "isMultiValued": false
-                        }
-                    },
-                   ...
-                    {
-                        "name": "merchant_name",
-                        "localizedName": "Merchant",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": "Spryker",
-                                "doc_count": 110
-                            },
-                            {
-                                "value": "Video King",
-                                "doc_count": 66
-                            },
-                            {
-                                "value": "Budget Cameras",
-                                "doc_count": 37
-                            },
-                            {
-                                "value": "Sony Experts",
-                                "doc_count": 26
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "merchant_name",
-                            "isMultiValued": true
-                        }
-                    }
-                ],
-                "rangeFacets": [
-                    {
-                        "name": "price-DEFAULT-CHF-GROSS_MODE",
-                        "localizedName": "Price range",
-                        "min": 0,
-                        "max": 397554,
-                        "activeMin": 0,
-                        "activeMax": 397554,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "price",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "rating",
-                        "localizedName": "Product Ratings",
-                        "min": 4,
-                        "max": 5,
-                        "activeMin": 4,
-                        "activeMax": 5,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "rating",
-                            "isMultiValued": false
-                        }
-                    }
-                ],
-                "categoryTreeFilter": [
-                    {
-                        "nodeId": 5,
-                        "name": "Computer",
-                        "docCount": 72,
-                        "children": [
-                            {
-                                "nodeId": 6,
-                                "name": "Notebooks",
-                                "docCount": 24,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 7,
-                                "name": "Pc's/Workstations",
-                                "docCount": 20,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 8,
-                                "name": "Tablets",
-                                "docCount": 28,
-                                "children": []
-                            }
-                        ]
-                    },
-                    ...
-                    {
-                        "nodeId": 16,
-                        "name": "Fish",
-                        "docCount": 0,
-                        "children": [
-                            {
-                                "nodeId": 18,
-                                "name": "Vegetables",
-                                "docCount": 0,
-                                "children": []
-                            }
-                        ]
-                    }
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/catalog-search?currency=CHF"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue.mysprykershop.com/catalog-search?currency=CHF",
-        "last": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=216&page[limit]=12",
-        "first": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=0&page[limit]=12",
-        "next": "https://glue.mysprykershop.com/catalog-search?currency=CHF&page[offset]=12&page[limit]=12"
-    }
-}
-```
-</details>
-
-
-<details>
-<summary markdown='span'>Response sample: sort the results in ascending order</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "catalog-search",
-            "id": null,
-            "attributes": {
-                "spellingSuggestion": null,
-                "sort": {
-                    "sortParamNames": [
-                        "rating",
-                        "name_asc",
-                        "name_desc",
-                        "price_asc",
-                        "price_desc",
-                        "popularity"
-                    ],
-                    "sortParamLocalizedNames": {
-                        "rating": "Sort by product ratings",
-                        "name_asc": "Sort by name ascending",
-                        "name_desc": "Sort by name descending",
-                        "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
                     },
                     "currentSortParam": "name_asc",
                     "currentSortOrder": "asc"
@@ -4871,7 +4841,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: sort the results in descending order</summary>
+<summary markdown='span'>Response sample: set sorting order descending in the search results</summary>
 
 ```json
 {
@@ -4887,16 +4857,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": "name_desc",
                     "currentSortOrder": "desc"
@@ -5044,7 +5012,7 @@ To search by products, send the request:
                                 "value": 1,
                                 "doc_count": 43
                             },
-                            ююю
+
                             {
                                 "value": 14,
                                 "doc_count": 1
@@ -5178,10 +5146,10 @@ To search by products, send the request:
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc",
-        "last": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=36&page[limit]=12",
-        "first": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=0&page[limit]=12",
-        "next": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=12&page[limit]=12"
+        "self": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc",
+        "last": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=36&page[limit]=12",
+        "first": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=0&page[limit]=12",
+        "next": "glue.mysprykershop.com/catalog-search?q=Sony&sort=name_desc&page[offset]=12&page[limit]=12"
     }
 }
 ```
@@ -5189,7 +5157,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: sort the search results by rating</summary>
+<summary markdown='span'>Response sample: sort the found products by rating</summary>
 
 ```json
 {
@@ -5205,16 +5173,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": "rating",
                     "currentSortOrder": "desc"
@@ -5488,7 +5454,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: sort search results by price ascending</summary>
+<summary markdown='span'>Response sample: sort the found products by price ascending</summary>
 
 ```json
 {
@@ -5504,16 +5470,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": "price_asc",
                     "currentSortOrder": "asc"
@@ -5802,261 +5766,9 @@ To search by products, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: sort the search results by popularity (This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.)</summary>
-
-```json
-{
-    "data": [
-        {
-            "type": "catalog-search",
-            "id": null,
-            "attributes": {
-                "spellingSuggestion": null,
-                "sort": {
-                    "sortParamNames": [
-                        "rating",
-                        "name_asc",
-                        "name_desc",
-                        "price_asc",
-                        "price_desc",
-                        "popularity"
-                    ],
-                    "sortParamLocalizedNames": {
-                        "rating": "Sort by product ratings",
-                        "name_asc": "Sort by name ascending",
-                        "name_desc": "Sort by name descending",
-                        "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
-                    },
-                    "currentSortParam": "popularity",
-                    "currentSortOrder": "desc"
-                },
-                "pagination": {
-                    "numFound": 43,
-                    "currentPage": 3,
-                    "maxPage": 4,
-                    "currentItemsPerPage": 12,
-                    "config": {
-                        "parameterName": "page",
-                        "itemsPerPageParameterName": "ipp",
-                        "defaultItemsPerPage": 12,
-                        "validItemsPerPageOptions": [
-                            12,
-                            24,
-                            36
-                        ]
-                    }
-                },
-                "abstractProducts": [
-                    {
-                        "abstractSku": "195",
-                        "price": 39467,
-                        "abstractName": "Sony FDR-AXP33",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "EUR",
-                                    "symbol": "\u20ac",
-                                    "name": "Euro"
-                                },
-                                "grossAmount": 39467,
-                                "DEFAULT": 39467
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/25904159_6059.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/gallery/25904159_6059.jpg"
-                            }
-                        ]
-                    },
-                    {
-                        "abstractSku": "196",
-                        "price": 24940,
-                        "abstractName": "Sony HDR-AS20",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "EUR",
-                                    "symbol": "\u20ac",
-                                    "name": "Euro"
-                                },
-                                "grossAmount": 24940,
-                                "DEFAULT": 24940
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/23120327-Sony.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/23120327-Sony.jpg"
-                            }
-                        ]
-                    },
-                    {
-                        "abstractSku": "197",
-                        "price": 23010,
-                        "abstractName": "Sony HDR-AS20",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "EUR",
-                                    "symbol": "\u20ac",
-                                    "name": "Euro"
-                                },
-                                "grossAmount": 23010,
-                                "DEFAULT": 23010
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/21421718-Sony.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/21421718-Sony.jpg"
-                            }
-                        ]
-                    },
-                    {
-                        "abstractSku": "199",
-                        "price": 32909,
-                        "abstractName": "Sony HXR-MC2500",
-                        "prices": [
-                            {
-                                "priceTypeName": "DEFAULT",
-                                "currency": {
-                                    "code": "EUR",
-                                    "symbol": "\u20ac",
-                                    "name": "Euro"
-                                },
-                                "grossAmount": 32909,
-                                "DEFAULT": 32909
-                            }
-                        ],
-                        "images": [
-                            {
-                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/24788780-2045.jpg",
-                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/24788780-2045.jpg"
-                            }
-                        ]
-                    },
-                    ...
-                ],
-                "valueFacets": [
-                    {
-                        "name": "category",
-                        "localizedName": "Categories",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": 1,
-                                "doc_count": 43
-                            },
-                            ...
-                            {
-                                "value": 14,
-                                "doc_count": 1
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "category",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "label",
-                        "localizedName": "Product Labels",
-                        "docCount": null,
-                        "values": [
-                            {
-                                "value": "SALE %",
-                                "doc_count": 10
-                            }
-                        ],
-                        "activeValue": null,
-                        "config": {
-                            "parameterName": "label",
-                            "isMultiValued": true
-                        }
-                    },
-                    ...
-                ],
-                "rangeFacets": [
-                    {
-                        "name": "price-DEFAULT-EUR-GROSS_MODE",
-                        "localizedName": "Price range",
-                        "min": 3000,
-                        "max": 345699,
-                        "activeMin": 3000,
-                        "activeMax": 345699,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "price",
-                            "isMultiValued": false
-                        }
-                    },
-                    {
-                        "name": "rating",
-                        "localizedName": "Product Ratings",
-                        "min": 4,
-                        "max": 4,
-                        "activeMin": 4,
-                        "activeMax": 4,
-                        "docCount": null,
-                        "config": {
-                            "parameterName": "rating",
-                            "isMultiValued": false
-                        }
-                    }
-                ],
-                "categoryTreeFilter": [
-                    {
-                        "nodeId": 5,
-                        "name": "Computer",
-                        "docCount": 1,
-                        "children": [
-                            {
-                                "nodeId": 6,
-                                "name": "Notebooks",
-                                "docCount": 0,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 7,
-                                "name": "Pc\u0027s/Workstations",
-                                "docCount": 0,
-                                "children": []
-                            },
-                            {
-                                "nodeId": 8,
-                                "name": "Tablets",
-                                "docCount": 1,
-                                "children": []
-                            }
-                        ]
-                    },
-                    ...
-                ]
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity&page=3"
-            }
-        }
-    ],
-    "links": {
-        "self": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity&page=3",
-        "last": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity&page[offset]=36&page[limit]=12",
-        "first": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity&page[offset]=0&page[limit]=12",
-        "next": "https://glue.mysprykershop.com/catalog-search?q=Sony&sort=popularity&page[offset]=12&page[limit]=12"
-    }
-}
-```
-</details>
 
 <details>
-<summary markdown='span'>Response sample: set a page of search for results</summary>
+<summary markdown='span'>Response sample: set a page to retrieve the search results from</summary>
 
 ```json
 {
@@ -6072,16 +5784,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -6316,7 +6026,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set a number of products per page in results</summary>
+<summary markdown='span'>Response sample: set a number of products per page</summary>
 
 ```json
 {
@@ -6332,16 +6042,14 @@ To search by products, send the request:
                         "name_asc",
                         "name_desc",
                         "price_asc",
-                        "price_desc",
-                        "popularity"
+                        "price_desc"
                     ],
                     "sortParamLocalizedNames": {
                         "rating": "Sort by product ratings",
                         "name_asc": "Sort by name ascending",
                         "name_desc": "Sort by name descending",
                         "price_asc": "Sort by price ascending",
-                        "price_desc": "Sort by price descending",
-                        "popularity": "Sort by popularity"
+                        "price_desc": "Sort by price descending"
                     },
                     "currentSortParam": null,
                     "currentSortOrder": null
@@ -6623,82 +6331,962 @@ To search by products, send the request:
 </details>
 
 
+<details>
+<summary markdown='span'>Response sample: filter the results by the merchant name</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "catalog-search",
+            "id": null,
+            "attributes": {
+                "spellingSuggestion": null,
+                "sort": {
+                    "sortParamNames": [
+                        "rating",
+                        "name_asc",
+                        "name_desc",
+                        "price_asc",
+                        "price_desc"
+                    ],
+                    "sortParamLocalizedNames": {
+                        "rating": "Sort by product ratings",
+                        "name_asc": "Sort by name ascending",
+                        "name_desc": "Sort by name descending",
+                        "price_asc": "Sort by price ascending",
+                        "price_desc": "Sort by price descending"
+                    },
+                    "currentSortParam": null,
+                    "currentSortOrder": null
+                },
+                "pagination": {
+                    "numFound": 110,
+                    "currentPage": 1,
+                    "maxPage": 11,
+                    "currentItemsPerPage": 10,
+                    "config": {
+                        "parameterName": "page",
+                        "itemsPerPageParameterName": "ipp",
+                        "defaultItemsPerPage": 10,
+                        "validItemsPerPageOptions": [
+                            12,
+                            24,
+                            36
+                        ]
+                    }
+                },
+                "abstractProducts": [
+                    {
+                        "abstractSku": "060",
+                        "price": 41837,
+                        "abstractName": "Acer Liquid Jade",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 41837,
+                                "DEFAULT": 41837
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/26027598-6953.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/26027598-6953.jpg"
+                            }
+                        ]
+                    },
+                    ...
+                    {
+                        "abstractSku": "031",
+                        "price": 40024,
+                        "abstractName": "Canon PowerShot G9 X",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 40024,
+                                "DEFAULT": 40024
+                            },
+                            {
+                                "priceTypeName": "ORIGINAL",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 41000,
+                                "ORIGINAL": 41000
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/gallery_mediums/30021637_4678.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/gallery/30021637_4678.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "valueFacets": [
+                    {
+                        "name": "category",
+                        "localizedName": "Categories",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": 1,
+                                "doc_count": 110
+                            },
+                            ...
+                            {
+                                "value": 14,
+                                "doc_count": 8
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "category",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "localizedName": "Product Labels",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "SALE %",
+                                "doc_count": 33
+                            },
+                            {
+                                "value": "New",
+                                "doc_count": 2
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "label",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "color",
+                        "localizedName": "Color",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Black",
+                                "doc_count": 37
+                            },
+                            ...
+                            {
+                                "value": "Purple",
+                                "doc_count": 2
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "color",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "storage_capacity",
+                        "localizedName": "Storage Capacity",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "32 GB",
+                                "doc_count": 4
+                            },
+                            ...
+                            {
+                                "value": "16 GB",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "storage_capacity",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "brand",
+                        "localizedName": "Brand",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Samsung",
+                                "doc_count": 32
+                            },
+                            ...
+                            {
+                                "value": "Hannspree",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "brand",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "touchscreen",
+                        "localizedName": "Touchscreen",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Yes",
+                                "doc_count": 5
+                            },
+                            {
+                                "value": "No",
+                                "doc_count": 3
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "touchscreen",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "weight",
+                        "localizedName": "Weight",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "132 g",
+                                "doc_count": 7
+                            },
+                            ...
+                            {
+                                "value": "63.5 g",
+                                "doc_count": 2
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "weight",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "merchant_name",
+                        "localizedName": "Merchant",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Spryker",
+                                "doc_count": 110
+                            },
+                            {
+                                "value": "Video King",
+                                "doc_count": 66
+                            },
+                            {
+                                "value": "Budget Cameras",
+                                "doc_count": 37
+                            },
+                            {
+                                "value": "Sony Experts",
+                                "doc_count": 26
+                            }
+                        ],
+                        "activeValue": "Spryker",
+                        "config": {
+                            "parameterName": "merchant_name",
+                            "isMultiValued": true
+                        }
+                    }
+                ],
+                "rangeFacets": [
+                    {
+                        "name": "price-DEFAULT-EUR-GROSS_MODE",
+                        "localizedName": "Price range",
+                        "min": 1879,
+                        "max": 345699,
+                        "activeMin": 1879,
+                        "activeMax": 345699,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "price",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "localizedName": "Product Ratings",
+                        "min": 4,
+                        "max": 5,
+                        "activeMin": 4,
+                        "activeMax": 5,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "rating",
+                            "isMultiValued": false
+                        }
+                    }
+                ],
+                "categoryTreeFilter": [
+                    {
+                        "nodeId": 5,
+                        "name": "Computer",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 6,
+                                "name": "Notebooks",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 7,
+                                "name": "Pc's/Workstations",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 8,
+                                "name": "Tablets",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 2,
+                        "name": "Cameras & Camcorders",
+                        "docCount": 41,
+                        "children": [
+                            {
+                                "nodeId": 4,
+                                "name": "Digital Cameras",
+                                "docCount": 41,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 3,
+                                "name": "Camcorders",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 15,
+                        "name": "Cables",
+                        "docCount": 0,
+                        "children": []
+                    },
+                    {
+                        "nodeId": 11,
+                        "name": "Telecom & Navigation",
+                        "docCount": 38,
+                        "children": [
+                            {
+                                "nodeId": 12,
+                                "name": "Smartphones",
+                                "docCount": 38,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 9,
+                        "name": "Smart Wearables",
+                        "docCount": 31,
+                        "children": [
+                            {
+                                "nodeId": 10,
+                                "name": "Smartwatches",
+                                "docCount": 31,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 16,
+                        "name": "Fish",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 18,
+                                "name": "Vegetables",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker"
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker",
+        "last": "https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker&page[offset]=108&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker&page[offset]=0&page[limit]=12",
+        "next": "https://glue.mysprykershop.com/catalog-search?merchant_name=Spryker&page[offset]=12&page[limit]=12"
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample: search for a product by SKU including its concrete products and product offers</summary>
+
+```json
+{
+    "data": [
+        {
+            "type": "catalog-search",
+            "id": null,
+            "attributes": {
+                "spellingSuggestion": null,
+                "sort": {
+                    "sortParamNames": [
+                        "rating",
+                        "name_asc",
+                        "name_desc",
+                        "price_asc",
+                        "price_desc",
+                        "popularity"
+                    ],
+                    "sortParamLocalizedNames": {
+                        "rating": "Sort by product ratings",
+                        "name_asc": "Sort by name ascending",
+                        "name_desc": "Sort by name descending",
+                        "price_asc": "Sort by price ascending",
+                        "price_desc": "Sort by price descending",
+                        "popularity": "Sort by popularity"
+                    },
+                    "currentSortParam": null,
+                    "currentSortOrder": null
+                },
+                "pagination": {
+                    "numFound": 1,
+                    "currentPage": 1,
+                    "maxPage": 1,
+                    "currentItemsPerPage": 12,
+                    "config": {
+                        "parameterName": "page",
+                        "itemsPerPageParameterName": "ipp",
+                        "defaultItemsPerPage": 12,
+                        "validItemsPerPageOptions": [
+                            12,
+                            24,
+                            36
+                        ]
+                    }
+                },
+                "abstractProducts": [
+                    {
+                        "abstractSku": "001",
+                        "price": 9999,
+                        "abstractName": "Canon IXUS 160",
+                        "prices": [
+                            {
+                                "priceTypeName": "DEFAULT",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 9999,
+                                "DEFAULT": 9999
+                            },
+                            {
+                                "priceTypeName": "ORIGINAL",
+                                "currency": {
+                                    "code": "EUR",
+                                    "symbol": "€",
+                                    "name": "Euro"
+                                },
+                                "grossAmount": 12564,
+                                "ORIGINAL": 12564
+                            }
+                        ],
+                        "images": [
+                            {
+                                "externalUrlSmall": "https://images.icecat.biz/img/norm/medium/25904006-8438.jpg",
+                                "externalUrlLarge": "https://images.icecat.biz/img/norm/high/25904006-8438.jpg"
+                            }
+                        ]
+                    }
+                ],
+                "valueFacets": [
+                    {
+                        "name": "category",
+                        "localizedName": "Categories",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": 1,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 2,
+                                "doc_count": 1
+                            },
+                            {
+                                "value": 4,
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "category",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "label",
+                        "localizedName": "Product Labels",
+                        "docCount": null,
+                        "values": [],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "label",
+                            "isMultiValued": true
+                        }
+                    },
+                    {
+                        "name": "merchant_name",
+                        "localizedName": "Merchant",
+                        "docCount": null,
+                        "values": [
+                            {
+                                "value": "Budget Cameras",
+                                "doc_count": 1
+                            },
+                            {
+                                "value": "Spryker",
+                                "doc_count": 1
+                            },
+                            {
+                                "value": "Video King",
+                                "doc_count": 1
+                            }
+                        ],
+                        "activeValue": null,
+                        "config": {
+                            "parameterName": "merchant_name",
+                            "isMultiValued": true
+                        }
+                    }
+                ],
+                "rangeFacets": [
+                    {
+                        "name": "price-DEFAULT-EUR-GROSS_MODE",
+                        "localizedName": "Price range",
+                        "min": 9999,
+                        "max": 9999,
+                        "activeMin": 9999,
+                        "activeMax": 9999,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "price",
+                            "isMultiValued": false
+                        }
+                    },
+                    {
+                        "name": "rating",
+                        "localizedName": "Product Ratings",
+                        "min": 0,
+                        "max": 0,
+                        "activeMin": 0,
+                        "activeMax": 0,
+                        "docCount": null,
+                        "config": {
+                            "parameterName": "rating",
+                            "isMultiValued": false
+                        }
+                    }
+                ],
+                "categoryTreeFilter": [
+                    {
+                        "nodeId": 5,
+                        "name": "Computer",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 6,
+                                "name": "Notebooks",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 7,
+                                "name": "Pc's/Workstations",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 8,
+                                "name": "Tablets",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 2,
+                        "name": "Cameras & Camcorders",
+                        "docCount": 1,
+                        "children": [
+                            {
+                                "nodeId": 4,
+                                "name": "Digital Cameras",
+                                "docCount": 1,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 3,
+                                "name": "Camcorders",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 11,
+                        "name": "Telecom & Navigation",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 12,
+                                "name": "Smartphones",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 15,
+                        "name": "Cables",
+                        "docCount": 0,
+                        "children": []
+                    },
+                    {
+                        "nodeId": 16,
+                        "name": "Food",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 18,
+                                "name": "Fish",
+                                "docCount": 0,
+                                "children": []
+                            },
+                            {
+                                "nodeId": 19,
+                                "name": "Vegetables",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "nodeId": 9,
+                        "name": "Smart Wearables",
+                        "docCount": 0,
+                        "children": [
+                            {
+                                "nodeId": 10,
+                                "name": "Smartwatches",
+                                "docCount": 0,
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/catalog-search"
+            },
+            "relationships": {
+                "abstract-products": {
+                    "data": [
+                        {
+                            "type": "abstract-products",
+                            "id": "001"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "links": {
+        "self": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers",
+        "last": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12",
+        "first": "https://glue.mysprykershop.com/access-tokens?q=001&include=abstract-products,concrete-products,product-offers&page[offset]=0&page[limit]=12"
+    },
+    "included": [
+        {
+            "type": "product-offers",
+            "id": "offer8",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000002",
+                "isDefault": true
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer8"
+            }
+        },
+        {
+            "type": "product-offers",
+            "id": "offer49",
+            "attributes": {
+                "merchantSku": null,
+                "merchantReference": "MER000005",
+                "isDefault": false
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/product-offers/offer49"
+            }
+        },
+        {
+            "type": "concrete-products",
+            "id": "001_25904006",
+            "attributes": {
+                "sku": "001_25904006",
+                "isDiscontinued": false,
+                "discontinuedNote": null,
+                "averageRating": null,
+                "reviewCount": 0,
+                "productAbstractSku": "001",
+                "name": "Canon IXUS 160",
+                "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "flash_range_tele": "4.2-4.9 ft",
+                    "memory_slots": "1",
+                    "usb_version": "2",
+                    "brand": "Canon",
+                    "color": "Red"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "metaTitle": "Canon IXUS 160",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "flash_range_tele": "Flash range (tele)",
+                    "memory_slots": "Memory slots",
+                    "usb_version": "USB version",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "productConfigurationInstance": null
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006"
+            },
+            "relationships": {
+                "product-offers": {
+                    "data": [
+                        {
+                            "type": "product-offers",
+                            "id": "offer8"
+                        },
+                        {
+                            "type": "product-offers",
+                            "id": "offer49"
+                        }
+                    ]
+                },
+                "abstract-products": {
+                    "data": [
+                        {
+                            "type": "abstract-products",
+                            "id": "001"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "abstract-products",
+            "id": "001",
+            "attributes": {
+                "sku": "001",
+                "merchantReference": "MER000001",
+                "averageRating": null,
+                "reviewCount": 0,
+                "name": "Canon IXUS 160",
+                "description": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results while framing using Live View Control and enjoy sharing them with friends using the 6.8 cm (2.7”) LCD screen. Combine with a Canon Connect Station and you can easily share your photos and movies with the world on social media sites and online albums like irista, plus enjoy watching them with family and friends on an HD TV. Effortlessly enjoy great shots of friends thanks to Face Detection technology. It detects multiple faces in a single frame making sure they remain in focus and with optimum brightness. Face Detection also ensures natural skin tones even in unusual lighting conditions.",
+                "attributes": {
+                    "megapixel": "20 MP",
+                    "flash_range_tele": "4.2-4.9 ft",
+                    "memory_slots": "1",
+                    "usb_version": "2",
+                    "brand": "Canon",
+                    "color": "Red"
+                },
+                "superAttributesDefinition": [
+                    "color"
+                ],
+                "superAttributes": {
+                    "color": [
+                        "Red"
+                    ]
+                },
+                "attributeMap": {
+                    "product_concrete_ids": [
+                        "001_25904006"
+                    ],
+                    "super_attributes": {
+                        "color": [
+                            "Red"
+                        ]
+                    },
+                    "attribute_variants": [],
+                    "attribute_variant_map": {
+                        "1": []
+                    }
+                },
+                "metaTitle": "Canon IXUS 160",
+                "metaKeywords": "Canon,Entertainment Electronics",
+                "metaDescription": "Add a personal touch Make shots your own with quick and easy control over picture settings such as brightness and colour intensity. Preview the results whi",
+                "attributeNames": {
+                    "megapixel": "Megapixel",
+                    "flash_range_tele": "Flash range (tele)",
+                    "memory_slots": "Memory slots",
+                    "usb_version": "USB version",
+                    "brand": "Brand",
+                    "color": "Color"
+                },
+                "url": "/en/canon-ixus-160-1"
+            },
+            "links": {
+                "self": "https://glue.mysprykershop.com/abstract-products/001"
+            },
+            "relationships": {
+                "concrete-products": {
+                    "data": [
+                        {
+                            "type": "concrete-products",
+                            "id": "001_25904006"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
+```
+</details>
+
 <a name="sorting"></a>
 
 **Sorting parameters**
 
-| ATTRIBUTE               | TYPE   | DESCRIPTION                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|-------------------------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| sortParamNames          | Array  | List of the possible sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating</li><li>`name_asc`—sorting by name, ascending</li><li>`name_desc`—sorting by name, descending</li><li>`price_asc`—sorting by price, ascending</li><li>`price_desc`—sorting by price, descending</li><li>`popularity`—sorting by popularity (**This is valid for Master Suite only and has not been integrated into B2B/B2C Suites yet.**)</li></ul> |
-| sortParamLocalizedNames | Object | Localized names of the sorting parameters.                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| currentSortParam        | String | The currently applied sorting parameter.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| currentSortOrder        | String | The current sorting order.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ATTRIBUTE       | TYPE | DESCRIPTION     |
+| --------------- | -------- | ----------------------- |
+| sortParamNames   | Array    | Sorting parameters. The default Spryker Demo Shop parameters:<ul><li>`rating`—sorting by product rating.</li><li>`name_asc`—sorting by name, ascending.</li><li>`name_desc`—sorting by name, descending.</li><li>`price_asc`—sorting by price, ascending.</li><li>`price_desc`—sorting by price, descending.</li></ul> |
+| sortParamLocalizedNames | Object   | Localized names of the sorting parameters. |
+| currentSortParam  | String   | The currently applied sorting parameter.  |
+| currentSortOrder | String   | The current sorting order. |
 
 **Pagination**
 
-| ATTRIBUTE                 | TYPE    | DESCRIPTION                                          |
-|---------------------------|---------|------------------------------------------------------|
-| numFound                  | Integer | Number of the search results found.                  |
-| currentPage               | Integer | The current search results page.                     |
-| maxPage                   | Integer | Total number of the search results pages.            |
-| currentItemsPerPage       | Integer | Current number of the search results per page.       |
-| parameterName             | String  | Parameter name for setting the page number.          |
-| itemsPerPageParameterName | String  | Parameter name for setting number of items per page. |
-| defaultItemsPerPage       | Integer | Default number of items per one search results page. |
-| validItemsPerPageOptions  | Array   | Options for numbers per search results page.         |
+| ATTRIBUTE  |TYPE | DESCRIPTION   |
+| --------- | -------- | ---------- |
+| pagination.pagination | Object | Attributes that define the pagination. |
+| pagination.numFound | Integer  | Number of the search results found.  |
+| pagination.currentPage  | Integer  | The current search results page.   |
+| pagination.maxPage  | Integer  | Total number of the search results pages. |
+| pagination.currentItemsPerPage  | Integer  | Current number of the search results per page. |
+| pagination.parameterName  | String | Parameter name for setting the page number.  |
+| pagination.itemsPerPageParameterName | String | Parameter name for setting number of items per page. |
+| pagination.defaultItemsPerPage | Integer  | Default number of items per one search results page. |
+| pagination.validItemsPerPageOptions | Array | Options for numbers per search results page. |
 
 **Abstract products**
 
-| ATTRIBUTE    | TYPE   | DESCRIPTION                   |
-|--------------|--------|-------------------------------|
-| abstractSku  | String | SKU of the abstract product.  |
-| abstractName | String | Name of the abstract product. |
-| images       | Array  | Links to product images.      |
+| ATTRIBUTE | TYPE | DESCRIPTION  |
+| ---------- | -------- | --------------- |
+| abstractProducts | Array | Abstract products in the search results. |
+| abstractProducts.abstractSku   | String   | Unique identifier of the abstract product.  |
+| abstractProducts.price | Integer | Price to pay for that product in cents. |
+| abstractProducts.abstractName  | String   | Abstract product name. |
+| abstractProducts.images        | Array    | Product images of the abstract product.      |
+| abstractProducts.prices | Integer | Attributes describing the abstract product's price. |
+| abstractProducts.prices.priceTypeName | String | Price type. |
+| abstractProducts.prices.currency | String | Attributes describing the currency of the abstract product's price. |
+| abstractProducts.prices.currency.code | String | Currency code. |
+| abstractProducts.prices.currency.name | String | Currency name. |
+| abstractProducts.prices.currency.symbol | String | Currency symbol. |
+| abstractProducts.prices.grossAmount | Integer | Gross price in cents. |
+| abstractProducts.images | Array | Images of the abstract product. |
+| abstractProducts.images.externalUrlLarge | URL of the large image. |
+| abstractProducts.images.externalUrlSmall | URL of the small image. |
 
-For other abstract product attributes, see:
-
-* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
 
 **Value facets**
 
-| ATTRIBUTE     | TYPE    | DESCRIPTION                                                     |
-|---------------|---------|-----------------------------------------------------------------|
-| name          | String  | Name of the value facet.                                        |
-| localizedName | String  | Localized name of the value facet.                              |
-| values        | Array   | Values of the facet for the found items.                        |
-| activeValue   | Integer | Value of the facet specified in the current search request.     |
-| parameterName | String  | Parameter name.                                                 |
-| isMultiValued | Boolean | Indicates whether several values of the facet can be specified. |
+| ATTRIBUTE| TYPE | DESCRIPTION  |
+| ------------- | -------- | ------------------ |
+| valueFacets | Array | Objects describing the value facets. |
+| valueFacets.name   | String | Name of the value facet.     |
+| valueFacets.localizedName | String   | Localized name of the value facet.  |
+| valueFacets.values    | Array | Values of the facet for the found items.     |
+| valueFacets.activeValue | Integer| Value of the facet specified in the current search request. |
+| valueFacets.config | Object | Parameters describing the value facet's configuration. |
+| valueFacets.config.parameterName | String | Parameter name. |
+| valueFacets.config.isMultiValued | Boolean | Defines if several values of the facet can be specified. |
 
 **Range facets**
 
-| ATTRIBUTE     | TYPE    | DESCRIPTION                                                         |
-|---------------|---------|---------------------------------------------------------------------|
-| name          | String  | Name of the range facet.                                            |
-| localizedName | String  | Localized name of the range facet.                                  |
-| min           | Integer | Minimum value of the range for the found items.                     |
-| max           | Integer | Maximum value of the range for the found items.                     |
-| activeMin     | Integer | Minimum value of the range specified in the current search request. |
-| activeMax     | Integer | Maximum value of the range specified in the current search request. |
-| parameterName | String  | Parameter name.                                                     |
-| isMultiValued | Boolean | Indicates whether several values of the facet can be specified.     |
+| ATTRIBUTE | TYPE | DESCRIPTION   |
+| ---------- | -------- | ------------------ |
+| rangeFacets | Array | Objects describing the range facets. |
+| rangeFacets.name  | String  | Name of the range facet.  |
+| rangeFacets.localizedName | String  | Localized name of the range facet.   |
+| rangeFacets.min | Integer  | Minimum value of the range for the found items. |
+| rangeFacets.max | Integer  | Maximum value of the range for the found items.   |
+| rangeFacets.activeMin  | Integer | Minimum value of the range specified in the current search request. |
+| rangeFacets.activeMax | Integer | Maximum value of the range specified in the current search request. |
+| rangeFacets.config | Object | Parameters describing the range facet's configuration. |
+| rangeFacets.config.parameterName | String | Parameter name.   |
+| rangeFacets.config.isMultiValued | Boolean  | Defines if several values of the facet can be specified. |
 
 **Category tree filter**
 
-| ATTRIBUTE   | TYPE    | DESCRIPTION                                                |
-|-------------|---------|------------------------------------------------------------|
-| nodeId      | Integer | Category node ID.                                          |
-| name        | String  | Category name.                                             |
-| docCount    | Integer | Number of the found items in the category.                 |
-| children    | Array   | Array of node elements nested within the current category. |
+| ATTRIBUTE | TYPE| DESCRIPTION        |
+| ------------- | -------- | --------------- |
+| categoryTreeFilter | Array | Category tree filters. |
+| nodeId   | Integer  | Unique identifier of the category.   |
+| name    | String   | Category name.      |
+| docCount      | Integer  | Number of the found items in the category.    |
+| children      | Array    | Child categories of the category. The child categories have the same parameters.  |
+
+For details of the included resources, see:
+
+- [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html)
+- [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html)
+- [Retrieving product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
 
 ## Possible errors
 
-| CODE   | REASON                                                                                                                                                                             |
-|--------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 313    | Currency is invalid.                                                                                                                                                               |
-| 314    | Price mode is invalid.                                                                                                                                                             |
-| 503    | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
-
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+| CODE | REASON  |
+| -------- | ------------ |
+| 501      | Invalid currency.   |
+| 502      | Invalid price mode.  |
+| 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |

@@ -1,22 +1,27 @@
 ---
-title: Release notes 202311.0
+title: Release notes 202404.0
 description: Release notes for the Spryker SCCOS release 202404.0
 last_updated: Apr 20, 2024
 template: concept-topic-template
 ---
 
-## Stripe App (for B2B & B2C Models) <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.
 
-The Stripe app is a new addition in ACP under the Payment category. The initial version of the Stripe app offers Spryker projects a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
+For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
-We are currently working to offer also Stripe for Marketplaces bringing an easy merchant onboarding and setups and management of the payouts from one application.
+
+## Stripe App for B2B and B2C <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+The Stripe app is a new ACP app in the payment category. The initial version of the Stripe app offers a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
+
+We are currently working on enabling Stripe for marketplace models, which offers easy merchant onboarding and management of the payouts from one application.
 
 
 ### Business benefits
 
 - Diverse payment methods, wider reach: Offer a variety of convenient payment options to increase sales conversion rates and reach a broader audience.
 
-- Accelerated time-to-market with low-code integration. Utilize the out-of-the-box Stripe app to streamline PSP integration, minimizing project timelines and resource allocation.
+- Accelerated time-to-market with a low-code integration. Easily integrate the Stripe app without having to allocate a lot of resources.
 
 ### Documentation
 
@@ -30,15 +35,14 @@ We are currently working to offer also Stripe for Marketplaces bringing an easy 
 
 ## Agent Assist in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-The Agent Assist in Merchant Portal feature enables marketplace operators to effortlessly impersonate merchant users. It empowers the merchant support team, logged in as agents, to act on behalf of merchants within the Merchant Portal.
+The Agent Assist in Merchant Portal feature enables marketplace operators to effortlessly impersonate merchant users. The merchant support team, logged in as agents, can act on behalf of merchants within the Merchant Portal.
 
 !
 
 
-
 ### Business benefit
 
-Excellence in merchant care: Provide your merchants comprehensive support, guidance, and issue resolution.
+Excellence in merchant care: Provide your merchants with comprehensive support, guidance, and issue resolution.
 
 
 ### Documentation
@@ -46,9 +50,9 @@ Excellence in merchant care: Provide your merchants comprehensive support, guida
 [Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
-## Enhanced Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. The Merchant B2B Contracts & Contract Requests feature introduces initiation and management of relation requests, making it easier to connect both parties and to create buyer-merchant relations in B2B marketplaces and shops. These relations allow merchants and marketplace operators to specify buyer-specific products, prices, and order thresholds.
+In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. The Merchant B2B Contracts & Contract Requests feature introduces the initiation and management of relation requests, making it easier to connect both parties and to create buyer-merchant relations in B2B marketplaces and shops. These relations enable merchants and marketplace operators to specify buyer-specific products, prices, and order thresholds.
 
 
 !
@@ -56,7 +60,7 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 ### Business benefits
 
 - Streamlined user journey: Enhance user satisfaction by simplifying the process for buyers to connect with merchants, creating a more seamless and user-friendly experience.
-- Efficient operational management: Increase operational efficiency for merchants and marketplace operators by automating the initiation and management of merchant relation requests, thereby reducing the manual efforts required to establish these relations.
+- Efficient operational management: Increase operational efficiency for merchants and marketplace operators by automating the initiation and management of merchant relation requests, which reduces the manual efforts required to establish these relations.
 
 
 ### Documentation
@@ -67,15 +71,15 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 ## Managed Security Operations Center <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-The managed Security Operations Center (SOC) provides continuous monitoring, detection, and response to cybersecurity threats in your cloud environments. By leveraging advanced technologies, coupled with the expertise of skilled security professionals, our managed SOC offers comprehensive protection to safeguard your organization.
+The managed Security Operations Center (SOC) provides continuous monitoring, detection, and response to cybersecurity threats in your cloud environments. By leveraging advanced technologies, coupled with the expertise of skilled security professionals, our managed SOC offers comprehensive protection to safeguard your projects.
 
 ### Business benefits
 
 - 24/7 security monitoring: Stay protected with round-the-clock vigilance against threats.
 - Optimized for Spryker’s infrastructure: Tailored specifically for the Spryker ecosystem, our service seamlessly integrates with your existing infrastructure.
 - Threat detection and analysis: Use cutting-edge technology and intelligence to promptly identify and assess cybersecurity risks. Our proactive approach ensures that potential threats are detected early, minimizing the risk to your business.
-Streamlined incident response: In the event of a security incident, our coordinated response mechanism allows for swift reaction, mitigation, and remediation. This ensures that any impact is minimized and business continuity is maintained.
-Compliance and reporting: The service is aligned with industry regulations like SOC2 and ISO27001.
+- Streamlined incident response: In the event of a security incident, our coordinated response mechanism allows for a swift reaction, mitigation, and remediation. This ensures that any impact is minimized and business continuity is maintained.
+- Compliance and reporting: The service is aligned with industry regulations like SOC2 and ISO27001.
 
 ### Learn more
 
@@ -83,50 +87,54 @@ Compliance and reporting: The service is aligned with industry regulations like 
 
 ### Technical prerequisites
 
-Available for Spryker Cloud Commerce OS environments.
+Available for cloud environments.
 
 
-## Merchant Portal UI/UX improvements
+## Merchant Portal UI/UX improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Several improvements have been made to the Merchant Portal, including color adjustments, updated icons, and a reorganised sidebar. The sidebar's state, whether expanded or collapsed, is now saved.
+We introduced the following Merchant Portal improvements:
+* Color adjustments
+* Updated icons
+* A reorganized sidebar.
 
-### Business benefits <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+The sidebar's state, whether expanded or collapsed, is now saved.
+
+### Business benefits
 
 - Better readability
-- Enhanced user experience
+- Easier navigation
 
-## Vertex improvement
+## Vertex improvement <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Store owners and Marketplace operators can now effortlessly manage refunds and ensure accurate tax reporting through the updated Vertex app. Additionally, users can continue to use the app seamlessly even during periods of downtime.
+Store owners and marketplace operators can now effortlessly manage refunds and ensure accurate tax reporting through the updated Vertex app. Additionally, users can continue to use the app seamlessly even during periods of downtime.
 
-### Business benefits <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
+### Business benefits
 
-- Enhanced app reliability: Uninterrupted service for users even during downtime
-- Tax report accuracy
+- Enhanced app reliability: uninterrupted service for users even during downtime.
+- Tax report accuracy.
 
 ### Documentation
 
 [Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html)
 
-### Technical Prerequisites
+### Technical prerequisites
 
-- [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
-- [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
+[App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
 
 ## Spryker Code Upgrader: UX Improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
 
-Based on your input in the UX research, we restructured the layout of Pull Requests created by Spryker Code Upgrader. Out of all supported platforms, you will get the best experience on GitHub. The information is now structured in the order of importance. Each Pull Request is connected to the Release Catalog. If a release requires a manual integration, the catalog provides clear steps to integrate it. We also clearly show how good each release is integrated in your project and potential conflicts or issues.
+Based on your input in the UX research, we restructured the layout of Pull Requests (PRs) created by Spryker Code Upgrader. Out of all supported platforms, you will get the best experience on GitHub. The information is now structured in the order of importance. Each PR is connected to the Release Catalog. If a release requires a manual integration, the catalog provides clear steps to integrate it. Also, PRs contain information on how much of a release is automatically integrated by the Upgrader, as well as potential conflicts or issues.
 
 !
 
 PR examples to compare:
 Before: https://github.com/spryker-shop/b2c-demo-shop/pull/297
-After: https://github.com/spryker-shop/b2c-demo-shop/pull/441
+Now: https://github.com/spryker-shop/b2c-demo-shop/pull/441
 
 ### Business benefit
 
-Slimmer layout of the pull request eases experience of your engineers to review and merge the upgrade suggestion
+Slimmer layout of PRs enables engineers to review and merge the upgrade suggestion.
 
 
 ### Learn more
@@ -173,8 +181,30 @@ symfony/security-core
 
 The latest Symfony framework LTS version provides enhanced stability, security, and performance.
 
-## Learn more 
+## Learn more
+
 Symfony 6.4 and Symfony Blog
 
-Technical Prerequisites:
+Technical prerequisites:
 Upgrade spryker/symfony modules to the latest version by following Upgrade to Symfony 6.4 or running Spryker Code Upgrader.
+
+
+## Improved Search in Spryker Docs
+
+Description:
+
+The Spryker Docs portal has been enhanced with new Algolia-based search functionality. Key highlights of the new search include:
+
+High performance: Most of the search queries take less than 20ms.
+Crawler-based indexing: Regular indexing ensures that no irrelevant content or 404 pages appear in the search results.
+Enhanced relevance: The refined algorithm ensures that only relevant search results are returned.
+Search as you type: Instant suggestions for relevant search results.
+Typo tolerance: Algolia suggests results for inputs even with typos.
+Additional features such as search history and favorites.
+
+
+Business Benefit:
+
+Enhanced search experience with high-quality results relevance.
+
+Labels: enhancement

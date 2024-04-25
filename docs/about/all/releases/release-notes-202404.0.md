@@ -1,20 +1,20 @@
 ---
 title: Release notes 202404.0
-description: Release notes for the Spryker SCCOS release 202404.0
+description: Release notes for the Spryker Cloud Commerce OS version 202404.0
 last_updated: Apr 20, 2024
 template: concept-topic-template
 ---
 
 Spryker Cloud Commerce OS is an end-to-end solution for digital commerce. This document contains a business-level description of new features and improvements.
 
-For information about installing the Spryker Commerce OS, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
+For information about installing Spryker, see [Getting started guide](/docs/dg/dev/development-getting-started-guide.html).
 
 
-## Stripe App for B2B and B2C <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## Stripe app<span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
 The Stripe app is a new ACP app in the payment category. The initial version of the Stripe app offers a seamless and secure payment service for B2B and B2C transactions. With its global reach and adherence to regulatory standards, it ensures hassle-free electronic transactions while meeting compliance requirements.
 
-We are currently working on enabling Stripe for marketplace models, which offers easy merchant onboarding and management of the payouts from one application.
+Currently, Stripe app supports B2C and B2B modes. We are working on enabling Stripe for marketplace models, which offers easy merchant onboarding and management of the payouts from one application.
 
 
 ### Business benefits
@@ -25,29 +25,29 @@ We are currently working on enabling Stripe for marketplace models, which offers
 
 ### Documentation
 
-[Stripe](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/stripe.html)
+[Stripe](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/stripe.html)
 
 ### Technical prerequisites
 
 * [App Composition Platform](/docs/dg/dev/acp/app-composition-platform-installation.html)
-* [SCCOS Prerequisites](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/sccos-prerequisites-for-the-stripe-app.html)
+* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
 
 
 ## Agent Assist in Merchant Portal <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
-The Agent Assist in Merchant Portal feature enables marketplace operators to effortlessly impersonate merchant users. The merchant support team, logged in as agents, can act on behalf of merchants within the Merchant Portal.
+The Agent Assist in Merchant Portal feature enables marketplace operators to impersonate merchant users. The merchant support team, logged in as agents, can act on behalf of merchants within the Merchant Portal.
 
 !
 
 
-### Business benefit
+### Business benefits
 
 Excellence in merchant care: Provide your merchants with comprehensive support, guidance, and issue resolution.
 
 
 ### Documentation
 
-[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/202404.0/marketplace/merchant-portal-agent-assist-feature-overview.html)
+[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management{{site.version}}marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
 ## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -65,8 +65,8 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 ### Documentation
 
-- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/202404.0/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html)
-- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/202404.0/base-shop/merchant-b2b-contracts-feature-overview.html)
+- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management{{site.version}}marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html)
+- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management{{site.version}}base-shop/merchant-b2b-contracts-feature-overview.html)
 
 
 ## Managed Security Operations Center <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -102,7 +102,7 @@ The sidebar's state, whether expanded or collapsed, is now saved.
 ### Business benefits
 
 - Better readability
-- Easier navigation
+- Better navigation
 
 ## Vertex improvement <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
@@ -115,7 +115,7 @@ Store owners and marketplace operators can now effortlessly manage refunds and e
 
 ### Documentation
 
-[Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/vertex.html)
+[Vertex](/docs/pbc/all/tax-management/{{site.version}}/base-shop/third-party-integrations/vertex/vertex.html)
 
 ### Technical prerequisites
 
@@ -134,7 +134,7 @@ Now: https://github.com/spryker-shop/b2c-demo-shop/pull/441
 
 ### Business benefit
 
-Slimmer layout of PRs enables engineers to review and merge the upgrade suggestion.
+Slimmer layout of PRs enables engineers to review and merge upgrade PRs faster.
 
 
 ### Learn more
@@ -144,25 +144,25 @@ Slimmer layout of PRs enables engineers to review and merge the upgrade suggesti
 
 ## Data Exchange API <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Traditionally, developing APIs required technical expertise and time-consuming coding processes. However, with our innovative dynamic Data Exchange API infrastructure, we have removed the complexities, making it seamless for our customers to create APIs effortlessly. With this tool, you can quickly build, customise, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.
+Traditionally, developing APIs required technical expertise and time-consuming coding processes. We removed complexities from the infrastructure of our innovative dynamic Data Exchange API, making creating APIs effortless. With this tool, you can quickly build, customize, and manage APIs tailored to your specific business requirements, all through an intuitive user interface.
 
-In this release Spryker added support of CRUD for combined entities allowing to write, read or update not a single entity, but also entities connected to it. For example, now it is possible to import a product and all it’s variants in a single API call. This improves performance as well as simplified implementation of the data import process.
+In this release, we added the support of CRUD for combined entities allowing to write, read, and update not a single entity, but also other entities connected to it. For example, now you can import a product and all its variants with a single API call. This improves performance and simplifies the implementation of the data import process.
 
 ### Business benefits
 
 * Faster data imports
-* Friendlier API interfaces to import data into Spryker
+* Friendlier API interface to import data into Spryker
 
 
 ### Documentation
 
 * [Data Exchange API](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/dynamic-data-api/data-exchange-api-integration.html)
-* [Data Exchange](/docs/pbc/all/data-exchange/202311.0/data-exchange.html#data-importers-and-data-exporters)
-* [Data Exchange FAQ](/docs/pbc/all/data-exchange/202311.0/data-exchange-faq.html)
+* [Data Exchange](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange.html#data-importers-and-data-exporters)
+* [Data Exchange FAQ](/docs/pbc/all/data-exchange/{{site.version}}/data-exchange-faq.html)
 
 ### Technical prerequisites
 
-* [Data Exchange API integration](/docs/pbc/all/data-exchange/202311.0/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
+* [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
 * [Data Exchange API + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
@@ -173,38 +173,36 @@ Spryker now supports Symfony 6.4, a long-term support (LTS) version. LTS version
 All Spryker products now require Symfony 6.4 or 5.4. We highly recommend migrating to the latest LTS version of Symfony.
 
 As a follow-up of migration to Symfony 6.4, we migrated all critical security modules to the latest version:
-symfony/security-guard
-symfony/security-http
-symfony/security-core
+- symfony/security-guard
+- symfony/security-http
+- symfony/security-core
 
 ### Business benefit
 
 The latest Symfony framework LTS version provides enhanced stability, security, and performance.
 
-## Learn more
+### Documentation
 
-Symfony 6.4 and Symfony Blog
+* [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html)
+* [Symfony blog posts related to new features](https://symfony.com/blog/category/living-on-the-edge/7.0-6.4)
 
-Technical prerequisites:
-Upgrade spryker/symfony modules to the latest version by following Upgrade to Symfony 6.4 or running Spryker Code Upgrader.
+### Technical prerequisites
 
-
-## Improved Search in Spryker Docs
-
-Description:
-
-The Spryker Docs portal has been enhanced with new Algolia-based search functionality. Key highlights of the new search include:
-
-High performance: Most of the search queries take less than 20ms.
-Crawler-based indexing: Regular indexing ensures that no irrelevant content or 404 pages appear in the search results.
-Enhanced relevance: The refined algorithm ensures that only relevant search results are returned.
-Search as you type: Instant suggestions for relevant search results.
-Typo tolerance: Algolia suggests results for inputs even with typos.
-Additional features such as search history and favorites.
+Upgrade spryker/symfony modules to the latest version by following [Upgrade to Symfony 6](https://docs.spryker.com/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html) or running [Spryker Code Upgrader](https://docs.spryker.com/docs/ca/devscu/spryker-code-upgrader.html).
 
 
-Business Benefit:
+## Improved Search in Spryker Docs <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 
-Enhanced search experience with high-quality results relevance.
+We implemented a new Algolia-based search on the Spryker Docs portal. Key highlights of the new search:
 
-Labels: enhancement
+- High performance: Most search queries take less than 20ms.
+- Crawler-based indexing: Regular indexing ensures that no irrelevant content or 404 pages appear in the search results.
+- Enhanced relevance: The refined algorithm ensures that only relevant search results are returned.
+- Search as you type: Instant suggestions for relevant search results.
+- Typo tolerance: Algolia suggests results for inputs even with typos.
+- Additional features such as search history and favorites.
+
+
+## Business benefit
+
+Find the needed content faster.

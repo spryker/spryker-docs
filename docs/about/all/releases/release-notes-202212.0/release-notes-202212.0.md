@@ -34,8 +34,8 @@ Configured Products can be saved, accessed, and configured again in carts or fro
 
 #### Documentation
 
-* Technical prerequisites: [Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/202212.0/product-configuration-feature-integration.html)
-* [Configurable Product feature overview](/docs/scos/user/features/202212.0/configurable-product-feature-overview.html)
+* Technical prerequisites: [Product Configuration feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-configuration-feature.html)
+* [Configurable Product feature overview](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html)
 
 ### Localization improvements <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
 

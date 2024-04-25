@@ -1375,6 +1375,8 @@ entries:
                     url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/edit-merchant-relations.html
                   - title: Manage merchant relation requests
                     url: /docs/pbc/all/merchant-management/base-shop/manage-in-the-back-office/manage-merchant-relation-requests.html
+                    include_versions:
+                    - "202404.0"
 
               - title: Domain model and relationships
                 nested:

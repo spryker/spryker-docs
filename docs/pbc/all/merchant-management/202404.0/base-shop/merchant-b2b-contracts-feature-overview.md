@@ -38,7 +38,7 @@ Company user can initiate the merchant relation by placing a request on the Stor
 
 In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have a formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the *Pending* status on the *Company Account* page.
 
-The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on еру *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
+The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on the *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 
 ## Merchant relation request approval by a merchant
 

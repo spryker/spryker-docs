@@ -37,7 +37,7 @@ Currently, Stripe app supports B2C and B2B modes. We are working on enabling Str
 
 The Agent Assist in Merchant Portal feature enables marketplace operators to impersonate merchant users. The merchant support team, logged in as agents, can act on behalf of merchants within the Merchant Portal.
 
-!
+![Agent assist in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/agent-assist-in-merchant-portal.png)
 
 
 ### Business benefits
@@ -55,7 +55,7 @@ Excellence in merchant care: Provide your merchants with comprehensive support, 
 In a B2B business model, the partnership is usually based on contracts, or relations, between buyers and merchants. The Merchant B2B Contracts & Contract Requests feature introduces the initiation and management of relation requests, making it easier to connect both parties and to create buyer-merchant relations in B2B marketplaces and shops. These relations enable merchants and marketplace operators to specify buyer-specific products, prices, and order thresholds.
 
 
-!
+![Merchant B2B contact requests](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/merchant-b2b-contracts-and-requests.png)
 
 ### Business benefits
 
@@ -126,7 +126,7 @@ Store owners and marketplace operators can now effortlessly manage refunds and e
 
 Based on your input in the UX research, we restructured the layout of Pull Requests (PRs) created by Spryker Code Upgrader. Out of all supported platforms, you will get the best experience on GitHub. The information is now structured in the order of importance. Each PR is connected to the Release Catalog. If a release requires a manual integration, the catalog provides clear steps to integrate it. Also, PRs contain information on how much of a release is automatically integrated by the Upgrader, as well as potential conflicts or issues.
 
-!
+![scu-prs](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/release-notes-202404.0.md/scu-prs.png)
 
 PR examples to compare:
 Before: https://github.com/spryker-shop/b2c-demo-shop/pull/297

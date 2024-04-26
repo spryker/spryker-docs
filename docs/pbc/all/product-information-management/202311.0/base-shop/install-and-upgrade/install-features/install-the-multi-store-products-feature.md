@@ -16,8 +16,6 @@ redirect_from:
 related:
   - title: Migration Guide - Collector
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
-  - title: Migration Guide - Touch
-    link: docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html
   - title: Migration Guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
   - title: Migration Guide - ProductManagement

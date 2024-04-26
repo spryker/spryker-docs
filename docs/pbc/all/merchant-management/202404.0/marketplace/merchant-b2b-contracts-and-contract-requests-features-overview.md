@@ -61,6 +61,14 @@ Based on the data in a request, one or multiple merchant relations are automatic
 ## Merchant relations in business operations 
 Based on merchant relations, you can assign buyer-specific product prices in the [Back Office](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) and in the [Merchant Portal](/docs/pbc/all/price-management/{{page.version}}/marketplace/marketplace-merchant-custom-prices-feature-overview.html). You can also define [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
 
+The following demonstrates the Marketplace Merchant B2B Contracts and Contract Requests features features:
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/merchant-b2b-contracts-and-contract-requests-features-overview/Merchant+Request+Demo.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Related Developer documents
 - [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)
 - [Install the Marketplace Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html)

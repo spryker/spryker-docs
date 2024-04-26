@@ -7,9 +7,9 @@ last_updated: Mar 26, 2024
 
 A marketplace operator can view, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview#initiation-of-the-merchant-relation-by-a-company-user).
 
-Once a company user creates a merchant relation request, it appears in *Marketplace -> Merchant Relation Requests*.
+Once a company user creates a merchant relation request, it appears in *B2B Contracts -> Merchant Relation Requests*.
 
-![merchant-relation-requests-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchants/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
+![merchant-relation-requests-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/merchant-relation-requests-in-back-office.png)
 
 To approve or reject a merchant relation request, do the following:
 
@@ -28,7 +28,7 @@ To approve or reject a merchant relation request, do the following:
 For the approved merchant relation requests, you can view the merchant relations created from this. Do the following:
 
 1. On the *Merchant Relation Requests* page, click **View** for the approved relation request. 
-2. In the top right corner of the form with the request details, click **Merchant relations**.
+2. In the top right corner of the form with the request details, click **Merchant Relations**.
 
 ![merchant-relations-button-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchants/manage-merchant-relation-requests/merchant-relations-button-in-back-office.png)
 
@@ -36,5 +36,5 @@ This takes you to *Overview of the Merchant relation* page with the merchant rel
 
 ## What's next
 
-[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-merchant-relations.html#edit-a-merchant-relation)
+[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relations/edit-merchant-relations.html)
 

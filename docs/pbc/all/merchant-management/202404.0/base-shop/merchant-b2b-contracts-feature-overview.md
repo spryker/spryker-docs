@@ -1,5 +1,5 @@
 ---
-title: Merchant B2B Contracts feature overview
+title: Merchant B2B Contracts and Contract Requests features overview
 description: In the context of Spryker B2B eCommerce platform, there can be three key figures- marketplace owner, merchant, and buyer.
 last_updated: Jul 22, 2021
 template: concept-topic-template
@@ -58,8 +58,11 @@ Based on the data in a request, one or multiple merchant relations are automatic
 Based on merchant relations, you can assign [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), [product prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
 
 ## Related Developer documents
-
-|INSTALLATION GUIDES  |
-|---------|
-| [Merchant B2B Contracts feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)   |
-| [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)  |
+- [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)
+- [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html)
+- [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)
+- [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)
+- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)
+- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html)
+- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)
+- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html)

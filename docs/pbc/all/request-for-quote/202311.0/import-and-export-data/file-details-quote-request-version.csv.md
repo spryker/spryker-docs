@@ -9,7 +9,7 @@ This document describes the `quote_request_version.csv` file to configure inform
 
 ## Import file dependencies
 
-[quote_request.csv](/docs/pbc/all/request-for-quote/202212.0/import-and-export-data/file-details-quote-request.csv.html)
+[quote_request.csv](/docs/pbc/all/request-for-quote/{{page.version}}/import-and-export-data/file-details-quote-request.csv.html)
 
 ## Import file parameters
 

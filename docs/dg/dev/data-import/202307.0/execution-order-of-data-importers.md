@@ -55,7 +55,7 @@ The following list illustrates the order followed to run the data importers and 
 * Special Products:
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html)
   * [product-option-price](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html)
-  * [Gift cards](/docs/pbc/all/gift-cards/202212.0/import-and-export-data/import-gift-cards-data.html)
+  * [Gift cards](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/import-gift-cards-data.html)
   * [gift-card-abstract-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/import-file-details-gift-card-abstract-configuration.csv.html)
   * [gift-card-concrete-configuration](/docs/pbc/all/gift-cards/{{page.version}}/import-and-export-data/import-file-details-gift-card-concrete-configuration.csv.html)
   * product-packaging-unit-type:

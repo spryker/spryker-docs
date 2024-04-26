@@ -14,6 +14,7 @@ entries:
       - "202212.0"
       - "202307.0"
       - "202311.0"
+      - "202204.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
@@ -1413,15 +1414,12 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-rest-api.html
       - title: Glue infrastructure
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-infrastructure.html
+      - title: Resolve search engine friendly URLs
+        url: /docs/dg/dev/glue-api/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
+        include_versions:
+        - "202307.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-        include_versions:
-        - "202212.0"
-      - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/202212.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
-        include_versions:
-        - "202212.0"
-        - "202307.0"
       - title: "Marketplace: Resolve search engine friendly URLs"
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors

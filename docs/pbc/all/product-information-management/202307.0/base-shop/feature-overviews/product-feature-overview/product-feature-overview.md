@@ -16,7 +16,7 @@ redirect_from:
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/pbc/all/back-office/{{page.version}}/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/pbc/all/back-office/{{page.version}}/base-shop/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront are based on product attributes.

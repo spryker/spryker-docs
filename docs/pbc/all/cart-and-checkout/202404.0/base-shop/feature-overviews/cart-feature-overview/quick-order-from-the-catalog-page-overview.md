@@ -21,8 +21,8 @@ For the **Add to cart** icon to be active for the product on the **Catalog** pag
 * The product is an abstract with only one variant.
 * The product is available.
 * The product does not have [attributes](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html).
-* The product does not have [measurement](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html).
+* The product does not have [measurement](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/measurement-units-feature-overview.html) or [packaging units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html).
 
 A product belonging to a [product group](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) can also be added to the cart from the **Category** page. However, like with regular products, a product from the product group must have no more than one variant and be available.
 
-If a product has [options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html), it can be added to the cart from the Category page, but it is added without any options.
+If a product has [options](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html), it can be added to the cart from the Category page, but it is added without any options.

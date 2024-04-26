@@ -47,7 +47,7 @@ Excellence in merchant care: Provide your merchants with comprehensive support, 
 
 ### Documentation
 
-[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management{{site.version}}marketplace/merchant-portal-agent-assist-feature-overview.html)
+[Merchant Portal Agent Assist feature overview](/docs/pbc/all/user-management/{{site.version}}/marketplace/merchant-portal-agent-assist-feature-overview.html)
 
 
 ## Merchant B2B Contracts & Contract Requests <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
@@ -65,8 +65,8 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 ### Documentation
 
-- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management{{site.version}}marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html)
-- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management{{site.version}}base-shop/merchant-b2b-contracts-feature-overview.html)
+- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html)
+- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
 
 
 ## Managed Security Operations Center <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

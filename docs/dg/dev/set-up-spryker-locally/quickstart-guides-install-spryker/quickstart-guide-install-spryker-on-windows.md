@@ -17,7 +17,7 @@ To install Spryker on Windows, follow these steps:
 
 Install the following applications:
 
-* [Ubuntu](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?ref=spryker-documentation)
+* [Ubuntu](https://apps.microsoft.com/detail/9pdxgncfsczv)
 * [Docker](https://www.docker.com/)
 
 

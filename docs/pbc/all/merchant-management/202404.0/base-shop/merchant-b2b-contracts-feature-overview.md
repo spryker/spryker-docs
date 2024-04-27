@@ -35,14 +35,21 @@ Company user can request a merchant relation from the merchant. Once the merchan
 ### Merchant relation request creation by a company user
 
 Company user can initiate the merchant relation by placing a request on the Storefront from the *Merchant Relation Requests* page in the Company Account by clicking **Create request**.
-In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have a formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the *Pending* status on the *Company Account* page.
-The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on еру *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
+
+In the merchant relation request form, the company user need to specify the business unit owner and business unit they want to create the merchant relation for. This business unit has a formal contract for this relation. Optionally, the company user can leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the **Pending** status on the **Company Account** page.
+
+![Merchant relation request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-feature-overview.md/merchant-relation-request.png)
+
+The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on the *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 
 ## Merchant relation request approval by a merchant
 
 When a company user creates a request, the merchant receives a notification via email and can start processing this request.
+
 The merchant can leave notes for the company that requested the relation. Merchant can also leave internal comments that only their users can view and respond to.
+
 Once the merchant approves or rejects a relation request, its status changes to Approved or Rejected. The company user receives the email about the status change of the request.
+
 For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
 
 

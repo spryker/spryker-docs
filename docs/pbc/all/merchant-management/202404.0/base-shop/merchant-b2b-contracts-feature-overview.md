@@ -36,7 +36,9 @@ Company user can request a merchant relation from the merchant. Once the merchan
 
 Company user can initiate the merchant relation by placing a request on the Storefront from the *Merchant Relation Requests* page in the Company Account by clicking **Create request**.
 
-In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have a formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the *Pending* status on the *Company Account* page.
+In the merchant relation request form, the company user need to specify the business unit owner and business unit they want to create the merchant relation for. This business unit has a formal contract for this relation. Optionally, the company user can leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with the **Pending** status on the **Company Account** page.
+
+![Merchant relation request](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-feature-overview.md/merchant-relation-request.png)
 
 The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront on the *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 

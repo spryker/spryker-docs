@@ -46,7 +46,7 @@ When a company user creates a request, the merchant receives a notification via 
 
 The merchant can leave notes for the company that requested the relation. Merchant can also leave internal comments that only their users can view and respond to.
 
-Once the merchant approves or rejects a relation request, its status changes to Approved or Rejected. The company user receives the email about the status change of the request. 
+Once the merchant approves or rejects a relation request, its status changes to Approved or Rejected. The company user receives the email about the status change of the request.
 
 For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
 
@@ -54,8 +54,14 @@ For details on how a merchant can process the merchant relation requests in the 
 ## Automatic creation of a merchant relation
 Based on the data in a request, one or multiple merchant relations are automatically created for approved requests and displayed in the Back Office and on the Storefront.
 
-## Merchant relations in business operations 
+## Merchant relations in business operations
 Based on merchant relations, you can assign [buyer-specific products](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html), [product prices](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices), and [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-merchant-order-thresholds.html) in the Back Office.
+
+
+Check out this video tutorial on how to set up merchants and merchant relations:
+
+{% wistia aowgi1c6k1 960 720 %}
+
 
 ## Related Developer documents
 - [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)

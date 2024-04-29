@@ -48,7 +48,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 - [Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/promotions-discounts-feature-overview.html)
 - [Cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/cart-feature-overview/cart-feature-overview.html)
-- [Multiple carts](/docs/scos/user/features/{{site.version}}/multiple-carts-feature-overview.html)
+- [Multiple carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html)
 - [Quick add to cart](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html)
 - [Shared carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/shared-carts-feature-overview.html)
 - [Reorder](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/reorder-feature-overview.html)
@@ -56,7 +56,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features:
 - [Agent Assist](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html)
 - [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
 - [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)

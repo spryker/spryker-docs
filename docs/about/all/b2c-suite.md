@@ -45,7 +45,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Payments](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/payments-feature-overview.html)
 <!---- [Invoice]()-->
 - [Gift cards](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html)
-- [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
+- [Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/pbc/all/emails/{{site.version}}/emails.html)
 - [Spryker Core](/docs/pbc/all/miscellaneous/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
 - [Product](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html)

@@ -26,7 +26,7 @@ Understanding the development scenarios in which Spryker can be used is crucial 
 - *Project development*: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
 - *Module development*: Contributing reusable third-party modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
 - *Module development*: Contributing third-party reusable modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
-- *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines based on the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, Unified Commerce. These rules also ensure the stability of module API used by Spryker development ecosystem and community.
+- *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines in the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, or Unified Commerce. These rules also ensure the stability of the module API used by Spryker development ecosystem and community.
 
 ### Directive classification
 
@@ -36,13 +36,13 @@ There are two types of directives:
 
 ## Applications
 
-Spryker uses application layers to enable constructing the necessary application architecture for the specific business requirements to provide a quick project start and long-term maintainability.
+Spryker uses application layers to enable the construction of the necessary application architecture for specific business requirements to provide a quick project start and long-term maintainability.
 - Backend applications, like Zed, Backend API, Backend Gateway, Backoffice, GlueBackend, MerchantPortal, Console, typically use the Zed-, Glue-, Client-, Service-, and Shared application layers.
-- Storefront applications, like Yves, Configurator, Glue, GlueStorefront, Console, typically use the Yves-, Glue-, Client-, Service- and Shared application layers.
+- Storefront applications, like Yves, Configurator, Glue, GlueStorefront, Console, typically use the Yves-, Glue-, Client-, Service-, and Shared application layers.
 
-## Application Layers
+## Application layers
 
-Spryker organizes responsibilities and functionalities over a set of [application layers](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html) to enable flexible business logic orchestration across the applications.
+Spryker organizes responsibilities and functionalities over a set of [application layers](https://docs.spryker.com/docs/dg/dev/architecture/conceptual-overview.html) to enable flexible business logic orchestration across applications.
 
 The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
 
@@ -57,7 +57,7 @@ The Shared application layer is a layer-overarching, stateless, abstraction libr
 
 ### Zed
 
-Zed serves as the backend application layer responsible for housing all business logic, persisting data and backend UI, like the Back Office.
+Zed serves as the backend application layer responsible for housing all business logic, persisting data and the backend UI, like the Back Office.
 
 ```text
 [Organization]
@@ -156,7 +156,7 @@ Used components:
 
 ### Yves
 
-Yves application layer provides a lightweight Shop Application.
+Yves application layer provides a lightweight shop application.
 
 ```
 [Organization]
@@ -227,8 +227,7 @@ Used components:
 
 ### Glue
 
-The Glue application layer serves as a conduit for providing data access points through APIs.
-It acts as an interface for external systems to interact with the application's data.
+The Glue application layer provides data access points through APIs. It acts as an interface for external systems to interact with the application's data.
 
 ```
 [Organization]
@@ -330,7 +329,7 @@ Used components:
 
 ### Service
 
-The Service application layer is multipurpose library that can be used across various application layers, such as Yves, Client, Glue, or Zed.
+The Service application layer is a multipurpose library that's used across various application layers, such as Yves, Client, Glue, or Zed.
 
 A service primarily consists of reusable lightweight stateless business logic components. Due to its deployment across all applications, a service is constrained to accessing data providers that are available universally. For example, the backend database is not accessible from Storefront applications by default.
 
@@ -360,7 +359,7 @@ Used components:
 
 The Shared library contains code and configuration that's used across any application layer and module. It facilitates the sharing of code among application layers and modules.
 
-To ensure compatibility and versatility across different application architecture setups, any content within the Shared library must be free of application layer-specific elements. So, [factories](#factory) are not allowed in the `Shared` library.
+To ensure compatibility and versatility across different application architecture setups, the content in the Shared library must be free of application layer-specific elements. So, [factories](#factory) are not allowed in the `Shared` library.
 
 ```text
 [Organization]
@@ -390,7 +389,7 @@ An application layer can have up to four logical layers with clear purpose and c
 - Handles the UI presentation.
 - Contains frontend assets, like HTML, Twig templates, JS, TypeScript, or CSS files.
 - Handles user interactions and input validations on the client side.
-- Interacts with the [Communication layer](#communication-layer-responsibilities) to retrieve necessary data for display.
+- Interacts with the [Communication layer](#communication-layer-responsibilities) to retrieve data for display.
 
 ### Communication layer responsibilities
 
@@ -409,7 +408,7 @@ An application layer can have up to four logical layers with clear purpose and c
 - Performs data manipulation, calculations, and validation.
 - Interacts with the [Persistence Layer](#persistence-layer-responsibilities) to read and write data.
 
-### Persistence Layer responsibilities
+### Persistence layer responsibilities
 
 - Responsible for data storage and retrieval.
 - Contains queries (via [Entity Manager](#entity-manager) or [Repository](#repository)), [entities](#entity) (data models), and [database schema definitions](#persistence-schema).
@@ -420,16 +419,28 @@ An application layer can have up to four logical layers with clear purpose and c
 ## Components
 
 Conventions:
-- The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
-- The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
-- For core module development: The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in the `Kernel` module.
+- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture  to take effect.
+- Components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
 
+<details>
+  <summary> For *core module development* </summary>
+Components must be extended directly from the [application layer's](#application-layers) corresponding abstract class in the `Kernel` module.
+</details>
 
 Guidelines:
 - The components should be stateless to be deterministic and easy to comprehend.
-- Project development: Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
-- Module development and Core module development: The components are required to be stateless to be deterministic and easy to comprehend.
+<details>
+  <summary>For *project development*</summary>
 
+Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
+
+</details>
+<details>
+  <summary>For *module development* and *core module development*</summary>
+
+Components must be stateless to be deterministic and easy to comprehend.
+
+</details>
 
 ### Controller
 
@@ -469,22 +480,27 @@ The `Index` controller name acts as the default controller during request contro
 
 The `index` action name acts as the default action during request action resolution.
 
-Conventions:
-- `Action` methods are required to be suffixed with `Action` and be `public` in order to be accessible. They need to define the entry points of the `Controller` in a straight-forward manner.
-- Module development and Core module development:
-  - Only `Action` methods can be `public` for simplicity.
-  - `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
-  - `Action` methods are required to orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.
-  - `Action` methods can't contain any logic directly that is outside the regular responsibilities of a `Controller`.
+#### Conventions
+
+`Action` methods must be suffixed with `Action` and be `public` in order to be accessible. They need to define the entry points of the `Controller` in a straight-forward manner.
+
+<details>
+  <summary>For *module development* and *core module development*</summary>
+
+- For simplicity, only `Action` methods can be `public`.
+- `Action` methods need to have either no parameter or receive the `\Symfony\Component\HttpFoundation\Request` object to access system or request variables.
+- `Action` methods must orchestrate [syntactical validation](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html) before delegating to underlying processing layers.
+- `Action` methods can't directly contain any logic that's outside the regular responsibilities of a `Controller`.
 
 </details>
 
-Guidelines:
+#### Guidelines
 - `Controller` has an inherited `castId()` method that should be used for casting numerical IDs.
 - The inherited `getFactory()` method grants access to the [Factory](#factory).
-- The inherited `getFacade()` or `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
+- The inherited `getFacade()` and `getClient()` methods grant access to the corresponding [facade](#facade-design-pattern) functionalities.
 
-Example:
+#### Examples
+
 ```php
 <?php
 

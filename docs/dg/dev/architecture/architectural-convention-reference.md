@@ -11,28 +11,28 @@ related:
 ---
 
 
-This document serves as a dynamic resource intended to provide an overview of our conventions and guidelines. We acknowledge that the technology landscape is ever-evolving, and as such, this document is subject to continuous refinement and improvement.
+This document provides an overview of our conventions and guidelines. The technology landscape is ever-evolving, so this document is subject to continuous refinement and improvement.
 
-Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker. We encourage you to contribute your insights and recommendations by proposing changes through our designated channels.
+Your feedback and suggestions are highly valued to enhance the accuracy, relevance, and effectiveness of Spryker. We encourage you to contribute your insights and recommendations by submitting changes through our designated channels.
 
-## Documentation structure
+## Structure of the document
 
-### Development Use-Cases
+This section describes how to interpret different terms in this document.
 
-Understanding the development scenarios in which Spryker can be used is crucial for maximizing its potential. We have outlined specific behaviors and guidelines tailored to different use-cases:
+### Conventions per development use cases
 
-- **Project development**: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
-- **Module development**: Contributing third-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions.  Because such functionalities should be reusable on multiple projects in different contexts, these guidelines are more strict than *Project Development*.
-- **Module development**: Contributing third-party reusable modules, boilerplates or accelerators requires additional considerations. We provide guidelines specific to this use-case to streamline your contributions. Because such functionalities should be reusable on multiple projects in different contexts, these guidelines are more strict than *Project Development*.
-- **Core module development**: For those contributing to Spryker modules, there are specialized rules to follow within the module folders. This ensures consistency and compatibility across product lines based on the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, Unified Commerce, and ensure the stability of module API used by Spryker development ecosystem and community.
+Understanding the development scenarios in which Spryker can be used is crucial for maximizing its potential. This document describes guidelines and conventions tailored to the following use cases:
 
-Our guidelines and conventions for each component begin with generic instructions applicable to all development use cases. Following this, you will find specific details to the more specialized versions of development use cases.
+- *Project development*: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
+- *Module development*: Contributing reusable third-party modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
+- *Module development*: Contributing third-party reusable modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
+- *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines based on the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, Unified Commerce. These rules also ensure the stability of module API used by Spryker development ecosystem and community.
 
 ### Directive classification
 
 There are two types of directives:
-- **Convention**: These are mandatory requirements that contributors must adhere to enable specific Spryker features and ensure proper application responses.
-- **Guideline**: While not mandatory, following these guidelines is highly recommended to promote long-term code maintainability and facilitate smoother development processes.
+- Convention: These are mandatory requirements that contributors must adhere to enable specific Spryker features and ensure proper application responses.
+- Guideline: While not mandatory, following these guidelines is highly recommended to promote long-term code maintainability and facilitate smoother development processes.
 
 ## Applications
 
@@ -2183,7 +2183,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ```
 
-**Description**
+#### Description
 
 - Modules which consume [Plugins](#plugin) need to define their requirements with an interface.
 - The `Plugin Interface` needs to be placed in an `extension module`.
@@ -2194,7 +2194,7 @@ There are three modules involved:
 2. **Plugin executor**: The module that uses the [Plugin(s)](#plugin) in its [Dependency Provider](#dependency-provider) thus provides extension point (example: `CompanyDependencyProvider::getCompanyPostCreatePlugins()` in `Company` module)
 3. **Plugin providers**: The modules that implement a [Plugin](#plugin) thus provide extension for the given extension point (example: `CompanyBusinessUnitCreatePlugin` in `CompanyBusinessUnit` module)
 
-**Conventions**
+#### Conventions
 - No generic conventions.
 
 <details><summary markdown='span'>Conventions for Module development and Core module development</summary>
@@ -2206,7 +2206,7 @@ There are three modules involved:
 
 </details>
 
-**Guidelines**
+#### Guidelines
 - Operations on single items in plugin stack methods is not feasible, except for the following reasons:
   - it is strictly and inevitably a single-item flow.
   - the items go in FIFO order and there is no other way to use a collection instead.
@@ -2214,7 +2214,7 @@ There are three modules involved:
   - how the [Plugins](#plugin) will be used,
   - what are the typical use-cases of a [Plugin](#plugin).
 
-**Example**
+#### Example
 
 ```php
 <?php

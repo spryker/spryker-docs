@@ -13,6 +13,6 @@ redirect_from:
 
 ## Next steps
 
-* [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-account-details-and-settings.html)
-* [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchants-performance-data.html)
+* [Manage merchant account details and settings](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-account-details-and-settings.html)
+* [Manage merchant's performance data](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchants-performance-data.html)
 * [Edit merchant profiles](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html)

@@ -41,7 +41,8 @@ Company user can initiate the merchant relation by creating a merchant relation 
 - From the product details page, by clicking **Merchant Relation Request** under the name of the merchant selling the product.
 - From the *Company Account page*, in *Merchant Relation Requests*, by clicking **Create request** and selecting the relevant merchant.
 
-In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with a *Pending* status on the *Company Account* page. 
+In the merchant relation request form, the company user has to specify the business units for which they want to create the merchant relation and the business unit owner. This business unit will have the formal contract for this relation. Optionally, the company user can also leave a message for the merchant with more details regarding the relation request. After the company user submits the relation request, it appears with a *Pending* status on the *Company Account* page.
+
 The company user can view details of all the merchant relation requests and cancel pending requests on the Storefront, on the *My Company -> Merchant Relation Requests* page. However, they can't edit the submitted requests.
 
 ### Merchant relation request approval by a merchant or marketplace operator
@@ -71,11 +72,12 @@ The following demonstrates the Marketplace Merchant B2B Contracts and Contract R
 
 ## Related Developer documents
 - [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)
+- [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html)
+- [Install the Marketplace Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contracts-feature.html)
+- [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)
+- [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)
 - [Install the Marketplace Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-b2b-contract-requests-feature.html)
 - [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)
 - [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html)
 - [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)
-- [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html)
-- [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)
 - [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html)
-- [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)

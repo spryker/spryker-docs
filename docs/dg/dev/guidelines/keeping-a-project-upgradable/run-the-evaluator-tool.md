@@ -39,16 +39,20 @@ vendor/bin/evaluator evaluate --path=src/path_to_module
 ```
 
 ## Execute checkers
-* Exclude checkers:
+
+Exclude checkers:
 ```bash
 vendor/bin/evaluator evaluate --exclude-checkers=CONTAINER_SET_FUNCTION_CHECKER
 ```
-* Execute specific checker:
+
+Execute a specific checker:
 ```bash
-vendor/bin/evaluator evaluate --checkers=CONTAINER_SET_FUNCTION_CHECKER
+vendor/bin/evaluator evaluate --checkers={CONTAINER_SET_FUNCTION_CHECKER}
 ```
-where `CONTAINER_SET_FUNCTION_CHECKER` is a checker name
+`CONTAINER_SET_FUNCTION_CHECKER` is the name of the checker to execute.
+
 ### Checkers
+
 * CONTAINER_SET_FUNCTION_CHECKER - [Container set function](https://docs.spryker.com/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/container-set-function.html)
 * DEAD_CODE_CHECKER - [Dead code checker](https://docs.spryker.com/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/dead-code-checker.html)
 * DEPENDENCY_PROVIDER_ADDITIONAL_LOGIC_CHECKER - [Additional logic in dependency provider](https://docs.spryker.com/docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/additional-logic-in-dependency-provider.html#run-only-this-checker)

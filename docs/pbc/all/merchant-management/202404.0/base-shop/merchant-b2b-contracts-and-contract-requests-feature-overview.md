@@ -4,10 +4,6 @@ description: In the context of Spryker B2B eCommerce platform, there can be thre
 last_updated: Jul 22, 2021
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/merchant-b2b-contracts-feature-overview
-  - /2021080/docs/en/merchant-b2b-contracts-feature-overview
-  - /docs/merchant-b2b-contracts-feature-overview
-  - /docs/en/merchant-b2b-contracts-feature-overview
   - /docs/scos/user/features/201811.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202311.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202204.0/merchant-b2b-contracts-feature-overview.html

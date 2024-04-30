@@ -107,4 +107,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Glue API: Configurable Bundle  | ✓ | [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |
-| GLUE: Configurable Bundle + Cart  | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |
+| GLUE: Configurable Bundle + Cart  | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html) |

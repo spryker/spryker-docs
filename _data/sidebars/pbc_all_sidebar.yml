@@ -1322,6 +1322,13 @@ entries:
             nested:
               - title: Merchant B2B Contracts feature overview
                 url: /docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-feature-overview.html
+                include_versions:
+                - "202311.0"
+                - "202307.0"
+              - title: Merchant B2B Contracts and Contract Requests features overview
+                url: /docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
+                include_versions:
+                - "202404.0"                
               - title: Merchant Product Restrictions feature overview
                 url: /docs/pbc/all/merchant-management/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
                 nested:
@@ -2162,7 +2169,7 @@ entries:
                         url: /docs/pbc/all/order-management-system/unified-commerce/install-and-upgrade/install-the-order-management-service-points-feature.html
                         include_versions:
                         - "202311.0"
-                        
+
       - title: Payment Service Provider
         url: /docs/pbc/all/payment-service-provider/payment-service-provider.html
         nested:

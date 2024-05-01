@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/product-feature-integration.html
 related:
   - title: Install the Product Glue API
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html
   - title: Glue API - Product Image Sets feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html
   - title: Configurable Bundle feature integration

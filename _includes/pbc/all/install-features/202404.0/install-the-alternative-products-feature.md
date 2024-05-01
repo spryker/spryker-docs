@@ -14,7 +14,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| Product | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules
 
@@ -447,7 +447,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
 | Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{site.version}} | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| Product | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 
 ### 1) Install the required modules
 

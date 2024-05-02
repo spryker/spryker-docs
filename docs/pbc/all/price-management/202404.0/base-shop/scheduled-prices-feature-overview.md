@@ -86,7 +86,7 @@ In this case:
 The feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices that the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html).
+* The feature does not work with merchant prices ([relations](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html).
 
 ## Related Business User documents
 

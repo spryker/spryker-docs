@@ -1436,7 +1436,7 @@ Module entries of the Back Office navigation panel. The icons are taken from [Fo
                 └── [PluginName]Plugin.php        
 ```
 
-`Permission Plugins` are a way to put a scope on the usage of an application during a request lifecycle.
+`Permission Plugins` are used to put a scope on the usage of an application during a request lifecycle.
 
 #### Conventions
 
@@ -1444,17 +1444,17 @@ Module entries of the Back Office navigation panel. The icons are taken from [Fo
 - `Permission Plugins` need to adhere to [Plugin](#plugin) conventions.
 
 #### Guidelines
-- When using one of the traits in a [Model](#model), refer directly to the remote `Permission Plugin` key string when possible, instead of defining a local constant.
-- The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait allows the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
+- When using one of the traits in a [Model](#model),  when possible, refer directly to the remote `Permission Plugin` key string instead of defining a local constant.
+- The `\Spryker\[Application]\Kernel\PermissionAwareTrait` trait enables the [Model](#model) in the corresponding [application](#applications) to check if a permission is granted to an application user.
 
-<details><summary>Additional Guidelines for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
-- When using one of the traits in a [Model](#model), use a `protected` constant string to reference the `Permission Plugin` that will be used in the [Model](#model). As an annotation for this string you should add `@uses` annotation to the `PermissionPlugin::KEY` string that you will compare against (see in `examples` below).
+- When using one of the traits in a [Model](#model), use a `protected` constant string to reference the `Permission Plugin` that will be used in the [Model](#model). As an annotation for this string, add the `@uses` annotation to the `PermissionPlugin::KEY` string which you will compare against. See the following examples.
 
 </details>
 
 
-**Example**
+## Examples
 
 ```php
 class QuotePermissionChecker implements QuotePermissionCheckerInterface
@@ -1489,34 +1489,39 @@ class QuotePermissionChecker implements QuotePermissionCheckerInterface
                     └── spy_[domain_name].schema.xml
 ```
 
-**Description**
+The schema file defines the module's tables and columns. Schema files are organized into business `domains`, each representing a module overarching group that encapsulates related domain entities. For more details, see [Propel Documentation - Schema XML](https://propelorm.org/documentation/reference/schema.html).
 
-The schema file defines the module's tables and columns (see [Propel Documentation - Schema XML](https://propelorm.org/documentation/reference/schema.html)). Schema files are organized into business `domains`, each representing a module overarching group that encapsulates related domain entities.
+#### Conventions
 
-**Conventions**
 
-- Table names need to follow the format `[org]_[domain_entity_name]` for business entities, `[org]_[domain_entity_name]_to_[domain_entity_name]` for relations, `[org]_[domain_entity_name]_search` for Search entities, and `[org]_[domain_entity_name]_storage` for Storage entities  (eg: `spy_customer_address`, `spy_customer_address_book`, `spy_cms_slot_to_cms_slot_template`, `spy_configurable_bundle_template_image_storage`, `spy_configurable_bundle_template_page_search`).
-- Tables need to have an integer ID primary key, following the format `id_[domain_entity_name]` (eg: `id_customer_address`, `id_customer_address_book`).
-- Table foreign key column needs to follow the format `fk_[remote_entity]` (eg: `fk_customer_address`, `fk_customer_address_book`)
-  - Exception can be to the case if the same table is referred multiple times, in which case the follow-up foreign key columns need to be named as `fk_[custom_connection_name]` .
+- Tables need to have an integer ID primary key following the `id_[domain_entity_name]` format. Examples: `id_customer_address`, `id_customer_address_book`.
+- Table foreign key column needs to follow the `fk_[remote_entity]` format. Examples: `fk_customer_address`, `fk_customer_address_book`. If the same table is referred multiple times, follow-up foreign key columns need to be named as `fk_[custom_connection_name]`.
+- Table names need to follow the following format:
 
-<details><summary>Additional Conventions for Module development and Core module development</summary>
+| ENTITY | FORMAT | EXAMPLE |
+| - | - | - |
+| Business | `[org]_[domain_entity_name]` | `spy_customer_address` |
+| Relation |  `[org]_[domain_entity_name]_to_[domain_entity_name]` | `spy_cms_slot_to_cms_slot_template`  |
+| Search  |  `[org]_[domain_entity_name]_search`  | `spy_configurable_bundle_template_page_search`  |
+| Storage  |  `[org]_[domain_entity_name]_storage` |  `spy_configurable_bundle_template_image_storage`  |
+
+<details><summary>For *module development* and *core module development*</summary>
 
 - The table `[org]` prefix needs to be `spy_`.
 - The schema file `[org]` prefix needs to be `spy_`.
-- The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data (eg: `spy_order` primary key gives information about submitted order count).
+- The `uuid` field needs to be defined and used for external communication to uniquely identify records and hide possible sensitive data. For example, the `spy_order` primary key gives information about the submitted order count.
   - The field can be `null` by default.
-  - The field needs to be eventually unique across the table (until the unique value is provided, the business logic may not operate appropriately).
+  - The field needs to be eventually unique across the table; until a unique value is provided, the business logic may not operate appropriately.
 - Table foreign key definitions needs to include the `phpName` attribute.
 
 </details>
 
-**Guidelines**
-- `PhpName` is usually the CamelCase version of the "SQL name" (eg: `<table name="spy_customer" phpName="SpyCustomer">`).
-- A module (eg: `Product` module) may inject columns into a table which belong to another module (eg: `Url` module). This case is usually used if the direction of a relation is opposed to the direction of the dependency. For this scenario, the injector module will contain a separate, foreign module schema definition file (eg: `Product` module will contain `spy_url.schema.xml` next to `spy_product.schema.xml` that defines the injected columns into the `Url` `domain`) (see below in `examples`).
+#### Guidelines
+- `PhpName` is usually the CamelCase version of the "SQL name", for example—`<table name="spy_customer" phpName="SpyCustomer">`.
+- A module, like the `Product` module, may inject columns into a table which belongs to another module, like the `Url` module. This usually happens if the direction of a relation is opposed to the direction of the dependency. For this scenario, the injector module contains a separate foreign module schema definition file. For example, the `Product` module contains `spy_url.schema.xml` next to `spy_product.schema.xml` that defines the injected columns into the `Url` `domain`. See the following examples.
 - The `database` element's `package` and `namespace` attributes are used during class generation and control the placement and namespace of generated files.
 
-**Examples**
+#### Examples
 
 ```xml
 <?xml version="1.0"?>
@@ -1547,7 +1552,7 @@ The schema file defines the module's tables and columns (see [Propel Documentati
 
 ```
 
-Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema.xml` schema file in `Product` module.
+Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema.xml` schema file in the `Product` module.
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
@@ -1575,16 +1580,13 @@ Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema
                 └── [RouterName]Plugin.php
 ```
 
+`Providers` and `Routers` are used for bootstrapping the [Yves](#applications) application.
+- Controller Provider: registers [Yves](#applications) [Controllers](#controller) of a module and binds them to a path.
+- Router: resolves a path into an [Yves](#applications) [Controller and Action](#controller).
 
-**Description**
+Controllers in the [Zed](#zed) application layer are autowired and don't require a manual registration. An `ExampleController::indexAction()` in `ExampleModule` can be accessed via the `/example-module/example/index` URI.
 
-`Providers` and `Routers` are used during the bootstrap of [Yves](#applications) application.
-- **Controller Provider** - Registers [Yves](#applications) [Controllers](#controller) of a module and binds them to a path.
-- **Router** - Resolves a path into a [Yves](#applications) [Controller and Action](#controller).
-
-Controllers in [Zed](#zed) application layer are autowired and do not require manual registration. An `ExampleController::indexAction()` in `ExampleModule` can be accessed via `/example-module/example/index` URI.
-
-**Conventions**
+#### Conventions
 - A `Controller Provider` needs to extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Router` needs to extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
 - A `providers` are `routers` are classified as a [Plugin](#plugin) and so the plugin's conventions apply.

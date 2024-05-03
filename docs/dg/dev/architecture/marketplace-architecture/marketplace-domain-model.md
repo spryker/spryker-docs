@@ -21,7 +21,7 @@ It extends the existing Domain with Merchant and ProductOffer to enable sophisti
 
 {% info_block infoBox "" %}
 
-This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-merchant-feature-walkthrough.html) and [Product Offer feature walkthrough](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html).
+This model is intentionally simplified. Learn more about the core domain objects in [Marketplace Merchant feature walkthrough](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/domain-model-and-relationships/merchant-feature-domain-model.html) and [Product Offer feature walkthrough](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-domain-model-and-relationships.html).
 
 {% endinfo_block %}
 

@@ -853,7 +853,7 @@ No general conventions.
 </details>
 
 ### Guidelines
-No generic guidelines.
+No general guidelines.
 
 <details><summary>For *project development*</summary>
 
@@ -1334,7 +1334,7 @@ No general conventions.
 
 #### Guidelines
 
-- No generic guidelines.
+- No general guidelines.
 
 <details><summary>For *module development* and *core module development*</summary>
 
@@ -1552,7 +1552,7 @@ The schema file defines the module's tables and columns. Schema files are organi
 
 ```
 
-Injecting columns from `Product` to a `Url` `domain` by defining `spy_url.schema.xml` schema file in the `Product` module.
+Injecting columns from `Product` to the `Url` `domain` by defining the `spy_url.schema.xml` schema file in the `Product` module.
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Url\Persistence" package="src.Orm.Zed.Url.Persistence">
@@ -1589,7 +1589,7 @@ Controllers in the [Zed](#zed) application layer are autowired and don't require
 #### Conventions
 - A `Controller Provider` needs to extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Router` needs to extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
-- A `providers` are `routers` are classified as a [Plugin](#plugin) and so the plugin's conventions apply.
+- A `providers` are `routers` are classified as a [Plugin](#plugin) so the plugin's conventions apply.
 
 ### Query Object
 
@@ -1610,27 +1610,25 @@ src
                     └── Abstract[EntityName]Query.php
 ```
 
-**Description**
+Enables to write queries to the related table in an SQL engine agnostic way. `Query Objects` can be instantiated and used only from the [Repository](#repository) and [Entity Manager](#entity-manager) of the definer module or modules.
 
-Enables to write queries to the related table in an SQL engine agnostic way.
-`Query Objects` can be instantiated and used only from the [Repository](#repository) and [Entity Manager](#entity-manager) of the definer module(s).
+For more information, see the following:
+* [Query class in the Propel docs](https://propelorm.org/documentation/reference/model-criteria.html)
+* More details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
 
-See [Propel Documentation - Query Class](https://propelorm.org/documentation/reference/model-criteria.html)
+#### Conventions
 
-See more details on the 3-tier class hierarchy in [Entity](#entity), and domains in [Persistence Schema](#persistence-schema).
-
-**Convention**
 No general conventions.
 
-<details><summary>Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
-- Hidden, hard dependencies appearing through `join` need to be defined via `@module [RemoteModule1][,[...]]` tag (see `examples` below).
+- Hidden hard dependencies appearing through `join` need to be defined using the `@module [RemoteModule1][,[...]]` tag. See the following examples.
 
 </details>
 
-**Example**
+#### Examples
 
-In the below example, the `SpyProductQuery` is part of the `Product` `domain` while `SpyUrl` belongs to `Url` `domain` and `SpyProductComment` belongs to `ProductComment` `domain`.
+In the following example, the `SpyProductQuery` is part of the `Product` `domain`, while `SpyUrl` belongs to `Url` `domain`,  and `SpyProductComment` belongs to `ProductComment` `domain`.
 
 ```php
   /**
@@ -1658,30 +1656,31 @@ In the below example, the `SpyProductQuery` is part of the `Product` `domain` wh
             └── [Module]RepositoryInterface.php
 ```
 
-**Descriptions**
 
-Responsible for retrieving data from database by executing queries and returning the results as [Transfer Objects](#transfer-object) or native types.
+Retrieves data from the database by executing queries and returns the results as [Transfer Objects](#transfer-object) or native types.
 The `Repository` can be accessed from the same module's [Communication](#communication-layer-responsibilities) and [Business layers](#business-layer-responsibilities).
 
-**Conventions**
+#### Conventions
+
 No general conventions.
 
-<details><summary>Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
-- `Repostiories` can't alter the data in the database, only retrieve it.
+- `Repostiories` can retrieve data in the database, but can't change it.
 - `Repositories` need to use [Entities](#entity) and/or [Query Objects](#query-object) to retrieve data from the database.
 - The `Repository` class needs to define and implement an interface that holds the specification of each `public` method.
-- `Public` methods need to receive and return [Transfer Objects](#transfer-object) only.
-- `Public` methods need to return with a collection of items or a single item (eg: using and wrapping the results of `find()` or `findOne()`).
+- `Public` methods need to receive and return only [Transfer Objects](#transfer-object).
+- `Public` methods need to return with a collection of items or a single item, for example—using and wrapping the results of `find()` or `findOne()`.
 
 </details>
 
-**Guidelines**
-- No generic guidelines.
+#### Guidelines
 
-<details><summary>Guidelines for Project Development</summary>
+No general guidelines.
 
-- Methods can use native PHP types as input arguments or result values, although this is not recommended as it leads to granular methods.
+<details><summary>For project development</summary>
+
+Methods can use native PHP types as input arguments or result values. Because it leads to granular methods, it's not recommended.
 
 </details>
 
@@ -1713,19 +1712,16 @@ No general conventions.
                         └── [name-of-action].twig    
 ```
 
-**Description**
-
 [Yves application layer](#yves) can have one or multiple themes that define the overall look and feel.
 
-SCOS implements the concept of [atomic web design](https://bradfrost.com/blog/post/atomic-web-design/).
+Spryker implements the concept of [atomic web design](https://bradfrost.com/blog/post/atomic-web-design/).
 
-[Yves application layer](#yves) provides only 1-level theme inheritance: `current theme` > `default theme`.
-- **Current theme**: a single theme defined on a project level (eg: `b2b-theme`, `b2c-theme`).
-- **Default theme**: a theme provided by default and used in the `boilerplate implementations`. Used for incremental project updates (start from default and change frontend components one-by-one) and a graceful fallback in case SCOS delivers a new functionality that doesn't have own frontend in a project.
-A `Theme` may contain `views`, `templates`, or `components` (`atoms`, `molecules`, or `organisms`).
-- **Views**: are the templates for the [Controllers](#controller) and [Widgets](#widget).
-- **Templates**: are reusable templates, such as page [Layouts](#layout).
-- **Components**: are reusable parts of the UI, further divided into `atoms`, `molecules`, and `organisms`.
+[Yves application layer](#yves) provides only one-level theme inheritance: `current theme` > `default theme`. A `Theme` may contain `views`, `templates`, and `components`.
+- Current theme: a single theme defined on a project level. Examples: `b2b-theme`, `b2c-theme`.
+- Default theme: a theme provided by default and used in the `boilerplate implementations`. Used for incremental project updates, that is starting from default and changing frontend components one by one. Also used for a  graceful fallback if the core delivers a new functionality that doesn't have own frontend in a project.
+- Views are the templates for [Controllers](#controller) and [Widgets](#widget).
+- Templates are reusable templates like page [Layouts](#layout).
+- Components are reusable parts of the UI, further divided into `atoms`, `molecules`, and `organisms`.
 
 
 ### Transfer Object
@@ -1744,34 +1740,31 @@ src
                 └── [module_name].transfer.xml   
 ```
 
-**Description**
+`Transfer Objects` are pure data transfer objects (DTO) with getters and setters. They can be used in all [applications](#applications) and all [layers](#layers). Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
 
-`Transfer Objects` are pure data transfer objects (DTO) with getters and setters.
-They can be used in all [applications](#applications) and all [layers](#layers).
-Business transfer objects are described in module specific XML files and then auto-generated into the `src/Generated/Shared/Transfer` directory.
+For every defined table in [Peristence Schema](#persistence-schema), a matching `EntityTransfer` `Transfer Object` is generated with the `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), so `Entity Transfers` should be used primarily during layer or module overarching communication.
 
-For every defined table in [Peristence Schema](#persistence-schema) a matching `EntityTransfer` `Transfer Object` will be generated with `EntityTransfer` suffix. `EntityTransfers` are the lightweight DTO representations of the [Entities](#entity), thus `Entity Transfers` should be used primarily during layer or module overarching communication.
-
-**Conventions**
+#### Conventions
 - `Transfer Objects` need to be defined in the transfer XML file.
-- The `Attributes` transfer name suffix is reserved for `Glue API modules` (modules with `RestApi` suffix) and must not be used for other purposes to avoid collision.
-- The `ApiAttributes` transfer name suffix is reserved for `Storefront API modules` (modules with `Api` suffix) and must not be used for other purposes to avoid collision.
-- The `BackendApiAttributes` transfer name suffix is reserved for `Backend API modules` (modules with `BackendApi` suffix) and must not be used for other purposes to avoid collision.
-- `EntityTransfers` must not be defined manually but rather will be generated automatically based on [Peristence Schema](#persistence-schema) definitions.
+- The `Attributes` transfer name suffix is reserved for `Glue API modules`, that is modules with the `RestApi` suffix, and must not be used for other purposes to avoid collision.
+- The `ApiAttributes` transfer name suffix is reserved for `Storefront API modules`, that is modules with the `Api` suffix, and must not be used for other purposes to avoid collision.
+- The `BackendApiAttributes` transfer name suffix is reserved for `Backend API modules`, that is modules with `BackendApi` suffix, and must not be used for other purposes to avoid collision.
+- `EntityTransfers` must not be defined manually. It's generated automatically based on the [Peristence Schema](#persistence-schema) definitions.
   - The `Entity` suffix is reserved for the auto-generated `EntityTransfers` and must not be used in manual transfer definitions to avoid collision.
 
-<details><summary>Additional Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
-- A module can only use those `Transfer Objects` and their properties which are declared in the same module (transfer definitions accessed through composer dependencies are considered as violation).
+- A module can only use the `Transfer Objects` and their properties that are declared in the same module. Transfer definitions accessed through composer dependencies are considered as a violation.
 
 </details>
 
-**Guidelines**
-- `Transfer Objects` can be instantiated directly anywhere (not just via [Factory](#factory)).
+#### Guidelines
 
-**Examples**
-- **BAPI resource names**: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
-- **SAPI resource names**: `PickingListsApiAttributes` for picking list, `PickingListItemsApiAttributes` for picking list items.
+- `Transfer Objects` can be directly instantiated everywhere, not just via [Factory](#factory).
+
+#### Examples
+- BAPI resource names: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
+- SAPI resource names: `PickingListsApiAttributes` for picking list, `PickingListItemsApiAttributes` for picking list items.
 
 ```
 <?xml version="1.0"?>
@@ -1802,26 +1795,29 @@ For every defined table in [Peristence Schema](#persistence-schema) a matching `
             └── [Name]Widget.php
 ```
 
-**Description**
+A `Widget` is a reusable part of a webpage in the [Yves](#yves) application layer. `Widgets` provide functionality in a decoupled, modular, and configurable way.
 
-A `Widget` is a reusable part of a webpage in [Yves](#yves) application layer. `Widgets` are meant to provide functionality in a decoupled, modular and configurable way.
+#### Conventions
 
-**Convention**
 - A `Widget` needs to have a unique name across all features.
 
-<details><summary>Additional Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
 - A `Widget` needs to contain only lightweight, display related logic.
   - The `Widget` class needs to use the inherited [Factory](#factory) method to delegate complex logic or access additional data.
-- `Widget` module can't appear as dependency (as it goes against the basic concept of the optional widgets).
+- `Widget` module can't appear as dependency because it's against the basic concept of optional widgets.
 - Implementing a `Widget` needs to happen in a widget module.
-- When `Widget` call is implemented, it needs to be considered that a `Widget` is always optionally enabled.
+- When a `Widget` call is implemented, take into account that a `Widget` is always enabled optionally.
 
 </details>
 
-**Guidelines**
-- Widget modules can contain frontend components (templates, atoms, molecules, organisms, etc.) without defining an actual `Widget` class.<br/
-- The `Widget` class receives the input/rendering parameters via its constructor.
+#### Guidelines
+
+- Widget modules can contain frontend components, like templates, atoms, molecules, or organisms, without defining an actual `Widget` class.
+- The `Widget` class receives the input or rendering parameters via its constructor.
+
+
+#### Examples
 
 ```php
 namespace SprykerShop\Yves\CurrencyWidget\Widget;
@@ -1878,22 +1874,23 @@ class CurrencyWidget extends \Spryker\Yves\Kernel\Widget\AbstractWidget
             └── [Module]StubInterface.php
 ```
 
-**Description**
+A `Zed Stub` is a class that defines interactions between [Yves](#yves) with [Glue](#glue) application layers and [Zed](#zed) application layer. Under the hood, the `Zed Stub` makes RPC calls to [Zed](#zed) application layer.
 
-A `Zed Stub` is a class which defines interactions between [Yves](#yves)/[Glue](#glue) application layers and [Zed](#zed) application layer. Under the hood, the `Zed Stub` makes RPC calls to [Zed](#zed) application layer.
+#### Conventions
 
-**Conventions**
 - The `Zed Stub` call's endpoints need to be implemented in a [Zed application](#applications) [Gateway Controller](#gateway-controller) of the receiving module.
 - `Zed Stubs` need to be a descendant of `\Spryker\Client\ZedRequest\Stub\ZedRequestStub`.
 
-<details><summary>Additional Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
 - The `Zed Stub` methods need to contain only delegation but no additional logic.
 - `Zed Stub` methods need to be `public`.
-- `Zed Stub` methods need to use [Transfer Objects](#transfer-object) as input and output parameter.
-- `Zed Stub` methods need to add a `@uses` tag with the targeted [Gateway Controller](#gateway-controller) action in the docblock to enable easy code flow tracking.
+- `Zed Stub` methods need to use [Transfer Objects](#transfer-object) as input and output parameters.
+- `Zed Stub` methods need to add an `@uses` tag with the targeted [Gateway Controller](#gateway-controller) action in the docblock to enable easy code flow tracking.
 
 </details>
+
+#### Examples
 
 ```php
 namespace Spryker\Client\ConfigurableBundleCartsRestApi\Zed;
@@ -1929,32 +1926,33 @@ class ConfigurableBundleCartsRestApiZedStub implements ConfigurableBundleCartsRe
     }
 ```
 
-## Core module development Components
+## Core module development components
 
-The components below are essential in `core module development` for the purpose of modularity and customisability. For `project development` and `module development` these components are recommended on need to have basis (consider implementing these components based on their relevance to your business or technical requirements).
+The following components are used in `core module development` to ensure modularity and customizability.
+For `project development` and `module development`, these components are recommended. Consider implementing these components based on their relevance to your business or technical requirements.
 
-**Conventions**
-- The components are required to be placed according to the corresponding [application layer’s](#application-layers) directory architecture in order to take effect.
-- The components are required to inherit from the [application layer](#application-layers) corresponding abstract class in `Kernel` module to take effect.
+### Conventions
+- Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture to take effect.
+- The components must inherit from the [application layer's](#application-layers) corresponding abstract class in `Kernel` module to take effect.
 
-<details><summary>Additional Conventions for Core module development</summary>
+<details><summary>For *core module development*</summary>
 
-- The components are required to be extended directly from the [application layer](#application-layers) corresponding abstract class in `Kernel` module.
-
-</details>
-
-**Guidelines**
-- The components should be stateless to be deterministic and easy to comprehend.
-
-<details><summary>Additional Guidelines for Project Development</summary>
-
-- It is recommended for each component to consider the conventions and guidelines of Module development and Core module development as they may offer solutions for long-term requirements or recurring issues.
+- Components must be extended directly from the [application layer's](#application-layers) corresponding abstract class in `Kernel` module.
 
 </details>
 
-<details><summary>Additional Guidelines for Module development and Core module development</summary>
+### Guidelines
+- Components should be stateless to be deterministic and easy to comprehend.
 
-- The components are required to be stateless to be deterministic and easy to comprehend.
+<details><summary>For *project development*</summary>
+
+- It is recommended for each component to consider the conventions and guidelines of *module development* and *core module development* because they may offer solutions for long-term requirements or recurring issues.
+
+</details>
+
+<details><summary>For *module development* and *core module development*</summary>
+
+- Components must be stateless to be deterministic and easy to comprehend.
 
 </details>
 
@@ -2020,7 +2018,7 @@ According to the Interface Segregation Principle, every module defines an interf
 
 - The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method (mind the missing `bridge` suffix word in the interface name).
 
-<details><summary>Additional Conventions for Module development and Core module development</summary>
+<details><summary>For *module development* and *core module development*</summary>
 
 - `Bridges` must contain only the delegation logic to the friend method.
 - The `Bridge` constructor can't have parameters to avoid coupling to a specific class.
@@ -2121,7 +2119,7 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 **Conventions**
 - No generic convention.
 
-<details><summary>Conventions for Module development and Core module development</summary>
+<details><summary>Conventions For *module development* and *core module development*</summary>
 
 - `Plugins` can't contain business logic but delegate to the underlying [facade](#facade-design-pattern).
 - `Plugin` method names need to use words `pre` and `post` instead of `before`, `after`.
@@ -2204,7 +2202,7 @@ There are three modules involved:
 #### Conventions
 No general conventions.
 
-<details><summary>Conventions for Module development and Core module development</summary>
+<details><summary>Conventions For *module development* and *core module development*</summary>
 
 - `Plugin interfaces` need to be defined in extension modules.
   - `Extension modules` need to be suffixed with `Extension` and follow regular module architecture.

@@ -20,6 +20,6 @@ related:
     - title: Install the Quotation Process + Multiple Carts feature
       link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
     - title: Install the Checkout + Quotation Process feature
-      link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
+      link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
 ---
 {% include pbc/all/install-features/202307.0/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-quotation-process-feature.md -->

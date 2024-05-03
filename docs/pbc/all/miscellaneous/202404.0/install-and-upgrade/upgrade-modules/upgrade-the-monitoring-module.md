@@ -14,9 +14,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-monitoring.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-monitoring.html
   - /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-related:
-  - title: New Relic
-    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-monitoring-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-monitoring-module.md -->

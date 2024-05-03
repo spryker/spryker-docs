@@ -45,7 +45,7 @@ This takes you to the *Merchant Relations* page with the respective merchant rel
 
 ## What's next
 
-[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relations.html)
+[Manage merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html)
 
 
 

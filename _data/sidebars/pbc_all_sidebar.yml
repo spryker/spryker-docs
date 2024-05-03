@@ -1414,7 +1414,7 @@ entries:
               - title: Merchant Category feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-category-feature-overview.html
               - title: Merchant B2B Contracts and Contact Requests features overview
-                url: /docs/pbc/all/merchant-management/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html
+                url: /docs/pbc/all/merchant-management/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html
                 include_versions:
                 - "202404.0"
               - title: Install and upgrade
@@ -1537,11 +1537,11 @@ entries:
                   - title: Edit merchant profiles
                     url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html
                   - title: Manage merchant relation requests
-                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-relation-requests.html
                     include_versions:
                     - "202404.0"
                   - title: Manage merchant relations
-                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-merchant-portal/manage-merchant-relations.html
+                    url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchant-relations.html
                     include_versions:
                     - "202404.0"
 
@@ -3996,7 +3996,7 @@ entries:
               - title: Install and upgrade
                 nested:
                   - title: Install the Merchant Portal Agent Assist feature
-                    url: /docs/pbc/all/user-management/marketplace/install-the-merchant-portal-agent-assist-feature.html
+                    url: /docs/pbc/all/user-management/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html
                     include_versions:
                     - "202404.0"
               - title: Manage in the Back Office

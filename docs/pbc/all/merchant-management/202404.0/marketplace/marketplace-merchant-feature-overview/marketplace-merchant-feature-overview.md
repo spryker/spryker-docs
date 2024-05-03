@@ -122,7 +122,7 @@ Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/
 
 | OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/edit-merchant-profiles.html) |[Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html)|
+|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html) |[Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html)|
 |[Main merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)| | [Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)|
 
 ## Related Developer documents

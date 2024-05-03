@@ -46,7 +46,7 @@ The merchant can leave notes for the company that requested the relation. Mercha
 
 Once the merchant approves or rejects a relation request, its status changes to Approved or Rejected. The company user receives the email about the status change of the request.
 
-For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
+For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-relation-requests.html).
 
 
 ## Automatic creation of a merchant relation

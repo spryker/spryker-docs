@@ -203,6 +203,6 @@ We implemented a new Algolia-based search on the Spryker Docs portal. Key highli
 - Additional features such as search history and favorites.
 
 
-## Business benefit
+### Business benefit
 
 Find the needed content faster.

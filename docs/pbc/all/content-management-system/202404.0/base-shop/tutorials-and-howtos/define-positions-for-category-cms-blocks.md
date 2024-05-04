@@ -5,7 +5,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 related:
   - title: CMS blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202311.0/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html

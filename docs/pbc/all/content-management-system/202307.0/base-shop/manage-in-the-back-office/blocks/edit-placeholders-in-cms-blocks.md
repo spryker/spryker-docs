@@ -5,7 +5,7 @@ last_updated: May 11, 2022
 template: back-office-user-guide-template
 related:
   - title: CMS blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to edit placeholders in CMS blocks in the Back Office.

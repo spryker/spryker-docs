@@ -92,14 +92,9 @@ Request sample: retrieve product ratings and reviews: `GET http://glue.myspryker
 ```
 </details>
 
-<a name="product-reviews-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTIONS |
-| --- | --- | --- |
-| nickname | String | Customer’s nickname. |
-| rating | Integer | Rating given to the product by a customer. |
-| summary | String | Review summary. |
-| description | String | Full review. |
+
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ## Submit a product review
 

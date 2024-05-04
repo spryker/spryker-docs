@@ -134,12 +134,7 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| nickname | String | yes | The name under which the review is to be displayed. |
-| rating | Integer | yes | Rating given to the product by the customer. |
-| summary | String | yes | Review summary. |
-| description | String | no | Full review. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ### Response
 
@@ -161,13 +156,7 @@ Request sample: provide a rating and a review of products
 }
 ```
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| id | String | Unique review identifier. |
-| nickname | String | The name under which the review is displayed. |
-| rating | Integer | Rating given to the product by the customer. |
-| summary | String | Review summary. |
-| description | String | Full review. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->
 
 ## Other management options
 

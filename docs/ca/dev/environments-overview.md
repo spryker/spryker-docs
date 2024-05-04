@@ -7,22 +7,22 @@ last_updated: Jun 8, 2023
   - /docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html
 ---
 
-This document describes the different Environment Types offered by Spryker and how you can make use of them best. Knowing the purpose of these platforms and working with them as intended can help you build more solid and performant projects.
+This document describes the environment types shipped with Spryker and the best ways to use them. Knowing the purpose of the environments and working with them as intended can help you build more solid and performant projects.
 
 {% info_block infoBox "" %}
 
-* Contracts may vary, and this document only describes the types of the environments that may represent your default setup. If you are using a different setup, ask your project manager or product owner for a more detailed explanation.
-* Your non-production environments do not scale automatically. If you want to increase their scaling, let us know by submitting this form: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling). Due to contractual reasons, these changes can only be requested by customers, not partners.
+* Contracts may vary, and this document only describes the environments types that may represent your default setup. If you are using a different setup, ask your project manager or product owner for a more detailed explanation.
+* Your non-production environments don't scale automatically. If you want to increase their scaling, let us know by submitting this form: [Upscale Request](https://support.spryker.com/s/hosting-change-requests/environment-upscaling). Due to contractual reasons, only customers can request these changes, not partners.
 
 {% endinfo_block %}
 
 ## Basic concept
 
-We offer environments that serve different purposes. These environments are non-production, production-like and production environments. We can configure these environments to be as similar as possible to make sure that the code you deploy on one platform behaves the same way on the others. You can help us keep your environments consistent by taking this into consideration when sending us change requests.
+We offer environments that serve different purposes. These environments are non-production, production-like, and production environments. We can configure these environments to be as similar as possible to make sure that the code you deploy in one environment behaves the same way as in the others. You can help us keep your environments consistent by taking this into consideration when sending us change requests.
 
-## Non-Production (NON-PROD) Environment
+## Non-production environment (NON-PROD)
 
-Used for development or testing purposes, smaller in size and does not scale. Spryker offers several types of NON-PROD Environments as exemplified below.
+Used for development and testing purposes, smaller in size and doesn't scale. We offer several types of NON-PROD environments as described in the following sections.
 
 ### Developer environment (DEV)
 
@@ -30,23 +30,23 @@ A Dev environment is a non-production environment that is usually used to test c
 
 ### Staging (STAGE)
 
-This environment is a non-production environment that is usually used to host a snapshot of the Dev environment, or a stable version of your code that is deployed to production eventually. You can use your staging environment to do testing to see how your code behaves in a production environment. However, staging is not of the same size as production, and a subset of data and expected traffic must be considered while running tests. This environment is regularly used for demos. The staging environment provides limited autoscaling capabilities and can only be scaled up upon request.
+This environment is a non-production environment that is usually used to host a snapshot of the DEV environment, or a stable version of your code that is deployed to production eventually. You can use your STAGE environment to test how your code behaves in a production environment. However, staging is not of the same size as production, and a subset of data and expected traffic must be considered while running tests. This environment is regularly used for demos. The staging environment provides limited autoscaling capabilities and can only be scaled up on request.
 
-## Production-Like (PROD-LIKE)
+## Production-like (PROD-LIKE)
 
 This environment is set up exactly like a PROD environment. It's designed to carry out temporary load testing and related activities in an environment similar to PROD. This makes deployments to PROD more predictable and prevents issues. PROD-LIKE behaves exactly like PROD, but it's only available for a short time period to perform the necessary tests.
 
 ## Production (PROD)
 
-Your production environment must host the code that the end-user gets to interact with directly. The code must already be tested on the staging environment for stability and performance. In a PROD Environment, the application will be automatically scaled to handle the load on the infrastructure generated by incoming requests.
+Your production environment hosts the code that the end-user gets to interact with directly. The code must already be tested on the STAGE environment for stability and performance. In a PROD Environment, the application is automatically scaled to handle the load on the infrastructure generated by incoming requests.
 
 
-{% info_block infoBox "Note" %}
+{% info_block infoBox "Making changes on PROD" %}
 
-Do not make changes to the production environments directly unless they have been verified on your staging and dev environments first.
-We highly recommend testing every data load and import, as well as any integrations on your staging environment.
+Before you deploy to PROD, make sure the changes were deployed and tested in your DEV and STAGE environments. We highly recommend testing every data load and import, as well as any integrations on your STAGE.
 
 {% endinfo_block %}
 
 ## Next step
+
 [Accessing AWS Management Console](/docs/ca/dev/access/access-the-aws-management-console.html)

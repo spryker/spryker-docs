@@ -2010,13 +2010,11 @@ For `project development` and `module development`, these components are recomme
                 └── [Module]To[Module]ServiceInterface.php  
 ```
 
-**Description**
+According to the Interface Segregation Principle, every module defines an interface for each external class it relies on. To decouple and encapsulate these dependencies effectively, `Bridges` are used. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be used. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
 
-According to the Interface Segregation Principle, every module defines an interface for each external class it relies upon. To decouple and encapsulate these dependencies effectively, we utilize `Bridges`. These `Bridges` serve to wrap dependencies such as [Facade](#facade-design-pattern), [Client](#facade-design-pattern), [Service](#facade-design-pattern), external library classes, and more. By doing so, a module explicitly declares its own requirements, enabling any class that implements the interface to be utilized. This approach facilitates seamless module decoupling, allowing both modules to evolve independently while maintaining a high degree of flexibility and maintainability.
+#### Conventions
 
-**Conventions**
-
-- The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method (mind the missing `bridge` suffix word in the interface name).
+- The `Bridge` class needs to define and implement an interface that holds the specification of each `public` method. Mind the missing `bridge` suffix word in the interface name.
 
 <details><summary>For *module development* and *core module development*</summary>
 
@@ -2026,7 +2024,7 @@ According to the Interface Segregation Principle, every module defines an interf
 
 </details>
 
-**Guidelines**
+#### Guidelines
 - Bridge vs adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a SCOS [facade](#facade-design-pattern). Adapters are used when the remote class' life-cycle is independent to SCOS or there is a huge technical difference between the adaptee and adaptor.
 - During `Bridge` definitions, type definition mistakes in remote [facades](#facade-design-pattern) become more visible. In these cases, be aware of the cascading effect of changing/restricting an argument type in [facades](#facade-design-pattern) when you consider such changes.
 - [QueryContainer](#facade-design-pattern) and [Facade](#facade-design-pattern) dependencies are only available in those [Glue](#glue) application layers where the application layer has access to database.

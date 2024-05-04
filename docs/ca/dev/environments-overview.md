@@ -20,7 +20,7 @@ This document describes the environment types shipped with Spryker and the best 
 
 We offer environments that serve different purposes. These environments are non-production, production-like, and production environments. We can configure these environments to be as similar as possible to make sure that the code you deploy in one environment behaves the same way as in the others. You can help us keep your environments consistent by taking this into consideration when sending us change requests.
 
-## Non-production environment (NON-PROD)
+## Non-production environments (NON-PROD)
 
 Used for development and testing purposes, smaller in size and doesn't scale. We offer several types of NON-PROD environments as described in the following sections.
 

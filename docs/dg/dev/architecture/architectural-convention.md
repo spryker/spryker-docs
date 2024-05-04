@@ -420,27 +420,29 @@ An application layer can have up to four logical layers with clear purpose and c
 
 ## Components
 
-Conventions:
+### Conventions
+
 - Components must be placed according to the corresponding [application layer’s](#application-layers) directory architecture  to take effect.
 - Components are required to inherit from the [application layer](#application-layers) corresponding abstract class in the  `Kernel` module to take effect.
 
 <details>
   <summary> For *core module development* </summary>
-Components must be extended directly from the [application layer's](#application-layers) corresponding abstract class in the `Kernel` module.
+- Components must be extended directly from the [application layer's](#application-layers) corresponding abstract class in the `Kernel` module.
 </details>
 
-Guidelines:
+### Guidelines
+
 - The components should be stateless to be deterministic and easy to comprehend.
 <details>
   <summary>For *project development*</summary>
 
-Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
+- Module development and core module development conventions and guidelines may offer solutions for long-term requirements or recurring issues. We recommend considering them for each component.
 
 </details>
 <details>
   <summary>For *module development* and *core module development*</summary>
 
-Components must be stateless to be deterministic and easy to comprehend.
+- Components must be stateless to be deterministic and easy to comprehend.
 
 </details>
 
@@ -484,7 +486,7 @@ The `index` action name acts as the default action during request action resolut
 
 #### Conventions
 
-`Action` methods must be suffixed with `Action` and be `public` in order to be accessible. They need to define the entry points of the `Controller` in a straight-forward manner.
+- `Action` methods must be suffixed with `Action` and be `public` in order to be accessible. They need to define the entry points of the `Controller` in a straight-forward manner.
 
 <details>
   <summary>For *module development* and *core module development*</summary>
@@ -606,7 +608,7 @@ function get[PluginInterfaceName]Plugins(Container $container)
 
 #### Guidelines
 
-- Dependency constant names should be descriptive and follow the `[COMPONENT_NAME]_[MODULE_NAME]` or `PLUGINS_[PLUGIN_INTERFACE_NAME]` pattern, with a name matching its value. See the following examples.
+Dependency constant names should be descriptive and follow the `[COMPONENT_NAME]_[MODULE_NAME]` or `PLUGINS_[PLUGIN_INTERFACE_NAME]` pattern, with a name matching its value. See the following examples.
 
 #### Examples
 
@@ -857,7 +859,7 @@ No general guidelines.
 
 <details><summary>For *project development*</summary>
 
-- Solutions in `Entity manager` can use raw SQL queries for performance reasons, but this also removes all Propel ORM benefits like triggering events. Use with caution.
+Solutions in `Entity manager` can use raw SQL queries for performance reasons, but this also removes all Propel ORM benefits like triggering events. Use with caution.
 
 </details>
 
@@ -1334,11 +1336,11 @@ No general conventions.
 
 #### Guidelines
 
-- No general guidelines.
+No general guidelines.
 
 <details><summary>For *module development* and *core module development*</summary>
 
-- `Protected` items are not recommended in `module configuration` because they tend to create backward compatibility problems on project extensions.
+`Protected` items are not recommended in `module configuration` because they tend to create backward compatibility problems on project extensions.
 
 </details>
 
@@ -1375,11 +1377,12 @@ interface OmsConstants
 Module entries of the Back Office navigation panel. The icons are taken from [Font Awesome Icons Library](https://fontawesome.com/v4/).
 
 #### Examples
-- The following example adds navigation elements under the existing `product` navigation element, which is defined in another module.
+The following example adds navigation elements under the existing `product` navigation element, which is defined in another module:
 - The `pages` reserved node holds the navigation items.
 - The navigation items are defined within the `configurable-bundle-templates` logical node according to business requirements.
 - The `bundle` identifies which `module` the processing `controller` is located in.
 - The `icon` is the [Font Awesome Icon](https://fontawesome.com/v4/) name.
+
 ```xml
 <?xml version="1.0"?>
 <config>
@@ -1622,7 +1625,7 @@ No general conventions.
 
 <details><summary>For *module development* and *core module development*</summary>
 
-- Hidden hard dependencies appearing through `join` need to be defined using the `@module [RemoteModule1][,[...]]` tag. See the following examples.
+Hidden hard dependencies appearing through `join` need to be defined using the `@module [RemoteModule1][,[...]]` tag. See the following examples.
 
 </details>
 
@@ -1760,7 +1763,7 @@ For every defined table in [Peristence Schema](#persistence-schema), a matching 
 
 #### Guidelines
 
-- `Transfer Objects` can be directly instantiated everywhere, not just via [Factory](#factory).
+`Transfer Objects` can be directly instantiated everywhere, not just via [Factory](#factory).
 
 #### Examples
 - BAPI resource names: `PickingListsBackendApiAttributes` for picking list, `PickingListItemsBackendApiAttributes` for picking list items.
@@ -2025,11 +2028,11 @@ According to the Interface Segregation Principle, every module defines an interf
 </details>
 
 #### Guidelines
-- Bridge vs adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a SCOS [facade](#facade-design-pattern). Adapters are used when the remote class' life-cycle is independent to SCOS or there is a huge technical difference between the adaptee and adaptor.
-- During `Bridge` definitions, type definition mistakes in remote [facades](#facade-design-pattern) become more visible. In these cases, be aware of the cascading effect of changing/restricting an argument type in [facades](#facade-design-pattern) when you consider such changes.
-- [QueryContainer](#facade-design-pattern) and [Facade](#facade-design-pattern) dependencies are only available in those [Glue](#glue) application layers where the application layer has access to database.
+- Bridge versus adapter: for simplification, we keep using bridge pattern even when adapting the earlier version of a core [facade](#facade-design-pattern). Adapters are used when the remote class' life cycle is independent to the core or there is a huge technical difference between the adaptee and adaptor.
+- During `Bridge` definitions, type definition mistakes in remote [facades](#facade-design-pattern) become more visible. In these cases, be aware of the cascading effect of changing or restricting an argument type in [facades](#facade-design-pattern) when you consider such changes.
+- [QueryContainer](#facade-design-pattern) and [Facade](#facade-design-pattern) dependencies are available only in the [Glue](#glue) application layers that have access to the database.
 
-**Example**
+#### Examples
 
 ```php
 namespace Spryker\Zed\Product\Business;
@@ -2109,27 +2112,30 @@ class ProductApiToProductBridge implements ProductApiToProductInterface
 
 ```
 
-**Description**
-- `Plugins` are classes which are used to realize Inversion-Of-Control - instead of a direct call to another module's [facade](#facade-design-pattern), a `plugin` can be provided as an optional and configurable class.
-- `Plugins` are the only classes that can be instantiated cross modules (normally via the [Dependency Provider](#dependency-provider)).
-- See more details about the implementation in [Plugin Interface](#plugin-interface) component, and instantiation in [Dependency Provider](#dependency-provider).
 
-**Conventions**
-- No generic convention.
+- `Plugins` are classes that are used to realize Inversion Of Control: instead of a direct call to another module's [facade](#facade-design-pattern), a `plugin` can be provided as an optional and configurable class.
+- `Plugins` are the only classes that can be instantiated across modules, normally via the [Dependency Provider](#dependency-provider).
 
-<details><summary>Conventions For *module development* and *core module development*</summary>
+See more details about the implementation in [Plugin Interface](#plugin-interface) component, and instantiation in [Dependency Provider](#dependency-provider).
+
+#### Conventions
+
+No general conventions.
+
+<details><summary>For *module development* and *core module development*</summary>
 
 - `Plugins` can't contain business logic but delegate to the underlying [facade](#facade-design-pattern).
-- `Plugin` method names need to use words `pre` and `post` instead of `before`, `after`.
-- `Plugin` class names need to use words `pre`, `post`, `create`, `update`, `delete`, instead of `creator`, `updater`, `deleter`.
-- `Plugin` classes need to implement a [Plugin Interface](#plugin-interface) which is provided by an `extension module`.
+- `Plugin` method names need to contain `pre` and `post` instead of `before`, `after`.
+- `Plugin` class names need to contain `pre`, `post`, `create`, `update`, and `delete`, instead of `creator`, `updater`, and `deleter`.
+- `Plugin` classes need to implement a [Plugin Interface](#plugin-interface), which is provided by an `extension module`.
 
 </details>
 
-**Guidelines**
-- `Plugin` class name should be unique and give and overview about the behaviour that the `Plugin` delivers (consider developers searching a `Plugin` in a catalog across all features only by plugin class name).
+#### Guidelines
 
-**Example**
+`Plugin` class name should be unique and give and overview about the behavior the `Plugin` delivers. Consider developers searching for a `Plugin` in a catalog across all features only by a plugin class name.
+
+#### Examples
 
 ```php
   /**

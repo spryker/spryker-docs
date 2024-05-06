@@ -85,11 +85,8 @@ Request sample: retrieve image sets of an abstract product
 
 <a name="abstract-product-sets-response-attributes"></a>
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Image set name |
-| externalUrlLarge | URLs to the image per image set per image |
-| externalUrlSmall | URLs to the image per image set per image |
+{% include /pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/abstract-product-image-sets-reponse-attributes.md -->
+
 
 
 ## Possible errors

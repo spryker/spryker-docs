@@ -62,11 +62,14 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 
 ## Related Developer documents
-- [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)
-- [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html)
-- [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html)
-- [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)
-- [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)
-- [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html)
-- [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)
-- [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html)
+
+| INSTALLATION GUIDES |
+|---|
+| [Install the Merchant B2B Contracts feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-feature.html)  |
+| [Install the Merchant B2B Contracts + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contracts-company-account-feature.html) |
+| [Install the Merchant B2B Contract Requests feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-feature.html) |
+| [Install the Merchant B2B Contract Requests + Company Account feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-b2b-contract-requests-company-account-feature.html)  |
+| [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
+| [Install the Comments + Spryker Core Back Office feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-spryker-core-back-office-feature.html) |
+| [Install the Comments + Merchant B2B Contracts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contracts-feature.html)  |
+| [Install the Comments + Merchant B2B Contract Requests feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-merchant-b2b-contract-requests-feature.html) |

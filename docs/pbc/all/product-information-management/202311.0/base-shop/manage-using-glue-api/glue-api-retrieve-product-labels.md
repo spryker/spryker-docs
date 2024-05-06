@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
   - title: Glue API - Promotions & Discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
 ---

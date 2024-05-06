@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-This document describes how to create [tax sets](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office.
+This document describes how to create [tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 

@@ -4,10 +4,6 @@ description: In the context of Spryker B2B eCommerce platform, there can be thre
 last_updated: Jul 22, 2021
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/merchant-b2b-contracts-feature-overview
-  - /2021080/docs/en/merchant-b2b-contracts-feature-overview
-  - /docs/merchant-b2b-contracts-feature-overview
-  - /docs/en/merchant-b2b-contracts-feature-overview
   - /docs/scos/user/features/201811.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202311.0/merchant-b2b-contracts/merchant-b2b-contracts.html
   - /docs/scos/user/features/202204.0/merchant-b2b-contracts-feature-overview.html
@@ -50,7 +46,7 @@ The merchant can leave notes for the company that requested the relation. Mercha
 
 Once the merchant approves or rejects a relation request, its status changes to Approved or Rejected. The company user receives the email about the status change of the request.
 
-For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
+For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-relation-requests.html).
 
 
 ## Automatic creation of a merchant relation

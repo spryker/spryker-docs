@@ -20,7 +20,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `discount.csv` file to configure [Discount](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `discount.csv` file to configure [Discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

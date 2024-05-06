@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/decimal-stock-migration-concept.html
 related:
   - title: Packaging Units feature overview
-    link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/packaging-units-feature-overview.html
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3

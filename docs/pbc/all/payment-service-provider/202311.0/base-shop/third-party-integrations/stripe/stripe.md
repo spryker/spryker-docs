@@ -21,8 +21,8 @@ The Stripe App supports B2B and B2C models.
 - Viewing the activated payment methods in the Stripe dashboard.
 - GLUE API support: Support for customers using Spryker headless.
 - Authorize payments and capture later: The default OMS configuration lets you authorize cards and capture the order amount either after shipping or based on the established business logic.
-- Refunds: Utilizing the default OMS configuration provides the ability to refund either a whole order or a specific item individually.
-- Payment cancellation: The default OMS configuration allows for the cancellation of payment prior to its capture.
+- Refunds: The default OMS configuration refunds a provided for whole orders or individual items.
+- Payment cancellation: With the default OMS configuration, payments can be cancelled before they are captured.
 - Default OMS Configuration: We provide a default OMS configuration that you can use as an example or modify to align with your business logic.
 
 ## Stripe payment methods

@@ -131,25 +131,19 @@ Stripe,Pay Online with Stripe,en_US
 console data:import glossary
 ```
 
-## Refunds success/failures handling
+## Processing refunds
 
-In our default OMS configuration, the ability to refund either a whole order or a specific item individually is provided.
-The refund action is initiated by the Back Office user, triggering the `Payment/Refund` command.
-Subsequently, the selected item enters the `payment refund pending` state, awaiting the response from Stripe.
+In the default OMS configuration, a refund can be done for an order or an individual item. The refund action is initiated by a Back Office user triggering the `Payment/Refund` command. The selected item enters the `payment refund pending` state, awaiting the response from Stripe.
 
-During this period, Stripe attempts to process the request, which may result in success or failure:
-* In case of success, the items transition to the `payment refund succeeded` state, although the amount is not yet refunded to the customer.
-* In case of failure, the items transition to the `payment refund failed` state.
+During this period, Stripe attempts to process the request, which results in success or failure:
+* Success: the items transition to the `payment refund succeeded` state, although the payment isn't refunded at this step.
+* Failure: the items transition to the `payment refund failed` state.
 
-These states serve to track the refund status and inform the BackOffice user.
-Over the following days, Stripe finalizes the refund, causing the item states to change accordingly.
-For instance, previously successful refunds may be declined, and vice versa.
+These states serve to track the refund status and inform the Back Office user. Over the following days, Stripe finalizes the refund, causing the item states to change accordingly. For example, previously successful refunds may be declined and vice versa.
 
-If a refund fails, the BackOffice user must navigate to the Stripe Dashboard to identify the cause of the failure.
-After resolving the issue, the item can be refunded again.
+If a refund fails, the Back Office user can go to the Stripe Dashboard to identify the cause of the failure. After resolving the issue, the item can be refunded again.
 
-Additionally, in our default OMS configuration, we allow Stripe 7 days to complete successful payment refunds and refund the amount to the customer.
-This is reflected in the BackOffice by transitioning the items to the `payment refunded` state.
+In the default OMS configuration, seven days are allocated to Stripe to complete successful payment refunds. This is reflected in the Back Office by transitioning the items to the `payment refunded` state.
 
 ## Retrieving and using payment details from Stripe
 

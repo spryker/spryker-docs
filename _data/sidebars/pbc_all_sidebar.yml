@@ -1024,17 +1024,14 @@ entries:
         url: /docs/pbc/all/data-exchange/data-exchange.html
         include_versions:
         - "202311.0"
+        - "202404.0"
         nested:
           - title: Install and upgrade
             nested:
               - title: Data Exchange API
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api.html
-                include_versions:
-                - "202311.0"
               - title: Data Exchange API + Inventory Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html
-                include_versions:
-                - "202311.0"
               - title: Data Exchange API + Category Management feature
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
@@ -1043,50 +1040,32 @@ entries:
             nested:
               - title: Configure Data Exchange API endpoints
                 url: /docs/pbc/all/data-exchange/tutorials-and-howtos/how-to-configure-data-exchange-api.html
-                include_versions:
-                - "202311.0"
               - title: How to send a request in Data Exchange API
                 url: /docs/pbc/all/data-exchange/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html
-                include_versions:
-                - "202311.0"
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
-            include_versions:
-            - "202311.0"
             nested:
               - title: Integration apps
                 url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
-                include_versions:
-                - "202311.0"
                 nested:
                 - title: Akeneo PIM Integration App
                   url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
-                  include_versions:
-                  - "202311.0"
                   nested:
                     - title: Configure the Akeneo PIM Integration App
                       url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app.html
-                      include_versions:
-                      - "202311.0"
                       nested:
                       - title: Configure the Spryker Middleware powered by Alumio connection with Akeneo PIM and SCCOS
                         url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html
-                        include_versions:
-                        - "202311.0"
                       - title: Configure data mapping between Akeneo and SCCOS
                         url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html
-                        include_versions:
-                        - "202311.0"
                       - title: Configure the data integration path between Akeneo and SCCOS
                         url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html
-                        include_versions:
-                        - "202311.0"
                       - title: Create tasks and import products from Akeneo to SCCOS
                         url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/create-tasks-and-import-products-from-akeneo-to-sccos.html
-                        include_versions:
-                        - "202311.0"
+
           - title: Data Exchange FAQ
             url: /docs/pbc/all/data-exchange/data-exchange-faq.html
+            
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

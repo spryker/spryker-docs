@@ -1593,6 +1593,7 @@ Controllers in the [Zed](#zed) application layer are autowired and don't require
 - A `Controller Provider` needs to extend `\SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider`.
 - A `Router` needs to extend `\SprykerShop\Yves\ShopRouter\Plugin\Router\AbstractRouter`.
 - A `providers` are `routers` are classified as a [Plugin](#plugin) so the plugin's conventions apply.
+- `Providers` and `routers` are classified as plugins so the [Plugin's](#plugin) conventions apply.
 
 ### Query Object
 
@@ -2023,7 +2024,7 @@ According to the Interface Segregation Principle, every module defines an interf
 
 - `Bridges` must contain only the delegation logic to the friend method.
 - The `Bridge` constructor can't have parameters to avoid coupling to a specific class.
-- `Bridge` classes and interfaces need to be declared as strict as possible for input arguments and returns values, compared to their friend method with valid types (no `mixed`, no `x|y`).
+- Bridge classes and interfaces need to declare input arguments and return values as strict as possible using valid types in alignment to their friend method. For example, there should be no `mixed`, no `x|y`.
 
 </details>
 

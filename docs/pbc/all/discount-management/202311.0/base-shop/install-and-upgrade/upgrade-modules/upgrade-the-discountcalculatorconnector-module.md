@@ -19,7 +19,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202204.0/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
 related:
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
   - title: Creating Vouchers
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
   - title: Upgrade the DiscountSalesAggregatorConnector

@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/howto-import-packaging-units
 related:
   - title: Packaging Units feature overview
-    link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/packaging-units-feature-overview.html
 ---
 
 This document shows how to extend the list of the packaging unit types available by default (box, bag, palette) by importing packaging unit information and types using a CSV file.

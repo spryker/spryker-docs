@@ -5,7 +5,7 @@ last_updated: May 26, 2023
 template: howto-guide-template
 related:
   - title: Running tests with the Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+    link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
 This document describes how to run tests with Robot Framework.

@@ -77,7 +77,7 @@ Here’s how approvals fit into the buying process:
 
 {% info_block warningBox "Note" %}
 
-There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html).
+There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html).
 
 {% endinfo_block %}
 

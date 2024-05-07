@@ -52,7 +52,7 @@ The Demo Shop was built using and demonstrates the use of the endpoints and reso
 | Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/glue-api-retrieve-orders.html) |
 | Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlists.html) |
-| Store API | [Retrieving store configuration](/docs/pbc/all/miscellaneous/{{site.version}}/glue-api-retrieve-store-configuration.html) |
+| Store API | [Retrieving store configuration](/docs/pbc/all/miscellaneous/{{site.version}}/manage-using-glue-api/glue-api-retrieve-store-configuration.html) |
 
 ## Running the example application
 

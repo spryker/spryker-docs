@@ -16,7 +16,7 @@ The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to
 
 {% info_block infoBox "Prerequisite" %}
 
-Marketplace operators need to define a relationship between the business units of the B2B customer and the merchants before merchants are able to define custom prices for these business unit users. For information on how to define a contract relationship between your marketplace B2B customers and the merchants, see [Merchant B2B contracts feature overview](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html). Once this relationship is established, merchants can see the existing contracts.
+Marketplace operators need to define a relationship between the business units of the B2B customer and the merchants before merchants are able to define custom prices for these business unit users. For information on how to define a contract relationship between your marketplace B2B customers and the merchants, see [Merchant B2B contracts feature overview](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html). Once this relationship is established, merchants can see the existing contracts.
 
 {% endinfo_block %}
 

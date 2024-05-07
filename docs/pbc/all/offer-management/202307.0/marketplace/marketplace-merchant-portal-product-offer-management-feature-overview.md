@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Aug 23, 2023
 related:
   - title: Managing marketplace product offers
-    link: docs/pbc/all/offer-management/page.version/marketplace/manage-product-offers.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
   - title: Managing merchant product offers
     link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
 ---
@@ -34,7 +34,7 @@ Merchants define the following settings when creating product offers:
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
+| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
 
 ## Related Developer documents
 

@@ -14,13 +14,13 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 related:
   - title: Glue API - Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Alternative products + Product Label feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
   - title: Product group + Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-labels-feature-integration.html
   - title: Glue API - Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Discontinued products + Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
   - title: Product labels + Promotions & Discounts feature integration

@@ -20,7 +20,7 @@ To start the feature integration, overview and install the necessary features:
 | Glue API: Glue Application            | {{page.version}} | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | UUID Generation Console               | {{page.version}}  |  |
 | Glue API: Shipment                    | {{page.version}}  | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html) |
-| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout                    | {{page.version}} | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
 
 
 

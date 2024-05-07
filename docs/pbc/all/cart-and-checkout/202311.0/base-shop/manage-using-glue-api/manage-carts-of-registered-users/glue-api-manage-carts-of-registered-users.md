@@ -23,18 +23,18 @@ This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. If the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{site.version}}/multiple-carts-feature-integration.html), and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{site.version}}/multiple-carts-feature-integration.html), registered users can also have an unlimited number of carts.
+Unlike guest carts, carts of registered users have an unlimited lifetime. If the Multiple Carts feature is [integrated into your project](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html), and Glue is [enabled for multi-cart operations](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html), registered users can also have an unlimited number of carts.
 
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-labels-feature-integration.html)
-* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shared-carts-feature-integration.html)
+* [Glue API: Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
+* [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
+* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Glue API: Product Options feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
+* [Shared Carts feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
 
 ## Create a cart
 

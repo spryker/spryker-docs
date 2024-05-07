@@ -9,7 +9,7 @@ related:
   - title: Product Bundles feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
   - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 redirect_from: 
 - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
 ---

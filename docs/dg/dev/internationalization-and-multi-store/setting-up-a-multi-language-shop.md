@@ -125,7 +125,7 @@ The CMS blocks and pages can render localized content through the use of placeho
 
 {% info_block infoBox %}
 
-For more details on CMS, see [Defining the maximum size of content fields](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/tutorials-and-howtos/howto-define-the-maximum-size-of-content-fields.html).
+For more details on CMS, see [Defining the maximum size of content fields](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/tutorials-and-howtos/define-the-maximum-size-of-content-fields.html).
 
 {% endinfo_block %}
 

@@ -16,7 +16,7 @@ related:
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---

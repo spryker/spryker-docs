@@ -597,12 +597,8 @@ To get related items of an abstract product, send the request:
 |metaDescription|String|Meta description of the product. |
 |attributeNames | Object | All non-super attribute/value combinations for the abstract product. |
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| product labels | name | String | Specifies the label name. |
-| product labels | isExclusive | Boolean | Indicates whether the label is `exclusive`.<br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
-| product labels | position | Integer | Indicates the label priority.<br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
-| product labels | frontEndReference | String |Specifies the label custom label type (CSS class).<br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+
 
 ## Retrieve upselling products of a registered user's cart
 
@@ -625,7 +621,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
+| GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products | Retrieve upselling products of the specified cart. |
 | GET https://glue.mysprykershop.com/carts/f9a3f045-02c2-5d47-b397-8ac1f5c63e27/up-selling-products?include=product-labels | Retrieve upselling products of the specified cart. Product labels assigned to the upselling products are included. |
 
 ### Response
@@ -972,8 +968,11 @@ To get upselling items for all products in a cart of a registered customer, send
 ```
 </details>
 
+{% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+
+
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html#product-labels-response-attributes)
+
 
 ## Retrieve upselling products of a guest cart
 

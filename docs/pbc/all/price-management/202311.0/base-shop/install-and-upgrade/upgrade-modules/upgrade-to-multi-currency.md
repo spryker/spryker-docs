@@ -39,7 +39,7 @@ related:
   - title: Upgrade the Price
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
   - title: Upgrade the Shipment
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---

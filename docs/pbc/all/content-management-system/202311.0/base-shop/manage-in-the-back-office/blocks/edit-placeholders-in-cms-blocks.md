@@ -7,7 +7,7 @@ redirect_from:
 - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html
 related:
   - title: CMS blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to edit placeholders in CMS blocks in the Back Office.

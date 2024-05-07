@@ -65,7 +65,7 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 ### Documentation
 
-- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/202404.0/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)
+- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html)
 - [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)
 
 

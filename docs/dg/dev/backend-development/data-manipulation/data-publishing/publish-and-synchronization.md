@@ -193,7 +193,7 @@ P&S inspires intelligent solutions and smart architecture designs!
 
 When designing a solution using P&S we need to consider the following concerns in our applications
 - eventual consistency for data available in storefronts
-- horizontal scalability of Publish process (native) and Sync process (requires development)
+- horizontal scalability of publish process (native) and sync process (requires development)
 - data object limitations
 
 #### Data Object Limitations

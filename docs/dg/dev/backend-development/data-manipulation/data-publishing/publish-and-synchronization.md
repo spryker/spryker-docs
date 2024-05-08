@@ -191,7 +191,7 @@ In other cases, P&S enabled customer projects to keep their main backend systems
 P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}
 
-When desining a solution using P&S we need to consider the following concerns in our applications
+When designing a solution using P&S we need to consider the following concerns in our applications
 - eventual consistency for data available in storefronts
 - horizontal scalability of Publish process (native) and Sync process (requires development)
 - data object limitations

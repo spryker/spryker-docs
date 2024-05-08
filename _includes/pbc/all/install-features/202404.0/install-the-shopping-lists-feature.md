@@ -1065,8 +1065,12 @@ class AgentDependencyProvider extends SprykerAgentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that shopping list item notes are being saved when saving shopping list item and deleted when deleting
-shopping list item. Also, make sure that shopping list item notes are transferred to cart item notes when creating a
+Make sure the following applies:
+* When saving a shopping list item, shopping list item notes are also saved.
+* When deleting a shopping list item,  and deleted when deleting
+shopping list item.
+
+Also, make sure that shopping list item notes are transferred to cart item notes when creating a
 cart from a shopping list.
 
 {% endinfo_block %}
@@ -1087,9 +1091,11 @@ non-active products can't be added to the shopping list.
 
 ## Install feature frontend
 
+Take the following steps to install the feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
 | NAME                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -1121,7 +1127,7 @@ Make sure the following modules have been installed:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 <details open>
 <summary markdown='span'>src/data/import/glossary.csv</summary>
@@ -1331,7 +1337,7 @@ product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 
 </details>
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -1441,7 +1447,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 
 ### 7) Set up widgets
 
-Enable global widgets:
+1. Enable global widgets:
 
 | WIDGET                           | DESCRIPTION                                                                                                       | NAMESPACE                                      |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
@@ -1493,7 +1499,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "" %}
 
 `ShoppingListWidget` uses Javascript for some functionality:
 
@@ -1503,7 +1509,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% endinfo_block %}
 
-Run the following command to enable Javascript and CSS changes:
+2. Run the following command to enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1511,7 +1517,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
+Make sure the following widgets have been registered:
 
 | MODULE                           | TEST                                                                                                                                                        |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|

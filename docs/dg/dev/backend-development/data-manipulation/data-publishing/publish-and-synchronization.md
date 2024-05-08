@@ -198,7 +198,7 @@ When designing a solution using P&S we need to consider the following concerns i
 
 #### Data Object Limitations
 
-In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with a healthy NFRs for P&S.
+In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with healthy NFRs for P&S.
 - storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
 - do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in sync process
 

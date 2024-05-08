@@ -11,4 +11,4 @@ redirect_from:
 
 ---
 
-{% include pbc/all/install-features/{{page.version}}/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202407.0/install-the-order-management-feature.md -->

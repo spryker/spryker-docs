@@ -27,7 +27,6 @@ Understanding the development scenarios in which Spryker can be used is crucial 
 
 - *Project development*: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
 - *Module development*: Contributing reusable third-party modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
-- *Module development*: Contributing third-party reusable modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
 - *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines in the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, or Unified Commerce. These rules also ensure the stability of the module API used by Spryker development ecosystem and community.
 
 ### Directive classification

@@ -188,7 +188,7 @@ Some of Spryker partners applied P&S features to distribute data over picking de
 
 In other cases, P&S enabled customer projects to keep their main backend systems with customer data in one region (eg Germany), while distributing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil can browse their catalogs (as "local") with blazing fast response times.
 
-Indeed, P&S inspires intelegent solutions and smart architecture designs!
+P&S inspires intelligent solutions and smart architecture designs!
 {% endinfo_block %}
 
 When desining a solution using P&S we need to consider the following concerns in our applications

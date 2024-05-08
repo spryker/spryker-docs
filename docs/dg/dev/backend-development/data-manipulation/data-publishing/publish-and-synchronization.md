@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-To access data rapidly, the Shop App client uses Redis as a key-value storage and Elasticsearch as a search engine for data sources. The client does not have direct access to the [SQL database](/docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html) used by the back end. Therefore, to ensure that client data sources are always up-to-date, all changes made in the back end must be propagated to the frontend data sources. To achieve this, Spryker implements a two-step process called Publish and Synchronize:
+To access data rapidly, the Shop App client uses Redis as a key-value storage and Elasticsearch as a search engine for data sources. The client does not have direct access to the [SQL database](/docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html) used by the back end. Therefore, to ensure that client data sources are always up-to-date, all changes made in the back end must be propagated to the frontend data sources. To achieve this, Spryker implements a two-step process called Publish and Synchronize (aka P&S):
 
 1. Publish:
    1. An event that describes a change is generated.
@@ -177,3 +177,36 @@ When a change happens in the mirror table, its *synchronization behavior* sends 
 	}
 }
 ```
+
+### Data Architecture 
+
+P&S plays a major role in data denormalization and distribution to Spryker storefronts and API. Denormalization procedure aims for preparing data in the form it will be consumed by data clients. Distribution procedure aims to distribute the data closer to the end users, so that they feel like accessing a local storage.
+
+{% info_block infoBox "Project Example"%}
+
+Some of Spryker partners applied P&S features to get data distributed over picking devices (barcode scanners) in a warehouse. Which accessed the Spryker catalog as their local one, even with low quality or missing network access.
+
+In order cases, P&S enabled customer projects to keep their main backend systems with customer data in one region (eg Germany), while providing local catalogs over the world. This enabled them on one hand to keep customer data under data privacy constraints, and on other hand their buyers in Brazil did not feel an oversea long response times, browsing their catalogs as "local" with blazing fast response times.
+
+Indeed, P&S inspires intelegent solutions and smart architecture designs!
+{% endinfo_block %}
+
+When desining a solution using P&S we need to consider the following concerns in our applications
+- eventual consistency for data available in storefronts
+- horizontal scalability of Publish process (native) and Sync process (requires development)
+- data object limitations
+
+#### Data Object Limitations
+
+In order to build a healthy commerce system, we need to make sure that P&S process is healthy at all times. And first we start with a healthy NFRs for P&S.
+- storage sync message size should not be over 256Kb - this prevents us from problems in data processing, but even more important in data comsumption, when an API consumer might experience failure when reviceing an aggregated object of a high size.
+- do not exceed the request limitations for the storage (eg. Redis) and search (eg. OpenSearch) systems, while sending data in Sync process
+
+{% info_block infoBox "Are these really limitations?"%}
+
+As every non-functional requirement (NFR) each of these limitations might be changed and adjusted to the project needs.
+However that might require an additional implementation or refactorring of Spryker OOTB functionallities.
+
+For examples if our business requirements include sending objects over 10Mb via API, which is not typical for ecommerce projects, that is still possible with Spryker. However it might require a review of the business logic attached to the API endpoint, and be adjusted to the new requirements when neccesary. In this case the default requirment of 256Kb for a sync message size is not applicable anymore.
+
+{% endinfo_block %}

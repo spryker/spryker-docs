@@ -87,11 +87,8 @@ Request sample: retrieve image sets of a concrete product
 
 <a name="concrete-image-sets-response-attributes"></a>
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Image set name. |
-| externalUrlLarge | URLs to the image per image set per image. |
-| externalUrlSmall | URLs to the image per image set per image. |
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md -->
+
 
 ## Possible errors
 

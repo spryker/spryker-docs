@@ -727,6 +727,9 @@ To retrieve information about a specific Configurable Bundle template, send the 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -740,10 +743,6 @@ A list of images assigned to a configurable bundle template.  |
 | configurable-bundle-template-image-sets | externalUrlLarge | String | URLs to the image per image set. |
 | configurable-bundle-template-image-sets | externalUrlSmall | String | URLs to the image per image set. |
 
-For the attributes of other included resources, see:
-
-* [Retrieving concrete product prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html)
-* [Retrieving concrete product image sets](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html)
 
 ## Possible errors
 

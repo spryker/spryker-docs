@@ -9,9 +9,10 @@ This document describes how to install [Dynamic Multistore](/docs/pbc/all/dynami
 ## Install feature core
 
 Follow the steps below to install the Dynamic Multistore feature core.
+
 ### Prerequisites
 
-Follow the steps below to install the Dynamic Store feature:
+Follow the steps below to install the Dynamic Store feature core:
 
 ### 1) Make sure that Country, Locale and Currency modules migrated to the required major version
 
@@ -72,7 +73,7 @@ Make sure the following modules have been installed:
 
 Before the introduction of dynamic store, configuration settings were maintained in the file `config/Shared/stores.php`. With the activation of dynamic store, these settings are now managed in the database, rendering the files `config/Shared/stores.php` and `config/Shared/default_store.php` obsolete.
 
-The default configuration will be imported using new data import modules, including StoreDataImport, LocaleDataImport, CountryDataImport, and other feature-related imports for instance such as CurrencyDataImport. 
+The default configuration will be imported using new data import modules, including StoreDataImport, LocaleDataImport, CountryDataImport, and other feature-related imports for instance such as CurrencyDataImport.
 These modules will populate the necessary configuration details in the database, ensuring a comprehensive migration of all relevant data.
 
 {% endinfo_block %}
@@ -83,7 +84,7 @@ These modules will populate the necessary configuration details in the database,
 1. Define the region stores context by domain
 
 Since implementation dynamic multistore features you can define region or store by domains or by headers.
-We recommend defining region by domains, which is supported by default for dynamic store. 
+We recommend defining region by domains, which is supported by default for dynamic store.
 
 {% info_block infoBox "Recommendations for changing domain name" %}
 
@@ -156,7 +157,7 @@ groups:
                             session:
                                 namespace: 7
             # Changed Yves endpoint for EU region. Use new domain name for all stores in EU region.
-            yves_eu: 
+            yves_eu:
                 application: yves
                 endpoints:
                     yves.eu.mysprykershop.com:
@@ -165,7 +166,7 @@ groups:
                             session:
                                 namespace: 2
             # Same for other endpoints
-            glue_eu: 
+            glue_eu:
                 application: glue
                 endpoints:
                     glue.eu.mysprykershop.com:
@@ -204,12 +205,12 @@ groups:
 
     US:
         # ...
- 
+
 # ...
 docker:
     # ...
     testing:
-        region: EU # Use EU region for testing insted store. 
+        region: EU # Use EU region for testing insted store.
 
 ```
 
@@ -220,7 +221,7 @@ Make sure that there are no mentions of the store is in the new deployment file.
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 
-3. Adjust configuration 
+3. Adjust configuration
 
 Add the following configuration to your project:
 
@@ -290,8 +291,8 @@ Please make sure that the following configuration is working via run `vendor/bin
 
 **src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
 
-```php 
-<?php 
+```php
+<?php
 
 namespace Pyz\Client\RabbitMq;
 
@@ -406,14 +407,14 @@ You also can check this configuration in the file `config/Zed/cronjobs/jenkins.p
 Run the following commands:
 
 ```bash
-vendor/bin/console scheduler:clean 
+vendor/bin/console scheduler:clean
 ```
 
-Ensure that Jenkins jobs per store have been removed. 
+Ensure that Jenkins jobs per store have been removed.
 If any jobs have not been automatically removed, they have to be manually deleted.
 
 ```bash
-vendor/bin/console scheduler:setup 
+vendor/bin/console scheduler:setup
 ```
 And check that the jobs are created in the Jenkins with region configuration.
 
@@ -591,10 +592,10 @@ Make sure the following changes have been applied in transfer objects:
 namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDependencyProvider;
-use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CountryStore\CountryStoreWritePublisherPlugin; 
+use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\CountryStore\CountryStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\LocaleStore\LocaleStoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreSynchronizationTriggeringPublisherPlugin;
-use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreWritePublisherPlugin; 
+use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\Store\StoreWritePublisherPlugin;
 use Spryker\Zed\StoreStorage\Communication\Plugin\Publisher\StorePublisherTriggerPlugin;
 
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
@@ -606,7 +607,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
             $this->getStoreStoragePlugins(),
         );
     }
-    
+
     /**
      * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
@@ -614,10 +615,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     {
         return [
             new StoreWritePublisherPlugin(),
-            new StoreSynchronizationTriggeringPublisherPlugin(), 
+            new StoreSynchronizationTriggeringPublisherPlugin(),
             new CountryStoreWritePublisherPlugin(),
             new LocaleStoreWritePublisherPlugin(),
-            
+
         ];
     }
 
@@ -675,7 +676,7 @@ Import locale, store and country data:
 
 1.  Prepare your data according to your requirements using our demo data:
 
-Example for DE store locales configurations: 
+Example for DE store locales configurations:
 
 **data/import/common/DE/locale_store.csv**
 
@@ -771,7 +772,7 @@ class DataImportConfig extends SprykerDataImportConfig
 ```
 
 3. Register the following plugins to enable data import:
- 
+
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -820,7 +821,7 @@ use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\StoreDataImport\StoreDataImportConfig;
 use Spryker\Zed\Locale\Communication\Plugin\Application\ConsoleLocaleApplicationPlugin;
 use Spryker\Zed\LocaleDataImport\LocaleDataImportConfig;
-use Spryker\Zed\CountryDataImport\CountryDataImportConfig; 
+use Spryker\Zed\CountryDataImport\CountryDataImportConfig;
 
 /**
  * @method \Pyz\Zed\Console\ConsoleConfig getConfig()
@@ -840,7 +841,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     protected function getConsoleCommands(Container $container): array
     {
         return [
-            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . CountryDataImportConfig::IMPORT_TYPE_COUNTRY_STORE), 
+            new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . CountryDataImportConfig::IMPORT_TYPE_COUNTRY_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . LocaleDataImportConfig::IMPORT_TYPE_LOCALE_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . LocaleDataImportConfig::IMPORT_TYPE_DEFAULT_LOCALE_STORE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . StoreDataImportConfig::IMPORT_TYPE_STORE),            
@@ -854,7 +855,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 5. Import data:
 
 ```bash
-vendor/bin/console data:import:locale-store 
+vendor/bin/console data:import:locale-store
 vendor/bin/console data:import:default-locale-store
 vendor/bin/console data:import:country-store
 ```
@@ -974,7 +975,7 @@ namespace Pyz\Zed\Console;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\Locale\Communication\Plugin\Application\ConsoleLocaleApplicationPlugin;
- 
+
 /**
  * @method \Pyz\Zed\Console\ConsoleConfig getConfig()
  */
@@ -999,7 +1000,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
-```php 
+```php
 <?php
 
 namespace Pyz\Zed\Application;
@@ -1047,7 +1048,7 @@ namespace Pyz\Zed\Store;
 
 use Spryker\Zed\Country\Communication\Plugin\Store\CountryStoreCollectionExpanderPlugin;
 use Spryker\Zed\Country\Communication\Plugin\Store\CountryStorePostCreatePlugin;
-use Spryker\Zed\Country\Communication\Plugin\Store\CountryStorePostUpdatePlugin; 
+use Spryker\Zed\Country\Communication\Plugin\Store\CountryStorePostUpdatePlugin;
 use Spryker\Zed\Locale\Communication\Plugin\Store\DefaultLocaleStorePostCreatePlugin;
 use Spryker\Zed\Locale\Communication\Plugin\Store\DefaultLocaleStorePostUpdatePlugin;
 use Spryker\Zed\Locale\Communication\Plugin\Store\DefaultLocaleStorePreCreateValidationPlugin;
@@ -1076,7 +1077,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStorePreUpdateValidationPlugins(): array
     {
         return [
-            new DefaultLocaleStorePreUpdateValidationPlugin(), 
+            new DefaultLocaleStorePreUpdateValidationPlugin(),
         ];
     }
 
@@ -1111,7 +1112,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
     protected function getStoreCollectionExpanderPlugins(): array
     {
         return [
-            new CountryStoreCollectionExpanderPlugin(), 
+            new CountryStoreCollectionExpanderPlugin(),
             new LocaleStoreCollectionExpanderPlugin(),
         ];
     }
@@ -1162,7 +1163,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormExpanderPlugins(): array
     {
         return [
-            new LocaleStoreFormExpanderPlugin(), 
+            new LocaleStoreFormExpanderPlugin(),
             new CountryStoreFormExpanderPlugin(),
         ];
     }
@@ -1173,7 +1174,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormViewExpanderPlugins(): array
     {
         return [
-            new LocaleStoreFormViewExpanderPlugin(), 
+            new LocaleStoreFormViewExpanderPlugin(),
             new CountryStoreFormViewExpanderPlugin(),
         ];
     }
@@ -1184,7 +1185,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreFormTabsExpanderPlugins(): array
     {
         return [
-            new LocaleStoreFormTabExpanderPlugin(), 
+            new LocaleStoreFormTabExpanderPlugin(),
             new CountryStoreFormTabExpanderPlugin(),
         ];
     }
@@ -1196,7 +1197,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     {
         return [
             new DefaultLocaleStoreViewExpanderPlugin(),
-            new AssignedLocalesStoreViewExpanderPlugin(), 
+            new AssignedLocalesStoreViewExpanderPlugin(),
             new AssignedCountriesStoreViewExpanderPlugin(),
         ];
     }
@@ -1207,7 +1208,7 @@ class StoreGuiDependencyProvider extends SprykerStoreGuiDependencyProvider
     protected function getStoreTableExpanderPlugins(): array
     {
         return [
-            new LocaleStoreTableExpanderPlugin(), 
+            new LocaleStoreTableExpanderPlugin(),
             new CountryStoreTableExpanderPlugin(),
         ];
     }
@@ -1256,7 +1257,7 @@ Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| StoreWidget | vendor/spryker-shop/store-widget | 
+| StoreWidget | vendor/spryker-shop/store-widget |
 
 {% endinfo_block %}
 
@@ -1320,7 +1321,7 @@ class RouterConfig extends SprykerRouterConfig
     {
         return (new Container())->getLocator()->locale()->client()->getAllowedLanguages();
     }
-    
+
     /**
      * @return array<string>
      */
@@ -1344,7 +1345,7 @@ class RouterConfig extends SprykerRouterConfig
 
 
 ```php
-<?php 
+<?php
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
@@ -1373,7 +1374,7 @@ Enable the following behaviors by registering the plugins:
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
-<?php 
+<?php
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;

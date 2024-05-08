@@ -207,6 +207,6 @@ In order to build a healthy commerce system, we need to make sure that P&S proce
 As every non-functional requirement (NFR) each of these limitations might be changed and adjusted to the project needs.
 However that might require an additional implementation or refactorring of Spryker OOTB functionallities.
 
-For examples if our business requirements include sending objects over 10Mb via API, which is not typical for ecommerce projects, that is still possible with Spryker. However it might require a review of the business logic attached to the API endpoint, and be adjusted to the new requirements when neccesary. In this case the default requirment of 256Kb for a sync message size is not applicable anymore.
+For examples if your business requirements include sending objects above 10MB via API, which is not typical for e-commerce projects, that is still possible with Spryker. However it might require a review of the business logic attached to the API endpoint, and be adjusted to the new requirements. In this case the default requirement of 256KB for a sync message size is not applicable anymore.
 
 {% endinfo_block %}

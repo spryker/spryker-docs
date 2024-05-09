@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-orders
 originalArticleId: 5774ec3a-945c-46f1-a51c-475e6e1d9df9
 redirect_from:
-  - /docs/scos/dev/glue-api-guides/202311.0/retrieving-orders.html
+  - /docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html
   - /docs/scos/dev/glue-api-guides/202204.0/retrieving-orders.html
 related:
   - title: Retrieving customer orders
@@ -98,18 +98,8 @@ To retrieve a list of all orders made by a registered customer, send the request
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| createdAt | String | Date and time when the order was created. |
-| currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
-| priceMode | String | Price mode that was active when placing the order. Possible values: <ul><li>**NET_MODE**—prices before tax.</li><li>**GROSS_MODE**—prices after tax.</li></ul> |
-| expenseTotal | Integer | Total amount of expenses (e.g. shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied. |
-| taxTotal | Integer | Total amount of taxes paid. |
-| subtotal | Integer | Subtotal of the order. |
-| grandTotal | Integer | Grand total of the order. |
-| canceledTotal | Integer | Total canceled amount. |
-| remunerationTotal | Integer | Total sum of remuneration. |
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+
 
 ## Retrieve an order
 
@@ -1211,9 +1201,9 @@ To retrieve detailed information on an order, send the request:
 ```    
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/orders-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/order-shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/order-shipments-response-attributes.md -->
 
 ## Possible errors
 

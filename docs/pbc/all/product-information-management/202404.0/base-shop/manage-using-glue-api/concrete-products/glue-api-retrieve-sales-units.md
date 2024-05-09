@@ -95,13 +95,8 @@ Request sample: retrieve sales units
 
 <a name="sales-units-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
-| precision | integer | Ratio between a sales unit and a base unit. |
-| is displayed | boolean | Defines if the sales unit is displayed on the product details page. |
-| is default | boolean | Defines if the sales unit is selected by default on the product details page. |
-| measurementUnitCode | string | Code of the measurement unit. |
+{% include pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md -->
+
 
 See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html) for more information on managing the sales units.
 

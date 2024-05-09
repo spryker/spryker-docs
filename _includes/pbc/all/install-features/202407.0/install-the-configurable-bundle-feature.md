@@ -1168,9 +1168,11 @@ composer require spryker-feature/configurable-bundle: "^{{page.version}}" --upda
 
 Make sure the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| ConfigurableBundleWidget | spryker-shop/configurable-bundle-widget |
+| MODULE                        | EXPECTED DIRECTORY                            |
+|-------------------------------|-----------------------------------------------|
+| ConfigurableBundlePage        | spryker-shop/configurable-bundle-page         |
+| ConfigurableBundleWidget      | spryker-shop/configurable-bundle-widget       |
+| ConfigurableBundleNoteWidget  | spryker-shop/configurable-bundle-note-widget  |
 | SalesConfigurableBundleWidget | spryker-shop/sales-configurable-bundle-widget |
 
 {% endinfo_block %}
@@ -1181,11 +1183,12 @@ Make sure the following modules have been installed:
 
 Register router plugins:
 
-| PROVIDER                                         | NAMESPACE                                               |
-|--------------------------------------------------|---------------------------------------------------------|
-| ConfigurableBundleWidgetRouteProviderPlugin      | SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router |
-| ConfigurableBundleWidgetAsyncRouteProviderPlugin | SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router   |
-| ConfigurableBundlePageRouteProviderPlugin        | SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router   |
+| PROVIDER                                             | NAMESPACE                                                   |
+|------------------------------------------------------|-------------------------------------------------------------|
+| ConfigurableBundleWidgetRouteProviderPlugin          | SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router     |
+| ConfigurableBundleWidgetAsyncRouteProviderPlugin     | SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router       |
+| ConfigurableBundlePageRouteProviderPlugin            | SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router       |
+| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | SprykerShop\Yves\ConfigurableBundleNoteWidget\Plugin\Router |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1195,6 +1198,7 @@ Register router plugins:
 namespace Pyz\Yves\Router;
 
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\ConfigurableBundleNoteWidget\Plugin\Router\ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin;
 use SprykerShop\Yves\ConfigurableBundlePage\Plugin\Router\ConfigurableBundlePageRouteProviderPlugin;
 use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWidgetAsyncRouteProviderPlugin;
 use SprykerShop\Yves\ConfigurableBundleWidget\Plugin\Router\ConfigurableBundleWidgetRouteProviderPlugin;
@@ -1210,6 +1214,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             new ConfigurableBundleWidgetRouteProviderPlugin(),
             new ConfigurableBundleWidgetAsyncRouteProviderPlugin(),
             new ConfigurableBundlePageRouteProviderPlugin(),
+            new ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin(),
         ];
     }
 }
@@ -1222,6 +1227,8 @@ Verify the `ConfigurableBundleWidgetRouteProviderPlugin`, make sure that you can
 Verify the `ConfigurableBundleWidgetAsyncRouteProviderPlugin`, make sure that you can change the quantity and remove the configurable bundle from the cart with cart actions AJAX mode enabled.
 
 Verify the `ConfigurableBundlePageRouteProviderPlugin`, make sure that you can navigate to `/configurator/template-selection` page.
+
+Verify the `ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin` by adding a configurable item note with cart actions AJAX mode enabled.
 
 {% endinfo_block %}
 

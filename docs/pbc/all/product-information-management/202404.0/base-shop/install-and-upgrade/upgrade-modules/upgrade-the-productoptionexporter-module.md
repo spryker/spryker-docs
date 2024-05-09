@@ -6,22 +6,6 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-option-exporter
 originalArticleId: e57262ce-2da8-4146-a936-a019b4ae392d
 redirect_from:
-  - /2021080/docs/mg-product-option-exporter
-  - /2021080/docs/en/mg-product-option-exporter
-  - /docs/mg-product-option-exporter
-  - /docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
-  - /v1/docs/mg-product-option-exporter
-  - /v1/docs/en/mg-product-option-exporter
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoptionexporter.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productoptionexporter.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productoptionexporter.html

@@ -1,6 +1,6 @@
 {% info_block warningBox %}
 
-Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
+Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and don't provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
@@ -12,28 +12,20 @@ Follow the steps below to install the Dynamic Multistore feature core.
 
 ### Prerequisites
 
-Follow the steps below to install the Dynamic Store feature core:
+Upgrade the following modules:
 
-### 1) Make sure that Country, Locale and Currency modules migrated to the required major version
+| NAME     | VERSION |  UPGRADE GUIDE |
+|----------|---------|---|
+| Country  | ^4.0.0  | [Upgrade the Country module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html) |
+| Locale   | ^4.0.0  | [Upgrade the Locale module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html) |
+| Currency | ^4.0.0  | [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) |
 
-In order to make Dynamic Store work, new major versions of 3 modules must be updated.
 
 {% info_block warningBox %}
 
 The minimum PHP version required to get or update the following modules is PHP 8.1 or higher.
 
 {% endinfo_block %}
-
-| NAME     | VERSION |
-|----------|---------|
-| Country  | ^4.0.0  |
-| Locale   | ^4.0.0  |
-| Currency | ^4.0.0  |
-
-Migration guides can be found here:
-[Country](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-country-module.html)
-[Locale](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-locale-module.html)
-[Currency](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html)
 
 ### 2) Install the required modules using Composer
 

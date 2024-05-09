@@ -26,6 +26,20 @@ Install the required features:
 composer require spryker-feature/cart {{page.version}} --update-with-dependencies
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE         | EXPECTED DIRECTORY                   |
+|----------------|--------------------------------------|
+| Calculation    | vendor/spryker/calculation           |
+| Cart           | vendor/spryker/cart                  |
+| CartNote       | vendor/spryker/cart-note             |
+| CartVariant    | vendor/spryker/cart-variant          |
+| PersistentCart | vendor/spryker/persistent-cart       |
+
+{% endinfo_block %}
+
 ### 2) Add translations
 
 1. Append glossary according to your configuration:
@@ -73,9 +87,10 @@ composer require spryker-feature/cart {{page.version}} --update-with-dependencie
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| CartPage | vendor/spryker-shop/cart-page |
+| MODULE         | EXPECTED DIRECTORY                   |
+|----------------|--------------------------------------|
+| CartPage       | vendor/spryker-shop/cart-page        |
+| CartNoteWidget | vendor/spryker-shop/cart-note-widget |
 
 {% endinfo_block %}
 
@@ -131,10 +146,13 @@ After finishing the integration make sure that:
 
 Register the following route providers on the Storefront:
 
-| PROVIDER                         | NAMESPACE                               |
-|----------------------------------|-----------------------------------------|
-| CartPageRouteProviderPlugin      | SprykerShop\Yves\CartPage\Plugin\Router |
-| CartPageAsyncRouteProviderPlugin | SprykerShop\Yves\CartPage\Plugin\Router |
+| PROVIDER                                | NAMESPACE                                     |
+|-----------------------------------------|-----------------------------------------------|
+| CartPageRouteProviderPlugin             | SprykerShop\Yves\CartPage\Plugin\Router       |
+| CartPageAsyncRouteProviderPlugin        | SprykerShop\Yves\CartPage\Plugin\Router       |
+| CartNoteWidgetRouteProviderPlugin       | SprykerShop\Yves\CartNoteWidget\Plugin\Router |
+| CartNoteWidgetAsyncRouteProviderPlugin  | SprykerShop\Yves\CartNoteWidget\Plugin\Router |
+
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -143,6 +161,9 @@ Register the following route providers on the Storefront:
 
 namespace Pyz\Yves\Router;
 
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\CartNoteWidget\Plugin\Router\CartNoteWidgetAsyncRouteProviderPlugin;
+use SprykerShop\Yves\CartNoteWidget\Plugin\Router\CartNoteWidgetRouteProviderPlugin;
 use SprykerShop\Yves\CartPage\Plugin\Router\CartPageAsyncRouteProviderPlugin;
 use SprykerShop\Yves\CartPage\Plugin\Router\CartPageRouteProviderPlugin;
 
@@ -156,6 +177,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
         return [
             new CartPageRouteProviderPlugin(),
             new CartPageAsyncRouteProviderPlugin(),
+            new CartNoteWidgetRouteProviderPlugin(),
+            new CartNoteWidgetAsyncRouteProviderPlugin(),
         ];
     }
 }
@@ -166,6 +189,10 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 Verify the `CartPageRouteProviderPlugin` by opening the `https://mysprykershop.com/cart` page.
 
 Verify the `CartPageAsyncRouteProviderPlugin` by performing the cart actions as changing item quantity, removing an item, etc with AJAX mode enabled.
+
+Verify the `CartNoteWidgetRouteProviderPlugin` by adding a cart note.
+
+Verify the `CartNoteWidgetAsyncRouteProviderPlugin` by adding a cart item note with cart actions AJAX mode enabled.
 
 {% endinfo_block %}
 

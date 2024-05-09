@@ -1059,7 +1059,9 @@ class AgentDependencyProvider extends SprykerAgentDependencyProvider
 
 1. Share User A's shopping list with User B.
 2. Change the shopping list from User A's profile.
- 	Make sure User B can see the updates in this shopping list. Also, make sure shared shopping lists have the permission group you've configured.
+ 	Make sure User B can see the updates in this shopping list.
+
+Also, make sure shared shopping lists have the permission group you've configured.
 
 {% endinfo_block %}
 
@@ -1067,24 +1069,22 @@ class AgentDependencyProvider extends SprykerAgentDependencyProvider
 
 Make sure the following applies:
 * When saving a shopping list item, shopping list item notes are also saved.
-* When deleting a shopping list item,  and deleted when deleting
-shopping list item.
+* When deleting a shopping list item, shopping list item notes are also deleted.
 
-Also, make sure that shopping list item notes are transferred to cart item notes when creating a
-cart from a shopping list.
+Also, make sure that shopping list item notes are transferred to cart item notes when creating a cart from a shopping list.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that shopping list collection in session and in storage is always up-to-date. You can check this by changing
-the session shopping list collection 'updated_at' value to be older than one in shopping list customer storage.
+Make sure that shopping list collection in session and in storage is always up to date. You can check this by changing
+the `updated_at` value of the session shopping list collection to be older than the one in the shopping list customer storage.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To make sure the ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin is setup correctly, make sure that
+To verify that `ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin` is set up correctly, make sure that
 non-active products can't be added to the shopping list.
 
 {% endinfo_block %}
@@ -1353,8 +1353,8 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 | PLUGIN                                | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                                |
 |---------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
-| ShoppingListPageRouteProviderPlugin   | Adds the shopping list routes to the Yves application        |           | \SprykerShop\Yves\ShoppingListPage\Plugin\Router                                         |
-| ShoppingListWidgetRouteProviderPlugin | Adds the shopping list widget routes to the Yves application |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\Router\ShoppingListWidgetRouteProviderPlugin |
+| ShoppingListPageRouteProviderPlugin   | Adds the shopping list routes to the Yves application.        |           | \SprykerShop\Yves\ShoppingListPage\Plugin\Router                                         |
+| ShoppingListWidgetRouteProviderPlugin | Adds the shopping list widget routes to the Yves application. |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\Router\ShoppingListWidgetRouteProviderPlugin |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1386,7 +1386,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                  |
 |-------------------------------------------------|----------------------------------------------------------|---------------|------------------------------------------------------------|
-| ShoppingListQuickOrderFormHandlerStrategyPlugin | Adds products to shopping list with quick order feature. |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage |
+| ShoppingListQuickOrderFormHandlerStrategyPlugin | Adds products to shopping lists using the quick order feature. |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1413,11 +1413,11 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-### 6) Set up shopping list note form plugin
+### 6) Set up the shopping list note form plugin
 
 | PLUGIN                                 | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                       |
 |----------------------------------------|---------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| ShoppingListItemNoteFormExpanderPlugin | Adds ShoppingListItemNote form fields to builder using ShoppingListItemNoteForm |           | SprykerShop\Yves\ShoppingListNoteWidget\Plugin\ShoppingListPage |
+| ShoppingListItemNoteFormExpanderPlugin | Adds the `ShoppingListItemNote` form fields to builder using `ShoppingListItemNoteForm`. |           | SprykerShop\Yves\ShoppingListNoteWidget\Plugin\ShoppingListPage |
 
 **Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php**
 
@@ -1451,13 +1451,13 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 
 | WIDGET                           | DESCRIPTION                                                                                                       | NAMESPACE                                      |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
-| ShoppingListNavigationMenuWidget | Shows a top-navigation sub-menu containing all of the current logged-in customer Shopping Lists.                  | SprykerShop\Yves\ShoppingListWidget\Widget     |
-| ShoppingListMenuItemWidget       | Shows customer Shopping Lists in the customer account navigation side menu.                                       | SprykerShop\Yves\ShoppingListWidget\Widget     |
-| AddToShoppingListWidget          | Allows a customer to be able to add a product with an SKU to one of the Shopping Lists they have write access to. | SprykerShop\Yves\ShoppingListWidget\Widget     |
-| ShoppingListItemNoteWidget       | Allows a customer to create/save/remove notes from the Shopping List items.                                       | SprykerShop\Yves\ShoppingListNoteWidget\Widget |
-| ShoppingListDismissWidget        | Allows a customer to dismiss the Shopping List that was shared.                                                   | SprykerShop\Yves\ShoppingListPage\Widget       |
-| ShoppingListSubtotalWidget       | Allows a customer to see the Shopping List subtotal price.                                                        | SprykerShop\Yves\ShoppingListWidget\Widget     |
-| CreateShoppingListFromCartWidget | Allows a customer to move the products from the cart to the shopping list                                         | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| ShoppingListNavigationMenuWidget | Shows a top navigation submenu containing all of the current logged-in customer shopping lists.                  | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| ShoppingListMenuItemWidget       | Shows customer shopping lists in the customer account navigation side menu.                                       | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| AddToShoppingListWidget          | Enables customers to add a product with an SKU to one of the shopping lists they have write access to. | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| ShoppingListItemNoteWidget       | Enables customers to create, save, and remove notes from shopping list items.                                       | SprykerShop\Yves\ShoppingListNoteWidget\Widget |
+| ShoppingListDismissWidget        | Enables customers to dismiss a shopping list that was shared.                                                   | SprykerShop\Yves\ShoppingListPage\Widget       |
+| ShoppingListSubtotalWidget       | Enables customers to see the shopping list subtotal price.                                                        | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| CreateShoppingListFromCartWidget | Enables customers to move products from cart to a shopping list.                                         | SprykerShop\Yves\ShoppingListWidget\Widget     |
 | AddItemsToShoppingListWidget     | Displays available shopping lists.                                                                                | SprykerShop\Yves\ShoppingListWidget\Widget     |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1509,7 +1509,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% endinfo_block %}
 
-2. Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1521,13 +1521,13 @@ Make sure the following widgets have been registered:
 
 | MODULE                           | TEST                                                                                                                                                        |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AddToShoppingListWidget          | Go to the product detail page and add a product to the Shopping List.                                                                                       |
-| ShoppingListItemNoteWidget       | Go to the Shopping List and save a note to the item.                                                                                                        |
-| ShoppingListMenuItemWidget       | Log in with a customer having a company account that has a Shopping List and you should see the Shopping List Widget in the top navigation bar.             |
-| ShoppingListNavigationMenuWidget | Log in with a customer having a company account and go to the My Account page. The Shopping List side navigation should be displayed on the left side.      |
-| ShoppingListDismissWidget        | Go to the Shopping List Page with a shared Shopping List and make sure that the action block contains the **Dismiss** button.                               |
-| ShoppingListSubtotalWidget       | Log in as a company user, create a Shopping List and add any product to it, Subtotal price should be shown of View / Edit Shopping List pages.              |
-| CreateShoppingListFromCartWidget | Go to the cart page and find the form with a name "Save cart to a shopping list", write the name of the shopping list and hit "Add to shoping list" button. |
-| AddItemsToShoppingListWidget     | The list of the available shopping list will be displayed to the company user at the right corner of the page.                                              |
+| AddToShoppingListWidget          | Go to the product details page and add a product to a shopping list.                                                                                       |
+| ShoppingListItemNoteWidget       | Go to a shopping list and save a note to the item.                                                                                                        |
+| ShoppingListMenuItemWidget       | Log in with a customer who's part of a company account that has a shopping list. The Shopping List Widget should be displayed in the top navigation bar.             |
+| ShoppingListNavigationMenuWidget | Log in with a customer who's part of a company account and go to the **My Account** page. The Shopping List side navigation should be displayed on the left side.      |
+| ShoppingListDismissWidget        | Share a shopping list with a customer. Log in as the customer you've shared the list with. Go to the Shopping List Page with and make sure that the action block contains the **Dismiss** button.                               |
+| ShoppingListSubtotalWidget       | Log in as a company user. Create a Shopping List and add any product to it. Subtotal price should be displayed on *View Shopping List* and *Edit Shopping List* pages.              |
+| CreateShoppingListFromCartWidget | On the cart page in the **Save cart to a shopping list** form, write the name of a shopping list and click **Add to shopping list**. |
+| AddItemsToShoppingListWidget     | The list of the available shopping lists should be displayed to the company user. |
 
 {% endinfo_block %}

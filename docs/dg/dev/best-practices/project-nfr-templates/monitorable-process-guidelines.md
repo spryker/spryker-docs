@@ -90,6 +90,9 @@ A log entry must always answer the following items and follow the describes stru
 
 Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and/or [Cloud Handler](https://github.com/maxbanton/cwh) recommendations):
 
+<details>
+  <summary>Log structure example</summary>
+
 ```JSON
 {
   "actor": {
@@ -137,7 +140,11 @@ Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/A
 }
 ```
 
-Log structure with example values:
+</details>
+
+<details>
+  <summary>Log structure with example values</summary>
+
 ```JSON
 {
     "@timestamp": "2022-08-01T18:20:22.602934+00:00",
@@ -184,7 +191,11 @@ Log structure with example values:
 }
 ```
 
-Log structure with example error values:
+</details>
+
+
+<details>
+  <summary>Log structure with example error values</summary>
 
 ```JSON
 {
@@ -242,12 +253,13 @@ Log structure with example error values:
 }
 ```
 
+</details>
+
 ## Metric generation
 Each metric represents a condition of system attributes. There can be many of them, and they can be correlated with each other.
 
-* Every service/component may define and generate project-appropriate metrics for key processes (with a basic dimension of the outcome of the operation (success, failure) and duration) to enable tracking of such events and reacting when they reach undesired scores.
+* Every service or component can define and generate project-appropriate metrics for key processes to enable tracking of such events and reacting when they reach undesired scores. These metrics are generated with a basic dimension of the duration and outcome of the operation, such as success or failure.
   * The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
-  * Communication durations with remote services must be recorded to understand whether the local process is delayed for a good reason.
-* Critical metrics, along with their threshold values, must be highlighted in the
-[Operational guidelines](/docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
-* Deployment and rollback flows may generate metrics to enable tracking and interaction with these processes.
+  * Instances of communication duration with remote services must be recorded to understand if a local process is delayed for a good reason.
+* Critical metrics, along with their threshold values, must be highlighted in the [Operational guidelines](/docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
+* Deployment and rollback flows can generate metrics to enable tracking and interaction with these processes.

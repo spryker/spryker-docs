@@ -12,11 +12,8 @@ related:
     link: docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html
 ---
 
-{% info_block warningBox "Warning" %}
+This document provides guideline templates for development teams striving for high-quality software. These templates are flexible and serve as a starting point, so make sure to adjust them to your project's requirements. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
 
-This document provides a set of guidelines for project development, intended as a flexible template and starting point for development teams striving for high-quality software. While these guidelines offer a default ruleset, it's imperative to tailor them to meet the specific requirements and commitments of each project. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
-
-{% endinfo_block %}
 
 Enable your Operations Team to track and correlate issues within deployed applications by implementing the following practices:
 - Ensure comprehensive logging mechanisms for capturing relevant events and errors.
@@ -24,59 +21,75 @@ Enable your Operations Team to track and correlate issues within deployed applic
 
 These practices provide essential data for troubleshooting and monitoring application health.
 
-# Log generation
+## Log generation
 Applies to all application components.
 
-## Log Entry Best Practices
-* **Unified Format**: The format and text taxonomy of log entries must be unified across all log providers for ease of human processing.
-* **No PII**: Log entries, under no circumstances, can contain Personal Identifiable Information (PII) due to security reasons.
-* **No Encryption Keys or Secrets**: Log entries must not contain any encryption keys or secrets.
-* **Single Event Reflection**: Each log entry must reflect a single event and vice versa to ensure determinability.
-* **Language Use**: Log entries must use simple English language or widely recognized characters, especially when representing complex data.
-* **Meaningful Messages**: Log entry messages must be meaningful and provide context to the event. For instance, avoid vague messages like "Error occurred".
-* **State Preservation**: When creating log entries, avoid passing arguments to log statements that could alter the state of an object. This is crucial for traceability and readability.
-* **Cross Component Tracing ID**: Include a "cross component tracing ID" in log entries to enable tracking of all generated logs across multiple components.
-* **Data Residency Compliance**: Ensure that logs comply with data residency requirements.
+### Log entry best practices
+* Unified format: The format and text taxonomy of log entries must be unified across all log providers for ease of human processing.
+* No PII: Log entries, under no circumstances, can contain Personal Identifiable Information (PII) for security reasons.
+* No encryption keys or secrets: Log entries must not contain any encryption keys or secrets.
+* Single event reflection: To ensure determinability, each log entry must reflect a single event and the other way around.
+* Language use: Log entries must use simple English language or widely recognized characters, especially when representing complex data.
+* Meaningful messages: Log entry messages must be meaningful and provide context to the event. For example, avoid vague messages like "Error occurred".
+* State preservation: When creating log entries, avoid passing arguments to log statements that could alter the state of an object. This is crucial for traceability and readability.
+* Cross-component tracing ID: Include a cross component tracing ID in log entries to enable tracking of all generated logs across multiple components.
+* Data residency compliance: Ensure that logs comply with data residency requirements.
 
-## What to log?
-* **Requests**: Log all incoming requests to a local component.
-* **Remote Calls**: Log all outgoing requests to a remote service. It's crucial to log the duration of the call and the result of the remote response (success, error) for future debugging.
-* **Scheduled Tasks**: Log all initiated scheduled tasks along with their end-results (error, success, interrupt).
-* **Application Scoped Resources**: Log resource issues, including exhausted resources, exceeded capacities, session management failures, and connectivity issues.
-* **Threats**: Log suspicious or malicious activities against the application, as well as successes and failures in authentication or authorization.
-* **Exceptions**: Log both handled and unhandled application errors, stack traces, troubleshooting instances, and thrown exceptions.
-* **Silenced Exceptions**: Log instances where an exception is consumed by an empty “catch()” clause.
-* **Significant User Actions/Events**: Log significant user actions and events, such as help requests, cancelled actions, notable user actions like successful logins or privilege elevations, data validation failures, payment and transaction events, and significant user journey events.
+### What to log?
+* Requests: Incoming requests to a local component.
+* Remote calls: All outgoing requests to a remote service. Log the duration of the call and the response, such as success or error, for future debugging.
+* Scheduled tasks: All initiated scheduled tasks with their end results: error, success, interrupt.
+* Application scoped resource issues:
+    * Exhausted resources
+    * Exceeded capacities
+    * Session management failures
+    * Connectivity issues
+* Threats: Suspicious or malicious activities against the application, as well as successes and failures in authentication or authorization.
+* Exceptions:
+    * Handled and unhandled application errors
+    * Stack traces
+    * Troubleshooting instances
+    * Thrown exceptions
+* Silenced exceptions: Instances of an exception being consumed by an empty `catch()` clause.
+* Significant user actions and events:
+    * Help requests
+    * Cancelled actions
+* Notable user actions:
+    * Successful logins
+    * Privilege elevations
+    * Data validation failures
+    * Payment and transaction events
+    * Significant user journey events
 
-## What NOT to Log?
-* **Unreasonable Logging**: Avoid logging without a clear purpose. When deciding to create a log entry, there should be at least one use-case where the related data would be beneficial.
-* **Performance Critical Places**: Minimize logging in areas where performance is critical. If there's a performance-critical process or a large cycle as a sub-process element, a careful decision between performance and traceability is necessary.
-* **Audit Trail**: While it's recommended to log the audit trails of significant entity changes, these logs should not be sent to the regular log system due to the sensitive nature of the data typically involved in authentication and authorization.
+### What not to log?
+* Unreasonable logging: Avoid logging without a clear purpose. When deciding to create a log entry, identify at least one use case for the data.
+* Performance critical places: Minimize logging in areas where performance is critical. If there's a performance-critical process or a large cycle as a sub-process element, try to strike a balance between performance and traceability.
+* Audit trail: While it's recommended to log the audit trails of significant entity changes, these logs shouldn't be sent to the regular log system due to the sensitive nature of the data typically involved in authentication and authorization.
 
-## Log levels
-The following log levels (based on Syslog [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424)) must be utilised appropriately during application workflows to allow easy track down particular problems / investigations 
-in the System. A wrong category selection may de-rail a fellow inspector.
+### Log levels
+Appropriately implement the following log levels in application workflows to simplify issue investigations and resolutions. The log levels are based on Syslog [RFC 5424](https://datatracker.ietf.org/doc/html/rfc5424).
 
 | Level | Description |
 |-------|-------------|
-| Debug | Provides detailed data, which is mostly used for debugging. These logs allow to check variable values and/or error stacks. |
+| Debug | Provides detailed data that's mostly used for debugging. These logs allow to check variable values and/or error stacks. |
 | Info |  Provides information about the normal operation of the application. This level is often used to record the progress of a task or operation. |
 | Notice | Provides information about normal, but significant, events that occur within the application. |
-| Warning | Describes events that are less destructive than errors. They usually do not result in any reduction of the program's functionality or its full failure. Undesirable things that are not necessarily wrong. |
-| Error | Identifies error events that may still let the software run, but with restricted capabilities in the impacted routes. |
-| Critical | Identifies extremely serious error events that are likely to cause the program to abort. Typically, this leads to catastrophic failures. |
+| Warning | Describes events that are less destructive than errors. They usually don't result in any reduction of the system's functionality or its full failure. Undesirable things that are not necessarily wrong. |
+| Error | Identifies error events that may still let the software run but with restricted capabilities in the impacted routes. |
+| Critical | Identifies extremely serious error events that are likely to cause the system to abort. Typically, this leads to catastrophic failures. |
 | Alert | Indicates a situation that requires immediate attention. |
 | Emergency | Indicates a severe problem that requires immediate action to prevent damage or loss. |
 
-## Log entry format
-A log entry must always answer the following items and follow the below describes structure
-* **who** caused the event
-* **when** exactly did the event happened
-* **where** did the event took place (context, component, application, etc.)
-* **what** has happened and/or why has it happened
-* **result** of event (exception, success details, information details)
+### Log entry format
+A log entry must always answer the following items and follow the describes structure:
+* *who* caused an event.
+* *when* exactly did the event happen.
+* *where* did the event take place, for example-context, component or application.
+* *what* happened and/or why it happened.
+* *result* of event: exception, success details, information details.
 
 Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and/or [Cloud Handler](https://github.com/maxbanton/cwh) recommendations):
+
 ```JSON
 {
   "actor": {
@@ -229,12 +242,12 @@ Log structure with example error values:
 }
 ```
 
-# Metric generation
+## Metric generation
 Each metric represents a condition of system attributes. There can be many of them, and they can be correlated with each other.
 
 * Every service/component may define and generate project-appropriate metrics for key processes (with a basic dimension of the outcome of the operation (success, failure) and duration) to enable tracking of such events and reacting when they reach undesired scores.
   * The start and end of a process must be recorded to enable tracking and tuning of the infrastructure.
   * Communication durations with remote services must be recorded to understand whether the local process is delayed for a good reason.
-* Critical metrics, along with their threshold values, must be highlighted in the 
+* Critical metrics, along with their threshold values, must be highlighted in the
 [Operational guidelines](/docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html#operational-guidelines) to enable the setting up of a monitoring system.
 * Deployment and rollback flows may generate metrics to enable tracking and interaction with these processes.

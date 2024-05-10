@@ -213,25 +213,22 @@ Make sure that there are no mentions of the store is in the new deployment file.
 Please, check `deploy.dev.dynamic-store.yml` file for more details.
 
 
-3. Adjust configuration
-
-Add the following configuration to your project:
+3. Add the following configuration:
 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |
-| Default RabbitMQ connection. (See below in `config/Shared/config_default.php`) | Configuration allows to set the connection for queues dynamically. Use environment variable `SPRYKER_CURRENT_REGION` to set the configuration for queues | - |
+| Default RabbitMQ connection: `config/Shared/config_default.php`. | Enables the connection for queues to be set dynamically. Use the `SPRYKER_CURRENT_REGION` environment variable to set the configuration for queues. | - |
 | RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
-| RabbitMqConfig::getDefaultLocaleCode() | Returns default locale code. | Pyz\Client\RabbitMq |
-| RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE to configure sync queue. | Pyz\Client\RabbitMq |
-| Setup all cron jobs (See below in `config/Zed/cronjobs/jobs.php`)  | Adjust all cron jobs to use new configuration. | - |
-| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures sync queue name as used for processing store messages. | Pyz\Zed\StoreStorage |
+| RabbitMqConfig::getDefaultLocaleCode() | Returns the default locale code. | Pyz\Client\RabbitMq |
+| RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds 1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1 to configure the sync queue. | Pyz\Client\RabbitMq |
+| Setup cron jobs: `config/Zed/cronjobs/jobs.php`.  | Adjust all cron jobs to use the new configuration. | - |
+| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be  used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
 
 **config/Shared/config_default.php**
 
-Change the following code block from:
-
+Original code block:
 ```php
 <?php
 
@@ -247,7 +244,7 @@ foreach ($rabbitConnections as $key => $connection) {
 }
 ```
 
-to:
+Update the prior code snippet to the following:
 
 ```php
 $config[RabbitMqEnv::RABBITMQ_CONNECTIONS] = [];
@@ -277,11 +274,12 @@ foreach ($rabbitConnections as $key => $connection) {
 
 {% info_block warningBox "Verification" %}
 
-Please make sure that the following configuration is working via run `vendor/bin/console queue:setup` command.
+Make sure you can run `vendor/bin/console queue:setup` with a successful result.
 
 {% endinfo_block %}
 
-**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+<details>
+<summary>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -340,10 +338,11 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Please make sure that the following configuration is working via run `vendor/bin/console queue:worker:start` command.
-If the command execution was successful without rabbitmq connection errors, then everything works correctly.
+Run `vendor/bin/console queue:worker:start` and make sure RabbitMQ connection errors are not returned.
 
 {% endinfo_block %}
 
@@ -351,16 +350,19 @@ If the command execution was successful without rabbitmq connection errors, then
 
 **config/Zed/cronjobs/jenkins.php**
 
-Change configuration for Jenkins jobs. With the Dynamic Store setup, commands will be executed per region instead of per store.
-This means that the command that will be prepared for Jenkins will use `SPRYKER_CURRENT_REGION` env variable instead of `APPLICATION_STORE`.
+With the dynamic store setup, commands for Jenkins are executed per region instead of per store. The command for Jenkins uses the `SPRYKER_CURRENT_REGION` variable instead of `APPLICATION_STORE`.
 
-Delete the variable `$allStores` and its usage in the configuration of the jobs through the `stores` parameter.
-
+1. In `config/Zed/cronjobs/jenkins.php`, remove the `$allStores` variable and its usage in the configuration of the jobs through the `stores` parameter. Example of updated job configuration:
+```php
+$jobs[] = [
+    'name' => 'job-name',
+    'command' => '$PHP_BIN vendor/bin/console product:check-validity',
+    'schedule' => '0 6 * * *',
+    'enable' => true,
+];
 ```
-config/Zed/cronjobs/jenkins.php
-```
 
-The code block below should be removed from your configuration file if it was used before:
+2. Remove the following configuration if exists:
 
 
 ```php
@@ -370,18 +372,8 @@ $allStores = array_keys($stores);
 
 ```
 
-Also please adjust each configuration of the job to remove the variable `$allStores`.
-So, job configuration will be like this:
 
-```php
-$jobs[] = [
-    'name' => 'job-name',
-    'command' => '$PHP_BIN vendor/bin/console product:check-validity',
-    'schedule' => '0 6 * * *',
-    'enable' => true,
-];
-```
-Please add the following code to the end of the jobs configuration file.
+3. Add the following code to the end of the jobs configuration file:
 
 ```php
 
@@ -392,7 +384,7 @@ if (getenv('SPRYKER_CURRENT_REGION')) {
 }
 ```
 
-You also can check this configuration in the file `config/Zed/cronjobs/jenkins.php` in the [Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
+For an example of an updated file, see [jenkins.php in the Spryker Suite repository](https://github.com/spryker-shop/suite/blob/master/config/Zed/cronjobs/jenkins.php).
 
 {% info_block warningBox “Verification” %}
 
@@ -402,18 +394,19 @@ Run the following commands:
 vendor/bin/console scheduler:clean
 ```
 
-Ensure that Jenkins jobs per store have been removed.
-If any jobs have not been automatically removed, they have to be manually deleted.
+Ensure that Jenkins jobs per store have been removed. If any jobs have not been automatically removed, you need to remove them manually.
+
+2. Set up Jenkins jobs:
 
 ```bash
 vendor/bin/console scheduler:setup
 ```
-And check that the jobs are created in the Jenkins with region configuration.
+Make sure jobs with region configuration have been created.
 
 {% endinfo_block %}
 
 
-Enable additional queue that will be used to publish `Store` data to the `Storage`.
+Enable the queue that to publish `Store` data to the `Storage`.
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -446,7 +439,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 Please make sure that the following configuration is working via run `vendor/bin/console queue:setup` command.
 
-Verify the `sync.storage.store` queue exists in RabbitMQ.
+Make sure the `sync.storage.store` queue exists in RabbitMQ.
 
 {% endinfo_block %}
 
@@ -519,7 +512,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY                       | TYPE   | EVENT   |
 |---------------------------------------|--------|---------|
@@ -533,16 +526,15 @@ Make sure that the following changes have been applied by checking your database
 {% info_block warningBox "Verification" %}
 
 
-In order to verify that the changes are taking effect, you need to suspend the scheduler.
-1. Stop scheduler and run the following commands.
+1. Stop the scheduler:
 
 ```bash
 vendor/bin/console scheduler:suspend
 ```
 
-2. Create store in the Back Office. Set up the store country and locale.
+2. In the Back Office, set up a store with a country and locale.
 
-Note: Don't forget to start scheduler after the verification.
+3. Restart the scheduler:
 
 {% endinfo_block %}
 

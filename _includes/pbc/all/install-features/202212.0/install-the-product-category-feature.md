@@ -700,8 +700,8 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Install the Category Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-| Product Management Feature | ✓ | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
-| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
+| Category Management Feature | ✓ | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
+| Product Management Feature | ✓ | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-category-management-glue-api.html) |
 | Catalog + Category Management |  |[Install the Catalog + Category Management feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-category-management-feature.html) |
 | CMS + Category Management  | | [Install the CMS + Category Management feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-category-management-feature.html) |

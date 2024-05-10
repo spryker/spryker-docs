@@ -29,12 +29,12 @@ For you to be registered on the App Composition Platform, your project must be h
 
 If your project version corresponds to the SCCOS product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can proceed to [Next steps after updating your project with required SCCOS dependencies](#next-steps-after-updating-your-project-with-required-sccos-dependencies).
 
-## SCCOS dependencies for projects on earlier versions 
-SCCOS product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html) includes a basic ACP setup. All ACP modules (apps and platform) require updates.
+## SCCOS dependencies for projects on earlier versions
+SCCOS product release 202211.0 includes a basic ACP setup. All ACP modules (apps and platform) require updates.
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release [202211.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202211.0/release-notes-202211.0.html), our team may need to examine your project and provide more support during the upgrade process. Do [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release 202211.0, our team may need to examine your project and provide more support during the upgrade process. Do [contact us](https://support.spryker.com/). 
 
 {% endinfo_block %}
 
@@ -47,7 +47,7 @@ To get your project ACP-ready, make sure that your project modules are updated t
 Starting with the Spryker product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html), the ACP catalog is included by default in the Spryker Cloud Commerce OS product. If you project's version is earlier than 202311.0, make sure that your Spryker project uses the latest versions of the following modules:
 
 * `spryker/app-catalog-gui: ^1.4.1` or later
-* `spryker/message-broker: ^1.10.0` or later
+* `spryker/message-broker: ^1.11.0` or later
 * `spryker/message-broker-aws: ^1.6.0` or later
 * `spryker/session: ^4.15.1` or later
 * `spryker/oauth-client: ^1.4.0` or later
@@ -68,7 +68,7 @@ For each app you wish to use, make sure that you have the latest app-related SCC
 
 {% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
 
-If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can skip this section. 
+If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can skip this section.
 
 {% endinfo_block %}
 
@@ -132,7 +132,7 @@ $config[OauthClientConstants::TENANT_IDENTIFIER]
     = $config[MessageBrokerAwsConstants::CONSUMER_ID]
     = $config[AppCatalogGuiConstants::TENANT_IDENTIFIER]
     = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
-    
+
 // ----------------------------------------------------------------------------
 // ------------------------------ OAUTH ---------------------------------------
 // ----------------------------------------------------------------------------

@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [CMS](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html) feature.
+This document describes how to install the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature.
 
 ## Install feature core
 

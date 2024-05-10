@@ -12,7 +12,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 
 ### Prerequisites
 
-Upgrade the following modules:
+1. Upgrade the following modules:
 
 | NAME     | VERSION |  UPGRADE GUIDE |
 |----------|---------|---|
@@ -27,14 +27,14 @@ The minimum PHP version required to get or update the following modules is PHP 8
 
 {% endinfo_block %}
 
-### 2) Install the required modules using Composer
+2. Install the required features:
 
-To continue feature integration, overview and install or update the required feature:
+| NAME | VERSION | INSTALLATION GUIDE |
+| --- | --- | --- |
+|Spryker Core  | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-| NAME | VERSION |
-| --- | --- |
-|Spryker Core  | {{page.version}} |
 
+### 2) Install the required modules
 
 Install the required modules using Composer:
 

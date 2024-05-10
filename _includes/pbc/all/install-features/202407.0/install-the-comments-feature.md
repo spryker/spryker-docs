@@ -34,7 +34,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION                                                          | SPECIFICATION                                      | NAMESPACE          |
 |------------------------------------------------------------------------|----------------------------------------------------|--------------------|
@@ -305,14 +305,16 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 ## Install feature frontend
 
+Take the following steps to install the feature frontend.
+
 ### Prerequisites
 
 Install the required features:
 
-| NAME                        | VERSION          |
-|-----------------------------|------------------|
-| Spryker Core                | {{page.version}} |
-| Customer Account Management | {{page.version}} |
+| NAME                        | VERSION          | INSTALLATION GUIDE |
+|-----------------------------|------------------|--|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html)
 
 ### 1) Install the required modules
 
@@ -386,10 +388,6 @@ Make sure that, in the database, the configured data has been added to the `spy_
 {% endinfo_block %}
 
 ### 3) Enable controllers
-
-Enable the following controllers.
-
-#### Route List
 
 Register the following route provider plugins:
 

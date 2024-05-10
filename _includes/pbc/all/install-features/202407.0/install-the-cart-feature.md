@@ -4,7 +4,7 @@
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) and Dynamic cart page update functionality.
+The current feature installation guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) and Dynamic cart page update functionality.
 
 {% endinfo_block %}
 
@@ -61,7 +61,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that above keys and corresponding translations are present in the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure the keys with translations have been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -85,7 +85,7 @@ composer require spryker-feature/cart {{page.version}} --update-with-dependencie
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE         | EXPECTED DIRECTORY                   |
 |----------------|--------------------------------------|
@@ -100,9 +100,9 @@ Set up the following configuration:
 
 | CONFIGURATION                                                  | SPECIFICATION                                    | NAMESPACE                 |
 |----------------------------------------------------------------|--------------------------------------------------|---------------------------|
-| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables loading the cart items via AJAX.         | SprykerShop\Yves\CartPage |
-| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables loading the upselling products via AJAX. | SprykerShop\Yves\CartPage |
-| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables performing the cart actions via AJAX.    | SprykerShop\Yves\CartPage |
+| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables the loading of cart items via AJAX.         | SprykerShop\Yves\CartPage |
+| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables the loading of upselling products via AJAX. | SprykerShop\Yves\CartPage |
+| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables the performing of cart actions via AJAX.    | SprykerShop\Yves\CartPage |
 
 **src/Pyz/Yves/CartPage/CartPageConfig.php**
 
@@ -135,10 +135,10 @@ class CartPageConfig extends SprykerCartPageConfig
 
 {% info_block warningBox "Verification" %}
 
-After finishing the integration make sure that:
+Make sure the following applies:
 - Cart items are loaded via AJAX.
 - Upselling products are loaded via AJAX.
-- Cart actions as changing item quantity, removing an item, etc are performed via AJAX.
+- Cart actions, like changing item quantity or removing an item, are performed via AJAX.
 
 {% endinfo_block %}
 
@@ -186,23 +186,26 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the `CartPageRouteProviderPlugin` by opening the `https://mysprykershop.com/cart` page.
 
-Verify the `CartPageAsyncRouteProviderPlugin` by performing the cart actions as changing item quantity, removing an item, etc with AJAX mode enabled.
+| PLUGIN | VERIFICATION |
+| - | - |
+| CartPageRouteProviderPlugin` | `https://mysprykershop.com/cart` page is accessible |
 
-Verify the `CartNoteWidgetRouteProviderPlugin` by adding a cart note.
+| CartPageAsyncRouteProviderPlugin | You can perform cart actions, like changing item quantity or removing an item, with AJAX mode enabled. |
 
-Verify the `CartNoteWidgetAsyncRouteProviderPlugin` by adding a cart item note with cart actions AJAX mode enabled.
+| CartNoteWidgetRouteProviderPlugin | You can add a cart note. |
+
+| CartNoteWidgetAsyncRouteProviderPlugin | You can add a cart item note with AJAX mode enabled. |
 
 {% endinfo_block %}
 
 ### 4) Set up widgets
 
-Register the following widgets:
+1. Register the following widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductAbstractAddToCartButtonWidget | Displays a button for adding the product abstract to the cart in case the product is eligible. | None | SprykerShop\Yves\CartPage\Widget |
+| ProductAbstractAddToCartButtonWidget | Displays a button for adding a product abstract to cart in case the product is eligible. |  | SprykerShop\Yves\CartPage\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -228,7 +231,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -236,6 +239,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Navigate to the catalog and find an abstract product with a single concrete product. The button for adding this concrete product to the cart must be displayed on the catalog page.
+Go to the catalog and find an abstract product with a single concrete product. The button for adding this concrete product to the cart should be displayed on the catalog page.
 
 {% endinfo_block %}

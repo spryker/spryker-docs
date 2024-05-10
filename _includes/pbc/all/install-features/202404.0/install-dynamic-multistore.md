@@ -403,13 +403,12 @@ You also can check this configuration in the file `config/Zed/cronjobs/jenkins.p
 
 {% info_block warningBox “Verification” %}
 
-Run the following commands:
+Remove Jenkins jobs per store by running the following commands:
 
 ```bash
 vendor/bin/console scheduler:clean 
 ```
 
-Ensure that Jenkins jobs per store have been removed. 
 If any jobs have not been automatically removed, they have to be manually deleted.
 
 ```bash
@@ -451,7 +450,11 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 ```
 {% info_block warningBox "Verification" %}
 
-Please make sure that the following configuration is working via run `vendor/bin/console queue:setup` command.
+Set up the required queue infrastructure by running the following command:
+
+```bash
+vendor/bin/console queue:setup
+```
 
 Verify the `sync.storage.store` queue exists in RabbitMQ.
 

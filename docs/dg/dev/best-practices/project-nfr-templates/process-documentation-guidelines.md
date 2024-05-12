@@ -12,42 +12,32 @@ related:
     link: docs/dg/dev/best-practices/project-nfr-templates/monitorable-process-guidelines.html
 ---
 
-{% info_block warningBox "Warning" %}
+This document provides guideline templates for development teams striving for high-quality software. These templates are flexible and serve as a starting point, so make sure to adjust them to your project's requirements. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
 
-This document provides a set of guidelines for project development, intended as a flexible template and starting point for development teams striving for high-quality software. While these guidelines offer a default ruleset, it's imperative to tailor them to meet the specific requirements and commitments of each project. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.
+The process documentation guidelines enhance the communication between teams over all processes and ensure that they can operate and deploy their applications the best possible way.
 
-{% endinfo_block %}
+## Deployment guidelines
 
-The process documentation guidelines are in place to enhance the communication between cross-teams over all processes and to ensure that they can operate and deploy their applications the best-possible way.
+The following guidelines apply to the deployment of each release candidate.
 
-# Deployment guidelines
-The following elements apply in the scope of deployment/rollback of each release candidate. Below you can also find an example how a deployment
-standard service request could look like based on the guidelines.
+### Environment variable assertion
 
-## Environment variable assertion
-In large-scale teams, effective communication and issue management can be challenging. As a result, it is possible that some environment variables
-or their expected values may not be properly set in the production environment. To minimize the risk of critical errors, it is recommended to run
-a final validation on the production environment to verify that the expected setup changes match the actual state. In order to understand the scope
-of these changes, it is important to provide a list of the requested changes as part of the deployment standard service request for the Operations team.
-This final validation step can help ensure that the production environment is correctly configured and minimize the risk of errors.
+In large teams, effective communication and issue management can be challenging. As a result, some environment variables or their expected values may not be properly set in the production environment. To minimize the risk of critical errors, we recommend running a final validation on the production environment to verify that the expected setup changes match the actual state. To run a proper validation with the understanding of the scope of these changes, make sure to provide a list of the requested changes as part of the deployment standard service request for the operations team. This final validation step ensures that the production environment is correctly configured and minimizes the risk of errors.
 
-## Special manual steps
-In case of needed un-regular, one-time, manual steps that are not automated on application side via our deployment / rollback pipeline processes, 
-the uniformed instructions to these exclusive requests need to be handed over to our Operations Team in the deployment standard service request. 
-This also includes any dependencies that may appear between the deployment elements (eg: 1 component needs to be released before another; or a 
-special timing is necessary; etc.).
+### Special manual steps
 
-## Infrastructure changes
-Changes to the infrastructure and application infrastructure are carefully evaluated, as mistakes in this area can cause critical problems. 
-To reduce risks, the intention behind each impact on this field should be highlighted in handed over documentation (as part of the deployment 
-standard service request) to enable comparison with the actual implementation.
+If there are manual one-time steps that aren't automated on the application side via the deployment pipeline processes, the uniformed instructions to these exclusive requests need to be handed over to the operations team in the deployment standard service request.
 
-## Expected behaviour
-Some special cases (technical debts / functional debts / accepted risks / etc.) can lead to release specific, temporary, expected critical/warning 
-state that should not be mitigated or handled by us. In order to decrease unnecessary fire-fighting on both sides, such scenarios need to be 
-listed and explained via the deployment standard service request.
+This also includes any dependencies that may appear between the deployment elements. For example, one component needs to be released before another; or a special timing is needed.
 
-## Example for deployment standard service request
+### Infrastructure changes
+
+Changes to the platform infrastructure and application infrastructure are carefully evaluated because mistakes in this area can cause critical problems. To reduce risks, when submitting a deployment standard service request, make sure to carefully document the intention behind each impact on infrastructure.
+
+### Expected behavior
+In special cases, like technical debts, functional debts, or accepted risks, a release can lead to release specific, temporary, expected critical or warning states that doesn't have to be handled or mitigated by the operations team. To decrease unnecessary fire-fighting on both sides, list and explain these scenarios when submitting a deployment standard service request.
+
+### Example for deployment standard service request
 
 **Title**: Deployment of version 1.2.3 to production
 
@@ -87,55 +77,42 @@ This release has been thoroughly tested in the staging environment. A final vali
 * QA team: approved
 * Operations team: approved
 
-# Operational guidelines
-The following elements apply in the scope of operating applications or for special failure scenarios that may as well occur during deployment/rollback.
+## Operational guidelines
 
-Given the size and complexity of a large-sized application, which delivers many features with each release, unexpected errors can have multiple 
-potential resolutions. To ensure that the most effective resolution is chosen with minimal disruption to the functionality of a successfully 
-deployed release, it is recommended to maintain an operational guideline that are described below.
+The following guidelines apply to operating applications or for special failure scenarios that may as well occur during deployment or rollback.
 
-## Main workflows
-To understand the main and critical workflows in the application, operational guidelines should outline the normal behavior of 
+Given the size and complexity of a large applications, which delivers many features with each release, unexpected errors can have multiple potential resolutions. To ensure that the most effective resolution is chosen with minimal disruption to the functionality of a successfully deployed release, implement the following operation guidelines.
+
+### Main workflows
+To understand the main and critical workflows in the application, operational guidelines should outline the normal behavior of
 important features and workflows at the logical, component, and infrastructure levels.
 
-This helps to form a general overview of the logic, components, and infrastructure, which is necessary for making informed operational 
-decisions or building project-specific operational dashboards (e.g. to identify and highlight project-specific bottlenecks) or analyzing, 
-answering, and resolving requests.
+This forms a general overview of the logic, components, and infrastructure. This overview is necessary for making informed operational decisions and building project-specific operational dashboards, for example—to to identify and highlight project-specific bottlenecks. Also, it's needed for analyzing, answering, and resolving requests.
 
-## Risks, early warnings & counter actions
-Building a huge application is usually coupled with massive application level logging. In some cases, a critical system issue can be prevented 
-(or minimized) with timely warning signals. By utilizing regular signals (logs and metrics) from identified business or technical bottlenecks 
-or risks, the Operations Team can improve the application's stability. It is recommended to maintain a list of such signals and risks in the 
-Operational guidelines, including recommended actions to take in order to deliver the best selected mitigation action (see 
-[Operatable feature guidelines](docs/scos/dev/guidelines/operatable-feature-guidelines.html)).
+### Risks, early warnings, and counter actions
+Building a large application is usually coupled with massive application-level logging. In some cases, a critical system issue can be prevented or minimized with timely warning signals. By using regular signals, like logs and metrics, from identified business or technical bottlenecks or risks, the operations team can improve the application's stability. We recommend maintaining a list of such signals and risks in the operational guidelines. This includes recommended actions to take in order to deliver the best mitigation strategy. For more information on these guidelines, see [Operatable feature guidelines](docs/scos/dev/guidelines/operatable-feature-guidelines.html).
 
-## Silent undesired scenario
-Although monitoring systems are used to detect unwanted states, it is possible that business functionality falls within acceptable metrics 
-but is not desirable under certain conditions (e.g. the minimum daily browsing customer count is 10, but 11 customers during Black Friday 
-is not considered normal). To monitor such cases, these scenarios need to be specified for the Operations Team.
+### Silent undesired scenario
+Although monitoring systems are used to detect unwanted states, some business functionality may be within acceptable metrics but not desirable under certain conditions. For example, the minimum daily browsing customer count is 10, but 11 customers during Black Friday is not considered normal. To monitor such cases, these scenarios need to be documented for the operations team.
 
-## User guide
-To minimize the impact of resolution efforts and optimize the process (e.g. resolving a small number of errors through the backoffice rather than rolling back
-the entire release), it is important to provide the Operations Team with a user guide that includes the necessary business context.
+### User guide
+To minimize the impact of resolution efforts and optimize the process, make sure to provide the operations team with the necessary business context. For example, resolving a small number of errors through the Back Office may be more optimal than rolling back an entire release.
 
-## Entity size expectations
-The cardinality of entities plays an important role in determining how an application will function in a production environment. To mitigate 
-risks in this area, performance, scaling, manual tests, and reviews can be applied. However, the identified and estimated entity cardinality 
-for the project can serve as a warning to pay extra attention to these entities in order to further reduce risks (e.g. a marketing campaign 
-bringing 10,000 active users to the homepage at 17:08 on Friday).
+### Entity size expectations
 
-## Remote service catalog
-To properly handle and monitor the co-operation between local and remote services (aka 3rd party services), the expected and detailed communication 
-protocol needs to be forward to the Operations Team, in addition with the known/expected service-out or major impacts that otherwise not directly 
-accessible. This way, it will be possible ignore expected outages or compensate/build-workarounds over temporary problems or actively 
-focus on known risks.
+The cardinality of entities plays an important role in determining how an application will function in a production environment. To mitigate risks in this area, performance, scaling, manual tests, and reviews can be applied. However, the identified and estimated entity cardinality for the project can serve as a warning to pay extra attention to these entities in order to further reduce risks. For example, a marketing campaign bringing 10,000 active users to the homepage at 17:08 on Friday.
 
-As an example, consider a payment provider connected to the project that needs to be monitored to ensure the availability of the 
+
+### Remote service catalog
+
+To properly handle and monitor the cooperation between local and remote or third-party services, provide the operations team with a detailed communication protocol. Make sure to additionally include the known/expected service-out or major impacts that otherwise not directly accessible. This way, it will be possible ignore expected outages or compensate/build-workarounds over temporary problems or actively focus on known risks.
+
+As an example, consider a payment provider connected to the project that needs to be monitored to ensure the availability of the
 external service. The following communication protocol is used:
 
 * The local service sends an HTTP GET request to the remote service's API endpoint, along with any necessary headers and query parameters.
 * The remote service responds with an HTTP status code and a JSON payload containing the requested data.
 * The local service processes the data and displays it to the user or performs any necessary actions.
 
-It's important to note that this is just one example of a communication protocol, and the specific details will vary depending 
+It's important to note that this is just one example of a communication protocol, and the specific details will vary depending
 on the specific requirements and capabilities of the local and remote services.

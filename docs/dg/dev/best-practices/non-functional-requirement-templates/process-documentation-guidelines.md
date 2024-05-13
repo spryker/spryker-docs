@@ -107,12 +107,8 @@ The cardinality of entities plays an important role in determining how an applic
 
 To properly handle and monitor the cooperation between local and remote or third-party services, provide the operations team with a detailed communication protocol. Make sure to additionally include the known/expected service-out or major impacts that otherwise not directly accessible. This way, it will be possible ignore expected outages or compensate/build-workarounds over temporary problems or actively focus on known risks.
 
-As an example, consider a payment provider connected to the project that needs to be monitored to ensure the availability of the
-external service. The following communication protocol is used:
+For example, a payment provider connected to the project needs to be monitored to ensure its availability. The following communication protocol is used:
 
 * The local service sends an HTTP GET request to the remote service's API endpoint, along with any necessary headers and query parameters.
 * The remote service responds with an HTTP status code and a JSON payload containing the requested data.
 * The local service processes the data and displays it to the user or performs any necessary actions.
-
-It's important to note that this is just one example of a communication protocol, and the specific details will vary depending
-on the specific requirements and capabilities of the local and remote services.

@@ -1267,17 +1267,17 @@ entries:
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
-    - title: Project NFR Templates
-      url: /docs/dg/dev/best-practices/project-nfr-templates/project-nfr-templates.html
+    - title: Non-funcational requirement templates
+      url: /docs/dg/dev/best-practices/non-functional-requirement-templates/non-functional-requirement-templates.html
       nested:
-        - title: NFR guidelines
-          url: /docs/dg/dev/best-practices/project-nfr-templates/nfr-guidelines.html
-        - title: Monitorable Process Guidelines
-          url: /docs/dg/dev/best-practices/project-nfr-templates/monitorable-process-guidelines.html
-        - title: Operatable Feature Guidelines
-          url: /docs/dg/dev/best-practices/project-nfr-templates/operatable-feature-guidelines.html
-        - title: Process Documentation Guidelines
-          url: /docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html
+        - title: Operational and deployment guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+        - title: Monitorable process Guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+        - title: Operatable feature guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+        - title: Process documentation guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
     - title: Basic SEO techniques to use in your project
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices

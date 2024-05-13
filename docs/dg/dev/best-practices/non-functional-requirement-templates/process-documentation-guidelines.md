@@ -100,12 +100,12 @@ To minimize the impact of resolution efforts and optimize the process, make sure
 
 ### Entity size expectations
 
-The cardinality of entities plays an important role in determining how an application will function in a production environment. To mitigate risks in this area, performance, scaling, manual tests, and reviews can be applied. However, the identified and estimated entity cardinality for the project can serve as a warning to pay extra attention to these entities in order to further reduce risks. For example, a marketing campaign bringing 10,000 active users to the homepage at 17:08 on Friday.
+The number of entities plays an important role in determining how an application will function in a production environment. To mitigate risks in this area, performance, scaling, manual tests, and reviews can be applied. However, the identified and estimated number of entities for the project can serve as a warning to pay extra attention to these entities in order to further reduce risks. For example, a marketing campaign bringing 10,000 active users to the homepage at 17:08 on Friday.
 
 
 ### Remote service catalog
 
-To properly handle and monitor the cooperation between local and remote or third-party services, provide the operations team with a detailed communication protocol. Make sure to additionally include the known/expected service-out or major impacts that otherwise not directly accessible. This way, it will be possible ignore expected outages or compensate/build-workarounds over temporary problems or actively focus on known risks.
+To properly handle and monitor the cooperation between local and remote or third-party services, provide the operations team with a detailed communication protocol. Make sure to additionally include the expected outages and major impacts. This way, the operations team can ignore expected outages and actively focus on known risks.
 
 For example, a payment provider connected to the project needs to be monitored to ensure its availability. The following communication protocol is used:
 

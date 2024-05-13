@@ -88,7 +88,7 @@ A log entry must always answer the following items and follow the describes stru
 * *what* happened and/or why it happened.
 * *result* of event: exception, success details, information details.
 
-Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and/or [Cloud Handler](https://github.com/maxbanton/cwh) recommendations):
+The following are examples of log structure. When designing your own log structure, take into account recommendations from [CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-metric-streams-formats-json.html) and  [Cloud Handler](https://github.com/maxbanton/cwh).
 
 <details>
   <summary>Log structure example</summary>
@@ -256,6 +256,7 @@ Log structure example (consider using [CloudWatch](https://docs.aws.amazon.com/A
 </details>
 
 ## Metric generation
+
 Each metric represents a condition of system attributes. There can be many of them, and they can be correlated with each other.
 
 * Every service or component can define and generate project-appropriate metrics for key processes to enable tracking of such events and reacting when they reach undesired scores. These metrics are generated with a basic dimension of the duration and outcome of the operation, such as success or failure.

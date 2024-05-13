@@ -5,11 +5,11 @@ last_updated: April 23, 2024
 template: concept-topic-template
 related:
 - title: Operatable feature guidelines
-  link: docs/dg/dev/best-practices/project-nfr-templates/operatable-feature-guidelines.html
+  link: docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
 - title: Process documentation guidelines
-  link: docs/dg/dev/best-practices/project-nfr-templates/process-documentation-guidelines.html
+  link: docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
 - title: Monitorable process guidelines
-  link: docs/dg/dev/best-practices/project-nfr-templates/monitorable-process-guidelines.html
+  link: docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
 - title: Architecture performance guidelines
   link: docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
 ---

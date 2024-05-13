@@ -5,11 +5,11 @@ last_updated: April 23, 2024
 template: concept-topic-template
 related:
   - title: NFR guidelines
-    link: docs/dg/dev/best-practices/project-nfr-templates/nfr-guidelines.html
+    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
   - title: Operatable feature guidelines
-    link: docs/dg/dev/best-practices/project-nfr-templates/operatable-feature-guidelines.html
+    link: docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
   - title: Monitorable process guidelines
-    link: docs/dg/dev/best-practices/project-nfr-templates/monitorable-process-guidelines.html
+    link: docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
 ---
 
 This document provides guideline templates for development teams striving for high-quality software. These templates are flexible and serve as a starting point, so make sure to adjust them to your project's requirements. Defining and following these guidelines may be necessary to fulfill project Service Level Agreements (SLAs), with each guideline explicitly outlining the responsible team. Alignment with all involved teams is essential for ensuring a functioning concept.

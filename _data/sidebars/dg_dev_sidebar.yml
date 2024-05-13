@@ -1267,6 +1267,17 @@ entries:
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
+    - title: Non-funcational requirement templates
+      url: /docs/dg/dev/best-practices/non-functional-requirement-templates/non-functional-requirement-templates.html
+      nested:
+        - title: Operational and deployment guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+        - title: Monitorable process Guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+        - title: Operatable feature guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+        - title: Process documentation guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
     - title: Basic SEO techniques to use in your project
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices

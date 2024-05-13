@@ -348,7 +348,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
 }
 ```
 
-2. Add query expander and result-formatter plugins for the `configurable bundle template` entity.
+2. Add query expander and result formatter plugins for the `configurable bundle template` entity.
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -498,8 +498,8 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin | Allows populating empty storage table with data. |  | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
-| ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin | Allows populating empty search table with data. |  | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplateEventResourceBulkRepositoryPlugin | Allows populating empty storage tables with data. |  | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
+| ConfigurableBundleTemplatePageSearchEventResourceBulkRepositoryPlugin | Allows populating empty search tables with data. |  | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Event |
 | ConfigurableBundleTemplateSynchronizationDataBulkPlugin | Allows synchronizing the entire storage table content into Storage. |  | Spryker\Zed\ConfigurableBundleStorage\Communication\Plugin\Synchronization |
 | ConfigurableBundleTemplatePageSynchronizationDataBulkPlugin | Allows synchronizing all of the content into Search. |  | Spryker\Zed\ConfigurableBundlePageSearch\Communication\Plugin\Synchronization |
 
@@ -602,14 +602,17 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that when you added some data to tables `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` and run `console trigger:event -r configurable_bundle_template` command, the changes reflect in `spy_configurable_bundle_template_storage`  and  `spy_configurable_bundle_template_page_search` tables.
+1. Add some data to the `spy_configurable_bundle_template` or `spy_configurable_bundle_template_slot` table.
+2. Run the `console trigger:event -r configurable_bundle_template` command.
+  Make sure the changes are reflected in `spy_configurable_bundle_template_storage` and `spy_configurable_bundle_template_page_search` tables.
 
-2. Make sure that after step #1 or after command `console sync:data configurable_bundle_template` execution data is exported:
+3. Run the `console sync:data configurable_bundle_template` command.
+    Make sure the data has been exported as follows:
+    * from `spy_configurable_bundle_template_storage` table to Redis
+    * from `spy_configurable_bundle_template_page_search` table to Elasticsearch
 
-* from `spy_configurable_bundle_template_storage` table to Redis
-* from `spy_configurable_bundle_template_page_search` table to Elasticsearch
-
-3. Make sure that when a configurable bundle template (or template slot) created or edited through ORM, it is exported to Redis or Elasticsearch accordingly.
+4. Create or edit a configurable bundle template or template slot through ORM.
+  Make sure it is exported to Redis or Elasticsearch accordingly.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
@@ -658,9 +661,11 @@ class ConfigurableBundlePageSearchConfig extends SprykerConfigurableBundlePageSe
 
 ### 6) Import data
 
+Import the folowing data.
+
 #### Import configurable bundles data
 
-Prepare your data according to your requirements using our demo data:
+1. Prepare data according to your requirements using our demo data:
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template.csv**
 
@@ -673,9 +678,9 @@ t000002,c8291fd3-c6ca-5b8f-8ff5-eccd6cb787de,configurable_bundle.templates.smart
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| configurable_bundle_template_uuid | optional | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
+| configurable_bundle_template_uuid |  | string | 8d8510d8-59fe-5289-8a65-19f0c35a0089 | Unique identifier for the configurable bundle. |
 | configurable_bundle_template_name | ✓ | string | configurable_bundle.templates.smartstation.name | Glossary key for the configurable bundle name. |
-| configurable_bundle_template_is_active | ✓ | bool | 1 | `IsActive` flag for the configurable bundle name. |
+| configurable_bundle_template_is_active | ✓ | bool | 1 | Defines if the bundle is active. |
 
 **vendor/spryker/spryker/Bundles/ConfigurableBundleDataImport/data/import/configurable_bundle_template_slot.csv**
 
@@ -692,12 +697,12 @@ s000006,configurable_bundle.template_slots.slot-6.name,2a5e55b1-993a-5510-864c-a
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | configurable_bundle_template_slot_key | ✓ | string | s000001 | Internal data import identifier for the configurable bundle template slot. |
-| configurable_bundle_template_slot_name | ✓ | string | configurable_bundle.template_slots.slot-1.name |Name (glossary key) for the configurable bundle template slot.  |
-| configurable_bundle_template_slot_uuid | optional | string | 332b40ac-a789-57ce-bec0-23d8dddd71eb |Unique identifier for the configurable bundle template slot.  |
+| configurable_bundle_template_slot_name | ✓ | string | configurable_bundle.template_slots.slot-1.name | Name (glossary key) for the configurable bundle template slot.  |
+| configurable_bundle_template_slot_uuid |  | string | 332b40ac-a789-57ce-bec0-23d8dddd71eb | Unique identifier for the configurable bundle template slot.  |
 | configurable_bundle_template_key | ✓ | string | t000001 | Internal data import identifier for the configurable bundle template. |
-| product_list_key | ✓ | string | pl-009 | The ID of the product list for allowed products of the slot. |
+| product_list_key | ✓ | string | pl-009 | ID of a product list that is allowed to be used in this slot. |
 
-Register the following plugins to enable data import:
+2. Register the following plugins to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -727,7 +732,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import configurable-bundle-template
@@ -736,11 +741,11 @@ console data:import configurable-bundle-template-slot
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configurable bundle data is added to the `spy_configurable_bundle_template`, `spy_configurable_bundle_template_slot`  tables in the database.
+Make sure that the configurable bundle data has been added to the `spy_configurable_bundle_template` and `spy_configurable_bundle_template_slot` database tables.
 
 {% endinfo_block %}
 
-To add a new point into navigation, adjust import data:
+4. To add a navigation item, adjust the import data:
 
 **data/import/navigation_node.csv**
 
@@ -749,13 +754,13 @@ navigation_key,node_key,parent_node_key,node_type,title.en_US,url.en_US,css_clas
 MAIN_NAVIGATION,node_key_48,node_key_18,link,Configurable Bundle List,/en/configurable-bundle/configurator/template-selection,,Configurable Bundle List,/de/configurable-bundle/configurator/template-selection,,,
 ```
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-Don't forget to replace sample node keys with ones relevant for your project.
+Make sure to replace the sample node keys with your project specific ones.
 
 {% endinfo_block %}
 
-Run the following command to import data:
+5. Import the updated navigation:
 
 ```bash
 console data:import navigation-node
@@ -763,20 +768,22 @@ console data:import navigation-node
 
 {% info_block warningBox "Verification" %}
 
-Navigate to your shop and make sure you can see a new item in the navigation menu.
+Go to your shop and make sure the new navigation menu item is displayed.
 
 {% endinfo_block %}
 
 ### 7) Set up behavior
 
-#### Set up configurable bundles workflow
+Set up the following behaviors.
+
+#### Set up the configurable bundles workflow
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConfiguredBundleOrderExpanderPlugin | Expands sales order by configured bundles. Expands ItemTransfer by configured bundle item. |  |Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales|
-|ConfiguredBundlesOrderPostSavePlugin| Persists configured bundles from `ItemTransfer` in Quote to `sales_order` configured bundle tables. ||Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales |
+| ConfiguredBundleOrderExpanderPlugin | Expands a sales order with configured bundles. Expands `ItemTransfer` with a configured bundle item. |  |Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales|
+|ConfiguredBundlesOrderPostSavePlugin| Persists configured bundles from `ItemTransfer` in Quote to `sales_order` configured bundle tables. || Spryker\Zed\SalesConfigurableBundle\Communication\Plugin\Sales |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -815,10 +822,10 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you place an order with a configured bundle:
+Place an order with a configured bundle and make sure the following applis:
 
-* New data saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
-* You can see items grouped by configured bundle details on the order details page in Yves. (You can access it by clicking **View Order** here `http://mysprykershop.com/customer/overview`)
+* New data has been saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
+* On the Storefront order details page, you can see items grouped by configured bundle details.
 
 {% endinfo_block %}
 

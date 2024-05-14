@@ -26,7 +26,7 @@ A warehouse can be assigned to a single store or shared between several stores. 
 
 The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with offers, these order items are *reserved*, so they are not available for ordering, even if they are physically on hand.
 
-Merchants can define product offer stock in the Merchant Portal. For details, see [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html).
+Merchants can define product offer stock in the Merchant Portal. For details, see [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html).
 
 Also, you can do the following using the data import:
 
@@ -61,7 +61,7 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) |
+| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html) | [Managing warehouses](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/edit-warehouses.html) |
 
 ## Related Developer documents
 

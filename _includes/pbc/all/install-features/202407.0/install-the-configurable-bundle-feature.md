@@ -768,7 +768,7 @@ console data:import navigation-node
 
 {% info_block warningBox "Verification" %}
 
-Go to your shop and make sure the new navigation menu item is displayed.
+Make sure the new navigation menu item is displayed on the Storefront.
 
 {% endinfo_block %}
 
@@ -822,26 +822,27 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Place an order with a configured bundle and make sure the following applis:
+Place an order with a configured bundle and make sure the following applies:
 
-* New data has been saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
+* Data has been saved to `spy_sales_order_configured_bundle_item` and `spy_sales_order_configured_bundle`.
 * On the Storefront order details page, you can see items grouped by configured bundle details.
 
 {% endinfo_block %}
 
-#### Register Pre-load, Pre-check and Expander Plugins for the Cart Module
+#### Register preload, precheck and expander plugins for the Cart module
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| CartConfigurableBundlePreReloadPlugin | Removes items from the QuoteTransfer if its configurable bundle template was removed or became inactive. |  |Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart |
-| ConfiguredBundleQuantityPostSavePlugin | Applies to items that have configurable properties. Updates configured bundle quantity. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin | Applies to items that have configurable properties. Updates configured bundle quantity per slot. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleQuantityCartTerminationPlugin | Terminates add/remove product to the cart process if configured bundle quantity is not proportional to product quantity. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleTemplateSlotCombinationPreCheckPlugin | Checks configurable bundle template/slot combinations. Adds error message if wrong combinations found. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleQuantityPerSlotItemExpanderPlugin | Expands configured bundle items with the quantity per slot. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
-| ConfiguredBundleGroupKeyItemExpanderPlugin | Expands items with configured bundle property with the group key. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| CartConfigurableBundlePreReloadPlugin | Removes items from a `QuoteTransfer` if its configurable bundle template was removed or became inactive. |  |Spryker\Zed\ConfigurableBundle\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPostSavePlugin | Updates configured bundle quantity. Applies to items that have configurable properties. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPerSlotPreReloadItemsPlugin | Updates configured bundle quantity per slot. Applies to items that have configurable properties. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityCartTerminationPlugin | Terminates add and remove product to the cart processes if configured bundle quantity isn't proportional to product quantity. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleTemplateSlotCombinationPreCheckPlugin | Checks configurable bundle template with slot combinations. Adds an error message if wrong combinations are found. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleQuantityPerSlotItemExpanderPlugin | Expands configured bundle items with quantity per slot. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
+| ConfiguredBundleGroupKeyItemExpanderPlugin | Expands items with configured bundle property with a group key. |  | Spryker\Zed\ConfigurableBundleCart\Communication\Plugin\Cart |
 
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -926,15 +927,17 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Make sure that deleted or deactivated configured bundles are removed from the cart.
+Add a configurable bundle to cart. Delete or deactivate it. Make sure it's been removed from the cart.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure after updating the configured bundle quantity on cart page:
+Update configured bundle quantity on the cart page. Make sure the following applies:
 
 * The quantity of each item in the bundle has changed.
 * The quantity of bundle has changed.
@@ -943,24 +946,24 @@ Make sure after updating the configured bundle quantity on cart page:
 
 {% info_block warningBox "Verification" %}
 
-* Make clean up for the configured bundle item (in `session/database` storage): `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`;
-* Reload cart page;
-* Make sure that `ConfiguredBundleItem::quantityPerSlot` is not null.
+1. Add a configurable item to cart.
+2. Make clean up for a configured bundle item in `session/database` storage: `$itemTransfer->getConfiguredBundleItem()->setQuantityPerSlot(null)`.
+* Reload the cart page.
+* Make sure that `ConfiguredBundleItem::quantityPerSlot` isn't `null`.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-* Set the wrong quantity to `ConfiguredBundle::quantity` for the configured bundle item.
-* Make sure that after updating the configured bundle quantity on cart page error flash message shown.
+Set a wrong quantity to `ConfiguredBundle::quantity` for a configured bundle item. Make sure that, after updating the configured bundle quantity on cart page, an error flash message is displayed.
 
 {% endinfo_block %}
 
-#### Register Delete Pre-Check Plugins for the ProductList Module
+#### Register delete precheck plugins for the ProductList module
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin | Finds configurable bundle template slots that use a given Product List. Disallows Product List deleting if any usage cases found. |  | Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList |
+| ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin | Finds configurable bundle template slots that use a given product list. If any slots that use the list are found, disallows deleting the list. |  | Spryker\Zed\ConfigurableBundle\Communication\Plugin\ProductList |
 
 **src/Pyz/Zed/ProductList/ProductListDependencyProvider.php**
 
@@ -988,22 +991,26 @@ class ProductListDependencyProvider extends SprykerProductListDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure an error occurs while deleting a product list that was assigned to a slot.
+1. Assign a product list to a configurable bundle slot.
+2. Try to delete the product list.
+  Make sure an error is displayed.
 
 {% endinfo_block %}
 
 ### 8) Configure Zed UI
 
+Take the steps in the following sections to configure Zed UI.
+
 #### Register plugins for the ConfigurableBundleGui module
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin | Expands **Slot Edit** page tabs with additional product list management tabs. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin | Expands **Slot Edit** form with Product List assignment subforms.  |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin | Expands options for **Slot Edit** form with Product List management data. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin | Handles Product Concrete Relation CSV file upload. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin | Provides subtabs for the Assign Products tab. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
-| ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the Assign Products tab. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditTabsExpanderPlugin | Expands the **Slot Edit** page tabs with additional product list management tabs. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormExpanderPlugin | Expands the **Slot Edit** form with product list assignment subforms.  |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductListManagementConfigurableBundleTemplateSlotEditFormDataProviderExpanderPlugin | Expands options for the **Slot Edit** form with product list management data. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationCsvConfigurableBundleTemplateSlotEditFormFileUploadHandlerPlugin | Handles product concrete relation CSV file upload. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditSubTabsProviderPlugin | Provides subtabs for the **Assign Products** tab. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
+| ProductConcreteRelationConfigurableBundleTemplateSlotEditTablesProviderPlugin | Provides tables for the **Assign Products** tab. |  | Spryker\Zed\ProductListGui\Communication\Plugin\ConfigurableBundleGui |
 
 
 <details open>
@@ -1089,10 +1096,10 @@ class ConfigurableBundleGuiDependencyProvider extends SprykerConfigurableBundleG
 
 {% info_block warningBox "Verification" %}
 
-Make sure that on configurable bundle template slot edit page (`http://zed.mysprykershop.com/configurable-bundle-gui/slot/edit?id-configurable-bundle-template-slot=1`):
+Make sure the following tabs exist on the **Configurable Bundle Template Slot Edit** page:
 
-* **Assign Categories** tab exists.
-* **Assign Products** tab exists.
+* **Assign Categories**.
+* **Assign Products**.
 
 {% endinfo_block %}
 
@@ -1100,8 +1107,8 @@ Make sure that on configurable bundle template slot edit page (`http://zed.myspr
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin | Expands buttons list with button leads to a Configurable Bundle Template list page. |  | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
-| ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin | Expands table data with Configurable Bundle Templates and Slots which use Product List. |  | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
+| ConfigurableBundleTemplateListProductListTopButtonsExpanderPlugin | Adds a button that opens the **Configurable Bundle Template list** page. |  | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
+| ConfigurableBundleTemplateProductListUsedByTableExpanderPlugin | Expands table data with configurable bundle templates and slots which use product listeners. |  | Spryker\Zed\ConfigurableBundleGui\Communication\Plugin\ProductListGui |
 
 **src/Pyz/Zed/ProductListGui/ProductListGuiDependencyProvider.php**
 
@@ -1140,15 +1147,15 @@ class ProductListGuiDependencyProvider extends SprykerProductListGuiDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  **Configurable Bundle Templates** button exists on **Overview of Product lists** (`http://zed.mysprykershop.com/product-list-gui`) page.
-
-Make sure that **Used by** table is populated by configurable bundle template slots on **Edit Product List** page  (in cases of relationship).
+Make sure the following applies:
+* On the **Overview of Product lists** page, the **Configurable Bundle Templates** button is displayed.
+* On the **Edit Product List** page, the **Used by** table is populated by configurable bundle template slots.    
 
 {% endinfo_block %}
 
 ### 9) Build Zed UI frontend
 
-Run the following command to enable Javascript and CSS changes for Zed:
+Enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build
@@ -1156,16 +1163,19 @@ console frontend:zed:build
 
 ## Install feature frontend
 
+Take the following steps to install the feature frontend.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the required features.
 
 | Feature | Version |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
-| Prices | {{page.version}} |
+| -------------- | ----------------- | ----------------- |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Product | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+| Prices | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules
 
@@ -1189,6 +1199,8 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Enable controllers
+
+Enable the controllers in the following sections.
 
 #### Router List
 
@@ -1233,24 +1245,24 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify the `ConfigurableBundleWidgetRouteProviderPlugin`, make sure that you can change the quantity and remove the configurable bundle from the cart.
 
-Verify the `ConfigurableBundleWidgetAsyncRouteProviderPlugin`, make sure that you can change the quantity and remove the configurable bundle from the cart with cart actions AJAX mode enabled.
-
-Verify the `ConfigurableBundlePageRouteProviderPlugin`, make sure that you can navigate to `/configurator/template-selection` page.
-
-Verify the `ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin` by adding a configurable item note with cart actions AJAX mode enabled.
+| PLUGIN | VERIFICATION |
+| - | - |
+| ConfigurableBundleWidgetRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart. |
+| ConfigurableBundleWidgetAsyncRouteProviderPlugin | You can change the quantity and remove a configurable bundle from cart with the cart actions AJAX mode enabled. |
+| ConfigurableBundlePageRouteProviderPlugin | You can go to the `/configurator/template-selection` page. |
+| ConfigurableBundleNoteWidgetAsyncRouteProviderPlugin | You can add a configurable item note with the cart actions AJAX mode enabled.
 
 {% endinfo_block %}
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+1. Register the following plugins to enable widgets:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| QuoteConfiguredBundleWidget | Displays configured bundles on a cart page. |  | SprykerShop\Yves\ConfigurableBundleWidget\Widget |
-| OrderConfiguredBundleWidget | Displays configured bundles on the order details page. |  | SprykerShop\Yves\SalesConfigurableBundleWidget\Widget |
+| QuoteConfiguredBundleWidget | Displays configured bundles on the **Cart** page. |  | SprykerShop\Yves\ConfigurableBundleWidget\Widget |
+| OrderConfiguredBundleWidget | Displays configured bundles on the **Order Details** page. |  | SprykerShop\Yves\SalesConfigurableBundleWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1278,7 +1290,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1286,22 +1298,22 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
+Make sure the following widgets have been registered:
 
-| MODULE | TEST |
+| WIDGET | VERIFICATION |
 | --- | --- |
-| QuoteConfiguredBundleWidget | Go to the cart (`http://mysprykershop.com/cart`) with a configured bundle, make sure that you see items grouped by the configured bundle. |
-| OrderConfiguredBundleWidget | Go to the order that was made from a cart with a configured bundle, make sure that you see items grouped by the configured bundle. |
+| QuoteConfiguredBundleWidget | Add a configurable bundle to cart. Make sure that, on the **Cart** page, items are grouped by the configurable bundle. |
+| OrderConfiguredBundleWidget | Place an order with a configurable bundle. On the Storefront, go to the order's details page. Make sure the items are grouped by the configurable bundle.  |
 
 {% endinfo_block %}
 
 ### 4) Set up configuration
 
-Add the following configuration to your project:
+Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| ConfigurableBundleWidgetConfig::isQuantityChangeable() | Used to display block with quantity input form. | Pyz\Yves\ConfigurableBundleWidget |
+| ConfigurableBundleWidgetConfig::isQuantityChangeable() | Displays the block with the quantity input form. | Pyz\Yves\ConfigurableBundleWidget |
 
 **src/Pyz/Yves/ConfigurableBundleWidget/ConfigurableBundleWidgetConfig.php**
 
@@ -1326,6 +1338,6 @@ class ConfigurableBundleWidgetConfig extends SprykerShopConfigurableBundleWidget
 
 {% info_block warningBox "Verification" %}
 
-Make sure that each configured bundle on the cart (`http://mysprykershop.com/cart`) contains a block with quantity input.
+On the **Cart** page, make sure that, for each configured bundle, a field for entering quantity is displayed.
 
 {% endinfo_block %}

@@ -7,4 +7,4 @@ redirect_from:
 last_updated: Nov 21, 2023
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productconfigurationwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productconfigurationwidget-module.md -->

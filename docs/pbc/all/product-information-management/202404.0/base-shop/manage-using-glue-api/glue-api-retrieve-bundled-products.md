@@ -786,14 +786,8 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 ```
 </details>
 
-<a name="bundled-products-response-attributes"></a>
+{% include pbc/all/glue-api-guides/{{page.version}}/bundled-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/bundled-products-response-attributes.md -->
 
-
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| sku | String | Unique identifier of the product in the bundle. |
-|quantity |Integer| Quantity of the product in the bundle.|
 
 {% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 

@@ -1,7 +1,7 @@
 ---
 title: "HowTo: Make a product searchable and shown on the Storefront"
 description: Use the guide to learn about the conditions required to make a product searchable in the online store.
-last_updated: Mai 14, 2024
+last_updated: May 14, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-make-product-shown-on-frontend-by-url
 originalArticleId: c8a71f89-7fea-4bd5-9c50-3f372b8af760

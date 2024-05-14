@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html).
+This document describes how to install the [Gift Cards feature](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html).
 
 ## Install feature core
 
@@ -10,21 +10,21 @@ Follow the steps below to install the Gift Cards feature core.
 
 Install the required features:
 
-| NAME   | VERSION | INTEGRATE GUIDE |
+| NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-|Product  | {{site.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
-|Payments  | {{site.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
-| Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
-| Order Management | {{site.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
-| Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)|
-| Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
+| Spryker Core | {{page.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+|Product  | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+|Payments  | {{page.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
+| Shipment | {{page.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
+| Order Management | {{page.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
+| Mailing &amp; Notifications | {{page.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)|
+| Promotions &amp; Discounts | {{page.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -73,11 +73,11 @@ class GiftCardConfig extends SprykerGiftCardConfig
 
 {% info_block warningBox "Verification" %}
 
-When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure that the `NoShipment` shipment method is selected automatically while ordering only a gift card.
+After you finish the [Setup behavior](#install-the-required-modules) step, make sure that, when ordering only a gift card, the `NoShipment` shipment method is selected automatically.
 
 {% endinfo_block %}
 
-### 3) Set up the Gift Card usage process
+### 3) Set up the gift card usage process
 
 Extend your project with the following configuration:
 
@@ -171,11 +171,11 @@ class SalesConfig extends SprykerSalesConfig
 ```
 
 {% info_block warningBox "Verification" %}
-When you finish the [Setup Behaviour](#install-the-required-modules) step, make sure the following:
-* The `NoPayment01` state machine is activated successfully.
-* When using a gift card to cover an entire order, the configured order state machine is used—for example, `Nopayment01`.
+After you finish the [Setup Behavior](#install-the-required-modules) step, make sure the following applies:
+* The `NoPayment01` state machine has been activated successfully.
+* When using a gift card to pay for an entire order, the configured order state machine is used—for example, `Nopayment01`.
 * You can't use denied payment methods when using a gift card.
-* In the Back office, on the order details page, you see the gift cards used in the order.
+* In the Back office, on the order details page, the gift cards used in an order are displayed.
 
 {% endinfo_block %}
 
@@ -190,7 +190,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following changes have been applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -226,18 +226,17 @@ Make sure that propel entities have been generated successfully by checking thei
 
 {% endinfo_block %}
 
-### 5) Import the Gift Card configuration data
+### 5) Import the gift card configuration data
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-The following step imports abstract and concrete gift card configurations. Implementation for the data importer is not provided by Spryker Core, so you need to implement it on the project level.
-
-You can find an exemplary implementation on [GitHub](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a) in the `suit` repository (only `Console` and `DataImport` module changes are relevant). The following data import examples are based on this implementation.
+The following step imports abstract and concrete gift card configurations. Implementation for the data importer isn't provided by Spryker Core, so you need to implement it on the project level. You can find an example implementation in the [`suit` repository](https://github.com/spryker-shop/suite/commit/f38bc5264e9964d2d2da5a045c0305973b3cb556#diff-e854f9b396bdaa07ca6276f168aaa76a); only `Console` and `DataImport` module changes are relevant. The following data import examples are based on this implementation.
 
  {% endinfo_block %}
 
-**data/import/gift_card_abstract_configuration.csv**
+1. Prepare your data according to your requirements using the demo data:
 
+**data/import/gift_card_abstract_configuration.csv**
 ```yaml
 abstract_sku,pattern
 1234,{prefix}-{randomPart}-{suffix}
@@ -245,8 +244,8 @@ abstract_sku,pattern
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| abstract_sku |mandatory  | string | 1234 |  SKU reference of an abstract gift card product.|
-| pattern |mandatory  | string | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| abstract_sku |mandatory  | string | 1234 |  SKU reference of an abstract gift card product. |
+| pattern |mandatory  | string | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift cards. |
 
 **data/import/gift_card_concrete_configuration.csv**
 
@@ -260,7 +259,9 @@ sku,value
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
 | sku | ✓ | string| 1234 | An SKU reference of an abstract gift card product. |
-| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift card codes. |
+| value | ✓ | string	 | {prefix}-{randomPart}-{suffix} | A pattern that is used to generate codes for purchased gift cards. |
+
+2. Import data:
 
 ```bash
 console data:import:gift-card-abstract-configuration
@@ -269,7 +270,7 @@ console data:import:gift-card-concrete-configuration
 
 {% info_block warningBox "Verification" %}
 
-Make sure to have imported abstract and concrete gift card configuration into your `spy_gift_card_product_abstract_configuration` and `spy_gift_card_product_configuration` database tables.
+Make sure abstract and concrete gift card configuration has been imported to `spy_gift_card_product_abstract_configuration` and `spy_gift_card_product_configuration` database tables.
 
 {% endinfo_block %}
 
@@ -1160,14 +1161,14 @@ Install the required features:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1332,4 +1333,3 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 Make sure that the widget is displayed on the **Cart** and **Summary** pages of the checkout process.
 
 {% endinfo_block %}
-

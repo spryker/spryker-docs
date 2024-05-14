@@ -21,13 +21,7 @@ Follow the steps below to install the Dynamic Multistore feature core.
 | Currency | ^4.0.0  | [Upgrade the Currency module](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) |
 
 
-{% info_block warningBox %}
-
-The minimum PHP version required to get or update the following modules is PHP 8.1 or higher.
-
-{% endinfo_block %}
-
-2. Install the required features:
+2. Install the following features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
@@ -78,7 +72,7 @@ We recommend making `de.mysprykershop.com` a mirror of `eu.mysprykershop.com` to
 {% endinfo_block %}
 
 
-#### Enable dynamic store feature
+#### Enable the dynamic store feature
 
 To use the new region configuration, create a new deployment file, like `deploy.dynamic-store.yml` or `deploy.dev.dynamic-store.yml`. Example of file with region configuration:
 
@@ -198,19 +192,19 @@ docker:
 
 </details>
 
-In this configuration, region is used for enitites like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
+In this configuration, region is used for entities like services, endpoints, or applications. The `SPRYKER_DYNAMIC_STORE_MODE`  variable enables the dynamic multistore feature. Make sure store is not used in the new configuration to avoid deployment failures.
 
 
 3. Add the following configuration:
 
 | CONFIGURATION        | SPECIFICATION | NAMESPACE |
 |----------------------|---------------| --- |
-| Default RabbitMQ connection: `config/Shared/config_default.php`. | Enables the connection for queues to be set dynamically. Use the `SPRYKER_CURRENT_REGION` environment variable to set the configuration for queues. | - |
+| Default RabbitMQ connection: `config/Shared/config_default.php`. | Enables the connection for queues to be set dynamically. Use the `SPRYKER_CURRENT_REGION` environment variable to set the configuration for queues. |  |
 | RabbitMqConfig::getQueuePools() | Configures queue pools for regions. | Pyz\Client\RabbitMq |
 | RabbitMqConfig::getDefaultLocaleCode() | Returns the default locale code. | Pyz\Client\RabbitMq |
-| RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds 1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1 to configure the sync queue. | Pyz\Client\RabbitMq |
-| Setup cron jobs: `config/Zed/cronjobs/jobs.php`.  | Adjust all cron jobs to use the new configuration. | - |
-| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be  used for processing store messages. | Pyz\Zed\StoreStorage |
+| RabbitMqConfig::getSynchronizationQueueConfiguration() | Adds `1StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE1` to configure the sync queue. | Pyz\Client\RabbitMq |
+| Setup cron jobs: `config/Zed/cronjobs/jobs.php`.  | Adjust all cron jobs to use the new configuration. |  |
+| StoreStorageConfig::STORE_SYNC_STORAGE_QUEUE | Configures the sync queue name to be used for processing store messages. | Pyz\Zed\StoreStorage |
 
 
 
@@ -334,9 +328,7 @@ Run `vendor/bin/console queue:worker:start` and make sure RabbitMQ connection er
 
 {% endinfo_block %}
 
-
-
-**config/Zed/cronjobs/jenkins.php**
+#### Configure Jenkins
 
 With the dynamic store setup, commands for Jenkins are executed per region instead of per store. The command for Jenkins uses the `SPRYKER_CURRENT_REGION` variable instead of `APPLICATION_STORE`.
 
@@ -376,13 +368,13 @@ For an example of an updated file, see [jenkins.php in the Spryker Suite reposit
 
 {% info_block warningBox “Verification” %}
 
-1. Remove Jenkins jobs per store by running the following commands:
+1. Remove Jenkins jobs per store:
 
 ```bash
 vendor/bin/console scheduler:clean
 ```
 
-If any jobs have not been automatically removed, they have to be manually deleted.
+If any jobs have not been automatically removed, remove them manually.
 
 2. Set up Jenkins jobs:
 
@@ -395,7 +387,7 @@ Make sure jobs with region configuration have been created.
 {% endinfo_block %}
 
 
-Enable the queue that to publish `Store` data to the `Storage`.
+4. Enable the queue to publish `Store` data to the `Storage`.
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -424,9 +416,10 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
-Set up the required queue infrastructure by running the following command:
+Set up the queue infrastructure:
 
 ```bash
 vendor/bin/console queue:setup
@@ -526,6 +519,7 @@ vendor/bin/console scheduler:suspend
 ```
 
 2. In the Back Office, set up a store with a country and locale.
+    Make sure the store is created successfully.
 
 3. Restart the scheduler:
 
@@ -760,7 +754,7 @@ class DataImportConfig extends SprykerDataImportConfig
 
 | PLUGIN | SPECIFICATION                                            | PREREQUISITES | NAMESPACE |
 | --- |----------------------------------------------------------| --- | --- |
-| StockDataImportPlugin | Imports Stock.                                           |  | \Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport |
+| StockDataImportPlugin | Imports stock.                                           |  | \Spryker\Zed\StoreDataImport\Communication\Plugin\DataImport |
 | CountryStoreDataImportPlugin | Imports country store relations.                         |  | \Spryker\Zed\CountryDataImport\Communication\Plugin\DataImport |
 | LocaleStoreDataImportPlugin | Imports locale store relations.                          |  | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
 | DefaultLocaleStoreDataImportPlugin | Imports relations between the default locale and stores. |  | \Spryker\Zed\LocaleDataImport\Communication\Plugin\DataImport |
@@ -846,7 +840,7 @@ vendor/bin/console data:import:country-store
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the data for locale-store and country-store relationships have been added to the `spy_locale_store` and `spy_country_store` tables.
+Make sure the data for locale-store and country-store relationships have been added to the `spy_locale_store` and `spy_country_store` tables.
 
 {% endinfo_block %}
 
@@ -914,7 +908,7 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that `StoreTransfer` is expanded with store data (countries, currency ISO codes, etc.) from the database.
+Make sure `StoreTransfer` has been expanded with store data, like countries or currency ISO codes, from the database.
 
 {% endinfo_block %}
 

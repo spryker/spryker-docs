@@ -10,12 +10,13 @@ Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
-| Company Account | {{page.version}} |
-| Customer Account Management | {{page.version}} |
-| Spryker Core | {{page.version}} |
-|Cart | {{page.version}} |
-|Prices | {{page.version}} |
-|Product | {{page.version}} |
+| Company Account | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
+| Customer Account ManagemenT | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Prices | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
+| Product | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+
 
 ### 1) Install the required modules
 
@@ -39,7 +40,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the database schema and transfer objects
 
-Adjust the schema definition so that entity changes can trigger events.
+1. Adjust the schema definition so that entity changes can trigger events.
 
 | AFFECTED ENTITY | TRIGGERED EVENTS |
 | --- | --- |
@@ -100,7 +101,7 @@ Adjust the schema definition so that entity changes can trigger events.
     </database>
 ```
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -109,7 +110,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied when checking your database:
+Make sure the following changes have been applied in the database.
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -171,7 +172,7 @@ Make sure that the following changes have been applied when checking your databa
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:
+Trigger the following methods and make sure the prior events have been triggered:
 
 | PATH | METHOD NAME |
 | --- | --- |
@@ -184,7 +185,7 @@ Make sure that the changes were implemented successfully. For this purpose, trig
 
 ### 3) Add translations
 
-Append a glossary for the feature:
+1. Append the glossary for the feature:
 
 **src/data/import/glossary.csv**
 
@@ -207,7 +208,7 @@ customer.account.shopping_list_item.error.product_not_active,Product is not acti
 customer.account.shopping_list_item.error.product_not_active,Produkt ist nicht aktiv,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -221,13 +222,13 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 ### 4) Configure export to Redis
 
-This step will publish tables on change (create, edit, delete) to the `spy_shopping_list_storage` and synchronize the data to Storage.
+This step publishes tables on change (create, edit, delete) to the `spy_shopping_list_storage` and syncs the data to Storage.
 
 #### Set up event listeners
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListStorageEventSubscriber | Registers listeners that are responsible for publishing shopping list data based on changes to shopping lists or related entities. | None | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber |
+| ShoppingListStorageEventSubscriber | Registers listeners that are responsible for publishing shopping list data based on changes to shopping lists or related entities. |  | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 

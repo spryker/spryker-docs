@@ -9,7 +9,9 @@ Follow the steps below to install the Multiple Carts feature core.
 
 ### Prerequisites
 
-Install the required features:
+* Enable the database storage strategy in the Quote module.
+
+* Install the required features:
 
 | NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -167,11 +169,11 @@ quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 | is_default         | ✓ | int       | 1               | Thelag to show that the quote is default for the customer.           |
 | quote_data         | ✓ | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN                    | SPECIFICATION                          | PREREQUISITES                                | NAMESPACE                                            |
 |---------------------------|----------------------------------------|----------------------------------------------|------------------------------------------------------|
-| MultiCartDataImportPlugin | Imports customer's quotes to database. | Make sure that customers have been imported. | Spryker\Zed\MultiCartDataImport\Communication\Plugin |
+| MultiCartDataImportPlugin | Imports a customer's quotes to database. | Customers are imported. | Spryker\Zed\MultiCartDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -197,7 +199,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-2. Import data:
+3. Import data:
 
 ```bash
 console data:import multi-cart
@@ -205,17 +207,13 @@ console data:import multi-cart
 
 {% info_block warningBox "Verification" %}
 
-Open `spy_quote` and make sure that all data has been imported.
+Make sure the data has been imported to the `spy_quote` table.
 
 {% endinfo_block %}
 
 ### 5) Set up behavior
 
-{% info_block infoBox "Info" %}
-
-This feature requires a database storage strategy enabled in the quote module.
-
-{% endinfo_block %}
+Set up the baheviors in the following sections.
 
 #### Set up quote integration
 
@@ -224,12 +222,12 @@ Register the following plugins:
 | PLUGIN                                         | SPECIFICATION                                                                                                          | PREREQUISITES                                                                  | NAMESPACE                                  |
 |------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------|--------------------------------------------|
 | AddSuccessMessageAfterQuoteCreatedPlugin       | Adds success message to messenger afterward.                                                                           |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
-| AddDefaultNameBeforeQuoteSavePlugin            | Sets default quote name if quote does not have name.                                                                   |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
-| ResolveQuoteNameBeforeQuoteCreatePlugin        | Resolves quote name to make it unique for customer before the quote is saved.                                          | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it must be added afterward.  | Spryker\Zed\MultiCart\Communication\Plugin |
-| DeactivateQuotesBeforeQuoteSavePlugin          | Mark quote as default. Makes SQL request to mark all customers' quotes as not default.                                 |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
-| InitDefaultQuoteCustomerQuoteDeleteAfterPlugin | Activates any customer quote, if an active customer quote has been removed.                                            |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
-| NameQuoteTransferExpanderPlugin                | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes.     |                                                                                | Spryker\Client\MultiCart\Plugin            |
-| TotalItemCountDefaultCartQuoteExpanderPlugin   | Calculates the number of items in the provided `QuoteTransfer` and sets the results to `QuoteTransfer.totalItemCount`. |                                                                                | Spryker\Client\Cart\Plugin\MultiCart       |
+| AddDefaultNameBeforeQuoteSavePlugin            | Sets the default quote name if a quote doesn't have a name.                                                                   |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
+| ResolveQuoteNameBeforeQuoteCreatePlugin        | Resolves a quote name to make it unique for the customer before it's saved.                                          | If `AddDefaultNameBeforeQuoteSavePlugin` is used, it must be added afterwards.  | Spryker\Zed\MultiCart\Communication\Plugin |
+| DeactivateQuotesBeforeQuoteSavePlugin          | Marks a quote as default. Makes an SQL request to mark all customers' quotes as not default.                                 |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
+| InitDefaultQuoteCustomerQuoteDeleteAfterPlugin | Activates any customer quote if an active customer quote was removed.                                            |                                                                                | Spryker\Zed\MultiCart\Communication\Plugin |
+| NameQuoteTransferExpanderPlugin                | Sets the default quote name if a quote doesn't have a name. Default guest quote name is used for guest customer quotes.     |                                                                                | Spryker\Client\MultiCart\Plugin            |
+| TotalItemCountDefaultCartQuoteExpanderPlugin   | Calculates the number of items in the provided `QuoteTransfer` and sets the result to `QuoteTransfer.totalItemCount`. |                                                                                | Spryker\Client\Cart\Plugin\MultiCart       |
 
 <details open><summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
@@ -347,23 +345,19 @@ class MultiCartDependencyProvider extends SprykerMultiCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that customer carts have unique names. If a customer creates a cart with a name that has already been used in another cart of the customer, the cart name is extended with an iterative suffix.
-
-{% endinfo_block %}
-
-{% info_block infoBox "Info" %}
+Make sure that customer carts have unique names. If a customer creates a cart with a name that was already used for another cart of the same customer, the cart name is extended with an iterative suffix.
 
 Example:
-
-If the name "Shopping cart" already exists, it is changed to the following:
-* Shopping cart → Shopping cart 1
-* Shopping cart → Shopping cart 2
+1. A customer creates a cart named "Shopping cart".
+2. The customer creates a cart named "Shopping cart". It's automatically renamed to "Shopping cart 1".
+3. The customer creates a cart named "Shopping cart". It's automatically renamed to "Shopping cart 2".
 
 {% endinfo_block %}
+
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the customer has only one active cart at once. If the customer updates an inactive cart it becomes active, while the previous active cart becomes inactive.
+Make sure that a customer has only one active cart at a time. If a customer updates an inactive cart, it becomes active, while the previous active cart becomes inactive.
 
 {% endinfo_block %}
 
@@ -373,10 +367,10 @@ Register the following plugins:
 
 | PLUGIN                                          | SPECIFICATION                                                                                                                          | PREREQUISITES | NAMESPACE                                              |
 |-------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| CustomerCartQuoteResponseExpanderPlugin         | Adds customer quote collection to quote response transfer after cart operation handling. Replaces quote with active quote if it exist. |               | Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
-| SaveCustomerQuotesQuoteUpdatePlugin             | Extracts Customer Quote Collection from quote response object and saves it to customer session.                                        |               | Spryker\Client\MultiCart\Plugin                        |
-| DefaultQuoteUpdatePlugin                        | Finds Customer Default Quote in customer quote collection and saves it to customer session.                                            |               | Spryker\Client\MultiCart\Plugin                        |
-| QuoteSelectorPersistentCartChangeExpanderPlugin | Takes quote ID form parameters and replaces it in quote change request.                                                                |               | Spryker\Client\MultiCart\Plugin                        |
+| CustomerCartQuoteResponseExpanderPlugin         | Adds a customer quote collection to the quote response transfer after cart operation handling. Replaces a quote with an active quote if it exist. |               | Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
+| SaveCustomerQuotesQuoteUpdatePlugin             | Extracts Customer Quote Collection from a quote response object and saves it to the customer session.                                        |               | Spryker\Client\MultiCart\Plugin                        |
+| DefaultQuoteUpdatePlugin                        | Finds Customer Default Quote in a customer quote collection and saves it to the customer session.                                            |               | Spryker\Client\MultiCart\Plugin                        |
+| QuoteSelectorPersistentCartChangeExpanderPlugin | Takes a quote ID form parameters and replaces it in a quote change request.                                                                |               | Spryker\Client\MultiCart\Plugin                        |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -441,17 +435,17 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that adding items to the cart will update the customer's cart list in the multi-cart session.
+Make sure that, in a multi-cart session, adding items to cart updates the customer's cart list.
 
 {% endinfo_block %}
 
-#### Set up customer integration
+#### Set up the customer integration
 
 Register the following plugins:
 
 | PLUGIN                                | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                     | NAMESPACE                       |
 |---------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|---------------------------------|
-| GuestCartSaveCustomerSessionSetPlugin | Executed after the customer has been added to the session. Saves a guest customer quote to the database if it is not empty. Takes an actual customer quote from the database if the guest cart is empty. | Must be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
+| GuestCartSaveCustomerSessionSetPlugin | Executed after a customer was added to the session. Saves a guest customer quote to the database if it's not empty. Takes an actual customer quote from the database if the guest cart is empty. | Must be added before `GuestCartUpdateCustomerSessionSetPlugin`. | Spryker\Client\MultiCart\Plugin |
 
 **src/Pyz/Client/Customer/CustomerDependencyProvider.php**
 

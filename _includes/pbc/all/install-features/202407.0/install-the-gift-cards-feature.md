@@ -18,7 +18,7 @@ Install the required features:
 |Payments  | {{page.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
 | Shipment | {{page.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
 | Order Management | {{page.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
-| Mailing &amp; Notifications | {{page.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)|
+| Mailing &amp; Notifications | {{page.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{page.version}}/install-themailing-and-notifications-feature.html)|
 | Promotions &amp; Discounts | {{page.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules
@@ -276,13 +276,13 @@ Make sure abstract and concrete gift card configuration has been imported to `sp
 
 ### 6) Set up the shipment method data
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-In this step, you create a shipment method called `NoShipment`. The name of the shipment method has to match the value of `\Spryker\Shared\Shipment\ShipmentConfig::SHIPMENT_METHOD_NAME_NO_SHIPMENT` constant.
+In this step, you create a shipment method called `NoShipment`. The name of the shipment method must match the value of the `\Spryker\Shared\Shipment\ShipmentConfig::SHIPMENT_METHOD_NAME_NO_SHIPMENT` constant.
 
 {% endinfo_block %}
 
-1. Taking into account project customizations, extend shipment method data importer as follows:
+1. Taking into account project customizations, extend the shipment method data importer as follows:
 
 **data/import/shipment.csv**
 
@@ -291,7 +291,7 @@ shipment_method_key,name,carrier,taxSetName
 spryker_no_shipment,NoShipment,NoShipment,Tax Exempt
 ```
 
-2. Taking into account project customizations, extend your shipment price data importer as follows:
+2. Taking into account project customizations, extend the shipment price data importer as follows:
 
 **data/import/shipment_price.csv**
 
@@ -309,15 +309,15 @@ console data:import:shipment-price
 
 {% info_block warningBox "Verification" %}
 
-Make sure that a shipment method with the `NoShipment` name exists in your `spy_shipment_method` and `spy_shipment_method_price` database tables.
+Make sure that a shipment method with the `NoShipment` name exists in `spy_shipment_method` and `spy_shipment_method_price` database tables.
 
 {% endinfo_block %}
 
 ### 7) Import additional and optional data
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-To represent and display gift cards as products in your shop, you need to import some data into your database depending on your project configuration and needs. The following list contains the points that can be used to get an idea of what gift card-related data you might want to use:
+To represent and display gift cards as products in your shop, you need to import data into your database depending on your project configuration and needs. The following list contains the points that can be used to get an idea of what gift card-related data you might want to use:
 * *Product Attribute Key* to create a gift card `value` super attribute that defines gift card variants.
 * *Abstract Product* that represents gift cards in your catalog.
 * *Abstract Product Store Relation* to manage store-specific gift cards.
@@ -333,7 +333,7 @@ To represent and display gift cards as products in your shop, you need to import
 
 ### 8) Prepare order state machines for the Gift Card purchase process
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 In this step, you can customize your order state machine to purchase gift cards. The process distinguishes gift card order items and ships them by emailing the customer. The following example shows how the `DummyPayment` state machine is defined.
 
@@ -341,7 +341,8 @@ In this step, you can customize your order state machine to purchase gift cards.
 
 The `DummyPayment` order state machine example:
 
-**config/Zed/oms/DummyPayment01.xml**
+<details>
+<summary>config/Zed/oms/DummyPayment01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -468,7 +469,11 @@ The `DummyPayment` order state machine example:
 
 ![Dummy payment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/dummy-payment.svg)
 
-<details open><summary markdown='span'>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
+</details>
+
+
+
+<details><summary markdown='span'>config/Zed/oms/GiftCardSubprocess/CreateGiftCard01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -510,7 +515,9 @@ The `DummyPayment` order state machine example:
 ```
 </details>
 
-**config/Zed/oms/DummySubprocess/DummyRefund01.xml**
+
+<details>
+<summary>config/Zed/oms/DummySubprocess/DummyRefund01.xml</summary>
 
 ```html
 <?xml version="1.0"?>
@@ -551,14 +558,12 @@ The `DummyPayment` order state machine example:
 ```
 
 ![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg)
+</details>
+
 
 ### 9) Prepare order state machines for the Gift Card usage process
 
-{% info_block infoBox "Info" %}
-
-In this step, you customize your order state machine to place orders with zero prices to pay (by using gift cards). The process skips payment-related steps because there is nothing for the customer to pay anymore. The following example shows how the NoPayment state machine is defined.
-
-{% endinfo_block %}
+In this step, you customize your order state machine to place orders with zero prices to pay, by using gift cards. The process skips payment-related steps because there is nothing for a customer to pay. The following example shows how the `NoPayment` state machine is defined.
 
 The `NoPayment` order state machine example:
 
@@ -638,32 +643,28 @@ The `NoPayment` order state machine example:
 
 </statemachine>
 ```
-</details>
 
 ![Nopayment](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Gift+Cards+Feature+Integration/nopayment.svg)
 
+</details>
+
+
 ### 10) Enable the gift card purchase process
 
-{% info_block infoBox "Info" %}
-
-In this step, you enable gift card purchasing in your project.
-
-{% endinfo_block %}
-
-Add the following plugins to your project:
+To enable purchasing of gifts, add the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|GiftCardCalculatorPlugin  | During quote recalculation, distinguishes applicable and non-applicable gift cards and creates payment methods for applicable gift cards. | - | Spryker\Zed\GiftCard\Communication\Plugin |
-| GiftCardMetadataExpanderPlugin | Extends gift card items with gift card configuration metadata to change cart items. | - | Spryker\Zed\GiftCard\Communication\Plugin |
-| `GiftCardCheckoutDoSaveOrderPlugin` | Saves gift cards items from the quote. Saves gift card payments from the quote. |-  | `Spryker\Zed\GiftCard\Communication\Plugin\Checkout` |
-| `GiftCardCheckoutPreConditionPlugin` | Returns true if QuoteTransfer.payments don't have GiftCard payments. Returns true if gift card was in use before and amount is valid. Returns false otherwise. |-  | `\Spryker\Zed\GiftCard\Communication\Plugin\Checkout` |
-| `NopaymentCheckoutPreConditionPlugin` | Returns true if there is no the Nopayment payment provider in `QuoteTransfer.payments`; otherwise, it does additional checks/logic. Returns true if `QuoteTransfer.totals.priceToPay` greater than 0 otherwise adds an error into `CheckoutResponseTransfer` and returns false. |-  | `\Spryker\Zed\Nopayment\Communication\Plugin\Checkout` |
-| GiftCardDiscountableItemFilterPlugin |  Filters gift card items from discountable items.|- | Spryker\Zed\GiftCard\Communication\Plugin |
-| GiftCardDeliveryMailTypePlugin | Provides a mail type for sending e-mails about successful gift card orders. |-  | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail |
-| Command\ShipGiftCardByEmailCommandPlugin | Registers `GiftCardMailConnector/ShipGiftCard` OMS command that is used to deliver a gift card by e-mail. | Use `GiftCardDeliveryMailTypePlugin` above to register the necessary mail type. | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Oms |
-|CreateGiftCardCommandPlugin  | Registers `GiftCard/CreateGiftCard` OMS command that is used to generate a new gift card based on a gift card order item configuration. |-  | Spryker\Zed\GiftCard\Communication\Plugin\Oms\Command |
-| IsGiftCardConditionPlugin | Registers `GiftCard/IsGiftCard` OMS command that is used to check whether an order item is a gift card.| - |  Spryker\Zed\GiftCard\Communication\Plugin\Oms\Condition|
+|GiftCardCalculatorPlugin  | During quote recalculation, distinguishes applicable and non-applicable gift cards and creates payment methods for applicable gift cards. |  | Spryker\Zed\GiftCard\Communication\Plugin |
+| GiftCardMetadataExpanderPlugin | Extends gift card items with gift card configuration metadata to change cart items. |  | Spryker\Zed\GiftCard\Communication\Plugin |
+| `GiftCardCheckoutDoSaveOrderPlugin` | Saves gift cards items from the quote. Saves gift card payments from the quote. |  | `Spryker\Zed\GiftCard\Communication\Plugin\Checkout` |
+| `GiftCardCheckoutPreConditionPlugin` | Returns true if `QuoteTransfer.payments` don't have `GiftCard` payments. Returns true if gift card was in use before and the amount is valid. Returns false otherwise. |  | `\Spryker\Zed\GiftCard\Communication\Plugin\Checkout` |
+| `NopaymentCheckoutPreConditionPlugin` | Returns true if there is no `Nopayment` payment provider in `QuoteTransfer.payments`; otherwise, it does additional checks and logic. Returns true if `QuoteTransfer.totals.priceToPay` is greater than 0; otherwise,  adds an error into `CheckoutResponseTransfer` and returns false. |   | `\Spryker\Zed\Nopayment\Communication\Plugin\Checkout` |
+| GiftCardDiscountableItemFilterPlugin |  Filters gift card items from discountable items. |  | Spryker\Zed\GiftCard\Communication\Plugin |
+| GiftCardDeliveryMailTypePlugin | Provides a mail type for sending emails about successful gift card orders. |   | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail |
+| Command\ShipGiftCardByEmailCommandPlugin | Registers the `GiftCardMailConnector/ShipGiftCard` OMS command that is used to deliver a gift card by email. | Use the prior `GiftCardDeliveryMailTypePlugin` to register the necessary mail type. | Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Oms |
+|CreateGiftCardCommandPlugin  | Registers the `GiftCard/CreateGiftCard` OMS command that is used to generate a new gift card based on a gift card order item configuration. |  | Spryker\Zed\GiftCard\Communication\Plugin\Oms\Command |
+| IsGiftCardConditionPlugin | Registers the `GiftCard/IsGiftCard` OMS command that is used to check if an order item is a gift card.|  |  Spryker\Zed\GiftCard\Communication\Plugin\Oms\Condition|
 |OnlyGiftCardShipmentMethodFilterPlugin  | Filters non-available shipment methods for gift card items to be purchased. | - | Spryker\Zed\GiftCard\Communication\Plugin |
 
 **src/Pyz/Zed/Calculation/CalculationDependencyProvider.php**
@@ -923,37 +924,30 @@ class ShipmentDependencyProvider extends SprykerShipmentDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following happens:
-* You can add a configured gift card product to the cart and purchase it.
-* The gift card item doesn't have any discounts applied.
-* During the checkout process, shipment method selection is optional if there is only a gift card in the cart.
-* The GiftCart/ShipGiftCard OMS command is invoked, and the customer receives an email with the generated gift card code once the order is placed.
-
-Before verifying these points, you must complete the [feature frontend integration](#install-feature-frontend).
+After completing the [frontend integration](#install-feature-frontend), make sure the following applies:
+* You can add a gift card to cart.
+* Discounts are not applied to the card.
+* During the checkout process, because there is only a gift card in the cart, shipment method selection is optional.
+* You can place the order successfully.
+* You receive a gift card code to your mailbox.
 
 {% endinfo_block %}
 
 ### 11) Enable the gift card code usage process
 
-{% info_block infoBox "Info" %}
-
-In this step, you enable purchasing with existing gift cards in your project.
-
-{% endinfo_block %}
-
-Add the following plugins to your project:
+To enable purchasing with existing gift cards, add the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-|GiftCardCartCodePlugin  | Manages adding and removing gift card code from a quote. | - | Spryker\Client\GiftCard\Plugin\CartCode |
-| GiftCardBalanceValueProviderPlugin | Calculates the remaining balance of a gift card based on its usage history and returns its value. | - |Spryker\Zed\GiftCardBalance\Communication\Plugin |
-| BalanceTransactionLogPaymentSaverPlugin |Logs a gift card payment transaction.  | - | Spryker\Zed\GiftCardBalance\Communication\Plugin |
-| BalanceCheckerApplicabilityPlugin |  Calculates the remaining balance of a gift card based on its usage history and checks if the balance is positive.|-  | Spryker\Zed\GiftCardBalance\Communication\Plugin |
-| SendEmailToGiftCardUser | Sends usage email notification to the user of the gift card. | - |Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout |
-|GiftCardUsageMailTypePlugin | Provides a mail type for sending gift card usage information emails. | - |  Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail|
-|PriceToPayPaymentMethodFilterPlugin | Filters available payment methods based on the price-to-pay value of the quote. | - |Spryker\Zed\Nopayment\Communication\Plugin\Payment |
-| GiftCardPaymentMethodFilterPlugin | Filters blacklisted payment methods in case the quote contains a gift card to be purchased. |-  | Spryker\Zed\GiftCard\Communication\Plugin |
-| GiftCardPaymentMapKeyBuilderStrategyPlugin | Returns payment map key based on `PaymentTransfer.paymentProvider`, `PaymentTransfer.paymentMethod` and `PaymentTransfer.giftCard.idGiftCard`. |-  | Spryker\Zed\GiftCard\Communication\Plugin\SalesPayment |
+|GiftCardCartCodePlugin  | Manages adding and removing gift card code from a quote. | | Spryker\Client\GiftCard\Plugin\CartCode |
+| GiftCardBalanceValueProviderPlugin | Calculates the remaining balance of a gift card based on its usage history and returns its value. |  |Spryker\Zed\GiftCardBalance\Communication\Plugin |
+| BalanceTransactionLogPaymentSaverPlugin | Logs gift card payment transactions.  |  | Spryker\Zed\GiftCardBalance\Communication\Plugin |
+| BalanceCheckerApplicabilityPlugin |  Calculates the remaining balance of a gift card based on its usage history and checks if the balance is positive.|   | Spryker\Zed\GiftCardBalance\Communication\Plugin |
+| SendEmailToGiftCardUser | Sends a usage email notification to the user of the gift card. |  |Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Checkout |
+|GiftCardUsageMailTypePlugin | Provides a mail type for sending gift card usage information emails. |  |  Spryker\Zed\GiftCardMailConnector\Communication\Plugin\Mail|
+|PriceToPayPaymentMethodFilterPlugin | Filters available payment methods based on the price-to-pay value of the quote. |  |Spryker\Zed\Nopayment\Communication\Plugin\Payment |
+| GiftCardPaymentMethodFilterPlugin | Filters blacklisted payment methods if the quote contains a gift card to be purchased. | | Spryker\Zed\GiftCard\Communication\Plugin |
+| GiftCardPaymentMapKeyBuilderStrategyPlugin | Returns payment map key based on `PaymentTransfer.paymentProvider`, `PaymentTransfer.paymentMethod`, and `PaymentTransfer.giftCard.idGiftCard`. |    | Spryker\Zed\GiftCard\Communication\Plugin\SalesPayment |
 
 **src/Pyz/Client/CartCode/CartCodeDependencyProvider.php**
 
@@ -1140,14 +1134,14 @@ class SalesPaymentDependencyProvider extends SprykerSalesPaymentDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following happens:
-* You can activate a gift card using its generated code.
-* You can activate more than one gift card simultaneously using its generated codes.
-* You can't activate a gift card, the balance of which has been depleted.
-* During the checkout process, payment method selection is skipped in case the gift card covers the grand total.
-* Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.
+After completing the [frontend integration](#install-feature-frontend), make sure the following applies:
 
-Before verifying these points, you must complete the [feature frontend integration](#install-feature-frontend).
+* You can activate a gift card using its generated code.
+* You can activate more than one gift card simultaneously using the generated codes.
+* You can't activate a gift card with a depleted balance.
+* During the checkout process, payment method selection is skipped if the gift card covers the grand total.
+* Having made a successful purchase with the help of a gift card, you receive a gift card balance notification email.
+
 
 {% endinfo_block %}
 
@@ -1204,13 +1198,13 @@ $config[KernelConstants::DEPENDENCY_INJECTOR_YVES] = [
 
 {% info_block warningBox "Verification" %}
 
-Make sure to have the nopayment payment method successfully selected when you cover an entire order with a gift card.
+Make sure the `nopayment` payment method is selected when the grand total of an order is covered by a gift card.
 
 {% endinfo_block %}
 
 ### 3) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -1291,8 +1285,8 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-- Make sure that a valid gift card code can be added and removed from the cart by submitting the cart code form (activated by the previous step).
-- Make sure cart code can be applied with cart actions AJAX mode enabled.
+- Make sure a valid gift card code can be added and removed from cart by submitting the cart code form.
+- Make sure a cart code can be applied with the cart actions AJAX mode enabled.
 
 {% endinfo_block %}
 
@@ -1330,6 +1324,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the widget is displayed on the **Cart** and **Summary** pages of the checkout process.
+Make sure the code widget is displayed on the **Cart** and **Summary** pages of the checkout process.
 
 {% endinfo_block %}

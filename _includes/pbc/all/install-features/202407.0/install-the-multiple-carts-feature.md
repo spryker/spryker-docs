@@ -26,7 +26,7 @@ composer require spryker-feature/multiple-carts: "{{page.version}}" --update-wit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE              | EXPECTED DIRECTORY                    |
 |---------------------|---------------------------------------|
@@ -84,7 +84,7 @@ class MultiCartConfig extends SprykerMultiCartConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that only configured fields are saved in the customer's session.
+Make sure that only configured fields are saved in a customer's session.
 
 {% endinfo_block %}
 
@@ -124,15 +124,12 @@ Make sure that the following changes in transfer objects have been applied:
 
 ### 4) Import multicarts
 
-{% info_block infoBox "Info" %}
 
-The following imported entities will be used as carts in Spryker OS.
+1. Prepare data according to your requirements using our demo data:
 
-{% endinfo_block %}
 
-1. Prepare your data according to your requirements using our demo data:
-
-**vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv**
+<details>
+  <summary>vendor/spryker/spryker/multi-cart-data-import/data/import/multi_cart.csv</summary>
 
 ```yaml
 key,name,customer_reference,store,is_default,quote_data
@@ -159,13 +156,15 @@ quote-20,My Cart,DE--20,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 ```
 
+</details>
+
 | COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                                   |
 |--------------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| key                | ✓ | string    | quote-19                                                                                                                                       | THe key that identifies the quote to be referred in future imports. |
-| name               | ✓ | string    | >My Cart                                                                                                                                       | The name of the quote.                                                 |
-| customer_reference | ✓ | string    | DE--21                                                                                                                                         | The customer reference of the quote owner.                             |
-| store              | ✓ | string    | DE                                                                                                                                             | The store name that the quote relates to.                              |
-| is_default         | ✓ | int       | 1                                                                                                                                              | Thelag to show that the quote is default for the customer.           |
+| key                | ✓ | string    | quote-19        | Unique identifier used to refer to in other imports.  |
+| name               | ✓ | string    | >My Cart          | The name of the quote.                                                 |
+| customer_reference | ✓ | string    | DE--21            | Customer reference of the quote owner.                             |
+| store              | ✓ | string    | DE              | The store name that the quote is related to.                              |
+| is_default         | ✓ | int       | 1               | Thelag to show that the quote is default for the customer.           |
 | quote_data         | ✓ | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
 
 Register the following plugin to enable data import:

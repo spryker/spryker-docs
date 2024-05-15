@@ -40,7 +40,7 @@ There are a number of conditions that must be fulfilled to make your product sea
 * Active product variant is available for the current store. To learn how to check products' availability, see the [Availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html) section.
 * Product abstract and active variant have a price in the current locale. For more details, see the [Product Prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/prices-feature-overview/prices-feature-overview.html) section.
 * Product abstract has localized attributes. For the current locale, see the [Edit product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/edit-product-attributes.html) section.
-* Product has a URL in at least one locale of the current store. This data is only imported and cannot be changed in the backoffice.
+* Product has a URL in at least one locale of the current store, see [General section of the product abstract](https://docs.spryker.com/docs/pbc/all/product-information-management/202404.0/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html#editing-general-settings-of-an-abstract-product). 
 * Product is assigned to the current store, see [Product abstract edit General Section](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html#reference-information-editing-general-settings-of-an-abstract-product)
 
 {% info_block infoBox "Note" %}

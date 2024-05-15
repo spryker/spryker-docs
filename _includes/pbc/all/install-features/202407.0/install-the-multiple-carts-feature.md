@@ -511,7 +511,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 <details><summary markdown='span'>src/data/import/glossary.csv</summary>
 
@@ -627,11 +627,13 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 3) Enable controllers
+
+Enable the following controllers
 
 #### Router list
 
@@ -673,11 +675,11 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Verify `MultiCartPageRouteProviderPlugin` by opening the customer cart list page with a logged-in customer on—for example, `http://mysprykershop.com/multi-cart/`.
-
-Verify `MultiCartPageAsyncRouteProviderPlugin` after finishing the integration by clearing the cart with cart actions AJAX mode enabled.
-
-Verify `MultiCartPageRouteProviderPlugin` - after finishing the integration make sure the mini cart counter is updated after performing the cart actions with cart actions AJAX mode enabled.
+| PLUGIN | VERIFICATION |
+| - | - |
+| MultiCartPageRouteProviderPlugin | The cart list page is available for a logged-in customer, for example—at `http://mysprykershop.com/multi-cart/`. |
+| MultiCartPageAsyncRouteProviderPlugin | You can clear a cart with the cart actions AJAX mode enabled. |
+| MultiCartPageRouteProviderPlugin | After performing a cart action with the cart actions AJAX mode enabled, the mini cart counter is updated. This can be verified after you complete the installation. |
 
 {% endinfo_block %}
 
@@ -687,10 +689,10 @@ Verify `MultiCartPageRouteProviderPlugin` - after finishing the integration make
 
 | WIDGET                  | DESCRIPTION                                                  | NAMESPACE                               |
 |-------------------------|--------------------------------------------------------------|-----------------------------------------|
-| AddToMultiCartWidget    | Shows cart list for adding to cart functionality.            | SprykerShop\Yves\MultiCartWidget\Widget |
-| CartOperationsWidget    | Shows multi-cart functionalities in cart page.               | SprykerShop\Yves\MultiCartWidget\Widget |
-| MiniCartWidget          | Shows mini-cart in header.                                   | SprykerShop\Yves\MultiCartWidget\Widget |
-| MultiCartMenuItemWidget | Shows link to cart list page in customer account navigation. | SprykerShop\Yves\MultiCartWidget\Widget |
+| AddToMultiCartWidget    | Shows the cart list for adding items to cart.            | SprykerShop\Yves\MultiCartWidget\Widget |
+| CartOperationsWidget    | Shows multi-cart functionalities on the cart page.               | SprykerShop\Yves\MultiCartWidget\Widget |
+| MiniCartWidget          | Shows the mini cart in the header.                                   | SprykerShop\Yves\MultiCartWidget\Widget |
+| MultiCartMenuItemWidget | Shows a cart list navigation menu item. | SprykerShop\Yves\MultiCartWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -732,11 +734,11 @@ console frontend:yves:build
 
 Make sure the following widgets have been registered:
 
-| MODULE                  | TEST                                                                                                       |
+| MODULE                  | VERIFICATION                                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------------------|
-| AddToMultiCartWidget    | Go to the product detail page. A shopping cart list must be added to the cart form.                      |
-| CartOperationsWidget    | Go to the cart overview page and see a title with the cart name and the **Clear all** button.                  |
-| MiniCartWidget          | Mini-cart with all customer's carts should be in the header.                                               |
-| MultiCartMenuItemWidget | Go to the customer account overview page. A shopping cart link should be in the customer navigation links. |
+| AddToMultiCartWidget    | Go to the product details page. A shopping cart list is displayed in the cart form.                      |
+| CartOperationsWidget    | Go to the cart overview page. Make sure the cart title and the **Clear all** button are displayed.                  |
+| MiniCartWidget          | The minicart with all customer's carts is displayed the header.                                               |
+| MultiCartMenuItemWidget | Go to the customer account overview page. The carts list navigation menu item is displayed.  |
 
 {% endinfo_block %}

@@ -1,12 +1,17 @@
+This document describes how to upgrade the Locale module.
+
+## Prerequisites
+
+[Upgrade to PHP 8.1](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html)
+
+
+## Upgrading from version 3.* to version 4.0.0
+
 {% info_block warningBox %}
 
 Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
-
-This document describes how to upgrade the Locale module.
-
-## Upgrading from version 3.* to version 4.0.0
 
 In this version of the `Locale` module, we have enabled the configuration of locales per store in the database. The `Locale` module version 4 introduces the `spy_locale_store` database table to persist stores-locales in Zed. We've also added the `fk_locale` column to the `spy_store` table for saving default locales per store. For more details about the changes, see the [Locale module release page](https://github.com/spryker/locale/releases).
 

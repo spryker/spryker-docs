@@ -121,17 +121,8 @@ Request sample: retrieve a category node
 ```
 </details>
 
-<a name="category-nodes-response-attributes"></a>
+{% include /pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md -->
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| nodeId | String | Category node ID. |
-| name | String | Name of category associated with the node. |
-| metaTitle | String | Meta title of the category. |
-| metaKeywords | String | Meta keywords of the category. |
-| metaDescription | String | Meta description of the category. |
-| isActive | Boolean | Boolean to see, if the category is active. |
-| order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node). |
 
 ## Possible errors
 

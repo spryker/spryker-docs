@@ -181,9 +181,9 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
          $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
              //...
              $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
-             // These two commands will be also supported soon by ACP Stripe app.
              $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
              $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
+             $commandCollection->add(new RefundCommandPlugin(), 'Payment/Refund/Confirm');
 
              return $commandCollection;
         });

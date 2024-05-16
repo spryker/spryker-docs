@@ -1,5 +1,9 @@
 This document describes how to upgrade the Currency module.
 
+## Prerequisites
+
+[Upgrade to PHP 8.1](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html)
+
 ## Upgrading from version 3.* to version 4.0.0
 
 {% info_block warningBox %}

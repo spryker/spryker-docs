@@ -5,7 +5,7 @@ template: concept-topic-template
 last_updated: Nov 21, 2023
 ---
 
-To inject the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html) feature into the [Back office](/docs/pbc/all/back-office/{{page.version}}/spryker-core-back-office-feature-overview.html) the following modules are used:
+To inject the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html) feature into the [Back office](/docs/pbc/all/back-office/{{page.version}}/base-shop/spryker-core-back-office-feature-overview.html) the following modules are used:
 
 | MODULE | DESCRIPTION |
 | -------------------- | ---------- |

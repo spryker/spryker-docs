@@ -97,7 +97,7 @@ Request sample: retrieve customers
 ```
 </details>
 
-See [Create a customer](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html#create-a-customer-response-attributes) to learn about the response attributes.
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
 
 ## Retrieve a customer
 

@@ -22,7 +22,7 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
 ---
 
-This doc describes how to define [global thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.
+This doc describes how to define [global thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.
 
 ## Prerequisites
 

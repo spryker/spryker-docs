@@ -77,7 +77,7 @@ ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGr
 
 {% info_block infoBox "Discount Calculation" %}
 
-Discount calculation is a separate topic and is explained in the [Discount](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html) article.
+Discount calculation is a separate topic and is explained in the [Discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/promotions-discounts-feature-overview.html) article.
 
 {% endinfo_block %}
 

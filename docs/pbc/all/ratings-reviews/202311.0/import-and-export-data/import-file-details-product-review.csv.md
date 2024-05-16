@@ -15,7 +15,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_review.csv` file to configure [Product Review](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_review.csv` file to configure [Product Review](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 

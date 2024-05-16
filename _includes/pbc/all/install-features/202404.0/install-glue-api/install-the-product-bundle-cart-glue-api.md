@@ -11,7 +11,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Product Bundles |{{page.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-feature-integration.html)|
-| Cart |{{page.version}}| [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Cart |{{page.version}}| [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)|
 
 ## 1) Install the required modules
 
@@ -213,5 +213,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Products | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)|
+| Products | ✓ | [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
+| Product Bundles |✓ |[Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)|

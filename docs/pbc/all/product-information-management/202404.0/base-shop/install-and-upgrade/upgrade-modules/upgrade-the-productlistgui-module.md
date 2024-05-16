@@ -6,16 +6,6 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-product-list-gui
 originalArticleId: 5cc810fe-c85d-40f2-984e-497580f71557
 redirect_from:
-  - /2021080/docs/migration-guide-product-list-gui
-  - /2021080/docs/en/migration-guide-product-list-gui
-  - /docs/migration-guide-product-list-gui
-  - /docs/en/migration-guide-product-list-gui
-  - /v4/docs/migration-guide-product-list-gui
-  - /v4/docs/en/migration-guide-product-list-gui
-  - /v5/docs/migration-guide-product-list-gui
-  - /v5/docs/en/migration-guide-product-list-gui
-  - /v6/docs/migration-guide-product-list-gui
-  - /v6/docs/en/migration-guide-product-list-gui
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productlistgui.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlistgui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlistgui.html

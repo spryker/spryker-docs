@@ -8,14 +8,14 @@ Follow the steps below to install feature core.
 
 Install the required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Company Account | {{page.version}} | [Install the Company Account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html) |
-| Customer Account ManagemenT | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Prices | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html) |
-| Product | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
+|-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Cart                        | {{page.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.md.html)                                                    |
+| Prices                      | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
+| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
 
 
 ### 1) Install the required modules
@@ -54,33 +54,33 @@ Make sure the following modules have been installed:
 ```xml
 <?xml version="1.0"?>
 <database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		name="zed"
-		xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
-		namespace="Orm\Zed\ShoppingList\Persistence"
-		package="src.Orm.Zed.ShoppingList.Persistence">
+          name="zed"
+          xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\ShoppingList\Persistence"
+          package="src.Orm.Zed.ShoppingList.Persistence">
 
-	<table name="spy_shopping_list">
-		<behavior name="event">
-			<parameter name="spy_shopping_list_all" column="*"/>
-		</behavior>
+    <table name="spy_shopping_list">
+        <behavior name="event">
+            <parameter name="spy_shopping_list_all" column="*"/>
+        </behavior>
     </table>
 
-	<table name="spy_shopping_list_item">
-		<behavior name="event">
-			<parameter name="spy_shopping_list_item_all" column="*"/>
-		</behavior>
+    <table name="spy_shopping_list_item">
+        <behavior name="event">
+            <parameter name="spy_shopping_list_item_all" column="*"/>
+        </behavior>
     </table>
 
-	<table name="spy_shopping_list_company_user">
-		<behavior name="event">
-			<parameter name="spy_shopping_list_company_user_all" column="*"/>
-		</behavior>
+    <table name="spy_shopping_list_company_user">
+        <behavior name="event">
+            <parameter name="spy_shopping_list_company_user_all" column="*"/>
+        </behavior>
     </table>
 
-	<table name="spy_shopping_list_company_business_unit">
-		<behavior name="event">
-			<parameter name="spy_shopping_list_company_business_unit_all" column="*"/>
-		</behavior>
+    <table name="spy_shopping_list_company_business_unit">
+        <behavior name="event">
+            <parameter name="spy_shopping_list_company_business_unit_all" column="*"/>
+        </behavior>
     </table>
 </database>
 ```
@@ -89,16 +89,17 @@ Make sure the following modules have been installed:
 
 ```xml
 <?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
-	   namespace="Orm\Zed\ShoppingListStorage\Persistence"
-	   package="src.Orm.Zed.ShoppingListStorage.Persistence">
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed"
+          xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
+          namespace="Orm\Zed\ShoppingListStorage\Persistence"
+          package="src.Orm.Zed.ShoppingListStorage.Persistence">
 
-	<table name="spy_shopping_list_customer_storage">
-		<behavior name="synchronization">
-			<parameter name="queue_pool" value="synchronizationPool"/>
+    <table name="spy_shopping_list_customer_storage">
+        <behavior name="synchronization">
+            <parameter name="queue_pool" value="synchronizationPool"/>
         </behavior>
-	</table>
-    </database>
+    </table>
+</database>
 ```
 
 2. Apply database changes and generate entity and transfer changes:
@@ -185,7 +186,7 @@ Trigger the following methods and make sure the prior events have been triggered
 
 ### 3) Add translations
 
-1. Append the glossary for the feature:
+1. Append the glossary:
 
 **src/data/import/glossary.csv**
 
@@ -228,7 +229,7 @@ This step publishes tables on change (create, edit, delete) to the `spy_shopping
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListStorageEventSubscriber | Registers listeners that are responsible for publishing shopping list data based on changes to shopping lists or related entities. |  | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber |
+| ShoppingListStorageEventSubscriber | Registers the listeners that are responsible for publishing shopping list data based on changes to shopping lists and related entities. |       | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Event\Subscriber |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -252,9 +253,10 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Register synchronization queue and synchronization error queue:
+2. Register synchronization queue and synchronization error queue:
 
-**src/Pyz/Client/RabbitMq/RabbitMqConfig.php**
+<details>
+	<summary>src/Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php
@@ -338,11 +340,13 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }
 ```
 
+</details>
+
 #### Configure message processors
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| SynchronizationStorageQueueMessageProcessorPlugin | Configures all Shopping List messages to sync with Redis storage, and marks messages as failed in case of error. | None | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
+| SynchronizationStorageQueueMessageProcessorPlugin | Configures all shopping list messages to sync with Redis storage and marks messages as failed in case of an error. |           | Spryker\Zed\Synchronization\Communication\Plugin\Queue |
 
 **src/Pyz/Zed/Queue/QueueDependencyProvider.php**
 
@@ -376,7 +380,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListSynchronizationDataPlugin | Allows populating empty storage table with data. | None | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Synchronization |
+| ShoppingListSynchronizationDataBulkPlugin | Populates empty storage table with data. |           | Spryker\Zed\ShoppingListStorage\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -404,7 +408,8 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Verify if `console sync:data --help` has `shopping_list_customer` as an available resource in the list. Make sure that `sync.storage.shopping_list` and `sync.storage.shopping_list.error` queues get created after at least one message is pushed through Spryker into any RabbitMQ queue.
+- Make sure `console sync:data --help` has `shopping_list_customer` as an available resource in the list.
+- Make sure that, after at least one message is pushed through Spryker into any RabbitMQ queue, `sync.storage.shopping_list` and `sync.storage.shopping_list.error` queues are created.
 
 {% endinfo_block %}
 
@@ -418,7 +423,7 @@ Make sure when shopping lists are exported or created, updated, deleted manually
 
 {% endinfo_block %}
 
-**Example Expected Data Fragment**
+Example expected data fragment:
 
 ```json
 {
@@ -429,11 +434,11 @@ Make sure when shopping lists are exported or created, updated, deleted manually
 
 ### 5) Import data
 
-Add infrastructural data:
+1. Add infrastructural data:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListPermissionsInstallerPlugin | Installs infrastructural shopping list permissions and permission groups. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
+| ShoppingListPermissionsInstallerPlugin | Installs infrastructural shopping list permissions and permission groups. |  | Spryker\Zed\ShoppingList\Communication\Plugin |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 
@@ -459,7 +464,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 }
 ```
 
-Run the following console command to execute registered installer plugins and install infrastructural data:
+2. Execute registered installer plugins and install infrastructural data:
 
 ```bash
 console setup:init-db
@@ -467,19 +472,16 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the permission groups are added to the `spy_shoppping_list_permission_group` table and the permissions are added to the `spy_permission table`; the relations between them are added to the `spy_shopping_list_permission_group_to_permission` table.
+Make sure the following occurred in the database:
+* Permission groups have been added to the `spy_shoppping_list_permission_group` table.
+* Permissions have been added to the `spy_permission`
+* The relations between them have been added to the `spy_shopping_list_permission_group_to_permission` table.
 
 {% endinfo_block %}
 
 #### Import shopping lists
 
-{% info_block infoBox "Info" %}
-
-The following imported entities will be used as shopping lists in Spryker OS.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/shopping-list-data-import/data/import/shopping_list.csv**
 
@@ -492,15 +494,15 @@ Workstations,WorkstationsDE--21
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key| ✓ | string | Laptops | Key that will identify the shopping list to be referred to in future imports. |
-| name | ✓ | string | Laptops | Name of the shopping list. |
-| owner_customer_reference | ✓ | string | DE--21 | Customer reference of the shopping list owner. |
+| shopping_list_key        | ✓        | string    | Laptops      | This identifier is used to refer to a shopping list in other imports. |
+| name                     | ✓        | string    | Laptops      | Name of the shopping list.                                                    |
+| owner_customer_reference | ✓        | string    | DE--21       | Customer reference of the shopping list owner.       
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListDataImportPlugin | Imports demo shopping lists into the database. | None | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
+| ShoppingListDataImportPlugin | Imports demo shopping lists into the database. |  | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -523,7 +525,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import shopping-list
@@ -537,13 +539,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 #### Import shopping list items
 
-{% info_block infoBox "Information" %}
-
-The following imported entities will be used as shopping list items in Spryker OS.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/shopping-list-data-import/data/import/shopping_list_item.csv**
 
@@ -583,13 +579,13 @@ Workstations,117_30585828,1
 Workstations,129_30706500,1
 ```
 
-| COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
-| --- | --- | --- | --- | --- |
-| shopping_list_key | ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
-| product_sku | ✓ | string | 187_26306352 | SKU of the concrete product variant that will be added to the shopping list. |
-| quantity | ✓ | integer | 3 | Number of products that will be added to the shopping list. |
+| COLUMN            | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                                                             |
+|-------------------|----------|-----------|--------------|------------------------------------------------------------------------------|
+| shopping_list_key | ✓        | string    | Laptops      | Identifier of a shopping list to add an item to.        |
+| product_sku       | ✓        | string    | 187_26306352 | SKU of a concrete product to add as a shopping list item. |
+| quantity          | ✓        | integer   | 3            | Number of products to add.             |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -616,7 +612,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import shopping-list-item
@@ -630,13 +626,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 #### Import shopping list company users
 
-{% info_block infoBox "Info" %}
-
-The following imported entities will be used as shopping lists being directly shared with specific company users in Spryker OS.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
+1. Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_user.csv**
 
@@ -654,15 +644,15 @@ Workstations,Spryker--6,READ_ONLY
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key | ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
-| company_user_key | ✓ | string | Spryker--7 | Key that will identify the company user that the shopping list is shared with. |
-| permission_group_name | ✓ | integer | READ_ONLY | Permission group that will be assigned to the shared company user. |
+| shopping_list_key     | ✓        | string    | Laptops      | Defines a shopping list to assign to a company user.    |
+| company_user_key      | ✓        | string    | Spryker--7   | Defines a company user to share a shopping list with. |
+| permission_group_name | ✓        | integer   | READ_ONLY    | Defines a company user's permissions to access a shopping list.      |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListCompanyUserDataImportPlugin | Imports demo shopping lists sharing data with company users. | Assumes that the shopping list keys, company user keys, and the permission groups exist in the database. | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
+| ShoppingListCompanyUserDataImportPlugin | Imports the demo data about shopping lists shared with company users. | Assumes that the shopping list keys, company user keys, and the permission groups exist in the database. | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -685,7 +675,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 
 ```bash
@@ -700,13 +690,8 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 #### Import shopping list company business units
 
-{% info_block infoBox "Info" %}
+1. Prepare your data according to your requirements using our demo data:
 
-The following imported entities will be used as shopping lists being directly shared with specific company business units in Spryker OS.
-
-{% endinfo_block %}
-
-Prepare your data according to your requirements using our demo data:
 
 **vendor/spryker/shopping-list-data-import/data/import/shopping_list_company_business_unit.csv**
 
@@ -719,15 +704,15 @@ Workstations,spryker_systems_Berlin,READ_ONLY
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| shopping_list_key| ✓ | string | Laptops | Key that will identify the shopping list to add data to. |
-| business_unit_key | ✓ | string | spryker_systems_HR | Key that will identify the company business unit that the shopping list is shared with. |
-| permission_group_name | ✓ | integer | FULL_ACCESS | Permission group that will be assigned to the shared company business unit. |
+| shopping_list_key     | ✓        | string    | Laptops            | Defines a shopping list to assign to a business unit.                                |
+| business_unit_key     | ✓        | string    | spryker_systems_HR | Defines a business unit to share a shopping list with. |
+| permission_group_name | ✓        | integer   | FULL_ACCESS        | Defines a business unit's permissions to access a shopping list.             |
 
-Register the following plugin to enable data import:
+2. Register the following plugin to enable data import:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ShoppingListCompanyBusinessUnitDataImportPlugin | Imports demo shopping lists sharing data with company business units. | Assumes that the shopping list keys, company business unit keys, and the permission groups exist in the database. | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
+| ShoppingListCompanyBusinessUnitDataImportPlugin | Imports the demo data of shopping lists shared with company business units. | Assumes that the shopping list keys, company business unit keys, and the permission groups exist in the database. | Spryker\Zed\ShoppingListDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -750,7 +735,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Import data:
+3. Import data:
 
 ```bash
 console data:import shopping-list-company-business-unit
@@ -768,19 +753,19 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ReadShoppingListPermissionPlugin | Provides the ability to read a certain set of shopping lists on the Client side using twig function `can()`. | None | Spryker\Client\ShoppingList\Plugin |
-| WriteShoppingListPermissionPlugin | Provides the ability to write to a certain set of shopping lists on the Client side using twig function `can()`. | None | Spryker\Client\ShoppingList\Plugin |
-| ReadShoppingListPermissionPlugin | Provides the ability to read a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
-| WriteShoppingListPermissionPlugin | Provides the ability to write to a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
-| ShoppingListPermissionStoragePlugin | Retrieves a set of shopping lists permissions related to a certain company user. | None | Spryker\Zed\ShoppingList\Communication\Plugin |
+| ReadShoppingListPermissionPlugin | Provides the ability to read a certain set of shopping lists on the Client side using twig function `can()`. |  | Spryker\Client\ShoppingList\Plugin |
+| WriteShoppingListPermissionPlugin | Provides the ability to write to a certain set of shopping lists on the Client side using twig function `can()`. |  | Spryker\Client\ShoppingList\Plugin |
+| ReadShoppingListPermissionPlugin | Provides the ability to read a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. |  | Spryker\Zed\ShoppingList\Communication\Plugin |
+| WriteShoppingListPermissionPlugin | Provides the ability to write to a certain set of shopping lists on the Zed side using `PermissionAwareTrait`. |  | Spryker\Zed\ShoppingList\Communication\Plugin |
+| ShoppingListPermissionStoragePlugin | Retrieves a set of shopping lists permissions related to a certain company user. |  | Spryker\Zed\ShoppingList\Communication\Plugin |
 | ShoppingListPermissionCustomerExpanderPlugin | Expands `CustomerTransfer::PERMISSIONS` data with a set of permissions that allow the customer to read or write to shopping lists. | Expects `CustomerTransfer` to contain `CompanyUserTransfer` with `idCompanyUser`.<br>(hint: `CompanyUser.CustomerTransferCompanyUserExpanderPlugin`) | Spryker\Zed\ShoppingList\Communication\Plugin |
-| ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin | Checks if the product concrete within the shopping list item is active. | None) | Spryker\Zed\ShoppingList\Communication\Plugin |
-| ShoppingListItemNoteToItemCartNoteMapperPlugin | Maps shopping list item notes to cart item notes when creating a cart out of a shopping list. | None | Spryker\Client\ShoppingListNote\Plugin |
-| ItemCartNoteToShoppingListItemNoteMapperPlugin | Maps cart item notes to shopping list notes when creating shopping list out of a cart. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |
-| ShoppingListItemNoteBeforeDeletePlugin | Deletes a shopping list item note before deleting a shopping list item. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |
-| ShoppingListItemNoteExpanderPlugin |Expands `ShoppingListItemTransfer` with `ShoppingListItemNoteTransfer`. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |
-| ShoppingListItemNotePostSavePlugin |Saves a shopping list item note when saving a shopping list item. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |
-| ShoppingListCollectionOutdatedPlugin |Used to determine if the shopping list collection needs to be updated, according to the last update date. | None | Spryker\Zed\ShoppingListNote\Communication\Plugin |
+| ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin | Checks if the product concrete within the shopping list item is active. | ) | Spryker\Zed\ShoppingList\Communication\Plugin |
+| ShoppingListItemNoteToItemCartNoteMapperPlugin | Maps shopping list item notes to cart item notes when creating a cart out of a shopping list. |  | Spryker\Client\ShoppingListNote\Plugin |
+| ItemCartNoteToShoppingListItemNoteMapperPlugin | Maps cart item notes to shopping list notes when creating shopping list out of a cart. |  | Spryker\Zed\ShoppingListNote\Communication\Plugin |
+| ShoppingListItemNoteBeforeDeletePlugin | Deletes a shopping list item note before deleting a shopping list item. |  | Spryker\Zed\ShoppingListNote\Communication\Plugin |
+| ShoppingListItemNoteExpanderPlugin |Expands `ShoppingListItemTransfer` with `ShoppingListItemNoteTransfer`. |  | Spryker\Zed\ShoppingListNote\Communication\Plugin |
+| ShoppingListItemNotePostSavePlugin |Saves a shopping list item note when saving a shopping list item. |  | Spryker\Zed\ShoppingListNote\Communication\Plugin |
+| ShoppingListCollectionOutdatedPlugin |Used to determine if the shopping list collection needs to be updated, according to the last update date. |  | Spryker\Zed\ShoppingListNote\Communication\Plugin |
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
 
@@ -892,8 +877,8 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 	}
 }
 ```
-
-**src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
+<details>
+<summary>src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -950,6 +935,8 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 }
 ```
 
+</details>
+
 **src/Pyz/Client/ShoppingListSession/ShoppingListSessionDependencyProvider.php**
 
 ```php
@@ -976,41 +963,54 @@ class ShoppingListSessionDependencyProvider extends SprykerShoppingListSessionDe
 
 {% info_block warningBox "Verification" %}
 
-Share User A's shopping list with User B, then change the shopping list from User A's profile; User B should get the updated shopping list. Also, make sure that sharing shopping lists have the correct permission group (the ones you had in your installation).
+1. Share User A's shopping list with User B.
+2. Change the shopping list from User A's profile.
+ 	Make sure User B can see the updates in this shopping list.
+
+Also, make sure shared shopping lists have the permission group you've configured.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that shopping list item notes are being saved when saving shopping list item and deleted when deleting shopping list item. Also, make sure that shopping list item notes are transferred to cart item notes when creating a cart from a shopping list.
+Make sure the following applies:
+* When saving a shopping list item, shopping list item notes are also saved.
+* When deleting a shopping list item, shopping list item notes are also deleted.
+
+Also, make sure that shopping list item notes are transferred to cart item notes when creating a cart from a shopping list.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that shopping list collection in session and in storage is always up-to-date. You can check this by changing the session shopping list collection 'updated_at' value to be older than one in shopping list customer storage.
+Make sure that shopping list collection in session and in storage is always up to date. You can check this by changing
+the `updated_at` value of the session shopping list collection to be older than the one in the shopping list customer storage.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
-To make sure the ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin is setup correctly, make sure that non-active products can't be added to the shopping list.
+To verify that `ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin` is set up correctly, make sure that
+non-active products can't be added to the shopping list.
 
 {% endinfo_block %}
 
 ## Install feature frontend
 
+Take the following steps to install the feature frontend.
+
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Install the following required features:
 
-| NAME | VERSION |
-| --- | --- |
-| Spryker Core | {{page.version}} |
-| Company Account | {{page.version}} |
-| Multiple Carts | {{page.version}} |
-| Product | {{page.version}} |
-| Customer Account Management | {{page.version}} |
+| NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
+|-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Multiple Carts              | {{page.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md)                                                           |
+| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
 
 ### 1) Install the required modules
 
@@ -1024,17 +1024,17 @@ composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with
 
 Make sure the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| ShoppingListPage|vendor/spryker-shop/shopping-list-page |
-| ShoppingListWidget | vendor/spryker-shop/shopping-list-widget |
+| MODULE                 | EXPECTED DIRECTORY                            |
+|------------------------|-----------------------------------------------|
+| ShoppingListPage       | vendor/spryker-shop/shopping-list-page        |
+| ShoppingListWidget     | vendor/spryker-shop/shopping-list-widget      |
 | ShoppingListNoteWidget | vendor/spryker-shop/shopping-list-note-widget |
 
 {% endinfo_block %}
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 <details open>
 <summary markdown='span'>src/data/import/glossary.csv</summary>
@@ -1243,7 +1243,7 @@ product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 ```
 </details>
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -1255,17 +1255,14 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 3) Enable controllers
-
-#### Router list
+### 3) Set up router plugins
 
 Register the following route provider plugins:
 
-| PROVIDER                                   | NAMESPACE                                         |
-|--------------------------------------------|---------------------------------------------------|
-| ShoppingListPageRouteProviderPlugin        | SprykerShop\Yves\ShoppingListWidget\Plugin\Router |
-| ShoppingListWidgetRouteProviderPlugin      | SprykerShop\Yves\ShoppingListWidget\Plugin\Router |
-| ShoppingListWidgetAsyncRouteProviderPlugin | SprykerShop\Yves\ShoppingListWidget\Plugin\Router |
+| PLUGIN                                | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                                |
+|---------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
+| ShoppingListPageRouteProviderPlugin   | Adds the shopping list routes to the Yves application.        |           | \SprykerShop\Yves\ShoppingListPage\Plugin\Router                                         |
+| ShoppingListWidgetRouteProviderPlugin | Adds the shopping list widget routes to the Yves application. |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\Router\ShoppingListWidgetRouteProviderPlugin |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -1297,26 +1294,93 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can see the list of shopping lists by opening the `https://mysprykershop.com/shopping-list` page.
+Make sure shopping lists are available at `https://mysprykershop.com/shopping-list`.
 
-After finishing the integration make sure you can perform the actions as add, remove, etc.
+After completing the installation, make sure you can perform shopping list actions like add or remove.
 
-Make sure you can add items to a shopping list from Cart page with cart actions AJAX mode enabled.
+Make sure you can add items to a shopping list from the Cart page with the cart actions AJAX mode enabled.
 
 {% endinfo_block %}
 
-### 4) Set up widgets
 
-Enable global widgets:
+### 4) Set up quick order plugin
 
-| WIDGET | DESCRIPTION | NAMESPACE |
-| --- | --- | --- |
-| ShoppingListNavigationMenuWidget | Shows a top-navigation sub-menu containing all of the current logged-in customer Shopping Lists. | SprykerShop\Yves\ShoppingListWidget\Widget |
-| ShoppingListMenuItemWidget| Shows customer Shopping Lists in the customer account navigation side menu. | SprykerShop\Yves\ShoppingListWidget\Widget|
-| AddToShoppingListWidget| Allows a customer to be able to add a product with an SKU to one of the Shopping Lists they have write access to. | SprykerShop\Yves\ShoppingListWidget\Widget |
-| ShoppingListItemNoteWidget | Allows a customer to create/save/remove notes from the Shopping List items. | SprykerShop\Yves\ShoppingListNoteWidget\Widget|
-| ShoppingListDismissWidget | Allows a customer to dismiss the Shopping List that was shared. | SprykerShop\Yves\ShoppingListPage\Widget |
-| ShoppingListSubtotalWidget | Allows a customer to see the Shopping List subtotal price. | SprykerShop\Yves\ShoppingListWidget\Widget |
+| PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                  |
+|-------------------------------------------------|----------------------------------------------------------|---------------|------------------------------------------------------------|
+| ShoppingListQuickOrderFormHandlerStrategyPlugin | Adds products to shopping lists using the quick order feature. |           | \SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\QuickOrderPage;
+
+use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
+use SprykerShop\Yves\ShoppingListWidget\Plugin\QuickOrderPage\ShoppingListQuickOrderFormHandlerStrategyPlugin;
+
+class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderFormHandlerStrategyPluginInterface>
+     */
+    protected function getQuickOrderFormHandlerStrategyPlugins(): array
+    {
+        return [
+            new ShoppingListQuickOrderFormHandlerStrategyPlugin(), #ShoppingListFeature
+        ];
+    }
+
+}
+```
+
+### 5) Set up the shopping list note form plugin
+
+| PLUGIN                                 | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                       |
+|----------------------------------------|---------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
+| ShoppingListItemNoteFormExpanderPlugin | Adds the `ShoppingListItemNote` form fields to builder using `ShoppingListItemNoteForm`. |           | SprykerShop\Yves\ShoppingListNoteWidget\Plugin\ShoppingListPage |
+
+**Yves/ShoppingListPage/ShoppingListPageDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShoppingListPage;
+
+use SprykerShop\Yves\ShoppingListPage\ShoppingListPageDependencyProvider as SprykerShoppingListPageDependencyProvider;
+use SprykerShop\Yves\ShoppingListNoteWidget\Plugin\ShoppingListPage\ShoppingListItemNoteFormExpanderPlugin;
+
+class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependencyProvider
+{
+
+    /**
+     * @return array<\SprykerShop\Yves\ShoppingListPageExtension\Dependency\Plugin\ShoppingListItemFormExpanderPluginInterface>
+     */
+    protected function getShoppingListItemFormExpanderPlugins(): array
+    {
+        return [
+            new ShoppingListItemNoteFormExpanderPlugin()
+        ];
+    }
+
+}
+```
+
+
+### 6) Set up widgets
+
+1. Enable global widgets:
+
+| WIDGET                           | DESCRIPTION                                                                                                       | NAMESPACE                                      |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| ShoppingListNavigationMenuWidget | Shows a top navigation submenu containing all of the current logged-in customer shopping lists.                  | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| ShoppingListMenuItemWidget       | Shows customer shopping lists in the customer account navigation side menu.                                       | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| AddToShoppingListWidget          | Enables customers to add a product with an SKU to one of the shopping lists they have write access to. | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| ShoppingListItemNoteWidget       | Enables customers to create, save, and remove notes from shopping list items.                                       | SprykerShop\Yves\ShoppingListNoteWidget\Widget |
+| ShoppingListDismissWidget        | Enables customers to dismiss a shopping list that was shared.                                                   | SprykerShop\Yves\ShoppingListPage\Widget       |
+| ShoppingListSubtotalWidget       | Enables customers to see the shopping list subtotal price.                                                        | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| CreateShoppingListFromCartWidget | Enables customers to move products from cart to a shopping list.                                         | SprykerShop\Yves\ShoppingListWidget\Widget     |
+| AddItemsToShoppingListWidget     | Displays available shopping lists.                                                                                | SprykerShop\Yves\ShoppingListWidget\Widget     |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1363,7 +1427,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% endinfo_block %}
 
-Run the following command to enable Javascript and CSS changes:
+2. Enable Javascript and CSS changes:
 
 ```bash
 console frontend:yves:build
@@ -1371,15 +1435,17 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets were registered:
+Make sure the following widgets have been registered:
 
-| MODULE | TEST |
-| --- | --- |
-| AddToShoppingListWidget | Go to the product detail page and add a product to the Shopping List. |
-| ShoppingListItemNoteWidget | Go to the Shopping List and save a note to the item. |
-| ShoppingListMenuItemWidget | Log in with a customer having a company account that has a Shopping List and you should see the Shopping List Widget in the top navigation bar. |
-| ShoppingListNavigationMenuWidget | Log in with a customer having a company account and go to the My Account page. The Shopping List side navigation should be displayed on the left side. |
-| ShoppingListDismissWidget | Go to the Shopping List Page with a shared Shopping List and make sure that the action block contains the **Dismiss** button. |
-| ShoppingListSubtotalWidget | Log in as a company user, create a Shopping List and add any product to it, Subtotal price should be shown of View / Edit Shopping List pages. |
+| MODULE                           | VERIFICATION                                                                                                                                                        |
+|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| AddToShoppingListWidget          | Go to the product details page and add a product to a shopping list.                                                                                       |
+| ShoppingListItemNoteWidget       | Go to a shopping list and save a note to the item.                                                                                                        |
+| ShoppingListMenuItemWidget       | Log in with a customer who's part of a company account that has a shopping list. The Shopping List Widget should be displayed in the top navigation bar.             |
+| ShoppingListNavigationMenuWidget | Log in with a customer who's part of a company account and go to the **My Account** page. The Shopping List side navigation should be displayed on the left side.      |
+| ShoppingListDismissWidget        | Share a shopping list with a customer. Log in as the customer you've shared the list with. Go to the Shopping List Page with and make sure that the action block contains the **Dismiss** button.                               |
+| ShoppingListSubtotalWidget       | Log in as a company user. Create a Shopping List and add any product to it. Subtotal price should be displayed on *View Shopping List* and *Edit Shopping List* pages.              |
+| CreateShoppingListFromCartWidget | On the cart page in the **Save cart to a shopping list** form, write the name of a shopping list and click **Add to shopping list**. |
+| AddItemsToShoppingListWidget     | The list of the available shopping lists should be displayed to the company user. |
 
 {% endinfo_block %}

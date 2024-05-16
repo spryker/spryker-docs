@@ -1,22 +1,18 @@
 This document describes how to install the Marketplace Merchant Commission feature.
 
-## Install feature core
-
-Follow the steps below to install the Marketplace Merchant feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Merchant     | {{page.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)          |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Merchant     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)          |
 
-### 1) Install the required modules
+## 1) Install the required modules
 
 ```bash
-composer require spryker-feature/marketplace-merchant-commission:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-commission:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -30,7 +26,7 @@ Make sure the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up database schema and transfer objects
+## 2) Set up database schema and transfer objects
 
 1. Apply database changes, generate entity and transfer changes:
 
@@ -82,11 +78,7 @@ Make sure the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Import data
-
-To import data follow the steps in the following sections.
-
-#### Import merchant commission data
+## 3) Import data
 
 1. Prepare merchant commission data according to your requirements using the demo data:
 
@@ -178,7 +170,7 @@ mc4,AT
 | merchant_commission_key | ✓        | string    | mc4          | Unique key of the merchant commission. |
 | store_name              | ✓        | string    | DE           | Name of the store.                     |
 
-6. Enable the data imports per your configuration file—for example:
+6. Enable the data imports per your configuration. Example:
 
 **data/import/local/full_EU.yml**
 

@@ -1,7 +1,7 @@
 ---
 title: Vertex
 description: Vertex technology partner
-last_updated: August 7, 2023
+last_updated: May 17, 2024
 template: concept-topic-template
 related:
   - title: Install Vertex
@@ -38,11 +38,10 @@ The Spryker Vertex app offers the following features that are worth considering 
 To start using the Spryker Vertex app in your project, you need to do the following:
 
 1. Since the Vertex integration in Spryker is built on Spryker’s App Composition Platform (ACP) as an ACP application, make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-2. Make sure you use NET prices in your project, as Vertex app only works with NET prices. GROSS prices aren't supported.
-3. Get an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
-4. Install the Vertex app. See [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html) for details.
-5. Configure the Vertex app. See [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html) for details.
-6. Ensure that the address form in your Storefront has the required fields in that country. For example, the `State` should be added in the US, and the `Province` should be added in Canada.
+2. Get an account with [Vertex](https://www.vertexinc.com/). Contact the Spryker Support team or your Customer Success Manager if you need support getting a Vertex account.
+3. Install the Vertex app. See [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html) for details.
+4. Configure the Vertex app. See [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html) for details.
+5. Ensure that the address form in your Storefront has the required fields in that country. For example, the `State` should be added in the US, and the `Province` should be added in Canada.
 
 Once you have installed and configured the Vertex app, the taxes will be calculated by Vertex during the checkout process. See this video to understand the experience for the end user:
 
@@ -54,9 +53,14 @@ Once you have installed and configured the Vertex app, the taxes will be calcula
 
 By default, the following data is sent to Vertex for tax calculation:
 
- - Shipping address
- - Product SKU
+ - User's shipping address
+ - User's billing address
  - Warehouse address that also includes the Merchant warehouse address for a Marketplace model
+ - Product SKUs
+ - Product prices
+ - Discounts
+ - Shipping costs
+
 
 {% info_block infoBox "Company code" %}
 

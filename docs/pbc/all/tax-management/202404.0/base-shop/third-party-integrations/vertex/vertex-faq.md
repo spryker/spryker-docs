@@ -2,7 +2,7 @@
 title: Vertex FAQ
 description: FAQ about Vertex 
 template: concept-topic-template
-last_updated: Nov 17, 2023
+last_updated: May 17, 2024
 ---
 
 **What is a Product Class Code for Vertex, and how can we use it?**
@@ -24,3 +24,9 @@ We do not support freight shipment in terms of big packaging support, but if itâ
 
 The Spryker OMS transition command has to be used as an execution point to send a full order with all existing and custom fields provided by the project. The results will be visible in the Invoice Tax Details report.
 
+
+**How does the Vertex app handle tax calculation for different countries?**
+
+The Vertex app calculates taxes based on the tax rules and rates of the country where the product is shipped. The Vertex app uses the shipping address to determine the tax rate.
+In some cases, for example when a seller is located in EU, but a buyer is located in the US, the Vertex app won't calculate taxes and will return a 0 tax rate.
+So make sure your project has a logic for such cases, for example provides correct warehouse addresses when a buyer selects shipping address different from project's default tax region/country.  

@@ -27,8 +27,6 @@ Let's say you have a module named `ModuleRestApi`, where you want to add the `ba
 ```php
 <?php
 
-<?php
-
 namespace Pyz\Glue\ModuleRestApi\Plugin\GlueJsonApiConvention;
 
 use Generated\Shared\Transfer\GlueRelationshipTransfer;

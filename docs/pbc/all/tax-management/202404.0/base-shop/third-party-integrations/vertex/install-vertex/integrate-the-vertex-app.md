@@ -330,9 +330,10 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ### 5. Optional: Configure custom seller and buyer countries.
 
-By default, if a user did not select a country on the checkout Address step, the system uses the first country of the selected Spryker store.
-For seller the behavior is the same, but the country is taken from the first warehouse of the product in the cart.
-If you want to change default behavior, you can configure the country for the seller and buyer, which will be used as default values for the tax calculation, use these config methods:
+If a user doesn't choose a country during the checkout Address step, the system will automatically use the first country listed in the selected Spryker store.
+The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
+
+To modify this default behavior, you can configure the country for both sellers and buyers. These configured countries will then serve as the default values for tax calculations. You can use the following configuration methods to do this:
 
 ```php
 

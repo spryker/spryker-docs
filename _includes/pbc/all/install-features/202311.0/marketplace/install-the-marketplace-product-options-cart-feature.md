@@ -13,7 +13,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Product Options| {{page.version}}      | [Marketplace Product Options feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html) |
+| Marketplace Product Options| {{page.version}}      | [Marketplace Product Options feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html) |
 | Cart | {{page.version}}   | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
 
 ### 1) Set up behavior

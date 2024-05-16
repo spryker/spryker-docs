@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Product Labels feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html).
+This document describes how to install the [Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html).
 
 ## Install feature core
 

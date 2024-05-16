@@ -19,4 +19,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-checkout-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-checkout-feature.md -->

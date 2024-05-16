@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Gift Cards feature](/docs/pbc/all/gift-cards/{{page.version}}/gift-cards.html).
+This document describes how to install the [Gift Cards feature](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html).
 
 ## Install feature core
 
@@ -12,19 +12,19 @@ Install the required features:
 
 | NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-|Product  | {{page.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
-|Payments  | {{page.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
-| Shipment | {{page.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
-| Order Management | {{page.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
-| Mailing &amp; Notifications | {{page.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{page.version}}/install-themailing-and-notifications-feature.html)|
-| Promotions &amp; Discounts | {{page.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
+| Spryker Core | {{site.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+|Product  | {{site.version}} |[Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)|
+|Payments  | {{site.version}} |[Payments feature integration](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
+| Shipment | {{site.version}} |[Integrate the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
+| Order Management | {{site.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
+| Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{site.version}}/install-themailing-and-notifications-feature.html)|
+| Promotions &amp; Discounts | {{site.version}} |[Integrate the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1155,14 +1155,14 @@ Install the required features:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Cart | {{page.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
-| Checkout | {{page.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Cart | {{site.version}} |[Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)|
+| Checkout | {{site.version}} | [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html)
 
 ### 1) Install the required modules
 
 ```bash
-composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/gift-cards:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

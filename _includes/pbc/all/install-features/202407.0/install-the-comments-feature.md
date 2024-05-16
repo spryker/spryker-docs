@@ -10,15 +10,15 @@ Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                                                                     |
 |-----------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
+| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                            |
 
 ### 1) Install the required modules
 
 To install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -313,15 +313,15 @@ Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE |
 |-----------------------------|------------------|--|
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html)
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Customer Account Management | {{site.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-shipment-feature.html)
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/comments: "{{site.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 

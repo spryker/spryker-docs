@@ -10,12 +10,12 @@ Install the required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Cart                        | {{page.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.md.html)                                                    |
-| Prices                      | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
+| Company Account             | {{site.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Customer Account Management | {{site.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Cart                        | {{site.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.md.html)                                                    |
+| Prices                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
+| Product                     | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
 
 
 ### 1) Install the required modules
@@ -23,7 +23,7 @@ Install the required features:
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1006,18 +1006,18 @@ Install the following required features:
 
 | NAME                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Multiple Carts              | {{page.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md)                                                           |
-| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
-| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
+| Spryker Core                | {{site.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account             | {{site.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Multiple Carts              | {{site.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md)                                                           |
+| Product                     | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Customer Account Management | {{site.version}} | [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
 
 ### 1) Install the required modules
 
 Install the required modules using Composer:
 
 ```bash
-composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shopping-lists:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

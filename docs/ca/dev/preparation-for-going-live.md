@@ -50,6 +50,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Application
 
+- [Activating IP tracking](docs/07-deploy-file/02-deploy.file.reference.v1.md#cloud-define-gateway-ip-addresses) in your application significantly increases chances to mitigate or spot malicious activities like DOS attacks. You might need to evaluation this from a data protection policy perspective.
 - Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.

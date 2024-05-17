@@ -20,4 +20,4 @@ related:
   - title: Category Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
-{% include pbc/all/install-features/202311.0/install-the-cms-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-category-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-cms-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-cms-category-management-feature.md -->

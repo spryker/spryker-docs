@@ -7,4 +7,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/install-the-warehouse-picking-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/unified-commerce/install-the-warehouse-picking-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/unified-commerce/install-the-warehouse-picking-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/unified-commerce/install-the-warehouse-picking-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/unified-commerce/install-the-warehouse-picking-feature.md -->

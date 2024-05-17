@@ -9,4 +9,4 @@ redirect_from:
   - /docs/pbc/all/user-management/202204.0/base-shop/install-and-upgrade/install-the-acl-feature.html   
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-acl-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-acl-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-acl-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-acl-feature.md -->

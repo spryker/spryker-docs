@@ -5,4 +5,4 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-merchant-switcher-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-merchant-switcher-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-merchant-switcher-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-merchant-switcher-feature.md -->

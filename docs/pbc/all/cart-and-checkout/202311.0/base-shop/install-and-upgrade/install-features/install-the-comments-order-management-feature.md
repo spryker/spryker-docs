@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/comments-order-management-feature-integration.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html
 ---
-{% include pbc/all/install-features/202311.0/install-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-comments-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-comments-order-management-feature.md -->

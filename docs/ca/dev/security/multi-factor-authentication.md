@@ -1,25 +1,32 @@
 ---
-title: Multi Factor Authentication
-description: Secure your accounts and increase your security posture
+title: Multi-factor authentication
+description: Increase account security
 template: howto-guide-template
 last_updated: Apr 22, 2024
 ---
 
-Multi Factor Authentication (MFA= adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Here are the steps to set up MFA:
+Multi-factor authentication (MFA) adds an extra layer of security by requiring users to provide unique authentication in addition to their regular sign-in credentials when accessing AWS services. Here are the steps to set up MFA:
 
-## Get an MFA Device
-You’ll need an MFA device to proceed. There are several types of MFA devices supported by AWS:
- * FIDO Security Keys: These are third-party hardware security keys certified by the FIDO Alliance. They use public key cryptography for strong, phishing-resistant authentication.
- * Virtual MFA Devices: These are authenticator apps that run on your phone or other devices. They emulate physical MFA devices and use the time-based one-time password (TOTP) algorithm.
- * Hardware TOTP Tokens: These are physical tokens that generate TOTP codes.
-Choose the type of MFA device that suits your needs.
+## Get an MFA device
 
-## Receive Your Login Details and Log In
-When you request a new AWS console user using the Support Portal, you’ll receive credentials for that user. Use these credentials to log in to the AWS dashboard.
-You’ll be prompted to set up a new password. Make sure to use a strong password.
+AWS supports the following types of MFA devices:
+
+| MFA DEVICE TYPE | DESCRIPTION |
+| - | - |
+| FIDO security keys | Hardware security keys certified by the FIDO Alliance. They use public key cryptography for strong, phishing-resistant authentication.
+| Virtual MFA devices | Authenticator apps for smartphones and other devices. They emulate physical MFA devices and use the time-based one-time password (TOTP) algorithm.
+| Hardware TOTP tokens | Physical tokens that generate TOTP codes. |
+
+
+## Receive your login details and log in
+
+When you request a new AWS console user using the Support Portal, you’ll receive credentials for that user. Use these credentials to log into the AWS dashboard.
+
+When prompted set up a new password, make sure to use a strong one.
 
 ## Activate MFA
-Switch to the IAM (Identity and Access Management) console by searching for “IAM” in the search window.
+
+In the AWS Management Console, go to **Services**>**IAM**. Switch to the IAM (Identity and Access Management) console by searching for “IAM” in the search window.
 Look for the “Security Recommendations” tab, which should give you the option to set up MFA.
 Click the “Add MFA” button.
 ![AWS MFA Setup](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Security/Multi+Factor+Authentication/aws_mfa_example.png "AWS MFA Setup")

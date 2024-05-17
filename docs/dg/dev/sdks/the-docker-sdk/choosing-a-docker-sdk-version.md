@@ -157,7 +157,6 @@ To configure a reference file:
 |Hash|dbdfac276ae80dbe6f7b66ec1cd05ef21372988a|
 |Release|1.24.0|
 |Branch name|my-branch|
-|Major branch|1.x|
 
 4. Commit and push:
 

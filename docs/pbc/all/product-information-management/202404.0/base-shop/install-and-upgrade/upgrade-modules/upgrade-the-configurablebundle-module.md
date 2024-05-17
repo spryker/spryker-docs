@@ -6,16 +6,6 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-configurablebundle
 originalArticleId: 1f6b6d4b-cc99-46eb-9078-2589782c2476
 redirect_from:
-  - /2021080/docs/migration-guide-configurablebundle
-  - /2021080/docs/en/migration-guide-configurablebundle
-  - /docs/migration-guide-configurablebundle
-  - /docs/en/migration-guide-configurablebundle
-  - /v4/docs/migration-guide-configurablebundle
-  - /v4/docs/en/migration-guide-configurablebundle
-  - /v5/docs/migration-guide-configurablebundle
-  - /v5/docs/en/migration-guide-configurablebundle
-  - /v6/docs/migration-guide-configurablebundle
-  - /v6/docs/en/migration-guide-configurablebundle
   - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundle.html
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundle.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundle.html

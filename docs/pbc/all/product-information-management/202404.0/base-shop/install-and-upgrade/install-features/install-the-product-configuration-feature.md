@@ -14,4 +14,4 @@ related:
       link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-product-configuration-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-configuration-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-configuration-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-configuration-feature.md -->

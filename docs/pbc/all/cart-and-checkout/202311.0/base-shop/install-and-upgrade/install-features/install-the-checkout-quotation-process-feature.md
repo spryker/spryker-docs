@@ -17,4 +17,4 @@ related:
     link: docs/pbc/all/request-for-quote/page.version/install-and-upgrade/install-features/install-the-quotation-process-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-uuid-generation-console-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-uuid-generation-console-feature.md -->

@@ -24,34 +24,47 @@ You can log in to the [support portal](https://support.spryker.com) by using the
 
 To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [Share secrets with the Spryker Support Team](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
-### Questions
+Spryker is using a Case Assistat that will guide you through the process of creating your requests. It will ask you for information where needed and makes sure your request is routed correctly. In the following we want to quickly explain the top level categories we currently have:
 
-Requests can be questions or change requests that we do not yet offer as categories in *Hosting Change Requests*.
+### Report a Problem or Incident
 
-### Problems
+Problems can be reports suspecting a bug or issues with our hosting. Please make sure that you follow this guide to include everything we need to get working on your case right away. Where applicable it might suggest things you can try to resolve the problem yourself.
 
-Problems can be reports suspecting a bug or issues with our hosting. Please make sure that you follow this guide to include everything we need to get working on your case right away.
+### Ask a Question
+We primarily ask our customers and partners to use our community for questions around Spryker. We will provide you with a link to the documentation and [Spryker Community](https://commercequest.space/) here.
+
+### Request help with Alumio
+Here you can report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
+
+### Infrstructure Change Request and Access Management
+Here you can request all currently supported standard changes, such as requesting changes to non production sizing, IAM users and environment provisioning.
+
+### Reporting a Problem with Spryker CI
+This should be used if you have an issue with Spryker CI (Buddy), such as errors or issues with its UI or pipeline runs
+
+### Announce a Go Live
+When you are close to go live, you can announce it here. This will alert our Customer Success Team about your plans.
+
+### Request Help with Spryker ACP
+If you have an issue with the Spryker ACP connector, you can report it here.
+
+### Request Professional Services
+If you are struggling implementing custom features or want expert help or advice you will find here a selection of professional services we are offering.
+
+### Request Help with Spryker Code Upgrader
+If the Code Upgrader does not work as expected you can raise a case that will be routed to our Code Upgrader experts.
 
 ### Emergencies
 
 Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). Please do not use this case type to simply try to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.
 
-### Platform change requests
+###  Info on Change Requests
 
 {% info_block warningBox "Plan your change requests and use the right request form" %}
 
-Due to verification processes and *role-based access control (RBAC)* mechanisms, change requests take some time to process. While Spryker is working towards providing self service options for many change request types, ensure to ask for changes by using the correct case types.
+Due to verification processes and *role-based access control (RBAC)* mechanisms, change requests take some time to process. Allow 3-5 days of processing time.
 
-{% endinfo_block %}
-
-These requests are automatically forwarded to our DevOps team. Therefore, make sure that you provide all the information that we ask for in the forms so that the team can get things done without having to ask for further information. If you do not find a Change Request type for your request, use a Request case type to contact us.
-
-{% info_block infoBox "Info" %}
-
-Allow 3-5 days of processing time for change requests.
-If you need changes done at a certain date, include that information in the change request description.
-
-Also, only customers (through the support portal) can request new environments or access to environment monitoring. For contractual reasons, partners can't request these items.
+Please note that only customers (through the support portal) can request new environments or access to environment monitoring. For contractual reasons, partners can't request these items.
 
 {% endinfo_block %}
 

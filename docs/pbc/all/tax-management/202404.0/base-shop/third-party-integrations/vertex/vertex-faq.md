@@ -1,32 +1,34 @@
 ---
 title: Vertex FAQ
-description: FAQ about Vertex 
+description: FAQ about Vertex
 template: concept-topic-template
 last_updated: May 17, 2024
 ---
 
-**What is a Product Class Code for Vertex, and how can we use it?**
+## What is a Product Class Code for Vertex, and how can we use it?
 
-The Product Class Code is used to represent groups or categories of products or services with identical taxability. By default, Spryker Product SKU is sent as `LineItems[].product.value` and `LineItems.lineItemId. Keep in mind that the Vertex App doesn't create any Vertex Tax Categories.
+The Product Class Code is used to represent groups or categories of products or services with identical taxability. By default, Spryker Product SKU is sent as `LineItems[].product.value` and `LineItems.lineItemId`. Keep in mind that the Vertex App doesn't create any Vertex Tax Categories.
 
 
-**How should we use Item Flexible Fields? Should it contain some Product Class Code? Should we provide some class codes for order expenses as well?**
+## How should we use Item Flexible Fields? Should it contain some Product Class Code? Should we provide some class codes for order expenses as well?
 
 ​Item Flexible Fields are optional fields provided by a project. They are needed for customization of tax calculation. Flexible Fields are supported by the Vertex app, and whether or not to use them is a business decision.
 
 
-**How will stock address information be used in the Marketplace? Does it calculate freight tax for shipment?**
+## How will stock address information be used in the Marketplace? Does it calculate freight tax for shipment?
 
 We do not support freight shipment in terms of big packaging support, but if it’s about just calculating taxes for shipping price, yes, it’s supported.
 
 
-**Could you share more information about sending invoices to Vertex through the OMS feature?**
+## Could you share more information about sending invoices to Vertex through the OMS feature?
 
 The Spryker OMS transition command has to be used as an execution point to send a full order with all existing and custom fields provided by the project. The results will be visible in the Invoice Tax Details report.
 
 
-**How does the Vertex app handle tax calculation for different countries?**
+## How does the Vertex app handle tax calculation for different countries?
 
 The Vertex app calculates taxes based on the tax rules and rates of the country where the product is shipped. The Vertex app uses the shipping address to determine the tax rate.
+
 In some cases, for example when a seller is located in EU, but a buyer is located in the US, the Vertex app won't calculate taxes and will return a 0 tax rate.
+
 So make sure your project has a logic for such cases, for example provides correct warehouse addresses when a buyer selects shipping address different from project's default tax region/country.  

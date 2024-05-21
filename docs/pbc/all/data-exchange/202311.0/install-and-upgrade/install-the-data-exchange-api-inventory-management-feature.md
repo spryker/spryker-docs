@@ -8,4 +8,4 @@ redirect_from:
 - /docs/pbc/all/data-exchange/202311.0/install-and-upgrade%5Cinstall-the-data-exchange-api-inventory-management-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-data-exchange-api-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api-inventory-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-data-exchange-api-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api-inventory-management-feature.md -->

@@ -20,7 +20,7 @@ The following diagram shows the data flow of the tax calculation request from th
 
 To integrate Vertex, follow these steps.
 
-### 1. Configure Vertex-specific metadata transfers
+## 1. Configure Vertex-specific metadata transfers
 
 Define specific Vertex Tax metadata transfers and extend other transfers with them:
 
@@ -73,22 +73,19 @@ Define specific Vertex Tax metadata transfers and extend other transfers with th
 
 ```
 
-`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can extend them as you need, following to the Vertex API structure.
+`SaleTaxMetadata` and `ItemTaxMetadata` are designed to be equal to the Vertex Tax Calculation API request body. You can extend them as you need, following the Vertex API structure.
 
 - `SaleTaxMetadata` equals the Invoicing/Quotation request payload, excluding LineItems.
 
 - `ItemTaxMetadata` equals the Line Item API payload.
 
-### 2. Implement Vertex-specific metadata extender plugins
+## 2. Implement Vertex-specific metadata extender plugins
 
-There are several types of expander plugins you have to introduce.
-As a starting point, you can take examples provided by Spryker in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins in this module are for development purposes. The data in the TaxMetaData fields has to be collected from the project database or other sources such as external ERP.
+You need to introduce several types of expander plugins. As a starting point, you use the examples provided in the [tax-app-vertex](https://github.com/spryker/tax-app-vertex) module. The plugins in this module are for development purposes. The data in the `TaxMetaData` fields needs to be collected from the project database or other sources, like an external ERP.
 
-#### Configure the Customer Class Code Expander plugins
+### Configure the Customer Class Code Expander plugins
 
-The following code sample shows how to introduce the following expander plugin:
-
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexCodeExpanderPlugin.php`
+1. Introduce `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexCodeExpanderPlugin.php` using the following example:
 
 ```php
 <?php
@@ -115,10 +112,7 @@ class OrderCustomerWithVertexCodeExpanderPlugin extends AbstractPlugin implement
 }
 ```
 
-The following code sample shows how to introduce the following expander plugin:
-
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php`
-
+2. Introduce `Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexCodeExpanderPlugin.php` using the following example:
 
 ```php
 <?php
@@ -145,17 +139,14 @@ class CalculableObjectCustomerWithVertexCodeExpanderPlugin extends AbstractPlugi
 }
 ```
 
-#### Configure the Customer Exemption Certificate Expander plugins
+### Configure the Customer Exemption Certificate Expander plugins
 
-- Configure the Customer Exemption Certificate Expander plugin for order:
+Configure the following plugins using the provided example.
 
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexExemptionCertificateExpanderPlugin.php`
-
-- Configure the Customer Exemption Certificate Expander plugin for quote:
-
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php`
-
-The following code sample shows how to implement the previously mentioned plugins:
+| PLUGIN | NAMESPACE |
+| - | - |
+| Customer Exemption Certificate Expander plugin for order | Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderCustomerWithVertexExemptionCertificateExpanderPlugin.php |
+| Customer Exemption Certificate Expander plugin for quote | Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectCustomerWithVertexExemptionCertificateExpanderPlugin.php |
 
 ```php
 // ...
@@ -175,17 +166,14 @@ class OrderCustomerWithVertexExemptionCertificateExpanderPlugin extends Abstract
 }
 ```
 
-#### Configure the Product Class Code Expander plugins
+### Configure the Product Class Code Expander plugins
 
-Configure the Product Class Code Expander plugin for order items:
+Configure the following plugins using the provided example.
 
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderItemVertexProductClassCodeExpanderPlugin.php`
-
-Configure the Product Class Code Expander plugin for quote items:
-
-`Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectItemWithVertexProductClassCodeExpanderPlugin.php`
-
-The contents of both plugins are similar:
+| PLUGIN | NAMESPACE |
+| - | - |
+| Product Class Code Expander plugin for order items | Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Order/OrderItemVertexProductClassCodeExpanderPlugin.php` |
+| Product Class Code Expander plugin for quote items | Pyz/Zed/{YourDesiredModule}/Communication/Plugin/Quote/CalculableObjectItemWithVertexProductClassCodeExpanderPlugin.php |
 
 ```php
 // ...
@@ -209,13 +197,13 @@ class ItemWithVertexClassCodeExpanderPlugin extends AbstractPlugin implements Ca
 
 {% info_block infoBox "Use the same Product Class Code" %}
 
-You must use the same Product Class Code extension for all product options and other order expenses. From Vertex's perspective, it considers each of them as a separate item for tax calculation. For guidance on where to place them, refer to the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
+You must use the same Product Class Code extension for all product options and other order expenses. Vertex considers each of them as a separate item for tax calculation. For guidance on where to place them, see the definition of transfers in [Configure Vertex-specific Metadata Transfers](#configure-vertex-specific-metadata-transfers).
 
 {% endinfo_block %}
 
-#### Configure the flexible fields extension
+### Configure the flexible fields extension
 
-Configure the flexible files extension as in the following example:
+Configure the flexible files extension using the following example:
 
 ```php
 
@@ -250,9 +238,9 @@ class ItemWithFlexibleFieldsExpanderPlugin extends AbstractPlugin implements Cal
 }
 ```
 
-### 3. Configure the Tax App dependency provider
+## 3. Configure the Tax App dependency provider
 
-After the Tax App dependency provider configuration, the plugin stack should look similar to this one:
+After the Tax App dependency provider configuration, the plugin stack should look similar to the following:
 
 ```php
 
@@ -301,9 +289,9 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
 
 ```
 
-### 4. Configure Product Offer Stock dependency provider (Marketplace only)
+## 4. Marketplace only: Configure Product Offer Stock dependency provider
 
-After you have configured the Product Offer Stock dependency provider for Marketplace, the plugin stack should look similar to this one:
+After you have configured the Product Offer Stock dependency provider for Marketplace, the plugin stack should look similar to the following:
 
 ```php
 
@@ -328,12 +316,11 @@ class ProductOfferStockDependencyProvider extends SprykerProductOfferStockDepend
 
 ```
 
-### 5. Optional: Configure custom seller and buyer countries.
+## 5. Optional: Configure custom seller and buyer countries.
 
-If a user doesn't choose a country during the checkout Address step, the system will automatically use the first country listed in the selected Spryker store.
-The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
+If a user doesn't choose a country during the checkout Address step, the system automatically usse the first country listed in the selected Spryker store. The same rule applies to sellers, except that the country is taken from the first warehouse address of a product stock.
 
-To modify this default behavior, you can configure the country for both sellers and buyers. These configured countries will then serve as the default values for tax calculations. You can use the following configuration methods to do this:
+To change this default behavior, you can configure the country for both sellers and buyers. These configured countries will be the default values for tax calculations. You can use the following configuration methods to do this:
 
 ```php
 
@@ -343,12 +330,12 @@ use Spryker\Zed\TaxApp\TaxAppConfig as SprykerTaxAppConfig;
 
 class TaxAppConfig extends SprykerTaxAppConfig
 {
-    
+
     public function getSellerCountryCode(): string
     {
         return 'FR';
     }
-    
+
     public function getCustomerCountryCode(): string
     {
         return 'DE';
@@ -359,7 +346,7 @@ class TaxAppConfig extends SprykerTaxAppConfig
 
 ### 6. Add translations
 
-Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -368,7 +355,7 @@ cart.total.tax_total.calculated_at_checkout,an der Kasse berechnet,de_DE
 cart.total.tax_total.calculated_at_checkout,calculated at checkout,en_US
 ```
 
-To import data, run the following command:
+2. Import the updated glossary:
 
 ```yaml
 console data:import glossary
@@ -376,11 +363,9 @@ console data:import glossary
 
 ---
 
-### Reference: Quote/Order object to Vertex API mapping
+## Reference: Mapping of Quote and Order objects to Vertex API
 
-While developing custom plugins for deeper integration with your projects, you may need to know how Spryker data is mapped to Vertex API requests.
-
-The following table reflects the mapping of the Spryker Quote/Order transfer object to the Vertex API request format.
+The following table reflects the mapping of the Spryker Quote and Order transfer object to the Vertex API request format. This information is useful for developing custom plugins for a deeper integration with your project.
 
 | QuoteTransfer/OrderTransfer object properties                                                | Vertex API field                                                         | Comment                                                                                                                                              |
 |----------------------------------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -391,35 +376,35 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 | -                                                                                            | saleMessageType                                                          | Depends on the type of operation, `INVOICE` or `QUOTATION`.                                                                                          |
 | taxMetadata                                                                                  | **Mapped over the final request 1:1**                                    | Metadata is supposed to follow the structure of the Vertex API request.                                                                              |
 | taxMetadata.seller.company                                                                   | seller.company                                                           | Required by Vertex from the legal point of view.                                                                                                     |
-| items[].sku                                                                                  | lineItems[].lineItemId; lineItems[].product.value; lineItems[].vendorSku | lineItems[].lineItemId can be changed if there are multiple items with the same SKU in the request.                                                  |
+| items[].sku                                                                                  | lineItems[].lineItemId; lineItems[].product.value; lineItems[].vendorSku | `lineItems[].lineItemId` can be changed if there are multiple items with the same SKU in the request.                                                  |
 | items[].shipment.shippingAddress                                                             | lineItems[].customer.destination                                         |                                                                                                                                                      |
 | billingAddress                                                                               | lineItems[].customer.administrativeDestination                           |                                                                                                                                                      |
-| items[].merchantStockAddresses                                                               | lineItems[].seller.physicalOrigin                                        | Multiple addresses are mapped to multiple items in the Vertex PBC and Vertex API lineItems[].                                                        |
+| items[].merchantStockAddresses                                                               | lineItems[].seller.physicalOrigin                                        | Multiple addresses are mapped to multiple items in the Vertex PBC and Vertex API `lineItems[]`.                                                        |
 | items[].merchantProfileAddress                                                               | lineItems[].seller.administrativeOrigin                                  |                                                                                                                                                      |
 | items[].unitDiscountAmountFullAggregation                                                    | lineItems[].discount.discountValue                                       | Prices are converted from the Spryker’s cent-based format to the Vertex decimal format.                                                              |
-| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discount based on amount, so there is no need for percentage-based discounts.                                |
+| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need for percentage-based discounts.                                |
 | items[].unitPrice (either GROSS or NET depending on the selected mode)                       | lineItems[].unitPrice                                                    | Prices are converted from Spryker’s cent-based format to Vertex decimal format.                                                                      |
-| items[].merchantStockAddresses.quantityToShip                                                | lineItems[].quantity.value                                               | If quantityToShip is less than quantity requested in cart - in this case this item will be mapped to multiple items in the Vertex API.               |
+| items[].merchantStockAddresses.quantityToShip                                                | lineItems[].quantity.value                                               | If `quantityToShip` is less than the quantity requested in cart, the item is mapped to multiple items in the Vertex API.               |
 | -                                                                                            | lineItems[].quantity.unitOfMeasure                                       | Always `EA` (“each”). Other units of measure are not supported yet.                                                                                  |
-| items[].taxMetadata                                                                          | Mapped over specific lineItem 1:1                                        | Metadata is supposed to follow the structure of the Vertex API request. For lineItems it is mapped over each corresponding item based on lineItemId. |
+| items[].taxMetadata                                                                          | Mapped over specific `lineItem` one to one.                                        | Metadata is supposed to follow the structure of the Vertex API request. For `lineItems`, it's mapped over each corresponding item based on `lineItemId`. |
 | items[].taxMetadata.seller.company                                                           | lineItems[].seller.company                                               | Required by Vertex from the legal point of view.                                                                                                     |
-| expenses (only for expenses with type `SHIPMENT_EXPENSE_TYPE`)                               | lineItems                                                                | Shipments are treated just like products in Vertex - it’s all a line item.                                                                           |
+| expenses (only for expenses with type `SHIPMENT_EXPENSE_TYPE`)                               | lineItems                                                                | Shipments are treated like products in Vertex - it’s all a line item.                                                                           |
 | expenses.hash                                                                                | lineItems[].lineItemId                                                   |                                                                                                                                                      |
 | expenses.shipment.shipmentAddress                                                            | lineItems[].customer.destination                                         |                                                                                                                                                      |
 | billingAddress                                                                               | lineItems[].customer.administrativeDestination                           |                                                                                                                                                      |
 | expenses.sumPrice (either GROSS or NET depending on the selected mode)                       | lineItems[].extendedPrice                                                |                                                                                                                                                      |
 | expenses.sumDiscountAmountAggregation                                                        | lineItems[].discount.discountValue                                       | Prices are converted from the Spryker’s cent-based format to the Vertex decimal format.                                                              |
-| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discount based on amount, so there is no need to use percentage-based discounts.                             |
+| -                                                                                            | lineItems[].discount.discountType                                        | Always `DiscountAmount`. Spryker stores discounts based on amount, so there is no need to use percentage-based discounts.                             |
 | priceMode                                                                                    | lineItems[].taxIncludedIndicator                                         | NET mode: false, GROSS mode: true                                                                                                                    |
 
-##### Location mapping
+### Location mapping
 
 | Spryker          | Vertex         | Comment                            |
 |------------------|----------------|------------------------------------|
 | address1         | streetAddress1 |                                    |
-| address2         | streetAddress2 | Should be either not empty or null |
+| address2         | streetAddress2 | Should be either not empty or `null`. |
 | city             | city           |                                    |
-| state            | mainDivision   | Should be either not empty or null |
+| state            | mainDivision   | Should be either not empty or `null`. |
 | zipCode          | postalCode     |                                    |
 | country.iso2Code | country        |                                    |
 

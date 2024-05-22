@@ -8,4 +8,4 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-product-inventory-management-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md -->

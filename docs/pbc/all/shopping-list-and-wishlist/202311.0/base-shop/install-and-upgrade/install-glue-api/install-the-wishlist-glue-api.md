@@ -22,4 +22,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-glue-api/install-the-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-wishlist-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-wishlist-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-wishlist-glue-api.md -->

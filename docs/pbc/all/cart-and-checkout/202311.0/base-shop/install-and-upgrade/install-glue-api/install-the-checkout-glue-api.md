@@ -25,4 +25,4 @@ related:
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-submit-checkout-data.html    
 ---
 
-{% include pbc/all/install-features/202311.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-checkout-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-checkout-glue-api.md -->

@@ -34,4 +34,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
 
-{% include pbc/all/install-features/202404.0/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-configurable-bundle-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-configurable-bundle-feature.md -->

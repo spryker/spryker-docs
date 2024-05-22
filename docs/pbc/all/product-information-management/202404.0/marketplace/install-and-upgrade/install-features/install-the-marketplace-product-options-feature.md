@@ -12,4 +12,4 @@ related:
     link: docs/pbc/all/product-information-management/page.version/marketplace/marketplace-product-options-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-feature.md -->

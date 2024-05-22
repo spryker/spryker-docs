@@ -43,8 +43,7 @@ However, our team only tested the following payment methods:
 
 ## Current limitations
 
-The Stripe App has limited or no support for the following features:
-- Multi-capture: Partial capture of payment for order with multiple items is not covered. Hence, Payments can’t be partially canceled. We create one payment intent per order and the payment for the order can either be authorised, captured or cancelled from Stripe's perespective.
+The Stripe App has limited or no support for multi-capture. Partial capture of payment for orders with multiple items isn't covered. So, payments can’t be partially canceled. One payment intent is created per order, and the payment for the order can either be authorized, captured, or cancelled from Stripe's perespective.
 
 ## Next step
 

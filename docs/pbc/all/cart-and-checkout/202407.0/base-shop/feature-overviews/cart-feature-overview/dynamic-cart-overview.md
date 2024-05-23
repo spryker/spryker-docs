@@ -9,7 +9,12 @@ The dynamic cart functionality enables users to seamlessly manage their carts wi
 
 The following video shows how a user can interact with different elements of a cart without reloading the page.
 
-![dynamic-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/dynamic-cart-overview.md/dynamic-cart.mp4)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/cart-feature-overview/dynamic-cart-overview.md/dynamic-cart.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Related Developer documents
 

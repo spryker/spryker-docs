@@ -17,8 +17,8 @@ This document describes how to use the support portal to create and manage your 
 
 ## Prerequisites
 
-You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
-You can log in to the [support portal](https://support.spryker.com) by using the login button on the top right.
+* You should have a customer account provisioned for you. If you don't, request one using this [form](https://www.surveymonkey.com/r/XYK5R26).
+* Log in at the [support portal](https://support.spryker.com).
 
 ## Create new cases
 
@@ -30,7 +30,7 @@ The following are the top-level categories of cases and their description.
 
 ### Report a Problem or Incident
 
-Problems can be reports suspecting a bug or issues with the hosting services. To speed up the resolution of such cases, make sure to follow this [document](/docs/about/all/support/getting-the-most-out-of-spryker-support.html) before you submit your request.
+Problems can be reports suspecting a bug or issues with the hosting services. To speed up the resolution of such cases, make sure to follow [Getting the most out of Spryker support](/docs/about/all/support/getting-the-most-out-of-spryker-support.html) before you submit your request.
 
 ### Ask a Question
 

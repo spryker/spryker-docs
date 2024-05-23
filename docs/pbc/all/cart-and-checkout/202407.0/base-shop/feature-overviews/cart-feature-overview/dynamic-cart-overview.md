@@ -15,7 +15,7 @@ The following video shows how a user can interact with different elements of a c
 
 | INSTALLATION GUIDES |
 |---------|
-| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/202407.0/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/202407.0/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
 | [Install the Configurable Bundle feature](/docs/pbc/all/product-information-management/202407.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html) |
 | [Install the Gift Cards feature](/docs/pbc/all/gift-cards/202407.0/install-and-upgrade/install-the-gift-cards-feature.html) |

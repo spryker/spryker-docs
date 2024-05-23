@@ -15,7 +15,7 @@ Follow the steps below to install the Multiple Carts feature core.
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   | |
 
 ### 1) Install the required modules
@@ -366,10 +366,10 @@ Register the following plugins:
 | PLUGIN                                          | SPECIFICATION                                                                                                                                     | PREREQUISITES | NAMESPACE                                              |
 |-------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
 | CustomerCartQuoteResponseExpanderPlugin         | Adds a customer quote collection to the quote response transfer after cart operation handling. Replaces a quote with an active quote if it exist. |               | Spryker\Zed\Spryker\Zed\MultiCart\Communication\Plugin |
-| SaveCustomerQuotesQuoteUpdatePlugin             | Extracts Customer Quote Collection from a quote response object and saves it to the customer session.                                             |               | Spryker\Client\MultiCart\Plugin                        |
-| DefaultQuoteUpdatePlugin                        | Finds Customer Default Quote in a customer quote collection and saves it to the customer session.                                                 |               | Spryker\Client\MultiCart\Plugin                        |
+| SaveCustomerQuotesQuoteUpdatePlugin             | Extracts a customer quote collection from a quote response object and saves it to the customer session.                                             |               | Spryker\Client\MultiCart\Plugin                        |
+| DefaultQuoteUpdatePlugin                        | Locates a customer default quote in a customer quote collection and saves it to the customer session.                                                 |               | Spryker\Client\MultiCart\Plugin                        |
 | QuoteSelectorPersistentCartChangeExpanderPlugin | Takes a quote ID form parameters and replaces it in a quote change request.                                                                       |               | Spryker\Client\MultiCart\Plugin                        |
-| MultiCartMiniCartViewExpanderPlugin             | Expands the provided mini cart view template with multi cart view.                                                                                |               |                                                        |
+| MultiCartMiniCartViewExpanderPlugin             | Expands the provided mini cart view template with a multi-cart view.                                                                                |               |                                                        |
 
 **src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
 
@@ -435,15 +435,10 @@ class CartPageDependencyProvider extends SprykerPersistentCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-
-Make sure that, multi-cart widget works well: 
-
-* Log in to the customer account.
-* Add products to the cart.
-* Adjust quantity of products.
-* Check the mini cart widget:
-    * Open the mini cart widget.
-    * Verify updated quantity and prices, ensuring all products are listed correctly.
+1. On the Storefront, log in as a customer.
+2. Add products to cart.
+3. Update quantity of products.
+  Open the mini-cart widget and make sure the updated quantity, prices, and products are displayed correctly.
 
 {% endinfo_block %}
 
@@ -511,7 +506,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure an empty guest cart is not saved to the database upon customer login.
+When a customer logs in, make sure an empty guest cart isn't saved to the database.
 
 {% endinfo_block %}
 
@@ -525,7 +520,7 @@ Install the required features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Cart         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)   | |
 
 ### 1) Install the required modules

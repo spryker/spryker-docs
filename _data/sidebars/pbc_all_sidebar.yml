@@ -1,4 +1,4 @@
-title: PBC guides
+  title: PBC guides
 entries:
   - product: PBC
     nested:
@@ -217,7 +217,9 @@ entries:
                       - title: Cart widget
                         url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/cart-widget-overview.html
                       - title: Dynamic cart
-                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html                        
+                        url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/dynamic-cart-overview.html
+                        include_versions:
+                        - "202407.0"
                       - title: Quick order from the catalog page
                         url: /docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
                   - title: Multiple Carts feature overview

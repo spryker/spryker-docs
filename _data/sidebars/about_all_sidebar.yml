@@ -117,6 +117,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
+          - title: Merge pull requests
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html            
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

@@ -5,7 +5,7 @@ last_updated: May 21, 2023
 template: concept-topic-template
 ---
 
-The dynamic cart functionality enables users to seamlessly manage their carts without reloading the Cart page. User can perform actions like, updating item quantity or adding cart notes, within the context of their current browsing session. This eliminates the friction in the checkout experience and increases conversion rates. Giving customers immediate feedback to their cart actions improves user experience.
+The dynamic cart functionality enables users to seamlessly manage their carts without reloading the Cart page. Users can perform actions like updating item quantity or adding cart notes without being redirected to the top of the page. This eliminates friction in the checkout experience and increases conversion rates. Additionally, giving immediate feedback on their cart actions without losing the context improves the user experience.
 
 The following video shows how a user can interact with different elements of a cart without reloading the page.
 

@@ -474,7 +474,7 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure the folowing ocurred in the database:
+Make sure the following occurred in the database:
 * Permission groups have been added to the `spy_shoppping_list_permission_group` table.
 * Permissions have been added to the `spy_permission`
 * The relations between them have been added to the `spy_shopping_list_permission_group_to_permission` table.
@@ -1349,7 +1349,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Set up router plugins
+### 3) Set up router plugins
 
 | PLUGIN                                | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                                |
 |---------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
@@ -1382,7 +1382,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 5) Set up quick order plugin
+### 4) Set up quick order plugin
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                  |
 |-------------------------------------------------|----------------------------------------------------------|---------------|------------------------------------------------------------|
@@ -1413,7 +1413,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-### 6) Set up the shopping list note form plugin
+### 5) Set up the shopping list note form plugin
 
 | PLUGIN                                 | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                       |
 |----------------------------------------|---------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -1445,7 +1445,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 }
 ```
 
-### 7) Set up widgets
+### 6) Set up widgets
 
 1. Enable global widgets:
 
@@ -1519,7 +1519,7 @@ console frontend:yves:build
 
 Make sure the following widgets have been registered:
 
-| MODULE                           | TEST                                                                                                                                                        |
+| MODULE                           | VERIFICATION                                                                                                                                                        |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AddToShoppingListWidget          | Go to the product details page and add a product to a shopping list.                                                                                       |
 | ShoppingListItemNoteWidget       | Go to a shopping list and save a note to the item.                                                                                                        |

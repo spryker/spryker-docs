@@ -56,7 +56,7 @@ docker/sdk bootstrap deploy.dev.yml
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202311.0 --single-branch ./b2c-demo-marketplace && \
-cd b2b-demo-marketplace && \
+cd b2c-demo-marketplace && \
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker && \
 docker/sdk bootstrap deploy.dev.yml
 ```

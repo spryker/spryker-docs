@@ -46,14 +46,12 @@ For example, `spy_price_product_default` contains only connections to prices tha
 
 {% endinfo_block %}
 
-The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products. The specific prices apply only to the merchant relation assignee (business units, as a rule), not to merchant relation owners. 
+The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products. The specific prices apply only to the merchant relation assignee (business units, as a rule), not to merchant relation owners.
 
-{% info_block infoBox %}
+{% info_block warningBox %}
 
-Please keep in mind the following rules:
-
-1. If the default product price is lower than any of the merchant relation prices for a given product, the default price will be displayed in Storefront. You can adjust this behavior on the project level by customizing the business logic for the price display.
-2. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
+* If the default product price is lower than any of the merchant relation prices for a given product, the default price is displayed in Storefront. You can adjust this behavior on the project level by customizing the business logic for the price display.
+* If a business unit of a customer has several merchant relations with different prices for the same product, the lowest price is offered.
 
 {% endinfo_block %}
 

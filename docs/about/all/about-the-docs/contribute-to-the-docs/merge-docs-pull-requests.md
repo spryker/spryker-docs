@@ -29,6 +29,7 @@ Add the following labels to the PR:
 The CI ensures no bugs or broken links are deployed to the production website. Before you merge a PR, you must wait for the CI checks to finish. If a check is failed, you must fix the error. You can merge a PR when the following checks are successful:
 
 | CI CHECK | DESCRIPTION |
+| - | - |
 | Enforce PR labels / enforce-label | Checks for required labels. To learn about the required labels, see [Add labels](#add-labels). |
 | CI / Build | Checks if the website can be built with your changes. |
 | CI / Page validation | Checks for bugs in the pages. |

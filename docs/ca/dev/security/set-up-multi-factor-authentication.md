@@ -19,6 +19,12 @@ AWS supports the following types of MFA devices:
 
 ## Set up MFA
 
+{% info_block infoBox "Changing and removing MFA" %}
+
+For security and auditing purposes, you can only add MFA. If you need to update or remove MFA, create a [Password Reset Change Request](https://spryker.force.com/support/s/) and specify the necessary details.
+
+{% endinfo_block %}
+
 1. In the AWS Management Console, go to **Services**>**IAM**.
 This opens the **IAM Dashboard** page.
 2. In the navigation pane, click **Users**.
@@ -33,9 +39,3 @@ This opens the **IAM Dashboard** page.
 8. Click **Next** and follow the wizard to set up the device.
 
 Once MFA is activated, you’ll need to provide this factor every time you log into AWS.
-
-{% info_block infoBox "Changing and removing MFA" %}
-
-For security and auditing purposes, you can only add MFA. If you need to update or remove MFA, create a [Password Reset Change Request](https://spryker.force.com/support/s/) and specify the necessary details.
-
-{% endinfo_block %}

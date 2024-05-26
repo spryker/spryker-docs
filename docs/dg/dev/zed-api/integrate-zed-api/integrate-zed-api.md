@@ -23,7 +23,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME    | VERSION    | INSTALLATION GUIDE            |
 |---------------| ----------------- |------------------------|
-| Spryker Core  | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
+| Spryker Core  | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
 ### 1) Install the required modules
 

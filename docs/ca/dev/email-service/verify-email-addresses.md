@@ -14,9 +14,9 @@ To verify an email address:
 
 1. In the AWS Management Console, go to **Services** > [**Amazon Simple Email Service**](https://console.aws.amazon.com/ses/).
 2. In the top-right corner, select the region you want to verify the email address for.
-3. In the left navigation pane, select **Email Addresses**.
-4. Select **Verify a New Email Address**.
-5. In the *Verify a New Email Address* window, enter the **Email Address** you want to verify and select **Verify This Email Address**.
+3. In the left navigation pane, select **Identities**.
+4. Select **Create Identity**.
+5. In the *Create identity* window, you can either whitelist the domain name or Email addresses one by one. Enter the **Email Address** (or **Domain name**) you want to verify and select **Create Identity**.
   This reloads the page with the *Verification Email Sent* window displayed. A verification email has been sent to the email address.
 
   {% info_block warningBox "Verification link expiration" %}
@@ -25,6 +25,6 @@ To verify an email address:
 
 7. In the verification email, select the verification link.
   This opens the page with the verification success message.
-8. Optional: Repeat steps 1-7 until you verify the email address in all the desired regions.
+8. Optional: Repeat steps 1-7 until you verify the email address (or domain names) in all the desired regions.
 
 You can see the verified email address in [Amazon Simple Email Service](https://console.aws.amazon.com/ses/) > **Email Addresses**. Your applications can use it to send emails.

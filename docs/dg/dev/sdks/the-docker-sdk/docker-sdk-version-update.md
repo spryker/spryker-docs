@@ -12,13 +12,13 @@ related:
     link: docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
 ---
 
-This document describes how to perform update of the DOckerSDK version on your project.
+This document describes how to perform update of the Docker SDK version on your project.
 
-In general, version of the DockerSDK on the project can be managed by a project's owner in any way.
+In general, version of the Docker SDK on the project can be managed by a project's owner in any way.
 
-Our recomendation is to (use GIT Submodule)[https://docs.spryker.com/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#configuring-a-project-to-use-the-chosen-version-of-the-docker-sdk], which will ensure the same version of the DockerSDK across the team.
+Our recomendation is to (use GIT Submodule)[https://docs.spryker.com/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#configuring-a-project-to-use-the-chosen-version-of-the-docker-sdk], which will ensure the same version of the Docker SDK across the team.
 
-In PaaS on contrary, we have a strict rule - version is taken from *.git.docker*.
+In PaaS, on contrary, we have a strict rule - version is taken from *.git.docker*.
 
 Please refer to (this document)[https://docs.spryker.com/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html#why-should-i-use-a-particular-version-of-the-docker-sdk], if you are not sure which version to take.
 

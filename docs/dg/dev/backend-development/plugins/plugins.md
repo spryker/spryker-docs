@@ -1,6 +1,6 @@
 ---
 title: Plugins
-description: Plugins are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
+description: Plugins are small classes that are used to connect modules in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/plugin
@@ -14,13 +14,13 @@ related:
     link: docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
 ---
 
-*Plugins* are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
+*Plugins* are small classes that are used to connect modules in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 
 According to our conventions, plugins are the only classes that can be directly instantiated in other modules. For example, the `Calculation` module uses an array of modules to perform the calculation. A lot of core modules let you hook into the logic using plugins. This way, you can change core behavior without extending core classes and the risk of losing backward compatibility.
 
 ## Example: Calculator plugins
 
-The `Calculation` module ships with a `CalculatorPluginInterface`, which is implemented in several bundles. For example, you can find the `ItemTaxCalculatorPlugin` inside the Tax module.
+The `Calculation` module ships with a `CalculatorPluginInterface`, which is implemented in several other modules. For example, you can find the `ItemTaxCalculatorPlugin` inside the Tax module.
 
 According to the interface, this plugin retrieves a quote transfer object, performs tax-related calculations, and adds them to the quote.
 

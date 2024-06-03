@@ -15,7 +15,7 @@ Install the required features:
 | ----------------- | ------ | ------------------- |
 | Glue API: Spryker Core     | {{page.version}}  | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Shipment                  | {{page.version}}  | [Install the Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |
-| Glue API: Checkout         | {{page.version}}  | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout         | {{page.version}}  | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |
 | Glue API: Glue Application      | {{page.version}}  | [Install the Glue Application Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Glue API: Order Management | {{page.version}}  | [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |
 
@@ -456,4 +456,4 @@ Integrate the following related features.
 
 | FEATURE            | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                               |
 |--------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout | &check;                                | [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfigurationsRestApi
+title: Upgrade the ProductConfigurationsRestApi module
 description: Learn how to upgrade the ProductConfigurationsRestApi module to a newer version.
 template: module-migration-guide-template
 last_updated: Jul 25, 2023

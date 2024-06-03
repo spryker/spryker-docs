@@ -23,7 +23,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
 related:
-  - title: Migration guide - Payment
+  - title: Upgrade the Payment module
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 ---
 

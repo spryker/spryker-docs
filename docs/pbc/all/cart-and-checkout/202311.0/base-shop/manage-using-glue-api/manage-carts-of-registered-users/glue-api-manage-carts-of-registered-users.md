@@ -113,7 +113,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
 
 
@@ -1687,15 +1687,15 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -2891,11 +2891,11 @@ To retrieve a particular cart, send the request:
 
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the attributes of other included resources, see:
 

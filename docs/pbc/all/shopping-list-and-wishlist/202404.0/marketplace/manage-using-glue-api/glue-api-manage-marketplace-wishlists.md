@@ -426,7 +426,7 @@ To retrieve all wishlists of a customer, send the request:
 | updatedAt     | String  | Date when the wishlist was updated.|
 
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For attributes of the included resources, see:
 
@@ -2221,7 +2221,7 @@ To retrieve a specific wishlist, send the request:
 | createdAt     | String  | Creation date of the wishlist. |
 | updatedAt     | String  | Date when the wishlist was updated. |
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the attributes of the included resources, see
 

@@ -328,7 +328,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the response attributes, see [Create a shopping list](#create-a-shopping-list).
 
@@ -797,7 +797,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
@@ -1017,7 +1017,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 

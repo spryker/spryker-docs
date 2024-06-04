@@ -11,7 +11,7 @@ redirect_from:
     - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/data-exchange-api-integration.html
 related:
 - title: How to configure Data Exchange API
-  link: docs/pbc/all/data-exchange/page.version/tutorials-and-howtos/how-to-configure-data-exchange-api.html
+  link: docs/pbc/all/data-exchange/page.version/configure-data-exchange-api.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-data-exchange-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-data-exchange-api.md -->

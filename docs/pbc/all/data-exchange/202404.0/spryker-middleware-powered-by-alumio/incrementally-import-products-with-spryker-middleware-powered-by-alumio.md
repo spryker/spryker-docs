@@ -67,15 +67,15 @@ Third part:
     2. For **Key**, enter **LastTimestamp**.
     3. For **Value**, select **string** and enter the placeholder `-1 day`.
     4. For **Mappers**, select **Format: Date**.
-    5. In **Mappers** -> **Output for*mat**, enter `Y-m-d H:i:s`.
+    5. For **Output format**, enter `Y-m-d H:i:s`.
     6. Leave **Input format**, **Output timezone** and **Input timezone** with the default `Automatic` value.
 
 ![apply-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/6-apply-transformers.png)
 
-12. In **Follow pagination**, select **Follow next links**.
-13. In **Pattern to the link for the next page**, enter `_links.next.href`.
-14. In **Maximum number of pages to fetch**, enter you value. For example, 100.
-15. In **Entity schema**, select `Akeneo Product`.
+12. For **Follow pagination**, select **Follow next links**.
+13. For **Pattern to the link for the next page**, enter `_links.next.href`.
+14. In **Maximum number of pages to fetch**, enter the needed value. For example, 100.
+15. For **Entity schema**, select **Akeneo Product**.
 
 ![response-decoder](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/7-response-decoder.png)
 
@@ -85,29 +85,28 @@ For the incremental import to work, you need to add to your [outgoing connection
 
 To create the additional transformer, do the following:
 
-1. In the Spryker Middleware powered by Alumio platform, go to **Connections -> Entity transformers** and click the + sign.
-2. In **Name**, enter the name of your entity transformer. As you are entering the name, the identifier will be populated automatically based on the name.
+1. In the Spryker Middleware powered by Alumio platform, go to **Connections** > **Entity transformers** and click **+**.
+2. In **Name**, enter the name of entity transformer. As you are entering the name, the identifier is  automatically populated based on the name.
 3. Optional: In **Description**, add the description of your transformer.
-4. To activate the entity transformer, set the status to Enabled.
-5. In **Settings**, select `Chain multiple entity transformers`.
+4. To activate the entity transformer after creating, set the status to **Enabled**.
+5. In **Settings**, select **Chain multiple entity transformers**.
 6. In **Manage name and description**, select `Data, transform using mappers and conditions`. This is the first data transformer in the entity transformer.
 6. In **Data transformers** -> **Manage name**, select `Value setter`.
-7. In **Configurations** -> **Key**, enter `lastTimestamp`.
-8. In **Value**, select **string** and enter the placeholder `&{updated}`
-9. In **Mappers**, select `String: Replace`.
-10. In **Search**, enter `T`.
-11. Leave the **Replace** field empty.
-12. Select **String: Cut**.
-13. In **Start**, enter `0`.
-14. In **Length**, enter `19`.
+7. In **Configurations** > **Key**, enter `lastTimestamp`.
+8. For **Value**, select **string** and enter the placeholder `&{updated}`
+9. In **Mappers**, select **String: Replace**.
+10. For **Search**, enter `T`.
+11. Select **String: Cut**.
+12. For **Start**, enter `0`.
+13. For **Length**, enter `19`.
 
 ![manage-name](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/8-manage-name.png)
 
-15. In **Manage name and description**, select `Data, transform using mappers and conditions`. This is the second data transformer in the entity transformer.
-16. In **Data transformers** -> **Manage name**, select `Save entity to storage`.
-17. In **Storage**, select the name of storage you created when establishing the incoming configuration at [step 10](#step-10). In our example, it is `[Default] Akeneo to Spryker - Products - update lastTimestamp`.
-18. In **Storage entity identifier**, enter `lastTimestamp`.
-19. In **Source**, enter `lastTimestamp`.
+14. For **Manage name and description**, select **Data, transform using mappers and conditions**. This is the second data transformer in the entity transformer.
+15. In **Data transformers** > **Manage name**, select **Save entity to storage**.
+16. In **Storage**, select the name of storage you created when establishing the incoming configuration at [step 10](#step-10). In our example, it is `[Default] Akeneo to Spryker - Products - update lastTimestamp`.
+17. For **Storage entity identifier**, enter `lastTimestamp`.
+18. For **Source**, enter `lastTimestamp`.
 
 ## 5. Define the route
 

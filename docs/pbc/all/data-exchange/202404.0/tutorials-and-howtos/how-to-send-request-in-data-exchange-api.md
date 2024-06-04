@@ -602,7 +602,60 @@ to the child entities based on the newly created parent entity's ID.
 
 {% endinfo_block %}
 
-#### Error codes
+## Non-transactional saving
+
+By default, the Data Exchange API uses a transactional approach to save data.
+This means that if an error occurs during the saving process, the entire transaction is rolled back, and no data is saved. 
+However, in some cases, you may want to save data non-transactionally. In no-transactional mode, the API wraps each entity and its related records (if present in the request) in a separate transaction.
+
+To enable the non-transactional behavior, you need to set the specific header in the request.
+The header is `X-Is-Transactional` with the value `false`.
+
+```bash
+POST /dynamic-entity/countries HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+X-Is-Transactional: false
+Content-Length: 245
+
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00"
+            }
+      ]
+    }
+  ]
+}
+```
+
+The header name can be changed in the DynamicEntityBackendApiConfig::HEADER_IS_TRANSACTIONAL constant.
+
+```php
+<?php
+
+namespace Spryker\Glue\DynamicEntityBackendApi;
+
+use Spryker\Glue\Kernel\AbstractBundleConfig;
+
+class DynamicEntityBackendApiConfig extends AbstractBundleConfig
+{
+    /**
+     * @var string
+     */
+    protected const HEADER_IS_TRANSACTIONAL = 'X-Is-Transactional'; // The header name which is used to enable non-transactional mode.
+}
+```
+
+## Error codes
 
 Bellow, you can find a list of error codes that you can receive when sending `GET`, `POST`, `PATCH` or `PUT` requests.
 

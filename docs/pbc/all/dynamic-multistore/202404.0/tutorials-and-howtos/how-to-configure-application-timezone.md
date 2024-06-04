@@ -1,11 +1,11 @@
 ---
-title: Configure application context timezone
+title: Configure application context.
 description: This guide shows how to configure timezone for store application
 last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
-This document describes how to create and configure store context application settings. 
+This document describes how to create and configure store context application. 
 
 ## Create and configure application timezone in database
 

@@ -40,7 +40,7 @@ To continue feature integration, overview and install or update the required fea
 Install the required modules using Composer:
 
 ```bash
-composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies 
+composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -564,12 +564,16 @@ Make sure the following changes have been applied in transfer objects:
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
 | LocaleConditions | class | created | src/Generated/Shared/Transfer/LocaleConditionsTransfer  |
+| StoreApplicationContext | class | created | src/Generated/Shared/Transfer/StoreApplicationContextTransfer  |
+| StoreApplicationContextCollection | class | created | src/Generated/Shared/Transfer/StoreApplicationContextCollectionTransfer  |
 | SearchContext.storeName | property | added | src/Generated/Shared/Transfer/SearchContextTransfer |
 | SchedulerJob.region     | property | added | src/Generated/Shared/Transfer/SchedulerJobTransfer  |
 | ProductConcrete.stores            | property | added | src/Generated/Shared/Transfer/ProductConcreteTransfer  |
 | Customer.storeName                | property | added | src/Generated/Shared/Transfer/CustomerTransfer  |
+| Store.applicationContextCollection | property | added | src/Generated/Shared/Transfer/StoreTransfer  |
+| StoreStorage.applicationContextCollection | property | added | src/Generated/Shared/Transfer/StoreStorageTransfer  |
 
-@#todo - add transfers 
+
 
 {% endinfo_block %}
 
@@ -892,6 +896,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 vendor/bin/console data:import:locale-store 
 vendor/bin/console data:import:default-locale-store
 vendor/bin/console data:import:country-store
+vendor/bin/console data:import:context-store
 ```
 
 {% info_block warningBox "Verification" %}
@@ -926,6 +931,7 @@ Enable the following behaviors by registering the plugins:
 | ContextStorePostCreatePlugin | Update store context after store is created. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 | CountryStorePostUpdatePlugin | Update country store data after store is updated. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | DefaultLocaleStorePostUpdatePlugin | Update default locale data after store is updated. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
+| ContextStorePostUpdatePlugin | Update store context after store is updated. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 | LocaleStorePostUpdatePlugin | Update locale store data after store is updated. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | CountryStoreCollectionExpanderPlugin | Expands country store collection. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | LocaleStoreCollectionExpanderPlugin | Expands locale store collection. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
@@ -933,6 +939,7 @@ Enable the following behaviors by registering the plugins:
 | CountryStoreFormExpanderPlugin | Adds country selection fields to the Store form. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormViewExpanderPlugin | Adds rendered locale tabs and tables as variables in template. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreFormViewExpanderPlugin | Adds rendered country tabs and tables as variables in template. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
+| ContextStoreFormExpanderPlugin | Adds rendered store context tabs and application and timezone dropdowns. | None | Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormTabExpanderPlugin | Expands Store form with Locales tab. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreFormTabExpanderPlugin | Expands Store form with Countries tab. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | ContextStoreFormTabExpanderPlugin | Expands Store form with application context tab. | None | Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui |
@@ -941,6 +948,7 @@ Enable the following behaviors by registering the plugins:
 | AssignedCountriesStoreViewExpanderPlugin | Returns table with assigned countries. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreTableExpanderPlugin | Expands locale table with store column. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreTableExpanderPlugin | Expands table data rows of store table with country codes. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
+| ContextStoreCollectionExpanderPlugin | Expands table rows of store table and form with store context. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 
 
 @#todo - add plugins in table 
@@ -1305,7 +1313,6 @@ Steps to verify:
 - Make sure that you can see the table with assigned countries on the Store view page.
 - Make sure that you can see the locale codes in the store table.   
 - Make sure that you can see the countries in the store table.
-
 
 {% endinfo_block %}
 

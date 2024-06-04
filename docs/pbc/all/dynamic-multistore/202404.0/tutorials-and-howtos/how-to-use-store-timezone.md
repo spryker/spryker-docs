@@ -1,15 +1,13 @@
 ---
-title: How to use store context timezone in Yves
+title: How to use store context timezone in Yves.
 description: This guide shows how to use store context timezone in yves
 last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
-
 ## Prerequisites
 
 * [Configure application context timezone](/docs/pbc/all/dynamic-multistore/{{page.version}}/tutorials-and-howtos/how-to-configure-application-timezone.html)
-
 
 
 ## How to Use Store Context Timezone
@@ -17,12 +15,13 @@ template: howto-guide-template
 To use the store context timezone in Yves, you can follow these steps:
 
 1. Retrieve the store timezone using the `StoreTransfer`:
-Timezone is stored in the `StoreTransfer` object. You can retrieve the store timezone using the following code:
+Timezone is stored in the `StoreTransfer` object. You can retrieve the store timezone using the following code or something similar: 
 
     ```php
     $storeTransfer = $this->getFactory()->getStoreClient()->getCurrentStore();
     $storeTimezone = $storeTransfer->getTimezone();
     ```
+`StoreTransfer` will contain also store context collection property `StoreTransfer.applicationContextCollection` which contains the timezone for each application in the store.
 
 2. Use the store timezone in your code as needed. For example, you can format a date using the store timezone:
 

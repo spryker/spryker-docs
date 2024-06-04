@@ -1197,6 +1197,13 @@ entries:
 
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
+                
+              - title: Tutorials and HowTos
+                nested:
+                  - title: Configure application context.
+                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-configure-application-timezone.html
+                  - title: How to use store context timezone in Yves.
+                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-use-store-timezone.html
 
           - title: Marketplace
             nested:

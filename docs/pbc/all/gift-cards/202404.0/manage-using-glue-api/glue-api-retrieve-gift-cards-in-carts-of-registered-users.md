@@ -121,7 +121,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-For the included attributes of gift cards, see [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 ## Retrieve a registered user's cart
 
@@ -220,8 +220,7 @@ To retrieve a particular cart, send the request:
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-For the attributes of the gift cards included resource, see [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
-
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 
 ## Possible errors

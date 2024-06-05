@@ -84,11 +84,8 @@ Response sample:
 }
 ```
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| id | String | The unique ID used for sharing the cart. |
-| idCompanyUser | String | The unique ID of the company user the cart is shared with. |
-| idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user the cart is shared with. |
+{% include pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shared-carts-response-attributes.md -->
+
 
 ## Possible errors
 

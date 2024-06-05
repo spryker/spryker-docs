@@ -1043,6 +1043,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
       - title: Docker SDK quick start guide
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
+      - title: Update the Docker SDK
+        url: /docs/dg/dev/sdks/the-docker-sdk/update-the-docker-sdk.html        
       - title: Choosing a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
       - title: Configure a mount mode

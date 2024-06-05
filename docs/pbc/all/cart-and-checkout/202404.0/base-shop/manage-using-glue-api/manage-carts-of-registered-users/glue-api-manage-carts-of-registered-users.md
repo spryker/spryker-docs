@@ -1699,6 +1699,10 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
+{% include /pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md -->
+
+{% include /pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
+
 
 |INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -1707,14 +1711,9 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
 | shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
-| cart-permission-groups | name | String | The permission group's name. |
-| cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 | company-users |  id | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | company-users |  isActive | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is active. |
 | company-users |  isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
-
-For the attributes of the included resources, see:
-* [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 
 
 ## Retrieve a registered user's cart
@@ -2902,11 +2901,10 @@ To retrieve a particular cart, send the request:
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 
+{% include /pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
 
-For the attributes of other included resources, see:
+{% include /pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups.md -->
 
-* [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html).
-* [Cart permission groups](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/share-company-user-carts/glue-api-retrieve-cart-permission-groups.html).
 
 
 ## Edit a cart

@@ -618,7 +618,7 @@ Content-Type: application/json
 Accept: application/json
 Authorization: Bearer {your_token}
 X-Is-Transactional: false
-Content-Length: 245
+Content-Length: 445
 
 {
   "data": [
@@ -632,8 +632,52 @@ Content-Length: 245
                 "rate": "1.00"
             }
       ]
+    },
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Entity without a rate"
+            }
+      ]
     }
   ]
+}
+```
+
+In the example above, the first entity will be saved successfully, while the second entity will not be saved due to the missing `rate` field.
+
+Due to the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
+
+```json
+{
+    "data": [
+        {
+            "iso2_code": "DE",
+            "iso3_code": "DEU",
+            "name": "Germany",
+            "id_country": 260,
+            "postal_code_mandatory": false,
+            "postal_code_regex": null,
+            "countryTaxRates": [
+                {
+                    "name": "Germany Standard",
+                    "rate": "1.00",
+                    "fk_country": 260,
+                    "id_tax_rate": 43
+                }
+            ]
+        }
+    ],
+    "errors": [
+        {
+            "code": "1307",
+            "status": 400,
+            "message": "The required field must not be empty. Field: `countries[1].tax-rates[0].rate`"
+        }
+    ]
 }
 ```
 
@@ -662,16 +706,20 @@ Bellow, you can find a list of error codes that you can receive when sending `GE
 | Error code | Message                                                                                                                                          | Description                                                                                                                                                                                                                                                                                                         |
 | --- |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1301 | Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: `{'data':[{...},{...},..]}` | The request body is not valid. Please review the data format for validity. Ensure that the data is provided in the correct format. An example request body would be: `{'data':[{...data entity...},{...data entity...},...]}`. `data` If the data format is invalid or missing, an error message will be displayed. |
-| 1302 | Failed to persist the data for `entity[index].field`. Please verify the provided data and try again.                                                                       | The data could not be persisted in the database. Please verify the provided data entities and try again.                                                                                                                                                                                                            |
-| 1303 | The entity `entity[index]` could not be found in the database.                                                                                                   | The requested entity could not be found in the database for retrieval or update.                                                                                                                                                                                                                                    |
-| 1304 | Modification of immutable field `entity[index].field` is prohibited.                                                                                           | The field is prohibited from being modified. Check the configuration for this field.                                                                                                                                                                                                                         |
-| 1305 | Invalid data type `entity[index]` for field: `field`                                                                                                             | The specified field has an incorrect type. Check the configuration for this field and correct the value.                                                                                                                                                                                                     |
-| 1306 | Invalid data value `entity[index]` for field: `field`. Field rules: `validation rules`.                                                       | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`.                                                                                  |
-| 1307 | The required field must not be empty. Field: `entity[index].field`                                                                                             | The specified field is required according to the configuration. The field wasn't provided. Check the data you are sending and try again.                                                                                                                                                                    |
-| 1308 | Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request.                      | The entity couldn't be found using the provided identifier, and a new identifier cannot be persisted. Update your request accordingly or check configuration for the identifier field.                                                                                                                          |
-| 1309 | Failed to persist the data `entity[index].field`. Please verify the provided data and try again. Entry is duplicated.                                                  | Failed to persist the data. Verify the provided data and try again. This error may occur if a record with the same information already exists in the database.                                                                                                                                               |
-| 1310 | Incomplete Request - missing identifier for `entity[index]`.                                                                                                         | The request is incomplete. The identifier is missing. Check the request and try again.                                                                                                                                                                                                                       |
-| 1311 | The provided `entity[index].field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                          |
+| 1302 | Failed to persist the data for `entity[index].field`. Please verify the provided data and try again.                                             | The data could not be persisted in the database. Please verify the provided data entities and try again.                                                                                                                                                                                                            |
+| 1303 | The entity `entity[index]` could not be found in the database.                                                                                   | The requested entity could not be found in the database for retrieval or update.                                                                                                                                                                                                                                    |
+| 1304 | Modification of immutable field `entity[index].field` is prohibited.                                                                             | The field is prohibited from being modified. Check the configuration for this field.                                                                                                                                                                                                                                |
+| 1305 | Invalid data type `entity[index]` for field: `field`                                                                                             | The specified field has an incorrect type. Check the configuration for this field and correct the value.                                                                                                                                                                                                            |
+| 1306 | Invalid data value `entity[index]` for field: `field`. Field rules: `validation rules`.                                                          | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`.                                                                                   |
+| 1307 | The required field must not be empty. Field: `entity[index].field`                                                                               | The specified field is required according to the configuration. The field wasn't provided. Check the data you are sending and try again.                                                                                                                                                                            |
+| 1308 | Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request.                      | The entity couldn't be found using the provided identifier, and a new identifier cannot be persisted. Update your request accordingly or check configuration for the identifier field.                                                                                                                              |
+| 1309 | Failed to persist the data `entity[index].field`. Please verify the provided data and try again. Entry is duplicated.                            | Failed to persist the data. Verify the provided data and try again. This error may occur if a record with the same information already exists in the database.                                                                                                                                                      |
+| 1310 | Incomplete Request - missing identifier for `entity[index]`.                                                                                     | The request is incomplete. The identifier is missing. Check the request and try again.                                                                                                                                                                                                                              |
+| 1311 | The provided `entity[index].field` is incorrect or invalid.                                                                                      | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                        |
 | 1312 | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
-| 1313 | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                        |
-| 1314 | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                       |
+| 1313 | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                      |
+| 1314 | The relationship `relation` is not editable by configuration.                                                                                    | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                                                                                    |
+| 1315 | Filter field `field` for table alias `alias` not found.                                                                                          | Make sure that the field you send for the filter exist in configuration.                                                                                                                                                                                                                                            |
+| 1316 | The URL is invalid. `entity[index]` field `field` must have a URL data format.                                                                   | Make sure that the URL is passed in relatrive format and starts with the `/` symbol.                                                                                                                                                                                                                                |
+| 1317 | Failed to delete the data for `entity[index]`. The entity has a child entity and can not be deleted. Child entity: `entity[index]`.              | Make sure that the entity that you want to delete does not have child entities. Otherwise delete child entitities and the main on afterewards.                                                                                                                                                                      |
+| 1318 | Method not allowed for the entity `alias`.                                                                                                       | Make sure that the enity that you wabt to delete is set as `isDeletable: true` in configuration.                                                                                                                                                                                                                    |

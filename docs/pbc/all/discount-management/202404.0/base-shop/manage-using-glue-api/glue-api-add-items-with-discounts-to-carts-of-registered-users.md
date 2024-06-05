@@ -699,9 +699,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
-For the attributes of the other included resources, see the docs:
+{% include pbc/all/glue-api-guides/{{page.version}}/product-measurement-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-measurement-units-response-attributes.md -->
 
-* [Retrieving Measurement Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)
 
 
 ## Possible errors

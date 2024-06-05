@@ -1150,6 +1150,8 @@ In case of a successful update, the endpoint responds with information that can 
 
 {% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -1157,20 +1159,6 @@ In case of a successful update, the endpoint responds with information that can 
 | payment-methods | paymentProviderName | String | The name of the payment provider. |
 | payment-methods | priority | String | Defines the order of returned payment methods in ascending order. |
 | payment-methods | requiredRequestData | Object | An array of attributes required by the given method to effectuate a purchase. The exact attribute list depends on the specific provider. |
-| addresses | salutation | String | The salutation to use when addressing the customer. |
-| addresses |  firstName | String | The customer's first name. |
-| addresses | lastName | String | The customer's last name. |
-| addresses | address1 | String | The 1st line of the customer's address. |
-| addresses | address2 | String | The 2nd line of the customer's address. |
-| addresses | address3 | String | The 3rd line of the customer's address. |
-| addresses | zipCode | String | ZIP code. |
-| addresses | city | String |The name of the city. |
-| addresses | country | String | The name of the country. |
-| addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
-| addresses | company | String | Specifies the customer's company. |
-| addresses | phone | String | Specifies the customer's phone number. |
-| addresses | isDefaultShipping | String | Defines if it is the default shipping address of the customer. |
-| addresses | isDefaultBilling | String | Defines if it is the default billing address of the customer. |
 | company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
 | company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
 | company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |

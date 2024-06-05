@@ -153,16 +153,10 @@ To retrieve a company role, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| name | String | Specifies the name of the Company Role |
-| isDefault | Boolean | Indicates whether the Company Role is the default role for the company. |
+{% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-roles-response-attributes.md -->
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| companies | name | String | Company name. |
-| companies | isActive | Boolean | Indicates if the company is active. |
-| companies | status | String | Company status. Possible values are: *Pending*, *Approved* or *Denied*. |
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+
 
 ## Possible errors
 

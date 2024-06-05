@@ -2903,7 +2903,7 @@ To retrieve a particular cart, send the request:
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md -->
 
-{% include /pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups.md -->
+{% include /pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md -->
 
 
 

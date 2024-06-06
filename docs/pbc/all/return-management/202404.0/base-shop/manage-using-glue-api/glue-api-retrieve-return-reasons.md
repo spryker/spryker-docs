@@ -38,8 +38,7 @@ Request sample: retrieve return reasons
 ## Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve return reasons
-</summary>
+<summary markdown='span'>Response sample: retrieve return reasons</summary>
 
 ```json
 {

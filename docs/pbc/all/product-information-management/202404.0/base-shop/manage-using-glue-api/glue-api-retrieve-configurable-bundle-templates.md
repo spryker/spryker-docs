@@ -744,6 +744,7 @@ A list of images assigned to a configurable bundle template.  |
 | configurable-bundle-template-image-sets | externalUrlSmall | String | URLs to the image per image set. |
 
 
+
 ## Possible errors
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

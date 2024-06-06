@@ -85,16 +85,8 @@ Request sample: retrieve a business unit address
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| address1 | String | 1st line of the business unit address. |
-| address2 | String | 2nd line of the business unit address. |
-| address3 | String | 3rd line of the business unit address. |
-| zipCode  | String | ZIP code. |
-| city  | String | City. |
-| phone | String | Phone number of the business unit. |
-| iso2Code | String | ISO 2 Country Code to use. |
-| comment | String | Optional comment describing the business unit address. |
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-unit-addresses-response-attributes.md -->
+
 
 ## Possible errors
 

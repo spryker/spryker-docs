@@ -345,16 +345,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 {% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-|INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| vouchers, cart-rules | displayName | String | The discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | The amount of the provided discount. |
-| vouchers, cart-rules | code | String | The discount code. |
-| vouchers, cart-rules | discountType | String | The discount type. |
-| vouchers, cart-rules  | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+
 
 
 
@@ -591,9 +583,10 @@ To retrieve a particular cart, send the request:
 ```
 </details>
 
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
-For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
 ## Possible errors
 

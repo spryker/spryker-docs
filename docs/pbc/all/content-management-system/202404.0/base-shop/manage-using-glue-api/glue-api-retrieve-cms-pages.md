@@ -583,15 +583,11 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| pageKey | String | Page identifier. |
-| Name | String | Name of the CMS page. |
-| validTo | DateTimeUtc | Date until which the CMS page is visible on the Storefront. |
-| isSearchable | Boolean | Indicates if the page can be searched for on the web. |
-| url | String | URL address of the CMS page. |
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#response).
+
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+
 
 ## Retrieve a CMS page
 
@@ -879,7 +875,10 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 ```
 </details>
 
-Find all the related attribute descriptions in [Retrieve all CMS Pages](#all-cms-pages).
+{% include pbc/all/glue-api-guides/{{page.version}}/cms-pages-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cms-pages-response-attributes.md -->
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 ## Possible errors
 

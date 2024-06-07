@@ -66,7 +66,6 @@ Request sample: retrieve a product label
 
 </details>
 
-<a name="product-labels-response-attributes"></a>
 
 {% include pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
 

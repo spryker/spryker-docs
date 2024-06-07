@@ -13,6 +13,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex.html
 
 ---
 This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.

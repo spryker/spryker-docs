@@ -3921,7 +3921,7 @@ entries:
                   - title: Install the Agent Assist Glue API
                     url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users-in-the-back-office.html
                 nested:
                   - title: "Best practices: Manage users and their permissions with roles and groups"
                     url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
@@ -4049,7 +4049,7 @@ entries:
                   - title: File details - product_stock.csv
                     url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-product-stock.csv.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/manage-warehouses-in-the-back-office.html
                 nested:
                   - title: Create warehouses
                     url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html

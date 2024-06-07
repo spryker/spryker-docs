@@ -89,13 +89,8 @@ Request sample: create a shopping list
  <br>
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| owner | String | First and last names of the shopping list owner. |
-| name | String |Shopping list name. |
-| numberOfItems | Integer | Number of items on the shopping list. |
-| updatedAt | String | Date when the shopping list was last updated. |
-| createdAt | String | Date when the shopping list was created. |
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
+
 
 ## Retrieve shopping lists
 
@@ -338,12 +333,11 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-For response attributes, see [Create a shopping list](#create-a-shopping-list).
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-
-For the attributes of included resources, [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html#shopping-list-items-response-attributes)ю
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
 ## Retrieve a shopping list
 
@@ -599,12 +593,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>    
 
-For response attributes, see [Create a shopping list](#create-a-shopping-list).
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-For the attributes of included resources, see [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html#shopping-list-items-response-attributes).
 
 ## Edit a shopping list
 
@@ -815,12 +809,12 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 ```
 </details>
 
-For response attributes, see [Create a shopping list](#create-a-shopping-list).
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-lists-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-lists-response-attributes.md -->
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-For the attributes of included resources, see [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-shopping-list-items.html#shopping-list-items-response-attributes).
 
 ## Delete a shopping list
 

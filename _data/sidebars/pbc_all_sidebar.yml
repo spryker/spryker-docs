@@ -2183,7 +2183,7 @@ entries:
                   - title: File details - payment_method_store.csv
                     url: /docs/pbc/all/payment-service-provider/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/manage-payment-methods-in-the-back-office.html
                 nested:
                   - title: Edit payment methods
                     url: /docs/pbc/all/payment-service-provider/base-shop/manage-in-the-back-office/edit-payment-methods.html

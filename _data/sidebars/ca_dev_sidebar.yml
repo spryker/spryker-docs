@@ -73,6 +73,8 @@ entries:
             url: /docs/ca/dev/security/generate-access-keys.html
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
+          - title: Set up multi-factor authentication
+            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html            
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
       - title: Configure deployment pipelines
@@ -111,6 +113,8 @@ entries:
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
       - title: Managing parameters in the Parameter Store
         url: /docs/ca/dev/managing-parameters-in-the-parameter-store.html
+      - title: Environment scaling
+        url: /docs/ca/dev/environment-scaling.html        
       - title: Monitoring issues and informing about alerts
         url: /docs/ca/dev/monitoring-issues-and-informing-about-alerts.html
       - title: Multi-store setups

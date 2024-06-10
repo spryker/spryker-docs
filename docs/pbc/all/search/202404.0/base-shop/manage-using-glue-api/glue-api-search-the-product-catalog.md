@@ -6647,18 +6647,11 @@ To search by products, send the request:
 | defaultItemsPerPage       | Integer | Default number of items per one search results page. |
 | validItemsPerPageOptions  | Array   | Options for numbers per search results page.         |
 
-**Abstract products**
 
-| ATTRIBUTE    | TYPE   | DESCRIPTION                   |
-|--------------|--------|-------------------------------|
-| abstractSku  | String | SKU of the abstract product.  |
-| abstractName | String | Name of the abstract product. |
-| images       | Array  | Links to product images.      |
 
-For other abstract product attributes, see:
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
+For other abstract product attributes, see [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
 
 **Value facets**
 

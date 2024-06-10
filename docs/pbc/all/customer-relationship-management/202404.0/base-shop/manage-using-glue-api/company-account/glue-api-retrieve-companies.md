@@ -91,11 +91,7 @@ To retrieve information about a company, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| name | String | Company name. |
-| isActive | Boolean | Defines if the company is active. |
-| status | String | Company status. Possible values are: `Pending`, `Approved`, or `Denied`.|
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
 
 
 ## Possible errors

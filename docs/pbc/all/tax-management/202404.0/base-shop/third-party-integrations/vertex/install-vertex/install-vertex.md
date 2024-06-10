@@ -2,7 +2,7 @@
 title: Install Vertex
 description: Find out how you can install Vertex in your Spryker shop
 draft: true
-last_updated: Jan 10, 2024
+last_updated: May 17, 2024
 template: howto-guide-template
 related:
   - title: Vertex
@@ -13,6 +13,7 @@ redirect_from:
     - /docs/pbc/all/tax-management/202400.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/third-party-integrations/vertex/install-vertex.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex.html
+    - /docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex.html
 
 ---
 This document describes how to integrate [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) into a Spryker shop.
@@ -27,7 +28,6 @@ Before integrating Vertex, ensure the following prerequisites are met:
 Ensure that your installation meets these requirements.
 
 - Make sure that your deployment pipeline executes database migrations.
-- You are using NET prices in your Spryker project. Keep in mind that the Vertex integration only works with NET prices, as it is assumed that businesses using the app are unable to determine GROSS prices.
 
 ## Installation steps
 

@@ -10,4 +10,4 @@ redirect_from:
   - docs/pbc/all/merchant-management/202403.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html
 ---
 
-{% include pbc/all/install-features/202404.0/marketplace/install-the-marketplace-merchant-portal-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/marketplace/install-the-marketplace-merchant-portal-core-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-portal-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/marketplace/install-the-marketplace-merchant-portal-core-feature.md -->

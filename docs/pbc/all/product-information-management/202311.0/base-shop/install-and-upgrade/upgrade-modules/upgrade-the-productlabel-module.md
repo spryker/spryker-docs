@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductLabel
+title: Upgrade the ProductLabel module
 description: Use the guide to update the ProductLabel module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -32,11 +32,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
 related:
-  - title: Migration guide - Product Label GUI
+  - title: Upgrade the ProductLabelGUI module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - Product Bundle
+  - title: Upgrade the ProductBundle module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
 ---
 

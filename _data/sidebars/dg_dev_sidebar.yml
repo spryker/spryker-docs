@@ -10,6 +10,11 @@ entries:
     nested:
     - title: System requirements
       url: /docs/dg/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202212.0"
+      - "202307.0"
+      - "202311.0"
+      - "202204.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
@@ -1038,6 +1043,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
       - title: Docker SDK quick start guide
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
+      - title: Update the Docker SDK
+        url: /docs/dg/dev/sdks/the-docker-sdk/update-the-docker-sdk.html        
       - title: Choosing a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
       - title: Configure a mount mode
@@ -1262,6 +1269,17 @@ entries:
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
+    - title: Non-funcational requirement templates
+      url: /docs/dg/dev/best-practices/non-functional-requirement-templates/non-functional-requirement-templates.html
+      nested:
+        - title: Operational and deployment guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+        - title: Monitorable process Guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+        - title: Operatable feature guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+        - title: Process documentation guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
     - title: Basic SEO techniques to use in your project
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
@@ -1293,7 +1311,7 @@ entries:
       - title: Composer version 2 compatibility issues
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/composer-version-2-compatibility-issues.html
       - title: Could not resolve host zed.calls.are.forbidden.from.zed
-        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/could-not-resolve-host-zed-calls-are-forbidden-from-zed.html        
+        url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/could-not-resolve-host-zed-calls-are-forbidden-from-zed.html
       - title: Unable to resolve hosts for Mail, Jenkins, and RabbitMQ
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/unable-to-resolve-hosts-for-mail-jenkins-and-rabbitmq.html
       - title: PHPStan memory issues
@@ -1409,15 +1427,12 @@ entries:
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-rest-api.html
       - title: Glue infrastructure
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/glue-infrastructure.html
+      - title: Resolve search engine friendly URLs
+        url: /docs/dg/dev/glue-api/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
+        include_versions:
+        - "202307.0"
       - title: Handling concurrent REST requests and caching with entity tags
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/handling-concurrent-rest-requests-and-caching-with-entity-tags.html
-        include_versions:
-        - "202212.0"
-      - title: Resolve search engine friendly URLs
-        url: /docs/dg/dev/glue-api/202212.0/old-glue-infrastructure/resolving-search-engine-friendly-urls.html
-        include_versions:
-        - "202212.0"
-        - "202307.0"
       - title: "Marketplace: Resolve search engine friendly URLs"
         url: /docs/dg/dev/glue-api/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html
       - title: Reference information - GlueApplication errors
@@ -1540,31 +1555,31 @@ entries:
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
-      - title: Develop an app
-        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
-        nested:
-          - title: App manifest
-            url: /docs/dg/dev/acp/develop-an-app/app-manifest.html
-          - title: App configuration
-            url: /docs/dg/dev/acp/develop-an-app/app-configuration.html
-          - title: App configuration translation
-            url: /docs/dg/dev/acp/develop-an-app/app-configuration-translation.html
-          - title: Sync API
-            url: /docs/dg/dev/acp/develop-an-app/sync-api.html
-          - title: Async API
-            url: /docs/dg/dev/acp/develop-an-app/async-api.html
-          - title: Receive ACP messages from SCCOS
-            url: /docs/dg/dev/acp/receive-acp-messages.html
-          - title: Debug an app with XDebug
-            url: /docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html
-          - title: Connect an app
-            url: /docs/dg/dev/acp/develop-an-app/connect-an-app.html
-          - title: Configuration JSON file
-            url: /docs/dg/dev/acp/develop-an-app/configuration-json-file.html
-          - title: Manifest JSON file
-            url: /docs/dg/dev/acp/develop-an-app/manifest-json-file.html
-          - title: Translation JSON file
-            url: /docs/dg/dev/acp/develop-an-app/translation-json-file.html
+#      - title: Develop an app
+#        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
+#        nested:
+#          - title: App manifest
+#            url: /docs/dg/dev/acp/develop-an-app/app-manifest.html
+#          - title: App configuration
+#            url: /docs/dg/dev/acp/develop-an-app/app-configuration.html
+#          - title: App configuration translation
+#            url: /docs/dg/dev/acp/develop-an-app/app-configuration-translation.html
+#          - title: Sync API
+#            url: /docs/dg/dev/acp/develop-an-app/sync-api.html
+#          - title: Async API
+#            url: /docs/dg/dev/acp/develop-an-app/async-api.html
+#          - title: Receive ACP messages from SCCOS
+#            url: /docs/dg/dev/acp/receive-acp-messages.html
+#          - title: Debug an app with XDebug
+#            url: /docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html
+#          - title: Connect an app
+#            url: /docs/dg/dev/acp/develop-an-app/connect-an-app.html
+#          - title: Configuration JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/configuration-json-file.html
+#          - title: Manifest JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/manifest-json-file.html
+#          - title: Translation JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/translation-json-file.html
 
   - title: Miscellaneous guides
     url: /docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html

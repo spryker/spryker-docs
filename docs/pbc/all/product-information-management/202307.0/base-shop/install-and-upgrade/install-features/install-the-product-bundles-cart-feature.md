@@ -19,7 +19,7 @@ related:
   - title: "Glue API: Product Bundle + Cart feature integration"
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
   - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-bundles-cart-feature.md -->

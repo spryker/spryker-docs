@@ -11,8 +11,8 @@ Install the required features:
 |---|---|---|
 |Spryker Core| {{page.version}} |[Glue Application](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)|
 |Product Relation| {{page.version}} | [Product relations feature integration](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-feature.html)|
-|Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
-Product| {{page.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
+|Cart| {{page.version}}| [Cart API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) ||
+Product| {{page.version}} |[Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)|
 
 ### 1) Install the required modules
 

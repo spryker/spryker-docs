@@ -5,6 +5,7 @@ entries:
   nested:
   - title: Developer getting started guide
     url: /docs/dg/dev/development-getting-started-guide.html
+  
   - title: Set up locally
     url: /docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html
     nested:
@@ -84,6 +85,49 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+
+  - title: Architecture
+    url: /docs/dg/dev/architecture/architecture.html
+    nested:
+    - title: Technology stack
+      url: /docs/dg/dev/architecture/technology-stack.html
+    - title: Conceptual overview
+      url: /docs/dg/dev/architecture/conceptual-overview.html
+    - title: Modules and application layers
+      url: /docs/dg/dev/architecture/modules-and-application-layers.html
+    - title: Architectural Convention Reference
+      url: /docs/dg/dev/architecture/architectural-convention-reference.html
+    - title: Module API
+      url: /docs/dg/dev/architecture/module-api/module-api.html
+      nested:
+      - title: Using ~ Composer Constraint for Customized Modules
+        url: /docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html
+      - title: Performance and Scalability
+        url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
+      - title: "Declaration of module APIs: Public and private"
+        url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
+      - title: Semantic Versioning- Major vs. Minor vs. Patch Release
+        url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+    - title: Code buckets
+      url: /docs/dg/dev/architecture/code-buckets.html
+    - title: Programming concepts
+      url: /docs/dg/dev/architecture/programming-concepts.html
+    - title: Marketplace architecture
+      url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-architecture.html
+      nested:
+        - title: Marketplace Application composition
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-application-composition.html
+        - title: Marketplace domain model
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-domain-model.html
+        - title: Merchant Portal architecture overview
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
+        - title: Marketplace in the Back Office
+          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+    - title: "Tutorial: Architectural walkthrough"
+      url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
+    - title: Example modules
+      url: /docs/dg/dev/example-modules.html
+  
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
     nested:
@@ -743,215 +787,6 @@ entries:
     - title: Notifying about unsupported browsers
       url: /docs/dg/dev/frontend-development/notifying-about-unsupported-browsers.html
 
-  - title: Upgrade and migrate
-    url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
-    nested:
-    - title: Migrate to decoupled Glue infrastructure
-      nested:
-        - title: Integrate Storefront and Backend Glue API applications
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
-        - title: Integrate the authentication
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
-        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
-        - title: Integrate the authorization scopes
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
-        - title: Integrate the documentation generator
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
-        - title: Integrate the Glue JSON:API convention
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
-        - title: Integrate the protected endpoints authorization
-          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
-    - title: Migrate from Auth to SecurityGui module
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
-    - title: Migrating from Twig v1 to Twig v3
-      url: /docs/dg/dev/upgrade-and-migrate/migrating-from-twig-v1-to-twig-v3.html
-    - title: Silex Replacement
-      url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html
-      nested:
-      - title: Application
-        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html
-      - title: Container
-        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/container.html
-      - title: Router
-        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router.html
-        nested:
-        - title: Router Yves
-          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html
-        - title: Router Zed
-          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-zed.html
-      - title: Migrate modules
-        nested:
-          - title: ErrorHandler
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-errorhandler-module.html
-          - title: EventDispatcher
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html
-          - title: Form
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html
-          - title: HTTP
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html
-          - title: Locale
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-locale-module.html
-          - title: Messenger
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-messenger-module.html
-          - title: Propel
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-propel-module.html
-          - title: Router
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html
-          - title: Security
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-security-module.html
-          - title: Session
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-session-module.html
-          - title: Store
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-store-module.html
-          - title: Translator
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-translator-module.html
-          - title: Twig
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-twig-module.html
-          - title: Validator
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html
-          - title: WebProfiler
-            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
-      - title: Upgrade to Angular 12
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
-      - title: Upgrade to Angular 15
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
-      - title: Upgrade to Angular 17
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
-      - title: Upgrade to PHP 8.1
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
-      - title: Upgrade to Symfony 5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
-      - title: Upgrade to Symfony 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
-      - title: Upgrade to Webpack v5
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
-      - title: Upgrade to Stylelint 16 and css-loader 6
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
-      - title: Upgrade Node.js to v18 and npm to v9
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
-      - title: Migrate from TSLint to ESLint
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
-      - title: Migrate from Yarn to npm
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
-      - title: Upgrade Publish and Sync
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
-      - title: Upgrade to Marketplace
-        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
-      - title: Migrate to Docker
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
-        nested:
-          - title: Adjust Jenkins for a Docker environment
-            url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
-    - title: Update environemnt configuration
-      url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
-    - title: Migrate to cloud
-      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html
-      nested:
-      - title: "Integrate the Docker SDK"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html
-      - title: "Upgrade the PHP version"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html
-      - title: "Migrate non-standard services"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html
-      - title: "Provision the Spryker SCCOS environments"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-provision-the-sccos-environments.html
-      - title: "Define the deployment strategy"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html
-      - title: "Define environment variables"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html
-      - title: "Restore Elasticsearch and Redis"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html
-      - title: "Adapt the file system-based features"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html
-      - title: "Implement security and performance guidelines"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html
-      - title: "Add frontend assets"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-add-frontend-assets.html
-      - title: "Wire custom services"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html
-      - title: "Choose a multi-store setup"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html
-      - title: "Migrate database"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html
-      - title: "Finilize the migration"
-        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html
-
-  - title: Integrate and configure
-    url: /docs/dg/dev/integrate-and-configure/integrate-and-configure.html
-    nested:
-    - title: Integrate development tools
-      url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-development-tools.html
-      nested:
-      - title: "Glue API: Development tools"
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-the-development-tools-glue-api.html
-      - title: Formatter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
-      - title: Combined product offer import
-        url: /docs/dg/dev/integrate-and-configure/integrate-combined-product-offer-import.html
-      - title: SCSS linter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
-      - title: TS linter
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
-      - title: Web Profiler for Zed
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
-      - title: Web Profiler Widget for Yves
-        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
-
-    - title: ARM architecture (M1 chip)
-      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
-    - title: Authorization Enabler
-      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
-    - title: Basic SEO techniques
-      url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
-    - title: Graceful shutdown
-      url: /docs/dg/dev/integrate-and-configure/implementing-graceful-shutdown.html
-    - title: Cache of unresolved entities for Zed
-      url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
-    - title: Case-sensitive file system on Mac OS
-      url: /docs/dg/dev/integrate-and-configure/switch-to-a-case-sensitive-file-system-on-mac-os.html
-    - title: CSS lazy loading for the frontend
-      url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
-    - title: CMS block widgets
-      url: /docs/dg/dev/integrate-and-configure/integrate-cms-block-widgets.html
-    - title: CSS lazy loading for the frontend
-      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
-    - title: Custom location for static assets
-      url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
-    - title: Database connections
-      url: /docs/dg/dev/integrate-and-configure/configure-database-connections.html
-    - title: Dynamic Yves-Zed tokens
-      url: /docs/dg/dev/integrate-and-configure/configure-dynamic-yves-zed-tokens.html
-    - title: Dynamic Propel configuration
-      url: /docs/dg/dev/integrate-and-configure/integrate-dynamic-propel-configuration.html
-    - title: Elastic computing
-      url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
-    - title: Environment configuration enhancement
-      url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
-    - title: Forcing HTTPS
-      url: /docs/dg/dev/integrate-and-configure/forcing-https.html
-    - title: Health checks
-      url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
-    - title: IE11
-      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
-    - title: Multi-database logic
-      url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
-    - title: Multi-queue publish structure
-      url: /docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html
-    - title: Profiler module
-      url: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
-    - title: Propel clean command
-      url: /docs/dg/dev/integrate-and-configure/integrate-propel-clean-command.html
-    - title: Queue worker signal handling
-      url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
-    - title: Separate endpoint bootstraps
-      url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
-    - title: Services
-      url: /docs/dg/dev/integrate-and-configure/configure-services.html
-    - title: Twig and TwigExtension
-      url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
-
-
   - title: SDKs
     nested:
     - title: SDK
@@ -1061,47 +896,6 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html
       - title: Reset docker environments
         url: /docs/dg/dev/sdks/the-docker-sdk/reset-docker-environments.html
-
-
-  - title: Architecture
-    url: /docs/dg/dev/architecture/architecture.html
-    nested:
-    - title: Technology stack
-      url: /docs/dg/dev/architecture/technology-stack.html
-    - title: Conceptual overview
-      url: /docs/dg/dev/architecture/conceptual-overview.html
-    - title: Modules and application layers
-      url: /docs/dg/dev/architecture/modules-and-application-layers.html
-    - title: Architectural Convention Reference
-      url: /docs/dg/dev/architecture/architectural-convention-reference.html
-    - title: Module API
-      url: /docs/dg/dev/architecture/module-api/module-api.html
-      nested:
-      - title: Using ~ Composer Constraint for Customized Modules
-        url: /docs/dg/dev/architecture/module-api/use-composer-constraint-for-customized-modules.html
-      - title: Performance and Scalability
-        url: /docs/dg/dev/architecture/module-api/performance-and-scalability.html
-      - title: "Declaration of module APIs: Public and private"
-        url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
-      - title: Semantic Versioning- Major vs. Minor vs. Patch Release
-        url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
-    - title: Code buckets
-      url: /docs/dg/dev/architecture/code-buckets.html
-    - title: Programming concepts
-      url: /docs/dg/dev/architecture/programming-concepts.html
-    - title: Marketplace architecture
-      url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-architecture.html
-      nested:
-        - title: Marketplace Application composition
-          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-application-composition.html
-        - title: Marketplace domain model
-          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-domain-model.html
-        - title: Merchant Portal architecture overview
-          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
-        - title: Marketplace in the Back Office
-          url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
-    - title: "Tutorial: Architectural walkthrough"
-      url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
 
   - title: Data import
     url: /docs/dg/dev/data-import/data-import.html
@@ -1541,6 +1335,214 @@ entries:
         url: /docs/dg/dev/updating-spryker/switch-demo-shop-version.html
       - title: Troubleshooting updates
         url: /docs/dg/dev/updating-spryker/troubleshooting-updates.html
+  
+  - title: Upgrade and migrate
+    url: /docs/dg/dev/upgrade-and-migrate/upgrade-and-migrate.html
+    nested:
+    - title: Migrate to decoupled Glue infrastructure
+      nested:
+        - title: Integrate Storefront and Backend Glue API applications
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html
+        - title: Integrate the authentication
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html
+        - title: "Decoupled Glue infrastructure: Integrate the API Key authorization"
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-api-key-authorization.html
+        - title: Integrate the authorization scopes
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authorization-scopes.html
+        - title: Integrate the documentation generator
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-documentation-generator.html
+        - title: Integrate the Glue JSON:API convention
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
+        - title: Integrate the protected endpoints authorization
+          url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+    - title: Migrate from Auth to SecurityGui module
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
+    - title: Migrating from Twig v1 to Twig v3
+      url: /docs/dg/dev/upgrade-and-migrate/migrating-from-twig-v1-to-twig-v3.html
+    - title: Silex Replacement
+      url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html
+      nested:
+      - title: Application
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/application.html
+      - title: Container
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/container.html
+      - title: Router
+        url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router.html
+        nested:
+        - title: Router Yves
+          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html
+        - title: Router Zed
+          url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-zed.html
+      - title: Migrate modules
+        nested:
+          - title: ErrorHandler
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-errorhandler-module.html
+          - title: EventDispatcher
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-eventdispatcher-module.html
+          - title: Form
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html
+          - title: HTTP
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-http-module.html
+          - title: Locale
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-locale-module.html
+          - title: Messenger
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-messenger-module.html
+          - title: Propel
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-propel-module.html
+          - title: Router
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html
+          - title: Security
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-security-module.html
+          - title: Session
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-session-module.html
+          - title: Store
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-store-module.html
+          - title: Translator
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-translator-module.html
+          - title: Twig
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-twig-module.html
+          - title: Validator
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html
+          - title: WebProfiler
+            url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
+      - title: Upgrade to Angular 12
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
+      - title: Upgrade to Angular 15
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-15.html
+      - title: Upgrade to Angular 17
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-17.html
+      - title: Upgrade to PHP 8.1
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html
+      - title: Upgrade to Symfony 5
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html
+      - title: Upgrade to Symfony 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-6.html
+      - title: Upgrade to Webpack v5
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-webpack-v5.html
+      - title: Upgrade to Stylelint 16 and css-loader 6
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-stylelint-16-and-css-loader-6.html
+      - title: Upgrade Node.js to v18 and npm to v9
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-nodejs-to-v18-and-npm-to-v9.html
+      - title: Migrate from TSLint to ESLint
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-tslint-to-eslint.html
+      - title: Migrate from Yarn to npm
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-from-yarn-to-npm.html
+      - title: Upgrade Publish and Sync
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-publish-and-sync.html
+      - title: Upgrade to Marketplace
+        url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-marketplace.html
+      - title: Migrate to Docker
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/migrate-to-docker.html
+        nested:
+          - title: Adjust Jenkins for a Docker environment
+            url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+    - title: Update environemnt configuration
+      url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
+    - title: Migrate to cloud
+      url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud.html
+      nested:
+      - title: "Integrate the Docker SDK"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-integrate-the-docker-sdk.html
+      - title: "Upgrade the PHP version"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-upgrade-the-php-version.html
+      - title: "Migrate non-standard services"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-non-standard-services.html
+      - title: "Provision the Spryker SCCOS environments"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-provision-the-sccos-environments.html
+      - title: "Define the deployment strategy"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-the-deployment-strategy.html
+      - title: "Define environment variables"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-define-environment-variables.html
+      - title: "Restore Elasticsearch and Redis"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-restore-es-and-redis.html
+      - title: "Adapt the file system-based features"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-adapt-the-filesystem-based-features.html
+      - title: "Implement security and performance guidelines"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-implement-security-and-performance-guidelines.html
+      - title: "Add frontend assets"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-add-frontend-assets.html
+      - title: "Wire custom services"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-wire-custom-services.html
+      - title: "Choose a multi-store setup"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-choose-a-multi-store-setup.html
+      - title: "Migrate database"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-migrate-database.html
+      - title: "Finilize the migration"
+        url: /docs/dg/dev/upgrade-and-migrate/migrate-to-cloud/migrate-to-cloud-finalize-the-migration.html
+
+  - title: Integrate and configure
+    url: /docs/dg/dev/integrate-and-configure/integrate-and-configure.html
+    nested:
+    - title: Integrate development tools
+      url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-development-tools.html
+      nested:
+      - title: "Glue API: Development tools"
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-the-development-tools-glue-api.html
+      - title: Formatter
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-formatter.html
+      - title: Combined product offer import
+        url: /docs/dg/dev/integrate-and-configure/integrate-combined-product-offer-import.html
+      - title: SCSS linter
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-scss-linter.html
+      - title: TS linter
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-ts-linter.html
+      - title: Web Profiler for Zed
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-for-zed.html
+      - title: Web Profiler Widget for Yves
+        url: /docs/dg/dev/integrate-and-configure/integrate-development-tools/integrate-web-profiler-widget-for-yves.html
+
+    - title: ARM architecture (M1 chip)
+      url: /docs/dg/dev/integrate-and-configure/switch-to-arm-architecture-m1-chip.html
+    - title: Authorization Enabler
+      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
+    - title: Basic SEO techniques
+      url: /docs/dg/dev/integrate-and-configure/integrate-basic-seo-techniques.html
+    - title: Graceful shutdown
+      url: /docs/dg/dev/integrate-and-configure/implementing-graceful-shutdown.html
+    - title: Cache of unresolved entities for Zed
+      url: /docs/dg/dev/integrate-and-configure/integrate-cache-of-unresolved-entities-for-zed.html
+    - title: Case-sensitive file system on Mac OS
+      url: /docs/dg/dev/integrate-and-configure/switch-to-a-case-sensitive-file-system-on-mac-os.html
+    - title: CSS lazy loading for the frontend
+      url: /docs/dg/dev/integrate-and-configure/integrate-css-lazy-loading.html
+    - title: CMS block widgets
+      url: /docs/dg/dev/integrate-and-configure/integrate-cms-block-widgets.html
+    - title: CSS lazy loading for the frontend
+      url: /docs/dg/dev/integrate-and-configure/integrate-authorization-enabler.html
+    - title: Custom location for static assets
+      url: /docs/dg/dev/integrate-and-configure/integrate-custom-location-for-static-assets.html
+    - title: Database connections
+      url: /docs/dg/dev/integrate-and-configure/configure-database-connections.html
+    - title: Dynamic Yves-Zed tokens
+      url: /docs/dg/dev/integrate-and-configure/configure-dynamic-yves-zed-tokens.html
+    - title: Dynamic Propel configuration
+      url: /docs/dg/dev/integrate-and-configure/integrate-dynamic-propel-configuration.html
+    - title: Elastic computing
+      url: /docs/dg/dev/integrate-and-configure/integrate-elastic-computing.html
+    - title: Environment configuration enhancement
+      url: /docs/dg/dev/integrate-and-configure/integrate-environment-configuration-enhancement.html
+    - title: Forcing HTTPS
+      url: /docs/dg/dev/integrate-and-configure/forcing-https.html
+    - title: Health checks
+      url: /docs/dg/dev/integrate-and-configure/integrate-health-checks.html
+    - title: IE11
+      url: /docs/dg/dev/integrate-and-configure/remove-the-support-of-ie11.html
+    - title: Multi-database logic
+      url: /docs/dg/dev/integrate-and-configure/integrate-multi-database-logic.html
+    - title: Multi-queue publish structure
+      url: /docs/dg/dev/integrate-and-configure/integrate-multi-queue-publish-structure.html
+    - title: Profiler module
+      url: /docs/dg/dev/integrate-and-configure/Integrate-profiler-module.html
+    - title: Propel clean command
+      url: /docs/dg/dev/integrate-and-configure/integrate-propel-clean-command.html
+    - title: Queue worker signal handling
+      url: /docs/dg/dev/integrate-and-configure/configure-queue-worker-signal-handling.html
+    - title: Separate endpoint bootstraps
+      url: /docs/dg/dev/integrate-and-configure/integrate-separate-endpoint-bootstraps.html
+    - title: Services
+      url: /docs/dg/dev/integrate-and-configure/configure-services.html
+    - title: Twig and TwigExtension
+      url: /docs/dg/dev/integrate-and-configure/twig-and-twigextension.html
 
   - title: App Composition Platform
     url: /docs/dg/dev/acp/app-composition-platform.html
@@ -1597,7 +1599,5 @@ entries:
     url: /docs/dg/dev/code-contribution-guide.html
   - title: Code generator
     url: /docs/dg/dev/code-generator.html
-  - title: Example modules
-    url: /docs/dg/dev/example-modules.html
   - title: Supported versions of PHP
     url: /docs/dg/dev/supported-versions-of-php.html

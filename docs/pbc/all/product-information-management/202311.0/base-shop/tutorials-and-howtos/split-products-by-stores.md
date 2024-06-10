@@ -49,7 +49,7 @@ The following database tables structure relates to our use case:
 
 1. To restrict access to the `Product` entity, first hook up `AclEntityBehavior` to all the related tables:
 
-**.src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
+**./src/Pyz/Zed/Product/Persistence/Propel/Schema/spy_product.schema.xml**
 ```xml
 <?xml version="1.0"?>
 <database
@@ -72,7 +72,7 @@ The following database tables structure relates to our use case:
 </database>
 ```
 
-**.src/Pyz/Zed/Store/Persistence/Propel/Schema/spy_store.schema.xml**
+**./src/Pyz/Zed/Store/Persistence/Propel/Schema/spy_store.schema.xml**
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01"
@@ -93,7 +93,7 @@ The following database tables structure relates to our use case:
 2. Extend the main configuration object of the Persistence Acl feature and configure as necessary.
 In our case, we use the [basic inheritance configuration](/docs/pbc/all/user-management/{{site.version}}/marketplace/persistence-acl-feature-overview/persistence-acl-feature-configuration.html) example and adopt it:
 
-**.src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php**
+**./src/Pyz/Zed/Product/Communication/Plugin/ProductAclEntityMetadataConfigExpanderPlugin.php**
 ```php
 <?php
 

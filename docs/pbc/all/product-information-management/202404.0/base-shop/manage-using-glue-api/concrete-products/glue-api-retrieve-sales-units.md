@@ -93,8 +93,6 @@ Request sample: retrieve sales units
 ```
 </details>
 
-<a name="sales-units-response-attributes"></a>
-
 {% include pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md -->
 
 

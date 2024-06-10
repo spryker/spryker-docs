@@ -146,22 +146,8 @@ Request sample: add an address
 
 <a name="add-an-address-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| salutation | String | Salutation to use when addressing to the customer. |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| address1 | String | The 1st line of the customer's address. |
-| address2 | String | The 2nd line of the customer's address. |
-| address3 | String | The 3rd line of the customer's address. |
-| zipCode | String | ZIP code. |
-| city | String | Specifies the city. |
-| country | String | Specifies the country. |
-| iso2Code |   | Specifies an ISO 2 Country Code to use. |
-| company | String | Specifies the customer's company. |
-| phone | String | Specifies the customer's phone number. |
-| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
+
 
 ## Edit an address
 
@@ -239,7 +225,7 @@ Request sample: edit an address
 ```
 </details>
 
-For response attributes, see [Add an address](#add-an-address-response-attributes).
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
 
 ## Retrieve customer's addresses
 
@@ -323,22 +309,7 @@ Request sample: retrieve customer's addresses
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| salutation | String | Salutation to use when addressing the customer. |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| address1 | String | The 1st line of the customer's address. |
-| address2 | String | The 2nd line of the customer's address. |
-| address3 | String | The 3rd line of the customer's address. |
-| zipCode | String | ZIP code. |
-| city | String | Specifies the city. |
-| country | String | Specifies the country. |
-| iso2Code | String | Specifies an ISO 2 Country Code to use. |
-| company | String | Specifies customer's company. |
-| phone | String | Specifies customer's phone number. |
-| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
 
 ## Retrieve an address
 
@@ -367,24 +338,7 @@ Request sample: retrieve an address
 
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| salutation | String | Salutation to use when addressing the customer |
-| firstName | String | Customer's first name |
-| lastName | String | Customer's last name |
-| address1 | String | The 1st line of the customer's address |
-| address2 | String | The 2nd line of the customer's address |
-| address3 | String | The 3rd line of the customer's address |
-| zipCode | String | ZIP code |
-| city | String | Specifies the city |
-| country | String | Specifies the country |
-| iso2Code | String | Specifies an ISO 2 Country Code to use |
-| company | String | Specifies the customer's company |
-| phone | String | Specifies the customer's phone number |
-| isDefaultShipping | Boolean | Specifies whether the address should be used as the default shipping address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-| isDefaultBilling | Boolean | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is **true**. This is also the case for the first address to be saved. |
-
-If the request is successful, the endpoint returns **RestAddressesResponse** with the requested address.
+{% include pbc/all/glue-api-guides/{{page.version}}/addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/addresses-response-attributes.md -->
 
 ## Delete an address
 

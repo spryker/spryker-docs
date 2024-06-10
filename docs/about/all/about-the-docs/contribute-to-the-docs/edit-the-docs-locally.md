@@ -92,7 +92,9 @@ The name of the pull request must match the title of the page or section you've 
 {% endinfo_block %}
 
 3. Add a description of what you've changed.
-4. Click **Create pull request**.
+4. Add the **TW review needed** label.
+  This confirms that the PR can be reviewed and merged.
+5. Click **Create pull request**.
     This refreshes the page and displays the created pull request. The status is **Open**.
 
 

@@ -146,17 +146,11 @@ Response sample: redeem a gift card in a guest cart
 }
 ```
 
-For the guest cart attributes, see [Creating Guest Carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-carts.html#create-a-guest-cart).
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
 
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| gift-cards | code | String | Code of the gift card sent to the specified email address after the gift card was purchased. |
-| gift-cards | name | String | Name of the gift card. |
-| gift-cards | value | Integer | Amount applied to the card when the gift card code is redeemed. |
-| gift-cards | currencyIsoCode | String | Currency to which the code is applied. |
-| gift-cards | actualValue | Integer | Actual value of the gift card code. |
-| gift-cards | isActive | Boolean | Specifies whether the gift card code is redeemed or not. |
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
+
 
 ## Remove a gift card code
 

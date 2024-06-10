@@ -9,4 +9,5 @@ template: back-office-user-guide-template
 
 ## Next steps
 
-[Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html)
+* [Best practices: Promote products with product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html)
+* [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/create-product-relations.html)

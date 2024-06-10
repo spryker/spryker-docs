@@ -3203,6 +3203,7 @@ entries:
                       - title: Manage marketplace concrete product attributes
                         url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/concrete-products/manage-marketplace-concrete-product-attributes.html
               - title: Manage in the Back Office
+                url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/manage-marketplace-products-in-the-back-office.html
                 nested:
                   - title: Products
                     url: /docs/pbc/all/product-information-management/marketplace/manage-in-the-back-office/products/products.html

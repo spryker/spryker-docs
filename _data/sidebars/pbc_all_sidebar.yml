@@ -3260,7 +3260,7 @@ entries:
           - title: Import product relations
             url: /docs/pbc/all/product-relationship-management/import-file-details-product-relation.csv.html
           - title: Manage in the Back Office
-            url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/log-into-the-back-office.html
+            url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/manage-product-relations-in-the-back-office.html
             nested:
               - title: "Best practices: Promote products with product relations"
                 url: /docs/pbc/all/product-relationship-management/manage-in-the-back-office/best-practices-promote-products-with-product-relations.html
@@ -3315,11 +3315,8 @@ entries:
             nested:
               - title: File details- product_review.csv
                 url: /docs/pbc/all/ratings-reviews/import-and-export-data/import-file-details-product-review.csv.html
-          - title: Manage in the Back Office
-            url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/log-into-the-back-office.html
-            nested:
-              - title: Manage product reviews
-                url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+          - title: Manage product reviews
+            url: /docs/pbc/all/ratings-reviews/manage-product-reviews-in-the-back-office.html
           - title: Manage using Glue API
             nested:
               - title: Manage product reviews
@@ -3396,7 +3393,7 @@ entries:
                   - title: Install the Return Management Glue API
                     url: /docs/pbc/all/return-management/base-shop/install-and-upgrade/install-the-return-management-glue-api.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/manage-returns-in-the-back-office.html
                 nested:
                   - title: Change the state of order items in returns
                     url: /docs/pbc/all/return-management/base-shop/manage-in-the-back-office/change-the-state-of-order-items-in-returns.html
@@ -3423,7 +3420,7 @@ entries:
                   - title: Install the Marketplace Return Management Glue API
                     url: /docs/pbc/all/return-management/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-marketplace-returns-in-the-back-office.html
                 nested:
                   - title: Main merchant returns
                     url: /docs/pbc/all/return-management/marketplace/manage-in-the-back-office/manage-main-merchant-returns.html
@@ -3490,7 +3487,7 @@ entries:
                   - title: Upgrade search initialization
                     url: /docs/pbc/all/search/base-shop/install-and-upgrade/upgrade-search-initialization.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/manage-filters-and-search-preferences-in-the-back-office.html
                 nested:
                   - title: "Best practices: Promote products with search preferences"
                     url: /docs/pbc/all/search/base-shop/manage-in-the-back-office/best-practices-promote-products-with-search-preferences.html
@@ -3592,6 +3589,7 @@ entries:
         url: /docs/pbc/all/service-point-management/service-point-management.html
         include_versions:
         - "202311.0"
+        - "202404.0"        
         nested:
           - title: Unified Commerce
             nested:
@@ -3821,7 +3819,7 @@ entries:
                   - title: Upgrade the Tax module
                     url: /docs/pbc/all/tax-management/base-shop/install-and-upgrade/upgrade-the-tax-module.html
               - title: Manage in the Back Office
-                url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/log-into-the-back-office.html
+                url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/manage-taxes-the-back-office.html
                 nested:
                   - title: Create tax rates
                     url: /docs/pbc/all/tax-management/base-shop/manage-in-the-back-office/create-tax-rates.html
@@ -3986,12 +3984,10 @@ entries:
                     url: /docs/pbc/all/user-management/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html
                     include_versions:
                     - "202404.0"
-              - title: Manage in the Back Office
-                nested:
-                  - title: Create users
-                    url: /docs/pbc/all/user-management/marketplace/manage-in-the-back-office/create-users.html
-                    include_versions:
-                    - "202404.0"
+              - title: Create users
+                url: /docs/pbc/all/user-management/marketplace/back-office-create-users.html
+                include_versions:
+                - "202404.0"
 
 
       - title: Warehouse Management System

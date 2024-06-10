@@ -507,8 +507,8 @@ To change the item quantity in a shopping list, send the request:
 
 {% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
 
 ## Remove an item from a shopping list
 

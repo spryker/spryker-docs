@@ -169,8 +169,6 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<a name="abstract-products-response-attributes"></a>
-
 {% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-reviews-response-attributes.md -->

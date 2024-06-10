@@ -62,6 +62,8 @@ docker/sdk testing
 2. In the CLI container, run Codeception:
 
 ```bash
+codecept build
+codecept fixtures
 codecept run
 ```
 {% info_block infoBox "" %}

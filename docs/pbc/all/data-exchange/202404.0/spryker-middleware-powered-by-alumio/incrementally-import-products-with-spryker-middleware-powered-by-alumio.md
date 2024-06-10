@@ -22,17 +22,19 @@ To run the incremental import of products, follow these steps.
 ## 3. Create an incoming configuration
 
 1. In Spryker Middleware powered by Alumio, go to **Connections** > **Incoming** and click **+**.
-2. In **Name**, enter the name of your configuration. As you are entering the name, the identifier is automatically populated based on the name.
-3. Optional: In **Description**, add the description of your incoming configuration.
-4. To activate the incoming configuration after creating, set the status to **Enabled**.
-5. For **Subscriber**, select **HTTP subscriber**.
-6. For **Request URL**, enter `/api/rest/v1/products`.
-7. For **Payload type**, select **Encoded data**.
-8. For **Request Parameters**, enter the following string: `search={"updated":[{"operator":">","value":"&{lastTimestamp}"}]}&limit=10`. For the **limit** value, you can specify any number of products you want to import. If you want to import all updated products, see [Batch products import](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#batch-products-import).
+  This opens the **Create an incoming configuration** page.
+2. For **Name**, enter the name for this configuration.
+  As you are entering the name, the **Identifier** is automatically populated.
+3. Optional: For **Description**, add the description of the configuration.
+4. To activate the incoming configuration after creating, make sure **Status** is set to **Enabled**.
+5. For **Subscriber**, enter and select **HTTP Subscriber**.
+6. For **Request URI**, enter `/api/rest/v1/products`.
+7. For **Payload type**, enter and select **Encoded data**.
+8. For **Request Parameters**, enter the following string: `search={"updated":[{"operator":">","value":"&{lastTimestamp}"}]}&limit=10`. Make sure to define the `limit` value with the number of products you want to import. If you want to import all updated products, see [Batch products import](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#batch-products-import).
 
 ![http-subscriber](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/1-http-subscriber.png)
 
-9. In **HTTP Client**, select the Akeneo client you created in [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+9. In **HTTP Client**, enter and select the Akeneo client you created in [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 
 ![akeneo-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/2-akeneo-client.png)
 

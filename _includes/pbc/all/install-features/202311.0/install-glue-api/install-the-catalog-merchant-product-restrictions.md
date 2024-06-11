@@ -7,7 +7,7 @@ Install the required features:
 | Glue API: Spryker Core        | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)                  |
 | Merchant Product Restrictions | {{page.version}} | [Merchant Product Restrictions feature integration](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html)  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -17,7 +17,7 @@ composer require spryker/merchant-relationship-product-lists-rest-api:"^0.1.0" -
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE                                  | EXPECTED DIRECTORY                                          |
 |-----------------------------------------|-------------------------------------------------------------|

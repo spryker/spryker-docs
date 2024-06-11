@@ -17,7 +17,7 @@ Install the required features:
 
 ### Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-sales-order-threshold-gui:"^0.1.0" --update-with-dependencies

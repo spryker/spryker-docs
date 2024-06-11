@@ -40,7 +40,7 @@ Recommended: `/home/jdoe/workspace/project`.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
 
-4. Clone *one* of the [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+4. Clone *one* of the [Demo Shops](/docs/about/all/about-spryker.html#demo-shops):
 
     * B2C Demo Shop:
 
@@ -53,7 +53,7 @@ Recommended: `/home/jdoe/workspace/project`.
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202311.0 --single-branch ./b2b-demo-shop && \
-    cd b2c-demo-shop
+    cd b2b-demo-shop
     ```
 
     * B2C Marketplace Demo Shop

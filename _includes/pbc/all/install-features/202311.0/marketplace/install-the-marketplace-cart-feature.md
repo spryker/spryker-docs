@@ -14,9 +14,9 @@ Install the required features:
 | Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Marketplace Order Management | {{page.version}}  | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/marketplace-cart:"{{page.version}}" --update-with-dependencies
@@ -82,9 +82,9 @@ Install the required features:
 | Merchant Portal Core | {{page.version}}  |
 | Marketplace Order Management | {{page.version}}  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/cart-note-merchant-portal-gui:"^1.0.0" --update-with-dependencies

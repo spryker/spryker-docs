@@ -60,5 +60,5 @@ For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).
 
 ## Next steps
 
-* For information about using the query containers, see [Using a qauery container](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/using-a-query-container.html).
+* For information about using the query containers, see [Using a query container](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/using-a-query-container.html).
 * If you need to implement your own Query Container, see [Implement a query container](/docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html).

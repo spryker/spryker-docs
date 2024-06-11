@@ -12,7 +12,7 @@ Install the required features:
 | Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)                              |
 | Inventory Management     | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 ```bash
 composer require spryker-feature/warehouse-user-management: "{{page.version}}" --update-with-dependencies

@@ -8,11 +8,11 @@ Install the required features:
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Product Management | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product Management | {{page.version}} | [Products API feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Product Label | {{page.version}} | |
 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -32,7 +32,7 @@ Make sure that the following module is installed:
 
 ## 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate

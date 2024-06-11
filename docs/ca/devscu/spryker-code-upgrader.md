@@ -41,7 +41,7 @@ You can change the upgrade schedule to better fit your development process.
 
 ## Availability of Spryker Code Upgrader
 
-The Upgrader is shipped with PaaS+ in the EU region.
+The Upgrader is shipped with PaaS+ in the EU and US regions.
 
 ## Next steps
 

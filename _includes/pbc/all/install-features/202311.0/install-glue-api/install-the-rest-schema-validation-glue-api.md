@@ -13,7 +13,7 @@ Install the required features:
 
 ## 1)  Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/rest-request-validator:"^1.0.0" --update-with-dependencies

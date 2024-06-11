@@ -19,9 +19,9 @@ Install the required features:
 | Glue API: Payments                     | {{page.version}} | [Glue API: Payments feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/install-and-upgrade/install-the-payments-glue-api.html)                                         |
 | Glue API: Shipment                     | {{page.version}} | [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)                                            |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/checkout-rest-api:"3.5.0" spryker/order-payments-rest-api:"^1.0.0" spryker/sales-order-thresholds-rest-api:"^1.0.0" --update-with-dependencies
@@ -279,7 +279,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                             | TYPE     | EVENT       | PATH                                                                         |
 |------------------------------------------------------|----------|-------------|------------------------------------------------------------------------------|

@@ -27,11 +27,11 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/mailing-and-notifications-feature-integration.html)
+| Mailing and Notifications | {{page.version}} | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
 | Persistent Cart | {{page.version}} |  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
@@ -67,7 +67,7 @@ Make sure that the following changes have been applied in the database:
 | spy_sales_order_invoice                | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                          | TYPE     | EVENT   | PATH                                                               |
 |---------------------------------------------------|----------|---------|--------------------------------------------------------------------|
@@ -1098,7 +1098,7 @@ To start the feature integration, overview and install the necessary features.
 | Checkout                    | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies

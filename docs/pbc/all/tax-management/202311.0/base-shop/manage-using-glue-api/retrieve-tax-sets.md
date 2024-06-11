@@ -25,7 +25,7 @@ This endpoint allows retrieving detailed information about tax sets of abstract 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 ## Retrieve tax sets
 
@@ -149,14 +149,8 @@ Request sample: retrieve tax sets
 ```
 </details>
 
-<a name="tax-sets-response-attributes"></a>
+{% include pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Tax set name |
-| restTaxRates.name | Tax rate name |
-| restTaxRates.rate | Tax rate |
-| restTaxRates.country | Applicable country for the tax rate |
 
 ## Possible errors
 

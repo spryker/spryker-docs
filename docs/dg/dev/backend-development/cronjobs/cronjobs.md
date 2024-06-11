@@ -35,7 +35,7 @@ Basic module schema:
 
 ## Cronjob schedulers
 
-[Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrate to Jenkins](/docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html).
+[Demo Shops](/docs/about/all/about-spryker.html#demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrate to Jenkins](/docs/dg/dev/backend-development/cronjobs/migrate-to-jenkins.html).
 
 If your project has very specific requirements, you can [create a custom scheduler](/docs/dg/dev/backend-development/cronjobs/create-a-custom-scheduler.html).
 

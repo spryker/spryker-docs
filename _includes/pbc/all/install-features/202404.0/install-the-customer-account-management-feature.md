@@ -26,7 +26,7 @@ Install the required features:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{page.version}}" spryker/oauth-customer-connector:"^1.8.0" --update-with-dependencies
@@ -808,9 +808,9 @@ To start feature integration, integrate the required feature:
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/customer-account-management: "{{page.version}}" --update-with-dependencies

@@ -14,9 +14,9 @@ Install the required features:
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                            |
 | Product      | {{site.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{site.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
-| Cart         | {{site.version}} | [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{site.version}}/customer-account-management-feature-integration.html)                                  |
+| Cart         | {{site.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)                                  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
@@ -45,7 +45,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:
+Make sure the following changes have been applied in the database::
 
 | DATABASE ENTITY     | TYPE   | EVENT   |
 |---------------------|--------|---------|
@@ -148,7 +148,7 @@ Install the required features:
 |--------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                            |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies

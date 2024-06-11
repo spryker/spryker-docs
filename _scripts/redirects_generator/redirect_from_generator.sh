@@ -21,7 +21,7 @@ process_markdown_files() {
 }
 
 # Specify the folder to add `redirect_from` to
-folder_path="docs/sdk"
+folder_path="docs/scos/user"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

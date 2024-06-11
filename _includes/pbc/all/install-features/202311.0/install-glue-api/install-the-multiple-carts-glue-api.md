@@ -11,9 +11,9 @@ Install the required features:
 | Multiple Carts | {{page.version}} | Install the Multiple Carts feature |
 | Cart | {{page.version}} | Cart feature integration |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/multi-carts-rest-api:"^1.0.0" --update-with-dependencies
@@ -31,7 +31,7 @@ Make sure that the following modules have been installed:
 
 ## 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -39,7 +39,7 @@ console transfer:generate
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 {% endinfo_block %}
 
 | Transfer | Type | Event | Path |

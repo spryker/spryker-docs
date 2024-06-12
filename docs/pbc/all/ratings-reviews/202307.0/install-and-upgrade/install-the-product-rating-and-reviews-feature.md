@@ -18,6 +18,6 @@ related:
   - title: Product Rating and Reviews feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
   - title: Product Rating & Reviews feature overview
-    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
+    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
 ---
 {% include pbc/all/install-features/202307.0/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-rating-and-reviews-feature.md -->

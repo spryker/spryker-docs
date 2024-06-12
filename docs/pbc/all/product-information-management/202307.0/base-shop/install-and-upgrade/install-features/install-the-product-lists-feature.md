@@ -16,7 +16,7 @@ related:
   - title: Install the CMS + Product Lists + Catalog feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-product-lists-catalog-feature-integration.html
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Prices feature integration
@@ -27,8 +27,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
   - title: Merchant Product Restrictions feature overview
     link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
-  - title: Product Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-product-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-lists-feature.md -->

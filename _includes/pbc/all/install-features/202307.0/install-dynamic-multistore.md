@@ -912,7 +912,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StoreStorageStoreExpanderPlugin | Expands store on store getting. | None | Spryker\Client\StoreStorage\Plugin\Store |
-| TimezoneStoreStorageStoreExpanderPlugin | Expends store timezone on store context | None | Spryker\Client\StoreContextStorage\Plugin\Store |
+| TimezoneStoreStorageStoreExpanderPlugin | Expands store with timezone. | None | Spryker\Client\StoreContextStorage\Plugin\Store |
 | StoreMetaDataProviderPlugin  | Provides store meta data. | None | Spryker\Client\Store\Plugin\ZedRequest |
 | LocaleMetaDataProviderPlugin | Provides locale meta data. | None | Spryker\Client\Locale\Plugin\ZedRequest |
 | ConsoleLocaleApplicationPlugin |Provides locale service. | None | Spryker\Zed\Locale\Communication\Plugin\Application |
@@ -922,16 +922,16 @@ Enable the following behaviors by registering the plugins:
 | LocaleBackendGatewayApplicationPlugin | Provides locale service. | None | Spryker\Zed\Locale\Communication\Plugin\Application |
 | DefaultLocaleStorePreCreateValidationPlugin | Validates default locale before store is created. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | DefaultLocaleStorePreUpdateValidationPlugin | Validates default locale before store is updated. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
-| ContextStorePreCreateValidationPlugin | Validates store application contex before store is created. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
-| ContextStorePreUpdateValidationPlugin | Validates store application contex before store is updated. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| ContextStorePreCreateValidationPlugin | Validates store application context before store is created. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| ContextStorePreUpdateValidationPlugin | Validates store application context before store is updated. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 | CountryStorePostCreatePlugin | Update country store data after store is created. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | DefaultLocaleStorePostCreatePlugin | Update default locale data after store is created. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | LocaleStorePostCreatePlugin | Update locale store data after store is created. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | SearchSetupSourcesStorePostCreatePlugin | Update search setup after store is created. | None | Spryker\Zed\Search\Communication\Plugin\Store |
-| ContextStorePostCreatePlugin | Update store context after store is created. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| ContextStorePostCreatePlugin | Updates store context after the store is created. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 | CountryStorePostUpdatePlugin | Update country store data after store is updated. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | DefaultLocaleStorePostUpdatePlugin | Update default locale data after store is updated. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
-| ContextStorePostUpdatePlugin | Update store context after store is updated. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| ContextStorePostUpdatePlugin | Updates store context after the store is updated. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 | LocaleStorePostUpdatePlugin | Update locale store data after store is updated. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
 | CountryStoreCollectionExpanderPlugin | Expands country store collection. | None | Spryker\Zed\Country\Communication\Plugin\Store |
 | LocaleStoreCollectionExpanderPlugin | Expands locale store collection. | None | Spryker\Zed\Locale\Communication\Plugin\Store |
@@ -939,7 +939,7 @@ Enable the following behaviors by registering the plugins:
 | CountryStoreFormExpanderPlugin | Adds country selection fields to the Store form. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormViewExpanderPlugin | Adds rendered locale tabs and tables as variables in template. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreFormViewExpanderPlugin | Adds rendered country tabs and tables as variables in template. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
-| ContextStoreFormExpanderPlugin | Adds rendered store context tabs and application and timezone dropdowns. | None | Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui |
+| ContextStoreFormExpanderPlugin | Expands store form with application and timezone dropdowns. | None | Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui |
 | LocaleStoreFormTabExpanderPlugin | Expands Store form with Locales tab. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreFormTabExpanderPlugin | Expands Store form with Countries tab. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | ContextStoreFormTabExpanderPlugin | Expands Store form with application context tab. | None | Spryker\Zed\StoreContextGui\Communication\Plugin\StoreGui |
@@ -948,7 +948,7 @@ Enable the following behaviors by registering the plugins:
 | AssignedCountriesStoreViewExpanderPlugin | Returns table with assigned countries. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
 | LocaleStoreTableExpanderPlugin | Expands locale table with store column. | None | Spryker\Zed\LocaleGui\Communication\Plugin\StoreGui |
 | CountryStoreTableExpanderPlugin | Expands table data rows of store table with country codes. | None | Spryker\Zed\CountryGui\Communication\Plugin\StoreGui |
-| ContextStoreCollectionExpanderPlugin | Expands table rows of store table and form with store context. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
+| ContextStoreCollectionExpanderPlugin | Expands store collection with application contexts. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 
 
 @#todo - add plugins in table 

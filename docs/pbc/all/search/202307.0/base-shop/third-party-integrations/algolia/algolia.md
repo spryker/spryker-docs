@@ -137,4 +137,4 @@ Here is an example of product data stored in Algolia:
 ```
 
 ## Next step
-[Integrate Algolia](/docs/pbc/all/search/{{page.version}}/third-party-integrations/integrate-algolia.html)
+[Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/integrate-algolia.html)

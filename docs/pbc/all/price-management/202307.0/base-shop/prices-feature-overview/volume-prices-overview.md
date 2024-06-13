@@ -141,9 +141,3 @@ The feature has the following functional constraints which are going to be resol
 |BACK OFFICE USER GUIDES|
 |---|
 | [Add volume prices to abstract products](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

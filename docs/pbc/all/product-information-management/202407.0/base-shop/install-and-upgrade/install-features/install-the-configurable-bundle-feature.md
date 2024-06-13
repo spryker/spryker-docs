@@ -17,7 +17,7 @@ related:
   - title: Install the Configurable Bundle + Product Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
   - title: Product Lists + Catalog feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Prices feature integration

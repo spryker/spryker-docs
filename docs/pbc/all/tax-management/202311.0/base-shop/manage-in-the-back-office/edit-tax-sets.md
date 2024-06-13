@@ -4,7 +4,7 @@ last_updated: May 31, 2022
 template: back-office-user-guide-template
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 redirect_from:
     - /docs/scos/user/back-office-user-guides/201903.0/administration/tax-sets/managing-tax-sets.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-sets.html

@@ -24,7 +24,7 @@ related:
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-prices-feature.md -->

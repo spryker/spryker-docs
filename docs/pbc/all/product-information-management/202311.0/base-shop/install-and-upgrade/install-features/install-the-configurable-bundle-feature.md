@@ -25,7 +25,7 @@ related:
   - title: Product Lists + Catalog feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration

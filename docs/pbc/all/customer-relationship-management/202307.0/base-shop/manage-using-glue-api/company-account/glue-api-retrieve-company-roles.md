@@ -25,7 +25,7 @@ related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Company user roles and permissions overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---

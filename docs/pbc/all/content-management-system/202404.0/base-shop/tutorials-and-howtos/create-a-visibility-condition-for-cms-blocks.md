@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/tutorials-and-howtos/create-a-visibility-condition-for-cms-blocks.html
 related:
   - title: Templates & Slots overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
   - title: Managing slots
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html
 ---

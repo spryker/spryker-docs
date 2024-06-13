@@ -119,7 +119,7 @@ Even if all the parameter values are [preconfigured](#preconfigured-parameter-va
 
 #### Request for Quote with a configurable product
 
-The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to [Quotation Process & RFQ](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
 #### Shopping List with a configurable product
 

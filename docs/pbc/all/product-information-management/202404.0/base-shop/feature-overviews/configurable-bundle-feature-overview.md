@@ -162,7 +162,7 @@ Product availability is taken into account when calculating the total.
 A Storefront User can reorder items from a configurable bundle as separate order items.
 
 ## Configurable bundle and quotation process
-A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
+A Storefront User can include a configurable bundle into the [quotation process](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
 
 ## Configurable bundle and splittable order items
 A Storefront User can add splittable and non-splittable products to a configurable bundle.

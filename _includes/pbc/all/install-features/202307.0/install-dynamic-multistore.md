@@ -657,26 +657,37 @@ Example expected data identifier: `kv:store:de`
 
 Example expected data fragment:
 
-@#todo check redis 
-
 ```json
 {
   "id_store": 1,
   "name": "DE",
   "default_locale_iso_code": "en_US",
+  "default_currency_iso_code": "EUR",
+  "available_currency_iso_codes": [
+    "EUR",
+    "CHF"
+  ],
   "available_locale_iso_codes": [
-    "de_DE",
-    "en_US"
+    "en_US",
+    "de_DE"
   ],
   "stores_with_shared_persistence": [],
   "countries": [
-    "CH",
-    "DE"
+    "DE",
+    "CH"
   ],
   "country_names": [
-    "Switzerland",
-    "Germany"
+    "Germany",
+    "Switzerland"
   ],
+  "application_context_collection": {
+    "application_contexts": [
+      {
+        "application": null,
+        "timezone": "Europe/Berlin"
+      }
+    ]
+  },
   "_timestamp": 100000000.000000
 }
 ```
@@ -951,8 +962,6 @@ Enable the following behaviors by registering the plugins:
 | ContextStoreCollectionExpanderPlugin | Expands table rows of store table and form with store context. | None | Spryker\Zed\StoreContext\Communication\Plugin\Store |
 
 
-@#todo - add plugins in table 
-
 
 **src/Pyz/Client/Store/StoreDependencyProvider.php**
 
@@ -1209,6 +1218,8 @@ Steps to verify:
 - Make sure that you can update a store with countries assigned to it.
 - Make sure that you can update a store with a default locale assigned to it.
 - Make sure that you can update a store with locales assigned to it.
+- Make sure that you can create a store with store context assigned to it.
+- Make sure that you can update a store with store context assigned to it.
 
 {% endinfo_block %}
 

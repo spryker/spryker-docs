@@ -1200,10 +1200,8 @@ entries:
                 
               - title: Tutorials and HowTos
                 nested:
-                  - title: Configure application context.
-                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-configure-application-timezone.html
-                  - title: How to use store context timezone in Yves.
-                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-use-store-timezone.html
+                  - title: How to add a new custom field to store settings
+                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-add-new-custom-field.html
 
           - title: Marketplace
             nested:

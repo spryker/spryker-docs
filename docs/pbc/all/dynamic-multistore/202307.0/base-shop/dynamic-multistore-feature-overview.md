@@ -40,7 +40,7 @@ To define which currencies the customers can you use, you can assign them to the
 To define additional store settings you can use the **Settings** tab.
 When creating a store, you can assign timezone per each application or specify a default one for the store. 
 
-![configure-store-context](/images/dynamic-multistore/screen1.png)
+![configure-store-settings](/images/dynamic-multistore/screen1.png)
 
 ## Publishing and synchronizing
 

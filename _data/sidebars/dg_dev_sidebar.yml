@@ -1595,6 +1595,23 @@ entries:
 
   - title: Code contribution guide
     url: /docs/dg/dev/code-contribution-guide.html
+  - title: Third-Party Spryker Module Development and Distribution
+    url: /docs/dg/dev/third-party-module-development/third-party-spryker-module-development-and-distribution.html
+    nested:
+      - title: Onboard & Learn
+        url: /docs/dg/dev/third-party-module-development/onboard-and-learn.html
+      - title: Develop
+        url: /docs/dg/dev/third-party-module-development/develop.html
+      - title: Ensure Quality
+        url: /docs/dg/dev/third-party-module-development/ensure-quality.html
+      - title: Publish Code
+        url: /docs/dg/dev/third-party-module-development/publish-code.html
+      - title: Ensure Compatibility
+        url: /docs/dg/dev/third-party-module-development/ensure-compatibility.html
+      - title: Drive Usage and Support with Problems
+        url: /docs/dg/dev/third-party-module-development/drive-usage-and-support-with-problems.html
+      - title: Distribute
+        url: /docs/dg/dev/third-party-module-development/distribute.html
   - title: Code generator
     url: /docs/dg/dev/code-generator.html
   - title: Example modules

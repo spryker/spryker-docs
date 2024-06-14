@@ -6,10 +6,10 @@ template: howto-guide-template
 ---
 
 This document describes how to add a  custom contact email field in store settings. 
-Will be added a new field `contactEmail` to `StoreContextApplicationTransfer` and configure the timezone for each application in the store.
+Let's add a new field `contactEmail` to `StoreContextApplicationTransfer` and configure the timezone for each application in the store.
 
 
-## Adjuste StoreContextApplicationTransfer to add new field
+## Adjust StoreContextApplicationTransfer to add a new field
 
 Add new field `contactEmail` to `StoreContextApplicationTransfer`:
 
@@ -61,7 +61,7 @@ class СontactEmailRule implements StoreContextValidatorRuleInterface
 }
 
 ```
-Also add new rule to validator via extend `StoreContextBusinessFactory`
+Also, add new rule to the validator via extending `StoreContextBusinessFactory`
 
 **src/Pyz/Zed/StoreContext/Business/StoreContextBusinessFactory.php**
 
@@ -123,7 +123,7 @@ class StoreContextBusinessFactory extends SprykerStoreContextBusinessFactory
 
 ## Extend StoreContextFormExpander
 
-For adjuste the form in the Back Office need to extend `StoreContextFormExpander` and add new field to the form.
+To adjust the form in the Back Office, we need to extend `StoreContextFormExpander` and add a new field to the form.
 
 First, need to extend `StoreContextForm` and add new field to the form.
 

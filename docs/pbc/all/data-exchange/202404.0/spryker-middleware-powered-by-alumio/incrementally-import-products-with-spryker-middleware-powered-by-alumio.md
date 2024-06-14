@@ -44,11 +44,11 @@ To run the incremental import of products, follow these steps.
 13. For **Key**, enter `lastTimestamp`.
 
 ![input-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/3-input-transformer.png)
-<a name="step-10"></a>
 
 14. Click **Add data transformer**.
 15. For **Select a prototype**, select **Get an entity from storage**.
-16. For **Storage**, select the storage you created. For example, `[Default] Akeneo to Spryker - Products - update lastTimestamp`. For instructions on creating new storage, see [Create cache](/docs/pbc/all/data-exchange/202404.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#create-cache).
+<a name="step-10"></a>
+16. For **Storage**, enter and select the storage you created. For example, **[Default] Akeneo to Spryker - Products - update lastTimestamp**. For instructions on creating new storage, see [Create cache](/docs/pbc/all/data-exchange/202404.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#create-cache).
 17. For **Storage entity identifier**, enter `lastTimestamp`.
 18. For **Destination**, enter `lastTimestamp`.
 
@@ -81,42 +81,49 @@ To run the incremental import of products, follow these steps.
 ![response-decoder](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/7-response-decoder.png)
 
 36. Click **Save & continue**.
-This opens the edit page for this configurations with a success message displayed.
+This opens the edit page for this configuration with a success message displayed.
 
 ## 4. Create an outgoing connection
 
 For the incremental import to work, you need to add to your [outgoing connection](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#create-an-outgoing-configuration) an additional entity transformer with two data transformers in it.
 
-To create the additional transformer, do the following:
+To create the additional transformer, follow the steps:
 
 1. In the Spryker Middleware powered by Alumio platform, go to **Connections** > **Entity transformers** and click **+**.
-2. In **Name**, enter the name of entity transformer. As you are entering the name, the identifier is  automatically populated based on the name.
-3. Optional: In **Description**, add the description of your transformer.
+  This opens the **Create an entity transformer** page.
+2. For **Name**, enter the name for the entity transformer. As you are entering the name, the **Identifier** is  automatically populated based on the name.
+3. Optional: In **Description**, add the description for the transformer.
 4. To activate the entity transformer after creating, set the status to **Enabled**.
-5. In **Settings**, select **Chain multiple entity transformers**.
+5. For **Settings**, select **Chain multiple entity transformers**.
 add entity transformer
-6. In **Manage name and description**, select `Data, transform using mappers and conditions`. This is the first data transformer in the entity transformer.
-add data transformer
-6. In **Data transformers** -> **Manage name**, select `Value setter`.
-7. In **Configurations** > **Key**, enter `lastTimestamp`.
-8. For **Value**, select **string** and enter the placeholder `&{updated}`
-add mapper
-9. In **Mappers**, select **String: Replace**.
-10. For **Search**, enter `T`.
-add mapper
-11. Select **String: Cut**.
+6. Click **Add entity transformer**.
+7. For **Select a prototype or configuration**, enter and select **Data, transform using mappers and conditions**.
+  This is the first data transformer in the entity transformer.
+
+8. In **Data transformers** click **Add data transformer**.
+9. For **Select a prototype**, enter and select **Value setter**.
+10. For **Configurations** > **Key**, enter `lastTimestamp`.
+11. For **Value**, select **string** and enter `&{updated}`.
+12. In **Mappers**, click **Add a mapper**.
+13. For **Select a prototype**, enter and select **String: Replace**.
+14. For **Search**, enter `T`.
+15. Click **Add a mapper**.
+11. For **Select a prototype**, enter and select **String: Cut**.
 12. For **Start**, enter `0`.
 13. For **Length**, enter `19`.
 
 ![manage-name](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/8-manage-name.png)
 
-add entity transformer
-14. For **Manage name and description**, select **Data, transform using mappers and conditions**. This is the second data transformer in the entity transformer.
-Add data transformer.
-15. In **Data transformers** > **Manage name**, select **Save entity to storage**.
-16. In **Storage**, select the name of storage you created when establishing the incoming configuration at [step 10](#step-10). In our example, it is `[Default] Akeneo to Spryker - Products - update lastTimestamp`.
+15. Click **Add entity transformer**.
+16. For **Select a prototype or configuration**, enter and select **Data, transform using mappers and conditions**
+  This is the second data transformer in the entity transformer.
+17. In **Data transformers** click **Add data transformer**.
+18. For **Select a prototype**, enter and select select **Save entity to storage**.
+16. For **Storage**, enter and select the storage you created when establishing the incoming configuration at [Create an incoming configuration](#step-10). In our example, it's **[Default] Akeneo to Spryker - Products - update lastTimestamp**.
 17. For **Storage entity identifier**, enter `lastTimestamp`.
 18. For **Source**, enter `lastTimestamp`.
+19. Click **Save & continue**.
+  This opens the edit page for this connection with a success message displayed.
 
 ## 5. Define the route
 

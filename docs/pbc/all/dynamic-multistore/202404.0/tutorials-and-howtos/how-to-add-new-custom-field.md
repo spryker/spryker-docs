@@ -5,13 +5,10 @@ last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
-This document describes how to add a  custom contact email field in store settings. 
-Let's add a new field `contactEmail` to `StoreContextApplicationTransfer` and configure the timezone for each application in the store.
 
+This document explains how to add a custom contact email field in the store settings. We will add a new field, `contactEmail`, to StoreContextApplicationTransfer and configure it for each application in the store.
 
 ## Adjust StoreContextApplicationTransfer to add a new field
-
-Add new field `contactEmail` to `StoreContextApplicationTransfer`:
 
 **src/Pyz/Shared/StoreContext/Transfer/store_context.transfer.xml**
 ```xml
@@ -121,11 +118,9 @@ class StoreContextBusinessFactory extends SprykerStoreContextBusinessFactory
 ```
 
 
-## Extend StoreContextFormExpander
+## Extend StoreContextForm
 
-To adjust the form in the Back Office, we need to extend `StoreContextFormExpander` and add a new field to the form.
-
-First, need to extend `StoreContextForm` and add new field to the form.
+To adjust the form in the Back Office, we need to extend `StoreContextForm` and add a new field `contactEmail` to the form.
 
 **src/Pyz/Zed/StoreContextGui/Communication/Form/StoreContextForm.php**
 
@@ -169,7 +164,7 @@ class StoreContextForm extends SprykerStoreContextForm
     {
         $builder
             ->add(static::FIELD_SUPPORT_CONTACT_EMAIL, EmailType::class, [
-                'label' => 'Email',
+                'label' => 'Contact Email',
                 'constraints' => $this->createEmailConstraints(),
             ]);
 
@@ -189,104 +184,30 @@ class StoreContextForm extends SprykerStoreContextForm
 
 ```
 
-Next step is to extend `StoreContextCollectionForm` and use new `StoreContextForm` in the `StoreContextCollectionForm`.
-
-*src/Pyz/Zed/StoreContextGui/Communication/Form/StoreContextCollectionForm.php*
-
-```php
-<?php
-
-namespace Pyz\Zed\StoreContextGui\Communication\Form;
-
-use Pyz\Zed\StoreContextGui\Communication\Form\StoreContextForm;
-use Spryker\Zed\StoreContextGui\Communication\Form\StoreContextCollectionForm as SprykerStoreContextCollectionForm;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\FormBuilderInterface;
-
-class StoreContextCollectionForm extends SprykerStoreContextCollectionForm
-{
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     * @param array<string, mixed> $options
-     *
-     * @return void
-     */
-    protected function addStoreContextForm(FormBuilderInterface $builder, array $options): void
-    {
-        $builder->add(static::FORM_STORE_CONTEXT, CollectionType::class, [
-            'entry_type' => StoreContextForm::class,
-            'entry_options' => [
-                static::OPTION_TIMEZONES => $options[static::OPTION_TIMEZONES],
-                static::OPTION_APPLICATIONS => $options[static::OPTION_APPLICATIONS],
-            ],
-            'label' => false,
-            'allow_add' => true,
-            'allow_delete' => true,
-            'prototype' => true,
-            'prototype_name' => '__store_context__',
-        ]);
-    }
-}
-
-```
-
-Finally, extend `StoreContextFormExpander` and use new `StoreContextCollectionForm` in the `StoreContextFormExpander`.
-
-*src/Pyz/Zed/StoreContextGui/Communication/Expander/StoreContextFormExpander.php*
-
-```php
-
-namespace Pyz\Zed\StoreContextGui\Communication\Expander;
-
-use Generated\Shared\Transfer\StoreTransfer;
-use Spryker\Zed\StoreContextGui\Communication\Expander\StoreContextFormExpander as SprykerStoreContextFormExpander;
-use Pyz\Zed\StoreContextGui\Communication\Form\StoreContextCollectionForm;
-use Symfony\Component\Form\FormBuilderInterface;
-
-class StoreContextFormExpander extends SprykerStoreContextFormExpander
-{
-    /**
-     * @param \Symfony\Component\Form\FormBuilderInterface $builder
-     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
-     *
-     * @return \Symfony\Component\Form\FormBuilderInterface
-     */
-    public function expand(FormBuilderInterface $builder, StoreTransfer $storeTransfer): FormBuilderInterface
-    {
-        $builder->add(
-            static::FIELD_APPLICATION_CONTEXT_COLLECTION,
-            StoreContextCollectionForm::class,
-            $this->getOptions(),
-        );
-
-        return $builder;
-    }
-}
-```
+## Replace StoreContextForm in the extended StoreContextGuiCommunicationFactory 
 
 *src/Pyz/Zed/StoreContextGui/Communication/StoreContextGuiCommunicationFactory.php*
 
 ```php
 
 namespace Pyz\Zed\StoreContextGui\Communication;
-
-use Pyz\Zed\StoreContextGui\Communication\Expander\StoreContextFormExpander;
-use Spryker\Zed\StoreContextGui\Communication\Expander\StoreContextFormExpanderInterface;
+ 
+use Pyz\Zed\StoreContextGui\Communication\Form\StoreContextForm;
 use Spryker\Zed\StoreContextGui\Communication\StoreContextGuiCommunicationFactory as SprykerStoreContextGuiCommunicationFactory;
 
 class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunicationFactory
 {
     /**
-     * @return \Spryker\Zed\StoreContextGui\Communication\Expander\StoreContextFormExpanderInterface
+     * @return string
      */
-    public function createStoreContextFormExpander(): StoreContextFormExpanderInterface
+    public function getStoreContextFormClass(): string
     {
-        return new StoreContextFormExpander(
-            $this->createStoreContextFormDataProvider(),
-        );
+        return StoreContextForm::class;
     }
 }
 ```
+So we can use the new field of form in the Back Office.
+
 
 ## Setup and configure the store settings in the Back Office
 
@@ -302,28 +223,92 @@ Each store must be have one default application block.
 5. Click **Save** to save the changes.
 
 
-## How extract new field value from StoreTransfer
+## Example how extend StoreTransfer to extract the new field via Plugin 
 
-This is simple example how to extract the new field `contactEmail` value from `StoreTransfer` in the project.
+Adjust `StoreTransfer` to add new field `contactEmail`:
+
+**src/Pyz/Shared/StoreContextStorage/Transfer/store_context_storage.transfer.xml**
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+    <transfer name="Store">
+        <property name="contactEmail" type="string"/>
+    </transfer>
+</transfers>
+
+
+```
+
+And implement the plugin to expend `StoreTransfer`:
+
+**src/Pyz/Client/StoreContextStorage/Plugin/Store/ContactEmailStoreStorageStoreExpanderPlugin.php**
 
 ```php
+namespace Pyz\Client\StoreContextStorage\Plugin\Store;
 
-// .... 
+use Generated\Shared\Transfer\StoreTransfer;
+use Spryker\Client\Kernel\AbstractPlugin;
+use Spryker\Client\StoreExtension\Dependency\Plugin\StoreExpanderPluginInterface;
 
-function extractContactEmail(StoreTransfer $storeTransfer): ?string
+class ContactEmailStoreStorageStoreExpanderPlugin  extends AbstractPlugin implements StoreExpanderPluginInterface
 {
-
-    foreach ($storeTransfer->getApplicationContextCollectionOrFail()->getApplicationContexts() as $storeApplicationContextTransfer) {
-        if ($storeApplicationContextTransfer->getApplication() === APPLICATION && $storeApplicationContextTransfer->getContactEmail() !== null) {
-            return $storeApplicationContextTransfer->getContactEmail();
+    /**
+     * Specification:
+     * - Expands `StoreTransfer` with timezone.
+     *
+     * @api
+     *
+     * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
+     *
+     * @return \Generated\Shared\Transfer\StoreTransfer
+     */
+    public function expand(StoreTransfer $storeTransfer): StoreTransfer
+    {
+        if ($storeTransfer->getApplicationContextCollection() === null) {
+            return $storeTransfer;
         }
 
-        if ($storeApplicationContextTransfer->getApplication() === null) {
-           return $storeApplicationContextTransfer->getContactEmail();
-      }
+        foreach ($storeTransfer->getApplicationContextCollectionOrFail()->getApplicationContexts() as $storeApplicationContextTransfer) {
+            if ($storeApplicationContextTransfer->getApplication() === APPLICATION && $storeApplicationContextTransfer->getContactEmail() !== null) {
+                return $storeTransfer->setContactEmail($storeApplicationContextTransfer->getContactEmail());
+            }
+
+            if ($storeApplicationContextTransfer->getApplication() === null) {
+                $storeTransfer->setContactEmail($storeApplicationContextTransfer->getContactEmail());
+            }
+        }
+
+        return $storeTransfer;
     }
 }
 
-// ....
 
 ```
+
+And register the plugin in the `StoreDependencyProvider`:
+
+**src/Pyz/Client/Store/StoreDependencyProvider.php**
+
+```php
+namespace Pyz\Client\Store;
+
+use Pyz\Client\StoreContextStorage\Plugin\Store\ContactEmailStoreStorageStoreExpanderPlugin;
+use Spryker\Client\Store\StoreDependencyProvider as SprykerStoreDependencyProvider;
+
+class StoreDependencyProvider extends SprykerStoreDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\StoreExtension\Dependency\Plugin\StoreExpanderPluginInterface>
+     */
+    protected function getStoreExpanderPlugins(): array
+    {
+        return [
+            new ContactEmailStoreStorageStoreExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+Now you can use the new field `contactEmail` in the StoreTransfer. 

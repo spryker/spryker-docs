@@ -13,16 +13,16 @@ We would recommend 4 steps how to improve usage of your module:
      - Keep guide up to date for the latest release. (After all the steps executed, the functionality should work for the end user)
      - Have **Verification** step that clearly states how to check that everything is done properly and functionality works as expected.
 
-2. We recommend to use https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart for collaboration with module users, mention (In **README.md** file of your module) how issues can be reported.
-   - If you have domain specific requirements for the details needed from customer to identify the issue, feel free to add them to the readme file.
+2. If you do not have Support Portal or similar, we recommend to use https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart for collaboration with module users, mention (In **README.md** file of your module) how issues can be reported.
+   - If you have domain specific requirements for the details needed from a module user to identify the issue, feel free to add them to the readme file.
 3. If you have several Major (see https://semver.org/) releases, provide a migration guide for each of them.
     - You can find an example here: https://docs.spryker.com/docs/pbc/all/product-information-management/202404.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html
     - It is important to:
     - Have migration for each **Major** version starting from 2nd.
     - Have **Verification** step that clearly states how to check that everything is done properly and functionality works as expected.
-4: Request Spryker review for you module to obtain **Verified by Spryker** badge, it will allow to promote and increase trust for you module from the end users. 
+4: Request a review of your module from **Spryker** to obtain **Verified by Spryker** badge, it will allow to promote it and increase trust from the end users into it. 
       
     - **TBD: More details coming soon.**
-5. Publish module in Spryker Application Catalog
+5. Publish the module in Spryker Application Catalog
       
     - **TBD: More details coming soon.**

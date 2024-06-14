@@ -9,7 +9,7 @@ template: howto-guide-template
 ## Code compatibility
 Steps how to ensure code compatibility with latest Spryker releases:
 
-**1.** Decide which demoshop is most relevant for your module testing, choose one of:
+**1.** Decide which demoshop is most relevant for testing your module, choose one of:
 - https://github.com/spryker-shop/b2c-demo-[shop](https://github.com/spryker-shop/b2c-demo-shop/blob/master/.github/workflows/ci.yml)
 - https://github.com/spryker-shop/b2b-demo-shop
 - https://github.com/spryker-shop/b2c-demo-marketplace

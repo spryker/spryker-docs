@@ -69,7 +69,7 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 ```
 
 ### 4. Commit Your Package to a Git Repository
-- In the next steps we assume that you already have git repository with the module:
+- In the next steps we assume that you already have a git repository with the module:
 
 - Add all files to the repository:
   ```bash

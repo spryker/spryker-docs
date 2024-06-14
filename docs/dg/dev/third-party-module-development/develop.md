@@ -20,12 +20,12 @@ https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention.html 
 **Option 3.** Use the existing Spryker module extension point.
 
 **a.** Example of existing extension point usage.
-Were we'll extend product table with additional column **Categories** where will show the list of categories where the product is present.
+Were we'll extend product table with an additional column **Categories** where will show the list of categories where the product is present.
 For this we'll use two extension points in the existing Spryker modules 
 - One to extend table headers with **Categories** column [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php)
-- And another to extend table content with corresponding column [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php)
+- And another to extend table content with the corresponding column [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php)
 
-a. Create a module **console dev:module:create your-company-name.product-category**. (Replace the namespace and module name according to you preferences)
+a. Create a module **console dev:module:create your-company-name.product-category**. 
 
 {% info_block infoBox %}
    Make sure that `vendor/your-company-name/product-category` folder with module data is created.

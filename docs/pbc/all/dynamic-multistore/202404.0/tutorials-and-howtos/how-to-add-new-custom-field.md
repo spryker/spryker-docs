@@ -240,7 +240,7 @@ Adjust `StoreTransfer` to add new field `contactEmail`:
 
 ```
 
-And implement the plugin to expend `StoreTransfer`:
+And implement the plugin to expand `StoreTransfer`:
 
 **src/Pyz/Client/StoreContextStorage/Plugin/Store/ContactEmailStoreStorageStoreExpanderPlugin.php**
 

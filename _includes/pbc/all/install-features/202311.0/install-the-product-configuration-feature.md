@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configurable-product-feature-overview.html) feature.
+This document describes how to install the [Product Configuration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) feature.
 
 
 ## Install feature core

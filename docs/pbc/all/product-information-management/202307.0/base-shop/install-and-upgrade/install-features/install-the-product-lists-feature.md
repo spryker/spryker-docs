@@ -24,7 +24,7 @@ related:
   - title: Merchant Product Restrictions feature integration
     link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
   - title: Product Images + Configurable Bundle feature integration
-    link: ddocs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
   - title: Merchant Product Restrictions feature overview
     link: docs/pbc/all/merchant-management/page.version/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html
 ---

@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html).
+This document describes how to install the [Product Lists feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html).
 
 ## Install feature core
 

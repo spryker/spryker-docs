@@ -23,7 +23,7 @@ related:
   - title: Prices feature integration
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Product Images + Configurable Bundle feature integration
-    link: ddocs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-merchant-product-restrictions-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchant-product-restrictions-feature.md -->

@@ -254,11 +254,6 @@ use Spryker\Client\StoreExtension\Dependency\Plugin\StoreExpanderPluginInterface
 class ContactEmailStoreStorageStoreExpanderPlugin  extends AbstractPlugin implements StoreExpanderPluginInterface
 {
     /**
-     * Specification:
-     * - Expands `StoreTransfer` with timezone.
-     *
-     * @api
-     *
      * @param \Generated\Shared\Transfer\StoreTransfer $storeTransfer
      *
      * @return \Generated\Shared\Transfer\StoreTransfer

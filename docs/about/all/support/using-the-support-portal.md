@@ -65,7 +65,8 @@ This category offers a selection of professional services we are offering. For e
 Request help with the Upgrader. These requests are processed by our Upgrader experts.
 
 ### Announce High Traffic/Load
-Using this option you can let us know about events or time periods in which you expect higher than usual load on your production systems. We can use this information to check auto scaling settings and evaluate whether they need to be adjusted to meet your demands.
+
+Let us know about events or time periods in which you expect a higher than usual load on your production enviornments. We can use this information to check auto scaling settings and evaluate if they need to be adjusted to meet your demands.
 
 ### Emergencies
 

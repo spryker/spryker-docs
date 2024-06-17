@@ -34,7 +34,8 @@ By default, the following data is sent to Vertex for tax calculation:
 
 3. When using Vertex for tax determination, no exact tax rate is received from Vertex instead of a default tax value in the Back Office. So, to avoid confusion, we recommend removing the default tax rate that appears in the Back Office.
 
-## Failover Solution
+## Failover solution
+
 The integration covers use cases for when there is a downtime and for reasons taxes cannot be calculated. In this scenario, no tax is displayed and the end-user can checkout without taxes.
 
 In the future, we will include a flag that states: VERTEXDOWN – 0 rate to enable you differentiate the downtime scenario from when tax rates are actually calculated as 0 from Vertex.

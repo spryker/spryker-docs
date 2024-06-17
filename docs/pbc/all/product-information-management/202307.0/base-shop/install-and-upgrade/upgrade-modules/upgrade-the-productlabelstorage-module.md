@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductLabelStorage
+title: Upgrade the ProductLabelStorage module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelstorage

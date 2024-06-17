@@ -1,5 +1,5 @@
 ---
-title: Viewing Dashboard
+title: View Dashboard
 description: The guide provides an overview of the Count Orders, Orders by Status, and Top Orders charts you can see when working from the Dashboard.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template

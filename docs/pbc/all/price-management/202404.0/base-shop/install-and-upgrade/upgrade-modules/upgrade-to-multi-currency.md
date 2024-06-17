@@ -88,8 +88,8 @@ composer update spryker/*
    * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) uses the new PriceProduct module.
    * **PriceDataFeed >= 0.2.** — uses the new `PriceProduct` module.
    * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
-   * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).
-   * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
+   * **ProductLabelGui >= 2.** — see [Upgrade the ProductLabelGui module](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).
+   * **ProductManagement >= 0.9.** — see [Upgrade the ProductManagement module](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
    * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelation-module.html).
    * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelationcollector-module.html).
    * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).

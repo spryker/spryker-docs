@@ -150,16 +150,8 @@ Request sample: Retrieve a customer
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| email | String | Customer's email address. |
-| gender | String | Customer's gender. |
-| dateOfBirth | String | Customer's date of birth. |
-| salutation | String | Salutation to use when addressing the customer. |
-| createdAt | String | Account creation date. |
-| updatedAt | String | Date of the last update. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
+
 
 ## Edit a customer
 
@@ -220,16 +212,8 @@ Request sample: edit a customer
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| email | String | Customer's email address. |
-| gender | String | Customer's gender. |
-| dateOfBirth | String | Customer's date of birth. |
-| salutation | String | Salutation to use when addressing the customer. |
-| createdAt | String | Account creation date. |
-| updatedAt | String | Date of the last update. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
+
 
 
 ## Anonymize a customer

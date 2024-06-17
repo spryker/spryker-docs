@@ -34,13 +34,13 @@ redirect_from:
 related:
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - ProductLabel
+  - title: Upgrade the ProductLabel module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
   - title: Migration guide - ProductBundle
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
-  - title: Migration guide - ProductLabelGui
+  - title: Upgrade the ProductLabelGui module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
-  - title: Migration guide - ProductOptionDiscountConnector
+  - title: Upgrade the ProductOptionDiscountConnector module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.html
 ---
 

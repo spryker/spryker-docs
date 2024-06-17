@@ -549,19 +549,19 @@ Deletion of child entities is not cascaded and is disallowed. Deletion is disall
 
 ### Sending `POST`, `PATCH` and `PUT` requests with relationships
 
-To create or update an entity along with its related entities, you need to include the relationships directly in 
-the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity 
+To create or update an entity along with its related entities, you need to include the relationships directly in
+the request payload. The payload should be structured to reflect the hierarchy and connections between the main entity
 and its child entities.
 
 {% info_block infoBox %}
 
-Currently, our system doesn't support `many-to-many` relationships for POST, PATCH, and PUT requests. 
-Only `one-to-one` and `one-to-many` relationships are allowed. This means that each child entity can be associated 
+Currently, our system doesn't support `many-to-many` relationships for POST, PATCH, and PUT requests.
+Only `one-to-one` and `one-to-many` relationships are allowed. This means that each child entity can be associated
 with only one parent entity.
 
 {% endinfo_block %}
 
-The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array. 
+The payload for these requests follows a nested structure where the main entity and its related entities are included within a data array.
 Each object in the data array represents an instance of the main entity, and each related entity is nested within it.
 
 For correct processing, make sure that related entities are defined with existing relation names. Also, organize them in alignment with their hierarchical relationships in the database, corresponding to the relationships defined in tables like `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping`:
@@ -569,14 +569,14 @@ For correct processing, make sure that related entities are defined with existin
 - `spy_dynamic_entity_configuration_relation` specifies the relationships between parent and child entities. Each record links a parent entity to a child entity.
 - `spy_dynamic_entity_configuration_relation_field_mapping` contains the field mappings between related entities.
 
-The hierarchical relationships are primarily defined by the foreign key references in these tables. 
-For example, `spy_dynamic_entity_configuration_relation` uses foreign keys to establish connections between 
+The hierarchical relationships are primarily defined by the foreign key references in these tables.
+For example, `spy_dynamic_entity_configuration_relation` uses foreign keys to establish connections between
 parent and child configurations in `spy_dynamic_entity_configuration`.
 
 Incorrect or non-existent relation names or a misalignment in the hierarchy leads to processing errors.
 For a detailed list of potential errors, see [Error codes](#error-codes).
 
-For POST, PATCH, and PUT requests the payload must accurately reflect the entity relationships. 
+For POST, PATCH, and PUT requests the payload must accurately reflect the entity relationships.
 Make sure that each entity in the request includes its corresponding related entities, structured as nested objects within the payload.
 
 ```bash
@@ -629,39 +629,134 @@ Response sample:
 }
 ```
 
-The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table, 
-as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName` 
+The response contains all columns from the `spy_country` table and the included `spy_tax_rate` table,
+as configured in `spy_dynamic_entity_definition.definition`. Each column is identified using the `fieldVisibleName`
 as the key, providing a comprehensive view of the table’s data in the API response.
 
 {% info_block infoBox %}
 
-For POST and PUT requests, which are used to create new entities, child entities receive their foreign key reference 
-to the parent entity only after the parent entity is created. The system automatically assigns the foreign key 
+For POST and PUT requests, which are used to create new entities, child entities receive their foreign key reference
+to the parent entity only after the parent entity is created. The system automatically assigns the foreign key
 to the child entities based on the newly created parent entity's ID.
 
 {% endinfo_block %}
 
-#### Error codes
+## Non-transactional saving
 
-Bellow, you can find a list of error codes that you can receive when sending `GET`, `POST`, `PATCH` or `PUT` requests.
+By default, the Data Exchange API uses a transactional approach to save data. If an error occurs during the saving process, the entire transaction is rolled back, and no data is saved. However, in some cases, you may want to save data non-transactionally. In the non-transactional mode, the API wraps each entity and its related records (if present in the request) in a separate transaction.
+
+To enable the non-transactional behavior, you need to set the `X-Is-Transactional` with the value `false` in the request.
+In the following example, the first entity will be saved successfully, while the second entity won't be saved due to the missing `rate` field.
+
+
+```bash
+POST /dynamic-entity/countries HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+X-Is-Transactional: false
+Content-Length: 445
+
+{
+  "data": [
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Germany Standard",
+                "rate": "1.00"
+            }
+      ]
+    },
+    {
+      "iso2_code": "DE",
+      "iso3_code": "DEU",
+      "name": "Germany",
+      "countryTaxRates": [
+            {
+                "name": "Entity without a rate"
+            }
+      ]
+    }
+  ]
+}
+```
+
+
+Due to the non-transactional mode, the user will receive a response with the saved entity in the `data` field and an error message in the `error` field.
+
+```json
+{
+    "data": [
+        {
+            "iso2_code": "DE",
+            "iso3_code": "DEU",
+            "name": "Germany",
+            "id_country": 260,
+            "postal_code_mandatory": false,
+            "postal_code_regex": null,
+            "countryTaxRates": [
+                {
+                    "name": "Germany Standard",
+                    "rate": "1.00",
+                    "fk_country": 260,
+                    "id_tax_rate": 43
+                }
+            ]
+        }
+    ],
+    "errors": [
+        {
+            "code": "1307",
+            "status": 400,
+            "message": "The required field must not be empty. Field: `countries[1].tax-rates[0].rate`"
+        }
+    ]
+}
+```
+
+The header name can be changed in the `DynamicEntityBackendApiConfig::HEADER_IS_TRANSACTIONAL` constant.
+
+```php
+<?php
+
+namespace Spryker\Glue\DynamicEntityBackendApi;
+
+use Spryker\Glue\Kernel\AbstractBundleConfig;
+
+class DynamicEntityBackendApiConfig extends AbstractBundleConfig
+{
+    /**
+     * @var string
+     */
+    protected const HEADER_IS_TRANSACTIONAL = 'X-Is-Transactional'; // The header name which is used to enable non-transactional mode.
+}
+```
+
+## Error codes
+
+Error codes for `GET`, `POST`, `PATCH` and `PUT` requests:
 
 | Error code | Message                                                                                                                                          | Description                                                                                                                                                                                                                                                                                                         |
-|------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1301       | Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: `{'data':[{...},{...},..]}` | The request body is not valid. Please review the data format for validity. Ensure that the data is provided in the correct format. An example request body would be: `{'data':[{...data entity...},{...data entity...},...]}`. `data` If the data format is invalid or missing, an error message will be displayed. |
-| 1302       | Failed to persist the data for `entity[index].field`. Please verify the provided data and try again.                                                                       | The data could not be persisted in the database. Please verify the provided data entities and try again.                                                                                                                                                                                                            |
-| 1303       | The entity `entity[index]` could not be found in the database.                                                                                                   | The requested entity could not be found in the database for retrieval or update.                                                                                                                                                                                                                                    |
-| 1304       | Modification of immutable field `entity[index].field` is prohibited.                                                                                           | The field is prohibited from being modified. Check the configuration for this field.                                                                                                                                                                                                                                |
-| 1305       | Invalid data type `entity[index]` for field: `field`                                                                                                             | The specified field has an incorrect type. Check the configuration for this field and correct the value.                                                                                                                                                                                                            |
-| 1306       | Invalid data value `entity[index]` for field: `field`. Field rules: `validation rules`.                                                       | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`.                                                                                   |
-| 1307       | The required field must not be empty. Field: `entity[index].field`                                                                                             | The specified field is required according to the configuration. The field wasn't provided. Check the data you are sending and try again.                                                                                                                                                                            |
-| 1308       | Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request.                      | The entity couldn't be found using the provided identifier, and a new identifier cannot be persisted. Update your request accordingly or check configuration for the identifier field.                                                                                                                              |
-| 1309       | Failed to persist the data `entity[index].field`. Please verify the provided data and try again. Entry is duplicated.                                                  | Failed to persist the data. Verify the provided data and try again. This error may occur if a record with the same information already exists in the database.                                                                                                                                                      |
-| 1310       | Incomplete Request - missing identifier for `entity[index]`.                                                                                                         | The request is incomplete. The identifier is missing. Check the request and try again.                                                                                                                                                                                                                              |
-| 1311       | The provided `entity[index].field` is incorrect or invalid.                                                                                                    | The request contains a field that isn't present in the configuration. Check the field names.                                                                                                                                                                                                                        |
-| 1312       | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send the valid alias of the entity in the request.                                                                                                                                                                                                                                               |
-| 1313       | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation that you send in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.                                                                                                                                                                      |
-| 1314       | The relationship `relation` is not editable by configuration.                                                                              | Make sure that the relation that you send in the relation chain is configurable.                                                                                                                                                                                                                                    |
-| 1315       | Filter field `%filterField%` for table alias `%aliasName%` not found.                                                                              | Make sure that you send the valid filter field name of the entity in the request.                                                                                                                                                                                                                                   |
-| 1316       | The URL is invalid. `%errorPath%` field `%fieldName%` must have a URL data format.                                                                              | Make sure that you send the URL value in the corresponding format in the request.                                                                                                                                                                                                                                   |
-| 1317       | Failed to delete the data for `%errorPath%`. The entity has a child entity and can not be deleted. Child entity: `%childEntity%`.                | The entity couldn't be deleted because it has a child entity.                                                                                                                                                                                                                                                       |
-| 1318       | Method not allowed for the entity `%aliasName%`.                                                                              | The method is not allowed. Check the configuration for this entity.                                                                                                                                                                                                                                                  |
+| --- |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1301 | Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: `{'data':[{...},{...},..]}` | The request body isn't valid. Make sure the data is provided in the correct format. An example request body: `{'data':[{...data entity...},{...data entity...},...]}`. |
+| 1302 | Failed to persist the data for `entity[index].field`. Please verify the provided data and try again.                                             | The data could not be persisted in the database. |
+| 1303 | The entity `entity[index]` could not be found in the database.                                                                                   | The requested entity could not be found in the database for retrieval or update. |
+| 1304 | Modification of immutable field `entity[index].field` is prohibited. | The field is prohibited from being modified. Check the configuration for this field. |
+| 1305 | Invalid data type `entity[index]` for field: `field`                                                                                             | The specified field has an incorrect type. Check the configuration for this field.  |
+| 1306 | Invalid data value `entity[index]` for field: `field`. Field rules: `validation rules`.                                                          | The error indicates a data row and a field that doesn't comply with the validation rules in the configuration. Here is an example of the error: `Invalid data value for field: id, row number: 2. Field rules: min: 0, max: 127`. |
+| 1307 | The required field must not be empty. Field: `entity[index].field`                                                                               | The specified field is required according to the configuration. Add the data for this field and try again. |
+| 1308 | Entity `some field identifier` not found by identifier, and new identifier can not be persisted. Please update the request.                      | The entity couldn't be found using the provided identifier, and a new identifier can't be persisted. Update your request or check configuration for the identifier field.                       |
+| 1309 | Failed to persist the data `entity[index].field`. Please verify the provided data and try again. Entry is duplicated.                            | This error may occur if a record with the same information already exists in the database. |
+| 1310 | Incomplete Request - missing identifier for `entity[index]`.                                                                                     | The request is incomplete. The identifier is missing. Check the request and try again.                                                                          |
+| 1311 | The provided `entity[index].field` is incorrect or invalid.                                                                                      | The request contains a field that isn't present in the configuration. Check the field names.                                                                          |
+| 1312 | Dynamic entity configuration for table alias `alias` not found.                                                                                  | Make sure that you send a valid alias of the entity in the request.                                                                        |
+| 1313 | Relation `relation` not found. Please check the requested relation name and try again.                                                           | Make sure that the relation you're sending in the relation chain is valid and present in the `spy_dynamic_entity_configuration_relation` table.        |
+| 1314 | The relationship `relation` is not editable by configuration.                                                                                    | Make sure that the relation you're sending in the relation chain is configurable. |
+| 1315 | Filter field `field` for table alias `alias` not found.                                                                                          | Make sure that the field you're sending for the filter exist in configuration. |
+| 1316 | The URL is invalid. `entity[index]` field `field` must have a URL data format.                                                                   | Make sure that the URL is passed in relative format and starts with a `/`. |
+| 1317 | Failed to delete the data for `entity[index]`. The entity has a child entity and can not be deleted. Child entity: `entity[index]`.              | Make sure that the entity you want to delete doesn't have child entities. Delete child entities before deleting this entity. |
+| 1318 | Method not allowed for the entity `alias`.                                                                                                       | Make sure that the entity that you want to delete is set as `isDeletable: true` in the configuration.       | | The method is not allowed. Check the configuration for this entity.                                                                                                                                                                                                                                                  |

@@ -186,16 +186,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
 ```
 </details>
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| vouchers | displayName | String | The discount name displayed on the Storefront. |
-| vouchers | amount | Integer | The amount of the provided discount. |
-| vouchers | code | String | The discount code. |
-| vouchers | discountType | String | The discount type. |
-| vouchers | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+
 
 ## Remove a discount voucher from a registered user's cart
 

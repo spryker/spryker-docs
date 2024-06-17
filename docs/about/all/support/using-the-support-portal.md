@@ -64,6 +64,10 @@ This category offers a selection of professional services we are offering. For e
 
 Request help with the Upgrader. These requests are processed by our Upgrader experts.
 
+### Announce High Traffic/Load
+
+Let us know about events or time periods in which you expect a higher than usual load on your production enviornments. We can use this information to check auto scaling settings and evaluate if they need to be adjusted to meet your demands.
+
 ### Emergencies
 
 Emergencies are reserved for problems that have significant business impact now or very soon. Emergency cases regularly start an [escalation](/docs/about/all/support/support-case-escalations.html). This category shouldn't be used to speed up requests or problem reports. Emergencies need to be associated with significant risk or business impact, like revenue, security, or go-lives.

@@ -1,5 +1,5 @@
 ---
-title: Create users
+title: "Back Office: Create users"
 description: Learn how to create users in the Back Office for Marketplace
 last_updated: Jan 14, 2024
 template: back-office-user-guide-template
@@ -23,8 +23,8 @@ This document describes how to create users in the Back Office for Marketplace.
 6. Enter a **FIRST NAME**.
 7. Enter a **LAST NAME**.
 8. For **ASSIGNED GROUPS**, select one or more user groups you want to assign this user to.
-9. Optional: To make this user a customer agent, select **THIS USER IS AN AGENT IN STOREFRONT**. 
-10. Optional: To make this user a merchant agent, select **THIS USER IS AN AGENT IN MERCHANT PORTAL**. 
+9. Optional: To make this user a customer agent, select **THIS USER IS AN AGENT IN STOREFRONT**.
+10. Optional: To make this user a merchant agent, select **THIS USER IS AN AGENT IN MERCHANT PORTAL**.
 11. Optional: To make the user a warehouse user, select **WAREHOUSE USER**.
 12. For **INTERFACE LANGUAGE**, select a language suitable for the user.
 13. Click **Create**.

@@ -680,11 +680,11 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 
-{% include pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 
 

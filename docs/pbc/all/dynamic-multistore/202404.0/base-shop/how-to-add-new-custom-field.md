@@ -214,8 +214,6 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
 }
 ```
 
-The new field should now be available in the Back Office.
-
 
 {% info_block warningBox "Verification" %}
 
@@ -233,9 +231,11 @@ In the **Settings** tab, make sure the following applies:
 
 
 
-## Example how extend StoreTransfer to extract the new field via Plugin
+## Extend StoreTransfer to extract fields
 
-Adjust `StoreTransfer` to add new field `contactEmail`:
+This section explains how to extend StoreTransfer to extract fields using a plugin. The contact email field is used as an example.
+
+1. Adjust `StoreTransfer` to add the `contactEmail` field:
 
 **src/Pyz/Shared/StoreContextStorage/Transfer/store_context_storage.transfer.xml**
 
@@ -250,7 +250,7 @@ Adjust `StoreTransfer` to add new field `contactEmail`:
 
 ```
 
-And implement the plugin to expand `StoreTransfer`:
+2. To expand `StoreTransfer`, implement the following plugin:
 
 **src/Pyz/Client/StoreContextStorage/Plugin/Store/ContactEmailStoreStorageStoreExpanderPlugin.php**
 
@@ -291,7 +291,7 @@ class ContactEmailStoreStorageStoreExpanderPlugin  extends AbstractPlugin implem
 
 ```
 
-And register the plugin in the `StoreDependencyProvider`:
+3. Register the plugin in `StoreDependencyProvider`:
 
 **src/Pyz/Client/Store/StoreDependencyProvider.php**
 
@@ -316,4 +316,4 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 
 ```
 
-Now you can use the new field `contactEmail` in the StoreTransfer.
+Now you can use the `contactEmail` field in `StoreTransfer`.

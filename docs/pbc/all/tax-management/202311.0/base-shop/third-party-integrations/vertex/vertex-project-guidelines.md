@@ -7,13 +7,13 @@ last_updated: June 12, 2024
 
 ## Modify the Address Form with country-specific fields
 
-Make sure that the address form in your Storefront has the required fields in that country. 
-For example, the `State` should be added in the US, and the `Province` should be added in Canada.
+Make sure that, in your Storefront, the address form has the required fields for each country. For example, the US store should have the **State** field, and the CA store should have the **Province** field.
 
 ## Specify the Country Code
-Vertex uses a hierarchy structure for tax determination. The highest in the structure is the Company code. Therefore, it is important to set up your company code in Vertex and in the Vertex configuration page in Spryker.
 
-## Understand the data sent to Vertex
+Vertex uses a hierarchy structure for tax determination. The highest in the structure is the Company code. Make sure to set up your company code in Vertex and Spryker. For more information on configuring Vertex in Spryker, see [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)
+
+## The data sent to Vertex
 
 By default, the following data is sent to Vertex for tax calculation:
 
@@ -26,13 +26,13 @@ By default, the following data is sent to Vertex for tax calculation:
  - Discounts
  - Shipping costs
 
-## Project Configuration Guide
+## Additional configuration options for Vertex
 
-1. If you want to include other data, such as Customer Exemption Certificate in the requests to Vertex, you can do so via plugins and the `taxMetadata` fields. You can add more data to request any specific information that is not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
+1. You can send additional data to Vertex, like a Customer Exemption Certificate, using plugins and the `taxMetadata` fields. You can add more data to request any specific information that's not available in Spryker by default. For example, this could be data from ERP, other systems, and customized Spryker instances. For the implementation details, see [Install Vertex](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#implement-vertex-specific-metadata-extender-plugins).
 
-2. You can configure the Vertex app so that the invoice is saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously hence no response is saved in SCCOS.
+2. You can configure the Vertex app so that the invoice is saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously, so no response is saved in Spryker.
 
-3. When using Vertex for tax determination, no exact tax rate is received from Vertex instead of a default tax value in the Back Office. Therefore, to avoid confusion, we recommend removing the default tax rate that appears in the Back Office.
+3. When using Vertex for tax determination, no exact tax rate is received from Vertex instead of a default tax value in the Back Office. So, to avoid confusion, we recommend removing the default tax rate that appears in the Back Office.
 
 ## Failover Solution
 The integration covers use cases for when there is a downtime and for reasons taxes cannot be calculated. In this scenario, no tax is displayed and the end-user can checkout without taxes.

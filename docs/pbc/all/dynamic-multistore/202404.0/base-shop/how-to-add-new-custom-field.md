@@ -1,14 +1,18 @@
 ---
-title: How to add a new custom field to store settings
+title: Add Back Office form fields to store settings
 description: This guide shows how to add custom field contact email for store settings.
 last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
 
-This document explains how to add a custom contact email field in the store settings. We will add a new field, `contactEmail`, to StoreContextApplicationTransfer and configure it for each application in the store.
+This document explains how to add a contact email field in the store settings.
 
-## Adjust StoreContextApplicationTransfer to add a new field
+## Add a contact email field to the Back Office
+
+To add the `contactEmail` field to `StoreContextApplicationTransfer` and configure it for each application in the store, follow the steps:
+
+1. Add the field to `StoreContextApplicationTransfer`:
 
 **src/Pyz/Shared/StoreContext/Transfer/store_context.transfer.xml**
 ```xml
@@ -21,7 +25,7 @@ This document explains how to add a custom contact email field in the store sett
 
 ```
 
-## Added specific validation rules for the new field
+2. Add validation rules for the field:
 
 **src/Pyz/Zed/StoreContext/Business/Validator/Rule/СontactEmailRule.php**
 
@@ -58,7 +62,7 @@ class СontactEmailRule implements StoreContextValidatorRuleInterface
 }
 
 ```
-Also, add new rule to the validator via extending `StoreContextBusinessFactory`
+3. Add a rule to the validator by extending `StoreContextBusinessFactory`:
 
 **src/Pyz/Zed/StoreContext/Business/StoreContextBusinessFactory.php**
 
@@ -118,9 +122,7 @@ class StoreContextBusinessFactory extends SprykerStoreContextBusinessFactory
 ```
 
 
-## Extend StoreContextForm
-
-To adjust the form in the Back Office, we need to extend `StoreContextForm` and add a new field `contactEmail` to the form.
+4. To adjust the form in the Back Office, extend `StoreContextForm` and add the `contactEmail` field:
 
 **src/Pyz/Zed/StoreContextGui/Communication/Form/StoreContextForm.php**
 
@@ -184,14 +186,14 @@ class StoreContextForm extends SprykerStoreContextForm
 
 ```
 
-## Replace StoreContextForm in the extended StoreContextGuiCommunicationFactory 
+6. Replace `StoreContextForm` in the extended `StoreContextGuiCommunicationFactory`:
 
 *src/Pyz/Zed/StoreContextGui/Communication/StoreContextGuiCommunicationFactory.php*
 
 ```php
 
 namespace Pyz\Zed\StoreContextGui\Communication;
- 
+
 use Pyz\Zed\StoreContextGui\Communication\Form\StoreContextForm;
 use Spryker\Zed\StoreContextGui\Communication\StoreContextGuiCommunicationFactory as SprykerStoreContextGuiCommunicationFactory;
 
@@ -206,10 +208,10 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
     }
 }
 ```
-So we can use the new field of form in the Back Office.
+The new field should now be available in the Back Office.
 
 
-## Setup and configure the store settings in the Back Office
+## Set up and configure the store settings in the Back Office
 
 1. In the Back Office, go to **Administration**.
 2. On the **Stores** page choice store and click **Edit store**.
@@ -223,7 +225,7 @@ Each store must be have one default application block.
 5. Click **Save** to save the changes.
 
 
-## Example how extend StoreTransfer to extract the new field via Plugin 
+## Example how extend StoreTransfer to extract the new field via Plugin
 
 Adjust `StoreTransfer` to add new field `contactEmail`:
 
@@ -306,4 +308,4 @@ class StoreDependencyProvider extends SprykerStoreDependencyProvider
 
 ```
 
-Now you can use the new field `contactEmail` in the StoreTransfer. 
+Now you can use the new field `contactEmail` in the StoreTransfer.

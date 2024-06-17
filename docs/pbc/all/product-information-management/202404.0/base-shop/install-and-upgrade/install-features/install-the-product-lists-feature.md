@@ -13,9 +13,9 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
 related:
   - title: Product Lists + Catalog feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Install the CMS + Product Lists + Catalog feature
-    link: docs/scos/dev/feature-integration-guides/page.version/cms-product-lists-catalog-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Configurable Bundle feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Install the Product feature

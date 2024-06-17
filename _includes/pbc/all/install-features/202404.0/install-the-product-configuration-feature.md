@@ -21,7 +21,7 @@ Install the required features:
 | Prices               | {{page.version}} | [Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                    |
 | Inventory Management | {{page.version}} | [Inventory management feature integration](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 | Wishlist             | {{page.version}} ||
-| ShoppingList         | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)             |
+| ShoppingList         | {{page.version}} | [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html)             |
 
 ### 1) Install the required modules
 

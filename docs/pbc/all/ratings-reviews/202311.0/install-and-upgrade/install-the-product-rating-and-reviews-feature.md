@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
 related:
   - title: Glue API - Product rating & reviews feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
+    link: docs/pbc/all/ratings-reviews/page.version/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html
   - title: Product Rating and Reviews feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
   - title: Product Rating & Reviews feature overview

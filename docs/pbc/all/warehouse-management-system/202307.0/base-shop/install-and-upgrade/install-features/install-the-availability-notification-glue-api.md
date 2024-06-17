@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-availability-notification-feature-integration.html
 related:
   - title: Install the Availability Notification feature
-    link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
   - title: Retrieve subscriptions to availability notifications

@@ -16,7 +16,7 @@ redirect_from:
 
 related:
   - title: CMS Page overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
 
 To view CMS pages and their history, follow the steps:

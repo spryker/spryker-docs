@@ -1,14 +1,13 @@
 ---
-title: Add Back Office form fields to store settings
+title: Add fields to Back Office forms
 description: This guide shows how to add custom field contact email for store settings.
 last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
+This document explains how to add fields to Back Office forms.
 
-This document explains how to add a contact email field in the store settings.
-
-## Add a contact email field to the Back Office
+## Add a contact email field to the store settings in the Back Office
 
 To add the `contactEmail` field to `StoreContextApplicationTransfer` and configure it for each application in the store, follow the steps:
 

@@ -1577,17 +1577,23 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-options-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-options-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 {% include /pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/shared-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shared-carts-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cart-permission-groups-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/gift-cards-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/gift-cards-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -1595,17 +1601,11 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 | promotional-items | id | String | The unique ID of the promotional item. The ID can be used to apply the promotion to the given purchase. |
 | promotional-items | sku | String | The SKU of the promoted abstract product. |
 | promotional-items | quantity | Integer | Specifies how many promotions can be applied to the given purchase. |
-| shared-carts | idCompanyUser | String | The unique ID of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
-| shared-carts | idCartPermissionGroup | Integer | The unique ID of the cart permission group that describes the permissions granted to the user with whom the cart is shared. |
-| cart-permission-groups | name | String | The permission group's name. |
-| cart-permission-groups | isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
 | company-users | id | String | Unique identifier of the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) with whom the cart is shared. |
 | company-users | isActive | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)is active. |
 | company-users | isDefault | Boolean | If true, the [company user](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html) is default for the [customer](/docs/pbc/all/identity-access-management/{{site.version}}/manage-using-glue-api/glue-api-authenticate-as-a-customer.html). |
 
-For the attributes of the included resources, see:
 
-* [Manage gift cards of registered users](/docs/pbc/all/gift-cards/{{site.version}}/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html)
 
 
 ## Possible errors

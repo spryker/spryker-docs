@@ -1,3 +1,5 @@
+| RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
+| --- | --- | --- | --- |
 | vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
 | vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
 | vouchers, cart-rules | code | String | Discount code. |

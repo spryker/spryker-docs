@@ -217,18 +217,20 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
 The new field should now be available in the Back Office.
 
 
-## Set up and configure the store settings in the Back Office
+{% info_block warningBox "Verification" %}
 
-1. In the Back Office, go to **Administration**.
-2. On the **Stores** page choice store and click **Edit store**.
-3. In the **Edit store** page, go to the **Settings** tab.
-4. In the **Settings** tab, find the new field **Contact Email**.
+1. In the Back Office, go to **Administration**>**Stores**.
+2. On the **Stores** page, click **Edit store** next to a store.
+3. On the **Edit store** page, click the **Settings** tab.
+In the **Settings** tab, make sure the following applies:
+  * The **Contact Email** field is displayed.
+  * The block with the **APPLICATION** value set to **Default** is displayed.
 
 ![configure-application-timezone](/images/dynamic-multistore/screen2.png)
 
-Each store must be have one default application block.
 
-5. Click **Save** to save the changes.
+{% endinfo_block %}
+
 
 
 ## Example how extend StoreTransfer to extract the new field via Plugin

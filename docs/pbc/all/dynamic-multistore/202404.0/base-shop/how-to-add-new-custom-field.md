@@ -64,7 +64,8 @@ class СontactEmailRule implements StoreContextValidatorRuleInterface
 ```
 3. Add a rule to the validator by extending `StoreContextBusinessFactory`:
 
-**src/Pyz/Zed/StoreContext/Business/StoreContextBusinessFactory.php**
+<details>
+<summary>src/Pyz/Zed/StoreContext/Business/StoreContextBusinessFactory.php</summary>
 
 ```php
 namespace Pyz\Zed\StoreContext\Business;
@@ -121,10 +122,13 @@ class StoreContextBusinessFactory extends SprykerStoreContextBusinessFactory
 }
 ```
 
+</details>
 
-4. To adjust the form in the Back Office, extend `StoreContextForm` and add the `contactEmail` field:
 
-**src/Pyz/Zed/StoreContextGui/Communication/Form/StoreContextForm.php**
+4. Extend the `StoreContextForm` form with the `contactEmail` field:
+
+<details>
+<summary>src/Pyz/Zed/StoreContextGui/Communication/Form/StoreContextForm.php</summary>
 
 ```php
 
@@ -186,6 +190,8 @@ class StoreContextForm extends SprykerStoreContextForm
 
 ```
 
+</details>
+
 6. Replace `StoreContextForm` in the extended `StoreContextGuiCommunicationFactory`:
 
 *src/Pyz/Zed/StoreContextGui/Communication/StoreContextGuiCommunicationFactory.php*
@@ -208,6 +214,7 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
     }
 }
 ```
+
 The new field should now be available in the Back Office.
 
 

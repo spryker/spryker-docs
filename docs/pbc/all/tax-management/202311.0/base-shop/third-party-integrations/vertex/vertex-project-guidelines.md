@@ -32,7 +32,7 @@ By default, the following data is sent to Vertex for tax calculation:
 
 2. You can configure the Vertex app so that the invoice is saved in Vertex. However, we recommend to send invoice requests only for paid orders, as specified in [Vertex installation](https://docs.spryker.com/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html#optional-if-you-plan-to-send-invoices-to-vertex-through-oms-configure-your-payment-oms). The current implementation works asynchronously, so no response is saved in Spryker.
 
-3. When using Vertex for tax determination, no exact tax rate is received from Vertex instead of a default tax value in the Back Office. So, to avoid confusion, we recommend removing the default tax rate that appears in the Back Office.
+3. When using Vertex for tax determination, no exact tax rate is received from Vertex instead the tax rates in Spryker. To avoid confusion, we recommend removing the tax rates in Spryker. In the Back Office, you can delete tax rates in **Administration** > **Tax Rates**.
 
 ## Failover solution
 

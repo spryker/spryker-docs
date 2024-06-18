@@ -4106,9 +4106,9 @@ entries:
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
 
           - title: Marketplace
-              nested:
-                - title: Install the Tax + Merchant Portal - Marketplace Product feature
-                  url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+            nested:
+              - title: Install the Tax + Merchant Portal - Marketplace Product feature
+                url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
 
       - title: User Management
         url: /docs/pbc/all/user-management/user-management.html

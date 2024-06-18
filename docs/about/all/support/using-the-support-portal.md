@@ -85,3 +85,25 @@ Due to contractual reasons, only customers can request new environments or acces
 ## Manage cases
 
 Clicking on **Our Cases** opens the list of cases you've opened. To take a look at the details of a particular case, click on the case number. On the page of a case, you can take a look at the communication history, view the status of the case and associated Jira ticket, or ask to reevaluate the assigned priority.
+
+### Case Receipts and Notifications
+When you are creating a case or when there are meaningful updates to your case, such as certain status changes or new comments, we will notify you via email. This email notification is sent to the user email associated with the Portal User that is creating the case, as well as optionally to the email address specified as "Additional Contact to notify" in the Case Assistant.
+
+If you are managing multiple projects or have a high volume of cases and communication with us, you might be interested in the structure of our notifications and receipts, so you can prepare forwarding or labelling rules in your email client:
+
+```bash
+//Case Confirmation Emails have the following Subject Pattern. You will receive these notifications when you create a case or when their status is updated
+Case Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
+
+//Change Request Confirmation Emails have the following Subject Pattern. You will receive this notification when you create a change request
+Change Request Receipt - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS}. {TRACKING ID}
+
+//ETA Update Notification Emails will have the following Subject Pattern. You will receive this notification when the ETA on your case is updated
+Case ETA Update - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME}} - ETA: {ETA}. {TRACKING ID}
+
+//Emergency Cases will have the following Subject Pattern. You will receive this notification when you declare an emergency or your emergency case's status is updated
+Emergency {STATUS} - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} {TRACKING ID}
+
+//Case Comment Notification Emails will have the following Subject Pattern. You will receive this notification if there is a new comment on your case.
+Case Comment Notification - Case ID: {CASE NUMBER} - Customer: {CUSTOMER NAME} - Status: {STATUS} {Tracking ID}
+```

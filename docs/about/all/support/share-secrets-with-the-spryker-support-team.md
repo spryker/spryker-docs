@@ -17,11 +17,6 @@ Spryker employees never ask for credentials. We delete and don’t work with any
 
 {% endinfo_block %}
 
-## Prerequisites
-
-* Register in our [Slack community](https://spryker.com/support/).
-* Open a support case.
-
 ## Process for sharing the secrets
 
 1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.

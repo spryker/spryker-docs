@@ -14,7 +14,7 @@ This endpoint allows managing marketplace shopping list items.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
 
 ## Add items to a shopping list
@@ -270,7 +270,7 @@ To add items to a shopping list, send the request:
 | productOfferReference | String | Unique identifier of the product offer.   |
 | merchantReference | String | Unique identifier of the merchant.   |
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 
 ## Change item quantity in a shopping list
@@ -505,10 +505,10 @@ To change the item quantity in a shopping list, send the request:
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
 
 ## Remove an item from a shopping list
 

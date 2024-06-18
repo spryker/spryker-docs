@@ -66,7 +66,7 @@ Response sample: retrieve availability of a product offer
 }
 ```
 
-{% include pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-offer-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-offer-availabilities-response-attributes.md -->
 
 
 

@@ -24,7 +24,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/extend-and-customize/checkout-steps.html  
 related:
   - title: Multi-Step Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html
   - title: Checkout process review and implementation
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/extend-and-customize/checkout-process-review-and-implementation.html
 ---

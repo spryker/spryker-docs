@@ -65,8 +65,8 @@ In a B2B business model, the partnership is usually based on contracts, or relat
 
 ### Documentation
 
-- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/202404.0/marketplace/merchant-b2b-contracts-and-contract-requests-features-overview.html)
-- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html)
+- [Marketplace Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-b2b-contracts-and-contract-requests-feature-overview.html)
+- [Merchant B2B Contracts and Contract Requests features overview](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html)
 
 
 ## Managed Security Operations Center <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>
@@ -203,6 +203,6 @@ We implemented a new Algolia-based search on the Spryker Docs portal. Key highli
 - Additional features such as search history and favorites.
 
 
-## Business benefit
+### Business benefit
 
 Find the needed content faster.

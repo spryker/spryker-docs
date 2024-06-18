@@ -25,7 +25,7 @@ This endpoint allows managing discount vouchers in guest carts.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html).
 
 ## Apply a discount voucher to a guest cart
 
@@ -197,16 +197,8 @@ To apply a discount voucher to a guest cart, send the request:
 </details>
 
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| vouchers | displayName | String | The discount name displayed on the Storefront. |
-| vouchers | amount | Integer | The amount of the provided discount. |
-| vouchers | code | String | The discount code. |
-| vouchers | discountType | String | The discount type. |
-| vouchers | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers | expirationDateTime | DateTimeUtc | The date and time on which the discount expires. |
-| vouchers | discountPromotionAbstractSku | String | The SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+
 
 
 ## Remove a discount voucher from a guest cart

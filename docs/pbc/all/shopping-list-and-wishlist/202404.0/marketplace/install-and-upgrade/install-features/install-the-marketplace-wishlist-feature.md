@@ -8,4 +8,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/marketplace-wishlist-feature-overview.html
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-wishlist-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-wishlist-feature.md -->

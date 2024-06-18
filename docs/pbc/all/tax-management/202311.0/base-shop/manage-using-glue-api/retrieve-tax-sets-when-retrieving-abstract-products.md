@@ -13,7 +13,7 @@ This document describes how to retrieve tax sets of abstract products. To retrie
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 ## Retrieve tax sets of an abstract product
 
@@ -107,9 +107,9 @@ For detailed information on the modules that provide the API functionality and r
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/product-tax-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/product-tax-sets-response-attributes.md -->
 
 ## Possible errors
 

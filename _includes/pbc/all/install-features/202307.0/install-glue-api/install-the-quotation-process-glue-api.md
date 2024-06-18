@@ -11,7 +11,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | NAME                | VERSION          | INSTALLATION GUIDE  |
 |---------------------|------------------|--------------------|
 | Spryker Core API    | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html)       |
-| Cart API            | {{page.version}} | [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)                       |
+| Cart API            | {{page.version}} | [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)                       |
 | Company Account API | {{page.version}} | [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |
 | Agent Assist API    | {{page.version}} | [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)       |
 | Quotation Process   | {{page.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/{{page.version}}/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |

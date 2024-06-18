@@ -13,14 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/cms-product-lists-catalog-feature-integration.html
   - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
 related:
-  - title: Product Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
-  - title: Catalog feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
   - title: CMS pages in search results
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-in-search-results-overview.html
   - title: CMS page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-cms-product-lists-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-cms-product-lists-catalog-feature.md -->

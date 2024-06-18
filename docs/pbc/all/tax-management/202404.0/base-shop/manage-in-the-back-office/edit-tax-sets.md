@@ -4,14 +4,14 @@ last_updated: May 31, 2022
 template: back-office-user-guide-template
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 redirect_from:
     - /docs/scos/user/back-office-user-guides/201903.0/administration/tax-sets/managing-tax-sets.html
     - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-sets.html
     - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-sets.html
 ---
 
-To edit a [tax set](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax set](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Sets**.
     This opens the **Overview of Tax Sets** page.

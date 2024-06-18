@@ -7,7 +7,7 @@ originalArticleId: f44bd963-7af3-4ce8-8b7a-3c1477880728
   - /docs/pbc/all/cart-and-checkout/202311.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
   - title: Checkout feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Update payment data
@@ -18,4 +18,4 @@ redirect_from:
 - /docs/pbc/all/cart-and-checkout/202403.0/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 ---
 
-{% include pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-checkout-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-glue-api/install-the-checkout-glue-api.md -->

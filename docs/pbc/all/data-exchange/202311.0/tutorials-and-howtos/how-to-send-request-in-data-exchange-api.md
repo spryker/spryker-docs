@@ -15,7 +15,7 @@ This document describes how to interact with databases using the Data Exchange A
 
 ## Prerequisites
 
-* [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html)
+* [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
 * [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html)
 
 

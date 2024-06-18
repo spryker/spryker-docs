@@ -13,19 +13,17 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/product-labels-feature-integration.html
 related:
   - title: Glue API - Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Alternative products + Product Label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
   - title: Product group + Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html
   - title: Glue API - Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html
   - title: Discontinued products + Product Labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-discontinued-products-product-labels-feature.html
   - title: Product labels + Promotions & Discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
-  - title: Product Labels feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-labels-promotions-and-discounts-feature.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-labels-feature.md -->

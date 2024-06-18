@@ -4,7 +4,7 @@ description: Algolia empowers Builders with Search and Recommendation services t
 last_updated: June 26 2023
 template: howto-guide-template
 redirect_from:
-  - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  - 
+  - /docs/pbc/all/search/202311.0/third-party-integrations/algolia.html  -
   - /docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia.html
 ---
 
@@ -20,11 +20,6 @@ Spryker is shipped with [Elasticsearch](https://www.elastic.co/elasticsearch/) a
 
 To use Algolia as your search engine, you need an account with Algolia. For details about Algolia integration, see [Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 
-{% info_block infoBox "Note" %}
-
-With the current ACP Algolia App, you can retrieve Algolia search results in your Strorefront from the Spryker API endpoint `GET /catalog-search`. The Spryker Storefront will soon be supported.
-
-{% endinfo_block %}
 
 ## Searchable attributes
 
@@ -137,4 +132,4 @@ Here is an example of product data stored in Algolia:
 ```
 
 ## Next step
-[Integrate Algolia](/docs/pbc/all/search/{{page.version}}/third-party-integrations/integrate-algolia.html)
+[Integrate Algolia](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/integrate-algolia.html)

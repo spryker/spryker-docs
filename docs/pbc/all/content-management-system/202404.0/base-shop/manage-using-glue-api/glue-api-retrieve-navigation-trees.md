@@ -1113,17 +1113,8 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | validTo | String | Specifies a date that the node is valid to. |
 | children | Array | Specifies an array of node elements that are nested within the current element. |
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| category-nodes | nodeId | String | Category node ID. |
-| category-nodes | name | String | Name of the category associated with the node. |
-| category-nodes | metaTitle | String | Meta title of the category. |
-| category-nodes | metaKeywords | String | Meta keywords of the category. |
-| category-nodes | metaDescription | String | Meta description of the category. |
-| category-nodes | isActive | Boolean | Specifies whether the category is active. |
-| category-nodes | order | Integer | Category rank.<br>Allowed range: 1–100, where 100 is the highest rank (located on the same level as the parent node). |
-| category-nodes | children | Array | Specifies an array of node elements that are nested within the current category. |
-| category-nodes | parents | Array | Specifies an array of node elements that are parents for the current category. |
+{% include pbc/all/glue-api-guides/{{page.version}}/category-nodes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/category-nodes-response-attributes.md -->
+
 
 ### Possible errors
 

@@ -20,7 +20,7 @@ related:
   - title: Integrating the Prepayment payment method for RatePay
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-prepayment-payment-method-for-ratepay.html
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
   - title: RatePay - State Machine Commands and Conditions

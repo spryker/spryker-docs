@@ -13,7 +13,7 @@ This document describes how to retrieve shipments and shipment methods when subm
 ## Installation
 
 For detailed information about the modules that provide the API functionality and any related installation instructions, see the following guides:
-* [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)
+* [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html)
 * [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
 
 
@@ -135,7 +135,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-{% include pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-request-attributes.md -->
 
 
 
@@ -521,11 +521,11 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-{% include pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/checkout-data-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-methods-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipment-methods-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipment-methods-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/shipments-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shipments-response-attributes.md -->
 
 
 

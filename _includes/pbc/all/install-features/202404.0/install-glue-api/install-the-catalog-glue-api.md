@@ -11,7 +11,7 @@ Install the required features:
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Search | {{page.version}} |  |
 | Catalog | {{page.version}} |  |
-| Product | {{page.version}} | [Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product | {{page.version}} | [Product API feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Catalog + Price | {{page.version}} |  |
 
 ### 1) Install the required modules

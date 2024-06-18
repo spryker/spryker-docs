@@ -15,8 +15,5 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/cms-category-management-feature-integration.htm
   - /docs/scos/dev/feature-integration-guides/202307.0/cms-category-management-feature-integration.html
   - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
-related:
-  - title: Category Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
 {% include pbc/all/install-features/202307.0/install-the-cms-category-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-cms-category-management-feature.md -->

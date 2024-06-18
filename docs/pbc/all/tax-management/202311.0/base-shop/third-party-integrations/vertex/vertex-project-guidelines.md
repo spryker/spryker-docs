@@ -36,7 +36,7 @@ By default, the following data is sent to Vertex for tax calculation:
 
 ## Failover solution
 
-The integration covers use cases for when there is a downtime and for reasons taxes cannot be calculated. In this scenario, no tax is displayed and the end-user can checkout without taxes.
+If the Vertex app is down or taxes can't be calculated for other reasons, taxes aren't displayed during checkout, but customers can still place their orders.
 
 In the future, we will include a flag that states: VERTEXDOWN – 0 rate to enable you differentiate the downtime scenario from when tax rates are actually calculated as 0 from Vertex.
 

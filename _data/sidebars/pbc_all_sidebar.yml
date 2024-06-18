@@ -4109,3 +4109,288 @@ entries:
             nested:
               - title: Install the Tax + Merchant Portal - Marketplace Product feature
                 url: /docs/pbc/all/tax-management/marketplace/install-the-tax-merchant-portal-marketplace-product-feature.html
+
+      - title: User Management
+        url: /docs/pbc/all/user-management/user-management.html
+        nested:
+          - title: Base shop
+            nested:
+              - title: Agent Assist feature overview
+                url: /docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.html
+              - title: User and rights overview
+                url: /docs/pbc/all/user-management/base-shop/user-and-rights-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install the ACL feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-acl-feature.html
+                  - title: Install the Agent Assist feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-feature.html
+                  - title: Install the Agent Assist + Cart feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-cart-feature.html
+                  - title: Install the Agent Assist + Shopping List feature
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html
+                  - title: Install the Agent Assist Glue API
+                    url: /docs/pbc/all/user-management/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
+
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users-in-the-back-office.html
+                nested:
+                  - title: "Best practices: Manage users and their permissions with roles and groups"
+                    url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html
+                  - title: Manage user roles
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-roles/create-user-roles.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-roles/edit-user-roles.html
+                  - title: Manage user groups
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
+                  - title: Manage users
+                    nested:
+                      - title: Create
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/create-users.html
+                      - title: Edit
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/edit-users.html
+                      - title: Assign and deassign customers
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
+                      - title: Delete
+                        url: /docs/pbc/all/user-management/base-shop/manage-in-the-back-office/manage-users/delete-users.html
+
+              - title: Manage using Glue API
+                nested:
+                  - title: Search by customers as an agent assist
+                    url: /docs/pbc/all/user-management/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html
+                  - title: Impersonate customers as an agent assist
+                    url: /docs/pbc/all/user-management/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+
+          - title: Marketplace
+            nested:
+              - title: Persistence ACL feature overview
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-overview.html
+                nested:
+                  - title: Persistence ACL feature configuration
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/persistence-acl-feature-configuration.html
+                  - title: Execution flow
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/execution-flow.html
+                  - title: Rules and scopes
+                    url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/rules-and-scopes.html
+                    nested:
+                      - title: Composite entity
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/composite-entity.html
+                      - title: Global scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/global-scope.html
+                      - title: Inherited scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/inherited-scope.html
+                      - title: Segment scope
+                        url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-overview/rules-and-scopes/segment-scope.html
+
+              - title: "Persistence ACL feature: Domain model and relationships"
+                url: /docs/pbc/all/user-management/marketplace/persistence-acl-feature-domain-model-and-relationships.html
+              - title: Merchant Portal Agent Assist feature overview
+                url: /docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview.html
+                include_versions:
+                - "202404.0"
+
+              - title: Install and upgrade
+                nested:
+                  - title: Install the Merchant Portal Agent Assist feature
+                    url: /docs/pbc/all/user-management/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html
+                    include_versions:
+                    - "202404.0"
+
+              - title: Create users
+                url: /docs/pbc/all/user-management/marketplace/back-office-create-users.html
+                include_versions:
+                - "202404.0"
+
+
+      - title: Warehouse Management System
+        url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
+        nested:
+          - title: Base shop
+            nested:
+              - title: Inventory Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/inventory-management-feature-overview.html
+              - title: Availability Notification feature overview
+                url: /docs/pbc/all/warehouse-management-system/base-shop/availability-notification-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Availability Notification
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
+                      - title: Availability Notification + Dynamic Multistore
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature-dynamic-multistore.html
+                      - title: Inventory Management
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                      - title: Inventory Management + Alternative Products
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
+                      - title: Availability Notification Glue API
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
+                      - title: Inventory Management Glue API
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
+
+                  - title: Upgrade modules
+                    nested:
+                      - title: Availability
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                      - title: AvailabilityCartConnector
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
+                      - title: AvailabilityGui
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
+                      - title: AvailabilityOfferConnector
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
+                      - title: AvailabilityStorage
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+                      - title: StockGui
+                        url: /docs/pbc/all/warehouse-management-system/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stockgui-module.html
+
+              - title: Import and export data
+                url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/warehouse-management-system-data-import.html
+                nested:
+                  - title: File details - warehouse.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse.csv.html
+                  - title: File details - warehouse_address.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse-address.csv.html
+                  - title: File details - warehouse_store.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-warehouse-store.csv.html
+                  - title: File details - product_stock.csv
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/import-and-export-data/import-file-details-product-stock.csv.html
+
+              - title: Manage in the Back Office
+                url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/manage-warehouses-in-the-back-office.html
+                nested:
+                  - title: Create warehouses
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/create-warehouses.html
+                  - title: Edit warehouses
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-warehouses.html
+                  - title: Check availability of products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/check-availability-of-products.html
+                  - title: Edit stock of products and product bundles
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
+
+              - title: Manage using Glue API
+                nested:
+                  - title: Retrieve abstract product availability
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-availability.html
+                  - title: Retrieve availability when retrieving abstract products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-abstract-products.html
+                  - title: Retrieve concrete product availability
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html
+                  - title: Retrieve availability when retrieving concrete products
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-availability-when-retrieving-concrete-products.html
+                  - title: Manage availability notifications
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
+                  - title: Retrieve subscriptions to availability notifications
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
+
+              - title: Domain mode and relationships
+                url: /docs/pbc/all/warehouse-management-system/base-shop/domain-model-and-relationships/availability-notification-domain-model-and-relationships.html
+              - title: Extend and customize
+                nested:
+                  - title: Configure product availability to be published on product amount changes
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html
+                  - title: Inventory Management feature modules overview
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/inventory-management-feature-modules-overview.html
+                  - title: "Manage stocks in a multi-store environment: Best practices"
+                    url: /docs/pbc/all/warehouse-management-system/base-shop/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
+
+          - title: Marketplace
+            url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-overview.html
+            nested:
+              - title: Install features
+                nested:
+                  - title: Marketplace Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-feature.html
+                  - title: Marketplace Inventory Management + Order Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-order-management-feature.html
+                  - title: Marketplace Inventory Management + Packaging Units
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-marketplace-inventory-management-packaging-units-feature.html
+                  - title: Inventory Management + Marketplace Product
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-inventory-management-marketplace-product-feature.html
+                  - title: Inventory Management + Merchant Portal - Marketplace Product
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-features/install-the-inventory-management-merchant-portal-marketplace-product-feature.html
+
+              - title: Install Glue API
+                nested:
+                  - title: Marketplace Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-glue-api.html
+                  - title: Marketplace Inventory Management + Wishlist
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/install-glue-api/install-the-marketplace-inventory-management-wishlist-glue-api.html
+
+              - title: Retrieve product offer availability using Glue API
+                url: /docs/pbc/all/warehouse-management-system/marketplace/glue-api-retrieve-product-offer-availability.html
+              - title: "Marketplace Inventory Management feature: Domain model"
+                url: /docs/pbc/all/warehouse-management-system/marketplace/marketplace-inventory-management-feature-domain-model.html
+              - title: Manage availability in the Back Office
+                url: /docs/pbc/all/warehouse-management-system/marketplace/manage-availability.html
+              - title: Import and export data
+                nested:
+                  - title: "File details: product_offer_stock.csv"
+                    url: /docs/pbc/all/warehouse-management-system/marketplace/import-and-export-data/import-file-details-product-offer-stock.csv.html
+
+          - title: Unified Commerce
+            include_versions:
+            - "202311.0"
+            - "202404.0"
+            nested:
+              - title: Fulfillment App overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-overview.html
+              - title: Warehouse Picking feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-picking-feature-overview.html
+              - title: Warehouse User Management feature overview
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/warehouse-user-management-feature-overview.html
+              - title: Install and upgrade
+                nested:
+                  - title: Install features
+                    nested:
+                      - title: Warehouse Picking
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-picking-feature.html
+                      - title: Warehouse Picking + Product
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-picking-product-feature.html
+                      - title: Warehouse User Management
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/install-and-upgrade/install-the-warehouse-user-management-feature.html
+
+              - title: Set up Fulfillment App
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/set-up-fulfillment-app.html
+              - title: "Back Office: Assign and deassign warehouses from warehouse users"
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/assign-and-deassign-warehouses-from-warehouse-users.html
+              - title: "Fulfillment App: Fulfill orders"
+                url: /docs/pbc/all/warehouse-management-system/unified-commerce/fulfillment-app-fulfill-orders.html
+              - title: Manage using Glue API
+                nested:
+                  - title: Authenticate as a warehouse user
+                    url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/glue-api-authenticate-as-a-warehouse-user.html
+                  - title: Manage warehouse user assignments
+                    nested:
+                      - title: Create warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-create-warehouse-user-assignments.html
+                      - title: Update warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-update-warehouse-user-assignments.html
+                      - title: Retrieve warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-retrieve-warehouse-user-assignments.html
+                      - title: Delete warehouse user assignments
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-warehouse-user-assignments/glue-api-delete-warehouse-user-assignments.html
+
+                  - title: Manage picklists
+                    nested:
+                      - title: Retrieve picklists
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-retrieve-picklists.html
+                      - title: Start picking
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-start-picking.html
+                      - title: Pick picklist items
+                        url: /docs/pbc/all/warehouse-management-system/unified-commerce/manage-using-glue-api/manage-picklists/glue-api-pick-picklist-items.html
+
+      - title: Usercentrics
+        url: /docs/pbc/all/usercentrics/usercentrics.html
+        nested:
+          - title: Integrate Usercentrics
+            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Configure Usercentrics
+            url: /docs/pbc/all/usercentrics/configure-usercentrics.html
+          - title: Disconnect Usercentrics
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

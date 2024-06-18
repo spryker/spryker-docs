@@ -94,4 +94,4 @@ If you still have questions about the Spryker Vertex app, see the [Vertex FAQ](/
 
 ## Next steps
 
-[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/vertex/install-vertex.html)
+[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html)

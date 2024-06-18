@@ -62,7 +62,7 @@ The following table describes the attributes you enter and select when defining 
 | SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
 | Name | Name that will be displayed for the product on the Storefront. |
 | Description | Description that will be displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
 
 ## Defining prices

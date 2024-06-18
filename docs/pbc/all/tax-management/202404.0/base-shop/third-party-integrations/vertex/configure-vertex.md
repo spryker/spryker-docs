@@ -5,7 +5,7 @@ last_updated: Nov 3 2023
 template: howto-guide-template
 ---
 
-Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
+Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you can configure it.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To configure Vertex, do the following:
 
 {% info_block infoBox "Company code" %}
 
-Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html#reference-quoteorder-object-to-vertex-api-mapping) in your projects.
+Vertex expects to receive the Company Code you have set in Vertex from Spryker and use it to determine taxes. Although the Company Code field is not currently included in the Vertex app configuration page, we recommend that you provide this code as [Quote/Order TaxMetadata](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html#reference-mapping-of-quote-and-order-objects-to-vertex-api) in your projects.
 
 
 {% endinfo_block %}

@@ -13,7 +13,7 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 

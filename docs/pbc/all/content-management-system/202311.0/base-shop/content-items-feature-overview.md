@@ -37,7 +37,7 @@ A developer can do the following:
 * [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html)
 * [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html)
 
-For more information about each content item type and module relations, see [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html).
+For more information about each content item type and module relations, see [Content Items feature overview](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/content-items-feature-overview.html).
 
 ## Content Item Widget
 

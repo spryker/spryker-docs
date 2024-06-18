@@ -834,7 +834,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Set up a minimum hard threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html#define-a-minimum-hard-threshold.html).
+1. [Set up a minimum hard threshold](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html#define-a-minimum-hard-threshold).
 2. Add a product to cart with a price lower than the threshold you've set.
 3. Send the request: `GET https://glue.mysprykershop.com/carts/{cart-uuid}`
     Make sure the message about threshold conditions not being met is returned. Example:

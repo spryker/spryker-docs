@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/blocks/create-email-cms-blocks.html
 related:
   - title: Email as a CMS block
-    link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).

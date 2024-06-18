@@ -18,11 +18,11 @@ related:
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 
 {% include pbc/all/install-features/{{page.version}}/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->

@@ -9,14 +9,14 @@ This document describes how to import products that have recently been updated. 
 
 To run the incremental import of products, follow these steps.
 
-## 1. Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS
+## 1. Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and Spryker
 
 * If you create the new configuration, follow [Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html).
 * If you update the existing configuration, proceed with [3. Create an incoming configuration](#3-create-an-incoming-configuration).
 
-## 2. Configure the data mapping between Akeneo and SCCOS
+## 2. Configure the data mapping between Akeneo and Spryker
 
-* If you create the new configuration, follow the procedure described in [If you create the new configuration, follow the procedure described in](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
+* If you create a new configuration, follow [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
 * If you update the existing configuration, proceed with [3. Create an incoming configuration](#3-create-an-incoming-configuration).
 
 ## 3. Create an incoming configuration
@@ -29,58 +29,53 @@ To run the incremental import of products, follow these steps.
 4. To activate the incoming configuration after creating, make sure **Status** is set to **Enabled**.
 5. For **Subscriber**, enter and select **HTTP Subscriber**.
 6. For **Request URI**, enter `/api/rest/v1/products`.
-7. For **Payload type**, enter and select **Encoded data**.
-8. For **Request Parameters**, select **string** and enter the following string: `search={"updated":[{"operator":">","value":"&{lastTimestamp}"}]}&limit=10`. Make sure to define the `limit` value with the number of products you want to import. If you want to import all updated products, see [Batch products import](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-data-integration-path-between-akeneo-and-sccos.html#batch-products-import).
-
-![http-subscriber](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/1-http-subscriber.png)
-
-9. In **HTTP Client**, enter and select the Akeneo client you created in [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
+7. In **HTTP Client**, enter and select the Akeneo client you created in [Connect Akeneo with Spryker Middleware powered by Alumio](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html#connect-akeneo-with-spryker-middleware-powered-by-alumio).
 
 ![akeneo-client](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/2-akeneo-client.png)
 
-10. For **Input transformer**, select **Chain**.
-11. Click **Add data transformer**.
-12. For **Select a prototype**, select **Value setter**.
-13. For **Key**, enter `lastTimestamp`.
+8. For **Input transformer**, select **Chain**.
+9. Click **Add data transformer**.
+10. For **Select a prototype**, select **Value setter**.
+11. For **Key**, enter `lastTimestamp`.
 
 ![input-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/3-input-transformer.png)
 
-14. Click **Add data transformer**.
-15. For **Select a prototype**, select **Get an entity from storage**.
+12. Click **Add data transformer**.
+13. For **Select a prototype**, select **Get an entity from storage**.
 <a name="step-10"></a>
-16. For **Storage**, enter and select the storage you created. For example, **[Default] Akeneo to Spryker - Products - update lastTimestamp**. For instructions on creating new storage, see [Create cache](/docs/pbc/all/data-exchange/202404.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#create-cache).
-17. For **Storage entity identifier**, enter `lastTimestamp`.
-18. For **Destination**, enter `lastTimestamp`.
+14. For **Storage**, enter and select the storage you created. For example, **[Default] Akeneo to Spryker - Products - update lastTimestamp**. For instructions on creating new storage, see [Create cache](/docs/pbc/all/data-exchange/202404.0/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html#create-cache).
+15. For **Storage entity identifier**, enter `lastTimestamp`.
+16. For **Destination**, enter `lastTimestamp`.
 
 ![entity-from-storage](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/4-entity-from-storage.png)
 
-19. Click **Add data transformer**.
-20. For **Select a prototype**, select **Conditional transformer**.
-21. For **If all conditions are met**, select **Value condition**.
-22. For **Accessor**, select **Pattern accessor**.
-23. For **Pattern**, enter `lastTimestamp`.
-24. For **Conditions**, click **Add conditions**.
-25. For **Select a prototype**, select **is empty**.
+17. Click **Add data transformer**.
+18. For **Select a prototype**, select **Conditional transformer**.
+19. For **If all conditions are met**, select **Value condition**.
+20. For **Accessor**, select **Pattern accessor**.
+21. For **Pattern**, enter `lastTimestamp`.
+22. For **Conditions**, click **Add conditions**.
+23. For **Select a prototype**, select **is empty**.
 
 ![conditional-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/5-conditional-transformer.png)
 
-26. In **Then apply transformer**, for **Select a prototype**, select **Value setter**.
-27. For **Key**, enter `LastTimestamp`.
-28. For **Value**, select **string** and enter `-1 day`.
-29. For **Mappers**, click **Add a mapper**.
-30. For **Select a prototype**, select **Format: Date**.
-31. For **Output format**, enter `Y-m-d H:i:s`.
+24. In **Then apply transformer**, for **Select a prototype**, select **Value setter**.
+25. For **Key**, enter `LastTimestamp`.
+26. For **Value**, select **string** and enter `-1 day`.
+27. For **Mappers**, click **Add a mapper**.
+28. For **Select a prototype**, select **Format: Date**.
+29. For **Output format**, enter `Y-m-d H:i:s`.
 
 ![apply-transformer](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/6-apply-transformers.png)
 
-32. For **Follow pagination**, select **Follow next links**.
-33. For **Pattern to the link for the next page**, enter `_links.next.href`.
-34. In **Maximum number of pages to fetch**, enter the needed value. For example, 100.
-35. For **Entity schema**, select **Akeneo Product**.
+30. For **Follow pagination**, select **Follow next links**.
+31. For **Pattern to the link for the next page**, enter `_links.next.href`.
+32. In **Maximum number of pages to fetch**, enter the needed value. For example, 100.
+33. For **Entity schema**, select **Akeneo Product**.
 
 ![response-decoder](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/tutorials-and-howtos/docs%5Cpbc%5Call%5Cdata-exchange%5C202311.0%5Ctutorials-and-howtos%5Chow-to-incrementally-import-products-with-spryker-middleware-powered-by-alumio/7-response-decoder.png)
 
-36. Click **Save & continue**.
+34. Click **Save & continue**.
 This opens the edit page for this configuration with a success message displayed.
 
 ## 4. Create an outgoing connection

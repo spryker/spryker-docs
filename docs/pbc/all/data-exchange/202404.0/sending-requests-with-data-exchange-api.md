@@ -1,5 +1,5 @@
 ---
-title: How to send a request in Data Exchange API
+title: Sending requests with Data Exchange API
 description: This guide shows how to send a request in Data Exchange API.
 last_updated: Dec 5, 2023
 template: howto-guide-template

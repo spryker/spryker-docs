@@ -29,7 +29,7 @@ To register an endpoint for interacting with entities in the database, you need 
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
 
-You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. 
+You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables.
 The `spy_dynamic_entity_configuration_relation` contains the configuration of relations for dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION                                                                                   |
@@ -193,13 +193,13 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 {% info_block warningBox "Verification" %}
 
 If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
-Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/data-exchange-api-integration.html) to proceed with it.
+Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
 
 ## Download Data Exchange API specification
 
-You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format. 
+You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format.
 To download the specification, go to the *Data Exchange API Configuration* page, click **Download API Specification**. This initiates the download of the specification to your computer.
 
 ![deapi_download_spec_button](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_download_spec_button.png)

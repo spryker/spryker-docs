@@ -1,4 +1,4 @@
-This document describes how to install the [Merchant B2B Contracts](docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) feature.
+This document describes how to install the [Merchant B2B Contracts](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) feature.
 
 ## Install feature core
 

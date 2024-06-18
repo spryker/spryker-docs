@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/payments-feature-integration.html
 related:
   - title: Glue API - Payments feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-payments-feature-integration.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/install-the-payments-glue-api.html
   - title: Payments feature walkthrough
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
   - title: Payments feature overview

@@ -152,13 +152,6 @@ Every company role includes a set of permissions that can be enabled/disabled ac
 | [Edit company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html) |
 
 
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
-
 ## See next
 
 [Business on Behalf overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-on-behalf-overview.html)

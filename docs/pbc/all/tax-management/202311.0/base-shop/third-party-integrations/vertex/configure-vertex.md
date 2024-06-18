@@ -5,7 +5,7 @@ last_updated: Nov 3 2023
 template: howto-guide-template
 ---
 
-Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/third-party-integrations/vertex/install-vertex.html), you can configure it.
+Once you have [installed the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html), you can configure it.
 
 ## Prerequisites
 

@@ -88,11 +88,6 @@ This moves the address to the **UNASSIGNED ADDRESSES** section.
 | [Create company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/create-company-unit-addresses.html) |
 | [Edit company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html) |
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
 
 ## See next
 

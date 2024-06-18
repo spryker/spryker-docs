@@ -98,7 +98,7 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 
 * [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
 * [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
-* [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
+* [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
 
 
 ## Related Business User documents

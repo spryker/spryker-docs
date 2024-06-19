@@ -619,7 +619,7 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
 ​
         $this->application = $application . '-' . $store . ' (' . $environment . ')';
 ​
-        newrelic_set_appname($this->application, null, false);
+        newrelic_set_appname($this->application, '', false);
     }
 }
 ```

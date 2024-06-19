@@ -14,8 +14,6 @@ redirect_from:
 related:
   - title: Install the Shipment Glue API
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
-  - title: Shipment feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
   - title: Shipment + Approval Process feature integration

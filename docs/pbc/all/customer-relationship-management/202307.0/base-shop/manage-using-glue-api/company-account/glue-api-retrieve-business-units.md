@@ -27,9 +27,9 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.

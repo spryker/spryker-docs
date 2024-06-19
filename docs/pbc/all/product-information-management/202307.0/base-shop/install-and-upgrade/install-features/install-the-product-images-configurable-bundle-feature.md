@@ -1,5 +1,5 @@
 ---
-title: Product Images + Configurable Bundle feature integration
+title: Install the Product Images + Configurable Bundle feature
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-images-configurable-bundle-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/product-images-configurable-bundle-feature-integration.html
 related:
-  - title: Configurable Bundle feature integration
+  - title: Install the Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
@@ -20,7 +20,7 @@ related:
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
-  - title: Merchant Product Restrictions feature integration
+  - title: Install the Merchant Product Restrictions feature
     link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 

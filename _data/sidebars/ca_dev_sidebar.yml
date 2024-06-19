@@ -17,6 +17,7 @@ entries:
             url: /docs/ca/dev/access/locate-service-credentials.html
           - title: Connect to services via SSH
             url: /docs/ca/dev/access/connect-to-services-via-ssh.html
+
       - title: Connecting the Docker SDK
         url: /docs/ca/dev/connecting-the-docker-sdk.html
       - title: Connect a code repository
@@ -28,6 +29,7 @@ entries:
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-route-53.html
           - title: Set up a custom domain name with a third-party DNS zone provider
             url: /docs/ca/dev/set-up-a-custom-domain-name/set-up-a-custom-domain-name-with-a-third-party-dns-zone-provider.html
+
       - title: Set up DNS
         url: /docs/ca/dev/set-up-dns.html
       - title: Setting up a custom SSL certificate
@@ -51,12 +53,14 @@ entries:
           url: /docs/ca/dev/best-practices/best-practises-jenkins-stability.html
         - title: Jenkins operational best practices
           url: /docs/ca/dev/best-practices/jenkins-operational-best-practices.html
+
       - title: Manage maintenance mode
         nested:
           - title: Enable and disable maintenance mode
             url: /docs/ca/dev/manage-maintenance-mode/enable-and-disable-maintenance-mode.html
           - title: Configure access to applications in maintenance mode
             url: /docs/ca/dev/manage-maintenance-mode/configure-access-to-applications-in-maintenance-mode.html
+
       - title: Monitoring
         url: /docs/ca/dev/monitoring/monitoring.html
         nested:
@@ -64,6 +68,7 @@ entries:
             url: /docs/ca/dev/monitoring/performance-and-availability-monitoring-via-new-relic.html
           - title: Customize AWS CloudWatch dashboards
             url: /docs/ca/dev/monitoring/customize-aws-cloudwatch-dashboards.html
+
       - title: Security
         url: /docs/ca/dev/security/security.html
         nested:
@@ -74,9 +79,10 @@ entries:
           - title: Penetration testing
             url: /docs/ca/dev/security/penetration-testing.html
           - title: Set up multi-factor authentication
-            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html            
+            url: /docs/ca/dev/security/set-up-multi-factor-authentication.html
           - title: Web Application Firewall (WAF)
             url: /docs/ca/dev/security/web-application-firewall-waf.html
+
       - title: Configure deployment pipelines
         url: /docs/ca/dev/configure-deployment-pipelines/configure-deployment-pipelines.html
         nested:
@@ -94,6 +100,7 @@ entries:
             url: /docs/ca/dev/configure-deployment-pipelines/configure-gitlab-pipelines.html
           - title: Configure Bitbucket Pipelines
             url: /docs/ca/dev/configure-deployment-pipelines/configure-bitbucket-pipelines.html
+
       - title: Configure data import from an S3 bucket
         url: /docs/ca/dev/configure-data-import-from-an-s3-bucket.html
       - title: Create and restore database backups
@@ -107,6 +114,7 @@ entries:
             url: /docs/ca/dev/email-service/email-quota-restrictions.html
           - title: Verify email addresses
             url: /docs/ca/dev/verify-email-addresses.html
+
       - title: Set up notifications for 5xx errors
         url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
       - title: Performance testing in staging environments
@@ -114,7 +122,7 @@ entries:
       - title: Managing parameters in the Parameter Store
         url: /docs/ca/dev/managing-parameters-in-the-parameter-store.html
       - title: Environment scaling
-        url: /docs/ca/dev/environment-scaling.html        
+        url: /docs/ca/dev/environment-scaling.html
       - title: Monitoring issues and informing about alerts
         url: /docs/ca/dev/monitoring-issues-and-informing-about-alerts.html
       - title: Multi-store setups
@@ -126,6 +134,7 @@ entries:
             url: /docs/ca/dev/multi-store-setups/add-and-remove-databases-of-stores.html
           - title: Checklist for a new store implementation
             url: /docs/ca/dev/multi-store-setups/checklist-for-a-new-store-implementation.html
+
       - title: Troubleshooting
         url: /docs/ca/dev/troubleshooting/troubleshooting.html
         nested:
@@ -152,6 +161,7 @@ entries:
                 url: /docs/ca/dev/troubleshooting/troubleshooting-general-issues/fatal-error-allowed-memory-size-of-x-bytes-exhausted.html
               - title: Missing migration files on production environments
                 url: /docs/ca/dev/troubleshooting/troubleshooting-general-issues/missing-migration-files-on-production-environments.html
+
           - title: Troubleshooting tutorials
             url: /docs/ca/dev/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html
             nested:
@@ -171,6 +181,7 @@ entries:
                 url: /docs/ca/dev/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-unavailable-yves-or-glue.html
               - title: Troubleshooting Yves or Zed not restarting after deployment
                 url: /docs/ca/dev/troubleshooting/troubleshooting-tutorials/tutorial-troubleshooting-yves-or-zed-not-restarting-after-deployment.html
+
       - title: Release notes
         url: /docs/ca/dev/release-notes.html
       - title: Spryker Cloud Commerce OS management

@@ -43,7 +43,7 @@ On the **Order _[Order ID]_** drawer, every merchant can view only the shipment 
 |INSTALLATION GUIDES  |
 |---------|
 | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |  |
-| [Marketplace Shipment + Cart feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |  |
+| [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |  |
 | [Marketplace Shipment + Customer feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |   |
 | [Marketplace Shipment + Checkout feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |  |
 |    |    |    |    |

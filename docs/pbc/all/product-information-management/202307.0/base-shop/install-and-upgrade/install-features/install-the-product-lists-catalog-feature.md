@@ -9,7 +9,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202108.0/product-lists-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/product-lists-catalog-feature-integration.html
 related:
-  - title: Merchant Product Restrictions feature integration
+  - title: Install the Merchant Product Restrictions feature
     link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 

@@ -13,7 +13,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) |
-| Spryker Cart | {{page.version}}   | [Spryker Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Spryker Cart | {{page.version}}   | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 
 ### 1) Install the required modules
 
@@ -68,8 +68,8 @@ Ensure that the following changes have been triggered in transfer objects:
 | ProductView.promotionItem           | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                          |
 
 Ensure that the *ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a comma-separated list:
-1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount** and select **Create new discount**. 
-2. On the **Create new discount** page, in the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
+1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount** and select **Create new discount**.
+2. On the **Create new discount** page, in the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
 3. Ensure that the **ABSTRACT PRODUCT SKU(S)** field appears and add to it a comma-separated list of abstract product SKUs.
 
 {% endinfo_block %}
@@ -150,9 +150,9 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure that the plugin works correctly:
- 
+
 1. [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html).
-2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
+2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
 3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.
 5. To fulfill the discounts' requirements, add items to the cart.

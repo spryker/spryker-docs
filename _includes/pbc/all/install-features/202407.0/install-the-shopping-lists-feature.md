@@ -13,9 +13,9 @@ Install the required features:
 | Company Account             | {{site.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
 | Customer Account Management | {{site.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Cart                        | {{site.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
+| Cart                        | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
 | Prices                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
+| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)   
 
 
 ### 1) Install the required modules
@@ -1009,7 +1009,7 @@ Install the following required features:
 | Spryker Core                | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
 | Company Account             | {{site.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
 | Multiple Carts              | {{site.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md)                                                           |
-| Product                     | {{site.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Product                     | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
 | Customer Account Management | {{site.version}} | [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
 
 ### 1) Install the required modules

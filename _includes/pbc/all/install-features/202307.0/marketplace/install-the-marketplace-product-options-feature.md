@@ -382,5 +382,5 @@ Make sure the following is true:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Options + Cart | | [Marketplace Product Options + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html) |
+| Marketplace Product Options + Cart | | [Install the Marketplace Product Options + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-cart-feature.html) |
 | Marketplace Product Options + Checkout | | [Marketplace Product Options + Checkout feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-checkout-feature.html) |

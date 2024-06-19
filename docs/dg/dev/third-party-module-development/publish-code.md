@@ -65,7 +65,7 @@ git commit -m "Initial commit"
 Link your local repository to the GitHub repository you created:
 
 ```bash
-git remote add origin https://github.com/your-username/your-repository.git
+git remote add origin https://github.com/your-company/your-repository.git
 ```
 
 ## 9. Push Your Code to GitHub
@@ -80,4 +80,22 @@ git push -u origin master
 
 Refresh your GitHub repository page to see your code published.
 
-Congratulations! You have successfully published your code to GitHub.
+## 11. Add the module to your project composer.json
+
+```yaml
+{
+    "require": {
+        "your-company-name/your-repository": "{replace this with your repo latest release version}"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:your-company-name/your-repository.git"
+        }
+    ],
+}
+```
+
+Run `composer update your-company-name/your-repository`.
+
+Congratulations! You have successfully published your code to GitHub and added it to your project.

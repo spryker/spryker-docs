@@ -1,26 +1,26 @@
 ---
-title: How to develop a Spryker module
+title: How to develop a Third-Party Spryker module
 description: How to develop a Spryker module
 last_updated: Jun 7, 2024
 template: howto-guide-template
 
 ---
 
-### Spryker architectural conventions
+### Architectural conventions
 
-https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention.html needs to be followed in the development process.
+Documentation (/docs/dg/dev/architecture/architectural-convention.html needs to be followed in the development process.)
 -  Use the samples that marked as *Module Development*.
 
 
 ### How you can extend Spryker functionality from your module:
-**Option 1.** Introduce an extension point in existing Spryker module, use it. (See complete example here https://docs.spryker.com/docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module)
+**Option 1.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))
 
-**Option 2.** Adding a controller, example for project-level implementation can be found here https://docs.spryker.com/docs/dg/dev/backend-development/extend-spryker/create-modules.html#display-a-random-salutation-message, core implementation will be the same but with different namespaces.
+**Option 2.** Adding a controller, example for project-level implementation can be found [here](/docs/dg/dev/backend-development/extend-spryker/create-modules.html#display-a-random-salutation-message), core implementation will be the same but with different namespaces.
 
 **Option 3.** Use the existing Spryker module extension point.
 
 **a.** Example of existing extension point usage.
-Were we'll extend product table with an additional column **Categories** where will show the list of categories where the product is present.
+Where we'll extend product table with an additional column **Categories** where will show the list of categories where the product is present.
 For this we'll use two extension points in the existing Spryker modules 
 - One to extend table headers with **Categories** column [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php)
 - And another to extend table content with the corresponding column [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php)
@@ -56,8 +56,6 @@ class ProductCategoryProductTableConfigurationExpanderPlugin extends AbstractPlu
      * {@inheritDoc}
      * - Expands `ProductTable` configuration with categories column.
      *
-     * @api
-     *
      * @param \Spryker\Zed\Gui\Communication\Table\TableConfiguration $config
      *
      * @return \Spryker\Zed\Gui\Communication\Table\TableConfiguration
@@ -77,6 +75,8 @@ class ProductCategoryProductTableConfigurationExpanderPlugin extends AbstractPlu
 }
 
 ```
+
+Wire the plugin in `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
 
 {% info_block infoBox %}
     Validate that on http://backoffice.de.spryker.local/product-management page you can see categories column in the table header.
@@ -100,7 +100,6 @@ namespace YourCompanyName\Zed\ProductCategory\Communication\Plugin\ProductManage
 use Generated\Shared\Transfer\ProductCategoryConditionsTransfer;
 use Generated\Shared\Transfer\ProductCategoryCriteriaTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
-use Spryker\Zed\ProductCategory\Business\ProductCategoryFacade;
 use Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableDataBulkExpanderPluginInterface;
 
 class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin implements ProductTableDataBulkExpanderPluginInterface
@@ -108,8 +107,6 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
     /**
      * {@inheritDoc}
      * - Expands product table items with abstract product approval status.
-     *
-     * @api
      *
      * @param array<array<string, mixed>> $items
      * @param array<array<string, mixed>> $productData
@@ -123,7 +120,7 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
             return $item['id_product_abstract'];
         }, $items);
 
-        $productCategoryCollection = (new ProductCategoryFacade())
+        $productCategoryCollection = $this->getFacade()
             ->getProductCategoryCollection(
                 (new ProductCategoryCriteriaTransfer())
                     ->setProductCategoryConditions(
@@ -151,6 +148,9 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
 }
 
 ```
+
+Wire the plugin in `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
+
 
 {% info_block infoBox %}
 Validate that on http://backoffice.de.spryker.local/product-management page you can see categories column with assigned categories.

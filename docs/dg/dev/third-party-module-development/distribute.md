@@ -99,17 +99,22 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 ### 6. Maintain Your Package
 - Each time you make changes to your package, remember to push the changes to your Git repository.
 - Tag a new version in Git to update the package version on Packagist:
-  ```bash
-  git tag v1.0.1
-  git push origin v1.0.1
-  ```
+  This can be done in several ways:
+    1. Using github interface https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository by creating a new release. (Recommended)
+    2. Manually
+        ```bash
+        git tag v1.0.1
+        git push origin v1.0.1
+        ```
 
-This also can be done using github interface
 
 ### 7. Update Composer Metadata (Optional)
 As your package evolves, you might need to update your `composer.json` file with new dependencies or other metadata. After making changes, ensure you commit and push these updates to your Git repository.
 
-### 8. Monitor and Respond to Issues
+### 8. Install package via composer
+Run `composer install vendor/package-name` to install the published package to your project.
+
+### 9. Monitor and Respond to Issues
 Monitor the issues reported on your Git repository hosting service and respond to feedback from users to improve your package.
 
 ## Summary

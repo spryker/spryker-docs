@@ -40,4 +40,4 @@ Merchants define the following settings when creating product offers:
 
 | INSTALLATION GUIDES|
 | -------------- |
-| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
+| [Install the Marketplace Merchant Portal Product Offer Management feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |

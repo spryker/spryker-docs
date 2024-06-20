@@ -14,7 +14,7 @@ redirect_from:
 related:
   - title: Glue API - Alternative products feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
-  - title: Alternative Products - Inventory Management feature integration
+  - title: Install the Alternative Products - Inventory Management feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
   - title: Install the Alternative Products - Wishlist feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html

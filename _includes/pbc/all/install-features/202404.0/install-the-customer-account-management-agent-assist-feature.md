@@ -280,4 +280,4 @@ Install the following related features:
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Customer Account Management | [Customer Acount Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
 | Agent Assist                | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)                              |
-| Agent Assist API            | [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)  |
+| Agent Assist API            | [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)  |

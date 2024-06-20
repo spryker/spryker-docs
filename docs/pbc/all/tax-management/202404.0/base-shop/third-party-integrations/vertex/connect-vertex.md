@@ -1,5 +1,5 @@
 ---
-title: Configure Vertex
+title: Connect Vertex
 description: Find out how you can configure Vertex in your Spryker shop
 last_updated: Nov 3 2023
 template: howto-guide-template
@@ -11,15 +11,14 @@ This document describes how to connect a Spryker project to Vertex.
 
 - [Install Vertex](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
 - Create an account with [Vertex](https://www.vertexinc.com/). If you need support getting a Vertex account, [contact support](https://support.spryker.com/) or your Customer Success Manager.
-- You removed the default tax rate value from the Back Office. When you use Vertex to determine taxes, the tax rate received from Vertex does not overwrite the existing tax rate values in the Back Office. Therefore, before using Vertex, we recommend removing the default values from the Back Office. To remove the default tax rates, in your store's Back Office, go to **Administration -> Tax rates** and delete the tax rates.
-
 
 ## Connect Vertex
 
 1. In the Back Office, go to **Apps**.
 2. On the **App Composition Platform Catalog** page, click **Vertex**.
   This opens the Vertex app details page.
-3. In the top right corner of the Vertex app details page, click **Connect app**. The notification saying that the application connection is pending is displayed.
+3. In the top right corner of the Vertex app details page, click **Connect app**.
+  The notification saying that the application connection is pending is displayed.
 4. In the top right corner of the Vertex app details page, click **Configure**.
 5. To activate the app, select **Active**.
 6. In **Security URI**, enter the Security URI of your Vertex platform. For details on the Security URI, see [Vertex documentation](https://tax-calc-api.vertexcloud.com/resources/index.html).

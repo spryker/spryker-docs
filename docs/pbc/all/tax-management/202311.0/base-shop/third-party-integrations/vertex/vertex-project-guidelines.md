@@ -11,7 +11,7 @@ Make sure that, in your Storefront, the address form has the required fields for
 
 ## Specify the Country Code
 
-Vertex uses a hierarchy structure for tax determination. The highest in the structure is the Company code. Make sure to set up your company code in Vertex and Spryker. For more information on configuring Vertex in Spryker, see [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)
+Vertex uses a hierarchy structure for tax determination. The highest in the structure is the Company code. Make sure to set up your company code in Vertex and Spryker. For more information on configuring Vertex in Spryker, see [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
 
 ## The data sent to Vertex
 

@@ -80,28 +80,13 @@ The following AWS regions are supported:
 - US West (N. California)
 - US West (Oregon)
 
-
-## Code base and boiler plates
-
-This section explains the aspects of the code base and boilerplate you use and its impact on the provisioning task.
-
-### Code base
-
-Which code base is being used? As Spryker offers different business models based on customer requirements, application services related to infra setup vary based on the model. It is important to know which model is being used for the respective environment during provisioning.
-
-{% info_block infoBox "Note" %}
-
-Similar to project names, you can't switch between these models after the environment is created. Switching means a complete de-provisioning of your environment. You can't carry over any data—for example, B2B, B2C, B2B Marketplace, or B2C Marketplace.
-
-{% endinfo_block %}
-
 ### Repository
 
-The repository is the place where the customer's Spryker application code resides. Spryker supports only GitHub, GitLab, and Bitbucket code hosting services. If the customer code base isn't ready, the Spryker team provisions the environment with the previously chosen Demo Dhop model from the most recent release using GitHub.
+The repository is the place where the customer's Spryker application code resides. Spryker supports only GitHub, GitLab, and Bitbucket code hosting services. Providing a repository with Spryker code is a mandatory prerequisite to provision Spryker Cloud environment.
 
 GitHub: If the customer uses GitHub, provide a link to the GitHub repository, including a branch and a valid GitHub token. This allows code pipelines to access the repository. Ensure that you securely share the GitHub token according to [Spryker recommendations](/docs/about/all/support/share-secrets-with-the-spryker-support-team.html).
 
-GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines isn't supported. Therefore, we have to enable the codecommit feature during provisioning. Connections with pipelines can be established only after the environment is provisioned. If possible, grant GitLab or Bitbucket access to the Spryker engineer working on this request. If not, we'll use your deploy file along with the Spryker Demo Shop during provisioning. For detailed information about the connection process, see [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository) section in "Connecting a code repository".
+GitLab and Bitbucket: Connecting GitLab and Bitbucket repositories directly to pipelines isn't supported. Therefore, we have to enable the codecommit feature during provisioning. Connections with pipelines can be established only after the environment is provisioned. If possible, grant GitLab or Bitbucket access to the Spryker engineer working on this request. For detailed information about the connection process, see [Connect a GitLab code repository](/docs/ca/dev/connect-a-code-repository.html#connect-a-gitlab-code-repository) section in "Connecting a code repository".
 
 {% info_block infoBox "Note" %}
 
@@ -111,11 +96,11 @@ We can share the required credentials mentioned in the preceding documentation o
 
 ### Deploy file
 
-The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. If the customer provides their own repository, a deploy file must be provided. For Demo Shop deployments, Spryker Cloud Ops prepares the file on their own. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demo Shops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html). The most relevant deploy file that you can use as a reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each Demo Shop repository has its respective deploy file template. Adjust this according to your requirements and preferences following the preceding documentation and share it with Spryker.
+The *Deploy file* is a YAML file used by the Docker SDK to build infrastructure for applications. Providing Spryker with a valid deploy file is a mandatory prerequisite to proceed with environment provisioning. A repository usually has multiple deploy files that are relevant for different purposes and environments. Demo Shops have a `deploy.dev.yml` file that is mostly meant for local development purposes. The naming of these files is important. The naming convention is `deploy.{PROJECT_NAME}-{ENVIRONEMENT_NAME}.yml`—for example, `deploy.myshop-production.yml`. For reference, see [Deploy file](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html). The most relevant deploy file that you can use as a reference is [deploy.aws-env-template.yml](https://github.com/spryker-shop/b2b-demo-shop/blob/master/deploy.aws-env-template.yml). Each Demo Shop repository has its respective deploy file template. Adjust this according to your requirements and preferences following the preceding documentation and share it with Spryker.
 
 ## Domains
 
-This section explains how you can choose a domain name for your project. The domain name determines the URL under which your shop will be available.
+This section explains how you can choose a domain name for your project. The domain name determines the URL under which your shop will be available. Domains can be managed by Spryker or Customer. In case Spryker should manage domain it should not be a top level domain (eg. `companyname.com`) but one that is specifically used for the Spryker Commerce system (eg. `shop.companyname.com`). 
 
 ### Domain name
 
@@ -148,9 +133,9 @@ The following configuration parameters are optional:
 - Dynamic BGP routes
 - Other Parameters of tunnels
 
-{% info_block infoBox "IPsec" %}
+{% info_block infoBox "Site to Site VPN" %}
 
-If you need IPsec, provide your internal subnet CIDR, so our Spryker VPC doesn’t overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can’t change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
+If you need Site to Site VPN, provide your internal subnet CIDR, so our Spryker VPC doesn’t overlap with it. It is crucial to evaluate this option during provisioning, as Spryker can’t change it later once the environment is provisioned. If overlapping is identified, the environment will need to be recreated.
 
 {% endinfo_block %}
 

@@ -6,7 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/order-management-system/202311.0/base-shop/install-and-update/install-glue-api/install-the-checkout-glue-api.html
 related:
-  - title: Checkout feature integration
+  - title: Install the Checkout feature
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html

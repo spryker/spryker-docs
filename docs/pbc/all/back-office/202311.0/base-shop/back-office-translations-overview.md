@@ -50,7 +50,7 @@ If a translation is missing, the corresponding key is displayed instead.
 
 Unlike the **Glossary** section of Zed, which is used for managing Front-end (Yves) translations, there is no interface for managing Zed translations. All the translations are managed by updating corresponding CSV files directly. Similarly to uploading translation files, you need to regenerate the translation cache to reflect the changes after updating them. Use the commands to do that.
 
-Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Back Office translations feature integration guide](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html).
+Newly created and all the existing modules are shipped with German translation by default. If you want to add a different language, you can follow the instructions from the [Install the Back Office translations feature guide](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html).
 
 The following schema illustrates relations between Translator, UserExtension, User, UserLocale, and UserLocaleGui modules:
 

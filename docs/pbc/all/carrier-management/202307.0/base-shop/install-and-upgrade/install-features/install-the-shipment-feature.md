@@ -16,7 +16,7 @@ related:
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
-  - title: Shipment + Approval Process feature integration
+  - title: Install the Shipment + Approval Process feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html
 ---
 

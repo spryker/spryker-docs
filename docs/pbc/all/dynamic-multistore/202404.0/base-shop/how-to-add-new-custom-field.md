@@ -191,7 +191,7 @@ class StoreContextForm extends SprykerStoreContextForm
 
 </details>
 
-6. Use new `StoreContextForm` which extended with new field in the extended `StoreContextGuiCommunicationFactory` class:
+6. Use `StoreContextForm` , which is extended with the field, in the extended `StoreContextGuiCommunicationFactory` class:
 
 *src/Pyz/Zed/StoreContextGui/Communication/StoreContextGuiCommunicationFactory.php*
 
@@ -221,8 +221,8 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
 2. On the **Stores** page, click **Edit store** next to a store.
 3. On the **Edit store** page, click the **Settings** tab.
 In the **Settings** tab, make sure the following applies:
-  * The default block with the **APPLICATION** value set to **Default** is displayed. 
-  * The new **Contact Email** field is displayed, Please see the screenshot below for reference. 
+  * The default block with the **APPLICATION** value set to **Default** is displayed.
+  * The new **Contact Email** field is displayed, Please see the screenshot below for reference.
   * The **Contact Email** field is required and accepts only valid email addresses.
 4. Click **Save** to save the changes and validate whether the new field is saved correctly.
 
@@ -233,10 +233,9 @@ In the **Settings** tab, make sure the following applies:
 
 
 
-## Extend StoreTransfer with a new field. 
+## Extend StoreTransfer
 
-This section explains how to extend StoreTransfer and extract field using a plugin for access to the `contactEmail` field directly from the `StoreTransfer`.
-The contact email field is used as an example.
+This section explains how to extend StoreTransfer and extract a field using a plugin for access to the `contactEmail` field directly from the `StoreTransfer`. The contact email field is used as an example.
 
 1. Adjust `StoreTransfer` to add the `contactEmail` field:
 

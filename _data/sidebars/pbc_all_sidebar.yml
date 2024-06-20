@@ -1085,7 +1085,9 @@ entries:
               - title: Integration apps
                 url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
               - title: Incrementally import recently updated products
-                url: /docs/pbc/all/data-exchange/tutorials-and-howtos/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
+                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
+                include_versions:
+                - "202404.0"
                 nested:
                 - title: Akeneo PIM Integration App
                   url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html

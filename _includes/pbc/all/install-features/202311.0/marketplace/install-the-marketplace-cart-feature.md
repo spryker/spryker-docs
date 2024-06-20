@@ -11,7 +11,7 @@ Install the required features:
 | NAME | VERSION | INSTALLATION GUIDE |
 | ----------- | ------- | ------------------|
 | Cart            | {{page.version}}  | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
-| Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
+| Order Threshold | {{page.version}}  | [Install the Order Threshold feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html) |
 | Marketplace Order Management | {{page.version}}  | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ### 1) Install the required modules

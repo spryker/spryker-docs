@@ -22,6 +22,7 @@ entries:
         nested:
         - title: Security release notes 202307.0
           url: /docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html
+
       - title: Security release notes 202306.0
         url: /docs/about/all/releases/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
@@ -118,7 +119,7 @@ entries:
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
           - title: Merge pull requests
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html            
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

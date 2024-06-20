@@ -22,6 +22,7 @@ entries:
             url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-an-azure-managed-project.html
           - title: Connect a GitLab managed project
             url: /docs/ca/devscu/connect-spryker-code-upgrader/connect-spryker-code-upgrader-to-a-gitlab-managed-project.html
+
       - title: Set the target branch for PRs
         url: /docs/ca/devscu/set-the-target-branch-for-spryker-code-upgrader.html
       - title: Configure

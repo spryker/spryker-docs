@@ -51,7 +51,7 @@ When a company user creates a request, the merchant receives a notification via 
 The merchant can leave notes for the company that requested the relation. Merchant can also leave internal comments that only their merchant users can view and respond to.
 Once the merchant approves or rejects a relation request, its status changes to *Approved* or *Rejected*. The company user receives the email about the status change of the request.
 
-For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-merchant-portal/manage-merchant-relation-requests.html).
+For details on how a merchant can process the merchant relation requests in the Merchant Portal, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/manage-merchant-relation-requests.html).
 
 Even though it's usually a merchant who approves or rejects a merchant relation request, a marketplace operator can also process the merchant relation request from the Back Office. For details on how they can do this, see [Manage merchant relation requests](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html).
 

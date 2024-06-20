@@ -7,7 +7,7 @@ Install the required features:
 
 | Name | Version | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | Glue Application feature integration |
+| Spryker Core | {{page.version}} | Install the Spryker Core Glue API |
 | Multiple Carts | {{page.version}} | Install the Multiple Carts feature |
 | Cart | {{page.version}} | Cart feature integration |
 

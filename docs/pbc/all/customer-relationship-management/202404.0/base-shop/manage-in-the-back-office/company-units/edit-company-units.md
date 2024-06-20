@@ -9,7 +9,7 @@ redirect_from:
 - /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/edit-company-units.html
 related:
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
 ---
 
 This document describes how to edit company units in the Back Office. You can add addresses to company units only when editing them.

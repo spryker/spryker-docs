@@ -1,36 +1,19 @@
 ---
-title: "HowTo: Add a new shipment method"
-description: This document describes the steps to add a new shipment method, without integrating with the shipment provider.
-
+title: Add shipment methods
+description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/ht-add-new-shipment-method
-originalArticleId: acc1e4a3-0d2e-459e-b57b-8a2eb20e4fd8
+originalLink: https://documentation.spryker.com/2021080/docs/ht-add-new-shipment-method-2
+originalArticleId: 8237cdec-4f7a-4361-94b6-8ef7c04e80f5
 redirect_from:
-  - /2021080/docs/ht-add-new-shipment-method
-  - /2021080/docs/en/ht-add-new-shipment-method
-  - /docs/ht-add-new-shipment-method
-  - /docs/en/ht-add-new-shipment-method
-  - /v6/docs/ht-add-new-shipment-method
-  - /v6/docs/en/ht-add-new-shipment-method
-  - /v5/docs/ht-add-new-shipment-method
-  - /v5/docs/en/ht-add-new-shipment-method
-  - /v4/docs/ht-add-new-shipment-method
-  - /v4/docs/en/ht-add-new-shipment-method
-  - /v3/docs/ht-add-new-shipment-method
-  - /v3/docs/en/ht-add-new-shipment-method
-  - /v2/docs/ht-add-new-shipment-method
-  - /v2/docs/en/ht-add-new-shipment-method
-  - /v1/docs/ht-add-new-shipment-method
-  - /v1/docs/en/ht-add-new-shipment-method
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
+  - /docs/pbc/all/carrier-management/202204.0/base-shop/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
 related:
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
 
-This document shows how to add a new shipment method without integrating with the shipment provider.
-
-This document considers the case when you need to add a new shipment method without integrating it with the shipment providers system.
+This document shows how to add a new shipment method without integrating it with the shipment provider system.
 
 {% info_block infoBox "Note" %}
 
@@ -40,11 +23,11 @@ In this situation, you *must* have multi-currency prices attached to the shipmen
 
 ## Set up the state machine
 
-The state machine that handles orders that use this shipment method needs to use a manual event for shipping so that it can be triggered from the Zed Admin UI.
+The state machine which handles orders using this shipment method needs to use a manual event for shipping so that it can be triggered from the Back Office.
 
-<!--../../Resources/Images/ship_event.png -->
+![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png)
 
-The corresponding XML for this transition would be as follows:
+The corresponding XML for this transition would be:
 
 ```xml
 <states>
@@ -68,8 +51,6 @@ The corresponding XML for this transition would be as follows:
 
 ## Add a new shipment method
 
-<!-- ../../Resources/Images/ui_add_carrier_cmpany.png-->
-
 To add a new shipment method, follow these steps:
 1. In the Back Office, navigate to the **Delivery Methods** section and click **Create new carrier company**.
 2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
@@ -89,12 +70,11 @@ For more detailed information about adding shipment methods, see [Add delivery m
 
 To add a shipment method to a carrier, follow these steps:
 1. Click **Create new delivery method**. The **Create Delivery Method** page opens.
-2. Select the **CARRIER** you have created in the [Add a new shipment method](#add-a-new-shipment-method) section.
+2. Select the **CARRIER** you have created in the [Add a new delivery method](#add-a-new-shipment-method) section.
 3. Add the **NAME** and store- and currency-specific net and gross prices.
 4. Select **IS ACTIVE**.
 5. Select the corresponding **TAX SET**.
 6. Click **Save**.
-   The new shipment method is available in the shop.
 
 {% info_block infoBox "Note" %}
 
@@ -102,7 +82,11 @@ For more detailed information about adding carrier companies, see [Creating carr
 
 {% endinfo_block %}
 
-<!-- ../../Resources/Images/ui_shipment_method_6.png -->
+![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png)
 
+The shipment methods with price are retrieved depending on your preconfigured price mode + current store and the selected currency.
 
-<!-- ../../Resources/Images/ui_shipment_selection.png -->
+Shipment methods can be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them; otherwise, it has a price as NULL.
+
+In this current example, the new shipment method is available in the shop for DE store, EUR currency, and gross price mode as 7 EUR.
+![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png)

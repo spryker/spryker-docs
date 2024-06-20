@@ -38,16 +38,6 @@ Each variant needs to be activated in order to be visible to your customers.
 **Tips & tricks**
 <br>If you want to hide the product variant from your customers, you deactivate it using the same procedure as for activating the product. This deactivates only the product variant. The abstract product is active until at least one its variant is active.
 
-## Viewing products
-
-To view the product details without actually editing them, do the following:
-
-1. In the _Actions_ column of the abstract product you want to view, click **View**.
-2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
-
-**Tips & tricks**
-
-<br>If you notice something you would like to change for your product, in the top right corner of the page. click **Edit**.
 
 ## Approving and denying marketplace products
 
@@ -62,7 +52,3 @@ To update the approval status of the product, in the _Actions_ column of the abs
 - For the product with status *Approved*, click **Deny** to reject the product.
 
 - For the product with status *Denied*, click **Approve** to approve the product.
-
-**What's next?**
-
-To learn more about the product management, see [Editing abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-back-office/products/abstract-products/edit-abstract-products.html)

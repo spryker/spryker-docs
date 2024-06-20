@@ -1,5 +1,5 @@
 ---
-title: Product Group + Product Labels feature integration
+title: Install the Product group + Product Labels feature
 description: Instructions to integrate Product group + Product labels feature into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

@@ -130,7 +130,7 @@ Make sure that the following endpoint is available:<br>`http://mysprykershop.com
 
 **See also:**
 
-* [Tax Management](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
+* [Tax Management](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html)
 
  
 *Last review date: Mar 21, 2019*

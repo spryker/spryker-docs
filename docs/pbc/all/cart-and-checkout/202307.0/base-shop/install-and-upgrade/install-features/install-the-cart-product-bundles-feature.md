@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 related:
   - title: Install the Cart + Product Bundle Glue API
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-cart-product-bundle-glue-api.html
-  - title: Cart feature integration
+  - title: Install the Cart feature
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 

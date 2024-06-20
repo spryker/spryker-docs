@@ -4096,6 +4096,8 @@ entries:
                           - title: Integrate Vertex
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
 
+                      - title: Project configuration for Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
                       - title: Connect
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
                       - title: Troubleshooting

@@ -192,7 +192,7 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
 Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}

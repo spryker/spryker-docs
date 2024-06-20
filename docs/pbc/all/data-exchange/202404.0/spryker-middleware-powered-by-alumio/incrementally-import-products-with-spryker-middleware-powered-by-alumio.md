@@ -12,12 +12,12 @@ To run the incremental import of products, follow these steps.
 ## 1. Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and Spryker
 
 * If you create the new configuration, follow [Configure the Spryker Middleware Powered by Alumio connection with Akeneo PIM and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-the-smpa-connection-with-akeneo-pim-and-sccos.html).
-* If you update the existing configuration, proceed with [3. Create an incoming configuration](#3-create-an-incoming-configuration).
+* If you update the existing configuration, proceed with [3. Create an incoming configuration](#create-an-incoming-configuration).
 
 ## 2. Configure the data mapping between Akeneo and Spryker
 
 * If you create a new configuration, follow [Configure data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html).
-* If you update the existing configuration, proceed with [3. Create an incoming configuration](#3-create-an-incoming-configuration).
+* If you update the existing configuration, proceed with [3. Create an incoming configuration](#create-an-incoming-configuration).
 
 ## 3. Create an incoming configuration
 

@@ -1,5 +1,5 @@
 ---
-title: How to send a request in Data Exchange API
+title: Sending requests with Data Exchange API
 description: This guide shows how to send a request in Data Exchange API.
 last_updated: May 30, 2024
 template: howto-guide-template
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/data-exchange/202311.0/tutorials-and-howtoes/how-to-send-request-in-data-exchange-api.html
 ---
 
-This document describes how to interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, we use the `/dynamic-data/countries` to interact with the `spy_country` and `spy_tax_rate` tables as an example.
+This document describes how to interact with databases using the Data Exchange API. The Data Exchange API lets you configure endpoints to interact with any database tables. In this document, `/dynamic-data/countries` is used to interact with the `spy_country` and `spy_tax_rate` tables as an example.
 
 ## Prerequisites
 
@@ -508,13 +508,9 @@ to ensure accurate and consistent data manipulation during `PUT` operations.
 
 {% endinfo_block %}
 
-### Sending `DELETE` request
+### Sending `DELETE` requests
 
-{% info_block infoBox %}
-
-When using `DELETE` requests, it's important to allow deletion. This means that the `isDeletable` attribute for the entity inside the configuration should be `true`.
-
-{% endinfo_block %}
+By default, entities can't be deleted. To be able to delete an entity, in the configuration, set the `isDeletable` attribute for the entity to `true`. The configuration to delete entities isn't cascaded to child entities. Before you can delete an entity, you need to delete all of its child entities.
 
 To delete a collection of countries, submit the following HTTP request:
 
@@ -526,10 +522,10 @@ Accept: application/json
 Authorization: Bearer {your_token}
 ```
 
-The response should be `204 No Content`.
+The response should be `204 No Content`. If deletion is not allowed, `405 Method not allowed` is returned.
 
 
-It is also possible to send a `DELETE` request for a specific ID instead of a collection using the following request:
+To delete a specific country, submit the following HTTP request:
 
 ```bash
 PUT /dynamic-entity/countries/1 HTTP/1.1
@@ -539,13 +535,7 @@ Accept: application/json
 Authorization: Bearer {your_token}
 ```
 
-{% info_block infoBox %}
-
-If deletion is not allowed, the API answered `405 Method not allowed`.
-The default configuration is not to allow deletion unless explicitly allowed.
-Deletion of child entities is not cascaded and is disallowed. Deletion is disallowed if an entity has existing child entities (by foreign keys).
-
-{% endinfo_block %}
+The response should be `204 No Content`. If deletion is not allowed, `405 Method not allowed` is returned.
 
 ### Sending `POST`, `PATCH` and `PUT` requests with relationships
 

@@ -28,7 +28,7 @@ This document helps you prepare for a traditionally very busy season of the year
 * Global business: co-locate infrastructure and your customers.
 * Make sure infrastructure monitoring is in place so you can watch for errors or issues.
 * Test your deployment: you should be able to quickly deliver fixes if needed.
-* If your project is hosted on Spryker PaaS, let us know that you are expecting higher load via the [Support Portal](/docs/about/all/support/using-the-support-portal.html#announce-high-trafficload) 
+* If your project is hosted with Spryker PaaS, let us know that you are expecting a higher load using the [Support Portal](/docs/about/all/support/using-the-support-portal.html#announce-high-trafficload) 
 
 ## Tips for developers
 

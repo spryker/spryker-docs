@@ -58,4 +58,4 @@ Integrate the following related features:
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE  |
 | ----------------- | ------------ | ----------------------- |
-| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html) |
+| Agent Assist + Shopping List |         | [Install the Agent Assist + Shopping List feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-shopping-list-feature.html) |

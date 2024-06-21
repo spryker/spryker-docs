@@ -18,7 +18,7 @@ Install the required features:
 |Payments  | {{site.version}} |[Install the Payments feature](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/install-and-upgrade/install-the-payments-feature.html)|
 | Shipment | {{site.version}} |[Install the Shipment feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)|
 | Order Management | {{site.version}} |[Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)|
-| Mailing &amp; Notifications | {{site.version}} |[Mailing &amp; Notifications feature integration](/docs/pbc/all/emails/{{site.version}}/install-themailing-and-notifications-feature.html)|
+| Mailing &amp; Notifications | {{site.version}} |[Install the Mailing &amp; Notifications feature](/docs/pbc/all/emails/{{site.version}}/install-themailing-and-notifications-feature.html)|
 | Promotions &amp; Discounts | {{site.version}} |[Install the Promotions &amp; Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)|
 
 ### 1) Install the required modules

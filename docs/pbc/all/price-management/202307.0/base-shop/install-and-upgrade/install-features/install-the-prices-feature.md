@@ -14,15 +14,15 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/prices-feature-integration.html
 related:
-  - title: Configurable Bundle feature integration
+  - title: Install the Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
-  - title: Product Images + Configurable Bundle feature integration
+  - title: Install the Product Images + Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
-  - title: Merchant Product Restrictions feature integration
+  - title: Install the Merchant Product Restrictions feature
     link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 

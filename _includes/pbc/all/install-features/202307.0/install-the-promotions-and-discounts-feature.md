@@ -125,7 +125,7 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 
 [//]: # (---)
 
-[//]: # (title: Promotions & Discounts feature integration)
+[//]: # (title: Install the Promotions & Discounts feature)
 
 [//]: # (description: This guides provides you with a set of steps needed to be performed in order to integrate the Discount Promotion feature into your project.)
 

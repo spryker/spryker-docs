@@ -1,5 +1,5 @@
 ---
-title: Comments + Persistent Cart feature integration
+title: Install the Comments + Persistent Cart feature
 description: The guide walks you through the process of integrating the Comments + Persistent Cart feature into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

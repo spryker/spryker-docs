@@ -1,5 +1,5 @@
 ---
-title: How to send a request in Data Exchange API
+title: Sending requests with Data Exchange API
 description: This guide shows how to send a request in Data Exchange API.
 last_updated: Dec 5, 2023
 template: howto-guide-template
@@ -16,7 +16,7 @@ This document describes how to interact with databases using the Data Exchange A
 ## Prerequisites
 
 * [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
-* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-configure-data-exchange-api.html)
+* [Configure the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html)
 
 
 The Data Exchange API is a non-resource-based API, and routes all specified endpoints directly to a controller. By default, all routes within the Data Exchange API are protected to ensure data security. To access the API, you need to obtain an access token by sending the `POST /token/` request with the appropriate credentials:

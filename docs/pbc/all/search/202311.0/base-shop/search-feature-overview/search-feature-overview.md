@@ -29,10 +29,10 @@ By default, the following information is indexed:
 Everything you have on the product details page is indexed. Therefore, it is important that you provide full and accurate information here, like a complete title (for example, not just *Samsung Galaxy A03*, but *Samsung Galaxy A03 Core 2/32GB Blue*), descriptions, or manufacturer information.
 
 **Product reviews**
-The indexed content includes summary and description of [product reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html).
+The indexed content includes summary and description of [product reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html).
 
 **Product attributes**
-The indexed [Product attribute](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) values help customers refine their search. Therefore, it is important that your list of attribute is complete and precise. For information about creating the product attributes, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
+The indexed [Product attribute](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) values help customers refine their search. Therefore, it is important that your list of attribute is complete and precise. For information about creating the product attributes, see [Create product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/attributes/create-product-attributes.html).
 
 **CMS pages**
 Information from the CMS pages is indexed just like the information from the product details page. So if user searches for something that occurs on any of the CMS pages, the CMS page appears in the search results. For information about how you can create CMS pages, see [Creating CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html)

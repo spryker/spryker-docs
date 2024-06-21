@@ -15,7 +15,7 @@ related:
   - title: Akeneo — Console commands
     link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html
   - title: Installing and configuring Akeneo
-    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html
 ---
 
 ## Partner Information
@@ -37,7 +37,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing and configuring Akeneo](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo.html)
+* [Installing and configuring Akeneo](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/install-and-configure-akeneo-eco-module.html)
 * [Akeneo — Console commands](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/akeneo/akeneo-connector-eco-module-console-commands.html)
 
 

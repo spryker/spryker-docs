@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Product Bundle + Cart feature integration"
+title: "Install the Product Bundle + Cart Glue API"
 description: Learn how to integrate the Glue API - Product Bundle + Cart feature into a Spryker project.
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template

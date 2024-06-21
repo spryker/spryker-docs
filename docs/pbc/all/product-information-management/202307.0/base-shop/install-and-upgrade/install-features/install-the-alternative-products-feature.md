@@ -13,14 +13,14 @@ redirect_from:
 related:
   - title: Glue API - Alternative products feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
-  - title: Alternative Products - Inventory Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
+  - title: Install the Alternative Products - Inventory Management feature
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
   - title: Install the Alternative Products - Wishlist feature
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-wishlist-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
   - title: Alternative Products - Product Label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
   - title: Alternative Products - Discontinued Products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-discontinued-products-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
   - title: Alternative Products feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 ---

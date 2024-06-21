@@ -18,7 +18,7 @@ related:
   - title: Managing Threshold Settings
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-in-the-back-office/manage-threshold-settings.html
   - title: Order Thresholds feature overview
-    link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 This doc describes how to manage [merchant order thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds) in the Back Office.

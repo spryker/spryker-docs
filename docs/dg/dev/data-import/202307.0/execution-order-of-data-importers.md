@@ -40,7 +40,7 @@ The following list illustrates the order followed to run the data importers and 
   * [payment-method](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method.csv.html)
   * [payment-method-store](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/import-and-export-data/import-file-details-payment-method-store.csv.html)
 
-* [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-product-catalog-data.html):
+* [Catalog](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-information-management-data-import.html):
   * [category-template](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category-template.csv.html)
   * [category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/categories-data-import/import-file-details-category.csv.html)
   * [product-attribute-key](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html)
@@ -51,7 +51,7 @@ The following list illustrates the order followed to run the data importers and 
   * [product-image](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-image.csv.html)
   * [product-price](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price.csv.html)
   * [product-price-schedule](/docs/pbc/all/price-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-price-schedule.csv.html)
-  * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-data/file-details-product-stock.csv.html)
+  * [product-stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-stock.csv.html)
 * Special Products:
   * [product-option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option.csv.html)
   * [product-option-price](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/product-options/import-file-details-product-option-price.csv.html)
@@ -94,8 +94,8 @@ The following list illustrates the order followed to run the data importers and 
   * [product-review](/docs/pbc/all/ratings-reviews/{{page.version}}/import-and-export-data/import-file-details-product-review.csv.html)
   * [product-label](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-label.csv.html)
   * [product-set](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html)
-  * [product-search-attribute-map](/docs/pbc/all/search/{{page.version}}/base-shop/import-data/file-details-product-search-attribute-map.csv.html)
-  * [product-search-attribute](/docs/pbc/all/search/{{page.version}}/base-shop/import-data/file-details-product-search-attribute.csv.html)
+  * [product-search-attribute-map](/docs/pbc/all/search/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-search-attribute-map.csv.html)
+  * [product-search-attribute](/docs/pbc/all/search/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-search-attribute.csv.html)
   * [discount-amount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html)
   * [product-discontinued](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html)
   * [product-alternative](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-alternative.csv.html)

@@ -10,23 +10,23 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/configurable-bundle-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
 related:
-  - title: Glue API - Configurable Bundle feature integration
+  - title: Install the Configurable Bundle Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
-  - title: Glue API - Configurable Bundle + Cart feature integration
+  - title: Glue API - Install the Configurable Bundle + Cart feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html
   - title: Install the Configurable Bundle + Product Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html
-  - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+  - title: Install the Merchant Product Restrictions feature
+    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
   - title: Product Lists + Catalog feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
-  - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+  - title: Install the Prices feature
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
-  - title: Product Images + Configurable Bundle feature integration
+  - title: Install the Product Images + Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 ---
 

@@ -542,7 +542,7 @@ Optional parameters for `application:`:
 
 {% info_block infoBox %}
 
-* To disable the validation of request body size against this parameter, set it to `0`. We do not recommended disabling it.
+To disable the validation of request body size against this parameter, set it to `0`. We don't recommended disabling it.
 
 {% endinfo_block %}
 
@@ -561,7 +561,7 @@ Optional parameters for `application:`:
 {% info_block infoBox %}
 
 * In cloud environments, increasing the number of workers requires infrastructure changes. Increasing the number of workers should be thoroughly tested beforehand and may have drastic impact on your application's resource requirements. Coordinate this change with our Operations team using the Infrastrucute Change Request (Change to existing Parameter Store Variable).
-* This number should be increased, when you see in logs the following error: **server reached pm.max_children setting**.
+* Increase this number if you are getting the following error in logs: **server reached pm.max_children setting**.
 * We recommend the following increase steps: 4, 8, 12.
 
 {% endinfo_block %}

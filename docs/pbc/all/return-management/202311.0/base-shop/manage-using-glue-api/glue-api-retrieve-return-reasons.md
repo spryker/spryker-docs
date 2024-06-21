@@ -19,7 +19,7 @@ This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Retrieve return reasons
 

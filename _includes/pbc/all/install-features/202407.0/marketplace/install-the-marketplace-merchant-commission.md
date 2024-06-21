@@ -19,16 +19,85 @@ composer require spryker-feature/marketplace-merchant-commission:"{{site.version
 
 Make sure the following modules have been installed:
 
-| MODULE                       | EXPECTED DIRECTORY                             |
-|------------------------------|------------------------------------------------|
-| MerchantCommission           | vendor/spryker/merchant-commission             |
-| MerchantCommissionDataExport | vendor/spryker/merchant-commission-data-export |
-| MerchantCommissionDataImport | vendor/spryker/merchant-commission-data-import |
-| MerchantCommissionGui        | vendor/spryker/merchant-commission-gui         |
+| MODULE                                    | EXPECTED DIRECTORY                                                      |
+|-------------------------------------------|-------------------------------------------------------------------------|
+| MerchantCommission                        | vendor/spryker/merchant-commission                                      |
+| MerchantCommissionDataExport              | vendor/spryker/merchant-commission-data-export                          |
+| MerchantCommissionDataImport              | vendor/spryker/merchant-commission-data-import                          |
+| MerchantCommissionGui                     | vendor/spryker/merchant-commission-gui                                  |
+| SalesMerchantCommission                   | vendor/spryker/sales-merchant-commission                                |
+| SalesMerchantCommissionExtension          | vendor/spryker/sales-merchant-commission-extension                      |
+| MerchantSalesOrderSalesMerchantCommission | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
+| MerchantSalesOrderSalesMerchantCommission | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 
 {% endinfo_block %}
 
-## 2) Set up database schema and transfer objects
+## 2) Set up configuration
+
+Add the following configuration:
+
+| CONFIGURATION                                                      | SPECIFICATION                                                   | NAMESPACE                   |
+|--------------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------|
+| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for a stores in the system. | \Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who are not subject to commissions.       | \Pyz\Zed\MerchantCommission |
+
+**src/Pyz/Zed/MerchantCommission/MerchantCommissionConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission;
+
+use Spryker\Zed\MerchantCommission\MerchantCommissionConfig as SprykerMerchantCommissionConfig;
+
+class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
+{
+    /**
+     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_NET
+     *
+     * @var string
+     */
+    protected const PRICE_MODE_NET = 'NET_MODE';
+
+    /**
+     * @uses \Spryker\Shared\Calculation\CalculationPriceMode::PRICE_MODE_GROSS
+     *
+     * @var string
+     */
+    protected const PRICE_MODE_GROSS = 'GROSS_MODE';
+
+    /**
+     * @var array<string, string>
+     */
+    protected const MERCHANT_COMMISSION_PRICE_MODE_PER_STORE = [
+        'DE' => self::PRICE_MODE_GROSS,
+        'AT' => self::PRICE_MODE_GROSS,
+        'US' => self::PRICE_MODE_GROSS,
+    ];
+
+    /**
+     * @var list<string>
+     */
+    protected const EXCLUDED_MERCHANTS_FROM_COMMISSION = [
+        'MER000001',
+    ];
+}
+
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the price modes are properly defined for the stores that will be charging commission from the merchant in the marketplace.
+This can be done by setting the `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` configuration.
+(Important): The price mode must be set for the stores charging commission from the merchant!
+
+Ensure that the merchants who are not subject to commissions are properly defined. 
+This can be done by setting the `MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION` configuration. 
+Usually this is used for the marketplace owner.
+
+{% endinfo_block %}
+
+## 3) Set up database schema and transfer objects
 
 1. Apply database changes, generate entity and transfer changes:
 
@@ -61,26 +130,47 @@ console transfer:generate
 
 Make sure the following changes have been applied in transfer objects:
 
-| TRANSFER                             | TYPE  | EVENT   | PATH                                                                       |
-|--------------------------------------|-------|---------|----------------------------------------------------------------------------|
-| MerchantCommission                   | class | Created | src/Generated/Shared/Transfer/MerchantCommissionTransfer                   |
-| MerchantCommissionGroup              | class | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupTransfer              |
-| MerchantCommissionAmount             | class | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountTransfer             |
-| MerchantCommissionCollection         | class | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionTransfer         |
-| MerchantCommissionCriteria           | class | Created | src/Generated/Shared/Transfer/MerchantCommissionCriteriaTransfer           |
-| MerchantCommissionConditions         | class | Created | src/Generated/Shared/Transfer/MerchantCommissionConditionsTransfer         |
-| MerchantCommissionCollectionRequest  | class | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionRequestTransfer  |
-| MerchantCommissionCollectionResponse | class | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionResponseTransfer |
-| MerchantCommissionAmountCollection   | class | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountCollectionTransfer   |
-| MerchantCommissionAmountCriteria     | class | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountCriteriaTransfer     |
-| MerchantCommissionAmountConditions   | class | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountConditionsTransfer   |
-| MerchantCommissionGroupCollection    | class | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupCollectionTransfer    |
-| MerchantCommissionGroupCriteria      | class | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupCriteriaTransfer      |
-| MerchantCommissionGroupConditions    | class | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupConditionsTransfer    |
+| TRANSFER                                     | TYPE     | EVENT   | PATH                                                                             |
+|----------------------------------------------|----------|---------|----------------------------------------------------------------------------------|
+| MerchantCommission                           | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionTransfer                         |
+| MerchantCommissionGroup                      | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupTransfer                    |
+| MerchantCommissionAmount                     | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountTransfer                   |
+| MerchantCommissionCollection                 | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionTransfer               |
+| MerchantCommissionCriteria                   | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCriteriaTransfer                 |
+| MerchantCommissionConditions                 | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionConditionsTransfer               |
+| MerchantCommissionCollectionRequest          | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionRequestTransfer        |
+| MerchantCommissionCollectionResponse         | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCollectionResponseTransfer       |
+| MerchantCommissionAmountCollection           | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountCollectionTransfer         |
+| MerchantCommissionAmountCriteria             | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountCriteriaTransfer           |
+| MerchantCommissionAmountConditions           | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountConditionsTransfer         |
+| MerchantCommissionGroupCollection            | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupCollectionTransfer          |
+| MerchantCommissionGroupCriteria              | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupCriteriaTransfer            |
+| MerchantCommissionGroupConditions            | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionGroupConditionsTransfer          |
+| MerchantCommissionCalculationRequest         | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCalculationRequestTransfer       |
+| MerchantCommissionCalculationRequestItem     | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCalculationRequestItemTransfer   |
+| MerchantCommissionCalculationResponse        | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCalculationResponseTransfer      |
+| MerchantCommissionCalculationItem            | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCalculationItemTransfer          |
+| MerchantCommissionCalculationTotals          | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionCalculationTotalsTransfer        |
+| CollectedMerchantCommission                  | class    | Created | src/Generated/Shared/Transfer/CollectedMerchantCommissionTransfer                |
+| MerchantCommissionAmountTransformerRequest   | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountTransformerRequestTransfer |
+| MerchantCommissionAmountFormatRequest        | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountFormatRequestTransfer      |
+| RuleEngineSpecificationProviderRequest       | class    | Created | src/Generated/Shared/Transfer/RuleEngineSpecificationProviderRequestTransfer     |
+| RuleEngineSpecificationRequest               | class    | Created | src/Generated/Shared/Transfer/RuleEngineSpecificationRequestTransfer             |
+| RuleEngineQueryStringValidationRequest       | class    | Created | src/Generated/Shared/Transfer/RuleEngineQueryStringValidationRequestTransfer     |
+| RuleEngineQueryStringValidationResponse      | class    | Created | src/Generated/Shared/Transfer/RuleEngineQueryStringValidationResponseTransfer    |
+| RuleEngineClause                             | class    | Created | src/Generated/Shared/Transfer/RuleEngineClauseTransfer                           |
+| MerchantCommissionView                       | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionViewTransfer                     |
+| MerchantCommissionAmountView                 | class    | Created | src/Generated/Shared/Transfer/MerchantCommissionAmountViewTransfer               |
+| SalesMerchantCommission                      | class    | Created | src/Generated/Shared/Transfer/SalesMerchantCommissionTransfer                    |
+| Item.merchantCommissionAmountAggregation     | property | created | src/Generated/Shared/Transfer/ItemTransfer                                       |
+| Item.merchantCommissionAmountFullAggregation | property | created | src/Generated/Shared/Transfer/ItemTransfer                                       |
+| Item.merchantCommissionRefundedAmount        | property | created | src/Generated/Shared/Transfer/ItemTransfer                                       |
+| Totals.merchantCommissionTotal               | property | created | src/Generated/Shared/Transfer/TotalsTransfer                                     |
+| Totals.merchantCommissionRefundedTotal       | property | created | src/Generated/Shared/Transfer/TotalsTransfer                                     |
 
 {% endinfo_block %}
 
-### 3) Add translations
+### 4) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -131,7 +221,7 @@ Make sure the configured data has been added to the `spy_glossary_key` and `spy_
 
 {% endinfo_block %}
 
-### 4) Import data
+### 5) Import data
 
 To import data follow the steps in the following sections.
 
@@ -349,7 +439,7 @@ Make sure the entities have been imported to the following database tables:
 
 {% endinfo_block %}
 
-### 5) Configure navigation
+### 6) Configure navigation
 
 1. Add the `MerchantCommissionGui` section to `navigation.xml`:
 

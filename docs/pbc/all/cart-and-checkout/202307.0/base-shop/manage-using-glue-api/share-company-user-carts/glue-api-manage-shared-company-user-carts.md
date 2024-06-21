@@ -16,9 +16,9 @@ related:
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Shared Cart feature overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
   - title: Install the Shared Carts feature
-    link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html
   - title: Manage carts of registered users
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-carts-of-registered-users.html
 ---

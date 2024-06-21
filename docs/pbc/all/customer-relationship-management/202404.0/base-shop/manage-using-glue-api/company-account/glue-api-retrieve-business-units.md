@@ -28,16 +28,16 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve a company business unit
 
@@ -209,30 +209,13 @@ To retrieve a business unit, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| id | String | Specifies a unique identifier of the business unit. You can use the identifier to access the unit in the future. |
-| name | String | Specifies the name of the business unit. |
-| email | String | Specifies the email address of the business unit. |
-| phone | String | Specifies the telephone number of the business unit. |
-| externalUrl | String | Specifies the URL of the business unit's website. |
-| bic | String | Specifies the Bank Identifier Code of the business unit. |
-| iban | String | Specifies the International Bank Account Number of the business unit. |
-| defaultBillingAddress | String | Specifies the ID of the business unit default billing address. For details on how to retrieve the actual address, see the *Retrieving Business Unit Addresses* section. |
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-units-response-attributes.md -->
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| companies | name | String | Specifies the company name. |
-| companies | isActive | Boolean | Indicates whether the company is active. |
-| companies | status | String | Specifies the status of the company. Possible values: *Pending*, *Approved* or *Denied*. |
-| company-business-unit-addresses | address1 | String | Specifies the 1st line of the business unit address. |
-| company-business-unit-addresses | address2 | String | Specifies the 2nd line of the business unit address. |
-| company-business-unit-addresses | address3 | String | Specifies the 3rd line of the business unit address. |
-| company-business-unit-addresses | zipCode  | String | Specifies the ZIP code. |
-| company-business-unit-addresses | city | String | Specifies the city. |
-| company-business-unit-addresses | phone | String | Specifies the phone number of the business unit. |
-| company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 country code to use. |
-| company-business-unit-addresses | comment  | String | Specifies an optional comment to the business unit. |
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-unit-addresses-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-unit-addresses-response-attributes.md -->
+
+
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+
 
 ## Possible errors
 

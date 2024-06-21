@@ -10,11 +10,6 @@ entries:
     nested:
     - title: System requirements
       url: /docs/dg/dev/system-requirements/system-requirements.html
-      include_versions:
-      - "202212.0"
-      - "202307.0"
-      - "202311.0"
-      - "202204.0"
     - title: "Quickstart guides: Install Spryker"
       url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guides-install-spryker.html
       nested:
@@ -22,6 +17,7 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-macos-and-linux.html
       - title: "Quickstart guide: Install Spryker on Windows"
         url: /docs/dg/dev/set-up-spryker-locally/quickstart-guides-install-spryker/quickstart-guide-install-spryker-on-windows.html
+
     - title: Install Spryker
       url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-spryker.html
       nested:
@@ -36,6 +32,7 @@ entries:
           url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl2.html
         - title: Install Docker prerequisites on Windows with WSL1
           url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install-docker-prerequisites/install-docker-prerequisites-on-windows-with-wsl1.html
+
       - title: Install
         url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/choose-an-installation-mode.html
         nested:
@@ -47,6 +44,7 @@ entries:
           url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-macos-and-linux.html
         - title: Install in Demo mode on Windows
           url: /docs/dg/dev/set-up-spryker-locally/install-spryker/install/install-in-demo-mode-on-windows.html
+
       - title: Configure after installing
         url: /docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-spryker-after-installing.html
         nested:
@@ -62,6 +60,7 @@ entries:
 
       - title: Database access credentials
         url: /docs/dg/dev/set-up-spryker-locally/database-access-credentials.html
+
     - title: Manage dependencies with Composer
       url: /docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
     - title: Redis configuration
@@ -84,6 +83,7 @@ entries:
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/setup-of-new-indexes-throws-an-exception.html
       - title: Vendor folder synchronization error
         url: /docs/dg/dev/set-up-spryker-locally/troubleshooting-installation/vendor-folder-synchronization-error.html
+
   - title: Backend development
     url: /docs/dg/dev/backend-development/back-end-development.html
     nested:
@@ -94,6 +94,7 @@ entries:
         url: /docs/dg/dev/backend-development/client/implement-a-client.html
       - title: Use and configure Redis as a key-value storage
         url: /docs/dg/dev/backend-development/client/use-and-configure-redis-as-a-key-value-storage.html
+
     - title: Yves
       url: /docs/dg/dev/backend-development/yves/yves.html
       nested:
@@ -135,15 +136,18 @@ entries:
             url: /docs/dg/dev/backend-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
           - title: A facade implementation
             url: /docs/dg/dev/backend-development/zed/business-layer/facade/a-facade-implementation.html
+
         - title: Business models
           url: /docs/dg/dev/backend-development/zed/business-layer/business-models.html
         - title: Custom exceptions
           url: /docs/dg/dev/backend-development/zed/business-layer/custom-exceptions.html
+
       - title: Communication layer
         url: /docs/dg/dev/backend-development/zed/communication-layer/communication-layer.html
         nested:
         - title: Add indexes to foreign key columns - index generator
           url: /docs/dg/dev/backend-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
+
       - title: Persistence layer
         url: /docs/dg/dev/backend-development/zed/persistence-layer/persistence-layer.html
         nested:
@@ -166,6 +170,7 @@ entries:
             url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/using-a-query-container.html
           - title: Implement a query container
             url: /docs/dg/dev/backend-development/zed/persistence-layer/query-container/implement-a-query-container.html
+
       - title: Add navigation in the Back Office
         url: /docs/dg/dev/backend-development/zed/add-navigation-in-the-back-office.html
       - title: Create table views
@@ -190,11 +195,13 @@ entries:
       nested:
       - title: Create forms
         url: /docs/dg/dev/backend-development/forms/create-forms.html
+
     - title: Plugins
       url: /docs/dg/dev/backend-development/plugins/plugins.html
       nested:
       - title: Get an overview of the used plugins
         url: /docs/dg/dev/backend-development/plugins/get-an-overview-of-the-used-plugins.html
+
     - title: Session handlers
       url: /docs/dg/dev/backend-development/session-handlers.html
     - title: Session management
@@ -263,6 +270,7 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/queue/queue-pool.html
         - title: Integrate RabbitMQ Headers in Queue Messages
           url: /docs/dg/dev/backend-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
+
       - title: Payment methods
         url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/payment-methods.html
         nested:
@@ -280,6 +288,7 @@ entries:
           - title: Test Your Direct Debit Implementation
             url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
         - title: Prepayment
+
           url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
           nested:
           - title: Implement prepayment in frontend
@@ -292,6 +301,7 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
           - title: Test the prepayment implementation
             url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+
         - title: Invoice
           url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
           nested:
@@ -305,6 +315,7 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
           - title: Test the invoice payment implementation
             url: /docs/dg/dev/backend-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+
       - title: Data ingestion
         url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
@@ -319,8 +330,10 @@ entries:
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
           - title: Create, use, and extend the transfer objects
             url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
+
         - title: Spryker LINK Middleware
           url: /docs/dg/dev/backend-development/data-manipulation/data-ingestion/spryker-link-middleware.html
+
       - title: Event
         url: /docs/dg/dev/backend-development/data-manipulation/event/event.html
         nested:
@@ -330,6 +343,7 @@ entries:
           url: /docs/dg/dev/backend-development/data-manipulation/event/listen-to-events.html
         - title: Add events
           url: /docs/dg/dev/backend-development/data-manipulation/event/add-events.html
+
     - title: Extend Spryker
       url: /docs/dg/dev/backend-development/extend-spryker/extend-spryker.html
       nested:
@@ -340,6 +354,7 @@ entries:
           nested:
           - title: Creae modules
             url: /docs/dg/dev/backend-development/extend-spryker/create-modules.html
+
         - title: Spryker OS module customization
           url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
           nested:
@@ -351,6 +366,7 @@ entries:
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
           - title: Install module structure and configuration
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
+
     - title: Zed UI tables
       url: /docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html
       nested:
@@ -358,6 +374,7 @@ entries:
         url: /docs/dg/dev/backend-development/zed-ui-tables/create-and-configure-zed-tables.html
       - title: Add buttons to Zed tables
         url: /docs/dg/dev/backend-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+
     - title: Messages and errors
       url: /docs/dg/dev/backend-development/messages-and-errors/messages-and-errors.html
       nested:
@@ -369,6 +386,7 @@ entries:
         url: /docs/dg/dev/backend-development/messages-and-errors/handling-internal-server-messages.html
       - title: Handling errors with ErrorHandler
         url: /docs/dg/dev/backend-development/messages-and-errors/handling-errors-with-errorhandler.html
+
     - title: Factory
       url: /docs/dg/dev/backend-development/factory/factory.html
       nested:
@@ -387,6 +405,7 @@ entries:
         url: /docs/dg/dev/frontend-development/zed/overriding-webpack-js-scss-for-zed-on-the-project-level.html
       - title: Oryx for Zed
         url: /docs/dg/dev/frontend-development/zed/oryx-for-zed.html
+
     - title: Yves
       url: /docs/dg/dev/frontend-development/yves/yves-frontend.html
       nested:
@@ -413,12 +432,14 @@ entries:
             url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-components/extending-components.html
           - title: Using a component
             url: /docs/dg/dev/frontend-development/yves/atomic-frontend/managing-components/using-components.html
+
         - title: Customization example - B2C Product Details page
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/frontend-customization-example-b2c-product-details-page.html
         - title: Atomic Frontend
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/atomic-frontend.html
         - title: Customizing Spryker frontend
           url: /docs/dg/dev/frontend-development/yves/atomic-frontend/customizing-spryker-frontend.html
+
       - title: Frontend assets building and loading
         url: /docs/dg/dev/frontend-development/yves/frontend-assets-building-and-loading.html
       - title: Adding and using external libraries in Yves
@@ -431,6 +452,7 @@ entries:
         url: /docs/dg/dev/frontend-development/yves/multi-theme.html
       - title: Image optimization usage
         url: /docs/dg/dev/frontend-development/yves/implement-image-optimization.html
+
     - title: Oryx
       url: /docs/dg/dev/frontend-development/oryx/oryx.html
       nested:
@@ -466,6 +488,7 @@ entries:
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/oryx-application-orchestration/oryx-application-feature.html
               - title: Application plugins
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/oryx-application-orchestration/oryx-application-plugins.html
+
           - title: Styling
             nested:
               - title: Color system
@@ -478,9 +501,6 @@ entries:
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/styling/oryx-typography.html
               - title: Responsive Design
                 url: /docs/dg/dev/frontend-development/oryx/building-applications/styling/oryx-responsive-design.html
-                include_versions:
-                - "202307.0"
-                - "202311.0"
 
         - title: Building pages
           nested:
@@ -493,9 +513,6 @@ entries:
 
         - title: Building components
           url: /docs/dg/dev/frontend-development/oryx/building-components/oryx-building-components.html
-          include_versions:
-          - "202307.0"
-          - "202311.0"
           nested:
             - title: Component types
               url: /docs/dg/dev/frontend-development/oryx/building-components/oryx-component-types.html
@@ -552,9 +569,6 @@ entries:
       nested:
         - title: Extending the Merchant Portal frontend
           url: /docs/dg/dev/frontend-development/marketplace/extending-the-merchant-portal-frontend.html
-          include_versions:
-          - "202307.0"
-          - "202311.0"
         - title: "Table design"
           url: /docs/dg/dev/frontend-development/marketplace/table-design/table-design.html
           nested:
@@ -672,7 +686,6 @@ entries:
                         - title: "Text"
                           url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/data-transformers/data-transformer-collate/collate-data-transformer-filters/data-transformer-collate-filter-text.html
 
-
                 - title: "Array-map"
                   url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/data-transformers/data-transformer-array-map.html
                 - title: "Chain"
@@ -688,15 +701,11 @@ entries:
                 - title: "Pluck"
                   url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/data-transformers/data-transformer-pluck.html
 
-
             - title: "Datasources"
               url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasources.html
               nested:
                 - title: "Trigger"
                   url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger.html
-                  include_versions:
-                  - "202307.0"
-                  - "202311.0"
                   nested:
                     - title: "Change"
                       url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-change.html
@@ -704,9 +713,6 @@ entries:
                       url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasource-trigger/datasource-trigger-input.html
                 - title: "Dependable"
                   url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasource-dependable.html
-                  include_versions:
-                  - "202307.0"
-                  - "202311.0"
                 - title: "HTTP"
                   url: /docs/dg/dev/frontend-development/marketplace/ui-components-library/datasources/datasource-http.html
                 - title: "Inline"
@@ -736,6 +742,7 @@ entries:
           url: /docs/dg/dev/frontend-development/marketplace/set-up-the-merchant-portal.html
         - title: "Web components"
           url: /docs/dg/dev/frontend-development/marketplace/web-components.html
+
     - title: Create Angular modules
       url: /docs/dg/dev/frontend-development/create-angular-modules.html
     - title: Define Twig tag
@@ -762,6 +769,7 @@ entries:
           url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-glue-json-api-convention.html
         - title: Integrate the protected endpoints authorization
           url: /docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-protected-endpoints-authorization.html
+
     - title: Migrate from Auth to SecurityGui module
       url: /docs/dg/dev/upgrade-and-migrate/migrate-from-auth-to-securitygui-module.html
     - title: Migrating from Twig v1 to Twig v3
@@ -812,6 +820,7 @@ entries:
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html
           - title: WebProfiler
             url: /docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-webprofiler-module.html
+
       - title: Upgrade to Angular 12
         url: /docs/dg/dev/upgrade-and-migrate/upgrade-to-angular-12.html
       - title: Upgrade to Angular 15
@@ -843,6 +852,7 @@ entries:
         nested:
           - title: Adjust Jenkins for a Docker environment
             url: /docs/dg/dev/upgrade-and-migrate/migrate-to-docker/adjust-jenkins-for-a-docker-environment.html
+
     - title: Update environemnt configuration
       url: /docs/dg/dev/upgrade-and-migrate/update-environment-configuration.html
     - title: Migrate to cloud
@@ -1000,6 +1010,7 @@ entries:
           url: /docs/dg/dev/sdks/sdk/spryks/spryks-qa-automation.html
         - title: FileResolver
           url: /docs/dg/dev/sdks/sdk/spryks/fileresolver.html
+
       - title: Development tools
         url: /docs/dg/dev/sdks/sdk/development-tools/development-tools.html
         nested:
@@ -1023,6 +1034,7 @@ entries:
           url: /docs/dg/dev/sdks/sdk/development-tools/ts-linter.html
         - title: VCS connector
           url: /docs/dg/dev/sdks/sdk/vcs-connector.html
+
       - title: Troubleshooting
         nested:
           - title: spryker-sdk command not found
@@ -1043,6 +1055,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html
       - title: Docker SDK quick start guide
         url: /docs/dg/dev/sdks/the-docker-sdk/docker-sdk-quick-start-guide.html
+      - title: Update the Docker SDK
+        url: /docs/dg/dev/sdks/the-docker-sdk/update-the-docker-sdk.html
       - title: Choosing a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
       - title: Configure a mount mode
@@ -1083,6 +1097,7 @@ entries:
         url: /docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
       - title: Semantic Versioning- Major vs. Minor vs. Patch Release
         url: /docs/dg/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+
     - title: Code buckets
       url: /docs/dg/dev/architecture/code-buckets.html
     - title: Programming concepts
@@ -1098,6 +1113,7 @@ entries:
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-merchant-portal-architecture-overview.html
         - title: Marketplace in the Back Office
           url: /docs/dg/dev/architecture/marketplace-architecture/marketplace-in-back-office.html
+
     - title: "Tutorial: Architectural walkthrough"
       url: /docs/dg/dev/architecture/tutorial-architectural-walkthrough.html
 
@@ -1143,6 +1159,7 @@ entries:
         url: /docs/dg/dev/guidelines/coding-guidelines/secure-coding-practices-for-external-packages.html
       - title: Code style guide
         url: /docs/dg/dev/guidelines/coding-guidelines/code-style-guide.html
+
     - title: Keeping a project upgradable
       url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
       nested:
@@ -1155,6 +1172,7 @@ entries:
           url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/modules-configuration.html
         - title: Plugins registration
           url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/extension-scenarios/plugins-registration.html
+
       - title: Run the evaluator tool
         url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
       - title: Upgradability guidelines
@@ -1186,8 +1204,10 @@ entries:
           url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/single-plugin-argument.html
         - title: Spryker dev packages checker
           url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-dev-packages-checker.html
+
       - title: Ignore evaluation errors
         url: /docs/dg/dev/guidelines/keeping-a-project-upgradable/ignore-evaluation-errors.html
+
     - title: Performance guidelines
       url: /docs/dg/dev/guidelines/performance-guidelines/performance-guidelines.html
       nested:
@@ -1199,12 +1219,14 @@ entries:
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Storage caching for primary-replica database setups
           url: /docs/dg/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
+
       - title: General performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
       - title: Frontend performance guidelines
         url: /docs/dg/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
+
     - title: Testing guidelines
       url: /docs/dg/dev/guidelines/testing-guidelines/testing-guidelines.html
       nested:
@@ -1225,6 +1247,7 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/using-test-helpers.html
           - title: Test helpers best practices
             url: /docs/dg/dev/guidelines/testing-guidelines/test-helpers/test-helpers-best-practices.html
+
       - title: Executing tests
         url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/executing-tests.html
         nested:
@@ -1240,6 +1263,7 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/test-the-asynchronous-api.html
           - title: Test the publish and synchronization process
             url: /docs/dg/dev/guidelines/testing-guidelines/executing-tests/testing-the-publish-and-synchronization-process.html
+
       - title: Testify
         url: /docs/dg/dev/guidelines/testing-guidelines/testify.html
       - title: Testing concepts
@@ -1255,6 +1279,7 @@ entries:
             url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/best-practices-for-effective-testing.html
           - title: Test types best practices
             url: /docs/dg/dev/guidelines/testing-guidelines/testing-best-practices/test-types-best-practices.html
+
     - title: Project development guidelines
       url: /docs/dg/dev/guidelines/project-development-guidelines.html
     - title: Data processing guidelines
@@ -1267,6 +1292,18 @@ entries:
   - title: Best practices
     url: /docs/dg/dev/best-practices/best-practices.html
     nested:
+    - title: Non-funcational requirement templates
+      url: /docs/dg/dev/best-practices/non-functional-requirement-templates/non-functional-requirement-templates.html
+      nested:
+        - title: Operational and deployment guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operational-and-deployment-guidelines.html
+        - title: Monitorable process Guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/monitorable-process-guidelines.html
+        - title: Operatable feature guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/operatable-feature-guidelines.html
+        - title: Process documentation guidelines
+          url: /docs/dg/dev/best-practices/non-functional-requirement-templates/process-documentation-guidelines.html
+
     - title: Basic SEO techniques to use in your project
       url: /docs/dg/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
     - title: Coding best practices
@@ -1287,6 +1324,7 @@ entries:
           url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-in-the-unacked-state.html
         - title: Messages are stuck without error notifications
           url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/messages-are-stuck-without-error-notifications.html
+
       - title: RabbitMQ - Zed.CRITICAL - PhpAmqpLib\Exception\AMQPChannelClosedException
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-rabbitmq/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html
       - title: Fail whale on the frontend
@@ -1321,6 +1359,7 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/no-data-on-the-storefront.html
       - title: The spy_oms_transition_log table takes up too much space
         url: /docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html
+
     - title: Troubleshooting performance issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/troubleshooting-performance-issues.html
       nested:
@@ -1338,13 +1377,13 @@ entries:
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/technology-restrictions.html
+
     - title: Troubleshooting Spryker in Docker issues
       url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-docker-issues.html
       nested:
       - title: Troubleshooting debugging in Docker
         nested:
-        - title: PHP `xdebug` extension is not active when accessing the website via
-            a browser or curl
+        - title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
         - title: nc command tells that the port is opened
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
@@ -1354,6 +1393,7 @@ entries:
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
         - title: PHP `xdebug` extension is not active in CLI
           url: /docs/dg/dev/troubleshooting/troubleshooting-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
+
       - title: Troubleshooting running applications in Docker
         nested:
         - title: An application is not reachable via http
@@ -1390,20 +1430,18 @@ entries:
       url: /docs/dg/dev/glue-api/security-and-authentication.html
     - title: Use API Key authorization
       url: /docs/dg/dev/glue-api/use-api-key-authorization.html
-      include_versions:
-      - "202307.0"
-      - "202311.0"
     - title: Backend Glue infrastructure
       nested:
       - title: Backend API Marketplace B2B Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2b-demo-shop-reference.html
         include_versions:
           - "202311.0"
+          - "202304.0"
       - title: Backend API Marketplace B2C Demo Shop reference
         url: /docs/dg/dev/glue-api/backend-glue-infrastructure/backend-api-marketplace-b2c-demo-shop-reference.html
         include_versions:
           - "202311.0"
-
+          - "202304.0"
     - title: Old Glue infrastructure
       nested:
       - title: Glue API authentication and authorization
@@ -1441,6 +1479,7 @@ entries:
           url: /docs/dg/dev/glue-api/routing/create-backend-resources.html
         - title: Create routes
           url: /docs/dg/dev/glue-api/routing/create-routes.html
+
     - title: Configure the included section
       url: /docs/dg/dev/glue-api/configure-the-included-section.html
     - title: Configure cross-origin resource sharing
@@ -1475,6 +1514,7 @@ entries:
           nested:
             - title: Install B2C API React example
               url: /docs/dg/dev/glue-api/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+
         - title: Document Glue API resources
           url: /docs/dg/dev/glue-api/glue-api-tutorials/document-glue-api-resources.html
         - title: Extend a REST API resource
@@ -1497,6 +1537,7 @@ entries:
       nested:
         - title: Integrate Zed API for merchant relationships
           url: /docs/dg/dev/integrate-and-configure/integrate-zed-api/integrate-zed-api-for-merchant-relationships.html
+
     - title: Zed API configuration
       url: /docs/dg/dev/zed-api/zed-api-configuration.html
     - title: "Tutorial: Using Zed API"
@@ -1542,31 +1583,31 @@ entries:
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
-      - title: Develop an app
-        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
-        nested:
-          - title: App manifest
-            url: /docs/dg/dev/acp/develop-an-app/app-manifest.html
-          - title: App configuration
-            url: /docs/dg/dev/acp/develop-an-app/app-configuration.html
-          - title: App configuration translation
-            url: /docs/dg/dev/acp/develop-an-app/app-configuration-translation.html
-          - title: Sync API
-            url: /docs/dg/dev/acp/develop-an-app/sync-api.html
-          - title: Async API
-            url: /docs/dg/dev/acp/develop-an-app/async-api.html
-          - title: Receive ACP messages from SCCOS
-            url: /docs/dg/dev/acp/receive-acp-messages.html
-          - title: Debug an app with XDebug
-            url: /docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html
-          - title: Connect an app
-            url: /docs/dg/dev/acp/develop-an-app/connect-an-app.html
-          - title: Configuration JSON file
-            url: /docs/dg/dev/acp/develop-an-app/configuration-json-file.html
-          - title: Manifest JSON file
-            url: /docs/dg/dev/acp/develop-an-app/manifest-json-file.html
-          - title: Translation JSON file
-            url: /docs/dg/dev/acp/develop-an-app/translation-json-file.html
+#      - title: Develop an app
+#        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
+#        nested:
+#          - title: App manifest
+#            url: /docs/dg/dev/acp/develop-an-app/app-manifest.html
+#          - title: App configuration
+#            url: /docs/dg/dev/acp/develop-an-app/app-configuration.html
+#          - title: App configuration translation
+#            url: /docs/dg/dev/acp/develop-an-app/app-configuration-translation.html
+#          - title: Sync API
+#            url: /docs/dg/dev/acp/develop-an-app/sync-api.html
+#          - title: Async API
+#            url: /docs/dg/dev/acp/develop-an-app/async-api.html
+#          - title: Receive ACP messages from SCCOS
+#            url: /docs/dg/dev/acp/receive-acp-messages.html
+#          - title: Debug an app with XDebug
+#            url: /docs/dg/dev/acp/develop-an-app/debug-an-app-with-xdebug.html
+#          - title: Connect an app
+#            url: /docs/dg/dev/acp/develop-an-app/connect-an-app.html
+#          - title: Configuration JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/configuration-json-file.html
+#          - title: Manifest JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/manifest-json-file.html
+#          - title: Translation JSON file
+#            url: /docs/dg/dev/acp/develop-an-app/translation-json-file.html
 
   - title: Miscellaneous guides
     url: /docs/dg/dev/miscellaneous-guides/miscellaneous-guides.html

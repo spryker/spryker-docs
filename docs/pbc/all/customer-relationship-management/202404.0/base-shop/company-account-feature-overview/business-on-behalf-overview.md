@@ -61,12 +61,6 @@ Company users can assign and unassign a company business unit to their accounts 
 | [Assign a company user to a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html)  |
 
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
-
 
 ## See next
 [Customer Login by Token overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/customer-login-by-token-overview.html)

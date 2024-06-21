@@ -20,7 +20,7 @@ Merchant accounts are created in the Back Office, and a [marketplace administrat
 * Approves and denies merchants
 * Activates and deactivates merchants
 
-For detailed instructions about managing merchants, see [Managing merchants](/docs/marketplace/user/back-office-user-guides/{{site.version}}/marketplace/merchants/managing-merchants.html).
+For detailed instructions about managing merchants, see [Managing merchants](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 
 ## Offer management
 

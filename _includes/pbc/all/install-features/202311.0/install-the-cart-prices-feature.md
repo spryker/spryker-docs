@@ -15,7 +15,7 @@ Install the required features:
 
 | NAME                                        | VERSION          | INSTALLATION GUIDE                                                                                                                                                 |
 |---------------------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Cart                                        | {{site.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                                            |
+| Cart                                        | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                            |
 | Prices                                      | {{site.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)              |
 | Marketplace Product Offer Prices (Optional) | {{site.version}} | [Install the Marketplace Product Offer Prices feature](/docs/pbc/all/price-management/{{site.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-prices-feature.html) |
 

@@ -178,7 +178,7 @@ These two documents can be viewed as two tables with a foreign key in terms of r
 
 The side effects of this solution are the following:
 
-1. The [Product Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is disabled because it requires multiple document types per index.
+1. The [Product Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
 3. Due to ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 

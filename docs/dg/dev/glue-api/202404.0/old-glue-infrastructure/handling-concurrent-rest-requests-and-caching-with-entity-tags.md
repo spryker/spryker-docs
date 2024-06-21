@@ -12,7 +12,7 @@ related:
   - title: Glue Infrastructure
     link: docs/dg/dev/glue-api/page.version/old-glue-infrastructure/glue-infrastructure.html
   - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/shared-carts-feature-overview.html
 ---
 
 <!-- 2020307.0 is the last version to support this doc. Don't move it to the next versions -->

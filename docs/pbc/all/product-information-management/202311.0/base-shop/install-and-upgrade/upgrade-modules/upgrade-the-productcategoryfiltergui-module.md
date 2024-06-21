@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductCategoryFilterGui
+title: Upgrade the ProductCategoryFilterGui module
 description: Learn how to update the ProductCategoryFilterGui module.
 last_updated: Jun 18, 2021
 template: module-migration-guide-template

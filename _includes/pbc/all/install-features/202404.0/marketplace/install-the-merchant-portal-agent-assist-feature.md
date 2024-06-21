@@ -568,7 +568,7 @@ Log in as an agent to the Merchant Portal. Make sure there is the **Merchant Use
 
 ## Install feature frontend
 
-For installing frontend dependencies, follow [Set up the Merchant Portal](docs/dg/dev/frontend-development/marketplace/set-up-the-merchant-portal.html).
+For installing frontend dependencies, follow [Set up the Merchant Portal](/docs/dg/dev/frontend-development/{{page.version}}/marketplace/set-up-the-merchant-portal.html).
 
 Once everything has been installed, you can access the UI of Merchant Portal Agent Assist at `$[local_domain]/agent-security-merchant-portal-gui/login`.
 

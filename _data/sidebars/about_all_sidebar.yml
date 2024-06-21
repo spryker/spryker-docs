@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Release notes 202404.0
+        url: /docs/about/all/releases/release-notes-202404.0.html
       - title: Security release notes 202403.0
         url: /docs/about/all/releases/security-release-notes-202403.0.html
       - title: Security release notes 202312.0
@@ -20,21 +22,13 @@ entries:
         nested:
         - title: Security release notes 202307.0
           url: /docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html
+
       - title: Security release notes 202306.0
         url: /docs/about/all/releases/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
         url: /docs/about/all/releases/security-release-notes-202304.0.html
       - title: Security release notes 202302.0
         url: /docs/about/all/releases/security-release-notes-202302.0.html
-      - title: Release notes 202212.0
-        url: /docs/about/all/releases/release-notes-202212.0/release-notes-202212.0.html
-        nested:
-        - title: Patch releases 202212.0
-          url: /docs/about/all/releases/release-notes-202212.0/patch-release-notes-202212.0.html
-        - title: Security release notes 202212.0
-          url: /docs/about/all/releases/release-notes-202212.0/security-release-notes-202212.0.html
-      - title: Release notes 202211.0
-        url: /docs/about/all/releases/release-notes-202211.0.html
 
     - title: Security audit reports
       nested:
@@ -124,6 +118,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-global-sections-to-the-docs.html
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
+          - title: Merge pull requests
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

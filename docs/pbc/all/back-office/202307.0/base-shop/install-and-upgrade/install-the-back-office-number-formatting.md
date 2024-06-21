@@ -17,10 +17,10 @@ To add support of number formatting in the Back Office, integrate the following 
 | NAME   | REQUIRED | VERSION   | INTEGRATION  GUIDE    |
 |--|-----------|-------|--------------------------|
 | Spryker Core          |         &#9989;        | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                           |
-| Promotions & Discounts |    | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html)     |
-| Product Options |    | {{site.version}} | [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/product-options-feature-walkthrough.html)                           |
+| Promotions & Discounts |    | {{site.version}} | [Install the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html)     |
+| Product Options |    | {{site.version}} | [Product Options feature walkthrough](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-options-feature-overview.html)                           |
 | Product + Order Management|   | {{site.version}} | [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |
-| Shipment   |   | {{site.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                           |
+| Shipment   |   | {{site.version}} | [Shipment integration](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html)                                           |
 
 ## 1) Install the required modules
 

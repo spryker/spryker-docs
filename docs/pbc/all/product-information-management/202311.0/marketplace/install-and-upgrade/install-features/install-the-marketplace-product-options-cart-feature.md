@@ -8,4 +8,4 @@ redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202311.0/marketplace-product-options-cart-feature-integration.html
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-options-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-options-cart-feature.md -->

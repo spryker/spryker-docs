@@ -12,7 +12,7 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE  |
 |-|-|-|
-| Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
+| Merchant Switcher | {{page.version}} | [Install the Merchant Switcher feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-feature.html)|
 | Marketplace Wishlist | {{page.version}} | [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) |
 
 ### 1) Set up behavior

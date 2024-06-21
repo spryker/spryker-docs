@@ -104,17 +104,8 @@ Request sample: create a customer
 
 </details>
 
-<a name="create-a-customer-response-attributes"></a>
+{% include /pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/customers-response-attributes.md -->
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| firstName | String | Customer's first name. |
-| lastName | String | Customer's last name. |
-| gender | String | Gender of the customer. |
-| dateOfBirth | String | Customer's date of birth. |
-| salutation | String | Salutation to use when addressing the customer. |
-| createdAt | String | Account creation date. |
-| updatedAt | String | Date of the last update. |
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfigurationsRestApi
+title: Upgrade the ProductConfigurationsRestApi module
 description: Learn how to upgrade the ProductConfigurationsRestApi module to a newer version.
 template: module-migration-guide-template
 last_updated: Nov 21, 2023
@@ -9,4 +9,4 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.md -->

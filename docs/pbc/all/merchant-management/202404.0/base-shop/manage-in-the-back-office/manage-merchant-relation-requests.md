@@ -5,7 +5,7 @@ template: back-office-user-guide-template
 last_updated: Mar 26, 2024
 ---
 
-A Back Office user can view, edit, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html#initiation-of-the-merchant-relation-by-a-company-user).
+A Back Office user can view, edit, approve, and reject merchant relation requests created by buyers. For details on the merchant relation requests, see [Initiation of the merchant relation by a company user](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html#initiation-of-a-merchant-relation-by-a-company-user).
 
 Once a company user creates a merchant relation request, it appears in *B2B Contracts -> Merchant Relation Requests*.
 
@@ -19,7 +19,7 @@ To approve or reject a merchant relation request, do the following:
 4. Optional: In *Internal Comments*, leave comments for internal usage within your organization. Your colleagues can see and respond to the internal comments. The buyer’s company that requested the merchant relation won't see these comments.
 5. In the top right corner, click **Approve** or **Reject**.
 6. Optional: To create a separate merchant relation per each business unit, check the respective check box.
-7. Confirm approval or rejection of the merchant request. 
+7. Confirm approval or rejection of the merchant request.
 
 ![bo-request-details.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchant-relation-requests/bo-request-details.png)
 
@@ -27,7 +27,7 @@ To approve or reject a merchant relation request, do the following:
 
 For the approved merchant relation requests, you can view the merchant relations created from this. Do the following:
 
-1. On the *Merchant Relation Requests* page, click **View** for the approved relation request. 
+1. On the *Merchant Relation Requests* page, click **View** for the approved relation request.
 2. In the top right corner of the form with the request details, click **Merchant Relations**.
 
 ![merchant-relations-button-in-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/manage-in-the-back-office/manage-merchants/manage-merchant-relation-requests/merchant-relations-button-in-back-office.png)

@@ -8,7 +8,7 @@ To start feature integration, install the required features:
 
 | NAME  | VERSION | INSTALLATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
+| Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Install the Marketplace Merchant Portal Product Offer Management feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |
 | Merchant Portal - Marketplace Order Management | {{page.version}} | [Install the Marketplace Merchant Portal Order Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-order-management-feature.html) |
 
 

@@ -4,10 +4,14 @@ This document describes how to install the Marketplace Merchant Commission featu
 
 Install the required features:
 
-| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                          |
-|--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Merchant     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)          |
+| NAME                         | VERSION          | INSTALLATION GUIDE                                                                                                                                                                            |
+|------------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core                 | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                   |
+| Merchant                     | {{site.version}} | [Install the Merchant feature](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/install-and-upgrade/install-the-merchant-feature.html)                                            |
+| Acl                          | {{site.version}} | [Install the ACL feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                          |
+| Cart                         | {{site.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                     |
+| Order Management             | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)       |
+| Marketplace Order Management | {{site.version}} | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html) |
 
 ## 1) Install the required modules
 
@@ -36,10 +40,14 @@ Make sure the following modules have been installed:
 
 Add the following configuration:
 
-| CONFIGURATION                                                      | SPECIFICATION                                                   | NAMESPACE                   |
-|--------------------------------------------------------------------|-----------------------------------------------------------------|-----------------------------|
-| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for a stores in the system. | \Pyz\Zed\MerchantCommission |
-| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who are not subject to commissions.       | \Pyz\Zed\MerchantCommission |
+| CONFIGURATION                                                      | SPECIFICATION                                                     | NAMESPACE                   |
+|--------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------|
+| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for a stores in the system.   | \Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who are not subject to commissions.         | \Pyz\Zed\MerchantCommission |
+| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.     | \Pyz\Zed\Refund             |
+| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update | \Pyz\Zed\Sales              |
+
+1. Configure the merchant commission price mode per store and the excluded merchants from the commission:
 
 **src/Pyz/Zed/MerchantCommission/MerchantCommissionConfig.php**
 
@@ -82,18 +90,219 @@ class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
         'MER000001',
     ];
 }
-
 ```
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the price modes are properly defined for the stores that will be charging commission from the merchant in the marketplace.
+Ensure that the price modes are properly defined for the stores that will be charging commission from the merchant in
+the marketplace.
 This can be done by setting the `MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE` configuration.
 (Important): The price mode must be set for the stores charging commission from the merchant!
 
-Ensure that the merchants who are not subject to commissions are properly defined. 
-This can be done by setting the `MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION` configuration. 
+Ensure that the merchants who are not subject to commissions are properly defined.
+This can be done by setting the `MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION` configuration.
 Usually this is used for the marketplace owner.
+
+{% endinfo_block %}
+
+2. Configure the cleanup of recalculation messages after a refund:
+
+**src/Pyz/Zed/Refund/RefundConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Refund;
+
+use Spryker\Zed\Refund\RefundConfig as SprykerRefundConfig;
+
+class RefundConfig extends SprykerRefundConfig
+{
+    /**
+     * @return bool
+     */
+    public function shouldCleanupRecalculationMessagesAfterRefund(): bool
+    {
+        return true;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the recalculation messages are properly cleaned up after a refund by setting
+the `RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()` configuration.
+
+{% endinfo_block %}
+
+3. Enable the persistence of the order item merchant commission data:
+
+**src/Pyz/Zed/Sales/SalesConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
+
+class SalesConfig extends SprykerSalesConfig
+{
+    /**
+     * @return bool
+     */
+    public function shouldPersistModifiedOrderItemProperties(): bool
+    {
+        return true;
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the order item merchant commission data is properly persisted by setting
+the `SalesConfig::shouldPersistModifiedOrderItemProperties()` configuration.
+
+{% endinfo_block %}
+
+4. Prepare order state machines for the Merchant Commission process
+
+{% info_block infoBox "Info" %}
+
+In this step, you can customize your order state machine to charge the Merchant Commission commissions. 
+We will prepare the `DummyPayment` and `MarketplacePayment01` state machine for the Merchant Commission process.
+
+{% endinfo_block %}
+
+The `MerchantCommission/Calculate` command is responsible for calculating the merchant commission for the order.
+Define the `DummyMerchantCommission` sub process that has an execution of the `MerchantCommission/Calculate` command:
+
+**config/Zed/oms/DummySubprocess/DummyMerchantCommission01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="DummyMerchantCommission">
+        <states>
+            <state name="commission calculated" display="oms.state.paid"/>
+        </states>
+
+        <transitions>
+            <transition happy="true">
+                <source>paid</source>
+                <target>commission calculated</target>
+                <event>commission-calculate</event>
+            </transition>
+
+            <transition happy="true">
+                <source>commission calculated</source>
+                <target>tax pending</target>
+                <target>commission-calculated</target>
+            </transition>
+        </transitions>
+
+        <events>
+            <event name="commission-calculate" onEnter="true" command="MerchantCommission/Calculate"/>
+            <event name="commission-calculated" onEnter="true"/>
+        </events>
+    </process>
+
+</statemachine>
+```
+
+Here is provided the `DummyPayment01` simplified state machine with the `DummyMerchantCommission` sub process enabled:
+
+**config/Zed/oms/DummyPayment01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="DummyPayment01" main="true">
+        <subprocesses>
+            <process>DummyMerchantCommission</process>
+        </subprocesses>
+    </process>
+    <process name="DummyMerchantCommission" file="DummySubprocess/DummyMerchantCommission01.xml"/>
+
+</statemachine>
+```
+
+Define the `MarketplaceMerchantCommission` sub process that has an execution of the `MerchantCommission/Calculate` command:
+
+**config/Zed/oms/DummySubprocess/DummyMarketplaceMerchantCommission01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="MarketplaceMerchantCommission">
+        <states>
+            <state name="commission calculated" display="oms.state.paid"/>
+        </states>
+
+        <transitions>
+            <transition happy="true">
+                <source>paid</source>
+                <target>commission calculated</target>
+                <event>commission-calculate</event>
+            </transition>
+
+            <transition happy="true">
+                <source>commission calculated</source>
+                <target>merchant split pending</target>
+                <target>commission-calculated</target>
+            </transition>
+        </transitions>
+
+        <events>
+            <event name="commission-calculate" onEnter="true" command="MerchantCommission/Calculate"/>
+            <event name="commission-calculated" onEnter="true"/>
+        </events>
+    </process>
+
+</statemachine>
+```
+
+Here is provided the `MarketplacePayment01` simplified state machine with the `MarketplaceMerchantCommission` sub process enabled:
+
+**config/Zed/oms/MarketplacePayment01.xml**
+
+```xml
+<?xml version="1.0"?>
+<statemachine
+    xmlns="spryker:oms-01"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+>
+
+    <process name="MarketplacePayment01" main="true">
+
+        <subprocesses>
+            <process>DummyMarketplaceMerchantCommission</process>
+        </subprocesses>
+    </process>
+    <process name="DummyMarketplaceMerchantCommission" file="DummySubprocess/DummyMarketplaceMerchantCommission01.xml"/>
+</statemachine>
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that the `DummyPayment01` and `MarketplacePayment01` state machines are properly configured for the Merchant Commission process.
+Place an order with the `DummyPayment01` and `MarketplacePayment01` state machines to verify that the Merchant Commission process is working as expected.
 
 {% endinfo_block %}
 
@@ -439,7 +648,370 @@ Make sure the entities have been imported to the following database tables:
 
 {% endinfo_block %}
 
-### 6) Configure navigation
+### 6) Set up behavior
+
+1. To enable the Marketplace ACL control, register the following plugins:
+
+| PLUGIN                                                      | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                                   |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------|
+| SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin  | Expands set of `AclEntityRule` transfer objects with sales merchant commission composite data.            |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
+| SalesMerchantCommissionAclEntityConfigurationExpanderPlugin | Expands provided `AclEntityMetadataConfig` transfer object with sales merchant commission composite data. |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
+
+**src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\AclMerchantPortal;
+
+use Spryker\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider as SprykerAclMerchantPortalDependencyProvider;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal\SalesMerchantCommissionAclEntityConfigurationExpanderPlugin;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal\SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin;
+
+class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDependencyProvider
+{
+     /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\MerchantAclEntityRuleExpanderPluginInterface>
+     */
+    protected function getMerchantAclEntityRuleExpanderPlugins(): array
+    {
+        return [
+            new SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
+     */
+    protected function getAclEntityConfigurationExpanderPlugins(): array
+    {
+        return [
+            new SalesMerchantCommissionAclEntityConfigurationExpanderPlugin(),
+        ];
+    }
+}
+```
+
+2. To enable the Order Management related behaviour register the following plugins:
+
+| PLUGIN                                                           | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                                            |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
+| MerchantCommissionCalculatorPlugin                               | Recalculates merchant commissions for a given order, updating the `CalculableObjectTransfer` object with the new commission values for items and totals   |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Calculation                                |
+| SanitizeMerchantCommissionPreReloadPlugin                        | Sanitizes merchant commission related fields in quote for the reorder functionality.                                                                      |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal                          |
+| UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin      | Calculates and persists the total merchant commission amounts for a newly created merchant order.                                                         |               | \Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\MerchantSalesOrder       |
+| SalesMerchantCommissionCalculationCommandByOrderPlugin           | Calculates and persists the merchant commissions for a given order, updating the order totals and order items with the calculated commission amounts.     |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Oms\Command                                |
+| MerchantCommissionRefundPostSavePlugin                           | Processes the refund of merchant commissions after a refund has been saved, updating the relevant sales merchant commissions and recalculating the order. |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Refund                                     |
+| MerchantCommissionOrderPostCancelPlugin                          | Handles the refund of merchant commissions when an order is cancelled, updating the relevant sales merchant commissions and recalculating the order.      |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Sales                                      |
+| UpdateMerchantCommissionTotalsPostRefundMerchantCommissionPlugin | Updates the total and refunded merchant commission amounts in the order totals after a merchant commission refund.                                        |               | \Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\SalesMerchantCommission; |
+
+**src/Pyz/Zed/Calculation/CalculationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Calculation;
+
+use Spryker\Zed\Calculation\CalculationDependencyProvider as SprykerCalculationDependencyProvider;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Calculation\MerchantCommissionCalculatorPlugin;
+use Spryker\Zed\Kernel\Container;
+
+class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
+{
+   /**
+     * This calculator plugin stack working with order object which happens to be created after order is placed
+     *
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     */
+    protected function getOrderCalculatorPluginStack(Container $container): array
+    {
+        return [
+            new MerchantCommissionCalculatorPlugin(),
+        ];
+    }
+
+}
+```
+
+**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Cart;
+
+use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Cart\SanitizeMerchantCommissionPreReloadPlugin;
+use Spryker\Zed\Kernel\Container;
+
+class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
+     */
+    protected function getPreReloadPlugins(Container $container): array
+    {
+        return [
+            new SanitizeMerchantCommissionPreReloadPlugin(),
+        ];
+    }
+
+}
+```
+
+**src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantSalesOrder;
+
+use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as SprykerMerchantSalesOrderDependencyProvider;
+use Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\MerchantSalesOrder\UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin;
+
+class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
+     */
+    protected function getMerchantOrderPostCreatePlugins(): array
+    {
+        return [
+            new UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin(),
+        ];
+    }
+
+}
+```
+
+**src/Pyz/Zed/Oms/OmsDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Oms;
+
+use Spryker\Zed\Oms\OmsDependencyProvider as SprykerOmsDependencyProvider;
+use Spryker\Zed\Oms\Dependency\Plugin\Command\CommandCollectionInterface;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Oms\Command\SalesMerchantCommissionCalculationCommandByOrderPlugin;
+
+
+class OmsDependencyProvider extends SprykerOmsDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    protected function extendCommandPlugins(Container $container): Container
+    {
+        $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+            $commandCollection->add(new SalesMerchantCommissionCalculationCommandByOrderPlugin(), 'MerchantCommission/Calculate');
+            
+            return $commandCollection;
+        });
+
+        return $container;
+    }
+}
+```
+
+**src/Pyz/Zed/Refund/RefundDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Refund;
+
+use Spryker\Zed\Refund\RefundDependencyProvider as SprykerRefundDependencyProvider;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Refund\MerchantCommissionRefundPostSavePlugin;
+
+class RefundDependencyProvider extends SprykerRefundDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\RefundExtension\Dependency\Plugin\RefundPostSavePluginInterface>
+     */
+    protected function getRefundPostSavePlugins(): array
+    {
+        return [
+            new MerchantCommissionRefundPostSavePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
+use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Sales\MerchantCommissionOrderPostCancelPlugin;
+
+class SalesDependencyProvider extends SprykerSalesDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SalesExtension\Dependency\Plugin\OrderPostCancelPluginInterface>
+     */
+    protected function getOrderPostCancelPlugins(): array
+    {
+        return [
+            new MerchantCommissionOrderPostCancelPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/SalesMerchantCommission/SalesMerchantCommissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesMerchantCommission;
+
+use Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\SalesMerchantCommission\UpdateMerchantCommissionTotalsPostRefundMerchantCommissionPlugin;
+use Spryker\Zed\SalesMerchantCommission\SalesMerchantCommissionDependencyProvider as SprykerSalesMerchantCommissionDependencyProvider;
+
+class SalesMerchantCommissionDependencyProvider extends SprykerSalesMerchantCommissionDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\SalesMerchantCommissionExtension\Dependency\Plugin\PostRefundMerchantCommissionPluginInterface>
+     */
+    protected function getPostRefundMerchantCommissionPlugins(): array
+    {
+        return [
+            new UpdateMerchantCommissionTotalsPostRefundMerchantCommissionPlugin(),
+        ];
+    }
+}
+```
+
+3. To enable the merchant commission rule engine, register the following plugins:
+
+| PLUGIN                                                         | SPECIFICATION                                                                                                                                                        | PREREQUISITES | NAMESPACE                                                               |
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
+| MerchantCommissionItemCollectorRuleSpecificationProviderPlugin | Provides rule specifications for the collection of merchant commission items in the rule engine.                                                                     |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| MerchantCommissionOrderDecisionRuleSpecificationProviderPlugin | Provides rule specifications for decision-making regarding merchant commission orders in the rule engine.                                                            |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| FixedMerchantCommissionCalculatorPlugin                        | Calculates merchant commissions based on a fixed amount, transforming and formatting the commission amount for persistence and display.                              |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
+| PercentageMerchantCommissionCalculatorPlugin                   | Calculates merchant commissions based on a percentage of the total amount, transforming, rounding, and formatting the commission amount for persistence and display. |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
+| ItemSkuCollectorRulePlugin                                     | Collects all items that match a given SKU in the rule engine.                                                                                                        |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| PriceModeDecisionRulePlugin                                    | Checks if the price mode in the rule engine matches the one provided in the merchant commission calculation request                                                  |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+
+**src/Pyz/Zed/RuleEngine/RuleEngineDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\RuleEngine;
+
+use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\MerchantCommissionItemCollectorRuleSpecificationProviderPlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\MerchantCommissionOrderDecisionRuleSpecificationProviderPlugin;
+use Spryker\Zed\RuleEngine\RuleEngineDependencyProvider as SprykerRuleEngineDependencyProvider;
+
+class RuleEngineDependencyProvider extends SprykerRuleEngineDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\RuleEngineExtension\Communication\Dependency\Plugin\RuleSpecificationProviderPluginInterface>
+     */
+    protected function getRuleSpecificationProviderPlugins(): array
+    {
+        return [
+            new MerchantCommissionItemCollectorRuleSpecificationProviderPlugin(),
+            new MerchantCommissionOrderDecisionRuleSpecificationProviderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/MerchantCommission/MerchantCommissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission;
+
+use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\FixedMerchantCommissionCalculatorPlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\PercentageMerchantCommissionCalculatorPlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\ItemSkuCollectorRulePlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\PriceModeDecisionRulePlugin;
+use Spryker\Zed\MerchantCommission\MerchantCommissionDependencyProvider as SprykerMerchantCommissionDependencyProvider;
+
+class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MerchantCommissionExtension\Communication\Dependency\Plugin\MerchantCommissionCalculatorPluginInterface>
+     */
+    protected function getMerchantCommissionCalculatorPlugins(): array
+    {
+        return [
+            new FixedMerchantCommissionCalculatorPlugin(),
+            new PercentageMerchantCommissionCalculatorPlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\RuleEngineExtension\Communication\Dependency\Plugin\CollectorRulePluginInterface>
+     */
+    protected function getRuleEngineCollectorRulePlugins(): array
+    {
+        return [
+            new ItemSkuCollectorRulePlugin(),
+        ];
+    }
+
+    /**
+     * @return list<\Spryker\Zed\RuleEngineExtension\Communication\Dependency\Plugin\DecisionRulePluginInterface>
+     */
+    protected function getRuleEngineDecisionRulePlugins(): array
+    {
+        return [
+            new PriceModeDecisionRulePlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the configured plugins have been registered and are working as expected.
+
+1. Place an order with merchant products:
+
+    * Navigate to your marketplace's front-end(Yves/Your custom frontend).
+    * Add some products from different merchants to your cart.
+    * Proceed to checkout and complete the order process.
+
+2. Check that commissions are applied:
+
+    * Open your database management tool.
+    * Navigate to the `spy_sales_merchant_commission` table.
+    * Look for the entries related to the order you just placed. You should see the commission applied for each merchant product in your order.
+
+   The `spy_sales_merchant_commission` table should have entries similar to this:
+
+   | id_sales_merchant_commission | uuid | fk_sales_order | fk_sales_order_item | name | amount | refunded_amount |
+   |------------------------------|------|----------------|---------------------|------|--------|-----------------|
+   | 1                            | abcd | 123            | 1234                | Comm1| 10     | 0               |
+   | 2                            | efgh | 124            | 1245                | Comm2| 5      | 0               |
+
+   In this example, the `fk_sales_order` column corresponds to the sales order ID, `fk_sales_order_item` is the sales order item ID, `name` is the name of the merchant commission, `amount` is the commission amount applied to that order item, and `refunded_amount` is the amount of the commission that has been refunded.
+
+3. Verify the commission calculation:
+
+    * Check the commission amount for each order item. It should match the commission rules you've set up for each merchant.
+    * If the commission amounts are correct, this means the Marketplace Merchant Commission feature is working as expected.
+
+Remember, the commission amounts may vary depending on the commission rules you've set up for each merchant. If the commission amounts do not match your expectations, review the commission rules in the `spy_merchant_commission` table.
+
+{% endinfo_block %}
+
+### 7) Configure navigation
 
 1. Add the `MerchantCommissionGui` section to `navigation.xml`:
 

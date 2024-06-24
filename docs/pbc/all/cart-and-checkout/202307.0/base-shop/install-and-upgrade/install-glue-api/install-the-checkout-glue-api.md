@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-checkout-feature-integration.html  
   - /docs/pbc/all/cart-and-checkout/202307.0/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 related:
-  - title: Checkout feature integration
+  - title: Install the Service Points Cart + Checkout feature
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-checkout-feature.html
   - title: Check out purchases
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html

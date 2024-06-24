@@ -131,7 +131,7 @@ Make sure that `MerchantByMerchantReferenceResourceRelationshipPlugin` is set up
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html) |
-| Marketplace Product Offer + Volume Prices API | | [Glue API: Marketplace Product Offer + Volume Prices feature integration](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html) |
+| Marketplace Product Offer + Prices API | | [Install the Marketplace Product Offer + Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html) |
+| Marketplace Product Offer + Volume Prices API | | [Install the Marketplace Product Offer + Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html) |
 | Marketplace Product Offer + Wishlist API | | [Install the Marketplace Product Offer + Wishlist Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-wishlist-glue-api.html) |
 | Marketplace Product Offer + Cart API | | [Install the Marketplace Product Offer + Cart Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-cart-glue-api.html) |

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-product-price-feature-integration.html  
   - /docs/pbc/all/price-management/202204.0/base-shop/install-and-upgrade/install-the-product-price-glue-api.html
 related:
-  - title: Prices feature integration
+  - title: Install the Prices feature
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html

@@ -16,7 +16,7 @@ There are several domain reputation checkers available that you can use to asses
 To improve your domain's reputation and increase the deliverability of your emails, there are several things you should do:
 
 #### Debug and troubleshoot carefully
-Your Spryker PaaS non-production environments are - by default - using a sandboxed Simple Email Service (or SES) Account. This means that you can only send emails to [validated recipients](https://docs.spryker.com/docs/ca/dev/email-service/verify-email-addresses.html).
+Your Spryker PaaS non-production environments are - by default - using a sandboxed Simple Email Service (or SES) Account. This means that you can only send emails to [validated recipients](/docs/ca/dev/email-service/verify-email-addresses.html).
 This protects you from mistakenly sending faulty emails to many recipients that might report this behavior and damage the reputation of your sender's domain.
 Only request the SES Sandbox to be disabled if you are confident that your email functionality works as expected.
 

@@ -23,16 +23,16 @@ composer require spryker-feature/marketplace-merchant-commission:"{{site.version
 
 Make sure the following modules have been installed:
 
-| MODULE                                    | EXPECTED DIRECTORY                                                      |
-|-------------------------------------------|-------------------------------------------------------------------------|
-| MerchantCommission                        | vendor/spryker/merchant-commission                                      |
-| MerchantCommissionDataExport              | vendor/spryker/merchant-commission-data-export                          |
-| MerchantCommissionDataImport              | vendor/spryker/merchant-commission-data-import                          |
-| MerchantCommissionGui                     | vendor/spryker/merchant-commission-gui                                  |
-| SalesMerchantCommission                   | vendor/spryker/sales-merchant-commission                                |
-| SalesMerchantCommissionExtension          | vendor/spryker/sales-merchant-commission-extension                      |
-| MerchantSalesOrderSalesMerchantCommission | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
-| MerchantSalesOrderSalesMerchantCommission | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
+| MODULE                                             | EXPECTED DIRECTORY                                                      |
+|----------------------------------------------------|-------------------------------------------------------------------------|
+| MerchantCommission                                 | vendor/spryker/merchant-commission                                      |
+| MerchantCommissionDataExport                       | vendor/spryker/merchant-commission-data-export                          |
+| MerchantCommissionDataImport                       | vendor/spryker/merchant-commission-data-import                          |
+| MerchantCommissionGui                              | vendor/spryker/merchant-commission-gui                                  |
+| SalesMerchantCommission                            | vendor/spryker/sales-merchant-commission                                |
+| SalesMerchantCommissionExtension                   | vendor/spryker/sales-merchant-commission-extension                      |
+| MerchantSalesOrderSalesMerchantCommission          | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
+| MerchantSalesOrderSalesMerchantCommissionExtension | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 
 {% endinfo_block %}
 

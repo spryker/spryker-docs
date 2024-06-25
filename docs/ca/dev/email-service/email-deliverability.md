@@ -5,8 +5,8 @@ last_updated: Jun 19, 2024
 template: concept-topic-template
 ---
 
-Be it informing customers about offers, sending them receipts or password reset links, sending emails is one of the most basic functions of an e-commerce system.
-It is essential for businesses to make sure that emails they are sending are actually received by their recipients. There are several factors that can increase or decrease email deliverability.
+
+Sending emails is one of the most basic functions of an e-commerce system. This document describes how you can make sure your emails are received be recipients by setting up special DNS records and monitoring email statistics.
 
 ## Reputation
 
@@ -14,35 +14,36 @@ To reduce spam reaching their customers, email service providers use reputation 
 
 If the server and domain has been reported for spamming or distributing malicious content, the message that it wants to transmit may be outright rejected or flagged as spam.
 
-You can use domain reputation checkers to assess the reputation of your email domain. To improve your domain's reputation and increase the deliverability of your emails, there are several things you should do:
+You can use domain reputation checkers to assess the reputation of your email domain. To improve your domain's reputation and increase the deliverability of your emails, follow the instructions in the next sections.
 
-### Properly test the email sending features
+## Testing email sending features
 
 Your Spryker cloud non-production environments are using a sandboxed Simple Email Service Account *by default*. This means that you can only send emails to [validated recipients](https://docs.spryker.com/docs/ca/dev/email-service/verify-email-addresses.html). This protects you from mistakenly sending faulty emails to many recipients that might report this behavior and damage the reputation of your sender's domain. Only request the SES Sandbox to be disabled when you're confident that your email functionality works as expected.
 
-### Configure SPF, DKIM, and DMARC
+## Configure email authentication DNS records
 
-There are extensive resources available on these three concepts, so we will only provide a short explanation. We will be using example.com as an example email domain.
+There are extensive resources available on email DNS records, so we only provide a short explanation. `example.com` is used as an example domain.
 
-#### SPF (Sender Policy Framework)
+### Configure SPF
 
-Purpose: Lists authorized servers for sending emails from a domain.
-How It Works: Mail servers check SPF records before delivering emails.
-How to configure:
-When you are using Spryker PaaS, you are using AWS SES to send emails. To entitle this email server to send emails with your domain, you will need to set
-the following DNS records (TXT) for the domain you are using to send emails:
+Sender Policy Framework (SPF) record lists authorized servers for sending emails from a domain. Mail servers check SPF records before delivering emails.
+
+Your cloud environments use AWS SES to send emails. To allow this email server to send emails with your domain, set the following TXT DNS record for the domain you are using to send emails:
 ```bash
 v=spf1 include:amazonses.com -all
 ```
 
-#### DKIM (DomainKeys Identified Mail)
+### Configure DKIM
 
-Purpose: Digitally signs emails to verify their origin.
-How It Works: Public key cryptography ensures authenticity.
-How to configure:
-In the AWS Console, switch to the SES Dashboard. You will be able to find the DKIM DNS CNAMES in the DKIM section under Configuration>Identities.
-You should find three DNS CNAME records in this format. You will need to set them as CNAMES for the email domain you are using.
+ DomainKeys Identified Mail (DKIM) digitally signs emails to verify their origin. Public key cryptography ensures authenticity of the emails sent from this domain.
 
+To configure this record, follow the steps:
+1. In the AWS Management Console, go to **Amazon Simple Email Service**.
+2. In the navigation, go to **Configuration**>**Identities**.
+3. On the **Identities** page, click on the domain name you want to configure DKIM for.
+  This opens the domain's page.
+4. In the **DomainKeys Identified Mail (DKIM)** pane, click **Publish DNS records**.
+This displays CNAME records in the following format:
 ```bash
 CNAME
 NAME 123EXAMPLEHASH123._domainkey.example.com
@@ -55,15 +56,23 @@ VALUE 789EXAMPLEHASH789.dkim.amazonses.com
 CNAME
 NAME abcEXAMPLEHASHabc._domainkey.example.com
 VALUE abcEXAMPLEHASHabc.dkim.amazonses.com
-```  
+```
 
-#### DMARC (Domain-based Message Authentication Reporting and Conformance)
+5. Add the CNAME records to the domain's DNS zone.
 
-Purpose: Handles emails that fail SPF or DKIM checks.
-How It Works: Specifies actions (e.g., quarantine, reject) based on authentication results.
-How to configure:
-In the AWS Console, switch to the SES Dashboard. You will be able to find the DMARC DNS entries in the DMARC section under Configuration>Identities>Choose the domain identity you want to manage.
-You will need to set the listed records in your DNS management:
+
+### Configure DMARC
+
+Domain-based Message Authentication Reporting and Conformance (DMARC) handles emails that fail SPF or DKIM checks. It specifies actions, like quarantine or reject, based on authentication results.
+
+To configure DMARC, follow the steps:
+
+1. In the AWS Management Console, go to **Amazon Simple Email Service**.
+2. In the navigation, go to **Configuration**>**Identities**.
+3. On the **Identities** page, click on the domain name you want to configure DKIM for.
+  This opens the domain's page.
+4. In the **Domain-based Message Authentication, Reporting, and Conformance (DMARC)** pane, click **Publish DNS records**
+This displays a TXT record in the following format:
 
 ```bash
 
@@ -75,14 +84,16 @@ _dmarc.example.com
 
 ```
 
-### Regularly review your SES Standing, Bounces and Complaints Rate
-The AWS SES Console gives you an overview of the emails you are sending. The Account Dashboard section gives you insights into your sending statistics. It is important to regularly review your usage of the sending quota and [request increases](/docs/ca/dev/email-service/email-quota-restrictions.html) when they are needed.
-Please pay attention to the Account Health information, which will indicate issues with your account. Amazon can review, suspend or close your SES account if your account is reported due to spam or complaints.
-In the Reputation Metrics section, you can check your bounce and complaints rate.
+5. Add the TXT record to the domain's DNS zone.
 
-### Keep your emails relevant and desirable
-After you have completed the technical setup, the best way to avoid complaints and spam reports is to keep your emails relevant and interesting for your customers.
-You should not use AWS SES service for "cold" advertisement or send email notifications to your customers in a high frequency.
 
-## Conclusion
-Email Deliverability is a multi-faceted topic. By making sure your application's email sending mechanism works as intended before deploying to production, you are protecting your email domain's reputation. By setting up DKIM, SPF, and DMARC you are using industry standard mechanisms to legitimize AWS SES as email sender and by keeping your email content is relevant, you keep your audience engaged and avoid blocks and complaints.
+
+## Reviewing SES standing, bounces, and complaints rate
+
+The AWS SES Console gives you an overview of the emails you are sending. The **Account dashboard** section gives you insights into your sending statistics. It is important to regularly review your usage of the sending quota and [request increases](/docs/ca/dev/email-service/email-quota-restrictions.html) when they are needed. Pay attention to the **Account Health** pane, which indicates issues if any.
+
+In the **Reputation Metrics** section, you can check the bounce and complains rate. If a SES account is reported for spam, Amazon can review, suspend, or close it.
+
+## Sending relevant emails
+
+After completing the technical setup, the best way to avoid complaints and spam reports is to keep your emails relevant and interesting for your customers. Avoid using the AWS SES service for "cold" advertisement or sending high-frequency email notifications.

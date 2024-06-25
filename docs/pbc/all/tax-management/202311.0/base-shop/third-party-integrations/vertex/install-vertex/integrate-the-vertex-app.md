@@ -394,4 +394,5 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 
 
 ## Next step
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)
+
+[Connect Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)

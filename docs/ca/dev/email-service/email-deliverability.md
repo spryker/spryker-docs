@@ -40,7 +40,7 @@ v=spf1 include:amazonses.com -all
 Purpose: Digitally signs emails to verify their origin.
 How It Works: Public key cryptography ensures authenticity.
 How to configure:
-In the AWS Console, switch the the SES Dashboard. You will be able to find the DKIM DNS CNAMES in the DKIM section under Configuration>Identities.
+In the AWS Console, switch to the SES Dashboard. You will be able to find the DKIM DNS CNAMES in the DKIM section under Configuration>Identities.
 You should find three DNS CNAME records in this format. You will need to set them as CNAMES for the email domain you are using.
 
 ```bash
@@ -62,8 +62,8 @@ VALUE abcEXAMPLEHASHabc.dkim.amazonses.com
 Purpose: Handles emails that fail SPF or DKIM checks.
 How It Works: Specifies actions (e.g., quarantine, reject) based on authentication results.
 How to configure:
-In the AWS Console, switch the the SES Dashboard. You will be able to find the DMARC DNS entries in the DMARC section under Configuration>Identities.
-You will need to set an MX and TXT record
+In the AWS Console, switch to the SES Dashboard. You will be able to find the DMARC DNS entries in the DMARC section under Configuration>Identities>Choose the domain identity you want to manage.
+You will need to set the listed records in your DNS management:
 
 ```bash
 

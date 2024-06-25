@@ -1,7 +1,7 @@
 ---
 title: Configure Data Exchange API endpoints
 description: This guide shows how to configure the Data Exchange API endpoints.
-last_updated: Dec 5, 2023
+last_updated: May 30, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202304.0/dynamic-data-api/how-to-guides/how-to-configure-data-exchange-api.html
@@ -29,7 +29,7 @@ To register an endpoint for interacting with entities in the database, you need 
 | created_at | Date and time when the configuration was created. |
 | updated_at | Date and time when the configuration was updated. |
 
-You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables. 
+You can optionally create a relation by adding new rows to `spy_dynamic_entity_configuration_relation` and `spy_dynamic_entity_configuration_relation_field_mapping` tables.
 The `spy_dynamic_entity_configuration_relation` contains the configuration of relations for dynamic entity endpoints and has the following columns:
 
 | COLUMN | SPECIFICATION                                                                                   |
@@ -54,6 +54,7 @@ The following example shows a possible value of the `spy_dynamic_entity_configur
 ```json
 {
   "identifier": "id_country",
+  "isDeletable": false,
   "fields": [
     {
       "fieldName": "id_country",
@@ -86,6 +87,7 @@ and for `spy_tax_rate` table:
 ```json
 {
   "identifier": "id_tax_rate",
+  "isDeletable": false,
   "fields": [
     {
       "fieldName": "id_tax_rate",
@@ -130,21 +132,22 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 {% endinfo_block %}
 
 
-| FIELD | DESCRIPTION |
-| --- | --- |
-| identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record. |
+| FIELD | DESCRIPTION                                                                                                                                                                                                                                                           |
+| --- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| identifier | The name of the column in the table that serves as an identifier. It can be any chosen column from the table, typically used as a unique ID for each record.                                                                                                          |
+| isDeletable | Defines if the entity can be deleted.                                                                                                                                                                                                                                 |
 | fields | An array containing the descriptions of the columns from the table. It defines the columns that are included for interaction. The API exposes and operates on the included columns. Columns that are not included in the array are inaccessible through API requests. |
-| fieldName | The name of the column in the database table. |
-| fieldVisibleName | The name used for interacting with the field through API requests. It's a more user-friendly and descriptive name compared to the physical column name. |
-| type | The data type of the field. It specifies the expected data format for the field, enabling proper validation and handling of values during API interactions. |
-| isEditable | Defines if the field's value can be changed. |
-| isCreatable | Defines if the field can be included in requests to provide an initial value during record creation. |
-| validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria. |
-| required | Defines if the field must be provided in API requests. |
-| maxLength | Defines the maximum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. |
-| minLength | Defines the minimum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined requirement. |
-| max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional. |
-| min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional. |
+| fieldName | The name of the column in the database table.                                                                                                                                                                                                                         |
+| fieldVisibleName | The name used for interacting with the field through API requests. It's a more user-friendly and descriptive name compared to the physical column name.                                                                                                               |
+| type | The data type of the field. It specifies the expected data format for the field, enabling proper validation and handling of values during API interactions.                                                                                                           |
+| isEditable | Defines if the field's value can be changed.                                                                                                                                                                                                                          |
+| isCreatable | Defines if the field can be included in requests to provide an initial value during record creation.                                                                                                                                                                  |
+| validation | Contains validation configurations. Proper validation ensures that the provided data meets the specified criteria.                                                                                                                                                    |
+| required | Defines if the field must be provided in API requests.                                                                                                                                                                                                                |
+| maxLength | Defines the maximum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement.                                                                                          |
+| minLength | Defines the minimum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined requirement.                                                                                                |
+| max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional.                                                                               |
+| min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional.                                                                             |
 
 
 {% info_block infoBox %}
@@ -192,14 +195,14 @@ This opens the **Data Exchange API Configuration** page with the endpoint displa
 
 {% info_block warningBox "Verification" %}
 
-If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) to discover how to request your API endpoint.
+If everything is set up correctly, you can follow [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html) to discover how to request your API endpoint.
 Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
 
 ## Download Data Exchange API specification
 
-You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format. 
+You can download the specification of all the available endpoints, including the Data Exchange API endpoints, in the OpenAPI format.
 To download the specification, go to the *Data Exchange API Configuration* page, click **Download API Specification**. This initiates the download of the specification to your computer.
 
 ![deapi_download_spec_button](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/data-exchange/configure-data-exchange-api/deapi_download_spec_button.png)
@@ -210,4 +213,4 @@ In case you've added new endpoints, the documentation will be automatically upda
 
 ## Next steps
 
-[Send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html)
+[Send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)

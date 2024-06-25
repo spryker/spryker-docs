@@ -44,5 +44,5 @@ In the future, we will include a flag that states: VERTEXDOWN – 0 rate to enab
 If you still have questions about the Spryker Vertex app, see the [Vertex FAQ](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex-faq.html), which provides some clarification on several aspects.
 
 ## Read also
-[Configure the Vertex App](/docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/configure-vertex.html)
-[Install the Prerequisites](/docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
+[Configure the Vertex App](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)
+[Install the Prerequisites](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)

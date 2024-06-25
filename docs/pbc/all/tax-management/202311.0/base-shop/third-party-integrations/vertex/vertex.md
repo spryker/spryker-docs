@@ -58,12 +58,6 @@ By default, the following data is sent to Vertex for tax calculation:
  - Product SKU
  - Warehouse address that also includes the Merchant warehouse address for a Marketplace model
 
-{% info_block infoBox "Company code" %}
-
-Vertex uses a hierarchy structure for tax determination. The highest in the structure is the Company code. Therefore, it is important to set up your company code in Vertex and add it on your project as it determines what rate applies. For information about how to add the Company code, see [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html#company-code).
-
-{% endinfo_block %}
-
 Thus, the buyers see the tax amount calculated by Vertex during the checkout after they have provided their shipping address.
 The Back Office users can see the taxes calculated by Vertex on the order details page.
 

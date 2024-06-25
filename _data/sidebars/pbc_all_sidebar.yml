@@ -4089,7 +4089,7 @@ entries:
                     - "202311.0"
                     - "202404.0"
                     nested:
-                      - title: Install Vertex
+                      - title: Install
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         nested:
                           - title: Integrate the connector module
@@ -4097,14 +4097,16 @@ entries:
                           - title: Integrate Vertex
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
 
-                      - title: Configure Vertex
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
-                      - title: Disconnect Vertex
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-                      - title: Troubleshooting Vertex
+                      - title: Project configuration for Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
+                      - title: Connect
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
+                      - title: Troubleshooting
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-                      - title: Vertex FAQ
+                      - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                      - title: Disconnect
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 
           - title: Marketplace
             nested:

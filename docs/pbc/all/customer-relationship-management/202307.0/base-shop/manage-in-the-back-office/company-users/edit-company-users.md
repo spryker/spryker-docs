@@ -14,7 +14,7 @@ related:
   - title: Managing Companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-in-the-back-office/manage-companies.html
   - title: Company user roles and permissions overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to edit company users.

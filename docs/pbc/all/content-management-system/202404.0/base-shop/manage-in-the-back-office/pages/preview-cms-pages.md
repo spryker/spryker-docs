@@ -17,7 +17,7 @@ redirect_from:
   
 related:
   - title: CMS Page overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: Editing CMS Pages
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/pages/edit-cms-pages.html
   - title: View CMS pages and history

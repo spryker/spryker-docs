@@ -53,7 +53,7 @@ Check the video below to understand how the Vertex App works:
 4. Support for Delivery Terms: Vertex allows customers to set delivery terms within their dashboard, which are used in tax calculation. This is especially important for cross-border transactions when the seller wants to use the customer's location to determine the applicable tax rate.
 5. Inclusion of Shipping Tax in the Total Tax Calculated: Spryker sends the selected shipping method to Vertex. The `delivery-method-key` set in Spryker is used for this purpose. Projects must ensure this is mapped correctly inside the Vertex App by following the steps below:
    - In Vertex you create a Taxability Driver with the same value from Spryker
-   - In Vertex you create a Taxability Mapping for the driver to one of Vertex's defined Delivery Charges 
+   - In Vertex you create a Taxability Mapping for the driver to one of Vertex's defined Delivery Charges
 
 
 The following diagram demonstrates the flow of the Vertex app integration:
@@ -63,5 +63,4 @@ The following diagram demonstrates the flow of the Vertex app integration:
 
 ## Next steps
 
-[Install the Prerequisites for the Vertex App](/docs/pbc/all/tax-management/202404.0/base-shop/third-party-integrations/vertex/install-vertex/install-vertex.html)
-[Project Guidelines for the Vertex App] 
+[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html)

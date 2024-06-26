@@ -10,8 +10,6 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/creating-users.html
   - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/create-users.html
 related:
-  - title: Activating and deactivating users
-    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
     link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
   - title: Editing users

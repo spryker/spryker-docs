@@ -26,15 +26,15 @@ For more information about how Vertex calculates taxes, see the [Vertex O Series
 
 The Spryker Vertex app offers the following features that are worth considering when comparing it to the default Spryker [Tax Management capability](/docs/pbc/all/tax-management/{{page.version}}/tax-management.html):
 
-- **Configure Vertex in Spryker**: Add your Vertex configurations, including your company code, in the App Composition catalog to connect your Spryker project to Vertex.
-- **Tax Determination & Calculation**: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
-- **Discounts Support**: The Vertex App uses both the discount and the amount paid by the customer, sending this information to Vertex for tax calculation and estimation.
-- **Manage Tax Exemptions**: Configure your project to exclude tax-exempt customers using the Vertex App.
-- **View Invoice Reports in Vertex Dashboard**: The Vertex App allows customers to send invoice reports for paid orders from Spryker to Vertex. Customers can opt out of sending invoices to Spryker if they choose.
-- **Support for Refunds**: When order items are returned, refunded, or a paid order is canceled, the Vertex App updates the tax report in Vertex for accurate reporting and compliance.
-- **Failover Solution**: Store owners and marketplace operators can manage refunds and ensure accurate tax reporting even during downtime.
-- **Supported Product Types**: The integration currently supports tax calculation only for items/products created using Spryker Product capabilities.
-- **Application of custom tax rules to products**: You can implement custom tax rules to accommodate unique product categorizations or specific tax regulations that apply to your business. The Vertex Integration provides a means for taxes to be calculated using these rules.
+- *Configure Vertex in Spryker*: Add your Vertex configurations, including your company code, in the App Composition catalog to connect your Spryker project to Vertex.
+- *Tax determination and calculation*: View tax estimates during checkout and calculated taxes before generating an invoice. This feature works across all regions, including countries where taxes are included in the price.
+- *Discounts Support*: The Vertex App uses both the discount and the amount paid by the customer, sending this information to Vertex for tax calculation and estimation.
+- *Manage tax exemptions*: Configure your project to exclude tax-exempt customers using the Vertex App.
+- *View invoice reports in Vertex dashboard*: The Vertex App allows customers to send invoice reports for paid orders from Spryker to Vertex. Customers can opt out of sending invoices to Spryker if they choose.
+- *Support for refunds*: When order items are returned, refunded, or a paid order is canceled, the Vertex App updates the tax report in Vertex for accurate reporting and compliance.
+- *Failover Solution*: Store owners and marketplace operators can manage refunds and ensure accurate tax reporting even during downtime.
+- *Supported Product Types*: The integration currently supports tax calculation only for items/products created using Spryker Product capabilities.
+- *Application of custom tax rules to products*: You can implement custom tax rules to accommodate unique product categorizations or specific tax regulations that apply to your business. The Vertex Integration provides a means for taxes to be calculated using these rules.
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -59,5 +59,4 @@ The following diagram demonstrates the flow of the Vertex app integration:
 
 ## Next steps
 
-* [Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/vertex/install-vertex.html)
-* [Project Guidelines for the Vertex App]()
+[Install Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html)

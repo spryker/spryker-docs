@@ -3,6 +3,9 @@ title: Spryker Middleware powered by Alumio
 description: General information about the data exchange options.
 template: concept-topic-template
 last_updated: Nov 17, 2023
+redirect_from:
+  - /spryker-middleware.htm
+  - https://docs.spryker.com/spryker-middleware.htm   
 ---
 
 {% include pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio.md %} <!-- To edit, see /_includes/pbc/all/data-exchange/202311.0/spryker-middleware-powered-by-alumio.md -->

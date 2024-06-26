@@ -2,10 +2,6 @@
 
 This document describes how to install the Merchant feature.
 
-## Install feature core
-
-Follow the steps below to install the Merchant feature.
-
 ## Prerequisites
 
 Install the required features:
@@ -118,7 +114,7 @@ console translator:generate-cache
 
 ## 4) Import merchants data
 
-1. Prepare your data according to your requirements using our demo data:
+1. Prepare data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant.csv**
 
@@ -144,8 +140,7 @@ MER000002,Video King,1234.4567,approved,martha@video-king.nl,1,/de/merchant/vide
 | url | optional(per locale) | string | /de/merchant/sony-experts | Unique Storefront identifier for a merchant's page. |
 
 **data/import/common/common/marketplace/merchant_store.csv**
-
-```php
+```csv
 merchant_reference,store_name
 MER000001,DE
 MER000002,DE
@@ -607,7 +602,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 | PLUGIN                                          | SPECIFICATION                                             | PREREQUISITES | NAMESPACE                                                       |
 |-------------------------------------------------|-----------------------------------------------------------|---------------|-----------------------------------------------------------------|
-| MerchantSynchronizationDataBulkRepositoryPlugin | Synchronizes the entire search table content into Search. |               | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
+| MerchantSynchronizationDataBulkRepositoryPlugin | Syncs the entire search table content into Search. |               | Spryker\Zed\MerchantSearch\Communication\Plugin\Synchronization |
 
 **src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
@@ -661,7 +656,7 @@ class MerchantSearchConfig extends SprykerMerchantSearchConfig
 
 | PLUGIN                              | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                                           |
 |-------------------------------------|-----------------------------------------------------------------------|---------------|---------------------------------------------------------------------|
-| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to MerchantSearchCollectionTransfer. |               |  Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
+| MerchantSearchResultFormatterPlugin | Maps raw data from Elasticsearch to `MerchantSearchCollectionTransfer`. |               |  Spryker\Client\MerchantSearch\Plugin\Elasticsearch\ResultFormatter |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**
 
@@ -691,7 +686,7 @@ class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyPr
 
 | PLUGIN                                     | SPECIFICATION                                                                     | PREREQUISITES | NAMESPACE                                                |
 |--------------------------------------------|-----------------------------------------------------------------------------------|---------------|----------------------------------------------------------|
-| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for merchant search.                                      |               | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
+| PaginatedMerchantSearchQueryExpanderPlugin | Allows using pagination for the merchant search.                                      |               | Spryker\Client\MerchantSearch\Plugin\Elasticsearch\Query |
 | StoreQueryExpanderPlugin                   | Allows searching to filter out merchants that don't belong to the current store. |               | Spryker\Client\SearchElasticsearch\Plugin\QueryExpander  |
 
 **src/Pyz/Client/MerchantSearch/MerchantSearchDependencyProvider.php**

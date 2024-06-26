@@ -7,7 +7,7 @@ Install the required features:
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                  |
 |--------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core             | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)         |
-| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html) |
 
 ## 1) Install the required modules
 
@@ -156,7 +156,7 @@ root_group,root_role
 |------------------------------|--------------------------------------------------------------------------------|---------------|-------------------------------------------------|
 | AclGroupDataImportPlugin     | Imports ACL group data from the specified file.                                |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
 | AclRoleDataImportPlugin      | Imports ACL role data from the specified file.                                 |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
-| AclGroupRoleDataImportPlugin | Imports the connection between ACL role and ACL group from the specified file. |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
+| AclGroupRoleDataImportPlugin | Imports the connections between ACL roles and ACL groups from the specified file. |           | \Spryker\Zed\AclDataImport\Communication\Plugin |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -220,7 +220,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-4. Run the following commands to import the data:
+4. Import the data:
 
 ```bash
 console data:import:data:import:acl-role
@@ -244,11 +244,11 @@ Make sure the configured data has been added to the following database tables:
 
 | PLUGIN                                  | DESCRIPTION                                                                                                                                      | PREREQUISITES | NAMESPACE                                              |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------|
-| AccessControlEventDispatcherPlugin      | Adds a listener to `\Symfony\Component\HttpKernel\KernelEvents::REQUEST` which checks if the user is allowed to access the current resource. |               | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher   |
+| AccessControlEventDispatcherPlugin      | Adds a listener to `\Symfony\Component\HttpKernel\KernelEvents::REQUEST`, which checks if the user is allowed to access the current resource. |               | Spryker\Zed\Acl\Communication\Plugin\EventDispatcher   |
 | AclNavigationItemCollectionFilterPlugin | Checks if the navigation item can be accessed by the current user.                                                                               |               | Spryker\Zed\Acl\Communication\Plugin\Navigation        |
 | AclInstallerPlugin                      | Fills the database  with required ACL data.                                                                                                            |               | Spryker\Zed\Acl\Communication\Plugin                   |
-| GroupPlugin                             | Provides Acl Groups for User.                                                                                                                    |               | Spryker\Zed\Acl\Communication\Plugin                   |
-| AclEntityAclRolePostSavePlugin          | Saves `RoleTransfer.aclEntityRules` to database.                                                                                                 |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
+| GroupPlugin                             | Provides ACL groups for user.                                                                                                                    |               | Spryker\Zed\Acl\Communication\Plugin                   |
+| AclEntityAclRolePostSavePlugin          | Saves `RoleTransfer.aclEntityRules` to the database.                                                                                                 |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
 | AclRulesAclRolesExpanderPlugin          | Expands the `Roles` transfer object with ACL rules.                                                                                                  |               | Spryker\Zed\AclEntity\Communication\Plugin\Acl         |
 | AclEntityApplicationPlugin              | Enables ACL for the whole Application.                                                                                                           |               | Spryker\Zed\AclEntity\Communication\Plugin\Application |
 
@@ -388,7 +388,7 @@ class AclDependencyProvider extends SprykerAclDependencyProvider
 }
 ```
 
-2. To enable the ACL Entity feature for the `MerchantPortalApplication`, register the `AclEntityApplicationPlugin` plugin. The ACL Entity feature lets you manage access to the entities in the store of different merchants separately.
+2. To enable the ACL Entity feature for `MerchantPortalApplication`, register the `AclEntityApplicationPlugin` plugin. The ACL Entity feature lets you manage access to the entities of different merchants separately.
 
 **src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php**
 
@@ -425,8 +425,8 @@ console setup:init-db
 Make sure the following works correctly:
 
 * The request to access the Merchant Portal doesn't succeed for users without permissions.
-* The marketplace user can see only the allowed Merchant Portal menu links.
-* The `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
+* A marketplace user can see only the allowed Merchant Portal menu links.
+* `spy_acl_role`, `spy_acl_group`, and `spy_acl_user_has_group` tables contain default data.
 * You can edit a user's ACL groups when [editing users in the Back Office](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/edit-users.html).
 * When a `RoleTransfer` is saved and contains `AclEntityRules`, `AclEntityRule` is created in `spy_acl_entity_rule`.
 * `RolesTransfer` contains the needed `AclEntityRules`.

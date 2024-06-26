@@ -6,7 +6,7 @@ Follow the steps below to install feature core.
 
 ### 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker/data-export:"^0.2.0" spryker/data-export-extension:"^0.1.0" spryker/sales-data-export:"^0.1.0" --update-with-dependencies
@@ -26,7 +26,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up transfer objects
 
-1. Run the following command to generate transfer changes:
+1. Generate transfer changes:
 
 ```bash
 vendor/bin/console transfer:generate
@@ -34,7 +34,7 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes are present in transfer objects::
+Make sure that the following changes have occurred in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -52,7 +52,7 @@ Make sure that the following changes are present in transfer objects::
 
 ### 3) Set up behavior
 
-1. Register the console command in `ConsoleDependencyProvider`
+1. Register the console command in `ConsoleDependencyProvider`.
 
 | COMMAND           | SPECIFICATION     | PREREQUISITES | NAMESPACE                                    |
 |-------------------|-------------------|---------------|----------------------------------------------|
@@ -89,11 +89,14 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Run `vendor/bin/console list` and make sure that data:export command is on the list of the available commands.
+Run `vendor/bin/console list` and make sure that the `data:export` command is on the list of the available commands.
 
 {% endinfo_block %}
 
 2. Add the data export configuration .yml file to the `data/export/config` folder:
+
+<details>
+  <summary>Data export config file</summary>
 
 ```yml
 version: 1
@@ -140,11 +143,13 @@ actions:
           store_name: [AT]
  ```
 
+ </details>
+
  3. Activate the following plugins:
 
 | PLUGIN                                 | SPECIFICATION                                 | PREREQUISITES | NAMESPACE                                                   |
 |----------------------------------------|-----------------------------------------------|---------------|-------------------------------------------------------------|
-| OutputStreamDataExportConnectionPlugin | Writes formatted data batch to output stream. |               | Spryker\Service\DataExport\Plugin\DataExport                |
+| OutputStreamDataExportConnectionPlugin | Writes a formatted data batch to the output stream. |               | Spryker\Service\DataExport\Plugin\DataExport                |
 | OrderDataEntityExporterPlugin          | Adds the `order` data exporter.               |               | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
 | OrderExpenseDataEntityExporterPlugin   | Adds the `order-expense` data exporter.       |               | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
 | OrderItemDataEntityExporterPlugin      | Adds the `order-item` data exporter.          |               | Spryker\Zed\SalesDataExport\Communication\Plugin\DataExport |
@@ -203,6 +208,11 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify that plugins are activated, run console command `vendor/bin/console data:export -c order_export_config.yml` and check that files with the exported data were created in the `data/export` folder.
+Run the export:
+```bash
+vendor/bin/console data:export -c order_export_config.yml`
+```
+
+Make sure the files with the exported data have been created in the `data/export` folder.
 
 {% endinfo_block %}

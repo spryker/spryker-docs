@@ -8,11 +8,11 @@ This document describes how to add product variants, product images, and price v
 
 ## Prerequisites
 
-Read the concept of Spryker [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes).
+Learn about [super attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-attributes-overview.html#super-attributes).
 
 ## UI changes
 
-The cart now supports changing cart items by modifying their attributes. If you have the wrong t-shirt size in the cart, you can change it.
+The cart now supports changing cart items by editing their attributes. If you have the wrong t-shirt size in the cart, you can change it.
 
 The cart supports product images out of the box.
 

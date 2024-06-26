@@ -219,8 +219,6 @@ entries:
     - title: Data manipulation
       url: /docs/dg/dev/backend-development/data-manipulation/data-manipulation.html
       nested:
-      - title: Run and revert a database migration
-        url: /docs/dg/dev/backend-development/data-manipulation/run-and-revert-a-database-migration.html
       - title: Data publishing
         url: /docs/dg/dev/backend-development/data-manipulation/data-publishing/data-publishing.html
         nested:

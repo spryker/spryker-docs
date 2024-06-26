@@ -40,7 +40,7 @@ To start using the Spryker Vertex app in your project, you need to do the follow
 1. Enable ACP for your project. For instructions, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
 2. Create an account with [Vertex account](https://www.vertexinc.com/). If you need help with getting a Vertex account, contact the Spryker Support team or your Customer Success Manager.
 3. [Install the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/install-vertex.html).
-4. [Configure the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html).
+4. [Configure the Vertex app](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html).
 5. Ensure that the address form in your Storefront has the required fields in that country. For example, there should be a `State` field in the US and the `Province` field in Canada.
 
 Once you have installed and configured the Vertex app, the taxes will be calculated by Vertex during the checkout process. See this video to understand the experience for the end user:
@@ -61,12 +61,6 @@ By default, the following data is sent to Vertex for tax calculation:
  - Discounts
  - Shipping costs
 
-
-{% info_block infoBox "Company code" %}
-
-Vertex uses a hierarchy structure for tax determination. Company code is the highest in the hierarchy, so it determines what rates apply. So, make sure to set up your company code in Vertex and add it in the project. For information about adding the Company code, see [Configure Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html#company-code).
-
-{% endinfo_block %}
 
 Thus, the buyers see the tax amount calculated by Vertex during the checkout after they have provided their shipping address.
 The Back Office users can see the taxes calculated by Vertex on the order details page.

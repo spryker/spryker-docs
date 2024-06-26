@@ -11,7 +11,7 @@ redirect_from:
   - /docs/product-lists-feature-integration
   - /docs/en/product-lists-feature-integration
 related:
-  - title: Product Lists + Catalog feature integration
+  - title: Install the Product Lists + Catalog feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html
   - title: Install the CMS + Product Lists + Catalog feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-catalog-feature.html

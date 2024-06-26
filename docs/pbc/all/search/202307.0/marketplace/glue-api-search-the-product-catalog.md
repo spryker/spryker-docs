@@ -20,7 +20,7 @@ In your development, this endpoint can help you to:
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
-- [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
+- [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
 - [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
 
 ## Search by products

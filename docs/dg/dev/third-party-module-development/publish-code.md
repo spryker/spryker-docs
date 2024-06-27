@@ -3,7 +3,9 @@ title: How to publish module on GitHub
 description: How to publish module on GitHub
 last_updated: Jun 7, 2024
 template: howto-guide-template
-
+related:
+  - title: Go to the Next Step.
+    link: docs/dg/dev/third-party-module-development/ensure-compatibility.html
 ---
 
 # Guide to Publishing Code to GitHub

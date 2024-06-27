@@ -3,7 +3,9 @@ title: Onboard & Learn
 description: Onboard & Learn
 last_updated: Jun 7, 2024
 template: howto-guide-template
-
+related:
+  - title: Go to the Next Step.
+    link: docs/dg/dev/third-party-module-development/develop.html
 ---
 
 Basic rules of the module development can be found at https://docs.spryker.com/docs/dg/dev/architecture/architectural-convention.html (With **module development** remarks)

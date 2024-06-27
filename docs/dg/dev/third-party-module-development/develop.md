@@ -3,12 +3,14 @@ title: How to develop a Third-Party Spryker module
 description: How to develop a Spryker module
 last_updated: Jun 7, 2024
 template: howto-guide-template
-
+related:
+  - title: Go to the Next Step.
+    link: docs/dg/dev/third-party-module-development/ensure-quality.html
 ---
 
 ### Architectural conventions
 
-Documentation (/docs/dg/dev/architecture/architectural-convention.html needs to be followed in the development process.)
+[Documentation](/docs/dg/dev/architecture/architectural-convention.html) ( needs to be followed in the development process.)
 -  Use the samples that marked as *Module Development*.
 
 

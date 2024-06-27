@@ -3,7 +3,9 @@ title: Drive Usage and Support with Problems
 description: Drive Usage and Support with Problems
 last_updated: Jun 7, 2024
 template: howto-guide-template
-
+related:
+  - title: Go to the Next Step.
+    link: docs/dg/dev/third-party-module-development/distribute.html
 ---
 
 We would recommend 4 steps how to improve usage of your module:
@@ -20,9 +22,11 @@ We would recommend 4 steps how to improve usage of your module:
     - It is important to:
     - Have migration for each **Major** version starting from 2nd.
     - Have **Verification** step that clearly states how to check that everything is done properly and functionality works as expected.
-4: Request a review of your module from **Spryker** to obtain **Verified by Spryker** badge, it will allow to promote it and increase trust from the end users into it. 
-      
-    - **TBD: More details coming soon.**
+
+4: Request a review of your module from **Spryker** to obtain **Verified by Spryker** badge, it will allow to promote it and increase trust from the end users into it.
+   
+   - **TBD: More details coming soon.**
+
 5. Publish the module in Spryker Application Catalog
       
     - **TBD: More details coming soon.**

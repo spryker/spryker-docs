@@ -3,7 +3,9 @@ title: Ensure compatibility
 description: Ensure compatibility
 last_updated: Jun 7, 2024
 template: howto-guide-template
-
+related:
+  - title: Go to the Next Step.
+    link: docs/dg/dev/third-party-module-development/drive-usage-and-support-with-problems.html
 ---
 
 ## Code compatibility

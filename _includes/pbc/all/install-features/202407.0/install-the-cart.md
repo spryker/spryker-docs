@@ -12,9 +12,9 @@ Learn about [super attributes](/docs/pbc/all/product-information-management/{{pa
 
 ## UI changes
 
-The cart now supports changing cart items by editing their attributes. If you have the wrong t-shirt size in the cart, you can change it.
+Cart items can now be changed by changing their attributes. For example, you can change a t-shirt's size.
 
-The cart supports product images out of the box.
+Cart supports product images out of the box.
 
 ![cart_product_images](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/cart_product_images.png)
 
@@ -24,13 +24,13 @@ Based on the super attributes, you can select the needed product variant in the 
 
 ## Add item images
 
-To support images in a cart, install the optional module `ProductImageCartConnector`:
+1. To support images to cart, install the optional module `ProductImageCartConnector`:
 
 ```bash
 composer require spryker/product-image-cart-connector
 ```
 
-This module provides `ProductImageCartPlugin`, which you must register later in your shop's `CartDependencyProvider` as follows:
+2. This module provides `ProductImageCartPlugin`, which you must register later in your shop's `CartDependencyProvider` as follows:
 
 ```php
 /**

@@ -67,6 +67,7 @@ protected function getExpanderPlugins(Container $container)
 {% info_block warningBox "Verification" %}
 
 Make sure `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBundleItemsPlugin` plugin.
+Navigate to the **src/Pyz/Zed/Cart/CartDependencyProvider.php** dependency provider file and check the order of the plugins in the `getExpanderPlugins` function.
 
 {% endinfo_block %}
 

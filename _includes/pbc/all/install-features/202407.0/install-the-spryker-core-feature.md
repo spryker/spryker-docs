@@ -5,8 +5,8 @@ This document describes how to install the [Spryker Core feature](/docs/pbc/all/
 
 {% info_block infoBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place.
-The current feature integration guide only adds the following functionalities:
+
+This guide expects the basic feature to be installed. This guide adds the following functionalities:
 * Vault
 * Redis Session
 * Store GUI
@@ -54,16 +54,16 @@ Set up the following configuration.
 
 #### Set up SecuritySystemUser
 
-Add the configuration to your project:
+Add the configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME	 | Redis session lifetime | Spryker\Shared\SecuritySystemUser |
+| SecuritySystemUserConstants::SYSTEM_USER_SESSION_REDIS_LIFE_TIME	 | Redis session lifetime. | Spryker\Shared\SecuritySystemUser |
 |SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS | Default credentials for Yves accessing Zed. | Spryker\Shared\SecuritySystemUser |
 
 {% info_block errorBox "Security measures" %}
 
-Make sure that `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured in your live environment. Otherwise, your backend system might be compromised by a malicious user.
+To prevent the backend from being compromised, make sure that `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured in production environments.
 
 {% endinfo_block %}
 
@@ -85,7 +85,7 @@ $config[SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS] = [
 
 #### Set up Vault
 
-Add the configuration to your project:
+Add the configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ Add the configuration to your project:
 
 {% info_block errorBox "Security measures" %}
 
-Make sure that the encryption key is secured in your live environment. This key protects all the data stored in Vault.
+Make sure that the encryption key is secured in production environments. This key protects all the data stored in the Vault.
 
 {% endinfo_block %}
 
@@ -118,35 +118,41 @@ $vaultFacade->store("secret_category", "secret_id", $secret);
 assertSame($secret, $vaultFacade->retrieve("secret_category", "secret_id"));
 ```
 
-#### Redis
+#### Configure Redis
 
-Add the configuration to your project:
+Add the configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
-| SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS	 | Defines Redis lock timeout in milliseconds. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS	 | Defines the Redis lock timeout in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire Redis lock in microseconds. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for Redis lock in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionFileConstants::ZED_SESSION_FILE_PATH	 | Defines the filesystem path for storing Zed sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL	 | Defines the protocol used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_DATABASE	 | Defines the database used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_DATA_SOURCE_NAMES	 | Defines the list of DSNs used while connecting to Redis as Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS	 | Defines the list of client options used while connecting to Redis as Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
-| StorageRedisConstants::STORAGE_REDIS_PROTOCOL	 | Defines the protocol used while connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PASSWORD	 | Defines the password used while connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_HOST	 | Defines the host used while connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PORT	 | Defines the port used while connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_DATABASE	 | Defines the database used while connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION	 | Enables/disables data persistence for a Redis connection. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_DATA_SOURCE_NAMES	 | Specifies an array of DSN strings for a multi-instance cluster/replication Redis setup. | Spryker\Shared\StorageRedis |
-| StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS	 | Specifies an array of client options for connecting to Redis as key-value storage. | Spryker\Shared\StorageRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL	 | Defines the protocol used when connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password used when connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host used when connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol used when connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_DATABASE	 | Defines the database used when connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_DATA_SOURCE_NAMES	 | Defines the list of DSNs used when connecting to Redis a as Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS	 | Defines the list of client options used when connecting to Redis as a Zed session storage in replication mode. | Spryker\Shared\SessionRedis |
+| StorageRedisConstants::STORAGE_REDIS_PROTOCOL	 | Defines the protocol used when connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PASSWORD	 | Defines the password used when connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_HOST	 | Defines the host used when connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PORT	 | Defines the port used when connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_DATABASE	 | Defines the database used when connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_PERSISTENT_CONNECTION	 | Enables and disables data persistence for a Redis connection. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_DATA_SOURCE_NAMES	 | Specifies an array of DSN strings for a multi-instance cluster and replication Redis setup. | Spryker\Shared\StorageRedis |
+| StorageRedisConstants::STORAGE_REDIS_CONNECTION_OPTIONS	 | Specifies an array of client options for connecting to Redis as a key-value storage. | Spryker\Shared\StorageRedis |
 
-#### General storage
+#### Configure general storage
 
-* In case of a multi-instance Redis setup, extend your project with the following configuration:
+{% info_block warningBox "" %}
+
+Make sure to replace all the values in the following examples with real values.
+
+{% endinfo_block %}
+
+In case of a multi-instance Redis setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -164,13 +170,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-{% info_block warningBox "Note" %}
-
-All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
-
-{% endinfo_block %}
-
-* In case of a single-instance Redis setup, extend your project with the following configuration:
+In case of a single-instance Redis setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -188,15 +188,16 @@ $config[StorageRedisConstants::STORAGE_REDIS_PASSWORD] = false;
 $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = 0;
 ```
 
-{% info_block warningBox "Note" %}
 
-All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
+#### Configure session storage
+
+{% info_block warningBox "" %}
+
+Make sure to replace all the values in the following examples with real values.
 
 {% endinfo_block %}
 
-#### Session storage
-
-If you're using Redis as session storage, extend your project with the following configuration:
+1. If you're using Redis as session storage, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -216,13 +217,13 @@ $config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 0;
 $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 ```
 
-{% info_block warningBox "Note" %}
+{% info_block warningBox "" %}
 
 `SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING` and `SessionRedisConfig::SESSION_HANDLER_REDIS` can be used as values for `SessionConstants::ZED_SESSION_SAVE_HANDLER`.
 
 {% endinfo_block %}
 
-* In case of a multi-instance Redis setup, extend your project with the following configuration:
+2. In case of a multi-instance Redis setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -242,13 +243,13 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_CLIENT_OPTIONS] = [
 ];
 ```
 
-{% info_block warningBox "Note" %}
+{% info_block warningBox "" %}
 
 This configuration is used exclusively. In other words, you can't use any other Redis configuration.
 
 {% endinfo_block %}
 
-* In case of a single-instance Redis setup, extend your project with the following configuration:
+3. In case of a single-instance Redis setup, add the following configuration:
 
 **config/Share/config_default.php**
 
@@ -264,7 +265,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD] = false;
 $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 ```
 
-If you use the file system as session storage, extend your project with the following configuration:
+4. If the file system is used as a session storage, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -282,15 +283,9 @@ $config[SessionFileConstants::ZED_SESSION_TIME_TO_LIVE] = SessionConfig::SESSION
 $config[SessionFileConstants::ZED_SESSION_FILE_PATH] = session_save_path();
 ```
 
-{% info_block warningBox "Note" %}
-
-All the values in the preceding examples must be replaced with the real ones used in the corresponding environment.
-
-{% endinfo_block %}
-
 #### Configure SecurityBlocker
 
-`SecurityBlocker` stores blocked accounts' information in Redis. Thus, it needs connection information. You can get it in the environment configuration of your project:
+1. `SecurityBlocker` stores blocked accounts' information in Redis. So, it needs connection information. You can get it in the environment configuration of your project:
 
 **config/Shared/config_default.php**
 
@@ -303,13 +298,13 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_PASSWORD] = false;
 $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 ```
 
-Add environment configuration for customer security:
+2. Add environment configuration for customer security:
 
 | CONFIGURATION                                                                    | SPECIFICATION                                                                                                                                          | NAMESPACE                                        |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL                | Specifies the TTL configuration, the period when number of unsuccessful tries will be counted for customer.                                            | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt a customer can make during the `SECURITY_BLOCKER_STOREFRONT:CUSTOMER_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the period for which the agent is blocked if the number of attempts is exceeded for a customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL                | Specifies the TTL configuration: the period when number of unsuccessful tries will be counted for customer.                                            | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of failed login attempts to make within the time period defined in `SECURITY_BLOCKER_STOREFRONT:CUSTOMER_BLOCKING_TTL` before the customer is blocked. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 
 **config/Shared/config_default.php**
 
@@ -699,13 +694,13 @@ Add the following configuration to your project:
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
 | SessionFileConstants::YVES_SESSION_FILE_PATH | Defines the filesystem path for storing Yves sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL | Defines the protocol used while connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD | Defines the password used while connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_HOST | Defines the host used while connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_PORT | Defines the port used while connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_DATABASE | Defines the database used while connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES | Defines the list of DSNs used while connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
-| SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS | Defines the list of client options used while connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL | Defines the protocol used when connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD | Defines the password used when connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_HOST | Defines the host used when connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_PORT | Defines the port used when connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_DATABASE | Defines the database used when connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES | Defines the list of DSNs used when connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS | Defines the list of client options used when connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
 
 **config/Shared/config_default.php**
 
@@ -819,7 +814,7 @@ class SecurityBlockerPageConfig extends SprykerSecurityBlockerPageConfig
      * @var bool
      */
     protected const USE_EMAIL_CONTEXT_FOR_LOGIN_SECURITY_BLOCKER = false;
-    
+
     /**
      * @return bool
      */

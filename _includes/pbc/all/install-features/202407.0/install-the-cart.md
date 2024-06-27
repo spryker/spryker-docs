@@ -30,7 +30,7 @@ Based on the super attributes, you can select the needed product variant in the 
 composer require spryker/product-image-cart-connector
 ```
 
-2. This module provides `ProductImageCartPlugin`, which you must register later in your shop's `CartDependencyProvider` as follows:
+2. Register `ProductImageCartPlugin` in `CartDependencyProvider`:
 
 ```php
 /**
@@ -47,7 +47,7 @@ protected function getExpanderPlugins(Container $container)
 }
 ```
 
-If your shop uses product bundles, register `ExpandBundleItemsWithImagesPlugin` in your shop's `CartDependencyProvider` as follows:
+3. If product bundles are used in the shop, register `ExpandBundleItemsWithImagesPlugin` in `CartDependencyProvider`:
 
 ```php
 /**
@@ -72,15 +72,13 @@ Make sure `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBun
 
 ### Add price validation
 
-Spryker provides the `PriceCartConnector` module for this purpose.
-
-Install the `PriceCartConnector` module:
+1. Install the `PriceCartConnector` module:
 
 ```bash
 composer require spryker/price-cart-connector
 ```
 
-This module provides the `CartItemPricePreCheckPlugin`, which you must register later in your shop `CartDependencyProvider` as follows:
+2. Register `CartItemPricePreCheckPlugin` in `CartDependencyProvider`:
 
 ```php
 /**
@@ -97,7 +95,7 @@ protected function getCartPreCheckPlugins(Container $container): array
 }
 ```
 
-Adjust the configuration constant to allow or prevent adding products with zero price:
+3. Adjust the configuration constant to allow or prevent adding products with a zero price:
 
 **src/Pyz/Zed/PriceCartConnector/PriceCartConnectorConfig.php**
 ```php
@@ -114,8 +112,6 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 If it has the `false` value, while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
 
 #### Install cart variants
-
-Spryker provides the `CartVariant` module for this purpose.
 
 Install the `CartVariant` module:
 

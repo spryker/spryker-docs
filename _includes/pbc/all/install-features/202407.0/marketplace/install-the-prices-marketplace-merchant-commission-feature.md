@@ -23,20 +23,19 @@ composer require spryker/price-product-merchant-commission-connector:"^1.0.0" --
 
 Make sure the following modules have been installed:
 
-| MODULE                             | EXPECTED DIRECTORY                                   |
-|------------------------------------|------------------------------------------------------|
-| ProductMerchantCommissionConnector | vendor/spryker/product-merchant-commission-connector |
+| MODULE                                  | EXPECTED DIRECTORY                                   |
+|-----------------------------------------|------------------------------------------------------|
+| PriceProductMerchantCommissionConnector | vendor/spryker/product-merchant-commission-connector |
 
 {% endinfo_block %}
-
 
 ### 2) Set up behavior
 
 Set up the following behaviors:
 
-| PLUGIN                                                 | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                                                                   |
-|--------------------------------------------------------|------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
-| PriceProductMerchantCommissionItemCollectorRulePlugin  | Collects items with unit price that matches the provided clause. |               | Spryker\Zed\PriceProductMerchantCommissionConnector\Communication\Plugin\MerchantCommission |
+| PLUGIN                                                | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                                                                   |
+|-------------------------------------------------------|------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------------------|
+| PriceProductMerchantCommissionItemCollectorRulePlugin | Collects items with unit price that matches the provided clause. |               | Spryker\Zed\PriceProductMerchantCommissionConnector\Communication\Plugin\MerchantCommission |
 
 **src/Pyz/Zed/MerchantCommission/MerchantCommissionDependencyProvider.php**
 

@@ -26,11 +26,11 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
-This document describes how you can run console commands on your local environment with the Docker SDK.
+This document describes how to run console commands in a local Spryker environment with the Docker SDK.
 
-## Running commands only in a local Spryker environment
+## Enter the CLI
 
-To enter the command line interface of a local instance, run one of the following commands:
+To enter the command line interface of a local Spryker instance, run one of the following commands:
 
 Non-debug mode:
 ```bash
@@ -46,14 +46,14 @@ docker/sdk cli -x
 
 From here, you can run any commands related to your project, like composer, console, glue, or yves.
 
-## Running a single command once in a local Spryker environment
+## Running a command without entering the CLI
 
-Sometimes you don't want to enter into the CLI mode of your project.
-In this case, you may run the following command:
+You might sometimes want to run just one command, which is faster to do without entering the CLI. Example:
 ```bach
 docker/sdk cli composer install
 ```
-Execution of the **composer install** will happen inside a CLI container, but after completion, you will stay in your regular CLI.
+
+The execution of the command happens inside the Spryker CLI container, but your sessions stays in the regular CLI.
 
 {% info_block infoBox "Complex commands" %}
 When running a complex command that requires quotes, make sure to use double quotes for the whole command and any allowed quotes inside it.
@@ -62,13 +62,13 @@ docker/sdk cli "composer require 'spryker/kernel:master as 1.1.1-dev'"
 ```
 {% endinfo_block %}
 
-## Running a set of commands once on your local Spryker environment
+### Running multiple commands without entering the CLI
 
-Similar to the previous case, but you want to run several commands.
-Do the following:
+Running several commands without entering the CLI is also possible. Example:
+
 ```bash
 docker/sdk cli "composer install && console transfer:generate && console propel:install"
-
+```
 
 
 

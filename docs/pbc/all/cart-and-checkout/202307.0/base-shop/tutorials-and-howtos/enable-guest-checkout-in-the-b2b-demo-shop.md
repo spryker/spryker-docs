@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
-As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
+As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/about/all/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
 
 {% info_block infoBox "Exemplary implementation" %}
 

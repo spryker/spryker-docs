@@ -2,6 +2,7 @@
 title: Enable and disable maintenance mode
 description: Learn how to deploy maintenance pages for Spryker applications.
 template: howto-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/manage-maintenance-mode/enable-and-disable-maintenance-mode.html
 ---

@@ -2,6 +2,7 @@
 title: Getting started with cloud administration
 description: After the initial setup, access Spryker Cloud and start developing.
 template: howto-guide-template
+last_updated: Oct 17, 2023
 originalLink: https://cloud.spryker.com/docs/getting-started-with-spryker-cloud-commerce-os
 originalArticleId: 04c7a319-4c90-4fd7-a112-982569e48c70
 redirect_from:
@@ -14,6 +15,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202212.0/hosting-providers/metaways.html
   - /docs/scos/dev/technology-partner-guides/202212.0/hosting-providers/integrating-heroku.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/hosting-providers/integrating-heroku.html
 ---
 
 This document is a starting point for managing your Spryker Cloud Commerce OS (SCCOS) cloud environments.

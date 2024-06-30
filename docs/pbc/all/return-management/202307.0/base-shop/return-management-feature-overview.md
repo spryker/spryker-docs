@@ -112,7 +112,7 @@ The feature has the following functional constraints which are going to be resol
 
 To install the return management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
@@ -132,13 +132,13 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 
 | INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
+| [Install the Return Management feature](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
 | [Install the Configurable Bundle + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |
-| [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
+| [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
 | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
-| [Install the Product + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
-| [Install the Product Bundles + Order Management feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
-| [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
+| [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Return Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html) |  |  |
 | [Product Measurement Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |  |  |
 | [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |  |  |
 | [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |

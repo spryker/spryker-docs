@@ -15,9 +15,9 @@ Install the required features:
 | Spryker Core | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Marketplace Product Offer | {{page.version}} | [Install the Marketplace Product Offer feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-feature.html) |
 
-###  1) Install the required modules using Composer
+###  1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-switcher --update-with-dependencies
@@ -25,7 +25,7 @@ composer require spryker-feature/merchant-switcher --update-with-dependencies
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE         | EXPECTED DIRECTORY        |
 | --------------- | ------------------------ |
@@ -63,9 +63,9 @@ To start feature integration, overview, and install the necessary features:
 | ------------ | -------- |
 | Spryker Core | {{page.version}} |
 
-###  1) Install the required modules using Composer
+###  1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-shop/merchant-switcher-widget --update-with-dependencies
@@ -73,7 +73,7 @@ composer require spryker-shop/merchant-switcher-widget --update-with-dependencie
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | ----------- | -------------- |
@@ -296,5 +296,5 @@ Make sure the following widgets were registered:
 
 | FEATURE                                          | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                |
 |--------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Switcher + Customer Account Management  |                                  | [Merchant Switcher + Customer Account Management feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html)  |
+| Merchant Switcher + Customer Account Management  |                                  | [Install the Merchant Switcher + Customer Account Management feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-customer-account-management-feature.html)  |
 | Merchant Switcher + Wishlist                     |                                  | [ Install the Merchant Switcher + Wishlist feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-switcher-wishlist-feature.html)                                       |

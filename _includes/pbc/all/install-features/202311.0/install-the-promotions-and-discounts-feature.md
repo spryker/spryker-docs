@@ -19,9 +19,9 @@ Install the required features:
 |----------------|--------------------|---------------------|
 | Spryker Core   | {{page.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)   |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/promotions-discounts {{page.version}} --update-with-dependencies
@@ -125,7 +125,7 @@ Make sure that you can submit the *Discount Create* and *Discount Update* forms 
 
 [//]: # (---)
 
-[//]: # (title: Promotions & Discounts feature integration)
+[//]: # (title: Install the Promotions & Discounts feature)
 
 [//]: # (description: This guides provides you with a set of steps needed to be performed in order to integrate the Discount Promotion feature into your project.)
 

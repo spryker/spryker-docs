@@ -2,6 +2,7 @@
 title: "Glue API: Search the product catalog"
 description: Search the product catalog via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/searching-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202001.0/searching-the-product-catalog.html
@@ -20,7 +21,7 @@ In your development, this endpoint can help you to:
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see the following documents:
 - [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html#install-feature-api)
-- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html)
+- [Install the Catalog + Merchant Product Restrictions feature](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-merchant-product-restrictions-feature.html)
 
 ## Search by products
 

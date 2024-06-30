@@ -116,7 +116,7 @@ A developer can do the following:
 
 ## Store relation
 
-A product catalog manager can define the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) each product relation is displayed in.
+A product catalog manager can define the [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) each product relation is displayed in.
 
 If no store relation is defined for a product relation, it is not displayed on Storefront.
 
@@ -126,7 +126,7 @@ Stores are defined when creating or editing a product relation in the Back Offic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Relations feature](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html)  |   |
+| [Get a general idea of the Product Relations feature](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html)  |   |
 | [Create product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html)  |   |
 | [Edit product relations](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html)  |   |
 

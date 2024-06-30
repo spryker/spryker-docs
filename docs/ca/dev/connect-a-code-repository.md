@@ -2,6 +2,7 @@
 title: Connect a code repository
 description: Connect a GitHub or Bitbucket code repository to your Spryker Cloud project.
 template: howto-guide-template
+last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/connecting-code-repository
 originalArticleId: cf723ab0-922f-4255-a26b-f405b15098e5
 redirect_from:
@@ -26,6 +27,8 @@ Spryker Cloud Commerce OS supports the following version control systems:
 * [GitHub](https://github.com/)
 * [Bitbucket](https://bitbucket.org/)
 * [GitLab](https://gitlab.com/)
+
+Spryker Cloud also offers support for all the Git repositories that support AWS CodeCommit push mirroring. Similar to the GitLab setup, you can configure all the commits from your version control system to be mirrored to Spryker Cloud and consumed by our pipelines to build and deploy your system.
 
 We recommend mapping your branches to environments as follows:
 

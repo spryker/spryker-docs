@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/features/202108.0/refunds-feature-overview.html
   - /docs/scos/user/features/202200.0/refunds-feature-overview.html
   - /docs/scos/user/features/202307.0/refunds-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/refunds-feature-walkthrough.html
 ---
 
 Refunds can be handled automatically in the Back Office once the order has been delivered. Your customers can return the entire order or parts thereof by means of the order splitting mechanism. Every order contains information about the total possible refund value and how much has already been refunded.

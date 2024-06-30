@@ -8,9 +8,10 @@ originalArticleId: 70d36a7a-e701-427d-ae2a-e78ebde56ebe
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
-  - title: Glue API - Promotions & Discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - title: Install the Promotions & Discounts feature Glue API
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
@@ -19,7 +20,7 @@ related:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
 
 ## Retrieve a product label
 
@@ -67,12 +68,8 @@ Request sample: retrieve a product label
 
 <a name="product-labels-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| name | String | Specifies the label name. |
-| isExclusive | Boolean | Indicates whether the label is `exclusive`.<br>If the attribute is set to true, the current label takes precedence over other labels the product might have. This means that only the current label should be displayed for the product, and all other possible labels should be hidden. |
-| position | Integer | Indicates the label priority.<br>Labels should be indicated on the frontend according to their priority, from the highest (**1**) to the lowest, unless a product has a label with the `isExclusive` attribute set.|
-| frontEndReference | String |Specifies the label custom label type (CSS class).<br>If the attribute is an empty string, the label should be displayed using the default CSS style. |
+{% include pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-labels-response-attributes.md -->
+
 
 ## Other management options
 
@@ -92,4 +89,4 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

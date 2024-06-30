@@ -2,11 +2,12 @@
 title: Edit billing addresses in orders
 description: Learn how to edit order billing addresses in the Back Office
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/sales/orders/editing-billing-addresses-in-orders.html
 related:
   - title: Order Management feature overview
-    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 This document describes how to edit billing addresses in orders.

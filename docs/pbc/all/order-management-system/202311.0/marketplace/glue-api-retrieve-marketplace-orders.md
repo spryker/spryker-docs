@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve Marketplace orders"
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
+last_updated: Nov 21, 2023
 related:
   - title: Managing the returns
     link: docs/pbc/all/return-management/page.version/marketplace/glue-api-manage-marketplace-returns.html

@@ -1,5 +1,5 @@
 ---
-title: "Best practises: Jenkins stability"
+title: "Best practices: Jenkins stability"
 description: Improve the stability of the scheduler component.
 template: best-practices-guide-template
 redirect_from:
@@ -35,4 +35,4 @@ When configuring multiple queue workers per queue, consider [Memory management](
 
 ## Creating jobs in Jenkins dashboard
 
-While you can create jobs in Jenkins dashboard to quickly run console commands, remember that these jobs are removed when the Jenkins instance is reprovisioned. Jenkins can be reprovisioned during self-healing, recovering from an exception of the underlying instance or container, or during a pipeline execution. For instructions on setting up a job that doesn't get removed, see [Using cronjob schedulers](https://docs.spryker.com/docs/scos/dev/back-end-development/cronjobs/cronjobs.html#using-cronjob-schedulers).
+While you can create jobs in Jenkins dashboard to quickly run console commands, remember that these jobs are removed when the Jenkins instance is reprovisioned. Jenkins can be reprovisioned during self-healing, recovering from an exception of the underlying instance or container, or during a pipeline execution. For instructions on setting up a job that doesn't get removed, see [Using cronjob schedulers](/docs/dg/dev/backend-development/cronjobs/cronjobs.html#using-cronjob-schedulers).

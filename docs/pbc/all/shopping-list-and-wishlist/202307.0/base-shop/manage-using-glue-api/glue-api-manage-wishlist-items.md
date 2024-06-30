@@ -21,7 +21,7 @@ This endpoint allows you to add and remove items from wishlists.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-wishlist-glue-api.html)
-* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
+* [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html)
 
 ## Add an item to a wishlist
 
@@ -437,4 +437,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207 | Cannot remove the item. |
 | 208 | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

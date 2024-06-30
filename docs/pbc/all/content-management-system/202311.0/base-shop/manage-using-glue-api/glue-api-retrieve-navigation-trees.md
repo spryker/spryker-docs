@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/retrieving-navigation-trees.html
   - /docs/pbc/all/content-management-system/202311.0/manage-using-glue-api/retrieve-navigation-trees.html
   - /docs/pbc/all/content-management-system/202311.0/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
+  - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
@@ -1131,4 +1132,4 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | 1601 | Navigation is not found. |
 | 1602 | Navigation ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

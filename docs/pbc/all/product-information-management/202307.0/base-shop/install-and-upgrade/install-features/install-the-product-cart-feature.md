@@ -1,5 +1,5 @@
 ---
-title: Product + Cart feature integration
+title: Install the Product + Cart feature
 description: The guide walks you through the process of installing the Product and Cart features in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,8 +14,8 @@ redirect_from:
 related:
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
-  - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+  - title: Install the Cart feature
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
   - title: Product image management
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/product-images-overview.html
 ---

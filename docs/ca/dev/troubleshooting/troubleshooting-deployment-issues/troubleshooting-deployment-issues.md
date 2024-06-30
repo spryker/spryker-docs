@@ -2,6 +2,7 @@
 title: Troubleshooting deployment issues
 description: Solutions to common deployment issues
 template: concept-topic-template
+last_updated: Oct 17, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/troubleshooting-deployment.html

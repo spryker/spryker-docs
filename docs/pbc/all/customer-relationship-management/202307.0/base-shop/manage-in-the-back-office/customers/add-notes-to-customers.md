@@ -2,6 +2,7 @@
 title: Add notes to customers
 description: Learn how to add notes to customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/add-notes-to-customers.html
 related:

@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202307.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/pbc/all/cart-and-checkout/202307.0/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
 related:
-  - title: Migration guide - Payment
+  - title: Upgrade the Payment module
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/upgrade-the-payment-module.html
 ---
 

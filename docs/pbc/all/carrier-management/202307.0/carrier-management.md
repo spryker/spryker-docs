@@ -2,6 +2,7 @@
 title: Carrier Management
 description: The Carrier Management capability deals with delivery methods
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Carrier Management lets you set up different deliver methods.

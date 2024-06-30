@@ -11,7 +11,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
 related:
   - title: Templates & Slots overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
   - title: Managing slots
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html
 ---
@@ -158,7 +158,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class that implements `\Symfony\Component\Form\FormBuilderInterface`. For details, see the following:
    * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
-   * [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
+   * [Creating Forms](/docs/dg/dev/backend-development/forms/create-forms.html) to learn about form creation procedure in Spryker.
    * A form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}

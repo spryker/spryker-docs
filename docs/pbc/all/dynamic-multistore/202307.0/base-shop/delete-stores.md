@@ -3,6 +3,7 @@ title: Delete stores
 description: This document shows how to delete a store
 past_updated: Jun 26, 2023
 template: howto-guide-template
+last_updated: Oct 6, 2023
 ---
 
 This document describes how to delete stores.

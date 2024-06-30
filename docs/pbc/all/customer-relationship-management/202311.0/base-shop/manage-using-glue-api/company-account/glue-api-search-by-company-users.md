@@ -7,6 +7,7 @@ originalLink: https://documentation.spryker.com/2021080/docs/searching-by-compan
 originalArticleId: a0cc11ce-40e9-4fcf-8cd5-eddd23b02363
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/searching-by-company-users.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/searching-by-company-users.html
 related:
   - title: Retrieving companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
@@ -27,7 +28,7 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
   - title: Merchant Custom Prices feature overview
     link: docs/pbc/all/price-management/page.version/base-shop/merchant-custom-prices-feature-overview.html
   - title: Password Management overview
@@ -38,7 +39,7 @@ This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-man
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve available company users
 
@@ -310,7 +311,7 @@ To retrieve company users of the current authenticated customer, send the reques
 | 001 | The access token is invalid. |
 | 002 | The access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 

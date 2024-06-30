@@ -14,7 +14,7 @@ Since the staging environment isn't designed to be as performant as the producti
 
 If you want to execute a full load test on a production-like dataset and traffic, use a production environment. This could be your actual production environment if it is not yet live, or you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, it is recommended to use the same amount of data that will be used in the production environment.
 
-If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Please note that we do not provide support for this data. However, if your specific use case is not covered, you can [contact support](https://spryker.force.com/support/s/knowledge-center), and we will try to accommodate your needs.
+If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Additional support ins't provided for this data.
 
 Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.
 
@@ -39,11 +39,11 @@ Gatling is capable of creating an immense amount of traffic from a single node, 
 
 The purpose of this guide is to show you how to integrate Spryker's load testing tool into your environment. While the instructions here will focus on setting this up with using one of Spryker’s many available demo shops, it can also be implemented into an on-going project.
 
-For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/scos/dev/developer-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
+For instructions on setting up a developer environment using one of the available Spryker shops, you can visit our [getting started guide](/docs/dg/dev/development-getting-started-guide.html) which shows you how to set up the Spryker Commerce OS.
 
 Some of the following options are available to choose from:
-- [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
-- [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
+- [B2B Demo Shop](/docs/about/all//b2b-suite.html): A boilerplate for B2B commerce projects.
+- [B2C Demo Shop](/docs/about/all/b2c-suite.html): A starting point for B2C implementations.
 
 If you wish to start with a demo shop that has been pre-configured with the Spryker load testing module, you can use the [Spryker Suite Demo Shop](https://github.com/spryker-shop/suite).
 
@@ -59,7 +59,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 ### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
+With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes include requiring the load testing tool with composer as well as updating the [Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/router/router-yves.html) inside of Yves.
 
 {% info_block infoBox %}
 
@@ -162,7 +162,7 @@ You've set up your Spryker B2C Demo Shop and can now access your applications.
 
 ### Data preparation
 
-With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html).
+With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/running-tests-with-the-docker-sdk.html).
 
 These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to take separate steps to generate parity data between the load-testing tool and your cloud-based environment.
 
@@ -281,7 +281,7 @@ vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing
 console publish:trigger-events
 ```
 
-3. Run the *queue worker*. The [Queue System](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
+3. Run the *queue worker*. The [Queue System](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html) provides a protocol for managing asynchronous processing, meaning that the sender and the receiver do not have access to the same message at the same time. Queue Workers are commands which send the queued task to a background process and provides it with parallel processing. The `-s` or `--stop-when-empty` flag stops worker execution only when the queues are empty.
 
 ```bash
 console queue:worker:start -s

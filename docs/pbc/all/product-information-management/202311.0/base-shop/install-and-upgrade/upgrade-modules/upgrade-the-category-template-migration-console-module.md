@@ -29,5 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category-template-migration-console.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category-template-migration-console.html
   - /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-category-template-migration-console-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-category-template-migration-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-category-template-migration-console-module.md -->

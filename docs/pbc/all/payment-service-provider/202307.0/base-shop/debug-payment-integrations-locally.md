@@ -3,6 +3,7 @@ title: Debug payment integrations locally
 description: This document shows how to debug most payment integrations locally to make sure that your integration works before deploying it.
 past_updated: Jul 27, 2022
 template: howto-guide-template
+last_updated: Oct 26, 2023
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
 ---

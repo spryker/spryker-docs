@@ -2,9 +2,10 @@
 title: "Product Offer in the Back Office: Domain model and relationships"
 description: This document provides reference information about product offers in the Back Office.
 template: concept-topic-template
+last_updated: Aug 28, 2023
 ---
 
-To inject the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html) feature into the [Back office](/docs/pbc/all/back-office/{{page.version}}/spryker-core-back-office-feature-overview.html) the following modules are used:
+To inject the [Marketplace Product Offer](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html) feature into the [Back office](/docs/pbc/all/back-office/{{page.version}}/base-shop/spryker-core-back-office-feature-overview.html) the following modules are used:
 
 | MODULE | DESCRIPTION |
 | -------------------- | ---------- |

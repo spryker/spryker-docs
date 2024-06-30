@@ -6,7 +6,7 @@ last_updated: Jan 10, 2024
 template: howto-guide-template
 related:
   - title: Vertex
-    link: docs/pbc/all/tax-management/page.version/vertex/vertex.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/third-party-integrations/vertex/vertex.html
 
 ---
 
@@ -269,7 +269,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     /**
      * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\CalculableObjectTaxAppExpanderPluginInterface>
      */
-    protected function getCalculableObjectExpanderPluginCollection(): array
+    protected function getCalculableObjectTaxAppExpanderPlugins(): array
     {
         return [       
             # This plugin stack is responsible for expansion of CalculableObjectTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
@@ -285,7 +285,7 @@ class TaxAppDependencyProvider extends SprykerTaxAppDependencyProvider
     /**
      * @return array<\Spryker\Zed\TaxAppExtension\Dependency\Plugin\OrderTaxAppExpanderPluginInterface>
      */
-    protected function getOrderExpanderPluginCollection(): array
+    protected function getOrderTaxAppExpanderPlugins(): array
     {
         return [
             # This plugin stack is responsible for expansion of OrderTransfer based on present fields. Add your custom implemented expander plugins here following the example in `spryker/tax-app-vertex` module.
@@ -394,4 +394,5 @@ The following table reflects the mapping of the Spryker Quote/Order transfer obj
 
 
 ## Next step
-[Configure Vertex in the Back Office](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/configure-vertex.html)
+
+[Connect Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/connect-vertex.html)

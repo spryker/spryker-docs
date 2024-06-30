@@ -2,6 +2,7 @@
 title: Troubleshooting general issues
 description: Solutions to common issues
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/troubleshooting-general-issues.html
 ---

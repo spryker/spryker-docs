@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/product-sets-feature-integration.html
 related:
   - title: Product Sets feature overview
-    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-product-sets-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-product-sets-feature.md -->

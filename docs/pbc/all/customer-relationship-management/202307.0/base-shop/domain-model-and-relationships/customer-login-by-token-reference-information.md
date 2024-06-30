@@ -2,6 +2,7 @@
 title: "Customer Login by Token: reference information"
 description: This document describes the token structure.
 template: feature-walkthrough-template
+last_updated: Sep 21, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html

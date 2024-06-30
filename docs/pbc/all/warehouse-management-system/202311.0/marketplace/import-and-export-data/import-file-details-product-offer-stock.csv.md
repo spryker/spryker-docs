@@ -7,7 +7,7 @@ related:
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_offer_stock.csv` file to configure [Merchant product offer stock](/docs/pbc/all/warehouse-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-inventory-management-feature.html) information in your Spryker shop.

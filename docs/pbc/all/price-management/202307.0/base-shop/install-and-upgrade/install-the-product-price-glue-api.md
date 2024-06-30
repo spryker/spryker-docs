@@ -12,8 +12,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-price-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-product-price-feature-integration.html  
 related:
-  - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+  - title: Install the Prices feature
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html
   - title: Retrieving concrete product prices

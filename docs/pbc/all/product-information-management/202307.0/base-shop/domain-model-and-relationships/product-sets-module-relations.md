@@ -2,6 +2,7 @@
 title: "Product Sets: Module relations"
 description: Module relations and database schema of the Product Sets feature.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-module-relations.html
   - /docs/pbc/all/product-information-management/202307.0/install-and-upgrade/upgrade-modules/product-sets-module-relations.html

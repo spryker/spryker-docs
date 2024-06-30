@@ -2,6 +2,7 @@
 title: "Best practices: Manage users and their permissions with roles and groups"
 description: Learn how to manage users and their permissions with roles and groups
 template: back-office-user-guide-template
+last_updated: Aug 18, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/users/best-practices-managing-users-and-their-permissions-with-roles-and-groups.html
 related:

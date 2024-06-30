@@ -2,6 +2,7 @@
 title: Edit search preferences
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/merchandising/search-preferences/edit-search-preferences.html
   - /docs/pbc/all/search/202307.0/manage-in-the-back-office/edit-search-preferences.html

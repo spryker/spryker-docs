@@ -2,6 +2,7 @@
 title: Change the state of order items in returns
 description: Learn how to change the state of order items in returns in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 related:
   - title: Creating returns
     link: docs/pbc/all/order-management-system/page.version/base-shop/manage-in-the-back-office/orders/create-returns.html

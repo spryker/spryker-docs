@@ -18,7 +18,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/import-and-export-data/file-details-payment-method-store.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.

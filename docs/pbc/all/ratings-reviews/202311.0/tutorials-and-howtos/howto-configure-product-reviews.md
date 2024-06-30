@@ -22,11 +22,12 @@ redirect_from:
   - /v1/docs/ht-product-review-feature-configuration
   - /v1/docs/en/ht-product-review-feature-configuration
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
+  - /docs/pbc/all/ratings-reviews/202204.0/tutorials-and-howtos/howto-configure-product-reviews.html
 related:
   - title: Product Rating and Reviews feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
   - title: Product Rating and Reviews feature overview
-    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
+    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
 ---
 
 ## Configure the maximum rating

@@ -12,7 +12,7 @@ Before you start, check out the formatting templates in [Formatting templates fo
 
 This document describes how to install the [Feature Name feature]({link to a respective feature overview}) feature.
 
-## Install feature core
+## Install feature core <!-- Skip if there won't be a frontend section in the doc -->
 
 Follow the steps below to install the {Feature Name} feature core.
 
@@ -26,7 +26,7 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {installation guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
 <!--When "composer require" includes a "Spryker Feature" (github.com/spryker-feature), then it always needs to be "dev-master" version. For regular modules, use regular versions.-->
@@ -383,7 +383,7 @@ console setup:init-db
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly. Provide verification for "Configure Export to Redis and Elasticsearch".-->
 
-Ensure that the {entities} have been added to the `{table_name}` table.
+Make sure that the {entities} have been added to the `{table_name}` table.
 
 #### Import {DataImporterName}
 <!--Provide demo data for the current data importer as a code snippet. Provide additional information about glossary key generation if it depends on data import. Provide a table with data import column definitions. Provide the plugin list to wire up the data importer. Provide a code snippet showing how to attach the data import to a console command. Provide the console command to import data.-->
@@ -442,10 +442,10 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {integration guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 {command to install the required modules}
@@ -550,7 +550,7 @@ The verification step often needs to use an example domain, use
  - "glue.mysprykershop.com"
 domains according to your requirements.-->
 
-Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
+Verify that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET   | VERIFICATION                  |
 | -------- | ----------------------------- |

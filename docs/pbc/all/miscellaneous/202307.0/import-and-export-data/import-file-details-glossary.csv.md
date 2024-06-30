@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-glossarycsv
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `glossary.csv` file to configure [Customer](/docs/pbc/all/miscellaneous/{{page.version}}/manage-in-the-back-office/add-translations.html) information in your Spryker Demo Shop.

@@ -28,9 +28,10 @@ related:
 
 This document describes how you can run console commands on your local environment with the Docker SDK.
 
-## Running commands only on your local Spryker environment
+## Running commands only in a local Spryker environment
 
-In order to enter into the command line interface of your local instance, please run the following command:
+To enter the command line interface of a local instance, run one of the following commands:
+
 Non-debug mode:
 ```bash
 docker/sdk cli
@@ -43,9 +44,9 @@ docker/sdk cli -x
 ```
 ![img](https://i.ibb.co/bBcgpLJ/docker-cli-2.png)
 
-From here, you can run any commands related to your projec, like: composer, console, glue, yves, etc..
+From here, you can run any commands related to your project, like composer, console, glue, or yves.
 
-## Running a single of commands once on your local Spryker environment
+## Running a single command once in a local Spryker environment
 
 Sometimes you don't want to enter into the CLI mode of your project.
 In this case, you may run the following command:
@@ -54,8 +55,8 @@ docker/sdk cli composer install
 ```
 Execution of the **composer install** will happen inside a CLI container, but after completion, you will stay in your regular CLI.
 
-{% info_block infoBox "Complex commands hint" %}
-If you have to run a complex command, which requires quotes, please make sure to use double quote for the whole command and any allowed quotes inside it.
+{% info_block infoBox "Complex commands" %}
+When running a complex command that requires quotes, make sure to use double quotes for the whole command and any allowed quotes inside it.
 ```bash
 docker/sdk cli "composer require 'spryker/kernel:master as 1.1.1-dev'"
 ```
@@ -67,4 +68,39 @@ Similar to the previous case, but you want to run several commands.
 Do the following:
 ```bash
 docker/sdk cli "composer install && console transfer:generate && console propel:install"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```

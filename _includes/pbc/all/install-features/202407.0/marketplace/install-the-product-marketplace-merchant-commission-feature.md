@@ -64,12 +64,10 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the plugins work correctly:
-
-1. Import a new merchant commission via data import or GUI import with defined item condition as a query string with an *attribute* field (e.g. "attribute.brand IS IN 'samsung;sony'").
-2. Add a merchant product with corresponding product attribute to the cart and complete the order process.
-3. Make sure that OMS event `commission-calculate` was triggered.
-4. In database navigate to `spy_sales_merchant_commission` table and make sure there's a new record with your merchant commission applied to corresponding sales order item.
+1. Import a new merchant commission via data import or GUI import with an item condition defined as a query string with an *attribute* field. For example, `attribute.brand IS IN 'samsung;sony'`.
+2. Add a merchant product with the corresponding product attribute to the cart and place the order.
+Make sure the following applies:
+* The `commission-calculate` OMS event has been triggered.
+* In the `spy_sales_merchant_commission` database table, a record with the merchant commission applied to corresponding sales order item has been added.
 
 {% endinfo_block %}
-

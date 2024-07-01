@@ -68,4 +68,4 @@ A marketplace owner can set a default approval status for marketplace products o
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------| --- |
-| [Marketplace Product Approval Process feature integration](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |
+| [Install the Marketplace Product Approval Process feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |

@@ -203,7 +203,8 @@ The unused state could have a missing transition.
 ## Saving states (per item transaction)
 
 **Example:** The system has a callback that should move order items from picking started to ready for recalculation. After that, check-condition will move the order further to the recalculation step.
-![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/dd060438-7cd2-4453-9cf4-e08cda243003)
+![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/bc4d581b-d587-4f84-bb17-3452d4573ae4)
+
 
 **The issue:** During the last transition in the callback from picking finished to ready for recalculation - Jenkins job started the check-condition command. Because of that check-condition takes not all order items from the order and pushes them forward. Only the next job started executing the remaining order items with the delay, because of that many commands (per Order) were triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)

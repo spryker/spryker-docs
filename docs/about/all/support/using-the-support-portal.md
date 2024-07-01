@@ -40,7 +40,7 @@ For any questions about Spryker. We want the knowledge about Spryker to be avail
 
 Report problems with Alumio, request its provisioning for your environments, or schedule an appointment with Alumio Support.
 
-### Infrstructure Change Request and Access Management
+### Infrastructure Change Request and Access Management
 
 Request all currently supported standard changes, such as requesting changes to non-production environments sizing, IAM users and environment provisioning.
 

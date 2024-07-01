@@ -5,7 +5,7 @@ last_updated: Jun 5, 2024
 template: howto-guide-template
 ---
 
-This document explains how to add fields to Back Office forms.
+This document explains how to add fields to Back Office forms. The email field is used as an example.
 
 ## Add a contact email field to the store settings in the Back Office
 
@@ -222,20 +222,25 @@ class StoreContextGuiCommunicationFactory extends SprykerStoreContextGuiCommunic
 3. On the **Edit store** page, click the **Settings** tab.
 In the **Settings** tab, make sure the following applies:
   * The default block with the **APPLICATION** value set to **Default** is displayed.
-  * The new **Contact Email** field is displayed, Please see the screenshot below for reference.
-  * The **Contact Email** field is required and accepts only valid email addresses.
-4. Click **Save** to save the changes and validate whether the new field is saved correctly.
+  * The **CONTACT EMAIL** field is displayed.
+  * The **CONTACT EMAIL** field is required and accepts only valid email addresses.
 
 ![configure-application-timezone](/images/dynamic-multistore/screen2.png)
+
+4. For **CONTACT EMAIL**, enter an email address.
+5. Click **Save**.
+  Make sure the email address is saves successfully.
+
+
 
 
 {% endinfo_block %}
 
 
 
-## Extend StoreTransfer
+## Configure access to the email field
 
-This section explains how to extend StoreTransfer and extract a field using a plugin for access to the `contactEmail` field directly from the `StoreTransfer`. The contact email field is used as an example.
+This section explains how to extend `StoreTransfer` and extract a field using a plugin to access `contactEmail` field directly from the `StoreTransfer`. The contact email field is used as an example.
 
 1. Adjust `StoreTransfer` to add the `contactEmail` field:
 

@@ -56,7 +56,7 @@ docker/sdk cli composer install
 The execution of the command happens inside the Spryker CLI container, but your sessions stays in the regular CLI.
 
 {% info_block infoBox "Complex commands" %}
-When running a complex command that requires quotes, make sure to use double quotes for the whole command and any allowed quotes inside it.
+When running a complex command that requires quotes, wrap the command into double quotes and use single quotes inside it.
 ```bash
 docker/sdk cli "composer require 'spryker/kernel:master as 1.1.1-dev'"
 ```

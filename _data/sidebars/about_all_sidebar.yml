@@ -110,6 +110,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
           - title: Add and edit diagrams
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+          - title: Add images and other media
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html            
           - title: Report issues
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
           - title: Review pull requests

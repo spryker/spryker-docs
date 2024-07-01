@@ -70,7 +70,7 @@ Make sure the following modules have been installed:
 
 Before dynamic store was introduced, configuration for the store was stored in the file `config/Shared/stores.php`. Since the dynamic store is now enabled, configuration for the store is stored in the database, making the files `config/Shared/stores.php` and `config/Shared/default_store.php` deprecated.
 
-The default store configuration will now be imported using new data import modules such as `StoreDataImport`, `LocaleDataImport`, `CountryDataImport`, and `StoreContextDataImport`. These modules will populate the store configuration in the database.
+The default store configuration is now imported using the data import modules: `StoreDataImport`, `LocaleDataImport`, `CountryDataImport`, and `StoreContextDataImport`. These modules populate the store configuration in the database.
 
 {% endinfo_block %}
 
@@ -1316,9 +1316,9 @@ Steps to verify:
 - Make sure that you can see the country selection fields on the Store form.
 - Make sure that you can see the rendered locale tabs and tables on the Store form.
 - Make sure that you can see the rendered country tabs and tables on the Store form.
-- Make sure that you can see the Locales tab on the Store form.
-- Make sure that you can see the Countries tab on the Store form.
-- Make sure that you can see the Settings tab on the Store form.
+- Make sure that you can see the **Locales** tab on the Store form.
+- Make sure that you can see the **Countries** tab on the Store form.
+- Make sure that you can see the **Settings** tab on the Store form.
 - Make sure that you can see the default locale ISO code on the Store view page.
 - Make sure that you can see the table with assigned locales on the Store view page.
 - Make sure that you can see the table with assigned countries on the Store view page.

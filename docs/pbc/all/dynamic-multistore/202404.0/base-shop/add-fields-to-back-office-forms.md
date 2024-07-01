@@ -225,7 +225,7 @@ In the **Settings** tab, make sure the following applies:
   * The **CONTACT EMAIL** field is displayed.
   * The **CONTACT EMAIL** field is required and accepts only valid email addresses.
 
-![configure-application-timezone](/images/dynamic-multistore/screen2.png)
+![contact-email-field](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.md/contact-email-field.png)
 
 4. For **CONTACT EMAIL**, enter an email address.
 5. Click **Save**.

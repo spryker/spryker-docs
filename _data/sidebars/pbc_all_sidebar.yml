@@ -1236,13 +1236,12 @@ entries:
                   - title: Install the Dynamic Multistore Glue API
                     url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html
 
+              - title: Add fields to Back Office forms
+                url: /docs/pbc/all/dynamic-multistore/base-shop/add-fields-to-back-office-forms.html
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
-                
-              - title: Tutorials and HowTos
-                nested:
-                  - title: How to add a new custom field to store settings
-                    url: /docs/pbc/all/dynamic-multistore/tutorials-and-howtos/how-to-add-new-custom-field.html
+
+
 
           - title: Marketplace
             nested:

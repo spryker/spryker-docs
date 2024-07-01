@@ -212,11 +212,11 @@ The unused state could have a missing transition.
 
 ## LockedStateMachine
 
-**Example:** In case when multiple processes can push forward an order (callback from third-party & console command) it’s recommended to use LockedStateMachine. Important to understand:
+**Example:** In case when multiple processes can push forward an order from one source state it’s recommended to use LockedStateMachine. For example: manual transition, which can be triggered by a different entry points. Important to understand:
 
-1. It implements the same interface as common StateMachine and has locks for all methods except the check-condition command. The reason behind - you shouldn’t have any conflict inside the execution of the check-condition command.
+1. It implements the same interface as common StateMachine and has locks for all methods except the check-condition command.
 
-2. Lock works based on MySQL table spy_state_machine_lock - and because it is MySQL sometimes you can face deadlocks (you have to handle them properly) and it takes more time to work with than memory storage (redis for example). Also locking works on the order item level, but in most cases more efficient will be used on the order level.
+2. Lock works based on MySQL table spy_state_machine_lock. Due to the nature of MySQL sometimes you can face deadlocks (you have to [handle them properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html)). Also, the same operation in MySQL will take more time than memory storage (redis for example). Finally, OOTB locking works on the order item level, but in most cases more efficient will be using them on the order level.
 
 ## Speed-up oms:check-condition (parallel execution & run often than once per minute)
 
@@ -227,9 +227,9 @@ The unused state could have a missing transition.
 $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: if you change this value do not forget to update the number of Jenkins jobs in jenkins.php
 ```
 and then create 10 Jenkins jobs for every processor. The console command has the option processor-id where you can define which identifiers will be processed in this job. Assignment of process happens during order creation for every order item.
-You can find more details in this article.
+You can find more details in this [article](https://docs.spryker.com/docs/pbc/all/order-management-system/202311.0/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html).
 
-2. Start a job more often than once per minute. You may create a wrapper console command that will run check-condition (or another console command) one by one. A few hints for wrapper command:
+2. Start a job more often than once per minute. You may create a wrapper console command that will run check-condition command in a loop. A few hints for wrapper command:
 a) Don’t run subprocesses in parallel. It will bring more complexity in logic than profits 
 b) Run real command (check-condition) in subprocess - it will help with clean-up memory after ending execution.
 c) Have timeouts for subprocesses and the wrapper. Avoid hard limits with the killing process - it may lead to items stuck in onEnter transitions. Instead - do analyze the previous execution time of subprocesses - should you run a new child process or finish the execution of the wrapper?

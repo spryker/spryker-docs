@@ -1075,18 +1075,19 @@ entries:
                 url: /docs/pbc/all/data-exchange/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html
                 include_versions:
                 - "202404.0"
-          - title: Tutorials and HowTos
-            nested:
-              - title: Configure Data Exchange API endpoints
-                url: /docs/pbc/all/data-exchange/tutorials-and-howtos/how-to-configure-data-exchange-api.html
-              - title: How to send a request in Data Exchange API
-                url: /docs/pbc/all/data-exchange/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html
-
+          - title: Configure Data Exchange API endpoints
+            url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
+          - title: Sending requests with Data Exchange API
+            url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:
               - title: Integration apps
                 url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/integration-apps.html
+              - title: Incrementally import recently updated products
+                url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/incrementally-import-products-with-spryker-middleware-powered-by-alumio.html
+                include_versions:
+                - "202404.0"
                 nested:
                 - title: Akeneo PIM Integration App
                   url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/akeneo-pim-integration-app.html
@@ -4093,7 +4094,7 @@ entries:
                     - "202311.0"
                     - "202404.0"
                     nested:
-                      - title: Install Vertex
+                      - title: Install
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex.html
                         nested:
                           - title: Integrate the connector module
@@ -4101,14 +4102,16 @@ entries:
                           - title: Integrate Vertex
                             url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-vertex-app.html
 
-                      - title: Configure Vertex
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/configure-vertex.html
-                      - title: Disconnect Vertex
-                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
-                      - title: Troubleshooting Vertex
+                      - title: Project configuration for Vertex
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/project-configuration-for-vertex.html
+                      - title: Connect
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/connect-vertex.html
+                      - title: Troubleshooting
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/troubleshooting-vertex.html
-                      - title: Vertex FAQ
+                      - title: FAQ
                         url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/vertex-faq.html
+                      - title: Disconnect
+                        url: /docs/pbc/all/tax-management/base-shop/third-party-integrations/vertex/disconnect-vertex.html
 
           - title: Marketplace
             nested:

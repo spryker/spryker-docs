@@ -1057,6 +1057,8 @@ entries:
         url: /docs/dg/dev/sdks/the-docker-sdk/update-the-docker-sdk.html
       - title: Choosing a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/choosing-a-mount-mode.html
+      - title: Running commands
+        url: /docs/dg/dev/sdks/the-docker-sdk/running-commands-with-the-docker-sdk.html
       - title: Configure a mount mode
         url: /docs/dg/dev/sdks/the-docker-sdk/configure-a-mount-mode.html
       - title: Configure access to private repositories

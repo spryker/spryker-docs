@@ -151,4 +151,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryInterfaceMethod` - Add Zed Persistence Repository Interface Method
 * `vendor/bin/console spryk:run AddZedPersistenceRepositoryMethod` - Add Zed Persistence Repository Method
 
-For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

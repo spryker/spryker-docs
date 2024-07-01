@@ -9,7 +9,7 @@ redirect_from:
 ---
 {% info_block warningBox "Warning" %}
 
-Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/scos/dev/glue-api-guides/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
+Zed API, initially released as a beta version, is now considered outdated and is no longer being developed. Instead of it, we recommend using [Glue Backend API](/docs/dg/dev/glue-api/{{site.version}}/decoupled-glue-api.html#new-type-of-application-glue-backend-api-application).
 
 {% endinfo_block %}
 

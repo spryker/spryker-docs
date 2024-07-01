@@ -43,7 +43,7 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| STORE RELATION  | [Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in. |
+| STORE RELATION  | [Stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) the product is available in. |
 | SKU PREFIX | Unique product identifier that helps to track unique information related to the product. |
 | NAME | Name that's displayed for the product on the Storefront. |
 | DESCRIPTION | Description that's displayed for the product on the Storefront. |
@@ -151,7 +151,7 @@ Click the **Images** tab and do any of the following for needed locales.
 | --- | --- |
 | ABSTRACT SKU | Unique identifier of an abstract product the scheduled price belongs to |
 | CONCRETE SKU | Unique identifier of a concrete product the scheduled price belongs to. The field is blank because you are editing the scheduled price of an abstract product. |
-| STORE | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price is displayed. |
+| STORE | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the scheduled price is displayed. |
 | CURRENCY | Currency in which the scheduled price is defined. |
 | NET PRICE | Net value of the product defined by the scheduled price. |
 | NET PRICE | Net value of the product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**. |

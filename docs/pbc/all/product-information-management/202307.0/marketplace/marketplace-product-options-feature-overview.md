@@ -79,7 +79,7 @@ Currently, the feature has the following functional constraints which are going 
 * Product option values of a product option group can be only from one merchant.
 * Product options of a merchant can be used with all offers from all merchants.
 * There is no Back Office UI for approving or denying merchant product options.
-* [Glue API](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/glue-rest-api.html) does not support merchant product option groups and values.
+* [Glue API](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/glue-rest-api.html) does not support merchant product option groups and values.
 * Merchants can not create and manage product option groups and values in the Merchant Portal.
 
 ## Related Business User documents
@@ -93,5 +93,5 @@ Currently, the feature has the following functional constraints which are going 
 
 | INSTALLATION GUIDES          | DATA IMPORT         |
 |--------------------------------|----------------|
-| [Marketplace Product Options feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-options-feature-integration.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html)  |
-| [Merchant Portal - Marketplace Product Options Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-options-management-feature-integration.html) |  
+| [Install the Marketplace Product Options feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-options-feature.html)                                        | [File details: merchant product option group](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-option-group.csv.html)  |
+| [Merchant Portal - Marketplace Product Options Management integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-product-options-feature.html) |  

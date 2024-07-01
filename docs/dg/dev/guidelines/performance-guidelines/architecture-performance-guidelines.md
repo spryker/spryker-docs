@@ -261,7 +261,7 @@ Every shop should always be ready for high traffic and serve as many users as po
 
 ### Monitoring and profiling
 
-We strongly recommend our customers enable APM systems for their projects. Spryker supports [Newrelic](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html) as the default monitoring system.
+We strongly recommend our customers enable APM systems for their projects. Spryker supports [Newrelic](/docs/dg/dev/integrate-and-configure/configure-services.html#new-relic) as the default monitoring system.
 
 ### Performance CI
 

@@ -136,7 +136,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-For more information on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html) section in *Tutorial - Widgets and Widget Plugins*.  
+For more information on how to implement a Widget, see the [How to Implement a Widget Plugin](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html) section in *Tutorial - Widgets and Widget Plugins*.  
 
 ## Widget twig tag reference
 
@@ -212,4 +212,4 @@ class YvesBootstrap extends SprykerYvesBootstrap
 }
 ```
 
-For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin).  
+For more information on how to create a Widget Plugin, see the *How to Implement a Widget Plugin* section in [Tutorial: Widgets and Widget Plugins](/docs/dg/dev/backend-development/yves/implementing-widgets-and-widget-plugins.html#how-to-implement-a-widget-plugin).  

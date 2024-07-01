@@ -10,9 +10,11 @@ redirect_from:
   - /docs/scos/dev/analyzing-and-upgrading-your-project-with-spryker-jarvis.html
 ---
 
+<!-- Remove this doc until the end of 2024 -->
+
 {% info_block warningBox "Jarvis deprecation" %}
 
-Jarvis is not actively supported anymore.
+Jarvis is not actively supported. For upgrading your projects, use [Spryker Code Upgrader](/docs/ca/devscu/spryker-code-upgrader.html).
 
 {% endinfo_block %}
 
@@ -31,7 +33,7 @@ This document shows how to install and use the Spryker Jarvis tool for the analy
 
 ## Prerequisites
 
-* [Install Spryker project locally](/docs/scos/dev/developer-getting-started-guide.html#install-spryker)
+* [Install Spryker project locally](/docs/dg/dev/development-getting-started-guide.html#install-spryker)
 * [Install Node.js](https://nodejs.org/en/download)
 
 ## Install Spryker Jarvis
@@ -69,7 +71,7 @@ To migrate to a newer product release, use the Jarvis *basic* view. This view li
 This view is especially useful when:
 
 * You have a Spryker-based product and finished the main development part of it.
-* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
+* Your project uses feature repositories, or the project is based on the Spyker[ B2B Demo Shop](/docs/about/all/b2b-suite.html) or the [B2C Demo Shop](/docs/about/all/b2c-suite.html).
 
 Use this view if you want to stay up-to-date with Spryker and get new features of every Spryker product release.
 

@@ -13,7 +13,7 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME           | VERSION           | INSTALLATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Alternative Products | {{page.version}} | [Alternative Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
+| Alternative Products | {{page.version}} | [Install the Alternative Products feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html#install-feature-core) |
 | Discontinued Products | {{page.version}} |  |
 
 ### 1) Set up behavior

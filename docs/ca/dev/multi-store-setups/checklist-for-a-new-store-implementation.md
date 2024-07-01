@@ -12,7 +12,7 @@ related:
 
 This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multi-store environment. For a description of setups referred to in this document, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
 
-For detailed steps about the new store implementation, see [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html).
+For detailed steps about the new store implementation, see [HowTo: Set up multiple stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html).
 
 ## Setup 1
 

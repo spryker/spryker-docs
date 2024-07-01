@@ -15,7 +15,7 @@ Spryker allows extending certain classes (such as facades, clients, etc.) in pro
 
 Follow the steps below to integrate Cache of Unresolved Entities for Zed into your project to improve performance.
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 Run the following command to install the required module:
 

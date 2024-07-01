@@ -22,7 +22,7 @@ The complete default payment OMS configuration is available at `vendor/spryker/s
 
 The payment flow of the default OMS involves authorizing the initial payment, which means that the amount is temporarily blocked when the payment method permits. Then, the OMS sends requests to capture, that is, transfer of the previously blocked amount from the customer's account to the store account.
 
-The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page. 
+The `Payment/Capture` command initiates the capture action. By default, this command is initiated when a Back office user clicks **Ship** on the *Order Overview* page.
 
 Optionally, you can change and configure your own payment OMS based on `ForeignPaymentStateMachine01.xml` from the core package and change this behavior according to your business flow. See [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) for more information about the OMS feature and its configuration.
 
@@ -103,7 +103,7 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
             ...
         }
     {% endembed %}
-{% endfor %} 
+{% endfor %}
 {% endraw %}       
 ```
 
@@ -130,3 +130,21 @@ Stripe,Pay Online with Stripe,en_US
 ```bash
 console data:import glossary
 ```
+
+## Processing refunds
+
+In the default OMS configuration, a refund can be done for an order or an individual item. The refund action is initiated by a Back Office user triggering the `Payment/Refund` command. The selected item enters the `payment refund pending` state, awaiting the response from Stripe.
+
+During this period, Stripe attempts to process the request, which results in success or failure:
+* Success: the items transition to the `payment refund succeeded` state, although the payment isn't refunded at this step.
+* Failure: the items transition to the `payment refund failed` state.
+
+These states serve to track the refund status and inform the Back Office user. Over the following days, Stripe finalizes the refund, causing the item states to change accordingly. For example, previously successful refunds may be declined and vice versa.
+
+If a refund fails, the Back Office user can go to the Stripe Dashboard to identify the cause of the failure. After resolving the issue, the item can be refunded again.
+
+In the default OMS configuration, seven days are allocated to Stripe to complete successful payment refunds. This is reflected in the Back Office by transitioning the items to the `payment refunded` state.
+
+## Retrieving and using payment details from Stripe
+
+For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)

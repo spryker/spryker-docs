@@ -47,7 +47,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 {% endinfo_block %}
 
-To install the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) on MacOS or Linux with DevVM, follow the steps below.
+To install the [B2B Demo Shop](/docs/about/all/b2b-suite.html) or [B2C Demo Shop](/docs/about/all/b2c-suite.html) on MacOS or Linux with DevVM, follow the steps below.
 
 ## 1. Install prerequisites
 
@@ -162,5 +162,5 @@ Back Office credentials:
 
 ## Next steps
 
-* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+* [Troubleshooting installation issues](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
 * [Configure Spryker after installing with DevVM](/docs/dg/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html)

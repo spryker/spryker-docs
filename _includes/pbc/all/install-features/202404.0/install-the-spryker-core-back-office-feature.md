@@ -19,9 +19,9 @@ Ensure that the related features are installed:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | 
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/spryker-core-back-office:"{{page.version}}" --update-with-dependencies

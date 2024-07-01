@@ -34,15 +34,11 @@
                                                 {% elsif page.product == 'pbc' and page.role == 'all' %}
                                                 Packages Business Capabilities
                                                 {% elsif page.product == 'ca' and page.role == 'dev' %}
-                                                Cloud administration
-                                                {% elsif page.product == 'scos' and page.role == 'dev' %}
-                                                SCOS developer guide
-                                                {% elsif page.product == 'scos' and page.role == 'user' %}
-                                                SCOS users guide
-                                                {% elsif page.product == 'spryker-code-upgrader' and page.role == 'dev' %}
-                                                Spryker Code Upgrader
-                                                {% elsif page.product == 'sdk' and page.role == 'dev' %}
-                                                Spryker SDK
+                                                Managing cloud applications
+                                                {% elsif page.product == 'ca' and page.role == 'devscu' %}
+                                                Upgrading cloud applications
+                                                {% elsif page.product == 'about' and page.role == 'all' %}
+                                                About Spryker
                                                 {% else %}
                                                 Select a guide
                                                 {% endif %}
@@ -51,7 +47,7 @@
                                         </a>
                                         <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                           <li>
-                                              <a href="/docs/dg/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
+                                              <a href="/docs/dg/dev/development-getting-started-guide.html" class="main-nav__drop-link">
                                               Development
                                               </a>
                                           </li>
@@ -60,46 +56,36 @@
                                               Packaged Business Capabilities [BETA]
                                               </a>
                                           </li>
+                                          <li>
+                                              <a href="/docs/about/all/about-spryker.html" class="main-nav__drop-link">
+                                              About Spryker
+                                              </a>
+                                          </li>
                                             <li class="dropdown">
                                                 <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    Spryker Commerce OS
+                                                    Cloud administration
                                                     <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
                                                 </a>
                                                 <ul class="main-nav__drop dropdown-menu">
                                                     <li>
-                                                        <a href="/docs/scos/dev/developer-getting-started-guide.html" class="main-nav__drop-link">
+                                                        <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
                                                             <span class="main-nav__drop-link-title">
-                                                                <i class="icon-developer"></i>
-                                                                Developer
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
                                                             </span>
-                                                            <span class="main-nav__drop-link-subtitle">SCOS developer guide</span>
+                                                            <span class="main-nav__drop-link-subtitle">Manage applications</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/docs/scos/user/intro-to-spryker/intro-to-spryker.html" class="main-nav__drop-link">
+                                                        <a href="/docs/ca/devscu/spryker-code-upgrader.html" class="main-nav__drop-link">
                                                             <span class="main-nav__drop-link-title">
-                                                                <i class="icon-business"></i>
-                                                                Business User
+                                                                <i class="icon-cloud"></i>
+                                                                Cloud admin
                                                             </span>
-                                                            <span class="main-nav__drop-link-subtitle">SCOS users guide</span>
+                                                            <span class="main-nav__drop-link-subtitle">Upgrade applications</span>
                                                         </a>
                                                     </li>
                                                 </ul>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/ca/dev/getting-started-with-cloud-administration.html" class="main-nav__drop-link">
-                                                Cloud administration
-                                                </a>
-                                            </li>                                            
-                                            <li>
-                                                <a href="/docs/sdk/dev/spryker-sdk.html" class="main-nav__drop-link">
-                                                Spryker SDK
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="/docs/scu/dev/spryker-code-upgrader.html" class="main-nav__drop-link">
-                                                Spryker Code Upgrader
-                                                </a>
                                             </li>
                                         </ul>
                                     </div>
@@ -110,30 +96,15 @@
                     </div>
 
 
-                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
-                        <div class="search-popup">
-                            <div class="search-popup__inner">
-                                <div class="search-popup__content">
-                                    <a href="#" class="search-popup__close js-search-popup-close" aria-label="search popup close"><i class="icon-arrow-left"></i></a>
-                                    <div class="main-header__search">
-                                        <i class="main-header__search-icon icon-search"></i>
-                                        {% include search/{{ site.search | default "default" }}_deprecated-quicksearch.html %}
-                                    </div>
-                                </div>
-                                <div class="search-popup__footer">
-                                    <a href="/search" class="search-popup__more">Show all results</a>
-                                </div>
-                            </div>
+                    {% if page.url != "/index.html" and page.url != "/search/" %}
+                        <div class="search-section-panel search-section-panel--secondary main-header__search">
+                            {% include search/{{ site.search | default "default" }}-quicksearch.html %}
                         </div>
                     {% endif %}
 
                 </div>
                 <div class="main-header__right">
-                    {% if page.url != "/search/" %}
-                        <a href="#" class="main-header__search-opener js-search-popup-opener" aria-label="search popup opener"><i class="icon-search"></i></a>
-                    {% endif %}
-
-                    {% if page.url != "/index.html" and page.url != "/index_ds" and page.url != "/search/" %}
+                    {% if page.url != "/index.html" and page.url != "/search/" %}
                         <div class="header-switcher">
                             {% if site.github_editme_path %}
                                 <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="button main-header__button button--small header-switcher__sticky" role="button"><i class="icon-github"></i> Edit on GitHub</a>

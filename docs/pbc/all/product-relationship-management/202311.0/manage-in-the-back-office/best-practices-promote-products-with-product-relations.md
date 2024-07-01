@@ -46,7 +46,12 @@ To set up the need product relations, follow the steps in the sections below.
 10. Click **Next**.
     This opens the **Products** tab.
 
-![Define general settings of a product relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/define-general-settings-of-a-product-relation.mp4)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/define-general-settings-of-a-product-relation.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Define related products by adding condition rules
 
@@ -77,11 +82,19 @@ When the **Products** tab opens, there is a preadded rule on the page. To define
 14. Click *Save*.
     This creates the product relation and opens the **Edit Product Relation** page.
 
-![Define related products by adding condition rules](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/define-related-products-by-defining-condition-rules.mp4)    
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/define-related-products-by-defining-condition-rules.mp4" type="video/mp4">
+  </video>
+</figure>
 
 The result looks as follows on the Storefront.
 
-![Related products on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/related-products-on-the-storefront.mp4)
-
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/product-relations/best-practices-promote-products-with-product-relations.md/related-products-on-the-storefront.mp4" type="video/mp4">
+  </video>
+</figure>
 
 You've set up related products for just one product: *Sony SmartWatch 3*. All the other Sony smartwatches don't have related products on their pages. To show related products on the pages of all the other smartwatches, repeat the process for each of them.  

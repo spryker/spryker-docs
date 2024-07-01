@@ -191,4 +191,4 @@ You can use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchema`: Add Zed Persistence Propel Schema
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable`: Add Zed Persistence Propel Schema Table
 
-For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

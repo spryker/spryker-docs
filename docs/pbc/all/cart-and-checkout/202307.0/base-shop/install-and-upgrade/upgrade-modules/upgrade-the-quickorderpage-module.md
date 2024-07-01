@@ -1,5 +1,5 @@
 ---
-title: Migration guide - QuickOrderPage
+title: Upgrade the QuickOrderPage module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-quick-order-page

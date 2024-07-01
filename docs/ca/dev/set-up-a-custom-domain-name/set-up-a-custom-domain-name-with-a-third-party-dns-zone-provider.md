@@ -31,7 +31,7 @@ To point a domain to your application, point it to the respective load balancer 
 
 In Spryker Cloud Commerce OS, infrastructure deployment is based on the application configuration.
 
-Domains are defined in a [deploy.*.yml](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) file used by the [Docker SDK](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html) tool to build applications.
+Domains are defined in a [deploy.*.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) file used by the [Docker SDK](/docs/dg/dev/sdks/the-docker-sdk/the-docker-sdk.html) tool to build applications.
 
 To define a custom domain, edit `deploy.{project_name}-prod.yml` for the production environment or `deploy.{project_name}-staging.yml` for the staging environment:
 
@@ -70,7 +70,7 @@ groups:
 
 {% endinfo_block %}
 
-See [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn more about deploy file configuration.
+See [Deploy file reference](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html) to learn more about deploy file configuration.
 
 4. Depending on the environment you are setting up the domain for:
 

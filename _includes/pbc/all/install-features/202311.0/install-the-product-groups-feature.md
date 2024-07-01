@@ -13,9 +13,9 @@ Install the required features:
 | Product | {{page.version}} |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
@@ -83,7 +83,7 @@ Make sure that the following modules have been installed:
 ```
 
 
-3. Run the following commands to apply database changes and generate entity and transfer changes:
+3. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -259,7 +259,7 @@ Follow the steps below to install Product group feature front end.
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -267,9 +267,9 @@ Overview and install the necessary features before beginning the integration ste
 | Spryker Core | {{page.version}} |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
@@ -351,6 +351,6 @@ Make sure that `ProductGroupColorWidget` has been registered:
 
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
-| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
-| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |
+| Product Group + Product Labels | [Install the Product group + Product Labels feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-group-product-labels-feature.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-group-product-rating-and-reviews-feature.html) |
+| Product Group + Cart | [Install the Product Group + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-group-cart-feature.html)  |

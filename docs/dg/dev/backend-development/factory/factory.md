@@ -189,4 +189,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedBusinessFactoryMethod`: Adds Zed Business Factory Method.
 * `vendor/bin/console spryk:run AddClientFactory`: Adds Client Factory.
 
-For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation.
+For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

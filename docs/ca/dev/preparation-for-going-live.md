@@ -13,6 +13,7 @@ redirect_from:
 {% info_block warningBox "Do not risk your Go-Live!" %}
 
 The preparation steps listed here are mandatory as they are crucial for the success of your go-live. We strongly encourage you to complete these steps if they are applicable to your project, as we won't be able to resolve issues related to steps not completed in time. Make sure that your project plan contains the tasks related to the go-live checklist and allocates enough time for their completion.
+
 {% endinfo_block %}
 
 
@@ -22,18 +23,22 @@ We've divided the preparation into approximate timeframes, and you can adjust th
 
 ## Eight weeks before go-live
 
+Make sure you've addressed all the items from the following checklists.
+
+{% info_block warningBox "Inform us" %}
+
 Let us know all the details of your go-live plan. Reach out to your Partner or Customer Success Manager and share your go-live plans: the date and time when you want to make your shop accessible to the public. If the time changes, keep us updated. This is critical for Domain Name System (DNS) switching and the hypercare phase we provide before and after your go-live.
 
-Make sure you've addressed all the items from the following checklists.
+{% endinfo_block %}
 
 ### Cloud environments
 
-- Connected systems are checked and prepared:
+- Connected systems are checked and prepared (project adjustments):
     - Double-check that all VPC peering and Site-to-Site VPN connections are monitored and secure. We don't usually monitor such connections with external parties.
     - Make sure that there is a network diagram that can be used to explain the setup quickly if the need arises.
     - Make sure that routing works as expected, and no internal resources are accidentally exposed via the Site-to-Site or VPC peering setup.
-- Denial-of-service (DDOS) prevention or mitigation is checked and implemented:
-    - Check your concepts for Denial-of-service (DOS) and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
+- Denial-of-service (DOS) and Distributed Denial-of-service (DDOS) prevention or mitigation is checked and implemented:
+    - Check your concepts for DOS and DDOS prevention or mitigation, and check with relevant vendors for products that fit your needs and are compatible with SCCOS.
     - Check your concepts for DOS and DDOS prevention in the Back office and Merchant portal. Add basic auth if applicable. For instructions on implementing basic auth, see [Configure basic .htaccess authentication](/docs/pbc/all/identity-access-management/{{site.version}}/configure-basic-htaccess-authentication.html)
 - The DNS strategy is defined. If you delegate DNS to Spryker, let us know the date on which to point the domain name to your Spryker project.
 
@@ -45,34 +50,36 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Application
 
-- Upgrade your project's code to the [latest Demo Shop release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
+- [Activating IP tracking](https://github.com/spryker/docker-sdk/blob/master/docs/07-deploy-file/02-deploy.file.reference.v1.md#cloud-define-gateway-ip-addresses) significantly increases chances to mitigate or spot malicious activities like DOS attacks. You might need to evaluate this from a data protection policy perspective.
+- Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
 - Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme exactly matches the examples in the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/202204.0-p2/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
-- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html).
+- Create [deploy files](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file.html) for each of your environments. File names must follow the naming convention: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- [Define a Docker SDK version](/docs/dg/dev/sdks/the-docker-sdk/choosing-a-docker-sdk-version.html).
 - Integrate [FlySystem](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html) to use data in S3 Buckets instead of local storage for the project.
 - Connect S3 buckets to correct environments:
-  - Production S3 bucket to a production environment.
-  - Staging S3 bucket to a staging environment. 
+  - Connect Production S3 bucket to a production environment.
+  - Connect Staging S3 bucket to a staging environment.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
-  - Implement the recommended Jenkins [performance and stability improvements](/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) where applicable.
+  - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
   - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
   - Make sure that you don't have any plain-text passwords, private keys, or API secrets in config files or Git repositories.
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
-  - Install all the [security updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
+  - Install all the [security updates](/docs/about/all/releases/product-and-code-releases.html) from all Spryker packages.
   - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
-- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for new GDPR rules](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html).
+- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
+- If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
 
 ### Testing
 
-- Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode).
-- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
+- Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html).
+- Before deploying your payment options, test them all locally. For more information, see [HowTo: Debug payment integrations locally](/docs/pbc/all/payment-service-provider/{{site.version}}/base-shop/debug-payment-integrations-locally.html).
 - Perform User Acceptance Testing (UAT). Besides internal testing, before opening your system publicly, we highly recommend conducting extensive UAT to validate the functionality and user experience from an end-user perspective. If applicable, ensure the platform's compatibility and optimal performance across various devices and browsers
 
 ### Search engine optimization (SEO)
@@ -81,7 +88,7 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Set up redirects. If you are migrating from another shop or project to Spryker, that is, the domain you want to use already points to a shop or a project, you need a migration plan to phase out the old project and phase in the new one. Check with your SEO experts on the strategy for your content and search engine results.
   - Review and implement the best practices where applicable. For details, see [Basic SEO techniques to use in your project](/docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html).
 
-### Training 
+### Training
 
 - Prepare role-specific enablement training for all internal users of the platform. These may include: Back Office administrators (including role specifics), support assistants and agents, marketplace operators, merchant portal users.
 - Prepare trainings for external users, such as those interacting with the platform via APIs or third-party systems.
@@ -96,7 +103,7 @@ Make sure you've addressed all the items from the following checklists.
 - We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes] (/docs/scos/dev/the-docker-sdk/202311.0/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
+- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes).
 - Make sure the DNS names and strategy for your shop are clear. Do the following:
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. For details on how to set up DNS for your application, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
     - Optional: Delegate DNS. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).
@@ -187,7 +194,7 @@ Make sure you've addressed all the items from the following checklists:
   - Other data
 - Make sure that all the translations are provided. Double-check that all the needed languages are available.
 - Make sure that all emails are correct. Double-check that all the needed data and translations are available.
-- Define the glossary update strategy. For example, make sure to exclude glossary updates during the normal deployment or adjust the strategy according to your business needs. 
+- Define the glossary update strategy. For example, make sure to exclude glossary updates during the normal deployment or adjust the strategy according to your business needs.
 
 ### SEO
 
@@ -204,6 +211,6 @@ Make sure you've addressed all the items from the following checklists:
 
 {% info_block infoBox "Don't hesitate to contact us" %}
 
-If your go-live date is close and you need help with any of the described tasks, contact us by your onboarding case *right away*. 
+If your go-live date is close and you need help with any of the described tasks, contact us via your Partner or Customer Success Manager *right away*.
 
 {% endinfo_block %}

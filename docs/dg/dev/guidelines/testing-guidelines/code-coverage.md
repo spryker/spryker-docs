@@ -49,5 +49,4 @@ Currently, we don't support code coverage for Presentation (Acceptance) tests ou
 
 ## Next steps
 
-- [Configure your testing environment]
-- [Set up an organization of your tests](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html)
+[Set up an organization of your tests](/docs/dg/dev/guidelines/testing-guidelines/setting-up-tests.html)

@@ -59,7 +59,7 @@ Sometimes, you may want to install a feature of a version higher than that of yo
 
 A new feature may require a higher major version of a specific module. In this case, do a [single module update](#update-to-a-major-versions-and-install-new-packages).
 
-You can learn about new Spryker features from the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/scos/user/intro-to-spryker/releases/releases.html).
+You can learn about new Spryker features from the [release notes](/docs/about/all/releases/product-and-code-releases.html). Not to miss new release notes, we recommend [subscribing to our release newsletter](/docs/about/all/releases/product-and-code-releases.html).
 
 ## Next steps
 

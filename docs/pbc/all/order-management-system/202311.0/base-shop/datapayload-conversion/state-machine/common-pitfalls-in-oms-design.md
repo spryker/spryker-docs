@@ -203,7 +203,7 @@ The unused state may have a missing transition.
 ## Saving states per item transaction
 
 **Example:** The system has a callback that moves order items from `picking started` to `ready for recalculation`. After that, a check-condition moves the order to the `recalculation` step.
-![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/dd060438-7cd2-4453-9cf4-e08cda243003)
+![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/bc4d581b-d587-4f84-bb17-3452d4573ae4)
 
 **Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts  the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
@@ -212,11 +212,11 @@ The unused state may have a missing transition.
 
 ## LockedStateMachine
 
-**Example:** When multiple processes can push forward an order (callback from third-party & console command) it’s recommended to use LockedStateMachine:
+**Example:** When multiple processes can push forward an order from one source state it’s recommended to use LockedStateMachine. For example: manual transition, which can be triggered by a different entry points. Important to understand:
 
-1. It implements the same interface as common StateMachine and has locks for all methods except the `check-condition` command. The `check-condition` command shouldn’t have any conflicts during the execution.
+1. It implements the same interface as common StateMachine and has locks for all methods except the `check-condition` command.
 
-2. Locks are based on the `spy_state_machine_lock` table - and because it is MySQL sometimes you can face deadlocks (you have to handle them properly) and it takes more time to work with than memory storage (redis for example). Also locking works on the order item level, but in most cases more efficient will be used on the order level.
+2. Lock works based on MySQL table spy_state_machine_lock. Due to the nature of MySQL sometimes you can face deadlocks (you have to [handle them properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html)). Also, the same operation in MySQL will take more time than memory storage (redis for example). Finally, OOTB locking works on the order item level, but in most cases more efficient will be using them on the order level.
 
 ## Speed up oms:check-condition: parallel execution & run often than once per minute)
 
@@ -227,9 +227,10 @@ The unused state may have a missing transition.
     ```php
     $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: if you change this value do not forget to update the number of Jenkins jobs in jenkins.php
     ```
-  2. Create ten Jenkins jobs for every processor. Use the `processor-id` option to define which identifiers to process in a job. Processes are assigned when orders order items are created. You can find more details in this article.
+  2. Create ten Jenkins jobs for every processor. Use the `processor-id` option to define which identifiers to process in a job. Processes are assigned when orders order items are created. You can find more details in this [Order management system multi-thread
+](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html).
 
-* Create a wrapper console command that runs `check-condition` or any other needed command one by one. Tips for the wrapper command:
+* Create a wrapper console command that runs `check-condition` in a loop. Tips for the wrapper command:
   * Don’t run subprocesses in parallel because it results in more complexity in logic than profits.
   * Run the real command (check-condition) in a subprocess to speed up memory cleanup after the execution.
   * Implement timeouts for subprocesses and the wrapper. To prevent items from being stuck in `onEnter` transitions, avoid hard limits with the killing process. Instead, analyze the execution time of subprocesses to figure out if you should run a new child process or finish the execution of the wrapper.

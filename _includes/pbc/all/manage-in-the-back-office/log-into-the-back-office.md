@@ -1,4 +1,4 @@
-This document describes how to log into the Back Office using a Back Office account or a single sign-on.
+If you are not logged into the Back Office, take the following steps.
 
 ## Prerequisites
 

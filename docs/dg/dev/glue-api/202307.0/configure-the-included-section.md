@@ -29,7 +29,7 @@ You can decide whether Glue REST API includes the sections in all responses by d
 |**Enabled** | The **included** and **relationships** sections contain only the resources whose names were passed in the query string (resource `concrete-product-image-sets` per the example). | The included section contains all the included resources (if any). |
 |**Disabled** | The response does not contain the included section with related resources. |  The included section contains all the included resources (if any).|
 
-By default, the option is enabled on the Spryker Core level but disabled on the project level in all [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#demo-shops) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
+By default, the option is enabled on the Spryker Core level but disabled on the project level in all [Spryker Demo Shops](/docs/about/all/about-spryker.html#demo-shops) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
 
 {% info_block infoBox %}
 

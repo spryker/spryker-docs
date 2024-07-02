@@ -23,9 +23,9 @@ To start feature integration, overview and install the necessary feature:
 | -------------- | ----------------- | ----------------- |
 | Glue Authentication | {{site.version}} | [Glue Authentication itegration](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-the-authentication.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/glue-storefront-api-application-authorization-connector:"^1.0.0" \
@@ -54,7 +54,7 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |

@@ -15,7 +15,7 @@ related:
   - title: Glue API - Catalog feature integration
     link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -6655,16 +6655,10 @@ To search by products, send the request:
 
 **Abstract products**
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| ---------- | -------- | --------------- |
-| abstractSku   | String   | SKU of the abstract product.  |
-| abstractName  | String   | Name of the abstract product. |
-| images        | Array    | Links to product images.      |
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
-For other abstract product attributes, see:
-
-* [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
+**Abstract product prices**
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 **Value facets**
 

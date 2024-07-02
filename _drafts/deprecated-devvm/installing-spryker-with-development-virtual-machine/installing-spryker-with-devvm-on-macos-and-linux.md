@@ -47,7 +47,7 @@ We will soon deprecate the DevVM and stop supporting it. Therefore, we highly re
 
 {% endinfo_block %}
 
-To install the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) on MacOS or Linux with DevVM, follow the steps below.
+To install the [B2B Demo Shop](/docs/about/all/b2b-suite.html) or [B2C Demo Shop](/docs/about/all/b2c-suite.html) on MacOS or Linux with DevVM, follow the steps below.
 
 ## 1. Install prerequisites
 

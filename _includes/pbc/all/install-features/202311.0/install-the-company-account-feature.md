@@ -18,9 +18,9 @@ Install the required features:
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
@@ -690,7 +690,7 @@ Follow these steps to install feature frontend
 
 ### Prerequisites
 
-Overview and install the necessary features before beginning the integration step.
+Install the required features:
 
 | NAME | VERSION |
 | --- | --- |
@@ -698,9 +698,9 @@ Overview and install the necessary features before beginning the integration ste
 | Customer Account Management | {{page.version}} |
 | Company Account | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
@@ -708,7 +708,7 @@ composer require spryker-feature/company-account: "{{page.version}}" --update-wi
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -745,7 +745,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

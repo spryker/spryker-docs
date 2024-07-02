@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfigurationStorage
+title: Upgrade the ProductConfigurationStorage module
 description: Learn how to upgrade the ProductConfigurationStorage module to a newer version.
 template: module-migration-guide-template
 last_updated: Jul 25, 2023

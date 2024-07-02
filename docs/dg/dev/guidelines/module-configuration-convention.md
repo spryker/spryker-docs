@@ -32,7 +32,7 @@ Environment configuration is changeable per environment, but the constant and it
 
 * It's an interface, so the usage always points to the current repository => binds constant name => binds value.
 * Environment configuration is always in Shared layer, so it's accessible in any layer.
-* The constant contains the same UPPERCASE value as the key is + properly prefixed with `MODULE_NAME:`.
+* The constant key is uppercase, and its value is prefix `MODULE_NAME:` + key.
 
 ```php
 interface ModuleNameConstants
@@ -46,9 +46,10 @@ interface ModuleNameConstants
 Module configuration is extendable on project level. For the module configuration, the following applies:
 
 * It's always a class, so it supports extension for methods.
+* It or its parent has to extend AbstractBundleConfig of the corresponding layer.
 * Required values are defined in protected constants so it can be extended, but outside access is disabled.
 * Getter methods are introduced for constant access, so extended values are used on demand.
-* static:: used everywhere to support extension.
+* Protected constants are used via `static::` to support extension.
 
 Module configuration is split into two categories:
 
@@ -98,3 +99,27 @@ class ModuleNameConfig extends AbstractBundleConfig
 Storage unchangeable constants (like queue name, error queue name, resource name) should also follow the unchangeable module constant implementation, and not the events.
 
 {% endinfo_block %}
+
+### Shared environment configuration
+
+In some cases, an environment variable is used in several modules. We recommend creating a separate environment configuration for each module, preferably with the same key name, and use a chained assignment of the value.
+
+```php
+interface ModuleNameConstants
+{
+  public const EXAMPLE_KEY = 'MODULE_NAME:EXAMPLE_KEY';
+}
+```
+
+```php
+interface AnotherNameConstants
+{
+  public const EXAMPLE_KEY = 'ANOTHER_NAME:EXAMPLE_KEY';
+}
+```
+
+**config/Shared/config_*.php**
+```php
+ $config[ModuleNameConstants::EXAMPLE_KEY] =
+ $config[AnotherNameConstants::EXAMPLE_KEY] = 'some-shared-value';
+```

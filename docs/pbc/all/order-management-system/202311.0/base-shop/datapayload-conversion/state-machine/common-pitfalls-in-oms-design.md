@@ -17,7 +17,7 @@ related:
 ---
 
 
-Implementing OMS processes can be challenging when they are complex or requirements are not trivial. This can lead to hidden issues, which are hard to debug. An example of such issues is race conditions.
+Implementing OMS processes can be challenging when they're complex or requirements aren't trivial. This can lead to hidden issues, which are hard to debug. An example of such issues is race conditions.
 
 In some cases, OMS works incorrectly. In most cases, a *correct* flow can be run successfully, but the first run of a wrong path might reveal a problem. In other cases, there might be known limitations that can lead to incorrect transitions. There can also be cases that are valid but should be rewritten into a more readable process. If you discover more edge cases, send them to our [support team](https://spryker.force.com/support/s/).
 
@@ -29,7 +29,7 @@ This document describes the most common issues with OMS design and how you can f
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1.png)
 
-**Reason**: This behavior is not supported because there must always be only one state after an event execution.
+**Reason**: This behavior isn't supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain them:
 
@@ -169,7 +169,7 @@ The unused state may have a missing transition.
 
 ## Long timeouts
 
-**Example:** *Export finished* is the final state from the business perspective, but from the OMS perspective the final state is *closed*. That's because the business wants to create a return or refund anytime after the order is completed. In the timeout processor, the system has a configurable value in days, 9999 in this example, to manage how many days an order is moved to the closed state.
+**Example:** *Export finished* is the final state from the business perspective, but, from the OMS perspective, the final state is *closed*. That's because the business wants to create a return or refund anytime after an order is completed. In the timeout processor, the system has a configurable value in days, 9999 in this example, to manage how many days an order is moved to the closed state.
 ![huge_timeouts](https://github.com/xartsiomx/spryker-docs/assets/110463030/b3038a9a-564e-47de-9b09-397137d4a02e)
 
 **Issue:** After the order is pushed to the `export finished`, for every order item, a record is created in the `spy_oms_event_timeout` table. For example, if you have 10000 orders per day each containing 100 items, approximately one million records are created. Because of a long timeout, the system is storing this data for a long time. This causes storage issues and slows down OMS processes.
@@ -178,7 +178,7 @@ The unused state may have a missing transition.
 
 ## Long chain onEnter
 
-**Example:** When a recalculation is started by `oms:check-condition` it triggers a chain of `onEnter` events with more than eight transitions in it.
+**Example:** When a recalculation is started by `oms:check-condition`, it triggers a chain of `onEnter` events with more than eight transitions in it.
 ![long-chain-on-enter](https://github.com/xartsiomx/spryker-docs/assets/110463030/2cafb0fe-1388-434e-a783-7838535a69e7)
 
 **Issue:** Long chains of `onEnter` events can be “fragile”. It increases the time of execution, memory consumption, and the risk of having an error in the middle of the process, which results in a stuck order item.
@@ -190,61 +190,61 @@ The unused state may have a missing transition.
 **Issue:** Orders start processing directly after placement. The checkout endpoint contains the execution of all `onEnter` transitions in OMS.
 ![slow-order-creation](https://github.com/xartsiomx/spryker-docs/assets/110463030/02892077-3d8d-432e-a6a4-281dcdb9824d)
 
-**Solution:** Configure the checkout endpoint logic to finish after an order is created with all items in starting states—for example, `new`. The transition from the `new` state shouldn’t have an event and is processed  by the `oms:check-condition` command.
+**Solution:** Configure the checkout endpoint logic to finish after an order is created with all items in starting states—for example, `new`. The transition from the `new` state shouldn’t have an event and is processed by the `oms:check-condition` command.
 
 ## Stuck onEnter
 
-**Issue:** In most cases, if you have an order item stuck during the `onEnter` transition, there is an unexpected error during execution.
+**Issue:** In most cases, if you have an order item stuck during the `onEnter` transition, there's an unexpected error during execution.
 
-**Solution 1:** If you are not in a hurry, we recommend checking and fixing each issue individually.
+**Solution 1:** If you aren't in a hurry, we recommend checking and fixing each issue individually.
 
-**Solution 2:** Use this solution if you have many stuck items and you need to fix them quickly. Create a console command that triggers `onEnter` events. We recommend creating a list of OMS states which you want to check and move order items from. Set limits for orders (not items!) and time windows. For example, check stuck order items only if their last state update was after two hours.
+**Solution 2:** Use this solution if you have many stuck items and you need to fix them quickly. Create a console command that triggers `onEnter` events. We recommend creating a list of OMS states which you want to check and move order items from. Set limits for orders (not items) and time windows. For example, check stuck order items only if their last state update was after two hours.
 
 ## Saving states per item transaction
 
 **Example:** The system has a callback that moves order items from `picking started` to `ready for recalculation`. After that, a check-condition moves the order to the `recalculation` step.
 ![saving-states-1](https://github.com/xartsiomx/spryker-docs/assets/110463030/bc4d581b-d587-4f84-bb17-3452d4573ae4)
 
-**Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts  the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
+**Issue:** During the last transition in the callback from `picking finished` to `ready for recalculation`, a Jenkins job starts the `check-condition` command. Because of the command, the check-condition takes only a part of order items and pushes them forward. The next job executes the remaining order items with a delay, so many commands are triggered twice.
 ![saving-states-2](https://github.com/xartsiomx/spryker-docs/assets/110463030/1fd1b30f-00dc-49eb-8d35-37583e140f5e)
 
-**Solution:** This is possible because during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them due to a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
+**Solution:** This is possible because, during the execution of `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::saveOrderItems`, the system stores data per item. That's because the core logic expects that there may be more than one order in transition. To avoid blocking all of them due to a potential failed order, transition is executed per item. To change that, group order items per order and change the transaction behavior to store all order items per one transaction. Then, a check-condition or any other command can’t take order items partially.
 
 ## LockedStateMachine
 
-**Example:** When multiple processes can push forward an order from one source state it’s recommended to use LockedStateMachine. For example: manual transition, which can be triggered by a different entry points. Important to understand:
+When multiple processes can push forward an order from one source state, we recommend using LockedStateMachine. For example, a manual transition can be triggered by different entry points. LockedStateMachine key features:
 
-1. It implements the same interface as common StateMachine and has locks for all methods except the `check-condition` command.
+1. It implements the same interface as a common StateMachine and has locks for all methods except the `check-condition` command.
 
-2. Lock works based on MySQL table spy_state_machine_lock. Due to the nature of MySQL sometimes you can face deadlocks (you have to [handle them properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html)). Also, the same operation in MySQL will take more time than memory storage (redis for example). Finally, OOTB locking works on the order item level, but in most cases more efficient will be using them on the order level.
+2. Lock works based on `spy_state_machine_lock` table. Due to the nature of MySQL, you may face deadlocks, which you need to [handle properly](https://dev.mysql.com/doc/refman/8.4/en/innodb-deadlocks-handling.html). Also, the same operation in MySQL takes more time than memory storage, like Redis. By default, locking works on the order item level, but, in most cases, using locks on the order level is more efficient.
 
-## Speed up oms:check-condition: parallel execution & run often than once per minute)
+## Speed up oms:check-condition: parallel execution and run often than once per minute
 
-**Example:** When the execution of `check-condition` once per minute is not enough, you can increase the frequency as follows:
+When the execution of `check-condition` once per minute isn't enough, you can increase the frequency as follows:
 
 * Increase the number of threads:
   1. Update the config:
     ```php
     $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10; // IMPORTANT: if you change this value do not forget to update the number of Jenkins jobs in jenkins.php
     ```
-  2. Create ten Jenkins jobs for every processor. Use the `processor-id` option to define which identifiers to process in a job. Processes are assigned when orders order items are created. You can find more details in this [Order management system multi-thread
+  2. Create 10 Jenkins jobs for every processor. Use the `processor-id` option to define which identifiers to process in a job. Processes are assigned when order items are created. For more details, see [Order management system multi-thread
 ](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/datapayload-conversion/state-machine/order-management-system-multi-thread.html).
 
 * Create a wrapper console command that runs `check-condition` in a loop. Tips for the wrapper command:
   * Don’t run subprocesses in parallel because it results in more complexity in logic than profits.
   * Run the real command (check-condition) in a subprocess to speed up memory cleanup after the execution.
-  * Implement timeouts for subprocesses and the wrapper. To prevent items from being stuck in `onEnter` transitions, avoid hard limits with the killing process. Instead, analyze the execution time of subprocesses to figure out if you should run a new child process or finish the execution of the wrapper.
+  * Implement timeouts for subprocesses and the wrapper. To prevent items from being stuck in the `onEnter` transitions, avoid hard limits with the killing process. Instead, analyze the execution time of subprocesses to figure out if you should run a new child process or finish the execution of the wrapper.
 
-## PerOrder or PerItem command & condition
+## PerOrder or PerItem command and condition
 
-**Issue:** Core has different ways of executing the OMS commands: per order and per item. However, for conditions, OMS commands are executed only per item.
+**Issue:** Core has different ways of executing OMS commands: per order and per item. However, for conditions, OMS commands are executed only per item.
 ![per-order-or-per-item-command-and-condition](https://github.com/xartsiomx/spryker-docs/assets/110463030/2dbe96ae-0a59-48cb-8653-ee104201f63c)
 
 **Solution:** Extend `ConditionInterface` without changing the signature:
-1. Create a new interface `ConditionPerOrderInterface` and extend it from `ConditionInterface`.
-2. Overwrite `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::checkCondition` with the caching mechanism inside a  static property to execute the logic only for the first item and return results from cache for the rest of the items.
+1. Create the `ConditionPerOrderInterface` interface and extend it from `ConditionInterface`.
+2. Overwrite `\Spryker\Zed\Oms\Business\OrderStateMachine\OrderStateMachine::checkCondition` with the caching mechanism inside a static property to execute the logic only for the first item and return results from cache for the rest of the items.
 
-The logic in the `ConditionPlugin` should be around Order (not Item) - in this case, you have the correct value in the cache. However, the signature allows a developer to create logic around the item.
+The logic in the `ConditionPlugin` should work around Order (not Item). This provides the correct value to the cache.
 
 
 

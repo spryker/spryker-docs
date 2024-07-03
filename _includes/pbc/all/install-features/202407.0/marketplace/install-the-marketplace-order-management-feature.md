@@ -14,11 +14,11 @@ Install the required features:
 | --------- | ------ | ---------------|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Order Management | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |
-| State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| State Machine | {{page.version}} | [State Machine](https://github.com/spryker-feature/state-machine) |
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Marketplace Shipment | {{page.version}} | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
 
-### 1) Install required modules using Composer
+### 1) Install required modules
 
 Install the required modules using Composer:
 
@@ -46,15 +46,15 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up configuration
 
-Add the following configuration:
+1. Add the following configuration:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
 | ------------- | ------------ | ------------ |
-| MainMerchantStateMachine | Introduce `MainMerchantStateMachine` configuration. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
-| MerchantDefaultStateMachine | Introduce `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
-| MarketplacePayment  | Introduce `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
-| Navigation  | Introduce navigation configuration. | config/Zed/navigation.xml |
-| MerchantOmsConfig  | Introduce OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
+| MainMerchantStateMachine | Adds the `MainMerchantStateMachine` configuration. | config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml |
+| MerchantDefaultStateMachine | Adds the `MerchantDefaultStateMachine` configuration. | config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml |
+| MarketplacePayment  | Adds the `MarketplacePayment` order management system. | config/Zed/oms/MarketplacePayment01.xml |
+| Navigation  | Adds the navigation configuration. | config/Zed/navigation.xml |
+| MerchantOmsConfig  | Adds the OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
@@ -420,7 +420,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </config>
 ```
 
-Execute the following command:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -428,14 +428,16 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the navigation menu of the Back Office, you can see the **Marketplace&nbsp;<span aria-label="and then">></span> Orders** as well as **Sales&nbsp;<span aria-label="and then">></span> My Orders** menu items.
+Make sure that the Back Office navigation menu has the following items:
+* **Marketplace&nbsp;<span aria-label="and then">></span> Orders**
+* **Sales&nbsp;<span aria-label="and then">></span> My Orders**
 
 {% endinfo_block %}
 
 
 ### 3) Set up database schema and transfer objects
 
-Adjust the schema definition so entity changes trigger events:
+1. Adjust the schema definition so entity changes trigger events:
 
 **src/Pyz/Zed/OmsProductOfferReservation/Persistence/Propel/Schema/spy_oms_product_offer_reservation.schema.xml**
 
@@ -457,7 +459,7 @@ Adjust the schema definition so entity changes trigger events:
 </database>
 ```
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -467,7 +469,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Check your database to make sure that the following changes have been applied:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --------------- | ---- | ------ |
@@ -480,7 +482,7 @@ Check your database to make sure that the following changes have been applied:
 |spy_sales_order_item.merchant_reference | column |created  |
 |spy_sales_order_item.product_offer_reference | column | created |
 
-Make sure that the following changes have been triggered in transfer objects:
+Make sure the following changes have been triggered in transfer objects:
 
 | TRANSFER | TYPE | EVENT  | PATH  |
 | --------- | ------- | ----- | ------------- |
@@ -501,7 +503,7 @@ Make sure that the following changes have been triggered in transfer objects:
 
 ### 4) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **data/import/common/common/glossary.csv**
 
@@ -510,13 +512,13 @@ merchant_sales_order.merchant_order_id,Merchant Order ID,en_US
 merchant_sales_order.merchant_order_id,Händlerbestell-ID,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
 ```
 
-Generate a new translation cache for Zed:
+3. Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -529,8 +531,6 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 {% endinfo_block %}
 
 ### 5) Import data
-
-Import data as follows:
 
 1. Prepare your data according to your requirements using the demo data:
 
@@ -613,9 +613,7 @@ Make sure that in the `spy_merchant` table, merchants have correct `fk_process i
 
 ### 6) Export data
 
-Export data as follows:
-
-1. Create and prepare your `data/export/config/merchant_order_export_config.yml` file  according to your requirements using our demo config template:
+1. Create and prepare your `data/export/config/merchant_order_export_config.yml` file according to your requirements using our demo config template:
 
 <details>
 <summary markdown='span'>data/export/config/merchant_order_export_config.yml</summary>
@@ -680,17 +678,17 @@ actions:
 | data_entity |  |  | &check; | merchant-order merchant-order-item merchant-order-expense | String identifier for data entity that is expected to be  exported. |
 | filter_criteria | store_name |  | &check; | All existing store names. | An existing store name for the data to filter on. |
 |  | merchant_order_created_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation from which the data needs to be filtered. |
-|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation up to  which the data needs to be filtered. |
+|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order creation up to which the data needs to be filtered. |
 |  | merchant_order_updated_at | from |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update from which the data needs to be filtered. |
-|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update up to  which the data needs to be filtered. |
+|  |  | to |  | Date in format 'YYYY-MM-DD HH:mm:ss HH24:MI' | Date of merchant order update up to which the data needs to be filtered. |
 
-2. Register the following plugins to enable data export:
+2. Register the following plugins to enable data export.
 
  PLUGIN | SPECIFICATION | PREREQUISITES| NAMESPACE|
 | --------------- | -------------- | ------ | -------------- |
-| MerchantOrderDataEntityExporterPlugin | Exports merchant order data |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
-| MerchantOrderItemDataEntityExporterPlugin | Exports merchant order Items data |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
-| MerchantOrderExpenseDataEntityExporterPlugin  | Exports merchant order Expense data |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+| MerchantOrderDataEntityExporterPlugin | Exports merchant order data. |   | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport|
+| MerchantOrderItemDataEntityExporterPlugin | Exports merchant order items data. |     | Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
+| MerchantOrderExpenseDataEntityExporterPlugin  | Exports merchant order expense data. |     |Spryker\Zed\MerchantSalesOrderDataExport\Communication\Plugin\DataExport |
 
 **src/Pyz/Zed/DataExport/DataExportDependencyProvider.php**
 
@@ -732,21 +730,21 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | ------------ | ----------- | ----- | ------------ |
-| TriggerEventFromCsvFileConsole |Allows for updating merchant order status via CSV input.  |  |Spryker\Zed\MerchantOms\Communication\Console |
-| EventTriggerMerchantOrderPostCreatePlugin  | Triggers new events for the newly created merchant orders | |Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder  |
-| MerchantOmsMerchantOrderExpanderPlugin |Expands merchant order with merchant Oms data (item state and manual events)  | | Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder |
-| MerchantStateMachineHandlerPlugin | Wires merchant order updates in the State Machine module | |Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine |
-| MerchantOmsStateOrderItemsTableExpanderPlugin  |Expands the order item table with merchant order item state  | | Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales |
-| MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
-| MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order item with merchant reference before saving an order item to the database | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
-| MerchantReferencesOrderExpanderPlugin  |Expands order with merchant references from order items  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
-| ProductOfferReferenceOrderItemExpanderPreSavePlugin |Expands order item with product offer reference before saving the order item to the database  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
-| DeliverMarketplaceOrderItemCommandPlugin | Triggers 'deliver' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| CancelMarketplaceOrderItemCommandPlugin | Triggers 'ship by merchant' event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
-| ShipmentFormTypePlugin | Returns ShipmentFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
-| ItemFormTypePlugin | Returns ItemFormType class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
-| MerchantReferenceShipmentExpenseExpanderPlugin | Expands expense transfer with merchant reference from items | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
+| TriggerEventFromCsvFileConsole | Allows for updating merchant order status via CSV input.  |  |Spryker\Zed\MerchantOms\Communication\Console |
+| EventTriggerMerchantOrderPostCreatePlugin  | Triggers new events for newly created merchant orders. | |Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder  |
+| MerchantOmsMerchantOrderExpanderPlugin | Expands merchant order with merchant Oms data, such as item state and manual events.  | | Spryker\Zed\MerchantOms\Communication\Plugin\MerchantSalesOrder |
+| MerchantStateMachineHandlerPlugin | Wires merchant order updates into the State Machine module. | |Spryker\Zed\MerchantOms\Communication\Plugin\StateMachine |
+| MerchantOmsStateOrderItemsTableExpanderPlugin  |Expands the order item table with merchant order item state. | | Spryker\Zed\MerchantOmsGui\Communication\Plugin\Sales |
+| MerchantOrderDataOrderExpanderPlugin  | Expands order data with merchant order details. | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
+| MerchantReferenceOrderItemExpanderPreSavePlugin  | Expands order items with merchant references before saving them to the database. | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales |
+| MerchantReferencesOrderExpanderPlugin  | Expands orders with merchant references from order items.  | |	Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Sales  |
+| ProductOfferReferenceOrderItemExpanderPreSavePlugin | Expands order items with product offer references before saving them to the database.  | | Spryker\Zed\ProductOfferSales\Communication\Plugin\Sales |
+| DeliverMarketplaceOrderItemCommandPlugin | Triggers the `deliver` event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipByMerchantMarketplaceOrderItemCommandPlugin | Triggers the `ship by merchant` event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| CancelMarketplaceOrderItemCommandPlugin | Triggers the `ship by merchant` event on a marketplace order item. |  |   Pyz\Zed\MerchantOms\Communication\Plugin\Oms |
+| ShipmentFormTypePlugin | Returns `ShipmentFormType` class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| ItemFormTypePlugin | Returns `ItemFormType` class name resolution.  |  | Spryker\Zed\ShipmentGui\Communication\Plugin\Form |
+| MerchantReferenceShipmentExpenseExpanderPlugin | Expands the expense transfer with merchant references from items. | | Spryker\Zed\MerchantSalesOrder\Communication\Plugin\Shipment |
 
 **src/Pyz/Zed/MerchantOms/Communication/MerchantOmsCommunicationFactory.php**
 
@@ -1098,18 +1096,18 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.
+Make sure the following applies:
 
-Make sure that when retrieving an order in the *Sales* module, it is split by the merchant order and that the Order state is derived from the Merchant State Machine.
+* After an order was split, the Merchant State Machine is executed on merchant orders.
 
-Make sure that after splitting the order into merchants' orders, their IDs are displayed on the order details page in Yves.
+* When retrieving an order in the *Sales* module, it's split by the merchant order and the order state is derived from the Merchant State Machine.
+
+* After splitting an order into merchant orders, their IDs are displayed on the order details page on the Storefront.
 
 {% endinfo_block %}
 
 
 ## Install related features
-
-Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |

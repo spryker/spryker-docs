@@ -1,10 +1,6 @@
 This document describes how to install the Product + Marketplace Merchant Commission feature.
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -30,7 +26,7 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 
-### 2) Set up behavior
+## 2) Set up behavior
 
 Set up the following behaviors:
 

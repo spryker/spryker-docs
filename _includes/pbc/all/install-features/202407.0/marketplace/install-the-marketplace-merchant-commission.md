@@ -38,16 +38,16 @@ Make sure the following modules have been installed:
 
 ## 2) Set up configuration
 
-Add the following configuration:
+1. Add the following configuration:
 
 | CONFIGURATION                                                      | SPECIFICATION                                                     | NAMESPACE                   |
 |--------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------|
-| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for a stores in the system.   | \Pyz\Zed\MerchantCommission |
-| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who are not subject to commissions.         | \Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for stores in the system.   | \Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who aren't subject to commissions.         | \Pyz\Zed\MerchantCommission |
 | RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.     | \Pyz\Zed\Refund             |
-| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update | \Pyz\Zed\Sales              |
+| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update. | \Pyz\Zed\Sales              |
 
-1. Configure the merchant commission price mode per store and the excluded merchants from the commission:
+2. Configure the merchant commission price mode per store and the excluded merchants from the commission:
 
 **src/Pyz/Zed/MerchantCommission/MerchantCommissionConfig.php**
 
@@ -105,7 +105,7 @@ Usually this is used for the marketplace owner.
 
 {% endinfo_block %}
 
-2. Configure the cleanup of recalculation messages after a refund:
+3. Configure the cleanup of recalculation messages after a refund:
 
 **src/Pyz/Zed/Refund/RefundConfig.php**
 
@@ -135,7 +135,7 @@ the `RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()` configuratio
 
 {% endinfo_block %}
 
-3. Enable the persistence of the order item merchant commission data:
+4. Enable the persistence of the order item merchant commission data:
 
 **src/Pyz/Zed/Sales/SalesConfig.php**
 
@@ -165,11 +165,11 @@ the `SalesConfig::shouldPersistModifiedOrderItemProperties()` configuration.
 
 {% endinfo_block %}
 
-4. Prepare order state machines for the Merchant Commission process
+4. Prepare order state machines for the Merchant Commission process.
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
-In this step, you can customize your order state machine to charge the Merchant Commission commissions. 
+In this step, you can customize your order state machine to charge the Merchant Commission commissions.
 We will prepare the `DummyPayment` and `MarketplacePayment01` state machine for the Merchant Commission process.
 
 {% endinfo_block %}
@@ -679,7 +679,7 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
             new SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @return list<\Spryker\Zed\AclMerchantPortalExtension\Dependency\Plugin\AclEntityConfigurationExpanderPluginInterface>
      */
@@ -811,7 +811,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     {
         $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
             $commandCollection->add(new SalesMerchantCommissionCalculationCommandByOrderPlugin(), 'MerchantCommission/Calculate');
-            
+
             return $commandCollection;
         });
 

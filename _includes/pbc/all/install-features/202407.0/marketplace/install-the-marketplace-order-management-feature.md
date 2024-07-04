@@ -2,11 +2,7 @@
 
 This document describes how to install the Marketplace Order Management feature.
 
-## Install feature core
-
-Follow the steps below to install the Marketplace Order Management feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -18,7 +14,7 @@ Install the required features:
 | Marketplace Merchant | {{page.version}} | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Marketplace Shipment | {{page.version}} | [Install the Marketplace Shipment feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-feature.html) |
 
-### 1) Install required modules
+## 1) Install required modules
 
 Install the required modules using Composer:
 
@@ -44,7 +40,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up configuration
+## 2) Set up configuration
 
 1. Add the following configuration:
 
@@ -435,7 +431,7 @@ Make sure that the Back Office navigation menu has the following items:
 {% endinfo_block %}
 
 
-### 3) Set up database schema and transfer objects
+## 3) Set up database schema and transfer objects
 
 1. Adjust the schema definition so entity changes trigger events:
 
@@ -501,7 +497,7 @@ Make sure the following changes have been triggered in transfer objects:
 
 {% endinfo_block %}
 
-### 4) Add translations
+## 4) Add translations
 
 1. Append glossary according to your configuration:
 
@@ -530,7 +526,7 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 {% endinfo_block %}
 
-### 5) Import data
+## 5) Import data
 
 1. Prepare your data according to your requirements using the demo data:
 
@@ -611,7 +607,7 @@ Make sure that in the `spy_merchant` table, merchants have correct `fk_process i
 
 {% endinfo_block %}
 
-### 6) Export data
+## 6) Export data
 
 1. Create and prepare your `data/export/config/merchant_order_export_config.yml` file according to your requirements using our demo config template:
 
@@ -724,7 +720,7 @@ class DataExportDependencyProvider extends SprykerDataExportDependencyProvider
 console data:export --config=merchant_order_export_config.yml
 ```
 
-### 7) Set up behavior
+## 7) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 

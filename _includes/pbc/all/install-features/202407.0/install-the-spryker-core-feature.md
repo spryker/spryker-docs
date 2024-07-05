@@ -487,7 +487,6 @@ Make sure that the following changes have been applied by checking your database
 | EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
 | ServerProcessorPlugin                                      | Adds servee related data to the log data.                                                                                                                                  | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
 | AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
-| CurrentRequestProcessorPlugin                              | Adds data from the current request to the log data.                                                                                                                        | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
 | ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
 | AuditLogMetaDataProcessorPlugin                            | Adds `audit_log` log type to the log data.                                                                                                                                 | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
 | AuditLogTagFilterBufferedStreamHandlerPlugin               | Provided Monolog handler.                                                                                                                                                  | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
@@ -495,7 +494,6 @@ Make sure that the following changes have been applied by checking your database
 | EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
 | ServerProcessorPlugin                                      | Adds servee related data to the log data.                                                                                                                                  | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
 | AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
-| CurrentRequestProcessorPlugin                              | Adds data from the current request to the log data.                                                                                                                        | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
 | ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
 | AuditLogMetaDataProcessorPlugin                            | Adds `audit_log` log type to the log data.                                                                                                                                 | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
 
@@ -651,7 +649,6 @@ use Spryker\Glue\Log\LogDependencyProvider as SprykerLogDependencyProvider;
 use Spryker\Glue\Log\Plugin\Log\AuditLogMetaDataProcessorPlugin;
 use Spryker\Glue\Log\Plugin\Log\AuditLogRequestProcessorPlugin;
 use Spryker\Glue\Log\Plugin\Log\AuditLogTagFilterBufferedStreamHandlerPlugin;
-use Spryker\Glue\Log\Plugin\Log\CurrentRequestProcessorPlugin;
 use Spryker\Glue\Log\Plugin\Processor\EnvironmentProcessorPlugin;
 use Spryker\Glue\Log\Plugin\Processor\PsrLogMessageProcessorPlugin;
 use Spryker\Glue\Log\Plugin\Processor\ResponseProcessorPlugin;
@@ -662,7 +659,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogHandlerPluginInterface>
      */
-    protected function getGlueAuditLogHandlerPlugins(): array
+    protected function getGlueSecurityAuditLogHandlerPlugins(): array
     {
         return [
             new AuditLogTagFilterBufferedStreamHandlerPlugin(),
@@ -672,7 +669,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogHandlerPluginInterface>
      */
-    protected function getGlueBackendAuditLogHandlerPlugins(): array
+    protected function getGlueBackendSecurityAuditLogHandlerPlugins(): array
     {
         return [
             new AuditLogTagFilterBufferedStreamHandlerPlugin(),
@@ -682,14 +679,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogProcessorPluginInterface>
      */
-    protected function getGlueAuditLogProcessorPlugins(): array
+    protected function getGlueSecurityAuditLogProcessorPlugins(): array
     {
         return [
             new PsrLogMessageProcessorPlugin(),
             new EnvironmentProcessorPlugin(),
             new ServerProcessorPlugin(),
             new AuditLogRequestProcessorPlugin(),
-            new CurrentRequestProcessorPlugin(),
             new ResponseProcessorPlugin(),
             new AuditLogMetaDataProcessorPlugin(),
         ];
@@ -698,7 +694,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogProcessorPluginInterface>
      */
-    protected function getGlueBackendAuditLogProcessorPlugins(): array
+    protected function getGlueBackendSecurityAuditLogProcessorPlugins(): array
     {
         return [
             new PsrLogMessageProcessorPlugin(),
@@ -722,7 +718,6 @@ namespace Pyz\Zed\Log;
 use Spryker\Zed\Log\Communication\Plugin\Log\AuditLogMetaDataProcessorPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Log\AuditLogRequestProcessorPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Log\AuditLogTagFilterBufferedStreamHandlerPlugin;
-use Spryker\Zed\Log\Communication\Plugin\Log\CurrentRequestProcessorPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Processor\EnvironmentProcessorPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Processor\PsrLogMessageProcessorPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Processor\ResponseProcessorPlugin;
@@ -734,7 +729,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogHandlerPluginInterface>
      */
-    protected function getZedAuditLogHandlerPlugins(): array
+    protected function getZedSecurityAuditLogHandlerPlugins(): array
     {
         return [
             new AuditLogTagFilterBufferedStreamHandlerPlugin(),
@@ -744,7 +739,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogHandlerPluginInterface>
      */
-    protected function getMerchantPortalAuditLogHandlerPlugins(): array
+    protected function getMerchantPortalSecurityAuditLogHandlerPlugins(): array
     {
         return [
             new AuditLogTagFilterBufferedStreamHandlerPlugin(),
@@ -754,14 +749,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogProcessorPluginInterface>
      */
-    protected function getZedAuditLogProcessorPlugins(): array
+    protected function getZedSecurityAuditLogProcessorPlugins(): array
     {
         return [
             new PsrLogMessageProcessorPlugin(),
             new EnvironmentProcessorPlugin(),
             new ServerProcessorPlugin(),
             new AuditLogRequestProcessorPlugin(),
-            new CurrentRequestProcessorPlugin(),
             new ResponseProcessorPlugin(),
             new AuditLogMetaDataProcessorPlugin(),
         ];
@@ -770,14 +764,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogProcessorPluginInterface>
      */
-    protected function getMerchantPortalAuditLogProcessorPlugins(): array
+    protected function getMerchantPortalSecurityAuditLogProcessorPlugins(): array
     {
         return [
             new PsrLogMessageProcessorPlugin(),
             new EnvironmentProcessorPlugin(),
             new ServerProcessorPlugin(),
             new AuditLogRequestProcessorPlugin(),
-            new CurrentRequestProcessorPlugin(),
             new ResponseProcessorPlugin(),
             new AuditLogMetaDataProcessorPlugin(),
         ];
@@ -1225,7 +1218,6 @@ Find the list of all the plugins and modules to install:
 | EnvironmentProcessorPlugin                   | Adds environment related data to the log data.                                                                                                                           | None | Spryker\Yves\Log\Plugin\Processor       |
 | ServerProcessorPlugin                        | Adds servee related data to the log data.                                                                                                                                | None | Spryker\Yves\Log\Plugin\Processor       |
 | AuditLogRequestProcessorPlugin               | Adds request related data to the log data.                                                                                                                               | None | Spryker\Yves\Log\Plugin\Log             |
-| CurrentRequestProcessorPlugin                | Adds data from the current request to the log data.                                                                                                                      | None | Spryker\Yves\Log\Plugin\Log             |
 | ResponseProcessorPlugin                      | Removes response data from the log data.                                                                                                                                 | None | Spryker\Yves\Log\Plugin\Processor       |
 | AuditLogMetaDataProcessorPlugin              | Adds `audit_log` log type to the log data.                                                                                                                               | None | Spryker\Yves\Log\Plugin\Log             |
 
@@ -1332,7 +1324,6 @@ use Spryker\Yves\Log\LogDependencyProvider as SprykerLogDependencyProvider;
 use Spryker\Yves\Log\Plugin\Log\AuditLogMetaDataProcessorPlugin;
 use Spryker\Yves\Log\Plugin\Log\AuditLogRequestProcessorPlugin;
 use Spryker\Yves\Log\Plugin\Log\AuditLogTagFilterBufferedStreamHandlerPlugin;
-use Spryker\Yves\Log\Plugin\Log\CurrentRequestProcessorPlugin;
 use Spryker\Yves\Log\Plugin\Processor\EnvironmentProcessorPlugin;
 use Spryker\Yves\Log\Plugin\Processor\PsrLogMessageProcessorPlugin;
 use Spryker\Yves\Log\Plugin\Processor\ResponseProcessorPlugin;
@@ -1343,7 +1334,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogHandlerPluginInterface>
      */
-    protected function getAuditLogHandlerPlugins(): array
+    protected function getYvesSecurityAuditLogHandlerPlugins(): array
     {
         return [
             new AuditLogTagFilterBufferedStreamHandlerPlugin(),
@@ -1353,14 +1344,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     /**
      * @return list<\Spryker\Shared\Log\Dependency\Plugin\LogProcessorPluginInterface>
      */
-    protected function getAuditLogProcessorPlugins(): array
+    protected function getYvesSecurityAuditLogProcessorPlugins(): array
     {
         return [
             new PsrLogMessageProcessorPlugin(),
             new EnvironmentProcessorPlugin(),
             new ServerProcessorPlugin(),
             new AuditLogRequestProcessorPlugin(),
-            new CurrentRequestProcessorPlugin(),
             new ResponseProcessorPlugin(),
             new AuditLogMetaDataProcessorPlugin(),
         ];

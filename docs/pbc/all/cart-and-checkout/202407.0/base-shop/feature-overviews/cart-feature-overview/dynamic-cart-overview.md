@@ -1,7 +1,7 @@
 ---
 title: Dynamic cart overview
 description: Dynamic cart lets customers update carts without reloading the Cart page.
-last_updated: May 21, 2023
+last_updated: May 21, 2024
 template: concept-topic-template
 ---
 

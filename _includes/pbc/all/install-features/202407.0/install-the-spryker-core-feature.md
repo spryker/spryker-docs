@@ -946,7 +946,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Visit mysprykershop.com and make sure that Yves boots up without errors.
+Visit `https://mysprykershop.com` and make sure that Yves boots up without errors.
 
 {% endinfo_block %}
 
@@ -980,6 +980,6 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 Make sure the `SecurityBlockerCustomerEventDispatcherPlugin` is activated correctly by attempting to sign in with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account is blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
 
-Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentEventDispatcherPlugin`. The agent gets the blocking configuration specific for agents if you specify the agent-specific settings in step 2 of the feature core integration.
+To verify `SecurityBlockerAgentEventDispatcherPlugin`, repeat the same actions for the agent sign-in. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration).
 
 {% endinfo_block %}

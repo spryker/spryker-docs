@@ -1,10 +1,6 @@
 This document describes how to install the Category Management + Marketplace Merchant Commission feature.
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
+## Prerequisites
 
 Install the required features:
 
@@ -30,13 +26,13 @@ Make sure the following modules have been installed:
 {% endinfo_block %}
 
 
-### 2) Set up behavior
+## 2) Set up behavior
 
 Set up the following behaviors:
 
 | PLUGIN                                            | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                               |
 |---------------------------------------------------|------------------------------------------------------------|---------------|-----------------------------------------------------------------------------------------|
-| CategoryMerchantCommissionItemCollectorRulePlugin | Collects items which categories match the provided clause. |               | Spryker\Zed\CategoryMerchantCommissionConnector\Communication\Plugin\MerchantCommission |
+| CategoryMerchantCommissionItemCollectorRulePlugin | Collects the items whose categories match the provided clause. |               | Spryker\Zed\CategoryMerchantCommissionConnector\Communication\Plugin\MerchantCommission |
 
 **src/Pyz/Zed/MerchantCommission/MerchantCommissionDependencyProvider.php**
 
@@ -64,12 +60,11 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the plugins work correctly:
+1. Import a new merchant commission via data import or GUI import with an item condition defined as a query string with a `category` field. For example, `category = 'cameras-and-camcorders'`.
+2. Add a merchant product assigned to the defined category to cart and place the order.
 
-1. Import a new merchant commission via data import or GUI import with defined item condition as a query string with a *category* field (e.g. "category = 'cameras-and-camcorders'").
-2. Add a merchant product assigned to the defined category to the cart and complete the order process.
-3. Make sure that OMS event `commission-calculate` was triggered.
-4. In database navigate to `spy_sales_merchant_commission` table and make sure there's a new record with your merchant commission applied to corresponding sales order item.
+Make sure the following applies:
+* The `commission-calculate` OMS event has been triggered.
+* In the `spy_sales_merchant_commission` database table, there's a new record with your merchant commission applied to corresponding sales order item.
 
 {% endinfo_block %}
-

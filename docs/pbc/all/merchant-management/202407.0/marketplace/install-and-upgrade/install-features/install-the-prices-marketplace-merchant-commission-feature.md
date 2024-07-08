@@ -5,4 +5,4 @@ description: Integrate the Prices + Marketplace Merchant Commission feature into
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202407.0/marketplace/install-the-prices-marketplace-merchant-commission.md %} <!-- To edit, see /_includes/pbc/all/install-features/202407.0/marketplace/install-the-prices-marketplace-merchant-commission.md -->
+{% include pbc/all/install-features/202407.0/marketplace/install-the-prices-marketplace-merchant-commission-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202407.0/marketplace/install-the-prices-marketplace-merchant-commission-feature.md -->

@@ -29,7 +29,11 @@ For the [Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.ht
 
 {% endinfo_block %}
 
-![merchants-switcher-on-availabilities](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Availability/availability-reference-information/merchants-switcher-on-availabilities.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/marketplace/manage-availability.md/merchants-switcher-on-availabilities.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ---
 

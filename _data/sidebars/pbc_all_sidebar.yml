@@ -1350,6 +1350,7 @@ entries:
                 url: /docs/pbc/all/identity-access-management/manage-using-glue-api/glue-api-retrieve-protected-resources.html
           - title: Configure basic .htaccess authentication
             url: /docs/pbc/all/identity-access-management/configure-basic-htaccess-authentication.html
+
       - title: Merchant Management
         url: /docs/pbc/all/merchant-management/merchant-management.html
         nested:
@@ -1463,19 +1464,19 @@ entries:
                         include_versions:
                         - "202404.0"
                       - title: Marketplace Merchant Commission
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html
                         include_versions:
                         - "202407.0"
                       - title: Marketplace Merchant Commission + Category Management
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html
                         include_versions:
                         - "202407.0"
                       - title: Marketplace Merchant Commission + Prices
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html
                         include_versions:
                         - "202407.0"
                       - title: Marketplace Merchant Commission + Product
-                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission.html
+                        url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html
                         include_versions:
                         - "202407.0"
                       - title: Marketplace Merchant Portal Core
@@ -3335,7 +3336,7 @@ entries:
                       - title: Product + Marketplace Merchant Commission
                         url: /docs/pbc/all/product-information-management/marketplace/install-and-upgrade/install-features/install-the-product-marketplace-merchant-commission-feature.html
                         include_versions:
-                        - "202407.0"                        
+                        - "202407.0"
 
                   - title: Install Glue API
                     nested:

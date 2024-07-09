@@ -1785,4 +1785,4 @@ console navigation:build-cache
 
 | FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |
+| Merchant Portal | &check;                          | [Install the Merchant Portal](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |

@@ -1,0 +1,332 @@
+---
+title: "Create Merchant Commission Calculator Type Plugin"
+description: This articles provides details how to implement merchant commission collector rule
+template: howto-guide-template
+---
+
+This document shows how to create and register a merchant commission calculator type plugin to provide custom calculation logic for merchant commissions.
+
+## Prerequisites
+
+To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-merchant-commission-feature.html).
+
+This guide will implement the merchant commission calculator type plugin that calculates commission based on the order item's price to pay aggregation value. For this, we will go step by step to create a plugin implementing `MerchantCommissionCalculatorPluginInterface` in the `MerchantCommission` module.
+Approximate time to complete: 1 hour.
+
+## 1) Adjust transfer definitions
+
+To provide the required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
+`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` table, to provide the price to pay aggregation amount of the order item we only need to add a new property `priceToPayAggregation` to the transfer object.
+
+**src/Pyz/Shared/MerchantCommission/Transfer/merchant_commission.transfer.xml**
+
+```xml
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="MerchantCommissionCalculationRequestItem" strict="true">
+        <property name="priceToPayAggregation" type="int"/>
+    </transfer>
+
+</transfers>
+```
+
+## 3) Implement the calculator business model
+
+Implement a custom class that will be used to calculate merchant commission amount based on the order item's price to pay aggregation value.
+This class will implement the `MerchantCommissionCalculatorTypeInterface` interface.
+
+**src/Pyz/Zed/MerchantCommission/Business/Calculator/PriceToPayPercentageMerchantCommissionCalculatorType.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission\Business\Calculator;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer;
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\MerchantCommissionTransfer;
+use Spryker\Zed\MerchantCommission\Business\Calculator\MerchantCommissionCalculatorTypeInterface;
+use Spryker\Zed\MerchantCommission\MerchantCommissionConfig;
+
+class PriceToPayPercentageMerchantCommissionCalculatorType implements MerchantCommissionCalculatorTypeInterface
+{
+    /**
+     * @var \Spryker\Zed\MerchantCommission\MerchantCommissionConfig
+     */
+    protected MerchantCommissionConfig $merchantCommissionConfig;
+
+    /**
+     * @param \Spryker\Zed\MerchantCommission\MerchantCommissionConfig $merchantCommissionConfig
+     */
+    public function __construct(MerchantCommissionConfig $merchantCommissionConfig)
+    {
+        $this->merchantCommissionConfig = $merchantCommissionConfig;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionTransfer $merchantCommissionTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     *
+     * @return int
+     */
+    public function calculateMerchantCommissionAmount(
+        MerchantCommissionTransfer $merchantCommissionTransfer,
+        MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer,
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+    ): int {
+        $merchantCommissionPercentAmount = $merchantCommissionTransfer->getAmountOrFail() / 100;
+        if ($merchantCommissionPercentAmount <= 0) {
+            return 0;
+        }
+
+        return $this->calculate(
+            $merchantCommissionCalculationRequestItemTransfer->getPriceToPayAggregationOrFail(),
+            $merchantCommissionPercentAmount,
+        );
+    }
+
+    /**
+     * @param int $itemPriceToPay
+     * @param float $merchantCommissionPercentAmount
+     *
+     * @return int
+     */
+    protected function calculate(int $itemPriceToPay, float $merchantCommissionPercentAmount): int
+    {
+        $calculatedMerchantCommissionAmount = $itemPriceToPay * $merchantCommissionPercentAmount / 100;
+
+        return (int)round(
+            $calculatedMerchantCommissionAmount,
+            0,
+            $this->merchantCommissionConfig->getPercentageMerchantCommissionCalculationRoundMode(),
+        );
+    }
+}
+```
+
+## 3) Introduce a new facade method for the calculation logic.
+
+**src/Pyz/Zed/MerchantCommission/Business/MerchantCommissionBusinessFactory.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission\Business;
+
+use Pyz\Zed\MerchantCommission\Business\Calculator\PriceToPayPercentageMerchantCommissionCalculatorType;
+use Spryker\Zed\MerchantCommission\Business\Calculator\MerchantCommissionCalculatorTypeInterface;
+use Spryker\Zed\MerchantCommission\Business\MerchantCommissionBusinessFactory as SprykerMerchantCommissionBusinessFactory;
+
+/**
+ * @method \Spryker\Zed\MerchantCommission\Persistence\MerchantCommissionEntityManagerInterface getEntityManager()
+ * @method \Pyz\Zed\MerchantCommission\MerchantCommissionConfig getConfig()
+ * @method \Spryker\Zed\MerchantCommission\Persistence\MerchantCommissionRepositoryInterface getRepository()
+ */
+class MerchantCommissionBusinessFactory extends SprykerMerchantCommissionBusinessFactory
+{
+    /**
+     * @return \Spryker\Zed\MerchantCommission\Business\Calculator\MerchantCommissionCalculatorTypeInterface
+     */
+    public function createPriceToPayPercentageMerchantCommissionCalculatorType(): MerchantCommissionCalculatorTypeInterface
+    {
+        return new PriceToPayPercentageMerchantCommissionCalculatorType($this->getConfig());
+    }
+}
+```
+
+**src/Pyz/Zed/MerchantCommission/Business/MerchantCommissionFacadeInterface.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission\Business;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer;
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\MerchantCommissionTransfer;
+use Spryker\Zed\MerchantCommission\Business\MerchantCommissionFacadeInterface as SprykerMerchantCommissionFacadeInterface;
+
+interface MerchantCommissionFacadeInterface extends SprykerMerchantCommissionFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionTransfer $merchantCommissionTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     *
+     * @return int
+     */
+    public function calculatePriceToPayPercentageMerchantCommissionAmount(
+        MerchantCommissionTransfer $merchantCommissionTransfer,
+        MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer,
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+    ): int;
+}
+```
+
+**src/Pyz/Zed/MerchantCommission/Business/MerchantCommissionFacade.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission\Business;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer;
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\MerchantCommissionTransfer;
+use Spryker\Zed\MerchantCommission\Business\MerchantCommissionFacade as SprykerMerchantCommissionFacade;
+
+/**
+ * @method \Spryker\Zed\MerchantCommission\Persistence\MerchantCommissionEntityManagerInterface getEntityManager()
+ * @method \Spryker\Zed\MerchantCommission\Persistence\MerchantCommissionRepositoryInterface getRepository()
+ * @method \Pyz\Zed\MerchantCommission\Business\MerchantCommissionBusinessFactory getFactory()
+ */
+class MerchantCommissionFacade extends SprykerMerchantCommissionFacade implements MerchantCommissionFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionTransfer $merchantCommissionTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     *
+     * @return int
+     */
+    public function calculatePriceToPayPercentageMerchantCommissionAmount(
+        MerchantCommissionTransfer $merchantCommissionTransfer,
+        MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer,
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+    ): int {
+        return $this->getFactory()
+            ->createPriceToPayPercentageMerchantCommissionCalculatorType()
+            ->calculateMerchantCommissionAmount(
+                $merchantCommissionTransfer,
+                $merchantCommissionCalculationRequestItemTransfer,
+                $merchantCommissionCalculationRequestTransfer,
+            );
+    }
+}
+```
+
+## 4) Implement the calculator plugin
+
+This plugin should implement the `MerchantCommissionCalculatorPluginInterface` interface and provide the logic to calculate the merchant commission amount and correct persisting and reading the merchant commission amount.
+
+1. Method `getCalculatorType()` should return the type of the calculator as it will be stored in `spy_merchant_commission.calculator_plugin_type`.
+2. Method `transformAmountForPersistence()` should transform merchant commission amount before persisting. Usually, we persist the amount multiplied by 100 to avoid floating point precision issues.
+3. Method `transformAmountFromPersistence()` should transform merchant commission amount after reading from the database.
+4. Method `formatMerchantCommissionAmount()` should format the merchant commission amount for displaying in the Backoffice UI on the Merchant Commission Detail page.
+
+**src/Pyz/Zed/MerchantCommission/Communication/Plugin/MerchantCommission/PriceToPayPercentageMerchantCommissionCalculatorPlugin.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission\Communication\Plugin\MerchantCommission;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer;
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\MerchantCommissionTransfer;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+use Spryker\Zed\MerchantCommissionExtension\Communication\Dependency\Plugin\MerchantCommissionCalculatorPluginInterface;
+
+/**
+ * @method \Pyz\Zed\MerchantCommission\MerchantCommissionConfig getConfig()
+ * @method \Pyz\Zed\MerchantCommission\Business\MerchantCommissionFacadeInterface getFacade()
+ * @method \Spryker\Zed\MerchantCommission\Communication\MerchantCommissionCommunicationFactory getFactory()
+ */
+class PriceToPayPercentageMerchantCommissionCalculatorPlugin extends AbstractPlugin implements MerchantCommissionCalculatorPluginInterface
+{
+    /**
+     * @var string
+     */
+    protected const CALCULATOR_TYPE = 'price-to-pay-percentage';
+
+    /**
+     * @return string
+     */
+    public function getCalculatorType(): string
+    {
+        return static::CALCULATOR_TYPE;
+    }
+
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionTransfer $merchantCommissionTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     * 
+     * @return int
+     */
+    public function calculateMerchantCommission(
+        MerchantCommissionTransfer $merchantCommissionTransfer,
+        MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer,
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+    ): int {
+        return $this->getFacade()->calculatePriceToPayPercentageMerchantCommissionAmount(
+            $merchantCommissionTransfer,
+            $merchantCommissionCalculationRequestItemTransfer,
+            $merchantCommissionCalculationRequestTransfer,
+        );
+    }
+
+    /**
+     * @param float $merchantCommissionAmount
+     *
+     * @return int
+     */
+    public function transformAmountForPersistence(float $merchantCommissionAmount): int
+    {
+        return (int)round($merchantCommissionAmount * 100);
+    }
+
+    /**
+     * @param int $merchantCommissionAmount
+     *
+     * @return float
+     */
+    public function transformAmountFromPersistence(int $merchantCommissionAmount): float
+    {
+        return round($merchantCommissionAmount / 100, 2);
+    }
+
+    /**
+     * @param int $merchantCommissionAmount
+     * @param string|null $currencyIsoCode
+     *
+     * @return string
+     */
+    public function formatMerchantCommissionAmount(int $merchantCommissionAmount, ?string $currencyIsoCode = null): string
+    {
+        return sprintf('%s %%', $this->transformAmountFromPersistence($merchantCommissionAmount));
+    }
+}
+```
+
+## 5) Register the plugin
+
+To register the plugin, add it to the `MerchantCommissionDependencyProvider::getMerchantCommissionCalculatorPlugins()` method.
+
+**src/Pyz/Zed/MerchantCommission/MerchantCommissionDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommission;
+
+use Pyz\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\PriceToPayPercentageMerchantCommissionCalculatorPlugin;
+use Spryker\Zed\MerchantCommission\MerchantCommissionDependencyProvider as SprykerMerchantCommissionDependencyProvider;
+
+class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDependencyProvider
+{
+    /**
+     * @return list<\Spryker\Zed\MerchantCommissionExtension\Communication\Dependency\Plugin\MerchantCommissionCalculatorPluginInterface>
+     */
+    protected function getMerchantCommissionCalculatorPlugins(): array
+    {
+        return [
+            new PriceToPayPercentageMerchantCommissionCalculatorPlugin(),
+        ];
+    }
+}
+```
+
+Now you can import merchant commissions with the calculator type plugin `price-to-pay-percentage` and calculate commissions for items based on price to pay aggregation amount.

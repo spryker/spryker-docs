@@ -5,18 +5,20 @@ template: howto-guide-template
 ---
 
 This document shows how to create and register a merchant commission collector rule you want to use.
-Collector rules are used to collect items by specific criteria. Implementing and registering a `CollectorRulePlugin` allows you to build a specific query string used in the merchant commission's item condition and collect items that satisfies the condition.
+Collector rules are used to collect items by specific criteria. Implementing and registering a `CollectorRulePlugin` allows you to build a particular query string used in the merchant commission's item condition and collect items that satisfy the condition.
 
 ## Prerequisites
 
 To install the Spryker Core feature providing `RuleEngine` module, follow the [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-merchant-commission-feature.html).
 
-In this guide we will implement merchant commission collector rule by order item discount amount. For this we will introduce the `DiscountMerchantCommission` module and go step by step on how to implement new collector rule.
+This guide will implement the merchant commission collector rule by order item discount amount. For this, we will introduce the `DiscountMerchantCommission` module and go step by step to implement the new collector rule.
+Approximate time to complete: 2 hours.
 
 ## 1) Adjust transfer definitions
 
-To provide required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object. Add the `discountAmountAggregation` property to the transfer object definition.
+To provide the required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
+`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` table, to provide the discount amount of the order item we only need to add a new property `discountAmountAggregation` to the transfer object.
 
 **src/Pyz/Shared/DiscountMerchantCommission/Transfer/discount_merchant_commission.transfer.xml**
 
@@ -31,7 +33,7 @@ To provide required order item data, we need to adjust the definition of the `Me
 </transfers>
 ```
 
-## 2) Add RuleEngineFacade to module's dependency provider
+## 2) Add RuleEngineFacade to the module's dependency provider
 
 **src/Pyz/Zed/DiscountMerchantCommission/DiscountMerchantCommissionDependencyProvider.php**
 
@@ -219,10 +221,70 @@ class DiscountMerchantCommissionBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-## 5) Implement the collector rule plugin
+## 5) Introduce a facade method to collect commissionable items by discount amount
 
-Plugin will call our `DiscountAmountMerchantCommissionItemCollectorRule` class to collect order items. In our example plugin only accepts `number` data type, but you can adjust it to accept other data types, like `list` or `string`.
-The `getFieldName()` method returns the field name as it used in item collector query string, e.g. `discount-amount >= '100'`.
+**src/Pyz/Zed/DiscountMerchantCommission/Business/DiscountMerchantCommissionFacadeInterface.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DiscountMerchantCommission\Business;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\RuleEngineClauseTransfer;
+
+interface DiscountMerchantCommissionFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     * @param \Generated\Shared\Transfer\RuleEngineClauseTransfer $ruleEngineClauseTransfer
+     *
+     * @return list<\Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer>
+     */
+    public function collectByDiscountAmount(
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer,
+        RuleEngineClauseTransfer $ruleEngineClauseTransfer
+    ): array;
+}
+```
+
+**src/Pyz/Zed/DiscountMerchantCommission/Business/DiscountMerchantCommissionFacade.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\DiscountMerchantCommission\Business;
+
+use Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer;
+use Generated\Shared\Transfer\RuleEngineClauseTransfer;
+use Spryker\Zed\Kernel\Business\AbstractFacade;
+
+/**
+ * @method \Pyz\Zed\DiscountMerchantCommission\Business\DiscountMerchantCommissionBusinessFactory getFactory()
+ */
+class DiscountMerchantCommissionFacade extends AbstractFacade implements DiscountMerchantCommissionFacadeInterface
+{
+    /**
+     * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
+     * @param \Generated\Shared\Transfer\RuleEngineClauseTransfer $ruleEngineClauseTransfer
+     *
+     * @return list<\Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer>
+     */
+    public function collectByDiscountAmount(
+        MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer,
+        RuleEngineClauseTransfer $ruleEngineClauseTransfer
+    ): array {
+        return $this->getFactory()
+            ->createDiscountAmountMerchantCommissionItemCollectorRule()
+            ->collect($merchantCommissionCalculationRequestTransfer, $ruleEngineClauseTransfer);
+    }
+}
+```
+
+## 6) Implement the collector rule plugin
+
+The plugin will call our `DiscountAmountMerchantCommissionItemCollectorRule` class to collect order items. In our example, the plugin only accepts the `number` data type, but you can adjust it to accept other data types, like `list` or `string`.
+The `getFieldName()` method returns the field name as it is used in the item collector query string, e.g. `discount-amount >= '100'`.
 
 ```php
 <?php
@@ -235,7 +297,7 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\RuleEngineExtension\Communication\Dependency\Plugin\CollectorRulePluginInterface;
 
 /**
- * @method \Pyz\Zed\DiscountMerchantCommission\Business\DiscountMerchantCommissionBusinessFactory getFactory()
+ * @method \Pyz\Zed\DiscountMerchantCommission\Business\DiscountMerchantCommissionFacadeInterface getFacade()
  */
 class DiscountAmountMerchantCommissionItemCollectorRulePlugin extends AbstractPlugin implements CollectorRulePluginInterface
 {
@@ -247,9 +309,7 @@ class DiscountAmountMerchantCommissionItemCollectorRulePlugin extends AbstractPl
      */
     public function collect(TransferInterface $collectableTransfer, RuleEngineClauseTransfer $ruleEngineClauseTransfer): array
     {
-        return $this->getFactory()
-            ->createDiscountAmountMerchantCommissionItemCollectorRule()
-            ->collect($collectableTransfer, $ruleEngineClauseTransfer);
+        return $this->getFacade()->collectByDiscountAmount($collectableTransfer, $ruleEngineClauseTransfer);
     }
 
     /**
@@ -270,7 +330,9 @@ class DiscountAmountMerchantCommissionItemCollectorRulePlugin extends AbstractPl
 }
 ```
 
-## 6) Register new collector rule plugin
+## 6) Register a new collector rule plugin
+
+To register the plugin, add it to the `MerchantCommissionDependencyProvider::getRuleEngineCollectorRulePlugins()` method.
 
 **src/Pyz/Zed/MerchantCommission/MerchantCommissionDependencyProvider.php**
 
@@ -296,4 +358,4 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 }
 ```
 
-Now you can import merchant commissions with item condition based on order item discount amount value and calculate commissions for collected items. 
+Now you can import merchant commissions with item conditions based on order item discount amount value and calculate commissions for collected items. 

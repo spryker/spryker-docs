@@ -40,12 +40,12 @@ Make sure the following modules have been installed:
 
 1. Add the following configuration:
 
-| CONFIGURATION                                                      | SPECIFICATION                                                     | NAMESPACE                   |
-|--------------------------------------------------------------------|-------------------------------------------------------------------|-----------------------------|
-| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for stores in the system.   | \Pyz\Zed\MerchantCommission |
-| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who aren't subject to commissions.         | \Pyz\Zed\MerchantCommission |
-| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.     | \Pyz\Zed\Refund             |
-| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update. | \Pyz\Zed\Sales              |
+| CONFIGURATION                                                      | SPECIFICATION                                                     | NAMESPACE                |
+|--------------------------------------------------------------------|-------------------------------------------------------------------|--------------------------|
+| MerchantCommissionConfig::MERCHANT_COMMISSION_PRICE_MODE_PER_STORE | Commission price mode configuration for stores in the system.   | Pyz\Zed\MerchantCommission |
+| MerchantCommissionConfig::EXCLUDED_MERCHANTS_FROM_COMMISSION       | The list of merchants who aren't subject to commissions.         | Pyz\Zed\MerchantCommission |
+| RefundConfig::shouldCleanupRecalculationMessagesAfterRefund()      | Sanitizes recalculation messages after refund if set to true.     | Pyz\Zed\Refund           |
+| SalesConfig::shouldPersistModifiedOrderItemProperties()            | Returns true if order items should be updated during order update. | Pyz\Zed\Sales            |
 
 2. Configure the merchant commission price mode per store and the excluded merchants from the commission:
 
@@ -79,7 +79,7 @@ class MerchantCommissionConfig extends SprykerMerchantCommissionConfig
      */
     protected const MERCHANT_COMMISSION_PRICE_MODE_PER_STORE = [
         'DE' => self::PRICE_MODE_GROSS,
-        'AT' => self::PRICE_MODE_GROSS,
+        'AT' => self::PRICE_MODE_NET,
         'US' => self::PRICE_MODE_GROSS,
     ];
 
@@ -410,6 +410,10 @@ merchant_commission.validation.merchant_commission_valid_to_invalid_datetime,A m
 merchant_commission.validation.merchant_commission_valid_to_invalid_datetime,Das ‘Gültig bis’-Datum ist nicht im gültigen Format.,de_DE
 merchant_commission.validation.merchant_commission_validity_period_invalid,A merchant commission ‘valid to’ date must be later than the ‘valid from’ date.,en_US
 merchant_commission.validation.merchant_commission_validity_period_invalid,Das ‘Gültig bis’-Datum muss nach dem ‘Gültig von’-Datum liegen.,de_DE
+merchant_commission.validation.invalid_query_string,The provided query string has an invalid format in %field%.,en_US
+merchant_commission.validation.invalid_query_string,Die angegebene Abfragezeichenfolge hat ein ungültiges Format in %field%.,de_DE
+merchant_commission.validation.invalid_compare_operator,The provided compare operator is invalid in %field%.,en_US
+merchant_commission.validation.invalid_compare_operator,Der angegebene Vergleichsoperator ist ungültig in %field%.,de_DE
 ```
 
 2. Import data:
@@ -543,13 +547,13 @@ mc4,AT
 
 7. Register the following data import plugins:
 
-| PLUGIN                                     | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                 |
-|--------------------------------------------|--------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
-| MerchantCommissionGroupDataImportPlugin    | Imports merchant commission group data into the database.    |               | \Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
-| MerchantCommissionDataImportPlugin         | Imports merchant commission data into the database.          |               | \Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
-| MerchantCommissionAmountDataImportPlugin   | Imports merchant commission amount data into the database.   |               | \Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
-| MerchantCommissionStoreDataImportPlugin    | Imports merchant commission store data into the database.    |               | \Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
-| MerchantCommissionMerchantDataImportPlugin | Imports merchant commission merchant data into the database. |               | \Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
+| PLUGIN                                     | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                |
+|--------------------------------------------|--------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| MerchantCommissionGroupDataImportPlugin    | Imports merchant commission group data into the database.    |               | Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
+| MerchantCommissionDataImportPlugin         | Imports merchant commission data into the database.          |               | Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
+| MerchantCommissionAmountDataImportPlugin   | Imports merchant commission amount data into the database.   |               | Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
+| MerchantCommissionStoreDataImportPlugin    | Imports merchant commission store data into the database.    |               | Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
+| MerchantCommissionMerchantDataImportPlugin | Imports merchant commission merchant data into the database. |               | Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -646,10 +650,10 @@ Make sure the entities have been imported to the following database tables:
 
 1. To enable the Marketplace ACL control, register the following plugins:
 
-| PLUGIN                                                      | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                                   |
-|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------------------|
-| SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin  | Expands a set of `AclEntityRule` transfer objects with sales merchant commission composite data.            |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
-| SalesMerchantCommissionAclEntityConfigurationExpanderPlugin | Expands a provided `AclEntityMetadataConfig` transfer object with sales merchant commission composite data. |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
+| PLUGIN                                                      | SPECIFICATION                                                                                             | PREREQUISITES | NAMESPACE                                                                  |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------|
+| SalesMerchantCommissionMerchantAclEntityRuleExpanderPlugin  | Expands a set of `AclEntityRule` transfer objects with sales merchant commission composite data.            |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
+| SalesMerchantCommissionAclEntityConfigurationExpanderPlugin | Expands a provided `AclEntityMetadataConfig` transfer object with sales merchant commission composite data. |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal |
 
 **src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php**
 
@@ -688,15 +692,15 @@ class AclMerchantPortalDependencyProvider extends SprykerAclMerchantPortalDepend
 
 2. To enable the Order Management related behavior, register the following plugins:
 
-| PLUGIN                                                           | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                                            |
-|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------------|
-| MerchantCommissionCalculatorPlugin                               | Recalculates merchant commissions for a given order, updating the `CalculableObjectTransfer` object with the new commission values for items and totals.   |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Calculation                                |
-| SanitizeMerchantCommissionPreReloadPlugin                        | Sanitizes merchant commission related fields in quote for the reorder functionality.                                                                      |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal                          |
-| UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin      | Calculates and persists the total merchant commission amounts for a newly created merchant order.                                                         |               | \Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\MerchantSalesOrder       |
-| SalesMerchantCommissionCalculationCommandByOrderPlugin           | Calculates and persists the merchant commissions for a given order, updating the order totals and order items with the calculated commission amounts.     |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Oms\Command                                |
-| MerchantCommissionRefundPostSavePlugin                           | Processes the refund of merchant commissions after a refund has been saved, updating the relevant sales merchant commissions and recalculating the order. |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Refund                                     |
-| MerchantCommissionOrderPostCancelPlugin                          | Handles the refund of merchant commissions when an order is cancelled, updating the relevant sales merchant commissions and recalculating the order.      |               | \Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Sales                                      |
-| UpdateMerchantCommissionTotalsPostRefundMerchantCommissionPlugin | Updates the total and refunded merchant commission amounts in the order totals after a merchant commission refund.                                        |               | \Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\SalesMerchantCommission; |
+| PLUGIN                                                           | SPECIFICATION                                                                                                                                             | PREREQUISITES | NAMESPACE                                                                                      |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------------|
+| MerchantCommissionCalculatorPlugin                               | Recalculates merchant commissions for a given order, updating the `CalculableObjectTransfer` object with the new commission values for items and totals.   |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Calculation                           |
+| SanitizeMerchantCommissionPreReloadPlugin                        | Sanitizes merchant commission related fields in quote for the reorder functionality.                                                                      |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\AclMerchantPortal                     |
+| UpdateMerchantCommissionTotalsMerchantOrderPostCreatePlugin      | Calculates and persists the total merchant commission amounts for a newly created merchant order.                                                         |               | Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\MerchantSalesOrder  |
+| SalesMerchantCommissionCalculationCommandByOrderPlugin           | Calculates and persists the merchant commissions for a given order, updating the order totals and order items with the calculated commission amounts.     |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Oms\Command                           |
+| MerchantCommissionRefundPostSavePlugin                           | Processes the refund of merchant commissions after a refund has been saved, updating the relevant sales merchant commissions and recalculating the order. |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Refund                                |
+| MerchantCommissionOrderPostCancelPlugin                          | Handles the refund of merchant commissions when an order is cancelled, updating the relevant sales merchant commissions and recalculating the order.      |               | Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Sales                                 |
+| UpdateMerchantCommissionTotalsPostRefundMerchantCommissionPlugin | Updates the total and refunded merchant commission amounts in the order totals after a merchant commission refund.                                        |               | Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\SalesMerchantCommission; |
 
 **src/Pyz/Zed/Calculation/CalculationDependencyProvider.php**
 
@@ -888,14 +892,14 @@ class SalesMerchantCommissionDependencyProvider extends SprykerSalesMerchantComm
 
 3. To enable the merchant commission rule engine, register the following plugins:
 
-| PLUGIN                                                         | SPECIFICATION                                                                                                                                                        | PREREQUISITES | NAMESPACE                                                               |
-|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------|
-| MerchantCommissionItemCollectorRuleSpecificationProviderPlugin | Provides rule specifications for the collection of merchant commission items in the rule engine.                                                                     |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
-| MerchantCommissionOrderDecisionRuleSpecificationProviderPlugin | Provides rule specifications for decision-making regarding merchant commission orders in the rule engine.                                                            |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
-| FixedMerchantCommissionCalculatorPlugin                        | Calculates merchant commissions based on a fixed amount, transforming and formatting the commission amount for persistence and display.                              |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
-| PercentageMerchantCommissionCalculatorPlugin                   | Calculates merchant commissions based on a percentage of the total amount, transforming, rounding, and formatting the commission amount for persistence and display. |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
-| ItemSkuCollectorRulePlugin                                     | Collects all items that match a given SKU in the rule engine.                                                                                                        |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
-| PriceModeDecisionRulePlugin                                    | Checks if the price mode in the rule engine matches the one provided in the merchant commission calculation request.                                                  |               | \Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| PLUGIN                                                         | SPECIFICATION                                                                                                                                                        | PREREQUISITES | NAMESPACE                                                              |
+|----------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| MerchantCommissionItemCollectorRuleSpecificationProviderPlugin | Provides rule specifications for the collection of merchant commission items in the rule engine.                                                                     |               | Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| MerchantCommissionOrderDecisionRuleSpecificationProviderPlugin | Provides rule specifications for decision-making regarding merchant commission orders in the rule engine.                                                            |               | Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine         |
+| FixedMerchantCommissionCalculatorPlugin                        | Calculates merchant commissions based on a fixed amount, transforming and formatting the commission amount for persistence and display.                              |               | Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
+| PercentageMerchantCommissionCalculatorPlugin                   | Calculates merchant commissions based on a percentage of the total amount, transforming, rounding, and formatting the commission amount for persistence and display. |               | Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
+| ItemSkuMerchantCommissionItemCollectorRulePlugin               | Collects all items that match a given SKU in the rule engine.                                                                                                        |               | Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
+| PriceModeMerchantCommissionOrderDecisionRulePlugin             | Checks if the price mode in the rule engine matches the one provided in the merchant commission calculation request.                                                 |               | Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission |
 
 **src/Pyz/Zed/RuleEngine/RuleEngineDependencyProvider.php**
 
@@ -932,8 +936,8 @@ namespace Pyz\Zed\MerchantCommission;
 
 use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\FixedMerchantCommissionCalculatorPlugin;
 use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\PercentageMerchantCommissionCalculatorPlugin;
-use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\ItemSkuCollectorRulePlugin;
-use Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine\PriceModeDecisionRulePlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\ItemSkuMerchantCommissionItemCollectorRulePlugin;
+use Spryker\Zed\MerchantCommission\Communication\Plugin\MerchantCommission\PriceModeMerchantCommissionOrderDecisionRulePlugin;
 use Spryker\Zed\MerchantCommission\MerchantCommissionDependencyProvider as SprykerMerchantCommissionDependencyProvider;
 
 class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDependencyProvider
@@ -955,7 +959,7 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
     protected function getRuleEngineCollectorRulePlugins(): array
     {
         return [
-            new ItemSkuCollectorRulePlugin(),
+            new ItemSkuMerchantCommissionItemCollectorRulePlugin(),
         ];
     }
 
@@ -965,7 +969,7 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
     protected function getRuleEngineDecisionRulePlugins(): array
     {
         return [
-            new PriceModeDecisionRulePlugin(),
+            new PriceModeMerchantCommissionOrderDecisionRulePlugin(),
         ];
     }
 }

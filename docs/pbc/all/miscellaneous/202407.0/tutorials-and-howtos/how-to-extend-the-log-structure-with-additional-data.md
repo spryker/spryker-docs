@@ -22,7 +22,7 @@ is installed. Without it, you will not be able to proceed with the steps outline
 
 ### Option 1: Introduce Processor Plugins
 
-* Obtain the **RequestStack** service to get access to the customer session:
+* Add **RequestStack** service to the dependency provider of your module to get access to the customer session:
 
 **src/Pyz/Yves/Log/LogDependencyProvider.php**
 
@@ -181,7 +181,7 @@ class CustomerBusinessUnitProcessorPlugin extends AbstractPlugin implements LogP
 ```
 
 * Register the newly introduced plugin for the **security** log type for the **Yves** application:
-* 
+
   **src/Pyz/Yves/Log/LogDependencyProvider.php**
 
 ```php
@@ -211,7 +211,6 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 Pass the data directly to the specific log context as needed:
 
-```php
 ```php
 <?php
 

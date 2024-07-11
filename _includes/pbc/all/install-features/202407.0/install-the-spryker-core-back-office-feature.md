@@ -159,11 +159,6 @@ use Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig as SprykerSecurityOaut
 class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 {
     /**
-     * Specification:
-     *  - Defines by which strategy Oauth user authentication should be.
-     *
-     * @api
-     *
      * @return string
      */
     public function getAuthenticationStrategy(): string
@@ -332,7 +327,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
         return [
             new ZedUserSessionHandlerSecurityPlugin(),
             new ZedUserSecurityPlugin(),
-			new ZedOauthUserSecurityPlugin(),
+            new ZedOauthUserSecurityPlugin(),
         ];
     }
 }
@@ -600,8 +595,7 @@ use Spryker\Zed\UserLocaleGui\Communication\Plugin\UserLocaleFormExpanderPlugin;
 
 class UserDependencyProvider extends SprykerUserDependencyProvider
 {
-
-	/**
+    /**
      * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
      */
     protected function getUserFormExpanderPlugins(): array
@@ -725,20 +719,20 @@ use Spryker\Zed\Translator\Communication\Console\GenerateTranslationCacheConsole
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
-	/**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return list<\Symfony\Component\Console\Command\Command>
-     */
-     protected function getConsoleCommands(Container $container)
-     {
+   /**
+    * @param \Spryker\Zed\Kernel\Container $container
+    *
+    * @return list<\Symfony\Component\Console\Command\Command>
+    */
+    protected function getConsoleCommands(Container $container)
+    {
         $commands = [
-			new CleanTranslationCacheConsole(),
+            new CleanTranslationCacheConsole(),
             new GenerateTranslationCacheConsole(),
-     	];
-
- 		return $commands;
-     }
+        ];
+        
+        return $commands;
+    }
 }
 ```
 

@@ -348,7 +348,32 @@ Make sure that the following changes have been applied by checking your database
 
 {% endinfo_block %}
 
-### 4) Set up behavior
+### 4) Add translations
+
+1. Append the glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+rule_engine.validation.invalid_query_string,The provided query string has an invalid format.,en_US
+rule_engine.validation.invalid_query_string,Die angegebene Abfragezeichenfolge hat ein ungültiges Format.,de_DE
+rule_engine.validation.invalid_compare_operator_value,The provided compare operator is invalid.,en_US
+rule_engine.validation.invalid_compare_operator_value,Der angegebene Vergleichsoperator ist ungültig.,de_DE
+```
+
+2. Add the glossary keys:
+
+```bash
+console data:import:glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+
+{% endinfo_block %}
+
+### 5) Set up behavior
 
 1. Install the following plugins with modules:
 
@@ -560,7 +585,7 @@ To verify that the navigation for Store GUI is successfully generated, make sure
 
 {% endinfo_block %}
 
-### 5) Set up Publish and Synchronize
+### 6) Set up Publish and Synchronize
 
 1. Update `RabbitMqConfig`:
 
@@ -859,7 +884,6 @@ All locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerP
 error.429,Zu viele Anfragen,de_DE
 error.429,Too Many Requests,en_US
 security_blocker_page.error.account_blocked,"Too many log in attempts from your address. Please wait %minutes% minutes before trying again.",en_US
-security_blocker_page.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
 2. Add the glossary keys:
@@ -878,15 +902,14 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 
 Install the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| SessionHandlerRedisProviderPlugin | Provides a Redis-based session handler implementation for Yves sessions. |  | Spryker\Yves\SessionRedis\Plugin\Session |
-| SessionHandlerRedisLockingProviderPlugin | Provides a Redis-based session handler implementation with session locking for Yves sessions. |  | Spryker\Yves\SessionRedis\Plugin\Session |
-| SessionHandlerFileProviderPlugin | Provides a file-based session handler implementation for Yves sessions. |  | Spryker\Yves\SessionFile\Plugin\Session |
-| YvesSessionRedisLockReleaserPlugin | Removes a session lock from Redis by session ID for Yves sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session
- |
-| SecurityBlockerCustomerEventDispatcherPlugin | Adds subscribers for request and authentication failure events to control the customers' failed login attempts. |  | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
-| SecurityBlockerAgentEventDispatcherPlugin | Adds subscribers for request and authentication failure events to control the agents' failed login attempts. |  | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
+| PLUGIN                                       | SPECIFICATION                                                                                                                                        | PREREQUISITES | NAMESPACE                                                   |
+|----------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------|
+| SessionHandlerRedisProviderPlugin            | Provides a Redis-based session handler implementation for Yves sessions.                                                                             |               | Spryker\Yves\SessionRedis\Plugin\Session                    |
+| SessionHandlerRedisLockingProviderPlugin     | Provides a Redis-based session handler implementation with session locking for Yves sessions.                                                        |               | Spryker\Yves\SessionRedis\Plugin\Session                    |
+| SessionHandlerFileProviderPlugin             | Provides a file-based session handler implementation for Yves sessions.                                                                              |               | Spryker\Yves\SessionFile\Plugin\Session                     |
+| YvesSessionRedisLockReleaserPlugin           | Removes a session lock from Redis by session ID for Yves sessions. It's used for removing previously created locks by running `session:lock:remove`. |               | Spryker\Zed\SessionRedis\Communication\Plugin\Session       |       
+| SecurityBlockerCustomerEventDispatcherPlugin | Adds subscribers for request and authentication failure events to control the customers' failed login attempts.                                      |               | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
+| SecurityBlockerAgentEventDispatcherPlugin    | Adds subscribers for request and authentication failure events to control the agents' failed login attempts.                                         |               | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
 
 **src/Pyz/Yves/Session/SessionDependencyProvider.php**
 

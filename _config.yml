@@ -236,6 +236,3 @@ redirect_from:
 
 form_endpoints:
   feedback: 'https://formspree.io/f/xdoboyro'
-
-files_to_exclude:
-  - docs/pbc/all/cart-and-checkout/202407.0/*

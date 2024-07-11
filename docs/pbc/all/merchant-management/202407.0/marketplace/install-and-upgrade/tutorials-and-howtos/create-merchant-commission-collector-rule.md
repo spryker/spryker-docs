@@ -33,6 +33,12 @@ To provide the required order item data, we need to adjust the definition of the
 </transfers>
 ```
 
+Then run the command to generate the transfer objects:
+
+```bash
+console transfer:generate
+```
+
 ## 2) Add RuleEngineFacade to the module's dependency provider
 
 **src/Pyz/Zed/DiscountMerchantCommission/DiscountMerchantCommissionDependencyProvider.php**

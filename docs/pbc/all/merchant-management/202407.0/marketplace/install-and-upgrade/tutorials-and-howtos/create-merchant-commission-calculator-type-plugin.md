@@ -1,6 +1,6 @@
 ---
-title: "Create Merchant Commission Calculator Type Plugin"
-description: This articles provides details how to implement merchant commission collector rule
+title: Create Merchant Commission Calculator Type Plugin
+description: This articles provides details how to implement merchant commission calculator type plugin.
 template: howto-guide-template
 ---
 
@@ -8,7 +8,7 @@ This document shows how to create and register a merchant commission calculator 
 
 ## Prerequisites
 
-To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-merchant-commission-feature.html).
+To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 This guide will implement the merchant commission calculator type plugin that calculates commission based on the order item's sum price to pay aggregation value. For this, we will go step by step to create a plugin implementing `MerchantCommissionCalculatorPluginInterface` in the `MerchantCommission` module.
 Approximate time to complete: 1 hour.
@@ -16,7 +16,7 @@ Approximate time to complete: 1 hour.
 ## 1) Adjust transfer definitions
 
 To provide the required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
-`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` table, to provide the price to pay aggregation amount of the order item we only need to add a new property `sumPriceToPayAggregation` to the transfer object.
+`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` database table, to provide the price to pay aggregation amount of the order item we only need to add a new property `sumPriceToPayAggregation` to the transfer object.
 
 **src/Pyz/Shared/MerchantCommission/Transfer/merchant_commission.transfer.xml**
 
@@ -217,7 +217,7 @@ class MerchantCommissionFacade extends SprykerMerchantCommissionFacade implement
 
 This plugin should implement the `MerchantCommissionCalculatorPluginInterface` interface and provide the logic to calculate the merchant commission amount and correct persisting and reading the merchant commission amount.
 
-1. Method `getCalculatorType()` should return the type of the calculator as it will be stored in `spy_merchant_commission.calculator_plugin_type`.
+1. Method `getCalculatorType()` should return the type of the calculator as it will be stored in `spy_merchant_commission.calculator_plugin_type` database column.
 2. Method `transformAmountForPersistence()` should transform merchant commission amount before persisting. Usually, we persist the amount multiplied by 100 to avoid floating point precision issues.
 3. Method `transformAmountFromPersistence()` should transform merchant commission amount after reading from the database.
 4. Method `formatMerchantCommissionAmount()` should format the merchant commission amount for displaying in the Backoffice UI on the Merchant Commission Detail page.

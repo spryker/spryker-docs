@@ -91,7 +91,7 @@ use Spryker\Zed\User\UserDependencyProvider as SprykerUserDependencyProvider;
 class UserDependencyProvider extends SprykerUserDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
      */
     protected function getUserFormExpanderPlugins(): array
     {
@@ -101,7 +101,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserTableConfigExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserTableConfigExpanderPluginInterface>
      */
     protected function getUserTableConfigExpanderPlugins(): array
     {
@@ -111,7 +111,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\UserExtension\Dependency\Plugin\UserTableDataExpanderPluginInterface[]
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserTableDataExpanderPluginInterface>
      */
     protected function getUserTableDataExpanderPlugins(): array
     {
@@ -254,38 +254,38 @@ autocomplete.placeholder,Suche,de_DE
 console data:import:glossary
 ```
 
-### 4) Enable the controller providers
+### 4) Enable controllers
 
-Register the controller providers in the Yves application:
+Register the following route provider plugins:
 
-| PROVIDER                      | NAMESPACE                                    | ENABLED CONTROLLER                         | CONTROLLER SPECIFICATION                                             |
-|-------------------------------|----------------------------------------------|--------------------------------------------|----------------------------------------------------------------------|
-| AgentPageControllerProvider   | SprykerShop\Yves\AgentPage\Plugin\Provider   | AgentPage\AuthController                   | Provides Login and Logout actions for the agent user.                |
-| AgentWidgetControllerProvider | SprykerShop\Yves\AgentWidget\Plugin\Provider | AgentWidget\CustomerAutocompleteController | Provides the customer autocomplete action for the agent control bar. |
+| PROVIDER                       | NAMESPACE                                  |
+|--------------------------------|--------------------------------------------|
+| AgentPageRouteProviderPlugin   | SprykerShop\Yves\AgentPage\Plugin\Router   |
+| AgentWidgetRouteProviderPlugin | SprykerShop\Yves\AgentWidget\Plugin\Router |
 
-**src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
+Register the route provider plugins in the Yves application:
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
 ```php
 <?php
 
-namespace Pyz\Yves\ShopApplication;
+namespace Pyz\Yves\Router;
 
-use SprykerShop\Yves\AgentPage\Plugin\Provider\AgentPageControllerProvider;
-use SprykerShop\Yves\AgentWidget\Plugin\Provider\AgentWidgetControllerProvider;
-use SprykerShop\Yves\ShopApplication\YvesBootstrap as SprykerYvesBootstrap;
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\AgentPage\Plugin\Router\AgentPageRouteProviderPlugin;
+use SprykerShop\Yves\AgentWidget\Plugin\Router\AgentWidgetRouteProviderPlugin;
 
-class YvesBootstrap extends SprykerYvesBootstrap
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @param bool|null $isSsl
-     *
-     * @return \SprykerShop\Yves\ShopApplication\Plugin\Provider\AbstractYvesControllerProvider[]
+     * @return list<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
-    protected function getControllerProviderStack($isSsl)
+    protected function getRouteProvider(): array
     {
         return [
-            new AgentPageControllerProvider($isSsl), #AgentFeature
-            new AgentWidgetControllerProvider($isSsl), #AgentFeature
+            new AgentPageRouteProviderPlugin(),
+            new AgentWidgetRouteProviderPlugin(),
         ];
     }
 }
@@ -293,12 +293,12 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you have registered the providers correctly:
+Ensure that you have registered the route provider plugins correctly:
 
-| PROVIDER                      | TEST                                                                                               |
-|-------------------------------|----------------------------------------------------------------------------------------------------|
-| AgentPageControllerProvider   | Ensure that you can open https://mysprykershop.com/agent/login.                                    |
-| AgentWidgetControllerProvider | 1. Log in as an agent. <br>2. Ensure that you can search by customers using the Agent control bar. |
+| PROVIDER                       | TEST                                                                                               |
+|--------------------------------|----------------------------------------------------------------------------------------------------|
+| AgentPageRouteProviderPlugin   | Ensure that you can open https://mysprykershop.com/agent/login.                                    |
+| AgentWidgetRouteProviderPlugin | 1. Log in as an agent. <br>2. Ensure that you can search by customers using the Agent control bar. |
 
 {% endinfo_block %}
 
@@ -312,7 +312,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| AgentPageSecurityPlugin                                 | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
+| YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
 | AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      | None          | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
@@ -323,17 +323,17 @@ Enable the following behaviors by registering the plugins:
 namespace Pyz\Yves\Security;
 
 use Spryker\Yves\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use SprykerShop\Yves\AgentPage\Plugin\Security\AgentPageSecurityPlugin;
+use SprykerShop\Yves\AgentPage\Plugin\Security\YvesAgentPageSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
+     * @return list<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
         return [
-            new AgentPageSecurityPlugin(),
+            new YvesAgentPageSecurityPlugin(),
         ];
     }
 }
@@ -402,7 +402,7 @@ use SprykerShop\Yves\SessionAgentValidation\Plugin\Security\ValidateAgentSession
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
+     * @return list<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
@@ -579,7 +579,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return array<string>
+     * @return list<string>
      */
     protected function getGlobalWidgets(): array
     {

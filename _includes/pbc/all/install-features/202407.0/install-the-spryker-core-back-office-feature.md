@@ -1,6 +1,3 @@
-
-
-
 {% info_block errorBox %}
 
 This feature integration guide expects the basic feature to be in place.
@@ -99,14 +96,12 @@ Ensure the following transfers have been created:
 
 Add the following configuration to your project:
 
-| CONFIGURATION                                           | SPECIFICATION                                                                                                                | NAMESPACE                 |
-|---------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------|
-| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES   | Fallback locales that are used if there is no translation for a selected locale.                                             | Spryker\Shared\Translator |
-| TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY    | An absolute path to a translation cache directory. For example, `/var/www/data/DE/cache/Zed/translation`.                       | Spryker\Shared\Translator |
-| TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS | Paths to project level translations. You can use a global pattern that specifies sets of filenames with wildcard characters. | Spryker\Shared\Translator |
-| AclConstants::ACL_DEFAULT_RULES                         | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                 | Spryker\Shared\Acl        |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for a Back Office user.                                    | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.            | Spryker\Shared\SecurityBlockerBackoffice |
+| CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                          | NAMESPACE                 |
+|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
+| TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                       | Spryker\Shared\Translator |
+| AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                                           | Spryker\Shared\Acl        |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for a Back Office user.                                   | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.       | Spryker\Shared\SecurityBlockerBackoffice |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
 
 **config/Shared/config_default.php**
@@ -117,14 +112,6 @@ use Spryker\Shared\Translator\TranslatorConstants;
 // ----------- Translator
 $config[TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES] = [
     'de_DE' => ['en_US'],
-];
-$config[TranslatorConstants::TRANSLATION_ZED_CACHE_DIRECTORY] = sprintf(
-    '%s/data/%s/cache/Zed/translation',
-    APPLICATION_ROOT_DIR,
-    $CURRENT_STORE
-);
-$config[TranslatorConstants::TRANSLATION_ZED_FILE_PATH_PATTERNS] = [
-    APPLICATION_ROOT_DIR . '/data/translation/Zed/*/[a-z][a-z]_[A-Z][A-Z].csv',
 ];
 
 // >> BACKOFFICE
@@ -262,16 +249,16 @@ Set up the following behaviors.
 
 1. Activate the following security plugins:
 
-| PLUGIN                                                           | SPECIFICATION                                                                                                   | PREREQUISITES                                                                                                             | NAMESPACE                                                                       |
-|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| SecurityApplicationPlugin                                        | Extends the Zed global container with the services required for the Security functionality.                     | If there is `WebProfilerApplicationPlugin` in `ApplicationDependencyProvider`, put `SecurityApplicationPlugin` before it. | Spryker\Zed\Security\Communication\Plugin\Application                           |  
-| UserSessionHandlerSecurityPlugin                                 | Sets an authenticated user to the session.                                                                      | None                                                                                                                      | Spryker\Zed\User\Communication\Plugin\Securiy                                   |
-| UserSecurityPlugin                                               | Sets security firewalls, such as rules and handlers, for the Back Office users.                                 | None                                                                                                                      | Spryker\Zed\SecurityGui\Communication\Plugin\Security                           |
-| UserPasswordResetMailTypePlugin                                  | Adds a new email type, which is used by `MailUserPasswordResetRequestHandlerPlugin`.                            | None                                                                                                                      | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
-| MailUserPasswordResetRequestHandlerPlugin                        | Sends a password reset email on a user request.                                                                 | Mail module must be configured. <br>`UserPasswordResetMailTypePlugin` is enabled.                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
-| OauthUserSecurityPlugin                                          | Sets security firewalls, such as rules and handlers, for Oauth users.                                           | None                                                                                                                      | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
-| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Back Office user security configuration.                    | None                                                                                                                      | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
-| SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log the failed Backoffice login attempts. Denies user access in case of exceeding the limit. | None                                                                                                                      | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
+| PLUGIN                                                           | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                                                                                | NAMESPACE                                                                       |
+|------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| ZedSecurityApplicationPlugin                                     | Integrates with the Symfony framework, leveraging its security components for managing authentication and authorization, configures and provides necessary services for security-related functionality. | If there is `WebProfilerApplicationPlugin` in `ApplicationDependencyProvider`, put `ZedSecurityApplicationPlugin` before it. | Spryker\Zed\Security\Communication\Plugin\Application                           |  
+| ZedUserSessionHandlerSecurityPlugin                              | Extends security service with `CurrentUserSessionHandlerListener` to handle user sessions during the authentication process.                                                                            | None                                                                                                                         | Spryker\Zed\User\Communication\Plugin\Securiy                                   |
+| ZedUserSecurityPlugin                                            | Extends security service with User firewall.                                                                                                                                                            | None                                                                                                                         | Spryker\Zed\SecurityGui\Communication\Plugin\Security                           |
+| UserPasswordResetMailTypeBuilderPlugin                           | Builds the `MailTransfer` with data for a user password restore mail.                                                                                                                                   | None                                                                                                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
+| MailUserPasswordResetRequestStrategyPlugin                       | Sends a password reset email on a user request.                                                                                                                                                         | Mail module must be configured. <br>`UserPasswordResetMailTypeBuilderPlugin` is enabled.                                     | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
+| ZedOauthUserSecurityPlugin                                       | Extends `User` firewall with authenticator and user provider if exists, introduces `OauthUser` firewall in security service otherwise.                                                                  | Mst be connected after or instead of `ZedUserSecurityPlugin`                                                                 | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
+| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Back Office user security configuration.                                                                                                           | None                                                                                                                         | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
+| SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log the failed Backoffice login attempts. Denies user access in case of exceeding the limit.                                                                                         | None                                                                                                                         | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 ```php
@@ -280,21 +267,46 @@ Set up the following behaviors.
 namespace Pyz\Zed\Application;
 
 use Spryker\Zed\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
-use Spryker\Zed\Security\Communication\Plugin\Application\SecurityApplicationPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplicationPlugin;
+use Spryker\Zed\WebProfiler\Communication\Plugin\Application\WebProfilerApplicationPlugin;
 
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
-		return [
-			new SecurityApplicationPlugin(),
+        return [
+            new ZedSecurityApplicationPlugin(),
+            
+            // web profiler plugin should be after the security plugin.
+            new WebProfilerApplicationPlugin(),
+        ]
 
-			// web profiler plugin should be after the security plugin.
-			new WebProfilerApplicationPlugin(),
-		];
+        return $plugins;
+    }
+
+    /**
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getBackofficeApplicationPlugins(): array
+    {
+        $plugins = [
+            new ZedSecurityApplicationPlugin(),
+        ];
+
+        return $plugins;
+    }
+
+    /**
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    protected function getBackendGatewayApplicationPlugins(): array
+    {
+        return [
+            new ZedSecurityApplicationPlugin(),
+        ];
     }
 }
 ```
@@ -306,19 +318,21 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 namespace Pyz\Zed\Security;
 
 use Spryker\Zed\Security\SecurityDependencyProvider as SprykerSecurityDependencyProvider;
-use Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security\OauthUserSecurityPlugin;
+use Spryker\Zed\SecurityGui\Communication\Plugin\Security\ZedUserSecurityPlugin;
+use Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security\ZedOauthUserSecurityPlugin;
+use Spryker\Zed\User\Communication\Plugin\Security\ZedUserSessionHandlerSecurityPlugin;
 
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
+     * @return list<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
         return [
-		    new UserSessionHandlerSecurityPlugin(),
-            new UserSecurityPlugin(),
-			new OauthUserSecurityPlugin(),
+            new ZedUserSessionHandlerSecurityPlugin(),
+            new ZedUserSecurityPlugin(),
+			new ZedOauthUserSecurityPlugin(),
         ];
     }
 }
@@ -361,7 +375,7 @@ use Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatche
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
      */
     protected function getEventDispatcherPlugins(): array
     {
@@ -385,17 +399,17 @@ Ensure that `https://mysprykershop.com/security-oauth-user/login` redirects you 
 namespace Pyz\Zed\UserPasswordReset;
 
 use Spryker\Zed\UserPasswordReset\UserPasswordResetDependencyProvider as SprykerUserPasswordResetDependencyProvider;
-use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailUserPasswordResetRequestHandlerPlugin;
+use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset\MailUserPasswordResetRequestStrategyPlugin;
 
 class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestHandlerPluginInterface>
+     * @return array<\Spryker\Zed\UserPasswordResetExtension\Dependency\Plugin\UserPasswordResetRequestStrategyPluginInterface>
      */
-    public function getUserPasswordResetRequestHandlerPlugins(): array
+    public function getUserPasswordResetRequestStrategyPlugins(): array
     {
         return [
-            new MailUserPasswordResetRequestHandlerPlugin(),
+            new MailUserPasswordResetRequestStrategyPlugin(),
         ];
     }
 }
@@ -406,27 +420,18 @@ class UserPasswordResetDependencyProvider extends SprykerUserPasswordResetDepend
 <?php
 
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
-use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail\UserPasswordResetMailTypePlugin;
+use Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail\UserPasswordResetMailTypeBuilderPlugin;
 
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
+     * @return array<\Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface>
      */
-    public function provideBusinessLayerDependencies(Container $container)
+    protected function getMailTypeBuilderPlugins(): array
     {
-        $container = parent::provideBusinessLayerDependencies($container);
-
-        $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
-            $mailCollection
-				->add(new UserPasswordResetMailTypePlugin());
-
-			return $mailCollection;
-        });
-
-		return $container;
+        return [
+            new UserPasswordResetMailTypeBuilderPlugin(),
+        ];
     }
 }
 ```
@@ -435,7 +440,6 @@ class MailDependencyProvider extends SprykerMailDependencyProvider
 
 ```bash
 console router:cache:warm-up
-console twig:cache:warmer
 console twig:cache:warmer
 ```
 
@@ -474,7 +478,7 @@ use Spryker\Zed\Translator\Communication\Plugin\TranslatorInstallerPlugin;
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -511,7 +515,7 @@ use Spryker\Zed\Translator\Communication\Plugin\Messenger\TranslationPlugin;
 class MessengerDependencyProvider extends SprykerMessengerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\MessengerExtension\Dependency\Plugin\TranslationPluginInterface>
+     * @return list<\Spryker\Zed\MessengerExtension\Dependency\Plugin\TranslationPluginInterface>
      */
     protected function getTranslationPlugins(): array
     {
@@ -537,7 +541,7 @@ use Spryker\Zed\Twig\TwigDependencyProvider as SprykerTwigDependencyProvider;
 class TwigDependencyProvider extends SprykerTwigDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
+     * @return list<\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface>
      */
     protected function getTwigPlugins(): array
     {
@@ -598,7 +602,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 {
 
 	/**
-     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserFormExpanderPluginInterface>
      */
     protected function getUserFormExpanderPlugins(): array
     {
@@ -609,7 +613,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 
 	/**
-     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserPreSavePluginInterface>
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserPreSavePluginInterface>
      */
     protected function getUserPreSavePlugins(): array
     {
@@ -619,7 +623,7 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
     }
 
 	/**
-     * @return array<\Spryker\Zed\UserExtension\Dependency\Plugin\UserExpanderPluginInterface>
+     * @return list<\Spryker\Zed\UserExtension\Dependency\Plugin\UserExpanderPluginInterface>
      */
     protected function getUserExpanderPlugins(): array
     {
@@ -677,7 +681,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     protected function getZedSecurityAuditLogProcessorPlugins(): array
     {
         return [
-            CurrentUserDataRequestProcessorPlugin
+            new CurrentUserDataRequestProcessorPlugin(),
         ];
     }
 
@@ -687,7 +691,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     protected function getMerchantPortalSecurityAuditLogProcessorPlugins(): array
     {
         return [
-            CurrentUserDataRequestProcessorPlugin
+            new CurrentUserDataRequestProcessorPlugin(),
         ];
     }
 }
@@ -699,7 +703,7 @@ Make sure the audit logs data is expanded by the current logged in user data.
 
 {% endinfo_block %}
 
-### Set up console commands for cache
+### Set up console commands for managing the translation cache
 
 1. Set up the following console commands:
 
@@ -724,7 +728,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 	/**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Symfony\Component\Console\Command\Command>
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
      protected function getConsoleCommands(Container $container)
      {

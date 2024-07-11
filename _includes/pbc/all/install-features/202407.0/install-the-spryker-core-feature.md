@@ -1,6 +1,3 @@
-
-
-
 This document describes how to install the [Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html).
 
 {% info_block infoBox "Included features" %}
@@ -128,7 +125,7 @@ Add the configuration to your project:
 | SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire Redis lock in microseconds. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for Redis lock in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionFileConstants::ZED_SESSION_FILE_PATH	 | Defines the filesystem path for storing Zed sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL	 | Defines the protocol used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::ZED_SESSION_REDIS_SCHEME	 | Defines a scheme|protocol for Redis connection when used as Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol used while connecting to Redis as Zed session storage. | Spryker\Shared\SessionRedis |
@@ -257,7 +254,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 
-$config[SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL] = 'tcp';
+$config[SessionRedisConstants::ZED_SESSION_REDIS_SCHEME] = 'tcp';
 $config[SessionRedisConstants::ZED_SESSION_REDIS_HOST] = '127.0.0.1';
 $config[SessionRedisConstants::ZED_SESSION_REDIS_PORT] = 6379;
 $config[SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD] = false;
@@ -510,7 +507,7 @@ use Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplication
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface[]
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
@@ -534,7 +531,7 @@ use Spryker\Zed\SecuritySystemUser\Communication\Plugin\Security\ZedSystemUserSe
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface[]
+     * @return list<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {
@@ -561,7 +558,7 @@ use Spryker\Zed\SessionRedis\Communication\Plugin\Session\ZedSessionRedisLockRel
 class SessionDependencyProvider extends SprykerSessionDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface[]
+     * @return list<\Spryker\Shared\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface>
      */
     protected function getSessionHandlerPlugins(): array
     {
@@ -573,7 +570,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\SessionExtension\Dependency\Plugin\SessionLockReleaserPluginInterface[]
+     * @return list<\Spryker\Zed\SessionExtension\Dependency\Plugin\SessionLockReleaserPluginInterface>
      */
     protected function getZedSessionLockReleaserPlugins(): array
     {
@@ -809,7 +806,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container)
     {
@@ -914,7 +911,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Symfony\Component\Console\Command\Command[]
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container)
     {
@@ -938,7 +935,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 namespace Pyz\Zed\Event;
 
 use Spryker\Zed\Event\EventDependencyProvider as SprykerEventDependencyProvider;
+use Spryker\Zed\GlossaryStorage\Communication\Plugin\Event\Subscriber\GlossaryStorageEventSubscriber;
 use Spryker\Zed\Publisher\Communication\Plugin\Event\PublisherSubscriber;
+use Spryker\Zed\UrlStorage\Communication\Plugin\Event\Subscriber\UrlStorageEventSubscriber;
 
 class EventDependencyProvider extends SprykerEventDependencyProvider
 {
@@ -975,7 +974,7 @@ Add the following configuration to your project:
 | CONFIGURATION                                               | SPECIFICATION                                                                                                  | NAMESPACE                   |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------|
 | SessionFileConstants::YVES_SESSION_FILE_PATH                | Defines the filesystem path for storing Yves sessions.                                                         | Spryker\Shared\SessionFile  |
-| SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL          | Defines the protocol used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
+| SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme|protocol for Redis connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD          | Defines the password used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_HOST              | Defines the host used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_PORT              | Defines the port used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
@@ -1041,7 +1040,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 
-$config[SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL] = 'tcp';
+$config[SessionRedisConstants::YVES_SESSION_REDIS_SCHEME] = 'tcp';
 $config[SessionRedisConstants::YVES_SESSION_REDIS_HOST] = '127.0.0.1';
 $config[SessionRedisConstants::YVES_SESSION_REDIS_PORT] = 6379;
 $config[SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD] = false;
@@ -1136,7 +1135,7 @@ Note that all of the locale-related configs in `CustomerPage`, `AgentPage`, and 
 use Spryker\Shared\Log\LogConstants;
 use Spryker\Yves\Log\Plugin\Log\YvesSecurityAuditLoggerConfigPlugin;
 
-$config[PropelConstants::LOG_FILE_PATH_ZED] = 'php://stdout';
+$config[LogConstants::LOG_FILE_PATH_YVES] = 'php://stdout';
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
     YvesSecurityAuditLoggerConfigPlugin::class,
 ];
@@ -1236,7 +1235,7 @@ use Spryker\Yves\SessionRedis\Plugin\Session\SessionHandlerRedisProviderPlugin;
 class SessionDependencyProvider extends SprykerSessionDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface[]
+     * @return list<\Spryker\Shared\SessionExtension\Dependency\Plugin\SessionHandlerProviderPluginInterface>
      */
     protected function getSessionHandlerPlugins(): array
     {
@@ -1257,16 +1256,12 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 namespace Pyz\Zed\Session;
 
 use Spryker\Zed\Session\SessionDependencyProvider as SprykerSessionDependencyProvider;
-use Spryker\Zed\SessionFile\Communication\Plugin\Session\SessionHandlerFileProviderPlugin;
-use Spryker\Zed\SessionRedis\Communication\Plugin\Session\SessionHandlerRedisLockingProviderPlugin;
-use Spryker\Zed\SessionRedis\Communication\Plugin\Session\SessionHandlerRedisProviderPlugin;
 use Spryker\Zed\SessionRedis\Communication\Plugin\Session\YvesSessionRedisLockReleaserPlugin;
-use Spryker\Zed\SessionRedis\Communication\Plugin\Session\ZedSessionRedisLockReleaserPlugin;
 
 class SessionDependencyProvider extends SprykerSessionDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SessionExtension\Dependency\Plugin\SessionLockReleaserPluginInterface[]
+     * @return list<\Spryker\Zed\SessionExtension\Dependency\Plugin\SessionLockReleaserPluginInterface>
      */
     protected function getYvesSessionLockReleaserPlugins(): array
     {
@@ -1297,7 +1292,7 @@ use SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher\SecurityBlockerC
 class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface[]
+     * @return list<\Spryker\Shared\EventDispatcherExtension\Dependency\Plugin\EventDispatcherPluginInterface>
      */
     protected function getEventDispatcherPlugins(): array
     {

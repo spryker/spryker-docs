@@ -89,7 +89,7 @@ use Spryker\Shared\CustomerStorage\CustomerStorageConfig;
 class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     /**
-     * @return array<mixed>
+     * @return list<mixed>
      */
     protected function getPublishQueueConfiguration(): array
     {
@@ -99,7 +99,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     }
 
     /**
-     * @return array<mixed>
+     * @return list<mixed>
      */
     protected function getSynchronizationQueueConfiguration(): array
     {
@@ -191,7 +191,7 @@ class CustomerConfig extends SprykerCustomerConfig
     protected const MAX_LENGTH_CUSTOMER_PASSWORD = 64;
 
     /**
-     * @return array<string>
+     * @return list<string>
      */
     public function getCustomerPasswordAllowList(): array
     {
@@ -201,7 +201,7 @@ class CustomerConfig extends SprykerCustomerConfig
     }
 
     /**
-     * @return array<string>
+     * @return list<string>
      */
     public function getCustomerPasswordDenyList(): array
     {
@@ -230,15 +230,14 @@ class CustomerConfig extends SprykerCustomerConfig
 
 The following table describes the settings:
 
-| SETTING                                                                 | MEANING                                                                                                                                                                   |
-|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| CustomerConfig::getCustomerPasswordAllowList()                          | Provides a list of strings that will be accepted as a password for the customer bypassing any policy validations. These will be accepted despite breaking other policies. |
-| CustomerConfig::getCustomerPasswordCharacterSet()                       | Provides regular expression for character set password validation.                                                                                                        |
-| CustomerConfig::getCustomerPasswordDenyList()                           | A common list of insecure, invalid passwords. These will be rejected immediately.                                                                                         |
-| CustomerConfig::getCustomerPasswordSequenceLimit()                      | Provides a limit for character repeating if defined.                                                                                                                      
- Example: `Limit=4` forbids using "aaaa" in the password but allows "aaa". |
-| CustomerConfig::MAX_LENGTH_CUSTOMER_PASSWORD                            | Defines password maximum length.                                                                                                                                          |
-| CustomerConfig::MIN_LENGTH_CUSTOMER_PASSWORD                            | Defines password minimum length.                                                                                                                                          |
+| SETTING                                            | MEANING                                                                                                                                                                   |
+|----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CustomerConfig::getCustomerPasswordAllowList()     | Provides a list of strings that will be accepted as a password for the customer bypassing any policy validations. These will be accepted despite breaking other policies. |
+| CustomerConfig::getCustomerPasswordCharacterSet()  | Provides regular expression for character set password validation.                                                                                                        |
+| CustomerConfig::getCustomerPasswordDenyList()      | A common list of insecure, invalid passwords. These will be rejected immediately.                                                                                         |
+| CustomerConfig::getCustomerPasswordSequenceLimit() | Provides a limit for character repeating if defined. Example: `Limit=4` forbids using "aaaa" in the password but allows "aaa".                                            |
+| CustomerConfig::MAX_LENGTH_CUSTOMER_PASSWORD       | Defines password maximum length.                                                                                                                                          |
+| CustomerConfig::MIN_LENGTH_CUSTOMER_PASSWORD       | Defines password minimum length.                                                                                                                                          |
 
 ### 3) Set up database schema and transfer objects
 
@@ -329,8 +328,11 @@ Ensure that the following changes have been applied in the transfer objects:
 | OauthRefreshTokensRevokerPlugin                                | Revokes all refresh tokens.                                                                                                                                                                                  | None          | Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth                  |		
 | CustomerPasswordResetConsole                                   | Generates password restoration keys and sends a password reset email to the customers without a password. Sends a password reset email to all the customers if the corresponding command option is provided. | None          | Spryker\Zed\Customer\Communication\Console                          |
 | CustomerPasswordSetConsole                                     | Sends the password reset email to all the customers with the empty password value in the database.                                                                                                           | None          | Spryker\Zed\Customer\Communication\Console                          |		
-| CustomerRegistrationConfirmationMailTypePlugin                 | Builds a mail for customer registration confirmation that is used when double opt in feature is enabled.                                                                                                     | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                      |
-| *** ValidateInvalidatedCustomerAccessTokenValidatorPlugin      | Validates provided access token if the customer is not anonymized and the password hasn't been changed after a token creation.                                                                               | None          | Spryker\Client\OauthCustomerValidation\Plugin\Oauth                 |
+| CustomerRegistrationMailTypeBuilderPlugin                      | Prepares the data for customer registration mail.                                                                                                                                                            | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                      |
+| CustomerRegistrationConfirmationMailTypeBuilderPlugin          | Prepares the data for customer registration confirmation mail.                                                                                                                                               | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                      |
+| CustomerRestorePasswordMailTypeBuilderPlugin                   | Prepares the data for customer restore password mail.                                                                                                                                                        | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                      |
+| CustomerRestoredPasswordConfirmationMailTypeBuilderPlugin      | Prepares the data for customer restored password confirmation mail.                                                                                                                                          | None          | Spryker\Zed\Customer\Communication\Plugin\Mail                      |
+| ValidateInvalidatedCustomerAccessTokenValidatorPlugin          | Validates provided access token if the customer is not anonymized and the password hasn't been changed after a token creation.                                                                               | None          | Spryker\Client\OauthCustomerValidation\Plugin\Oauth                 |
 | CustomerInvalidatedWritePublisherPlugin                        | Used in case if customer was invalidated or customer's password was changed and publishes customer data to storage based on customer publish event.                                                          | None          | Spryker\Zed\CustomerStorage\Communication\Plugin\Publisher\Customer |
 | EventQueueMessageProcessorPlugin                               | Used for processing invalidated customers within queue.                                                                                                                                                      | None          | Spryker\Zed\Event\Communication\Plugin\Queue                        |
 | SynchronizationStorageQueueMessageProcessorPlugin              | Registration of new queue message processor.                                                                                                                                                                 | None          | Spryker\Zed\Synchronization\Communication\Plugin\Queue              |
@@ -365,7 +367,7 @@ use Spryker\Zed\OauthRevoke\Communication\Plugin\Oauth\OauthRefreshTokensRevoker
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthUserProviderPluginInterface>
      */
     protected function getUserProviderPlugins(): array
     {
@@ -376,7 +378,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthScopeProviderPluginInterface>
      */
     protected function getScopeProviderPlugins(): array
     {
@@ -387,7 +389,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthGrantTypeConfigurationProviderPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthGrantTypeConfigurationProviderPluginInterface>
      */
     protected function getGrantTypeConfigurationProviderPlugins(): array
     {
@@ -397,7 +399,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenRevokerPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenRevokerPluginInterface>
      */
     protected function getOauthRefreshTokenRevokerPlugins(): array
     {
@@ -407,7 +409,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensRevokerPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensRevokerPluginInterface>
      */
     protected function getOauthRefreshTokensRevokerPlugins(): array
     {
@@ -417,7 +419,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenPersistencePluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenPersistencePluginInterface>
      */
     protected function getOauthRefreshTokenPersistencePlugins(): array
     {
@@ -427,7 +429,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenCheckerPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenCheckerPluginInterface>
      */
     protected function getOauthRefreshTokenCheckerPlugins(): array
     {
@@ -437,7 +439,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthExpiredRefreshTokenRemoverPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthExpiredRefreshTokenRemoverPluginInterface>
      */
     protected function getOauthExpiredRefreshTokenRemoverPlugins(): array
     {
@@ -447,7 +449,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenReaderPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokenReaderPluginInterface>
      */
     protected function getOauthRefreshTokenReaderPlugins(): array
     {
@@ -457,7 +459,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
     }
 
     /**
-     * @return array<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensReaderPluginInterface>
+     * @return list<\Spryker\Zed\OauthExtension\Dependency\Plugin\OauthRefreshTokensReaderPluginInterface>
      */
     protected function getOauthRefreshTokensReaderPlugins(): array
     {
@@ -482,7 +484,7 @@ use Spryker\Client\OauthCustomerValidation\Plugin\Oauth\ValidateInvalidatedCusto
 class OauthDependencyProvider extends SprykerOauthDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\OauthExtension\Dependency\Plugin\AccessTokenValidatorPluginInterface>
+     * @return list<\Spryker\Client\OauthExtension\Dependency\Plugin\AccessTokenValidatorPluginInterface>
      */
     protected function getAccessTokenValidatorPlugins(): array
     {
@@ -506,7 +508,7 @@ use Spryker\Zed\Publisher\PublisherDependencyProvider as SprykerPublisherDepende
 class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {
     /**
-     * @return array<int, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     * @return list<int, \Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
      */
     protected function getPublisherPlugins(): array
     {
@@ -537,7 +539,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
+     * @return list<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container): array
     {
@@ -562,7 +564,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
+     * @return list<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -591,7 +593,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Symfony\Component\Console\Command\Command>
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -669,37 +671,34 @@ console customer:password:set
 
 namespace Pyz\Zed\Mail;
 
-use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationConfirmationMailTypePlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationConfirmationMailTypeBuilderPlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRegistrationMailTypeBuilderPlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRestoredPasswordConfirmationMailTypeBuilderPlugin;
+use Spryker\Zed\Customer\Communication\Plugin\Mail\CustomerRestorePasswordMailTypeBuilderPlugin;
 use Spryker\Zed\Kernel\Container;
-use Spryker\Zed\Mail\Business\Model\Mail\MailTypeCollectionAddInterface;
 use Spryker\Zed\Mail\MailDependencyProvider as SprykerMailDependencyProvider;
 
 class MailDependencyProvider extends SprykerMailDependencyProvider
 {
     /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
+     * @return array<\Spryker\Zed\MailExtension\Dependency\Plugin\MailTypeBuilderPluginInterface>
      */
-    public function provideBusinessLayerDependencies(Container $container): Container
+    protected function getMailTypeBuilderPlugins(): array
     {
-        $container = parent::provideBusinessLayerDependencies($container);
-
-        $container->extend(static::MAIL_TYPE_COLLECTION, function (MailTypeCollectionAddInterface $mailCollection) {
-            $mailCollection
-                ->add(new CustomerRegistrationConfirmationMailTypePlugin())
-
-            return $mailCollection;
-        });
-
-        return $container;
+        return [
+            new CustomerRegistrationMailTypeBuilderPlugin(),
+            new CustomerRegistrationConfirmationMailTypeBuilderPlugin(),
+            new CustomerRestorePasswordMailTypeBuilderPlugin(),
+            new CustomerRestoredPasswordConfirmationMailTypeBuilderPlugin(),
+        ];
     }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the customer confirmation email is sent to the newly registered customers upon registration.
+* Ensure that the customer confirmation email is sent to the newly registered customers upon registration.
+* Ensure that the password restore email is sent to the customers who requested a password reset.
 
 {% endinfo_block %}
 
@@ -799,7 +798,7 @@ use Spryker\Zed\OauthCustomerConnector\Communication\Plugin\Installer\OauthCusto
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
+     * @return list<\Spryker\Zed\Installer\Dependency\Plugin\InstallerPluginInterface>
      */
     public function getInstallerPlugins()
     {
@@ -1049,7 +1048,7 @@ use SprykerShop\Yves\CustomerPage\Plugin\CustomerPage\RedirectUriCustomerRedirec
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CustomerRedirectStrategyPluginInterface[]
+     * @return list<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CustomerRedirectStrategyPluginInterface>
      */
     protected function getAfterLoginCustomerRedirectPlugins(): array
     {
@@ -1080,7 +1079,7 @@ use SprykerShop\Yves\CustomerValidationPage\Plugin\ShopApplication\LogoutInvalid
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {
@@ -1090,12 +1089,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 
     /**
-     * @return array<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\FilterControllerEventHandlerPluginInterface>
+     * @return list<\SprykerShop\Yves\ShopApplicationExtension\Dependency\Plugin\FilterControllerEventHandlerPluginInterface>
      */
     protected function getFilterControllerEventSubscriberPlugins(): array
     {
         return [
-            ...
             new LogoutInvalidatedCustomerFilterControllerEventHandlerPlugin(),
         ];
     }
@@ -1123,7 +1121,7 @@ use SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security\ValidateCusto
 class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 {
     /**
-     * @return array<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
+     * @return list<\Spryker\Shared\SecurityExtension\Dependency\Plugin\SecurityPluginInterface>
      */
     protected function getSecurityPlugins(): array
     {

@@ -131,7 +131,6 @@ Add the configuration:
 | SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire Redis lock in microseconds. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for Redis lock in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionFileConstants::ZED_SESSION_FILE_PATH	 | Defines the filesystem path for storing Zed sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL	 | Defines the protocol for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
@@ -200,7 +199,7 @@ Make sure to replace all the values in the following examples with real values.
 
 {% endinfo_block %}
 
-1. If you're using Redis as session storage, add the following configuration:
+If Redis is used as session storage, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -226,7 +225,7 @@ $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
 
 {% endinfo_block %}
 
-2. In case of a multi-instance Redis setup, add the following configuration:
+In case of a multi-instance Redis setup, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -252,7 +251,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 
 {% endinfo_block %}
 
-3. In case of a single-instance Redis setup, add the following configuration:
+In case of a single-instance Redis setup, add the following configuration:
 
 **config/Share/config_default.php**
 
@@ -261,7 +260,7 @@ This configuration is used exclusively. In other words, you can't use any other 
 
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 
-$config[SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL] = 'tcp';
+
 $config[SessionRedisConstants::ZED_SESSION_REDIS_SCHEME] = 'tcp';
 $config[SessionRedisConstants::ZED_SESSION_REDIS_HOST] = '127.0.0.1';
 $config[SessionRedisConstants::ZED_SESSION_REDIS_PORT] = 6379;
@@ -269,7 +268,7 @@ $config[SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD] = false;
 $config[SessionRedisConstants::ZED_SESSION_REDIS_DATABASE] = 2;
 ```
 
-4. If the file system is used as a session storage, add the following configuration:
+If the file system is used as a session storage, add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -306,8 +305,8 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 
 | CONFIGURATION                                                                    | SPECIFICATION                                                                                                                                          | NAMESPACE                                        |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the period for which the agent is blocked if the number of attempts is exceeded for a customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL                | Specifies the TTL configuration: the period when number of unsuccessful tries will be counted for customer.                                            | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the time period for which the agent is blocked if the number of attempts is exceeded for a customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL                | Specifies the TTL configuration: the time period within which a number of unsuccessful attempts for a customer is counted to block the agent.                                            | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 | SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of failed login attempts to make within the time period defined in `SECURITY_BLOCKER_STOREFRONT:CUSTOMER_BLOCKING_TTL` before the customer is blocked. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 
 **config/Shared/config_default.php**
@@ -320,18 +319,18 @@ $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_
 
 #### Configure Audit logging
 
-Add the configuration to your project:
+1. Add the configuration:
 
 | CONFIGURATION                                             | SPECIFICATION                                                                                          | NAMESPACE |
 |-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------| --- |
-| LogConstants::LOG_FILE_PATH_ZED                           | Absolute path to the log file which should be used be the stream handler.                              | Spryker\Shared\Log |
-| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file which should be used be the stream handler.                              | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED             | Provides plugin class names providing configuration for audit logging for Zed application.             | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL | Provides plugin class names providing configuration for audit logging for Merchant Portal application. | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE            | Provides plugin class names providing configuration for audit logging for Glue application.            | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE_BACKEND    | Provides plugin class names providing configuration for audit logging for Glue Backend application.    | Spryker\Shared\Log |
+| LogConstants::LOG_FILE_PATH_ZED                           | Absolute path to the log file to be used by the stream handler.                              | Spryker\Shared\Log |
+| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file which to be used by the stream handler.                              | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED             | Provides plugin class names providing the configuration for audit logging for the Zed application.             | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL | Provides plugin class names providing the configuration for audit logging for the Merchant Portal application. | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE            | Provides plugin class names providing the configuration for audit logging for the Glue application.            | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE_BACKEND    | Provides plugin class names providing the configuration for audit logging for the Glue Backend application.    | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOG_SANITIZE_FIELDS                   | Provides an array with names which is used to sanitize data in your audit logs.                        | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOG_SANITIZED_VALUE                   | Provides a string which is used as value for the audit log sanitized fields.                           | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOG_SANITIZED_VALUE                   | Provides a string which is used as a value for the audit log sanitized fields.                           | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOG_TAG_DISALLOW_LIST                 | Provides a list of audit log tags that are disallowed for logging.                                     | Spryker\Shared\Log |
 
 **config/Shared/config_default.php**
@@ -364,7 +363,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 
 {% info_block warningBox "Verification" %}
 
-After finishing the integration make sure you can log security actions in Zed, Glue, Glue Backend and Merchant Portal applications.
+After finishing the installation, make sure you can log security actions in Zed, Glue, Glue Backend, and Merchant Portal applications.
 Example:
 
 ```php
@@ -409,11 +408,11 @@ $config[LogConstants::AUDIT_LOG_SANITIZED_VALUE] = '*****'; // The default value
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the specified request data fields are sanitized in the logs.
+Make sure the specified request data fields are sanitized in the logs.
 
 {% endinfo_block %}
 
-You can optionally disallow logging of specific tags, for example to disallow logging of `user_logged_in` tags:
+2. Optional: Disallow logging of specific tags. Example of disallowing logging of `user_logged_in` tags:
 
 **config/Shared/config_default.php**
 
@@ -443,7 +442,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied by checking your database:
+Make sure that the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -479,22 +478,22 @@ Make sure that the following changes have been applied by checking your database
 | SessionHandlerRedisProviderPlugin	 | Provides a Redis-based session handler implementation for Zed sessions. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
 | StorageRedisPlugin | Provides a Redis-based storage implementation. |  | Spryker\Client\StorageRedis\Plugin                                       |
 | ZedSystemUserSecurityPlugin | Sets security firewalls, such as rules and handlers, for system users; provides Yves access to Zed. |  | Spryker\Zed\SecurityGui\Communication\Plugin\Security                    |
-| ZedSessionRedisLockReleaserPlugin | Removes a session lock from Redis by session ID for Zed sessions. It's for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
-| CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer user settings. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
-| AuditLogTagFilterBufferedStreamHandlerPlugin               | Provided Monolog handler.                                                                                                                                                  | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
-| PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
-| EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
-| ServerProcessorPlugin                                      | Adds servee related data to the log data.                                                                                                                                  | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
-| AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
-| ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   | None | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
-| AuditLogMetaDataProcessorPlugin                            | Adds `audit_log` log type to the log data.                                                                                                                                 | None | Spryker\Glue\Log\Plugin\Log                                                                                                        |
-| AuditLogTagFilterBufferedStreamHandlerPlugin               | Provided Monolog handler.                                                                                                                                                  | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
-| PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
-| EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
-| ServerProcessorPlugin                                      | Adds servee related data to the log data.                                                                                                                                  | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
-| AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
-| ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   | None | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
-| AuditLogMetaDataProcessorPlugin                            | Adds `audit_log` log type to the log data.                                                                                                                                 | None | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
+| ZedSessionRedisLockReleaserPlugin | Removes a session lock from Redis by session ID for Zed sessions. It's used for removing previously created locks by running `session:lock:remove`. |  | Spryker\Zed\SessionRedis\Communication\Plugin\Session                    |
+| CustomerSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with customer settings. |  | Spryker\Client\SecurityBlockerStorefrontCustomer\Plugin\SecurityBlocker\CustomerSecurityBlockerConfigurationSettingsExpanderPlugin |
+| AuditLogTagFilterBufferedStreamHandlerPlugin               | Provides the Monolog handler.                                                                                                                                                  |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
+| PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
+| EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
+| ServerProcessorPlugin                                      | Adds service related data to the log data.                                                                                                                                  |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
+| AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
+| ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   |  | Spryker\Glue\Log\Plugin\Processor                                                                                                  |
+| AuditLogMetaDataProcessorPlugin                            | Adds the `audit_log` log type to the log data.                                                                                                                                 |  | Spryker\Glue\Log\Plugin\Log                                                                                                        |
+| AuditLogTagFilterBufferedStreamHandlerPlugin               | Provides the Monolog handler.                                                                                                                                                  |  | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
+| PsrLogMessageProcessorPlugin                               | Processes a record's message according to PSR-3 rules.                                                                                                                     |  | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
+| EnvironmentProcessorPlugin                                 | Adds environment related data to the log data.                                                                                                                             |  | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
+| ServerProcessorPlugin                                      | Adds service related data to the log data.                                                                                                                                  |  | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
+| AuditLogRequestProcessorPlugin                             | Adds request related data to the log data.                                                                                                                                 |  | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
+| ResponseProcessorPlugin                                    | Removes response data from the log data.                                                                                                                                   |  | Spryker\Zed\Log\Communication\Plugin\Processor                                                                                     |
+| AuditLogMetaDataProcessorPlugin                            | Adds the `audit_log` log type to the log data.                                                                                                                                 |  | Spryker\Zed\Log\Communication\Plugin\Log                                                                                           |
 
 **src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
 
@@ -638,11 +637,12 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 {% info_block warningBox "Verification" %}
 
-Visit `zed.mysprykershop.com` and make sure that Zed boots up without errors.
+Visit `https://zed.mysprykershop.com` and make sure Zed boots up without errors.
 
 {% endinfo_block %}
 
-**src/Pyz/Glue/Log/LogDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Glue/Log/LogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -712,7 +712,13 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 }
 ```
 
-**src/Pyz/Zed/Log/LogDependencyProvider.php**
+</details>
+
+
+<details>
+  <summary>src/Pyz/Zed/Log/LogDependencyProvider.php</summary>
+
+
 
 ```php
 <?php
@@ -782,9 +788,11 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-Make sure the logs data is expanded by the registered plugins - environment, server, request, log type sections exist
+Make sure the logs data has been expanded by the registered plugins: environment, server, request, log type sections exist
 and contain the corresponding data.
 
 {% endinfo_block %}
@@ -848,7 +856,7 @@ To verify that the navigation for Store GUI is successfully generated, make sure
 
 ### 5) Set up Publish and Synchronize
 
-1. Update `RabbitMqConfig`:
+1. Update the RabbitMQ configuration:
 
 <details>
 <summary markdown='span'>Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
@@ -984,7 +992,6 @@ Add the following configuration to your project:
 | CONFIGURATION                                               | SPECIFICATION                                                                                                  | NAMESPACE                   |
 |-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|-----------------------------|
 | SessionFileConstants::YVES_SESSION_FILE_PATH                | Defines the filesystem path for storing Yves sessions.                                                         | Spryker\Shared\SessionFile  |
-| SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL | Defines the protocol for connecting to Redis as Yves session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_SCHEME            | Defines a scheme|protocol for Redis connection when used as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD          | Defines the password used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_HOST              | Defines the host used while connecting to Redis as Yves session storage.                                       | Spryker\Shared\SessionRedis |
@@ -992,8 +999,8 @@ Add the following configuration to your project:
 | SessionRedisConstants::YVES_SESSION_REDIS_DATABASE          | Defines the database used while connecting to Redis as Yves session storage.                                   | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_DATA_SOURCE_NAMES | Defines the list of DSNs used while connecting to Redis as Yves session storage in replication mode.           | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::YVES_SESSION_REDIS_CLIENT_OPTIONS    | Defines the list of client options used while connecting to Redis as Yves session storage in replication mode. | Spryker\Shared\SessionRedis |
-| LogConstants::LOG_FILE_PATH_YVES                            | Absolute path to the log file which should be used be the stream handler.                                      | Spryker\Shared\Log          |
-| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES              | Provides plugin class names providing configuration for audit logging for Yves application.                    | Spryker\Shared\Log          |
+| LogConstants::LOG_FILE_PATH_YVES                            | Absolute path to the log file to be used by the stream handler.                                      | Spryker\Shared\Log          |
+| LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES              | Provides plugin class names that contain the configuration for audit logging for the Yves application.                    | Spryker\Shared\Log          |
 
 **config/Shared/config_default.php**
 
@@ -1059,7 +1066,6 @@ Make sure you don't use the same Redis database for Yves and Zed sessions.
 use Spryker\Shared\SessionRedis\SessionRedisConstants;
 
 $config[SessionRedisConstants::YVES_SESSION_REDIS_SCHEME] = 'tcp';
-$config[SessionRedisConstants::YVES_SESSION_REDIS_PROTOCOL] = 'tcp';
 $config[SessionRedisConstants::YVES_SESSION_REDIS_HOST] = '127.0.0.1';
 $config[SessionRedisConstants::YVES_SESSION_REDIS_PORT] = 6379;
 $config[SessionRedisConstants::YVES_SESSION_REDIS_PASSWORD] = false;
@@ -1131,7 +1137,7 @@ Make sure that, when the login form for the customer or agent is submitted, the 
 
 {% endinfo_block %}
 
-{% info_block warningBox "" %}
+{% info_block infoBox "" %}
 
 All locale-related configs in `CustomerPage`, `AgentPage`, and `SecurityBlockerPage` are deprecated; in future releases, only locale-specific URLs will be used.
 
@@ -1153,7 +1159,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 
 {% info_block warningBox "Verification" %}
 
-After finishing the integration make sure you can log security actions in Yves applications.
+After finishing the installation, make sure you can log security actions in the Yves applications.
 Example:
 
 ```php
@@ -1210,7 +1216,7 @@ Ensure that, in the database, the configured data has been added to the `spy_glo
 
 ### 4) Set up behavior
 
-Find the list of all the plugins and modules to install:
+Install the plugins and modules:
 
 | PLUGIN                                       | SPECIFICATION                                                                                                                                                            | PREREQUISITES | NAMESPACE                                           |
 |----------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------| --- |-----------------------------------------------------|
@@ -1221,13 +1227,13 @@ Find the list of all the plugins and modules to install:
  |
 | SecurityBlockerCustomerEventDispatcherPlugin | Adds subscribers for request and authentication failure events to control the customers' failed login attempts. |  | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
 | SecurityBlockerAgentEventDispatcherPlugin | Adds subscribers for request and authentication failure events to control the agents' failed login attempts. |  | SprykerShop\Yves\SecurityBlockerPage\Plugin\EventDispatcher |
-| AuditLogTagFilterBufferedStreamHandlerPlugin | Provided Monolog handler.                                                                                                                                                | None | Spryker\Yves\Log\Plugin\Log             |
-| PsrLogMessageProcessorPlugin                 | Processes a record's message according to PSR-3 rules.                                                                                                                   | None | Spryker\Yves\Log\Plugin\Processor       |
-| EnvironmentProcessorPlugin                   | Adds environment related data to the log data.                                                                                                                           | None | Spryker\Yves\Log\Plugin\Processor       |
-| ServerProcessorPlugin                        | Adds servee related data to the log data.                                                                                                                                | None | Spryker\Yves\Log\Plugin\Processor       |
-| AuditLogRequestProcessorPlugin               | Adds request related data to the log data.                                                                                                                               | None | Spryker\Yves\Log\Plugin\Log             |
-| ResponseProcessorPlugin                      | Removes response data from the log data.                                                                                                                                 | None | Spryker\Yves\Log\Plugin\Processor       |
-| AuditLogMetaDataProcessorPlugin              | Adds `audit_log` log type to the log data.                                                                                                                               | None | Spryker\Yves\Log\Plugin\Log             |
+| AuditLogTagFilterBufferedStreamHandlerPlugin | Provides the Monolog handler.                                                                                                                                                |  | Spryker\Yves\Log\Plugin\Log             |
+| PsrLogMessageProcessorPlugin                 | Processes a record's message according to PSR-3 rules.                                                                                                                   |  | Spryker\Yves\Log\Plugin\Processor       |
+| EnvironmentProcessorPlugin                   | Adds environment related data to the log data.                                                                                                                           |  | Spryker\Yves\Log\Plugin\Processor       |
+| ServerProcessorPlugin                        | Adds service related data to the log data.                                                                                                                                |  | Spryker\Yves\Log\Plugin\Processor       |
+| AuditLogRequestProcessorPlugin               | Adds request related data to the log data.                                                                                                                               |  | Spryker\Yves\Log\Plugin\Log             |
+| ResponseProcessorPlugin                      | Removes response data from the log data.                                                                                                                                 |  | Spryker\Yves\Log\Plugin\Processor       |
+| AuditLogMetaDataProcessorPlugin              | Adds the `audit_log` log type to the log data.                                                                                                                               |  | Spryker\Yves\Log\Plugin\Log             |
 
 **src/Pyz/Yves/Session/SessionDependencyProvider.php**
 
@@ -1323,9 +1329,9 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 {% info_block warningBox "Validation" %}
 
-Make sure the `SecurityBlockerCustomerEventDispatcherPlugin` is activated correctly by attempting to sign in with the wrong credentials as a customer. After making the number of attempts you specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account is blocked for `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR` seconds. Check that with the consequent login attempts, you get the `429 Too many requests` error.
+1. Make sure `SecurityBlockerCustomerEventDispatcherPlugin` is activated by attempting to sign in with as a customer the incorrect credentials. After making the number of attempts specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCKING_NUMBER_OF_ATTEMPTS`, the account should get blocked for the period of time specified in `SecurityBlockerConstants::SECURITY_BLOCKER_BLOCK_FOR`. Consequent login attempts should return the `429 Too many requests` error.
 
-Repeat the same actions for the agent sign-in to check `SecurityBlockerAgentEventDispatcherPlugin`. The agent gets the blocking configuration specific for agents if you specify the agent-specific settings in step 2 of the feature core integration.
+2. To verify `SecurityBlockerAgentEventDispatcherPlugin`, repeat step 2 for the agent sign-in to check. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration).
 
 {% endinfo_block %}
 
@@ -1372,6 +1378,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-To verify `SecurityBlockerAgentEventDispatcherPlugin`, repeat the same actions for the agent sign-in. The security behavior should match the configuration you've set up in [Set up configuration](#set-up-configuration).
+Make sure the logs data has been expanded by the registered plugins: environment, server, request, and log type sections exist
+and contain the corresponding data.
 
 {% endinfo_block %}

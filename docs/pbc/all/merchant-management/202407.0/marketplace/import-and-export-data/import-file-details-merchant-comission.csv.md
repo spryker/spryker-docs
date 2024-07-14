@@ -1,6 +1,6 @@
 ---
-title: "Import file details: merchant_category.csv"
-last_updated: Jun 07, 2021
+title: "Import file details: merchant_commission.csv"
+last_upDated: Jun 07, 2021
 description: This document describes the merchant_profile_address.csv file to configure merchant profile addresses in your Spryker shop.
 template: import-file-template
 redirect_from:
@@ -13,18 +13,30 @@ related:
     link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
-This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/merchant-opening-hours-feature-overview.html) in your Spryker shop.
+This document describes the `merchant_commission.csv` file to configure [merchant commission](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).
 
 ## Import file dependencies
 
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
+
 
 ## Import file parameters
 
-| PARAMETER      | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION      |
-| -------------- | ----------- | ------- | ------------- | -------------------- | ------------------------------- |
-| category_key       | &check;             | String   |                   |                              | Category key to assign the merchant to.   |
-| merchant_reference | &check;             | String   |                   | Unique                       | Identifier of the merchant in the system. |
+| COLUMN                        | REQUIRED | DATA TYPE | DATA EXAMPLE                                      | DATA EXPLANATION                                |
+|-------------------------------|----------|-----------|---------------------------------------------------|-------------------------------------------------|
+| key                           | ✓        | String    | mc1                                               | Unique identifier of the merchant commission.          |
+| name                          | ✓        | String    | Merchant Commission 1                             | Name of the merchant commission.                |
+| description                   |          | String    |                                                   | Description of the merchant commission.         |
+| valid_from                    |          | Date      | 2024-01-01                                        | Starting from this date the commission is applied. |
+| valid_to                      |          | Date      | 2029-06-01                                        | The last day of when the commission is applied.   |
+| is_active                     | ✓        | Boolean      | 1                                                 | Defines if the merchant commission is active.   |
+| amount                        |          | Integer       | 5                                                 | Amount of the merchant commission.              |
+| calculator_type_plugin        | ✓        | String    | percentage                                        | Type of the calculator plugin used to calculate the commission.             |
+| merchant_commission_group_key | ✓        | String    | primary                                           | Defines the merchant commission group. Can be primary or secondary.           |
+| priority                      | ✓        | Integer       | 1                                                 | Priority of the merchant commission.            |
+| item_condition                |          | String    | item-price >= '500' AND category IS IN 'computer' | Item conditions that must be fulfilled to apply the commission.                         |
+| order_condition               |          | String    | "price-mode = ""GROSS_MODE"""                     | Condition for the order.                        |
+| merchants_allow_list |       |  It contains a list of merchant references separated by commas, such as “MER000002,MER000006”
+| fixed_amount_configuration |    |     |    EUR|0.5|0.5,CHF|0.5|0.5         |     Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT` |
 
 
 ## Import template file and content example

@@ -461,6 +461,14 @@ mc5,Merchant Commission 5,,2024-01-01,2029-06-01,1,,fixed,secondary,4,,"price-mo
 | priority                      | ✓        | int       | 1                                                 | Priority of the merchant commission.            |
 | item_condition                |          | string    | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
 | order_condition               |          | string    | "price-mode = ""GROSS_MODE"""                     | Condition for the order.                        |
+| merchants_allow_list |       |  It contains a list of merchant references separated by commas, such as “MER000002,MER000006”
+| fixed_amount_configuration |    |     |    EUR|0.5|0.5,CHF|0.5|0.5         |     Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT` |
+
+
+
+
+
+
 
 2. Prepare the merchant commission group data according to your requirements using the demo data:
 

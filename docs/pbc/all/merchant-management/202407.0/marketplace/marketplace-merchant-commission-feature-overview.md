@@ -31,37 +31,33 @@ To specify conditions based on attributes, the following format is used: `attrib
 | - | - |
 | {ATTRIBUTE_KEY} | A product category attribute. For example, brand or color. |
 | {OPERATOR} | The relationship between `{ATTRIBUTE_KEY}` and `{ATTRIBUTE_VALUE}`. Accepted operators: `>`, `<`, `>=`, `<=`,`!=`,`=`, `IS NOT IN`, `IS IN`. |
-| {ATTRIBUTE_VALUE} | The attribute of a product in the category of ``{ATTRIBUTE_KEY}`. For example, in the brand category, the value can be Sony. |
+| {ATTRIBUTE_VALUE} | The attribute of a product in the category of ``{ATTRIBUTE_KEY}`. For example, in the brand category, the value can be Sony. Accepts multiple values separated by `;`.|
 
+Examples:
+
+* Apply commission to all black products: `attribute.color = 'black'`
+
+* Apply commission to all black and blue products: `attribute.color IS IN 'black;blue'`
+
+
+### Product category conditions
+
+To specify conditions based on categories, the following format is used: `category {OPERATOR} '{CATEGORY_VALUE}'`
+
+|PLACEHOLDER | DESCRIPTION |
+| - | - |
+| {OPERATOR} | The relationship between category and `{CATEGORY_VALUE}`. Accepted operators: `IS NOT IN`, `IS IN`, `=`, `!=`. |
+| {CATEGORY_VALUE} | The category for defining a condition. Accepts multiple values separated by `;`. |
 
 
 Examples:
-Apply commission to all products that have an attribute Color equal to Black.
-attribute.color = 'black'
 
-Apply commission to all products with an attribute Color equal to Back or Blue.
-attribute.color IS IN 'black;blue'
+Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
 
-
-### Product category in the item condition
-When setting up a commission for a category, any child category will also be included. For example, applying commission to the category Electronics will also apply it to Smart Watches, as long as one is a child category of Electronics. So, if you want to apply specifically to a specific category, you need to use child categories or the exclusion rule.
-
-Use the following format to apply the condition to one or multiple categories: category IS IN 'VALUE' or category IS IN 'VALUE1;VALUE2'
-
-Examples:
-Apply commission to all products that belong to the category Electronics.
-category IS IN 'electronics'
-
-Apply commission to all products that belong to the category Electronics.
-Category IS IN 'electronics';smart-watches'
+Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones';smartwatches'`.
 
 
-category IS IN 'digital-cameras;camcorders'
-
-In this case, camcorders is a CATEGORY KEY, you can find it in the table on the Category page in the Back Office.
-
-You can use the following operators: IS NOT IN, IS IN, =, !=
-
+If a category has child categories, applying a commission to the category applies it to the child categories too. For example, applying commission to the Electronics category also apply it to the Smart Watches category. So, you might want to set up conditions using child categories or exclude some child categories.
 
 ### Item-price in the item condition
 You can define your commissions based on specific product prices and ranges. Item price is taken from the product's gross or net price depending on the price mode of the order. The product gross price is configured in the backend (including volume pricing) and does not include any discounts applied afterward in the shopping cart or checkout.

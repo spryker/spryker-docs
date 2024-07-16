@@ -67,7 +67,7 @@ git commit -m "Initial commit"
 Link your local repository to the GitHub repository you created:
 
 ```bash
-git remote add origin https://github.com/your-company/your-repository.git
+git remote add origin git@github.com:your-company-name/your-repository.git
 ```
 
 ## 9. Push Your Code to GitHub
@@ -75,7 +75,7 @@ git remote add origin https://github.com/your-company/your-repository.git
 Push your code to GitHub:
 
 ```bash
-git push -u origin master
+git push -u origin main
 ```
 
 ## 10. Verify Your Code on GitHub
@@ -84,19 +84,14 @@ Refresh your GitHub repository page to see your code published.
 
 ## 11. Add the module to your project composer.json
 
-```yaml
-{
-    "require": {
-        "your-company-name/your-repository": "{replace this with your repo latest release version}"
-    },
-    "repositories": [
-        {
-            "type": "git",
-            "url": "git@github.com:your-company-name/your-repository.git"
-        }
-    ],
-}
+```shell
+composer config repositories.your-company-name/your-repository git git@github.com:your-company-name/your-repository.git
+composer require your-company-name/your-repository
 ```
+
+{% info_block infoBox %}
+   Once the module published to packagist in the next step `repositories` section can be removed.
+{% endinfo_block %}
 
 Run `composer update your-company-name/your-repository`.
 

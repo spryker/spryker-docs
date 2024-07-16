@@ -16,18 +16,15 @@ related:
 
 ### How you can extend Spryker functionality from your module:
 **Option 1.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))
-
-**Option 2.** Adding a controller, example for project-level implementation can be found [here](/docs/dg/dev/backend-development/extend-spryker/create-modules.html#display-a-random-salutation-message), core implementation will be the same but with different namespaces.
-
-**Option 3.** Use the existing Spryker module extension point.
+**Option 2.** Use the existing Spryker module extension point.
 
 **a.** Example of existing extension point usage.
-Where we'll extend product table with an additional column **Categories** where will show the list of categories where the product is present.
-For this we'll use two extension points in the existing Spryker modules 
+Let's extend the product table with an additional column **Categories**, which will show the list of categories where the product is present.
+For this, we'll use two extension points in the existing Spryker modules.
 - One to extend table headers with **Categories** column [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php)
 - And another to extend table content with the corresponding column [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php)
 
-a. Create a module **console dev:module:create your-company-name.product-category**. 
+a. Create a module **vendor/bin/spryker-dev-console dev:module:create your-company-name.product-category**. 
 
 {% info_block infoBox %}
    Make sure that `vendor/your-company-name/product-category` folder with module data is created.

@@ -45,6 +45,11 @@ template: howto-guide-template
 
 ### 3. Add the Package Metadata
 Ensure your `composer.json` file includes all necessary metadata. Here’s an example of what it might look like:
+
+{% info_block infoBox %}
+   Make sure that all the module dependencies are mentioned in `require` section.
+{% endinfo_block %}
+
 ```json
 {
     "name": "vendor/package-name",
@@ -86,6 +91,15 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
   git push -u origin master
   ```
 
+- Add a new tag
+  This can be done in several ways:
+  1. Using github interface https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository by creating a new release. (Recommended)
+  2. Manually
+      ```bash
+      git tag v1.0.0
+      git push origin v1.0.0
+      ```
+
 ### 5. Submit Your Package to Packagist
 - Go to [Packagist](https://packagist.org/).
 - Log in with your GitHub account or create an account on Packagist.
@@ -97,22 +111,13 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 - After verification, click "Submit".
 
 ### 6. Maintain Your Package
-- Each time you make changes to your package, remember to push the changes to your Git repository.
-- Tag a new version in Git to update the package version on Packagist:
-  This can be done in several ways:
-    1. Using github interface https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository by creating a new release. (Recommended)
-    2. Manually
-        ```bash
-        git tag v1.0.1
-        git push origin v1.0.1
-        ```
-
+- Each time you make changes to your package, remember to push the changes to your Git repository and create a new tag (release).
 
 ### 7. Update Composer Metadata (Optional)
 As your package evolves, you might need to update your `composer.json` file with new dependencies or other metadata. After making changes, ensure you commit and push these updates to your Git repository.
 
 ### 8. Install package via composer
-Run `composer install vendor/package-name` to install the published package to your project.
+Run `composer require vendor/package-name` to install the published package to your project.
 
 ### 9. Monitor and Respond to Issues
 Monitor the issues reported on your Git repository hosting service and respond to feedback from users to improve your package.

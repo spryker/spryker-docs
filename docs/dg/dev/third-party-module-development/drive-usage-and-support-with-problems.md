@@ -18,10 +18,10 @@ We would recommend 4 steps how to improve usage of your module:
 2. If you do not have Support Portal or similar, we recommend to use https://docs.github.com/en/issues/tracking-your-work-with-issues/quickstart for collaboration with module users, mention (In **README.md** file of your module) how issues can be reported.
    - If you have domain specific requirements for the details needed from a module user to identify the issue, feel free to add them to the readme file.
 3. If you have several Major (see https://semver.org/) releases, provide a migration guide for each of them.
-    - You can find an example [here](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html)
-    - It is important to:
-    - Have migration for each **Major** version starting from 2nd.
-    - Have **Verification** step that clearly states how to check that everything is done properly and functionality works as expected.
+   You can find an example [here](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-categorygui-module.html)
+   It is important to:
+      - Have migration for each **Major** version starting from 2nd.
+      - Have **Verification** step that clearly states how to check that everything is done properly and functionality works as expected.
 
 4: Request a review of your module from **Spryker** to obtain **Verified by Spryker** badge, it will allow to promote it and increase trust from the end users into it.
    

@@ -17,14 +17,9 @@ Steps how to ensure code compatibility with latest Spryker releases:
 - https://github.com/spryker-shop/b2c-demo-marketplace
 - https://github.com/spryker-shop/b2b-demo-marketplace
 
-**2.** Add to you module CI pipeline that does the following thing:
+**2.** Install your module:
 - Pulls the latest tag from the demoshop (One from the list above)
 - Installs your module with composer (in the version that you want to test, e.g. if we run CI on specific branch, specific branch should be used)
 - Apply all the changes on demoshop project level that are necessary to fully integrate your module.
-- Adjust all `codeception*` files in cloned demoshops main folder to include your module (make sure that your module also contains `codeception.yml` file)
-```yaml
-include:
-    - vendor/your-company-name/your-module-name/Bundles/*/*
-```
-- Run all the demoshop tests, the same way as done in your demoshop CI https://github.com/spryker-shop/{chosen-demoshop-name}/blob/master/.github/workflows/* (As example for b2c demoshop see [ci.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/.github/workflows/ci.yml) and [robot-ui-e2e-tests.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/.github/workflows/robot-ui-e2e-tests.yml)
 
+**3.** Tests functionality of your module.

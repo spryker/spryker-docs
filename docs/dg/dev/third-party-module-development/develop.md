@@ -13,6 +13,14 @@ related:
 [Documentation](/docs/dg/dev/architecture/architectural-convention.html) ( needs to be followed in the development process.)
 -  Use the samples that marked as *Module Development*.
 
+### Enable custom namespace
+
+Adjust **config/Shared/config_default.php** to enable your custom namespace.
+
+```php
+$config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 'SprykerEco', 'Spryker', 'SprykerSdk', ];
+```
+
 
 ### How you can extend Spryker functionality from your module:
 **Option 1.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))

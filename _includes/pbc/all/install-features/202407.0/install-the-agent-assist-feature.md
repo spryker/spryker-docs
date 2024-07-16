@@ -51,7 +51,7 @@ Make sure the following changes have been applied in the database::
 |---------------------|--------|---------|
 | spy_user.is_agent   | column | created |
 
-Ensure the following transfers have been created:
+Make sure the following transfers have been created:
 
 | TRANSFER                                     | TYPE  | EVENT   | PATH                                                                       |
 |----------------------------------------------|-------|---------|----------------------------------------------------------------------------|
@@ -66,14 +66,14 @@ Ensure the following transfers have been created:
 
 Set up the following behaviors.
 
-#### Configure user Zed UI for agent handling
+#### Configure the user Zed UI for agent handling
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                        | DESCRIPTION                                                                                               | PREREQUISITES                                            | NAMESPACE                                               |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------|
-| UserAgentFormExpanderPlugin                                                   | In the Back Office, adds the **THIS USER IN AS AN AGENT** checkbox to the **Create new User** and **Edit User** pages.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
-| UserAgentTableConfigExpanderPlugin                                            | In te Back Office, adds the **AGENT** column to the **USERS LIST** table.                                                     | None                                                     | Spryker\Zed\AgentGui\Communication\Plugin               |
+| UserAgentFormExpanderPlugin                                                   | In the Back Office, adds the **THIS USER IN AS AN AGENT** checkbox to the **Create new User** and **Edit User** pages.                                                     |                                                      | Spryker\Zed\AgentGui\Communication\Plugin               |
+| UserAgentTableConfigExpanderPlugin                                            | In the Back Office, adds the **AGENT** column to the **USERS LIST** table.                                                     |                                                      | Spryker\Zed\AgentGui\Communication\Plugin               |
 | UserAgentTableDataExpanderPlugin                                              | In the Back Office, in the **USERS LIST** table, fills the **AGENT** column.                                                    | Expects the **THIS USER IN AS AN AGENT** checkbox on the **Create new User** and **Edit User** pages of the Back Office. | Spryker\Zed\AgentGui\Communication\Plugin               |
 
 <details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
@@ -130,9 +130,9 @@ Ensure that the following plugins have been registered:
 
 | MODULE                             | TEST                                                                                                                                                                                                                                                                                                                                                                                           |
 |------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a user, select **Edit**.  <br>3. Ensure that the **THIS USER IS AN AGENT** checkbox exists.                                                                                                                                                                                                                                      |
+| UserAgentFormExpanderPlugin        | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a user, click **Edit**.  <br>3. Ensure that the **THIS USER IS AN AGENT** checkbox exists.                                                                                                                                                                                                                                      |
 | UserAgentTableConfigExpanderPlugin | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Ensure that the **Agent** column exists.                                                                                                                                                                                                                                                                                                  |
-| UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **THIS USER IS AN AGENT** checkbox. <br>4. Click **Update**. This takes you to the **USERS LIST** page with the message about the successful update displayed. <br>5. Ensure that in the **AGENT** column, next to the user you've updated, the **Agent** tag is displayed. |
+| UserAgentTableDataExpanderPlugin   | 1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**. <br>2. Next to a non-agent user, select **Edit**. <br>3. Select the **THIS USER IS AN AGENT** checkbox. <br>4. Click **Update**. This opens the **USERS LIST** page with the message about the successful update displayed. <br>5. Make sure that, in the **AGENT** column, next to the user you've updated, the **Agent** tag is displayed. |
 
 {% endinfo_block %}
 
@@ -168,7 +168,7 @@ Make sure the following modules have been installed:
 
 ### 2) Set up configuration
 
-By default, in Spryker, posting a login form (where `SecurityBlocker` makes its check and blocks agents who made too many failed login attempts) is locale-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. You can do this by modifying the following configs:
+1. By default, posting a login form (where `SecurityBlocker` makes its check and blocks agents who made too many failed login attempts) is locale-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the agent login path. To do it, update the configuration:
 
 **src/Pyz/Yves/AgentPage/AgentPageConfig.php**
 
@@ -193,17 +193,17 @@ class AgentPageConfig extends SprykerAgentPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the agent is submitted, the URL it uses contains a locale code—for example, `/de/agent/login_check` is the default value for an agent.
+Make sure that, when the login form for the agent is submitted, the URL it uses contains a locale code. For example, `/de/agent/login_check` is the default value for an agent.
 
 {% endinfo_block %}
 
-Add environment configuration for the agent security:
+2. Add environment configuration for the agent security:
 
 | CONFIGURATION                                                              | SPECIFICATION                                                                                                                                     | NAMESPACE                                     |
 |----------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the agent is blocked if the number of attempts is exceeded for an agent.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for an agent.                                          | Spryker\Shared\SecurityBlockerStorefrontAgent |
-| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempt an agent can make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the period for which an agent is blocked if the number of attempts was exceeded.                       | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_TTL                | Specifies the TTL configuration: the time period during which failed attempts are counted. | Spryker\Shared\SecurityBlockerStorefrontAgent |
+| SecurityBlockerStorefrontAgentConstants::AGENT_BLOCKING_NUMBER_OF_ATTEMPTS | The number of failed login attempt to make during the `SECURITY_BLOCKER_STOREFRONT:AGENT_BLOCKING_TTL` time before the agent is blocked. | Spryker\Shared\SecurityBlockerStorefrontAgent |
 
 **config/Shared/config_default.php**
 
@@ -256,14 +256,14 @@ console data:import:glossary
 
 ### 4) Enable controllers
 
-Register the following route provider plugins:
+1. Register the following route provider plugins:
 
 | PROVIDER                       | NAMESPACE                                  |
 |--------------------------------|--------------------------------------------|
 | AgentPageRouteProviderPlugin   | SprykerShop\Yves\AgentPage\Plugin\Router   |
 | AgentWidgetRouteProviderPlugin | SprykerShop\Yves\AgentWidget\Plugin\Router |
 
-Register the route provider plugins in the Yves application:
+2. Register the route provider plugins in the Yves application:
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 
@@ -293,12 +293,10 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you have registered the route provider plugins correctly:
-
 | PROVIDER                       | TEST                                                                                               |
 |--------------------------------|----------------------------------------------------------------------------------------------------|
-| AgentPageRouteProviderPlugin   | Ensure that you can open https://mysprykershop.com/agent/login.                                    |
-| AgentWidgetRouteProviderPlugin | 1. Log in as an agent. <br>2. Ensure that you can search by customers using the Agent control bar. |
+| AgentPageRouteProviderPlugin   | Make sure `https://mysprykershop.com/agent/login` is accessible.                                    |
+| AgentWidgetRouteProviderPlugin | 1. Log in as an agent. <br>2. Make sure you can search by customers using the Agent control bar. |
 
 {% endinfo_block %}
 
@@ -306,14 +304,14 @@ Ensure that you have registered the route provider plugins correctly:
 
 Set up the following behaviors.
 
-#### Agent page security
+#### Set up the agent page security
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. | None          | SprykerShop\Yves\AgentPage\Plugin\Security                           |
-| AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      | None          | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
+| YvesAgentPageSecurityPlugin                             | Registers security firewalls, access rules, impersonate rules, login and logout handlers for agent users. |           | SprykerShop\Yves\AgentPage\Plugin\Security                           |
+| AgentSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with agent settings.                                      |           | Spryker\Client\SecurityBlockerStorefrontAgent\Plugin\SecurityBlocker |
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
 
@@ -365,8 +363,8 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 {% info_block warningBox "Verification" %}
 
-1. Open `https://mysprykershop.com/agent/login`.
-2. Ensure that the login form is displayed and that only a user with the agent role can log in.
+1. Go to `https://mysprykershop.com/agent/login`.
+2. Make sure the login form is displayed and that only a user with the agent role can log in.
 3. Go to `https://mysprykershop.com/agent/overview`.
 4. Ensure that only the user with the agent role can access the page.
 5. Ensure that the agent can log out.
@@ -379,13 +377,13 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                        | DESCRIPTION                                                                                               | PREREQUISITES                                            | NAMESPACE                                               |
 |-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------|
-| SaveAgentSessionSecurityPlugin                                                | Extends security builder event dispatcher with save session agent listener.                               | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
-| ValidateAgentSessionSecurityPlugin                                            | Extends security service with agent session validator listener.                                           | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
-| SessionAgentValidationSecurityAuthenticationListenerFactoryTypeExpanderPlugin | Expands security authentication listener factory types list with agent's session validator factory type.  | None                                                     | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
-| SessionRedisSessionAgentSaverPlugin                                           | Saves agent's session data to Redis storage.                                                              | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
-| SessionRedisSessionAgentValidatorPlugin                                       | Validates agent's session data in Redis storage.                                                          | Session data is store in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
-| SessionFileSessionAgentSaverPlugin                                            | Saves agent's session data to a file.                                                                     | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
-| SessionFileSessionAgentValidatorPlugin                                        | Validates agent's session data in a file.                                                                 | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
+| SaveAgentSessionSecurityPlugin                                                | Extends security builder event dispatcher with  save session agent listener.                               |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
+| ValidateAgentSessionSecurityPlugin                                            | Extends security service with agent session validator listener.                                           |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
+| SessionAgentValidationSecurityAuthenticationListenerFactoryTypeExpanderPlugin | Expands security authentication listener factory types list with the agent's session validator factory type.  |                                                      | SprykerShop\Yves\SessionAgentValidation\Plugin\Security |
+| SessionRedisSessionAgentSaverPlugin                                           | Saves an agent's session data to the Redis storage.                                                              | Session data is stored in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionRedisSessionAgentValidatorPlugin                                       | Validates an agent's session data in the Redis storage.                                                          | Session data is stored in Redis.                          | Spryker\Yves\SessionRedis\Plugin\SessionAgentValidation |
+| SessionFileSessionAgentSaverPlugin                                            | Saves an agent's session data to a file.                                                                     | Session data is stored in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
+| SessionFileSessionAgentValidatorPlugin                                        | Validates an agent's session data in a file.                                                                 | Session data is store in a file.                         | Spryker\Yves\SessionFile\Plugin\SessionAgentValidation  |
 
 **src/Pyz/Yves/Security/SecurityDependencyProvider.php**
 
@@ -424,9 +422,9 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "" %}
 
-Apply the following changes only if session data is store in Redis.
+Apply the following changes only if session data is stored in Redis.
 
 {% endinfo_block %}
 
@@ -466,16 +464,16 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Ensure that the following Redis key exists and contains data:
+2. Make sure the following Redis key exists and contains the data:
    `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
-3. Changed the session data to an invalid value.
-4. Verify that the agent was logged out.
+3. Change the session data to an invalid value.
+Make sure the agent has been logged out.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Warning" %}
 
-Apply the following changes only if session data is store in a file.
+Apply the following changes only if session data is stored in a file.
 
 {% endinfo_block %}
 
@@ -515,20 +513,20 @@ class SessionAgentValidationDependencyProvider extends SprykerSessionAgentValida
 {% info_block warningBox "Verification" %}
 
 1. Log in as an agent.
-2. Ensure that a file in the following path exists and contains data:
-   `data/session/session:agent:{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}`
-3. Changed the session data to an invalid value.
-4. Verify that the agent was logged out.
+2. Make sure the following Redis key exists and contains the data:
+   `{% raw %}{{{% endraw %}agent_id{% raw %}}}{% endraw %}:agent:entity`
+3. Change the session data to an invalid value.
+Make sure the agent has been logged out.
 
 {% endinfo_block %}
 
-#### Audit logging
+#### Set up audit logging
 
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                  | DESCRIPTION                                                                                               | PREREQUISITES | NAMESPACE                                                            |
 |---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------|
-| AgentCurrentRequestProcessorPlugin                      | Adds agent related data from the current request to the logs data.                                        | None          | SprykerShop\Yves\AgentPage\Plugin\Log                                |
+| AgentCurrentRequestProcessorPlugin                      | Adds agent related data from a current request to the logs data.                                        |           | SprykerShop\Yves\AgentPage\Plugin\Log                                |
 
 **src/Pyz/Yves/Log/LogDependencyProvider.php**
 
@@ -552,7 +550,7 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that during the user impersonation process, the agent's data is logged.
+Make sure that, during the user impersonation process, the agent's data is logged.
 
 {% endinfo_block %}
 
@@ -563,7 +561,7 @@ Make sure that during the user impersonation process, the agent's data is logged
 
 | WIDGET                | SPECIFICATION                                      | NAMESPACE                           |
 |-----------------------|----------------------------------------------------|-------------------------------------|
-| AgentControlBarWidget | Allows agents to select and impersonate customers. | SprykerShop\Yves\AgentWidget\Widget |
+| AgentControlBarWidget | Enables agents to select and impersonate customers. | SprykerShop\Yves\AgentWidget\Widget |
 
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -604,10 +602,10 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE                | TEST                                                                      |
 |-----------------------|---------------------------------------------------------------------------|
-| AgentControlBarWidget | Log in as an agent. The control bar widget appears above the site header. |
+| AgentControlBarWidget | Log in as an agent. The control bar widget is displayed above the site header. |
 
 {% endinfo_block %}

@@ -4,7 +4,7 @@ This document describes how to install the [Customer Account Management](/docs/p
 
 {% info_block errorBox "Included features" %}
 
-The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the following functionalities:
+This guide expects the basic feature to be in place. This guide adds the following functionalities:
 * Redirect support for Customer login functionality.
 * Password set and reset console commands for customers.
 * Double opt-in for customer registration.

@@ -803,8 +803,6 @@ Import the following data.
 
 #### Add infrastructural data
 
-Add infrastructural data as follows:
-
 1. Install the following plugins:
 
 | PLUGIN                            | SPECIFICATION                                  | PREREQUISITES | NAMESPACE                                                         |
@@ -846,9 +844,9 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following applies:
 
-* The `spy_oauth_client` table is populated with the OAuth client(s) you configured in the `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
+* The `spy_oauth_client` table is populated with the OAuth client or clients you've configured in `\Spryker\Shared\Oauth\OauthConstants::OAUTH_CLIENT_CONFIGURATION` of environment config files.
 
 * The `spy_oauth_scope` tables are filled with customer scopes.
 
@@ -861,7 +859,7 @@ Follow the steps below to install the Customer Account Management feature fronte
 
 ### Prerequisites
 
-To start feature integration, integrate the required feature:
+Install the following features:
 
 | NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                    |
 |--------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
@@ -876,7 +874,7 @@ composer require spryker-feature/customer-account-management: "{{page.version}}"
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE                        | EXPECTED DIRECTORY                                   |
 |-------------------------------|------------------------------------------------------|
@@ -912,15 +910,17 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that double opt-in is enabled by registering a new customer and checking that you cannot sign in to your account until the registration is confirmed.
+Make sure that double opt-in is enabled by registering a new customer and checking that you can't sign in to your account until the registration is confirmed.
 
 {% endinfo_block %}
 
-By default, in Spryker, posting the login form (where SecurityBlocker makes its check and blocks users who made too many failed login attempts) is local-independent. So, to see error messages translated into different languages, you need to configure the locale to be added to the login path. You can do this by modifying the following configs:
+2. By default, posting the login form (where SecurityBlocker makes its check and blocks users who made too many failed login attempts) is locale-independent. To see error messages translated into different languages, you need to configure the locale to be added to the login path. You can do this by modifying the following configs:
+
+{% info_block warningBox %}
+For security reasons, we recommend enabling the security blocker feature that block recurring attempts of resetting a password by setting `CUSTOMER_SECURITY_BLOCKER_ENABLED` to `true;`.
+{% endinfo_block %}
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
-
-Optional: For security reasons, we recommend enabling the security blocker feature that will block recurring attempts of resetting a password by setting `CUSTOMER_SECURITY_BLOCKER_ENABLED` to `true;`
 
 ```php
 <?php
@@ -948,11 +948,11 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the login form for the customer is submitted, the URL it uses contains a locale code—for example, `/de/login_check` is the default value for the customer.
+Make sure that, when a customer submits the login form, the URL it uses contains a locale code. For example, `/de/login_check` is the default value for the customer.
 
 {% endinfo_block %}
 
-You can define the password minimum and maximum length the frontend can use. They must use the same as you defined for the core feature in the previous `CustomerConfig`:
+3. You can define the password minimum and maximum length the frontend can use. They must use the same as you defined for the core feature in the previous `CustomerConfig`:
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 
@@ -983,7 +983,7 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 
 ### 3) Set up transfer objects
 
-Generate transfer changes:
+1. Generate transfer changes:
 
 ```bash
 console transfer:generate

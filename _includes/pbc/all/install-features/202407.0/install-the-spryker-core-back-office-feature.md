@@ -100,8 +100,8 @@ Add the following configuration to your project:
 | TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                       | Spryker\Shared\Translator |
 | AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller by default.                                           | Spryker\Shared\Acl        |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration: the time period during which the number of unsuccessful tries is counted for a Back Office user.                                   | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.       | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before they're blocked. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the period for which a Back Office user is blocked if they exceed the number of failed login attempts.       | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the time period specified in `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` before they're blocked. | Spryker\Shared\SecurityBlockerBackoffice |
 
 **config/Shared/config_default.php**
 
@@ -140,10 +140,10 @@ $config[SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_A
 
 ### Set up an authentication strategy
 
-Spryker offers two authentication strategies out of the box:
+The following authentication strategies are available by default:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it is created automatically based on the data from an external service.
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: It accepts only existing users for authentication.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`: If a user doesn't exist, it's created automatically based on the data from an external service.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`: Accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**
@@ -169,7 +169,7 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 
 {% info_block warningBox "Verification" %}
 
-After finishing the entire integration, ensure the following:
+After finishing the installation, make sure the following applies:
 * Entries without a translation for a language with a configured fallback are translated into the fallback language.
 * The translation cache is stored under the configured directory.
 * Translations are found based on the configured path pattern.
@@ -202,7 +202,7 @@ After finishing the entire integration, ensure the following:
 </config>
 ```
 
-2. Execute the following command:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -210,11 +210,11 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-In the Back Office, make sure that you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
+In the Back Office, make sure you can go to **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
 
-### Configure the `User` module to execute post save plugins:
+### Configure the `User` module to execute post-save plugins
 
 **src/Pyz/Zed/User/UserConfig.php**
 
@@ -239,22 +239,24 @@ class UserConfig extends SprykerUserConfig
 
 Set up the following behaviors.
 
-### Set up admin user login to the Back Office
+### Set up the admin user login to the Back Office
 
 1. Activate the following security plugins:
 
 | PLUGIN                                                           | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES                                                                                                                | NAMESPACE                                                                       |
 |------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | ZedSecurityApplicationPlugin                                     | Integrates with the Symfony framework, leveraging its security components for managing authentication and authorization, configures and provides necessary services for security-related functionality. | If there is `WebProfilerApplicationPlugin` in `ApplicationDependencyProvider`, put `ZedSecurityApplicationPlugin` before it. | Spryker\Zed\Security\Communication\Plugin\Application                           |  
-| ZedUserSessionHandlerSecurityPlugin                              | Extends security service with `CurrentUserSessionHandlerListener` to handle user sessions during the authentication process.                                                                            | None                                                                                                                         | Spryker\Zed\User\Communication\Plugin\Securiy                                   |
-| ZedUserSecurityPlugin                                            | Extends security service with User firewall.                                                                                                                                                            | None                                                                                                                         | Spryker\Zed\SecurityGui\Communication\Plugin\Security                           |
-| UserPasswordResetMailTypeBuilderPlugin                           | Builds the `MailTransfer` with data for a user password restore mail.                                                                                                                                   | None                                                                                                                         | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
-| MailUserPasswordResetRequestStrategyPlugin                       | Sends a password reset email on a user request.                                                                                                                                                         | Mail module must be configured. <br>`UserPasswordResetMailTypeBuilderPlugin` is enabled.                                     | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
-| ZedOauthUserSecurityPlugin                                       | Extends `User` firewall with authenticator and user provider if exists, introduces `OauthUser` firewall in security service otherwise.                                                                  | Mst be connected after or instead of `ZedUserSecurityPlugin`                                                                 | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
-| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with Back Office user security configuration.                                                                                                           | None                                                                                                                         | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
-| SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log the failed Backoffice login attempts. Denies user access in case of exceeding the limit.                                                                                         | None                                                                                                                         | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
+| ZedUserSessionHandlerSecurityPlugin                              | Extends the security service with `CurrentUserSessionHandlerListener` to handle user sessions during the authentication process.                                                                            |                                                                                                                          | Spryker\Zed\User\Communication\Plugin\Securiy                                   |
+| ZedUserSecurityPlugin                                            | Extends the security service with the user firewall.                                                                                                                                                            |                                                                                                                          | Spryker\Zed\SecurityGui\Communication\Plugin\Security                           |
+| UserPasswordResetMailTypeBuilderPlugin                           | Builds the `MailTransfer` with data for a user password restoration email.                                                                                                                                   |                                                                                                                          | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\Mail                     |
+| MailUserPasswordResetRequestStrategyPlugin                       | Sends a password reset email on a user request.                                                                                                                                                         | The Mail module is configured. <br>`UserPasswordResetMailTypeBuilderPlugin` is enabled.                                     | Spryker\Zed\UserPasswordResetMail\Communication\Plugin\UserPasswordReset        |
+| ZedOauthUserSecurityPlugin                                       | Extends the `User` firewall with an authenticator and user provider if exists;  otherwise, introduces the `OauthUser` firewall in the security service.                                                                  | Must be connected after or instead of `ZedUserSecurityPlugin`.                                                                 | \Spryker\Zed\SecurityOauthUser\Communication\Plugin\Security                    |
+| BackofficeUserSecurityBlockerConfigurationSettingsExpanderPlugin | Expands security blocker configuration settings with the Back Office user security configuration.                                                                                                           |                                                                                                                          | \Spryker\Client\SecurityBlockerBackoffice\Plugin\SecurityBlocker                |
+| SecurityBlockerBackofficeUserEventDispatcherPlugin               | Adds a listener to log failed Back Office login attempts. Denies access in case of exceeding the limit of failed login attempts.                                                                                         |                                                                                                                          | \Spryker\Zed\SecurityBlockerBackofficeGui\Communication\Plugin\EventDispatcher  |
 
-**src/Pyz/Zed/Application/ApplicationDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Application/ApplicationDependencyProvider.php</summary>
+
 ```php
 <?php
 
@@ -304,6 +306,8 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     }
 }
 ```
+
+</summary>
 
 **src/Pyz/Zed/Security/SecurityDependencyProvider.php**
 ```php
@@ -439,10 +443,10 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
-* You can open the Back Office login page or any page which requires authentication.
-* On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
-* You receive a password reset email to the email address you submitted the password reset form with.
+Make sure the following applies:
+* The Back Office login page and other pages that require authentication are accessible.
+* On the Back Office login page, clicking the **Forgot password?** button opens the password reset form.
+* You receive a password reset email after submitting the password reset form.
 
 {% endinfo_block %}
 
@@ -452,13 +456,13 @@ Ensure the following:
 
 | PLUGIN                        | SPECIFICATION                                                                        | PREREQUISITES                                                                                                                                                      | NAMESPACE                                             |
 |-------------------------------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
-| TranslatorInstallerPlugin     | Regenerates new translation caches for all locales of the current store.             | None                                                                                                                                                               | Spryker\Zed\Translator\Communication\Plugin           |
-| TranslationPlugin             | Translates flash messages provided by the Messenger module.                          | None                                                                                                                                                               | Spryker\Zed\Translator\Communication\Plugin\Messenger |
-| TranslatorTwigPlugin          | Extends Twig with Symfony's translation extension and Spryker's translator logic.    | None                                                                                                                                                               | Spryker\Zed\Translator\Communication\Plugin\Twig      |
-| UserLocaleLocalePlugin        | Provides locale of the logged-in user as current locale.                             | Enable `\Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin` that sets the locale of the application based on the provided locale plugin. | Spryker\Zed\UserLocale\Communication\Plugin\Locale    |
-| AssignUserLocalePreSavePlugin | Expands `UserTransfer` before saving it with a locale ID and name.                   | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
-| LocaleUserExpanderPlugin      | Expands `UserTransfer` with a locale ID and name after reading it from the database. | None                                                                                                                                                               | Spryker\Zed\UserLocale\Communication\Plugin\User      |
-| UserLocaleFormExpanderPlugin  | Expands the Edit user profile form with a locale field.                              | None                                                                                                                                                               | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
+| TranslatorInstallerPlugin     | Regenerates new translation caches for all locales of the current store.             |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin           |
+| TranslationPlugin             | Translates the flash messages provided by the Messenger module.                          |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin\Messenger |
+| TranslatorTwigPlugin          | Extends Twig with Symfony's translation extension and Spryker's translator logic.    |                                                                                                                                                                | Spryker\Zed\Translator\Communication\Plugin\Twig      |
+| UserLocaleLocalePlugin        | Provides the locale of a logged-in user as a current locale.                             | Enable `\Spryker\Zed\Locale\Communication\Plugin\Application\LocaleApplicationPlugin` that sets the locale of the application based on the provided locale plugin. | Spryker\Zed\UserLocale\Communication\Plugin\Locale    |
+| AssignUserLocalePreSavePlugin | Expands `UserTransfer` before saving it with a locale ID and name.                   |                                                                                                                                                                | Spryker\Zed\UserLocale\Communication\Plugin\User      |
+| LocaleUserExpanderPlugin      | Expands `UserTransfer` with a locale ID and name after reading it from the database. |                                                                                                                                                                | Spryker\Zed\UserLocale\Communication\Plugin\User      |
+| UserLocaleFormExpanderPlugin  | Expands the edit user profile form with a locale field.                              |                                                                                                                                                                | Spryker\Zed\UserLocaleGui\Communication\Plugin        |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
 ```php
@@ -630,16 +634,15 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you've enabled the plugins:
-1. In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
-2. Select **Add New User**.
-3. On the **Create new User** page, check that the **Interface language*** field exists.
+1. In the Back Office, go to **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. Click **Add New User**.
+  On the **Create new User** page, make sure that the **Interface language*** field exists.
 
 {% endinfo_block %}
 
-3. Add translations
+### Add translations
 
-Append glossary according to your configuration:
+Append the glossary according to your configuration:
 
 data/import/common/common/glossary.csv
 
@@ -648,13 +651,13 @@ security_blocker_backoffice_gui.error.account_blocked,"Too many log in attempts 
 security_blocker_backoffice_gui.error.account_blocked,"Warten Sie bitte %minutes% Minuten, bevor Sie es erneut versuchen.",de_DE
 ```
 
-### Set up Audit logging
+### Set up audit logging
 
 1. Activate the following plugins:
 
 | PLUGIN                                 | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                  |
 |----------------------------------------|-----------------------------------------------------------------------|---------------|--------------------------------------------|
-| CurrentUserDataRequestProcessorPlugin  | Adds username and user UUID from the current request to the log data. | None          | Spryker\Zed\User\Communication\Plugin\Log  |
+| CurrentUserDataRequestProcessorPlugin  | Adds the username and user UUID from the current request to the log data. |           | Spryker\Zed\User\Communication\Plugin\Log  |
 
 **src/Pyz/Zed/Log/LogDependencyProvider.php**
 
@@ -702,8 +705,8 @@ Make sure the audit logs data is expanded by the current logged in user data.
 
 | COMMAND                         | SPECIFICATION                        | PREREQUISITES | NAMESPACE                                    |
 |---------------------------------|--------------------------------------|-----------------|----------------------------------------------|
-| CleanTranslationCacheConsole    | Cleans translation cache for Zed.    | None            | Spryker\Zed\Translator\Communication\Console |
-| GenerateTranslationCacheConsole | Generates translation cache for Zed. | None            | Spryker\Zed\Translator\Communication\Console |
+| CleanTranslationCacheConsole    | Cleans translation cache for Zed.    |             | Spryker\Zed\Translator\Communication\Console |
+| GenerateTranslationCacheConsole | Generates translation cache for Zed. |             | Spryker\Zed\Translator\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 ```php

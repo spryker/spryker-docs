@@ -983,7 +983,7 @@ class CustomerPageConfig extends SprykerCustomerPageConfig
 
 ### 3) Set up transfer objects
 
-1. Generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -1002,7 +1002,7 @@ Make sure the following transfers have been created:
 
 ### 4) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -1041,7 +1041,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following:
+Make sure the following applies:
 * The `spy_glossary_key` table has new translation keys.
 * The `spy_glossary_translation` table has the corresponding translations.
 
@@ -1053,15 +1053,15 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                       | SPECIFICATION                                                                                | PREREQUISITES                     | NAMESPACE                                                       |
 |--------------------------------------------------------------|----------------------------------------------------------------------------------------------|-----------------------------------|-----------------------------------------------------------------|
-| RedirectUriCustomerRedirectStrategyPlugin                    | Redirects a customer who has just logged in to the `redirectURI` provided in parameters.     |                               | SprykerShop\Yves\CustomerPage\Plugin\CustomerPage               |
+| RedirectUriCustomerRedirectStrategyPlugin                    | Redirects a customer that logged in to the `redirectURI` provided in parameters.     |                               | SprykerShop\Yves\CustomerPage\Plugin\CustomerPage               |
 | CustomerConfirmationUserCheckerApplicationPlugin             | Adds a service that checks if a customer confirmed the registration before authorizing them. |                               | SprykerShop\Yves\CustomerPage\Plugin\Application                |
-| SaveCustomerSessionSecurityPlugin                            | Extends security builder event dispatcher with save customer session listener.               |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
-| ValidateCustomerSessionSecurityPlugin                        | Extends security service with customer session validator listener.                           |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
+| SaveCustomerSessionSecurityPlugin                            | Extends security builder event dispatcher with a save customer session listener.               |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
+| ValidateCustomerSessionSecurityPlugin                        | Extends security service with a customer session validator listener.                           |                               | SprykerShop\Yves\SessionCustomerValidationPage\Plugin\Security  |
 | LogoutInvalidatedCustomerFilterControllerEventHandlerPlugin  | Logs out an invalidated customer.                                                            |                               | SprykerShop\Yves\CustomerValidationPage\Plugin\ShopApplication  |
-| RedisCustomerSessionSaverPlugin                              | Saves customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
-| RedisCustomerSessionValidatorPlugin                          | Validates customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
-| FileCustomerSessionSaverPlugin                               | Saves customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
-| FileCustomerSessionValidatorPlugin                           | Validates customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
+| RedisCustomerSessionSaverPlugin                              | Saves a customer's session data to Redis storage.                                              | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| RedisCustomerSessionValidatorPlugin                          | Validates a customer's session data in Redis storage.                                          | Session data is stored in Redis.  | Spryker\Yves\SessionRedis\Plugin\SessionCustomerValidationPage  |
+| FileCustomerSessionSaverPlugin                               | Saves a customer's session data to a file.                                                     | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
+| FileCustomerSessionValidatorPlugin                           | Validates a customer's session data in a file.                                                 | Session data is stored in a file. | Spryker\Yves\SessionFile\Plugin\SessionCustomerValidationPage   |
 
 **src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php**
 
@@ -1161,7 +1161,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "" %}
 
 Apply the following changes only if session data is stored in Redis.
 
@@ -1206,14 +1206,13 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 {% info_block warningBox "Verification" %}
 
 1. Log in as a customer.
-2. Make sure that the following Redis key exists and contains data:
-   `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`
-3. Changed the session data to an invalid value.
-4. Verify that the customer was logged out.
+  Make sure that the following Redis key exists and contains the data: `{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}:customer:entity`.
+2. Change the session data to an invalid value.
+  Make sure the customer has been logged out.
 
 {% endinfo_block %}
 
-{% info_block warningBox "Warning" %}
+{% info_block warningBox "" %}
 
 Apply the following changes only if session data is stored in a file.
 
@@ -1258,10 +1257,9 @@ class SessionCustomerValidationPageDependencyProvider extends SprykerSessionCust
 {% info_block warningBox "Verification" %}
 
 1. Log in as a customer.
-2. Make sure that a file in the following path exists and contains data:
-   `data/session/session:customer:{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}`
-3. Changed the session data to an invalid value.
-4. Verify that the customer was logged out.
+  Make sure that a file in the following path exists and contains the data: `data/session/session:customer:{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}`.
+2. Change the session data to an invalid value.
+  Make sure the customer has been logged out.
 
 {% endinfo_block %}
 

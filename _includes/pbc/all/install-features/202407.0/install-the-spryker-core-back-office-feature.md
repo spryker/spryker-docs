@@ -1,7 +1,6 @@
 {% info_block errorBox %}
 
-This feature integration guide expects the basic feature to be in place.
-The current feature integration guide adds the following functionalities:
+This feature installation guide expects the basic feature to be in place. This guide adds the following functionalities:
 * Translation
 * Security
 * OAuth 2.0/Open ID Connect Support for Zed login
@@ -14,7 +13,7 @@ Ensure that the related features are installed:
 
 | NAME   | VERSION | INTEGRATE GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) | 
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
 ## 1) Install the required modules
 
@@ -274,7 +273,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
     {
         return [
             new ZedSecurityApplicationPlugin(),
-            
+
             // web profiler plugin should be after the security plugin.
             new WebProfilerApplicationPlugin(),
         ]
@@ -730,7 +729,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new CleanTranslationCacheConsole(),
             new GenerateTranslationCacheConsole(),
         ];
-        
+
         return $commands;
     }
 }

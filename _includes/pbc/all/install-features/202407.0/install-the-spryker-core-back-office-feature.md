@@ -9,9 +9,9 @@ This feature installation guide expects the basic feature to be in place. This g
 
 ## Prerequisites
 
-Ensure that the related features are installed:
+Install the following required features:
 
-| NAME   | VERSION | INTEGRATE GUIDE |
+| NAME   | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
@@ -52,7 +52,7 @@ Ensure that the following modules have been removed:
 
 {% endinfo_block %}
 
-2. If these modules have not been removed, remove them:
+2. If the prior modules have not been removed, remove them manually:
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension
@@ -98,10 +98,10 @@ Add the following configuration to your project:
 | CONFIGURATION                                                                   | SPECIFICATION                                                                                                                                          | NAMESPACE                 |
 |---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------|
 | TranslatorConstants::TRANSLATION_ZED_FALLBACK_LOCALES                           | Fallback locales that are used if there is no translation for a selected locale.                                                                       | Spryker\Shared\Translator |
-| AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller out of the box.                                           | Spryker\Shared\Acl        |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration, the period when the number of unsuccessful tries is counted for a Back Office user.                                   | Spryker\Shared\SecurityBlockerBackoffice |
+| AclConstants::ACL_DEFAULT_RULES                                                 | Default rules for ACL functionality, where you can open access to some modules or controller by default.                                           | Spryker\Shared\Acl        |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_TTL                | Specifies the TTL configuration: the time period during which the number of unsuccessful tries is counted for a Back Office user.                                   | Spryker\Shared\SecurityBlockerBackoffice |
 | SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration, the period for which the Back Office user is blocked if the number of attempts is exceeded for the Back Office.       | Spryker\Shared\SecurityBlockerBackoffice |
-| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before it is blocked. | Spryker\Shared\SecurityBlockerBackoffice |
+| SecurityBlockerBackofficeConstants::BACKOFFICE_USER_BLOCKING_NUMBER_OF_ATTEMPTS | Specifies number of failed login attempts a Back Office user can make during the `SECURITY_BLOCKER_BACKOFFICE:BLOCKING_TTL` time before they're blocked. | Spryker\Shared\SecurityBlockerBackoffice |
 
 **config/Shared/config_default.php**
 

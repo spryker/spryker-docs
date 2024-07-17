@@ -59,20 +59,32 @@ Apply commission to all products in the Smartphones and Smartwatches categories:
 
 If a category has child categories, applying a commission to the category applies it to the child categories too. For example, applying commission to the Electronics category also apply it to the Smart Watches category. So, you might want to set up conditions using child categories or exclude some child categories.
 
-### Item-price in the item condition
-You can define your commissions based on specific product prices and ranges. Item price is taken from the product's gross or net price depending on the price mode of the order. The product gross price is configured in the backend (including volume pricing) and does not include any discounts applied afterward in the shopping cart or checkout.
+### Item price conditions
 
-You can use the following conditions: </<= /=/!=/ >=/>,IS IN, IS NOT IN for example: item-price > '2' AND item-price <= '10.99'.
+To specify conditions based on item prices, the following format is used: `item-price {OPERATOR} '{PRICE_VALUE}'`
 
-An entry of "10.99" denotes a ten [euros] ninety-nine [cents]. This value should be entered as a decimal with two places, representing the amount accurately.
+|PLACEHOLDER | DESCRIPTION |
+| - | - |
+| {OPERATOR} | The relationship between item-price and `{PRICE_VALUE}`. Accepted operators: `<`, `<=`, `=`, `!=`, `>=`, `>`, `IS IN`, `IS NOT IN`. |
+| {PRICE_VALUE} | The price to check the condition against. Accepts decimal numbers and ranges. Item price is taken from the product's gross or net price depending on the price mode of the order. The product gross price is configured in the backend (including volume pricing) and does not include any discounts applied afterward in the shopping cart or checkout. |
 
-SKU in the item condition
-You can set up a specific commission for selected products in the catalog by SKU. In this case, make sure you use a product concrete SKU, not a product abstract SKU. Read about it here.
-Supports is in , is not in, =, !=
+Example: `item-price > '2' AND item-price <= '10.99'`.
 
-SKU IS IN '136_24425591;134_29759322'
 
-Merchant-based commission
+
+### SKU-based conditions
+
+
+To specify conditions based on SKU, use the following format: `SKU {OPERATOR} {SKU_VALUE}`
+
+|PLACEHOLDER | DESCRIPTION |
+| - | - |
+| {OPERATOR} | The relationship between category and `{CATEGORY_VALUE}`. Accepted operators: `IS NOT IN`, `IS IN`, `=`, `!=`. |
+| {SKU_VALUE} | The SKU to check the condition against. Accepts product concrete SKUs. Accepts multiple values separated by `;`. |
+
+Example: `SKU IS IN '136_24425591;134_29759322'`
+
+### Merchant-based commission
 You can use merchants_allow_list to specify one or multiple merchants who will receive a special commission. Make sure priority is higher than a default marketplace commission (mc02); otherwise, it will not be applied. Your commission setup will look like this:
 
 The system will apply mc01 first as it has a higher priority. If a merchant is not in the merchants_allow_list, the system will proceed with second priority mc02 and apply a 10% commission.

@@ -18,8 +18,8 @@ Steps how to ensure code compatibility with latest Spryker releases:
 - https://github.com/spryker-shop/b2b-demo-marketplace
 
 **2.** Install your module:
-- Pulls the latest tag from the demoshop (One from the list above)
-- Installs your module with composer (in the version that you want to test, e.g. if we run CI on specific branch, specific branch should be used)
+- Pull the latest tag from the demoshop (One from the list above)
+- Install your module with Composer. Use the version that you want to test, e.g. if you run CI on a specific branch, this branch has to be used as the module package's version constraint
 - Apply all the changes on demoshop project level that are necessary to fully integrate your module.
 
 **3.** Tests functionality of your module.

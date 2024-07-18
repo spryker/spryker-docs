@@ -86,7 +86,7 @@ Refresh your GitHub repository page to see your code published.
 
 ```shell
 composer config repositories.your-company-name/your-repository git git@github.com:your-company-name/your-repository.git
-composer require your-company-name/your-repository
+composer require your-company-name/your-repository:dev-main
 ```
 
 {% info_block infoBox %}

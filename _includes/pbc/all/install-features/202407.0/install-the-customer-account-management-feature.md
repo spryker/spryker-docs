@@ -793,7 +793,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the audit logs data is expanded by the current logged in customer data.
+Find the logs under the configured log file paths and make sure the audit logs data is expanded by customer email and 
+customer reference from the current request.
 
 {% endinfo_block %}
 

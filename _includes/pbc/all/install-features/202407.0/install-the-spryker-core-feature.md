@@ -344,7 +344,7 @@ use Spryker\Shared\Log\LogConstants;
 use Spryker\Zed\Log\Communication\Plugin\Log\MerchantPortalSecurityAuditLoggerConfigPlugin;
 use Spryker\Zed\Log\Communication\Plugin\Log\ZedSecurityAuditLoggerConfigPlugin;
 
-$config[PropelConstants::LOG_FILE_PATH_ZED]
+$config[LogConstants::LOG_FILE_PATH_ZED]
     = $config[LogConstants::LOG_FILE_PATH_GLUE]
     =  'php://stdout';
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED] = [
@@ -364,6 +364,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 {% info_block warningBox "Verification" %}
 
 After finishing the installation, make sure you can log security actions in Zed, Glue, Glue Backend, and Merchant Portal applications.
+Verify that the configured log file paths contain the corresponding logs for each application.
 Example:
 
 ```php
@@ -1160,6 +1161,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 {% info_block warningBox "Verification" %}
 
 After finishing the installation, make sure you can log security actions in the Yves applications.
+Verify that the configured log file path contains the corresponding log.
 Example:
 
 ```php

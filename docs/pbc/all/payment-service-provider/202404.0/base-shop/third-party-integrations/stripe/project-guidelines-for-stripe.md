@@ -159,6 +159,6 @@ The metadata field has some limitations you must ensure to be met:
 - Value length: max 500 characters
 - Key-value pairs: max 50 pairs
 
-When you pass the metadata to Stripe, it is stored in the payment object and can be retrieved later. For example, you can use the metadata to store the order ID or any other data you need to pass to Stripe.
+When you pass the metadata to Stripe, it is stored in the payment object and can be retrieved later. For example, you can use the metadata to store f.e. an external ID or any other data you need to pass to Stripe.
 
 When a `PaymentIntent` is created on the Stripe side you can see your passed `additionalPaymentData` in the Stripe UI. 

@@ -696,8 +696,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Find the logs under the configured log file paths and make sure the audit logs data is expanded by username and 
-user UUID from the current request.
+Find the logs under the configured log file paths and make sure the audit logs data is expanded with username and
+user UUID from a current request.
 
 {% endinfo_block %}
 

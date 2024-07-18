@@ -28,7 +28,7 @@ composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                            | EXPECTED DIRECTORY                                  |
 |-----------------------------------|-----------------------------------------------------|
@@ -66,7 +66,7 @@ Add the configuration:
 
 {% info_block errorBox "Security measures" %}
 
-To prevent the backend from being compromised, make sure that `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured in production environments.
+To prevent the backend from being compromised, make sure that, in production environments, `SecuritySystemUserConstants::AUTH_DEFAULT_CREDENTIALS` is secured.
 
 {% endinfo_block %}
 
@@ -96,7 +96,7 @@ Add the configuration:
 
 {% info_block errorBox "Security measures" %}
 
-Make sure that the encryption key is secured in production environments. This key protects all the data stored in the Vault.
+Make sure that, in production environments, the encryption key is secured. This key protects all the data stored in the Vault.
 
 {% endinfo_block %}
 
@@ -305,7 +305,7 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_REDIS_DATABASE] = 7;
 
 | CONFIGURATION                                                                    | SPECIFICATION                                                                                                                                          | NAMESPACE                                        |
 |----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
-| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the time period for which the agent is blocked if the number of attempts is exceeded for a customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
+| SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCK_FOR_SECONDS           | Specifies the TTL configuration: the time period for which an agent is blocked if the number of attempts is exceeded for a customer.                         | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 | SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL                | Specifies the TTL configuration: the time period within which a number of unsuccessful attempts for a customer is counted to block the agent.                                            | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 | SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS | Defines the number of failed login attempts to make within the time period defined in `SECURITY_BLOCKER_STOREFRONT:CUSTOMER_BLOCKING_TTL` before the customer is blocked. | Spryker\Shared\SecurityBlockerStorefrontCustomer |
 
@@ -317,20 +317,20 @@ $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_TTL] = 900
 $config[SecurityBlockerStorefrontCustomerConstants::CUSTOMER_BLOCKING_NUMBER_OF_ATTEMPTS] = 9;
 ```
 
-#### Configure Audit logging
+#### Configure audit logging
 
 1. Add the configuration:
 
 | CONFIGURATION                                             | SPECIFICATION                                                                                          | NAMESPACE |
 |-----------------------------------------------------------|--------------------------------------------------------------------------------------------------------| --- |
 | LogConstants::LOG_FILE_PATH_ZED                           | Absolute path to the log file to be used by the stream handler.                              | Spryker\Shared\Log |
-| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file which to be used by the stream handler.                              | Spryker\Shared\Log |
+| LogConstants::LOG_FILE_PATH_GLUE                          | Absolute path to the log file to be used by the stream handler.                              | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED             | Provides plugin class names providing the configuration for audit logging for the Zed application.             | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL | Provides plugin class names providing the configuration for audit logging for the Merchant Portal application. | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE            | Provides plugin class names providing the configuration for audit logging for the Glue application.            | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE_BACKEND    | Provides plugin class names providing the configuration for audit logging for the Glue Backend application.    | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOG_SANITIZE_FIELDS                   | Provides an array with names which is used to sanitize data in your audit logs.                        | Spryker\Shared\Log |
-| LogConstants::AUDIT_LOG_SANITIZED_VALUE                   | Provides a string which is used as a value for the audit log sanitized fields.                           | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOG_SANITIZE_FIELDS                   | Provides an array with names that are used to sanitize data in audit logs.                        | Spryker\Shared\Log |
+| LogConstants::AUDIT_LOG_SANITIZED_VALUE                   | Provides a string used as a value for the audit log sanitized fields.                           | Spryker\Shared\Log |
 | LogConstants::AUDIT_LOG_TAG_DISALLOW_LIST                 | Provides a list of audit log tags that are disallowed for logging.                                     | Spryker\Shared\Log |
 
 **config/Shared/config_default.php**
@@ -363,8 +363,9 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 
 {% info_block warningBox "Verification" %}
 
-After finishing the installation, make sure you can log security actions in Zed, Glue, Glue Backend, and Merchant Portal applications.
-Verify that the configured log file paths contain the corresponding logs for each application.
+After finishing the installation, make sure the following applies:
+* Security actions in Zed, Glue, Glue Backend, and Merchant Portal applications can be logged.
+* The configured log file paths contain the corresponding logs for each application.
 Example:
 
 ```php
@@ -434,7 +435,7 @@ Make sure that logging for 'user_logged_in' tags doesn't write any logs.
 
 ### 3) Set up database schema and transfer objects
 
-Apply database changes, generate entity, and transfer changes:
+Apply database changes, generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -443,7 +444,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in the database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -638,7 +639,7 @@ class SecurityBlockerDependencyProvider extends SprykerSecurityBlockerDependency
 
 {% info_block warningBox "Verification" %}
 
-Visit `https://zed.mysprykershop.com` and make sure Zed boots up without errors.
+Go to `https://zed.mysprykershop.com` and make sure Zed boots up without errors.
 
 {% endinfo_block %}
 
@@ -793,8 +794,9 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the logs data has been expanded by the registered plugins: environment, server, request, log type sections exist
-and contain the corresponding data.
+Make sure the following applies:
+* Logs data has been expanded with the registered plugins: environment, server, request.
+* Log type sections exist and contain the corresponding data.
 
 {% endinfo_block %}
 
@@ -1160,8 +1162,10 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 
 {% info_block warningBox "Verification" %}
 
-After finishing the installation, make sure you can log security actions in the Yves applications.
-Verify that the configured log file path contains the corresponding log.
+After finishing the installation, make sure the following applies:
+
+* Security actions in the Yves applications can be logged.
+* The configured log file path contains the corresponding log.
 Example:
 
 ```php

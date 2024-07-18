@@ -9,9 +9,14 @@ Commissions can be imported by a developer. For import details, see [Import file
 
 Back Office users can view commissions in **Marketplace**>**Merchant Commissions**.
 
+## Merchant commission priority
+
+When several commissions exist in a system, commission priority is used to identify which commission is applied to each order item.
+
+
 ## Applying merchant commissions conditionally
 
-Conditions are used to identify which commission is to be applied to individual order items.
+Conditions are used to identify which commission is to be applied. Conditions can be applied to individual items or orders.
 
 Conditions are based on the following criteria:
 * Product attribute, like brand or color.
@@ -20,7 +25,7 @@ Conditions are based on the following criteria:
 * Product SKU
 * Merchant, like ACME Inc.
 
-For a commission to be applied to an item, the item needs to fulfilled all the conditions defined for a commission.
+For a commission to be applied to an item or order, the item or order needs to fulfill all the conditions defined for a commission.
 
 
 ### Product attribute conditions
@@ -51,10 +56,8 @@ To specify conditions based on categories, the following format is used: `catego
 
 
 Examples:
-
-Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
-
-Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones';smartwatches'`.
+* Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
+* Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones';smartwatches'`.
 
 
 If a category has child categories, applying a commission to the category applies it to the child categories too. For example, applying commission to the Electronics category also apply it to the Smart Watches category. So, you might want to set up conditions using child categories or exclude some child categories.
@@ -84,54 +87,45 @@ To specify conditions based on SKU, use the following format: `SKU {OPERATOR} {S
 
 Example: `SKU IS IN '136_24425591;134_29759322'`
 
-### Merchant-based commission
-You can use merchants_allow_list to specify one or multiple merchants who will receive a special commission. Make sure priority is higher than a default marketplace commission (mc02); otherwise, it will not be applied. Your commission setup will look like this:
+### Merchant-based conditions
 
-The system will apply mc01 first as it has a higher priority. If a merchant is not in the merchants_allow_list, the system will proceed with second priority mc02 and apply a 10% commission.
 
-key
-priority
-amount
-merchants_allow_list
-mc01
-1
-5
-MER000002,MER000004
-mc02
-2
-10
+The `merchants_allow_list` attribute lets you apply a commission to one or more particular merchants. This is useful when you only want to apply a commission to some of your merchants; or when you have a universal commission for most merchants and a special commission for some of them. For example, your setup could be as follows. We simplified the commissions for this example by removing irrelevant fields.
+
+| KEY | PRIORITY | AMOUNT | merchants_allow_list |
+| mc01 | 1 | 10 | MER000002,MER000004 |
+| mc02 | 2 | 5 |   |
+
+In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the universal commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
+
+If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see []
 
 
 
+## Merchant commission priority and groups
+
+Priority and groups are used to make sure relevant commissions are applied when there are multiple commissions in a system.
+
+Merchant commission groups are used when multiple commissions need to be applied to per order or order item. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order or order item, one commission from each group is applied; the commission from the primary group is applied first.
+
+Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If groups aren't used in a system, but there're multiple commissions, priority is used to define which commission is applied in the system.
+
+For example, your setup with groups and priority could be as follows. We simplified the commissions for this example by removing irrelevant fields.
+
+| Commission Key | Priority | Group |
+| - | - | - |
+| MC01 | 1 | Primary |
+| MC02 | 2 | Primary |
+| MC03 | 2 | Secondary |
+| MC04 | 1 | Secondary |
+
+If an order item fulfills the conditions of all the commissions in the prior example, commissions `MC01` and `MC04` are applied. First, the system selects commission `MC01` as the commission in the primary group with the highest priority. Then, the system select commission `MC04` as the commission in the secondary group with the highest priority.
 
 
+Make sure to set different priorities for overlapping commissions to ensure transparency of the commission.
 
-Priority and Groups
-Commissions are applied based on priority within a single group, ​​starting from 1.
-Let's look at the example, let's say you have four commissions:
+## Applying different commissions to orders placed in NET and GROSS mode
 
-Commission Key
-Priority
-Group
-MC01
-1
-Primary
-MC02
-2
-Primary
-MC03
-1
-Secondary
-MC04
-2
-Secondary
-
-
-Let's assume a product in the order matches the condition rules of all commissions above. In this case, two commissions will be applied: MC01 and MC03. The system will start with the Primary group, sort commissions by priority within this group, and apply their conditions one by one. Once the Primary commission is applied, it will proceed to the Secondary group, and so on. Using a standard CSV importer, you can add as many groups as you want on a project level.
-
-If the same priority, then the last created commission applies. Make sure to set different priorities for overlapping commissions to ensure transparency of the commission.
-
-Applying different commissions to orders placed in NET and GROSS mode
 Add a condition Price-mode = Gross or Net to the Order Condition (represented by order_condition in the CSV file). This can be useful if you decide to have different rules depending on the Price Mode selected by the customer. This will require you to change how the commission is applied to use Apply commission on the sum item total price to pay after discounts with additions. (Represented by sumPriceToPayAggregation in GLUE API). Such customizations are easy, and we already factored that into our application design. To do that, follow the integration guide, on average, changing this logic requires 2h of developer's time: (spryker-docs/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugin.md)
 
 You might want to set up different commission rules based on this since it affects commission totals.

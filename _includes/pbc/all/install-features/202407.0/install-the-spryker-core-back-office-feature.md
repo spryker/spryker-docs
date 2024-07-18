@@ -705,8 +705,8 @@ Make sure the audit logs data is expanded by the current logged in user data.
 
 | COMMAND                         | SPECIFICATION                        | PREREQUISITES | NAMESPACE                                    |
 |---------------------------------|--------------------------------------|-----------------|----------------------------------------------|
-| CleanTranslationCacheConsole    | Cleans translation cache for Zed.    |             | Spryker\Zed\Translator\Communication\Console |
-| GenerateTranslationCacheConsole | Generates translation cache for Zed. |             | Spryker\Zed\Translator\Communication\Console |
+| CleanTranslationCacheConsole    | Cleans the translation cache for Zed.    |             | Spryker\Zed\Translator\Communication\Console |
+| GenerateTranslationCacheConsole | Generates the translation cache for Zed. |             | Spryker\Zed\Translator\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 ```php

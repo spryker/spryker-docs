@@ -4,6 +4,7 @@ This feature installation guide expects the basic feature to be in place. This g
 * Translation
 * Security
 * OAuth 2.0/Open ID Connect Support for Zed login
+* Audit logging
 
 {% endinfo_block %}
 
@@ -695,7 +696,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the audit logs data is expanded by the current logged in user data.
+Find the logs under the configured log file paths and make sure the audit logs data is expanded by username and 
+user UUID from the current request.
 
 {% endinfo_block %}
 

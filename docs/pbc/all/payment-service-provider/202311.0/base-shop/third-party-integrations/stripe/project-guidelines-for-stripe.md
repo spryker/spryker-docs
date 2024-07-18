@@ -148,3 +148,17 @@ In the default OMS configuration, seven days are allocated to Stripe to complete
 ## Retrieving and using payment details from Stripe
 
 For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
+
+## Sending additional data to Stripe
+
+Stripe accepts to pass metadata in the API calls for additional data. To send additional data to Stripe, you can use the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field. This field is a key-value array that you can use to pass additional data to Stripe.
+
+The metadata field has some limitations you must ensure to be met:
+
+- Key length: max 40 characters
+- Value length: max 500 characters
+- Key-value pairs: max 50 pairs
+
+When you pass the metadata to Stripe, it is stored in the payment object and can be retrieved later. For example, you can use the metadata to store the order ID or any other data you need to pass to Stripe.
+
+When a `PaymentIntent` is created on the Stripe side you can see your passed `additionalPaymentData` in the Stripe UI. 

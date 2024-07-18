@@ -7,7 +7,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/navigation/duplicate-navigation-nodes.html
 related:
   - title: Navigation feature overview
-    link: docs/scos/user/features/page.version/navigation-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/navigation-feature-overview.html
 ---
 
 To duplicate a [navigation element](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html#navigation-element) in the Back Office, follow the steps:

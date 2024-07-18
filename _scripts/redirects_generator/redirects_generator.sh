@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/scos/dev/troubleshooting"
+folder_path="docs/scos/user"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then

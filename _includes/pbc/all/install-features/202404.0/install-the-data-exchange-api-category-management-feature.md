@@ -9,7 +9,7 @@ Install the required features:
 | Data Exchange API   | {{page.version}} | [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)                                                                 |
 | Category Management | {{page.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
 ```bash
 composer require spryker/category-dynamic-entity-connector:"^1.0.0" --update-with-dependencies

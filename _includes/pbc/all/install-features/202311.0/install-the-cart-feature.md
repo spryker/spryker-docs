@@ -4,7 +4,7 @@
 
 The following feature integration guide expects the basic feature to be in place.
 
-The current feature integration guide only adds the [Add product to cart from the Catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
+The current feature integration guide only adds the [Add product to cart from the Catalog page](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html) functionality.
 
 {% endinfo_block %}
 
@@ -20,7 +20,7 @@ Install the required features:
 | -------------- | ----------------- | ----------------- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cart {{page.version}} --update-with-dependencies
@@ -63,7 +63,7 @@ Install the required features:
 | -------------- | ----------------- | ----------------- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cart {{page.version}} --update-with-dependencies

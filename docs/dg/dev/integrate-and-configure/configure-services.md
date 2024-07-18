@@ -512,7 +512,7 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html).
   We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
@@ -522,7 +522,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/about/all/support/using-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 
@@ -619,7 +619,7 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
 ​
         $this->application = $application . '-' . $store . ' (' . $environment . ')';
 ​
-        newrelic_set_appname($this->application, null, false);
+        newrelic_set_appname($this->application, '', false);
     }
 }
 ```

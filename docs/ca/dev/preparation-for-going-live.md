@@ -50,7 +50,8 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Application
 
-- Upgrade your project's code to the [latest Demo Shop release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
+- [Activating IP tracking](https://github.com/spryker/docker-sdk/blob/master/docs/07-deploy-file/02-deploy.file.reference.v1.md#cloud-define-gateway-ip-addresses) significantly increases chances to mitigate or spot malicious activities like DOS attacks. You might need to evaluate this from a data protection policy perspective.
+- Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
 - Split the project's Zed endpoints as described in [Integrating separate endpoint bootstraps](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
@@ -63,16 +64,17 @@ After pointing the domain name to your Spryker project, some of your customers m
   - Connect Staging S3 bucket to a staging environment.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
-  - Implement the recommended Jenkins [performance and stability improvements](/docs/dg/dev/backend-development/cronjobs/optimizing-jenkins-execution.html) where applicable.
+  - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)
   - Implement the [Publish and Sync stability best practices](/docs/ca/dev/best-practices/best-practises-jenkins-stability.html#memory-management) where applicable.
 - Implement the security tips:
   - Apply Spryker [security guidelines](/docs/scos/dev/guidelines/security-guidelines.html).
   - Make sure that you don't have any plain-text passwords, private keys, or API secrets in config files or Git repositories.
   - Minimize the use of personal credentials and choose work-specific accounts based on each environment (production, staging, testing). We highly recommend employing Centralized Credential Management to securely store and manage these credentials.
-  - Install all the [security updates](/docs/scos/user/intro-to-spryker/whats-new/security-updates.html) from all Spryker packages.
+  - Install all the [security updates](/docs/about/all/releases/product-and-code-releases.html) from all Spryker packages.
   - Install all the security updates from all the external packages. To check if your project modules require security updates, you can use the [Security checker](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/spryker-security-checker.html).
-- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for new GDPR rules](/docs/scos/user/intro-to-spryker/support/guidelines-for-new-gdpr-rules.html).
+- Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
+- If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
 
 ### Testing
 
@@ -101,7 +103,7 @@ Make sure you've addressed all the items from the following checklists.
 - We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
-- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes). 
+- Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes).
 - Make sure the DNS names and strategy for your shop are clear. Do the following:
     - You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain. For details on how to set up DNS for your application, see [Set up DNS](/docs/ca/dev/set-up-dns.html).
     - Optional: Delegate DNS. To find out how to delegate a DNS name, see [Setting up a custom SSL certificate](/docs/ca/dev/setting-up-a-custom-ssl-certificate.html).

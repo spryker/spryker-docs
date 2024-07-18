@@ -15,7 +15,7 @@ related:
   - title: Managing Scheduled Prices
     link: docs/pbc/all/price-management/page.version/base-shop/manage-in-the-back-office/manage-scheduled-prices.html
   - title: Scheduled Prices feature overview
-    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
+    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
 ---
 
 This topic describes how to create scheduled prices.

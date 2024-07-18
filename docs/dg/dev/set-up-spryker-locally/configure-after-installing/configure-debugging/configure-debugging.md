@@ -207,6 +207,18 @@ docker/sdk cli -x
 PHPMD_ALLOW_XDEBUG=true vendor/bin/phpmd ...
 ```
 
+## Troubleshooting
+
+Issue: Receiving no connection in PhpStorm or similar
+
+In rare cases, docker containers running in the debug mode stop XDebug connections after waking computer from the sleep mode.
+So if you don't get a banner "Debug session was finished without being paused", run the following command:
+```bash
+docker/sdk stop && docker/sdk run -x
+```
+
+
+
 ## Next step
 
 [Set up XDebug profiling](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/set-up-xdebug-profiling.html)

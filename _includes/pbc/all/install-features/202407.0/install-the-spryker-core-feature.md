@@ -1302,7 +1302,7 @@ class SessionDependencyProvider extends SprykerSessionDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Visit `https://mysprykershop.com` and make sure that Yves boots up without errors.
+Go to `https://mysprykershop.com` and make sure that Yves boots up without errors.
 
 {% endinfo_block %}
 
@@ -1384,7 +1384,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure the logs data has been expanded by the registered plugins: environment, server, request, and log type sections exist
-and contain the corresponding data.
+Make sure the following applies:
+* The logs data has been expanded with the registered plugins: environment, server, request.
+* The log type sections exists and contains the corresponding data.
 
 {% endinfo_block %}

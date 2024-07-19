@@ -25,8 +25,8 @@ We would recommend 4 steps how to improve usage of your module:
 
 4: Request a review of your module from **Spryker** to obtain **Verified by Spryker** badge, it will allow to promote it and increase trust from the end users into it.
    
-   - **TBD: More details coming soon.**
+   - **More details coming soon.**
 
 5. Publish the module in Spryker Application Catalog
       
-    - **TBD: More details coming soon.**
+    - **More details coming soon.**

@@ -14,8 +14,6 @@ related:
   }
 </style>
 
-**TBD: Commands must be updated after https://spryker.atlassian.net/browse/FRW-8436 is done (Check if we need it at all)  **
-
 ## Tools
 
 To make sure that code quality matched the Spryker standards it is important to execute code quality tools, here is the list:

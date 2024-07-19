@@ -68,7 +68,7 @@ A customer can perform the following actions on the Storefront:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/view-account-activity.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/view-account-activity.mp4" type="video/mp4">
   </video>
 </figure>
 
@@ -81,7 +81,7 @@ A customer can perform the following actions on the Storefront:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/create-edit-delete-a-customer-address.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/create-edit-delete-a-customer-address.mp4" type="video/mp4">
   </video>
 </figure>
 
@@ -92,7 +92,7 @@ A customer can perform the following actions on the Storefront:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/filter-order-history.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/filter-order-history.mp4" type="video/mp4">
   </video>
 </figure>
 
@@ -103,7 +103,7 @@ A customer can perform the following actions on the Storefront:
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
-    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/reorder-selected-items.mp4" type="video/mp4">
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/reorder-selected-items.mp4" type="video/mp4">
   </video>
 </figure>
 

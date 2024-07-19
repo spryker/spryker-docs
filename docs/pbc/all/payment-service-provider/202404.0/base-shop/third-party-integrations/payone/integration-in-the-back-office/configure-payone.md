@@ -8,6 +8,16 @@ redirect_from:
 ---
 Once you have [integrated the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html), you can configure it.
 
+
+## Set up the configuration in the Payone portal
+
+
+1. Create an account with [Payone](https://www.payone.com/DE-en).
+2. In the Payone portal, go to **CONFIGURATION&nbsp;<span aria-label="and then">></span> PAYMENT PORTALS**
+   - **TransactionStatus URL** - Must be set to `https://os.apps.aop.spryker.com/payone/payment-notification`
+   - **Method hash calculation** - Must be set to `md5 oder sha2-384 (during migration)`
+   ![payone-payment-portal-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-portal-configuration.png)
+
 To configure Payone, follow these steps:
 
 1. In the Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
@@ -22,10 +32,7 @@ To configure Payone, follow these steps:
    It takes some time to obtain credentials from Payone because you have to go through a thorough vetting process by Payone, such as the "know your customer" (KYC) process before Payone verifies you.
 
    {% endinfo_block %}
-5. Also, while in the Payone portal, make sure that you have set the following values correctly:
-   - **TransactionStatus URL** - Must be set to `https://os.apps.aop.spryker.com/payone/payment-notification`
-   - **Method hash calculation** - Must be set to `md5 oder sha2-384 (during migration)`
-   ![payone-payment-portal-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-portal-configuration.png)
+5.
 6. Go back to your store's Back Office, to the Payone app details page.
 7. In the top right corner of the Payone app details page, click **Configure**.
 8. On the Payone app details page, fill in fields in the **Credentials** section with values from step 4.

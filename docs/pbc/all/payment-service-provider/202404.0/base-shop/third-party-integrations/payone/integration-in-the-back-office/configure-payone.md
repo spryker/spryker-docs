@@ -10,14 +10,14 @@ Once you have [integrated the Payone app](/docs/pbc/all/payment-service-provider
 
 To configure Payone, follow these steps:
 
-1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
+1. In the Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Payone**.
-   This takes you to the Payone app details page.
-3. In the top right corner of the Payone app details page, click **Connect app**.
-   This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to *Connection pending*.   
+   This opens the Payone app details page.
+3. In the top right corner, click **Connect app**.
+   This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to **Connection pending**.   
 4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
 
-   {% info_block infoBox "Info" %}
+   {% info_block infoBox "" %}
 
    It takes some time to obtain credentials from Payone because you have to go through a thorough vetting process by Payone, such as the "know your customer" (KYC) process before Payone verifies you.
 

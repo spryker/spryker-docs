@@ -229,6 +229,50 @@ composer require spryker/merchant-app spryker/merchant-app-merchant-portal-gui
 
 To enable your application to work with Stripe in a Marketplace context, you need to configure your application by adding some plugins, update some configurations, and update your state-machine configuration.
 
+#### config_default.php
+
+Update your `config_default.php` file with the following changes:
+
+```php
+$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP]
+$config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP]
+$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
+$config[KernelAppConstants::TENANT_IDENTIFIER]
+```
+
+The OauthClientConstants are replacements for the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
+
+#### Navigation
+
+Update your `config/Zed/navigation.xml` file with the following changes:
+
+```xml
+<?xml version="1.0"?>
+<config>
+    ...
+  
+    <merchant-portal-payment-settings>
+        <label>Payment Settings</label>
+        <title>Payment Settings</title>
+        <icon>payment</icon>
+        <bundle>merchant-app-merchant-portal-gui</bundle>
+        <controller>payment-settings</controller>
+        <action>index</action>
+        <pages>
+            <onboarding>
+                <label>Onboarding</label>
+                <title>Onboarding</title>
+                <icon>payment</icon>
+                <bundle>merchant-app-merchant-portal-gui</bundle>
+                <controller>payment-settings</controller>
+                <action>onboarding</action>
+                <visible>0</visible>
+            </onboarding>
+        </pages>
+    </merchant-portal-payment-settings>
+</config>
+```
+
 #### Plugins
 
 ##### KernelApp

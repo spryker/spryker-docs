@@ -217,6 +217,58 @@ use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAutho
 
 ```
 
+## Using Stripe in Marketplace context
+
+Install the required modules:
+
+```bash
+composer require spryker/merchant-app spryker/merchant-app-merchant-portal-gui
+```
+
+### Configuration
+
+To enable your application to work with Stripe in a Marketplace context, you need to configure your application by adding some plugins, update some configurations, and update your state-machine configuration.
+
+#### Plugins
+
+##### KernelApp
+- `\Spryker\Zed\MerchantApp\Communication\Plugin\KernelApp\MerchantAppRequestExpanderPlugin` - Add this one to `\Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins()`
+- `\Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin` - Add this one to `\Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins()`
+
+##### MessageBroker
+- `\Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin` - Add this one to `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()`
+- `\Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin` - Add this one to `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()` (if not already present)
+
+##### AclMerchantPortal 
+- `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin` - Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`
+- `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppAclEntityConfigurationExpanderPlugin`- Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()`
+  `
+##### Oms
+
+Add the required commands to your `\Pyz\Zed\Oms\OmsDependencyProvider::extendCommandPlugins()`:
+```php
+$commandCollection->add(new MerchantPayoutCommandByOrderPlugin(), 'SalesPaymentMerchant/Payout');
+$commandCollection->add(new MerchantPayoutReverseCommandByOrderPlugin(), 'SalesPaymentMerchant/ReversePayout');
+```
+
+Add the required conditions to your `\Pyz\Zed\Oms\OmsDependencyProvider::extendConditionPlugins()`:
+```php
+$conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPaidOut');
+$conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
+```
+#### Configuration
+
+##### AclConfig
+- Add `'merchant-app-merchant-portal-gui'` to your `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`.
+
+##### MessageBrokerConfig
+- `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` to your `\Pyz\Zed\MessageBroker\MessageBrokerConfig::getDefaultWorkerChannels()`.
+
+### State-Machine configuration
+
+Checkout the ForeignPaymentProviderStateMachine01.xml file in the `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/` directory. This file contains the state-machine configuration for the payment provider. You can copy this file to your project and adjust it according to your needs.
+
+
 ## Next step
 
 [Connect and configure Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html)

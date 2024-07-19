@@ -33,3 +33,27 @@ This document describes how to connect and configure the Stripe app in the Back 
 10. Click **Save**.
 If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**.
 11. Activate Stripe in your store's Back office, in **Administration** -> **Payment methods**. For details, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+
+## Using Stripe in Marketplace context
+
+#### Configuring Transfers
+
+In Spryker we used the terms "Payout" and "Reverse Payout" for transferring money from the Marketplace to the Merchant and reverse the transfer respectively.
+
+In the context of Stripe in a Marketplace, you need to configure the transfers. The transfers are handled by the `MerchantPayoutCommandByOrderPlugin` and `MerchantPayoutReverseCommandByOrderPlugin` commands. These commands are responsible for transferring money from the Marketplace to the Merchant and reverse the transfer respectively when needed.
+
+You also need to define when this should happen. You have several options here which are default options provided by the OMS. The simplest solution is to set a state-machine-timeout for the `MerchantPayoutCommandByOrderPlugin` command. This will trigger the command after the timeout is reached. You can also define your own conditions and triggers for the command.
+
+You can also set up a cronjob that triggers the event for the transition when you have more sophisticated requirements e.g. transfer money to merchants every last friday of the month.
+
+
+### App Configuration
+
+The Stripe App is capable of handling payments in a Marketplace context. This can be configured in the AppStore Catalog by selecting the business model "Marketplace". When selecting the Marketplace business model, you need to pass the required configuration values for:
+- Stripe Account ID
+- Stripe Publishable Key
+- Stripe Secret Key
+
+When you save the configuration an asynchronous message will be sent to your application to get details for Merchants on how to onboard to the Stripe App. The onboarding is required to let Stripe know which Merchants are part of the Marketplace and to handle the payments, transfer money, and reverse transfers accordingly.
+
+From this moment your customers can use Stripe to pay for their orders.

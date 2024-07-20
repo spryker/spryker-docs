@@ -953,7 +953,7 @@ Make sure that, when a customer submits the login form, the URL it uses contains
 
 {% endinfo_block %}
 
-3. You can define the password minimum and maximum length the frontend can use. They must use the same as you defined for the core feature in the previous `CustomerConfig`:
+3. Optional: Define the minimum and maximum lengths for passwords that can be used on the frontend. They must use the same as you defined for the core feature in the previous `CustomerConfig`:
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
 

@@ -6,19 +6,11 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-and-shared-shopping-lists-overview
 originalArticleId: 6683a968-b4de-4e2b-aefc-2ab70fabe3b4
 redirect_from:
-  - /2021080/docs/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/en/multiple-and-shared-shopping-lists-overview
-  - /docs/multiple-and-shared-shopping-lists-overview
-  - /docs/en/multiple-and-shared-shopping-lists-overview
-  - /2021080/docs/shopping-lists
-  - /2021080/docs/en/shopping-lists
-  - /docs/shopping-lists
-  - /docs/en/shopping-lists
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shopping-lists-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html   
-  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html 
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 A *shopping list* is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -151,7 +143,11 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 <details>
 <summary markdown='span'>Create, delete, and add a shopping list to the cart</summary>
 
-![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview.md/create-delete-add-to-cart-shopping-lists.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
@@ -159,7 +155,11 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 <summary markdown='span'>Edit shopping lists</summary>
 
-![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview.md/manage-shopping-lists.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
@@ -167,16 +167,25 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 <summary markdown='span'>Add products from the product details page to a shopping list</summary>
 
-![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview.md/add-products-from-the-product-detail-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 
 <details>
 
-<summary markdown='span'>Dissmiss a shared shopping list, share and print a shopping list</summary>
+<summary markdown='span'>Dismiss a shared shopping list, share and print a shopping list</summary>
 
-![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/base-shop/shopping-lists-feature-overview.md/dismiss-share-and-print-a-shopping-list.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 

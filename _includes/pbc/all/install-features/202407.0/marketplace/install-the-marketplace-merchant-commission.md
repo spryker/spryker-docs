@@ -460,7 +460,7 @@ mc5,Merchant Commission 5,,2024-01-01,2029-06-01,1,,fixed,secondary,4,,"price-mo
 | merchant_commission_group_key | ✓        | string    | primary                                           | Key of the merchant commission group.           |
 | priority                      | ✓        | int       | 1                                                 | Priority of the merchant commission.            |
 | item_condition                |          | string    | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
-| order_condition               |          | string    | "price-mode = ""GROSS_MODE"""                     | Condition for the order.                        |
+| order_condition               |          | string    | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
 
 
 

@@ -87,6 +87,19 @@ To specify conditions based on SKU, use the following format: `SKU {OPERATOR} {S
 
 Example: `SKU IS IN '136_24425591;134_29759322'`
 
+### Price mode based commissions
+
+To specify conditions based on price mode, use the following format: `price-mode = ""{PRICE_MODE}""`. For example, `price-mode = ""GROSS_MODE""`.
+
+This can be useful if you want different commissions to be applied to orders in different prices modes.
+
+This will require you to change how the commission is applied to use Apply commission on the sum item total price to pay after discounts with additions. (Represented by sumPriceToPayAggregation in GLUE API). Such customizations are easy, and we already factored that into our application design. To do that, follow the integration guide. on average, changing this logic requires 2h of developer's time: (spryker-docs/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugin.md)
+
+You might want to set up different commission rules based on this since it affects commission totals.
+
+For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.
+
+
 ### Merchant-based conditions
 
 
@@ -99,8 +112,6 @@ The `merchants_allow_list` attribute lets you apply a commission to one or more 
 In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the universal commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
 
 If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see []
-
-
 
 ## Merchant commission priority and groups
 
@@ -119,21 +130,12 @@ For example, your setup with groups and priority could be as follows. We simplif
 | MC03 | 2 | Secondary |
 | MC04 | 1 | Secondary |
 
-If an order item fulfills the conditions of all the commissions in the prior example, commissions `MC01` and `MC04` are applied. First, the system selects commission `MC01` as the commission in the primary group with the highest priority. Then, the system select commission `MC04` as the commission in the secondary group with the highest priority.
+If an order item fulfills the conditions of all the commissions in the prior example, commissions `MC01` and `MC04` are applied. First, the system selects commission `MC01` as the commission in the primary group with the highest priority. Then, the system selects commission `MC04` as the commission in the secondary group with the highest priority.
 
 
-Make sure to set different priorities for overlapping commissions to ensure transparency of the commission.
-
-## Applying different commissions to orders placed in NET and GROSS mode
-
-Add a condition Price-mode = Gross or Net to the Order Condition (represented by order_condition in the CSV file). This can be useful if you decide to have different rules depending on the Price Mode selected by the customer. This will require you to change how the commission is applied to use Apply commission on the sum item total price to pay after discounts with additions. (Represented by sumPriceToPayAggregation in GLUE API). Such customizations are easy, and we already factored that into our application design. To do that, follow the integration guide, on average, changing this logic requires 2h of developer's time: (spryker-docs/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugin.md)
-
-You might want to set up different commission rules based on this since it affects commission totals.
-
-For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.
 
 
-Complex conditions
+## Complex conditions
 
 Conditions can be combined using AND/OR operator. For example:
 

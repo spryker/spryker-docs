@@ -29,7 +29,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Spryker Сore Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 ## Resolve a SEF URL into a Glue API URL
 

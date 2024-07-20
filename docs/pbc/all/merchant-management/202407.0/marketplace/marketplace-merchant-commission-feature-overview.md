@@ -112,8 +112,13 @@ Conditions can be combined using `AND` and `OR` operators. Examples:
 When conditions are combined by the `OR` operator, they don't exclude each other. If an order fulfills both such conditions, the commission is still applied.
 
 
+### Inclusion operators
 
-### Merchant-based conditions
+`contains` and `does not contain` operators are supported by default for conditions based on attributes, item-price, categories, and SKU. *We don't recommend* using these operators to avoid accidental matches or matches caused by typos. For example, `cartoon` contains `art`. However, this might be useful when using special characters in product attributes.
+
+
+
+## Applying commissions to specific merchants
 
 
 The `merchants_allow_list` attribute lets you apply a commission to one or more particular merchants. This is useful when you only want to apply a commission to some of your merchants; or when you have a universal commission for most merchants and a special commission for some of them. For example, your setup could be as follows. We simplified the commissions for this example by removing irrelevant fields.
@@ -124,7 +129,7 @@ The `merchants_allow_list` attribute lets you apply a commission to one or more 
 
 In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the universal commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
 
-If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see []
+If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see [Merchant commission priority and groups](#merchant-commission-priority-and-groups)
 
 
 
@@ -151,17 +156,14 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 
 
 
-
-
-
-
-Apply commission to GROSS or NET price
+## Apply commission to GROSS or NET price
 This Merchant Commission Price Mode configuration controls which prices are used as a basis to calculate commission: Gross Price or Net Price.
 
 The item Gross Price and Net Price is configured in the backend (including volume pricing) and does not include any discounts applied afterward in the shopping cart.
 
 Its defined by MERCHANT_COMMISSION_PRICE_MODE_PER_STORE, see https://github.com/spryker/spryker-docs/blob/master/_includes/pbc/all/install-features/202407.0/marketplace/install-the-marketplace-merchant-commission.md#2-set-up-configuration
 This configuration is different from an order price mode and defines behavior for the whole store.
+
 
 ## Current limitations
 
@@ -185,8 +187,3 @@ This customization is factored into the application design. A developer can chan
 Other use cases might be as follows:
 * Apply commission to product price including product options differently
 * Apply commission to special products like bundles or configurable differently
-
-
-
-Note
-There are also “contains, does not contain” operators that engine supports for attributes, item-price, categories and SKU in conditions, but we do not recommend using unless you fully understand the risks. While these can be useful when you use some special codes inside the attributes and do not want to use a separate product attribute for this purpose, this can also lead to applying commission in case there is a typo in the string or accidentally created match e.g. "art" inside "cartoon".

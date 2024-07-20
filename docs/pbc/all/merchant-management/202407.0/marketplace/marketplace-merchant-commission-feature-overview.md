@@ -100,6 +100,19 @@ You might want to set up different commission rules based on this since it affec
 For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.
 
 
+
+
+### Combining conditions
+
+Conditions can be combined using `AND` and `OR` operators. Examples:
+
+* `category IS IN 'electronics';smart-watches' AND attribute.color IS IN 'black;blue'`
+* `category IS IN 'electronics';smart-watches' OR attribute.color IS IN 'black;blue'`
+
+When conditions are combined by the `OR` operator, they don't exclude each other. If an order fulfills both such conditions, the commission is still applied.
+
+
+
 ### Merchant-based conditions
 
 
@@ -112,6 +125,9 @@ The `merchants_allow_list` attribute lets you apply a commission to one or more 
 In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the universal commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
 
 If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see []
+
+
+
 
 ## Merchant commission priority and groups
 
@@ -135,17 +151,7 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 
 
 
-## Complex conditions
 
-Conditions can be combined using AND/OR operator. For example:
-
-(Category IS IN 'electronics';smart-watches' AND attribute.color IS IN 'black;blue')
-
-(Category IS IN 'electronics';smart-watches') OR (attribute.color IS IN 'black;blue')
-
-
-Info
-When conditions are combined by the OR operator, they do not exclude each other. If an order fulfills both such conditions, the commission is still applied.
 
 
 
@@ -157,29 +163,28 @@ The item Gross Price and Net Price is configured in the backend (including volum
 Its defined by MERCHANT_COMMISSION_PRICE_MODE_PER_STORE, see https://github.com/spryker/spryker-docs/blob/master/_includes/pbc/all/install-features/202407.0/marketplace/install-the-marketplace-merchant-commission.md#2-set-up-configuration
 This configuration is different from an order price mode and defines behavior for the whole store.
 
-Current Limitations:
+## Current limitations
+
 Price Mode switcher is not supported. The Merchant Commission Price Mode must match the default price mode of the store that sets it for the sales order as a result. Otherwise, the percentage commission will be set to 0 for all items in the order.
 
 Supported configuration:
 
-Order Price Mode
-Merchant Commission Price Mode
-GROSS_MODE
-GROSS_MODE
-NET_MODE
-NET_MODE
+| Order Price Mode | Merchant Commission Price Mode |
+| - | - |
+| GROSS_MODE | GROSS_MODE |
+| NET_MODE | NET_MODE |
 
 
 
-Adjusting logic of commission calculation to apply it to the sum item total price to pay after discounts with additions
+## Applying merchant commissions to the sum item total price to pay after discounts with additions
 
-You might want to change how commission is calculated on a project level by applying commission on the sum item total price to pay after discounts with additions. (Represented by sumPriceToPayAggregation in GLUE API), this is useful when you want to apply commission on total paid by the customer for this exact line item. This amount is what customer is getting charged. Sum of all line items plus expenses (e.g. Shipment fee)  is equal to Grand Total.
+You might want to change how commission is calculated on the project level by applying commissions to the sum item total price to pay after discounts with additions. In Glue API, this is represented by `sumPriceToPayAggregation`. This can be useful when you want to apply commissions to total paid by a customer a line item. This amount is what the customer is getting charged. Sum of all line items plus expenses, like a shipment fee, is equal to the grand total.
 
-Such customizations are easy and we already factored that in our application design, to do that, follow the integration guide, on average, changing this logic requires 2h of developer's time: (spryker-docs/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugin.md)
+This customization is factored into the application design. A developer can change this logic within two hours by following [Create merchant commission calculator type plugin].
 
-Other use cases might be:
-Apply commission to product price including product options differently
-Apply commission to special products like bundles or configurable differently
+Other use cases might be as follows:
+* Apply commission to product price including product options differently
+* Apply commission to special products like bundles or configurable differently
 
 
 

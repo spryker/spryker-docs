@@ -1,16 +1,16 @@
 ---
-title: "HowTo: Extend the audit log structure with additional data"
-description: Learn how to enhance your audit log structure by adding supplementary data to improve auditing.
+title: Extend the audit log structure
+description: Learn how to enhance your audit log structure.
 template: howto-guide-template
 ---
 
-In this guide, we will walk you through the steps to extend the audit log structure with additional data. 
-As an example a business unit of a logged-in customer for **Yves** application will be added. 
+This document describes how to extend the audit log structure with additional data.
+As an example, a business unit of a logged-in customer for the `Yves` application will be added.
 
-There are two primary methods to extend data in your audit logs:
-* Introduce Processor Plugins: if registered for the corresponding audit log type and application will always be executed and will try to extend the data. 
+There are two primary methods to extend data in audit logs:
+* Introduce processor plugins: if registered for the corresponding audit log type and application will always be executed and will try to extend the data. 
 See [HowTo: Add a new audit log type](https://documentation.spryker.com/docs/how-to-add-a-new-audit-log-type) for more information.
-* Pass the data to the specific log context: You can pass additional data directly to the specific log context as needed, 
+* Pass the data to the specific log context: You can pass additional data directly to the specific log context as needed,
 providing flexibility for different logging scenarios.
 
 ## Prerequisites
@@ -224,7 +224,7 @@ class AnyClassWhereAuditLoggingIsNeeded
     public function someLogic()
     {
         //other logic
-        
+
         $this->getAuditLogger(
             (new AuditLoggerConfigCriteriaTransfer())->setChannelName('checkout'),
         )->info('any action', [
@@ -233,7 +233,7 @@ class AnyClassWhereAuditLoggingIsNeeded
                 ->getCompanyBusinessUnitOrFail()
                 ->getName(),
         ]);
-        
+
         //other logic
     }
 }

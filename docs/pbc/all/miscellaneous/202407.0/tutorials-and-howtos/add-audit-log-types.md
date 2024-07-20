@@ -1,26 +1,30 @@
 ---
-title: "HowTo: Add a new audit log type"
-description: Learn how to add a new audit log type to your system.
+title: Add audit log types
+description: Learn how to add an audit log type.
 template: howto-guide-template
+related:
+  - title: Extend the log structure
+    link: docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html
 ---
 
-In this guide, we will walk you through the steps to add a new audit log type to your system.
-Audit logs are essential for tracking system events, user actions, and other significant activities within your application.
-By following this guide, you will be able to define and implement a new audit log type that meets your specific tracking requirements.
-**Checkout** log type for **Yves** application will be added as an example. You can follow the same instructions to add a new type for other applications.
+This document describes how to add a new audit log type to your system.
+
+Audit logs are used for tracking system events, user actions, and other significant activities in an application. Adding new audit log types is needed when you have specific tracking requirements.
+
+In this guide, `Checkout` log type for the `Yves` application is added as an example. Using this guide, you can added different log types for any application.
 
 ## Prerequisites
 
-Before you begin, ensure that the [Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-is installed. Without it, you will not be able to proceed with the steps outlined in this guide.
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
-## Step-by-step instructions
 
-### Introduce AuditLoggerConfigPlugin
+## Add a checkout log type for Yves
 
-Introduce **AuditLoggerConfigPlugin** with all the needed for **Checkout** logs handlers and processors:
 
-**src/Pyz/Yves/Log/Plugin/Log/YvesCheckoutAuditLoggerConfigPlugin.php**
+1. Introduce `AuditLoggerConfigPlugin` for `Checkout` logs handlers and processors:
+
+<details>
+  <summary>src/Pyz/Yves/Log/Plugin/Log/YvesCheckoutAuditLoggerConfigPlugin.php</summary>
 
 ```php
 <?php
@@ -85,7 +89,10 @@ class YvesCheckoutAuditLoggerConfigPlugin extends AbstractPlugin implements Audi
 }
 ```
 
-### Register plugin in the config file
+</details>
+
+
+2. Register the plugin in the config:
 
 **config/Shared/config_default.php**
 
@@ -100,8 +107,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 ];
 ```
 
-To add **Checkout** type for other applications introduce AuditLoggerConfig plugins in the same way as in example
-and register them in the config file:
+3. To add the `Checkout` type for other applications, introduce `AuditLoggerConfig` plugins following the example and register them in the config file:
 
 **config/Shared/config_default.php**
 
@@ -132,9 +138,8 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 ];
 ```
 
-## Summary
 
-Now you can add Audit logs with **Checkout** type in any place where it is needed, for example:
+Now you can add audit logs with `Checkout` type across the application. Example:
 
 ```php
 <?php
@@ -149,17 +154,12 @@ class AnyCheckoutClassWhereAuditLoggingIsNeeded
     public function checkout()
     {
         //other logic
-        
+
         $this->getAuditLogger(
             (new AuditLoggerConfigCriteriaTransfer())->setChannelName('checkout'),
         )->info('any checkout action', ['tags' => ['any_checkout_action']]);
-        
+
         //other logic
     }
 }
 ```
-
-## Related topics
-
-* [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-* [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).

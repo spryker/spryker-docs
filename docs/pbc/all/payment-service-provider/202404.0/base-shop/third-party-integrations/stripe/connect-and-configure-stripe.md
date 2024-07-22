@@ -36,7 +36,17 @@ If the app was connected successfully, a corresponding message appears, and the 
 
 ## Using Stripe in Marketplace context
 
-#### Configuring Transfers
+### App Configuration
+
+The Stripe App is capable of handling payments in a Marketplace context. This can be configured in the AppStore Catalog by selecting the business model "Marketplace". When selecting the Marketplace business model, you need to pass the required configuration values for:
+- Stripe Account ID
+- Stripe Publishable Key
+- Stripe Secret Key
+
+When you save the configuration your Merchant Portal application will be updated and the page with Payment Settings will get the functionality of onboarding a merchant to Stripe. The onboarding is required to let Stripe know which Merchants are part of the Marketplace and to handle the payments, transfer money, and reverse transfers accordingly.
+From this moment your customers can use Stripe to pay for their orders.
+
+### Configuring Transfers
 
 In Spryker we used the terms "Payout" and "Reverse Payout" for transferring money from the Marketplace to the Merchant and reverse the transfer respectively.
 
@@ -46,14 +56,3 @@ You also need to define when this should happen. You have several options here w
 
 You can also set up a cronjob that triggers the event for the transition when you have more sophisticated requirements e.g. transfer money to merchants every last friday of the month.
 
-
-### App Configuration
-
-The Stripe App is capable of handling payments in a Marketplace context. This can be configured in the AppStore Catalog by selecting the business model "Marketplace". When selecting the Marketplace business model, you need to pass the required configuration values for:
-- Stripe Account ID
-- Stripe Publishable Key
-- Stripe Secret Key
-
-When you save the configuration an asynchronous message will be sent to your application to get details for Merchants on how to onboard to the Stripe App. The onboarding is required to let Stripe know which Merchants are part of the Marketplace and to handle the payments, transfer money, and reverse transfers accordingly.
-
-From this moment your customers can use Stripe to pay for their orders.

@@ -15,13 +15,11 @@ Non-debug mode:
 ```bash
 docker/sdk cli
 ```
-![img](https://i.ibb.co/Fm0wjYq/docker-cli-1.png)
 
 Debug mode:
 ```bash
 docker/sdk cli -x
 ```
-![img](https://i.ibb.co/bBcgpLJ/docker-cli-2.png)
 
 From here, you can run any commands related to your project, like composer, console, glue, or yves.
 

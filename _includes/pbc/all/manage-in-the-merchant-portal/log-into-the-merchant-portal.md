@@ -1,4 +1,4 @@
-This document describes how to log into the Merchant Portal with a merchant user account.
+If you aren't logged into the Merchant Portal, take the following steps.
 
 
 ## Prerequisites

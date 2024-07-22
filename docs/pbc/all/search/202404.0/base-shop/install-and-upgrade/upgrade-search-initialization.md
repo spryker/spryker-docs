@@ -45,7 +45,7 @@ Make sure that the following module has been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| SeaRch | vendor/spryker/search |
+| Search | vendor/spryker/search |
 
 {% endinfo_block %}
 

@@ -4,20 +4,16 @@ description: Learn how to work with Audit logs in Spryker.
 template: howto-guide-template
 ---
 
-Audit logging is crucial for web applications because it enhances security by tracking user activities and detecting 
-unauthorized access. It helps meet regulatory requirements by ensuring accountability and transparency. 
-Additionally, audit logs aid in troubleshooting by recording system events and user interactions, making it easier 
-to identify and resolve issues.
+Audit logging is used in web applications for tracking user activities and detecting unauthorized access. It helps meet regulatory requirements by ensuring accountability and transparency. Additionally, audit logs help with troubleshooting by recording system events and user interactions, making it easier to identify and resolve issues.
 
 ## AuditLoggerConfigPluginInterface
 
-Audit logging in Spryker is facilitated through various plugins that implement the
-`Spryker\Shared\LogExtension\Dependency\Plugin\AuditLoggerConfigPluginInterface`. These plugins provide the necessary 
-configuration for audit logging across different applications. This document outlines the main rules and guidelines 
-for working with audit logs in Spryker.
+Audit logging is enabled by various plugins that implement `Spryker\Shared\LogExtension\Dependency\Plugin\AuditLoggerConfigPluginInterface`. These plugins provide the necessary configuration for audit logging across different applications.
 
-The `AuditLoggerConfigPluginInterface` is central to audit logging in Spryker. It defines the contract for configuring 
-audit loggers. Here are the main methods in this interface:
+`AuditLoggerConfigPluginInterface` defines the main configuration for audiot loggers. Here are the main methods in this interface:
+
+<details>
+  <summary>AuditLoggerConfigPluginInterface</summary>
 
 ```php
 <?php
@@ -75,13 +71,13 @@ interface AuditLoggerConfigPluginInterface
 }
 ```
 
-## Plugin Configuration
+<details>
 
-Each plugin supports one type of logs (channel).
-See [HowTo: Add a new audit log type](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)
+## Plugin configuration
 
-The configuration for these plugins is defined in the
-`config/Shared/config_default.php` file. Below is an example of how to register plugins for different applications:
+Each plugin supports one type of logs (channel). For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)
+
+The configuration for these plugins is defined in `config/Shared/config_default.php`. Here's an example of how to register plugins for different applications:
 
 **config/Shared/config_default.php**
 
@@ -112,15 +108,13 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 ];
 ```
 
-## Out-of-the-Box Plugins
+## Default plugins
 
-Spryker provides out-of-the-box plugins for the `security` log type. These plugins are pre-configured and can be used 
-directly to log security-related events in various applications.
+By default, there are plugins for the `security` log type. These plugins are preconfigured and used to log security-related events in various applications.
 
-## Adding Audit Logs
+## Adding audit logs
 
-Audit logs can be added using the `AuditLoggerTrait` trait.
-Here is an example that demonstrates how to add an audit log:
+Audit logs are added using the `AuditLoggerTrait` trait. Example:
 
 ```php
 <?php
@@ -147,13 +141,9 @@ class AuditLogger
 }
 ```
 
-When adding audit logs, it is recommended to include tags. Tags provide additional context and help categorize logs,
-making them easier to search and analyze. In the example above, the tag `user_logged_in` is used to indicate a user login action.
+When adding audit logs, we recommend including tags. Tags provide additional context and help categorize logs, making them easier to search and analyze. In the prior example, the tag `user_logged_in` is used to indicate a user login action.
 
-We do not recommend tracking all DB-based activity actions in the audit logs, such as user status updates or
-customer email updates. This is because logging every database interaction can quickly lead to excessive log volume,
-making it harder to find relevant information and potentially impacting system performance. Instead, focus on logging
-critical actions that have significant security implications.
+We don't recommend tracking all database related activity actions in the audit logs, such as user status updates or customer email updates. Logging every database interaction can quickly lead to excessive log volume, making it harder to find relevant information and potentially impacting system performance. Focus on logging critical actions that have significant security implications.
 
 ## Example of Audit Log Data
 
@@ -238,8 +228,8 @@ In this example, the tag `user_logged_in` is disallowed, which means that any lo
 
 ## Configuring Log Path
 
-You can configure the log path to either a file or an output stream like `php://stdout` (for example in case an application 
-is hosted on AWS, data logged to `php://stdout` can be displayed in CloudWatch for centralized monitoring and analysis). 
+You can configure the log path to either a file or an output stream like `php://stdout` (for example in case an application
+is hosted on AWS, data logged to `php://stdout` can be displayed in CloudWatch for centralized monitoring and analysis).
 For example, the following configuration sets the log path for Yves, Zed and Glue applications to `php://stdout`:
 
 **config/Shared/config_default.php**

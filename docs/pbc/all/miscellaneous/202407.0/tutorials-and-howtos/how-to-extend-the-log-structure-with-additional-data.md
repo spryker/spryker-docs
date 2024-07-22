@@ -8,15 +8,14 @@ This document describes how to extend the audit log structure with additional da
 As an example, a business unit of a logged-in customer for the `Yves` application will be added.
 
 There are two primary methods to extend data in audit logs:
-* Introduce processor plugins: if registered for the corresponding audit log type and application will always be executed and will try to extend the data. 
+* Introduce processor plugins: if registered for the corresponding audit log type and application will always be executed and will try to extend the data.
 See [HowTo: Add a new audit log type](https://documentation.spryker.com/docs/how-to-add-a-new-audit-log-type) for more information.
-* Pass the data to the specific log context: You can pass additional data directly to the specific log context as needed,
-providing flexibility for different logging scenarios.
+* Pass the data to a specific log context: You can pass additional data directly to a needed log context, providing flexibility for different logging scenarios.
 
 ## Prerequisites
 
-Before you begin, ensure that the [Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-is installed. Without it, you will not be able to proceed with the steps outlined in this guide.
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+
 
 ## Step-by-step instructions
 
@@ -95,7 +94,7 @@ class LogFactory extends SprykerShopLogFactory
 
 ```
 
-* Introduce **CustomerBusinessUnitProcessorPlugin** which extracts the business unit name from the customer session and adds it to the log data.
+* Introduce `CustomerBusinessUnitProcessorPlugin`, which extracts the business unit name from the customer session and adds it to the log data:
 
 ```php
 <?php
@@ -180,9 +179,9 @@ class CustomerBusinessUnitProcessorPlugin extends AbstractPlugin implements LogP
 }
 ```
 
-* Register the newly introduced plugin for the **security** log type for the **Yves** application:
+* Register the newly introduced plugin for the `security` log type for the `Yves` application:
 
-  **src/Pyz/Yves/Log/LogDependencyProvider.php**
+**src/Pyz/Yves/Log/LogDependencyProvider.php**
 
 ```php
 <?php

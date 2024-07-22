@@ -1,7 +1,7 @@
 ---
-title: Third-Party Spryker Module Development and Distribution
+title: Third-party Spryker module development and distribution
 description: Third-Party Spryker Module Development and Distribution
-last_updated: Sep 7, 2022
+last_updated: Jul 7, 2024
 template: concept-topic-template
 
 ---

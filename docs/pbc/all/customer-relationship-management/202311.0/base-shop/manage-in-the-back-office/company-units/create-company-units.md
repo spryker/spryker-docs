@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-units/create-company-units.html
 related:
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
 ---
 
 This document describes how to create company units.

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
-  - title: Glue API - Promotions & Discounts feature integration
+  - title: Install the Promotions & Discounts feature Glue API
     link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
@@ -20,7 +20,7 @@ related:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
 
 ## Retrieve a product label
 

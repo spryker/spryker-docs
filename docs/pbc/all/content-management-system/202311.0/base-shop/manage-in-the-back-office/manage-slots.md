@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/manage-in-the-back-office/manage-slots.html
 related:
   - title: Templates & Slots feature overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to manage slots.

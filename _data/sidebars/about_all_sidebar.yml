@@ -22,6 +22,7 @@ entries:
         nested:
         - title: Security release notes 202307.0
           url: /docs/about/all/releases/release-notes-202307.0/security-release-notes-202307.0.html
+
       - title: Security release notes 202306.0
         url: /docs/about/all/releases/security-release-notes-202306.0.html
       - title: Security release notes 202304.0
@@ -109,6 +110,8 @@ entries:
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/edit-the-docs-locally.html
           - title: Add and edit diagrams
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
+          - title: Add images and other media
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html            
           - title: Report issues
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
           - title: Review pull requests
@@ -118,7 +121,7 @@ entries:
           - title: Install recommended VS Code extensions
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/install-recommended-vs-code-extensions.html
           - title: Merge pull requests
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html            
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/merge-docs-pull-requests.html
 
       - title: Style guide
         url: /docs/about/all/about-the-docs/style-guide/spryker-docs-style-guide.html

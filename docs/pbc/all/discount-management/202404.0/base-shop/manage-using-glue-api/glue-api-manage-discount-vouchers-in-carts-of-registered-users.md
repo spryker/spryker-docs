@@ -21,7 +21,7 @@ This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html).
 
 ## Apply a discount voucher to a cart of a registered user
 

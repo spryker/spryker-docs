@@ -41,7 +41,7 @@ Depending on the needed WSL version, follow one of the guides:
 
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202311.0 --single-branch ./b2b-demo-shop && \
-    cd b2c-demo-shop
+    cd b2b-demo-shop
     ```
 
     * B2C Marketplace Demo Shop

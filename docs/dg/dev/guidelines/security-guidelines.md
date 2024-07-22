@@ -44,8 +44,9 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 
 The Back Office and Merchant Portal applications serve as administration panels. So, we highly recommend adding an extra layer of security by introducing a VPN, IP whitelisting, or additional authentication. This ensures that only authorized users have access to them.
 
-## Whitelist the IP Addresses of Third-paty Systems
-We highly recommend adding the IP Addresses of Third-party systems such as ERP & WMS systems to an IP Whitelist. To request the whitelisting of Third-party systems [contact support](https://support.spryker.com) via **Create Case** - **Get Help** and supply us with the IP Address(s) or CIDR
+## Allowlisting IP addresses of third-party systems
+
+We highly recommend allowlisting the IP Addresses of third-party systems, such as ERP or WMS. To request allowlisting, provide the IP addresses or CIDR by [creating a support case](https://support.spryker.com)
 
 ## Security Headers
 

@@ -1,5 +1,5 @@
 ---
-title: How to develop a Third-Party Spryker module
+title: Create third-party modules
 description: How to develop a Spryker module
 last_updated: Jun 7, 2024
 template: howto-guide-template

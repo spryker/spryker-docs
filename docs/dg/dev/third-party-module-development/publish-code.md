@@ -8,81 +8,62 @@ related:
     link: docs/dg/dev/third-party-module-development/ensure-compatibility.html
 ---
 
-# Guide to Publishing Code to GitHub
+To publish a module on GitHub, follow the steps:
 
-GitHub is a popular platform for hosting and sharing code repositories. Follow these steps to publish your code to GitHub:
 
-## 1. Create a GitHub Account
+## Prerequisites
 
-If you haven't already, sign up for a GitHub account at [github.com](https://github.com/).
+* [Create a GitHub Account](https://github.com/signup).
+* Create a GitHub repository for your module. For instructions, see [Create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories#create-a-repository).
 
-## 2. Install Git
 
-Git is a version control system used to manage and track changes in your code. Install Git from [git-scm.com](https://git-scm.com/) if you haven't already.
+### Set up Git
 
-## 3. Set Up Git
+1. Install [Git](https://git-scm.com/).
 
-Configure Git with your username and email address:
+2. Configure Git with your username and email address:
 
 ```bash
 git config --global user.name "Your Name"
 git config --global user.email "youremail@example.com"
 ```
 
-## 4. Create a New Repository
+## Publish a third-party module on GitHub
 
-- Log in to GitHub and click on the "+" icon in the top-right corner.
-- Select "New repository."
-- Name your repository and add a description.
-- Choose if the repository will be public or private.
-- Click "Create repository."
-
-## 5. Initialize a Local Git Repository
-
-Navigate to your project directory in your terminal and initialize a Git repository:
+1. Go to your project directory and initialize a Git repository:
 
 ```bash
 cd /path/to/your/project
 git init
 ```
 
-## 6. Add Your Files
-
-Add your project files to git:
+2. Add your project files to Git:
 
 ```bash
 git add .
 ```
 
-## 7. Commit Your Changes
-
-Commit your changes with a descriptive message:
+3. Commit your changes with a descriptive message:
 
 ```bash
 git commit -m "Initial commit"
 ```
 
-## 8. Link Your Local Repository to GitHub
-
-Link your local repository to the GitHub repository you created:
+4. Link the local repository to the GitHub repository you've created:
 
 ```bash
 git remote add origin git@github.com:your-company-name/your-repository.git
 ```
 
-## 9. Push Your Code to GitHub
-
-Push your code to GitHub:
+5. Push your code to GitHub:
 
 ```bash
 git push -u origin main
 ```
 
-## 10. Verify Your Code on GitHub
+  Refresh your GitHub repository page to see your code published.
 
-Refresh your GitHub repository page to see your code published.
-
-## 11. Add the module to your project composer.json
+6. Add the module to your project's `composer.json`:
 
 ```shell
 composer config repositories.your-company-name/your-repository git git@github.com:your-company-name/your-repository.git
@@ -90,7 +71,7 @@ composer require your-company-name/your-repository:dev-main
 ```
 
 {% info_block infoBox %}
-   Once the module published to packagist in the next step `repositories` section can be removed.
+   Once the module is published to packagist, in the next step, the `repositories` section can be removed.
 {% endinfo_block %}
 
 Run `composer update your-company-name/your-repository`.

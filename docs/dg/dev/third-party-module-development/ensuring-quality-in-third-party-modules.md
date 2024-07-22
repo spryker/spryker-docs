@@ -1,11 +1,8 @@
 ---
-title: Ensure Quality
+title: Ensuring quality in third-party modules
 description: Ensure Quality
 last_updated: Jun 7, 2024
 template: howto-guide-template
-related:
-  - title: Go to the Next Step.
-    link: docs/dg/dev/third-party-module-development/publish-code.html
 ---
 
 <style>
@@ -14,20 +11,17 @@ related:
   }
 </style>
 
-## Tools
-
-To make sure that code quality matched the Spryker standards it is important to execute code quality tools, here is the list:
+To adhere to Spryker's code quality standards when creating third-party modules, run the following tools:
 
 | Command                                                                                 | Description                                                             |
-|:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------| 
+|:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
 | vendor/your-company-name/your-module-name/console code:sniff:style                      | Sniffs and fixes code style.                                            |
-| vendor/your-company-name/your-module-name/console code:sniff:architecture               | Validates module architecture to find a common architecture mistakes.   |
-| vendor/your-company-name/your-module-name/console code:phpstan                          | Runs PHPStan static analyzer to ensure the code quality.                |
-| vendor/your-company-name/your-module-name/console code:phpmd                            | Runs PHPMD  to detect code smells and possible errors within the analyzed source code.                |
+| vendor/your-company-name/your-module-name/console code:sniff:architecture               | Validates module architecture to find common architecture mistakes.   |
+| vendor/your-company-name/your-module-name/console code:phpstan                          | Runs PHPStan static analyzer to ensure code quality.                |
+| vendor/your-company-name/your-module-name/console code:phpmd                            | Runs PHPMD to detect code smells and possible errors within the analyzed source code.                |
 
-## GitHub CI file example 
 
-Make sure that your module CI runs all the command above
+You can add these code quality checks to your GitHub CI configuration. Example:
 
 ```yaml
 name: CI
@@ -83,4 +77,8 @@ jobs:
 
 ```
 
-- Make sure that CI status badge is added to you repository README.md file https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge
+After adding such configuration, make sure the [CI status badge](https://docs.github.com/en/actions/monitoring-and-troubleshooting-workflows/adding-a-workflow-status-badge) is added to the repository's README file.
+
+## Next step
+
+docs/dg/dev/third-party-module-development/publish-code.html

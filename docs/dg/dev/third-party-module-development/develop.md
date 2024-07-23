@@ -23,10 +23,10 @@ $config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 
 
 
 ### How you can extend Spryker functionality from your module:
-**Option 1.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))
-**Option 2.** Use the existing Spryker module extension point.
+**Option a.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))
+**Option b.** Use the existing Spryker module extension point:
 
-**a.** Example of existing extension point usage.
+**1.** Example of existing extension point usage.
 Let's extend the product table with an additional column **Categories**, which will show the list of categories where the product is present.
 For this, we'll use two extension points in the existing Spryker modules.
 - One to extend table headers with **Categories** column [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php)
@@ -38,7 +38,7 @@ a. Create a module **vendor/bin/spryker-dev-console dev:module:create your-compa
    Make sure that `vendor/your-company-name/product-category` folder with module data is created.
 {% endinfo_block %}
 
-**b.** Create a plugin that will extend product table headers with **Categories** column
+**2.** Create a plugin that will extend product table headers with **Categories** column
 
 File Path: vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php
 
@@ -89,7 +89,7 @@ Wire the plugin in `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvid
     Validate that on http://backoffice.de.spryker.local/product-management page you can see categories column in the table header.
 {% endinfo_block %}
 
-**c.** Create a plugin that will provide data for the **Categories** column
+**3.** Create a plugin that will provide data for the **Categories** column
 
 
 File Path: vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableDataBulkExpanderPlugin.php

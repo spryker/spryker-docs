@@ -71,9 +71,7 @@ composer require your-company-name/your-repository:dev-main
 ```
 
 {% info_block infoBox %}
-   Once the module is published to packagist, in the next step, the `repositories` section can be removed.
+Once the module is published to packagist, in the next step, the `repositories` section can be removed from `composer.json`.
 {% endinfo_block %}
-
-Run `composer update your-company-name/your-repository`.
 
 Congratulations! You have successfully published your code to GitHub and added it to your project.

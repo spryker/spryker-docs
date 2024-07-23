@@ -38,13 +38,24 @@ If the product offer or marketplace product is not available, the following beha
 
 When adding a merchant product or an offer to the shopping list, a customer can see the merchant information in the *Sold by* hint:
 
-![gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shopping+List/add-marketplace-product-and-offer-to-shopping-list.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.md/add-marketplace-product-and-offer-to-shopping-list.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 
 ### Share shopping list
 
 Regardless of whether the shopping list is shared with full or read access, the merchant information is displayed to a user in the same way it is displayed to the shopping list owner.
 
-![gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shopping+List/share-shopping-list.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/shopping-list-and-wishlist/marketplace/marketplace-shopping-lists-feature-overview.md/share-shopping-list.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Constraints

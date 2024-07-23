@@ -27,7 +27,7 @@ To configure Payone, follow these steps:
    This displays a message about the successful connection of the app to your SCCOS. The Payone app's status changes to **Connection pending**.   
 4. Go to [Payone](https://www.payone.com/DE-en) and obtain the credentials.
 
-   {% info_block infoBox "" %}
+   {% info_block infoBox "Info" %}
 
    It takes some time to obtain credentials from Payone because you have to go through a thorough vetting process by Payone, such as the "know your customer" (KYC) process before Payone verifies you.
 

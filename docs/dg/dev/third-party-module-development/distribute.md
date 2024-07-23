@@ -15,7 +15,7 @@ template: howto-guide-template
 
 ## Step-by-Step Instructions
 
-### 2. Initialize Composer
+### 1. Initialize Composer
 - Navigate to your package directory (Git repository directory created on the previous page) in the terminal:
   ```bash
   cd my-package
@@ -34,7 +34,7 @@ template: howto-guide-template
     - License
     - Dependencies (you can skip if not needed)
 
-### 3. Add the Package Metadata
+### 2. Add the Package Metadata
 Ensure your `composer.json` file includes all necessary metadata. Here’s an example of what it might look like:
 
 {% info_block infoBox %}
@@ -64,7 +64,7 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 }
 ```
 
-### 4. Commit Your Package to a Git Repository
+### 3. Commit Your Package to a Git Repository
 - In the next steps we assume that you already have a git repository with the module:
 
 - Make sure that you've ignored all the non-module files by creating `.gitignore` file with the following minimal content:
@@ -99,7 +99,7 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
       git push origin v1.0.0
       ```
 
-### 5. Submit Your Package to Packagist
+### 4. Submit Your Package to Packagist
 - Go to [Packagist](https://packagist.org/).
 - Log in with your GitHub account or create an account on Packagist.
 
@@ -109,16 +109,16 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 
 - After verification, click "Submit".
 
-### 6. Maintain Your Package
+### 5. Maintain Your Package
 - Each time you make changes to your package, remember to push the changes to your Git repository and create a new tag (release).
 
-### 7. Update Composer Metadata (Optional)
+### 6. Update Composer Metadata (Optional)
 As your package evolves, you might need to update your `composer.json` file with new dependencies or other metadata. After making changes, ensure you commit and push these updates to your Git repository.
 
-### 8. Install package via composer
+### 7. Install package via composer
 Run `composer require vendor/package-name` to install the published package to your project.
 
-### 9. Monitor and Respond to Issues
+### 8. Monitor and Respond to Issues
 Monitor the issues reported on your Git repository hosting service and respond to feedback from users to improve your package.
 
 ## Summary

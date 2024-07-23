@@ -8,7 +8,7 @@ This document describes how to extend the audit log structure with additional da
 As an example, a business unit of a logged-in customer for the `Yves` application will be added.
 
 There are two primary methods to extend data in audit logs:
-* Introduce processor plugins: if registered for the corresponding audit log type and application will always be executed and will try to extend the data.
+* Introduce processor plugins: when registered for the corresponding audit log type and application, plugins will be executed on each request to try to extend the log data.
 See [HowTo: Add a new audit log type](https://documentation.spryker.com/docs/how-to-add-a-new-audit-log-type) for more information.
 * Pass the data to a specific log context: You can pass additional data directly to a needed log context, providing flexibility for different logging scenarios.
 
@@ -71,6 +71,8 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 }
 ```
 
+* Add factory method to get the **RequestStack** service:
+
 **src/Pyz/Yves/Log/LogFactory.php**
 
 ```php
@@ -95,6 +97,8 @@ class LogFactory extends SprykerShopLogFactory
 ```
 
 * Introduce `CustomerBusinessUnitProcessorPlugin`, which extracts the business unit name from the customer session and adds it to the log data:
+
+**src/Pyz/Yves/Log/Plugin/Log/CustomerBusinessUnitProcessorPlugin.php**
 
 ```php
 <?php

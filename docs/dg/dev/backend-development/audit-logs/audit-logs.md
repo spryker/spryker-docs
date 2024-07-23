@@ -1,7 +1,11 @@
 ---
-title: Audit logs reference
+title: Audit logs
 description: Learn how to work with Audit logs in Spryker.
 template: howto-guide-template
+related:
+* [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
+* [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
+* [HowTo: Add a new audit log type](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)
 ---
 
 Audit logging is used in web applications for tracking user activities and detecting unauthorized access. It helps meet regulatory requirements by ensuring accountability and transparency. Additionally, audit logs help with troubleshooting by recording system events and user interactions, making it easier to identify and resolve issues.
@@ -10,7 +14,7 @@ Audit logging is used in web applications for tracking user activities and detec
 
 Audit logging is enabled by various plugins that implement `Spryker\Shared\LogExtension\Dependency\Plugin\AuditLoggerConfigPluginInterface`. These plugins provide the necessary configuration for audit logging across different applications.
 
-`AuditLoggerConfigPluginInterface` defines the main configuration for audiot loggers. Here are the main methods in this interface:
+`AuditLoggerConfigPluginInterface` defines the main configuration for audit loggers. Here are the main methods in this interface:
 
 <details>
   <summary>AuditLoggerConfigPluginInterface</summary>
@@ -71,11 +75,11 @@ interface AuditLoggerConfigPluginInterface
 }
 ```
 
-<details>
+</details>
 
 ## Plugin configuration
 
-Each plugin supports one type of logs (channel). For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)
+Each plugin supports one type of logs (channel). For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md).
 
 The configuration for these plugins is defined in `config/Shared/config_default.php`. Here's an example of how to register plugins for different applications:
 
@@ -145,10 +149,13 @@ When adding audit logs, we recommend including tags. Tags provide additional con
 
 We don't recommend tracking all database related activity actions in the audit logs, such as user status updates or customer email updates. Logging every database interaction can quickly lead to excessive log volume, making it harder to find relevant information and potentially impacting system performance. Focus on logging critical actions that have significant security implications.
 
-## Example of Audit Log Data
+## Example of audit log data
 
-This is an example of an audit log entry recorded during a successful login attempt in a Spryker-based application:
+This example of an audit log entry was recorded during a successful login attempt:
 
+
+<details>
+  <summary>Audit log example</summary>
 ```json
 {
     "@timestamp": "2024-07-16T09:45:12.310532+00:00",
@@ -197,19 +204,15 @@ This is an example of an audit log entry recorded during a successful login atte
 }
 ```
 
-The data can be further enriched by creating and integrating custom processors. These processors can be registered
-within the plugins implementing the AuditLoggerConfigPluginInterface, allowing for enhanced log details.
-This extensibility ensures that audit logs can be tailored to meet specific requirements and provide deeper insights
-into application activities.
+</details>
 
-See  [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
+The data can be further enriched by creating and integrating custom processors. These processors can be registered within the plugins implementing `AuditLoggerConfigPluginInterface`. This extensibility ensures that audit logs can be tailored to meet specific requirements and provide deeper insights into application activities.
 
-## Disallowing Logging for Specific Tags
+For instructions, see [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
 
-It is also possible to disallow logging for specific tags if certain types of actions should not be logged.
-This can be configured to ensure that only relevant and necessary information is recorded, thereby maintaining log
-clarity and security. This approach allows for fine-grained control over what gets logged and helps in managing log
-volume effectively. Here is an example that demonstrates how to disallow logging for specific tags:
+## Disallowing logging for specific tags
+
+If you don't want some actions to be logged, you can disallow logging for specific tags. In the following example, the `user_logged_in` tag is disallowed, preventing logs with this tag from being recorded.
 
 **config/Shared/config_default.php**
 
@@ -224,13 +227,12 @@ $config[LogConstants::AUDIT_LOG_TAG_DISALLOW_LIST] = [
 
 ```
 
-In this example, the tag `user_logged_in` is disallowed, which means that any log entry with this tag will not be recorded.
 
-## Configuring Log Path
+## Configuring the log path
 
-You can configure the log path to either a file or an output stream like `php://stdout` (for example in case an application
-is hosted on AWS, data logged to `php://stdout` can be displayed in CloudWatch for centralized monitoring and analysis).
-For example, the following configuration sets the log path for Yves, Zed and Glue applications to `php://stdout`:
+You can configure the log path to either a file or an output stream like `php://stdout`. If an application
+is hosted on AWS, the data logged to `php://stdout` can be displayed in CloudWatch for centralized monitoring and analysis.
+For example, the following configuration sets the log path for Yves, Zed, and Glue applications to `php://stdout`:
 
 **config/Shared/config_default.php**
 
@@ -245,12 +247,9 @@ $config[LogConstants::LOG_FILE_PATH_YVES]
     = 'php://stdout';
 ```
 
-## Sanitizing Audit Log Data
+## Sanitizing audit log data
 
-You can sanitize sensitive data in audit logs by replacing specific values with a sanitized placeholder.
-Out-of-the-Box the data is replaced in `request` section which is provided by the `Spryker\Shared\Log\Processor\RequestProcessor`
-which uses the corresponding sanitizer. You can reuse the sanitizer in any other processor by implementing it on project level.
-For instance, to replace sensitive fields like passwords, you can configure the following:
+You can sanitize sensitive data in audit logs by replacing specific values with a sanitized placeholder. By default the data is sanitized in the `request` section provided by `Spryker\Shared\Log\Processor\RequestProcessor`, which uses the corresponding sanitizer. You can reuse the sanitizer in any other processor by implementing it on project level. For example, to replace sensitive fields like passwords, you can add the following configuration:
 
 **config/Shared/config_default.php**
 
@@ -264,9 +263,3 @@ $config[LogConstants::AUDIT_LOG_SANITIZE_FIELDS] = [
 ];
 $config[LogConstants::AUDIT_LOG_SANITIZED_VALUE] = '*****';
 ```
-
-## Related topics
-
-* [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-* [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
-* [HowTo: Add a new audit log type](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)

@@ -40,7 +40,7 @@ Make sure the `vendor/your-company-name/product-category` folder with module dat
 
 
 
-3. Create a plugin that to extend the product table the with a **Categories** column:
+3. Create a plugin to extend the product table the with a **Categories** column:
 
 <details>
   <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php</summary>

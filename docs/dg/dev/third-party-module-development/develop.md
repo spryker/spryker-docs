@@ -1,48 +1,53 @@
 ---
-title: How to develop a Third-Party Spryker module
+title: Create third-party modules
 description: How to develop a Spryker module
 last_updated: Jun 7, 2024
 template: howto-guide-template
-related:
-  - title: Go to the Next Step.
-    link: docs/dg/dev/third-party-module-development/ensure-quality.html
 ---
 
-### Architectural conventions
+## Architectural conventions
 
-[Documentation](/docs/dg/dev/architecture/architectural-convention.html) ( needs to be followed in the development process.)
--  Use the samples that marked as *Module Development*.
+Follow the [architectural conventions](/docs/dg/dev/architecture/architectural-convention.html) tagged with *Module Development*.
 
-### Enable custom namespace
+## Enable a custom namespace
 
-Adjust **config/Shared/config_default.php** to enable your custom namespace.
+To enable a custom namespace, adjust **config/Shared/config_default.php**:
 
 ```php
 $config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 'SprykerEco', 'Spryker', 'SprykerSdk', ];
 ```
 
 
-### How you can extend Spryker functionality from your module:
-**Option a.** Introduce an extension point in existing Spryker module, use it. (See complete example [here](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module))
-**Option b.** Use the existing Spryker module extension point:
+## Extend Spryker functionality from a module
 
-**1.** Example of existing extension point usage.
-Let's extend the product table with an additional column **Categories**, which will show the list of categories where the product is present.
-For this, we'll use two extension points in the existing Spryker modules.
-- One to extend table headers with **Categories** column [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php)
-- And another to extend table content with the corresponding column [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php)
+You can extend Spryker functionality from a module using one of the following options:
 
-a. Create a module **vendor/bin/spryker-dev-console dev:module:create your-company-name.product-category**. 
+* Introduce an extension point in an existing module. For an example, see [How to use a plugin from another module](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module).
+* Use an existing extension point in a module. For instructions, see [Extend functionality using an existing extension point](#Extend-functionality using-an-existing-extension-point).
 
-{% info_block infoBox %}
-   Make sure that `vendor/your-company-name/product-category` folder with module data is created.
+### Extend functionality using an existing extension point
+
+1. Extend the product table with a **Categories** column that shows the list of categories, which a product is added to. For this, use the following extension points in the existing modules:
+  - [ProductTableConfigurationExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableConfigurationExpanderPluginInterface.php): to extend table headers with **Categories** column.
+  - [ProductTableDataBulkExpanderPluginInterface](https://github.com/spryker/product-management-extension/blob/master/src/Spryker/Zed/ProductManagementExtension/Dependency/Plugin/ProductTableDataBulkExpanderPluginInterface.php): to extend table content with the corresponding column
+
+2. Create a module:
+```shell
+vendor/bin/spryker-dev-console dev:module:create your-company-name.product-category
+```
+
+{% info_block warningBox "Verification" %}
+Make sure the `vendor/your-company-name/product-category` folder with module data has been created.
 {% endinfo_block %}
 
-**2.** Create a plugin that will extend product table headers with **Categories** column
 
-File Path: vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php
 
-```php 
+3. Create a plugin that to extend the product table the with a **Categories** column:
+
+<details>
+  <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableConfigurationExpanderPlugin.php</summary>
+
+```php
 
 <?php
 
@@ -83,16 +88,18 @@ class ProductCategoryProductTableConfigurationExpanderPlugin extends AbstractPlu
 
 ```
 
-Wire the plugin in `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
+</details>
 
-{% info_block infoBox %}
-    Validate that on http://backoffice.de.spryker.local/product-management page you can see categories column in the table header.
+2. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableConfigurationExpanderPlugins()` method.
+
+{% info_block warningBox "Verification" %}
+In the Back Office, go to **Catalog**>**Products**. Make sure the **Categories** column is displayed in the table.
 {% endinfo_block %}
 
-**3.** Create a plugin that will provide data for the **Categories** column
+3. Create a plugin to provide data for the **Categories** column:
 
-
-File Path: vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableDataBulkExpanderPlugin.php
+<details>
+  <summary>vendor/your-company-name/product-category/src/YourCompanyName/Zed/ProductCategory/Communication/Plugin/ProductManagement/ProductCategoryProductTableDataBulkExpanderPlugin.php</summary>
 
 ```php
 <?php
@@ -156,11 +163,19 @@ class ProductCategoryProductTableDataBulkExpanderPlugin extends AbstractPlugin i
 
 ```
 
-Wire the plugin in `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
+</details>
+
+4. Wire the plugin in the `\Pyz\Zed\ProductManagement\ProductManagementDependencyProvider::getProductTableDataBulkExpanderPlugins()` method.
 
 
-{% info_block infoBox %}
-Validate that on http://backoffice.de.spryker.local/product-management page you can see categories column with assigned categories.
+{% info_block warningBox "Verification" %}
+In the Back Office, go to **Catalog**>**Products**. Make sure relevant data is displayed in **Categories** column.
 {% endinfo_block %}
 
-**Congratulations! You've created your first Spryker module.**
+
+Your module is created.
+
+## Next step
+
+
+docs/dg/dev/third-party-module-development/ensure-quality.html

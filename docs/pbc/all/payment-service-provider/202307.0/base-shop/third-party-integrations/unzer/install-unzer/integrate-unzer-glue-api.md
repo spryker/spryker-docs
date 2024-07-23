@@ -22,7 +22,7 @@ Install the required features:
 |--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/unzer/install-unzer/integrate-unzer.html)                                     |
 | Glue API: Checkout | [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API: Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Payments | [Install the Payments Glue API](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
 
 ### 1) Install the required modules
 

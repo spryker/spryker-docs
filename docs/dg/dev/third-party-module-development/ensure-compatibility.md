@@ -1,5 +1,5 @@
 ---
-title: Ensure compatibility
+title: Test a third-party module's compatibility
 description: Ensure compatibility
 last_updated: Jun 7, 2024
 template: howto-guide-template
@@ -8,18 +8,16 @@ related:
     link: docs/dg/dev/third-party-module-development/drive-usage-and-support-with-problems.html
 ---
 
-## Code compatibility
-Steps how to ensure code compatibility with latest Spryker releases:
+To test a third-party module's compatibility with a Spryker Demo Shop, follow the steps:
 
-**1.** Decide which demoshop is most relevant for testing your module, choose one of:
+1. From one of the following, choose one Demo Shop to test the compatibility of your module with:
 - https://github.com/spryker-shop/b2c-demo-shop
 - https://github.com/spryker-shop/b2b-demo-shop
 - https://github.com/spryker-shop/b2c-demo-marketplace
 - https://github.com/spryker-shop/b2b-demo-marketplace
 
-**2.** Install your module:
-- Pull the latest tag from the demoshop (One from the list above)
-- Install your module with Composer. Use the version that you want to test, e.g. if you run CI on a specific branch, this branch has to be used as the module package's version constraint
-- Apply all the changes on demoshop project level that are necessary to fully integrate your module.
-
-**3.** Tests functionality of your module.
+2. Pull the latest version of the Demo Shop you've selected.
+3. Install your module using Composer.
+  Use the version you want to test. For example, if you're running CI on a specific branch, this branch has to be used as the module package's version constraint.
+4. On the demo shop project level, apply all the manual changes needed to complete the module installation.
+5. Test the functionality of the module.

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
 related:
   - title: CMS Pages overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: CMS Blocks overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---

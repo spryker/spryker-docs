@@ -14,7 +14,7 @@ related:
 
 Using the [Product Relations](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).
+Only [abstract](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/pbc/all/product-relationship-management/{{page.version}}/product-relationship-management.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 * Retrieve related products of an abstract product.
@@ -26,7 +26,7 @@ In your development, the endpoints can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Relations Glue API](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/install-the-product-relations-glue-api.html).
 
 ## Retrieve related items of an abstract product
 

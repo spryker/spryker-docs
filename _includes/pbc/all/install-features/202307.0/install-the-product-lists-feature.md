@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html).
+This document describes how to install the [Product Lists feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html).
 
 ## Install feature core
 
@@ -841,6 +841,6 @@ Make sure that no restricted products can be added to a cart, and if they were a
 
 After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user, who browses the catalog, gets product lists assigned, and this can be fulfilled by providing owners with product lists.
 
-To add this functionality for merchant relationships, see  [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html).
+To add this functionality for merchant relationships, see  [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html).
 
 {% endinfo_block %}

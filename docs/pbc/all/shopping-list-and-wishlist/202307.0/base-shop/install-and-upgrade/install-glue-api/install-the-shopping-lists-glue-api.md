@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-shopping-lists-feature-integration.html
   - /docs/pbc/all/shopping-list-and-wishlist/202307.0/base-shop/install-and-upgrade/install-the-shopping-lists-glue-api.html
 related:
-  - title: Shopping Lists feature integration
+  - title: Install the Shopping Lists feature
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/install-and-upgrade/install-features/install-the-shopping-lists-feature.html
   - title: Managing shopping lists
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/base-shop/manage-using-glue-api/glue-api-manage-shopping-lists.html

@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/ratepay/integrate-payment-methods-for-ratepay/integrate-the-direct-debit-payment-method-for-ratepay.html
 related:
   - title: RatePay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html
+    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay.html
   - title: RatePay - Payment Workflow
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/ratepay/ratepay-payment-workflow.html
   - title: RatePay facade methods

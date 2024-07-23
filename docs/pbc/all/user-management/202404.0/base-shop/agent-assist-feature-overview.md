@@ -22,13 +22,13 @@ A Back Office user can create an agent user in **Users&nbsp;<span aria-label="an
 
 To learn more about managing agent users in Back Office, see [Managing users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
-![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
+![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.md/zed-agent-assist.png)
 
 ## Agent Assist feature on the Storefront
 
 To act on a customer's behalf, the agent signs in at `https://mysprykershop.com/agent/login` with the agent account details and searches for the needed customer by typing their name or email in the customer search field.
 
-![customer-assitent.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-assitent.png)
+![customer-assitent.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.md/customer-assitent.png)
 
 Once they find the needed customer, they select **Confirm** to impersonate them.
 
@@ -36,10 +36,15 @@ This logs the agent into the selected customer account, so they see the shop the
 
 After performing all the requested actions, the agent ends the customer assistance session by selecting **End Customer Assistance**.
 
-<!-- ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/customer-session.png) -->
+<!-- ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.md/customer-session.png) -->
 
 This is how the Agent Assist feature works on the Spryker Demo Shop Storefront:
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/shop-guide-managing-agent-account.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/base-shop/agent-assist-feature-overview.md/shop-guide-managing-agent-account.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 
 Check out this video tutorial on setting up an Agent user in a B2B company account:
@@ -56,6 +61,6 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
 | [Install the Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)  | [Authenticate as an agent assist](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html)  |
-| [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html) |
+| [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html) | [Search by customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-search-by-customers-as-an-agent-assist.html) |
 | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) | [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) |
-|  [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html) | [Managing agent assist authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html)|
+|  [Install the Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html) | [Managing agent assist authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html)|

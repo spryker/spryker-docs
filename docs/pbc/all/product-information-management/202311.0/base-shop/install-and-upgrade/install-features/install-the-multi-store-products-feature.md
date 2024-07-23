@@ -17,7 +17,7 @@ related:
   - title: Upgrade the Collector module
     link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/upgrade-modules/upgrade-the-collector-module.html
   - title: Migration Guide - Product
-    link: docs/scos/dev/module-migration-guides/migration-guide-product.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module
   - title: Upgrade the ProductManagement module
     link: docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 ---

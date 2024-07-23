@@ -1,5 +1,5 @@
 ---
-title: Product Bundles + Cart feature integration
+title: Install the Product Bundles + Cart feature
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
@@ -17,9 +17,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-bundles-cart-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
 related:
-  - title: "Glue API: Product Bundle + Cart feature integration"
+  - title: "Install the Product Bundle + Cart Glue API"
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
-  - title: Cart feature integration
+  - title: Install the Cart feature
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 

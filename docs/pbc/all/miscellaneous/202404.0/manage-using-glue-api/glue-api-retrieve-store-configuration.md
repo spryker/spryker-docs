@@ -18,7 +18,7 @@ The configuration of the current store in a project can be retrieved via an endp
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 ## Retrieve store configuration
 

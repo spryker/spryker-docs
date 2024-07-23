@@ -17,10 +17,7 @@ related:
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html
   - title: Install the Shipment feature
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html
-  - title: Shipment feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
-  - title: Approval Process feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
+
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-shipment-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-shipment-approval-process-feature.md -->

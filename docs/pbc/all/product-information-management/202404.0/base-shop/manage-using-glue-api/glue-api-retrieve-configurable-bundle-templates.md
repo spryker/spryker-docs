@@ -24,8 +24,8 @@ In your development, this resource can help you to let the customers set up the 
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Configurable Bundle feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
+* [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-glue-api.html)
+* [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
 * [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
 
 ## Retrieve all configurable bundle templates
@@ -742,6 +742,7 @@ To retrieve information about a specific Configurable Bundle template, send the 
 A list of images assigned to a configurable bundle template.  |
 | configurable-bundle-template-image-sets | externalUrlLarge | String | URLs to the image per image set. |
 | configurable-bundle-template-image-sets | externalUrlSmall | String | URLs to the image per image set. |
+
 
 
 ## Possible errors

@@ -26,7 +26,7 @@ The Storefront displays only the products that are approved, active, lie within 
 
 {% info_block warningBox "Note" %}
 
-The following workflow is valid only in case the [Marketplace Product Approval Process feature is enabled](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html).
+The following workflow is valid only in case the [Marketplace Product Approval Process feature is enabled](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html).
 
 {% endinfo_block %}
 
@@ -69,4 +69,4 @@ A marketplace owner can set a default approval status for marketplace products o
 
 | INSTALLATION GUIDES                                                                                                                                                                         | DATA IMPORT                                                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |
+| [Install the Marketplace Product Approval Process feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-approval-process-feature.html) | [File details: merchant_product_approval_status_default.csv](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-product-approval-status-default.csv.html) |

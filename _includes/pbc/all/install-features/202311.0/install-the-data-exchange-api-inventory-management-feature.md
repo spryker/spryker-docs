@@ -11,7 +11,7 @@ Install the required features:
 | NAME              | VERSION          | INSTALLATION GUIDE |
 |-------------------|------------------|------------------|
 | Data Exchange API | {{page.version}} | [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) |
-| Inventory Management  | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/unified-commerce/install-and-upgrade/install-the-inventory-management-feature.html) |
+| Inventory Management  | {{page.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
 
 ### 1) Set up behavior
 
@@ -71,7 +71,7 @@ COMMIT;
 
 Do the following:
 
-1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/tutorials-and-howtos/how-to-send-request-in-data-exchange-api.html) for details on how to do that.
+1. Obtain an access token. Follow [How to send a request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html) for details on how to do that.
 
 2. Send a `PATCH` request. This request needs to include the necessary headers, such as Content-Type, Accept, and Authorization, with the access token provided:
 

@@ -2,14 +2,16 @@
 title: Extend the audit log structure
 description: Learn how to enhance your audit log structure.
 template: howto-guide-template
+related:
+  - title: Add audit log types
+    link: /docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/add-audit-log-types.html
+
 ---
 
-This document describes how to extend the audit log structure with additional data.
-As an example, a business unit of a logged-in customer for the `Yves` application will be added.
+This document describes how to extend the audit log structure with additional data. As an example, a business unit of a logged-in customer for the `Yves` application will be added.
 
 There are two primary methods to extend data in audit logs:
-* Introduce processor plugins: when registered for the corresponding audit log type and application, plugins will be executed on each request to try to extend the log data.
-See [HowTo: Add a new audit log type](https://documentation.spryker.com/docs/how-to-add-a-new-audit-log-type) for more information.
+* Introduce processor plugins: When registered for an audit log type and application, plugins will be executed on each request to try to extend the log data. For more information, see [Add audit log types](https://documentation.spryker.com/docs/how-to-add-a-new-audit-log-type).
 * Pass the data to a specific log context: You can pass additional data directly to a needed log context, providing flexibility for different logging scenarios.
 
 ## Prerequisites
@@ -17,13 +19,12 @@ See [HowTo: Add a new audit log type](https://documentation.spryker.com/docs/how
 [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
-## Step-by-step instructions
+## Extend the audit log structure by introducing processor plugins
 
-### Option 1: Introduce Processor Plugins
+1. Add the `RequestStack` service to the dependency provider of your module to get access to the customer session:
 
-* Add **RequestStack** service to the dependency provider of your module to get access to the customer session:
-
-**src/Pyz/Yves/Log/LogDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Yves/Log/LogDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -71,7 +72,9 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
 }
 ```
 
-* Add factory method to get the **RequestStack** service:
+</details>
+
+2. Add a factory method to get the `RequestStack` service:
 
 **src/Pyz/Yves/Log/LogFactory.php**
 
@@ -96,9 +99,10 @@ class LogFactory extends SprykerShopLogFactory
 
 ```
 
-* Introduce `CustomerBusinessUnitProcessorPlugin`, which extracts the business unit name from the customer session and adds it to the log data:
+3. Introduce `CustomerBusinessUnitProcessorPlugin`, which extracts the business unit name from the customer session and adds it to the log data:
 
-**src/Pyz/Yves/Log/Plugin/Log/CustomerBusinessUnitProcessorPlugin.php**
+<details>
+  <summary>src/Pyz/Yves/Log/Plugin/Log/CustomerBusinessUnitProcessorPlugin.php</summary>
 
 ```php
 <?php
@@ -183,7 +187,9 @@ class CustomerBusinessUnitProcessorPlugin extends AbstractPlugin implements LogP
 }
 ```
 
-* Register the newly introduced plugin for the `security` log type for the `Yves` application:
+</details>
+
+4. Register the newly introduced plugin for the `security` log type for the `Yves` application:
 
 **src/Pyz/Yves/Log/LogDependencyProvider.php**
 
@@ -209,8 +215,9 @@ class LogDependencyProvider extends SprykerLogDependencyProvider
     }
 }
 ```
+Now when you log in as a customer with a business unit, the corresponding business unit name will be added to the log data.
 
-### Option 2: Pass the data to the specific log context
+## Extend the audit log structure by pass the data to the specific log context
 
 Pass the data directly to the specific log context as needed:
 
@@ -242,11 +249,4 @@ class AnyClassWhereAuditLoggingIsNeeded
 }
 ```
 
-## Summary
-
-Now when you log in as a customer with a business unit the corresponding business unit name will be added to the log data.
-
-## Related topics
-
-* [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-* [HowTo: Add a new audit log type](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md).
+Now when you log in as a customer with a business unit, the corresponding business unit name will be added to the log data.

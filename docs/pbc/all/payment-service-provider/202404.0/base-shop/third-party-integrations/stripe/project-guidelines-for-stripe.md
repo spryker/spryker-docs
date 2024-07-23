@@ -147,8 +147,9 @@ namespace Pyz\Zed\Payment;
 class PaymentConfig extends \Spryker\Zed\Payment\PaymentConfig
 {
     public function getStoreFrontPaymentPage(): string
-    {
-        return '/payment'; //or any other URL you want to use, e.g. https://your-site.com/payment-with-stripe 
+    {        
+        // Please make sure that domain is whitelisted in the config_default.php `$config[KernelConstants::DOMAIN_WHITELIST]`
+        return '/payment'; //or any other URL on your storefront domain e.g. https://your-site.com/payment-with-stripe 
     }
 }
 ```

@@ -20,8 +20,8 @@ $config[KernelConstants::CORE_NAMESPACES] = [ 'YourCompanyName', 'SprykerShop', 
 
 You can extend Spryker functionality from a module using one of the following options:
 
-* Introduce an extension point in an existing module. For an example, see [How to use a plugin from another module](docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module).
-* Use an existing extension point in a module. For instructions, see [Extend functionality using an existing extension point](#Extend-functionality using-an-existing-extension-point).
+* Introduce an extension point in an existing module. For an example, see [How to use a plugin from another module](/docs/dg/dev/backend-development/plugins/plugins.html#how-to-use-a-plugin-from-another-module).
+* Use an existing extension point in a module. For instructions, see [Extend functionality using an existing extension point](#extend-functionality using-an-existing-extension-point).
 
 ### Extend functionality using an existing extension point
 

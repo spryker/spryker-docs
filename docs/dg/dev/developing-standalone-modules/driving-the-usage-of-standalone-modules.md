@@ -3,9 +3,6 @@ title: Driving the usage of standalone modules
 description: Drive Usage and Support with Problems
 last_updated: Jun 7, 2024
 template: howto-guide-template
-related:
-  - title: Go to the Next Step.
-    link: docs/dg/dev/third-party-module-development/distribute.html
 ---
 
 To drive usage of your standalone modules, we recommend covering the following points.

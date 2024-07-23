@@ -7,10 +7,10 @@ template: concept-topic-template
 
 This section contains documents on developing standalone modules for Spryker:
 
-* [Onboard & Learn](/docs/dg/dev/third-party-module-development/onboard-and-learn.html)
-* [Develop](/docs/dg/dev/third-party-module-development/develop.html)
-* [Ensure Quality](/docs/dg/dev/third-party-module-development/ensure-quality.html)
-* [Publish Code](/docs/dg/dev/third-party-module-development/publish-code.html)
-* [Ensure Compatibility](/docs/dg/dev/third-party-module-development/ensure-compatibility.html)
-* [Drive Usage and Support with Problems](/docs/dg/dev/third-party-module-development/drive-usage-and-support-with-problems.html)
-* [Distribute](/docs/dg/dev/third-party-module-development/distribute.html)
+* [Prepare](/docs/dg/dev/developing-standalone-modules/prepare-for-standalone-module-development.html)
+* [Create](/docs/dg/dev/developing-standalone-modules/create-standalone-modules.html)
+* [Ensure quality](/docs/dg/dev/developing-standalone-modules/ensuring-quality-in-standalone-modules.html)
+* [Publish on GitHub](/docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-github.html)
+* [Test the compatibility](/docs/dg/dev/developing-standalone-modules/test-the-compatibility-of-standalone-modules.html)
+* [Drive usage](/docs/dg/dev/developing-standalone-modules/driving-the-usage-of-standalone-modules.html)
+* [Publish on Packagist](/docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-packagist.html)

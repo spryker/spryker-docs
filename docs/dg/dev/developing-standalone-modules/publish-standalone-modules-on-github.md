@@ -5,7 +5,7 @@ last_updated: Jun 7, 2024
 template: howto-guide-template
 ---
 
-To publish a module on GitHub, follow the steps:
+To publish a module on GitHub, take the following steps.
 
 
 ## Prerequisites
@@ -14,7 +14,7 @@ To publish a module on GitHub, follow the steps:
 * Create a GitHub repository for your module. For instructions, see [Create a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories#create-a-repository).
 
 
-### Set up Git
+## Set up Git
 
 1. Install [Git](https://git-scm.com/).
 
@@ -68,10 +68,10 @@ composer require your-company-name/your-repository:dev-main
 ```
 
 {% info_block infoBox %}
-Once the module is published to packagist, in the next step, the `repositories` section can be removed from `composer.json`.
+Once the module is published on Packagist, the `repositories` section can be removed from `composer.json`.
 {% endinfo_block %}
 
-Congratulations! You have successfully published your code to GitHub and added it to your project.
+Now the module is published GitHub.
 
 
 ## Next step

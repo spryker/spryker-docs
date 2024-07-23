@@ -5,9 +5,7 @@ last_updated: Jun 7, 2024
 template: howto-guide-template
 ---
 
-## Architectural conventions
-
-Follow the [architectural conventions](/docs/dg/dev/architecture/architectural-convention.html) tagged with *Module Development*.
+This document describes how to create standalone modules.
 
 ## Enable a custom namespace
 

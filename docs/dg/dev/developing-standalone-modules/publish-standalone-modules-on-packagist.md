@@ -6,6 +6,8 @@ template: howto-guide-template
 
 ---
 
+To publish a module on Packagist, take the following steps.
+
 ## Prerequisites
 
 * Install PHP
@@ -13,7 +15,7 @@ template: howto-guide-template
 
 ## Initialize Composer
 
-1. Go to the repository directory (created in the previous step):
+1. Go to the module's repository directory:
 ```bash
 cd my-package
 ```
@@ -67,9 +69,7 @@ Make sure all the module dependencies are listed in the `require` section.
 
 ## Commit the package to a Git repository
 
-- In the next steps we assume that you already have a git repository with the module:
-
-1. Make sure that you've ignored all the non-module files by creating `.gitignore` file with the following content:
+1. Ignore all the non-module files by creating `.gitignore`:
 
 ```text
 # tooling

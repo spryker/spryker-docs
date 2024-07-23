@@ -44,4 +44,4 @@ For more details about major releases, see [Semantic Versioning](https://semver.
 
 ## Next step
 
-[Publish modules on Packagist]()
+[Publish modules on Packagist](/docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-packagist.html)

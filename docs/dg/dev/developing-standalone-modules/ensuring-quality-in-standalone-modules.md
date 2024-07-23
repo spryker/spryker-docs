@@ -11,7 +11,7 @@ template: howto-guide-template
   }
 </style>
 
-To adhere to Spryker's code quality standards when creating third-party modules, run the following tools:
+To adhere to Spryker's code quality standards when creating standalone modules, run the following tools:
 
 | Command                                                                                 | Description                                                             |
 |:----------------------------------------------------------------------------------------|:------------------------------------------------------------------------|
@@ -81,4 +81,4 @@ After adding such configuration, make sure the [CI status badge](https://docs.gi
 
 ## Next step
 
-[Publish modules on GitHub](/docs/dg/dev/third-party-module-development/publish-code.html)
+[Publish modules on GitHub](/docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-github.html)

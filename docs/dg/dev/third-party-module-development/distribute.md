@@ -11,21 +11,12 @@ template: howto-guide-template
 ## Prerequisites
 1. **PHP installed** on your machine.
 2. **Composer installed** on your machine.
-3. A **Git repository** for hosting your package (e.g., GitHub, GitLab, Bitbucket).
+3. A **Git repository** created in the previous step.
 
 ## Step-by-Step Instructions
 
-### 1. Create Your PHP Package
-- Create a directory for your package:
-  ```bash
-  mkdir my-package
-  cd my-package
-  ```
-
-- Add your PHP code to this directory (e.g., create a file named `src/Example.php`).
-
 ### 2. Initialize Composer
-- Navigate to your package directory in the terminal:
+- Navigate to your package directory (Git repository directory created on the previous page) in the terminal:
   ```bash
   cd my-package
   ```
@@ -76,13 +67,13 @@ Ensure your `composer.json` file includes all necessary metadata. Here’s an ex
 ### 4. Commit Your Package to a Git Repository
 - In the next steps we assume that you already have a git repository with the module:
 
-- Make sure that you've ignored all the non-module files by creating `.gitignore` file.
+- Make sure that you've ignored all the non-module files by creating `.gitignore` file with the following minimal content:
 
-```text
-# tooling
-vendor/
-composer.lock
-```
+  ```text
+  # tooling
+  vendor/
+  composer.lock
+  ```
 
 - Add all files to the repository:
   ```bash

@@ -90,7 +90,7 @@ composer require your-company-name/your-repository:dev-main
 ```
 
 {% info_block infoBox %}
-   Once the module published to packagist in the next step `repositories` section can be removed.
+   Once the module published to packagist in the next step, `repositories` section can be removed from the `composer.json`.
 {% endinfo_block %}
 
 Run `composer update your-company-name/your-repository`.

@@ -1,11 +1,8 @@
 ---
-title: How to publish module on GitHub
-description: How to publish module on GitHub
+title: Publish standalone modules on GitHub
+description: Learn how to publish a standalone module on GitHub
 last_updated: Jun 7, 2024
 template: howto-guide-template
-related:
-  - title: Go to the Next Step.
-    link: docs/dg/dev/third-party-module-development/ensure-compatibility.html
 ---
 
 To publish a module on GitHub, follow the steps:
@@ -77,3 +74,8 @@ composer require your-company-name/your-repository:dev-main
 Run `composer update your-company-name/your-repository`.
 
 Congratulations! You have successfully published your code to GitHub and added it to your project.
+
+
+## Next step
+
+[Test the compatibility](/docs/dg/dev/developing-standalone-modules/test-the-compatibility-of-standalone-modules.html)

@@ -1,5 +1,5 @@
 ---
-title: Ensuring quality in third-party modules
+title: Ensuring quality in standalone modules
 description: Ensure Quality
 last_updated: Jun 7, 2024
 template: howto-guide-template
@@ -81,4 +81,4 @@ After adding such configuration, make sure the [CI status badge](https://docs.gi
 
 ## Next step
 
-docs/dg/dev/third-party-module-development/publish-code.html
+[Publish modules on GitHub](/docs/dg/dev/third-party-module-development/publish-code.html)

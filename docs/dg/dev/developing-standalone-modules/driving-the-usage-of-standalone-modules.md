@@ -1,5 +1,5 @@
 ---
-title: Driving the usage of third-party modules
+title: Driving the usage of standalone modules
 description: Drive Usage and Support with Problems
 last_updated: Jun 7, 2024
 template: howto-guide-template
@@ -13,6 +13,7 @@ To drive usage of your standalone modules, we recommend covering the following p
 ## Provide installation instructions
 
 Provide complete, accurate and up-to-date installation instructions in README. For an example of installation instructions, see [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html).
+
 Make sure each section contains a verification step that clearly explains how to verify the changes are implemented correctly. After completing all the steps of an installation guide, for end users, the functionality should work as expected.
 
 
@@ -39,3 +40,8 @@ For more details about major releases, see [Semantic Versioning](https://semver.
 
 
 -->
+
+
+## Next step
+
+[Publish modules on Packagist]()

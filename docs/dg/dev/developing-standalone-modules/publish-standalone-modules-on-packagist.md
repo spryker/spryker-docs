@@ -1,6 +1,6 @@
 ---
-title: How to Publish a Module on Packagist
-description: How to Publish a Module on Packagist
+title: Publish standalone modules on Packagist
+description: Learn how to publish a module on Packagist for distribution
 last_updated: Jun 7, 2024
 template: howto-guide-template
 

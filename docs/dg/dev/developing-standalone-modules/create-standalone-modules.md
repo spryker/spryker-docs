@@ -1,5 +1,5 @@
 ---
-title: Create third-party modules
+title: Create standalone modules
 description: How to develop a Spryker module
 last_updated: Jun 7, 2024
 template: howto-guide-template
@@ -177,5 +177,4 @@ Your module is created.
 
 ## Next step
 
-
-docs/dg/dev/third-party-module-development/ensure-quality.html
+[Ensuring quality in standalone modules](/docs/dg/dev/developing-standalone-modules/ensuring-quality-in-standalone-modules.html)

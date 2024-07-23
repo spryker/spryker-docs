@@ -1,10 +1,11 @@
 ---
-title: Third-party Spryker module development and distribution
-description: Third-Party Spryker Module Development and Distribution
+title: Developing standalone modules
+description: Learn how to develop standalone modules
 last_updated: Jul 7, 2024
 template: concept-topic-template
-
 ---
+
+This section contains documents on developing standalone modules for Spryker:
 
 * [Onboard & Learn](/docs/dg/dev/third-party-module-development/onboard-and-learn.html)
 * [Develop](/docs/dg/dev/third-party-module-development/develop.html)

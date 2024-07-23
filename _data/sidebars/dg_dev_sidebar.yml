@@ -1623,23 +1623,23 @@ entries:
 
   - title: Code contribution guide
     url: /docs/dg/dev/code-contribution-guide.html
-  - title: Third-Party Spryker Module Development and Distribution
-    url: /docs/dg/dev/third-party-module-development/third-party-spryker-module-development-and-distribution.html
+  - title: Developing standalone modules
+    url: /docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html
     nested:
-      - title: Onboard & Learn
-        url: /docs/dg/dev/third-party-module-development/onboard-and-learn.html
-      - title: Develop
-        url: /docs/dg/dev/third-party-module-development/develop.html
-      - title: Ensure Quality
-        url: /docs/dg/dev/third-party-module-development/ensure-quality.html
-      - title: Publish Code
-        url: /docs/dg/dev/third-party-module-development/publish-code.html
-      - title: Ensure Compatibility
-        url: /docs/dg/dev/third-party-module-development/ensure-compatibility.html
-      - title: Drive Usage and Support with Problems
-        url: /docs/dg/dev/third-party-module-development/drive-usage-and-support-with-problems.html
-      - title: Distribute
-        url: /docs/dg/dev/third-party-module-development/distribute.html
+      - title: Prepare
+        url: /docs/dg/dev/developing-standalone-modules/prepare-for-standalone-module-development.html
+      - title: Create
+        url: /docs/dg/dev/developing-standalone-modules/create-standalone-modules.html
+      - title: Ensuring quality
+        url: /docs/dg/dev/developing-standalone-modules/ensuring-quality-in-standalone-modules.html
+      - title: Publish on GitHub
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-github.html
+      - title: Test the compatibility
+        url: /docs/dg/dev/developing-standalone-modules/test-the-compatibility-of-standalone-modules.html
+      - title: Drive usage
+        url: /docs/dg/dev/developing-standalone-modules/driving-the-usage-of-standalone-modules.html
+      - title: Publish on Packagist
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-packagist.html
   - title: Code generator
     url: /docs/dg/dev/code-generator.html
   - title: Example modules

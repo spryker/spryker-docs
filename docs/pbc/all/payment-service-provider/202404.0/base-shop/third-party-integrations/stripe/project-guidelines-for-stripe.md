@@ -134,3 +134,114 @@ console data:import glossary
 ## Retrieving and using payment details from Stripe
 
 For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
+
+## How to Embed Stripe Payment Page to Your Site (iframe approach)
+By default, the Stripe App payment flow assumes that the payment page is on another domain, so a user will be redirected to this page after order placement.
+To enhance your storefront users' experience, you can embed the Stripe payment page directly into your site. Follow these steps:
+
+### Step 1: Configure Payment Module
+Create or modify project-level `PaymentConfig.php` file (`Pyz\Zed\Payment\PaymentConfig`) and add the following configuration:
+```php
+namespace Pyz\Zed\Payment;
+
+class PaymentConfig extends \Spryker\Zed\Payment\PaymentConfig
+{
+    public function getStoreFrontPaymentPage(): string
+    {
+        return '/payment'; //or any other URL you want to use, e.g. https://your-site.com/payment-with-stripe 
+    }
+}
+```
+In this setup, the redirect URL will be added as a query parameter `url` (the value is base64-encoded) to the URL you specified in the `getStoreFrontPaymentPage()` method.
+
+### Step 2: Create the Stripe Payment Page
+Create a new page in your project to render the Stripe payment page. Here's a minimal PHP example:
+
+```php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order payment page</title>
+</head>
+<body>
+<iframe src="<?php echo base64_decode($_GET['url']) ?>" width="100%" height="700px" style="border:0"></iframe>
+</body>
+</html>
+```
+
+If your storefront application is built using front-end technologies (headless) and Spryker Glue API, you need to follow your framework library documentation
+and create a new page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response. 
+
+
+If your storefront application is Yves-based, you need to create a new controller to render this page
+
+1. Create a new controller in `src/Pyz/Yves/PaymentPage/Controller/PaymentController.php`:
+```php
+
+namespace Pyz\Yves\PaymentPage\Controller;
+
+use Spryker\Yves\Kernel\Controller\AbstractController;
+use Spryker\Yves\Kernel\View\View;
+use Symfony\Component\HttpFoundation\Request;
+
+class PaymentController extends AbstractController
+{
+    /**
+     * @return \Spryker\Yves\Kernel\View\View
+     */
+    public function indexAction(Request $request): View
+    {
+        return $this->view(
+            [
+                'iframeUrl' => base64_decode($request->query->getString('url', '')),
+            ],
+            [],
+            '@PaymentPage/views/payment.twig',
+        );
+    }
+}
+
+```
+
+2. Create a new template for this page in `src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig`:
+
+```twig
+{% extends template('page-layout-checkout', 'CheckoutPage') %}
+
+{% define data = {
+    iframeUrl: _view.iframeUrl,
+    title: 'Order Payment' | trans,
+} %}
+
+{% block content %}
+    <iframe  src="{{ data.iframeUrl }}" class="payment-iframe" style="border:0; display:block; width:100%; height:700px"></iframe>
+{% endblock %}
+```
+
+3. Create a new route for this controller in `src/Pyz/Yves/PaymentPage/Plugin/Router/EmbeddedPaymentPageRouteProviderPlugin.php`:
+
+```php
+namespace Pyz\Yves\PaymentPage\Plugin\Router;
+
+use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
+use Spryker\Yves\Router\Route\RouteCollection;
+
+class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
+{
+    /**
+     * @param \Symfony\Component\Routing\RouteCollection $routeCollection
+     *
+     * @return \Symfony\Component\Routing\RouteCollection
+     */
+    public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    {
+        $route = $this->buildRoute('/payment', 'PaymentPage', 'Payment', 'indexAction');
+        $routeCollection->add('payment-page', $route);
+
+        return $routeCollection;
+    }
+}
+```
+
+4. Add router plugin to the `RouterDependencyProvider::getRouteProvider()` in `src/Pyz/Yves/Router/RouterDependencyProvider.php`.

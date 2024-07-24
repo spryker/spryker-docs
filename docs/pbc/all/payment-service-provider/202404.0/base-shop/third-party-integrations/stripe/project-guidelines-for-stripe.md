@@ -1,8 +1,7 @@
 ---
 title: Project guidelines for the Stripe app
 description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
-draft: true
-last_updated: Jan 31, 2024
+last_updated: Jul 22, 2024
 template: howto-guide-template
 related:
    - title: Stripe
@@ -139,11 +138,11 @@ During this period, Stripe attempts to process the request, which results in suc
 * Success: the items transition to the `payment refund succeeded` state, although the payment isn't refunded at this step.
 * Failure: the items transition to the `payment refund failed` state.
 
-These states serve to track the refund status and inform the Back Office user. Over the following days, Stripe finalizes the refund, causing the item states to change accordingly. For example, previously successful refunds may be declined and vice versa.
+These states are used to track the refund status and inform the Back Office user. In a few days after an order is refunded in the Back Office, Stripe finalizes the refund, causing the item states to change accordingly. Previously successful refunds may be declined and the other way around.
 
 If a refund fails, the Back Office user can go to the Stripe Dashboard to identify the cause of the failure. After resolving the issue, the item can be refunded again.
 
-In the default OMS configuration, seven days are allocated to Stripe to complete successful payment refunds. This is reflected in the Back Office by transitioning the items to the `payment refunded` state.
+In the default OMS configuration, seven days are allocated to Stripe to complete successful payment refunds. This is reflected in the Back Office by transitioning items to the `payment refunded` state.
 
 ## Retrieving and using payment details from Stripe
 
@@ -151,14 +150,16 @@ For instructions on using payment details, like the payment reference, from Stri
 
 ## Sending additional data to Stripe
 
-Stripe accepts to pass metadata in the API calls for additional data. To send additional data to Stripe, you can use the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field. This field is a key-value array that you can use to pass additional data to Stripe.
+Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array.
 
-The metadata field has some limitations you must ensure to be met:
+The metadata sent using the field must meet the following criteria:
 
-- Key length: max 40 characters
-- Value length: max 500 characters
-- Key-value pairs: max 50 pairs
+| ATTRIBUTE | MAXIMUM VALUE |
+| - | - |
+| Key length | 40 characters |
+| Value length | 500 characters |
+| Key-value pairs | 50 pairs |
 
-When you pass the metadata to Stripe, it is stored in the payment object and can be retrieved later. For example, you can use the metadata to store f.e. an external ID or any other data you need to pass to Stripe.
+When you pass metadata to Stripe, it's stored in the payment object and can be retrieved later. For example, this way you can pass an external ID to Stripe.
 
-When a `PaymentIntent` is created on the Stripe side you can see your passed `additionalPaymentData` in the Stripe UI. 
+When a `PaymentIntent` is created on the Stripe side, you can see your passed `additionalPaymentData` in the Stripe Dashboard.

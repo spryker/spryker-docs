@@ -1,8 +1,7 @@
 ---
 title: Project guidelines for the Stripe app
 description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
-draft: true
-last_updated: Jan 31, 2024
+last_updated: Jul 22, 2024
 template: howto-guide-template
 related:
   - title: Stripe
@@ -135,12 +134,12 @@ console data:import glossary
 
 For instructions on using payment details, like the payment reference, from Stripe, see [Retrieve and use payment details from third-party PSPs](https://docs.spryker.com/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html)
 
-## How to Embed Stripe Payment Page to Your Site (iframe approach)
-By default, the Stripe App payment flow assumes that the payment page is on another domain, so a user will be redirected to this page after order placement.
-To enhance your storefront users' experience, you can embed the Stripe payment page directly into your site. Follow these steps:
+## Embed the Stripe payment page using iframe
 
-### Step 1: Configure Payment Module
-Create or modify project-level `PaymentConfig.php` file (`Pyz\Zed\Payment\PaymentConfig`) and add the following configuration:
+By default, the Stripe App payment flow assumes that the payment page is on another domain. When a user places an order, they're redirected to the Stripe payment page. To improve the user experience, you can embed the Stripe payment page directly into your website as follows:
+
+
+1. Create or update `PaymentConfig.php` (`Pyz\Zed\Payment\PaymentConfig`) on the project level with the following configuration:
 ```php
 namespace Pyz\Zed\Payment;
 
@@ -149,14 +148,15 @@ class PaymentConfig extends \Spryker\Zed\Payment\PaymentConfig
     public function getStoreFrontPaymentPage(): string
     {        
         // Please make sure that domain is whitelisted in the config_default.php `$config[KernelConstants::DOMAIN_WHITELIST]`
-        return '/payment'; //or any other URL on your storefront domain e.g. https://your-site.com/payment-with-stripe 
+        return '/payment'; //or any other URL on your storefront domain e.g. https://your-site.com/payment-with-stripe
     }
 }
 ```
-In this setup, the redirect URL will be added as a query parameter `url` (the value is base64-encoded) to the URL you specified in the `getStoreFrontPaymentPage()` method.
 
-### Step 2: Create the Stripe Payment Page
-Create a new page in your project to render the Stripe payment page. Here's a minimal PHP example:
+In this setup, the redirect URL will be added as a `url` query parameter to the URL you've specified in the `getStoreFrontPaymentPage()` method; the value of the parameter is base64-encoded.
+
+
+2. Create a page to render the Stripe payment page. Here's a minimal PHP example:
 
 ```php
 <!DOCTYPE html>
@@ -171,13 +171,12 @@ Create a new page in your project to render the Stripe payment page. Here's a mi
 </html>
 ```
 
-If your storefront application is built using front-end technologies (headless) and Spryker Glue API, you need to follow your framework library documentation
-and create a new page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response. 
+If your Storefront is based on third-party frontend technologies, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
 
 
-If your storefront application is Yves-based, you need to create a new controller to render this page
+3. If your Storefront application is Yves-based, create a controller to render this page:
 
-1. Create a new controller in `src/Pyz/Yves/PaymentPage/Controller/PaymentController.php`:
+**src/Pyz/Yves/PaymentPage/Controller/PaymentController.php**
 ```php
 
 namespace Pyz\Yves\PaymentPage\Controller;
@@ -205,8 +204,9 @@ class PaymentController extends AbstractController
 
 ```
 
-2. Create a new template for this page in `src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig`:
+3. Create a template for the page:
 
+**src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig**
 ```twig
 {% extends template('page-layout-checkout', 'CheckoutPage') %}
 
@@ -220,8 +220,9 @@ class PaymentController extends AbstractController
 {% endblock %}
 ```
 
-3. Create a new route for this controller in `src/Pyz/Yves/PaymentPage/Plugin/Router/EmbeddedPaymentPageRouteProviderPlugin.php`:
+3. Create a route for the controller:
 
+**src/Pyz/Yves/PaymentPage/Plugin/Router/EmbeddedPaymentPageRouteProviderPlugin.php**
 ```php
 namespace Pyz\Yves\PaymentPage\Plugin\Router;
 
@@ -245,4 +246,4 @@ class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
 }
 ```
 
-4. Add router plugin to the `RouterDependencyProvider::getRouteProvider()` in `src/Pyz/Yves/Router/RouterDependencyProvider.php`.
+4. In `src/Pyz/Yves/Router/RouterDependencyProvider.php`, add a router plugin to `RouterDependencyProvider::getRouteProvider()`.

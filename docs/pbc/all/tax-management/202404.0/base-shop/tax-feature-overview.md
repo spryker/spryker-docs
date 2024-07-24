@@ -47,14 +47,28 @@ In a tax system, the tax rate is the ratio (usually expressed as a percentage) a
 
 A *tax set* is a set of tax rates that can be applied to a specific product.
 
-![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/base-shop/tax-feature-overview.md/tax-rate.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 Once the rate is defined, you can attach it to a tax set(s). A tax set can contain from one to many tax rates.
-![Tax set](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-set.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/base-shop/tax-feature-overview.md/tax-set.mp4" type="video/mp4">
+  </video>
+</figure>
 
 The described values are defined in the **Back Office&nbsp;<span aria-label="and then">></span> Taxes** section.
 
-![Tax section](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/taxes-section.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/base-shop/tax-feature-overview.md/taxes-section.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Avalara system for automated tax compliance
 

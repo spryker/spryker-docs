@@ -1,7 +1,7 @@
 ---
 title: Configure Payone
 description: Find out how you can configure the Payone app in your Spryker shop
-last_updated: Feb 21 2023
+last_updated: Jul 20, 2023
 template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-provider/202212.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html

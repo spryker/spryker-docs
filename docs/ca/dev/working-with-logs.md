@@ -55,8 +55,9 @@ The following audit events are logged by default:
 * Failed login
 * Password reset requested
 * Password updated after reset
-* Impersonation started
-* Impersonation started (for the “Agent Assist” feature)
+* [Agent Assist feature](/docs/pbc/all/user-management/{{site.version}}/base-shop/agent-assist-feature-overview.html) logs:
+  * Impersonation started
+  * Impersonation ended
 
 ## Search in logs
 

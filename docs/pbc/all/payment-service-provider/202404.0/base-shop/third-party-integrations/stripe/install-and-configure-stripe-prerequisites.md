@@ -239,7 +239,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER]
 
 `OauthClientConstants` are replacing the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
 
-#### Navigation
+### Update navigation
 
 Update `config/Zed/navigation.xml` as follows:
 
@@ -270,7 +270,7 @@ Update `config/Zed/navigation.xml` as follows:
 </config>
 ```
 
-#### Plugins
+### Add plugins
 
 ##### KernelApp
 - `\Spryker\Zed\MerchantApp\Communication\Plugin\KernelApp\MerchantAppRequestExpanderPlugin` - Add this one to `\Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins()`
@@ -284,7 +284,7 @@ Update `config/Zed/navigation.xml` as follows:
 - `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin` - Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`
 - `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppAclEntityConfigurationExpanderPlugin`- Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()`
   `
-##### Oms
+### Configure OMS
 
 1. Add the following commands to `\Pyz\Zed\Oms\OmsDependencyProvider::extendCommandPlugins()`:
 ```php
@@ -301,14 +301,14 @@ $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesP
 #### Configuration
 
 ##### AclConfig
-- Add `'merchant-app-merchant-portal-gui'` to your `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`.
+- Add `'merchant-app-merchant-portal-gui'` to `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`.
 
 ##### MessageBrokerConfig
-- `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` to your `\Pyz\Zed\MessageBroker\MessageBrokerConfig::getDefaultWorkerChannels()`.
+- `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` to `\Pyz\Zed\MessageBroker\MessageBrokerConfig::getDefaultWorkerChannels()`.
 
-### State-Machine configuration
+### Configure state machine
 
-Checkout the ForeignPaymentProviderStateMachine01.xml file in the `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/` directory. This file contains the state-machine configuration for the payment provider. You can copy this file to your project and adjust it according to your needs.
+Copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust to your needs.
 
 
 ## Next step

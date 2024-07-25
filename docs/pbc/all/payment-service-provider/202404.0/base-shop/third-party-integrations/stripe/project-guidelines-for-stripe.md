@@ -1,16 +1,15 @@
 ---
 title: Project guidelines for the Stripe app
 description: Find out about the SCCOS modules needed for the Stripe App to function and their configuration
-draft: true
-last_updated: Jan 31, 2024
+last_updated: Jul 22, 2024
 template: howto-guide-template
 related:
-  - title: Stripe
-    link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
+   - title: Stripe
+     link: docs/pbc/all/payment-service-provider/page.version/base-shop/third-party-integrations/stripe/stripe.html
 redirect_from:
-- /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
-- /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
+   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/stripe/install-stripe.html
+   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/install-stripe.html
+   - /docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/stripe/integrate-stripe.html
 
 ---
 
@@ -33,50 +32,50 @@ This example demonstrates how to configure the order state machine transition fr
 ```xml
 <?xml version="1.0"?>
 <statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+        xmlns="spryker:oms-01"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
 >
 
-    <process name="SomeProjectProcess" main="true">
+   <process name="SomeProjectProcess" main="true">
 
-        <!-- other configurations -->
+      <!-- other configurations -->
 
-        <states>
+      <states>
 
-            <!-- other states -->
+         <!-- other states -->
 
-          <state name="payment capture pending" display="oms.state.in-progress"/>
+         <state name="payment capture pending" display="oms.state.in-progress"/>
 
-            <!-- other states -->
+         <!-- other states -->
 
-        </states>
+      </states>
 
-        <transitions>
+      <transitions>
 
-            <!-- other transitions -->
+         <!-- other transitions -->
 
-            <transition happy="true">
-              <source>ready for dispatch</source>
-              <target>payment capture pending</target>
-              <event>capture payment</event>
-            </transition>
+         <transition happy="true">
+            <source>ready for dispatch</source>
+            <target>payment capture pending</target>
+            <event>capture payment</event>
+         </transition>
 
-            <!-- other transitions -->
+         <!-- other transitions -->
 
-        </transitions>
+      </transitions>
 
-        <events>
+      <events>
 
-            <!-- other events -->
+         <!-- other events -->
 
-            <event name="capture payment" onEnter="true" command="Payment/Capture"/>
+         <event name="capture payment" onEnter="true" command="Payment/Capture"/>
 
-            <!-- other events -->
+         <!-- other events -->
 
-        </events>
+      </events>
 
-    </process>
+   </process>
 
 </statemachine>
 ```
@@ -108,7 +107,7 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 ```
 
 2. If you want to change the default payment provider or method names, do the following:
-    1. Make sure the names are translated in your payment step template:
+   1. Make sure the names are translated in your payment step template:
 
 ```twig
 {% raw %}
@@ -130,6 +129,20 @@ Stripe,Pay Online with Stripe,en_US
 ```bash
 console data:import glossary
 ```
+
+## Processing refunds
+
+In the default OMS configuration, a refund can be done for an order or an individual item. The refund action is initiated by a Back Office user triggering the `Payment/Refund` command. The selected item enters the `payment refund pending` state, awaiting the response from Stripe.
+
+During this period, Stripe attempts to process the request, which results in success or failure:
+* Success: the items transition to the `payment refund succeeded` state, although the payment isn't refunded at this step.
+* Failure: the items transition to the `payment refund failed` state.
+
+These states are used to track the refund status and inform the Back Office user. In a few days after an order is refunded in the Back Office, Stripe finalizes the refund, causing the item states to change accordingly. Previously successful refunds may be declined and the other way around.
+
+If a refund fails, the Back Office user can go to the Stripe Dashboard to identify the cause of the failure. After resolving the issue, the item can be refunded again.
+
+In the default OMS configuration, seven days are allocated to Stripe to complete successful payment refunds. This is reflected in the Back Office by transitioning items to the `payment refunded` state.
 
 ## Retrieving and using payment details from Stripe
 
@@ -159,4 +172,18 @@ There are several states the onboarding process can be in:
 **Note**: You need to inform your Merchants about the required onboarding so they know about the process. Spryker doesn't support this as this is different for each project.
 **Note**: The onboarding process is handled by Stripe. You can see the status of the onboarding in the Stripe Dashboard.
 
- 
+## Sending additional data to Stripe
+
+Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array.
+
+The metadata sent using the field must meet the following criteria:
+
+| ATTRIBUTE | MAXIMUM VALUE |
+| - | - |
+| Key length | 40 characters |
+| Value length | 500 characters |
+| Key-value pairs | 50 pairs |
+
+When you pass metadata to Stripe, it's stored in the payment object and can be retrieved later. For example, this way you can pass an external ID to Stripe.
+
+When a `PaymentIntent` is created on the Stripe side, you can see your passed `additionalPaymentData` in the Stripe Dashboard.

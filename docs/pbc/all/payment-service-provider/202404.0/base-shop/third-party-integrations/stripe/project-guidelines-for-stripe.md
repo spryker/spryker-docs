@@ -185,10 +185,14 @@ In this setup, the redirect URL will be added as a `url` query parameter to the 
 </html>
 ```
 
-If your Storefront is based on third-party frontend technologies, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
+3. Based on your frontend setup, set up the payment page in one the following ways:
+* If your Storefront is based on third-party frontend technologies, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
+* If your Storefront is based on Yves, follow [Create an Yves page for rendering the Stripe payment page](Create-an-Yves-page-for-rendering-the-Stripe-payment-page).
+
+### Create an Yves page for rendering the Stripe payment page
 
 
-3. If your Storefront application is Yves-based, create a controller to render this page:
+1. Create a controller to render the payment page:
 
 **src/Pyz/Yves/PaymentPage/Controller/PaymentController.php**
 ```php
@@ -218,7 +222,7 @@ class PaymentController extends AbstractController
 
 ```
 
-4. Create a template for the page:
+2. Create a template for the page:
 
 **src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig**
 ```twig

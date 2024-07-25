@@ -218,7 +218,7 @@ class PaymentController extends AbstractController
 
 ```
 
-3. Create a template for the page:
+4. Create a template for the page:
 
 **src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig**
 ```twig
@@ -234,7 +234,7 @@ class PaymentController extends AbstractController
 {% endblock %}
 ```
 
-3. Create a route for the controller:
+5. Create a route for the controller:
 
 **src/Pyz/Yves/PaymentPage/Plugin/Router/EmbeddedPaymentPageRouteProviderPlugin.php**
 ```php
@@ -260,7 +260,7 @@ class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
 }
 ```
 
-4. In `src/Pyz/Yves/Router/RouterDependencyProvider.php`, add a router plugin to `RouterDependencyProvider::getRouteProvider()`.
+6. In `src/Pyz/Yves/Router/RouterDependencyProvider.php`, add a router plugin to `RouterDependencyProvider::getRouteProvider()`.
 
 
 ## Sending additional data to Stripe

@@ -225,11 +225,8 @@ Install the required modules:
 composer require spryker/merchant-app spryker/merchant-app-merchant-portal-gui
 ```
 
-### Configuration
 
-To enable your application to work with Stripe in a Marketplace context, you need to configure your application by adding some plugins, update some configurations, and update your state-machine configuration.
-
-#### config_default.php
+### config_default.php
 
 Update your `config_default.php` file with the following changes:
 
@@ -289,17 +286,18 @@ Update `config/Zed/navigation.xml` as follows:
   `
 ##### Oms
 
-Add the required commands to your `\Pyz\Zed\Oms\OmsDependencyProvider::extendCommandPlugins()`:
+1. Add the following commands to `\Pyz\Zed\Oms\OmsDependencyProvider::extendCommandPlugins()`:
 ```php
 $commandCollection->add(new MerchantPayoutCommandByOrderPlugin(), 'SalesPaymentMerchant/Payout');
 $commandCollection->add(new MerchantPayoutReverseCommandByOrderPlugin(), 'SalesPaymentMerchant/ReversePayout');
 ```
 
-Add the required conditions to your `\Pyz\Zed\Oms\OmsDependencyProvider::extendConditionPlugins()`:
+2. Add the following conditions to `\Pyz\Zed\Oms\OmsDependencyProvider::extendConditionPlugins()`:
 ```php
 $conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPaidOut');
 $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
 ```
+
 #### Configuration
 
 ##### AclConfig

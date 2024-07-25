@@ -153,7 +153,7 @@ For instructions on using payment details, like the payment reference, from Stri
 By default, the Stripe App payment flow assumes that the payment page is on another domain. When a user places an order, they're redirected to the Stripe payment page. To improve the user experience, you can embed the Stripe payment page directly into your website as follows:
 
 
-1. Create or update `PaymentConfig.php` (`Pyz\Zed\Payment\PaymentConfig`) on the project level with the following configuration:
+1. Create or update `src/Pyz/Zed/Payment/PaymentConfig.php` with the following configuration:
 ```php
 namespace Pyz\Zed\Payment;
 

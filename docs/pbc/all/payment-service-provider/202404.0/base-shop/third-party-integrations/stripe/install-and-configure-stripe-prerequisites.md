@@ -240,17 +240,17 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
 $config[KernelAppConstants::TENANT_IDENTIFIER]
 ```
 
-The OauthClientConstants are replacements for the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
+`OauthClientConstants` are replacing the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
 
 #### Navigation
 
-Update your `config/Zed/navigation.xml` file with the following changes:
+Update `config/Zed/navigation.xml` as follows:
 
 ```xml
 <?xml version="1.0"?>
 <config>
     ...
-  
+
     <merchant-portal-payment-settings>
         <label>Payment Settings</label>
         <title>Payment Settings</title>
@@ -283,7 +283,7 @@ Update your `config/Zed/navigation.xml` file with the following changes:
 - `\Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin` - Add this one to `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()`
 - `\Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin` - Add this one to `\Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()` (if not already present)
 
-##### AclMerchantPortal 
+##### AclMerchantPortal
 - `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin` - Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()`
 - `\Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppAclEntityConfigurationExpanderPlugin`- Add this one to `\Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins()`
   `

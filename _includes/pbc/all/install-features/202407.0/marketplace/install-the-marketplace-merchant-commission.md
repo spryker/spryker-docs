@@ -1027,10 +1027,9 @@ class MerchantCommissionGuiDependencyProvider extends SprykerMerchantCommissionG
 
 {% info_block warningBox "Verification" %}
 
-Make sure the configured plugins have been registered and are working as expected.
-
-1. Go to Backoffice and navigate to `Marketplace > Merchant Commission`.
-2. Make sure you can export merchant commission data by clicking on `Export` button in a top right corner.
+1. In the Back Office, go to **Marketplace** > **Merchant Commission**.
+2. On the **Merchant Commission** page, click **Export**
+  Make sure this exports merchant commissions correctly.
 
 {% endinfo_block %}
 

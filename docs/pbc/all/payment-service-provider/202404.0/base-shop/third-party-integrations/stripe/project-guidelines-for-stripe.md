@@ -170,7 +170,11 @@ class PaymentConfig extends \Spryker\Zed\Payment\PaymentConfig
 In this setup, the redirect URL will be added as a `url` query parameter to the URL you've specified in the `getStoreFrontPaymentPage()` method; the value of the parameter is base64-encoded.
 
 
-2. Create a page to render the Stripe payment page. Here's a minimal PHP example:
+2. Depending on your frontend setup, create a page to render the Stripe payment page in one of the following ways:
+
+* Use the following minimal page regardless of the frontend technology used.
+* If your Storefront is based on a third-party frontend, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
+* If your Storefront is based on Yves, there are two options, follow [Create an Yves page for rendering the Stripe payment page](Create-an-Yves-page-for-rendering-the-Stripe-payment-page).
 
 ```php
 <!DOCTYPE html>
@@ -185,9 +189,6 @@ In this setup, the redirect URL will be added as a `url` query parameter to the 
 </html>
 ```
 
-3. Based on your frontend setup, set up the payment page in one the following ways:
-* If your Storefront is based on third-party frontend technologies, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
-* If your Storefront is based on Yves, follow [Create an Yves page for rendering the Stripe payment page](Create-an-Yves-page-for-rendering-the-Stripe-payment-page).
 
 ### Create an Yves page for rendering the Stripe payment page
 

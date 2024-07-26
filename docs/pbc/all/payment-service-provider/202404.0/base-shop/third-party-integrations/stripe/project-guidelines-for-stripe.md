@@ -227,6 +227,7 @@ class PaymentController extends AbstractController
 
 **src/Pyz/Yves/PaymentPage/Theme/default/views/payment.twig**
 ```twig
+{% raw %}
 {% extends template('page-layout-checkout', 'CheckoutPage') %}
 
 {% define data = {
@@ -237,6 +238,7 @@ class PaymentController extends AbstractController
 {% block content %}
     <iframe  src="{{ data.iframeUrl }}" class="payment-iframe" style="border:0; display:block; width:100%; height:700px"></iframe>
 {% endblock %}
+{% endraw %}
 ```
 
 3. Create a route for the controller:

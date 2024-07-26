@@ -174,7 +174,7 @@ In this setup, the redirect URL will be added as a `url` query parameter to the 
 
 * Use the following minimal page regardless of the frontend technology used.
 * If your Storefront is based on a third-party frontend, follow the documentation of your framework to create a page to render the Stripe payment page using query parameters from the redirect URL provided in the Glue API `POST /checkout` response.
-* If your Storefront is based on Yves, there are two options, follow [Create an Yves page for rendering the Stripe payment page](Create-an-Yves-page-for-rendering-the-Stripe-payment-page).
+* If your Storefront is based on Yves, follow [Create an Yves page for rendering the Stripe payment page](Create-an-Yves-page-for-rendering-the-Stripe-payment-page).
 
 ```php
 <!DOCTYPE html>

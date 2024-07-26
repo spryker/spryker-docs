@@ -131,7 +131,6 @@ Add the configuration:
 | SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS	 | Defines the retry delay between the attempts to acquire Redis lock in microseconds. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS	 | Defines the time to live for Redis lock in milliseconds. | Spryker\Shared\SessionRedis |
 | SessionFileConstants::ZED_SESSION_FILE_PATH	 | Defines the filesystem path for storing Zed sessions. | Spryker\Shared\SessionFile |
-| SessionRedisConstants::ZED_SESSION_REDIS_PROTOCOL	 | Defines the protocol for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PASSWORD	 | Defines the password for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_HOST	 | Defines the host for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
 | SessionRedisConstants::ZED_SESSION_REDIS_PORT	 | Defines the protocol for connecting to Redis as a Zed session storage. | Spryker\Shared\SessionRedis |
@@ -535,7 +534,7 @@ use Spryker\Zed\Security\Communication\Plugin\Application\ZedSecurityApplication
 class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 {
     /**
-     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface
+     * @return list<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
      */
     protected function getApplicationPlugins(): array
     {

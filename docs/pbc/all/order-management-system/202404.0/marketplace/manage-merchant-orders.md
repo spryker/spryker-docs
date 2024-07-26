@@ -41,7 +41,11 @@ To change the state of a single item in a merchant order:
 2. Switch to the **Items** tab.
 3. Next to the item you want to change the state for, click the corresponding state. The page refreshes to show the message about the successful state change.
 
-![change-the-states-of-a-single-item](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/change-the-states-of-a-single-item.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.md/change-the-states-of-a-single-item.mp4" type="video/mp4">
+  </video>
+</figure>
 
 **Tips and tricks**
 <br>To update the states of the merchant order items in bulk:
@@ -52,7 +56,12 @@ To change the state of a single item in a merchant order:
 
 3. Select in checkboxes the products you want to update the state of, and click the available button state that appeared after the selection. You can also click a button state on the top right of the drawer to update the state of all the items that match this state.
 
-![update-the-states-of-the-merchant-order-items-in-bulk](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Orders/update-the-states-of-the-merchant-order-items-in-bulk.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/marketplace/manage-merchant-orders.md/update-the-states-of-the-merchant-order-items-in-bulk.mp4" type="video/mp4">
+  </video>
+</figure>
 
 {% info_block warningBox "Note" %}
 

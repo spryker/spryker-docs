@@ -6,16 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-initialization-improvement
 originalArticleId: 2b3938fa-d016-429f-b317-2951e909eca4
 redirect_from:
-  - /2021080/docs/search-initialization-improvement
-  - /2021080/docs/en/search-initialization-improvement
-  - /docs/search-initialization-improvement
-  - /docs/en/search-initialization-improvement
-  - /v6/docs/search-initialization-improvement
-  - /v6/docs/en/search-initialization-improvement
-  - /v5/docs/search-initialization-improvement
-  - /v5/docs/en/search-initialization-improvement
-  - /v4/docs/search-initialization-improvement
-  - /v4/docs/en/search-initialization-improvement
   - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
 
@@ -45,7 +35,7 @@ Make sure that the following module has been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| SeaRch | vendor/spryker/search |
+| Search | vendor/spryker/search |
 
 {% endinfo_block %}
 

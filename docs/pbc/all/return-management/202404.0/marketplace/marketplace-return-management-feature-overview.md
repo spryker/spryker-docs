@@ -62,7 +62,12 @@ All the returns created by the buyer or by the Back Office user for the buyer ar
 
 The following figure shows how to create a return, view its details, and print a slip:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Return+Management/create-a-return-marketplace.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/return-management/marketplace/marketplace-return-management-feature-overview.md/create-a-return-marketplace.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Marketplace Return Management in the Back Office
 

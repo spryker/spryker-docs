@@ -44,15 +44,13 @@ The Stripe App is capable of handling payments in a Marketplace context. This ca
 - Stripe Secret Key
 
 When you save the configuration your Merchant Portal application will be updated and the page with Payment Settings will get the functionality of onboarding a merchant to Stripe. The onboarding is required to let Stripe know which Merchants are part of the Marketplace and to handle the payments, transfer money, and reverse transfers accordingly.
-From this moment your customers can use Stripe to pay for their orders.
 
 ### Configuring Transfers
 
-In Spryker we used the terms "Payout" and "Reverse Payout" for transferring money from the Marketplace to the Merchant and reverse the transfer respectively.
+The terms *Payout* and *Reverse Payout* refer to transferring money from the Marketplace to the Merchant and reversing the transfer respectively.
 
-In the context of Stripe in a Marketplace, you need to configure the transfers. The transfers are handled by the `MerchantPayoutCommandByOrderPlugin` and `MerchantPayoutReverseCommandByOrderPlugin` commands. These commands are responsible for transferring money from the Marketplace to the Merchant and reverse the transfer respectively when needed.
+In the context of Stripe in a Marketplace, you need to configure the transfers. Transfers are handled by the `MerchantPayoutCommandByOrderPlugin` and `MerchantPayoutReverseCommandByOrderPlugin` commands. These commands transfer money from the Marketplace to the Merchant and reverse the transfer respectively when needed.
 
-You also need to define when this should happen. You have several options here which are default options provided by the OMS. The simplest solution is to set a state-machine-timeout for the `MerchantPayoutCommandByOrderPlugin` command. This will trigger the command after the timeout is reached. You can also define your own conditions and triggers for the command.
+By default, there're several options to trigger transfers in OMS. The simplest one is to set a state-machine-timeout for the `MerchantPayoutCommandByOrderPlugin` command. This triggers the command after the timeout is reached. You can also define your own conditions and triggers for the command.
 
-You can also set up a cronjob that triggers the event for the transition when you have more sophisticated requirements e.g. transfer money to merchants every last friday of the month.
-
+With more sophisticated requirements, like transferring money to merchants on the last Firday of every month, you can set up a cronjob that triggers the event for the transition.

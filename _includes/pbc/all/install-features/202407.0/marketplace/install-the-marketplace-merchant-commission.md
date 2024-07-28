@@ -572,7 +572,7 @@ use Spryker\Zed\MerchantCommissionDataImport\Communication\Plugin\DataImport\Mer
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
+     * @return list<\Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface>
      */
     protected function getDataImporterPlugins(): array
     {
@@ -606,7 +606,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Symfony\Component\Console\Command\Command>
+     * @return list<\Symfony\Component\Console\Command\Command>
      */
     protected function getConsoleCommands(Container $container): array
     {
@@ -720,7 +720,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
      *
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
+     * @return list<\Spryker\Zed\CalculationExtension\Dependency\Plugin\CalculationPluginInterface>
      */
     protected function getOrderCalculatorPluginStack(Container $container): array
     {
@@ -743,12 +743,12 @@ use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Cart\SanitizeMerchantCommissionPreReloadPlugin;
 use Spryker\Zed\Kernel\Container;
 
-class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
+class CartDependencyProvider extends SprykerCartDependencyProvider
 {
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
+     * @return list<\Spryker\Zed\CartExtension\Dependency\Plugin\PreReloadItemsPluginInterface>
      */
     protected function getPreReloadPlugins(Container $container): array
     {
@@ -773,7 +773,7 @@ use Spryker\Zed\MerchantSalesOrderSalesMerchantCommission\Communication\Plugin\M
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
+     * @return list<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>
      */
     protected function getMerchantOrderPostCreatePlugins(): array
     {
@@ -831,7 +831,7 @@ use Spryker\Zed\SalesMerchantCommission\Communication\Plugin\Refund\MerchantComm
 class RefundDependencyProvider extends SprykerRefundDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\RefundExtension\Dependency\Plugin\RefundPostSavePluginInterface>
+     * @return list<\Spryker\Zed\RefundExtension\Dependency\Plugin\RefundPostSavePluginInterface>
      */
     protected function getRefundPostSavePlugins(): array
     {
@@ -993,6 +993,43 @@ In this example, the `fk_sales_order` column corresponds to the sales order ID, 
 
 3. To verify the commission calculation, make sure the commission amount for each order item matches the commission rules you've set up for each merchant.
   The commission amounts may vary depending on the commission rules you've set up for each merchant. If the commission amounts don't match your expectations, review the commission rules in the `spy_merchant_commission` table.
+
+{% endinfo_block %}
+
+4. To enable the merchant commission GUI, register the following plugins:
+
+| PLUGIN                                   | SPECIFICATION                      | PREREQUISITES | NAMESPACE                                                                           |
+|------------------------------------------|------------------------------------|---------------|-------------------------------------------------------------------------------------|
+| DataExportMerchantCommissionExportPlugin | Exports merchant commissions data. |               | Spryker\Zed\MerchantCommissionDataExport\Communication\Plugin\MerchantCommissionGui |
+
+**src/Pyz/Zed/MerchantCommissionGui/MerchantCommissionGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\MerchantCommissionGui;
+
+use Spryker\Zed\MerchantCommissionDataExport\Communication\Plugin\MerchantCommissionGui\DataExportMerchantCommissionExportPlugin;
+use Spryker\Zed\MerchantCommissionGui\MerchantCommissionGuiDependencyProvider as SprykerMerchantCommissionGuiDependencyProvider;
+use Spryker\Zed\MerchantCommissionGuiExtension\Communication\Dependency\Plugin\MerchantCommissionExportPluginInterface;
+
+class MerchantCommissionGuiDependencyProvider extends SprykerMerchantCommissionGuiDependencyProvider
+{
+    /**
+     * @return \Spryker\Zed\MerchantCommissionGuiExtension\Communication\Dependency\Plugin\MerchantCommissionExportPluginInterface
+     */
+    protected function getMerchantCommissionExportPlugin(): MerchantCommissionExportPluginInterface
+    {
+        return new DataExportMerchantCommissionExportPlugin();
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. In the Back Office, go to **Marketplace** > **Merchant Commission**.
+2. On the **Merchant Commission** page, click **Export**
+  Make sure this exports merchant commissions correctly.
 
 {% endinfo_block %}
 

@@ -229,6 +229,11 @@ $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY')
 $config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = json_decode(getenv('SPRYKER_OAUTH_CLIENT_CONFIGURATION'), true) ?: [];
 ```
 
+## ACL configuration
+
+Set up the ACL configuration according to your requirements and restrict access to sensitive data. For more information, see [ACL configuration](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
+
+
 ## Summary
 
 To sum up, the main points to keep the data secure are the following:

@@ -104,6 +104,7 @@ use Pyz\Yves\Log\Plugin\Log\YvesCheckoutAuditLoggerConfigPlugin;
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
     //other plugins
     YvesCheckoutAuditLoggerConfigPlugin::class,
+    //other plugins
 ];
 ```
 
@@ -123,43 +124,96 @@ use Pyz\Zed\Log\Communication\Plugin\Log\ZedCheckoutAuditLoggerConfigPlugin;
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_ZED] = [
     //other plugins
     ZedCheckoutAuditLoggerConfigPlugin::class,
+    //other plugins
 ];
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE] = [
     //other plugins
     GlueCheckoutAuditLoggerConfigPlugin::class,
+    //other plugins
 ];
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_GLUE_BACKEND] = [
     //other plugins
     GlueBackendCheckoutAuditLoggerConfigPlugin::class,
+    //other plugins
 ];
 $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
     //other plugins
     MerchantPortalCheckoutAuditLoggerConfigPlugin::class,
+    //other plugins
 ];
 ```
 
 
 Now you can add audit logs with `Checkout` type across the application. Example:
 
+1. Introduce `AuditLoggerCheckoutPostSavePlugin` which is called after the order is placed:
+
+**Pyz/Zed/Log/Communication/Plugin/Checkout/AuditLoggerCheckoutPostSavePlugin.php**
+
 ```php
 <?php
 
-use Generated\Shared\Transfer\AuditLoggerConfigCriteriaTransfer;
-use Spryker\Shared\Log\AuditLoggerTrait;
+namespace Pyz\Zed\Log\Communication\Plugin\Checkout;
 
-class AnyCheckoutClassWhereAuditLoggingIsNeeded
+use Generated\Shared\Transfer\AuditLoggerConfigCriteriaTransfer;
+use Generated\Shared\Transfer\CheckoutResponseTransfer;
+use Generated\Shared\Transfer\QuoteTransfer;
+use Spryker\Shared\Log\AuditLoggerTrait;
+use Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface;
+use Spryker\Zed\Kernel\Communication\AbstractPlugin;
+
+/**
+ * @method \Spryker\Zed\Log\Communication\LogCommunicationFactory getFactory()
+ * @method \Spryker\Zed\Log\LogConfig getConfig()
+ * @method \Spryker\Zed\Log\Business\LogFacadeInterface getFacade()
+ */
+class AuditLoggerCheckoutPostSavePlugin extends AbstractPlugin implements CheckoutPostSaveInterface
 {
     use AuditLoggerTrait;
 
-    public function checkout()
+    /**
+     * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
+     * @param \Generated\Shared\Transfer\CheckoutResponseTransfer $checkoutResponseTransfer
+     *
+     * @return void
+     */
+    public function executeHook(QuoteTransfer $quoteTransfer, CheckoutResponseTransfer $checkoutResponseTransfer)
     {
-        //other logic
-
         $this->getAuditLogger(
             (new AuditLoggerConfigCriteriaTransfer())->setChannelName('checkout'),
         )->info('any checkout action', ['tags' => ['any_checkout_action']]);
-
-        //other logic
     }
 }
+
 ```
+
+2. Register the plugin in the `CheckoutDependencyProvider`:
+
+**Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Checkout;
+
+use Pyz\Zed\Log\Communication\Plugin\Checkout\AuditLoggerCheckoutPostSavePlugin;
+use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
+
+class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
+{
+/**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
+     */
+    protected function getCheckoutPostHooks(Container $container): array
+    {
+        return [
+            new AuditLoggerCheckoutPostSavePlugin(),
+        ];
+    }
+}
+
+```
+
+Now after the order is placed, the log with the `checkout` type will be added.

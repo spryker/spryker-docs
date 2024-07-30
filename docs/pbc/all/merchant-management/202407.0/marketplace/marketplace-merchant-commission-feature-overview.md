@@ -1,6 +1,12 @@
-The Marketplace Merchant Commission feature lets you collect commission from the merchants in a marketplace.
+---
+title: Marketplace Merchant Commission feature overview
+last_updated: Apr 23, 2021
+description: Merchant categories help you easily find relevant merchants.
+template: concept-topic-template
+---
 
-There can be several commission in a shop at a time. This lets you set up different types of commissions to cater for different merchant categories. For example, you might want to collect a smaller commission from merchants that sell products in categories with smaller selling volumes.
+
+The Marketplace Commissions enables marketplace owners to monetize their services by calculating a fee on sales made through their platform. This feature allows for flexible commission structures, such as fixed fees, percentage-based fees, or a combination of both. Commissions can apply differently across various categories, products, or sellers. For example, you might want to collect a smaller commission from merchants that sell products in categories with smaller selling volumes.
 
 ## Managing merchant commissions
 
@@ -9,9 +15,7 @@ Commissions can be imported by a developer. For import details, see [Import file
 
 Back Office users can view commissions in **Marketplace**>**Merchant Commissions**.
 
-## Merchant commission priority
 
-When several commissions exist in a system, commission priority is used to identify which commission is applied to each order item.
 
 
 ## Applying merchant commissions conditionally
@@ -57,7 +61,7 @@ To specify conditions based on categories, the following format is used: `catego
 
 Examples:
 * Apply commission to all products in the Electronics category: `category IS IN 'electronics'`
-* Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones';smartwatches'`.
+* Apply commission to all products in the Smartphones and Smartwatches categories: `category IS IN 'smartphones;smartwatches'`.
 
 
 If a category has child categories, applying a commission to the category applies it to the child categories too. For example, applying commission to the Electronics category also apply it to the Smart Watches category. So, you might want to set up conditions using child categories or exclude some child categories.
@@ -89,7 +93,7 @@ Example: `SKU IS IN '136_24425591;134_29759322'`
 
 ### Price mode based commissions
 
-To specify conditions based on price mode, use the following format: `price-mode = ""{PRICE_MODE}""`. For example, `price-mode = ""GROSS_MODE""`.
+To specify conditions based on price mode, use the following format: `price-mode = '{PRICE_MODE}'`. For example, `price-mode = 'GROSS_MODE'`.
 
 This can be useful if you want different commissions to be applied to orders in different prices modes.
 

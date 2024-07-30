@@ -298,7 +298,7 @@ $conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentM
 $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
 ```
 
-#### Configuration
+#### Project Configuration
 
 ##### AclConfig
 - Add `'merchant-app-merchant-portal-gui'` to `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`.

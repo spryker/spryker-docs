@@ -7,8 +7,6 @@ related:
     link: docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html
 ---
 
-This document describes how to add a new audit log type to your system.
-
 Audit logs are used for tracking system events, user actions, and other significant activities in an application. Adding new audit log types is needed when you have specific tracking requirements.
 
 In this guide, `Checkout` log type for the `Yves` application is added as an example. Using this guide, you can added different log types for any application.
@@ -108,7 +106,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_YVES] = [
 ];
 ```
 
-3. To add the `Checkout` type for other applications, introduce `AuditLoggerConfig` plugins following the example and register them in the config file:
+3. To add the `Checkout` type for other applications, introduce `AuditLoggerConfig` plugins and register them in the config file following the example:
 
 **config/Shared/config_default.php**
 
@@ -146,7 +144,7 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 
 Now you can add audit logs with `Checkout` type across the application. Example:
 
-1. Introduce `AuditLoggerCheckoutPostSavePlugin` which is called after the order is placed:
+1. Introduce `AuditLoggerCheckoutPostSavePlugin`, which is called after an order is placed:
 
 **Pyz/Zed/Log/Communication/Plugin/Checkout/AuditLoggerCheckoutPostSavePlugin.php**
 
@@ -216,4 +214,4 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 ```
 
-Now after the order is placed, the log with the `checkout` type will be added.
+Now after an order is placed, a log with the `checkout` type is added.

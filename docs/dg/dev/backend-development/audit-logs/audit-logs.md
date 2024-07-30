@@ -179,7 +179,7 @@ This example of an audit log entry was recorded during a successful login attemp
             "is_https": false,
             "hostname": "yves.de.spryker.local",
             "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-            "user_ip": "192.168.000.00",
+            "user_ip": "192.168.0.1",
             "request_method": "POST",
             "referer": "http://yves.de.spryker.local/en/login"
         },
@@ -230,9 +230,9 @@ $config[LogConstants::AUDIT_LOG_TAG_DISALLOW_LIST] = [
 
 ## Configuring the log path
 
-You can configure the log path to either a file or an output stream like `php://stdout`. If an application
-is hosted on AWS, the data logged to `php://stdout` can be displayed in CloudWatch for centralized monitoring and analysis.
-For example, the following configuration sets the log path for Yves, Zed, and Glue applications to `php://stdout`:
+You can configure the log path to either a file or an output stream like `php://stdout`. Please ensure that you have it 
+configured with `php://stdout` to see logs in the CloudWatch for centralized monitoring and analysis.
+The following configuration sets the log path for Yves, Zed, and Glue applications to `php://stdout`:
 
 **config/Shared/config_default.php**
 

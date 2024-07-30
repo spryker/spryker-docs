@@ -3,14 +3,26 @@ title: Audit logs
 description: Learn how to work with Audit logs in Spryker.
 template: howto-guide-template
 related:
-* [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html).
-* [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
-* [HowTo: Add a new audit log type](/docs/pbc/all/miscellaneous/{{site.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md)
+  - title: Install the Spryker Core feature
+    link: docs/pbc/all/miscellaneous/page.version/install-and-upgrade/install-features/install-the-spryker-core-feature.html
+  - title: Extend the log structure with additional data
+    link: docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html
+  - title: Add audit log types
+    link: /docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/how-to-add-a-new-audit-log-type.html
 ---
 
 Audit logging is used in web applications for tracking user activities and detecting unauthorized access. It helps meet regulatory requirements by ensuring accountability and transparency. Additionally, audit logs help with troubleshooting by recording system events and user interactions, making it easier to identify and resolve issues.
 
-## AuditLoggerConfigPluginInterface
+## Installing audit logs
+
+To install audit logs, install the following features:
+
+* [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202407.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+* [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/202407.0/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+* [Install the Spryker Core Back Office feature](/docs/pbc/all/back-office/202407.0/base-shop/install-and-upgrade/install-the-spryker-core-back-office-feature.html)
+* [Install the Agent Assist feature](/docs/pbc/all/user-management/202407.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html)
+
+## AuditLoggerConfigPluginInterface interface
 
 Audit logging is enabled by various plugins that implement `Spryker\Shared\LogExtension\Dependency\Plugin\AuditLoggerConfigPluginInterface`. These plugins provide the necessary configuration for audit logging across different applications.
 
@@ -79,7 +91,7 @@ interface AuditLoggerConfigPluginInterface
 
 ## Plugin configuration
 
-Each plugin supports one type of logs (channel), ensuring that different kinds of activities and events are properly categorized and managed. Different channels are needed to segregate log data based on its context, purpose, or level of importance. For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md).
+Each plugin supports one type of logs (channel), ensuring that different kinds of activities and events are properly categorized and managed. Different channels are used to segregate log data based on context, purpose, and level of importance. For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.html).
 
 The configuration for these plugins is defined in `config/Shared/config_default.php`. Here's an example of how to register plugins for different applications:
 
@@ -230,9 +242,7 @@ $config[LogConstants::AUDIT_LOG_TAG_DISALLOW_LIST] = [
 
 ## Configuring the log path
 
-You can configure the log path to either a file or an output stream like `php://stdout`. Please ensure that you have it 
-configured with `php://stdout` to see logs in the CloudWatch for centralized monitoring and analysis.
-The following configuration sets the log path for Yves, Zed, and Glue applications to `php://stdout`:
+You can configure the log path to either a file or an output stream like `php://stdout`. For centralized monitoring and analysis in CloudWatch, you need to configure it with `php://stdout`. The following configuration sets the log path for Yves, Zed, and Glue applications to `php://stdout`:
 
 **config/Shared/config_default.php**
 

@@ -10,12 +10,9 @@ The Marketplace Commissions enables marketplace owners to monetize their service
 
 ## Managing merchant commissions
 
-Commissions can be imported by a developer. For import details, see [Import file details: merchant_commission.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html).
+A Back Office user can import commissions by following [Import merchant commissions in the Back Office](/docs/pbc/all/merchant-management/202407.0/marketplace/import-merchant-commissions-in-the-back-office.html).
 
-
-Back Office users can view commissions in **Marketplace**>**Merchant Commissions**.
-
-
+A developer can manually import commissions. For import file details, see [Import file details: merchant_commission.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html).
 
 
 ## Applying merchant commissions conditionally
@@ -78,7 +75,6 @@ To specify conditions based on item prices, the following format is used: `item-
 Example: `item-price > '2' AND item-price <= '10.99'`.
 
 
-
 ### SKU-based conditions
 
 
@@ -97,7 +93,6 @@ To specify conditions based on price mode, use the following format: `price-mode
 
 This can be useful if you want different commissions to be applied to orders in different prices modes.
 
-This will require you to change how the commission is applied to use Apply commission on the sum item total price to pay after discounts with additions. (Represented by sumPriceToPayAggregation in GLUE API). Such customizations are easy, and we already factored that into our application design. To do that, follow the integration guide. on average, changing this logic requires 2h of developer's time: (spryker-docs/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugin.md)
 
 You might want to set up different commission rules based on this since it affects commission totals.
 

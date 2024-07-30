@@ -9,7 +9,7 @@ Follow the steps below to install feature core.
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker/data-export:"^0.1.0" spryker/data-export-extension:"^0.1.0" spryker/sales-data-export:"^0.1.0" --update-with-dependencies
+composer require spryker/data-export:"^0.1.0" spryker/data-export-extension:"^0.1.0" spryker/sales-data-export:"^0.2.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

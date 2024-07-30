@@ -79,7 +79,7 @@ interface AuditLoggerConfigPluginInterface
 
 ## Plugin configuration
 
-Each plugin supports one type of logs (channel). For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md).
+Each plugin supports one type of logs (channel), ensuring that different kinds of activities and events are properly categorized and managed. Different channels are needed to segregate log data based on its context, purpose, or level of importance. For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.md).
 
 The configuration for these plugins is defined in `config/Shared/config_default.php`. Here's an example of how to register plugins for different applications:
 

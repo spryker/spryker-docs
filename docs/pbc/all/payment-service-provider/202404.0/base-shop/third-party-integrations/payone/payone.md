@@ -2,7 +2,7 @@
 title: Integrate PayOne
 description: Payone partner integ
 template: concept-topic-template
-last_updated: Nov 21, 2023
+last_updated: Jul 31, 2024
 ---
 
 The Payone partner integration is available through the following integration methods:

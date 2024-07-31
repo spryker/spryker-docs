@@ -125,6 +125,7 @@ and for `spy_tax_rate` table:
 }
 ```
 
+
 {% info_block infoBox %}
 
 For configuration relations follow [Configure Dynamic Data installation](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html#configure-dynamic-data-installation) .
@@ -148,7 +149,6 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 | minLength | Defines the minimum length allowed for the field with a string type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined requirement.                                                                                                |
 | max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional.                                                                               |
 | min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional.                                                                             |
-
 
 {% info_block infoBox %}
 
@@ -199,6 +199,14 @@ If everything is set up correctly, you can follow [How to send request in Data E
 Or if you're in the middle of the integration process for the Data Exchange API follow [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html) to proceed with it.
 
 {% endinfo_block %}
+
+
+{% info_block infoBox %}
+
+Currently the Data Exchange API not suppoort to configure child relations. If you need to configure child relations, you can do it manually in the database or adjust configuration in file `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json` for import.
+
+{% endinfo_block %}
+
 
 ## Download Data Exchange API specification
 

@@ -152,6 +152,9 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 }
 ```
 
+Note: Tables that are not allowed for configuration are defined in `Spryker\Zed\DynamicEntity\Business\Reader\DisallowedTablesReader::getDefaultDisallowedTables()`.
+
+
 ### Configure Dynamic Data installation
 
 1. Optional: To set the default configuration data, create a configuration file:
@@ -163,6 +166,49 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 ```json
 [
   {
+        "tableName": "spy_tax_rate",
+        "tableAlias": "taxRates",
+        "isActive": true,
+        "definition": {
+            "identifier": "id_tax_rate",
+            "isDeletable": false,
+            "fields": [
+                {
+                    "fieldName": "id_tax_rate",
+                    "fieldVisibleName": "id_tax_rate",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "integer",
+                    "validation": { "isRequired": false }
+                },
+                {
+                    "fieldName": "fk_country",
+                    "fieldVisibleName": "fk_country",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "integer",
+                    "validation": { "isRequired": false }
+                },
+                {
+                    "fieldName": "name",
+                    "fieldVisibleName": "name",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "string",
+                    "validation": { "isRequired": true }
+                },
+                {
+                    "fieldName": "rate",
+                    "fieldVisibleName": "rate",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "float",
+                    "validation": { "isRequired": true }
+                }
+            ]
+        }
+    },
+    {
       "tableName": "spy_country",
       "tableAlias": "countries",
       "isActive": true,
@@ -238,6 +284,59 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
     }
 ]
 ```
+
+{% info_block warningBox "Verification" %}
+For debuging after adding the configuration to the file, you need to import the configuration into the database. 
+
+For import new configuration to the database, you need to clear the tables `spy_dynamic_entity_configuration`, `spy_dynamic_entity_configuration_relation`, and `spy_dynamic_entity_configuration_relation_field_mapping` and run the command:
+
+```bash
+vendor/bin/console setup:init-db
+```
+For checking the configuration in the database, you can use the following GET request:
+
+```bash
+GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+```
+
+Response sample:
+
+```json
+{
+    "data": [
+        {
+            "id_country": 60,
+            "iso2_code": "DE",
+            "iso3_code": "DEU",
+            "name": "Germany",
+            "postal_code_mandatory": true,
+            "postal_code_regex": "\\d{5}",
+            "countryTaxRates": [
+                {
+                    "id_tax_rate": 7,
+                    "fk_country": 60,
+                    "name": "Germany Standard",
+                    "rate": "19.00"
+                },
+                {
+                    "id_tax_rate": 16,
+                    "fk_country": 60,
+                    "name": "Germany Reduced",
+                    "rate": "7.00"
+                }
+            ]
+        },
+        // ... other discounts
+    ]
+}
+```
+
+{% endinfo_block %}
+
 </details>
 
 ##### Structure:

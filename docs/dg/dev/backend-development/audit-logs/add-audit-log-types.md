@@ -2,9 +2,10 @@
 title: Add audit log types
 description: Learn how to add an audit log type.
 template: howto-guide-template
+last_updated: Jun 16, 2024
 related:
   - title: Extend the log structure
-    link: docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html
+    link: docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
 ---
 
 Audit logs are used for tracking system events, user actions, and other significant activities in an application. Adding new audit log types is needed when you have specific tracking requirements.
@@ -13,7 +14,7 @@ In this guide, `Checkout` log type for the `Yves` application is added as an exa
 
 ## Prerequisites
 
-[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+[Install the Spryker Core feature](/docs/pbc/all/miscellaneous/202407.0/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
 
 
 ## Add a checkout log type for Yves
@@ -142,9 +143,9 @@ $config[LogConstants::AUDIT_LOGGER_CONFIG_PLUGINS_MERCHANT_PORTAL] = [
 ```
 
 
-Now you can add audit logs with `Checkout` type across the application. Example:
+Now you can add audit logs with `Checkout` type across the application.
 
-1. Introduce `AuditLoggerCheckoutPostSavePlugin`, which is called after an order is placed:
+3. Introduce `AuditLoggerCheckoutPostSavePlugin`, which is called after an order is placed:
 
 **Pyz/Zed/Log/Communication/Plugin/Checkout/AuditLoggerCheckoutPostSavePlugin.php**
 
@@ -185,7 +186,7 @@ class AuditLoggerCheckoutPostSavePlugin extends AbstractPlugin implements Checko
 
 ```
 
-2. Register the plugin in the `CheckoutDependencyProvider`:
+4. Register the plugin in the `CheckoutDependencyProvider`:
 
 **Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 

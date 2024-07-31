@@ -1,10 +1,11 @@
 ---
 title: Extend the audit log structure
-description: Learn how to enhance your audit log structure.
+description: Learn how to enhance your audit log structure
 template: howto-guide-template
+last_updated: Jun 16, 2024
 related:
   - title: Add audit log types
-    link: /docs/pbc/all/miscellaneous/page.version/tutorials-and-howtos/add-audit-log-types.html
+    link: docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html
 
 ---
 

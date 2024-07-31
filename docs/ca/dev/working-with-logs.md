@@ -39,7 +39,7 @@ To make log browsing easier, logs from the same source form a log stream. Log st
 
 ### Audit logs
 
-Audit logs are a type of logs used to track user-related activities. If audit logs are installed<!--()](link to audit logs md) --> in your project, you can browse them for the following log groups.
+Audit logs are a type of logs used to track user-related activities. If [audit logs are installed](/docs/dg/dev/backend-development/audit-logs/audit-logs.html), you can browse them for the following log groups:
 
 * Storefront (Yves)
 * Back Office

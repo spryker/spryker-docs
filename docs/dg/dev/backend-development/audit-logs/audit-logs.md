@@ -92,7 +92,7 @@ interface AuditLoggerConfigPluginInterface
 
 ## Plugin configuration
 
-Each plugin supports one type of logs (channel), ensuring that different kinds of activities and events are properly categorized and managed. Different channels are used to segregate log data based on context, purpose, and level of importance. For instructions on adding audit log types, see [Add audit log types](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-add-a-new-audit-log-type.html).
+Each plugin supports one type of logs (channel), ensuring that different kinds of activities and events are properly categorized and managed. Different channels are used to segregate log data based on context, purpose, and level of importance. For instructions on adding audit log types, see [Add audit log types](/docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html).
 
 The configuration for these plugins is defined in `config/Shared/config_default.php`. Here's an example of how to register plugins for different applications:
 
@@ -221,7 +221,7 @@ This example of an audit log entry was recorded during a successful login attemp
 
 The data can be further enriched by creating and integrating custom processors. These processors can be registered within the plugins implementing `AuditLoggerConfigPluginInterface`. This extensibility ensures that audit logs can be tailored to meet specific requirements and provide deeper insights into application activities.
 
-For instructions, see [HowTo: Extend the log structure with additional data](/docs/pbc/all/miscellaneous/{{page.version}}/tutorials-and-howtos/how-to-extend-the-log-structure-with-additional-data.html).
+For instructions, see [Extend the log structure](/docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html).
 
 ## Disallowing logging for specific tags
 

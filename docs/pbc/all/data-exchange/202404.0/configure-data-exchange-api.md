@@ -150,6 +150,7 @@ For configuration relations follow [Configure Dynamic Data installation](/docs/p
 | max | Defines the maximum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meet or doesn't exceed the defined requirement. Optional.                                                                               |
 | min | Defines the minimum value allowed for the field with an integer type. It enforces a boundary, ensuring that the field's value meets or exceeds the defined minimum requirement. Optional.                                                                             |
 
+
 {% info_block infoBox %}
 
 * We recommend setting `isEditable` and `isCreatable` to `false` for fields that serve as identifiers or keys, ensuring their immutability and preserving the integrity of the data model.

@@ -330,11 +330,10 @@ Response sample:
                 }
             ]
         },
-        // ... other discounts
+        // ... other countries with tax rates
     ]
 }
 ```
-
 {% endinfo_block %}
 
 </details>

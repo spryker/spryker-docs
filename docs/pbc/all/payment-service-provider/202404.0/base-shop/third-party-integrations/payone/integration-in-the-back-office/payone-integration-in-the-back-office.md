@@ -2,7 +2,7 @@
 title: "Payone: Integration in the Back Office"
 description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
 template: howto-guide-template
-last_updated: Nov 21, 2023
+last_updated: Aug 01, 2024
 redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html
@@ -77,6 +77,12 @@ When customers pay with PayPal, a shop owner can do the following:
 - Charge customers once the order is ready to be shipped, that is, capture the funds.
 - Cancel the entire customer order, that is, void the existing preauthorization. In this case, the customer is not charged anything.
 - Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items.
+
+## Current limitations
+
+- Payments can be properly canceled only from the the Back Office and not from the Payone PMI.
+- Payments can't be partially canceled. We create one payment intent per order and it can either be authorized or fully cancelled.
+- When you cancel an item on the order details page, all order items are canceled.
 
 ## Next steps
 

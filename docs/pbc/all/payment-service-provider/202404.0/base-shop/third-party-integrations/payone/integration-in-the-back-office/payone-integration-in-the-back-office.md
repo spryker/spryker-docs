@@ -81,8 +81,8 @@ When customers pay with PayPal, a shop owner can do the following:
 ## Current limitations
 
 - Payments can be properly canceled only from the the Back Office and not from the Payone PMI.
-- Payments can't be partially canceled. We create one payment intent per order and it can either be authorized or fully cancelled.
-- When you cancel an item on the order details page, all order items are canceled.
+- Payments can't be partially canceled. One payment intent is created per order and it can either be authorized or fully cancelled.
+- When an item is canceled on the order details page, all order items are canceled.
 
 ## Next steps
 

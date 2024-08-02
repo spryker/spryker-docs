@@ -12,6 +12,7 @@ The following feature integration guide expects the basic feature to be in place
 - Invoice generation
 - Custom order reference
 - Sales Orders Backend API
+- Order Matrix
 
 {% endinfo_block %}
 
@@ -621,6 +622,28 @@ You will be able to verify the invoice template configuration in a later step.
 
 {% endinfo_block %}
 
+#### Adjust the scheduler configuration:
+
+**config/Zed/cronjobs/jenkins.php**
+
+```php
+/* Order matrix sync */
+$jobs[] = [
+    'name' => 'sync-order-matrix',
+    'command' => '$PHP_BIN vendor/bin/console order-matrix:sync',
+    'schedule' => '*/1 * * * *',
+    'enable' => true
+];
+```
+
+#### 3. Apply the scheduler configuration update:
+
+```bash
+vendor/bin/console scheduler:suspend
+vendor/bin/console scheduler:setup
+vendor/bin/console scheduler:resume
+```
+
 
 ### 4) Add translations
 
@@ -1212,21 +1235,15 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-## Install order matrix feature
-
 Follow the steps below to install the Order Matrix feature.
 
-### 1) Set up behavior
-
-Set up the following behaviors.
-
-#### Set up an order matrix console command
+#### 1) Set up Order Matrix behavior.
 
 1. Set up the following plugin:
 
-| PLUGIN             | SPECIFICATION                                                              | PREREQUISITES | NAMESPACE                                      |
-|--------------------|----------------------------------------------------------------------------|---------------|------------------------------------------------|
-| OrderMatrixConsole | A console command write whole order matrix statistics to a separate table. |               | Spryker\Zed\OrderMatrix\Communication\Console |
+| PLUGIN             | SPECIFICATION                                                               | PREREQUISITES | NAMESPACE                                      |
+|--------------------|-----------------------------------------------------------------------------|---------------|------------------------------------------------|
+| OrderMatrixConsole | A console command writes whole order matrix statistics to a separate table. |               | Spryker\Zed\OrderMatrix\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -1255,29 +1272,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-2. Adjust the scheduler configuration:
-
-**config/Zed/cronjobs/jenkins.php**
-
-```php
-/* Order matrix sync */
-$jobs[] = [
-    'name' => 'sync-order-matrix',
-    'command' => '$PHP_BIN vendor/bin/console order-matrix:sync',
-    'schedule' => '*/1 * * * *',
-    'enable' => true
-];
-```
-
-3. Apply the scheduler configuration update:
-
-```bash
-vendor/bin/console scheduler:suspend
-vendor/bin/console scheduler:setup
-vendor/bin/console scheduler:resume
-```
-
-### 2) Configure navigation
+#### 2) Configure navigation
 
 1. Adjust the order matrix page in `navigation.xml`:
 

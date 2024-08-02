@@ -365,6 +365,14 @@ entries:
           - title: Install module structure and configuration
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
 
+    - title: Audit logs
+      url: /docs/dg/dev/backend-development/audit-logs/audit-logs.html
+      nested:
+        - title: Add audit log types
+          url: /docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html
+        - title: Extend the audit log structure
+          url: /docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
+
     - title: Zed UI tables
       url: /docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html
       nested:
@@ -1623,6 +1631,23 @@ entries:
 
   - title: Code contribution guide
     url: /docs/dg/dev/code-contribution-guide.html
+  - title: Developing standalone modules
+    url: /docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html
+    nested:
+      - title: Prepare
+        url: /docs/dg/dev/developing-standalone-modules/prepare-for-standalone-module-development.html
+      - title: Create
+        url: /docs/dg/dev/developing-standalone-modules/create-standalone-modules.html
+      - title: Ensuring quality
+        url: /docs/dg/dev/developing-standalone-modules/ensuring-quality-in-standalone-modules.html
+      - title: Publish on GitHub
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-github.html
+      - title: Test the compatibility
+        url: /docs/dg/dev/developing-standalone-modules/test-the-compatibility-of-standalone-modules.html
+      - title: Drive usage
+        url: /docs/dg/dev/developing-standalone-modules/driving-the-usage-of-standalone-modules.html
+      - title: Publish on Packagist
+        url: /docs/dg/dev/developing-standalone-modules/publish-standalone-modules-on-packagist.html
   - title: Code generator
     url: /docs/dg/dev/code-generator.html
   - title: Example modules

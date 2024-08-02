@@ -1,23 +1,23 @@
 ---
-title: Create Merchant Commission Collector Rule
-description: This articles provides details how to implement merchant commission collector rule.
+title: Create merchant commission collector rules
+description: Learn how to implement merchant commission collector rules
 template: howto-guide-template
+last_updated: Jul 22, 2024
 ---
 
-This document shows how to create and register a merchant commission collector rule you want to use.
-Collector rules are used to collect items by specific criteria. Implementing and registering a `CollectorRulePlugin` allows you to build a particular query string used in the merchant commission's item condition and collect items that satisfy the condition.
+This document describes how to create and register merchant commission collector rules. Collector rules are used to collect items by specific criteria. Implementing and registering a `CollectorRulePlugin` lets you build a particular query string used in the merchant commission's item condition and collect items that satisfy the condition.
+
+Approximate time to complete: 2 hours.
 
 ## Prerequisites
 
-To install the Spryker Core feature providing `RuleEngine` module, follow the [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+* [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+* [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html)
 
-This guide will implement the merchant commission collector rule by order item discount amount. For this, we will introduce the `DiscountMerchantCommission` module and go step by step to implement the new collector rule.
-Approximate time to complete: 2 hours.
 
 ## 1) Adjust transfer definitions
 
-To provide the required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
+To provide the required order item data, adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
 `MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` database table, to provide the discount amount of the order item we only need to add a new property `discountAmountAggregation` to the transfer object.
 
 **src/Pyz/Shared/DiscountMerchantCommission/Transfer/discount_merchant_commission.transfer.xml**
@@ -364,4 +364,4 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 }
 ```
 
-Now you can import merchant commissions with item conditions based on order item discount amount value and calculate commissions for collected items. 
+Now you can import merchant commissions with item conditions based on order item discount amount value and calculate commissions for collected items.

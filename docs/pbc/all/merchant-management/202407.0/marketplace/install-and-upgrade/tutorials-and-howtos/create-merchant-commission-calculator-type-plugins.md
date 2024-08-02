@@ -1,22 +1,22 @@
 ---
-title: Create Merchant Commission Calculator Type Plugin
-description: This articles provides details how to implement merchant commission calculator type plugin.
+title: Create merchant commission calculator type plugins
+description: Learn how to implement merchant commission calculator type plugin.
 template: howto-guide-template
+last_updated: Jul 22, 2024
 ---
 
-This document shows how to create and register a merchant commission calculator type plugin to provide custom calculation logic for merchant commissions.
+This document describes how to create and register a merchant commission calculator type plugin to provide custom calculation logic for merchant commissions.
+
+Approximate time to complete: 1 hour.
 
 ## Prerequisites
 
-To install the Marketplace Merchant Commission feature, follow the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+[Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
-This guide will implement the merchant commission calculator type plugin that calculates commission based on the order item's sum price to pay aggregation value. For this, we will go step by step to create a plugin implementing `MerchantCommissionCalculatorPluginInterface` in the `MerchantCommission` module.
-Approximate time to complete: 1 hour.
 
 ## 1) Adjust transfer definitions
 
-To provide the required order item data, we need to adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
-`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` database table, to provide the price to pay aggregation amount of the order item we only need to add a new property `sumPriceToPayAggregation` to the transfer object.
+To provide the required order item data, adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object. `MerchantCommissionCalculationRequestItemTransfer` is populated with data from the `spy_sales_order_item` database table. to provide the price to pay aggregation amount of the order item, add the `sumPriceToPayAggregation` property to the transfer object.
 
 **src/Pyz/Shared/MerchantCommission/Transfer/merchant_commission.transfer.xml**
 
@@ -31,18 +31,20 @@ To provide the required order item data, we need to adjust the definition of the
 </transfers>
 ```
 
-Then run the command to generate the transfer objects:
+3. Generate the transfer objects:
 
 ```bash
 console transfer:generate
 ```
 
-## 3) Implement the calculator business model
+## 2) Implement the calculator business model
 
 Implement a custom class that will be used to calculate merchant commission amount based on the order item's sum price to pay aggregation value.
 This class will implement the `MerchantCommissionCalculatorTypeInterface` interface.
 
-**src/Pyz/Zed/MerchantCommission/Business/Calculator/SumPriceToPayPercentageMerchantCommissionCalculatorType.php**
+
+<details>
+  <summary>src/Pyz/Zed/MerchantCommission/Business/Calculator/SumPriceToPayPercentageMerchantCommissionCalculatorType.php</summary>
 
 ```php
 <?php
@@ -112,7 +114,9 @@ class SumPriceToPayPercentageMerchantCommissionCalculatorType implements Merchan
 }
 ```
 
-## 3) Introduce a new facade method for the calculation logic.
+</details>
+
+## 3) Introduce a facade method for the calculation logic
 
 **src/Pyz/Zed/MerchantCommission/Business/MerchantCommissionBusinessFactory.php**
 
@@ -215,14 +219,15 @@ class MerchantCommissionFacade extends SprykerMerchantCommissionFacade implement
 
 ## 4) Implement the calculator plugin
 
-This plugin should implement the `MerchantCommissionCalculatorPluginInterface` interface and provide the logic to calculate the merchant commission amount and correct persisting and reading the merchant commission amount.
+The plugin should implement the `MerchantCommissionCalculatorPluginInterface` interface and provide the logic to calculate the merchant commission amount and correct persisting and reading the merchant commission amount.
 
-1. Method `getCalculatorType()` should return the type of the calculator as it will be stored in `spy_merchant_commission.calculator_plugin_type` database column.
-2. Method `transformAmountForPersistence()` should transform merchant commission amount before persisting. Usually, we persist the amount multiplied by 100 to avoid floating point precision issues.
-3. Method `transformAmountFromPersistence()` should transform merchant commission amount after reading from the database.
-4. Method `formatMerchantCommissionAmount()` should format the merchant commission amount for displaying in the Backoffice UI on the Merchant Commission Detail page.
+1. Method `getCalculatorType()` should return the type of the calculator because it will be stored in the `spy_merchant_commission.calculator_plugin_type` database column.
+2. Method `transformAmountForPersistence()` should transform merchant commission amount before persisting. To avoid floating point precision issues, we recommend persisting the amount multiplied by 100.
+3. Method `transformAmountFromPersistence()` should transform the merchant commission amount after reading from the database.
+4. Method `formatMerchantCommissionAmount()` should format the merchant commission amount for displaying in the Back Office on the Merchant Commission Detail page.
 
-**src/Pyz/Zed/MerchantCommission/Communication/Plugin/MerchantCommission/PriceToPayPercentageMerchantCommissionCalculatorPlugin.php**
+<details>
+  <summary>src/Pyz/Zed/MerchantCommission/Communication/Plugin/MerchantCommission/PriceToPayPercentageMerchantCommissionCalculatorPlugin.php</summary>
 
 ```php
 <?php
@@ -259,7 +264,7 @@ class SumPriceToPayPercentageMerchantCommissionCalculatorPlugin extends Abstract
      * @param \Generated\Shared\Transfer\MerchantCommissionTransfer $merchantCommissionTransfer
      * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestItemTransfer $merchantCommissionCalculationRequestItemTransfer
      * @param \Generated\Shared\Transfer\MerchantCommissionCalculationRequestTransfer $merchantCommissionCalculationRequestTransfer
-     * 
+     *
      * @return int
      */
     public function calculateMerchantCommission(
@@ -307,7 +312,9 @@ class SumPriceToPayPercentageMerchantCommissionCalculatorPlugin extends Abstract
 }
 ```
 
-## 5) Register the plugin
+</details>
+
+## 5) Register the calculator plugin
 
 To register the plugin, add it to the `MerchantCommissionDependencyProvider::getMerchantCommissionCalculatorPlugins()` method.
 

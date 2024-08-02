@@ -1237,7 +1237,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 Follow the steps below to install the Order Matrix feature.
 
-#### 1) Set up Order Matrix behavior.
+#### Set up Order Matrix behavior.
 
 1. Set up the following plugin:
 
@@ -1272,7 +1272,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-#### 2) Configure navigation
+#### Configure navigation
 
 1. Adjust the order matrix page in `navigation.xml`:
 

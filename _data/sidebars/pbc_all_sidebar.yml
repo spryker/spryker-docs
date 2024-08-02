@@ -2613,7 +2613,17 @@ entries:
             nested:
               - title: Install Marketplace Dummy Payment
                 url: /docs/pbc/all/payment-service-provider/marketplace/install-marketplace-dummy-payment.html
-
+              - title: Stripe third-party integration
+                url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
+                nested:
+                  - title: Install and configure prerequisites
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html
+                  - title: Configure merchant transfers
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html
+                  - title: Connect and configure
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html
+                  - title: Onboard to Stripe in the Merchant Portal
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html                                                            
 
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html

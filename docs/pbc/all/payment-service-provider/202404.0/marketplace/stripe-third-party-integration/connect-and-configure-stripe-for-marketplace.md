@@ -39,16 +39,4 @@ This document describes how to connect and configure the Stripe app in the Back 
 ## Next steps
 
 1. Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
-2. Inform merchants about Stripe being available. To be able to use Stripe, merchants need to onboard. For instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html)
-
-
-
-### Configuring Transfers
-
-The terms *Payout* and *Reverse Payout* refer to transferring money from the Marketplace to the Merchant and reversing the transfer respectively.
-
-In the context of Stripe in a Marketplace, you need to configure the transfers. Transfers are handled by the `MerchantPayoutCommandByOrderPlugin` and `MerchantPayoutReverseCommandByOrderPlugin` commands. These commands transfer money from the Marketplace to the Merchant and reverse the transfer respectively when needed.
-
-By default, there're several options to trigger transfers in OMS. The simplest one is to set a state-machine-timeout for the `MerchantPayoutCommandByOrderPlugin` command. This triggers the command after the timeout is reached. You can also define your own conditions and triggers for the command.
-
-With more sophisticated requirements, like transferring money to merchants on the last Firday of every month, you can set up a cronjob that triggers the event for the transition.
+2. Inform merchants about Stripe being available. To be able to use Stripe, merchants need to onboard. For instructions, see [Onboard to Stripe in the Merchant Portal](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html).

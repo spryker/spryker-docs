@@ -365,6 +365,14 @@ entries:
           - title: Install module structure and configuration
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/install-module-structure-and-configuration.html
 
+    - title: Audit logs
+      url: /docs/dg/dev/backend-development/audit-logs/audit-logs.html
+      nested:
+        - title: Add audit log types
+          url: /docs/dg/dev/backend-development/audit-logs/add-audit-log-types.html
+        - title: Extend the audit log structure
+          url: /docs/dg/dev/backend-development/audit-logs/extend-the-audit-log-structure.html
+
     - title: Zed UI tables
       url: /docs/dg/dev/backend-development/zed-ui-tables/zed-ui-tables.html
       nested:

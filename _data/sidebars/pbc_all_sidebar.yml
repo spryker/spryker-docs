@@ -2390,6 +2390,7 @@ entries:
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/braintree/braintree-request-workflow.html
 
                   - title: Payone
+                    url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/payone.html
                     nested:
                       - title: Integration in the Back Office
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html

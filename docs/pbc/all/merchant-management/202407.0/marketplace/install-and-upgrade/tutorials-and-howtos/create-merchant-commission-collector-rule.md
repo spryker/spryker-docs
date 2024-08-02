@@ -17,8 +17,8 @@ Approximate time to complete: 2 hours.
 
 ## 1) Adjust transfer definitions
 
-To provide the required order item data, adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
-`MerchantCommissionCalculationRequestItemTransfer` is populated with data taken from the `spy_sales_order_item` database table, to provide the discount amount of the order item we only need to add a new property `discountAmountAggregation` to the transfer object.
+1. To provide the required order item data, adjust the definition of the `MerchantCommissionCalculationRequestItem` transfer object.
+`MerchantCommissionCalculationRequestItemTransfer` is populated with data from the `spy_sales_order_item` database table. To provide the discount amount of the order item,  add the `discountAmountAggregation` property to the transfer object.
 
 **src/Pyz/Shared/DiscountMerchantCommission/Transfer/discount_merchant_commission.transfer.xml**
 
@@ -33,7 +33,7 @@ To provide the required order item data, adjust the definition of the `MerchantC
 </transfers>
 ```
 
-Then run the command to generate the transfer objects:
+2. Generate the transfer objects:
 
 ```bash
 console transfer:generate
@@ -88,7 +88,7 @@ class DiscountMerchantCommissionDependencyProvider extends AbstractBundleDepende
 
 ## 3) Implement the collector rule
 
-Implement a custom class that will be used to compare the order item discount amount against the provided clause.
+Implement a custom class used to compare the order item discount amount against the provided clause.
 
 **src/Pyz/Zed/DiscountMerchantCommission/Business/CollectorRule/DiscountAmountMerchantCommissionItemCollectorRuleInterface.php**
 
@@ -115,7 +115,8 @@ interface DiscountAmountMerchantCommissionItemCollectorRuleInterface
 }
 ```
 
-**src/Pyz/Zed/DiscountMerchantCommission/Business/CollectorRule/DiscountAmountMerchantCommissionItemCollectorRule.php**
+<details>
+  <summary>src/Pyz/Zed/DiscountMerchantCommission/Business/CollectorRule/DiscountAmountMerchantCommissionItemCollectorRule.php</summary>
 
 ```php
 <?php
@@ -191,6 +192,8 @@ class DiscountAmountMerchantCommissionItemCollectorRule implements DiscountAmoun
     }
 }
 ```
+
+</summary>
 
 ## 4) Introduce a factory method to create the collector rule class
 

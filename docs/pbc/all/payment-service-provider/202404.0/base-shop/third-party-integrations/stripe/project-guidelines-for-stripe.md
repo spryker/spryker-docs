@@ -270,31 +270,6 @@ class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
 4. In `src/Pyz/Yves/Router/RouterDependencyProvider.php`, add a router plugin to `RouterDependencyProvider::getRouteProvider()`.
 
 
-## Using Stripe in Marketplace context
-
-### Merchant Onboarding Process
-
-To be able to transfer money from the Marketplace Account to the Merchants, Merchants need to be onboarded to the Stripe App. When you configured the Stripe App in Marketplace mode, the Merchant onboarding process is initiated. The process is as follows:
-
-- Merchants need login to the Merchant Portal.
-- Merchants need to open the "Payment Settings" section.
-- On the "Payment Settings" the Merchant will see a new section "Stripe Onboarding".
-- The Merchant needs to click on the "Connect with Stripe" button.
-- An onboarding page of Stripe will be opened and the Merchant needs to fill in his data.
-- After the onboarding is completed, the Merchant will be redirected back to the Merchant Portal.
-
-There are several states the onboarding process can be in:
-- **Pending**: The Merchant started the onboarding process but did not complete it.
-- **Enabled**: The Merchant completed the onboarding process and is ready to receive payments.
-- **Restricted**: Additional data from the Merchant are required. When not updated the payouts will be paused after some period of time.
-- **Restricted Soon**: Additional data from the Merchant are required. When not updated the payouts will be paused in the near future.
-- **Pending**: The Merchant onboarding is not completed and must be finalized.
-- **Rejected**: The Merchant onboarding was rejected and need to contact you to clarify the issue.
-
-**Note**: You need to inform your Merchants about the required onboarding so they know about the process. Spryker doesn't support this as this is different for each project.
-**Note**: The onboarding process is handled by Stripe. You can see the status of the onboarding in the Stripe Dashboard.
-
-
 ## Sending additional data to Stripe
 
 Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array.

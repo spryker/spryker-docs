@@ -1225,7 +1225,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
-8. Add the `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class.
+8. Add the `Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader.php` class.
 
 ```php
 <?php

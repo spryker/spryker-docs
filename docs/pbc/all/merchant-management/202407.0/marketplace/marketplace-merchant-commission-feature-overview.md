@@ -155,13 +155,12 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 
 
 
-## Apply commission to GROSS or NET price
-This Merchant Commission Price Mode configuration controls which prices are used as a basis to calculate commission: Gross Price or Net Price.
+## Apply commissions to GROSS or NET price
 
-The item Gross Price and Net Price is configured in the backend (including volume pricing) and does not include any discounts applied afterward in the shopping cart.
+The price mode used to apply commissions is defined separately from the order price mode and applies to the whole store. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn't include any discounts applied in the shopping cart afterwards.
 
-Its defined by MERCHANT_COMMISSION_PRICE_MODE_PER_STORE, see https://github.com/spryker/spryker-docs/blob/master/_includes/pbc/all/install-features/202407.0/marketplace/install-the-marketplace-merchant-commission.md#2-set-up-configuration
-This configuration is different from an order price mode and defines behavior for the whole store.
+Price mode is defined in `MERCHANT_COMMISSION_PRICE_MODE_PER_STORE`. For details, see [Install the Marketplace Merchant Commission feature](https://docs.spryker.com/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html#set-up-configuration).
+
 
 
 ## Current limitations

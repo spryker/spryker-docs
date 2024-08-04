@@ -137,7 +137,7 @@ If you have multiple commissions, depending on your setup, you will have to use 
 
 Priority and groups are used to make sure relevant commissions are applied when there are multiple commissions in a system.
 
-Merchant commission groups are used when multiple commissions need to be applied to per order or order item. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order or order item, one commission from each group is applied; the commission from the primary group is applied first.
+Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order or order item, one commission from each group is applied; the commission from the primary group is applied first.
 
 Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If groups aren't used in a system, but there're multiple commissions, priority is used to define which commission is applied in the system.
 
@@ -150,7 +150,7 @@ For example, your setup with groups and priority could be as follows. We simplif
 | MC03 | 2 | Secondary |
 | MC04 | 1 | Secondary |
 
-If an order item fulfills the conditions of all the commissions in the prior example, commissions `MC01` and `MC04` are applied. First, the system selects commission `MC01` as the commission in the primary group with the highest priority. Then, the system selects commission `MC04` as the commission in the secondary group with the highest priority.
+If an order item fulfills the conditions of all the commissions in the prior example, commissions `MC01` and `MC04` are applied. First, the system selects commission `MC01` as the commission with the highest priority in the `Primary` group. Then, the system selects commission `MC04` as the commission with the highest priority in the `Secondary` group.
 
 
 

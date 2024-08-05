@@ -271,9 +271,9 @@ Note: Tables that are not allowed for configuration are defined in `Spryker\Zed\
           "name": "countryTaxRates",
           "isEditable": true,
           "childDynamicEntityConfiguration": {
-            "tableAlias": "taxRates"
+            "tableAlias": "tax-rates"
           },
-          "relationFieldMapping": [
+          "relationFieldMappings": [
             {
               "childFieldName": "fk_country",
               "parentFieldName": "id_country"
@@ -286,9 +286,9 @@ Note: Tables that are not allowed for configuration are defined in `Spryker\Zed\
 ```
 
 {% info_block warningBox "Verification" %}
-For debuging after adding the configuration to the file, you need to import the configuration into the database. 
+To debug after adding the configuration to the file, you need to import the configuration into the database.
 
-For import new configuration to the database, you need to clear the tables `spy_dynamic_entity_configuration`, `spy_dynamic_entity_configuration_relation`, and `spy_dynamic_entity_configuration_relation_field_mapping` and run the command:
+To import new configuration relations run the command:
 
 ```bash
 vendor/bin/console setup:init-db
@@ -720,6 +720,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 {% info_block warningBox "Verification" %}
 
 Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)
+
+{% endinfo_block %}
+
+{% info_block infoBox %}
+
+At the moment Data Exchange API does not support child relations configuration. If you need to configure child relations, you can do it manually in the database or adjust the configuration in file `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json` for import.
 
 {% endinfo_block %}
 

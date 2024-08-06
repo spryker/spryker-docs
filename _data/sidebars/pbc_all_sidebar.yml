@@ -1614,7 +1614,15 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-gui-tables.html
                   - title: Extend Merchant Portal dashboard
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-merchant-portal-dashboard.html
-
+                  - title: Create merchant commission calculator type plugins
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html
+                    include_versions:
+                    - "202407.0"
+                  - title: Create merchant commission collector rules
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-collector-rule.html
+                    include_versions:
+                    - "202407.0"
+                    
               - title: Domain model and relationships
                 nested:
                   - title: Marketplace Merchant

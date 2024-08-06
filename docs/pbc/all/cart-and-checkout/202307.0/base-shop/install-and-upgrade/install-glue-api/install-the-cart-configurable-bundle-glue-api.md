@@ -4,7 +4,7 @@ description: Learn how to install the Cart + Configurable Bundle Glue API in a S
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template
 related:
-  - title: Glue API - Configurable Bundle feature integration
+  - title: Install the Configurable Bundle Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html
 ---
 

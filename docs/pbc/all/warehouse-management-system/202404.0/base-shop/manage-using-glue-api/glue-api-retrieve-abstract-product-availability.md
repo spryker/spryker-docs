@@ -68,7 +68,7 @@ Response sample: retrieve availability of an abstract product
 }
 ```
 
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-availabilities-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-availabilities-response-attributes.md -->
 
 
 ## Possible errors

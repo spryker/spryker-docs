@@ -28,7 +28,7 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
   - title: Merchant Custom Prices feature overview
     link: docs/pbc/all/price-management/page.version/base-shop/merchant-custom-prices-feature-overview.html
   - title: Password Management overview
@@ -39,7 +39,7 @@ This endpoint allows [authenticated customers](/docs/pbc/all/identity-access-man
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve available company users
 
@@ -289,20 +289,11 @@ To retrieve company users of the current authenticated customer, send the reques
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if this company user is default for the authenticated customer. |
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| companies | name | String | Company name. |
-| companies | isActive | Boolean | Indicates if the company is active. |
-| companies | status | String | Company status. Possible values are: *Pending*, *Approved* or *Denied*. |
-| company-roles | name | String | Company role name. |
-| company-roles | isDefault | Boolean | Indicates if the company role is default role for the company. |
-| company-business-units | name | String | Business unit name. |
-| company-business-units | email | String | Email address of the business unit. |
-| company-business-units | phone | String | Telephone number of the business unit. |
-| company-business-units | externalUrl | String | URL of the website of the business unit. |
-| company-business-units | bic | String | Specifies the Bank Identifier Code of the Business Unit. |
-| company-business-units | iban | String | Specifies the International Bank Account Number of the Business Unit. |
-| company-business-units | defaultBillingAddress | String | Specifies the default billing address of the Business Unit. |
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-units-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-roles-response-attributes.md -->
 
 ## Possible errors
 

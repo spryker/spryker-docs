@@ -1,5 +1,5 @@
 ---
-title: Glue API - Measurement Units feature integration
+title: Install the Measurement Units Glue API
 description: The procedure of integrating Measurement Units Feature API into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/glue-api/glue-api-measurement-units-feature-integration.html
 related:
-  - title: Measurement Units feature integration
+  - title: Install the Measurement Units feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html
   - title: Measurement Units feature walkthrough
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html

@@ -137,6 +137,6 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE| INSTALLATION GUIDE |
 |-|-|-|
-| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
-| Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |
-| Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |
+| Marketplace Shipment + Cart | | [Install the Marketplace Shipment + Cart feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-cart-feature.html) |
+| Marketplace Shipment + Checkout | | [Install the Marketplace Shipment + Checkout feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-the-marketplace-shipment-checkout-feature.html) |
+| Marketplace Shipment + Customer | | [Install the Marketplace Shipment + Customer feature](/docs/pbc/all/carrier-management/{{page.version}}/marketplace/install-features/install-marketplace-shipment-customer-feature.html) |

@@ -6,16 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview
 originalArticleId: 2fc8c00f-628b-485d-b00b-61bbb0b32973
 redirect_from:
-  - /2021080/docs/quotation-process-feature-overview
-  - /2021080/docs/en/quotation-process-feature-overview
-  - /docs/quotation-process-feature-overview
-  - /docs/en/quotation-process-feature-overview
-  - /2021080/docs/quotation-process
-  - /2021080/docs/en/quotation-process
-  - /docs/quotation-process
-  - /docs/en/quotation-process
-  - /2021080/docs/rfq-reference-information-shop-guide
-  - /2021080/docs/en/rfq-reference-information-shop-guide
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
@@ -156,34 +146,58 @@ Company users can perform the following actions using the CommentsQuotation proc
 <details>
 <summary markdown='span'>Create an RFQ</summary>
 
-![create-rfq](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/create-rfq.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/create-rfq.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Add an address and shipping method to the RFQ</summary>
 
-![add-rfq-address-and-shipping-method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/add-rfq-address-and-shipping-method.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/add-rfq-address-and-shipping-method.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
 <details>
 <summary markdown='span'>Edit RFQ items</summary>
 
-![edit-rfq-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/edit-rfq-items.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/edit-rfq-items.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 
 </details>
 
 <details><summary markdown='span'>Cancel an RFQ or send an RFQ to an agent </summary>
 
-![cancel-and-sent-rfq-to-agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/cancel-and-sent-rfq-to-agent.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/cancel-and-sent-rfq-to-agent.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
 <details><summary markdown='span'>Convert an RFQ to the cart</summary>
 
-![convert-rfq-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/convert-rfq-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/convert-rfq-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
@@ -191,7 +205,12 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 <details><summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
 
-![revise-rfq-and-send-to-customer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/revise-rfq-and-send-to-customer.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/revise-rfq-and-send-to-customer.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
@@ -205,7 +224,7 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
-| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-quotation-process-feature-integration.html) | [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
+| [Install the Quotation Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html) | [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
 | [Install the Quotation Process + Checkout feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html) | [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
 | [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) | [Upgrade the QuoteRequestAgentPage module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html) |
 | [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) | [Upgrade the QuoteRequestAgentWidget module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html) |

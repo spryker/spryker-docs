@@ -9,7 +9,8 @@ Install the required features:
 | NAME | VERSION |
 | --- | --- |
 | Comments | {{page.version}} |
-| Persistent Cart | {{page.version}} |
+| Cart | {{page.version}} |
+
 
 ### 1) Set up behavior
 

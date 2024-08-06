@@ -7,4 +7,4 @@ redirect_from:
 - /docs/pbc/all/offer-management/202311.0/marketplace/install-and-upgrade/install-the-marketplace-merchant-product-offer-service-points-availability-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-merchant-product-offer-service-points-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-merchant-product-offer-service-points-availability-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-merchant-product-offer-service-points-availability-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-merchant-product-offer-service-points-availability-feature.md -->

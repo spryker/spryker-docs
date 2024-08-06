@@ -111,4 +111,4 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
-|[Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |
+|[Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |

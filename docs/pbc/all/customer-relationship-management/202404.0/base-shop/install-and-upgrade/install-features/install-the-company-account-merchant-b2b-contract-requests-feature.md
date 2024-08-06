@@ -5,4 +5,4 @@ last_updated: Mar 13, 2024
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202404.0/install-the-company-account-merchant-b2b-contract-requests-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-company-account-merchant-b2b-contract-requests-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-company-account-merchant-b2b-contract-requests-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202404.0/install-the-company-account-merchant-b2b-contract-requests-feature.md -->

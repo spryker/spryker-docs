@@ -79,11 +79,8 @@ Request sample : `GET http://glue.mysprykershop.com/cart-permission-groups`
 
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| id | String | A unique ID that is used to define permissions with this permission group. |
-| name | String | The permission group's name. For example, `READ_ONLY` or `FULL_ACCESS`. |
-| isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
+{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cart-permission-groups-response-attributes.md -->
+
 
 
 ## Retrieve a cart permission group
@@ -127,11 +124,8 @@ Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 }
 ```
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| id | String | A unique ID that is used to assign permissions with this permission group. |
-| name | String | The permission group's name. For example, `READ_ONLY` or `FULL_ACCESS`. |
-| isDefault | Boolean | If true, the permission group is applied to shared carts by default. |
+{% include pbc/all/glue-api-guides/{{page.version}}/cart-permission-groups-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/cart-permission-groups-response-attributes.md -->
+
 
 ## Possible errors
 

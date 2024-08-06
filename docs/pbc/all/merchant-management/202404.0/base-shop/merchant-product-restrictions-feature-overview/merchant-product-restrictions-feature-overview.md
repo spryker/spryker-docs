@@ -16,7 +16,7 @@ redirect_from:
 
 The _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
 
-In terms of the [Merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-feature-overview.html), a *merchant* is an entity that sells products in a B2B environment.
+In terms of the [Merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html), a *merchant* is an entity that sells products in a B2B environment.
 
 Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
 

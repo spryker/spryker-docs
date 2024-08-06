@@ -12,10 +12,10 @@ redirect_from:
 related:
   - title: Retrieving autocomplete and search suggestions
     link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
-  - title: Glue API - Catalog feature integration
+  - title: Install the Catalog Glue API
     link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -27,7 +27,7 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Search by products
 
@@ -6655,10 +6655,10 @@ To search by products, send the request:
 
 **Abstract products**
 
-{% include pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-products-response-attributes.md -->
 
 **Abstract product prices**
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 **Value facets**
 

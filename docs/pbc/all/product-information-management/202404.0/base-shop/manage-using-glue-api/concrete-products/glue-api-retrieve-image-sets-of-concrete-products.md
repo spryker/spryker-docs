@@ -27,7 +27,7 @@ This endpoint allows retrieving image sets of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 
 ## Retrieve image sets of a concrete product
@@ -85,13 +85,8 @@ Request sample: retrieve image sets of a concrete product
 ```
 </details>
 
-<a name="concrete-image-sets-response-attributes"></a>
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-image-sets-response-attributes.md -->
 
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| name | Image set name. |
-| externalUrlLarge | URLs to the image per image set per image. |
-| externalUrlSmall | URLs to the image per image set per image. |
 
 ## Possible errors
 

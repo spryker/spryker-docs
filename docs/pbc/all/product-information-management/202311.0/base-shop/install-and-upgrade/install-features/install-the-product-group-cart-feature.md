@@ -1,5 +1,5 @@
 ---
-title: Product Group + Cart feature integration
+title: Install the Product Group + Cart feature
 description: Instructions to integrate the Product group + Cart feature into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,8 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-group-cart-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-group-cart-feature.html
 related:
-  - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+  - title: Install the Cart feature
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-product-group-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-group-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-group-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-group-cart-feature.md -->

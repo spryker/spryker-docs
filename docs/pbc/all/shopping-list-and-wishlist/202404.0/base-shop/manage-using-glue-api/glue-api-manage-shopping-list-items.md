@@ -22,8 +22,8 @@ This endpoint lets you manage shopping list items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see these integration guides:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Add items to a shopping list
 
@@ -142,7 +142,7 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are allowed. |
 | quantity | Integer | &check; | Quantity of the product to add. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
@@ -151,9 +151,9 @@ To add items to a shopping list, send the request:
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 ### Response
 
@@ -308,25 +308,12 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-<a name="shopping-list-items-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| productOfferReference | String | Unique identifier of the product offer. |
-| merchantReference | String | Unique identifier of the merchant. |
-| quantity | Integer | Quantity of the product. |
-| sku | String | Product SKU. |
-| productConfigurationInstance.displayData  | Array  | Array of variables that are proposed to a Storefront user to set up in the configurator.  |
-| productConfigurationInstance.configuration  | Array  | Default configuration of the configurable product.  |
-| productConfigurationInstance.configuratorKey  | String  | Configurator type. |
-| productConfigurationInstance.isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
-| productConfigurationInstance.quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
-| productConfigurationInstance.availableQuantity  | Integer  | Product quantity available in the store. |
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
-
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 ## Change item quantity in a shopping list
 
@@ -454,10 +441,6 @@ To change item quantity in a shopping list, send the request:
 | productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
-
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
-
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 ### Response
 
@@ -608,22 +591,12 @@ To change item quantity in a shopping list, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| productOfferReference | String | &check; | Unique identifier of the product offer. |
-| merchantReference| String | &check; | Unique identifier of the merchant. |
-| quantity | Integer | &check; | Updated quantity of the product. |
-| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
-| productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
-| productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
-| productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
-| productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
-| productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
-| productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
+{% include pbc/all/glue-api-guides/{{page.version}}/shopping-list-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/shopping-list-items-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
-{% include pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/abstract-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/abstract-product-prices-response-attributes.md -->
 
 ## Remove an item from a shopping list
 

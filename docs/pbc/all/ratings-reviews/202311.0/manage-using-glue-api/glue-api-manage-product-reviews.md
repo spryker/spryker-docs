@@ -11,10 +11,10 @@ redirect_from:
   - /docs/pbc/all/ratings-reviews/202204.0/manage-using-glue-api/glue-api-manage-product-reviews.html
 related:
   - title: Product Rating and Reviews feature overview
-    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
+    link: docs/pbc/all/ratings-reviews/page.version/ratings-and-reviews.html
 ---
 
-[Ratings and reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 

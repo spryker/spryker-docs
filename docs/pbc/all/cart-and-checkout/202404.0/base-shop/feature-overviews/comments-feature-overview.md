@@ -79,5 +79,5 @@ Company users can perform the following actions using the Comments widget on the
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
 | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html)  | [File details: comment.csv](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/import-and-export-data/import-file-details-comment.csv.html)  |
-| [Comments + persistent cart feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
-| [Comments + order management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/comments-order-management-feature-integration.html) |
+| [Install the Comments + Persistent Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-persistent-cart-feature.html) |
+| [Install the Comments + Order Management feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-order-management-feature.html) |

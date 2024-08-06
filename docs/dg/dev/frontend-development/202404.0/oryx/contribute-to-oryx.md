@@ -23,7 +23,7 @@ Code that gets merged into master must be compatible with the latest minor relea
 
 ## Submit pull requests
 
-1. Fork the [Oryx repository](https://github.com/spryker/oryx).
+1. Fork the [Oryx repository](https://github.com/oryx-frontend/oryx).
 2. Create a brunch based on the master.
 3. Run `npm install` in the repository root.  
 4. Add your changes. For more details, see [Development workflow](#development-workflow)

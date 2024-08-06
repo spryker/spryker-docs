@@ -5,14 +5,14 @@ last_updated: May 31, 2022
 template: back-office-user-guide-template
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 redirect_from:
     - /docs/pbc/all/tax-management/202311.0/base-shop/spryker-tax/manage-in-the-back-office/edit-tax-rates.html
     - /docs/pbc/all/tax-management/202204.0/base-shop/manage-in-the-back-office/edit-tax-rates.html
 ---
 
 
-To edit a [tax rate](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax rate](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
     This opens the **Overview of Tax Rates** page.

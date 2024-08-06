@@ -16,7 +16,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202204.0/base-shop/merchant-custom-prices-feature-overview.html
 related:
   - title: HowTo - Manage business unit specific prices via data import
-    link: docs/pbc/all/price-management/page.version/base-shop/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
+    link: docs/pbc/all/price-management/page.version/base-shop/tutorials-and-howtos/manage-business-unit-specific-prices-via-data-import.html
 ---
 
 In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the *Merchant Custom Prices* feature, the shop owners of the [B2B Demo Shop](/docs/about/all/b2b-suite.html) can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
@@ -46,10 +46,14 @@ For example, `spy_price_product_default` contains only connections to prices tha
 
 {% endinfo_block %}
 
-The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products.
+The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products. The specific prices apply only to the merchant relation assignee (business units, as a rule), not to merchant relation owners.
 
-The specific prices apply only to the merchant a relation assignee (business units, as a rule), not to merchant relation owners. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
+{% info_block warningBox %}
 
+* If the default product price is lower than any of the merchant relation prices for a given product, the default price is displayed in Storefront. You can adjust this behavior on the project level by customizing the business logic for the price display.
+* If a business unit of a customer has several merchant relations with different prices for the same product, the lowest price is offered.
+
+{% endinfo_block %}
 
 **Default prices in the web-shop**
 

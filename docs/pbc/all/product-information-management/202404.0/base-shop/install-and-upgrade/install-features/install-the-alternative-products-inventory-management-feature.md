@@ -1,5 +1,5 @@
 ---
-title: Alternative Products + Inventory Management feature integration
+title: Install the Alternative Products + Inventory Management feature
 description: The guide walks you through the process of installing the Alternative products and Inventory features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,4 +14,4 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-alternative-products-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-inventory-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-alternative-products-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-alternative-products-inventory-management-feature.md -->

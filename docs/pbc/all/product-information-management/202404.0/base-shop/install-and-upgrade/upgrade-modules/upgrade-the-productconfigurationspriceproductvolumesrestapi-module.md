@@ -9,4 +9,4 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.md -->

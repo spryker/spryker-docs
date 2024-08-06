@@ -1,5 +1,5 @@
 ---
-title: Discontinued Products + Product Labels feature integration
+title: Install the Discontinued Products + Product Labels feature
 description: This guide provides step-by-step instruction on integrating Discontinued Products + Product Labels feature into a Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/discontinued-products-product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/202307.0/discontinued-products-product-labels-feature-integration.html
 related:
-  - title: Product labels feature integration
+  - title: Install the Discontinued Products feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-labels-feature.html
 ---
 

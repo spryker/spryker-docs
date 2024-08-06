@@ -24,7 +24,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 <a name="{all-attributes}"></a>
 
@@ -150,16 +150,8 @@ Request sample: retrieve all product attributes
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| allowInput | Boolean | Indicates if custom values can be entered for this product attribute. |
-| isSuper | Boolean | Indicates if it is a super attribute or not. |
-| inputType | String | Input type of the product attribute, for example, text, number, select, etc. |
-| localeName | String | Name of the locale. |
-| values | Array | Possible values of the attribute. |
-| id | String | Product attribute key. |
-| key | String | Product attribute key. |
-| translation | String | Translation for the locale. |
+{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
+
 
 ## Retrieve a product attribute
 
@@ -231,9 +223,9 @@ Request sample: retrieve a product attribute
 ```
 </details>
 
-For the attributes, see [Retrieve all product attributes](#retrieve-all-product-attributes).
+{% include pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/product-management-attributes-response-attributes.md -->
 
-Possible errors
+## Possible errors
 
 | CODE | REASON |
 | --- | --- |

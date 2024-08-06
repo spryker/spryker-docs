@@ -18,10 +18,10 @@ redirect_from:
   - /docs/pbc/all/tax-management/202307.0/base-shop/spryker-tax/manage-in-the-back-office/create-tax-rates.html
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/pbc/all/tax-management/page.version/base-shop/tax-feature-overview.html
 ---
 
-To create a [tax rate](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To create a [tax rate](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
 2. On the **Overview of Tax Rates** page, click **Create Tax Rate**.

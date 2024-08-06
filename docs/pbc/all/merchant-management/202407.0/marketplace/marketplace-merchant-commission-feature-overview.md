@@ -94,9 +94,7 @@ To specify conditions based on price mode, use the following format: `price-mode
 This can be useful if you want different commissions to be applied to orders in different prices modes.
 
 
-You might want to set up different commission rules based on this since it affects commission totals.
 
-For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.
 
 
 
@@ -137,11 +135,11 @@ If you have multiple commissions, depending on your setup, you will have to use 
 
 Priority and groups are used to make sure relevant commissions are applied when there are multiple commissions in a system.
 
-Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order or order item, one commission from each group is applied; the commission from the primary group is applied first.
+Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order, one commission from each group is applied; the commission from the primary group is applied first.
 
-Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If groups aren't used in a system, but there're multiple commissions, priority is used to define which commission is applied in the system.
+Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If multiple commissions have the same priority, the last created commission is applied.
 
-For example, your setup with groups and priority could be as follows. We simplified the commissions for this example by removing irrelevant fields.
+For example, your setup could be as follows. We simplified the commissions for this example by removing irrelevant fields.
 
 | Commission Key | Priority | Group |
 | - | - | - |
@@ -185,3 +183,8 @@ This customization is factored into the application design. A developer can chan
 Other use cases might be as follows:
 * Apply commission to product price including product options differently
 * Apply commission to special products like bundles or configurable differently
+
+
+You might want to set up different commission rules based on this because it affects commission totals.
+
+For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.

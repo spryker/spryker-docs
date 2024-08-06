@@ -197,7 +197,7 @@ cd ..
 
 #### CI validation
 
-If you're using CI and store a hash of commit in **.git.docker**, we highly recommend you ensure that the reference and submodule hashes are matching.
+If you're using CI and store the commit hash in `.git.docker`, make sure the reference and submodule hashes match.
 
 The following is an example of what the code can look like:
 ```bash

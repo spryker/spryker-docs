@@ -99,9 +99,13 @@ You can change order items' states using a manual call, which lets you use the s
 **Issue:** Having more than one main process can lead to incorrect process rendering and execution:
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-7.png)
 
-Please note that even not whole process is drawn.
+{% info_block warningBox "" %}
 
-When placing an order, this issue entails an error like this one:
+The prior picture shows a part of the process.
+
+{% endinfo_block %}
+
+When placing an order, this issue entails an error like the following:
 
 ```php
 Exception - Unknown state: new in "/data/vendor/spryker/oms/src/Spryker/Zed/Oms/
@@ -270,17 +274,21 @@ Keeping both `onEnter` and `manual` commands can only be used for backup for the
 
 **Issue:** Slow order placement when launching OMS processing.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png))
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png)
 
-**Solution:** Create one additional step, i.e. `processing` after `new` and add a transition without conditions and commands.
-This will ensure that OMS processing will instantly stop after order creation.
-Actual processing of the OMS will happen after the next execution of the `oms:check-condition` command.
+**Solution:** Create one additional step, such as `processing` after `new`, and add a transition without conditions and commands.
+This ensures that OMS processing instantly stops after order creation. The actual processing of the OMS happens after the next execution of the `oms:check-condition` command.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-slow-order-placement.png)
 
-**Advanced Solution:** Implement aforementioned solution, and override method \Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine making it empty.
-Since the OMS process starts with a no-command transition, it will be automatically executed by the `oms:check-condition` command.
-**Important** it's not allowed to add `reserved` flag to the `new` state.
+**Advanced solution:** Implement the prior solution and override the `\Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine` method making it empty. Because the OMS process starts with a no-command transition, it will be automatically executed by the `oms:check-condition` command.
+
+{% info_block warningBox "" %}
+
+Adding the `reserved` flag to the `new` state isn't allowed.
+
+{% endinfo_block %}
+
 
 ## Calling OMS processing functions within a custom DB transaction
 

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/install-and-upgrade/install-features/install-the-content-items-feature.html
 related:
   - title: Install the Content Items Glue API
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-content-items-feature-integration.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-content-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-content-items-feature.md -->

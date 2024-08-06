@@ -2,7 +2,7 @@
 
 {% info_block errorBox %}
 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+This migration guide is a part of the [Silex migration effort](/docs/dg/dev/upgrade-and-migrate/silex-replacement/silex-replacement.html).
 
 {% endinfo_block %}
 
@@ -89,7 +89,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 namespace Pyz\Zed\Validator;
 
-use Spryker\Zed\Security\Communication\Plugin\Validator\UserPasswordValidatorConstraintPlugin;
+use Spryker\Zed\Security\Communication\Plugin\Validator\ZedUserPasswordValidatorConstraintPlugin;
 use Spryker\Zed\Translator\Communication\Plugin\Validator\TranslatorValidatorPlugin;
 use Spryker\Zed\Validator\Communication\Plugin\Validator\ConstraintFactoryValidatorPlugin;
 use Spryker\Zed\Validator\Communication\Plugin\Validator\MetadataFactoryValidatorPlugin;
@@ -114,7 +114,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
     protected function getConstraintPlugins(): array
     {
         return [
-            new UserPasswordValidatorConstraintPlugin(),
+            new ZedUserPasswordValidatorConstraintPlugin(),
         ];
     }
 }
@@ -127,7 +127,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
 
 namespace Pyz\Yves\Validator;
 
-use Spryker\Yves\Security\Plugin\Validator\UserPasswordValidatorConstraintPlugin;
+use Spryker\Yves\Security\Plugin\Validator\YvesUserPasswordValidatorConstraintPlugin;
 use Spryker\Yves\Translator\Plugin\Validator\TranslatorValidatorPlugin;
 use Spryker\Yves\Validator\Plugin\Validator\ConstraintValidatorFactoryValidatorPlugin;
 use Spryker\Yves\Validator\Plugin\Validator\MetadataFactoryValidatorPlugin;
@@ -152,7 +152,7 @@ class ValidatorDependencyProvider extends SprykerValidatorDependencyProvider
     protected function getConstraintPlugins(): array
     {
         return [
-            new UserPasswordValidatorConstraintPlugin(),
+            new YvesUserPasswordValidatorConstraintPlugin(),
         ];
     }
 }

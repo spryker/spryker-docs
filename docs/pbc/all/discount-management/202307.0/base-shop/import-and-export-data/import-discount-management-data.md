@@ -14,7 +14,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202307.0/base-shop/import-and-export-data/discount-import.html
 ---
 
-To learn how data import works and about different ways of importing data, see [Data import](/docs/scos/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:
+To learn how data import works and about different ways of importing data, see [Data import](/docs/dg/dev/data-import/{{page.version}}/data-import.html). This section describes the data import files that are used to import data related to the Discount Management PBC:
 
 * [discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html): allows you to import general information about the discounts and their attributes.
 * [discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html):  allows you to import data used to set the values of the discounts imported with *discount.csv*.

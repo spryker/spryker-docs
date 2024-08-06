@@ -56,7 +56,7 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
 }
 ```
 
-### Data Setup
+### Data setup
 
 You should now be able to manage navigation menus from Zed UI, and the collectors should also be able to export the navigation menus to the KV storage. This is a good time to implement an installer in your project to install a selection of frequently used navigation menus. <!--Check out our Demoshop implementation for examples and ideas.-->
 

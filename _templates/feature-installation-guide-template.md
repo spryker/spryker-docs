@@ -12,7 +12,7 @@ Before you start, check out the formatting templates in [Formatting templates fo
 
 This document describes how to install the [Feature Name feature]({link to a respective feature overview}) feature.
 
-## Install feature core
+## Install feature core <!-- Skip if there won't be a frontend section in the doc -->
 
 Follow the steps below to install the {Feature Name} feature core.
 
@@ -26,8 +26,10 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {installation guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+
+<!--When "composer require" includes a "Spryker Feature" (github.com/spryker-feature), then it always needs to be "dev-master" version. For regular modules, use regular versions.-->
 
 ```bash
 {commands to install the required modules}
@@ -35,6 +37,14 @@ Install the required features and Glue APIs:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 Make sure the following modules have been installed:
 
@@ -44,6 +54,14 @@ Make sure the following modules have been installed:
 
 ### Set up the configuration
 <!--Describe system and module configuration changes. If the default configuration is enough for a primary behavior, skip this step.-->
+
+<!--Only define those configs which have to be overridden / defined by the customer. Configs that are working out of the box, should not be listed.-->
+
+<!--Conventions:
+* The "prerequisites" column in the installation guide tables can define behavioral requirements (fulfilled by any "specification" column).
+* The "specification" column has to describe what is the behavior of the widget so that the customer can understand it.
+* The "specification" column has to describe what is the behavior of the controller so that the customer can understand it.
+-->
 
 Add the following configuration:
 
@@ -58,6 +76,13 @@ Add the following configuration:
 {% info_block warningBox "Verification" %}
 
 <!--Describe how a developer can check they have completed the step correctly.-->
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 {% endinfo_block %}
 
@@ -82,6 +107,14 @@ console transfer:generate
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 Make sure the following changes have been applied by checking your database:
 
@@ -121,6 +154,14 @@ console transfer:generate
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
 Make sure that following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE   | EVENT   |
@@ -139,6 +180,14 @@ console transfer:generate
 ---
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 Ensure the following transfers have been created:
 
@@ -168,13 +217,21 @@ console data:import glossary
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
 Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 ### Configure export to Redis and Elasticsearch
 <!--Provide the plugins for wiring P&S up. Provide the plugins for enabling re-generate and re-sync features of P&S.-->
 
-
 Configure tables to be published and synchronized to the Storage on create, edit, and delete changes.
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 
 | PLUGIN | SPECIFICATION | PREREQUISITES   | NAMESPACE   |
 | --------------- | -------------- | ------ | -------------- |
@@ -206,6 +263,7 @@ Expected data fragment example:
 
 Configure tables to be published to the {table name} table and synchronized to the Storage on create, edit, and delete changes.
 
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES    | NAMESPACE |
 | -------- | ------------- | ---------------- | --------- |
@@ -236,6 +294,8 @@ Expected data fragment example: {target entity}
 <!--If the feature has Redis configuration changes, merge the steps as described in [Configure export to Redis and Elasticsearch](#configure-export-to-redis-and-elasticsearch). Provide a plugin list for wiring P&S up. Provide a plugin list for enabling Re-generate and Re-sync features of P&S.-->
 
 Install the following plugins:
+
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
@@ -287,6 +347,14 @@ Import data as follows:
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
 Make sure that the configured data has been added to the `{table_name}` table.
 
 #### Import infrastructural data
@@ -295,6 +363,8 @@ Make sure that the configured data has been added to the `{table_name}` table.
 Import infrastructural data as follows:
 
 1. Install the plugins:
+
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
@@ -313,10 +383,12 @@ console setup:init-db
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly. Provide verification for "Configure Export to Redis and Elasticsearch".-->
 
-Ensure that the {entities} have been added to the `{table_name}` table.
+Make sure that the {entities} have been added to the `{table_name}` table.
 
 #### Import {DataImporterName}
 <!--Provide demo data for the current data importer as a code snippet. Provide additional information about glossary key generation if it depends on data import. Provide a table with data import column definitions. Provide the plugin list to wire up the data importer. Provide a code snippet showing how to attach the data import to a console command. Provide the console command to import data.-->
+
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
 | -------- | ------------- | --------------- | --------- |
@@ -334,7 +406,7 @@ Ensure that the {entities} have been added to the `{table_name}` table.
 * [Configure Export to Redis](#configure-export-to-redis)  -->
 
 ### Set up behavior
-<!--This is a comment, it will not be included -->
+<!--The "specification" column has to describe what is the behaviour of the plugin so that the customer can understand it. This should contain the necessary information for the following "prerequisites" column.-->
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN   | SPECIFICATION | PREREQUISITES   | NAMESPACE |
@@ -347,6 +419,14 @@ Enable the following behaviors by registering the plugins:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 ## Install feature frontend
 
@@ -362,10 +442,10 @@ Install the required features and Glue APIs:
 | -------------- | ----------------- | ----------------- |
 | {feature name / Glue API name} | {feature version} | {integration guide link} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 <!--Provide the console command\(s\) with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 {command to install the required modules}
@@ -373,6 +453,14 @@ Install the required modules:
 
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
+
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
 
 Make sure the following modules have been installed:
 
@@ -399,6 +487,14 @@ console data:import glossary
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
 Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 ---
@@ -419,6 +515,14 @@ Register the following route providers on the Storefront:
 **Verification**
 <!--Describe how a developer can check they have completed the step correctly.-->
 
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
 ### Set up widgets
 <!--Provide a list of plugins and global widgets to enable widgets. Add descriptions for complex javascript code snippets. Provide a console command for generating front-end code.-->
 
@@ -438,7 +542,15 @@ Set up widgets as follows:
 
 <!--Describe how a developer can check they have completed the step correctly.-->
 
-Make sure the following widgets have been registered by adding the respective code snippets to a Twig template:
+<!--Each step needs verification to make sure that the customer did not skip anything unintentionally.
+The verification needs to cover the entire "step".
+The verification step often needs to use an example domain, use
+ - "mysprykershop.com"
+ - "zed.mysprykershop.com"
+ - "glue.mysprykershop.com"
+domains according to your requirements.-->
+
+Verify that the following widgets have been registered by adding the respective code snippets to a Twig template:
 
 | WIDGET   | VERIFICATION                  |
 | -------- | ----------------------------- |

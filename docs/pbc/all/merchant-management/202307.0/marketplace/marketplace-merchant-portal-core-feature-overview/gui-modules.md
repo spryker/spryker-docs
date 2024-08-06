@@ -2,6 +2,7 @@
 title: GUI modules
 description: Short overview of GUI modules in Merchant Portal.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html
 related:

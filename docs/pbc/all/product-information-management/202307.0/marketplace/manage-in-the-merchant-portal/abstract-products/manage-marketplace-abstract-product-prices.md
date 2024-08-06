@@ -2,6 +2,7 @@
 title: Managing marketplace abstract product prices
 description: This document describes how to manage marketplace abstract product prices in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Aug 22, 2023
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202307.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
 related:
@@ -78,7 +79,7 @@ To remove abstract product's price, follow these steps:
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
 | Customer | Defines whether the price will be applied to all customers or a specific one. If **Default** is selected, the price will be applied to all customers.  |
-| Store          | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the price will be displayed. |
+| Store          | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the abstract product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |

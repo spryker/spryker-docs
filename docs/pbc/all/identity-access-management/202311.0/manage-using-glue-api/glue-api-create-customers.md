@@ -4,6 +4,8 @@ description: Learn how to create customer accounts using Glue API.
 last_updated: Nov 2, 2022
 template: glue-api-storefront-guide-template
 originalArticleId: 246e73d7-562f-414f-bbc0-d102ef54ff5c
+redirect_from:
+- /docs/pbc/all/identity-access-management/202204.0/manage-using-glue-api/glue-api-create-customers.html
 related:
   - title: Authentication and authorization
     link: docs/pbc/all/identity-access-management/page.version/glue-api-authentication-and-authorization.html

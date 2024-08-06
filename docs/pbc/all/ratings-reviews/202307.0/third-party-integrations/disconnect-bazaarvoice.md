@@ -2,11 +2,12 @@
 title: Disconnect Bazaarvoice
 description: Find out how you can disconnect Bazaarvoice in your Spryker shop
 template: howto-guide-template 
+last_updated: Jul 25, 2023
 ---
 
 You can always disconnect the Bazaarvoice app from your store. For example, after the trial period, you might decide not to continue with the app. 
 
-Disconnecting the app removes the Bazaarvoice UGC and automatically restores the default Spryker [Product Ratings and Reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) feature.
+Disconnecting the app removes the Bazaarvoice UGC and automatically restores the default Spryker [Product Ratings and Reviews](/docs/pbc/all/ratings-reviews/{{page.version}}/ratings-and-reviews.html) feature.
 
 To disconnect the Bazaarvoice app from your store, do the following
 

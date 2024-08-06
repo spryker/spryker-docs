@@ -2,6 +2,7 @@
 title: "Product Offer validity dates: Domain model and relationships"
 description: This document provides reference information about Marketplace Product Offer validity dates in the Spryker Marketplace.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 Validity dates define the date range when a product offer is active. The Validity Dates entity manipulates the product offer activity field (`spy_product_offer.is_active`),

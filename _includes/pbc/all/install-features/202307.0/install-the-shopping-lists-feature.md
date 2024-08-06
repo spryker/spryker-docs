@@ -17,9 +17,9 @@ Install the required features:
 |Prices | {{page.version}} |
 |Product | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
@@ -27,7 +27,7 @@ composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -100,7 +100,7 @@ Adjust the schema definition so that entity changes can trigger events.
     </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -127,7 +127,7 @@ Make sure that the following changes have been applied when checking your databa
 
 {% info_block warningBox "Verification" %}
 
- Make sure that the following changes have been applied in transfer objects:
+ Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | ---|
@@ -207,7 +207,7 @@ customer.account.shopping_list_item.error.product_not_active,Product is not acti
 customer.account.shopping_list_item.error.product_not_active,Produkt ist nicht aktiv,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -215,7 +215,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -457,7 +457,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 	}
 }
 ```
-
+ 
 Run the following console command to execute registered installer plugins and install infrastructural data:
 
 ```bash
@@ -522,7 +522,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list
@@ -530,7 +530,7 @@ console data:import shopping-list
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list` table.
+Make sure that, in the database, the configured data has been added to the `spy_shopping_list` table.
 
 {% endinfo_block %}
 
@@ -615,7 +615,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list-item
@@ -623,7 +623,7 @@ console data:import shopping-list-item
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_item` table.
+Make sure that, in the database, the configured data has been added to the `spy_shopping_list_item` table.
 
 {% endinfo_block %}
 
@@ -684,7 +684,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 
 ```bash
@@ -693,7 +693,7 @@ console data:import shopping-list-company-user
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_company_user` table.
+Make sure that, in the database, the configured data has been added to the `spy_shopping_list_company_user` table.
 
 {% endinfo_block %}
 
@@ -749,7 +749,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import shopping-list-company-business-unit
@@ -757,7 +757,7 @@ console data:import shopping-list-company-business-unit
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_shopping_list_company_busines_unit` table.
+Make sure that, in the database, the configured data has been added to the `spy_shopping_list_company_busines_unit` table.
 
 {% endinfo_block %}
 
@@ -1011,9 +1011,9 @@ Please overview and install the necessary features before beginning the integrat
 | Product | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with-dependencies
@@ -1021,7 +1021,7 @@ composer require spryker-feature/shopping-lists:"{{page.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -1242,7 +1242,7 @@ product_quick_add_widget.form.error.sku.empty,"SKU kann nicht leer sein",de_DE
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -1250,7 +1250,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

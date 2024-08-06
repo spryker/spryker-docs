@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-b2b-account/retrieving-company-users.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/retrieving-company-users.html
 related:
   - title: Retrieving companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
@@ -25,14 +26,14 @@ related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve company users
 
@@ -366,7 +367,7 @@ To retrieve information about a company user, send the request:
 | 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1404 | Specified company user is not found or does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 

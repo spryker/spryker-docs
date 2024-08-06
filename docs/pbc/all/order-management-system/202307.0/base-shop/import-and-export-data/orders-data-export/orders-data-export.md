@@ -8,6 +8,8 @@ originalArticleId: 0a38b991-f10c-4f6c-90db-247a62cda2e7
 redirect_from:
   - /docs/scos/dev/data-import/202212.0/data-export.html
   - /docs/scos/dev/sdk/data-export.html
+  - /docs/scos/dev/data-export/202307.0/data-export.html
+  - /docs/scos/dev/data-export/202307.0/data-export-orders-.csv-files-format.html
 related:
   - title: Install the Sales Data Export feature
     link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-sales-data-export-feature.html

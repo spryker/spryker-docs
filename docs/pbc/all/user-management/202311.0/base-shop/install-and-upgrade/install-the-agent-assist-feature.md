@@ -12,11 +12,10 @@ redirect_from:
   - /docs/en/agent-assist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/agent-assist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/agent-assist-feature-integration.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/install-and-upgrade/install-the-agent-assist-feature.html
 related:
   - title: Install the Agent Assist Glue API
     link: docs/pbc/all/user-management/page.version/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html
-  - title: Agent Assist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-agent-assist-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-agent-assist-feature.md -->

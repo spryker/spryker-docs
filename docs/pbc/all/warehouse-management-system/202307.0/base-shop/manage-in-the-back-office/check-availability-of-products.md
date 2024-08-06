@@ -13,7 +13,7 @@ related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Timed Product Availability Feature Overview
-    link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
 ---
 
 To check a product's availability in the Back Office, follow the steps:

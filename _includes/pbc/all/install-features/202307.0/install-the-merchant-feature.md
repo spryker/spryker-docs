@@ -14,9 +14,9 @@ Install the required features:
 |-|-|-|
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-## 1) Install the required modules using Composer
+## 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant
@@ -24,7 +24,7 @@ composer require spryker-feature/merchant
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
@@ -45,7 +45,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database
+Make sure the following changes have been applied in the database:
 
 | DATABASE SECURITY | TYPE | EVENT |
 |-|-|-|

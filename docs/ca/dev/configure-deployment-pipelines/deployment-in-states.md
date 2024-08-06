@@ -2,6 +2,7 @@
 title: Deployment in states
 description: States of applications during deployment and how they affect its behaviour.
 template: howto-guide-template
+last_updated: Oct 6, 2023
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
 redirect_from:
@@ -49,17 +50,37 @@ When no pipeline is running, a working application behaves as follows:
 
 ![Working application](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/working-application.gif)
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Build_and_Prepare
 
 In this step, AWS builds the containers for the services that are going to be deployed. For the sake of simplicity, we use only Glue and Zed in our examples.
 
 ![Build and Prepare step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/build-and-prepare-step.jpg)
 
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
 In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, they are updated rarely, but if they are, while they are being updated, the following may happen:
 
 ![Configure RabbitMQ Vhosts and Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/configure-rabbitmq-step.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Run_pre-deploy_hook
 
@@ -72,6 +93,13 @@ In this step, the following happens:
 While the scripts you defined are running and the scheduler finishes the currently running jobs, requests keep coming in. For this duration, all the services that are in an updated state may respond incorrectly to requests:
 
 ![Run pre deploy hook](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/pre-deploy-step.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Deploy_Scheduler
 
@@ -88,6 +116,12 @@ Scheduler is based on the Zed container, as it uses the codebase of Zed.
 During this step, all the services in an updated state may still respond to requests incorrectly:
 
 ![Deploy Scheduler step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-scheduler-step.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Run_install
 
@@ -108,9 +142,22 @@ The scheduler restarts queue workers and updates search and Redis.
 
 ![Update search and Redis](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/update-search-and-redis.gif)
 
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
+
 Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they may process requests incorrectly:
 
 ![Install step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/install-step.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Deploy_Spryker_services
 
@@ -128,6 +175,12 @@ Since this process is uncontrollable, there is a potential timeframe in which th
 
 ![Deploy Spryker services step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-services-step.gif)
 
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.md/view-merchant-profile.mp4" type="video/mp4">
+  </video>
+</figure>
+
 ## Run_post-deploy_hook
 
 In this step, the scripts you defined for this step in the `SPRYKER_HOOK_AFTER_DEPLOY` are run. By default, there are no scripts for this step. If you define any scripts for this step, they will just increase the duration of the deployment.
@@ -141,4 +194,4 @@ Another powerful technique we recommend is feature flags. They let you enable up
 ## Next steps
 
 
-*   [Deploying in a staging environemnt](/docs/ca/dev/deploy-in-a-staging-environment.html)
+[Deploying in a staging environment](/docs/ca/dev/deploy-in-a-staging-environment.html)

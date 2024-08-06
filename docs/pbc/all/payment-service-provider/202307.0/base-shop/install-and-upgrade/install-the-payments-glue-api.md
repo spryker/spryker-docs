@@ -1,5 +1,5 @@
 ---
-title: Glue API - Payments feature integration
+title: Install the Payments Glue API
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-payments-feature-integration
@@ -9,12 +9,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-payments-feature-integration.html
   - /docs/pbc/all/payment-service-provider/202307.0/install-and-upgrade/install-the-payments-glue-api.html
 related:
-  - title: Payments feature integration
+  - title: Install the Payments feature
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/install-and-upgrade/install-the-payments-feature.html
   - title: Payments feature walkthrough
     link: docs/pbc/all/payment-service-provider/page.version/base-shop/payments-feature-overview.html
   - title: Check out purchases
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html
   - title: Updating payment data
     link: docs/pbc/all/cart-and-checkout/page.version/base-shop/manage-using-glue-api/check-out/glue-api-update-payment-data.html
 ---

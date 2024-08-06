@@ -73,7 +73,7 @@ customer.order_history.reset_all,Reset All,en_US
 customer.order_history.reset_all,Alles zurücksetzen,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -81,6 +81,6 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/pbc/all/product-information-management/202307.0/base-shop/import-and-export-data/file-details-product-group.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `product_group.csv` file to configure [Product Group](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-groups-feature-overview.html) information in your Spryker Demo Shop.

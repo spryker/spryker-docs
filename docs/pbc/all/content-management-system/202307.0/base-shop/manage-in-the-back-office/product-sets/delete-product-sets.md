@@ -2,6 +2,7 @@
 title: Delete product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
 - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/product-sets/delete-product-sets.html
 related:
@@ -14,7 +15,7 @@ related:
   - title: View product sets
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/view-product-sets.html
   - title: Product Sets feature overview
-    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
 ---
 
 

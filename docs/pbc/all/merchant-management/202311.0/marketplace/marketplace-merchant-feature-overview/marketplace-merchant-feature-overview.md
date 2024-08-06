@@ -2,24 +2,19 @@
 title: Marketplace Merchant feature overview
 description: This document contains concept information for the Merchants feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Jan 15, 2024
 redirect_from:
   - /docs/marketplace/user/features/202311.0/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 related:
   - title: Managing merchants
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html
 ---
 
 A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#creating-merchants) or [import merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html).
-
-{% info_block infoBox "Note" %}
-
-After you create a merchant, you can not delete it completely. You can only [deactivate](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants) the merchant.
-
-{% endinfo_block %}
+You can [create merchants in the Back Office](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) or [import merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html).
 
 ## Merchant statuses
 
@@ -45,7 +40,7 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-For details about how to change the merchant statuses and activate or deactivate merchants in the Back Office, see [approving and denying merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#approving-and-denying-merchants) and [activating and deactivating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#activating-and-deactivating-merchants).
+For details about how to change the merchant statuses and activate or deactivate merchants in the Back Office, see [Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html).
 
 {% info_block infoBox "Info" %}
 
@@ -75,7 +70,7 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 
 The information for a merchant profile can be defined:
 
-* By the Marketplace administrator in the Back Office when [creating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#creating-merchants) or [editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html#editing-merchants).
+* By the Marketplace administrator in the Back Office when [creating merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html) or [editing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/edit-merchants.html).
 * By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
@@ -127,7 +122,7 @@ Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/
 
 | OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants.html)|
+|[Merchant users overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/edit-merchant-profiles.html) |[Create merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchants/create-merchants.html)|
 |[Main merchant concept](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html)| | [Managing merchant users](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html)|
 
 ## Related Developer documents
@@ -137,5 +132,5 @@ Learn about [merchant users](/docs/pbc/all/merchant-management/{{page.version}}/
 |[Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |[Retrieving merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html) | [File details: merchant.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html) |
 |[Install the Marketplace Merchant Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html) | [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile.csv.html) |
 | [Install the Merchant Portal - Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-portal-marketplace-merchant-feature.html) | [Retrieving autocomplete and search suggestions](/docs/pbc/all/search/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-profile-address.csv.html) |
-|     | [Resolving the URL of the merchant page](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html) |
+|     | [Resolving the URL of the merchant page](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-stock.csv.html) |
 |   |   | [File details: merchant_store.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-store.csv.html)  |

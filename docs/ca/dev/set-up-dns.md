@@ -2,6 +2,7 @@
 title: Set up DNS
 description: Learn how to set up DNS for your SCCOS project
 template: concept-topic-template
+last_updated: Dec 18, 2023
 ---
 
 You normally add a CNAME record in your DNS Management for the domains you want to use for your application. This CNAME corresponds to the DNS name of the load balancer of your environment to make your application accessible to the outside world. You can get the load balancer information from our support team. Generally, the DNS setup has these steps:

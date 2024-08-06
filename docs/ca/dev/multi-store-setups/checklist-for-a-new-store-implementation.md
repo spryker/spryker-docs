@@ -2,6 +2,7 @@
 title: Checklist for a new store implementation
 description: Learn how to implement a new store in a multi-store environment
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/checklist-for-a-new-store-implementation.html
 related:
@@ -11,7 +12,7 @@ related:
 
 This document outlines the high-level tasks and responsibilities of Spryker and Customer when setting up a new store depending on the chosen setup for the multi-store environment. For a description of setups referred to in this document, see [Multistore setup options](/docs/ca/dev/multi-store-setups/multistore-setup-options.html).
 
-For detailed steps about the new store implementation, see [HowTo: Set up multiple stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html).
+For detailed steps about the new store implementation, see [HowTo: Set up multiple stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html).
 
 ## Setup 1
 
@@ -21,7 +22,7 @@ For detailed steps about the new store implementation, see [HowTo: Set up multip
 
 **SI / Customer**
 1. Set up a local dev environment and adjust configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
-2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.  
+2. Implement and apply [code buckets](/docs/dg/dev/architecture/code-buckets.html) for different themes.  
 3. Adjust the importer and define product, content, data, payment, including OMS, or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
 5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).
@@ -52,7 +53,7 @@ For this setup, send a support request to Spryker and do the following:
 **SI / Customer**
 
 1. Set up a local dev environment and adjust the configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
-2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.
+2. Implement and apply [code buckets](/docs/dg/dev/architecture/code-buckets.html) for different themes.
 3. Adjust the importer and define product, content, data, payment, including OMS or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
 5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).
@@ -84,7 +85,7 @@ Provision of a new fully isolated environment per store.
 **SI / Customer**
 
 1. Set up a local dev environment and adjust the configuration in `config.php`, including hosts in data YML files, for example, in `/deploy.spryker-b2c-production.yml`.
-2. Implement and apply [code buckets](/docs/scos/dev/architecture/code-buckets.html) for different themes.
+2. Implement and apply [code buckets](/docs/dg/dev/architecture/code-buckets.html) for different themes.
 3. Adjust the importer and define product, content, data, payment, including OMS or stock store relations via the importer. See [example for the B2C demo shop](https://github.com/spryker-shop/b2c-demo-shop/tree/master/data/import/common/common).  
 4. Change DNS (merchant owns DNS).
 5. Check third-party integrations (ERP, CRM, CMS, PIM, Payment, Logistics, Search).

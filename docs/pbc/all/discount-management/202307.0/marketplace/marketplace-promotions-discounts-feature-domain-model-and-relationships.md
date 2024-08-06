@@ -2,6 +2,7 @@
 title: "Marketplace Promotions & Discounts feature: Domain model and relationships"
 description: This document provides technical details about the Marketplace Promotions and Discounts feature.
 template: feature-walkthrough-template
+last_updated: Jul 25, 2023
 ---
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Promotions and Discounts* feature.

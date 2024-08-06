@@ -29,7 +29,7 @@ On this page, you can find commonly encountered cases of product restrictions be
          </td>
          <td>
             <img title="Click Me!" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/Feature+Walkthroughs/Merchant+Product+Restrictions+Feature+Walkthrough/Restricted+Products+Behavior/categories-blacklist.png" alt="" />
-            <p>In case the products are added to the category after it was included in a list, it is reflected after some time with the help of <a href="/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html">publish &amp; sync</a> process.</p>
+            <p>In case the products are added to the category after it was included in a list, it is reflected after some time with the help of <a href="/docs/dg/dev/backend-development/data-manipulation/data-publishing/publish-and-synchronization.html">publish &amp; sync</a> process.</p>
          </td>
       </tr>
       <tr>

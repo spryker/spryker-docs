@@ -2,6 +2,7 @@
 title: Changing a source branch fails
 description: Solution to a failed source branch change while saving pipeline settings
 template: troubleshooting-guide-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting-deployment/changing-a-source-branch-fails.html
   - /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/changing-a-source-branch-fails.html

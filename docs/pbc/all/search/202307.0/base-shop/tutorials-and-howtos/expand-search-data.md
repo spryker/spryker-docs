@@ -2,6 +2,7 @@
 title: Expand search data
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
+last_updated: Aug 29, 2023
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html

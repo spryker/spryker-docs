@@ -9,11 +9,12 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202108.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/availability/managing-products-availability.html
   - /docs/scos/user/back-office-user-guides/202311.0/catalog/availability/managing-products-availability.html  
+  - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/manage-in-the-back-office/check-availability-of-products.html
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Timed Product Availability Feature Overview
-    link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-feature-overview/timed-product-availability-overview.html
 ---
 
 To check a product's availability in the Back Office, follow the steps:

@@ -2,6 +2,7 @@
 title: Edit slots in configurable bundle templates
 description: Learn how to edit slots in configurable bundle templates in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 related:
   - title: Create configurable bundle templates
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-in-the-back-office/configurable-bundle-templates/create-configurable-bundle-templates.html

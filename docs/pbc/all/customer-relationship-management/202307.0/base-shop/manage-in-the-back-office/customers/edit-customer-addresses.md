@@ -2,6 +2,7 @@
 title: Edit customer addresses
 description: Learn how to edit customer addresses in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/edit-customer-addresses.html
 related:

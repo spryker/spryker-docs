@@ -5,7 +5,7 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 related:
   - title: CMS blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
   - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
@@ -22,7 +22,7 @@ By default, we provide the following positions: "Top", "Middle", "Bottom". To de
 
 ## Prerequisites
 
-[Install category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html)
+[Install category CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-category-cms-blocks.html)
 
 
 ## Configure custom block positions

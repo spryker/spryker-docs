@@ -2,6 +2,7 @@
 title: Shopping List and Wishlist
 description: This document contains concept information for the Marketplace Wishlist feature.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 The *Shopping List and Wishlist* capability lets your customers create and manage shopping lists and wishlists on the Storefront.

@@ -24,7 +24,7 @@ There are several steps to consider when implementing special prices based on wh
 
 ## Extend the Customer module
 
-The `spy_customer` table must be extended on the project side to include the group ID. For more information about extending the database schema, see [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+The `spy_customer` table must be extended on the project side to include the group ID. For more information about extending the database schema, see [Extend the database schema](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 The `spy_customer` table must be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 

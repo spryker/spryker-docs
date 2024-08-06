@@ -2,6 +2,7 @@
 title: Merchant User
 description: Merchant User in Merchant Portal.
 template: concept-topic-template
+last_updated: Nov 17, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202311.0/marketplace-merchant-portal-core-feature-walkthrough/merchant-user-concept.html
 ---

@@ -2,6 +2,7 @@
 title: Create MerchantOms flows
 description: This articles provides details how to create new MerchantOms flow
 template: howto-guide-template
+last_updated: Jul 25, 2023
 ---
 
 This document provides the details about how to create a new MerchantOms flow.
@@ -40,7 +41,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 ];
 ```
 
-4. Create Merchant state machines. To learn more about state machine creation, see [Tutorial - OMS and State Machines](/docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html).
+4. Create Merchant state machines. To learn more about state machine creation, see [Tutorial - OMS and State Machines](/docs/dg/dev/backend-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html).
 
 **config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml**
 

@@ -15,9 +15,9 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/howto-create-cms-templates.html
 related:
   - title: CMS Pages overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
   - title: CMS Blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to create CMS templates for Yves.
@@ -87,7 +87,7 @@ A content manager can apply this template when [creating a CMS page](/docs/pbc/a
 Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
-3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
+3. [Import](/docs/dg/dev/data-import/{{site.version}}/data-importers-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
 Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/create-cms-pages.html) or [creating a category](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/categories/create-categories.html).
 

@@ -1,6 +1,7 @@
 ---
 title: "Marketplace Product Offer feature: Domain model and relationships"
 template: concept-topic-template
+last_updated: Jul 25, 2023
 ---
 
 The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. The product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be “owned” by any entity, however, in a B2C or B2B Marketplace, it is owned by a [merchant](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html).

@@ -13,6 +13,7 @@ redirect_from:
   - /docs/en/precise-search-by-super-attributes
   - /v6/docs/precise-search-by-super-attributes
   - /v6/docs/en/precise-search-by-super-attributes
+  - /docs/pbc/all/search/202212.0/best-practices/precise-search-by-super-attributes.html
 related:
   - title: Data-driven ranking
     link: docs/pbc/all/search/page.version/base-shop/best-practices/data-driven-ranking.html
@@ -74,19 +75,7 @@ This plugin does the following:
 - Makes a sub-search request such as  `CatalogClient::searchProductConcretesByFullText`, but searches by facets of super attributes from the request.
 - Adds a list of unique abstract product IDs into the query.
 
-An example implementation looks as follows:
-
-```
-some code here
-```
-
 4. Extend `FacetQueryExpanderPlugin`, which doesn't take into account facets used in the plugin `ConcreteProductSearchQueryExpanderPlugin`.
-
-An example implementation looks as follows:
-
-```
-some code here
-```
 
 Make sure to use updated plugin in `CatalogDependencyProvider`.
 

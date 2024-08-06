@@ -10,7 +10,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202307.0/base-shop/import-and-export-data/file-details-cms-block-category-postion.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `cms_block_category_position.csv` file to configure CMS Block Category Position information in your Spryker Demo Shop.

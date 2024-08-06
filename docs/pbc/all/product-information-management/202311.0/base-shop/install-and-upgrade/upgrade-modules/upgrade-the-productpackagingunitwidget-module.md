@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunitwidget.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunitwidget.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productpackagingunitwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productpackagingunitwidget-module.md -->

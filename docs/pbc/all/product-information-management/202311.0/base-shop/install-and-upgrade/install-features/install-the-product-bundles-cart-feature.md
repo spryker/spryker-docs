@@ -1,5 +1,5 @@
 ---
-title: Product Bundles + Cart feature integration
+title: Install the Product Bundles + Cart feature
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
@@ -15,11 +15,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202311.0/product-bundles-cart-feature-integration.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-cart-feature.html
 related:
-  - title: "Glue API: Product Bundle + Cart feature integration"
+  - title: "Install the Product Bundle + Cart Glue API"
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html
-  - title: Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+  - title: Install the Cart feature
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-cart-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-cart-feature.md -->

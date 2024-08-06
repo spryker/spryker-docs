@@ -22,7 +22,7 @@ After data updates we may implement the `Spryker\Zed\DynamicEntityExtension\Depe
 
 For more details, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
 
-We will create a plugin that will create some related data after data import for a specific entity, it's an abstract example without concrete logic. If we need to implement a plugin for data import, we need to implement the `DynamicEntityPostCreatePluginInterface` interface with `postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer` method. Please see the example below.
+We will create a plugin that activate product after product data import. We need to implement the `DynamicEntityPostCreatePluginInterface` interface with `postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer` method. Please see the example below.
 
 **Code sample:**
 
@@ -38,17 +38,21 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements DynamicEntityPostCreatePluginInterface
 {
-    protected const MAIN_TABLE_NAME = 'pyz_custom_table';
+    protected const TABLE_NAME = 'spy_product';
+
+    protected const ID_PRODUCT = 'id_product';
 
     public function postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer
     {
-        if ($dynamicEntityPostEditRequestTransfer->getTableName() !== static::MAIN_TABLE_NAME) {
+        if ($dynamicEntityPostEditRequestTransfer->getTableName() !== static::TABLE_NAME) {
             return new DynamicEntityPostEditResponseTransfer();
         }
 
-        $responseTransfer = $this->getSubTestCreator()->createSubTestEntity($dynamicEntityPostEditRequestTransfer->getRawDynamicEntities()->getArrayCopy());
+        foreach ($dynamicEntityPostEditRequestTransfer->getRawDynamicEntities() as $rawDynamicEntity) {
+            $this->productFacade->activateProductConcrete($rawDynamicEntity->getFields()[static::ID_PRODUCT]);
+        }
 
-        return $this->buildDynamicEntityPostEditResponseTransfer($responseTransfer);
+        return new DynamicEntityPostEditResponseTransfer();
     }
 }
 ```
@@ -81,6 +85,8 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Make sure the new created data has been in the database table.
+1. Configure the Product entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html).
+2. Send POST request to import product data. For instructions, see [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
+3. Send GET request to check if product is activated. For instructions, see [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
 
 {% endinfo_block %}

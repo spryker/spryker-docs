@@ -17,7 +17,7 @@ The following sections describe how the Oryx framework achieves versioning and r
 
 Oryx follows the principles of [semantic versioning](https://semver.org/). This means that, for version `x.y.z`, the following applies:
 - If critical bug fixes are released, a patch release is made by changing the `z` number. For example, `1.5.2` to `1.5.3`.
-- If new features or non-critical fixes are released, a minor release is made by changing the `y` number. For example, `1.5.2` to `15.6.0`.
+- If new features or non-critical fixes are released, a minor release is made by changing the `y` number. For example, `1.5.2` to `1.6.0`.
 - If significant changes that may break compatibility are released, a major release is made by changing the `x` number. For example, `1.5.2` to `2.0.0`.
 
 ### Release previews

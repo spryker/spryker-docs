@@ -51,19 +51,19 @@ Redis session locking allows exclusive access to sessions, ensuring that informa
 If your application heavily relies on information in Redis sessions, your PHP-FPM workers will regularly lock sessions. If they aquire information quickly and release the lock promptly, subsequent incoming requests find free workers that can acquire session locks again. However, if there are delays in session lock release—for example, because of temporarily unavailable or delayed third-party systems used to synchronously retrieve session information, or excessive GET/SET operations against Redis—the session can remain locked for an extended period. New requests will cause new child processes to spawn. If child workers also have to do the expensive session work, this will quickly lead to the max children count being reached. At this point, service degradation is almost inevitable and the outcome depends on which timeout is reached first.
 
 ## Solution
-You should regularly scan your APM for Session Lock exceptions, as well as your application logs for warnings related to PHP max children count. The former provides definitive evidence that action is needed, while the latter serves as an indicator that your PHP-FPM worker pool might not be “keeping up” with incoming requests and their average processing time. If your APM supports it, consider configuring alerts for these occurrences.
+Regularly scan your APM for Session Lock exceptions, as well as your application logs for warnings related to PHP max children count. The former provides definitive evidence that action is needed, while the latter serves as an indicator that your PHP-FPM worker pool might not be keeping up with incoming requests and their average processing time. If your APM supports it, consider configuring alerts for these events.
 
-**Increase php worker pool size**
+### Increase php worker pool size
 Ensure you have a sufficient pool of PHP-FPM workers defined. You can configure the php-fpm max_children count for each application part in your [deploy.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications) file.
 
-**Optimize External Calls**
-Evaluate whether you can combine Redis operations—for example, by using MGET. In general, try to reduce Redis calls in sessions as much as possible. Work with asynchronous calls to external systems where possible and handle failures to reach them gracefully.
+### Optimize external calls
+Evaluate if you can combine Redis operations—for example, by using MGET. In general, try to reduce Redis calls in sessions as much as possible. Work with asynchronous calls to external systems where possible and handle failures to reach them gracefully.
 
-**Optimize Timeouts**
-Work with short timeouts and avoid increasing them above industry standards/defaults. Allowing long `max_execution_time` will exacerbate the issue if the process can't finish successfully due to outages or other errors. It can quickly introduce a single point of failure to your application.
+### Optimize timeouts
+Work with short timeouts and avoid increasing them above industry standards or defaults. Setting a long `max_execution_time` may exacerbate the issue if a process can't finish successfully because of outages or other errors. It can quickly introduce a single point of failure to your application.
 
-**Evalaute Architecture Perfromance Guidelines**
-Explore these [guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#general-performance-challenges-in-architecture-design) to improve the performance and responsiveness of your application. Ensuring requests are fulfilled as quickly as possible will significantly enhance your application’s scalability.
+### Evalaute architecture performance guidelines
+Explore [architecture performance guidelines](/docs/dg/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html#general-performance-challenges-in-architecture-design) to improve the performance and responsiveness of your application. Ensuring requests are fulfilled as quickly as possible significantly enhances the application’s scalability.
 
-**Leverage APIs**
-Headless scenarios are not normally impaced by Session Locking challenges. You can use this to your advantage and evaluate whether you can adjust calls that would normally target Yves and target APIs instead.
+### Leverage APIs
+Headless scenarios aren't usually impacted by Session Locking challenges. Evaluate if you can adjust calls that would normally target Yves to target APIs instead.

@@ -157,7 +157,6 @@ To configure a reference file:
 |Hash|dbdfac276ae80dbe6f7b66ec1cd05ef21372988a|
 |Release|1.24.0|
 |Branch name|my-branch|
-|Major branch|1.x|
 
 4. Commit and push:
 
@@ -198,9 +197,9 @@ cd ..
 
 #### CI validation
 
-If you're using CI, we highly recommend you ensure that the reference and submodule hashes are matching.
+If you're using CI and store the commit hash in `.git.docker`, make sure the reference and submodule hashes match.
 
 The following is an example of what the code can look like:
 ```bash
-- git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
+git submodule | grep docker | grep `cat .git.docker` || (echo "Installed submodule hash doesn't match the reference hash from .git.docker"; exit 1)
 ```

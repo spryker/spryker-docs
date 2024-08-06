@@ -165,6 +165,8 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 
 <details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
+##### Example:
+
 ```json
 [
   {
@@ -286,9 +288,10 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
     }
 ]
 ```
+</details>
 
 {% info_block warningBox "Verification" %}
-To debug after adding the configuration to the file, you need to import the configuration into the database.
+After adding the configuration to the file, you need to import the configuration into the database.
 
 Import new configuration relations:
 
@@ -338,8 +341,6 @@ Response sample:
 }
 ```
 {% endinfo_block %}
-
-</details>
 
 ##### Structure:
 

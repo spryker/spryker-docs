@@ -11,7 +11,7 @@ The Stripe integration in Spryker is part of the App Composition Platform and su
 
 ## Supported business models
 
-The Stripe App supports B2B and B2C models.
+The Stripe App supports B2B, B2C, and Marketplace models.
 
 ## Stripe features
 

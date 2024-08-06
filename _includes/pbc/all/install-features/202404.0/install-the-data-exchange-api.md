@@ -151,17 +151,19 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
     }
 }
 ```
+{% info_block infoBox "" %}
 
-Note: Tables that are not allowed for configuration are defined in `Spryker\Zed\DynamicEntity\Business\Reader\DisallowedTablesReader::getDefaultDisallowedTables()`.
+Tables that aren't allowed for configuration are defined in `Spryker\Zed\DynamicEntity\Business\Reader\DisallowedTablesReader::getDefaultDisallowedTables()`.
+
+{% endinfo_block %}
+
 
 
 ### Configure Dynamic Data installation
 
-1. Optional: To set the default configuration data, create a configuration file:
+1. Optional: To set the default configuration data, create a configuration file following the example:
 
 <details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
-
-##### Example:
 
 ```json
 [
@@ -288,12 +290,13 @@ Note: Tables that are not allowed for configuration are defined in `Spryker\Zed\
 {% info_block warningBox "Verification" %}
 To debug after adding the configuration to the file, you need to import the configuration into the database.
 
-To import new configuration relations run the command:
+Import new configuration relations:
 
 ```bash
 vendor/bin/console setup:init-db
 ```
-For checking the configuration in the database, you can use the following GET request:
+
+To check the configuration in the database, send the following request:
 
 ```bash
 GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1

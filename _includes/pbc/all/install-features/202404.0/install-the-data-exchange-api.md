@@ -725,7 +725,7 @@ Make sure you can operate data. For instructions, see [Requesting data using the
 
 {% info_block infoBox %}
 
-At the moment Data Exchange API does not support child relations configuration. If you need to configure child relations, you can do it manually in the database or adjust the configuration in file `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json` for import.
+At the moment Data Exchange API does not support child relations configuration from the Backoffice. If you need to configure child relations, you can do it manually in the database or adjust the configuration in file `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json` for import.
 
 {% endinfo_block %}
 

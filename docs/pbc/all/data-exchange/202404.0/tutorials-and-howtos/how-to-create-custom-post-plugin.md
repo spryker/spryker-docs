@@ -1,6 +1,6 @@
 ---
-title: How to create a custom post plugin for Data Exchange API
-description: This document describes how to create custom post plugins for the Data Exchange API.
+title: How to create a custom post create/update plugin for Data Exchange API
+description: This document describes how to create custom post create/update plugin for the Data Exchange API.
 last_updated: Aug 5, 2024
 template: howto-guide-template
 ---
@@ -12,20 +12,17 @@ template: howto-guide-template
 * [Sending requests with Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.md)
 
 
-## Create a post plugin
+## Post plugin creation for Data Exchange API
 
-In some cases, you need to perform some actions after importing or changing data through the Data Exchange API.
+In some cases, we need to perform some actions after importing or changing data through the Data Exchange API.
 
-For some specific requirements, you may need to create custom post plugins. Post plugins allow you to perform some manipulations after data import or data update. 
-To implement custom post plugins, you need to create a new class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` or `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface.
+For some specific requirements, we may need to create a custom post plugin. Post plugins allow us to perform some manipulations after data import or data updates.
+For some manipulation after data import, we may need to create a new class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` interface.
+After data updates we may implement the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface.
 
-You can see more details in already existing plugins, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
+For more details, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
 
-
-### Implement the `DynamicEntityPostCreatePluginInterface` interface
-
-For example, we will create a plugin that will call a facade method after data import for a specific entity, it's an abstract example, and you can implement your logic. If you need to implement a plugin for data updates, you need to implement the  `DynamicEntityPostUpdatePluginInterface` interface. 
-Methods `postCreate` and `postUpdate` should return `DynamicEntityPostEditResponseTransfer` object, you can add some errors in this transfer object if needed. `DynamicEntityPostEditRequestTransfer` object to get data from the request. Please see the example below.
+We will create a plugin that will create some related data after data import for a specific entity, it's an abstract example without concrete logic. If we need to implement a plugin for data import, we need to implement the `DynamicEntityPostCreatePluginInterface` interface with `postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer` method. Please see the example below.
 
 **Code sample:**
 
@@ -36,28 +33,27 @@ namespace Pyz\Zed\CustomModule\Communication\Plugin\DynamicEntity;
 
 use Generated\Shared\Transfer\DynamicEntityPostEditRequestTransfer;
 use Generated\Shared\Transfer\DynamicEntityPostEditResponseTransfer;
-use Propel\Runtime\Collection\Collection;
 use Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements DynamicEntityPostCreatePluginInterface
 {
-    protected const TABLE_NAME = 'pyz_custom_table';
+    protected const MAIN_TABLE_NAME = 'pyz_custom_table';
 
     public function postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer
     {
-        if ($dynamicEntityPostEditRequestTransfer->getTableName() !== static::TABLE_NAME) {
+        if ($dynamicEntityPostEditRequestTransfer->getTableName() !== static::MAIN_TABLE_NAME) {
             return new DynamicEntityPostEditResponseTransfer();
         }
 
-        $responseTransfer = $this->getFacade()->createSubTestEntity($dynamicEntityPostEditRequestTransfer->getRawDynamicEntities()->getArrayCopy());
+        $responseTransfer = $this->getSubTestCreator()->createSubTestEntity($dynamicEntityPostEditRequestTransfer->getRawDynamicEntities()->getArrayCopy());
 
         return $this->buildDynamicEntityPostEditResponseTransfer($responseTransfer);
     }
 }
 ```
 
-To register your plugin, please add it to the `DynamicEntityDependencyProvider` in your module.
+To register the plugin, we need add it to the `DynamicEntityDependencyProvider` in the module.
 
 `src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php`
 
@@ -68,20 +64,9 @@ namespace Pyz\Zed\DynamicEntity;
 
 use Pyz\Zed\CustomModule\Communication\Plugin\CustomDynamicEntityPostCreatePlugin;
 use Spryker\Zed\DynamicEntity\DynamicEntityDependencyProvider as SprykerDynamicEntityDependencyProvider;
-use Spryker\Zed\ProductDynamicEntityConnector\Communication\Plugin\DynamicEntity\ProductAbstractLocalizedAttributesDynamicEntityPostUpdatePlugin;
 
 class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProvider
 {
-    /**
-     * @return array<\Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface>
-     */
-    protected function getDynamicEntityPostUpdatePlugins(): array
-    {
-        return [
-            new ProductAbstractLocalizedAttributesDynamicEntityPostUpdatePlugin(),
-        ];
-    }
-
     /**
      * @return array<\Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface>
      */
@@ -93,3 +78,9 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the new created data has been in the database table.
+
+{% endinfo_block %}

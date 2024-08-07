@@ -2,6 +2,7 @@
 title: Process incoming HTTP requests from external ERP services for order updates
 description: Learn how you can process incoming HTTP requests from external ERP services for order updates
 template: howto-guide-template
+last_updated: Jul 25, 2023
 ---
 
 Spryker applications can receive information about orders from external systems in various ways. The nature of such requests can vary widely: it can be a request from a user's browser, a push notification from a delivery company, or a batch update request from an ERP system. This document suggests possible solutions for processing incoming HTTP requests, describes their advantages and disadvantages, and highlights pitfalls.

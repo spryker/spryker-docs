@@ -18,7 +18,7 @@ Install the required features:
 | Marketplace Merchant | {{page.version}}  | [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html) |
 | Acl                  | {{page.version}}  | [Install the ACL feature](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-acl-feature.html)                                                                    |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
@@ -626,7 +626,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                                | TYPE  | EVENT   | PATH                                                                          |
 |-----------------------------------------|-------|---------|-------------------------------------------------------------------------------|
@@ -743,7 +743,7 @@ To start builder integration, check versions of Spryker packages:
 | Gui (optional)              | >= 3.30.2 |
 | Product Relation (optional) | >= 2.4.3  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^2.1.0" --update-with-dependencies
@@ -764,7 +764,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER                      | TYPE   | EVENT   | PATH                                                                |
 |-------------------------------|--------|---------|---------------------------------------------------------------------|
@@ -1671,4 +1671,4 @@ Integrate the following related features:
 
 | FEATURE         | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                  |
 |-----------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Portal | &check;                          | [Merchant Portal feature integration ](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |
+| Merchant Portal | &check;                          | [Install the Merchant Portal](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal.html) |

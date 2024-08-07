@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-measurement-unit-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-units-feature-integration.html
 related:
-  - title: Glue API - Measurement Units feature integration
+  - title: Install the Measurement Units Glue API
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html
 ---
 
@@ -36,9 +36,9 @@ Install the required features:
 | Order Management | {{page.version}} |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/measurement-units:"{{page.version}}" --update-with-dependencies
@@ -46,7 +46,7 @@ composer require spryker-feature/measurement-units:"{{page.version}}" --update-w
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -104,7 +104,7 @@ Adjust the schema definition so entity changes will trigger events.
  </database>
 ```
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -113,7 +113,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -199,7 +199,7 @@ measurement_units.standard.length.centimetre.name,Centimeter,de_DE
 measurement_units.standard.length.feet.name,Fuß,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -207,7 +207,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -445,7 +445,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-unit
@@ -508,7 +508,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-base-unit
@@ -588,7 +588,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit
@@ -701,7 +701,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import product-measurement-sales-unit-store
@@ -915,9 +915,9 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core E-commerce | {{page.version}} |
 |Checkout| {{page.version}} |
 |   |   |
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/measurement-units: "{{page.version}}" --update-with-dependencies
@@ -925,7 +925,7 @@ composer require spryker-feature/measurement-units: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -965,7 +965,7 @@ cart.item.sales_unit.not_found,Sales unit is not found for product with SKU '%sk
 cart.item.sales_unit.not_found,Verkaufseinheit wird für Produkt mit SKU '%sku%' nicht gefunden.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -973,7 +973,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

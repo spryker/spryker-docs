@@ -2,6 +2,7 @@
 title: Marketplace Order Management feature overview
 description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 6, 2023
 related:
   - title: Marketplace order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
@@ -122,4 +123,4 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html)  |
-| [Marketplace Order Management + Order Threshold feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/create-merchant-oms-flows.html)   |
+| [Install the Marketplace Order Management + Order Threshold feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/create-merchant-oms-flows.html)   |

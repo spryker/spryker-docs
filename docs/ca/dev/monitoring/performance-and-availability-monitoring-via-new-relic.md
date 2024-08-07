@@ -2,6 +2,7 @@
 title: Performance and availability monitoring via New Relic
 description:
 template: concept-topic-template
+last_updated: Oct 6, 2023
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/monitoring/performance-and-availability-monitoring-via-new-relic.html
 ---

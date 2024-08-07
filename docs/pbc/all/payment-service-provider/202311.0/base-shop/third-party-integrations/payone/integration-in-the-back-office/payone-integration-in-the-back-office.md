@@ -2,6 +2,7 @@
 title: "Payone: Integration in the Back Office"
 description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
 template: howto-guide-template
+last_updated: Nov 21, 2023
 redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html

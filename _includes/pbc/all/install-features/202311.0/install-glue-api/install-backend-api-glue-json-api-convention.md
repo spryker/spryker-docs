@@ -15,7 +15,7 @@ Install the required features:
 |----------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core   | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/glue-backend-api-application-glue-json-api-convention-connector:"^1.0.0" --update-with-dependencies
@@ -135,6 +135,6 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 
 {% info_block warningBox "Verification" %}
 
-To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/scos/dev/glue-api-guides/{{site.version}}/routing/create-backend-resources.html).
+To verify that everything is set up correctly and that you can access the endpoint, see [Create backend resources](/docs/dg/dev/glue-api/{{site.version}}/routing/create-backend-resources.html).
 
 {% endinfo_block %}

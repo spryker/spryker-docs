@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) and [plugins](/docs/scos/dev/back-end-development/plugins/plugins.html).
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) and [plugins](/docs/dg/dev/backend-development/plugins/plugins.html).
 
 ## Zed Output Folder
 
@@ -28,7 +28,7 @@ The application must have proper access(es) depending on what you expect to achi
 
 ## Console
 
-To export the products and categories, we must register the Collectors that were created in the [Console](/docs/scos/dev/back-end-development/console-commands/console-commands.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
+To export the products and categories, we must register the Collectors that were created in the [Console](/docs/dg/dev/backend-development/console-commands/console-commands.html). Econda module has already everything in place and the only thing you need to do is to add `CollectorFileExportConsole` to `Pyz\Zed\Console\ConsoleDependencyProvider` like in the snippet bellow:
 
 ```php
 <?php

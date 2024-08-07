@@ -33,7 +33,7 @@ redirect_from:
   - /module_migration_guides/mg-multi-cart-page.htm
 related:
   - title: Multiple Carts per User Feature Overview
-    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
+    link: docs/pbc/all/cart-and-checkout/page.version/base-shop/feature-overviews/multiple-carts-feature-overview.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-multicartpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-multicartpage-module.md -->

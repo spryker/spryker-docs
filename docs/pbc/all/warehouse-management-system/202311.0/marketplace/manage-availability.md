@@ -25,11 +25,15 @@ For multi-store projects, you can filter the products according to the store the
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
+For the [Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.html) project, you can also filter the products according to the merchant the product belongs to.
 
 {% endinfo_block %}
 
-![merchants-switcher-on-availabilities](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Availability/availability-reference-information/merchants-switcher-on-availabilities.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/warehouse-management-system/marketplace/manage-availability.md/merchants-switcher-on-availabilities.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ---
 
@@ -51,7 +55,7 @@ The **Abstract Product** contains a drop-down list where you can select the stor
 
 {% info_block infoBox "Info" %}
 
-For the [Marketplace](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
+For the [Marketplace](/docs/about/all/spryker-marketplace/marketplace-concept.html) project, a merchant name is available for a specific product. The availability of a certain merchant warehouse is provided.
 
 {% endinfo_block %}
 

@@ -5,6 +5,7 @@ last_updated: Aug 2, 2021
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202311.0/users/managing-users/assigning-customers-to-users.html
+  - /docs/pbc/all/user-management/202204.0/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
 related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
@@ -16,7 +17,7 @@ related:
     link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/delete-users.html
 ---
 
-This document describes how to assign customers to users, so that users can [preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/manage-cms-pages.html#previewing-cms-pages) as the customers that are assigned to them. This is especially relevant for B2B scenarios. For example, users can see company specific prices and product lists.
+This document describes how to assign customers to users, so that users can [preview CMS pages](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/pages/preview-cms-pages.html) as the customers that are assigned to them. This is especially relevant for B2B scenarios. For example, users can see company specific prices and product lists.
 
 {% info_block warningBox "Assigning a customer to multiple users" %}
 

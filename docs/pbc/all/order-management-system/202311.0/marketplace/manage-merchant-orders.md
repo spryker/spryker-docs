@@ -2,6 +2,7 @@
 title: Managing merchant orders
 description: This document describes the actions a merchant can do in the Orders section of the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Nov 21, 2023
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html

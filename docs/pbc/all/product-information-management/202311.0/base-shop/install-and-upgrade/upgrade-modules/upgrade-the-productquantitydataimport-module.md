@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productquantitydataimport.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productquantitydataimport.html
   - /module_migration_guides/mg-product-quantity-data-import.htm
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productquantitydataimport-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-productquantitydataimport-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productquantitydataimport-module.md -->

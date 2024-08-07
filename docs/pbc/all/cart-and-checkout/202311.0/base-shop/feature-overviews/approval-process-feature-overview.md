@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/user/features/202311.0/approval-process-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/approval-process-feature-overview.html  
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/approval-process-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/approval-process-feature-overview.html
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.
@@ -77,7 +78,7 @@ Here’s how approvals fit into the buying process:
 
 {% info_block warningBox "Note" %}
 
-There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html).
+There may be several approvers with different Approve up to grand total permissions created. By default, one Approver role is available after the feature has been [integrated](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html).
 
 {% endinfo_block %}
 
@@ -203,4 +204,4 @@ Company users can perform the following actions using the Approval Process featu
 | INSTALLATION GUIDES                                                                                                                                                                                    | TUTORIALS AND HOWTOS |
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|
 | [Approval Process feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-approval-process-feature.html)                      | [HowTo: Implement customer approval process based on a generic state machine](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/tutorials-and-howtos/implement-a-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) |   |
+| [Install the Shipment + Approval Process feature](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-approval-process-feature.html) |   |

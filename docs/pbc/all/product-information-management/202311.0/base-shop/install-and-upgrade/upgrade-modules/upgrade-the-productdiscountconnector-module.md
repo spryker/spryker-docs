@@ -31,6 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productdiscountconnector.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productdiscountconnector.html
   - /module_migration_guides/mg-product-discount-connector.htm
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productdiscountconnector-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->

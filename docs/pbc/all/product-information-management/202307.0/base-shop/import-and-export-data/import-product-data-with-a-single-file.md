@@ -17,7 +17,7 @@ Besides importing product-related data with multiple .csv files, like [product_a
 
 {% info_block warningBox "Prerequisites" %}
 
-Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html#implementation-overview) in your project.
+Before you can import all main product data, make sure that *combined_product* [importer is enabled](/docs/dg/dev/data-import/{{page.version}}/data-importers-implementation.html#implementation-overview) in your project.
 
 {% endinfo_block %}
 

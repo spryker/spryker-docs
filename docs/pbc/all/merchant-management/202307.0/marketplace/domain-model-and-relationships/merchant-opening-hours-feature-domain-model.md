@@ -2,6 +2,7 @@
 title: "Merchant Opening Hours feature: Domain model"
 description: The Merchant Opening Hours lets you define opening hours for a merchant.
 template: concept-topic-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/feature-walkthroughs/202307.0/merchant-opening-hours-feature-walkthrough.html
 ---

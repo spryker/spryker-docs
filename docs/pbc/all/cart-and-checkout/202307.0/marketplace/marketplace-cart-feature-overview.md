@@ -2,6 +2,7 @@
 title: Marketplace Cart feature overview
 description: This document contains concept information for the Marketplace Cart feature.
 template: concept-topic-template
+last_updated: Aug 21, 2023
 redirect_from:
   - docs/marketplace/user/features/page.version/marketplace-cart-notes-feature-overview.html
 ---
@@ -28,7 +29,7 @@ In a situation where the same product variants are added to the cart with differ
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |
 |---------|---------|---------|--------|
-| [Marketplace Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/install/install-features/install-the-marketplace-cart-feature.html)          | [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)          |
+| [Install the Marketplace Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/install/install-features/install-the-marketplace-cart-feature.html)          | [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-carts-of-registered-users.html)          |
 |  | [Managing items in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/carts-of-registered-users/manage-items-in-carts-of-registered-users.html) |
 |   |  [Manage guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-carts.html) |
 |   |  [Manage guest cart items](/docs/pbc/all/cart-and-checkout/{{page.version}}/marketplace/manage-using-glue-api/guest-carts/manage-guest-cart-items.html) |

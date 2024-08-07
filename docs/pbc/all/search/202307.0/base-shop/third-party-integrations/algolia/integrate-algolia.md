@@ -693,4 +693,4 @@ There is a difference in how default facets behave on Algolia and on the default
 
 ## Next steps
 
-[Configure the Algolia app](/docs/pbc/all/search/{{site.version}}/base-shop/third-party-integrations/configure-algolia.html) for your store.
+[Configure the Algolia app](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/configure-algolia.html) for your store.

@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/202120.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-b2b-account/retrieving-business-unit-addresses.html
 related:
   - title: Retrieving companies
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
@@ -109,7 +110,7 @@ If your current company account is not set, you may get the `404` status code.
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 
 ##  Next steps

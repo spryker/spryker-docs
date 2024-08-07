@@ -17,7 +17,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/user/features/202311.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202311.0/shopping-lists-feature-walkthrough.html
-  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html    
+  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html   
+  - /docs/pbc/all/shopping-list-and-wishlist/202204.0/base-shop/shopping-lists-feature-overview/shopping-lists-feature-overview.html 
 ---
 
 A *shopping list* is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -126,7 +127,7 @@ Different access rights can be granted on a shopping list to a business unit and
 
 ## Search widget for shopping lists
 
-Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 
 {% info_block warningBox %}
 

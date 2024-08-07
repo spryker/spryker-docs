@@ -15,9 +15,9 @@ Install the required features:
 | Persistent Cart | {{page.version}} |
 | Agent Assist | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
@@ -25,7 +25,7 @@ composer require spryker-feature/quotation-process: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -162,7 +162,7 @@ Make sure that `http://mysprykershop.com/quote-request` with not authenticated u
 
 ### 2) Set up the database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -246,7 +246,7 @@ quote_request.update.validation.error.wrong_valid_until,The validity date of thi
 quote_request.update.validation.error.wrong_valid_until,"Das Gültigkeitsdatum dieser Angebotsanfrage ist bereits abgelaufen. Bitte ändern Sie das Datum, um es an den Kunden zu senden.",de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -254,7 +254,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -417,9 +417,9 @@ Install the required features:
 | Persistent Cart | {{page.version}} |
 |Agent Assist  | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
@@ -427,7 +427,7 @@ composer require spryker-feature/quotation-process: "{{page.version}}" --update-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -618,7 +618,7 @@ quote_request_page.quote_request.item,%count% artikel,de_DE
 ```
 </details>
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -626,7 +626,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

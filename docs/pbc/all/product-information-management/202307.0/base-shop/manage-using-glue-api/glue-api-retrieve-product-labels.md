@@ -9,8 +9,8 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-product-labels.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-product-labels.html
 related:
-  - title: Glue API - Promotions & Discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+  - title: Install the Promotions & Discounts feature Glue API
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html
   - title: Product Labels feature overview
     link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/product-labels-feature-overview.html
 ---
@@ -19,7 +19,7 @@ related:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html).
 
 ## Retrieve a product label
 
@@ -92,4 +92,4 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

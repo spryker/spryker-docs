@@ -6,11 +6,11 @@ Install the required features:
 | Name | Version | INSTALLATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | 201907.0 | [Glue Application](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
-| Product | 201907.0 | [Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Product | 201907.0 | [Products API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |
 | Tax | 201907.0 |  |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/product-tax-sets-rest-api:"^2.0.0" --update-with-dependencies
@@ -25,8 +25,8 @@ Make sure that the following module has been installed:
 | `ProductTaxSetsRestApi` | `vendor/spryker/product-tax-sets-rest-api` |  
 </div></section>
 
-### 2) Set up Database Schema and Transfer Objects
-Run the following commands to apply database changes and generate entity and transfer changes:
+### 2) Set up database schema and transfer objects
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -44,7 +44,7 @@ Make sure that the following changes have been applied by checking your database
 </div></section>
 
 <section contenteditable="false" class="warningBox"><div class="content">
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -130,7 +130,7 @@ Make sure that the following endpoint is available:<br>`http://mysprykershop.com
 
 **See also:**
 
-* [Tax Management](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
+* [Tax Management](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html)
 
  
 *Last review date: Mar 21, 2019*

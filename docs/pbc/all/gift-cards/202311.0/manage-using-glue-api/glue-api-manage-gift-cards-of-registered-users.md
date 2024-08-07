@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202311.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/pbc/all/gift-cards/202311.0/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+  - /docs/pbc/all/gift-cards/202204.0/manage-using-glue-api/glue-api-manage-gift-cards-of-registered-users.html
 ---
 
 [Gift Card](/docs/pbc/all/gift-cards/{{site.version}}/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
@@ -60,7 +61,7 @@ To redeem the gift card code, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -177,7 +178,7 @@ To remove the gift card code from the cart, send the request:
 
 {% info_block infoBox "Authentication" %}
 
-To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+To use this endpoint, customers need to authenticate. For details, see [Authentication and Authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html).
 
 {% endinfo_block %}
 
@@ -203,4 +204,4 @@ If the item is deleted successfully, the endpoint will respond with a `204 No Co
 | 3302 | Incorrect voucher code or the voucher cannot be applied. |
 | 3303| Cart code can't be removed. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

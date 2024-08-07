@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/price-management/202307.0/base-shop/import-and-export-data/file-details-currency.csv.html
 related:
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `currency.csv` file to configure [Currency](/docs/pbc/all/price-management/{{site.version}}/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.

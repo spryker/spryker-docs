@@ -2,6 +2,7 @@
 title: Edit filter preferences
 description: Learn how to edit filter preferences in the Back Office
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/pbc/all/search/202307.0/manage-in-the-back-office/filter-preferences/edit-filter-preferences.html
 related:

@@ -12,9 +12,9 @@ To start the feature integration, overview and install the necessary features:
 | Product | {{page.version}}  |
 | Checkout | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-with-dependencies
@@ -22,7 +22,7 @@ composer require spryker-feature/quick-add-to-cart:"{{page.version}}" --update-w
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |---|---|
@@ -33,7 +33,7 @@ Make sure that the following modules were installed:
 
 ### 2) Set up transfer objects
 
-Run the following commands to generate transfer changes:
+Generate transfer changes:
 
 ```bash
 console transfer:generate
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |---|---|---|---|
@@ -79,7 +79,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -136,9 +136,9 @@ To start feature integration, review and install the necessary features:
 |Product| {{page.version}} |
 |Checkout| {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/quick-add-to-cart:"^master" --update-with-dependencies
@@ -146,7 +146,7 @@ composer require spryker-feature/quick-add-to-cart:"^master" --update-with-depen
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |---|---|
@@ -357,5 +357,5 @@ Make the following checks at https://mysprykershop.com/quick-order:
 
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE  |
 |---------|--------------|--------------|
-| Marketplace Product + Quick Add to Cart       |              | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)             |
-| Marketplace Product Offer + Quick Add to Cart |              | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html) |
+| Marketplace Product + Quick Add to Cart       |              | [Install the Marketplace Product + Quick Add to Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-quick-add-to-cart-feature.html)             |
+| Marketplace Product Offer + Quick Add to Cart |              | [Install the Marketplace Product Offer + Quick Add to Cart feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-product-offer-quick-add-to-cart-feature.html) |

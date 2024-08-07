@@ -2,6 +2,7 @@
 title: "Extend Gui tables"
 description: This articles provides details how to extend an existing Gui table
 template: howto-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-extend-gui-table.html
 related:
@@ -18,7 +19,7 @@ With this step by step instructions you will learn how to extend a Gui table wit
 
 ## Prerequisites
 
-To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Marketplace Merchant Portal Core feature integration guide](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+To install the Marketplace Merchant Portal Core feature providing the `GuiTable` module, follow the [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 
 
 ## 1) Add a new column

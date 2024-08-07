@@ -29,7 +29,7 @@ You can use the default OMS states to be displayed on the **Order Details** page
 
 {% endinfo_block %}
 
-By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo: Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html).
+By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo: Emailing Invoices Using BCC](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/email-invoices-using-bcc.html).
 
 
 ## Invoice template

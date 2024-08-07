@@ -2,6 +2,7 @@
 title: Configure the data integration path between Akeneo and SCCOS
 description: Create incoming configuration, outgoing configuration, and route in the Spryker Middleware powered by Alumio
 template: howto-guide-template
+last_updated: Nov 10, 2023
 ---
 
 After you have [configured data mapping between Akeneo and SCCOS](/docs/pbc/all/data-exchange/{{page.version}}/spryker-middleware-powered-by-alumio/integration-apps/akeneo-pim-integration-app/configure-the-akeneo-pim-integration-app/configure-data-mapping-between-akeneo-and-sccos.html), you need to configure the data integration path.
@@ -23,6 +24,8 @@ To create the incoming configuration, do the following:
 4. To activate the incoming configuration, set the status to *Enabled*.
 5. In the *Subscriber* field, select the *HTTP subscriber*. You may also select the *Akeneo subscriber*, however, in this document, we consider the settings for the *HTTP subscriber*.
 6. In the *Request URL*, specify the URL to a specific product or the URL to a list of products. The URL should include just the path after `akeneo.com`, as the base path to the Akeneo environment is already specified in the HTTP client you created. For example, if the actual path to a specific product you want to import from Akeneo is `https://test.cloud.akeneo.com/api/rest/v1/producs/1234567890`, the path to specify in the *Request URL* field is `/api/rest/v1/producs/1234567890`. 
+
+<a name="batch-products-import"></a> 
 
 {% info_block infoBox "Batch products import" %}
 

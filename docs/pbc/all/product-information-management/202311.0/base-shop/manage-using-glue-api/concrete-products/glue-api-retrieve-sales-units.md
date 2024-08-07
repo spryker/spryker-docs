@@ -8,6 +8,7 @@ originalArticleId: 4150363f-4c47-4e7c-b7e6-d1430ce864ba
 redirect_from:
   - /docs/scos/dev/glue-api-guides/202311.0/managing-products/concrete-products/retrieving-sales-units.html
   - /docs/pbc/all/product-information-management/202311.0/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
+  - /docs/pbc/all/product-information-management/202204.0/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
 related:
   - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
@@ -26,7 +27,7 @@ This endpoint allows retrieving sales units of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 * [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve sales units
@@ -111,4 +112,4 @@ See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{
 | 302 | Concrete product is not found. |
 | 312  | Concrete product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

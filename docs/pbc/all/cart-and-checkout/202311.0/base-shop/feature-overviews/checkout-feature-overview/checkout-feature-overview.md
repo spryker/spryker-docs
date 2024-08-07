@@ -10,6 +10,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202311.0/checkout-feature-walkthrough.html
   - /docs/pbc/all/cart-and-checkout/202311.0/checkout-feature-overview/checkout-feature-overview.html
   - /docs/pbc/all/cart-and-checkout/202311.0/base-shop/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/pbc/all/cart-and-checkout/202204.0/base-shop/feature-overviews/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 Offer customers a smooth shopping experience by customizing the checkout workflow. Add, delete, and configure any checkout step, like customer account login, shipment and payment methods, or checkout overview.
@@ -18,11 +19,11 @@ The *Checkout* feature lets customers select single or multiple products and add
 
 Control the values of the orders that your customers place by defining order thresholds.
 
-Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution to prevent orders that are too small from being made. The *[Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
+Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution to prevent orders that are too small from being made. The *[Order Thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) separately.
 
 With order thresholds, you can do the following:
 
@@ -36,7 +37,7 @@ With order thresholds, you can do the following:
 |OVERVIEWS| BACK OFFICE USER GUIDES |
 |-|-|
 | [Multi-step Checkout](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html)  | [Define global thresholds](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/define-global-thresholds.html) |
-| [Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)  | [Manage threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html) |
+| [Order Thresholds](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/order-thresholds-overview.html)  | [Manage threshold settings](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-in-the-back-office/manage-threshold-settings.html) |
 
 ## Related Developer documents
 

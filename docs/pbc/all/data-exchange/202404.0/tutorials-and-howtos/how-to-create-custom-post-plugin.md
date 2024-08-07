@@ -5,6 +5,14 @@ last_updated: Aug 5, 2024
 template: howto-guide-template
 ---
 
+In some cases, after data is imported or changed through Data Exchange API, you might want some events to be executed automatically. This document describes how to set up such events by creating custom post plugins.
+
+For some manipulation after data import, we may need to create a new class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` interface.
+After data updates we may implement the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface.
+
+For more details, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
+
+
 ## Prerequisites  
 
 * [Install the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api.html)
@@ -14,17 +22,9 @@ template: howto-guide-template
 
 ## Post plugin creation for Data Exchange API
 
-In some cases, we need to perform some actions after importing or changing data through the Data Exchange API.
+As an example, this guide explains how to create a plugin that activates products after they're imported:
 
-For some specific requirements, we may need to create a custom post plugin. Post plugins allow us to perform some manipulations after data import or data updates.
-For some manipulation after data import, we may need to create a new class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` interface.
-After data updates we may implement the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface.
-
-For more details, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
-
-We will create a plugin that activate product after product data import. We need to implement the `DynamicEntityPostCreatePluginInterface` interface with `postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer` method. Please see the example below.
-
-**Code sample:**
+1. Implement a `DynamicEntityPostCreatePluginInterface` interface with the `postCreate(DynamicEntityPostEditRequestTransfer $dynamicEntityPostEditRequestTransfer): DynamicEntityPostEditResponseTransfer` method. Example:
 
 ```php
 <?php
@@ -57,10 +57,9 @@ class CustomDynamicEntityPostCreatePlugin extends AbstractPlugin implements Dyna
 }
 ```
 
-To register the plugin, we need add it to the `DynamicEntityDependencyProvider` in the module.
+2. To register the plugin, add it to the `DynamicEntityDependencyProvider` in the module.
 
-`src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php`
-
+**src/Pyz/Zed/DynamicEntity/DynamicEntityDependencyProvider.php**
 ```php
 <?php
 
@@ -85,8 +84,8 @@ class DynamicEntityDependencyProvider extends SprykerDynamicEntityDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-1. Configure the Product entity in `spy_dynamic_entity_configuration`. For instructions, see [How to configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html).
-2. Send POST request to import product data. For instructions, see [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
-3. Send GET request to check if product is activated. For instructions, see [How to send request in Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
+1. Configure the Product entity in `spy_dynamic_entity_configuration`. For instructions, see [Configure Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/configure-data-exchange-api.html).
+2. Send a POST request to import product data. For instructions, see [Sending requests with Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
+3. Send a GET request to check if the product is activated. For instructions, see [Sending requests with Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html).
 
 {% endinfo_block %}

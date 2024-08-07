@@ -292,14 +292,14 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 
 </details>
 
-{% info_block warningBox "Verification" %}
-After adding the configuration to the file, you need to import the configuration into the database.
 
-Import new configuration relations:
+2. Import new configuration relations:
 
 ```bash
 vendor/bin/console setup:init-db
 ```
+
+{% info_block warningBox "Verification" %}
 
 To check the configuration in the database, send the following request:
 
@@ -346,10 +346,10 @@ Response sample:
 
 
 
-Structure:
+
 
 {% info_block infoBox "" %}
-
+Structure:
 
 | Name                                                      | Imported to                                                                     | Description                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -365,7 +365,7 @@ Structure:
 
 {% endinfo_block %}
 
-2. Add the path to the configuration file:
+3. Add the path to the configuration file:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 

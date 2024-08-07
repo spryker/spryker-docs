@@ -7,7 +7,7 @@ Install the required features:
 | NAME                     | VERSION          | INSTALLATION GUIDE                                                                                                                                                |
 |--------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Comments                 | {{page.version}} | [Install the Comments feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-comments-feature.html) |
-| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html)      |
+| Spryker Core Back Office | {{page.version}} | [Install the Spryker Core Back Office feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)      |
 
 ## 1) Install the required modules
 

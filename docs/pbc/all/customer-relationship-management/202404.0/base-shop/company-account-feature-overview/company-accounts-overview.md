@@ -57,7 +57,12 @@ Company users can perform the following actions on the Storefront:
 <details>
 <summary markdown='span'>Create a company</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-company.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/create-a-company.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
@@ -65,20 +70,36 @@ Company users can perform the following actions on the Storefront:
 <details>
 <summary markdown='span'>Create a business unit</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-business-unit.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/create-a-business-unit.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Edit a business unit</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/edit-a-business-unit.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/edit-a-business-unit.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 </details>
 
 <details>
 <summary markdown='span'>Delete a business unit</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-business-unit.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/delete-a-business-unit.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
@@ -86,20 +107,35 @@ Company users can perform the following actions on the Storefront:
 <details>
 <summary markdown='span'>Create a user</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/create-a-user.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/create-a-user.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 </details>
 
 <details>
 <summary markdown='span'>Edit, enable, and disable a user</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/enable-disable-edit-a-user.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/enable-disable-edit-a-user.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Delete a user</summary>
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/delete-a-user.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/company-accounts-overview.md/delete-a-user.mp4" type="video/mp4">
+  </video>
+</figure>
+
 </details>
 
 ## Related Business User documents
@@ -108,12 +144,6 @@ Company users can perform the following actions on the Storefront:
 |---|
 | [Manage companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html) |
 
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
 
 ## See next
 [Business Units overview](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html)

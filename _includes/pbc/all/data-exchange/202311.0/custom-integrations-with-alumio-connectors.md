@@ -13,6 +13,6 @@ We recommend building custom integrations with the existing Alumio connectors in
 - For your project, it's important that the data exchange solution allows for the proper data orchestration like dependency management, error handling and logging, entity mapping, integration variable management, .CSV file validation, health monitoring, etc.
 
 For more details on how to manage integrations and exchange data in the Alumio platform, see the following information provided by Alumio:
-- [The Basic Parts Of A Connector Package In Alumio](https://support.alumio.com/support/solutions/articles/80001031213-the-basic-parts-of-a-connector-package-in-alumio)
+<!-- - [The Basic Parts Of A Connector Package In Alumio](https://support.alumio.com/support/solutions/articles/80001031213-the-basic-parts-of-a-connector-package-in-alumio) | 404 -->
 - [How To Use The Alumio Connector Packages](https://forum.alumio.com/t/how-to-use-the-alumio-connector-packages/219)
 - List of Alumio standard Connector Packages: [Latest iPaaS Connector Packages](https://forum.alumio.com/c/ipaas-connector-packages/27)

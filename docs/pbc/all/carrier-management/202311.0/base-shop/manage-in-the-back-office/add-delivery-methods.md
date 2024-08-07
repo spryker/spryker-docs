@@ -20,7 +20,7 @@ related:
   - title: Shipment feature overview
     link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
   - title: Creating a Carrier Company
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/manage-in-the-back-office/add-carrier-companies.html
 ---
 
 This doc describes how to add delivery methods in the Back Office.

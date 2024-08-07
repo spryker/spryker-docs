@@ -15,7 +15,7 @@ This document describes how to retrieve cart rules, vouchers, and promotional it
 
 For details on the modules that provide the API functionality and how to install them, see the following docs:
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Retrieve customer’s carts
@@ -320,7 +320,10 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
+
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -332,14 +335,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | product-options | optionName | String | The  product option's name. |
 | product-options | price | Integer | The  product option price in cents. |
 | product-options | currencyIsoCode | String | The  ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | The  piscount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | The  amount of the provided discount. |
-| vouchers, cart-rules | code | String | The  discount code. |
-| vouchers, cart-rules | discountType | String | The  discount type. |
-| vouchers, cart-rules | isExclusive | Boolean | If true, the discount is exclusive. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | The  date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | The  SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 ## Possible errors
 

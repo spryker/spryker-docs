@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Push Notification feature](/docs/pbc/all/push-notification/{{page.version}}/unified-commerce/push-notification-feature-overview.html).
+This document describes how to install the [Push Notification feature](/docs/pbc/all/miscellaneous/{{page.version}}/push-notification-feature-overview.html).
 
 ## Install feature core
 

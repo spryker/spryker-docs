@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html 
 related:
   - title: Install the Content Items feature
-    link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html
   - title: "Glue API: Retrieve abstract product list content items"
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html
   - title: "Glue API: Retrieve banner content items"

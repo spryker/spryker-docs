@@ -217,6 +217,7 @@ use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAutho
 
 ```
 
+
 ## Next step
 
 [Connect and configure Stripe](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/connect-and-configure-stripe.html)

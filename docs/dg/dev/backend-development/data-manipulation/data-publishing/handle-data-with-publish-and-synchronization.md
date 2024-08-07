@@ -276,7 +276,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 </details>
 
-1. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
+3. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php
 <?php

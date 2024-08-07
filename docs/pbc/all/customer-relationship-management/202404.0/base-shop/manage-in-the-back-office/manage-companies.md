@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/manage-companies.html
 related:
   - title: Company user roles and permissions overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to manage companies.

@@ -12,7 +12,6 @@ Install the required features:
 | Cart | {{page.version}} |
 |Company Account  | {{page.version}} |
 |Prices  | {{page.version}} |
-| Persistent Cart | {{page.version}} |
 | Agent Assist | {{page.version}} |
 
 ### 1) Install the required modules
@@ -414,7 +413,6 @@ Install the required features:
 | Cart | {{page.version}} |
 | Company Account | {{page.version}} |
 |Prices  | {{page.version}} |
-| Persistent Cart | {{page.version}} |
 |Agent Assist  | {{page.version}} |
 
 ### 1) Install the required modules

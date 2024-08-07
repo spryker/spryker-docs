@@ -5,16 +5,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-accounts-overview
 originalArticleId: 94150bcb-e1c5-4290-b661-71af9fc3cbb3
 redirect_from:
-  - /2021080/docs/customer-accounts-overview
-  - /2021080/docs/en/customer-accounts-overview
-  - /docs/customer-accounts-overview
-  - /docs/en/customer-accounts-overview
-  - /2021080/docs/addresses-reference-information
-  - /2021080/docs/en/addresses-reference-information
-  - /docs/addresses-reference-information
-  - /docs/en/addresses-reference-information
-  - /2021080/docs/order-history-reference-information
-  - /2021080/docs/en/order-history-reference-information
   - /docs/order-history-reference-information
   - /docs/en/order-history-reference-information
   - /docs/scos/user/features/202311.0/customer-account-management-feature-overview/customer-accounts-overview.html
@@ -75,28 +65,47 @@ A customer can perform the following actions on the Storefront:
 <details>
 <summary markdown='span'>View the account activity</summary>
 
-![view-account-activity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/view-account-activity.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/view-account-activity.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Create, edit, and delete a customer address</summary>
 
-![create-edit-delete-a-customer-address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/create-edit-delete-a-customer-address.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/create-edit-delete-a-customer-address.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Filter order history</summary>
 
-![filter-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/filter-order-history.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/filter-order-history.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
 <summary markdown='span'>Reorder selected items</summary>
 
-![reorder-selected-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/reorder-selected-items.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/customer-account-management-feature-overview/customer-accounts-overview.md/reorder-selected-items.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 

@@ -10,12 +10,12 @@ Install the required features:
 
 | NAME                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
-| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Cart                        | {{page.version}} | [Cart feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.md.html)                                                    |
-| Prices                      | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{site.version}}/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
-| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Company Account             | {{page.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Customer Account Management | {{page.version}} | [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html) |
+| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Cart                        | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)                                                    |
+| Prices                      | {{page.version}} | [Install the Prices feature](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html)                      |
+| Product                     | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
 
 ### 1) Install the required modules
 
@@ -474,7 +474,7 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Make sure the folowing ocurred in the database:
+Make sure the following occurred in the database:
 * Permission groups have been added to the `spy_shoppping_list_permission_group` table.
 * Permissions have been added to the `spy_permission`
 * The relations between them have been added to the `spy_shopping_list_permission_group_to_permission` table.
@@ -1099,11 +1099,11 @@ Install the following required features:
 
 | NAME                        | VERSION          | INTEGRATE GUIDE                                                                                                                                                         |
 |-----------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
-| Company Account             | {{page.version}} | [Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
-| Multiple Carts              | {{page.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md)                                                           |
-| Product                     | {{page.version}} | [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
-| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
+| Spryker Core                | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                    |
+| Company Account             | {{page.version}} | [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)                              |
+| Multiple Carts              | {{page.version}} | [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)                                                           |
+| Product                     | {{page.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                              |
+| Customer Account Management | {{page.version}} | [Customer Account Management](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html) |
 
 ### 1) Install the required modules
 
@@ -1349,7 +1349,7 @@ Make sure that, in the database, the configured data has been added to the `spy_
 
 {% endinfo_block %}
 
-### 4) Set up router plugins
+### 3) Set up router plugins
 
 | PLUGIN                                | SPECIFICATION                                                | PREREQUISITES | NAMESPACE                                                                                |
 |---------------------------------------|--------------------------------------------------------------|---------------|------------------------------------------------------------------------------------------|
@@ -1382,7 +1382,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 5) Set up quick order plugin
+### 4) Set up quick order plugin
 
 | PLUGIN                                          | SPECIFICATION                                            | PREREQUISITES | NAMESPACE                                                  |
 |-------------------------------------------------|----------------------------------------------------------|---------------|------------------------------------------------------------|
@@ -1413,7 +1413,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-### 6) Set up the shopping list note form plugin
+### 5) Set up the shopping list note form plugin
 
 | PLUGIN                                 | SPECIFICATION                                                                   | PREREQUISITES | NAMESPACE                                                       |
 |----------------------------------------|---------------------------------------------------------------------------------|---------------|-----------------------------------------------------------------|
@@ -1445,7 +1445,7 @@ class ShoppingListPageDependencyProvider extends SprykerShoppingListPageDependen
 }
 ```
 
-### 7) Set up widgets
+### 6) Set up widgets
 
 1. Enable global widgets:
 
@@ -1519,7 +1519,7 @@ console frontend:yves:build
 
 Make sure the following widgets have been registered:
 
-| MODULE                           | TEST                                                                                                                                                        |
+| MODULE                           | VERIFICATION                                                                                                                                                        |
 |----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | AddToShoppingListWidget          | Go to the product details page and add a product to a shopping list.                                                                                       |
 | ShoppingListItemNoteWidget       | Go to a shopping list and save a note to the item.                                                                                                        |

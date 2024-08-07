@@ -5,12 +5,9 @@ last_updated: Aug 5, 2024
 template: howto-guide-template
 ---
 
-In some cases, after data is imported or changed through Data Exchange API, you might want some events to be executed automatically. This document describes how to set up such events by creating custom post plugins.
+In some cases, after data is imported or changed through Data Exchange API, you might want particular events to be executed automatically. This document describes how to set up such events by creating custom post plugins.
 
-For some manipulation after data import, we may need to create a new class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` interface.
-After data updates we may implement the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface.
-
-For more details, please check documentation [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
+To set up events that are executed after data import, you need to create a class that implements the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostCreatePluginInterface` interface. For events that are executed after data updates, use the `Spryker\Zed\DynamicEntityExtension\Dependency\Plugin\DynamicEntityPostUpdatePluginInterface` interface. For more details on these interfaces, see [Install the Data Exchange API + Category Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-category-management-feature.html) or [Install the Data Exchange API + Inventory Management feature](/docs/pbc/all/data-exchange/{{page.version}}/install-and-upgrade/install-the-data-exchange-api-inventory-management-feature.html).
 
 
 ## Prerequisites  
@@ -20,7 +17,7 @@ For more details, please check documentation [Install the Data Exchange API + Ca
 * [Sending requests with Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.md)
 
 
-## Post plugin creation for Data Exchange API
+## Create a post plugin to activate products
 
 As an example, this guide explains how to create a plugin that activates products after they're imported:
 

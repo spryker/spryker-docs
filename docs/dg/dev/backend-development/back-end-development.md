@@ -21,8 +21,6 @@ This section contains overviews and instructions for back-end developing on the 
 
 * [Plugins](/docs/dg/dev/backend-development/plugins/plugins.html)
 
-* [Session handlers](/docs/dg/dev/backend-development/session-handlers.html)
-
 * [Session management](/docs/dg/dev/backend-development/session-management.html)
 
 * [Running production](/docs/dg/dev/backend-development/running-production.html)

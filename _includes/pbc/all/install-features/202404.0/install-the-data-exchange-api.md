@@ -287,6 +287,8 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 ]
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 To debug after adding the configuration to the file, you need to import the configuration into the database.
 
@@ -339,9 +341,9 @@ Response sample:
 ```
 {% endinfo_block %}
 
-</details>
 
-##### Structure:
+
+Structure:
 
 {% info_block infoBox "" %}
 
@@ -360,7 +362,7 @@ Response sample:
 
 {% endinfo_block %}
 
-2. Add the path to the configuration file, to `DynamicEntityConfig`:
+2. Add the path to the configuration file:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 
@@ -468,7 +470,9 @@ Ensure successful generation of Propel entities by verifying that they exist. Ad
 
 1. Append the glossary according to your language configuration:
 
-**src/data/import/glossary.csv**
+
+<details>
+  <summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 dynamic_entity.validation.invalid_data_format,"Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: {'data':[{...},{...},..]}",en_US
@@ -510,6 +514,9 @@ dynamic_entity.validation.invalid_url,"Die URL ist ungültig. `%errorPath%` Feld
 dynamic_entity.validation.method_not_allowed,"Method not allowed for the entity `%aliasName%`.",en_US
 dynamic_entity.validation.method_not_allowed,"Die Methode ist für die Entität nicht zulässig `%aliasName%`.",de_DE
 ```
+
+</details>
+
 
 2. Import data:
 
@@ -664,7 +671,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 {% info_block infoBox "" %}
 
 The `DocumentationGeneratorApiDependencyProvider::getInvalidationVoterPlugins()` stack contains plugins that are used to invalidate the documentation cache.
-If the documentation cache is not invalidated, the documentation will not be updated.
+If the documentation cache isn't invalidated, the documentation will not be updated.
 
 {% endinfo_block %}
 
@@ -728,7 +735,7 @@ Make sure you can operate data. For instructions, see [Requesting data using the
 
 {% info_block infoBox %}
 
-At the moment Data Exchange API does not support child relations configuration from the Backoffice. If you need to configure child relations, you can do it manually in the database or adjust the configuration in file `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json` for import.
+The only ways to configure child relations for Data Exchange API is by updating the database or the import configuration in `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json`.
 
 {% endinfo_block %}
 

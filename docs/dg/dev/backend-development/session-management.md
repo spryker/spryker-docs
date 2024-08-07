@@ -6,9 +6,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/session-management-
 originalArticleId: 53d2c060-c45d-45a8-8d00-d0f1b10c7dbb
 redirect_from:
   - /docs/scos/dev/back-end-development/session-management.html
-related:
-  - title: Session handlers
-    link: docs/scos/dev/back-end-development/session-handlers.html
 ---
 
 In Spryker Commerce OS, session behavior is supported by `User`, `Customer`, and `CustomerPage` modules.

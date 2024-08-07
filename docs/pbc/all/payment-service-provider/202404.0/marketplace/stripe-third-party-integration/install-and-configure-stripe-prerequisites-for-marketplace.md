@@ -98,6 +98,8 @@ $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesP
 2. To configure the message broker, add `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` to `\Pyz\Zed\MessageBroker\MessageBrokerConfig::getDefaultWorkerChannels()`.
 3. To configure state machine, copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust to your needs.
 
+### Enable the Merchant Commission for the marketplace payment
+1. Follow the installation steps in the [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission.html) guide.
 
 ## Next step
 

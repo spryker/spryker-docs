@@ -117,14 +117,14 @@ Customer or partner users must have access to the following entities:
 * AWS Console access: You can use it to access environment CloudWatch logs, deployment pipelines, parameter store, S3 buckets. Provide the email addresses of users who need access to AWS Console.
 * VPN: You can use it to access services such as databases, Jenkins, and RabbitMQ. Usually, developers or DevOps personnel need it. Provide the email addresses of users that need VPN access.
 * SSH: You can use it to access the Bastion Host, and from there, reach other services via [port forwarding](/docs/ca/dev/access/connect-to-services-via-ssh.html). Usually, developers or DevOps personnel need it in special cases. Provide an SSH public key and email addresses of users who need access to SSH. Keep in mind that VPN access is required to use SSH.
-* SFTP: This access is required for the SFTP Bastion Host. Provide an SSH public key and email addresses of users who need access to SFTP. Keep in mind that VPN access is required to use SFTP. Please note that SFTP is not provisioned by default.
+* SFTP: This access is required for the SFTP Bastion Host. Provide an SSH public key and email addresses of users who need access to SFTP. Keep in mind that VPN access is required to use SFTP. Please note that SFTP is not provisioned by default. For data import porpuses please use S3 buckets!
 
 ## Optional: Additional attributes
 
 This section explains what additional attributes you can specify at the beginning of your provisioning, as well as accesses you can request.
 
 ### Optional: SFTP
-Spryker implemented SFTP on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it is preferred to validate this option during provisioning.
+Spryker implemented SFTP on top of EFS. You can use SFTP for any third-party integrations or for explicit data imports via Jenkins jobs if required on the project level. Note that SFTP is only available on Bastion and Jenkins. This feature is disabled by default. You can also request it later via the support ticket, but it is preferred to validate this option during provisioning. Please note that we recommend to use S3 buckets for data importing. 
 
 ### Optional: Site to Site VPN
 A Site-to-Site VPN (Virtual Private Network) is a type of network connection that enables secure communication between two or more geographically separated networks. This type of VPN allows two or more sites to establish a secure and encrypted connection over the internet or other public networks, creating a virtual private network between the two sites.

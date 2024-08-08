@@ -124,7 +124,7 @@ The `merchants_allow_list` attribute lets you apply a commission to one or more 
 | mc01 | 1 | 10 | MER000002,MER000004 |
 | mc02 | 2 | 5 |   |
 
-In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the universal commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
+In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the standard commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
 
 If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see [Merchant commission priority and groups](#merchant-commission-priority-and-groups)
 
@@ -135,7 +135,10 @@ If you have multiple commissions, depending on your setup, you will have to use 
 
 Priority and groups are used to make sure relevant commissions are applied when there are multiple commissions in a system.
 
-Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When commissions of both groups exist in a shop, for each order, one commission from each group is applied; the commission from the primary group is applied first.
+
+<!--
+Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When there're multiple commission groups in a shop, for each order, the system checks if a commission from each group can be applied; the commission from the primary group is applied first.
+-->
 
 Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If multiple commissions have the same priority, the last created commission is applied.
 
@@ -178,13 +181,11 @@ Supported configuration:
 
 You might want to change how commission is calculated on the project level by applying commissions to the sum item total price to pay after discounts with additions. In Glue API, this is represented by `sumPriceToPayAggregation`. This can be useful when you want to apply commissions to total paid by a customer a line item. This amount is what the customer is getting charged. Sum of all line items plus expenses, like a shipment fee, is equal to the grand total.
 
-This customization is factored into the application design. A developer can change this logic within two hours by following [Create merchant commission calculator type plugin].
+This customization is factored into the application design. A developer can change this logic within two hours by following [Create merchant commission calculator type plugins](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html).
 
 Other use cases might be as follows:
-* Apply commission to product price including product options differently
-* Apply commission to special products like bundles or configurable differently
+* Differently calculate commission for product price, including product options.
+* Differently calculate commission for special products like bundles or configurable products.
 
 
-You might want to set up different commission rules based on this because it affects commission totals.
-
-For example, if customer uses Net mode, you might want to apply 10% commission, while if customer uses Gross mode commission applied will be 12%.
+Multiple ways to calculate commissions affect commission totals, so you might want to set up different commission rules accordingly. For example, 10% commission for the Net mode and 12% commission for the Gross mode.

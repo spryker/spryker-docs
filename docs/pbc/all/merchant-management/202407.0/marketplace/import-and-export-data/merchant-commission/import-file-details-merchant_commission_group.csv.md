@@ -16,7 +16,7 @@ This document describes the `merchant_commission_group.csv` file to configure [m
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                             |
 |--------|----------|-----------|--------------|----------------------------------------------|
-| key    | ✓        | String    | primary      | Unique identifier of the merchant commission group. |
+| key    | ✓        | String    | primary      | Unique identifier of the [merchant commission group](/docs/pbc/all/merchant-management/202407.0/marketplace/marketplace-merchant-commission-feature-overview.html#merchant-commission-priority-and-groups). |
 | name   | ✓        | String    | Primary      | Name of the merchant commission group.       |
 
 

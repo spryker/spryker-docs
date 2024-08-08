@@ -569,9 +569,9 @@ class OauthUserConnectorDependencyProvider extends SprykerOauthUserConnectorDepe
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that you can authenticate as a merchant user:
+Authenticate as a merchant user:
 
-* `POST https://glue-backend.mysprykershop.com/token`
+`POST https://glue-backend.mysprykershop.com/token`
 
 ```json
 {
@@ -603,7 +603,8 @@ endpoints specified in **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.p
 
 1. Add the marketplace section to the navigation:
 
-**config/Zed/navigation.xml**
+<details>
+  <summary>config/Zed/navigation.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -643,6 +644,8 @@ endpoints specified in **src/Pyz/Zed/OauthMerchantUser/OauthMerchantUserConfig.p
     </merchant-portal-payment-settings>
 </config>
 ```
+
+</details>
 
 2. Build the navigation cache:
 

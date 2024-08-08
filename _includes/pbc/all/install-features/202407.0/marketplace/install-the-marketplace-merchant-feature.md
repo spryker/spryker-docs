@@ -130,10 +130,11 @@ class OauthMerchantUserConfig extends SprykerOauthMerchantUserConfig
 }
 ```
 
-3. Enable the Merchant portal installer rules for the Marketplace ACL control, register the following name of the
-   module:
+3. To enable the Merchant portal installer rules for the Marketplace ACL control, register the following name of the
+module:
 
-**src/Pyz/Zed/Acl/AclConfig.php**
+<details>
+  <summary>src/Pyz/Zed/Acl/AclConfig.php</summary>
 
 ```php
 <?php
@@ -149,7 +150,7 @@ class AclConfig extends SprykerAclConfig
      * @var string
      */
     protected const RULE_TYPE_DENY = 'deny';
-    
+
     /**
      * @return array<array<string, mixed>>
      */
@@ -158,7 +159,7 @@ class AclConfig extends SprykerAclConfig
         $installerRules = $this->addMerchantPortalInstallerRules($installerRules);
         return $installerRules;
     }
- 
+
     /**
      * @param array<array<string, mixed>> $installerRules
      *
@@ -182,6 +183,8 @@ class AclConfig extends SprykerAclConfig
         return $installerRules;
     }
 ```
+
+</details>
 
 {% info_block warningBox "Verification" %}
 
@@ -247,7 +250,8 @@ Enable the following behaviors by registering the plugins:
 | IsMerchantPaidOutConditionPlugin                          | Checks if the used payment method is configured to support payout.                                                    |               | Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Condition             |
 | IsMerchantPayoutReversedConditionPlugin                   | Checks if the used payment method is configured to support reverse payout.                                            |               | Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\Oms\Condition             |
 
-<details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
+<details>
+  <summary>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -488,7 +492,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
         return $container;
     }
-    
+
      /**
      * @param \Spryker\Zed\Kernel\Container $container
      *

@@ -17,7 +17,7 @@ _Estimated migration time: 30 minutes - 1h_
 
 To upgrade to the new version of the module, do the following:
 
-1. Upgrade the `Content` module to version 2.0.0. See [Migration Guide - Content](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) for more details.
+1. Upgrade the `Content` module to version 2.0.0. See [Upgrade the Content module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) for more details.
 
 2. Upgrade the `ContentStorage` module to version 2.0.0:
 

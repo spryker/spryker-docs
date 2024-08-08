@@ -72,7 +72,7 @@ Add the plugins to the methods:
 | PLUGIN | METHOD |
 | - | - |
 | \Spryker\Zed\MerchantApp\Communication\Plugin\KernelApp\MerchantAppRequestExpanderPlugin | \Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins() |
-| \Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin | Â \Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins() |
+| \Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin |  \Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins() |
 | \Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin | \Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins() |
 | \Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin` | \Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins() |
 | \Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin | \Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins() |

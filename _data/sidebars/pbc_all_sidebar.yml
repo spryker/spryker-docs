@@ -1079,6 +1079,10 @@ entries:
             url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
           - title: Sending requests with Data Exchange API
             url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
+          - title: Create post plugins for Data Exchange API
+            url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
+            include_versions:
+            - "202407.0"            
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:

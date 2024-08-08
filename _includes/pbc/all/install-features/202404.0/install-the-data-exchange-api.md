@@ -151,10 +151,17 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
     }
 }
 ```
+{% info_block infoBox "" %}
+
+Tables that aren't allowed for configuration are defined in `Spryker\Zed\DynamicEntity\Business\Reader\DisallowedTablesReader::getDefaultDisallowedTables()`.
+
+{% endinfo_block %}
+
+
 
 ### Configure Dynamic Data installation
 
-1. Optional: To set the default configuration data, create a configuration file:
+1. Optional: To set the default configuration data, create a configuration file following the example:
 
 <details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
@@ -163,6 +170,49 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 ```json
 [
   {
+        "tableName": "spy_tax_rate",
+        "tableAlias": "taxRates",
+        "isActive": true,
+        "definition": {
+            "identifier": "id_tax_rate",
+            "isDeletable": false,
+            "fields": [
+                {
+                    "fieldName": "id_tax_rate",
+                    "fieldVisibleName": "id_tax_rate",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "integer",
+                    "validation": { "isRequired": false }
+                },
+                {
+                    "fieldName": "fk_country",
+                    "fieldVisibleName": "fk_country",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "integer",
+                    "validation": { "isRequired": false }
+                },
+                {
+                    "fieldName": "name",
+                    "fieldVisibleName": "name",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "string",
+                    "validation": { "isRequired": true }
+                },
+                {
+                    "fieldName": "rate",
+                    "fieldVisibleName": "rate",
+                    "isCreatable": true,
+                    "isEditable": true,
+                    "type": "float",
+                    "validation": { "isRequired": true }
+                }
+            ]
+        }
+    },
+    {
       "tableName": "spy_country",
       "tableAlias": "countries",
       "isActive": true,
@@ -225,9 +275,9 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
           "name": "countryTaxRates",
           "isEditable": true,
           "childDynamicEntityConfiguration": {
-            "tableAlias": "taxRates"
+            "tableAlias": "tax-rates"
           },
-          "relationFieldMapping": [
+          "relationFieldMappings": [
             {
               "childFieldName": "fk_country",
               "parentFieldName": "id_country"
@@ -240,10 +290,66 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 ```
 </details>
 
-##### Structure:
+</details>
+
+
+2. Import new configuration relations:
+
+```bash
+vendor/bin/console setup:init-db
+```
+
+{% info_block warningBox "Verification" %}
+
+To check the configuration in the database, send the following request:
+
+```bash
+GET /dynamic-entity/countries?include=countryTaxRates HTTP/1.1
+Host: glue-backend.mysprykershop.com
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer {your_token}
+```
+
+Response sample:
+
+```json
+{
+    "data": [
+        {
+            "id_country": 60,
+            "iso2_code": "DE",
+            "iso3_code": "DEU",
+            "name": "Germany",
+            "postal_code_mandatory": true,
+            "postal_code_regex": "\\d{5}",
+            "countryTaxRates": [
+                {
+                    "id_tax_rate": 7,
+                    "fk_country": 60,
+                    "name": "Germany Standard",
+                    "rate": "19.00"
+                },
+                {
+                    "id_tax_rate": 16,
+                    "fk_country": 60,
+                    "name": "Germany Reduced",
+                    "rate": "7.00"
+                }
+            ]
+        },
+        // ... other countries with tax rates
+    ]
+}
+```
+{% endinfo_block %}
+
+
+
+
 
 {% info_block infoBox "" %}
-
+Structure:
 
 | Name                                                      | Imported to                                                                     | Description                                                                                                                                                                                                                                                                                     |
 |-----------------------------------------------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -259,7 +365,7 @@ class DynamicEntityGuiConfig extends SprykerDynamicEntityGuiConfig
 
 {% endinfo_block %}
 
-2. Add the path to the configuration file, to `DynamicEntityConfig`:
+3. Add the path to the configuration file:
 
 **src/Pyz/Zed/DynamicEntity/DynamicEntityConfig.php**
 
@@ -367,7 +473,9 @@ Ensure successful generation of Propel entities by verifying that they exist. Ad
 
 1. Append the glossary according to your language configuration:
 
-**src/data/import/glossary.csv**
+
+<details>
+  <summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 dynamic_entity.validation.invalid_data_format,"Invalid or missing data format. Please ensure that the data is provided in the correct format. Example request body: {'data':[{...},{...},..]}",en_US
@@ -409,6 +517,9 @@ dynamic_entity.validation.invalid_url,"Die URL ist ungültig. `%errorPath%` Feld
 dynamic_entity.validation.method_not_allowed,"Method not allowed for the entity `%aliasName%`.",en_US
 dynamic_entity.validation.method_not_allowed,"Die Methode ist für die Entität nicht zulässig `%aliasName%`.",de_DE
 ```
+
+</details>
+
 
 2. Import data:
 
@@ -563,7 +674,7 @@ class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGe
 {% info_block infoBox "" %}
 
 The `DocumentationGeneratorApiDependencyProvider::getInvalidationVoterPlugins()` stack contains plugins that are used to invalidate the documentation cache.
-If the documentation cache is not invalidated, the documentation will not be updated.
+If the documentation cache isn't invalidated, the documentation will not be updated.
 
 {% endinfo_block %}
 
@@ -622,6 +733,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 {% info_block warningBox "Verification" %}
 
 Make sure you can operate data. For instructions, see [Requesting data using the Data Exchange API](/docs/pbc/all/data-exchange/{{page.version}}/sending-requests-with-data-exchange-api.html)
+
+{% endinfo_block %}
+
+{% info_block infoBox %}
+
+The only ways to configure child relations for Data Exchange API is by updating the database or the import configuration in `src/Pyz/Zed/DynamicEntity/data/installer/configuration.json`.
 
 {% endinfo_block %}
 

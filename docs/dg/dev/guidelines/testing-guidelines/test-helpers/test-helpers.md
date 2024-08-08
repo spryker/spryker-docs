@@ -237,7 +237,7 @@ Lets you mock factory methods and access the factory.
 
 #### OpenApi3
 
-Lets you validate the response of API endpoints against the OpenApi3 schema.
+Lets you validate the response of Glue API endpoints against the OpenApi3 schema.
 
 #### JsonPath
 
@@ -250,6 +250,10 @@ Lets you send requests to the Glue API endpoints and validate response data.
 #### GlueBackendApiJsonApiHelper
 
 Lets you send requests to the Glue Backend API endpoints that implement JSON API convention and validate response data.
+
+#### GlueBackendApiOpenApi3Helper
+
+Lets you validate the response of Glue Backend API endpoints against the OpenApi3 schema.
 
 
 ## PropelSchemaHelper

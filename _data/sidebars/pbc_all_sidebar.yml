@@ -1079,6 +1079,10 @@ entries:
             url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
           - title: Sending requests with Data Exchange API
             url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
+          - title: Create post plugins for Data Exchange API
+            url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
+            include_versions:
+            - "202407.0"            
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:
@@ -1622,7 +1626,7 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-collector-rule.html
                     include_versions:
                     - "202407.0"
-                    
+
               - title: Domain model and relationships
                 nested:
                   - title: Marketplace Merchant
@@ -2624,7 +2628,7 @@ entries:
               - title: Stripe third-party integration
                 url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
                 include_versions:
-                - "202407.0"
+                - "202404.0"
                 nested:
                   - title: Install and configure prerequisites
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html

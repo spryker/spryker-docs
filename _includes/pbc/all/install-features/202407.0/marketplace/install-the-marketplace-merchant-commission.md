@@ -190,18 +190,18 @@ class SalesPaymentMerchantSalesMerchantCommissionConfig extends SprykerSalesPaym
 
 {% info_block warningBox "Verification" %}
 
-Make sure the tax deduction is properly configured for the store and price mode for the Merchant Payment Commission by
+* Make sure the tax deduction is properly configured for the store and price mode for the Merchant Payment Commission by
 setting the `SalesPaymentMerchantSalesMerchantCommissionConfig::TAX_DEDUCTION_ENABLED_FOR_STORE_AND_PRICE_MODE`
 configuration.
-Create an order with marketplace payment and verify that the tax deduction is working as expected by checking the
+* Create an order with a marketplace payment and verify that the tax deduction is working as expected by checking the
 details in the `spy_sales_payment_merchant_payout` and `spy_sales_payment_merchant_payout_reversal` tables.
 
 {% endinfo_block %}
 
-### Prepare order state machines for the Merchant Commission process.
+### Prepare order state machines for the Merchant Commission process
 
 In this step, you can customize your order state machine to charge the Merchant Commission commissions.
-This step prepares the `DummyPayment` and `MarketplacePayment01` state machine for the Merchant Commission process.
+This step prepares the `DummyPayment` and `MarketplacePayment01` state machines for the Merchant Commission process.
 
 The `MerchantCommission/Calculate` command calculates the merchant commission for an order.
 
@@ -245,7 +245,7 @@ The `MerchantCommission/Calculate` command calculates the merchant commission fo
 </statemachine>
 ```
 
-The following is the `DummyPayment01` simplified state machine with the `DummyMerchantCommission` sub process enabled:
+The following is the `DummyPayment01` simplified state machine with the `DummyMerchantCommission` subprocess enabled:
 
 **config/Zed/oms/DummyPayment01.xml**
 
@@ -267,7 +267,7 @@ The following is the `DummyPayment01` simplified state machine with the `DummyMe
 </statemachine>
 ```
 
-2. Define the `MarketplaceMerchantCommission` sub process that executes the `MerchantCommission/Calculate` command:
+2. Define the `MarketplaceMerchantCommission` subprocess that executes the `MerchantCommission/Calculate` command:
 
 **config/Zed/oms/DummySubprocess/DummyMarketplaceMerchantCommission01.xml**
 
@@ -307,8 +307,7 @@ The following is the `DummyPayment01` simplified state machine with the `DummyMe
 </statemachine>
 ```
 
-The following is the `MarketplacePayment01` simplified state machine with the `MarketplaceMerchantCommission` sub
-process enabled:
+The following is the `MarketplacePayment01` simplified state machine with the `MarketplaceMerchantCommission` subprocess enabled:
 
 **config/Zed/oms/MarketplacePayment01.xml**
 
@@ -332,8 +331,7 @@ process enabled:
 
 {% info_block warningBox "Verification" %}
 
-Place an order with the `DummyPayment01` and `MarketplacePayment01` state machines to verify that the Merchant
-Commission process is working as expected.
+Place an order to trigger the `DummyPayment01` and `MarketplacePayment01` state machines. Make sure the order goes through the steps and the merchant commissions are deducted correctly.
 
 {% endinfo_block %}
 
@@ -412,9 +410,10 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 4) Add translations
 
-1. Append glossary according to your configuration:
+1. Append the glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+<details>
+  <summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 merchant_commission.validation.currency_does_not_exist,A currency with the code ‘%code%’ does not exist.,en_US
@@ -452,6 +451,8 @@ merchant_commission.validation.invalid_query_string,Die angegebene Abfragezeiche
 merchant_commission.validation.invalid_compare_operator,The provided compare operator is invalid in %field%.,en_US
 merchant_commission.validation.invalid_compare_operator,Der angegebene Vergleichsoperator ist ungültig in %field%.,de_DE
 ```
+
+</details>
 
 2. Import data:
 
@@ -626,7 +627,8 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 8. Enable the behaviors by registering the console commands:
 
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -660,6 +662,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
+</details>
 
 9. Import data:
 
@@ -1014,8 +1018,6 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 
 {% info_block warningBox "Verification" %}
 
-Make sure the configured plugins have been registered and are working as expected.
-
 1. Place an order with products from different merchants.
 
 2. In the `spy_sales_merchant_commission` database table, make sure merchants commissions have been applied to each
@@ -1080,7 +1082,7 @@ class MerchantCommissionGuiDependencyProvider extends SprykerMerchantCommissionG
 | PLUGIN                                            | SPECIFICATION                                                           | PREREQUISITES                                                                       | NAMESPACE                                                      |
 |---------------------------------------------------|-------------------------------------------------------------------------|-------------------------------------------------------------------------------------|----------------------------------------------------------------|
 | PayoutAmountMerchantPayoutCalculatorPlugin        | Calculates the payout amount for the provided sales order item.         |                                                                                     | Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine |
-| PayoutReverseAmountMerchantPayoutCalculatorPlugin | Calculates the payout reverse amount for the provided sales order item. | This document describes how to install the Marketplace Merchant Commission feature. 
+| PayoutReverseAmountMerchantPayoutCalculatorPlugin | Calculates the payout reverse amount for the provided sales order item. | This document describes how to install the Marketplace Merchant Commission feature.
 
 ## Prerequisites
 
@@ -2098,25 +2100,34 @@ class MerchantCommissionDependencyProvider extends SprykerMerchantCommissionDepe
 
 Make sure the configured plugins have been registered and are working as expected.
 
-1. Place an order with products from different merchants.
+Place an order with products from different merchants and make sure the following applies:
 
-2. In the `spy_sales_merchant_commission` database table, make sure merchants commissions have been applied to each
-   merchant product in your order.
-   The `spy_sales_merchant_commission` table should have entries similar to this:
+* In the `spy_sales_merchant_commission` database table, merchants commissions have been applied to each merchant product in the order.
+* The commission amount for each order item matches the commission rules you've set up for each merchant.
+   The commission amounts may vary depending on the commission rules you've set up for each merchant. If the commission
+   amounts don't match your expectations, review the commission rules in the `spy_merchant_commission` table.
+* The `spy_sales_merchant_commission` table has entries similar to the following:
 
 | id_sales_merchant_commission | uuid | fk_sales_order | fk_sales_order_item | name  | amount | refunded_amount |
 |------------------------------|------|----------------|---------------------|-------|--------|-----------------|
 | 1                            | abcd | 123            | 1234                | Comm1 | 10     | 0               |
 | 2                            | efgh | 124            | 1245                | Comm2 | 5      | 0               |
 
-In this example, the `fk_sales_order` column corresponds to the sales order ID, `fk_sales_order_item` is the sales order
-item ID, `name` is the name of the merchant commission, `amount` is the commission amount applied to that order item,
-and `refunded_amount` is the amount of the commission that has been refunded.
+Column definitions in this example:
+`fk_sales_order`
+  Corresponds to the sales order ID.
 
-3. To verify the commission calculation, make sure the commission amount for each order item matches the commission
-   rules you've set up for each merchant.
-   The commission amounts may vary depending on the commission rules you've set up for each merchant. If the commission
-   amounts don't match your expectations, review the commission rules in the `spy_merchant_commission` table.
+`fk_sales_order_item`
+  Sales order item ID.
+
+`name`
+  Name of the merchant commission.
+
+`amount`
+  Commission amount applied to that order item.
+
+`refunded_amount`
+  Amount of the commission that has been refunded.
 
 {% endinfo_block %}
 
@@ -2245,6 +2256,7 @@ console navigation:build-cache
 In the Back Office, make sure the **Marketplace** > **Merchant Commissions** navigation menu item is displayed.
 
 {% endinfo_block %}
+
 | Spryker\Zed\MerchantCommission\Communication\Plugin\RuleEngine |
 
 ## 7) Configure navigation

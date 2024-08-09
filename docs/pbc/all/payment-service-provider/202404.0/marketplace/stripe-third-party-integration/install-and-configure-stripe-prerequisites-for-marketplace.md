@@ -32,6 +32,28 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
 $config[KernelAppConstants::TENANT_IDENTIFIER]
 ```
 
+
+## Add AsynchronousAPI message configuration
+
+Update `config_default.php` as follows:
+
+```php
+$config[MessageBrokerAwsConstants::MESSAGE_TO_CHANNEL_MAP] = [
+    ...
+    ReadyForMerchantAppOnboardingTransfer::class => 'merchant-app-events',
+    MerchantAppOnboardingStatusChangedTransfer::class => 'merchant-app-events',
+    ...
+];
+
+$config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
+    ...
+    'merchant-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    'merchant-app-events' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
+    ...
+];
+```
+
+
 `OauthClientConstants` are replacing the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
 
 ## Update navigation

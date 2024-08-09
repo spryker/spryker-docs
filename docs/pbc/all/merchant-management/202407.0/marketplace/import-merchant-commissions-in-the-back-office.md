@@ -33,11 +33,10 @@ This section explains how to fill out a merchant commission import file. For mor
 | is_active                     | ✓          | 1                                                 | Defines if the merchant commission is active(1) or inactive(0).   |
 | amount                        |             | 5                                                 | Commission in percentage. Accepts decimals—for example, `10.99` would mean 10.99%. If `calculator_type_plugin` is set to `fixed`, `amount` must be `0`.               |
 | calculator_type_plugin        | ✓         | percentage                                        | Defines how commission is calculated. By default, accepts `percentage` and `fixed`.             |
-| merchant_commission_group_key | ✓         | primary                                           |  Can be `primary` or `secondary`.         |
+| group | ✓         | primary                                           |  Can be `primary` or `secondary`.         |
 | priority                      | ✓            | 1                                                 |  Defines which commission to apply within a group. Priority is defined in an ascending order starting from one.            |
-| item_condition                |          | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
+| item_condition                |          | item-price >= '500' AND category IS IN 'computer' | Condition for the item. `500` refers to 500$ in this case.                       |
 | order_condition               |           | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
-| group | ✓ | primary  |   It can be primary or secondary. Custom groups can be added if needed. |
 | stores | ✓ |  | AT,DE  | Defines the stores to apply the commission in. accepts multipe values. |
 | merchants_allow_list   |   |  MER000002,MER000006  |  One or more merchants to apply the commission to. |
-| fixed_amount_configuration |  |  `{% raw %}EUR|0.5|0.5,CHF|0.5|0.5{% endraw %}` |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT`. |
+| fixed_amount_configuration |  |  `{% raw %}EUR|0.5|0.5,CHF|0.5|0.5{% endraw %}` |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT`. `0.5` refers to 50 cents in this example. |

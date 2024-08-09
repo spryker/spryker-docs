@@ -15,20 +15,18 @@ This document describes the `merchant_commission.csv` file to configure [merchan
 
 | COLUMN                        | REQUIRED | DATA TYPE | DATA EXAMPLE                                      | DATA EXPLANATION                                |
 |-------------------------------|----------|-----------|---------------------------------------------------|-------------------------------------------------|
-| key                           | ✓        | String    | mc1                                               | Unique identifier of the merchant commission.          |
-| name                          | ✓        | String    | Merchant Commission 1                             | Name of the merchant commission; must be unique and in the range of 1 to 255 characters.                |
-| description                   |          | String    |                                                   | Description of the merchant commission.         |
-| valid_from                    |          | Date      | 2024-01-01                                        | Starting from this date the commission is applied. |
-| valid_to                      |          | Date      | 2029-06-01                                        | The last day of when the commission is applied.   |
-| is_active                     | ✓        | Boolean      | 1                                                 | Defines if the merchant commission is active.   |
-| amount                        |          | Integer       | 10.99                                                 | Percentage of the merchant commission. The value must be a decimal. `10.99` in the example means `10.99%`. If `calculator_type_plugin` is `fixed`, the current value must be `0`.              |
-| calculator_type_plugin        | ✓        | String    | percentage                                        | Type of the calculator plugin used to calculate the commission. By default, accepts `percentage` and `fixed`; you can add custom plugins. |
-| merchant_commission_group_key | ✓        | String    | primary                                           | Defines the merchant commission group. Accepts `primary` and `secondary`; you can add custom groups.  |
-| priority                      | ✓        | Integer       | 1                                                 | Priority of the merchant commission. Priority defines the commission to apply if multiple commissions are available within a group. Defined in an ascending order starting from `1`.           |
-| item_condition                |          | String    | item-price >= '500' AND category IS IN 'computer' | Item conditions that must be fulfilled to apply the commission.                         |
-| order_condition               |          | String    | "price-mode = ""GROSS_MODE"""                     | Condition for the order.                        |
-| merchants_allow_list |       |  It contains a list of merchant references separated by commas, such as “MER000002,MER000006”
-| fixed_amount_configuration |    |     |    EUR|0.5|0.5,CHF|0.5|0.5         |     Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT` |
+| key                           | ✓        | string    | mc1                                               | Unique key of the merchant commission.          |
+| name                          | ✓        | string    | Merchant Commission 1                             | Name of the merchant commission.                |
+| description                   |          | string    |                                                   | Description of the merchant commission.         |
+| valid_from                    |          | date      | 2024-01-01                                        | Start date of the merchant commission validity. |
+| valid_to                      |          | date      | 2029-06-01                                        | End date of the merchant commission validity.   |
+| is_active                     | ✓        | bool      | 1                                                 | Defines if the merchant commission is active.   |
+| amount                        |          | int       | 5                                                 | Amount of the merchant commission.              |
+| calculator_type_plugin        | ✓        | string    | percentage                                        | Type of the calculator plugin used.             |
+| merchant_commission_group_key | ✓        | string    | primary                                           | Key of the merchant commission group.           |
+| priority                      | ✓        | int       | 1                                                 | Priority of the merchant commission.            |
+| item_condition                |          | string    | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
+| order_condition               |          | string    | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
 
 
 ## Import template file and content example

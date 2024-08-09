@@ -12,8 +12,6 @@ The Marketplace Commissions enables marketplace owners to monetize their service
 
 A Back Office user can import commissions by following [Import merchant commissions in the Back Office](/docs/pbc/all/merchant-management/202407.0/marketplace/import-merchant-commissions-in-the-back-office.html).
 
-A developer can manually import commissions. For import file details, see [Import file details: merchant_commission.csv](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/import-and-export-data/merchant-commission/import-file-details-merchant-comission.csv.html).
-
 
 ## Applying merchant commissions conditionally
 

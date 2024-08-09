@@ -87,7 +87,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-5. In `src/Pyz/Zed/Sales/SalesConfig.php`, extends the view detail external block on view order page:
+5. In `src/Pyz/Zed/Sales/SalesConfig.php`, extend the view detail external block on the view order page:
 
 ```php
 namespace Pyz\Zed\Sales;

@@ -1082,7 +1082,7 @@ entries:
           - title: Create post plugins for Data Exchange API
             url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
             include_versions:
-            - "202407.0"            
+            - "202407.0"
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:
@@ -1434,7 +1434,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/main-merchant.html
                   - title: Merchant users overview
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
-
+              - title: Marketplace Merchant Commission feature overview
+                url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-commission-feature-overview.html
+                include_versions:
+                - "202407.0"
               - title: Merchant Opening Hours feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-opening-hours-feature-overview.html
               - title: Marketplace Merchant Portal Core feature overview
@@ -1547,6 +1550,19 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-store.csv.html
                   - title: "File details: merchant_user.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html
+                  - title: Import merchant commissions
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html
+                    include_versions:
+                      - "202407.0"
+                    nested:
+                      - title: "Import file details: merchant_commission_amount.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html
+                      - title: "Import file details: merchant_commission_group.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_group.csv.html
+                      - title: "Import file details: merchant_commission_merchant.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html
+                      - title: "Import file details: merchant_commission_store.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html                                                                                                                    
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -1575,6 +1591,11 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/edit-merchant-relations.html
                       - title: Manage merchant relation requests
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html
+
+                  - title: Import merchant commissions
+                    url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html
+                    include_versions:
+                      - "202407.0"
 
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html

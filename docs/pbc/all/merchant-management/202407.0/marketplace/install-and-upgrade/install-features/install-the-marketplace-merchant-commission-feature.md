@@ -1,6 +1,6 @@
 ---
 title: Install the Marketplace Merchant Commission feature
-last_updated: Jun 21, 2024
+last_updated: Aug 7, 2024
 description: This document describes how to integrate the Marketplace Merchant Commission feature into a Spryker project.
 template: feature-integration-guide-template
 ---

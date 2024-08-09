@@ -62,6 +62,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Connect S3 buckets to correct environments:
   - Connect Production S3 bucket to a production environment.
   - Connect Staging S3 bucket to a staging environment.
+  - If you're using CSV imports, make sure they're imported from S3 buckets.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)

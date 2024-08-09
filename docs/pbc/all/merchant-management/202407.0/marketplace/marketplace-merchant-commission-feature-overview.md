@@ -136,11 +136,11 @@ If you have multiple commissions, depending on your setup, you will have to use 
 Priority and groups are used to make sure relevant commissions are applied when there are multiple commissions in a system.
 
 
-<!--
-Merchant commission groups are used when multiple commissions need to be applied per order. By default, there are `primary` and `secondary` commission groups. When there're multiple commission groups in a shop, for each order, the system checks if a commission from each group can be applied; the commission from the primary group is applied first.
--->
 
-Merchant commission priority is used to define which commission is to be applied within a commission group when there're multiple commissions in a system. Priority is defined in an ascending order starting from 1. If multiple commissions have the same priority, the last created commission is applied.
+Merchant commission groups are used for complex commission scenarios, for example—when you need to apply several commissions per order. By default, there are `primary` and `secondary` commission groups. When there're multiple commission groups in a shop, for each order, the system checks if a commission from each group can be applied.
+
+
+Merchant commission priority is used to define which commission is to be applied within a commission group. Priority is defined in an ascending order starting from 1. If multiple commissions have the same priority, the last created commission is applied.
 
 For example, your setup could be as follows. We simplified the commissions for this example by removing irrelevant fields.
 
@@ -179,7 +179,7 @@ Supported configuration:
 
 ## Applying merchant commissions to the sum item total price to pay after discounts with additions
 
-You might want to change how commission is calculated on the project level by applying commissions to the sum item total price to pay after discounts with additions. In Glue API, this is represented by `sumPriceToPayAggregation`. This can be useful when you want to apply commissions to total paid by a customer a line item. This amount is what the customer is getting charged. Sum of all line items plus expenses, like a shipment fee, is equal to the grand total.
+You might want to change how commission is calculated on the project level by applying commissions to the sum item total price to pay after discounts with additions. In Glue API, this is represented by `sumPriceToPayAggregation`. This can be useful when you want to apply commissions to total paid by a customer a line item. This amount is what the customer is getting charged.
 
 This customization is factored into the application design. A developer can change this logic within two hours by following [Create merchant commission calculator type plugins](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html).
 

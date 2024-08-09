@@ -32,6 +32,8 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
 $config[KernelAppConstants::TENANT_IDENTIFIER]
 ```
 
+`OauthClientConstants` are replacing the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
+
 
 ## Add AsynchronousAPI message configuration
 
@@ -52,9 +54,6 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     ...
 ];
 ```
-
-
-`OauthClientConstants` are replacing the deprecated `OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_*` constants.
 
 ## Update navigation
 

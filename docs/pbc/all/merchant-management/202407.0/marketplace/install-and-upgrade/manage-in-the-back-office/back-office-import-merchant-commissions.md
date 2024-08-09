@@ -1,5 +1,5 @@
 ---
-title: Import merchant commissions in the Back Office
+title: "Back Office: Import merchant commissions"
 description: Learn how to import merchant commissions in the Back Office
 last_updated: Jun 16, 2024
 template: back-office-user-guide-template

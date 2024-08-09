@@ -10,7 +10,7 @@ The Marketplace Commissions enables marketplace owners to monetize their service
 
 ## Managing merchant commissions
 
-A Back Office user can import commissions by following [Import merchant commissions in the Back Office](/docs/pbc/all/merchant-management/202407.0/marketplace/import-merchant-commissions-in-the-back-office.html).
+A Back Office user can import commissions by following [Import merchant commissions in the Back Office](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html).
 
 
 ## Applying merchant commissions conditionally
@@ -119,6 +119,7 @@ When conditions are combined by the `OR` operator, they don't exclude each other
 The `merchants_allow_list` attribute lets you apply a commission to one or more particular merchants. This is useful when you only want to apply a commission to some of your merchants; or when you have a universal commission for most merchants and a special commission for some of them. For example, your setup could be as follows. We simplified the commissions for this example by removing irrelevant fields.
 
 | KEY | PRIORITY | AMOUNT | merchants_allow_list |
+|-|-|-|-|
 | mc01 | 1 | 10 | MER000002,MER000004 |
 | mc02 | 2 | 5 |   |
 

@@ -7,20 +7,17 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/environment-provisioning.html
 ---
 
-Before proceeding with the provisioning of your Spryker Cloud Commerce OS environment, we would like to clarify the information we require from you. To initiate the environment provisioning process, you need to create a case using your support portal access. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
+This document describes the information you need to provide for an environment to be provisioned.
+
+To initiate the environment provisioning, you need to create a support portal case. If you have questions, visit the [Spryker Support Portal](https://support.spryker.com). If you don't have access to the support portal yet, request it through the [request form](https://www.surveymonkey.com/r/XYK5R26) on SurveyMonkey.
 Once you are logged in to the Spryker Support Portal, you can submit an [Infrastructure Change Request/Access Management Case](https://support.spryker.com/s/case-funnel-problem) selecting that you want to "Create a new Environment".
-
-{% info_block warningBox %}
-
-This process can only be initiated through a customer account. To request an environment, partners should work with their respective customers.
-
-{% endinfo_block %}
 
 The following sections outline the information you need to provide to initiate provisioning of your environment.
 
 {% info_block warningBox "Mandatory information" %}
 
-All the sections that aren't prefixed with *Optional* are mandatory for a provisioning request to be processed.
+* This process can only be initiated through a customer account. To request an environment, partners should work with their respective customers.
+* All the sections that aren't prefixed with *Optional* are mandatory for a provisioning request to be processed.
 
 {% endinfo_block %}
 

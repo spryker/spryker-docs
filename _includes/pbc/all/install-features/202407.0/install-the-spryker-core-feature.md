@@ -819,10 +819,11 @@ Make sure the following applies:
 
 2. Set up the console commands:
 
-| COMMAND | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console |
-| StorageRedisImportRdbConsole	 | Imports an rdb file.	 |  | Spryker\Zed\StorageRedis\Communication\Console |
+| COMMAND | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                       |
+| --- |-------------------------------------------| --- |-------------------------------------------------|
+| StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console  |
+| StorageRedisImportRdbConsole	 | Imports an rdb file.	                     |  | Spryker\Zed\StorageRedis\Communication\Console  |
+| BuildRouteCacheConsole | Generates backoffice router cache         |  | Spryker\Zed\Router\Communication\Plugin\Console |
 
 **Pyz\Zed\Console\ConsoleDependencyProvider**
 
@@ -833,6 +834,7 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Router\Communication\Plugin\Console\BuildRouteCacheConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisExportRdbConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisImportRdbConsole;
 
@@ -848,6 +850,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new StorageRedisExportRdbConsole(),
             new StorageRedisImportRdbConsole(),
+            new BuildRouteCacheConsole(),
         ];
 
         return $commands;
@@ -855,9 +858,21 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
+**config/install/docker.yml**
+
+```yaml
+env:
+    NEW_RELIC_ENABLED: 0
+
+sections:
+    build:
+        router-build-route-cache:
+            command: 'vendor/bin/console router:build-route-cache'
+```
+
 {% info_block warningBox "Verification" %}
 
-To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
+To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` and `BuildRouteCacheConsole` are activated, check if the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` and `vendor/bin/console router:build-route-cache` console commands exist.
 
 {% endinfo_block %}
 

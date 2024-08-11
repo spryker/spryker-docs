@@ -2,11 +2,12 @@
 title: Merchant users overview
 description: This document contains concept information for The Merchant users feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Aug 23, 2023
 redirect_from:
   - /docs/marketplace/user/features/202307.0/marketplace-merchant-feature-overview/merchant-users-overview.html
 related:
   - title: Managing merchant users
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html
+    link: docs/pbc/all/merchant-management/page.version/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
 ---
 
 The merchant concept presupposes having employees with access to the Merchant Portal that will perform various actions on behalf of the merchants. To enable that, the *merchant user* entity is introduced.
@@ -58,6 +59,6 @@ Merchant users have access only to the information related to their organization
 1. A Marketplace administrator creates a merchant and approves it.
 2. When the merchant is approved, corresponding merchant users can be created in **Back Office&nbsp;<span aria-label="and then">> </span> Merchant&nbsp;<span aria-label="and then">> </span> Users**.
 3. A Marketplace administrator can assign needed user groups to allow or restrict certain permissions for Merchant Portal in **Back Office&nbsp;<span aria-label="and then">> </span> Users&nbsp;<span aria-label="and then">> </span> Users**.
-4. After the merchant user is created, they need to be [activated](/docs/pbc/all/merchant-management/{page.version}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users) to log in to the Merchant Portal.
+4. After the merchant user is created, they need to be [activated](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-in-the-back-office/manage-merchant-users.html#activating-and-deactivating-the-merchant-users) to log in to the Merchant Portal.
 5. The "Reset Password" email is sent to the activated merchant user.
 6. After the password is reset, the merchant user can log in to the Merchant Portal.

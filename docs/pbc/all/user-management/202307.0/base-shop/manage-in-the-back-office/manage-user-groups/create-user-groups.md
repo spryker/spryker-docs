@@ -13,17 +13,17 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/users/managing-user-groups/creating-user-groups.html
 related:
   - title: Edit user groups
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-user-groups/edit-user-groups.html
   - title: Customer Groups overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-groups-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create user groups.
 
 ## Prerequisites
 
-* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
-* Create at least one user role. For instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
+* If you are new to the **Users** section, you might want to start with [Best practices: Managing users and their permissions with roles and groups](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/best-practices-manage-users-and-their-permissions-with-roles-and-groups.html).
+* Create at least one user role. For instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html).
 * Review the [reference information](#reference-information-create-user-groups) before you start, or look up the necessary information as you go through the process.
 
 ## Creating groups
@@ -41,8 +41,8 @@ This document describes how to create user groups.
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | TITLE | Unique identifier of the user group. You will use it to identify the group when assigning  users to it. |
-| ASSIGNED ROLES | The user roles to be assigned to the group. For role creating instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
+| ASSIGNED ROLES | The user roles to be assigned to the group. For role creating instructions, see [Create user roles](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-user-groups/create-user-groups.html). |
 
 ## Next steps
 
-[Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html)
+[Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html)

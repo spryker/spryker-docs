@@ -2,18 +2,19 @@
 title: Edit customers
 description: Learn how to edit customers in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/edit-customers.html
 related:
   - title: Customer Account Management feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This document describes how to edit customers in the Back Office.
 
 ## Prerequisites
 
-* Optional: To select billing and shipping addresses, [add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html).
+* Optional: To select billing and shipping addresses, [add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html).
 * Review the [reference information](#reference-information-edit-a-customer) before you start or look up the necessary information as you go through the process.
 
 
@@ -41,15 +42,15 @@ This document describes how to edit customers in the Back Office.
 
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
-| EMAIL | Email address. To change a customer's email address, you have to [create the customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/create-customers.html) from scratch. |
+| EMAIL | Email address. To change a customer's email address, you have to [create the customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/create-customers.html) from scratch. |
 | SALUTATION | Formal salutation. |
 | FIRST NAME | First name. |
 | LAST NAME | Last name. |
 | GENDER | Gender.|
 | DATE OF BIRTH | Date of birth.|
 | PHONE | Phone number.|
-|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html). |
 | LOCALE | Locale. |
 | SEND PASSWORD TOKEN THROUGH EMAIL | If you select the checkbox, after saving the customer, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer will still be  able to request the password reset email on the Storefront. |
-| BILLING ADDRESS | When placing an order, this address will be selected by default for billing. To add an address, see [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html). |
-| SHIPPING ADDRESS | When placing an order, this address will be selected by default for shipping. To add an address, see [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/add-customer-addresses.html).  |
+| BILLING ADDRESS | When placing an order, this address will be selected by default for billing. To add an address, see [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html). |
+| SHIPPING ADDRESS | When placing an order, this address will be selected by default for shipping. To add an address, see [Add customer addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/add-customer-addresses.html).  |

@@ -2,6 +2,7 @@
 title: Managing marketplace abstract product prices
 description: This document describes how to manage marketplace abstract product prices in the Merchant Portal.
 template: back-office-user-guide-template
+last_updated: Aug 22, 2023
 redirect_from:
   - /docs/marketplace/user/merchant-portal-user-guides/202307.0/products/abstract-products/managing-marketplace-abstract-product-prices.html
 related:
@@ -27,7 +28,7 @@ To add a new price for a marketplace abstract product, follow these steps:
 2. Scroll down to the **Price** pane.
 3. In the **Price** pane, click **+Add**. The empty cells appear in the following table.
 
-4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html) to apply the price to.
+4. Optional: To set a price for a specific customer, from the **Customer** drop-down menu, select the appropriate customer's [business unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html) to apply the price to.
 
   {% info_block infoBox "Note" %}
 
@@ -78,7 +79,7 @@ To remove abstract product's price, follow these steps:
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |
 | Customer | Defines whether the price will be applied to all customers or a specific one. If **Default** is selected, the price will be applied to all customers.  |
-| Store          | [Store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the price will be displayed. |
+| Store          | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the price will be displayed. |
 | Currency       | Currency in which the abstract product price is defined.           |
 | Net default    | Default item price before tax. |
 | Gross default  | Item price after tax.   |
@@ -96,7 +97,7 @@ Let's say you have a product that you want to sell with a special price if a use
 
 ## Next steps
 
-- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product.html)
+- [Edit abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-products.html)
 - [Manage abstract product attributes](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-attributes.html)
 - [Manage abstract product image sets](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-image-sets.html)
 - [Manage abstract product meta information](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-in-the-merchant-portal/abstract-products/manage-marketplace-abstract-product-meta-information.html)

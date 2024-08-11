@@ -4,6 +4,7 @@ last_updated: Aug 18, 2021
 description: Spryker Commerce OS handles all monetary values as integer and provides conversions from decimal values to cent values and vice versa.
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202108.0/prices-feature-walkthrough/money-module-reference-information.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/prices-feature-walkthrough/money-module-reference-information.html
   - /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
 ---

@@ -39,7 +39,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/checkout-feature-overview/multi-step-checkout-overview.html).
+For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/checkout-feature-overview/multi-step-checkout-overview.html).
 
 ## Split Delivery in the Back Office
 

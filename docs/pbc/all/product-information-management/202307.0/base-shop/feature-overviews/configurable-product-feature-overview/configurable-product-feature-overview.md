@@ -4,6 +4,7 @@ description: All the details about the Configurable Product feature of Spryker.
 last_updated: Dec 27, 2022
 template: concept-topic-template
 redirect_from:
+  - /docs/scos/user/features/202108.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
   - /docs/scos/user/features/202307.0/configurable-product-feature-overview.html
@@ -39,8 +40,8 @@ After adding a configurable product to the cart, a customer can change the produ
 
 Configurable products are created in two steps:
 
-1. A Back Office user creates regular products, or a developer imports them. See [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html) to learn about the file they import.
-2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
+1. A Back Office user creates regular products, or a developer imports them. See [Creating an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) to learn how they create products in the Back Office or [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html) to learn about the file they import.
+2. A developer converts regular products into configurable products by importing configuration parameters. See [File details: product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html) to learn about the file they import.
 
 
 ### Managing configurable products
@@ -100,7 +101,7 @@ If the configurator does not provide a price, [a regular product price](/docs/pb
 
 ### Complete and incomplete configuration
 
-When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
+When [importing configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
 
 If the configuration is complete, on the *Product details* page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, the **Show** and **Hide** buttons let the customer expand and collapse the remaining attributes to review them. The customer can purchase the product without again opening the configurator and selecting parameters, if they determine the configuration is complete.
 
@@ -117,7 +118,7 @@ Even if all the parameter values are [preconfigured](#preconfigured-parameter-va
 
 #### Request for Quote with a configurable product
 
-The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
+The information in the [Complete and incomplete configuration](#complete-and-incomplete-configuration) section applies to [Quotation Process & RFQ](/docs/pbc/all/request-for-quote/{{page.version}}/request-for-quote.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
 #### Shopping List with a configurable product
 
@@ -145,9 +146,9 @@ Customers configure a product on the Storefront as follows:
 
 |INSTALLATION GUIDES | MIGRATION GUIDES | DATA IMPORT | REFERENCES |
 |---------|---------|---------|---------|
-| [Product Configuration feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)| [Migration guide - ProductConfiguration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html) | [File details product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/file-details-product-concrete-pre-configuration.csv.html)  | [Configuration process flow of Configurable Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) |
-| [Glue API: Product Configuration feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html) |[Migration guide - ProductConfigurationStorage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html)   |  |  |
+| [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)| [Migration guide - ProductConfiguration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguration-module.html) | [File details product_concrete_pre_configuration.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-concrete-pre-configuration.csv.html)  | [Configuration process flow of Configurable Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configuration-process-flow-of-configurable-product.html) |
+| [Install the Product Configuration Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-configuration-glue-api.html) |[Upgrade the ProductConfigurationStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationstorage-module.html)   |  |  |
 |   | [Migration guide - ProductConfigurationsPriceProductVolumesRestApi](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationspriceproductvolumesrestapi-module.html)  |  |  |
-|   | [Migration guide - ProductConfigurationsRestApi](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html)  |  |  |
+|   | [Upgrade the ProductConfigurationsRestApi module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationsrestapi-module.html)  |  |  |
 |   | [Migration guide - ProductConfigurationWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfigurationwidget-module.html)  |  |  |
 |   | [Migration guide - ProductConfiguratorGatewayPage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productconfiguratorgatewaypage-module.html)  |  |  |

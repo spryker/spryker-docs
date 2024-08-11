@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Product Lists feature](/docs/scos/user/features/{{site.version}}/product-lists-feature-overview.html) into a Spryker project.
+This document describes how to install the [Product Lists feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-lists-feature-overview.html).
 
 ## Install feature core
 
@@ -11,13 +11,13 @@ Follow the steps below to install the Product Lists feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE|
+| NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
-| Product | {{site.version}}  | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
-| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Product | {{site.version}}  | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
+| Category Management | {{site.version}} | [Install the Category Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-management-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/product-lists:"{{site.version}}" --update-with-dependencies
@@ -482,7 +482,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string (unique) | pl-001 |  A unique identifier used to identify a product list. |
+| product_list_key | ✓ | string (unique) | pl-001 |  A unique identifier used to identify a product list. |
 |name|mandatory|string|All computers| A custom product list name used to provide a readable title or sentence of what the list contains. Used only for internal representation.|
 |type|mandatory|string ("blacklist"/"whitelist")|whitelist| Defines whether the list is a denylist or allowlist.|
 
@@ -550,7 +550,7 @@ pl-008,smartwatches
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-001 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-001 | An existing product list identifier for the assignment. |
 |category_key|mandatory|string|computer| An existing category identifier to be assigned to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -647,7 +647,7 @@ pl-007,177_25913296
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| product_list_key | mandatory | string | pl-002 | An existing product list identifier for the assignment. |
+| product_list_key | ✓ | string | pl-002 | An existing product list identifier for the assignment. |
 |concrete_sku|mandatory|string|166_30230575|An existing concrete product SKU to assign to the product list.|
 
 2. Register the following plugin to enable data import:
@@ -841,6 +841,6 @@ Make sure that no restricted products can be added to a cart, and if they were a
 
 After completing the integration of this feature, you need to extend it further to provide one or many owner types for product lists to be able to assign them. A product list can only be fully functional when a user, who browses the catalog, gets product lists assigned, and this can be fulfilled by providing owners with product lists.
 
-To add this functionality for merchant relationships, see  [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html).
+To add this functionality for merchant relationships, see  [Install the Merchant Product Restrictions feature](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html).
 
 {% endinfo_block %}

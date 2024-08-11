@@ -6,10 +6,6 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/econda-cross-sell
 originalArticleId: 66c188de-e8fa-4643-872c-98dc97d37c27
 redirect_from:
-  - /2021080/docs/econda-cross-sell
-  - /2021080/docs/en/econda-cross-sell
-  - /docs/econda-cross-sell
-  - /docs/en/econda-cross-sell
   - /docs/scos/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-cross-selling.html
@@ -32,9 +28,6 @@ An Econda ID can be found in your account details (see image below).
 <!-- ![](../../../Resources/Images/Econda/econda-3.png)-->
 
 These instructions assume  you are using Antelope<!-- add link https://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview--> for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
-
-Before getting started we recommend that you read the following topics: [asset management](/docs/scos/dev/legacy-demoshop/201811.0/frontend-overview.html#asset-management)
-and Twig.
 
 ## Installing assets
 
@@ -123,7 +116,7 @@ In `econda-widget.js` we are include the `cross-sell-widget.html` for the widget
 </section>
 ```
 
-Please refer to Econda visual widget [documentation](https://www.econda.de/en/technical-customer-support/).
+Please refer to Econda visual widget [documentation](https://www.econda.de/support/).
 
 ## Adding the Cross Sell Widget to Twig
 

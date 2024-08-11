@@ -9,11 +9,11 @@ related:
   - title: Activating and deactivating users
     link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
   - title: Assigning and deassigning customers from users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/assign-and-deassign-customers-from-users.html
   - title: Create users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/create-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/create-users.html
   - title: Editing users
-    link: docs/pbc/all/user-management/page.version/manage-in-the-back-office/manage-users/edit-users.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-in-the-back-office/manage-users/edit-users.html
 ---
 
 

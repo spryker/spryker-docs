@@ -258,7 +258,7 @@ You also must export `active-from` and `active-to` by your search collector. The
 
 The *Faceted navigation and filtering* feature lets you refilter search results by specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-search-featureshtml). Use this plugin to get the necessary data for the faceted navigation of your search results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 
@@ -303,6 +303,28 @@ Fuzzy search is valid for Master Suite only and has not been integrated into B2B
 {% endinfo_block %}
 
 It looks up for products even if a customer makes typos and spelling mistakes in a search query. Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FuzzyQueryExpanderPlugin` to allow Elasticsearch to add the `"fuzziness": "AUTO" parameter` to any matching query that is created as the suggested search.
+
+Before enabling this plugin for the primary search (not a suggestions search), make sure that you are not using the `cross_fields` search type, which is not allowed in conjunction with the [fuzzy search in Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#crossfields-fuzziness).
+You can change this behavior by overriding `\Spryker\Client\Catalog\Plugin\Elasticsearch\Query\CatalogSearchQueryPlugin` on the project level and adjusting the `createMultiMatchQuery` method.
+For example, you can change the type to the `best_fields`:
+```php
+ /**
+     * @param array<string> $fields
+     * @param string $searchString
+     *
+     * @return \Elastica\Query\MultiMatch
+     */
+    protected function createMultiMatchQuery(array $fields, string $searchString): MultiMatch
+    {
+        return (new MultiMatch())
+            ->setFields($fields)
+            ->setType(MultiMatch::TYPE_BEST_FIELDS)
+            ->setFuzziness(MultiMatch::FUZZINESS_AUTO)
+            ->setQuery($searchString)
+            ->setType(MultiMatch::TYPE_BEST_FIELDS);
+    }
+```
+Please check [official Elastic Search documentation]{https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-multi-match-query.html#multi-match-types} in order to pick most preferable type for the multi-match search query.
 
 #### Suggestions by page type
 

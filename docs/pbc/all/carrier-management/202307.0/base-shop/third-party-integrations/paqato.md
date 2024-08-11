@@ -7,9 +7,6 @@ originalLink: https://documentation.spryker.com/2021080/docs/paqato
 originalArticleId: a08912d4-c05c-498a-867b-b4e1d04bd30f
 redirect_from:
   - /docs/scos/user/technology-partners/202307.0/shipment/paqato.html  
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

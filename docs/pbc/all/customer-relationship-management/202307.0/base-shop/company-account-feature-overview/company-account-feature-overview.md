@@ -40,20 +40,20 @@ Setting up company structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Get a general idea of Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html)  |
-|  [Get a general idea of Business Units](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-units-overview.html)  |
-|  [Get a general idea of Business on Behalf](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)  |
-|  [Get a general idea of company user roles and permissions](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
+|  [Get a general idea of Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html)  |
+|  [Get a general idea of Business Units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-units-overview.html)  |
+|  [Get a general idea of Business on Behalf](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/business-on-behalf-overview.html)  |
+|  [Get a general idea of company user roles and permissions](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
 
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------|---------|---------|---------|---------|
-| [Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-company-account-feature.html)| [CompanyUser migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html)  | [Retrieving companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html) |[ HowTo - Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)  | [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) |
-| [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) | [BusinessOnBehalfDataImport migration guide](/docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html)  | [Retrieving business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)  |   |   |
-|   |   | [Retrieving business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html) |   |   |
-|   |   | [Retrieving company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)  |   |   |
-|   |   | [Retrieving company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)  |   |   |
+| [Install the Company account feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-company-account-feature.html)| [CompanyUser migration guide](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-companyuser-module.html)  | [Retrieving companies](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html) |[ HowTo - Generate a token for login](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/generate-login-tokens.html)  | [Customer Login by Token reference information](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html) |
+| [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) | [BusinessOnBehalfDataImport migration guide](/docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html)  | [Retrieving business units](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html)  |   |   |
+|   |   | [Retrieving business unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html) |   |   |
+|   |   | [Retrieving company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html)  |   |   |
+|   |   | [Retrieving company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html)  |   |   |
 |   |   | [Authenticating as a company user](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html)  |   |   |
 |   |   | [Managing company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)  |   |   |

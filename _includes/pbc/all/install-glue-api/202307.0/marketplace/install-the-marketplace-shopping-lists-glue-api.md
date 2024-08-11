@@ -8,14 +8,14 @@ Follow the steps below to install Marketplace Shopping Lists API feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)
+| Spryker Core | {{page.version}} |  [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)
+| Marketplace Shopping Lists | {{page.version}} | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-product-offer-shopping-lists-api require spryker/merchant-product-shopping-lists-api require spryker/product-offer-shopping-lists-rest-api
@@ -43,7 +43,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 |-|-|-|-|
@@ -246,8 +246,8 @@ Response sample:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 | - | - | - |
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |
+| Marketplace Shopping Lists | {{page.version}} | [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html)  |

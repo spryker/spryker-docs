@@ -1,7 +1,7 @@
 
 
 
-This document describes how to ingrate the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Packaging Units](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/feature-overviews/packaging-units-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -11,15 +11,15 @@ Follow the steps to install Packaging Units feature core.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
-| Order Management     | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)
-| Inventory Management | {{site.version}} | [Inventory Management feature integration](docs/scos/dev/feature-integration-guides/{{site.version}}/install-the-inventory-management-feature.md) |
-| Product             | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Order Management     | {{site.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)
+| Inventory Management | {{site.version}} | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
+| Product             | {{site.version}} | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) |
 | Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
@@ -427,7 +427,7 @@ packaging_unit_type.pack_500.name
 
 | COLUMN | REQUIRED  | DATA TYPE | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                        |
 |--------|-----------|-----------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| name   | mandatory | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type. Each name needs a glossary key definition for all configured locales. |
+| name   | ✓ | string    | packaging_unit_type.ring_500.name | Glossary key that will be used to display a packaging unit type. Each name needs a glossary key definition for all configured locales. |
 
 2. Register the following plugin to enable data import:
 
@@ -467,7 +467,7 @@ console data:import product-packaging-unit-type
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data has been added to the `spy_product_packaging_unit_type` table.
+Make sure that, in the database, the configured data has been added to the `spy_product_packaging_unit_type` table.
 
 {% endinfo_block %}
 
@@ -490,11 +490,11 @@ concrete_sku,lead_product_sku,packaging_unit_type_name,default_amount,is_amount_
 
 | COLUMN                   | REQUIRED  | DATA TYPE        | DATA EXAMPLE                      | DATA EXPLANATION                                                                                                                                                                                                                                                                         |
 |--------------------------|-----------|------------------|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| concrete_sku             | mandatory | string           | 218_123                           | Concrete product SKU of packaging unit.                                                                                                                                                                                                                                                  |
-| lead_product_sku         | mandatory | string           | 1                                 | Lead product concrete SKU.                                                                                                                                                                                                                                                               |
-| packaging_unit_type_name | mandatory | string           | packaging_unit_type.ring_500.name | Type a name of the current concrete product.                                                                                                                                                                                                                                             |
+| concrete_sku             | ✓ | string           | 218_123                           | Concrete product SKU of packaging unit.                                                                                                                                                                                                                                                  |
+| lead_product_sku         | ✓ | string           | 1                                 | Lead product concrete SKU.                                                                                                                                                                                                                                                               |
+| packaging_unit_type_name | ✓ | string           | packaging_unit_type.ring_500.name | Type a name of the current concrete product.                                                                                                                                                                                                                                             |
 | default_amount           | optional  | positive integer | 5                                 | <ul><li>Defines how many lead products should be sold together with each quantity of the current product concrete.</li><li>Effective only if the current concrete product `has_lead_product = 1`.</li></ul>                                                                              |
-| is_amount_variable       | mandatory | bool integer     | 1                                 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul>                                                                                                                        |
+| is_amount_variable       | ✓ | bool integer     | 1                                 | <ul><li>Allows customers to override the `default_amount` and decide how many lead products will be ordered for each quantity of this product concrete.</li></ul>                                                                                                                        |
 | amount_min               | optional  | positive integer | 3                                 | <ul><li>Restricts a customer to buy at least this amount of lead products.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is 1 when not provided.</li></ul>                                                                                                   |
 | amount_max               | optional  | positive integer | 5                                 | <ul><li>Restricts a customer not to buy more than this value.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value remains empty (unlimited) when not provided.</li></ul>                                                                                           |
 | amount_interval          | optional  | positive integer | 2                                 | <ul><li>Restricts customers to buy the amount that fits into the interval beginning with `amount_min`.</li><li>Effective only if `is_amount_variable = 1`.</li><li>Default value is `amount_min` when not provided.</li></ul> Min = 3; Max = 10; Interval = 2 <br> Choosable: 3, 5, 7, 9 |
@@ -975,13 +975,13 @@ Follow the steps below to install the {Feature Name} feature frontend.
 
 Install the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
+| NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 | Measurement Units    | {{page.version}} | [Install the Measurement Units feature](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |
 | Non-splittable Products | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies

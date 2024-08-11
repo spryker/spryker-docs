@@ -2,6 +2,7 @@
 title: Marketplace Shopping Lists feature overview
 description: This document contains concept information for the Marketplace Shopping List feature.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 ---
 
 A shopping list is a list of the items that shoppers buy or plan to buy frequently or regularly.
@@ -52,7 +53,7 @@ The *Print Shopping List* functionality does not contain any merchant-related in
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT   |
+| INSTALLATION GUIDES  | GLUE API GUIDES  | DATA IMPORT   |
 |-----------------|-------------|-----------------|
-| [Marketplace Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html) | [Managing shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-lists.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html) |
-| [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)   | [Managing shopping list items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html) | | | |
+| [Install the Marketplace Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html) | [Managing shopping lists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-lists.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/import-file-details-product-offer-shopping-list.csv.html) |
+| [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)   | [Managing shopping list items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html) | | | |

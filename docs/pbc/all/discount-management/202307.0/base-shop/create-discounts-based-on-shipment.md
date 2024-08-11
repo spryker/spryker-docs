@@ -6,22 +6,12 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
 originalArticleId: 98408c10-05d0-4d84-a0a8-e01ba2cbdfea
 redirect_from:
-  - /2021080/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /2021080/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v6/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v6/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v5/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v5/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v4/docs/ht-activate-a-discount-rule-based-on-a-shipment-carrier
-  - /v4/docs/en/ht-activate-a-discount-rule-based-on-a-shipment-carrier
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html  
   - /docs/pbc/all/discount-management/202307.0/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
   - /docs/pbc/all/discount-management/202204.0/base-shop/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/pbc/all/carrier-management/page.version/base-shop/shipment-feature-overview.html
   - title: "Reference information: Shipment method plugins"
     link: docs/pbc/all/carrier-management/page.version/base-shop/extend-and-customize/shipment-method-plugins-reference-information.html
 ---

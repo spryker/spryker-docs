@@ -6,38 +6,35 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-integration-into-project
 originalArticleId: 1bd158d4-9fd7-4a62-9665-577d5347a754
 redirect_from:
-  - /2021080/docs/fact-finder-integration-into-project
-  - /2021080/docs/en/fact-finder-integration-into-project
-  - /docs/fact-finder-integration-into-project
-  - /docs/en/fact-finder-integration-into-project
+  - /docs/scos/dev/technology-partner-guides/201907.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202212.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - /docs/scos/dev/technology-partner-guides/202307.0/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
   - title: Installing and configuring FACT-Finder web components
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html
   - title: Installing and configuring FACT-Finder NG API
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
   - title: Using FACT-Finder campaigns
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
   - title: Exporting product data for FACT-Finder
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
   - title: Using FACT-Finder search
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - title: Using FACT-Finder recommendation engine
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
   - title: Using FACT-Finder tracking
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
   - title: Using FACT-Finder search suggestions
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+    link: docs/pbc/all/miscellaneous/page.version/third-party-integrations/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 ---
 
 ## Prerequisites
 
 To integrate with FACT-Finder, you will need your FACT-Finder account. If you do not have a FACT-Finder account, please contact [FACT-Finder](http://www.fact-finder.de/).
-Make sure, that FactFinder modules were [installed and configured](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html) before proceeding with the integration.
+Make sure, that FactFinder modules were [installed and configured](/docs/pbc/all/miscellaneous/{{page.version}}/third-party-integrations/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html) before proceeding with the integration.
 
 ### FactFinder Module
 

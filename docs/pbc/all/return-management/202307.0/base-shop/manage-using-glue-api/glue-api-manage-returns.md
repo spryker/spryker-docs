@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-the-returns
 originalArticleId: bbe2ab03-1413-46f5-858a-9ca6c0bdb531
 redirect_from:
-  - /2021080/docs/managing-the-returns
-  - /2021080/docs/en/managing-the-returns
-  - /docs/managing-the-returns
-  - /docs/en/managing-the-returns
-  - /docs/scos/dev/glue-api-guides/202204.0/managing-returns/managing-the-returns.html
   - /docs/pbc/all/return-management/202307.0/manage-using-glue-api/glue-api-manage-returns.html
 related:
   - title: Retrieving the return reasons
@@ -32,7 +27,7 @@ In your development, the API can help you:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Create a return
 

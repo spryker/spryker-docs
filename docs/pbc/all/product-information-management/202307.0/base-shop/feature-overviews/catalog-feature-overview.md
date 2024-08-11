@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/catalog
 originalArticleId: c9c0a388-619c-464f-ac15-ee3c4bb13b36
 redirect_from:
-  - /2021080/docs/catalog
-  - /2021080/docs/en/catalog
-  - /docs/catalog
-  - /docs/en/catalog
+  - /docs/scos/user/features/202108.0/catalog-feature-overview.html
   - /docs/scos/user/features/202307.0/catalog-feature-overview.html
   - /docs/scos/user/features/202200.0/catalog-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/catalog-feature-walkthrough.html

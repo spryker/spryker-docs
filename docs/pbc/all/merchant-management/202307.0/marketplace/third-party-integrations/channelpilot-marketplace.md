@@ -6,15 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/channelpilot
 originalArticleId: 74542238-4686-4f7c-ab7e-6c38acc89e7d
 redirect_from:
-  - /2021080/docs/channelpilot
-  - /2021080/docs/en/channelpilot
-  - /docs/channelpilot
-  - /docs/en/channelpilot
   - /docs/scos/user/technology-partners/202200.0/marketplace-integrations/channelpilot-marketplace.html
   - /docs/scos/user/technology-partners/202307.0/marketplace-integrations/channelpilot-marketplace.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

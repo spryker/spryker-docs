@@ -84,7 +84,7 @@ Schematically, the workflow is shown in the following diagram:
 ### Sales representative workflow
 
 A sales representative can create an RFQ using two working procedures:
-* By an [agent](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html) account.
+* By an [agent](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) account.
 * On behalf of a company user.
 
 #### By an agent account
@@ -142,7 +142,7 @@ The buyers can use the blocked cart irrespective of the RFQ updates by unblockin
 
 ## Interaction of the RFQ with the approval process
 
-Mixing several workflows adds complexity to the process and increases the steps for a buyer to perform to submit the order. This can be true for projects where the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
+Mixing several workflows adds complexity to the process and increases the steps for a buyer to perform to submit the order. This can be true for projects where the [Approval Process](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
 Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to the cart with the total amount of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer finally can create the order and pay for it.
@@ -204,7 +204,7 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
-| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-quotation-process-feature-integration.html) | [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
+| [Install the Quotation Process feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html) | [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
 | [Install the Quotation Process + Checkout feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html) | [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
 | [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) | [Upgrade the QuoteRequestAgentPage module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html) |
 | [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) | [Upgrade the QuoteRequestAgentWidget module](/docs/pbc/all/request-for-quote/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html) |

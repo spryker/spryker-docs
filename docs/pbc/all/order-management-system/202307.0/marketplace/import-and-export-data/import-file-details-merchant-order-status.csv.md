@@ -4,12 +4,12 @@ last_updated: Feb 26, 2021
 description: This document describes the merchant-order-status.csv file to update merchant order states in your Spryker shop.
 template: import-file-template
 redirect_from:
-  - /docs/pbc/all/order-management-system/202307.0/marketplace/import-data/file-details-merchant-order-status.csv.html
+  - /docs/pbc/all/order-management-system/202307.0/marketplace/import-and-export-data/file-details-merchant-order-status.csv.html
 related:
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 
@@ -22,7 +22,7 @@ This document describes the `merchant-order-status.csv` file to configure the up
 | merchant_reference |   | String |   | Unique | Identifier of the merchant in the system. |
 | merchant_order_reference |   | String |   | Unique | Identifier of the merchant order in the system. |
 | order_item_reference | &check; | String |   | Unique | Identifier of the  item in the order. |
-| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/marketplace/user/features/{{site.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
+| merchant_order_item_event_oms | &check; | String |   | OMS events depend on the  [merchant state machine](/docs/pbc/all/order-management-system/{{site.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) configured. | Desired order-item state. Only this parameter is updated in the database. |
 
 ## Additional Information
 

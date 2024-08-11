@@ -6,30 +6,25 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-unit-addresses
 originalArticleId: 9fd20b19-8917-4c1d-b1e6-b9eef0e4390f
 redirect_from:
-  - /2021080/docs/retrieving-business-unit-addresses
-  - /2021080/docs/en/retrieving-business-unit-addresses
-  - /docs/retrieving-business-unit-addresses
-  - /docs/en/retrieving-business-unit-addresses
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-addresses.html
   - /docs/scos/dev/glue-api-guides/202120.0/managing-b2b-account/retrieving-business-unit-addresses.html
 related:
   - title: Retrieving companies
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
   - title: Retrieving company roles
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
   - title: Retrieving company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Managing company user authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Retrieving business units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
 ---
@@ -114,7 +109,7 @@ If your current company account is not set, you may get the `404` status code.
 
 {% endinfo_block %}
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 
 ##  Next steps

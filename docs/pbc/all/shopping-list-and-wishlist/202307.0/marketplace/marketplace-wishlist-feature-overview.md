@@ -2,6 +2,7 @@
 title: Marketplace Wishlist feature overview
 description: This document contains concept information for the Marketplace Wishlist feature.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 ---
 
 Wishlists are collections of products that a customer saves for further reference.
@@ -20,5 +21,5 @@ Once the customer decides to buy a product, they can add it to cart directly fro
 
 | INSTALLATION GUIDES | GLUE API GUIDES  |
 | ------------- | -------------- |
-| [Marketplace Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)
-| [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html) | [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html) |
+| [Install the Marketplace Wishlist feature](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-wishlist-feature.html) | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html)
+| [Install the Marketplace Product Offer + Wishlist Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-wishlist-glue-api.html) | [Managing wishlist items](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/manage-using-glue-api/glue-api-manage-wishlist-items.html) |

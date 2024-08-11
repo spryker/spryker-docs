@@ -12,7 +12,7 @@ To start feature integration, review and install the necessary features:
 | Product | {{page.version}} |
 | Price | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 
@@ -118,13 +118,13 @@ abstract_sku,concrete_sku,price_type,store,currency,value_net,value_gross,from_i
 | --- | --- | --- | --- | --- |
 |  abstract_sku | optional | string | 001 | Existing abstract product SKU of the scheduled price. |
 |  concrete_sku | optional | string | 060_26027598 | Existing concrete product SKU of the scheduled price. |
-|  price_type | mandatory | string | DEFAULT | Name of a price type. By default, it's "DEFAULT", but can be project specific (strike, sale, ...). |
-|  store | mandatory | string | DE | Store name of the scheduled price. |
-|  currency | mandatory | string | CHF | Currency ISO code. |
+|  price_type | ✓ | string | DEFAULT | Name of a price type. By default, it's "DEFAULT", but can be project specific (strike, sale, ...). |
+|  store | ✓ | string | DE | Store name of the scheduled price. |
+|  currency | ✓ | string | CHF | Currency ISO code. |
 |  value_net | optional | integer | 9832 | Net price in cents. |
 |  value_gross | optional | integer | 10924 | Gross price in cents. |
-|  from_included | mandatory | datetime | 2019-01-01T00:00:00-00:00 | Start date of the scheduled price (should be less than `to_included`). |
-|  to_included | mandatory | datetime | 2019-12-31T23:59:59-00:00 | End date of the scheduled price. |
+|  from_included | ✓ | datetime | 2019-01-01T00:00:00-00:00 | Start date of the scheduled price (should be less than `to_included`). |
+|  to_included | ✓ | datetime | 2019-12-31T23:59:59-00:00 | End date of the scheduled price. |
 
 Register the following plugin to enable data import:
 
@@ -156,7 +156,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import:product-price-schedule

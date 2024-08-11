@@ -2,6 +2,9 @@
 title: Tax Management
 description: Tax Management PBC lets you manage your tax rules for different stores and products
 template: concept-topic-template
+last_updated: Oct 10, 2023
+redirect_from: 
+    
 ---
 
 Adhere to the respective tax regulations in the countries you sell and effortlessly configure and manage tax rates for products, shipments, and additional services.
@@ -10,9 +13,9 @@ Adhere to the respective tax regulations in the countries you sell and effortles
 
 | TAX PROVIDER | BUILT AND MAINTAINED BY | AVAILABLE FROM | BUSINESS MODEL SUPPORTED | SUITABLE WHEN | CAN BE EXTENDED AND CUSTOMIZED |
 | --- | --- | ---| ---| --- | -- |
-| [Avalara](/docs/pbc/all/tax-management/{{page.version}}/avalara/avalara.html) | Avalara | Composer | B2C | You do business primarily in North America. | From the Avalara Admin panel, you can customize all the tax rules of your business. |
-| [Spryker Tax](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/spryker-tax/spryker-tax.html) | Spryker | Composer | B2B, B2C, Marketplace | You do business primarily in Europe and in the countries where tax systems are simple. | While you still need  a development team to customize the tax experience, some parts can be customized in Spryker Back Office. |
-| [Vertex](/docs/pbc/all/tax-management/{{page.version}}/vertex/vertex.html) | Spryker | ACP | Marketplace | You do business primarily in North America. | From the Vertex Admin panel, you can customize all the tax rules of your business. |
+| [Avalara](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/avalara/avalara.html) | Avalara | Composer | B2C | You do business primarily in North America. | From the Avalara Admin panel, you can customize all the tax rules of your business. |
+| [Spryker Tax](/docs/pbc/all/tax-management/{{page.version}}/base-shop/tax-feature-overview.html) | Spryker | Composer | B2B, B2C, Marketplace | You do business primarily in Europe and in the countries where tax systems are simple. | While you still need  a development team to customize the tax experience, some parts can be customized in Spryker Back Office. |
+| [Vertex](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex.html) | Spryker | ACP | Marketplace | You do business primarily in North America. | From the Vertex Admin panel, you can customize all the tax rules of your business. |
 
 The following are some key usages and values of a tax engine in the ecommerce context.
 

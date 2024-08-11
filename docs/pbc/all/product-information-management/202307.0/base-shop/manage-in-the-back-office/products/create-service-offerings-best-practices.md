@@ -87,7 +87,7 @@ This approach is suitable only for Scenario 1 - that is, when the service is opt
 
 One more way to have a product with an optional service offering would be to make the product a [configurable bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html). It means that you create a product (for example, equipment) and suggest another product (Installation service) as a bundle. To create such a configurable bundle product, follow the steps below.
 
-1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/creating-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to do that.
+1. Create the *Installation Service* product as a usual abstract product, like you did in the [Prerequisites](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-in-the-back-office/products/create-service-offerings-best-practices.html#prerequisites) section. Make sure you set the **Availability** as *Never out of stock*. See [Managing Products Availability](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/manage-in-the-back-office/check-availability-of-products.html) for details on how to do that.
 
 {% info_block infoBox "Note" %}
 

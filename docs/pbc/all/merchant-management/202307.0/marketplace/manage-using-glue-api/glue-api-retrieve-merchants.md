@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve merchants"
 description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Nov 15, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/merchants/retrieving-merchants.html
 related:
@@ -15,7 +16,7 @@ Merchant is an individual or an organization selling products on the Marketplace
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-merchant-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Marketplace Merchant Glue API](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-merchant-glue-api.html).
 
 ## Retrieve merchants
 
@@ -644,16 +645,16 @@ For the attributes of the included resources, see:
 
 Retrieve merchant information as a relationship when sending the following requests:
 
-* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-a-wishlist)
+* [Retrieve an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-wishlists.html#retrieve-a-wishlist)
 * [Retrieve a product offer]
 * [Retrieve marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)
 
 Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/pbc/all/search/{{page.version}}/marketplace/glue-api-search-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/marketplace-glue-api-resolve-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

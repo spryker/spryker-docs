@@ -15,14 +15,14 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/company-account/managing-company-unit-addresses.html
 related:
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
 ---
 
 This document describes how to create company unit addresses in the Back Office.
 
 ## Prerequisites
 
-* [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/manage-companies.html).
+* [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html).
 * Review the [reference information](#reference-information-create-a-company-unit-address) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company unit address
@@ -45,7 +45,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| COMPANY | A company to assign this address to. To learn how to create a company, see [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/manage-companies.html). |
+| COMPANY | A company to assign this address to. To learn how to create a company, see [Create a company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-companies.html). |
 | COUNTRY | Country. |
 | CITY | City. |
 | ZIP CODE | Zip code. |
@@ -57,7 +57,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 ## Next steps
 
-* [Assign the address to a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-units/edit-company-units.html)
-* [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html)
-* [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-roles/create-company-roles.html)
-* [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/company-users/create-company-users.html)
+* [Assign the address to a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-units/edit-company-units.html)
+* [Edit company unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-unit-addresses/edit-company-unit-addresses.html)
+* [Create company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-roles/create-company-roles.html)
+* [Create company users](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/create-company-users.html)

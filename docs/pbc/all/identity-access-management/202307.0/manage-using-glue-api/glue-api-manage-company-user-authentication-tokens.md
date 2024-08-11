@@ -6,29 +6,25 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-company-user-authentication-tokens
 originalArticleId: 93de3785-709e-48d2-a1f5-d5edf0e4bc93
 redirect_from:
-  - /2021080/docs/managing-company-user-authentication-tokens
-  - /2021080/docs/en/managing-company-user-authentication-tokens
-  - /docs/managing-company-user-authentication-tokens
-  - /docs/en/managing-company-user-authentication-tokens\
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/managing-company-user-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/managing-company-user-authentication-tokens.html
 related:
   - title: Retrieving companies
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
   - title: Retrieving company roles
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
   - title: Retrieving company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Retrieving business units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-units.html
   - title: Retrieving business unit addresses
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
 ---
 
 This endpoint allows refreshing a company user access token or revoking a refresh token.
@@ -36,7 +32,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Refresh a company user authentication token
 
@@ -144,4 +140,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 | 004 | Failed to refresh the token. |
 | 901 | Refresh token is not specified or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

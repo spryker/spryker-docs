@@ -6,19 +6,15 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-image-sets-of-concrete-products
 originalArticleId: 77585058-128f-4e20-a4c8-633b62dfabec
 redirect_from:
-  - /2021080/docs/retrieving-image-sets-of-concrete-products
-  - /2021080/docs/en/retrieving-image-sets-of-concrete-products
-  - /docs/retrieving-image-sets-of-concrete-products
-  - /docs/en/retrieving-image-sets-of-concrete-products
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html
 related:
-  - title: Retrieving concrete products
+  - title: "Glue API: Retrieve concrete products"
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html
   - title: Retrieve concrete product availability
-    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-availability.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html
   - title: Retrieving sales units
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html
   - title: Product image management
@@ -30,7 +26,7 @@ This endpoint allows retrieving image sets of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 
 ## Retrieve image sets of a concrete product
@@ -103,4 +99,4 @@ Request sample: retrieve image sets of a concrete product
 | 302 | Concrete product is not found. |
 | 304 | Can't find concrete product image sets. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

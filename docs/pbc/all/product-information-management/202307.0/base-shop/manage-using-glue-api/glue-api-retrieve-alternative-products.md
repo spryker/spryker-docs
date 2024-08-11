@@ -6,11 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-alternative-products
 originalArticleId: b910a3a3-e499-4047-bb32-b96e00b94bcb
 redirect_from:
-  - /2021080/docs/retrieving-alternative-products
-  - /2021080/docs/en/retrieving-alternative-products
-  - /docs/retrieving-alternative-products
-  - /docs/en/retrieving-alternative-products
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-alternative-products.html
   - /docs/scos/dev/glue-api-guides/202307.0/retrieving-alternative-products.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 related:
@@ -36,7 +31,7 @@ In your development, the endpoints help to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Alternative Products Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html).
 
 
 ## Check if a product is discontinued
@@ -376,4 +371,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

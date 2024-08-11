@@ -6,27 +6,12 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-content-search-personalized-catalog-page
 originalArticleId: 1a07bff6-3655-4d94-97d9-58d0b8df106d
 redirect_from:
-  - /2021080/docs/t-content-search-personalized-catalog-page
-  - /2021080/docs/en/t-content-search-personalized-catalog-page
-  - /docs/t-content-search-personalized-catalog-page
-  - /docs/en/t-content-search-personalized-catalog-page
-  - /v6/docs/t-content-search-personalized-catalog-page
-  - /v6/docs/en/t-content-search-personalized-catalog-page
-  - /v5/docs/t-content-search-personalized-catalog-page
-  - /v5/docs/en/t-content-search-personalized-catalog-page
-  - /v4/docs/t-content-search-personalized-catalog-page
-  - /v4/docs/en/t-content-search-personalized-catalog-page
-  - /v3/docs/t-content-search-personalized-catalog-page
-  - /v3/docs/en/t-content-search-personalized-catalog-page
-  - /v2/docs/t-content-search-personalized-catalog-page
-  - /v2/docs/en/t-content-search-personalized-catalog-page
-  - /v1/docs/t-content-search-personalized-catalog-page
-  - /v1/docs/en/t-content-search-personalized-catalog-page
   - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
   - /docs/pbc/all/content-management-system/202307.0/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
+  - /docs/pbc/all/content-management-system/202307.0/base-shop/tutorials-and-howtos/tutorial-content-and-search-personalized-catalog-pages.html
 related:
   - title: CMS Pages overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-pages-overview.html
 ---
 
 {% info_block infoBox %}

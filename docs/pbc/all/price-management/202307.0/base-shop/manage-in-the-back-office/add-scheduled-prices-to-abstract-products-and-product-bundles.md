@@ -52,7 +52,7 @@ If you want to add more than five scheduled prices, it might be quicker to [impo
 | --- | --- |
 | ABSTRACT SKU | Unique identifier of an abstract product to import the scheduled price for. The field is disabled because you are adding the scheduled price to a particular abstract product. |
 | CONCRETE SKU | Unique identifier of a concrete product to import the scheduled price for. The field is disabled because you are adding a scheduled price to a particular abstract product. |
-| STORE | [Store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) in which the scheduled price will be displayed. If you want to add the scheduled price for multiple stores, you can repeat the full procedure for all of the needed stores.  |
+| STORE | [Store](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) in which the scheduled price will be displayed. If you want to add the scheduled price for multiple stores, you can repeat the full procedure for all of the needed stores.  |
 | CURRENCY | Currency in which the scheduled price is defined. If you want to add the scheduled price for multiple currencies, you can repeat the full procedure for all of the needed currencies.  |
 | NET PRICE | Net value of the product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**. |
 | GROSS PRICE |Gross value of product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**.  |

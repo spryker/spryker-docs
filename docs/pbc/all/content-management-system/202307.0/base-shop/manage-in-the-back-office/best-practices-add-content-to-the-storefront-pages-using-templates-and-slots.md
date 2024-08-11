@@ -16,7 +16,7 @@ related:
   - title: Managing Slots
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/manage-slots.html
   - title: Templates & Slots feature overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
@@ -30,7 +30,7 @@ To do that, you need to create content items, insert them into CMS blocks, assig
 
 {% info_block infoBox "Examplary content" %}
 
-All the content used in this guide is shipped by default in our [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html).
+All the content used in this guide is shipped by default in our [B2B Demo Shop](/docs/about/all/b2b-suite.html) and [B2C Demo Shop](/docs/about/all/b2c-suite.html).
 
 {% endinfo_block %}
 
@@ -47,7 +47,7 @@ Create the following content items:
 
 See [Creating content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html) for more details.
 
-If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
+If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) for more details.
 
 ## Create CMS blocks
 
@@ -95,7 +95,7 @@ Follow the steps to select a template with slots:
 2. In **List of Templates**, select the *Product* template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 
-If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#template-with-slots) for more details.
+If the templates with slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Template with Slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#template-with-slots) for more details.
 
 ## Select a slot
 

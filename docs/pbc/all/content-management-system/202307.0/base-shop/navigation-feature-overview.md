@@ -6,10 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/navigation-feature-overview
 originalArticleId: 6d0a1210-9c3e-44b2-b6c9-aa0cf7780cba
 redirect_from:
-  - /2021080/docs/navigation-feature-overview
-  - /2021080/docs/en/navigation-feature-overview
-  - /docs/navigation-feature-overview
-  - /docs/en/navigation-feature-overview
+  - /docs/scos/user/features/202005.0/navigation-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/navigation-feature-walkthrough/navigation-module.html
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html
   - /docs/scos/user/features/202307.0/navigation-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
@@ -146,6 +144,6 @@ For more details about navigation, check the video:
 
 | INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Install the Navigation feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/navigation-feature-integration.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) |
-| [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-navigation-node.csv.html) | |
+| [Install the Navigation feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/extend-and-customize/navigation-module-reference-information.html) |
+| [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-navigation-node.csv.html) | |
 | [Install the CMS feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cms-feature.html) |  |  |  |

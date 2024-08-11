@@ -2,6 +2,7 @@
 title: "Glue API: Retrieve merchant addresses"
 description: Retrieve merchant addresses via Glue API
 template: glue-api-storefront-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/glue-api-guides/202307.0/merchants/retrieving-merchant-addresses.html
 related:
@@ -106,4 +107,4 @@ Request sample: retrieve merchant addresses
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

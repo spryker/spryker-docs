@@ -64,12 +64,12 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - We strive to shift all business logic to our backend; however, with Measurements Units, a part of the calculations (for example, quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
 - A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
-- In the [Quick Order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/quick-add-to-cart-feature-overview.html) form and [Search](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
+- In the [Quick Order](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html) form and [Search](/docs/pbc/all/search/{{page.version}}/base-shop/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | GLUE API GUIDES |
 |---------|---------|
 | [Product measurement unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html)  | [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html)  |
-| [Measurement units + Quick Add to Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html) | [Retrieving sales units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html)  |
+| [Install the Measurement units + Quick Add to Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-quick-add-to-cart-feature.html) | [Retrieving sales units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-sales-units.html)  |
 | [Glue API: Measurement units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)  |   |

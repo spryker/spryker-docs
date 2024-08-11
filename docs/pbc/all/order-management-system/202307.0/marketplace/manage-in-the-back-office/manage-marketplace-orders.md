@@ -72,7 +72,7 @@ All columns with headers having arrows in **List of orders** are sortable.
 |   | Trigger all matching states inside this order   | Action button for changing the available states for all the items in the order. For details, see [Changing marketplace order states](#changing-marketplace-order-states). |
 | Custom Order Reference |   | Custom number that can be added to the order. |
 | Customer |   | Section with the information about the customer who has submitted the order. |
-|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/manage-in-the-back-office/customers/view-customers.html)* page. |
+|   | Reference | Unique reference of the customer in the system. The reference is clickable and leads to the *[View Customer](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/customers/view-customers.html)* page. |
 |   | Name | Name of the customer. |
 |   | Email | Customer’s email address. |
 |   | Previous orders count | Number of orders the customer has submitted. |
@@ -137,16 +137,6 @@ You can set different states for your order by clicking the action buttons. The 
 | Refund | Click this button in case of a refund. |
 | Return | Click this button if the customer returns you either all or several items from the order. |
 
-Marketplace order states flow:
-
-* **New**—the initial order state.
-* **Canceled**—the state of the order after it is canceled by the customer on the Storefront or by a Back Office user.
-* **Sent to Merchant**—the state of the order when the payment is made and the marketplace order was successfully split into the merchant orders. The corresponding merchant got notified about the new order.
-* When you select **Pay**, the order state becomes *Paid*. After a while, the status of the order changes to *Sent to Merchant*.
-* When you select **Cancel**, the order state becomes *Canceled*.
-* When you select **Close**, the order state becomes *Closed*.
-* If the customer returns the ordered items: when you select **Return**, the state becomes *Waiting for return*. The merchant needs to execute the return in the Merchant Portal.
-* Once the return is executed for the merchant order in the Merchant Portal, the state becomes *Refunded*.
 
 **Tips & tricks**
 <br>To change the state of all the items inside a shipment at once, in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment, click **the next available state**.

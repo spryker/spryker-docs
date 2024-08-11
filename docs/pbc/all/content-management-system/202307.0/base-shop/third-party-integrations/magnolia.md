@@ -12,9 +12,6 @@ redirect_from:
   - /docs/en/magnolia-cms
   - /docs/scos/user/technology-partners/202307.0/content-management/magnolia.html
   - /docs/pbc/all/content-management-system/202307.0/third-party-integrations/magnolia.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

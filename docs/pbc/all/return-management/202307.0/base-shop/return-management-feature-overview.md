@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview
 originalArticleId: 74024d01-461c-4514-a158-fb22bb729dde
 redirect_from:
-  - /2021080/docs/return-management-feature-overview
-  - /2021080/docs/en/return-management-feature-overview
-  - /docs/return-management-feature-overview
-  - /docs/en/return-management-feature-overview
-  - /2021080/docs/return-details-reference-information
-  - /2021080/docs/en/return-details-reference-information
-  - /docs/return-details-reference-information
-  - /docs/en/return-details-reference-information
+  - /docs/scos/user/features/202108.0/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 The *Return Management* capability lets you create and manage returns for a sales order.
@@ -75,7 +68,7 @@ The *guest users* can not initiate returns of their orders, as the return manage
 {% info_block warningBox "Note" %}
 
 For a [Configurable Bundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+The [Product Bundles](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
@@ -119,13 +112,13 @@ The feature has the following functional constraints which are going to be resol
 
 To install the return management capability, do the following:
 
-1. Install the required modules:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/return-management:"{{site.version}}" spryker/sales-returns-rest-api:"{{site.version}}" spryker/barcode:"^1.1.1" --update-with-dependencies
 ```
 
-2. Follow the integration guides in [Related Developer articles](#related-developer-documents).
+2. Follow the integration guides in [Related Developer documents](#related-developer-documents).
 
 ## Related Business User articles
 
@@ -135,17 +128,17 @@ composer require spryker-feature/return-management:"{{site.version}}" spryker/sa
 | [View return details, set return statuses and print return slips in the Back Office](/docs/pbc/all/return-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-returns.html)  |
 | [Choose a suitable return management process for your project](/docs/pbc/all/return-management/{{page.version}}/base-shop/build-a-return-management-process-best-practices.html)  |
 
-## Related Developer articles
+## Related Developer documents
 
-| INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
-| [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
-| [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
-| [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
-| [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |  |  |
-| [Product Bundles + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-order-management-feature-integration.html) |  |  |
-| [Product Bundles + Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-return-management-feature-integration.html) |  |  |
+| [Install the Return Management feature](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) | [HowTo: Set number of days for a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/set-number-of-days-for-a-return-policy.html) |
+| [Install the Configurable Bundle + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-order-management-feature.html) |  |  |
+| [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html) |  |  |
+| [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) |  |  |
+| [Install the Product + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-order-management-feature.html) |  |  |
+| [Install the Product Bundles + Return Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html) |  |  |
 | [Product Measurement Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-measurement-units-feature.html) |  |  |
-| [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |  |  |
-| [Product Packaging Unit feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |  |  |
+| [Install the Product Options + Order Management feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-options-order-management-feature.html) |  |  |
+| [Product Packaging Unit feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-packaging-units-feature.html) |  |  |

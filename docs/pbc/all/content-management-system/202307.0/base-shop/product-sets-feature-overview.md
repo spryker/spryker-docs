@@ -6,14 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-sets-feature-overview
 originalArticleId: 7bc42ccb-f76c-400f-9372-251104ce0b77
 redirect_from:
-  - /2021080/docs/product-sets-feature-overview
-  - /2021080/docs/en/product-sets-feature-overview
-  - /docs/product-sets-feature-overview
-  - /docs/en/product-sets-feature-overview
-  - /2021080/docs/product-set
-  - /2021080/docs/en/product-set
-  - /docs/product-set
-  - /docs/en/product-set
+  - /docs/scos/user/features/202108.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
   - /docs/scos/user/features/202307.0/product-sets-feature-overview.html
   - /docs/pbc/all/content-management-system/202307.0/product-sets-feature-overview.html
@@ -51,11 +44,11 @@ The feature has the following functional constraints which are going to be resol
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Product Sets feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/product-sets-feature-overview.html) |
-| [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
-| [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
+| [Create product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/create-product-sets.html) |
+| [Manage product sets](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/product-sets/edit-product-sets.html) |
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES | DATA IMPORT |
 |---------|---------|
-| [Product Sets feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-sets-feature-integration.html)  | [File details: product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html) |
+| [Product Sets feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-sets-feature.html)  | [File details: product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-set.csv.html) |

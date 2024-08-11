@@ -11,18 +11,18 @@ redirect_from:
   - /docs/alternative-products-feature-integration
   - /docs/en/alternative-products-feature-integration
 related:
-  - title: Glue API - Alternative products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
-  - title: Alternative Products - Inventory Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
-  - title: Alternative Products - Wishlist feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-wishlist-feature-integration.html
+  - title: Install the Alternative Products Glue API
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
+  - title: Install the Alternative Products - Inventory Management feature
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html
+  - title: Install the Alternative Products - Wishlist feature
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-wishlist-feature.html
   - title: Alternative Products - Product Label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-product-labels-feature.html
   - title: Alternative Products - Discontinued Products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-discontinued-products-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html
   - title: Alternative Products feature walkthrough
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-alternative-products-glue-api.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-alternative-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-alternative-products-feature.md -->

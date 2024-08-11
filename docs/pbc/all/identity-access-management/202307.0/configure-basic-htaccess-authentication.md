@@ -5,13 +5,6 @@ last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-configure-basic-htaccess-authentication
 originalArticleId: 092354ac-2368-4906-a4a7-33e93229bd2c
-redirect_from:
-  - /2021080/docs/howto-configure-basic-htaccess-authentication
-  - /2021080/docs/en/howto-configure-basic-htaccess-authentication
-  - /docs/howto-configure-basic-htaccess-authentication
-  - /docs/en/howto-configure-basic-htaccess-authentication
-  - /v6/docs/howto-configure-basic-htaccess-authentication
-  - /v6/docs/en/howto-configure-basic-htaccess-authentication
 ---
 
 This document describes how to configure basic `.htaccess` authentication for the Storefront and the Back Office.

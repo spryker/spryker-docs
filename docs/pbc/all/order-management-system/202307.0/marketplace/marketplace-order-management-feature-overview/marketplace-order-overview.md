@@ -2,13 +2,14 @@
 title: Marketplace Order overview
 description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Aug 30, 2023
 related:
   - title: Marketplace Order Management feature overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing marketplace orders
@@ -35,7 +36,7 @@ As the Marketplace order contains details about offers and products a customer h
 ## Marketplace and merchant order states machines
 You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
 
-For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 
 For details about how the two state machines interact with each other, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 

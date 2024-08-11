@@ -44,7 +44,7 @@
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html) to learn how to do that. |
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. See [Checking out purchases in version 202009.0](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html) to learn how to do that. |
 
 **Order item information**
 
@@ -181,4 +181,4 @@
 
 | ATTRIBUTE | TYPE   | DESCRIPTION      |
 | -------- | ----- | ----------------------- |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/check-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Check out purchases](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/check-out/glue-api-check-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/customers/glue-api-retrieve-customer-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |

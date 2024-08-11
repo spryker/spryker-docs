@@ -6,31 +6,27 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-by-customers-as-an-agent-assist
 originalArticleId: 7e16c84e-9baf-4c1b-bab3-bb2d1db0a7d9
 redirect_from:
-  - /2021080/docs/searching-by-customers-as-an-agent-assist
-  - /2021080/docs/en/searching-by-customers-as-an-agent-assist
-  - /docs/searching-by-customers-as-an-agent-assist
-  - /docs/en/searching-by-customers-as-an-agent-assist
   - /docs/scos/dev/glue-api-guides/202307.0/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 related:
   - title: Agent Assist feature overview
-    link: docs/pbc/all/user-management/page.version/agent-assist-feature-overview.html
+    link: docs/pbc/all/user-management/page.version/base-shop/agent-assist-feature-overview.html
   - title: Authenticate as an agent assist
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-an-agent-assist.html
   - title: Impersonate customers as an agent assist
-    link: docs/pbc/all/user-management/page.version/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
+    link: docs/pbc/all/user-management/page.version/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html
   - title: Managing agent assist authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-agent-assist-authentication-tokens.html
 ---
 
 
-Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
+Search by customers to find out information about them. This endpoint is mostly used by [agent assists](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) to find out the customer reference needed to [impersonate a customer](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html#impersonate-a-customer).
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Agent Assist feature integration](/docs/pbc/all/user-management/{{page.version}}/install-and-upgrade/install-the-agent-assist-glue-api.html)
-* [Customer Account Management + Agent Assist feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
-* [Customer Account Management feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
+* [Install the Agent Assist Glue API](/docs/pbc/all/user-management/{{page.version}}/base-shop/install-and-upgrade/install-the-agent-assist-glue-api.html)
+* [Install the Customer Account Management + Agent Assist feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-agent-assist-feature.html)
+* [Install the Customer Account Management feature](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-customer-account-management-feature.html)
 
 ## Search by customers
 
@@ -56,11 +52,11 @@ To search by customers, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/agent-customer-search | Return the list of all customers. |
-| GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5 | Return a list of 5 customer entries starting from the 6th entry. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com | Search for the customer with the `sonia@spryker.com` email address. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=spencor | Search for the customer with the `spencor` name. |
-| GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5 | Search for the customer with the `DE--5` customer reference. |
+| `GET http://glue.mysprykershop.com/agent-customer-search` | Return the list of all customers. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?page[limit]=5&page[offset]=5` | Return a list of 5 customer entries starting from the 6th entry. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=sonia@spryker.com` | Search for the customer with the `sonia@spryker.com` email address. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=spencor` | Search for the customer with the `spencor` name. |
+| `GET http://glue.mysprykershop.com/agent-customer-search?q=DE--5` | Search for the customer with the `DE--5` customer reference. |
 
 ### Response
 
@@ -319,8 +315,8 @@ To search by customers, send the request:
 | 001 | Access token is invalid.|
 | 4103 | Agent access token is missing; or the action is available to an agent user only.|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) for details.
+After you’ve found the reference of the customer you want to assist, impersonate the customer to perform any actions available to them. See [Impersonate customers as an agent assist](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-impersonate-customers-as-an-agent-assist.html) for details.

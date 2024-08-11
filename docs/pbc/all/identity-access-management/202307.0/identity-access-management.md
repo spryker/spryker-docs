@@ -4,10 +4,6 @@ description:
 last_updated: Oct 2, 2022
 template: concept-topic-template
 redirect_from:
-  - /2021080/docs/logging-in-to-the-back-office
-  - /2021080/docs/en/logging-in-to-the-back-office
-  - /docs/logging-in-to-the-back-office
-  - /docs/en/logging-in-to-the-back-office
   - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
   - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html
@@ -26,7 +22,7 @@ Back Office supports login via two types of accounts:
 
 ### Login with a Back Office account
 
-Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/manage-in-the-back-office/manage-users/create-users.html).
+Only an existing Back Office user with sufficient permissions or a developer can create Back Office accounts. That is, if you want to onboard a new Back Office user, you need to create an account for them. For instructions on creating accounts in the Back Office, see [Create users](/docs/pbc/all/user-management/{{page.version}}/base-shop/manage-in-the-back-office/manage-users/create-users.html).
 
 
 To log in, on the Back Office login page, a user enters the email address and password of their account. If the credentials are correct and their account is active at that time, they are logged in.
@@ -70,7 +66,7 @@ If a user logs in with an SSO but does not have a Back Office account, the user 
 
 ## Glue API authentication
 
-For details about Glue API authentication, see [Glue API authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html)
+For details about Glue API authentication, see [Glue API authentication and authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html)
 
 ## Current constraints
 
@@ -78,20 +74,14 @@ The feature has the following functional constraint:
 
 Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
-## Related Business User documents
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Log in to the Back Office](/docs/pbc/all/identity-access-management/{{page.version}}/log-into-the-back-office.html) |
-
 
 
 ## Related Developer documents
 
 |INSTALLATION GUIDES  | GLUE API GUIDES |
 | - | - |
-| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-authentication-and-authorization.html) |
-| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/pbc/all/identity-access-management/{{page.version}}/glue-api-security-and-authentication.html) |
+| [Install the Spryker Core Back Office feature](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-spryker-core-back-office-feature.html)  | [Authentication and authorization](/docs/dg/dev/glue-api/{{page.version}}/authentication-and-authorization.html) |
+| [Install Microsoft Azure Active Directory](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-microsoft-azure-active-directory.html)   | [Security and authentication](/docs/dg/dev/glue-api/{{page.version}}/security-and-authentication.html) |
 | [Install the Customer Access Glue API](/docs/pbc/all/identity-access-management/{{page.version}}/install-and-upgrade/install-the-customer-access-glue-api.html) |  [Create customers](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-create-customers.html) |
 | | [Confirm customer registration](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-confirm-customer-registration.html) |
 | | [Manage customer passwords](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-customer-passwords.html) |

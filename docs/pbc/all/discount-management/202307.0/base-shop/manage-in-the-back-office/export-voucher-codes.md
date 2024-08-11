@@ -2,13 +2,14 @@
 title: Export voucher codes
 description: Learn how to generate voucher codes in the Back Office.
 template: back-office-user-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/merchandising/discount/export-voucher-codes.html
   - /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
   - /docs/pbc/all/discount-management/202307.0/manage-in-the-back-office/export-voucher-codes.html  
 related:
   - title: Promotions & Discounts feature overview
-    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/promotions-discounts-feature-overview.html
 ---
 
 To export voucher codes, do the following:

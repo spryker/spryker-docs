@@ -20,8 +20,6 @@ related:
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
     link: docs/pbc/all/content-management-system/page.version/base-shop/file-manager-feature-overview.html
-  - title: File uploader overview
-    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-uploader.html
 ---
 ---
 

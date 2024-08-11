@@ -11,9 +11,6 @@ redirect_from:
   - /docs/en/censhare
   - /docs/scos/user/technology-partners/202307.0/content-management/censhare.html
   - /docs/pbc/all/content-management-system/202307.0/third-party-integrations/censhare.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

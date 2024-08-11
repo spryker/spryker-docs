@@ -3,13 +3,15 @@ title: "Import file details: merchant_product_offer_store.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_product_offer_store.csv file to configure merchant product offer store information in your Spryker shop.
 template: import-file-template
+redirect_from:
+- /docs/pbc/all/offer-management/202307.0/marketplace/import-and-export-data/file-details-merchant-product-offer-store.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `merchant_product_offer_store.csv` file to configure [merchant product offer stores](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html#product-offer-stores) in your Spryker shop.

@@ -1,5 +1,5 @@
 ---
-title: Company Account feature integration
+title: Install the Company account feature
 description: The guide walks you through the process of installing Business on Behalf, Company Account Storage, and Company Account OAuth functionality into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,10 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/company-account-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202307.0/company-account-feature-integration.html
 related:
-  - title: Glue API - Company Account feature integration
-    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
-  - title: Company Account + Order Management feature integration
-    link: docs/pbc/all/customer-relationship-management/page.version/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
+  - title: Glue API - Install the Company account feature
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html
+  - title: Install the Company Account + Order Management feature
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/install-and-upgrade/install-features/install-the-company-account-order-management-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-feature.md -->

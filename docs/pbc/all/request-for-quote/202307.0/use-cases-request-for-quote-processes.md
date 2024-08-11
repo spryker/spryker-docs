@@ -26,5 +26,5 @@ In Marketplace, if customers have several items from different merchants in thei
 
 To solve this issue, Spryker needs to introduce Marketplace support for RFQ. To achieve this, the following actions are required:
 * Introduce the Split Quote feature so that different carts and quotes per merchant are automatically created.
-* Display quote requests in Merchant Portal so that merchants can manage the requests—for example, replying to the requests and changing prices—or allow merchants to log in as an [agent](/docs/pbc/all/user-management/{{site.version}}/agent-assist-feature-overview.html) with the limitation of only seeing quote requests for their products or offers.
+* Display quote requests in Merchant Portal so that merchants can manage the requests—for example, replying to the requests and changing prices—or allow merchants to log in as an [agent](/docs/pbc/all/user-management/{{page.version}}/base-shop/agent-assist-feature-overview.html) with the limitation of only seeing quote requests for their products or offers.
 * Add support for frontend and backend APIs.

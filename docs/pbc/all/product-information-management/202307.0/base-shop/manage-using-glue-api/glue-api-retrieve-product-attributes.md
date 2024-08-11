@@ -6,10 +6,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-product-attributes
 originalArticleId: 11708dbe-4c10-47db-8e40-d5cf23a8c3eb
 redirect_from:
-  - /2021080/docs/retrieving-product-attributes
-  - /2021080/docs/en/retrieving-product-attributes
-  - /docs/retrieving-product-attributes
-  - /docs/en/retrieving-product-attributes
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-product-attributes.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-product-attributes.html
 related:
@@ -27,7 +23,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 
 <a name="{all-attributes}"></a>
 
@@ -242,4 +238,4 @@ Possible errors
 | --- | --- |
 | 4201 | Attribute not found. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

@@ -2,6 +2,7 @@
 title: Configure Bazaarvoice
 description: Find out how you can configure Bazaarvoice in your Spryker shop
 template: howto-guide-template 
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
 ---

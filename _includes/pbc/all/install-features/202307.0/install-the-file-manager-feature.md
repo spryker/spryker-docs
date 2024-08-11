@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [File Manager feature](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-manager-feature-overview.html) into a Spryker project.
+This document describes how to install the [File Manager feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/file-manager-feature-overview.html).
 
 ## Install feature core
 
@@ -11,11 +11,11 @@ Follow the steps below to install the File Manager feature core.
 
 Install the required features:
 
-| NAME         | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+| NAME         | VERSION          | INSTALLATION GUIDE                                                                                                                                           |
 |--------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/file-manager:"{{page.version}}" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker-feature/file-manager:"{{page.version}}" --update-with-d
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE                | EXPECTED DIRECTORY                      |
 |-----------------------|-----------------------------------------|
@@ -94,7 +94,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Verify the following changes by checking your database:
+Make sure the following changes have been applied in the database::
 
 | DATABASE ENTITY                         | TYPE    | EVENT   |
 |-----------------------------------------|---------|---------|
@@ -152,7 +152,7 @@ Ensure the following transfers have been created:
 {% info_block warningBox "Note" %}
 
 The web server's maximum file size configuration - `max-request-body-size` has higher priority then the module configuration and can be adjusted using `deploy.*.yml`.
-For additional details, refer to the [Docker SDK configuration reference](/docs/scos/dev/the-docker-sdk/{{page.version}}/docker-sdk-configuration-reference.html)
+For additional details, refer to the [Docker SDK configuration reference](/docs/dg/dev/sdks/the-docker-sdk/docker-sdk-configuration-reference.html)
 
 {% endinfo_block %}
 

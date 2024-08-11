@@ -6,10 +6,7 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-categories
 originalArticleId: 93beba2a-596a-46ca-8933-c88ad105d1c7
 redirect_from:
-  - /2021080/docs/managing-categories
-  - /2021080/docs/en/managing-categories
-  - /docs/managing-categories
-  - /docs/en/managing-categories
+  - /docs/scos/user/back-office-user-guides/202108.0/catalog/category/managing-categories.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/managing-categories.html
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/category/managing-categories.html  
 related:

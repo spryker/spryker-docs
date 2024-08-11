@@ -1,10 +1,14 @@
 This document describes how to upgrade the Currency module.
 
+## Prerequisites
+
+[Upgrade to PHP 8.1](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html)
+
 ## Upgrading from version 3.* to version 4.0.0
 
 {% info_block warningBox %}
 
-Dynamic Multistore is part of an *Early Access Release*. This *Early Access* feature introduces the ability to handle the store entity in the Back Office. Business users can try creating stores without editing the `Stores.php` file and redeploying the system.
+Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 

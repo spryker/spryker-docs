@@ -1,6 +1,6 @@
 
 
-This document describes how to ingrate the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to install the [Inventory Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html) feature.
 
 {% info_block errorBox %}
 
@@ -9,7 +9,7 @@ The following feature integration guide expects the basic feature to be in place
 The current feature integration guide adds the following functionality:
 
 * [Warehouse Management](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html)
-* [Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+* [Add to cart from catalog page](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
 * [Warehouse address](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
@@ -231,7 +231,7 @@ Sony Experts MER000006 Warehouse 1,1
 
 | Column | REQUIRED | Data Type | Data Example | Data Explanation |
 | --- | --- | --- | --- | --- |
-| name | mandatory | string | Warehouse1 | Name of the warehouse. |
+| name | ✓ | string | Warehouse1 | Name of the warehouse. |
  |is_active |mandatory |bool |1 |Defines if the warehouse is active. |
 
 **vendor/spryker/spryker/Bundles/StockDataImport/data/import/warehouse_store.csv**
@@ -247,8 +247,8 @@ Warehouse2,US
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | mandatory | string | Warehouse1 | Name of the warehouse. |
-| store_name | mandatory | string | DE | Name of the store the warehouse will be available in. |
+| warehouse_name | ✓ | string | Warehouse1 | Name of the warehouse. |
+| store_name | ✓ | string | DE | Name of the store the warehouse will be available in. |
 
 **data/import/common/common/warehouse_address.csv**
 
@@ -265,14 +265,14 @@ Sony Experts MER000006 Warehouse 1,Wallstrasse 58,,,53507,Dernau,,DE,+49 2643 48
 
 | COLUMN | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | mandatory | string | Warehouse1 | Warehouse name. |
-| address1 | mandatory | string | Hallesches Ufer 71 | The first line of the warehouse address. |
+| warehouse_name | ✓ | string | Warehouse1 | Warehouse name. |
+| address1 | ✓ | string | Hallesches Ufer 71 | The first line of the warehouse address. |
 | address2 | optional | string | | The second line of the warehouse address. |
 | address3 | optional | string | |The third line of the warehouse address. |
-| zip_code | mandatory | string | 73271 | Zipcode. |
-| city | mandatory | string | Holzmaden | City. |
+| zip_code | ✓ | string | 73271 | Zipcode. |
+| city | ✓ | string | Holzmaden | City. |
 | region_name | optional | string | | Region name from the `spy_region` table. |
-| country_iso2_code | mandatory | string | DE | The ISO code of the country. |
+| country_iso2_code | ✓ | string | DE | The ISO code of the country. |
 | phone | optional | string | +49 7023 87 33 18 | Landline or any other contact phone. |
 |comment | optional | string | | Any related comment. |
 
@@ -536,9 +536,9 @@ Make sure that the warehouse address management works:
 
 {% endinfo_block %}
 
-## Related features
+## Install related features
 
-|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+|FEATURE | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE |
 |--- | --- | --- |
 | Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html)|
+| Alternative Products | | [Install the Alternative Products + Inventory Management feature - ongoing](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-inventory-management-feature.html)|

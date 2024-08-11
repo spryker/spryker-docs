@@ -2,11 +2,12 @@
 title: Edit customer addresses
 description: Learn how to edit customer addresses in the Back Office.
 template: back-office-user-guide-template
+last_updated: Aug 17, 2023
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/customer/customers/edit-customer-addresses.html
 related:
   - title: Customer Account Management feature overview
-    link: docs/pbc/all/customer-relationship-management/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 This document describes how to edit customer addresses in the Back Office.
@@ -50,5 +51,5 @@ Review the [reference information](#reference-information-edit-a-customer-addres
 |ZIP CODE | ZIP code. |
 |COUNTRY | Country. |
 |PHONE| Phone number. |
-|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html). |
 |COMMENT| Any comment about the address. For example, `Use only for billing`. |

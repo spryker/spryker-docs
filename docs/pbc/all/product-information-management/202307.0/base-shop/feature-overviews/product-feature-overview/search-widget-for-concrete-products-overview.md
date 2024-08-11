@@ -55,7 +55,7 @@ In the empty shopping list, the customer can still add products with the help of
 
 ![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png)
 
-In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/non-splittable-products-feature-overview.html) the products may have.
+In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/non-splittable-products-feature-overview.html) the products may have.
 
 The same works for the [product restriction](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/merchant-product-restrictions-feature-overview/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
 

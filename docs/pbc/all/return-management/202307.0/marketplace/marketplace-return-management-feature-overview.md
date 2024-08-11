@@ -2,6 +2,7 @@
 title: Marketplace Return Management feature overview
 description: This document contains concept information for the Marketplace Return Management feature.
 template: concept-topic-template
+last_updated: Nov 10, 2023
 related:
   - title: Managing marketplace returns
     link: docs/pbc/all/return-management/page.version/marketplace/manage-in-the-back-office/manage-marketplace-returns.html
@@ -9,7 +10,7 @@ related:
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole marketplace order or its individual items. For information about what items can be returned, see [Returnable items and a return policy](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#returnable-items-and-a-return-policy). For information about how a Back Office user can create returns, see [Managing marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html).
 
 
 {% info_block warningBox "Note" %}
@@ -65,7 +66,7 @@ The following figure shows how to create a return, view its details, and print a
 
 ## Marketplace Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/marketplace/marketplace-return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
+A Back Office user can create returns for the [returnable items](/docs/pbc/all/return-management/{{page.version}}/base-shop/return-management-feature-overview.html#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide: Managing orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/manage-in-the-back-office/manage-marketplace-orders.html). Also, a Back Office user can view returns, close fulfilled returns, print a return slip, and cancel returns.
 
 ## Marketplace Return Management in the Merchant Portal
 
@@ -80,7 +81,7 @@ Merchants process their returns in the Merchant Portal. For details about how to
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES      | GLUE API GUIDES     |
+| INSTALLATION GUIDES      | GLUE API GUIDES     |
 | -------------------- | -------------- |
-| [Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
-| [Glue API: Marketplace Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              
+| [Install the Marketplace Return Management feature](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-feature.html) | [Managing the returns](/docs/pbc/all/return-management/{{page.version}}/marketplace/glue-api-manage-marketplace-returns.html) |
+| [Install the Marketplace Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/marketplace/install-and-upgrade/install-the-marketplace-return-management-glue-api.html) |              

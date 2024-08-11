@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
 related:
   - title: Email as a CMS block
-    link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
 You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/email-as-a-cms-block-overview.html).
@@ -65,7 +65,7 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 | ATTRIBUTE  | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
 | STORE RELATION | Irrelevant. |
-| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#cms-block-template). |
+| TEMPLATE | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
 | NAME | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Irrelevant. |
 | PRODUCTS | Irrelevant. |

@@ -5,14 +5,6 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-bundled-products
 originalArticleId: f77455d1-e0ca-470c-a6f6-15a060ea2647
 redirect_from:
-  - /2021080/docs/retrieving-bundled-products
-  - /2021080/docs/en/retrieving-bundled-products
-  - /docs/retrieving-bundled-products
-  - /docs/en/retrieving-bundled-products
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-products/retrieving-bundled-products.html
   - /docs/pbc/all/product-information-management/202307.0/manage-using-glue-api/glue-api-retrieve-bundled-products.html
 related:
@@ -26,10 +18,10 @@ This endpoint allows retrieving the products that belong to a bundle.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Product Bundle + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
+* [Install the Product Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundle-cart-glue-api.html)
 
 ## Retrieve bundled products
 
@@ -58,9 +50,9 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products | Retrieve bundled products of the product bundle with SKU `214_123`. |
-| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
-| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
+| `GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products` | Retrieve bundled products of the product bundle with SKU `214_123`. |
+| `GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
+| `GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
 
 ### Response
 
@@ -802,7 +794,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 For the attributes of the included resources, see:
 
-* [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
+* [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html#abstract-products-response-attributes)
 
 ## Possible errors
@@ -812,12 +804,12 @@ For the attributes of the included resources, see:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is ID not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ## Other management options
 
 You can also manage the `bundled-products` resource as follows:
 * [Retrieve bundled products of a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#retrieve-a-concrete-product)
 * [Retrieve bundled products of an abstract product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Manage bundled products in carts of registered users](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Manage bundled products in guest carts](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart)
+* [Manage bundled products in carts of registered users](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-carts-of-registered-users/glue-api-manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
+* [Manage bundled products in guest carts](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/manage-using-glue-api/manage-guest-carts/glue-api-manage-guest-cart-items.html#add-items-to-a-guest-cart)

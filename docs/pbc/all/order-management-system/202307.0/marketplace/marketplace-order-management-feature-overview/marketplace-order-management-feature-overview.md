@@ -2,13 +2,14 @@
 title: Marketplace Order Management feature overview
 description: This document contains concept information for the Marketplace order feature in the Spryker Commerce OS.
 template: concept-topic-template
+last_updated: Nov 6, 2023
 related:
   - title: Marketplace order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-order-overview.html
   - title: Merchant order overview
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
     link: docs/pbc/all/order-management-system/page.version/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
   - title: Managing marketplace orders
@@ -35,7 +36,7 @@ As the Marketplace order contains details about offers and products a customer h
 ## Marketplace and merchant order states machines
 You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
 
-For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
 
 For details about how the two state machines interact, see [Marketplace and merchant state machine interactions](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 
@@ -82,7 +83,7 @@ In some cases, due to rounding, the amounts of Marketplace order totals can diff
 {% info_block warningBox “Warning” %}
 
 Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
-Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html) for this purpose.
+Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html) for this purpose.
 
 {% endinfo_block %}
 
@@ -121,5 +122,5 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 
 |INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| [Marketplace Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
-| [Marketplace Order Management + Order Threshold feature integration](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |
+| [Install the Marketplace Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-feature.html)    | [Retrieving Marketplace orders](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/glue-api-retrieve-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/merchant-oms.html)  |
+| [Install the Marketplace Order Management + Order Threshold feature](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/install-features/install-the-marketplace-order-management-order-threshold-feature.html)    |         | [File details: merchant-order-status.csv](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/import-and-export-data/import-file-details-merchant-order-status.csv.html)        |  [Create MerchantOms flows](/docs/pbc/all/order-management-system/{{page.version}}/marketplace/create-merchant-oms-flows.html)   |

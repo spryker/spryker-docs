@@ -2,6 +2,7 @@
 title: "Extend Merchant Portal dashboard"
 description: This articles provides details how to create new module with application
 template: howto-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 ---

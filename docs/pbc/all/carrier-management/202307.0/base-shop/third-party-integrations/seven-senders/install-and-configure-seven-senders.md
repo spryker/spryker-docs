@@ -1,6 +1,7 @@
 ---
 title: Install and configure Seven Senders
 template: howto-guide-template
+last_updated: Jul 25, 2023
 redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/installing-and-configuring-seven-senders.html
   - /docs/scos/dev/technology-partner-guides/202204.0/shipment/seven-senders/installing-and-configuring-seven-senders.html

@@ -3,12 +3,12 @@ title: "Glue API: Manage marketplace shopping lists"
 last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: Marketplace Shopping Lists feature integration
+  - title: Install the Marketplace Shopping Lists feature
     link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-features/install-the-marketplace-shopping-lists-feature.html
-  - title: Glue API - Marketplace Shopping Lists feature integration
-    link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
+  - title: Install the Marketplace Shopping Lists Glue API
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html
   - title: Managing shopping list items
-    link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
+    link: docs/pbc/all/shopping-list-and-wishlist/page.version/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html
 ---
 
 The Marketplace Shopping Lists API feature lets you manage shopping lists in the Marketplace, as well as managing the items in them.
@@ -18,9 +18,9 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-shopping-lists-feature-integration.html)
+* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Marketplace Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-shopping-lists-glue-api.html)
 
 
 ## Create a shopping list
@@ -331,7 +331,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For the response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
@@ -799,7 +799,7 @@ To retrieve product offers in a shopping list, include `shopping-list-items` and
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve merchants](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-merchants.html)
 * [Retrieve product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/glue-api-retrieve-product-offers.html)
@@ -1017,7 +1017,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/marketplace/dev/glue-api-guides/{{page.version}}/shopping-lists/managing-shopping-list-items.html)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/marketplace/manage-using-glue-api/glue-api-manage-marketplace-shopping-list-items.html)
 * [Retrieve a concrete product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list
@@ -1070,4 +1070,4 @@ If the shopping list is deleted successfully, the endpoint returns the `204 No C
 | 1518 | Product is not equal to the current Store. |
 | 1519 | Product offer is not equal to the current Store. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

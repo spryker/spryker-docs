@@ -6,16 +6,10 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-feature-overview
 originalArticleId: b0ed4278-e037-4644-a602-ae16f40a4d9c
 redirect_from:
-  - /2021080/docs/product-bundles-feature-overview
-  - /2021080/docs/en/product-bundles-feature-overview
-  - /docs/product-bundles-feature-overview
-  - /docs/en/product-bundles-feature-overview
-  - /docs/scos/user/features/202200.0/product-bundles-feature-overview.html
-  - /docs/scos/user/features/202307.0/product-bundles-feature-overview.html
-  - /docs/product-bundles
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-bundles-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202307.0/product-bundles-feature-walkthrough.html
   - /docs/pbc/all/product-information-management/202307.0/feature-overviews/product-bundles-feature-overview.html
+  - /docs/scos/user/features/202005.0/product-bundles-feature-overview.html
 ---
 
 With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -117,4 +111,4 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |INSTALLATION GUIDES | GLUE API GUIDES  |
 |---------|---------|
-|[Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |
+|[Install the Product Bundles feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-bundles-feature.html) | [Retrieving bundled products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-bundled-products.html) |

@@ -54,7 +54,7 @@ The email format itself is defined on the code level, the tales serving as ident
 
 
 ### Default email templates
-There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
+There is a number of email templates with the respective Email CMS Blocks available in the [Spryker Demo Shops](/docs/about/all/about-spryker.html#demo-shops).
 
 The following table contains the list of the default email templates, their Email CMS Blocks, and their purpose.
 
@@ -99,7 +99,7 @@ The following table contains the list of the default email templates, their Emai
 
 To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Edit placeholders in CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/blocks/edit-placeholders-in-cms-blocks.html).
 
-After creating email templates, a developer can [import](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [an example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
+After creating email templates, a developer can [import](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [an example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
 ## Email content
 

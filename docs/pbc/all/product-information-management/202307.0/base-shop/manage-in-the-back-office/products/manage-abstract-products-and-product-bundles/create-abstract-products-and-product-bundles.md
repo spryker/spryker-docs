@@ -58,7 +58,7 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| STORE RELATION  | Defines the [stores](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/tutorials-and-howtos/set-up-multiple-stores.html) the product will be available in. |
+| STORE RELATION  | Defines the [stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html) the product will be available in. |
 | SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
 | NAME | Name that will be displayed for the product on the Storefront. |
 | DESCRIPTION | Description that will be displayed for the product on the Storefront. |
@@ -79,11 +79,11 @@ On the **Price & Tax** tab, do the following:
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/pbc/all/price-management/{{site.version}}/base-shop/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/pbc/all/merchant-management/{{page.version}}/base-shop/manage-in-the-back-office/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-rates.html). |
+| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{site.version}}/base-shop/manage-in-the-back-office/create-tax-rates.html). |
 
 #### Default and original prices on the Storefront
 

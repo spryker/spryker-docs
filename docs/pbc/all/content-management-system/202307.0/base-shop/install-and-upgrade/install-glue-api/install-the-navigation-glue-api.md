@@ -14,9 +14,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-navigation-feature-integration.html
 related:
   - title: Install the Navigation feature
-    link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
-  - title: Retrieve navigation trees
-    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/retrieve-navigation-trees.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-navigation-feature.html
+  - title: "Glue API: Retrieve navigation trees"
+    link: docs/pbc/all/content-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-navigation-trees.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-glue-api/install-the-navigation-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-glue-api/install-the-navigation-glue-api.md -->

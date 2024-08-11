@@ -6,15 +6,8 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
 originalArticleId: bdb56333-569c-42ac-9a12-2f8ecc84c6b5
 redirect_from:
-  - /2021080/docs/promotions-discounts-feature-overview
-  - /2021080/docs/en/promotions-discounts-feature-overview
-  - /docs/promotions-discounts-feature-overview
-  - /docs/en/promotions-discounts-feature-overview
-  - /2021080/docs/promotions-discounts
-  - /2021080/docs/en/promotions-discounts
-  - /docs/promotions-discounts
-  - /docs/en/promotions-discounts
-  - /docs/cart-rules-discounts
+  - /docs/scos/user/features/201903.0/promotions-discounts-feature-overview.html
+  - /docs/scos/user/features/202108.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
   - /docs/scos/user/features/202307.0/promotions-discounts-feature-overview.html  
 ---
@@ -44,7 +37,7 @@ You can enter codes manually or use the code generator in the Back Office.
 
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-To learn how a Back Office user can create a voucher in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+To learn how a Back Office user can create a voucher in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 ## Cart rule
 
@@ -54,7 +47,7 @@ A cart rule is applied automatically once its conditions are met. If the decisio
 
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-To learn how a Back Office user can create a cart rule in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+To learn how a Back Office user can create a cart rule in the Back Office, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 ### Decision rule
 
@@ -184,7 +177,7 @@ See examples in the table below.
 | €50 | Percentage | 10 | €5 | €45 |
 | €50 | Fixed amount | 10 | €10 | €40 |
 
-A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines calculation when [creating discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
@@ -192,7 +185,7 @@ A Back Office user defines calculation when [creating discounts](/docs/scos/user
 
 *Discount exclusiveness* defines if the discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A Back Office user defines a calculation when [creating discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines a calculation when [creating discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/exclusivity.png)
 
@@ -207,13 +200,13 @@ An *exclusive discount* is a discount that when applied to a cart, discards all 
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. For details and examples on how the discounts are calculated, see [Discount calculation logic](#discount-calculation-logic).
 
 ### Non-exclusive discount
 
-A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. If all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize a discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html). For details and examples of how discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. If all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize a discount, see [Create discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html) For details and examples of how discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 ## Discount validity interval
 
@@ -221,7 +214,7 @@ A *validity interval* is a period of time during which a discount is active and 
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
-A Back Office user defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines calculation when [creating a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)
 
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/validity-interval.png)
 
@@ -408,17 +401,17 @@ Cart subtotal: €100
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a discount](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html)  |
-| [Edit discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/edit-discounts.html)  |
+| [Create a discount](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/create-discounts.html)  |
+| [Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)  |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|
-| [Integrate the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-the-promotions-and-discounts-feature.html) | [Upgrade the Discount module](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discount-module.html) | [Add items with discounts to carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html) | [File details: discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{site.version}}/base-shop/create-discounts-based-on-shipment.html) |
-| [Integrate the Category Management + Promotions & Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html) | [Upgrade the DiscountCalculatorConnector module](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html) |  [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html)   | [File details - discount_amount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-amount.csv.html) | |
-| [Integrate the Product labels + Promotions & Discounts feature](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html) | [Upgrade the DiscountPromotion module](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html) |  [Manage discount vouchers in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html) | [File details - discount_store.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-store.csv.html) | |
-| [Integrate the Promotions & Discounts Glue API](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/install-the-promotions-and-discounts-glue-api.html) | [Upgrade the DiscountPromotionWidget module](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html) | [Add items with discounts to guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html) | [File details - discount_voucher.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/file-details-discount-voucher.csv.html) |  |
-|  | [Upgrade the DiscountSalesAggregatorConnector module](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html) | [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-discounts-in-guest-carts.html) | | |
-|  |  |  [Manage discount vouchers in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html)   |  | |
-|  |  | [Retrieve discounts in customer carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-via-glue-api/retrieve-discounts-in-customer-carts.html) |  | |
+| [Integrate the Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-feature.html) | [Upgrade the Discount module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html) | [Add items with discounts to carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-carts-of-registered-users.html) | [File details: discount.csv](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/{{site.version}}/base-shop/create-discounts-based-on-shipment.html) |
+| [Integrate the Category Management + Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-category-management-feature.html) | [Upgrade the DiscountCalculatorConnector module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountcalculatorconnector-module.html) |  [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-carts-of-registered-users.html)   | ["Import file details: discount_amount.csv"](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-amount.csv.html) | |
+| [Integrate the Product labels + Promotions & Discounts feature](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-product-labels-feature.html) | [Upgrade the DiscountPromotion module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html) |  [Manage discount vouchers in carts of registered users](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-carts-of-registered-users.html) | ["Import file details: discount_store.csv"](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-store.csv.html) | |
+| [Integrate the Promotions & Discounts Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html) | [Upgrade the DiscountPromotionWidget module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotionwidget-module.html) | [Add items with discounts to guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-add-items-with-discounts-to-guest-carts.html) | ["Import file details: discount_voucher.csv"](/docs/pbc/all/discount-management/{{site.version}}/base-shop/import-and-export-data/import-file-details-discount-voucher.csv.html) |  |
+|  | [Upgrade the DiscountSalesAggregatorConnector module](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountsalesaggregatorconnector-module.html) | [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html) | | |
+|  |  |  [Manage discount vouchers in guest carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-manage-discount-vouchers-in-guest-carts.html)   |  | |
+|  |  | [Retrieve discounts in customer carts](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-customer-carts.html) |  | |

@@ -9,13 +9,13 @@ Follow the steps below to install the Merchant Opening Hours Glue API feature co
 
 Install the required features:
 
-| NAME  | VERSION | INTEGRATION GUIDE |
+| NAME  | VERSION | INSTALLATION GUIDE |
 | ----------- | ------ | --------------|
-| Merchant Opening Hours | {{page.version}}  | [Merchant Opening Hours feature integration](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-opening-hours-feature.html) |
+| Merchant Opening Hours | {{page.version}}  | [Install the Merchant Opening Hours feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-merchant-opening-hours-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-opening-hours-rest-api:"^1.0.0"
@@ -41,7 +41,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER  | TYPE  | EVENT   | PATH |
 | -------------- | ---- | ------ | ------------------ |

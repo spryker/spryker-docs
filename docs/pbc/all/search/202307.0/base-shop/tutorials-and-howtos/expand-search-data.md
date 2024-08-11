@@ -2,6 +2,7 @@
 title: Expand search data
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
+last_updated: Aug 29, 2023
 redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
@@ -12,9 +13,9 @@ related:
   - title: Configure search for multi-currency
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-featureshtml
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-search-features.html
   - title: Configure a search query
-    link: docs/pbc/all/search/{{page.version}}/base-shop/tutorials-and-howtos/configure-a-search-query.html
+    link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-a-search-query.html
   - title: Facet filter overview and configuration
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/facet-filter-overview-and-configuration.html
 ---

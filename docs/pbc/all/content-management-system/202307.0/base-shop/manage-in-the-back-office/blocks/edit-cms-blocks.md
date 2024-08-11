@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/managing-cms-blocks.html
 related:
   - title: CMS blocks overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to edit CMS blocks in the Back Office.
@@ -48,7 +48,7 @@ This opens the **Edit CMS Block** page.
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
 | STORE RELATION | Stores in which the block is displayed. | Irrelevant. |
-| TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/howto-create-cms-templates.html#cms-block-template). |
+| TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-cms-templates.html#cms-block-template). |
 | NAME | The name is used when [assigning the block to a slot in a page](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to which the block is assigned. The block is displayed on the products' details pages. | Irrelevant. |

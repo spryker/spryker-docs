@@ -7,7 +7,7 @@ redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202204.0/glue/marketplace-product-offer-volume-prices.html
 related:
   - title: Marketplace Product Offer Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
+    link: docs/pbc/all/price-management/page.version/marketplace/marketplace-product-offer-prices-feature-overview.html
 ---
 
 {% include pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-glue-api/202307.0/marketplace/install-the-marketplace-product-offer-volume-prices-glue-api.md -->

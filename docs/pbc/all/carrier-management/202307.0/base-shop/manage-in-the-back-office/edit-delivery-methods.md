@@ -4,6 +4,7 @@ description: Learn how to edit delivery methods in the Back Office.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
 redirect_from:
+  - /docs/scos/user/back-office-user-guides/202108.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
   - /docs/scos/user/back-office-user-guides/202307.0/administration/delivery-methods/edit-delivery-methods.html
 ---
 
@@ -58,5 +59,5 @@ This doc describes how to edit delivery methods.
 |  PRICE PLUGIN | The plugin that calculates the price of delivery. If you select a price  plugin, it overrides the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | The plugin that calculates the estimated delivery time. A developer can create plugins. |
 | IS ACTIVE | Defines if customers can choose the delivery method on the Storefront. |
-| TAX SET | The tax set used for the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/spryker-tax/base-shop/manage-in-the-back-office/create-tax-sets.html).
+| TAX SET | The tax set used for the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/{{page.version}}/base-shop/manage-in-the-back-office/create-tax-sets.html).
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines for which stores customers can choose the method. |

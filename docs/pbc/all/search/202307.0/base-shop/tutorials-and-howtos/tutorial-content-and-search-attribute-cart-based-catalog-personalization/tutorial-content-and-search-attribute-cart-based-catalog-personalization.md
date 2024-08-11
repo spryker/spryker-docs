@@ -24,7 +24,7 @@ redirect_from:
   - /docs/pbc/all/search/202307.0/tutorials-and-howtos/tutorial-content-and-search-attribute-cart-based-catalog-personalization/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
 related:
   - title: Search feature overview
-    link: docs/pbc/all/search/page.version/base-shop/search
+    link: docs/pbc/all/search/page.version/base-shop/search-feature-overview/search-feature-overview.html
 ---
 
 This tutorial shows how to boost and personalize the catalog using the color attribute of a product when it is added to the cart.

@@ -3,27 +3,29 @@ title: "Import file details: combined_merchant_product_offer.csv"
 last_updated: Jun 07, 2021
 description: This document describes the combined_merchant_product_offer.csv file to configure product offers in your Spryker shop.
 template: import-file-template
+redirect_from:
+- /docs/pbc/all/offer-management/202307.0/marketplace/import-and-export-data/file-details-combined-merchant-product-offer.csv.html
 related:
   - title: Marketplace Product Offer feature walkthrough
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-merchant-portal-product-offer-management-feature-overview.html
   - title: Marketplace Product Offer feature overview
     link: docs/pbc/all/offer-management/page.version/marketplace/marketplace-product-offer-feature-overview.html
   - title: Execution order of data importers in Demo Shop
-    link: docs/scos/dev/data-import/page.version/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html
+    link: docs/dg/dev/data-import/page.version/execution-order-of-data-importers.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/pbc/all/offer-management/{{site.version}}/marketplace/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 {% info_block infoBox "" %}
 
-To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
+To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/dg/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 
 
 ## Import file dependencies
 
-- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-data/file-details-merchant.csv.html)
+- [merchant.csv](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/import-and-export-data/import-file-details-merchant.csv.html)
 - `stores.php` configuration file of the demo shop PHP project  
 
 ## Import file parameters

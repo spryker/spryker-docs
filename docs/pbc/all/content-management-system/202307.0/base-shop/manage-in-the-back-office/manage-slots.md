@@ -6,14 +6,12 @@ template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-slots
 originalArticleId: 06d8bf64-4aee-4959-abae-f3fb849ccaa0
 redirect_from:
-  - /2021080/docs/managing-slots
-  - /2021080/docs/en/managing-slots
-  - /docs/managing-slots
-  - /docs/en/managing-slots
+  - /docs/scos/user/back-office-user-guides/202001.0/content/slots/slots.html
+  - /docs/scos/user/back-office-user-guides/202108.0/content/slots/managing-slots.html
   - /docs/pbc/all/content-management-system/202307.0/manage-in-the-back-office/manage-slots.html
 related:
   - title: Templates & Slots feature overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to manage slots.

@@ -12,9 +12,6 @@ redirect_from:
   - /docs/en/tradebyte
   - /docs/scos/user/technology-partners/202200.0/order-management-erpoms/tradebyte.html
   - /docs/scos/user/technology-partners/202307.0/order-management-erpoms/tradebyte.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information

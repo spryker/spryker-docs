@@ -39,10 +39,10 @@ To integrate Bazaarvoice, follow these steps:
 
 ### 1. Add the Bazaarvoice domain to your allowlist
 
-To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist. 
+To enable your customers to leave reviews on your products, you must add the Bazaarvoice domain to your **Content Security Policy** allowlist.
 
 To do that, do one of the following:
-1. Change the `deploy.yml` file: 
+1. Change the `deploy.yml` file:
 
 ```yml
 image:
@@ -79,8 +79,8 @@ Core template: `SprykerShop/Yves/ProductDetailPage/Theme/default/views/pdp/pdp.t
 | product.sku                  | productId            | Yes      | 012_3456789                                                                      |
 | product.name                 | productName          | Yes      | Camera Pro 123                                                                   |
 | product.description          | productDescription   | No       | Lorem ipsum dolor sit amet, consectetur adipiscing elit.                         |
-| product.image                | productImageURL      | Yes      | https://www.example.com/img/gallery/camera-pro-123.jpg (always use absolute URL) |
-| product.url                  | productPageURL       | Yes      | https://www.example.com/office-chair (always use absolute URL)                   |    
+| product.image                | productImageURL      | Yes      | `https://www.example.com/img/gallery/camera-pro-123.jpg` (always use absolute URL) |
+| product.url                  | productPageURL       | Yes      | `https://www.example.com/office-chair` (always use absolute URL)                   |    
 | product.brand.name           | brandId, brandName   | No       | Xyz Brand                                                                        |
 | product.category             | categoryPath         | No       | [{"id":1,"name":"Cameras & Camcorders"},{"id":4,"name":"Digital Cameras"}]       |
 | product.gtin12               | upcs                 | No       | 123456789876                                                                     |
@@ -118,7 +118,7 @@ Core template: `SprykerShop/Yves/MerchantProfileWidget/Theme/default/components/
 |-------------------------|----------------------|----------|------------------------------------------------------------------------------|
 | organization.identifier | productId            | Yes      | MER000001                                                                    |
 | organization.name       | productName          | Yes      | Xyz Merchant                                                                 |
-| organization.logo       | productImageURL      | Yes      | https://www.example.com/merchant/merchant-logo.png (always use absolute URL) |
+| organization.logo       | productImageURL      | Yes      | `https://www.example.com/merchant/merchant-logo.png` (always use absolute URL) |
 
 Example:
 ```html
@@ -140,12 +140,12 @@ Example:
 ```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}">
-   
+
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
       <meta itemprop="ratingValue" content="{rating}">
       <meta itemprop="bestRating" content="{best_rating}">
    </section>
-   
+
    <section class="review-summary"></section>
 </section>
 ```
@@ -162,7 +162,7 @@ Example:
    <meta itemprop="name" content="{merchant_name}"/>
    <meta itemprop="logo" content="{merchant_logo_url}"/>
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating"></section>
-   
+
    <section class="review-summary"></section>
 </section>
 ```
@@ -178,11 +178,11 @@ Example:
 ```html
 <section itemscope itemtype="https://schema.org/Product">
    <meta itemprop="sku" content="{some_sku}">
-   
+
    <section itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
       <meta itemprop="ratingValue" content="{rating}">
       <meta itemprop="bestRating" content="{best_rating}">
-      
+
       <rating-selector></rating-selector>
    </section>
 </section>
@@ -200,19 +200,19 @@ use \Spryker\Zed\MessageBrokerAws\MessageBrokerAwsConfig;
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...,
-    AddReviewsTransfer::class => 'reviews',
-    OrderStatusChangedTransfer::class => 'orders'
+    AddReviewsTransfer::class => 'product-review-commands',
+    OrderStatusChangedTransfer::class => 'order-events'
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_TRANSPORT_MAP] =
 $config[MessageBrokerAwsConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
     //...,
-    'reviews' => MessageBrokerAwsConfig::SQS_TRANSPORT,
+    'product-review-commands' => MessageBrokerAwsConfig::SQS_TRANSPORT,
 ];
 
 $config[MessageBrokerAwsConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     //...,
-    'orders' => 'http',
+    'order-events' => 'http',
 ];
 ```
 #### Add a message handler
@@ -275,7 +275,7 @@ protected function extendCommandPlugins(Container $container): Container
     $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
         // ...
         $commandCollection->add(new SendOrderStatusChangedMessagePlugin(), 'Order/RequestProductReviews');
-    
+
         return $commandCollection;
     });
  }
@@ -293,7 +293,7 @@ Here is an example with the `DummyPayment01.xml` process for the `deliver` event
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd">
- 
+
     <process name="DummyPayment01" main="true">
         <!-- ... -->
         <events>

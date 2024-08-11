@@ -6,18 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/products-overview
 originalArticleId: d12e5fdb-b74a-4d9b-91d9-866f330b46df
 redirect_from:
-  - /2021080/docs/products-overview
-  - /2021080/docs/en/products-overview
-  - /docs/products-overview
-  - /docs/en/products-overview
-  - /2021080/docs/product
-  - /2021080/docs/en/product
-  - /docs/product
-  - /docs/en/product
-  - /2021080/docs/shop-guide-managing-products
-  - /2021080/docs/en/shop-guide-managing-products
-  - /docs/shop-guide-managing-products
-  - /docs/en/shop-guide-managing-products
+  - /docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
   - /docs/product-quantity-restrictions
   - /docs/product-ttl
@@ -27,7 +16,7 @@ redirect_from:
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/pbc/all/back-office/{{page.version}}/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/pbc/all/back-office/{{page.version}}/base-shop/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront are based on product attributes.
@@ -106,9 +95,9 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
+* [Akeneo](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html)
 * [Censhare PIM](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/censhare-pim.html)
-* [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
+* [Xentral](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/third-party-integrations/xentral.html)
 
 
 ## Related Business User documents
@@ -125,10 +114,10 @@ The Spryker Commerce OS supports integration of the following PIM systems:
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Product feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) | [ProductValidity migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html) | [Retrieve abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-abstract-products.html) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract.csv.html) |
-| [Install the Quick Add to Cart + Discontinued Products feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html) |  | [Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/retrieve-concrete-products.html) | [File details: product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-abstract-store.csv.html) |
-| [Alternative Products + Discontinued Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html) |  | [Retrieving product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html) | [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-concrete.csv.html) |
-| [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |  | [Retrieving image sets of abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html) | [File details: product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-attribute-key.csv.html) |
-| [Glue API: Product Image Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) |  | [Retrieving image sets of concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html) | [File details: product_management_attribute.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/file-details-product-management-attribute.csv.html) |
-| [Category Image feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html) |  |  | [File details: product_discontinued.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-discontinued.csv.html) |
-| [Product + Cart feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-cart-feature.html) |  |  |  |
+| [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html) | [ProductValidity migration guide](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productvalidity-module.html) | [Retrieve abstract products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-abstract-products.html) | [File details: product_abstract.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract.csv.html) |
+| [Install the Quick Add to Cart + Discontinued Products feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html) |  | [Glue API: Retrieving concrete products](/docs/pbc/all/product-information-management/{{page.version}}/marketplace/manage-using-glue-api/glue-api-retrieve-concrete-products.html) | [File details: product_abstract_store.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-store.csv.html) |
+| [Alternative Products + Discontinued Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-alternative-products-discontinued-products-feature.html) |  | [Retrieving product attributes](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-product-attributes.html) | [File details: product_concrete.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-concrete.csv.html) |
+| [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html) |  | [Retrieving image sets of abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-image-sets-of-abstract-products.html) | [File details: product_attribute_key.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-attribute-key.csv.html) |
+| [Glue API: Product Image Sets feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html) |  | [Retrieving image sets of concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/concrete-products/glue-api-retrieve-image-sets-of-concrete-products.html) | [File details: product_management_attribute.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-management-attribute.csv.html) |
+| [Category Image feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-category-image-feature.html) |  |  | [File details: product_discontinued.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-discontinued.csv.html) |
+| [Install the Product + Cart feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-cart-feature.html) |  |  |  |

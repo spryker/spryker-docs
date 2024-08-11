@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-management
 originalArticleId: f9fbd2cd-af2f-4850-a07a-1cb4d8934171
 redirect_from:
-  - /2021080/docs/order-management
-  - /2021080/docs/en/order-management
-  - /docs/order-management
-  - /docs/en/order-management
+  - /docs/scos/user/features/202108.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
   - /docs/scos/user/features/202307.0/order-management-feature-overview/order-management-feature-overview.html
 ---
@@ -44,10 +41,10 @@ B2B customers usually purchase large volumes of products selecting specific meas
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
-| [Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) | [Split delivery migration concept](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/split-delivery-migration-concept.html) | [Retrieving orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html) | [Disable split delivery on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/disable-split-delivery-on-the-storefront.html) | [Sales module: reference information](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/domain-model-and-relationships/sales-module-reference-information.html) |
-| [Quick Add to Cart + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) | [Upgrade the ManualOrderEntryGui module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html) |  | [HowTo: Emailing invoices using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html) | [Custom order reference- module relations](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html) |
-| [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |  |  |  |  |
-|[ Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |  |  |  |  |
-| [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |  |  |  |  |
-| [Glue API: Order Management feature integration](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |  |  |  |  |
-| [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |  |  |  |  |
+| [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html) | [Split delivery migration concept](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/split-delivery-migration-concept.html) | [Retrieving orders](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/glue-api-retrieve-orders.html) | [Disable split delivery on the Storefront](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/disable-split-delivery-on-the-storefront.html) | [Sales module: reference information](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/domain-model-and-relationships/sales-module-reference-information.html) |
+| [Quick Add to Cart + Non-splittable Products feature integration](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) | [Upgrade the ManualOrderEntryGui module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-manualorderentrygui-module.html) |  | [HowTo: Emailing invoices using BCC](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/email-invoices-using-bcc.html) | [Custom order reference- module relations](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/domain-model-and-relationships/custom-order-reference-module-relations.html) |
+| [Install the Checkout Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html) |  |  |  |  |
+|[ Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html) |  |  |  |  |
+| [Install the Customer Account Management Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-customer-account-management-glue-api.html) |  |  |  |  |
+| [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html) |  |  |  |  |
+| [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-shipment-feature.html) |  |  |  |  |

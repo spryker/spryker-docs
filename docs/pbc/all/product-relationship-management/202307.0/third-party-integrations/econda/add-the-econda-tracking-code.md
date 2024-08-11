@@ -19,7 +19,7 @@ Now that we have integrated Econda to the website we can start adding the tracki
 
 ## Prerequisites
 
-To add tracking, you should also be familiar with [Twig.](/docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html)
+To add tracking, you should also be familiar with [Twig](/docs/dg/dev/integrate-and-configure/twig-and-twigextension.html).
 
 To enable Econda tracking for your application, you need to add `econda_tracker.twig` to the proper page template, for example:
 
@@ -35,9 +35,6 @@ To enable Econda tracking for your application, you need to add `econda_tracker.
 To enable Econda tracking for your application, you need to download a personalized JavaScript library from the econda Analytics Configuration menu (you can find detailed instructions on this on [https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen](https://support.econda.de/display/MONDE/Tracking-Bibliothek+herunterladen)).
 
 These instructions assume  you are using Antelope <!-- link to (http://documentation.spryker.com/front-end_developer_guide/demoshop/antelope_global_tool/overview) -->for your Yves assets management. If your project uses other frontend automation you can still use the instructions as guidelines.
-
-Before getting started we recomend that you read the following topics: [asset management](/docs/scos/dev/legacy-demoshop/201811.0/frontend-overview.html#asset-management)
-and [Twig](/docs/scos/dev/legacy-demoshop/201811.0/twig-templates/overview-twig.html)
 
 ## Installing Assets
 

@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# Specify the Ruby version for the project.
+ruby '3.2.2'
+
 gem "jekyll", "~> 4.2.0"
 
 gem "webrick", "~> 1.7"

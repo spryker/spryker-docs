@@ -1,5 +1,5 @@
 ---
-title: Company Account + Order Management feature integration
+title: Install the Company Account + Order Management feature
 description: This guide provides step-by-step instruction on integrating Company Account Management + Order Management feature into the Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,6 +13,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202307.0/company-account-order-management-feature-integration.html
 related:
     - title: Company Account
-      link: docs/scos/user/features/page.version/company-account-feature-overview/company-account-feature-overview.html
+      link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-account-feature-overview.html
 ---
-{% include pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-company-account-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-order-management-feature.md -->

@@ -210,4 +210,4 @@ This section contains additional information for defining decision rules.
 
 ## Next steps
 
-[Edit discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/edit-discounts.html)
+[Edit discounts](/docs/pbc/all/discount-management/{{page.version}}/base-shop/manage-in-the-back-office/edit-discounts.html)

@@ -6,42 +6,37 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-business-units
 originalArticleId: 4926546b-9757-4f24-91b1-05202d352c73
 redirect_from:
-  - /2021080/docs/retrieving-business-units
-  - /2021080/docs/en/retrieving-business-units
-  - /docs/retrieving-business-units
-  - /docs/en/retrieving-business-units
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202307.0/managing-b2b-account/retrieving-business-units.html
 related:
   - title: Retrieving business unit addresses
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Retrieving companies
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-companies.html
   - title: Retrieving company roles
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html
   - title: Retrieving company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-users.html
   - title: "Glue API: Authenticating as a company user"
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-company-user.html
   - title: Managing company user authentication tokens
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-search-by-company-users.html
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Business Units overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/business-units-overview.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
-In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
+In the B2B world, users represent their companies rather than act on their own behalf. Such users, called [Company Accounts](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/company-account-feature-overview/company-accounts-overview.html), are organized in business units depending on their job role and the scope of their activity. The endpoints allows retrieving business unit information.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve a company business unit
 
@@ -67,10 +62,10 @@ To retrieve a business unit, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET http://glue.mysprykershop.com/company-business-units/mine | Retrieve business units of the current authenticated company user. |
-| GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
-| GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
+| `GET http://glue.mysprykershop.com/company-business-units/mine` | Retrieve business units of the current authenticated company user. |
+| `GET http://glue.mysprykershop.com/company-business-units/b8a06475-73f5-575a-b1e9-1954de7a49ef` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef`. |
+| `GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related companies included. |
+| `GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses` | Retrieve the business unit with the unique identifier `b8a06475-73f5-575a-b1e9-1954de7a49ef` and related business unit addresses included.  |
 
 #### Response
 
@@ -247,10 +242,10 @@ To retrieve a business unit, send the request:
 | 1903 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1901 | Specified business unit is not found or the user does not have access to it. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Retrieve company company roles](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-company-roles.html)
+* [Retrieve business unit addresses](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html)
 * [Manage company user authentication tokens](/docs/pbc/all/identity-access-management/{{page.version}}/manage-using-glue-api/glue-api-manage-company-user-authentication-tokens.html)

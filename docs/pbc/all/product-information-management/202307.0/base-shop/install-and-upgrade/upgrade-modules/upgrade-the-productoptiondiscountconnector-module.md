@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductOptionDiscountConnector
+title: Upgrade the ProductOptionDiscountConnector module
 description: Use the guide to learn how to update the ProductOptionDiscountConnector module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,15 +29,15 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptiondiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
+  - /docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-modulediscountconnector.html
 related:
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - ProductLabel
+  - title: Upgrade the ProductLabel module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
   - title: Migration guide - ProductBundle
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html
-  - title: Migration guide - ProductLabelGui
+  - title: Upgrade the ProductLabelGui module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
 ---
 

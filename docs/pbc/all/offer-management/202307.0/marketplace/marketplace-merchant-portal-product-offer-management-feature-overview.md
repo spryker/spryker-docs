@@ -2,9 +2,10 @@
 title: Marketplace Merchant Portal Product Offer Management feature overview
 description: This document describes product offer management in the Merchant Portal.
 template: concept-topic-template
+last_updated: Aug 23, 2023
 related:
   - title: Managing marketplace product offers
-    link: docs/pbc/all/offer-management/page.version/marketplace/manage-product-offers.html
+    link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
   - title: Managing merchant product offers
     link: docs/pbc/all/offer-management/page.version/marketplace/manage-merchant-product-offers.html
 ---
@@ -33,10 +34,10 @@ Merchants define the following settings when creating product offers:
 
 |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|
-| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
+| [Managing product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)  |[Managing merchant product offers](/docs/pbc/all/offer-management/{{page.version}}/marketplace/manage-merchant-product-offers.html)|
 
 ## Related Developer documents
 
 | INSTALLATION GUIDES|
 | -------------- |
-| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
+| [Install the Marketplace Merchant Portal Product Offer Management feature](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-product-offer-management-feature.html) |

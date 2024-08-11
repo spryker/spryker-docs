@@ -1,7 +1,7 @@
 
 
 
-This document describes how to integrate the [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/multiple-carts-feature-overview.md) into a Spryker project.
+This document describes how to install the [Multiple Carts feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/multiple-carts-feature-overview.html).
 
 ## Install feature core
 
@@ -11,14 +11,14 @@ Follow the steps below to install the Multiple Carts feature core.
 
 Install the required features:
 
-| NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
+| NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
-| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Spryker Core    | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
+| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -159,14 +159,14 @@ quote-20,My Cart,DE--20,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",
 quote-21,My Cart,DE--21,DE,1,"{""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""}"
 ```
 
-| COLUMN             | REQUIRED? | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                                   |
+| COLUMN             | REQUIRED | DATA TYPE | DATA EXAMPLE                                                                                                                                   | DATA EXPLANATION                                                   |
 |--------------------|-----------|-----------|------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------|
-| key                | mandatory | string    | quote-19                                                                                                                                       | THe key that identifies the quote to be referred in future imports. |
-| name               | mandatory | string    | >My Cart                                                                                                                                       | The name of the quote.                                                 |
-| customer_reference | mandatory | string    | DE--21                                                                                                                                         | The customer reference of the quote owner.                             |
-| store              | mandatory | string    | DE                                                                                                                                             | The store name that the quote relates to.                              |
-| is_default         | mandatory | int       | 1                                                                                                                                              | Thelag to show that the quote is default for the customer.           |
-| quote_data         | mandatory | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
+| key                | ✓ | string    | quote-19                                                                                                                                       | THe key that identifies the quote to be referred in future imports. |
+| name               | ✓ | string    | >My Cart                                                                                                                                       | The name of the quote.                                                 |
+| customer_reference | ✓ | string    | DE--21                                                                                                                                         | The customer reference of the quote owner.                             |
+| store              | ✓ | string    | DE                                                                                                                                             | The store name that the quote relates to.                              |
+| is_default         | ✓ | int       | 1                                                                                                                                              | Thelag to show that the quote is default for the customer.           |
+| quote_data         | ✓ | string    | {""currency"":{""code"":""EUR"",""name"":""Euro"",""symbol"":""\u20ac"",""isDefault"":true,""fractionDigits"":2},""priceMode"":""GROSS_MODE""} | Quote data params serialized as json.                              |
 
 Register the following plugin to enable data import:
 
@@ -468,13 +468,13 @@ Follow the steps below to install the Multiple Carts feature frontend.
 Install the required features:
 
 
-| NAME            | VERSION          | INTEGRATION GUIDE                                                                                                                               |
+| NAME            | VERSION          | INSTALLATION GUIDE                                                                                                                               |
 |-----------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core    | {{page.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
-| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/install-and-upgrade/install-features/install-the-cart-feature.html) |
+| Spryker Core    | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)            |
+| Cart            | {{page.version}} | [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html) |
 | Persistent Cart | {{page.version}} |                                                                                                                                                 |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
@@ -609,7 +609,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -702,7 +702,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets have been registered:
+Make sure the following widgets have been registered:
 
 | MODULE                  | TEST                                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------------------|

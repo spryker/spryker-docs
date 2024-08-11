@@ -38,7 +38,7 @@ related:
   - title: Upgrade the Price
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Upgrade the Discount
-    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-the-discount-module.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discount-module.html
   - title: Upgrade the Shipment
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---
@@ -86,18 +86,18 @@ composer update spryker/*
    * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
    * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) uses the new PriceProduct module.
    * **PriceDataFeed >= 0.2.** — uses the new `PriceProduct` module.
-   * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
-   * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).
-   * **ProductManagement >= 0.9.** — see [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html). New forms and views have been added.
-   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelation-modulehtml).
+   * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
+   * **ProductLabelGui >= 2.** — see [Upgrade the ProductLabelGui module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html).
+   * **ProductManagement >= 0.9.** — see [Upgrade the ProductManagement module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html). New forms and views have been added.
+   * **ProductRelation >= 2.** — see [Migration Guide - ProductRelation](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelation-module.html).
    * **ProductRelationCollector >= 2.** — see [Migration Guide - ProductRelationCollector](/docs/pbc/all/product-relationship-management/{{page.version}}/install-and-upgrade/upgrade-the-productrelationcollector-module.html).
-   * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html).
+   * **ProductSetGui >= 2.** — see [Migration Guide - ProductSetGui](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productsetgui-module.html).
    * **Wishlist >= 2.** — see [Migration Guide - Wishlist](/docs/pbc/all/shopping-list-and-wishlist/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-wishlist-module.html).
    * **Search >= 7.0** - see [Migration Guide - Search](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-search–module.html).
 
 6. Regarding the Product Options, the way the price is entered in Zed Admin UI has been changed to support multi-currency behavior. Now Collector collects prices by store and cart checkout has been amended to support multi-currency product options.
 
-   * **ProductOptionCartConnector >= 5.** — see [Migration Guide - Product Option Cart Connector](/docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html).
-   * **ProductOption >= 6.** — see [Migration Guide - Product Option](/docs/scos/dev/module-migration-guides/migration-guide-productoption.html).
+   * **ProductOptionCartConnector >= 5.** — see [Migration Guide - Product Option Cart Connector](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html).
+   * **ProductOption >= 6.** — see [Migration Guide - Product Option](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoption-module.html).
 
 Some new configuration options have been made for the whole multi-currency feature: earlier the default price type was defined in environment configuration like `$config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT'`, now it's moved to: `\Spryker\Shared\PriceProduct\PriceProductConfig::getPriceTypeDefaultName`. Please note that you might get an exception that constant is not found - you can safely remove it, unless you used it in your code. In this case replace `\Spryker\Zed\PriceProduct\Business\PriceProductFacade::getDefaultPriceTypeName` or `\Spryker\Client\PriceProduct\PriceProductClient::getPriceTypeDefaultName` accordingly. Default price mode is defined in `\Spryker\Shared\Price\PriceConfig::getDefaultPriceMode`. Default currency is defined based on `config/Shared/stores.php`, array key `currencyIsoCodes` will be the first item in the list.

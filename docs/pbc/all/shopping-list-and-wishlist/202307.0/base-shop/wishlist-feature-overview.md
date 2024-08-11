@@ -6,10 +6,7 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/wishlist-feature-overview
 originalArticleId: 6af20838-1a7d-4112-9f8b-802995363403
 redirect_from:
-  - /2021080/docs/wishlist-feature-overview
-  - /2021080/docs/en/wishlist-feature-overview
-  - /docs/wishlist-feature-overview
-  - /docs/en/wishlist-feature-overview
+  - /docs/scos/user/features/202108.0/wishlist-feature-overview.html
   - /docs/scos/user/features/202200.0/wishlist-feature-overview.html
   - /docs/scos/user/features/202307.0/wishlist-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/wishlist-feature-walkthrough.html

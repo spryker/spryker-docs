@@ -1,5 +1,5 @@
 ---
-title: Glue API - Alternative Products feature integration
+title: Install the Alternative Products Glue API
 description: This guide will navigate you through the process of installing and configuring the Alternative Products API feature in the Spryker OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,8 +13,8 @@ redirect_from:
   - /scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-alternative-products-feature-integration.html
   - /scos/dev/feature-integration-guides/202307.0/glue-api/glue-api-alternative-products-feature-integration.html
 related:
-  - title: Alternative Products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-feature-integration.html
+  - title: Install the Alternative Products feature
+    link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-alternative-products-feature.html
   - title: Retrieving alternative products
     link: docs/pbc/all/product-information-management/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-alternative-products.html
 ---

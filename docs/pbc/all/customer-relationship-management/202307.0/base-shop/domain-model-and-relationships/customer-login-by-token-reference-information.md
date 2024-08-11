@@ -2,6 +2,7 @@
 title: "Customer Login by Token: reference information"
 description: This document describes the token structure.
 template: feature-walkthrough-template
+last_updated: Sep 21, 2023
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
 redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/customer-login-by-token-reference-information.html
@@ -80,8 +81,6 @@ Combining the three parts, an example URL with the full token looks like the fol
 http://mysprykershop.com/access-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIn0.eyJhdWQiOiJmcm9udGVuZCIsImp0aSI6IjljZWQ2NmFjNWNlZmUxNzY4MTU3NmJmOTViODAwMDc4ZTMwMjAxNDJmYWFhNTI0ZGE4NzFmZmIyYTYzNTA4OTUyMDQ1ZTEwNDUzMTM2YmRlIiwiaWF0IjoxNTU3OTI2NjIwLCJuYmYiOjE1NTc5MjY2MjAsImV4cCI6MTU1Nzk1NTQyMCwic3ViIjoie1wiY3VzdG9tZXJfcmVmZXJlbmNlXCI6bnVsbCxcImlkX2N1c3RvbWVyXCI6NixcImlkX2NvbXBhbnlfdXNlclwiOlwiMVwiLFwicGVybWlzc2lvbnNcIjpudWxsfSIsInNjb3BlcyI6W119.v6kvCtNMM-_x-sRWugigT2j7qXVXQ9Ds5a-65sD_d4Oaun0toGnM_A-458mCyV1FCdyOHU572hdz7w3SFcIHzFw4zGGr_cqMdBmCF6VJS21lcOK401j2Li4NJB-8TmOHMk1XmjrJ92EyBScvycTg8TCkY3w4jcIGN7TPGAwzvEWaJhIwqYGjEUcTWtsiIemeWijTWVYd4qE6gnXdzMeyekFLon9syLnXdxeAQ8qNM7BML5QfvazvuMBvFQWfatDcRd2SFfIkNmMrxEQ6daEaPEfyqpdXpHfhpzvuQpA0hQQ9BfYBrwvTskpH_CWTht7IsOqlY4KYRNIg-t3tcZYt6Q
 ```
 
-In the Spryker Commerce OS, token generation is performed using a facade method, which is why no GUI is present. To generate a token, see [HowTo: Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
-
-Token-based authentication works closely with the [Punch Out](/docs/pbc/all/punchout/{{page.version}}/punchout-catalogs.html) feature. It lets B2B buyers log in from their ERP system to a Spryker company user account using a token without entering the username and password and to buy products from the Spryker ecommerce shop.
+In the Spryker Commerce OS, token generation is performed using a facade method, which is why no GUI is present. To generate a token, see [HowTo: Generate a token for login](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/generate-login-tokens.html).
 
 To make the feature more flexible, we have implemented the functionality that lets you disable switching between the Business-on Behalf accounts. For example, if the user logs in to the pre-defined company account that has Business-on-Behalf feature integrated, the shop owner can disable the ability to switch between the accounts. In case the Business-on-Behalf is disabled, the company user logs in to the default account and can't switch between the company users within their company account.

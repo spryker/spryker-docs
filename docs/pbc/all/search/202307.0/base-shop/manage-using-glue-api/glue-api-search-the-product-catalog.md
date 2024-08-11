@@ -6,20 +6,15 @@ template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/searching-the-product-catalog
 originalArticleId: d8d530bf-7cb2-473f-a7cb-0db96957700e
 redirect_from:
-  - /2021080/docs/searching-the-product-catalog
-  - /2021080/docs/en/searching-the-product-catalog
-  - /docs/searching-the-product-catalog
-  - /docs/en/searching-the-product-catalog
-  - /docs/scos/dev/glue-api-guides/202200.0/searching-the-product-catalog.html
   - /docs/scos/dev/glue-api-guides/202307.0/searching-the-product-catalog.html
   - /docs/pbc/all/search/202307.0/manage-using-glue-api/glue-api-search-the-product-catalog.html
 related:
   - title: Retrieving autocomplete and search suggestions
-    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
-  - title: Glue API - Catalog feature integration
+    link: docs/pbc/all/search/page.version/base-shop/manage-using-glue-api/glue-api-search-the-product-catalog.html
+  - title: Install the Catalog Glue API
     link: docs/pbc/all/search/page.version/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html
   - title: Catalog feature overview
-    link: docs/scos/user/features/page.version/catalog-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/catalog-feature-overview.html
 ---
 
 The implementation of the search API offers you the same search experience as in the Spryker Demo Shops. The search engine used is Elasticsearch, and search results go beyond the simple listing of products in the results section. The list of search results is paginated according to your configuration, and spelling suggestions are offered when needed. In addition, sorting and facets are supported to narrow down the search results.
@@ -31,7 +26,7 @@ In your development, this endpoint can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Search by products
 
@@ -6668,7 +6663,7 @@ To search by products, send the request:
 For other abstract product attributes, see:
 
 * [Retrieving abstract products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/abstract-products/glue-api-retrieve-abstract-products.html)
-* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/retrieve-abstract-product-prices.html)
+* [Retrieving abstract product prices](/docs/pbc/all/price-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-prices.html)
 
 **Value facets**
 
@@ -6711,4 +6706,4 @@ For other abstract product attributes, see:
 | 314      | Price mode is invalid.  |
 | 503      | Invalid type (non-integer) of one of the request parameters:<ul><li>rating</li><li>rating.min</li><li>rating.max</li><li>page.limit</li><li>page.offset</li><li>category</li></ul> |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

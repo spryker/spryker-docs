@@ -11,4 +11,4 @@ redirect_from:
   - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-update/install-features/install-the-splittable-order-items-feature.html
 ---
 
-{% include pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-splittable-order-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md -->

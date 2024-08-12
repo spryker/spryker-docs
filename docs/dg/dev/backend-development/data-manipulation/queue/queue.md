@@ -129,6 +129,27 @@ class SampleQueueMessageProcessorPlugin implements QueueMessageProcessorPluginIn
 ?>
 ```
 
+### Configuration for Chunk Size
+
+Before relying on the `getChunkSize()` method in the plugin, a project-level configuration can be used to provide a more flexible chunk size for any queue. This is done using the `QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP` configuration.
+
+**Example of Configuration:**
+
+```php
+<?php
+
+use Spryker\Shared\Queue\QueueConstants;
+
+$config[QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP] = [
+    'publish' => 2000,
+    'event' => 1000,
+    'sync.search.product' => 100
+];
+?>
+```
+
+This configuration takes precedence over the `getChunkSize()` method. If a specific chunk size is defined in the `QUEUE_MESSAGE_CHUNK_SIZE_MAP` for a queue, that size will be used. If not, the chunk size will fall back to the value returned by the `getChunkSize()` method of the `QueueMessageProcessorPluginInterface`.
+
 Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php

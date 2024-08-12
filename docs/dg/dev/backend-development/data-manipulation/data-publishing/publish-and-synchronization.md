@@ -178,6 +178,71 @@ When a change happens in the mirror table, its *synchronization behavior* sends 
 }
 ```
 
+#### Direct Synchronize
+
+To optimize performance and flexibility, you can enable Direct Synchronization by applying certain configurations at the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue.
+
+To Enable Direct Synchronization:
+- Add the `DirectSynchronizationConsolePlugin` to `ConsoleDependencyProvider::getEventSubscriber()`. 
+- Enable the `SynchronizationBehaviorConfig::isDirectSynchronizationEnabled()` configuration.
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Zed\Kernel\Container;
+use Spryker\Zed\Synchronization\Communication\Plugin\Console\DirectSynchronizationConsolePlugin;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\EventDispatcher\EventSubscriberInterface>
+     */
+    public function getEventSubscriber(Container $container): array
+    {
+        return [
+            new DirectSynchronizationConsolePlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SynchronizationBehavior;
+
+use Spryker\Zed\SynchronizationBehavior\SynchronizationBehaviorConfig as SprykerSynchronizationBehaviorConfig;
+
+class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
+{
+    public function isDirectSynchronizationEnabled(): bool
+    {
+        return true;
+    }
+}
+```
+
+These configurations will enable direct synchronization for all entities with synchronization behavior. However, for specific entities, you can disable direct synchronization by adding an additional parameter in the Propel schema:
+
+```xml
+<table name="spy_table_storage" identifierQuoting="true">
+    <behavior name="synchronization">
+        <parameter name="direct_sync_disabled"/>
+    </behavior>
+</table>
+```
+
+By using this setup, you can control whether entities are synchronized directly or through the traditional queue-based method, giving you flexibility based on performance needs and architectural considerations.
+
 ### Data Architecture 
 
 P&S plays a major role in data denormalization and distribution to Spryker storefronts and API. Denormalization procedure aims for preparing data in the form it will be consumed by data clients. Distribution procedure aims to distribute the data closer to the end users, so that they feel like accessing a local storage.

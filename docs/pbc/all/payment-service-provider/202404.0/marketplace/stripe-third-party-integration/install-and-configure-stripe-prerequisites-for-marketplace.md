@@ -121,7 +121,7 @@ $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesP
 
 ### Enable merchant commissions for marketplace payments
 
-To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 

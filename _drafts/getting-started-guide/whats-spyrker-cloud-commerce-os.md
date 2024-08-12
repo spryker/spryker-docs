@@ -5,9 +5,9 @@ last_updated: Aug 17, 2023
 template: concept-topic-template
 ---
 
-*Spryker Cloud Commerce OS (SCCOS)* is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. This document provides an overview of the key features and benefits of SCCOS.
+*Spryker Cloud Commerce OS (SCCOS or Spryker)* is an e-commerce platform-as-a-service solution designed to provide businesses with the flexibility and efficiency needed to create a unique digital commerce experience. Built on a modular and layered architecture, it increases operational efficiency and lowers the total cost of ownership. This document provides an overview of the key features and benefits of Spryker.
 
-## Modular Architecture
+## Modular architecture
 
 The Spryker Commerce OS adopts a modular architecture, comprising over 750 different modules, with some being mandatory and others optional. This design allows you to create tailored solutions that match specific business needs.
 
@@ -15,14 +15,14 @@ The Spryker Commerce OS adopts a modular architecture, comprising over 750 diffe
 
 ### Advantages of modular architecture
 
-* **Selectivity**: Utilize only the modules you need, reducing redundant code.
-* **Scalability**: Grow your project with the wide selection of available modules.
-* **Flexibility**: Add, delete, and test new features without hindering your live shop.
-* **Atomic Release Approach**: Each module is developed and released independently, ensuring backward compatibility.
+* *Selectivity*: Use only the modules you need, reducing redundant code.
+* *Scalability*: Grow your project with the wide selection of available modules.
+* *Flexibility*: Add, delete, and test new features without hindering your live shop.
+* *Atomic release approach*: Each module is developed and released independently, ensuring backward compatibility.
 
-[More on Spryker Modules](https://github.com/spryker)
+[For the full list of modules, see Spryker's GitHub](https://github.com/spryker).
 
-## Layered Architecture
+## Layered architecture
 
 Layered Architecture in SCCOS ensures a clear separation between commercial offerings and sales channels. This architecture is split into four different layers:
 
@@ -40,17 +40,23 @@ Layered Architecture in SCCOS ensures a clear separation between commercial offe
 * **Growth Focus**: Efforts can concentrate on improvement rather than makeshift solutions.
 * **Information Flexibility**: Easy to modify, extend, or replace essential information.
 
-## Managed Cloud Platform
+## Managed cloud platform
 
 Spryker Cloud Commerce OS offers a managed cloud platform where the environments are fully managed by Spryker. This lets you achieve the following goals:
 
-* **Focus on development**:  You concentrate on creating and refining your projects because you don't need to worry about managing environments.
-* **Integrate seamlessly**: With CI/CD development workflows, you can achieve a streamlined development process.
+* Focus on development: Not having to manage your environments, you can concentrate on creating and refining your projects.
+* Integrate seamlessly: With CI/CD development workflows, you can achieve a streamlined development process.
+* Observability: By leveraging NewRelic APM and CloudWatch insides, you can monitor, analyze, and fix the performance of your applications.
 
-<!-- Additional details about the managed cloud platform will be added here once obtained from the experts. -->
 
 ## Customizable
 
-Having modular and layered architecture lets you customize your project to meet specific requirements of your business and processes.
+Modular and layered architecture lets you customize your project to meet the requirements of your business and processes:
 
-<!-- Additional information on customization options will be included here after gathering the information from the relevant experts. -->
+* Adaptable platform: SCCOS is suitable for a variety of e-commerce needs, accommodating various business operational models and industry verticals.
+
+* Vendor logic customization: Development teams can modify vendor-specific business logic provided by default, leveraging Spryker's modular and layered architecture. This design allows for tailored adjustments to align with individual business requirements.
+
+* Smooth integration: Spryker's architecture facilitates seamless integration with pre-existing service eco-systems.
+
+* Iterative development and autonomy: Teams can benefit from the flexibility of an MVP approach, quickly bringing their solutions to the market. They can start with essential features and integrations, and progressively introduce or remove functionalities, adjusting to evolving requirements.

@@ -518,6 +518,12 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 Integrate the OMS commands and conditions for the merchant payout and reverse payout into your process.
 Make sure that the OMS works as expected for merchant payout and reverse payout commands/conditions.
 
+1. Place an order with products from different merchants.
+2. Pass the merchant payout stage for the order.
+3. In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order.
+4. Do the refund for the order.
+5. In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order.
+
 {% endinfo_block %}
 
 #### Optional: Enable the Backend API authentication

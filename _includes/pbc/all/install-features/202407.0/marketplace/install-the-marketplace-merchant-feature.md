@@ -516,7 +516,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Integrate the OMS commands and conditions for the merchant payout and reverse payout into your process.
-Make sure that the OMS works as expected for merchant payout and reverse payout commands/conditions.
+Make sure that the OMS works as expected for merchant payout and reverse payout commands and conditions.
 
 1. Place an order with products from different merchants.
 2. Pass the merchant payout stage for the order.
@@ -581,22 +581,14 @@ Authenticate as a merchant user:
 
 ```json
 {
-  "data": {
-    "type": "token",
-    "attributes": {
-      "grant_type": "password",
-      "username": {
-        %
-      raw
-      %
-    }{{{
-  % endraw %}username{% raw %}}}{% endraw %
-},
-"password": {
-% raw %}{{{% endraw %}password{% raw %}}}{% endraw %
-},
-}
-}
+    "data": {
+        "type": "token",
+        "attributes": {
+            "grant_type": "password",
+            "username": {% raw %}{{{% endraw %}username{% raw %}}}{% endraw %},
+            "password": {% raw %}{{{% endraw %}password{% raw %}}}{% endraw %},
+        }
+    }
 }
 ```
 

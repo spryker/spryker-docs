@@ -106,15 +106,15 @@ Side effects:
 
 ## Disable INFO event logs
 
-Publish & Sync process can work slower and generate hundreds of megabytes of `INFO`-level logs, which is good for troubleshooting and debugging, but not appropriate for production environments. By default `INFO` logs are enabled and generate about 60 MB to 100 MB per each `queue:task:run ...` execution with 80-90% of CPU time only to write logs.
+Publish & Sync process can work slower and generate hundreds of megabytes of `INFO`-level logs, which is good for troubleshooting and debugging, but not appropriate for production environments. By default `INFO` logs are enabled and generate about 60-100 MB per `queue:task:run ...` execution with 80-90% of CPU time only to write logs.
 
-There are few options to avoid this in production environments:
+There are a few options to avoid this in production environments:
 
 * Disable event logs using one of the following:
   * Set `EventConstants::LOG_FILE_PATH` to `null`.
   * Set `EventConstants::LOGGER_ACTIVE` to `false` in the appropriate config files, like `config_default.php`.
-* Change events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to let's say `\Monolog\Logger::WARNING`, in newer (> 2.9.2) versions of `spryker/event`.
-* For versions up to and including `spryker/event:2.9.2` - override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
+* Change the events log level in any config file, by setting `EventConstants::EVENT_LOGGER_LEVEL` to, for example, `\Monolog\Logger::WARNING` in newer (> 2.9.2) versions of `spryker/event`.
+* For versions up to `spryker/event:2.9.2`: Override `LoggerConfig::createStreamHandler` to change the [event logger level](https://github.com/spryker/event/blob/master/src/Spryker/Zed/Event/Business/Logger/LoggerConfig.php).
 
 ## Activate Twig compiler
 

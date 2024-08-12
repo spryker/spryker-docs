@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/return-management/202307.0/manage-using-glue-api/glue-api-retrieve-return-reasons.html
 related:
   - title: Managing the returns
-    link: docs/pbc/all/return-management/page.version/manage-using-glue-api/glue-api-manage-returns.html
+    link: docs/pbc/all/return-management/page.version/base-shop/manage-using-glue-api/glue-api-manage-returns.html
   - title: Return Management feature overview
     link: docs/pbc/all/return-management/page.version/return-management.html
 ---
@@ -18,7 +18,7 @@ This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
+For details on the modules that provide the API functionality and how to install them, see [Install the Return Management Glue API](/docs/pbc/all/return-management/{{page.version}}/base-shop/install-and-upgrade/install-the-return-management-glue-api.html)
 
 ## Retrieve return reasons
 
@@ -85,4 +85,4 @@ Request sample: retrieve return reasons
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{page.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

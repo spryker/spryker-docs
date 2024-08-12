@@ -38,7 +38,7 @@ Yves is divided into two parts:
 * The part with controllers, forms, and templates is covered in the following documents:
   * [Controllers and actions](/docs/dg/dev/backend-development/yves/controllers-and-actions.html)
   * [Modular Frontend](/docs/dg/dev/backend-development/yves/modular-frontend.html)
-  * [Atomic Frontend](/docs/scos/dev/front-end-development/{{site.version}}/yves/atomic-frontend/atomic-front-end-general-overview.html)
+  * [Atomic Frontend](/docs/dg/dev/frontend-development/{{site.version}}/yves/atomic-frontend/atomic-frontend.html)
 * Client part that provides access to the search and storage engine and the Zed application. See the following documents for more information on the Client:
   * [Client](/docs/dg/dev/backend-development/client/client.html)
   * [Implement a client](/docs/dg/dev/backend-development/client/implement-a-client.html)

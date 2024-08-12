@@ -14,7 +14,7 @@ This document describes how to retrieve shipments in orders. For full informatio
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Install the Shipment Glue API](/docs/pbc/all/carrier-management/{{page.version}}/base-shop/install-and-upgrade/install-the-shipment-glue-api.html)
-* [Glue API: Order Management Feature Integration](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
+* [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 
 ## Retrieve an order
 
@@ -354,4 +354,4 @@ To retrieve detailed information about an order, send the following request:
 |002| Access token is missing.  |
 |801| Order with the given order reference is not found.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/reference-information-glueapplication-errors.html).

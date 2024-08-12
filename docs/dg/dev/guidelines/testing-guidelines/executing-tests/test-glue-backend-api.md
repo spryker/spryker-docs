@@ -25,7 +25,7 @@ This document describes how to set up and run Glue Backend API end-to-end (E2E) 
   composer update spryker/testify:"^3.52.0"
   ```
 
-2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
+2. To validate the response body against the OpenAPI schema, you need to generate the schema. For instructions, see [Document Glue API Resources](/docs/dg/dev/glue-api/{{site.version}}/glue-api-tutorials/document-glue-api-resources.html).
 
 
 ## Configure the project and set up test files
@@ -48,6 +48,7 @@ if (class_exists(TestifyConstants::class)) {
         $sprykerGlueBackendHost,
         $sprykerGlueBackendPort !== 443 ? ':' . $sprykerGlueBackendPort : '',
     );
+    $config[TestifyConstants::GLUE_BACKEND_API_OPEN_API_SCHEMA] = APPLICATION_SOURCE_DIR . '/Generated/GlueBackend/Specification/spryker_backend_api.schema.yml';
 }
 ```
 
@@ -83,7 +84,7 @@ suites:
                 - \SprykerTest\Shared\Testify\Helper\DataCleanupHelper
                 - \SprykerTest\Shared\AuthenticationOauth\Helper\AuthenticationOauthHelper
                 - \SprykerTest\Glue\Testify\Helper\GlueBackendApiJsonApiHelper
-                - \SprykerTest\Glue\Testify\Helper\OpenApi3
+                - \SprykerTest\Glue\Testify\Helper\GlueBackendApiOpenApi3Helper
                 - \SprykerTest\Glue\Testify\Helper\JsonPath
                 - \SprykerTest\Shared\Testify\Helper\DependencyHelper
                 - \SprykerTest\Service\Container\Helper\ContainerHelper
@@ -181,9 +182,9 @@ class ModuleBackendJsonApiFixtures implements FixturesBuilderInterface, Fixtures
     protected UserTransfer $userTransfer;
 
     /**
-     * @return mixed
+     * @return \Generated\Shared\Transfer\UserTransfer
      */
-    public function getUserTransfer()
+    public function getUserTransfer(): UserTransfer
     {
         return $this->userTransfer;
     }
@@ -280,16 +281,16 @@ class ModuleBackendJsonApiCest
     public function requestGetModule(ModuleBackendApiTester $I): void
     {
         // Arrange
-        $oauthResponseTransfer = $I->haveAuthorizationToBackendAPI($this->fixtures->getUserTransfer());
+        $oauthResponseTransfer = $I->havePasswordAuthorizationToBackendApi($this->fixtures->getUserTransfer());
         $I->amBearerAuthenticated($oauthResponseTransfer->getAccessToken());
 
         // Act
-        $I->sendGET(
+        $I->sendJsonApiGet(
             $I->formatUrl(ModuleRestApiConfig::RESOURCE_MODULE),
         );
 
         // Assert
-        $I->seeResponseCodeIs(HttpCode::OK);
+        $I->seeJsonApiResponseCodeIs(HttpCode::OK);
         $I->seeResponseIsJson();
         $I->seeResponseMatchesOpenApiSchema();
     }

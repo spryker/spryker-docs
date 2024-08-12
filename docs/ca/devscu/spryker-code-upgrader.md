@@ -7,6 +7,7 @@ redirect_from:
   - /docs/paas-plus/dev/spryker-code-upgrader.html
   - /docs/paas-plus/dev/platform-as-a-service-plus.html
   - /docs/scu/dev/spryker-ci.html
+  - /docs/scu/dev/spryker-code-upgrader.html
 ---
 
 Keeping enterprise software up-to-date is a known hurdle, especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. At the same time, low upgrade frequency comes with reduced access to security, improvements, patches, and new features. Spryker Code Upgrader (the Upgrader) addresses the challenges of an application's upgradability. The Upgrader is a combination of the upgrade tool and Spryker CI.
@@ -40,7 +41,7 @@ You can change the upgrade schedule to better fit your development process.
 
 ## Availability of Spryker Code Upgrader
 
-The Upgrader is shipped with PaaS+ in the EU region.
+The Upgrader is shipped with PaaS+ in the EU and US regions.
 
 ## Next steps
 

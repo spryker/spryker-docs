@@ -12,9 +12,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202307.0/catalog/scheduled-prices/managing-scheduled-prices.html
 related:
   - title: Scheduled Prices feature overview
-    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
+    link: docs/pbc/all/price-management/page.version/base-shop/scheduled-prices-feature-overview.html
   - title: Creating scheduled prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/creating-scheduled-prices.html
+    link: docs/pbc/all/price-management/page.version/base-shop/manage-in-the-back-office/create-scheduled-prices.html
 ---
 
 

@@ -95,4 +95,4 @@ You might use the following definitions to generate related code:
 * Add Zed Business factory.
 * Add Zed Business factory method.
 
-For details, see the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation.
+For details, see the [Spryk](/docs/dg/dev/sdks/sdk/spryks/spryks.html) documentation.

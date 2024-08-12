@@ -64,4 +64,4 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractEntity`: Add Zed Persistence Propel Abstract Entity
 
-For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

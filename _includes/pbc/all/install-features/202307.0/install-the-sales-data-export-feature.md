@@ -4,7 +4,7 @@
 
 Follow the steps below to install feature core.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 Run the following command to install the required modules:
 

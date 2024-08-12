@@ -15,4 +15,4 @@ SCCOS non-production email service has the following quotas:
 
 Recipients of emails need to be individually [verified](/docs/ca/dev/verify-email-addresses.html) for non-production systems.
 
-Reach out to [Spryker Support](/docs/scos/user/intro-to-spryker/support/getting-support.html) if these quotas are insufficient to support your use case.
+Reach out to [Spryker Support](/docs/about/all/support/getting-support.html) if these quotas are insufficient to support your use case.

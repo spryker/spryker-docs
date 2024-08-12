@@ -85,7 +85,7 @@ The **Quantity** field in the **Quick Order** adheres to these quantities. There
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/pbc/all/merchant-management/{{site.version}}/base-shop/merchant-b2b-contracts-and-contract-requests-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 
@@ -135,9 +135,9 @@ The following figure shows how to perform these actions:
 
 | INSTALLATION GUIDES  | UPGRADE GUIDES |
 |---|---|
-| [Install the Quick Add to Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html) | [Upgrade the ProductPackagingUnitStorage module](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html) |
-| [Install the Quick Add to Cart + Shopping Lists feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html) | [ProductPageSearch migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html) |
+| [Install the Quick Add to Cart feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html) | [Upgrade the ProductPackagingUnitStorage module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html) |
+| [Install the Quick Add to Cart + Shopping Lists feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html) | [ProductPageSearch migration guide](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html) |
 | [Install the Quick Add to Cart + Discontinued Products feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html) | [QuickOrderPage migration guide](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-quickorderpage-module.html) |
 | [Install the Quick Add to Cart + Measurement Units feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html) |  |
 | [Install the Quick Add to Cart + Non-splittable Products feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html) |  |
-| [Quick Add to Cart + Packaging Units feature integration](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html) |  |
+| [Install the Quick Add to Cart + Packaging Units feature](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html) |  |

@@ -1,6 +1,6 @@
 ---
 title: Secure coding practices for external packages
-description: 
+description: Coding practices for developing your app to ensure its security.
 last_updated: Feb 02, 2024
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/secure-coding-practices
@@ -16,7 +16,7 @@ related:
   - title: Secure Coding Practices
     link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
-Unsafe coding practices can expose your application to the theft of sensitive data. In this document, we provide recommended coding practices for developing your app to ensure its security.
+Unsafe coding practices can expose your application to the theft of sensitive data. In this document, we recommend coding practices for developing your app to ensure its security.
 
 ## How to add new external package to your project
 

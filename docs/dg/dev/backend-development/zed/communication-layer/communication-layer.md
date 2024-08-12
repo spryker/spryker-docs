@@ -121,4 +121,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedCommunicationController`: Add Zed communication controller.
 * `vendor/bin/console spryk:run AddZedCommunicationControllerAction`: Add Zed communication controller method.
 
-For details, see the [Spryks](/docs/sdk/dev/spryks/spryks.html).
+For details, see the [Spryks](/docs/dg/dev/sdks/sdk/spryks/spryks.html).

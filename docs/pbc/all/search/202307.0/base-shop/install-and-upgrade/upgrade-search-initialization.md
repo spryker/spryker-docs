@@ -33,7 +33,7 @@ To upgrade search initialization, see the following sections.
 
 ## 1. Install the required modules using Composer
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/search:"^8.9.0"

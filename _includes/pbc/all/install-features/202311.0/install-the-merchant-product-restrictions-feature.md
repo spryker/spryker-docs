@@ -11,9 +11,9 @@ Install the required features:
 | Product Lists | {{page.version}} |
 | Merchant | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
@@ -21,7 +21,7 @@ composer require spryker-feature/merchant-product-restrictions:"{{page.version}}
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -41,7 +41,7 @@ console transfer:generate
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes by checking your database:
+Make sure the following changes have been applied in the database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -51,7 +51,7 @@ Make sure that the following changes by checking your database:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | TYPE |
 | --- | --- | --- | --- |
@@ -113,7 +113,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import merchant-relationship-product-list

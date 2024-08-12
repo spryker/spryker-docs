@@ -32,7 +32,7 @@ The Spryker OS provides the following Application Layers:
 
 * [Yves](/docs/dg/dev/backend-development/yves/yves.html)—provides frontend functionality with the light-weight data access.
 * [Zed](/docs/dg/dev/backend-development/zed/zed.html)—provides back office/backend functionality with complicated calculations.
-* [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/old-glue-infrastructure/glue-infrastructure.html)—provides infrastructure for API with the mixed data access.
+* [Glue](/docs/dg/dev/glue-api/{{site.version}}/old-glue-infrastructure/glue-infrastructure.html)—provides infrastructure for API with the mixed data access.
 * [Client](/docs/dg/dev/backend-development/client/client.html)—provides data access infrastructure.
 * Shared—provides shared code abstractions to be used in other Application Layers of the same module.
 * Service—provides infrastructure for the stateless operations, usually utils.

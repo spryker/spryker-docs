@@ -16,14 +16,14 @@ Here are some examples of when Marketplace operator users could assist merchants
 
 ## Setting up a Merchant Agent
 
-To act as a Merchant Agent, the Marketplace Operator user must have the Agent permissions assigned to them in the Back Office. See [Create users](https://docs.google.com/document/d/1v0qAe-1czx4mm4MQDtFwkdc1_HIiobK8NJPRXLOsziw/edit) for information on how to do that.
+To act as a Merchant Agent, the Marketplace Operator user must have the Agent permissions assigned to them in the Back Office. See [Create users](/docs/pbc/all/user-management/202404.0/marketplace/back-office-create-users.html) for information on how to do that.
 
 ![merchant-agent-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview/agent-merchant-in-bo.png)
 
-## Agent Assist in Merchant Portal 
+## Agent Assist in Merchant Portal
 
 To act on a merchant’s behalf, the Merchant Agent signs in to the Merchant Portal with the Merchant Agent credentials on a dedicated Agent Assist Login page and finds the necessary merchant user. To impersonate this user, the agent clicks **Assist User**, and then **Confirm** to impersonate them.
-This logs the agent into the selected merchant account so they see the Merchant Portal as the merchant user does. To finish the merchant assistance session, the agent clicks **End User Assistance**. 
+This logs the agent into the selected merchant account so they see the Merchant Portal as the merchant user does. To finish the merchant assistance session, the agent clicks **End User Assistance**.
 
 This is how the Agent Assist in Merchant Portal feature works in the Merchant Portal:
 
@@ -32,3 +32,7 @@ This is how the Agent Assist in Merchant Portal feature works in the Merchant Po
     <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/user-management/marketplace/merchant-portal-agent-assist-feature-overview/agent-merchant-in-merchant-portal.mp4" type="video/mp4">
   </video>
 </figure>
+
+## Related Developer Documents
+
+[Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/{{page.version}}/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html)

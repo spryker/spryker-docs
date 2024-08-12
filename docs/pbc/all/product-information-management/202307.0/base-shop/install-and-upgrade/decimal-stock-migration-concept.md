@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 related:
   - title: Packaging Units feature overview
-    link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+    link: docs/pbc/all/product-information-management/page.version/base-shop/feature-overviews/packaging-units-feature-overview.html
   - title: CRUD Scheduled Prices migration concept
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Migrating from Twig v1 to Twig v3
@@ -86,10 +86,10 @@ The following table lists the modules affected by the Decimal Stock update and w
 | `spryker/cart-variant` | 2.0.0 | [Upgrade the CartVariant module](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productavailabilitiesrestapi-module.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html#upgrading-from-version-6-to-version-700) |
-| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
+| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunit-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmeasurementunit-module.html#upgrading-from-version-4-to-version-500) |
-| `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/product-packaging-unit-data-import` | 2.0.0 | [Upgrade the ProductPackagingUnitDataImport module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitdataimport-module.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitstorage-module.html#upgrading-from-version-4-to-v--version-500) |
-| `spryker/product-management` | 0.19.0 | [Migration Guide - ProductManagement](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html#upgrading-from-version-018-to-version-0190) |
+| `spryker/product-management` | 0.19.0 | [Upgrade the ProductManagement module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productmanagement-module.html#upgrading-from-version-018-to-version-0190) |
 | `spryker-shop/product-packaging-unit-widget` | 0.5.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpackagingunitwidget-module.html#upgrading-from-version-04-to-version-050) |

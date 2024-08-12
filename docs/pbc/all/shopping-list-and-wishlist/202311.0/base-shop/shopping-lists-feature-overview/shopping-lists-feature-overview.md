@@ -127,7 +127,7 @@ Different access rights can be granted on a shopping list to a business unit and
 
 ## Search widget for shopping lists
 
-Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 
 {% info_block warningBox %}
 

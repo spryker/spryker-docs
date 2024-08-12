@@ -1,7 +1,7 @@
 
 
 
-This document describes how to install the [Category Image feature](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html).
+This document describes how to install the [Category Image feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/alternative-products-feature-overview.html).
 
 ## Install feature core
 
@@ -13,10 +13,10 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE|
 |---|---|---|
-| Spryker Core | {{site.version}}| [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}}| [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
@@ -24,7 +24,7 @@ composer require spryker-feature/category-image:"{{site.version}}" --update-with
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -321,7 +321,7 @@ console data:import:category-template
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_category_template` table.
+Make sure that, in the database, the configured data has been added to the `spy_category_template` table.
 
 {% endinfo_block %}
 
@@ -439,10 +439,10 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 |---|---|---|
-| Spryker Core | {{site.version}} | [Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
+| Spryker Core | {{site.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 | Category | {{site.version}} | |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies

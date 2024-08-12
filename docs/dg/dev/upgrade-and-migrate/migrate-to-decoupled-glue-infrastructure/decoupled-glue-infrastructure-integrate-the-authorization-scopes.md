@@ -33,7 +33,7 @@ vendor/bin/console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects:
+Make sure the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -151,4 +151,4 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{site.version}}/use-glue-api-authorization-scopes.html).
+To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/dg/dev/glue-api/{{site.version}}/use-glue-api-authorization-scopes.html).

@@ -1,4 +1,4 @@
-version: "202311.0"
+version: "202404.0"
 
 repository: spryker/spryker-docs
 
@@ -83,34 +83,6 @@ defaults:
       feed: true
   -
     scope:
-      path: "docs/scos"
-    values:
-      product: "scos"
-  -
-    scope:
-      path: "docs/scos/dev"
-    values:
-      sidebar: "scos_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/scos/user"
-    values:
-      sidebar: "scos_user_sidebar"
-      role: "user"
-  -
-     scope:
-       path: "docs/sdk"
-     values:
-       product: "sdk"
-  -
-     scope:
-       path: "docs/sdk/dev"
-     values:
-       sidebar: "sdk_dev_sidebar"
-       role: "dev"
-  -
-    scope:
       path: "docs/ca"
     values:
       product: "ca"
@@ -148,27 +120,31 @@ defaults:
     values:
       sidebar: "pbc_all_sidebar"
       role: "all"
+  -
+     scope:
+       path: "docs/about"
+     values:
+       product: "about"
+  -
+    scope:
+      path: "docs/about/all"
+    values:
+      sidebar: "about_all_sidebar"
+      role: "all"
 
 versions:
-  '202212.0': '202212.0'
   '202307.0': '202307.0'
   '202311.0': '202311.0'
+  '202404.0': '202404.0'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
-  scos:
-    dev:
-      - feature-integration-guides
-      - data-import
-      - data-export
-      - glue-api-guides
-      - the-docker-sdk
-      - system-requirements
-      - front-end-development
   dg:
     dev:
       - data-import
+      - frontend-development
       - system-requirements
+      - glue-api
   pbc:
     all:
       - back-office
@@ -208,10 +184,8 @@ versioned_categories:
 sidebars:
   - ca_dev_sidebar
   - ca_devscu_sidebar
-  - scos_dev_sidebar
-  - scos_user_sidebar
-  - sdk_dev_sidebar
   - pbc_all_sidebar
+  - about_all_sidebar
   - dg_dev_sidebar
 
 description: "Spryker documentation center."

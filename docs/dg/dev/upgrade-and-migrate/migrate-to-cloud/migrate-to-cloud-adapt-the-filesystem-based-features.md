@@ -8,7 +8,7 @@ last_updated: Dec 6, 2023
 
 ---
 
-Due to the specifics of the Spryker architecture, all containers, such as Yves, Gateway, Backoffice, Jenkins, or Glue are isolated from each other and don't share any volume. For more details, refer to [Docker environment infrastructure](/docs/scos/dev/the-docker-sdk/{{site.version}}/docker-environment-infrastructure.html).
+Due to the specifics of the Spryker architecture, all containers, such as Yves, Gateway, Backoffice, Jenkins, or Glue are isolated from each other and don't share any volume. For more details, refer to [Docker environment infrastructure](/docs/dg/dev/sdks/the-docker-sdk/docker-environment-infrastructure.html).
 
 For a shared file storage solution, we recommend using S3 buckets. For an illustrative example, see the [Data Import](/docs/ca/dev/configure-data-import-from-an-s3-bucket.html#configure-a-csvreader-based-on-flysystem) feature based on an S3 bucket for file storage.
 For more details on the suggested file system, see [Flysystem feature](/docs/dg/dev/backend-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html).

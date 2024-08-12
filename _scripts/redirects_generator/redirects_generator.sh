@@ -37,7 +37,7 @@ process_files() {
 }
 
 # Specify the folder containing the files to add paths to
-folder_path="docs/scos/dev/data-import"
+folder_path="docs/scos/user"
 
 # Check if the folder exists
 if [ ! -d "$folder_path" ]; then
@@ -46,7 +46,7 @@ if [ ! -d "$folder_path" ]; then
 fi
 
 # Specify the root directory to make paths relative to. Must end with `spryker-docs`
-root_directory="/Users/andrii.tserkovnyi/Documents/GitHub/spryker-docs"
+root_directory="/Users/oscarwilde/Documents/GitHub/spryker-docs"
 
 # Call the function to process files and subfolders
 process_files "$folder_path" "$root_directory"

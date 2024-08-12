@@ -361,7 +361,7 @@ function initHomeSearchPosition() {
 
     function handleScroll() {
         pageOffsetTop = page.scrollTop();
-        searchOffsetTop = searchContainer.offset().top;
+        searchOffsetTop = searchContainer.offset()?.top ?? 0;
 
         if (isScrolled && pageOffsetTop < searchOffsetTop) {
             opener.removeClass('under-search');

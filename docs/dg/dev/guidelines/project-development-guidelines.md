@@ -76,9 +76,9 @@ Code maintainability is important because it ensures that your code remains unde
 
 The following tools can help you make your code maintainable:
 
-- [PHPStan](https://docs.spryker.com/docs/sdk/dev/development-tools/phpstan.html)
-- [Architecture Sniffer](https://docs.spryker.com/docs/sdk/dev/development-tools/architecture-sniffer.html)
-- [Code Style Sniffer](https://docs.spryker.com/docs/sdk/dev/development-tools/code-sniffer.html)
+- [PHPStan](/docs/dg/dev/sdks/sdk/development-tools/phpstan.html)
+- [Architecture Sniffer](/docs/dg/dev/sdks/sdk/development-tools/architecture-sniffer.html)
+- [Code Style Sniffer](/docs/dg/dev/sdks/sdk/development-tools/code-sniffer.html)
 - [PHP Mess detector](https://github.com/spryker/architecture-sniffer)
 
 

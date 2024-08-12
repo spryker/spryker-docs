@@ -10,8 +10,8 @@ Install the required features:
 | Spryker Core | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
-Run the following command(s) to install the required modules:
+### 1) Install the required modules
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "{{page.version}}" --update-with-dependencies
@@ -19,7 +19,7 @@ composer require spryker-feature/comments: "{{page.version}}" --update-with-depe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -83,7 +83,7 @@ Make sure that `mysprykershop.com/comment` with a guest user redirects to login 
 
 ### 3) Set up database schema and transfer objects
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -92,7 +92,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes were applied by checking your database:
+Make sure the following changes have been applied by checking your database:
 
 | DATABASE ENTITY | TYPE | EVENT |
 | --- | --- | --- |
@@ -143,7 +143,7 @@ comment.validation.error.comment_tag_not_available,Comment tag not available.,en
 comment.validation.error.comment_tag_not_available,Kommentar-Tag nicht verfügbar.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -151,7 +151,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
@@ -205,16 +205,16 @@ Please overview and install the necessary features before beginning the integrat
 | Spryker Core | {{page.version}} |
 | Customer Account Management | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/comments: "^201907.0" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -264,7 +264,7 @@ comment_widget.tags.important,Important,en_US
 comment_widget.tags.important,Wichtig,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -272,7 +272,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that, in the database, the configured data are added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

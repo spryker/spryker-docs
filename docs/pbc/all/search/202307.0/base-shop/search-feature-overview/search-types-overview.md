@@ -44,9 +44,3 @@ The feature has the following functional constraints:
 |BACK OFFICE USER GUIDES|
 |---|
 | [Manage search preferences](/docs/pbc/all/search/{{page.version}}/base-shop/manage-in-the-back-office/define-search-preferences.html)  |
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

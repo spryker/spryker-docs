@@ -22,11 +22,11 @@ Install the required features:
 
 | NAME | VERSION | INSTALLATION GUIDE |
 | --- | --- | --- |
-| Glue Application | {{page.version}} | [Glue API - Glue Application feature integration](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
+| Glue Application | {{page.version}} | [Glue API - Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/glue-storefront-api-application:"^1.0.0" spryker/glue-backend-api-application:"^1.0.0" --update-with-dependencies

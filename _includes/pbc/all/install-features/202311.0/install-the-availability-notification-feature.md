@@ -13,12 +13,12 @@ Install the required features:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
+| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
+| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
 | Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
@@ -341,12 +341,12 @@ To start feature integration, integrate the required feature:
 
 | NAME                      | VERSION            | INSTALLATION GUIDE                                                                                                                                                                         |
 |---------------------------|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/mailing-and-notifications-feature-integration.html)                            |
+| Mailing and Notifications | {{site.version}}   | [Install the Mailing and Notifications feature](/docs/pbc/all/emails/{{page.version}}/install-the-mailing-and-notifications-feature.html)                            |
 | Inventory Management      | {{site.version}}   | [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-feature.html) |
-| Product                   | {{site.version}}   | [Install the Product feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)                                                                |
+| Product                   | {{site.version}}   | [Install the Product feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-feature.html)                                                                |
 | Spryker Core              | {{site.version}}   | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                      |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
@@ -418,7 +418,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

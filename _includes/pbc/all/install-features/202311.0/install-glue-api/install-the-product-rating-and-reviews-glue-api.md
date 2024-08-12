@@ -16,7 +16,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Spryker Core Glue API | {{page.version}} | [Install the Spryker Core Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html) |
 | Product Rating & Reviews  | {{page.version}} | [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker/product-reviews-rest-api:"^1.1.0" --update-with-dependencies

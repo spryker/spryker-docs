@@ -19,10 +19,10 @@ Spryker Demo Shops are a good starting point for any project. They are shipped w
 
 You can choose from the following options:
 
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html)
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html)
-* [Marketplace B2C Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2c-suite.html)
-* [Marketplace B2B Demo Shop](/docs/scos/user/intro-to-spryker/spryker-marketplace/marketplace-b2b-suite.html)
+* [B2C Demo Shop](/docs/about/all/b2c-suite.html)
+* [B2B Demo Shop](/docs/about/all//b2b-suite.html)
+* [Marketplace B2C Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2c-suite.html)
+* [Marketplace B2B Demo Shop](/docs/about/all/spryker-marketplace/marketplace-b2b-suite.html)
 
 You can run Spryker on MacOS, Linux, and Windows with WSL1 or WSL2. For installation instructions, see [Set up Spryker locally](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
@@ -49,7 +49,7 @@ For more information about deploy files, see [Deploy file](/docs/dg/dev/sdks/the
 
 A Spryker module is a single-function unit that has well-defined dependencies and can be updated independently. [Composer](/docs/dg/dev/set-up-spryker-locally/manage-dependencies-with-composer.html) is used for installing and managing module dependencies.
 
-To define your strategy when implementing updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
+To define your strategy when implementing updates, learn about our [module and feature release process](/docs/about/all/releases/product-and-code-releases.html).
 
 
 You will use the following commands to manage modules with Composer:
@@ -85,7 +85,7 @@ To learn about the module versioning approach in Spryker, see [Semantic Versioni
 
 1. Define how to manage the settings in the configuration files with [Configuration management](/docs/dg/dev/backend-development/data-manipulation/configuration-management.html).
 2. [Configure services](/docs/dg/dev/integrate-and-configure/configure-services.html).
-3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/tutorials-and-howtos/configure-elasticsearch.html).
+3. [Configure ElasticSearch](/docs/pbc/all/search/{{site.version}}/base-shop/tutorials-and-howtos/configure-elasticsearch.html).
 4. [Configure queue](/docs/dg/dev/backend-development/data-manipulation/queue/queue.html).
 5. [Configure stores](/docs/dg/dev/internationalization-and-multi-store/set-up-multiple-stores.html#configure-stores).
 6. [Set up cronjobs](/docs/dg/dev/backend-development/cronjobs/cronjobs.html).
@@ -171,7 +171,7 @@ It is safe to disable cache indexing for the following files:
 ## 7. Configure debugging
 
 
-Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
+Before you start developing, you need to set up and get to know your debugging environment. To learn how to configure debugging, see [Configuring debugging](/docs/dg/dev/set-up-spryker-locally/configure-after-installing/configure-debugging/configure-debugging.html).
 
 
 ## 8. Explore Spryker architecture

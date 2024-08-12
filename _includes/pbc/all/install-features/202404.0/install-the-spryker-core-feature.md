@@ -18,7 +18,7 @@ The current feature integration guide only adds the following functionalities:
 
 Follow the steps below to install the Spryker Core feature core.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
@@ -683,7 +683,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 
 Follow the steps below to install the Spryker Core feature frontend.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require "spryker-feature/spryker-core": "{{page.version}}"

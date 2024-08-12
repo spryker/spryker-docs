@@ -13,7 +13,7 @@ To report issues and fix documentation, you need a [GitHub account](https://gith
 
 {% endinfo_block %}
 
-We use [Markdown](https://guides.github.com/features/mastering-markdown/) to write documentation and [Jekyll](https://jekyllrb.com/) to build the documentation site. You do not necessarily need to build the documentation site locally on your machine to propose your changes, but if you want to, follow the instructions in [Build documentation site](/docs/scos/user/intro-to-spryker/contribute-to-the-documentation/build-the-documentation-site.html).
+We use [Markdown](https://guides.github.com/features/mastering-markdown/) to write documentation and [Jekyll](https://jekyllrb.com/) to build the documentation site. You do not necessarily need to build the documentation site locally on your machine to propose your changes, but if you want to, follow the instructions in [Build documentation site](/docs/about/all/about-the-docs/run-the-docs-locally.html).
 
 ## Next steps
 Build the documentation site locally

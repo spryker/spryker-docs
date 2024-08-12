@@ -24,9 +24,9 @@ Install the required features:
 | -------------- | ----------------- | ----------------- |
 | Glue Storefront and Backend API Applications | {{page.version}} | [Integrate Storefront and Backend Glue API applications](/docs/dg/dev/upgrade-and-migrate/migrate-to-decoupled-glue-infrastructure/decoupled-glue-infrastructure-integrate-storefront-and-backend-glue-api-applications.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/glue-json-api-convention:"^1.0.0" spryker/glue-storefront-api-application-glue-json-api-convention-connector:"^1.0.0" --update-with-dependencies

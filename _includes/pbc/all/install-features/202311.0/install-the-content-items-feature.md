@@ -14,9 +14,9 @@ To start the feature integration, review and install the necessary features:
 | ----------- | ------ |
 | Spryker Core | {{page.version}}  |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/content-item:"{{page.version}}" --update-with-dependencies
@@ -734,9 +734,9 @@ To start the feature integration, review and install the necessary features:
 | ---------- | -------- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Install the required modules:
+Install the required modules using Composer:
 
 ```bash
 1composer require spryker-feature/content-item:"^dev-master" --update-with-dependencies

@@ -31,9 +31,9 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature](/docs/pbc/all/miscellaneous/{{site.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html) |
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
-Run the following command(s) to install the required modules:
+Install the required modules using Composer:
 
 ```bash
 composer require spryker/api:"^0.2.2" spryker/application:"^3.16.0" spryker/config:"^3.2.0" spryker/kernel:"^3.35.0" spryker/session:"^4.4.0" spryker/setup:"^4.3.0" spryker/zed-request:"^3.8.0" spryker-shop/shop-application:"^1.6.0" spryker-shop/error-page:"^1.2.0" spryker-shop/calculation-page:"^1.1.0"--update-with-dependencies

@@ -1,7 +1,7 @@
 ---
 title: Configure services
 description: Learn how to configure services.
-last_updated: Nov 4, 2022
+last_updated: May 8, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-services
 originalArticleId: 5b51acd3-1f5c-477d-995a-d821e88fd5f8
@@ -29,6 +29,10 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
   - /docs/scos/dev/the-docker-sdk/202311.0/configure-services.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
+  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/new-relic.html
+  - /docs/pbc/all/miscellaneous/202311.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202212.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
+  - /docs/pbc/all/miscellaneous/202307.0/third-party-integrations/operational-tools-monitoring-legal/new-relic.html
 
 related:
   - title: Deploy file reference
@@ -80,6 +84,8 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |       |          | mariadb-10.3 | &check;     |    |
 |       |          | mariadb-10.4 | &check;     |    |
 |       |          | mariadb-10.5 | &check;     |    |
+|       |          | mariadb-10.6 | &check;     |    |
+|       |          | mariadb-10.11 | &check;     |    |
 | broke | rabbitmq | 3.7          |             |    |
 |       |          | 3.8          | &check;     |    |
 |       |          | 3.9          | &check;     |    |
@@ -89,6 +95,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 |                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
 |                 |          | 7.6          | &check;     |    |
 |                 |          | 7.10         | &check;     |    |
+|                 | opensearch | 1.3         | &check;     |    |
 | scheduler       | jenkins  | 2.176        |             |    |
 |                 |          | 2.305        | &check;     |    |
 |                 |          | 2.324        | &check;     |    |
@@ -508,7 +515,7 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html).
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html).
   We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
@@ -518,7 +525,7 @@ Once New Relic is enabled, in the New Relic dashboard, you may see either `compa
 
 {% info_block infoBox %}
 
-If you update the name of an application, [contact support](/docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html) to update the changes in your APM.
+If you update the name of an application, [contact support](/docs/about/all/support/using-the-support-portal.html) to update the changes in your APM.
 
 {% endinfo_block %}
 
@@ -615,7 +622,7 @@ class NewRelicMonitoringExtensionPlugin extends SprykerNewRelicMonitoringExtensi
 ​
         $this->application = $application . '-' . $store . ' (' . $environment . ')';
 ​
-        newrelic_set_appname($this->application, null, false);
+        newrelic_set_appname($this->application, '', false);
     }
 }
 ```

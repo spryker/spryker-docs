@@ -9,7 +9,7 @@ redirect_from:
   - /docs/pbc/all/discount-management/202307.0/manage-in-the-back-office/export-voucher-codes.html  
 related:
   - title: Promotions & Discounts feature overview
-    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
+    link: docs/pbc/all/discount-management/page.version/base-shop/promotions-discounts-feature-overview.html
 ---
 
 To export voucher codes, do the following:

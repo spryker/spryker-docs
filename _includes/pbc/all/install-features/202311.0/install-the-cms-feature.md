@@ -1,6 +1,6 @@
 
 
-This document describes how to install the [CMS](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-feature-overview.html) feature.
+This document describes how to install the [CMS](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -12,7 +12,7 @@ Install the required features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)|
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
@@ -1194,7 +1194,7 @@ Make sure the following:
 
 Follow the steps below to install the CMS feature frontend.
 
-### 1) Install the required modules using Composer
+### 1) Install the required modules
 
 ```bash
 composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
@@ -1539,7 +1539,7 @@ Verify the changes by adding a slot widget to a page. See [Templates & Slots Fea
 Follow the further steps only if you are going to use the [visibility conidtions](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
-#### 1) Install the required modules using Composer
+#### 1) Install the required modules
 
 ```bash
 composer require spryker/cms-slot-block-product-category-connector:"^1.0.0" sspryker/cms-slot-block-product-category-gui:"^1.0.0" spryker/cms-slot-block-category-connector:"^1.0.0" sspryker/cms-slot-block-category-gui:"^1.0.0" spryker/cms-slot-block-cms-connector:"^1.0.0" spryker/cms-slot-block-cms-gui:"^1.0.0" --update-with-dependencies

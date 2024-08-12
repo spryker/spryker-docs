@@ -47,4 +47,4 @@ This section explains how to fill out a merchant commission import file. For mor
 | order_condition               |           | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
 | stores | ✓ |  | AT,DE  | Defines the stores to apply the commission in. accepts multipe values. |
 | merchants_allow_list   |   |  MER000002,MER000006  |  One or more merchants to apply the commission to. |
-| fixed_amount_configuration |  |  `{% raw %}EUR|0.5|0.5,CHF|0.5|0.5{% endraw %}` |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `CURRENCY|GROSS AMOUNT|NET AMOUNT`. `0.5` refers to 50 cents in this example. |
+| fixed_amount_configuration |  |  `{% raw %}EUR|0.5|0.5,CHF|0.5|0.5{% endraw %}` |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `{% raw %}CURRENCY|GROSS AMOUNT|NET AMOUNT{% endraw %}`. `0.5` refers to 50 cents in this example. |

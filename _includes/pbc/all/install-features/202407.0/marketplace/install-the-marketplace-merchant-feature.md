@@ -228,7 +228,7 @@ console translator:generate-cache
 
 ### 5) Set up behavior
 
-Enable the following behaviors by registering the plugins:
+1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                    | DESCRIPTION                                                                                                           | PREREQUISITES | NAMESPACE                                                                       |
 |-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------------------------------|
@@ -513,15 +513,17 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 }
 ```
 
+2. Based on your payment service provider, integrate the OMS commands and conditions for the merchant payout and reverse payout into your process.
+
+
 {% info_block warningBox "Verification" %}
 
-Integrate the OMS commands and conditions for the merchant payout and reverse payout into your process.
-Make sure that the OMS works as expected for merchant payout and reverse payout commands and conditions.
+Verify that the OMS works as expected for merchant payout and reverse payout commands and conditions:
 
 1. Place an order with products from different merchants.
 2. Pass the merchant payout stage for the order.
 3. In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order.
-4. Do the refund for the order.
+4. Refund for the order.
 5. In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order.
 
 {% endinfo_block %}

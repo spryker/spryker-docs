@@ -10,8 +10,9 @@ To import [merchant commissions](/docs/pbc/all/merchant-management/202407.0/mark
 1. In the Back Office, go to **Marketplace&nbsp;<span aria-label="and then">></span>Merchant Commissions**.
 2. On the **Merchant Commissions** page, click **Import**.
   This opens the **Import Merchant Commissions** page.
+
 3. Optional: If you don't have a file with merchant commissions, to prepare it, in **1 Download template**, click on **commissions_template.csv**.
-  This downloads the file. Fill the file with merchant commission data using the template and the [reference](#reference-information-Merchant-commissions-import-file).
+  This downloads the file. Fill the file with merchant commission data using the template and the [reference](#reference-information-merchant-commissions-import-file).
 
 4. In **2 Import CSV file**, click **Choose File** and select the file with commissions on your machine.
   This displays the name of the file next to **Choose File**.

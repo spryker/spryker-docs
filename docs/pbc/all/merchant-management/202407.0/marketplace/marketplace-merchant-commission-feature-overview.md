@@ -188,3 +188,21 @@ Other use cases might be as follows:
 
 
 Multiple ways to calculate commissions affect commission totals, so you might want to set up different commission rules accordingly. For example, 10% commission for the Net mode and 12% commission for the Gross mode.
+
+
+## Related Business User documents
+
+|BACK OFFICE USER GUIDES|
+| - |
+| [Import merchant commissions](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html) |
+
+
+## Related Developer documents
+
+| INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---| --- | --- |
+| [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html)  | [merchant_commission.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html) | [Create merchant commission calculator type plugins](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html) |     
+| [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html)  | [merchant_commission_store.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html) | [Create merchant commission collector rules](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-collector-rule.html) |
+| [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html)  | [merchant_commission_merchant.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html) |   |
+| [Install the Marketplace Merchant Commission + Product feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html)  | [merchant_commission_group.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_group.csv.html) |  |
+|   |  [merchant_commission_amount.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html) |  |

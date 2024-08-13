@@ -102,6 +102,8 @@ On the storefront, company users can perform the following actions by using the 
 ![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif)
 </details>
 
+test
+
 <details>
 <summary markdown='span'>Edit and delete a cart</summary>
 

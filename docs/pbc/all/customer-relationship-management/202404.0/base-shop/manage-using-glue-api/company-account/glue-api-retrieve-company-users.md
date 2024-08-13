@@ -26,14 +26,14 @@ related:
   - title: Retrieving business unit addresses
     link: docs/pbc/all/customer-relationship-management/page.version/base-shop/manage-using-glue-api/company-account/glue-api-retrieve-business-unit-addresses.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve company users
 
@@ -342,20 +342,13 @@ To retrieve information about a company user, send the request:
 | isActive | Boolean | Defines if the company user is active. |
 | isDefault | Boolean | Defines if the company user is default for the authenticated company user. |
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| companies | name | String | Specifies the name of the company. |
-| companies | isActive | Boolean | Indicates whether the company is active. |
-| companies | status | String | Specifies the status of the company. Possible values: *Pending*, *Approved* or *Denied*. |
-| company-roles | name | String | Specifies the name of the company role. |
-| company-roles | isDefault | Boolean | Indicates whether the company role is the default role for the company. |
-| company-business-units | name | String | Specifies the name of the business unit. |
-| company-business-units | email | String | Specifies the email address of the business unit. |
-| company-business-units | phone | String | Specifies the telephone number of the business unit. |
-| company-business-units | externalUrl | String | Specifies the url of the website of the business unit. |
-| company-business-units | bic | String | Specifies the bank identifier code of the business unit. |
-| company-business-units | iban | String | Specifies the International bank account number of the business unit. |
-| company-business-units | defaultBillingAddress | String | Specifies the default billing address of the business unit. |
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/company-business-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-business-units-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/company-roles-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/company-roles-response-attributes.md -->
+
+
 
 ## Possible errors
 

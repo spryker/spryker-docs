@@ -6,22 +6,6 @@ template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-product-measurement-unit
 originalArticleId: e9b40324-941f-424a-b1d6-d765054bea42
 redirect_from:
-  - /2021080/docs/mg-product-measurement-unit
-  - /2021080/docs/en/mg-product-measurement-unit
-  - /docs/mg-product-measurement-unit
-  - /docs/en/mg-product-measurement-unit
-  - /v1/docs/mg-product-measurement-unit
-  - /v1/docs/en/mg-product-measurement-unit
-  - /v2/docs/mg-product-measurement-unit
-  - /v2/docs/en/mg-product-measurement-unit
-  - /v3/docs/mg-product-measurement-unit
-  - /v3/docs/en/mg-product-measurement-unit
-  - /v4/docs/mg-product-measurement-unit
-  - /v4/docs/en/mg-product-measurement-unit
-  - /v5/docs/mg-product-measurement-unit
-  - /v5/docs/en/mg-product-measurement-unit
-  - /v6/docs/mg-product-measurement-unit
-  - /v6/docs/en/mg-product-measurement-unit
   - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productmeasurementunit.html

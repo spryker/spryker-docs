@@ -16,7 +16,7 @@ related:
   - title: Delete product sets
     link: docs/pbc/all/content-management-system/page.version/base-shop/manage-in-the-back-office/product-sets/delete-product-sets.html
   - title: Product Sets feature overview
-    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
+    link: docs/pbc/all/content-management-system/page.version/base-shop/product-sets-feature-overview.html
 ---
 
 To view a product set, do the following:

@@ -110,20 +110,8 @@ Alternatively, you can retrieve all orders made by a customer through the **/ord
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| merchantReferences | Array | Array of merchant references. A merchant reference assigned to every merchant. |
-| itemStates | Array | State of the item in the order. |
-| createdAt | String | Date and time when the order was created. |
-| currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
-| priceMode | String | Price mode that was active when placing the order. Possible values: NET_MODE—prices before tax. GROSS_MODE—prices after tax. |
-| expenseTotal | Integer | Total amount of expenses (e.g., shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied. |
-| taxTotal | Integer | Total amount of taxes paid. |
-| subtotal | Integer | Subtotal of the order. |
-| grandTotal | Integer | Grand total of the order. |
-| canceledTotal | Integer | Total canceled amount. |
-| remunerationTotal | Integer | Total sum of remuneration. |
+{% include /pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md %} <!-- To edit, see _includes/pbc/all/glue-api-guides/{{page.version}}/orders-response-attributes.md -->
+
 
 ## Possible errors
 

@@ -16,7 +16,7 @@ This document describes how to add items with discounts to guest carts. For full
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the following docs:
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Add items to a guest cart
@@ -678,17 +678,15 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 ```
 </details>
 
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-carts-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
+
+{% include pbc/all/glue-api-guides/{{page.version}}/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
 
 
-{% include pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/guest-cart-items-response-attributes.md -->
-
-{% include pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/bundle-items-bundled-items-response-attributes.md -->
-
-{% include pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/vouchers-cart-rules-response-attributes.md -->
-
-
-
-For the attributes of guest carts, see [Retrieve discounts in guest cart](/docs/pbc/all/discount-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-discounts-in-guest-carts.html#guest-cart-response-attributes).
 
 
 ## Possible errors

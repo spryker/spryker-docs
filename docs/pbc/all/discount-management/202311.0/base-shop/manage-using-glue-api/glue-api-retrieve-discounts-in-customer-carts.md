@@ -15,7 +15,7 @@ This document describes how to retrieve cart rules, vouchers, and promotional it
 
 For details on the modules that provide the API functionality and how to install them, see the following docs:
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
+* [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 
 
 ## Retrieve customer’s carts
@@ -320,7 +320,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 
-{% include pbc/all/glue-api-guides/202311.0/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

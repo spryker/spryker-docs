@@ -21,8 +21,8 @@ This endpoint lets you manage shopping list items.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see these integration guides:
-* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-shopping-lists-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 
 ## Add items to a shopping list
 
@@ -141,7 +141,7 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are allowed. |
 | quantity | Integer | &check; | Quantity of the product to add. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
@@ -612,7 +612,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
 | merchantReference| String | &check; | Unique identifier of the merchant. |
 | quantity | Integer | &check; | Updated quantity of the product. |
-| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/feature-overviews/configurable-product-feature-overview/configurable-product-feature-overview.html) are allowed. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |

@@ -5,4 +5,4 @@ description: Learn how to integrate the Inventory Management + Marketplace Produ
 template: feature-integration-guide-template
 ---
 
-{% include pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md -->
+{% include pbc/all/install-features/{{page.version}}/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/marketplace/install-the-marketplace-product-inventory-management-feature-integration.md -->

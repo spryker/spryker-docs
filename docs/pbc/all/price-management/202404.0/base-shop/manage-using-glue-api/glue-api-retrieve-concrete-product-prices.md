@@ -27,7 +27,7 @@ This endpoint allows retrieving prices of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
 * [Install the Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 
 ## Retrieve prices of a concrete product
@@ -199,19 +199,8 @@ To retrieve prices of a concrete product, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| price | Integer | Price to pay for that product in cents. |
-| priceTypeName | String | Price type. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| currency.code | String | Currency code. |
-| currency.name | String | Currency name. |
-| currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/pbc/all/price-management/{{site.version}}/base-shop/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
-| netAmount | Integer | Net price in cents. |
-| grossAmount | Integer | Gross price in cents. |
-| quantity | Integer | Number of items. |
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/concrete-product-prices-response-attributes.md -->
+
 
 ## Possible errors
 

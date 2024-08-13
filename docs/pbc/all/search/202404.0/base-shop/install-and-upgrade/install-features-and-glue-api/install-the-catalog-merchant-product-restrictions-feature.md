@@ -7,4 +7,4 @@ redirect_from:
     - /docs/pbc/all/merchant-management/202311.0/base-shop/install-and-upgrade/install-glue-api/install-the-merchant-relationship-product-lists-glue-api.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-glue-api/install-the-catalog-merchant-product-restrictions.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-catalog-merchant-product-restrictions.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-catalog-merchant-product-restrictions.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-catalog-merchant-product-restrictions.md -->

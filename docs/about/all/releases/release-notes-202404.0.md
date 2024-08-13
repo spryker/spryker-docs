@@ -163,7 +163,7 @@ In this release, we added the support of CRUD for combined entities allowing to 
 ### Technical prerequisites
 
 * [Data Exchange API integration](/docs/pbc/all/data-exchange/{{site.version}}/install-and-upgrade/install-the-data-exchange-api.html#prerequisites)
-* [Data Exchange API + Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
+* [Data Exchange API + Install the Inventory Management feature](/docs/scos/dev/feature-integration-guides/202307.0/glue-api/data-exchange-api/install-the-data-exchange-api-inventory-management-feature.html)
 
 
 ## Symfony 6.4 LTS support <span class="inline-img">![improvement](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/improvement.png)</span>

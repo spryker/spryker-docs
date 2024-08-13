@@ -28,14 +28,14 @@ related:
   - title: Authenticating as a customer
     link: docs/pbc/all/identity-access-management/page.version/manage-using-glue-api/glue-api-authenticate-as-a-customer.html
   - title: Company Accounts overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/pbc/all/customer-relationship-management/page.version/base-shop/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about companies.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Company account Glue API](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-company-account-glue-api.html).
 
 ## Retrieve a company
 
@@ -91,11 +91,7 @@ To retrieve information about a company, send the request:
 ```
 </details>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| name | String | Company name. |
-| isActive | Boolean | Defines if the company is active. |
-| status | String | Company status. Possible values are: `Pending`, `Approved`, or `Denied`.|
+{% include pbc/all/glue-api-guides/{{page.version}}/companies-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/companies-response-attributes.md -->
 
 
 ## Possible errors

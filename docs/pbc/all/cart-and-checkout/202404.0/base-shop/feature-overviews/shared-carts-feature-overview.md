@@ -69,7 +69,7 @@ The *Read-only* permission allows:
 
 {% info_block warningBox "Note" %}
 
-With the *Read-only* permission, no cart actions are available to the user, except for adding comments and editing a custom order's reference.
+With the *Read-only* permission, no cart actions are available to the user.
 
 {% endinfo_block %}
 

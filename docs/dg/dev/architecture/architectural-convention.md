@@ -27,7 +27,6 @@ Understanding the development scenarios in which Spryker can be used is crucial 
 
 - *Project development*: If you are developing a project, you need to adhere to specific project development guidelines to ensure a smooth integration.
 - *Module development*: Contributing reusable third-party modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
-- *Module development*: Contributing third-party reusable modules, boilerplates, or accelerators requires additional considerations. Because such functionalities are reusable on multiple projects in different contexts, these guidelines are more strict than those for *project development*.
 - *Core module development*: When contributing to Spryker modules, there are rules to follow in the module folders. This ensures consistency and compatibility across product lines in the Spryker Framework. These requirements are the the most strict to be reusable on multiple projects in different business verticals, like B2C, B2B, Marketplace, or Unified Commerce. These rules also ensure the stability of the module API used by Spryker development ecosystem and community.
 
 ### Directive classification
@@ -49,6 +48,7 @@ Spryker organizes responsibilities and functionalities over a set of [applicatio
 The application layers are aggregations of [layers](https://docs.spryker.com/docs/dg/dev/architecture/modules-and-application-layers.html). Some application layers are multi-layered with components organized in layer directories, while others are flat-layered with components merged in the same directory.
 
 | APPLICATION LAYER | LAYERING | LAYER |
+|-|-|
 | Glue |  flat-layered | Communication layer |
 | Client |  flat-layered | Communication layer |
 | Service |  flat-layered | Overarching Business layer |

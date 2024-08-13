@@ -41,18 +41,24 @@ The following table describes some workflows where assigning a company user to m
 
 Database relations without the Business on Behalf feature are as follows:
 
-![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme1.png)
+![scheme1.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/business-on-behalf-overview.md/scheme1.png)
 
 That is, the customer data used is connected to the company user in a one-to-one relationship.
 
 The aim of the Business on Behalf feature is to have one-to-many relationships:
 
-![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/scheme2.png)
+![scheme2.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/business-on-behalf-overview.md/scheme2.png)
 
 ## Business on Behalf on the Storefront
 
-Company users can assign and unassign a company business unit to their accounts on the storefront:
-![business-on-behalf-select-company-business-unit.gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+on+Behalf/Business+on+Behalf+Feature+Overview/business-on-behalf-select-company-business-unit.gif)
+Company users can assign and unassign a company business unit to their accounts on the Storefront:
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/customer-relationship-management/base-shop/company-account-feature-overview/business-on-behalf-overview.md/business-on-behalf-select-company-business-unit.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Related Business User documents
 
@@ -60,12 +66,6 @@ Company users can assign and unassign a company business unit to their accounts 
 |---|
 | [Assign a company user to a company unit](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/manage-in-the-back-office/company-users/edit-company-users.html)  |
 
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
 
 
 ## See next

@@ -17,11 +17,11 @@ redirect_from:
   - /docs/pbc/all/warehouse-management-system/202204.0/base-shop/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
 related:
   - title: Install the Availability Notification feature
-    link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
+    link: docs/pbc/all/warehouse-management-system/page.version/base-shop/install-and-upgrade/install-features/install-the-availability-notification-feature.html
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-manage-availability-notifications.html
   - title: Retrieve subscriptions to availability notifications
     link: docs/pbc/all/warehouse-management-system/page.version/base-shop/manage-using-glue-api/glue-api-retrieve-subscriptions-to-availability-notifications.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-availability-notification-glue-api.md -->
+{% include pbc/all/install-features/{{page.version}}/install-glue-api/install-the-availability-notification-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-glue-api/install-the-availability-notification-glue-api.md -->

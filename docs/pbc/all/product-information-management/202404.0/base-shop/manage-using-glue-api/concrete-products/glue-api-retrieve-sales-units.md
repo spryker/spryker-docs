@@ -27,7 +27,7 @@ This endpoint allows retrieving sales units of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html).
 * [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html).
 
 ## Retrieve sales units
@@ -93,15 +93,8 @@ Request sample: retrieve sales units
 ```
 </details>
 
-<a name="sales-units-response-attributes"></a>
+{% include pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/{{page.version}}/sales-units-response-attributes.md -->
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| conversion | integer | Factor to convert a value from sales to base unit. If it is "null", the information is taken from the global conversions. |
-| precision | integer | Ratio between a sales unit and a base unit. |
-| is displayed | boolean | Defines if the sales unit is displayed on the product details page. |
-| is default | boolean | Defines if the sales unit is selected by default on the product details page. |
-| measurementUnitCode | string | Code of the measurement unit. |
 
 See [Retrieve measurement units](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-measurement-units.html) for more information on managing the sales units.
 

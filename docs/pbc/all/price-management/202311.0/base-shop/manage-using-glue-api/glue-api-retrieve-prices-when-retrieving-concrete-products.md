@@ -13,8 +13,8 @@ This document describes how to retrieve prices when retrieving concrete products
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
-* [Glue API: Products Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
-* [Glue API: Prices feature integration](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
+* [Install the Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-glue-api.html)
+* [Install the Prices Glue API](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -238,7 +238,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-{% include pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
+{% include pbc/all/glue-api-guides/{{page.version}}/concrete-products-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/202311.0/concrete-products-response-attributes.md -->
 
 For the attributes of prices, see [Retrieve prices of a concrete product](/docs/pbc/all/price-management/{{site.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-concrete-product-prices.html#response).
 

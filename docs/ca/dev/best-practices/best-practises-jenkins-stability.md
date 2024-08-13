@@ -29,7 +29,7 @@ Jenkins executors let you orchestrate Jenkins jobs and introduce parallel proces
 
 We recommend sticking to the default executor count or the concurrent job limit recommended in the Spryker Service Description for your package. This ensures the stability of Jenkins and prevents instability and crashes.
 
-If you see the need to have more executors due to your job or store count, please check whether [this](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-reduce-jenkins-execution-costs-without-refactoring.html) will work for you. It will help you process all stores' sync jobs while only using one executor slot.
+If it seems like your project needs more executors because of your job or store count, consider configuring all stores's sync jobs to be processed by one executor. For instructions, see [Reduce Jenkins execution without P&S and data importers refactoring](/docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html).
 
 ## Queue worker configuration
 

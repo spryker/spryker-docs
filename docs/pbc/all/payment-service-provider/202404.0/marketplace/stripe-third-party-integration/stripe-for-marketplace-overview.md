@@ -88,5 +88,5 @@ To use Spryker's marketplace commissions engine, you need to [install the Market
 Payouts with Spryker's commissions engine work as follows:
 1. Set up the marketplace merchant commissions feature and the Stripe app.
 2. Configure OMS to suit your business logic.
-4. Set up a trigger for transfers using a timeout or [set up cronjobs that trigger transfers on a schedule](/docs.spryker.com/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
+4. Set up a trigger for transfers using a timeout or [set up cronjobs that trigger transfers on a schedule](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
 5. Test that the commissions are applied to the transfer amount.

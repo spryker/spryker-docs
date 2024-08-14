@@ -1562,7 +1562,7 @@ entries:
                       - title: "Import file details: merchant_commission_merchant.csv"
                         url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html
                       - title: "Import file details: merchant_commission_store.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html                                                                                                                    
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -2651,6 +2651,8 @@ entries:
                 include_versions:
                 - "202404.0"
                 nested:
+                  - title: Overview
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace-overview.html
                   - title: Install and configure prerequisites
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html
                   - title: Configure merchant transfers

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductListGui
+title: Upgrade the ProductListGui module
 description: This migration guide contains steps on migrating  ProductListGui to the major release versions.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

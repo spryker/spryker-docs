@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductLabelGUI
+title: Upgrade the ProductLabelGui module
 description: Use the guide to learn how to update the ProductLabelGui module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -34,7 +34,7 @@ redirect_from:
 related:
   - title: Migration guide - Product
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - Product Label
+  - title: Upgrade the ProductLabel module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabel-module.html
 ---
 

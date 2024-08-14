@@ -1,7 +1,7 @@
 ---
 title: Retrieve and use payment details from third-party PSPs
 description: Learn how to retrieve and use payment details from a third-party payment service providers
-last_updated: Mar 20, 2024
+last_updated: Aug 8, 2024
 template: howto-guide-template
 ---
 
@@ -21,10 +21,12 @@ composer require spryker/sales-payment-detail
 //...
 
 use Generated\Shared\Transfer\PaymentCreatedTransfer;
+use Generated\Shared\Transfer\PaymentUpdatedTransfer;
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     PaymentCreatedTransfer::class => 'payment-events',
+    PaymentUpdatedTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -79,6 +81,35 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
             //...
             'payment-events',
         ];
+    }
+
+    //...
+}
+```
+
+5. In `src/Pyz/Zed/Sales/SalesConfig.php`, extend the view detail external block on the view order page:
+
+```php
+namespace Pyz\Zed\Sales;
+
+use Spryker\Zed\Sales\SalesConfig as SprykerSalesConfig;
+
+class SalesConfig extends SprykerSalesConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getSalesDetailExternalBlocksUrls(): array
+    {
+        $projectExternalBlocks = [
+            //...
+            'sales_payment_details' => '/sales-payment-detail/sales/list',
+            //...
+        ];
+
+        $externalBlocks = parent::getSalesDetailExternalBlocksUrls();
+
+        return array_merge($externalBlocks, $projectExternalBlocks);
     }
 
     //...

@@ -1,5 +1,5 @@
 ---
-title: Product Images + Configurable Bundle feature integration
+title: Install the Product Images + Configurable Bundle feature
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,16 +13,16 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/product-images-configurable-bundle-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-images-configurable-bundle-feature.html
 related:
-  - title: Configurable Bundle feature integration
+  - title: Install the Configurable Bundle feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html
   - title: Product Lists feature integration
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-lists-feature.html
-  - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+  - title: Install the Prices feature
+    link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/install-features/install-the-prices-feature.html
   - title: Install the Product feature
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/install-features/install-the-product-feature.html
-  - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+  - title: Install the Merchant Product Restrictions feature
+    link: docs/pbc/all/merchant-management/page.version/base-shop/install-and-upgrade/install-the-merchant-product-restrictions-feature.html
 ---
 
-{% include pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-images-configurable-bundle-feature.md -->

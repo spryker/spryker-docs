@@ -15,7 +15,7 @@ redirect_from:
   - /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
 related:
   - title: Install the Checkout Glue API
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
 ---
 
 {% include pbc/all/install-features/202307.0/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202307.0/install-the-checkout-feature.md -->

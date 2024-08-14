@@ -50,6 +50,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 
 ### Application
 
+- [Activating IP tracking](https://github.com/spryker/docker-sdk/blob/master/docs/07-deploy-file/02-deploy.file.reference.v1.md#cloud-define-gateway-ip-addresses) significantly increases chances to mitigate or spot malicious activities like DOS attacks. You might need to evaluate this from a data protection policy perspective.
 - Upgrade your project's code to the [latest Demo Shop release](/docs/about/all/releases/product-and-code-releases.html). Or at least upgrade to a release that fully supports the Docker SDK (202009.0 and later).
 - Update `spryker/twig` to version 3.15.2 or later because this and later versions have important stability improvements over version 3.15.1.
 - Migrate the project's database to MariaDB.
@@ -61,6 +62,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Connect S3 buckets to correct environments:
   - Connect Production S3 bucket to a production environment.
   - Connect Staging S3 bucket to a staging environment.
+  - If you're using CSV imports, make sure they're imported from S3 buckets.
 - Implement the following performance tips:
   - Implement approaches described in all the [performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/performance-guidelines.html).
   - Implement [Jenekins operational best practices](/docs/ca/dev/best-practices/jenkins-operational-best-practices.html)

@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/sales/view-the-order-matrix.html
 related:
   - title: Order Management feature overview
-    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
+    link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/order-management-feature-overview.html
   - title: OMS (Order management system) matrix
     link: docs/pbc/all/order-management-system/page.version/base-shop/order-management-feature-overview/oms-order-management-system-matrix.html
 ---

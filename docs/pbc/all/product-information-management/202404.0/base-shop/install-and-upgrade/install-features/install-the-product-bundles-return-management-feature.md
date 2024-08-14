@@ -1,5 +1,5 @@
 ---
-title: Product Bundles + Return Management feature integration
+title: Install the Product Bundles + Return Management feature
 description: This guide provides step-by-step instructions on integrating Product Bundles + Return Management feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,4 +14,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/return-management-feature-integration.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/install-and-upgrade/install-features/install-the-product-bundles-return-management-feature.html
 ---
-{% include pbc/all/install-features/202311.0/install-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-return-management-feature.md -->
+{% include pbc/all/install-features/{{page.version}}/install-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202311.0/install-the-product-bundles-return-management-feature.md -->

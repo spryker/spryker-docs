@@ -13,4 +13,4 @@ The *Product Approval Process* feature adds the approval mechanism for products 
 
 |INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
-| [Product Approval Process feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) | [File details: product_abstract_approval_status.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-approval-status.csv.html)  |
+| [Install the Product Approval Process feature](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-approval-process-feature.html) | [File details: product_abstract_approval_status.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/products-data-import/import-file-details-product-abstract-approval-status.csv.html)  |

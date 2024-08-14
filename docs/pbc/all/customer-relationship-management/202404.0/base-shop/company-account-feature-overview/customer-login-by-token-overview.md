@@ -24,10 +24,4 @@ Most modern ecommerce applications let customers log in by token or, in other wo
 
 * Extensibility and access control. In the token payload, you can specify user roles, permissions as well as resources that the user can access. Besides, you can share some permissions with other applications.
 
-For technical details see [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html)
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+For technical details see [Customer Login by Token reference information](/docs/pbc/all/customer-relationship-management/{{page.version}}/base-shop/domain-model-and-relationships/customer-login-by-token-reference-information.html)

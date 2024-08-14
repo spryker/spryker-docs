@@ -44,6 +44,10 @@ You can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-
 
 The Back Office and Merchant Portal applications serve as administration panels. So, we highly recommend adding an extra layer of security by introducing a VPN, IP whitelisting, or additional authentication. This ensures that only authorized users have access to them.
 
+## Allowlisting IP addresses of third-party systems
+
+We highly recommend allowlisting the IP Addresses of third-party systems, such as ERP or WMS. To request allowlisting, provide the IP addresses or CIDR by [creating a support case](https://support.spryker.com)
+
 ## Security Headers
 
 Security headers are directives used by web applications to configure security defenses in web browsers.
@@ -224,6 +228,11 @@ $config[OauthConstants::PUBLIC_KEY_PATH]
 $config[OauthConstants::ENCRYPTION_KEY] = getenv('SPRYKER_OAUTH_ENCRYPTION_KEY') ?: null;
 $config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = json_decode(getenv('SPRYKER_OAUTH_CLIENT_CONFIGURATION'), true) ?: [];
 ```
+
+## ACL configuration
+
+Set up the ACL configuration according to your requirements and restrict access to sensitive data. For more information, see [ACL configuration](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
+
 
 ## Summary
 

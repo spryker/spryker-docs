@@ -1,5 +1,5 @@
 ---
-title: Customer Account Management + Agent Assist feature integration
+title: Install the Customer Account Management + Agent Assist feature
 description: Integrate the Customer Account Management + Agent Assist feature into your project.
 last_updated: Nov 21, 2022
 template: feature-integration-guide-template

@@ -47,6 +47,7 @@ if (class_exists(TestifyConstants::class)) {
         $glueHost,
         $gluePort !== 443 ? ':' . $gluePort : '',
     );
+    $config[TestifyConstants::GLUE_OPEN_API_SCHEMA] = APPLICATION_SOURCE_DIR . '/Generated/Glue/Specification/spryker_rest_api.schema.yml';
 }
 ```
 

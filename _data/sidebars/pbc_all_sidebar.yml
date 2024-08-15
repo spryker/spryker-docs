@@ -3157,6 +3157,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
                   - title: product_measurement_unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit-type.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit-type.csv.html
                   - title: product_packaging-unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
                   - title: product_list.csv
@@ -3303,8 +3305,6 @@ entries:
                 nested:
                   - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: Import packaging units
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
                   - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
                   - title: Make a product searchable and shown on the Storefront

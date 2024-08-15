@@ -250,3 +250,24 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
     }
 }
 ```
+
+Extend `\Pyz\Zed\CmsContentWidgetCmsContentWidgetDependencyProvider::getCmsContentWidgetParameterMapperPlugins()` in order to map Twig function name with item key mapper plugin, for example:
+```php 
+class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependencyProvider
+{
+    /**
+     * {@inheritDoc}
+     *
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CmsContentWidget\Dependency\Plugin\CmsContentWidgetParameterMapperPluginInterface>
+     */
+    protected function getCmsContentWidgetParameterMapperPlugins(Container $container)
+    {
+        return [
+            ...
+            'content_foo' => new CmsContentItemKeyMapperPlugin(),
+        ];
+    }
+}
+```

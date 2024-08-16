@@ -126,11 +126,11 @@ Content-Security-Policy: frame-ancestors 'self'
 ####  Cache-Control header
 
 You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins:
-* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
 and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
   and configure using: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
+* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
   and configure using: `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`.
 
 

@@ -29,6 +29,8 @@ Jenkins executors let you orchestrate Jenkins jobs and introduce parallel proces
 
 We recommend sticking to the default executor count or the concurrent job limit recommended in the Spryker Service Description for your package. This ensures the stability of Jenkins and prevents instability and crashes.
 
+If it seems like your project needs more executors because of your job or store count, consider configuring all stores's sync jobs to be processed by one executor. For instructions, see [Reduce Jenkins execution without P&S and data importers refactoring](/docs/dg/dev/backend-development/cronjobs/reduce-jenkins-execution-costs-without-p&s-and-data-importers-refactoring.html).
+
 ## Queue worker configuration
 
 When configuring multiple queue workers per queue, consider [Memory management](#memory-management) and [Jenkins executors configuration](#jenkins-executors-configuration). Each configured queue worker can consume up to PHP's max_memory, causing a significant increase in total memory demand as they are spawned. Another crucial factor to take into consideration is CPU utilization. If you configure more workers than the number of available cores, it becomes increasingly likely that processes will need to wait for CPU resources. This can  lead to suboptimal performance and stability issues. We recommend avoiding resource contention of this nature by aligning the number of workers with your environment package. Our service description specifies the number of CPU cores available in each package.

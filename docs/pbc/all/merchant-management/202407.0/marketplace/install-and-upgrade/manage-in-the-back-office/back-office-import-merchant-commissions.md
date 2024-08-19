@@ -10,8 +10,9 @@ To import [merchant commissions](/docs/pbc/all/merchant-management/202407.0/mark
 1. In the Back Office, go to **Marketplace&nbsp;<span aria-label="and then">></span>Merchant Commissions**.
 2. On the **Merchant Commissions** page, click **Import**.
   This opens the **Import Merchant Commissions** page.
+
 3. Optional: If you don't have a file with merchant commissions, to prepare it, in **1 Download template**, click on **commissions_template.csv**.
-  This downloads the file. Fill the file with merchant commission data using the template and the [reference](#reference-information-Merchant-commissions-import-file).
+  This downloads the file. Fill the file with merchant commission data using the template and the [reference](#reference-information-merchant-commissions-import-file).
 
 4. In **2 Import CSV file**, click **Choose File** and select the file with commissions on your machine.
   This displays the name of the file next to **Choose File**.
@@ -34,7 +35,7 @@ This section explains how to fill out a merchant commission import file. For mor
 | COLUMN                        | REQUIRED | DATA EXAMPLE                                      | DATA EXPLANATION                                |
 |-------------------------------|----------|---------------------------------------------------|-------------------------------------------------|
 | key                           | ✓        | mc1                                               | Unique identifier of the merchant commission.          |
-| name                          | ✓        | Merchant Commission 1                             | Name of the merchant commission. Accepted length: from 1 to 255 characters. Must be unqiue               |
+| name                          | ✓        | Merchant Commission 1                             | Name of the merchant commission. Accepted length: from 1 to 255 characters. Must be unique.               |
 | description                   |          |                                                   | Description of the merchant commission.         |
 | valid_from                    |     ✓     | 6/30/2029 0:00:00                                       | Start date of the merchant commission validity in UTC. |
 | valid_to                      |    ✓      | 8/30/2029 0:00:00                                     | End date of the merchant commission validity in UTC.   |
@@ -47,4 +48,4 @@ This section explains how to fill out a merchant commission import file. For mor
 | order_condition               |           | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
 | stores | ✓ |  | AT,DE  | Defines the stores to apply the commission in. accepts multipe values. |
 | merchants_allow_list   |   |  MER000002,MER000006  |  One or more merchants to apply the commission to. |
-| fixed_amount_configuration |  |  `{% raw %}EUR|0.5|0.5,CHF|0.5|0.5{% endraw %}` |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: `{% raw %}CURRENCY|GROSS AMOUNT|NET AMOUNT{% endraw %}`. `0.5` refers to 50 cents in this example. |
+| fixed_amount_configuration |  |  {% raw %} `EUR|0.5|0.5,CHF|0.5|0.5` {% endraw %} |   Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: {% raw %} `CURRENCY|GROSS AMOUNT|NET AMOUNT` {% endraw %}. `0.5` refers to 50 cents in this example. |

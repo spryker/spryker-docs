@@ -3158,7 +3158,7 @@ entries:
                   - title: product_measurement_unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
                   - title: product_packaging-unit-type.csv
-                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit-type.csv.html
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html
                   - title: product_packaging-unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
                   - title: product_list.csv

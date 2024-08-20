@@ -1,7 +1,7 @@
 ---
 title: Configure merchant transfers for Stripe
 description: Learn how to configure merchant transfers for Stripe
-last_updated: June 31, 2024
+last_updated: Aug 20, 2024
 template: howto-guide-template
 ---
 
@@ -11,7 +11,13 @@ When using Stripe in a Marketplace, you need to configure the these transfers. T
 
 By default, there're several options to trigger transfers in OMS. The simplest solution is to set a state-machine-timeout for the `MerchantPayoutCommandByOrderPlugin` command. This triggers the command after the timeout is reached. You can also define your own conditions and triggers for the command.
 
-With more sophisticated requirements, like transferring money to merchants on the last Firday of every month, you can set up a cronjob that triggers the event for the transition.
+With more sophisticated requirements, like transferring money to merchants on the last Friday of every month, you can set up a cronjob that triggers the event for the transition.
+
+## Commission Calculation
+
+The amount that has to be paid out to the merchants is calculated based on the commission that is set up in the Back Office. The commission is calculated when the order is moved to the **payment captured** state. The commission calculation is based on your project settings.
+
+See [Marketplace Merchant Commission feature overview](/docs/pbc/all/merchant-management/{{page.version}}/marketplace-merchant-commission-feature.html) for details on how to configure.
 
 ## Next step
 

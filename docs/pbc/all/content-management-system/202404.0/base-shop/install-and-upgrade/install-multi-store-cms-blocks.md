@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202311.0/multi-store-cms-block-feature-integration.html
   - /docs/pbc/all/content-management-system/202204.0/base-shop/install-and-upgrade/install-multi-store-cms-blocks.html
 related:
-  - title: Migration Guide - CMS Block
+  - title: Upgrade the CmsBlock module
     link: docs/pbc/all/content-management-system/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
 ---
 

@@ -260,8 +260,8 @@ Now you have two options:
 
 * migrate to the new calculators logic.
 
-1. To keep old calculation logic, see [Updating calculator stacks](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
-2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
+1. To keep old calculation logic, see [Updating calculator stacks](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
+2. To migrate to the new structure, see [Migrating sales to new calculator logic](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
 ## Upgrading from version 3.* to version 4.*
 

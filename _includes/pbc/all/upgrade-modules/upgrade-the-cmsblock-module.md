@@ -174,7 +174,7 @@ console propel:install
 This version allows saving CMS Block-Store relation.
 
 1. Update the `spryker/cms-block` module to at least Version 2.0.0.
-2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Migration Guide - CMS Collector](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html) for more details.
+2. Update your `spryker/cms-block-collector` module to at least Version 2.0.0. See [Upgrade the CMSCollector module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html) for more details.
 
 ### Custom CMS Block Collector
 
@@ -240,4 +240,4 @@ INSERT INTO spy_cms_block_store (fk_cms_block, fk_store)
 
 You can find more details for these changes on [CMS Block module release page](https://github.com/spryker/cms-block/releases).
 
-CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Interface to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Migration Guide - CMS Block GUI](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).
+CMS Block is ready to be used in multi-store environment. Additionally you might want to update the `spryker/cms-block-gui` Administration Interface to manage CMS Blocks and their store configuration. You can find further information about multi-store CMS Blocks here, and Zed Admin UI module migration guide in [Upgrade the CMSBlockGUI module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html).

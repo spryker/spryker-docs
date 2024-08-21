@@ -1,4 +1,5 @@
 
+<!-- Deprecated. Do not restore -->
 
 ## Upgrading from version 0.1.* to version 0.3.0
 

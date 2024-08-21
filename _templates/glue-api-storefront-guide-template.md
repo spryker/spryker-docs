@@ -49,7 +49,7 @@ If a particular combination of resources should be included in the request to ac
 
 -->
 
-Request sample: {request description} (e.g. add an item to a shopping list)
+Request sample: {request description} (e.g., add an item to a shopping list)
 
 '{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products).-->
 
@@ -63,7 +63,7 @@ Request sample: {request description} (e.g. add an item to a shopping list)
 | {method} {endpoint}{parameter example} | <!-- usage description (in imperative mood, i.e. Retrieve all products) --> |
 | {method} {endpoint}{parameter example}?include={included resource} | <!-- If including a resource into a request requires other resources to be included, describe only the target resource. For example, including `bundled-products` requires `concrete-products` and `bundled-products`. In this case, describe the request as " Retrieve ... with bundled products" omitting the other two resources. |
 
-<details><summary markdown='span'>Request sample: {request description} (e.g. add an item to a shopping list)</summary>
+<details><summary markdown='span'>Request sample: {request description} (e.g., add an item to a shopping list)</summary>
 '{method} {endpoint}{parameter example}' <!--usage description (in imperative mood, i.e. Retrieve all products). -->
 
 ```{language}

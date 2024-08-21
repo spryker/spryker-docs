@@ -77,6 +77,4 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 
 In order to find ApplicationIDs used in `NEW_RELIC_APPLICATION_ID_ARRAY`, please refer to [Get app and other IDs in New Relic](https://docs.newrelic.com/docs/apis/rest-api-v2/get-started/get-app-other-ids-new-relic-one/#apm).
 
-To get `YOUR_API_KEY` key, please refer to [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/#user-api-key).
-
-For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html).
+To get `YOUR_API_KEY` key, refer to [New Relic API keys](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/#user-api-key).

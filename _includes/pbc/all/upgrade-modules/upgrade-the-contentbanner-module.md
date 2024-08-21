@@ -3,7 +3,7 @@
 
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/pbc/all/content-management-system/{{site.version}}/navigation-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/navigation-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 With the `ContentBanner` version 2.0, the following changes have been made:
 
@@ -21,7 +21,7 @@ _Estimated migration time: 30minutes-1h_
 
 To upgrade to the new version of the module, do the following:
 
-1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/pbc/all/content-management-system/{{site.version}}/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html).
+1. Perform the steps provided in [Upgrade the ContentStorage module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html).
 
 2. Upgrade the `ContentBanner` module to version 2.0.0:
 

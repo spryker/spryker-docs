@@ -34,7 +34,7 @@ The old Calculator plugins were moved to the following separate repository: `spr
 
 {% endinfo_block %}
 
-The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
+The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_method, sales.shipment_delivery_time` - these are deprecated methods. To safely migrate them, see [Upgrade the Sales module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html).
 
 After this you should see the new values calculated + the legacy ones.
 

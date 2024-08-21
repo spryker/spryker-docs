@@ -36,7 +36,7 @@ In this new version of the `Shipment` module, we have added support of split del
 
 {% info_block errorBox %}
 
-This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/pbc/all/order-management-system/{{site.version}}/base-shop/install-and-upgrade/split-delivery-migration-concept.html).
+This release is a part of the Split delivery concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Split Delivery Migration Concept](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/split-delivery-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -484,9 +484,9 @@ In version 5, shipment lost the direct foreign key `sales.fk_shipment_method` to
 
 A new `SalesOrderHydration` plugin was added to populate `OrderTransfer` with shipment information `ShipmentOrderHydratePlugin`.
 
-The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html).
+The new shipment table structure requires manual data migration, we have provided migration script, you can read how to migrate shipment data in [Migration Guide Sales](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-sales-module.html).
 
 
 ## Upgrading from version 2.* to version 3.*
 
-The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/pbc/all/tax-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) module.
+The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/pbc/all/tax-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-the-tax-module.html) module.

@@ -12,17 +12,17 @@ redirect_from:
   - /docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /v6/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /v6/docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
-  - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
 related:
-  - title: Configuring Spryker after installing with DevVM
-    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - title: Configure Spryker after installing with DevVM
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
   - title: Configuring database servers
-    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
 ---
 
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 

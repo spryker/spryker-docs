@@ -1,0 +1,27 @@
+name: Check missing sidebar links
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  check-sidebar-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Make sidebar checker script executable
+        run: chmod +x _scripts/sidebar_checker/sidebar_checker.sh
+
+      - name: Run sidebar checker script
+        run: ./_scripts/sidebar_checker/sidebar_checker.sh
+
+      - name: Print missing documents file
+        run: if [ -f "_scripts/sidebar_checker/missing-documents.yml" ]; then cat _scripts/sidebar_checker/missing-documents.yml; else echo "No missing documents found."; fi
+
+      - name: Check for missing documents
+        run: test ! -s _scripts/sidebar_checker/missing-documents.yml

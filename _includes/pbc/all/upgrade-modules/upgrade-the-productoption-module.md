@@ -11,9 +11,9 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 ## Upgrading from version 5.* to version 6.*
 
 1. Update `spryker/product-option` to at least version 6.0.0.
-2. Install/Update `spryker/currency` to at least version 3.0.0. See [Migration Guide - Currency](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
-3. Install/Update `spryker/price` to at least version 5.0.0. See [Migration Guide - Price](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) for more details.
-4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Migration Guide - Product Option Cart Connector](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
+2. Install/Update `spryker/currency` to at least version 3.0.0. See [Upgrade the Currency module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
+3. Install/Update `spryker/price` to at least version 5.0.0. See [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) for more details.
+4. Update `spryker/product-option-cart-connector` to at least version 5.0.0 (if you have this module already installed). See [Upgrade the ProductOptionCartConnector module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productoptioncartconnector-module.html) for more details.
 5. Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
 6. Run `vendor/bin/console propel:migrate` to apply the database changes.
 7. Generate ORM models by running `vendor/bin/console propel:model:build`.
@@ -449,4 +449,4 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.
-To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
+To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.

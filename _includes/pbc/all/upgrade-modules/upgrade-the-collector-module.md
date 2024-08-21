@@ -31,7 +31,7 @@ The `AbstractCollector::isStorable` is not limited to multi-store entities and c
 
 You can find additional details on the [Collector module release page](https://github.com/spryker/collector/releases).
 
-5. Update/install `spryker/touch` to at least `4.0.0` version. For more information, see [Migration Guide - Touch](/docs/scos/dev/module-migration-guides/migration-guide-touch.html).
+5. Update/install `spryker/touch` to at least `4.0.0` version. For more information, see [Upgrade the Touch module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-touch-module.html).
 6. If you have multiple stores: Amend your existing custom `AbstractPdoCollectorQuery` extended queries to always select current store related `spy_touch_storage` and `spy_touch_search` records. This has to be made for all of the queries regardless if they work with a multi-store entity or a single-store entity. You can find additional details regarding collector multi-store concept in the previous step, on the [Collector module release page](https://github.com/spryker/collector/releases), and on our [Demoshop implementation](https://github.com/spryker/demoshop).
 
 **Example of a modified query**

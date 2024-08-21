@@ -2,11 +2,11 @@
 
 {% info_block infoBox %}
 
-This migration guide is a part of the [Search migration effort](/docs/pbc/all/search/{{site.version}}/install-and-upgrade/search-migration-concept.html).
+This migration guide is a part of the [Search migration effort](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/search-migration-concept.html).
 
 {% endinfo_block %}
 
-The [Elastica](https://github.com/spryker/elastica) module is a wrapper around 3rd-party library for interacting with Elasticsearch. It does not contain any code and usually should not be updated alone. Its version is managed either by the [Search](https://github.com/spryker/search) module or by the [SearchElasticsearch](https://github.com/spryker/search-elasticsearch) module.
+The [Elastica](https://github.com/spryker/elastica) module is a wrapper around third-party library for interacting with Elasticsearch. It does not contain any code and usually should not be updated alone. Its version is managed either by the [Search](https://github.com/spryker/search) module or by the [SearchElasticsearch](https://github.com/spryker/search-elasticsearch) module.
 
 ## Upgrading from version 5.0.0 to version 6.0.0
 

@@ -6,7 +6,7 @@ In this new version of the `ProductManagement` module, we added support of decim
 
 {% info_block errorBox %}
 
-This release is a part of the *Decimal Stock* concept migration. When you upgrade this module version, you must also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
+This release is a part of the *Decimal Stock* concept migration. When you upgrade this module version, you must also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -83,7 +83,7 @@ To dismantle the Horizontal Barrier and enable partial module updates on project
 
 The new version provides support to manage the `abstract product-store` relations per store.
 
-1. Update `/ install spryker/product` to at least 6.0.0 version. For more details, see [Migration Guide - Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html)
+1. Update `/ install spryker/product` to at least 6.0.0 version. For more details, see [Upgrade the Product module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html)
 2. Update `/ install spryker/productmanagement` to 0.10.0 version or later.
 3. Generate the transfer object changes:
 
@@ -120,7 +120,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-In the Product Information Management (PIM) Back Office, you can see the `abstract product-store` relations. However, you can't manage or change anything yet. To enable the entire multi-store product behavior, see [Multi-Store Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html).
+In the Product Information Management (PIM) Back Office, you can see the `abstract product-store` relations. However, you can't manage or change anything yet. To enable the entire multi-store product behavior, see [Multi-Store Products feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-multi-store-products-feature.html).
 
 ## Upgrading from version 0.8.* to version 0.9.*
 

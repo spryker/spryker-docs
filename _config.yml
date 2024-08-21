@@ -1,4 +1,4 @@
-version: "202212.0"
+version: "202404.0"
 
 repository: spryker/spryker-docs
 
@@ -83,82 +83,32 @@ defaults:
       feed: true
   -
     scope:
-      path: "docs/marketplace"
+      path: "docs/ca"
     values:
-      product: "marketplace"
+      product: "ca"
   -
     scope:
-      path: "docs/marketplace/dev"
+      path: "docs/ca/dev"
     values:
-      sidebar: "marketplace_dev_sidebar"
+      sidebar: "ca_dev_sidebar"
       role: "dev"
   -
-    scope:
-      path: "docs/marketplace/user"
-    values:
-      sidebar: "marketplace_user_sidebar"
-      role: "user"
-  -
-    scope:
-      path: "docs/scos"
-    values:
-      product: "scos"
-  -
-    scope:
-      path: "docs/scos/dev"
-    values:
-      sidebar: "scos_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/scos/user"
-    values:
-      sidebar: "scos_user_sidebar"
-      role: "user"
-  -
      scope:
-       path: "docs/sdk"
+       path: "docs/ca/devscu"
      values:
-       product: "sdk"
-  -
-     scope:
-       path: "docs/sdk/dev"
-     values:
-       sidebar: "sdk_dev_sidebar"
+       sidebar: "ca_devscu_sidebar"
        role: "dev"
   -
-    scope:
-      path: "docs/cloud"
-    values:
-      product: "cloud"
+     scope:
+       path: "docs/dg"
+     values:
+       product: "dg"
   -
     scope:
-      path: "docs/cloud/dev"
+      path: "docs/dg/dev"
     values:
-      sidebar: "cloud_dev_sidebar"
+      sidebar: "dg_dev_sidebar"
       role: "dev"
-  -
-    scope:
-      path: "docs/acp"
-    values:
-      product: "acp"
-  -
-    scope:
-      path: "docs/acp/user"
-    values:
-      sidebar: "acp_user_sidebar"
-      role: "user"
-  -
-     scope:
-       path: "docs/scu"
-     values:
-       product: "scu"
-  -
-     scope:
-       path: "docs/scu/dev"
-     values:
-       sidebar: "scu_dev_sidebar"
-       role: "dev"
   -
      scope:
        path: "docs/pbc"
@@ -170,58 +120,31 @@ defaults:
     values:
       sidebar: "pbc_all_sidebar"
       role: "all"
-
+  -
+     scope:
+       path: "docs/about"
+     values:
+       product: "about"
+  -
+    scope:
+      path: "docs/about/all"
+    values:
+      sidebar: "about_all_sidebar"
+      role: "all"
 
 versions:
-  '201811.0': '201811.0'
-  '201903.0': '201903.0'
-  '201907.0': '201907.0'
-  '202001.0': '202001.0'
-  '202005.0': 'Code releases 05.20'
-  '202009.0': '202009.0'
-  '202108.0': '202108.0'
-  '202204.0': '202204.0'
-  '202212.0': '202212.0'
-  '202304.0': 'Upcoming release'
+  '202307.0': '202307.0'
+  '202311.0': '202311.0'
+  '202404.0': '202404.0'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
-  marketplace:
-    user:
-      - features
-      - back-office-user-guides
-      - merchant-portal-user-guides
+  dg:
     dev:
-      - feature-integration-guides
-      - feature-walkthroughs
-      - glue-api-guides
       - data-import
-      - data-export
-      - legacy-demoshop
-      - front-end
-      - setup
-      - technical-enhancement
-  scos:
-    user:
-      - features
-      - back-office-user-guides
-      - technology-partners
-      - shop-user-guides
-      - overview-of-features
-    dev:
-      - feature-walkthroughs
-      - feature-integration-guides
-      - data-import
-      - data-export
-      - glue-api-guides
-      - technology-partner-integration-guides
-      - the-docker-sdk
-      - migration-and-integration
-      - legacy-demoshop
-      - technology-partner-guides
-      - devops-migration-guides
+      - frontend-development
       - system-requirements
-      - front-end-development
+      - glue-api
   pbc:
     all:
       - back-office
@@ -229,40 +152,41 @@ versioned_categories:
       - carrier-management
       - content-management-system
       - customer-relationship-management
+      - data-exchange
       - discount-management
+      - dynamic-multistore
       - emails
       - gift-cards
       - identity-access-management
       - merchant-management
       - miscellaneous
+      - offer-management
       - order-management-system
       - price-management
       - payment-service-provider
       - product-information-management
       - product-relationship-management
-      - punchout
+      - push-notification
       - return-management
       - ratings-reviews
       - request-for-quote
       - search
+      - service-point-management
       - shopping-list-and-wishlist
       - tax-management
       - user-management
       - warehouse-management-system
+      - warehouse-picking
 
 
 # these are defaults used for the front matter for these file types
 
 sidebars:
-  - marketplace_dev_sidebar
-  - marketplace_user_sidebar
-  - cloud_dev_sidebar
-  - scos_dev_sidebar
-  - scos_user_sidebar
-  - sdk_dev_sidebar
-  - acp_user_sidebar
-  - scu_dev_sidebar
+  - ca_dev_sidebar
+  - ca_devscu_sidebar
   - pbc_all_sidebar
+  - about_all_sidebar
+  - dg_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -287,18 +211,18 @@ algolia:
       title: 'SCOS User'
     - name: 'scos_dev'
       title: 'SCOS Developer'
-    - name: 'marketplace_user'
-      title: 'Marketplace User'
-    - name: 'marketplace_dev'
-      title: 'Marketplace Developer'
     - name: 'sdk_dev'
       title: 'SDK Developer'
-    - name: 'cloud_dev'
-      title: 'Cloud Developer'
+    - name: 'ca_dev'
+      title: 'Managing cloud applications'
+    - name: 'ca_devscu'
+      title: 'Upgrading cloud applications'
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'scu_dev'
       title: 'SCU Developer'
+    - name: 'dg_dev'
+      title: 'Development'
 sass:
     sass_dir: css
     style: compressed

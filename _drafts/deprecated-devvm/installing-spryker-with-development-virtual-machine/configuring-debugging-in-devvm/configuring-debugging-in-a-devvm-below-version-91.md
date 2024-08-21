@@ -22,14 +22,14 @@ redirect_from:
   - /v2/docs/en/debugging-setup-prior-vm91
   - /v1/docs/debugging-setup-prior-vm91
   - /v1/docs/en/debugging-setup-prior-vm91
-  - /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
 related:
   - title: Configuring debugging in DevVM
-    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
+    link: docs/scos/dev/set-up-spryker-locally/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
 ---
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/dg/dev/set-up-spryker-locally/set-up-spryker-locally.html).
 
 {% endinfo_block %}
 

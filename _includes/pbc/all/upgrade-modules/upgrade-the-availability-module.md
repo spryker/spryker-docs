@@ -6,7 +6,7 @@ In this new version of the `Availability` module, we have added support of decim
 
 {% info_block errorBox %}
 
-This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
+This release is a part of the **Decimal Stock** concept migration. When you upgrade this module version, you should also update all other installed modules in your project to use the same concept as well as to avoid inconsistent behavior. For more information, see [Decimal Stock Migration Concept](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/decimal-stock-migration-concept.html).
 
 {% endinfo_block %}
 
@@ -168,7 +168,7 @@ ALTER TABLE "spy_availability" ADD CONSTRAINT "spy_availability-fk_spy_availabil
 
 As this involves more than the Availability module, to start using it some configuration needed per module basis.
 
-**Oms version >= 4** is required. See the [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
+**Oms version >= 4** is required. See the [Upgrade the OMS module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
 
 **Cart > 2.1** and **AvailabilityCartConnector > 2.0**. To have cart availability per check, add a new plugin `Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` to the Cart project dependency provider. `Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins()` which is a core implementation of the cart availability check.
 A new availability collector is required. Take it from demoshop, `Pyz\Zed\Collector\Business\Storage\AvailabilityCollector`, this has to be added to the `Pyz\Zed\Collector\CollectorDependencyProvider` storage plugin stack.

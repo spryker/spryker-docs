@@ -18,21 +18,19 @@ redirect_from:
   - /v4/docs/en/b2b-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/b2c-demo-shop-installation-without-development-virtual-machine
   - /v4/docs/en/b2c-demo-shop-installation-without-development-virtual-machine
-  - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
-  - /docs/scos/dev/setup/installing-spryker-without-devvm.html
-  - /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-devvm.html
+  - /docs/scos/dev/set-up-spryker-locally/installing-spryker-without-development-virtual-machine-or-docker.html
 related:
   - title: Install module structure and configuration
-    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
-  - title: Installing Spryker with custom set of modules
-    link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
-  - title: Managing SCOS dependencies with Composer
-    link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
+    link: docs/scos/dev/set-up-spryker-locally/install-module-structure-and-configuration.html
+  - title: Manage dependencies with Composer
+    link: docs/scos/dev/set-up-spryker-locally/manage-dependencies-with-composer.html
   - title: Redis configuration
-    link: docs/scos/dev/setup/redis-configuration.html
+    link: docs/scos/dev/set-up-spryker-locally/redis-configuration.html
 ---
 
-To install [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) without Docker, follow the steps below.
+To install [B2B Demo Shop](/docs/about/all/b2b-suite.html) or [B2C Demo Shop](/docs/about/all/b2c-suite.html) without Docker, follow the steps below.
 
 ### Minimum requirements
 
@@ -245,4 +243,4 @@ Credentials to access the administrator interface: user `admin@spryker.com` and 
 
 ## Next steps:
 
-* [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)
+* [Troubleshooting installation issues](/docs/dg/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)

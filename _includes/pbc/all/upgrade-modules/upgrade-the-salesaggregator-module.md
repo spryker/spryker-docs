@@ -8,7 +8,7 @@ There are two steps to the two migration process.
 * The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`.
 * The second is to migrate your code to support the `old Aggregators`.
 
-To learn how to migrate to the new structure, see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
+To learn how to migrate to the new structure, see [Migration Guide - Calculation](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html).
 
 ### Enable the `SalesAggregator` in your project
 

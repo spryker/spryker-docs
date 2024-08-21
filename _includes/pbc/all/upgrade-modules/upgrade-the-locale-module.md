@@ -1,19 +1,43 @@
+This document describes how to upgrade the Locale module.
 
-{% info_block errorBox %}
+## Prerequisites
 
-This migration guide is a part of the [Silex migration effort](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html).
+[Upgrade to PHP 8.1](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-81.html)
+
+
+## Upgrading from version 3.* to version 4.0.0
+
+{% info_block warningBox %}
+
+Dynamic Multistore is currently running under an *Early Access Release*. Early Access Releases are subject to specific legal terms, they are unsupported and do not provide production-ready SLAs. They can also be deprecated without a General Availability Release. Nevertheless, we welcome feedback from early adopters on these cutting-edge, exploratory features.
 
 {% endinfo_block %}
 
-To upgrade the module, do the following:
+In this version of the `Locale` module, we have enabled the configuration of locales per store in the database. The `Locale` module version 4 introduces the `spy_locale_store` database table to persist stores-locales in Zed. We've also added the `fk_locale` column to the `spy_store` table for saving default locales per store. For more details about the changes, see the [Locale module release page](https://github.com/spryker/locale/releases).
 
-1. Update the module using Composer:
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `Locale` module to the new version:
 
 ```bash
-composer update spryker/locale
+composer require spryker/locale:"^4.0.0" --update-with-dependencies
 ```
 
-2. Add new plugins to dependency providers:
+2. Update transfer objects:
+
+```bash
+vendor/bin/console transfer:generate
+```
+
+3. Apply database changes:
+
+```bash
+vendor/bin/console propel:install
+```
+
+4. Add new plugins to dependency providers:
 
 **Zed integration**
 

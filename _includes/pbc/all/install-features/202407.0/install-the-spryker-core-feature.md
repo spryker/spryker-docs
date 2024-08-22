@@ -36,6 +36,7 @@ Make sure the following modules have been installed:
 | LogExtension                      | vendor/spryker/log-extension                        |
 | UtilEncryption                    | vendor/spryker/util-encryption                      |
 | Vault                             | vendor/spryker/vault                                |
+| Router                            | vendor/spryker/router                               |
 | SessionExtension                  | vendor/spryker/session-extension                    |
 | SessionRedis                      | vendor/spryker/session-redis                        |
 | SessionFile                       | vendor/spryker/session-redis                        |
@@ -54,6 +55,29 @@ Make sure the following modules have been installed:
 ### 2) Set up configuration
 
 Set up the following configuration.
+
+#### Set up Router
+
+Add the following configuration if it is needed to use router cache.
+
+```php
+<?php
+
+namespace Pyz\Zed\Router;
+
+use Spryker\Zed\Router\RouterConfig as SprykerRouterConfig;
+
+class RouterConfig extends SprykerRouterConfig
+{
+    /**
+     * @return bool
+     */
+    public function isRoutingCacheEnabled(): bool
+    {
+        return true;
+    }
+}
+```
 
 #### Set up SecuritySystemUser
 
@@ -823,7 +847,6 @@ Make sure the following applies:
 | --- |-------------------------------------------| --- |-------------------------------------------------|
 | StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console  |
 | StorageRedisImportRdbConsole	 | Imports an rdb file.	                     |  | Spryker\Zed\StorageRedis\Communication\Console  |
-| BuildRouteCacheConsole | Generates backoffice router cache         |  | Spryker\Zed\Router\Communication\Plugin\Console |
 
 **Pyz\Zed\Console\ConsoleDependencyProvider**
 
@@ -834,7 +857,6 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
-use Spryker\Zed\Router\Communication\Plugin\Console\BuildRouteCacheConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisExportRdbConsole;
 use Spryker\Zed\StorageRedis\Communication\Console\StorageRedisImportRdbConsole;
 
@@ -850,7 +872,6 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         $commands = [
             new StorageRedisExportRdbConsole(),
             new StorageRedisImportRdbConsole(),
-            new BuildRouteCacheConsole(),
         ];
 
         return $commands;

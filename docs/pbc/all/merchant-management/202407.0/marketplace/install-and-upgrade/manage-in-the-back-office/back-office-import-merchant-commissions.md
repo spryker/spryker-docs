@@ -130,8 +130,7 @@ This section explains how to fill out a merchant commission import file. For mor
 <td>fixed_amount_configuration</td>
 <td></td>
 <td> EUR|0.5|0.5,CHF|0.5|0.5</td>
-<td>Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: <code>CURRENCY|
-GROSS AMOUNT|NET AMOUNT</code>.<code>0.5</code> refers to 50 cents in this example.</td>
+<td>Defines fixed amount commission configuration in case a fixed commission needs to be applied to each item in the order. Format: <code>CURRENCY|GROSS AMOUNT|NET AMOUNT</code>.<code>0.5</code> refers to 50 cents in this example.</td>
 </tr>
 </tbody>
 </table>

@@ -69,7 +69,6 @@ Make sure that the following changes have been applied in the database:
 | DATABASE ENTITY                        | TYPE   | EVENT   |
 |----------------------------------------|--------|---------|
 | spy_sales_order_invoice                | table  | created |
-| spy_order_matrix                       | table  | created |
 | spy_sales_order.order_custom_reference | column | created |
 | spy_sales_order.uuid                   | column | created |
 | spy_sales_order_item.uuid              | column | created |
@@ -101,9 +100,11 @@ Make sure the following changes have been applied in transfer objects:
 | Order.orderCustomReference                        | property | created | src/Generated/Shared/Transfer/OrderTransfer                          |
 | Item.uuid                                         | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
 | OrderMatrix                                       | class    | created | src/Generated/Shared/Transfer/OrderMatrixTransfer                    |
-| OrderMatrixCriteriaFilter                         | class    | created | src/Generated/Shared/Transfer/OrderMatrixCriteriaFilterTransfer      |
+| OrderMatrixCriteria                               | class    | created | src/Generated/Shared/Transfer/OrderMatrixCriteriaTransfer            |
 | OrderMatrixRequest                                | class    | created | src/Generated/Shared/Transfer/OrderMatrixRequestTransfer             |
-| OrderMatrixResponse                               | class    | created | src/Generated/Shared/Transfer/OrderMatrixResponseTransfer            |
+| IndexedOrderMatrixResponse                        | class    | created | src/Generated/Shared/Transfer/IndexedOrderMatrixResponseTransfer     |
+| OrderMatrixConditions                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixConditionsTransfer          |
+| OrderMatrixCollection                             | class    | created | src/Generated/Shared/Transfer/OrderMatrixCollectionTransfer          |
 
 {% endinfo_block %}
 
@@ -632,7 +633,8 @@ $jobs[] = [
     'name' => 'sync-order-matrix',
     'command' => '$PHP_BIN vendor/bin/console order-matrix:sync',
     'schedule' => '*/1 * * * *',
-    'enable' => true
+    'enable' => true,
+    'global' => true,
 ];
 ```
 
@@ -1235,7 +1237,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-Follow the steps below to install the Order Matrix feature.
+Follow the steps below to install the Order Matrix functionality.
 
 #### Set up Order Matrix behavior.
 

@@ -893,7 +893,7 @@ sections:
 
 {% info_block warningBox "Verification" %}
 
-To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` and `BuildRouteCacheConsole` are activated, check if the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` and `vendor/bin/console router:build-route-cache` console commands exist.
+To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if the `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
 
 {% endinfo_block %}
 

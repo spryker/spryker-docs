@@ -58,7 +58,7 @@ To learn how a Back Office user can skip timeout or cancel an order by changing 
 ## Order cancellation on the Storefront
 This is how the Order Cancellation feature works on the Spryker Demo Shop Storefront:
 
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Order+Cancellation/Order+Cancellation+Feature+Overview/shop-guide-cancelling-orders.gif)
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/order-management-feature-overview/order-cancellation-overview.md/shop-guide-cancelling-orders.mp4)
 
 ## Related Business User documents
 

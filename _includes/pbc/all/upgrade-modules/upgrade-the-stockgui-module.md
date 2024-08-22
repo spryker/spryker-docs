@@ -8,7 +8,7 @@ In this new version of the `StockGui` module, we have added support of the wareh
 
 To upgrade to the new version of the module, do the following:
 
-1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html#upgrading-from-version-7-to-version-800).
+1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Upgrade the Stock module](/docs/pbc/all/product-information-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-stock-module.html#upgrading-from-version-7-to-version-800).
 
 2. Upgrade the `StockGui` module to the new version:
 

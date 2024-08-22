@@ -8,8 +8,6 @@ template: import-file-template
 
 This document describes the `merchant_commission_group.csv` file to configure [merchant commission groups](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-commission-feature-overview.html).
 
-## Import file dependencies
-
 
 
 ## Import file parameters

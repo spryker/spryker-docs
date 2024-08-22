@@ -16,7 +16,7 @@ To edit a product offer in the Merchant Portal, follow the steps:
 4. Click **Save**.
     This closes the drawer with a success message displayed.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/edit-product-offers.md/edit-offers.mp4)
 
 
 ## Reference information: Edit product offers

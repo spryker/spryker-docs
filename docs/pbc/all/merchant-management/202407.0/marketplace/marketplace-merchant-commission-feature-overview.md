@@ -6,7 +6,7 @@ template: concept-topic-template
 ---
 
 
-The Marketplace Commissions enables marketplace owners to monetize their services by calculating a fee on sales made through their platform. This feature allows for flexible commission structures, such as fixed fees, percentage-based fees, or a combination of both. Commissions can apply differently across various categories, products, or sellers. For example, you might want to collect a smaller commission from merchants that sell products in categories with smaller selling volumes.
+The *Marketplace Merchant Commissions* feature enables marketplace owners to monetize their services by calculating a fee on sales made through their platform. This feature allows for flexible commission structures, such as fixed fees, percentage-based fees, or a combination of both. Commissions can apply differently across various categories, products, or sellers. For example, you might want to collect a smaller commission from merchants that sell products in categories with smaller selling volumes.
 
 ## Managing merchant commissions
 
@@ -125,7 +125,7 @@ The `merchants_allow_list` attribute lets you apply a commission to one or more 
 
 In the prior example, the system first checks if an order is fulfilled by merchants `MER000002` or `MER000004`. If this condition is fulfilled, the `mc01` commission is applied. If an order is fulfilled by any other merchant, the standard commission `mc02` is applied. The empty `merchants_allow_list` attribute means that this commission applies to all merchants.
 
-If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see [Merchant commission priority and groups](#merchant-commission-priority-and-groups)
+If you have multiple commissions, depending on your setup, you will have to use priorities and groups to make sure that relevant commissions are applied. In the prior example, the merchant-specific commission with priority `1` is validated before the universal commission. If the merchant-specific commission had a lower priority, the universal commission would be applied because it doesn't have a merchant condition. For more details about priority, see [Merchant commission priority and groups](#merchant-commission-priority-and-groups).
 
 
 
@@ -159,7 +159,7 @@ If an order item fulfills the conditions of all the commissions in the prior exa
 
 The price mode used to apply commissions is defined separately from the order price mode and applies to the whole store. This price mode configuration controls which prices are used as a basis to calculate commission: gross or net price. The item gross price and net price is configured in the backend, including volume pricing, and doesn't include any discounts applied in the shopping cart afterwards.
 
-Price mode is defined in `MERCHANT_COMMISSION_PRICE_MODE_PER_STORE`. For details, see [Install the Marketplace Merchant Commission feature](https://docs.spryker.com/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html#set-up-configuration).
+Price mode is defined in `MERCHANT_COMMISSION_PRICE_MODE_PER_STORE`. For details, see [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 
 
@@ -188,3 +188,21 @@ Other use cases might be as follows:
 
 
 Multiple ways to calculate commissions affect commission totals, so you might want to set up different commission rules accordingly. For example, 10% commission for the Net mode and 12% commission for the Gross mode.
+
+
+## Related Business User documents
+
+|BACK OFFICE USER GUIDES|
+| - |
+| [Import merchant commissions](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html) |
+
+
+## Related Developer documents
+
+| INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---| --- | --- |
+| [Install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html)  | [merchant_commission.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html) | [Create merchant commission calculator type plugins](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html) |     
+| [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html)  | [merchant_commission_store.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html) | [Create merchant commission collector rules](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/tutorials-and-howtos/create-merchant-commission-collector-rule.html) |
+| [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html)  | [merchant_commission_merchant.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html) |   |
+| [Install the Marketplace Merchant Commission + Product feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html)  | [merchant_commission_group.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_group.csv.html) |  |
+|   |  [merchant_commission_amount.csv](/docs/pbc/all/merchant-management/202407.0/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html) |  |

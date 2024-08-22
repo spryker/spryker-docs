@@ -83,7 +83,7 @@ To dismantle the Horizontal Barrier and enable partial module updates on project
 
 The new version provides support to manage the `abstract product-store` relations per store.
 
-1. Update `/ install spryker/product` to at least 6.0.0 version. For more details, see [Migration Guide - Product](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html)
+1. Update `/ install spryker/product` to at least 6.0.0 version. For more details, see [Upgrade the Product module](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html)
 2. Update `/ install spryker/productmanagement` to 0.10.0 version or later.
 3. Generate the transfer object changes:
 

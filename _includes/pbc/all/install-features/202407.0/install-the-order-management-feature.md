@@ -1241,7 +1241,6 @@ Follow the steps below to install the Order Matrix functionality.
 
 #### Set up Order Matrix behavior.
 
-1. Set up the following plugin:
 
 | PLUGIN             | SPECIFICATION                                                               | PREREQUISITES | NAMESPACE                                      |
 |--------------------|-----------------------------------------------------------------------------|---------------|------------------------------------------------|

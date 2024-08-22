@@ -4,7 +4,7 @@
 
 This version adds support to manage CMS Block-store relation through the dedicated CMS Block Back Office.
 
-1. Install/update `spryker/cms-block` to at least version 2.0.0. For more information, see [Migration Guide - CMS Block](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html).
+1. Install/update `spryker/cms-block` to at least version 2.0.0. For more information, see [Upgrade the CmsBlock module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html).
 
 2. Upgrade `spryker/cms-block-gui` to at least version 2.0.0.
 

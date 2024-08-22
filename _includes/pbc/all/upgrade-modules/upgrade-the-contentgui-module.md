@@ -17,7 +17,7 @@ _Estimated migration time: 30 minutes_
 
 To upgrade to the new version of the module, do the following:
 
-1. Perform the steps in [Migration Guide - Content](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html).
+1. Perform the steps in [Upgrade the Content module](/docs/pbc/all/content-management-system/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html).
 2. Upgrade the `ContentGui` module to version 2.0.0:
 
 ```bash

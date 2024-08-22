@@ -1079,6 +1079,10 @@ entries:
             url: /docs/pbc/all/data-exchange/configure-data-exchange-api.html
           - title: Sending requests with Data Exchange API
             url: /docs/pbc/all/data-exchange/sending-requests-with-data-exchange-api.html
+          - title: Create post plugins for Data Exchange API
+            url: /docs/pbc/all/data-exchange/create-post-plugins-for-data-exchange-api.html
+            include_versions:
+            - "202407.0"
           - title: Spryker Middleware powered by Alumio
             url: /docs/pbc/all/data-exchange/spryker-middleware-powered-by-alumio/spryker-middleware-powered-by-alumio.html
             nested:
@@ -1430,7 +1434,10 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/main-merchant.html
                   - title: Merchant users overview
                     url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/merchant-users-overview.html
-
+              - title: Marketplace Merchant Commission feature overview
+                url: /docs/pbc/all/merchant-management/marketplace/marketplace-merchant-feature-overview/marketplace-merchant-commission-feature-overview.html
+                include_versions:
+                - "202407.0"
               - title: Merchant Opening Hours feature overview
                 url: /docs/pbc/all/merchant-management/marketplace/merchant-opening-hours-feature-overview.html
               - title: Marketplace Merchant Portal Core feature overview
@@ -1543,6 +1550,19 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-store.csv.html
                   - title: "File details: merchant_user.csv"
                     url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/import-file-details-merchant-user.csv.html
+                  - title: Import merchant commissions
+                    url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant-comission.csv.html
+                    include_versions:
+                      - "202407.0"
+                    nested:
+                      - title: "Import file details: merchant_commission_amount.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_amount.csv.html
+                      - title: "Import file details: merchant_commission_group.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_group.csv.html
+                      - title: "Import file details: merchant_commission_merchant.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html
+                      - title: "Import file details: merchant_commission_store.csv"
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -1571,6 +1591,11 @@ entries:
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/edit-merchant-relations.html
                       - title: Manage merchant relation requests
                         url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchant-relations/manage-merchant-relation-requests.html
+
+                  - title: Import merchant commissions
+                    url: /docs/pbc/all/merchant-management/marketplace/install-and-upgrade/manage-in-the-back-office/back-office-import-merchant-commissions.html
+                    include_versions:
+                      - "202407.0"
 
               - title: Manage in the Merchant Portal
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-merchant-portal/manage-merchants-in-the-merchant-portal.html
@@ -1614,6 +1639,14 @@ entries:
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-gui-tables.html
                   - title: Extend Merchant Portal dashboard
                     url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/extend-merchant-portal-dashboard.html
+                  - title: Create merchant commission calculator type plugins
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-calculator-type-plugins.html
+                    include_versions:
+                    - "202407.0"
+                  - title: Create merchant commission collector rules
+                    url: /docs/pbc/all/merchant-management/marketplace/tutorials-and-howtos/create-merchant-commission-collector-rule.html
+                    include_versions:
+                    - "202407.0"
 
               - title: Domain model and relationships
                 nested:
@@ -2613,7 +2646,21 @@ entries:
             nested:
               - title: Install Marketplace Dummy Payment
                 url: /docs/pbc/all/payment-service-provider/marketplace/install-marketplace-dummy-payment.html
-
+              - title: Stripe third-party integration
+                url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace.html
+                include_versions:
+                - "202404.0"
+                nested:
+                  - title: Overview
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace-overview.html
+                  - title: Install and configure prerequisites
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html
+                  - title: Configure merchant transfers
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html
+                  - title: Connect and configure
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html
+                  - title: Onboard to Stripe in the Merchant Portal
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html
 
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
@@ -3110,6 +3157,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
                   - title: product_measurement_unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit-type.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html
                   - title: product_packaging-unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
                   - title: product_list.csv
@@ -3256,12 +3305,10 @@ entries:
                 nested:
                   - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: Import packaging units
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
                   - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
                   - title: Make a product searchable and shown on the Storefront
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html
                   - title: Manage a big number of categories
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
                   - title: Render configurable bundle templates on the Storefront

@@ -29,8 +29,8 @@ data:import:cms-block
 | --- | --- | --- | --- | --- |
 | block_key | &check; | String |  |Block key identifier  |
 | block_name | &check; | String |Must be unique. Human-readable name. | Name of the block. |
-| template_name |  | String |  | Alphabetical identifier of the slot. It will be shown in the Back Office. |
-| template_path |  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
+| template_name | &check; | String |  | Alphabetical identifier of the slot. It will be shown in the Back Office. |
+| template_path | &check; | String |Must be a valid path to a twig template. | Path to the Twig file template. |
 | active |  | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the block will be imported as inactive.</li></ul> | Indicates if the block is active or inactive. |
 | placeholder.title.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.title.en_US* |  | String |  | Placeholder for block title, translated into the specified locale (US for our example). |
 | placeholder.description.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.description.en_US* |  | String |  | Placeholder for block description, translated into the specified locale (US for our example). |

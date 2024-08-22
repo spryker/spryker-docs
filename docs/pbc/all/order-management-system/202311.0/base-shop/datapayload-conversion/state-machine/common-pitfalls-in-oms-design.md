@@ -27,18 +27,17 @@ This document describes the most common issues with OMS design and how you can f
 
 **Issue**: If there is more than one onEnter transition event from state A, only one is executed.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-1.png)
 
 **Reason**: This behavior isn't supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain them:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-2.png)
 
 If you have the same commands, give one of them a condition:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-solution-2.png)
-
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-3.png)
 
 
 ## Defining states with names
@@ -66,7 +65,7 @@ In the OMS drawing, you see the last *read* event definition, but during the exe
 
 **Issue**: There are many states with only outgoing transitions.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-2.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-4.png)
 
 **Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it's impossible to start from another "initial" state.
 
@@ -98,10 +97,15 @@ You can change order items' states using a manual call, which lets you use the s
 
 
 **Issue:** Having more than one main process can lead to incorrect process rendering and execution:
-
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-7.png)
 
-When placing an order, this issue causes an error like the following:
+{% info_block warningBox "" %}
+
+The prior picture shows a part of the process.
+
+{% endinfo_block %}
+
+When placing an order, this issue entails an error like the following:
 
 ```php
 Exception - Unknown state: new in "/data/vendor/spryker/oms/src/Spryker/Zed/Oms/
@@ -112,7 +116,7 @@ Process/Process.php:198)
 
 **Solution:** Removing the duplicate `main` flag fixes the process rendering and processing:
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-7-fixed.png)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-processing-5.png)
 
 ## More than one transition with the same events and without a condition
 
@@ -265,6 +269,26 @@ Event does not appear as manual unless the previous command execution fails with
 Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
+
+## OnEnter from the New
+
+**Issue:** Slow order placement when launching OMS processing.
+
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1-fixed.png)
+
+**Solution:** Create one additional step, such as `processing` after `new`, and add a transition without conditions and commands.
+This ensures that OMS processing instantly stops after order creation. The actual processing of the OMS happens after the next execution of the `oms:check-condition` command.
+
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/base-shop/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.md/oms-slow-order-placement.png)
+
+**Advanced solution:** Implement the prior solution and override the `\Spryker\Zed\Checkout\Business\Workflow\CheckoutWorkflow::runStateMachine` method making it empty. Because the OMS process starts with a no-command transition, it will be automatically executed by the `oms:check-condition` command.
+
+{% info_block warningBox "" %}
+
+Adding the `reserved` flag to the `new` state isn't allowed.
+
+{% endinfo_block %}
+
 
 ## Calling OMS processing functions within a custom DB transaction
 

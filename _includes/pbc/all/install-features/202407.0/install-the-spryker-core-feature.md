@@ -843,10 +843,10 @@ Make sure the following applies:
 
 2. Set up the console commands:
 
-| COMMAND | SPECIFICATION                             | PREREQUISITES | NAMESPACE                                       |
-| --- |-------------------------------------------| --- |-------------------------------------------------|
-| StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console  |
-| StorageRedisImportRdbConsole	 | Imports an rdb file.	                     |  | Spryker\Zed\StorageRedis\Communication\Console  |
+| COMMAND | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+| StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. |  | Spryker\Zed\StorageRedis\Communication\Console |
+| StorageRedisImportRdbConsole	 | Imports an rdb file.	 |  | Spryker\Zed\StorageRedis\Communication\Console |
 
 **Pyz\Zed\Console\ConsoleDependencyProvider**
 

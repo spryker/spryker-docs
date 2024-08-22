@@ -1242,9 +1242,9 @@ Follow the steps below to install the Order Matrix functionality.
 #### Set up Order Matrix behavior.
 
 
-| PLUGIN             | SPECIFICATION                                                               | PREREQUISITES | NAMESPACE                                      |
-|--------------------|-----------------------------------------------------------------------------|---------------|------------------------------------------------|
-| OrderMatrixConsole | A console command writes whole order matrix statistics to a separate table. |               | Spryker\Zed\OrderMatrix\Communication\Console |
+| PLUGIN             | SPECIFICATION                                                        | PREREQUISITES | NAMESPACE                                      |
+|--------------------|----------------------------------------------------------------------|---------------|------------------------------------------------|
+| OrderMatrixConsole | A console command writes whole order matrix statistics to a storage. |               | Spryker\Zed\OrderMatrix\Communication\Console |
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 

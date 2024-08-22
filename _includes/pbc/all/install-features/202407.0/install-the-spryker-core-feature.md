@@ -58,7 +58,7 @@ Set up the following configuration.
 
 #### Set up Router
 
-Add the following configuration if it is needed to use router cache.
+Optional: To user router cache, add the following configuration:
 
 ```php
 <?php

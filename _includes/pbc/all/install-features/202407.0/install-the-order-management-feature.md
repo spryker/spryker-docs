@@ -623,7 +623,7 @@ You will be able to verify the invoice template configuration in a later step.
 
 {% endinfo_block %}
 
-#### Adjust the scheduler configuration:
+3. Adjust the scheduler configuration:
 
 **config/Zed/cronjobs/jenkins.php**
 
@@ -638,7 +638,7 @@ $jobs[] = [
 ];
 ```
 
-#### 3. Apply the scheduler configuration update:
+4. Apply the scheduler configuration update:
 
 ```bash
 vendor/bin/console scheduler:suspend

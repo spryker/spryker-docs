@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Product
+title: Upgrade the Product module
 description: Use the guide to update the Product module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

@@ -35,7 +35,7 @@ The following modules are related to the service:
 
 For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
 
-* [Migration Guide - Form](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
+* [Upgrade the Form module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-form-module.html)
 * [Upgrade the Validator module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-validator-module.html)
 
 ## Extending the form

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
+title: Upgrade the ProductConfigurationsPriceProductVolumesRestApi module
 description: Learn how to upgrade the ProductConfigurationsPriceProductVolumesRestApi module to a newer version.
 template: module-migration-guide-template
 last_updated: Jul 25, 2023

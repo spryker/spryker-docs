@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfiguration
+title: Upgrade the ProductConfiguration module
 description: Learn how to upgrade the ProductConfiguation module to a newer version.
 template: module-migration-guide-template
 last_updated: Jul 25, 2023

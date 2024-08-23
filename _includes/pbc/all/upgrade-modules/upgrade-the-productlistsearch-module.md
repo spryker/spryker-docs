@@ -9,7 +9,7 @@ _Estimated migration time: ~1h_
 To complete the migration, follow the steps below:
 
 1. Update `spryker/product-page-search` ^3.2.0
-2. Follow the steps from Migration guide - ProductPageSearch.
+2. Follow the steps from Upgrade the ProductPageSearch module.
 3. Update `spryker/product-list-search` to ^2.0.0
 4. Generate transfers:
 `vendor/bin/console transfer:generate`

@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productmanagement.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 related:
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
-  - title: Migration guide - Price
+  - title: Upgrade the Price module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-productmanagement-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productmanagement-module.md -->

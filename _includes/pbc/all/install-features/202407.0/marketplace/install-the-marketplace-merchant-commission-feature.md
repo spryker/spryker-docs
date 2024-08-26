@@ -33,7 +33,6 @@ Make sure the following modules have been installed:
 | SalesMerchantCommission                            | vendor/spryker/sales-merchant-commission                                |
 | SalesMerchantCommissionExtension                   | vendor/spryker/sales-merchant-commission-extension                      |
 | MerchantSalesOrderSalesMerchantCommission          | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
-| MerchantSalesOrderSalesMerchantCommissionExtension | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 | SalesPaymentMerchantSalesMerchantCommission        | vendor/spryker/sales-payment-merchant-sales-merchant-commission         |
 
 {% endinfo_block %}
@@ -553,8 +552,16 @@ mc4,AT
 
 ```csv
 merchant_commission_key,store_name
+mc1,DE
+mc1,AT
+mc2,DE
+mc2,AT
+mc3,DE
+mc3,AT
 mc4,DE
 mc4,AT
+mc5,DE
+mc5,AT
 ```
 
 | COLUMN                  | REQUIRED | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION                       |
@@ -1117,7 +1124,6 @@ Make sure the following modules have been installed:
 | SalesMerchantCommission                            | vendor/spryker/sales-merchant-commission                                |
 | SalesMerchantCommissionExtension                   | vendor/spryker/sales-merchant-commission-extension                      |
 | MerchantSalesOrderSalesMerchantCommission          | vendor/spryker/merchant-sales-order-sales-merchant-commission           |
-| MerchantSalesOrderSalesMerchantCommissionExtension | vendor/spryker/merchant-sales-order-sales-merchant-commission-extension |
 | SalesPaymentMerchantSalesMerchantCommission        | vendor/spryker/sales-payment-merchant-sales-merchant-commission         |
 
 {% endinfo_block %}
@@ -1555,6 +1561,16 @@ To import data follow the steps in the following sections.
 
 ### Import merchant commission data
 
+{% info_block warningBox "Important note:" %}
+
+Some of the commission rule expressions provided in the examples below are based on optional feature extensions, without enabling these extensions the rules will not work as expected and could lead to errors.
+
+Check the `Install related features` section for more information at the bottom of this page:
+`item-price` - the condition for the order item from the `Install the Marketplace Merchant Commission + Prices feature` extension.
+`category` - the condition for the order item from the `Install the Marketplace Merchant Commission + Category Management feature` extension.
+
+{% endinfo_block %}
+
 1. Prepare merchant commission data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_commission.csv**
@@ -1582,11 +1598,6 @@ mc5,Merchant Commission 5,,2024-01-01,2029-06-01,1,,fixed,secondary,4,,"price-mo
 | priority                      | ✓        | int       | 1                                                 | Priority of the merchant commission.            |
 | item_condition                |          | string    | item-price >= '500' AND category IS IN 'computer' | Condition for the item.                         |
 | order_condition               |          | string    | price-mode = ""GROSS_MODE""                     | Condition for the order.                        |
-
-
-
-
-
 
 
 2. Prepare the merchant commission group data according to your requirements using the demo data:
@@ -2242,7 +2253,7 @@ Make sure the configured plugins have been registered and are working as expecte
             <merchant-commission-gui>
                 <label>Merchant Commission</label>
                 <title>Merchant Commission</title>
-                <bundle>merchant_commission-gui</bundle>
+                <bundle>merchant-commission-gui</bundle>
                 <controller>list</controller>
                 <action>index</action>
             </merchant-commission-gui>
@@ -2262,3 +2273,12 @@ console navigation:build-cache
 In the Back Office, make sure the **Marketplace** > **Merchant Commissions** navigation menu item is displayed.
 
 {% endinfo_block %}
+
+
+## Install related features
+
+| FEATURE                                                                   | REQUIRED FOR THE CURRENT FEATURE | INSTALLATION GUIDE                                                                                                                                                                                                                                    |
+|---------------------------------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Install the Marketplace Merchant Commission + Category Management feature | {{page.version}}                 | [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html) |
+| Install the Marketplace Merchant Commission + Prices feature              | {{page.version}}                 | [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html)                           |
+| Install the Marketplace Merchant Commission + Product feature             | {{page.version}}                 | [Install the Marketplace Merchant Commission + Product feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-product-feature.html)                         |

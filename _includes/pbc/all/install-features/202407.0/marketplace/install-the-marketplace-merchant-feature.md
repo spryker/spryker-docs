@@ -218,6 +218,55 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ```
 
+5. Enable the order expenses for the merchant payout:
+
+**src/Pyz/Zed/SalesPaymentMerchant/SalesPaymentMerchantConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SalesPaymentMerchant;
+
+use Spryker\Shared\Shipment\ShipmentConfig;
+use Spryker\Zed\SalesPaymentMerchant\SalesPaymentMerchantConfig as SprykerSalesPaymentMerchantConfig;
+
+class SalesPaymentMerchantConfig extends SprykerSalesPaymentMerchantConfig
+{
+    /**
+     * @var bool
+     */
+    protected const ORDER_EXPENSE_INCLUDED_IN_PAYMENT_PROCESS = true;
+    
+    /**
+     * @var array<string, list<string>>
+     */
+    protected const EXCLUDED_EXPENSE_TYPES_FOR_STORE = [
+        'YOUR_STORE_NAME' => [ShipmentConfig::SHIPMENT_EXPENSE_TYPE],
+    ];
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Verify that the order expenses are included in the merchant payout process:
+
+1. Place an order with products from different merchants.
+2. Pass the merchant payout stage for the order.
+3. In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order.
+4. The order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+4. Refund for the order.
+5. In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order.
+6. The refunded order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table in case there are no merchant order items left for the refund.
+
+Verify that the order expenses with specific type are not included in the merchant payout process:
+
+1. Repeat the steps above for the store with the excluded expense types.
+2. Make sure the order expenses with the excluded expense types are not included in the merchant payout process.
+3. Make sure the order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+4. Make sure the refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
+
+{% endinfo_block %}
+
 ### 4) Add Zed translations
 
 Generate new translation cache for Zed:

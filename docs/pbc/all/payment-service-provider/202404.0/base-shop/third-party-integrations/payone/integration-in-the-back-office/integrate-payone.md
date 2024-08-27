@@ -11,44 +11,29 @@ redirect_from:
 This document describes how to integrate the Payone app into a Spryker shop.
 
 ## Prerequisites
-Before integrating Algolia, ensure the following prerequisites are met:
+Before integrating Payone, ensure the following prerequisites are met:
 - Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-
-- The Payone app requires the following Spryker modules:
-
-* `spryker/payment: ^5.18.0`
-* `spryker/sales: ^11.41.0`
-* `spryker/sales-return: ^1.5.0`
-* `spryker-shop/checkout-page: ^3.24.0`
-* `spryker-shop/payment-page: ^1.3.0`
-* `spryker/oms: ^11.21.0`
-* `spryker/sales-payment: ^1.5.0`
-
-Make sure that your installation meets these requirements.
+- The Payone ACP app requires the specific Spryker modules installed, to check the list of required modules and their versions, go to **Apps**>**Payone** in the Back Office (see Requirements > Spryker module list section).
+Additionally, you can install the following optional modules:  
+  * `spryker/sales-payment-detail: ^1.2.0` (to show payment details in the Back Office Order Details page)
 
 
 ## Integrate Payone
 
 To integrate Payone, follow these steps.
 
+{% info_block infoBox "Info" %}
+
+Your project codebase can already have some of the changes described in this guide. Make sure to adjust the code snippets according to your project codebase.
+
+{% endinfo_block %}
+
+
 ### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
     
 ```php
-use Generated\Shared\Transfer\AddPaymentMethodTransfer;
-use Generated\Shared\Transfer\CancelPaymentTransfer;
-use Generated\Shared\Transfer\CapturePaymentTransfer;
-use Generated\Shared\Transfer\DeletePaymentMethodTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizationFailedTransfer;
-use Generated\Shared\Transfer\PaymentAuthorizedTransfer;
-use Generated\Shared\Transfer\PaymentCanceledTransfer;
-use Generated\Shared\Transfer\PaymentCancellationFailedTransfer;
-use Generated\Shared\Transfer\PaymentCapturedTransfer;
-use Generated\Shared\Transfer\PaymentCaptureFailedTransfer;
-use Generated\Shared\Transfer\PaymentRefundedTransfer;
-use Generated\Shared\Transfer\PaymentRefundFailedTransfer;
-use Generated\Shared\Transfer\RefundPaymentTransfer;
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\OauthClient\OauthClientConstants;
 use Spryker\Shared\Oms\OmsConstants;
@@ -59,6 +44,20 @@ use Spryker\Zed\Payment\PaymentConfig;
 
 //...
 $config[PaymentConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFIER') ?: '';
+
+$config[OmsConstants::PROCESS_LOCATION] = [
+    //...
+    OmsConfig::DEFAULT_PROCESS_LOCATION,
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
+];
+$config[OmsConstants::ACTIVE_PROCESSES] = [
+    //...
+    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+];
+$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
+    //...
+    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+];
 
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
@@ -75,6 +74,8 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     PaymentRefundFailedTransfer::class => 'payment-events',
     PaymentCanceledTransfer::class => 'payment-events',
     PaymentCancellationFailedTransfer::class => 'payment-events',
+    PaymentCreatedTransfer::class => 'payment-events',
+    PaymentUpdatedTransfer::class => 'payment-events',
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -88,27 +89,19 @@ $config[MessageBrokerConstants::CHANNEL_TO_SENDER_TRANSPORT_MAP] = [
     'payment-commands' => MessageBrokerAwsConfig::HTTP_CHANNEL_TRANSPORT,
 ];
 
-$config[OmsConstants::PROCESS_LOCATION] = [
-    //...
-    OmsConfig::DEFAULT_PROCESS_LOCATION,
-    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
-];
-$config[OmsConstants::ACTIVE_PROCESSES] = [
-    //...
-    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
-];
-$config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
-    //...
-    PaymentConfig::PAYMENT_FOREIGN_PROVIDER => 'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
-];
-
 // ----------------------------------------------------------------------------
 // ------------------------------ OAUTH ---------------------------------------
 // ----------------------------------------------------------------------------
 //...
-$config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::PROVIDER_NAME;
+$config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME]
+    = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_ACP]
+    = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_MESSAGE_BROKER]
+    = $config[OauthClientConstants::OAUTH_PROVIDER_NAME_FOR_PAYMENT_AUTHORIZE]
+    = OauthAuth0Config::PROVIDER_NAME;
 $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_PAYMENT_AUTHORIZE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
-$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
+$config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
+    = $config[TaxAppConstants::OAUTH_OPTION_AUDIENCE]
+    = $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 
 ### 2. Configure dependencies in `MessageBroker`
@@ -121,6 +114,15 @@ namespace Pyz\Zed\MessageBroker;
 use Spryker\Zed\MessageBroker\MessageBrokerDependencyProvider as SprykerMessageBrokerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentMethodMessageHandlerPlugin;
 use Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin;
+use Spryker\Zed\SalesPaymentDetail\Communication\Plugin\MessageBroker\PaymentCreatedMessageHandlerPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\CorrelationIdMessageAttributeProviderPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TenantActorMessageAttributeProviderPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TimestampMessageAttributeProviderPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\TransactionIdMessageAttributeProviderPlugin;
+use Spryker\Zed\MessageBroker\Communication\Plugin\MessageBroker\ValidationMiddlewarePlugin;
+use Spryker\Zed\OauthClient\Communication\Plugin\MessageBroker\AccessTokenMessageAttributeProviderPlugin;
+use Spryker\Zed\Session\Communication\Plugin\MessageBroker\SessionTrackingIdMessageAttributeProviderPlugin;
+use Spryker\Zed\Store\Communication\Plugin\MessageBroker\CurrentStoreReferenceMessageAttributeProviderPlugin;
 
 class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProvider
 {
@@ -133,12 +135,40 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             //...
             new PaymentOperationsMessageHandlerPlugin();
             new PaymentMethodMessageHandlerPlugin(),
+            new PaymentCreatedMessageHandlerPlugin(), // [Optional] This plugin is handling the `PaymentCreated`/`PaymentUpdated` messages sent from Payone ACP app.
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageAttributeProviderPluginInterface>
+     */
+    public function getMessageAttributeProviderPlugins(): array
+    {
+        return [
+            new CorrelationIdMessageAttributeProviderPlugin(),
+            new TimestampMessageAttributeProviderPlugin(),
+            new AccessTokenMessageAttributeProviderPlugin(),
+            new TransactionIdMessageAttributeProviderPlugin(),
+            new SessionTrackingIdMessageAttributeProviderPlugin(),
+            new TenantActorMessageAttributeProviderPlugin(),
+            new CurrentStoreReferenceMessageAttributeProviderPlugin(),
+        ];
+    }
+    
+    
+    /**
+     * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MiddlewarePluginInterface>
+     */
+    public function getMiddlewarePlugins(): array
+    {
+        return [
+            new ValidationMiddlewarePlugin(),
         ];
     }
 }
 ```
 
-### 3. Configure channels in the `MessageBroker` configuration
+#### 2.1 Configure channels in the `MessageBroker` configuration
 
 Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
 
@@ -162,6 +192,42 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
     }
 
     //...
+}
+```
+
+### 3. Configure `Payment` module
+
+Add the following code to `src/Pyz/Zed/Payment/PaymentConfig.php`:
+
+```php
+namespace Pyz\Zed\Payment;
+
+use Generated\Shared\Transfer\ExpenseTransfer;
+use Generated\Shared\Transfer\ItemTransfer;
+use Generated\Shared\Transfer\QuoteTransfer;
+use Generated\Shared\Transfer\TaxTotalTransfer;
+use Generated\Shared\Transfer\TotalsTransfer;
+use Spryker\Zed\Payment\PaymentConfig as SprykerPaymentConfig;
+
+class PaymentConfig extends SprykerPaymentConfig
+{
+    public function getQuoteFieldsForForeignPayment(): array
+    {
+        return array_merge_recursive(parent::getQuoteFieldsForForeignPayment(), [
+            QuoteTransfer::TOTALS => [
+                TotalsTransfer::DISCOUNT_TOTAL => 'discountTotal',
+                TotalsTransfer::TAX_TOTAL => [
+                    TaxTotalTransfer::AMOUNT => 'taxTotal',
+                ],
+            ],
+            QuoteTransfer::ITEMS => [
+                ItemTransfer::TAX_RATE => 'taxRate',
+            ],
+            QuoteTransfer::EXPENSES => [
+                ExpenseTransfer::TAX_RATE => 'taxRate',
+            ],
+        ]);
+    }
 }
 ```
 
@@ -190,14 +256,6 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
         ];
     }
 }
-```
-
-2. Eliminate the use of the following plugins (if any):
-
-```php
-SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutDoSaveOrderPlugin;
-SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPostSavePlugin;
-SprykerEco\Zed\Payone\Communication\Plugin\Checkout\PayoneCheckoutPreConditionPlugin;
 ```
 
 ### 5. Configure plugins in `CheckoutPage`
@@ -255,102 +313,28 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 Adjust the `\Pyz\Zed\Oms\OmsDependencyProvider` file as follows:
 
 ```php
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\RefundCommandPlugin;
+
+
 protected function extendCommandPlugins(Container $container): Container
 {
     $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
         //...
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
-        $commandCollection->add(new Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
+        // ----- Payone commands -----
+        $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
+        $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
+        $commandCollection->add(new RefundCommandPlugin(), 'Payment/Refund/Confirm');
+        $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
     });
 }
 ```
 
-### 8. Optional: Configure your payment OMS
+### 8. Configure your payment OMS
 
-The complete default payment OMS configuration is available at `vendor/spryker/sales-payment/config/Zed/Oms/ForeignPaymentStateMachine01.xml`. Optionally, you can configure your own payment `config/Zed/oms/{your_payment_oms}.xml`as in the following example. This example demonstrates how to configure the order state machine transition from `ready for dispatch` to `payment capture pending`:
-
-```xml
-<?xml version="1.0"?>
-<statemachine
-    xmlns="spryker:oms-01"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
->
-
-    <process name="SomePaymentProcess" main="true">
-
-        <!-- other configurations -->
-
-        <states>
-
-            <!-- other states -->
-
-          <state name="payment capture pending" display="oms.state.in-progress"/>
-
-            <!-- other states -->
-
-        </states>
-
-        <transitions>
-
-            <!-- other transitions -->
-
-            <transition happy="true">
-              <source>ready for dispatch</source>
-              <target>payment capture pending</target>
-              <event>capture payment</event>
-            </transition>
-
-            <!-- other transitions -->
-
-        </transitions>
-
-        <events>
-
-            <!-- other events -->
-
-            <event name="capture payment" onEnter="true" command="Payment/Capture"/>
-
-            <!-- other events -->
-
-        </events>
-
-    </process>
-
-</statemachine>
-```
-
-[Read more](/docs/acp/user/acp-payment-oms-guides.html) about ACP payment methods integration with your project OMS configuration.
-
-### 9. Accommodate data and presentation change
-
-The newly added glossary keys require a few additional actions. Do the following:
-
-1. Add the following glossary keys to your glossary data import file:
-
-```csv
-...
-payment_foreign.thank_you,Danke,de_DE
-payment_foreign.thank_you,Thank you,en_US
-payment_foreign.go_to_my_account,Gehe zum "Benutzerkonto",de_DE
-payment_foreign.go_to_my_account,Go to "My Account",en_US
-payment_foreign.success.order.placement.message,Deine Bestellung ist erfolgreich bei uns eingegangen. Die Bestellbestätigung wurde soeben per E-Mail versendet. In deinem Benutzerkonto kannst deine Bestellung überprüfen und nachverfolgen.,de_DE
-payment_foreign.success.order.placement.message,Your order has been paid successfully. You will receive your order confirmation email in a few minutes. You can check and track your order in your account.,en_US
-payment.cancellation.title,Bezahlvorgang abgebrochen,de_DE
-payment.cancellation.title,Payment cancellation,en_US
-payment.cancellation.message,Du hast den Bezahlvorgang abgebrochen.,de_DE
-payment.cancellation.message,You have cancelled your payment.,en_US
-oms.state.reservation-cancelled,Payment cancelled,en_US
-oms.state.reservation-cancelled,Payment cancelled,de_DE
-oms.state.reservation-cancellation-pending,Payment cancellation in progress,en_US
-oms.state.reservation-cancellation-pending,Payment cancellation in progress,de_DE
-```
-2. Run the data import for the glossary:
-
-```bash
-console data:import glossary
-```
+Usually a project has custom OMS configurations. To integrate Payone to your OMS follow this [project guide](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
 
 ### 10. Optional: Introduce template changes in `CheckoutPage`
 
@@ -372,7 +356,7 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
 {% endraw %} 
 ```
 
-2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated without using the prefix:
+2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated according to your needs:
     
 ```twig
 {% raw %}
@@ -396,10 +380,6 @@ Then run the data import for the glossary:
 ```bash
 console data:import glossary
 ```
-
-### 11. Receive ACP messages
-
-Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/acp/user/receive-acp-messages.html) for details on how to do that.
 
 ## Next steps
 

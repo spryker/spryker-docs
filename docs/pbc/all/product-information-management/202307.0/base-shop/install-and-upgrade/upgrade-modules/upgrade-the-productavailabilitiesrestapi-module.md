@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductAvailabilitiesRestApi
+title: Upgrade the ProductAvailabilitiesRestApi module
 description: Use the guide to migrate to a new version of the ProductAvailabilitiesRestApi module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

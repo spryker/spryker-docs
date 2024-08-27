@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductBundle
+title: Upgrade the ProductBundle module
 description: Use the guide to migrate to a new version of the ProductBundle module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -32,9 +32,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
   - /module_migration_guides/mg-product-bundle.htm
 related:
-  - title: Migration guide - Price
+  - title: Upgrade the Price module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
 ---
 

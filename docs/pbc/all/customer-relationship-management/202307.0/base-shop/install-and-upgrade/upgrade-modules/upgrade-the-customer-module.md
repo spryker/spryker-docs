@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Customer
+title: Upgrade the Customer module
 description: Use the guide to update versions to the newer ones of the Customer module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

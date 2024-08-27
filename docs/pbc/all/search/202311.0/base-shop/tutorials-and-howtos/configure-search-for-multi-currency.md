@@ -36,9 +36,9 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-search-for-multi-currency.html
 related:
-  - title: Migration Guide - Multi-Currency
+  - title: Upgrade the Multi-Currency module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
-  - title: Migration Guide - Price
+  - title: Upgrade the Price module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Configure Elasticsearch
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html

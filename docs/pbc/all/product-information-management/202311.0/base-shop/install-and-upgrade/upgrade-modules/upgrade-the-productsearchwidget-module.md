@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductSearchWidget
+title: Upgrade the ProductSearchWidget module
 description: Use the guide to learn how to update the ProductSearchWidget module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

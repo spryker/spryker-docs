@@ -168,7 +168,7 @@ ALTER TABLE "spy_availability" ADD CONSTRAINT "spy_availability-fk_spy_availabil
 
 As this involves more than the Availability module, to start using it some configuration needed per module basis.
 
-**Oms version >= 4** is required. See the [Migration Guide - OMS](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
+**Oms version >= 4** is required. See the [Upgrade the OMS module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) to version 4 step by step guide how to migrate OMS to have the new Availability module integrated.
 
 **Cart > 2.1** and **AvailabilityCartConnector > 2.0**. To have cart availability per check, add a new plugin `Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` to the Cart project dependency provider. `Pyz\Zed\Cart\CartDependencyProvider::getCartPreCheckPlugins()` which is a core implementation of the cart availability check.
 A new availability collector is required. Take it from demoshop, `Pyz\Zed\Collector\Business\Storage\AvailabilityCollector`, this has to be added to the `Pyz\Zed\Collector\CollectorDependencyProvider` storage plugin stack.

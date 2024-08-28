@@ -236,8 +236,8 @@ Set up the ACL configuration according to your requirements and restrict access 
 
 ## Backend GATEWAY protection
 
-Gateway is used for communication from the storefront to the backend, and in most cases, it's not expecting any communication from the internet. To protect this endpoint you need extend `deploy.{project}-{env}.yml` file in the next way:
-1. New backend auths:
+Gateway is used for communication between the frontend and the backend. In most cases, it doesn't expect any communication from the internet. To protect this endpoint, you need to extend `deploy.{project}-{env}.yml` as follows:
+1. Add backend auths:
 ```yaml
 x-backend-auth: &backend-auth
   <<: *real-ip
@@ -259,7 +259,7 @@ backgw:
             primal: true
 ```
 
-3. Deploy environment and check protection (direct access for domain is finished with 403 error, but all ZED requests is working).
+To verify the configuration, redeploy the environment and make sure that accessing the domain returns a 403 error, but ZED requests are going through.
 
 ## Summary
 

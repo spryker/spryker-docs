@@ -14,7 +14,7 @@ Since the staging environment isn't designed to be as performant as the producti
 
 If you want to execute a full load test on a production-like dataset and traffic, use a production environment. If you production isn't live yet, you can use directly in that environment. Otherwise, you can order an additional environment by contacting you Account Executive. Testing with real or at least mock data provides significantly better and more reliable results than testing with a small data set. To conduct effective performance tests, we recommend the same data that you're going to use use in the live production environment.
 
-If you are unable to use real data for your load tests, you can use the [test data](https://drive.google.com/drive/folders/1QvwDp2wGz6C4aqGI1O9nK7G9Q_U8UUS-?usp=sharing) for an expanding amount of use cases. Additional support ins't provided for this data.
+If you are unable to use real data for your load tests, you can use the [test data](https://spryker.s3.eu-central-1.amazonaws.com/docs/ca/dev/performance-testing-in-staging-enivronments.md/performance-testing-data.zip) for an expanding amount of use cases. Additional support ins't provided for this data.
 
 Based on our experience, the [Load testing tool](https://github.com/spryker-sdk/load-testing) can greatly assist you in conducting more effective load tests.
 

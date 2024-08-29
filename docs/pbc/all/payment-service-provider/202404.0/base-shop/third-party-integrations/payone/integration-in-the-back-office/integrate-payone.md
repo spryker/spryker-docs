@@ -11,28 +11,27 @@ redirect_from:
 This document describes how to integrate the Payone app into a Spryker shop.
 
 ## Prerequisites
-Before integrating Payone, ensure the following prerequisites are met:
-- Make sure your project is ACP-enabled. See [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html) for details.
-- The Payone ACP app requires the specific Spryker modules installed, to check the list of required modules and their versions, go to **Apps**>**Payone** in the Back Office (see Requirements > Spryker module list section).
-Additionally, you can install the following optional modules:  
-  * `spryker/sales-payment-detail: ^1.2.0` (to show payment details in the Back Office Order Details page)
+
+- Make sure your project is ACP-enabled. For details, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
+- The Payone ACP app requires specific Spryker modules. To check the list of required modules and their versions, in the Back Office, go to **Apps**>**Payone** and check Requirements > Spryker module list section.
+- Optional: To show payment details in the Back Office Order Details page, you can install the `spryker/sales-payment-detail: ^1.2.0` module.
 
 
 ## Integrate Payone
 
-To integrate Payone, follow these steps.
+{% info_block infoBox "" %}
 
-{% info_block infoBox "Info" %}
-
-Your project codebase can already have some of the changes described in this guide. Make sure to adjust the code snippets according to your project codebase.
+Your project codebase can already have some of the changes described in this guide. Adjust the code according to your project codebase.
 
 {% endinfo_block %}
 
+To integrate Payone, follow the steps:
 
-### 1. Configure shared configs
+1. Configure shared configs:
 
-Add the following config to `config/Shared/config_default.php`:
-    
+<details>
+  <summary>config/Shared/config_default.php</summary>
+
 ```php
 use Spryker\Shared\MessageBroker\MessageBrokerConstants;
 use Spryker\Shared\OauthClient\OauthClientConstants;
@@ -104,9 +103,12 @@ $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP]
     = $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_PAYMENT_AUTHORIZE] = 'aop-app';
 ```
 
-### 2. Configure dependencies in `MessageBroker`
+</details>
 
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php`:
+2. Configure dependencies in `MessageBroker`:
+
+<details>
+  <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Zed\MessageBroker;
@@ -138,7 +140,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new PaymentCreatedMessageHandlerPlugin(), // [Optional] This plugin is handling the `PaymentCreated`/`PaymentUpdated` messages sent from Payone ACP app.
         ];
     }
-    
+
     /**
      * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MessageAttributeProviderPluginInterface>
      */
@@ -154,8 +156,8 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new CurrentStoreReferenceMessageAttributeProviderPlugin(),
         ];
     }
-    
-    
+
+
     /**
      * @return array<\Spryker\Zed\MessageBrokerExtension\Dependency\Plugin\MiddlewarePluginInterface>
      */
@@ -168,10 +170,11 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-#### 2.1 Configure channels in the `MessageBroker` configuration
+</details>
 
-Add the following code to `src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php`:
+3. Configure channels in the `MessageBroker` configuration:
 
+**src/Pyz/Zed/MessageBroker/MessageBrokerConfig.php**
 ```php
 namespace Pyz\Zed\MessageBroker;
 
@@ -195,10 +198,9 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 }
 ```
 
-### 3. Configure `Payment` module
+4. Configure the `Payment` module:
 
-Add the following code to `src/Pyz/Zed/Payment/PaymentConfig.php`:
-
+**src/Pyz/Zed/Payment/PaymentConfig.php**
 ```php
 namespace Pyz\Zed\Payment;
 
@@ -231,10 +233,9 @@ class PaymentConfig extends SprykerPaymentConfig
 }
 ```
 
-### 4. Configure plugins in `Checkout`
+5. Configure plugins in `Checkout`:
 
-1. Add the following plugin to `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`:
-
+**src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php**
 ```php
 namespace Pyz\Zed\Checkout;
 
@@ -258,10 +259,9 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-### 5. Configure plugins in `CheckoutPage`
+6. Configure plugins in `CheckoutPage`:
 
-Add the following plugin to `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`:
-
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
 ```php
 namespace Pyz\Yves\CheckoutPage;
 
@@ -283,10 +283,9 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 }
 ```
 
-### 6. Configure plugins in `Router`
+7. Configure plugins in `Router`:
 
-Add the following plugin to `src/Pyz/Yves/Router/RouterDependencyProvider.php`:
-
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
 ```php
 namespace Pyz\Yves\Router;
 
@@ -308,10 +307,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 }
 ```
 
-### 7. Configure plugins in `Oms`
+8. Configure plugins in `Oms`:
 
-Adjust the `\Pyz\Zed\Oms\OmsDependencyProvider` file as follows:
-
+**\Pyz\Zed\Oms\OmsDependencyProvider**
 ```php
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
 use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
@@ -332,15 +330,13 @@ protected function extendCommandPlugins(Container $container): Container
 }
 ```
 
-### 8. Configure your payment OMS
+9. [Integrate Payone into OMS](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
 
-Usually a project has custom OMS configurations. To integrate Payone to your OMS follow this [project guide](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
+### Optional: Introduce template changes in `CheckoutPage`
 
-### 10. Optional: Introduce template changes in `CheckoutPage`
+If you rewrote `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
-If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
-
-1. Make sure that a form molecule uses the following code for the payment selection choices:
+1. Make sure that the form molecule uses the following code for the payment selection choices:
 
 ```twig
 {% raw %}
@@ -353,33 +349,35 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
         }
     {% endembed %}    
 {% endfor %}           
-{% endraw %} 
+{% endraw %}
 ```
 
 2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated according to your needs:
-    
+
 ```twig
 {% raw %}
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     <h5>{{ name | trans }}</h5>
 {% endfor %}
-{% endraw %} 
+{% endraw %}
 ```
 
-3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. 
-For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
+3. Optional: Add the glossary keys for all the new external payment providers and methods to your glossary data import file.
 
-```csv
-...
-Payone,Payone Payments,en_US
-Credit Card,Credit Card (Payone),en_US
-```
-Then run the data import for the glossary:
-    
-```bash
-console data:import glossary
-```
+  1. For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
+
+  ```csv
+  ...
+  Payone,Payone Payments,en_US
+  Credit Card,Credit Card (Payone),en_US
+  ```
+
+  2. Import the glossary:
+
+  ```bash
+  console data:import glossary
+  ```
 
 ## Next steps
 

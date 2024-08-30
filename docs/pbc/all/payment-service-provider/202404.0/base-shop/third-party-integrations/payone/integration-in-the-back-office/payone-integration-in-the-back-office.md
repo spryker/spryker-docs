@@ -1,8 +1,8 @@
 ---
-title: "Payone: Integration in the Back Office"
-description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
+title: "Payone ACP App"
+description: With Payone, your customers can pay with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 template: howto-guide-template
-last_updated: Aug 01, 2024
+last_updated: Aug 30, 2024
 redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html
@@ -10,17 +10,24 @@ redirect_from:
    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
 ---
 
-The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card and PayPal.
+The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 
-{% info_block infoBox "Info" %}
-
-We support only credit card and PayPal payment methods for Payone. If you want to use either or both of these payment methods, you must have them in your Payone contract. However, even if your contract with Payone includes other payment methods, you can not use them, as we do not support them yet.
-
-{% endinfo_block %}
+The Payone integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
 
 You can have multiple accounts with Payone. For example, you can have different Payone credentials per store, which we support as well.
 
-## Payment method modes
+## Supported business models & Payment methods
+The Payone App supports only the B2B and B2C business models.
+
+The following payment methods are currently supported by the Payone App:
+1. Credit Card
+2. Paypal Standard
+3. Klarna- Invoice (Pay later)
+4. Klarna- Installments (Slice it)
+5. Klarna- Direct Debit (Pay now)
+6. Prepayment
+
+## Payment methods explained
 
 For the *Payone Credit Card* payment method, we support the following modes:
 

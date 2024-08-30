@@ -385,4 +385,4 @@ console data:import glossary
 
 ## Next steps
 
-[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html) for your store.
+[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html) for your store.

@@ -105,7 +105,6 @@ In January 2024, we have added and updated the following pages:
 - [Integrate the ACP connector module for tax calculation](/docs/pbc/all/tax-management/202311.0/base-shop/third-party-integrations/vertex/install-vertex/integrate-the-acp-connector-module-for-tax-calculation.html).
 - [Integrate Algolia](/docs/pbc/all/search/202311.0/base-shop/third-party-integrations/algolia/integrate-algolia.html).
 - [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/202311.0/third-party-integrations/integrate-bazaarvoice.html).
-- [Integrate Payone](/docs/pbc/all/payment-service-provider/202311.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html).
 - [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/202404.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 - [Install the ACL feature](/docs/pbc/all/user-management/202404.0/base-shop/install-and-upgrade/install-the-acl-feature.html).
 - [Install the Merchant Portal Agent Assist feature](/docs/pbc/all/user-management/202404.0/marketplace/install-and-upgrade/install-the-merchant-portal-agent-assist-feature.html).

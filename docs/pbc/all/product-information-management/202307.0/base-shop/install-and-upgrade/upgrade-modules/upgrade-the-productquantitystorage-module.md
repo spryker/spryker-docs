@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductQuantityStorage
+title: Upgrade the ProductQuantityStorage module
 description: Use the guide to learn how to update the ProductQuantityStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

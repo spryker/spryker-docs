@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductQuantity
+title: Upgrade the ProductQuantity module
 description: Use the guide to learn how to update the ProductQuantity module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

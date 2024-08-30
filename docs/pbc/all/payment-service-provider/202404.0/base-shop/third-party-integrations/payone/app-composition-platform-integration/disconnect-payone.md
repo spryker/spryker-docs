@@ -6,6 +6,7 @@ last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/disconnect-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
+  - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
 ---
 
 Disconnecting Payone from your store removes its payment methods from the store configuration. However, you can disconnect Payone only if there are no open orders that still use the Payone payment methods.

@@ -23,7 +23,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html
   - /docs/pbc/all/order-management-system/202307.0/base-shop/install-and-update/upgrade-modules/upgrade-the-manualorderentrygui-module.html
 related:
-  - title: Migration guide - Shipment
+  - title: Upgrade the Shipment module
     link: docs/pbc/all/carrier-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-shipment-module.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-manualorderentrygui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-manualorderentrygui-module.md -->

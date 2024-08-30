@@ -23,7 +23,7 @@ You can find the list of all the modules related to the service below:
 
 ### Installation
 
-For information on the installation, see [Migration Guide - Router](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html).
+For information on the installation, see [Upgrade the Router module](/docs/dg/dev/upgrade-and-migrate/silex-replacement/upgrade-modules/upgrade-the-router-module.html).
 
 ### RouterDependencyProvider
 

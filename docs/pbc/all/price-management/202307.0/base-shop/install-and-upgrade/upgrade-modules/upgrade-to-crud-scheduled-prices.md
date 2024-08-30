@@ -60,5 +60,5 @@ You can find the affected modules of the CRUD scheduled prices update in the fol
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200) |
-| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html) |
+| `spryker/price-product-schedule	` | 	2.0.0 | [Upgrade the PriceProductSchedule module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/price-product-schedule-gui` | 	2.0.0 | [Upgrade the PriceProductScheduleGui module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html) |

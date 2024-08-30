@@ -4,7 +4,7 @@
 
 `OauthCompanyUser` module version 2.0.0 brings two major changes:
 
-* GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Migration Guide - CompanyUserAuthRestApi](/docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
+* GLUE layer has been moved from Glue `OauthCompanyUser` to `CompanyUserAuthRestApi` (see [Upgrade the CompanyUserAuthRestApi module](/docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html) for more details).
 * `OauthCompanyUserConfig::OAUTH_CLIENT_IDENTIFIER`, `OauthCompanyUserConfig::OAUTH_CLIENT_SECRET` constants have been removed.
 
 BC Breaking changes:

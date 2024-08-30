@@ -10,7 +10,7 @@ redirect_from:
 related:
   - title: Queue pool
     link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-  - title: Migration Guide - RabbitMQ
+  - title: Upgrade the RabbitMQ module
     link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
 ---
 

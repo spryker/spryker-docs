@@ -21,7 +21,7 @@ This document describes how to integrate Payone using the Payone app.
 
 {% info_block infoBox "" %}
 
-Your project codebase can already have some of the changes described in this guide. Adjust the code according to your project codebase.
+Your project codebase can already have some of the changes described in this guide. Adjust the code according to your codebase.
 
 {% endinfo_block %}
 
@@ -352,7 +352,7 @@ If you rewrote `@CheckoutPage/views/payment/payment.twig` on the project level, 
 {% endraw %}
 ```
 
-2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated according to your needs:
+2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, configure names to be translated according to your glossary:
 
 ```twig
 {% raw %}
@@ -363,21 +363,19 @@ If you rewrote `@CheckoutPage/views/payment/payment.twig` on the project level, 
 {% endraw %}
 ```
 
-3. Optional: Add the glossary keys for all the new external payment providers and methods to your glossary data import file.
+3. Optional: Add the glossary keys for all the new external payment providers and methods to your glossary data import file. Example:
 
-  1. For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
+```csv
+...
+Payone,Payone Payments,en_US
+Credit Card,Credit Card (Payone),en_US
+```
 
-  ```csv
-  ...
-  Payone,Payone Payments,en_US
-  Credit Card,Credit Card (Payone),en_US
-  ```
+4. Import the glossary:
 
-  2. Import the glossary:
-
-  ```bash
-  console data:import glossary
-  ```
+```bash
+console data:import glossary
+```
 
 ## Next steps
 

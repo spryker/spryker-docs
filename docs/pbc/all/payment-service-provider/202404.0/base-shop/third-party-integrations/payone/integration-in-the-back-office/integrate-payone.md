@@ -14,7 +14,6 @@ This document describes how to integrate Payone using the Payone app.
 
 - Fulfill [App Composition Platform prerequisites](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
 - Install the modules for Payone. To check the list of required modules and their versions, in the Back Office, go to **Apps**>**Payone**. The list of modules is displayed in **Requirements** > **Spryker module list** section.
-- Optional: To show payment details in the Back Office Order Details page, install the `spryker/sales-payment-detail: ^1.2.0` module.
 
 
 ## Integrate Payone
@@ -332,7 +331,7 @@ protected function extendCommandPlugins(Container $container): Container
 
 9. [Integrate Payone into OMS](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
 
-### Optional: Introduce template changes in `CheckoutPage`
+### Introduce template changes in `CheckoutPage`
 
 If you rewrote `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
@@ -376,6 +375,13 @@ Credit Card,Credit Card (Payone),en_US
 ```bash
 console data:import glossary
 ```
+
+## Optional: Show payment details in the Back Office Order Details page
+
+
+1. Install the `spryker/sales-payment-detail: ^1.2.0` module.
+2. [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html).
+
 
 ## Next steps
 

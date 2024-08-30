@@ -8,13 +8,13 @@ redirect_from:
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
 ---
 
-This document describes how to integrate the Payone app into a Spryker shop.
+This document describes how to integrate Payone using the Payone app.
 
 ## Prerequisites
 
-- Make sure your project is ACP-enabled. For details, see [App Composition Platform installation](/docs/acp/user/app-composition-platform-installation.html).
-- The Payone ACP app requires specific Spryker modules. To check the list of required modules and their versions, in the Back Office, go to **Apps**>**Payone** and check Requirements > Spryker module list section.
-- Optional: To show payment details in the Back Office Order Details page, you can install the `spryker/sales-payment-detail: ^1.2.0` module.
+- Fulfill [App Composition Platform prerequisites](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
+- Install the modules for Payone. To check the list of required modules and their versions, in the Back Office, go to **Apps**>**Payone**. The list of modules is displayed in **Requirements** > **Spryker module list** section.
+- Optional: To show payment details in the Back Office Order Details page, install the `spryker/sales-payment-detail: ^1.2.0` module.
 
 
 ## Integrate Payone

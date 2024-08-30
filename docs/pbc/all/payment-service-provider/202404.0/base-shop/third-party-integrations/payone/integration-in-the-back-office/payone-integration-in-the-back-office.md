@@ -10,14 +10,15 @@ redirect_from:
    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
 ---
 
-The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
+[Payone](https://www.payone.com/DE-en?ref=spryker-documentation) lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 
 The Payone integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
 
-You can have multiple accounts with Payone. For example, you can have different Payone credentials per store, which we support as well.
+You can have multiple accounts with Payone. For example, you can have different Payone credentials per store.
 
-## Supported business models & Payment methods
-The Payone App supports only the B2B and B2C business models.
+## Supported business models and payment methods
+
+The Payone App supports the B2B and B2C business models.
 
 The following payment methods are currently supported by the Payone App:
 1. Credit Card
@@ -29,7 +30,7 @@ The following payment methods are currently supported by the Payone App:
 
 ## Payment methods explained
 
-For the *Payone Credit Card* payment method, we support the following modes:
+For the *Payone Credit Card* payment method, the following modes are supported:
 
 - *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it is shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.

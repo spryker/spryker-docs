@@ -6,6 +6,7 @@ last_updated: Jan 09, 2024
 redirect_from:
   - /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
+  - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
 ---
 
 This document describes how to integrate the Payone app into a Spryker shop.
@@ -34,7 +35,7 @@ To integrate Payone, follow these steps.
 ### 1. Configure shared configs
 
 Add the following config to `config/Shared/config_default.php`:
-    
+
 ```php
 use Generated\Shared\Transfer\AddPaymentMethodTransfer;
 use Generated\Shared\Transfer\CancelPaymentTransfer;
@@ -369,21 +370,21 @@ If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project 
         }
     {% endembed %}    
 {% endfor %}           
-{% endraw %} 
+{% endraw %}
 ```
 
 2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, make sure if the names of the payment providers are translated without using the prefix:
-    
+
 ```twig
 {% raw %}
 {% for name, choices in data.form.paymentSelection.vars.choices %}
     ...
     <h5>{{ name | trans }}</h5>
 {% endfor %}
-{% endraw %} 
+{% endraw %}
 ```
 
-3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file. 
+3. Optional: Add the glossary keys for all the new (external) payment providers and methods to your glossary data import file.
 For example, there is a new external payment with the provider name Payone, found in the `spy_payment_method` table under the `group_name` column,  and the payment method name Credit Card, found in the `spy_payment_method` table under the `label_name` column. For all of them, you can add translations to your glossary data import file like this:
 
 ```csv
@@ -392,7 +393,7 @@ Payone,Payone Payments,en_US
 Credit Card,Credit Card (Payone),en_US
 ```
 Then run the data import for the glossary:
-    
+
 ```bash
 console data:import glossary
 ```
@@ -403,4 +404,4 @@ Now, you can start receiving ACP messages in SCOS. See [Receive messages](/docs/
 
 ## Next steps
 
-[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html) for your store.
+[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html) for your store.

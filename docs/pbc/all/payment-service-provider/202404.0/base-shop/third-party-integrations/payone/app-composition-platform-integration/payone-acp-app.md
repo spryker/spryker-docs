@@ -1,5 +1,5 @@
 ---
-title: "Payone ACP App"
+title: Payone ACP app
 description: With Payone, your customers can pay with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 template: howto-guide-template
 last_updated: Aug 30, 2024
@@ -8,9 +8,10 @@ redirect_from:
    - /docs/acp/user/apps/payone.html
    - /docs/pbc/all/payment-service-providers/payone/payone.html
    - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+   - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
 ---
 
-[Payone](https://www.payone.com/DE-en?ref=spryker-documentation) lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
+[Payone](https://www.payone.com/DE-en?ref=spryker-documentation) lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment, and Klarna.
 
 The Payone integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
 
@@ -18,15 +19,15 @@ You can have multiple accounts with Payone. For example, you can have different 
 
 ## Supported business models and payment methods
 
-The Payone App supports the B2B and B2C business models.
+The Payone App supports the B2B and B2C business models and the following payment methods:
 
-The following payment methods are currently supported by the Payone App:
-1. Credit Card
-2. Paypal Standard
-3. Klarna- Invoice (Pay later)
-4. Klarna- Installments (Slice it)
-5. Klarna- Direct Debit (Pay now)
-6. Prepayment
+* Credit Card
+* Paypal Standard
+* Klarna:
+  * Invoice: pay later
+  * Installments: slice it
+  * Direct Debit: pay now
+* Prepayment
 
 ## Payment methods explained
 
@@ -94,4 +95,4 @@ When customers pay with PayPal, a shop owner can do the following:
 
 ## Next steps
 
-[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
+[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html)

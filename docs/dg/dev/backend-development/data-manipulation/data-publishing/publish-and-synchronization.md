@@ -178,11 +178,11 @@ When a change happens in the mirror table, its *synchronization behavior* sends 
 }
 ```
 
-#### Direct Synchronize
+#### Direct synchronize
 
-To optimize performance and flexibility, you can enable Direct Synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
+To optimize performance and flexibility, you can enable direct synchronization on the project level. This approach uses in-memory storage to retain all synchronization events instead of sending them to the queue. With this setup, you can control if entities are synchronized directly or through the traditional queue-based method.
 
-To enable Direct Synchronization, do the following:
+To enable direct synchronization, do the following:
 1. Add `DirectSynchronizationConsolePlugin` to `ConsoleDependencyProvider::getEventSubscriber()`.
 2. Enable the `SynchronizationBehaviorConfig::isDirectSynchronizationEnabled()` configuration.
 
@@ -231,7 +231,7 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 }
 ```
 
-This configuration enable direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
+3. Optional: This configuration enables direct synchronization for all entities with synchronization behavior. If needed, you can disable direct synchronization for specific entities by adding an additional parameter in the Propel schema:
 
 ```xml
 <table name="spy_table_storage" identifierQuoting="true">

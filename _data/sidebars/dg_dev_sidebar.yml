@@ -1148,8 +1148,8 @@ entries:
       url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
     - title: Implementing data installers
       url: /docs/dg/dev/data-import/implementing-data-installers.html
-    - title: Implementing incremental installers
-      url: /docs/dg/dev/data-import/implementing-incremental-installers.html
+    - title: Implement incremental installers
+      url: /docs/dg/dev/data-import/implement-incremental-installers.html
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html

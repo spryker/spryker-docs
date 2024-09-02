@@ -1,29 +1,26 @@
 ---
-title: Implementing incremental installers
-description: Use the guide to install and run IncrementalInstaller module to import or publish data during normal deployment
+title: Implement incremental installers
+description: Import and publish data during normal deployment
 last_updated: Aug 30, 2024
 template: howto-guide-template
 ---
 
-This document describes how to install and run `IncrementalInstaller` module to import or publish data during normal deployment.
-The IncrementalInstaller module is designed to execute installation scripts once per environment and store plugin information in the database. 
-It operates similarly to a database migration system but is also suitable for data manipulation tasks. 
-It integrates seamlessly with the common Spryker plugin stack.
+This document describes how to install and run the IncrementalInstaller module to import or publish data during normal deployment. The IncrementalInstaller module executes installation scripts once per environment and stores plugin information in the database. It works similarly to a database migration system but is also suitable for data manipulation tasks.
 
-## Install IncrementalInstaller module
+## Install the IncrementalInstaller module
 
-Require the package
+1. Require the package:
 ```bash
 composer require spryker/incremental-installer
 ```
 
-Run the database migration and generate transfers:
+2. Run the database migration and generate transfers:
 ```bash
 console propel:install
 console transfer:generate
 ```
 
-Add console command to src/Pyz/Zed/Console/ConsoleDependencyProvider.php
+3. Add a console command to `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`:
 ```php
 <?php
 
@@ -63,7 +60,7 @@ class FooBarIncrementalInstallerPlugin extends AbstractPlugin implements Increme
 
     public function execute(): void;
     {
-        // todo: implement execution 
+        // todo: implement execution
     }
 }
 ```
@@ -99,7 +96,7 @@ console incremental-installer:execute
 
 ## Enable incremental installer for normal deployment
 
-Add command execution at the end of the relevant deployment configuration files (e.g., config/install/*.yml), including those for destructive, normal, local, and CI environments.
+Add the incremental installer command at the end of the relevant deployment configuration files, like `config/install/staging.yml`, including those for destructive, normal, local, and CI environments.
 
 ```yml
     data-import:

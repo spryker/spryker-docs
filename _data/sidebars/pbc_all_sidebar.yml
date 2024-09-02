@@ -1211,7 +1211,7 @@ entries:
                 nested:
                   - title: Install features
                     nested:
-                      - title: Dynamic Multistore
+                      - title: Install Dynamic Multistore
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
                       - title: Dynamic Multistore + Availability Notification
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-availability-notification-feature.html
@@ -1225,8 +1225,6 @@ entries:
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-prices-feature.html
                       - title: Dynamic Multistore + Product
                         url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-product-feature.html
-                      - title: Install Dynamic Multistore
-                        url: /docs/pbc/all/dynamic-multistore/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html
 
                   - title: Upgrade modules
                     nested:

@@ -80,3 +80,57 @@ Normal storefront APIs can be used to fetch data from stores using the Store HTT
 The following image shows the ability to call API endpoints with the exemplary "SECOND" store selected in the API call itself.
 
 ![storefront-api](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/storefront-api.png)
+
+## Adding of a new store via data import
+
+Example for DE store configuration:
+
+**data/import/common/{REGION}/store.csv**
+
+```csv
+name
+DE
+AT
+```
+
+| Column     | REQUIRED | Data Type | Data Example | Data Explanation |
+|------------| --- | --- | --- | --- |
+|name        |mandatory |string | DE | Define store name. |
+
+Configure a new store as described here: [Import data for store](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
+
+
+Adding of a new store via Back Office is easier and faster way but in this case you should add this store at all environments. 
+Data import allows you to add and configure a new store once and deploy it to all environments. 
+
+Note that when you add a new store you should also assign all store-related entities to it for enabling them for customers:
+- Products
+- Categories
+- CMS entities
+- Prices. See [Install Dynamic Multistore + the Prices feature](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-prices-feature.html#install-feature-core)
+- etc.
+
+To avoid manual assignment of entities to the store you can use the data import for store-related entities as well.
+
+## What is changed when DMS is enabled?
+
+There is a list of changes that are applied to the project when DMS is enabled:
+- Urls for Yves, Back Office, Merchant Portal and Glue contain region instead of store name.
+    - Example for local environment: https://backoffice.eu.spryker.local instead of https://backoffice.de.spryker.local 
+- RabbitMQ virtual hosts contain region instead of store.
+    - For example eu-docker instead of de-docker.
+- Jenkins job names contain region instead of store. 
+    - For example EU_queue-worker-start instead of DE_queue-worker-start.
+- Elasticsearch indexes contain store as a part of the index name for DMS enabled and disabled modes.
+- Redis keys contain store as a part of the key name for DMS enabled and disabled modes.
+- When DMS is enabled customer can switch between available stores for a region.
+    - When customer changes a store it's set to a query param `_store`.
+    - Store is read from query param `_store` and set to session under the key `current_store`. It's used for fetching store-related data.
+
+## Performance
+
+Amount of stores affects data import speed. 
+
+For example import of 10000 products for 1 store and 27 locales takes 1 hour.
+
+Import of the same amount of products for 40 stores and 2 locales takes about 8 hours.

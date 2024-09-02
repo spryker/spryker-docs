@@ -2425,7 +2425,7 @@ entries:
                   - title: Payone
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/payone.html
                     nested:
-                      - title: Integration in the Back Office
+                      - title: ACP integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html
                         nested:
                           - title: Integrate Payone

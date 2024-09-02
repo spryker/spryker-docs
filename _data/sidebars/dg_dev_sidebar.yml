@@ -202,8 +202,6 @@ entries:
       - title: Get an overview of the used plugins
         url: /docs/dg/dev/backend-development/plugins/get-an-overview-of-the-used-plugins.html
 
-    - title: Session handlers
-      url: /docs/dg/dev/backend-development/session-handlers.html
     - title: Session management
       url: /docs/dg/dev/backend-development/session-management.html
     - title: Running production

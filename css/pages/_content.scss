@@ -19,6 +19,10 @@
         margin: 0 0 16px;
     }
 
+    h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+    }
+
     h1 {
         font-size: 38px;
         line-height: 1.369;
@@ -34,7 +38,7 @@
         @include media("<tablet") {
             font-size: 20px;
             line-height: 1.4;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -43,7 +47,7 @@
 
         @include media("<tablet") {
             font-size: 16px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -52,7 +56,7 @@
 
         @include media("<tablet") {
             font-size: 15px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 

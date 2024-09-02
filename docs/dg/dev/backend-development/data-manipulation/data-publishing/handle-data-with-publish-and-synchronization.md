@@ -276,7 +276,7 @@ class HelloWorldDeletePublisherPlugin extends AbstractPlugin implements Publishe
 
 </details>
 
-1. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
+3. Create a publish queue in which, during the publishing process, an event or multiple events are posted.
 
 ```php
 <?php
@@ -1225,7 +1225,7 @@ interface MessageStorageReaderInterface
     public function getMessageById(int $idMessage): HelloWorldStorageTransfer;
 }
 ```
-8. Add the `Pyz\Client\HelloWorldStorage\MessageStorageReader.php` class.
+8. Add the `Pyz\Client\HelloWorldStorage\Reader\MessageStorageReader.php` class.
 
 ```php
 <?php

@@ -1,28 +1,37 @@
 ---
-title: "Payone: Integration in the Back Office"
-description: With Payone, your customers can pay with common payment methods, such as credit card and PayPal.
+title: Payone ACP app
+description: With Payone, your customers can pay with common payment methods, such as credit card, PayPal, Prepayment and Klarna.
 template: howto-guide-template
-last_updated: Oct 11, 2023
+last_updated: Aug 30, 2024
 redirect_from:
    - /docs/aop/user/apps/payone.html
    - /docs/acp/user/apps/payone.html
    - /docs/pbc/all/payment-service-providers/payone/payone.html
-   - /docs/pbc/all/payment-service-provider/202307.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+   - /docs/pbc/all/payment-service-provider/202311.0/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+   - /docs/pbc/all/payment-service-provider/202404.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
 ---
 
-The [Payone](https://www.payone.com/DE-en?ref=spryker-documentation) app lets your customers make payments with common payment methods, such as credit card and PayPal.
+[Payone](https://www.payone.com/DE-en?ref=spryker-documentation) lets your customers make payments with common payment methods, such as credit card, PayPal, Prepayment, and Klarna.
 
-{% info_block infoBox "Info" %}
+The Payone integration in Spryker is part of the App Composition Platform and supports both the default Storefront Yves and Spryker GLUE APIs.
 
-We support only credit card and PayPal payment methods for Payone. If you want to use either or both of these payment methods, you must have them in your Payone contract. However, even if your contract with Payone includes other payment methods, you can not use them, as we do not support them yet.
+You can have multiple accounts with Payone. For example, you can have different Payone credentials per store.
 
-{% endinfo_block %}
+## Supported business models and payment methods
 
-You can have multiple accounts with Payone. For example, you can have different Payone credentials per store, which we support as well.
+The Payone App supports the B2B and B2C business models and the following payment methods:
 
-## Payment method modes
+* Credit Card
+* Paypal Standard
+* Klarna:
+  * Invoice: pay later
+  * Installments: slice it
+  * Direct Debit: pay now
+* Prepayment
 
-For the *Payone Credit Card* payment method, we support the following modes:
+## Payment methods explained
+
+For the *Payone Credit Card* payment method, the following modes are supported:
 
 - *Preauthorization and Capture*: After a customer entered the credit card details during the checkout, the seller preauthorizes or reserves the payable amount on the customer’s credit card. As soon as the items have shipped, this amount is captured. Capture kicks off the process of moving money from the customer’s credit card to the seller’s account. The preauthorization and capture mode is the best choice for physical goods. It ensures that in case the ordered items are not available anymore or the customer cancels the order before it is shipped, the seller does not have to transfer the money back to the customer's account and thereby avoids a chargeback.
 - *3DS*: Messaging protocol that enables consumer authentication with their card issuer when making online purchases.
@@ -78,6 +87,12 @@ When customers pay with PayPal, a shop owner can do the following:
 - Cancel the entire customer order, that is, void the existing preauthorization. In this case, the customer is not charged anything.
 - Cancel one or more items of a customer's order before shipment. The customer is not charged for the canceled items.
 
+## Current limitations
+
+- Payments can be properly canceled only from the the Back Office and not from the Payone PMI.
+- Payments can't be partially canceled. One payment intent is created per order and it can either be authorized or fully cancelled.
+- When an item is canceled on the order details page, all order items are canceled.
+
 ## Next steps
 
-[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html)
+[Integrate Payone](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html)

@@ -6,39 +6,13 @@ template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-multi-currency
 originalArticleId: bd8aa34b-bd53-4d64-8292-cfa026880e00
 redirect_from:
-  - /2021080/docs/search-multi-currency
-  - /2021080/docs/en/search-multi-currency
-  - /docs/search-multi-currency
-  - /docs/en/search-multi-currency
-  - /v6/docs/search-multi-currency
-  - /v6/docs/en/search-multi-currency
-  - /v5/docs/search-multi-currency
-  - /v5/docs/en/search-multi-currency
-  - /v4/docs/search-multi-currency
-  - /v4/docs/en/search-multi-currency
-  - /v3/docs/search-multi-currency
-  - /v3/docs/en/search-multi-currency
-  - /v2/docs/search-multi-currency
-  - /v2/docs/en/search-multi-currency
-  - /v1/docs/search-multi-currency
-  - /v1/docs/en/search-multi-currency
-  - /v6/docs/multicurrency-search
-  - /v6/docs/en/multicurrency-search
-  - /v5/docs/multicurrency-search
-  - /v5/docs/en/multicurrency-search
-  - /v4/docs/multicurrency-search
-  - /v4/docs/en/multicurrency-search
-  - /v3/docs/multicurrency-search
-  - /v3/docs/en/multicurrency-search
-  - /v2/docs/multicurrency-search
-  - /v2/docs/en/multicurrency-search
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
   - /docs/pbc/all/search/202311.0/tutorials-and-howtos/configure-search-for-multi-currency.html
 related:
-  - title: Migration Guide - Multi-Currency
+  - title: Upgrade the Multi-Currency module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
-  - title: Migration Guide - Price
+  - title: Upgrade the Price module
     link: docs/pbc/all/price-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
   - title: Configure Elasticsearch
     link: docs/pbc/all/search/page.version/base-shop/tutorials-and-howtos/configure-elasticsearch.html

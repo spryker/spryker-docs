@@ -169,6 +169,7 @@ This example of an audit log entry was recorded during a successful login attemp
 
 <details>
   <summary>Audit log example</summary>
+  
 ```json
 {
     "@timestamp": "2024-07-16T09:45:12.310532+00:00",

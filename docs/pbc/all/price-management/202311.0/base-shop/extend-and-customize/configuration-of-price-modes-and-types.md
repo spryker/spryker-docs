@@ -86,7 +86,7 @@ You can use these keys in environment configuration:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+   This is available after the product currency release so you must first follow the steps in [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 
  {% info_block infoBox "Switching shop to Net prices:" %}

@@ -130,7 +130,12 @@ Using the Quick Order feature on the Storefront, company users can do the follow
 * Add a quick order to a shopping cart.
 
 The following figure shows how to perform these actions:
-![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/quick-add-to-cart-feature-overview.md/create-quick-order.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Related Developer documents
 

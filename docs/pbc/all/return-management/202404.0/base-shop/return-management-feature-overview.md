@@ -83,7 +83,7 @@ Next to each sales order item, there is the date until which the item can be ret
 
 All the returns created by the buyer or by the Back Office user for the buyer are listed on the **Returns** page in the **Customer Account**. From here, the buyer can view the return details and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
-![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif)
+![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/return-management/base-shop/return-management-feature-overview.md/create-and-print-a-return.mp4)
 
 ## Return Management in the Back Office
 

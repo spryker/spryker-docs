@@ -20,7 +20,7 @@ To perform the migration, follow the steps:
 1. This feature requires `ProductPageSearch` 3.x.x.
 
     * Update `spryker/product-page-search ^3.0.0`
-    * Follow the steps from  [Migration guide - ProductPageSearch](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html).
+    * Follow the steps from  [Upgrade the ProductPageSearch module](/docs/pbc/all/search/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productpagesearch-module.html).
 
 2. Generate transfers:
 

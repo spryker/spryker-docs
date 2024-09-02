@@ -38,7 +38,7 @@ Product abstract card:
 2. Holding the pointer over or clicking a color circle changes the abstract product image, title, rating, label, and the price.
 3. Having held the pointer over the needed color, a shop user clicks on the product abstract card to be redirected to the **Product Details** page of the corresponding product.
 
-![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-abstract-card.gif)
+![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/product-group-product-abstract-card.mp4)
 
 
 **Product Details** page:
@@ -48,7 +48,7 @@ Product abstract card:
 * Clicking on a color circle redirects the shop user to the page of the corresponding abstract product.
 
 
-![Product group - product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-details-page.gif)
+![Product group - product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/product-group-product-details-page.mp4)
 
 ## Product Groups in the Back Office
 

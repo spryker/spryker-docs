@@ -97,7 +97,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/offer | 0.2.0 | [Upgrade the Offer module](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offer-module.html) |
 | spryker/offer-gui | 0.2.0 | [Upgrade the OfferGui module](/docs/pbc/all/offer-management/{{page.version}}/base-shop/upgrade-modules/upgrade-the-offergui-module.html) |
 | spryker/oms | 9.0.0 | [Upgrade the Oms module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-oms-module.html) |
-| spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
+| spryker/orders-rest-api | 2.0.0 | [Upgrade the OrdersRestApi module](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-ordersrestapi-module.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-persistentcart-module.html) |
 | spryker/price-cart-connector | 5.0.0 | [Upgrade the PriceCartConnector module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) |
 | spryker/price-product | 3.0.0 | [Upgrade the PriceProduct module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |

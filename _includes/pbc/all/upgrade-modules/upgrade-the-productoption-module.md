@@ -449,4 +449,4 @@ class ProductOptionCollector extends Spryker\Zed\Collector\Business\Collector\St
 
 In version 5 Product Options were updated to work with the new calculator concept. Therefore, the `SalesAggregator` plugin was moved to the `SalesAggregator` module `SubtotalWithProductOptionsAggregatorPlugin`.
 The sales option database tables received new columns for storing calculated values.
-To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Migration Guide - Calculation*.
+To learn how to migrate to new structure, see the [Upgrading from version 3.* to version 4.*](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-calculation-module.html#upgrading-from-version-3-to-version-4) section in *Upgrade the Calculation module*.

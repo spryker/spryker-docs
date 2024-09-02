@@ -131,7 +131,11 @@ class SampleQueueMessageProcessorPlugin implements QueueMessageProcessorPluginIn
 
 ### Configuration for chunk size
 
-Instead of relying on the `getChunkSize()` method in the plugin, you can use a project-level configuration to define a more flexible chunk size for any queue. Here's how you can configure it using`QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP`:
+Instead of relying on the `getChunkSize()` method in the plugin, you can use project-level configuration to define a more flexible chunk size for any queue. This configuration takes precedence over the `getChunkSize()` method. If a chunk size is defined for a queue in `QUEUE_MESSAGE_CHUNK_SIZE_MAP`, that size is used. Otherwise, the chunk size falls back to the value returned by the `getChunkSize()` method of the `QueueMessageProcessorPluginInterface`.
+
+To define a flexible chunk size, follow the steps:
+
+1. Configure chunk size using `QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP`:
 
 ```php
 <?php
@@ -146,9 +150,8 @@ $config[QueueConstants::QUEUE_MESSAGE_CHUNK_SIZE_MAP] = [
 ?>
 ```
 
-This configuration takes precedence over the `getChunkSize()` method. If a chunk size is defined for a queue in `QUEUE_MESSAGE_CHUNK_SIZE_MAP`, that size is used. Otherwise, the chunk size falls back to the value returned by the `getChunkSize()` method of the `QueueMessageProcessorPluginInterface`.
 
-Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
+2. Register the plugin in `QueueDependencyProvider::getProcessorMessagePlugins()`:
 
 ```php
 <?php

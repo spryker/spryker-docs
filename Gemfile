@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Specify the Ruby version for the project.
-ruby '3.2.2'
+ruby '3.0.0'
 
 gem "jekyll", "~> 4.2.0"
 

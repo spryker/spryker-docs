@@ -2661,6 +2661,8 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html
                   - title: Onboard to Stripe in the Merchant Portal
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html
+                  - title: OMS configuration
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html                    
 
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html

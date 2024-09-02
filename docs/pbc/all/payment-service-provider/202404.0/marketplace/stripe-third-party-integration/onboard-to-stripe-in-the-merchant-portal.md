@@ -13,6 +13,12 @@ To onboard to Stripe as a merchant, follow the steps:
 3. To complete the onboarding, follow the prompts to fill in merchant information.
   Once you finish onboarding, the **Payment Settings** page is opened. Stripe needs to approve your onboarding request before you can start using it. You can check the status of onboarding in the Stripe dashboard.
 
+{% info_block infoBox "" %}
+
+Please make sure that your Merchant Portal has `redirect.php` in the web server public folder: [`/public/MerchantPortal/redirect.php`](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
+
+{% endinfo_block %}
+
 ## Stripe onboarding statuses
 
 - **Pending**: The Merchant started the onboarding process but did not complete it.

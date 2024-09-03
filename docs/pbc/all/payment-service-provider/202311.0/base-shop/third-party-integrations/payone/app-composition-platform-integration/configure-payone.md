@@ -6,7 +6,7 @@ template: howto-guide-template
 redirect_from:
   - /docs/pbc/all/payment-service-provider/202212.0/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html
 ---
-Once you have [integrated the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html), you can configure it.
+Once you have [integrated the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html), you can configure it.
 
 To configure Payone, follow these steps:
 

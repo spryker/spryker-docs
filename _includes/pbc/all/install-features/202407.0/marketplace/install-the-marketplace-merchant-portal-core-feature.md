@@ -96,7 +96,10 @@ class AclMerchantPortalConfig extends SprykerAclMerchantPortalConfig
 }
 ```
 
-**src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php**
+
+
+<details>
+  <summary>src/Pyz/Zed/ZedNavigation/ZedNavigationConfig.php</summary>
 
 ```php
 <?php
@@ -159,6 +162,8 @@ class ZedNavigationConfig extends AbstractBundleConfig
 }
 ```
 
+</details>
+
 ### 3) Set up the database schema
 
 1. Set up the database schemas:
@@ -201,11 +206,11 @@ console propel:install
 console transfer:generate
 ```
 
-### 3) Optional: Set up the configuration
+### 3) Optional: Set up configuration
 
 1. In `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`, enable the blocking of recurring attempts to reset password by setting `MERCHANT_PORTAL_SECURITY_BLOCKER_ENABLED` to `true;`.
 
-2. Add the following configuration to `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`.
+2. In `src/Pyz/Zed/SecurityMerchantPortalGui/SecurityMerchantPortalGuiConfig.php`, add the following configuration:
 
 ```php
 namespace Pyz\Zed\SecurityMerchantPortalGui;
@@ -1194,10 +1199,10 @@ rm -rf node_modules && npm cache clean --force && npm install && npm run mp:buil
 
 ### 6) Adjust deployment configs
 
-To configure the deployment configuration to automatically install and build the Merchant Portal, change frontend dependencies and installation commands in the deployment file:
+To configure the deployment configuration to automatically install and build the Merchant Portal, change frontend dependencies and installation commands in the needed deployment file:
 
-1. Remove the following Yves dependency installation commands from the needed deployment file: `dependencies-install` and `yves-isntall-dependencies`.
-2. Add the required console commands:
+1. Remove the following Yves dependency installation commands: `dependencies-install` and `yves-isntall-dependencies`.
+2. Add the following console commands:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
@@ -1230,18 +1235,18 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 3. Add the Merchant Portal build commands:
 
 - build-static-production:
-    ```yaml
-    merchant-portal-build-frontend:
-        command: 'vendor/bin/console frontend:mp:build -e production'
-        timeout: 1600
-    ```
+```yaml
+merchant-portal-build-frontend:
+    command: 'vendor/bin/console frontend:mp:build -e production'
+    timeout: 1600
+```
 
 - build-static-development:
-    ```yaml
-    merchant-portal-build-frontend:
-        command: 'vendor/bin/console frontend:mp:build'
-        timeout: 1600
-    ```
+```yaml
+merchant-portal-build-frontend:
+    command: 'vendor/bin/console frontend:mp:build'
+    timeout: 1600
+```
 
 ### 7) Set up ACL behavior
 
@@ -1601,7 +1606,7 @@ Verify that all propel-related entities with the merchant have the allowed or re
 
 {% info_block warningBox "Merchant Portal security" %}
 
-It's not safe to expose the Merchant Portal next to the Back Office. The Merchant Portal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with the Back Office.
+The Merchant Portal should be exposed separately from the Back Office. The Merchant Portal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with the Back Office.
 
 {% endinfo_block %}
 
@@ -1610,18 +1615,16 @@ To adjust environment infrastructure, take the following steps.
 
 ### 1) Set up a docker container for the Merchant Portal
 
-`MerchantPortal` *must be* placed into its own private subnet and *must have* access to the following:
+* `MerchantPortal` *must be* placed into its own private subnet and *must have* access to the following:
+  - Primary database
+  - Message broker
 
-- Primary database
-- Message broker
+* `MerchantPortal` *must not have* access to the following:
+  - Search and Storage
+  - Gateway
+  - Scheduler
 
-`MerchantPortal` *must not have* access to the following:
-
-- Search and Storage
-- Gateway
-- Scheduler
-
-To set up a docker container, update the needed deploy file. Example:
+* To set up a docker container, update the needed deploy file. Example:
 
 **deploy.dev.yml**
 
@@ -1684,8 +1687,7 @@ FLUSH PRIVILEGES;
 1. Add Nginx configuration. Example:
 
 **/etc/nginx/merchant-portal.conf**
-
-```nginx
+```text
 server {
     # { Your virtual host settings }
 
@@ -1811,7 +1813,7 @@ Make sure the `user-merchant-portal-gui` rule has been added to the `spy_acl_rul
 
 ### 5) Update navigation
 
-1. Add the `My Account` and `Logout` sections to `config/Zed/navigation-secondary-merchant-portal.xml`:
+1. Add the `My Account` and `Logout` sections to Merchant Portal navigation:
 
 **config/Zed/navigation-secondary-merchant-portal.xml**
 

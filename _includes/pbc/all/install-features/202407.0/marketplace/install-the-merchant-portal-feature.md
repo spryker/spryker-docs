@@ -1,6 +1,6 @@
 
 
-{% info_block infoBox "Info" %}
+{% info_block infoBox "" %}
 
 See [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
 

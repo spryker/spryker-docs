@@ -28,7 +28,7 @@ fields @timestamp, @message, @logStream, @log
 
 ## Redis session locking exceptions
 
-Redis Session Locking exceptions are an application-level challenge that can be resolved on the project level because a universal solution doesn't exist. For more information on the Session Locking mechanism, see [Locked sessions with Redis](/docs/dg/dev/backend-development/session-handlers.html#locked-sessions-with-redis).
+Redis Session Locking exceptions are an application-level challenge that can be resolved on the project level because a universal solution doesn't exist.
 
 The following sections describe how requests are processed, how the Redis Session Locking mechanism is implemented, and under what circumstances scaling challenges can arise.
 

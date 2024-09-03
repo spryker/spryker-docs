@@ -477,11 +477,10 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* Access to New Relic with an APM account.
-* Local: [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/).
+* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/). (NEWRELIC_LICENSE)
+* NewRelic Account ID (NEWRELIC_ACCOUNT_ID)
+* NewRelic Insights Key (NEWRELIC_INSIGHTS_KEY)
 * The New Relic module.
-
-Spryker provides its own New Relic licenses for use with its PaaS environments. A New Relic license key is only required if you wish to set up your own local monitoring.
 
 ### Install the New Relic module
 
@@ -515,8 +514,10 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html).
-  We will confirm that a New Relic APM account is available for you and ensure that the correct application naming convention is set up to cascade to the appropriate APM.
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html) . Set up a Change Request for existing Parameter Store values and request your values to be set for these parameters
+* NEWRELIC_LICENSE
+* NEWRELIC_ACCOUNT_ID
+* NEWRELIC_INSIGHTS_KEY
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 

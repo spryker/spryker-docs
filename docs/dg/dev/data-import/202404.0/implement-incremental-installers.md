@@ -100,7 +100,7 @@ Add the incremental installer command at the end of the relevant deployment conf
 
 ```yml
     data-import:
-        glossary:
+        incremental-installer:
             command: 'vendor/bin/console incremental-installer:execute -vvv --no-ansi'
             stores: true
 ```

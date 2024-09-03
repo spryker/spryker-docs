@@ -258,3 +258,132 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     }
 }
 ```
+
+6. Configure plugins in `CheckoutPage`:
+
+**src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
+```php
+namespace Pyz\Yves\CheckoutPage;
+
+use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
+use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollectionExtenderPlugin;
+
+class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\PaymentCollectionExtenderPluginInterface>
+     */
+    protected function getPaymentCollectionExtenderPlugins(): array
+    {
+        return [
+            //...
+            new PaymentForeignPaymentCollectionExtenderPlugin(),
+        ];
+    }
+}
+```
+
+7. Configure plugins in `Router`:
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+```php
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\PaymentPage\Plugin\Router\PaymentPageRouteProviderPlugin;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProvider(): array
+    {
+        $routeProviders = [
+            //...
+            new PaymentPageRouteProviderPlugin(),
+        ];
+    }
+}
+```
+
+8. Configure plugins in `Oms`:
+
+**\Pyz\Zed\Oms\OmsDependencyProvider**
+```php
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCapturePaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendRefundPaymentMessageCommandPlugin;
+use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\RefundCommandPlugin;
+
+
+protected function extendCommandPlugins(Container $container): Container
+{
+    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
+        //...
+        // ----- Payone commands -----
+        $commandCollection->add(new SendCapturePaymentMessageCommandPlugin(), 'Payment/Capture');
+        $commandCollection->add(new SendRefundPaymentMessageCommandPlugin(), 'Payment/Refund');
+        $commandCollection->add(new RefundCommandPlugin(), 'Payment/Refund/Confirm');
+        $commandCollection->add(new SendCancelPaymentMessageCommandPlugin(), 'Payment/Cancel');
+    });
+}
+```
+
+9. [Integrate Payone into OMS](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html#configuring-oms-for-your-project).
+
+### Introduce template changes in `CheckoutPage`
+
+If you rewrote `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
+
+1. Make sure that the form molecule uses the following code for the payment selection choices:
+
+```twig
+{% raw %}
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    {% embed molecule('form') with {
+        data: {
+            form: data.form[data.form.paymentSelection[key].vars.name],
+            ...
+        }
+    {% endembed %}    
+{% endfor %}           
+{% endraw %}
+```
+
+2. Payment provider names now have glossary keys instead of a name itself. To accommodate this change, configure names to be translated according to your glossary:
+
+```twig
+{% raw %}
+{% for name, choices in data.form.paymentSelection.vars.choices %}
+    ...
+    <h5>{{ name | trans }}</h5>
+{% endfor %}
+{% endraw %}
+```
+
+3. Optional: Add the glossary keys for all the new external payment providers and methods to your glossary data import file. Example:
+
+```csv
+...
+Payone,Payone Payments,en_US
+Credit Card,Credit Card (Payone),en_US
+```
+
+4. Import the glossary:
+
+```bash
+console data:import glossary
+```
+
+## Optional: Show payment details in the Back Office Order Details page
+
+
+1. Install the `spryker/sales-payment-detail: ^1.2.0` module.
+2. [Retrieve and use payment details from third-party PSPs](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/retrieve-and-use-payment-details-from-third-party-psps.html).
+
+
+## Next steps
+
+[Configure the Payone app](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html) for your store.

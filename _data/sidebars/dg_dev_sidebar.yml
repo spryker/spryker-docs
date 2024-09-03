@@ -1382,7 +1382,7 @@ entries:
       - title: Not optimized Composer on the production environment
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
       - title: Redis session lock
-        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock-excpetions.html
       - title: Slow Publish and Synchronization
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductPackagingUnit
+title: Upgrade the ProductPackagingUnit module
 description: Use the guide to learn how to update the ProductPackagingUnit module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

@@ -201,7 +201,6 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
 
 use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAuthorizeRequestExpanderPlugin;
 
-
     // ...
 
     /**
@@ -216,6 +215,53 @@ use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAutho
     }
 
 ```
+
+7. In `src/Pyz/Yves/Router/RouterDependencyProvider.php`, add or update the following plugins:
+
+
+```php
+// ...
+
+use SprykerShop\Yves\PaymentPage\Plugin\Router\PaymentPageRouteProviderPlugin;
+
+    // ...
+
+    /**
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
+     */
+    protected function getRouteProvider(): array
+    {
+        $routeProviders = [
+            ...
+            new PaymentPageRouteProviderPlugin(),
+            ...
+        ];
+    }
+
+```
+
+8. In `src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`, add or update the following plugins:
+
+
+```php
+// ...
+
+use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollectionExtenderPlugin;
+
+    // ...
+
+    /**
+     * @return array<\SprykerShop\Yves\CheckoutPageExtension\Dependency\Plugin\PaymentCollectionExtenderPluginInterface>
+     */
+    protected function getPaymentCollectionExtenderPlugins(): array
+    {
+        return [
+            new PaymentForeignPaymentCollectionExtenderPlugin(),
+        ];
+    }
+
+```
+
 
 
 ## Next step

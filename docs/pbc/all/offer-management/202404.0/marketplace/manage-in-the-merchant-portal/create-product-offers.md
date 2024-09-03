@@ -38,7 +38,7 @@ To create a product offer in the Merchant Portal, follow the steps:
 11. Scroll up and select **Create**.
     This opens the **Offers** page with a success message displayed. The created product offer is displayed in the list.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
+![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/marketplace/manage-in-the-merchant-portal/create-product-offers.md/creating-product-offers.mp4)
 
 ## Reference information: Create product offers
 

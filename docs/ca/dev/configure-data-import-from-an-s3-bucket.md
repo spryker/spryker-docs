@@ -19,10 +19,10 @@ Before you start, make sure that you have the following:
 
 * Install the required modules
 
-| NAME                      | VERSION |
-|---------------------------|---------|
-| DataImport                | ^1.25.0 |
-| FlysystemAws3v3FileSystem | ^3.0.0  |
+| NAME                                 | VERSION |
+|--------------------------------------|---------|
+| spryker/data-import                  | ^1.25.0 |
+| spryker/flysystem-aws3v3-file-system | ^3.0.0  |
 
 * Write permissions in the SCCOS repository
 

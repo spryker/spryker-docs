@@ -17,7 +17,7 @@ This document describes how to replace the original CsvReader with the one based
 
 Before you start, make sure that you have the following:
 
-* Install the required modules
+* The following modules are installed:
 
 | NAME                                 | VERSION |
 |--------------------------------------|---------|
@@ -38,16 +38,19 @@ To configure a data entity to be imported from an S3 bucket, adjust the `data/im
   file_system: s3-import
 ```
 
-By setting the `file_system` attribute to `s3-import`, the application is instructed to fetch the `glossary.csv` file from an S3 bucket, 
-which enhances the flexibility and scalability of the data import process. 
+By setting the `file_system` attribute to `s3-import`, the application is instructed to fetch the `glossary.csv` file from an S3 bucket,
+which enhances the flexibility and scalability of the data import process.
 
-By default, when the `file_system` attribute is not set, the application reads the file from the local file system.
+By default, when the `file_system` attribute isn't set, the application reads the file from the local file system.
 
-Note, the folder structure in the S3 bucket should be the same as in the local file system.
+{% info_block warningBox %}
+The folder structure in the S3 bucket should be the same as in the local file system.
+{% endinfo_block %}
+
 
 ## 2. Configure the Flysystem service
 
-Wire the plugin `Aws3v3FilesystemBuilderPlugin` that will be used to interact with AWS S3 bucket.
+Wire the `Aws3v3FilesystemBuilderPlugin` plugin used to interact with AWS S3 bucket.
 
 **src/Pyz/Service/Flysystem/FlysystemDependencyProvider.php**
 ```php
@@ -98,7 +101,7 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE]['s3-import'] = [
 
 ## 4. Configure the data import
 
-Adjust the `DataImportConfig` class to enable the data import from the external source.
+To enable the data import from the external source, adjust the `DataImportConfig` class:
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
 ```php

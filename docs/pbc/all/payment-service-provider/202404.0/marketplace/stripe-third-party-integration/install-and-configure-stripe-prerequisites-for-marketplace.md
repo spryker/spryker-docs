@@ -118,6 +118,7 @@ $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesP
 1. To configure ACL, add `'merchant-app-merchant-portal-gui'` to `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`.
 2. To configure the message broker, add `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` to `\Pyz\Zed\MessageBroker\MessageBrokerConfig::getDefaultWorkerChannels()`.
 3. To configure state machine, copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust to your needs.
+4. Add `redirect.php` to your Merchant Portal application public folder: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
 
 ### Enable merchant commissions for marketplace payments
 

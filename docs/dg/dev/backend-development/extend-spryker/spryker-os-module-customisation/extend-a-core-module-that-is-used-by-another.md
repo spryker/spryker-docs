@@ -83,20 +83,23 @@ public function provideBusinessLayerDependencies(Container $container)
 
 ## 4. Update Factories
 
-In the `Cart` module's business factory, use new interface.
-Update other factories, if necessary.
+In the modules, where `CartFacade` is used, update module's business factory with the new interface.
 
 ```php
 use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
 
-class CartBusnessFactory extends SprykerCartBusnessFactory
+class CheckoutBusnessFactory extends SprykerCheckoutBusnessFactory
 {
-/**
-* @return \Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface
-*/
-public function getCalculationFacade(): CartToCalculationInterface
-{
-return $this->getProvidedDependency(CartDependencyProvider::FACADE_CALCULATION);
+...
+	/**
+	 * @return \Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface
+	 */
+	public function getCalculationFacade(): CartToCalculationInterface
+	{
+		return $this->getProvidedDependency(CartDependencyProvider::FACADE_CALCULATION);
+	}
+...
+}
 ```
 
 {% info_block errorBox %}

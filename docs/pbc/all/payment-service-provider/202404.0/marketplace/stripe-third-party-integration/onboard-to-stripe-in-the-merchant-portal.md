@@ -15,7 +15,7 @@ To onboard to Stripe as a merchant, follow the steps:
 
 {% info_block infoBox "" %}
 
-Please make sure that your Merchant Portal has `redirect.php` in the web server public folder: [`/public/MerchantPortal/redirect.php`](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
+Please make sure that your Merchant Portal has `redirect.php` in the web server public folder: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
 
 {% endinfo_block %}
 

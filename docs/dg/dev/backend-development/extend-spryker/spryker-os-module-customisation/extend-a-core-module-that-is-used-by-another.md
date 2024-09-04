@@ -1,5 +1,5 @@
 ---
-title: Extend a core module that is used by another
+title: Extend a core module that is used by another one
 description: This document describes how to extend a core module that is used by another core module.
 last_updated: Jun 16, 2021
 template: howto-guide-template

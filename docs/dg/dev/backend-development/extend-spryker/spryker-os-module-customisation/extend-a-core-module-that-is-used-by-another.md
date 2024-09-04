@@ -81,6 +81,20 @@ public function provideBusinessLayerDependencies(Container $container)
 }
 ```
 
+## 4. Update Factories
+
+In the `Cart` module's business factory, use new interface.
+Update other factories, if necessary.
+
+```php
+use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
+
+class CartBusnessFactory extends SprykerCartBusnessFactory
+{
+public function getCartFacade(): CartToCalculationInterface
+{
+```
+
 {% info_block errorBox %}
 
 Bridges are for core-level only. If you use them at the project level, you are doing it wrong.

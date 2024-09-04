@@ -93,6 +93,7 @@ class CartBusnessFactory extends SprykerCartBusnessFactory
 {
 public function getCartFacade(): CartToCalculationInterface
 {
+return $this->getProvidedDependency(CartDependencyProvider::FACADE_CALCULATION);
 ```
 
 {% info_block errorBox %}

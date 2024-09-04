@@ -83,20 +83,20 @@ console transfer:generate
 
 Ensure that the following changes have occurred in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| AbstractProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer |
-| ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer|
-| RestProductImageSetsAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductImageSetsAttributesTransfer|
-| RestProductImageSetTransfer|  class|  created  | src/Generated/Shared/Transfer/RestProductImageSetTransfer|
-| RestImagesAttributesTransfer |  class |  created | src/Generated/Shared/Transfer/RestImagesAttributesTransfer|
-| RestProductPriceAttributesTransfer|  class|  created | src/Generated/Shared/Transfer/RestProductPriceAttributesTransfer|
-| RestProductPricesAttributesTransfer | class|  created | src/Generated/Shared/Transfer/RestProductPricesAttributesTransfer|
-| RestCurrencyTransfer|  class | created | src/Generated/Shared/Transfer/RestCurrencyTransfer|
-| RestProductManagementAttributeAttributes|  class|  created|  src/Generated/Shared/Transfer/RestProductManagementAttributeAttributesTransfer|
-| RestLocalizedProductManagementAttributeKeyAttributes | class|  created | src/Generated/Shared/Transfer/RestLocalizedProductManagementAttributeKeyAttributesTransfer|
-| RestProductManagementAttributeValueAttributes | class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueAttributesTransfer|
-| RestProductManagementAttributeValueTranslationAttributes |  class |  created | src/Generated/Shared/Transfer/RestProductManagementAttributeValueTranslationAttributesTransfer|
+| TRANSFER                                                 | TYPE   | EVENT    | PATH                                                                                           |
+|----------------------------------------------------------|--------|----------|------------------------------------------------------------------------------------------------|
+| AbstractProductsRestAttributes                           | class  | created  | src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer                           |
+| ConcreteProductsRestAttributes                           | class  | created  | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer                           |
+| RestProductImageSetsAttributes                           | class  | created  | src/Generated/Shared/Transfer/RestProductImageSetsAttributesTransfer                           |
+| RestProductImageSet                                      | class  | created  | src/Generated/Shared/Transfer/RestProductImageSetTransfer                                      |
+| RestImagesAttributes                                     | class  | created  | src/Generated/Shared/Transfer/RestImagesAttributesTransfer                                     |
+| RestProductPriceAttributes                               | class  | created  | src/Generated/Shared/Transfer/RestProductPriceAttributesTransfer                               |
+| RestProductPricesAttributes                              | class  | created  | src/Generated/Shared/Transfer/RestProductPricesAttributesTransfer                              |
+| RestCurrency                                             | class  | created  | src/Generated/Shared/Transfer/RestCurrencyTransfer                                             |
+| RestProductManagementAttributeAttributes                 | class  | created  | src/Generated/Shared/Transfer/RestProductManagementAttributeAttributesTransfer                 |
+| RestLocalizedProductManagementAttributeKeyAttributes     | class  | created  | src/Generated/Shared/Transfer/RestLocalizedProductManagementAttributeKeyAttributesTransfer     |
+| RestProductManagementAttributeValueAttributes            | class  | created  | src/Generated/Shared/Transfer/RestProductManagementAttributeValueAttributesTransfer            |
+| RestProductManagementAttributeValueTranslationAttributes | class  | created  | src/Generated/Shared/Transfer/RestProductManagementAttributeValueTranslationAttributesTransfer |
 
 {% endinfo_block %}
 
@@ -159,13 +159,13 @@ use Spryker\Glue\ProductsRestApi\Plugin\ConcreteProductsResourceRoutePlugin;
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
         return [
             new AbstractProductsResourceRoutePlugin(),
-			new ConcreteProductsResourceRoutePlugin(),
+            new ConcreteProductsResourceRoutePlugin(),
         ];
     }
 }
@@ -274,13 +274,13 @@ use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
         return [
             new AbstractProductImageSetsRoutePlugin(),
-			new ConcreteProductImageSetsRoutePlugin(),
+            new ConcreteProductImageSetsRoutePlugin(),
         ];
     }
 
@@ -356,7 +356,7 @@ use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
@@ -532,12 +532,12 @@ use Spryker\Glue\ProductAttributesRestApi\Plugin\GlueApplication\ProductManageme
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return list<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
         return [
-			new ProductManagementAttributesResourceRoutePlugin(),
+            new ProductManagementAttributesResourceRoutePlugin(),
         ];
     }
 }

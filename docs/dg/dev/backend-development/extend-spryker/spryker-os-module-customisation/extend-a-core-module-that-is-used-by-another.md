@@ -91,7 +91,10 @@ use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
 
 class CartBusnessFactory extends SprykerCartBusnessFactory
 {
-public function getCartFacade(): CartToCalculationInterface
+/**
+* @return \Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface
+*/
+public function getCalculationFacade(): CartToCalculationInterface
 {
 return $this->getProvidedDependency(CartDependencyProvider::FACADE_CALCULATION);
 ```

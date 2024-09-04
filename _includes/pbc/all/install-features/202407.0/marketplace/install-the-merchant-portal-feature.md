@@ -41,11 +41,9 @@ Install the needed packages for the Merchant Portal with dependencies. For avail
 | Spryker Core                     | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                                                                  |
 | Marketplace Merchant Portal Core | {{page.version}} | [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) |
 
-### Merchant Portal users
+### Create and connect Merchant Portal users
 
-### 1) Create users
-
-Create users for the Merchant Portal using Zed UI (Back Office), or if you need them out of the box, add them into `\Pyz\Zed\User\UserConfig::getInstallerUsers()`—for example:
+1. Create Merchant Portal users using the Back Office; or, if you need users out of the box, add them to `\Pyz\Zed\User\UserConfig::getInstallerUsers()`. Example:
 
 **src/Pyz/Zed/User/UserConfig.php**
 
@@ -75,22 +73,20 @@ class UserConfig extends SprykerUserConfig
 }
 ```
 
-### 2) Connect users and merchants
-
-1.Connect users and merchants using Zed UI (the Back Office) or the following data import:
+2. Connect users and merchants using using the Back Office or the following data import:
 
 **data/import/common/common/marketplace/merchant.csv**
 
-```
- merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
- sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
+```csv
+merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
+sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-2. To inegrate merchant user data import, see [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+2. To integrate merchant user data import, follow [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
-```
+```csv
 merchant_key,username
 sony-experts,michele@sony-experts.com
 ```

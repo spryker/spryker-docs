@@ -477,9 +477,9 @@ The solution consists of a client and a server. The client is used to collect da
 
 ### Prerequisites
 
-* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/). (NEWRELIC_LICENSE)
-* NewRelic Account ID (NEWRELIC_ACCOUNT_ID)
-* NewRelic Insights Key (NEWRELIC_INSIGHTS_KEY)
+* [New Relic license key](https://docs.newrelic.com/docs/apis/intro-apis/new-relic-api-keys/): `NEWRELIC_LICENSE`
+* NewRelic account ID: `NEWRELIC_ACCOUNT_ID`
+* NewRelic insights key: `NEWRELIC_INSIGHTS_KEY`
 * The New Relic module.
 
 ### Install the New Relic module
@@ -514,10 +514,10 @@ image:
 
 
 
-3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html) . Set up a Change Request for existing Parameter Store values and request your values to be set for these parameters
-* NEWRELIC_LICENSE
-* NEWRELIC_ACCOUNT_ID
-* NEWRELIC_INSIGHTS_KEY
+3. Submit an infrastructure change request via the [Support Portal](/docs/about/all/support/using-the-support-portal.html). Set up a Change Request for existing Parameter Store values and request your values to be set for the following parameters:
+  * NEWRELIC_LICENSE
+  * NEWRELIC_ACCOUNT_ID
+  * NEWRELIC_INSIGHTS_KEY
 
 Once New Relic is enabled, in the New Relic dashboard, you may see either `company-staging-newrelic-app` or `YVES-DE (docker.dev)`. New Relic displays these APM names by the application name setup in the configuration files.
 

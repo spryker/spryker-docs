@@ -81,14 +81,14 @@ public function provideBusinessLayerDependencies(Container $container)
 }
 ```
 
-## 4. Update Factories
+## 4. Update Factory
 
-In the modules, where `CartFacade` is used, update module's business factory with the new interface.
+In `Cart` module update business factory with the new interface.
 
 ```php
 use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
 
-class CheckoutBusnessFactory extends SprykerCheckoutBusnessFactory
+class CartBusnessFactory extends SprykerCartBusnessFactory
 {
 ...
 	/**

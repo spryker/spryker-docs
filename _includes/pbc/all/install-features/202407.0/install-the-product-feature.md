@@ -23,7 +23,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Install the required modules using Composer:
+1. Install the required modules using Composer:
 
 ```bash
 composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
@@ -51,7 +51,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-Apply database changes and generate entity and transfer changes:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -71,7 +71,7 @@ Make sure the following changes have been applied in transfer objects:
 
 ### 2) Add translations
 
-Append glossary according to your configuration:
+1. Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
@@ -86,7 +86,7 @@ product_search_widget.search.no_results,Products were not found.,en_US
 product_search_widget.search.no_results,Products were not found.,de_DE
 ```
 
-Import data:
+2. Import data:
 
 ```bash
 console data:import glossary
@@ -98,7 +98,9 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 {% endinfo_block %}
 
-### 3) Configuration
+### 3) Add configuration
+
+Add the following configuration.
 
 #### Enable multiselect product attributes
 
@@ -133,13 +135,13 @@ class ProductAttributeConfig extends SprykerProductAttributeConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that new "mutliselect" input type is available in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create` attribute creation page.
+Make sure that, on the **Create a Product Attribute** page, a **mutliselect** input type is available: `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`.
 
 {% endinfo_block %}
 
 #### Configure export to Redis and Elasticsearch
 
-Add to a cart from the catalog page configuration:
+Add the configuration for adding products to cart from the catalog page:
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchConfig.php**
 
@@ -164,7 +166,7 @@ class ProductPageSearchConfig extends SprykerProductPageSearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products eligible for adding to a cart have the additional `add_to_cart_sku` field in the Elasticsearch document.
+Make sure that abstract products that can be added to cart have the `add_to_cart_sku` field in the ElasticSearch document.
 
 {% endinfo_block %}
 
@@ -174,11 +176,11 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConcretePageSearchProductImageEventSubscriber | Registers listeners that are responsible for publishing product concrete image entity changes to search when a related entity change event occurs. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\Event\Subscriber |
-| ProductImageProductConcretePageMapExpanderPlugin | Expands the product concrete page map with the images field. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
-| ProductImageProductConcretePageDataExpanderPlugin | Expands product concrete page data with the images data. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
-| ProductConcretePublisherTriggerPlugin | Triggers the concrete products resource to be published. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\Publisher |
-| MultiSelectProductAttributeDataFormatterPlugin | Formats product attributes with input type `multiselect` to array. | None | Spryker\Zed\ProductAttribute\Communication\Plugin\ProductAttribute |
+| ProductConcretePageSearchProductImageEventSubscriber | Registers listeners that are responsible for publishing product concrete image entity changes to search when a related entity change event occurs. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\Event\Subscriber |
+| ProductImageProductConcretePageMapExpanderPlugin | Expands the product concrete page map with the images field. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
+| ProductImageProductConcretePageDataExpanderPlugin | Expands product concrete page data with the images data. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
+| ProductConcretePublisherTriggerPlugin | Triggers the concrete products resource to be published. |  | Spryker\Zed\ProductPageSearch\Communication\Plugin\Publisher |
+| MultiSelectProductAttributeDataFormatterPlugin | Formats product attributes with input type `multiselect` to array. |  | Spryker\Zed\ProductAttribute\Communication\Plugin\ProductAttribute |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -265,15 +267,16 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
-1. After executing the `console sync:data product_concrete` command, product data, including images, is synced to Elasticsearch product concrete documents.
-2. When a product or its images, updated by Zed UI product data including images, is synced in respective Elasticsearch product concrete documents.
+Make sure the following applies:
+1. Executing the `console sync:data product_concrete` command, syncs the product data, including images, to Elasticsearch product concrete documents.
+2. When a product or its images are updated in the Back Office, these changes are synced to respective Elasticsearch product concrete documents.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
 | Elasticsearch | ProductConcrete | product_concrete:de:de_de:1 |
 
-**Expected data fragment example**
+<details>
+  <summary>Expected data fragment example</summary>
 
 ```yaml
 {
@@ -315,6 +318,8 @@ Ensure the following:
    }
 }
 ```
+
+</summary>
 {% endinfo_block %}
 
 **src/Pyz/Zed/ProductAttribute/ProductAttributeDependencyProvider.php**
@@ -343,7 +348,7 @@ class ProductAttributeDependencyProvider extends SprykerProductAttributeDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can manage "multiselect" product attribute at `https://zed.de.demo-spryker.com/product-attribute-gui/view/product-abstract?id-product-abstract={id-product-abstract}}`.
+Make sure that you can manage "multiselect" product attributes at `https://zed.de.demo-spryker.com/product-attribute-gui/view/product-abstract?id-product-abstract={id-product-abstract}}`.
 
 {% endinfo_block %}
 
@@ -384,9 +389,9 @@ To enable widgets, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConcreteSearchWidget | Allows customers to search for concrete products on the Cart page. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
-| ProductConcreteSearchWidget | Incorporates `ProductConcreteSearchWidget` and lets customers search for concrete products and quickly add them to the cart with the desired quantity. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
-| ProductConcreteSearchGridWidget | Enables the output list of concrete products from search filtered by criteira. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
+| ProductConcreteSearchWidget | Enables customers to search for concrete products on the Cart page. |  | SprykerShop\Yves\ProductSearchWidget\Widget |
+| ProductConcreteSearchWidget | Incorporates `ProductConcreteSearchWidget` and enables customers to search for concrete products and add them to cart with a selected quantity. |  | SprykerShop\Yves\ProductSearchWidget\Widget |
+| ProductConcreteSearchGridWidget | Enables the output list of concrete products from search filtered by criteria. |  | SprykerShop\Yves\ProductSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -418,12 +423,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following widgets have been registered:
+Verify the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductConcreteSearchWidget | Go to the **Cart** page and make sure the **Quick add to Cart** section is present, so you can search for concrete products by typing their SKU. |
-| ProductConcreteAddWidget | Go to the **Cart** page and make sure the **Quick add to Cart** section is present, so you can add the found products to the cart with the desired Quantity. |
+| ProductConcreteSearchWidget | Go to the **Cart** page. Make sure the **Quick add to Cart** section is displayed and you can search for concrete products by entering a SKU. |
+| ProductConcreteAddWidget | Go to the **Cart** page. Make sure that, in the **Quick add to Cart** section, you find a product, select a quantity and add it to cart. |
 | ProductConcreteSearchGridWidget | Can be checked on the slot edit page of Configurator. |
 
 {% endinfo_block %}

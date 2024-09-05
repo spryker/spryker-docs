@@ -34,7 +34,7 @@ This example demonstrates how to configure the order state machine transition fr
 <statemachine
         xmlns="spryker:oms-01"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="spryker:oms-01 http://static.spryker.com/oms-01.xsd"
+        xsi:schemaLocation="spryker:oms-01 https://static.spryker.com/oms-01.xsd"
 >
 
    <process name="SomeProjectProcess" main="true">
@@ -272,7 +272,45 @@ class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
 
 ## Sending additional data to Stripe
 
-Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array.
+Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array. When sending requests using Glue API, pass the `additionalPaymentData` field in the `POST /checkout` request.
+
+```http
+POST https://api.your-site.com/checkout
+Content-Type: application/json
+Accept-Language: en-US
+Authorization: Bearer {{access_token}}
+
+{
+    "data": {
+        "type": "checkout",
+        "attributes": {
+            "customer": {
+                ...
+            },
+            "idCart": "{{idCart}}",
+            "billingAddress": {  
+                ...
+            },
+            "shippingAddress": {
+                ...
+            },
+            "payments": [
+                {
+                    "paymentMethodName": "Stripe",
+                    "paymentProviderName": "Stripe",
+                    "additionalPaymentData": {
+                         "custom-field-1": "my custom value 1",
+                         "custom-field-2": "my custom value 2"
+                    }
+                }
+            ],
+            "shipment": {
+                "idShipmentMethod": {{idMethod}}
+            }
+        }    
+    }
+}
+```
 
 The metadata sent using the field must meet the following criteria:
 

@@ -1,6 +1,6 @@
 
 
-Follow the steps below to integrate the Glue API: Products feature.
+This document describes how to install the Products Glue API.
 
 
 ## Prerequisites
@@ -15,7 +15,7 @@ Install the required features:
 
 ## 1) Install the required modules
 
-Run the following command to install the required modules:
+Install the required modules using composer:
 
 ```bash
 composer require spryker/products-rest-api:"^2.11.0" spryker/product-image-sets-rest-api:"^1.0.3" spryker/product-prices-rest-api:"^1.1.0" spryker/product-tax-sets-rest-api:"^2.1.2" spryker/products-categories-resource-relationship:"^1.0.0" spryker/product-attributes-rest-api:"^1.1.0" --update-with-dependencies
@@ -23,7 +23,7 @@ composer require spryker/products-rest-api:"^2.11.0" spryker/product-image-sets-
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -65,14 +65,14 @@ We recommend setting `ALLOW_PRODUCT_CONCRETE_EAGER_RELATIONSHIP` to `false`. 
 
 Using `ALLOW_PRODUCT_CONCRETE_EAGER_RELATIONSHIP = true` in combination with `ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin`, which is described later in this document, results in duplicated relationships.
 
-We also recommend using `ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin` with `ALLOW_PRODUCT_CONCRETE_EAGER_RELATIONSHIP = false`. The config setting exists for BC reasons only.
+We also recommend using `ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin` with `ALLOW_PRODUCT_CONCRETE_EAGER_RELATIONSHIP = false`. The config setting exists for backward-compatibility reasons only.
 
 {% endinfo_block %}
 
 
 ## 3) Set up database schema and transfer objects
 
-Run the following commands to update the database and generate entity and transfer changes:
+Update the database and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -116,9 +116,9 @@ Ensure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are exte
 
 Set up the following behaviors.
 
-### Re-export data to storage
+### Reexport data to storage
 
-Run the following commands to reload the abstract and concrete product data into the Storage:
+Reload the abstract and concrete product data into the Storage:
 
 ```bash
 console publish:trigger-events -r product_abstract
@@ -141,8 +141,8 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AbstractProductsResourceRoutePlugin | Registers the abstract-products resource. | None | Spryker\Glue\ProductsRestApi\Plugin |
-| ConcreteProductsResourceRoutePlugin| Registers the concrete-products resource. |None |Spryker\Glue\ProductsRestApi\Plugin |
+| AbstractProductsResourceRoutePlugin | Registers the `abstract-products` resource. |  | Spryker\Glue\ProductsRestApi\Plugin |
+| ConcreteProductsResourceRoutePlugin| Registers the `concrete-products` resource. | |Spryker\Glue\ProductsRestApi\Plugin |
 
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -187,8 +187,8 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `abstract-products` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
-|ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `concrete-products` resource. |None| Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
+| ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `abstract-products` resource. |  | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
+|ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `concrete-products` resource. || Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -229,16 +229,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Make sure the following applies:
 
-*   The following endpoints are available:
-
-    *   https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}
-
-    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`  
+* The following endpoints are available:
+    * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+    * `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`  
 
 *   When the `concrete-products` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-products`.
-
 *   When the `abstract-products` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-products`.
 
 {% endinfo_block %}
@@ -249,13 +246,13 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AbstractProductImageSetsRoutePlugin | Registers the abstract-product-image-sets resource. | None | Spryker\Glue\ProductImageSetsRestApi\Plugin |
-|ConcreteProductImageSetsRoutePlugin |Registers the concrete-product-image-sets resource. |None| Spryker\Glue\ProductImageSetsRestApi\Plugin |
-| AbstractProductsProductImageSetsResourceRelationshipPlugin |Adds the `abstract-product-image-sets` resource as a relationship to the `abstract-products` resource. |None | Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship|
-|ConcreteProductsProductImageSetsResourceRelationshipPlugin |Adds the `concrete-product-image-sets` resource as a relationship to the `concrete-products` resource. |None |Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship|
+| AbstractProductImageSetsRoutePlugin | Registers the `abstract-product-image-sets` resource. |  | Spryker\Glue\ProductImageSetsRestApi\Plugin |
+|ConcreteProductImageSetsRoutePlugin |Registers the `concrete-product-image-sets` resource. || Spryker\Glue\ProductImageSetsRestApi\Plugin |
+| AbstractProductsProductImageSetsResourceRelationshipPlugin |Adds the `abstract-product-image-sets` resource as a relationship to the `abstract-products` resource. | | Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship|
+|ConcreteProductsProductImageSetsResourceRelationshipPlugin |Adds the `concrete-product-image-sets` resource as a relationship to the `concrete-products` resource. | |Spryker\Glue\ProductImageSetsRestApi\Plugin\Relationship|
 
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
@@ -310,17 +307,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
+Make sure the following applies:
 
-*   The endpoints are available:
+* The following endpoints are available:
+    * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
 
-    *   `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
+    * `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`  
 
-    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`  
+* When the `abstract-product-image-sets` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`
 
-*   When the `abstract-product-image-sets` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`
-
-*   When the `concrete-product-image-sets` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`
+* When the `concrete-product-image-sets` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`
 
 {% endinfo_block %}
 
@@ -330,10 +326,10 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AbstractProductPricesRoutePlugin | Registers the `abstract-product-prices` resource. | None | Spryker\Glue\ProductPricesRestApi\Plugin |
-| ConcreteProductPricesRoutePlugin |Registers the `concrete-product-prices` resource. |None| Spryker\Glue\ProductPricesRestApi\Plugin |
-| AbstractProductPricesByResourceIdResourceRelationshipPlugin |Adds the `abstract-product-prices-resource` as a relationship to the `abstract-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication |
-| ConcreteProductPricesByResourceIdResourceRelationshipPlugin |Adds the `concrete-product-prices-resource` as a relationship to the `concrete-products` resource. |None | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication|
+| AbstractProductPricesRoutePlugin | Registers the `abstract-product-prices` resource. |  | Spryker\Glue\ProductPricesRestApi\Plugin |
+| ConcreteProductPricesRoutePlugin | Registers the `concrete-product-prices` resource. || Spryker\Glue\ProductPricesRestApi\Plugin |
+| AbstractProductPricesByResourceIdResourceRelationshipPlugin |Adds the `abstract-product-prices-resource` as a relationship to the `abstract-products` resource. | | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication |
+| ConcreteProductPricesByResourceIdResourceRelationshipPlugin |Adds the `concrete-product-prices-resource` as a relationship to the `concrete-products` resource. | | Spryker\Glue\ProductPricesRestApi\Plugin\GlueApplication|
 
 
 
@@ -391,17 +387,15 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure the following:
+Make sure the following applies:
 
-*   The endpoints are available:
+* The following endpoints are available:
+    * `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
+    * `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
 
-    *   `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
+* When the `abstract-product-prices` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`
 
-    *   `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
-
-*   When the `abstract-product-prices` resource is included as a query string, the `abstract-products` resource returns it as a relationship: `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`
-
-*   When the `concrete-product-prices` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`
+* When the `concrete-product-prices` resource is included as a query string, the `concrete-products` resource returns it as a relationship: `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`
 
 {% endinfo_block %}
 
@@ -412,7 +406,7 @@ Activate the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| AbstractProductsCategoriesResourceRelationshipPlugin | Adds the `categories` resource as a relationship to the `abstract-products` resource. | None | Spryker\Glue\ProductsCategoriesResourceRelationship\Plugin |
+| AbstractProductsCategoriesResourceRelationshipPlugin | Adds the `categories` resource as a relationship to the `abstract-products` resource. |  | Spryker\Glue\ProductsCategoriesResourceRelationship\Plugin |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -448,13 +442,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the relationship has been registered correctly:
+Send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
 
-1.  Send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
+The response should contain the `category-nodes` resource as a relationship:
 
-2.  The response should contain the `category-nodes` resource as a relationship.
-
-<details open>
+<details>
 <summary markdown='span'>Response sample</summary>
 
 ```json
@@ -517,7 +509,7 @@ Activate the following plugin:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductManagementAttributesResourceRoutePlugin | Registers the `product-management-attributes` resource. | None | Spryker\Glue\ProductAttributesRestApi\Plugin\GlueApplication |
+| ProductManagementAttributesResourceRoutePlugin | Registers the `product-management-attributes` resource. |  | Spryker\Glue\ProductAttributesRestApi\Plugin\GlueApplication |
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -545,18 +537,18 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the following endpoint is available: `https://glue.mysprykershop.com/product-management-attributes/{% raw %}{{{% endraw %}attribute_key{% raw %}}}{% endraw %}`
+Make sure that the following endpoint is available: `https://glue.mysprykershop.com/product-management-attributes/{% raw %}{{{% endraw %}attribute_key{% raw %}}}{% endraw %}`
 
 {% endinfo_block %}
 
 ### Enable multiselect product attributes
 
-Activate the following plugin:
+Activate the following plugins:
 
 | PLUGIN | SPECIFICATION                                                          | PREREQUISITES | NAMESPACE |
 | --- |------------------------------------------------------------------------| --- | --- |
-| MultiSelectAttributeConcreteProductsResourceExpanderPlugin | Formats concrete-products resource "multiselect" attributes to string. | None | Spryker\Glue\ProductAttributesRestApi\Plugin\ProductsRestApi |
-| MultiSelectAttributeAbstractProductsResourceExpanderPlugin | Formats abstract-products resource "multiselect" attributes to string. | None | Spryker\Glue\ProductAttributesRestApi\Plugin\ProductsRestApi |
+| MultiSelectAttributeConcreteProductsResourceExpanderPlugin | Formats the "multiselect" attributes of the `concrete-products` resource to string. |  | Spryker\Glue\ProductAttributesRestApi\Plugin\ProductsRestApi |
+| MultiSelectAttributeAbstractProductsResourceExpanderPlugin | Formats the "multiselect" attributes of the `abstract-products` resource to string. |  | Spryker\Glue\ProductAttributesRestApi\Plugin\ProductsRestApi |
 
 **src/Pyz/Glue/ProductsRestApi/ProductsRestApiDependencyProvider.php**
 
@@ -596,6 +588,6 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Ensure that abstract-products and concrete-products resources return "multiselect" product attributes as strings.
+Make sure that `abstract-products` and `concrete-products` resources return "multiselect" product attributes as strings.
 
 {% endinfo_block %}

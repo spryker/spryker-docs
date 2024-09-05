@@ -355,7 +355,7 @@ entries:
           url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
           nested:
           - title: Extend a core module that is used by another
-            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
           - title: Extend the core
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality

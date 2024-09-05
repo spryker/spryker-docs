@@ -272,9 +272,7 @@ class EmbeddedPaymentPageRouteProviderPlugin extends AbstractRouteProviderPlugin
 
 ## Sending additional data to Stripe
 
-Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array.
-
-If you use Spryker Glue API, you need to pass the `additionalPaymentData` field in the `POST /checkout` request.
+Stripe accepts metadata passed using API calls. To send additional data to Stripe, the `QuoteTransfer::PAYMENT::ADDITIONAL_PAYMENT_DATA` field is used; the field is a key-value array. When sending requests using Glue API, pass the `additionalPaymentData` field in the `POST /checkout` request.
 
 ```http
 POST https://api.your-site.com/checkout

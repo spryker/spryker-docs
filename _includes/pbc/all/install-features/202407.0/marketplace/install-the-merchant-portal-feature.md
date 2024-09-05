@@ -344,7 +344,7 @@ composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-conne
 composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-gui:"^1.0.0" spryker/security-system-user:"^1.0.0" spryker/user-password-reset:"^1.0.0" spryker/user-password-reset-extension:"^1.0.0" spryker/user-password-reset-mail:"^1.0.0" --update-with-dependencies
 ```
 
-2. Update the following modules to the latest minors.
+2. Update the following modules to the latest minor versions:
 
 | MODULE       | DIRECTORY                    |
 |--------------|------------------------------|
@@ -360,11 +360,13 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 
 {% info_block warningBox "Verification" %}
 
-Go to `http://mp.de.spryker.local/security-merchant-portal-gui/login` and ensure that the Merchant Portal looks as follows:
+1. Go to `http://mp.de.spryker.local/security-merchant-portal-gui/login`.
+   Make sure the following login page is displayed:
 
 ![Merchant Portal login](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-login.png)
 
-After loging in, you are redirected to the dashboard. The contents of the sidebar depend on the installed features and their configuration.
+2. Log in.
+  This opens the dashboard. Make sure the navigation contains the items you've configured:
 
 ![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Feature+Integration+Guides/Marketplace/Merchant+Portal+feature+integration/mp-dashboard.png)
 

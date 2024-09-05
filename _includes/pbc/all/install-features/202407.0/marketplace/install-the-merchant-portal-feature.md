@@ -189,7 +189,7 @@ class AclConfig extends SprykerAclConfig
 console setup:init-db
 ```
 
-#### Extend ACL entity metadata configuration.
+#### Extend ACL entity metadata configuration
 
 As an example of extending the `AclEntityMetadata` configuration, you can use the `AclEntityDummyProduct` module.
 
@@ -199,7 +199,7 @@ Install the module:
 composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
 ```
 
-As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin`:
+For an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetadataConfigExpanderPlugin`:
 
 ```php
 <?php
@@ -222,9 +222,9 @@ As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\
      }
 ```
 
-### 4) Merchant Portal Navigation links in the sidebar
+### 4) Adjust Merchant Portal navigation
 
-1. To configure the Merchant Portal sidebar, add installed MP GUI modules to `config/Zed/navigation-main-merchant-portal.xml`.
+1. To configure the Merchant Portal sidebar, add the installed MP GUI modules to `config/Zed/navigation-main-merchant-portal.xml`.
 
 <details><summary markdown='span'>config/Zed/navigation-main-merchant-portal.xml</summary>
 
@@ -293,7 +293,7 @@ As an example of the `AclEntityMetadataCollection` configuration, use `\Spryker\
 ```
 </details>
 
-2. Build navigation cache:
+2. Build the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -301,8 +301,9 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following is true:
-* All configured items are present in the Merchant Portal Sidebar and route you accordingly.
+Make sure the following applies:
+* The Merchant Portal navigation contains all configured items.
+* Clicking the configured navigation items opens respective pages.
 * In `\Pyz\Zed\ZedNavigation\ZedNavigationDependencyProvider`, `\Spryker\Zed\Acl\Communication\Plugin\Navigation\AclNavigationItemCollectionFilterPlugin` is enabled:
 
 ```php

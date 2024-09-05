@@ -1,5 +1,5 @@
 ---
-title: Extend a core module that is used by another
+title: Extend a core module that is used by another module
 description: This document describes how to extend a core module that is used by another core module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -9,6 +9,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extend-spryker/extending-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+  - /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
 related:
   - title: Extend the core
     link: docs/scos/dev/back-end-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
@@ -21,6 +22,12 @@ This document describes how to extend a core module that is used by another core
 Extra consideration must be taken when extending core modules that are already in use by another module.
 
 The following example extends the `Cart` -> `Calculation` modules.
+
+{% info_block infoBox "" %}
+
+The described case is only practical when you are "between" two core bundles. For your own modules, use the general module interface—for example, `MyModuleInterface`.
+
+{% endinfo_block %}
 
 ## 1. Modify the interface
 
@@ -81,16 +88,31 @@ public function provideBusinessLayerDependencies(Container $container)
 }
 ```
 
+## 4. Update Factory
+
+In the `Cart` module, update the business factory with the new interface:
+
+```php
+use Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface;
+
+class CartBusnessFactory extends SprykerCartBusnessFactory
+{
+...
+	/**
+	 * @return \Pyz\Zed\Cart\Dependency\Facade\CartToCalculationInterface
+	 */
+	public function getCalculationFacade(): CartToCalculationInterface
+	{
+		return $this->getProvidedDependency(CartDependencyProvider::FACADE_CALCULATION);
+	}
+...
+}
+```
+
 {% info_block errorBox %}
 
-Bridges are for core-level only. If you use them at the project level, you are doing it wrong.
+Bridges can only be used on the core level.
 
-Spryker is constantly improving type declarations of all methods. Thus, some bridge interfaces might be incompatible with Facade interfaces, so this approach does not work. To prevent this, consider module version patch-lock.
-
-{% endinfo_block %}
-
-{% info_block infoBox "Info" %}
-
-The described case is only practical when you are "between" two core bundles, and you want to make it right. For your own modules, use the general module interface—for example, `MyModuleInterface`.
+We're constantly improving type declarations of all methods. Because some bridge interfaces might be incompatible with Facade interfaces, this approach doesn't work. To prevent this, consider module version patch-lock.
 
 {% endinfo_block %}

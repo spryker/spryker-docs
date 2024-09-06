@@ -23,7 +23,7 @@ For detailed information on the modules that provide the API functionality and r
 |-|-|-|-|
 | Content-Type | application/x-www-form-urlencoded | &check; | `x-www-form-urlencoded` is a URL encoded form. This is the default value if the encrypted attribute is not set to anything. The keys and values are encoded in key-value tuples separated by `&`, with a `=` between the key and the value. Non-alphanumeric characters in both keys and values are percent encoded. |
 
-<details><summary markdown='span'>Request sample: authenticate as a Back Office user</summary>
+<details><summary>Request sample: authenticate as a Back Office user</summary>
 
 | REQUEST BODY KEY | VALUE |
 |-|-|
@@ -41,7 +41,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ### Response
 
-<details><summary markdown='span'>Response sample: authenticate as a Back Office user</summary>
+<details><summary>Response sample: authenticate as a Back Office user</summary>
 
 ```json
 {

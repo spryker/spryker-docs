@@ -60,7 +60,7 @@ Request sample: retrieve a business unit address
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a business unit address</summary>
+<summary>Response sample: retrieve a business unit address</summary>
 
 ```json
 {

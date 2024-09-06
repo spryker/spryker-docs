@@ -166,8 +166,8 @@ Activate the following plugin:
 | PromotionItemByQuoteTransferResourceRelationshipPlugin | Adds the `promotional-items` resource as a relationship to the carts and `guest-carts` resources. | None | Spryker\Glue\DiscountPromotionsRestApi\Plugin\GlueApplication |
 | ProductAbstractBySkuResourceRelationshipPlugin | Adds the `abstract-products` resource as a relationship to the `promotional-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -472,8 +472,8 @@ To verify installation of `CartRuleByQuoteResourceRelationshipPlugin` and `Vouch
 
 * `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+<details>
+<summary>Example response</summary>
 
 ```json
 {
@@ -576,8 +576,8 @@ Make sure that the cart-rules and vouchers relationships are also available for 
 
 * `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
-<details open>
-<summary markdown='span'>Example response</summary>
+<details>
+<summary>Example response</summary>
 
 ```json
 {
@@ -705,8 +705,8 @@ Make sure that the following relations are available:
 
 * `promotional-items with abstract-products`
 
-<details open>
-<summary markdown='span'>Example of Response</summary>
+<details>
+<summary>Example of Response</summary>
 
 ```json
 {
@@ -873,8 +873,8 @@ Add the selected promotional product to the cart and check the cart in the respo
 }
 ```
 
-<details open>
-<summary markdown='span'>Example of Response</summary>
+<details>
+<summary>Example of Response</summary>
 
 ```json
 {

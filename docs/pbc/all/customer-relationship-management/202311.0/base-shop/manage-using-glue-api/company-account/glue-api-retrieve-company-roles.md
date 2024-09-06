@@ -68,7 +68,7 @@ To retrieve a company role, send the request:
 #### Response
 
 <details>
-<summary markdown='span'>Response sample: Retrieve all the company roles of the current authenticated company user</summary>
+<summary>Response sample: Retrieve all the company roles of the current authenticated company user</summary>
 
 ```json
 {
@@ -94,7 +94,7 @@ To retrieve a company role, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a company role with the unique identifier</summary>
+<summary>Response sample: retrieve a company role with the unique identifier</summary>
 
 ```json
 {
@@ -115,7 +115,7 @@ To retrieve a company role, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a company role with the unique identifier and include the related companies</summary>
+<summary>Response sample: retrieve a company role with the unique identifier and include the related companies</summary>
 
 ```json
 {

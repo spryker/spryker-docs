@@ -34,7 +34,7 @@ The state machine for the asynchronous flow:
 Here is a list of commands and conditions to support processing of OMS:
 
 <details>
-<summary markdown='span'>Click here for example of injection</summary>
+<summary>Click here for example of injection</summary>
 
  ```php
  <script>

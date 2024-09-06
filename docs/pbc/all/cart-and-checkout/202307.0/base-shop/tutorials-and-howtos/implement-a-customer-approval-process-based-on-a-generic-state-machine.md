@@ -55,7 +55,7 @@ Several foreign keys have been added, including foreign key to the `spy_customer
 
 Set up a few operations for managing customer approval process:
 
-<details><summary markdown='span'>CustomerApproveProcessFacadeInterface</summary>
+<details><summary>CustomerApproveProcessFacadeInterface</summary>
 
 ```php
 <?php
@@ -135,7 +135,7 @@ This is all you need to implement in the business layer.
 
 Configure the `StateMachineHandlerPlugin`:
 
-<details><summary markdown='span'>CustomerApproveProcessStateMachineHandlerPlugin</summary>
+<details><summary>CustomerApproveProcessStateMachineHandlerPlugin</summary>
 
 ```php
 <?php
@@ -325,7 +325,7 @@ class CustomerApproveProcessConditionPlugin extends AbstractPlugin implements Co
 
 There is a simple example of the state machine process, you need to put it into `config/Zed/StateMachine/CustomerApproveProcess/Process01.xml`.
 
-<details><summary markdown='span'>Process01.xml</summary>
+<details><summary>Process01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -396,7 +396,7 @@ There is a simple example of the state machine process, you need to put it into 
 For representing our process items in Zed UI we need only two things: controller and template.
 Controller includes the list of all items, add new item, delete item actions:
 
-<details><summary markdown='span'>StateMachineItemsController</summary>
+<details><summary>StateMachineItemsController</summary>
 
 ```php
 <?php
@@ -508,7 +508,7 @@ class StateMachineItemsController extends AbstractController
 
 You need the template only for the list action; the following is an example:
 
-<details><summary markdown='span'>StateMachineItemsControllertransfer.xml</summary>
+<details><summary>StateMachineItemsControllertransfer.xml</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends '@Cms/Layout/layout.twig' {% raw %}%}{% endraw %}

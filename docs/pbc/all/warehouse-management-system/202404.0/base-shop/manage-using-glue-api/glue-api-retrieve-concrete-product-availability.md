@@ -57,7 +57,7 @@ Request sample: retrieve availability of a concrete product
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve availability of a concrete product</summary>
+<summary>Response sample: retrieve availability of a concrete product</summary>
 
 ```json
 {

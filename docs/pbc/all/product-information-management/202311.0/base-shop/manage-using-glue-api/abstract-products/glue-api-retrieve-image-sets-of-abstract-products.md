@@ -50,7 +50,7 @@ Request sample: retrieve image sets of an abstract product
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve image sets of an abstract product</summary>
+<summary>Response sample: retrieve image sets of an abstract product</summary>
 
 ```json
 {

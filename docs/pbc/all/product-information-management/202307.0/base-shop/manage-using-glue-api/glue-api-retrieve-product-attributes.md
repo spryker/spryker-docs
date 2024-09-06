@@ -43,7 +43,7 @@ Request sample: retrieve all product attributes
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve all product attributes</summary>
+<summary>Response sample: retrieve all product attributes</summary>
 
 ```json
 {
@@ -181,7 +181,7 @@ Request sample: retrieve a product attribute
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a product attribute</summary>
+<summary>Response sample: retrieve a product attribute</summary>
 
 ```json
 {

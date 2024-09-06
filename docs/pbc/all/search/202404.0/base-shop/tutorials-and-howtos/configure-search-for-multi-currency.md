@@ -54,7 +54,7 @@ The `price` field has the same structure, but the value has a different meaning.
 
 The value is adjusted according to the customer state (currency, price mode, and price type). Because of this, you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:   
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary>Pyz\Client\Catalog</summary>
 
 ```php
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
@@ -180,7 +180,7 @@ class ProductSaleDependencyProvider extends AbstractDependencyProvider
 
 You also have to update the price expander to export grouped prices. To do this, change `\Pyz\Zed\ProductSearch\Business\Map\Expander\PriceExpander` class:
 
-<details><summary markdown='span'>Pyz\Zed\ProductSearch\Business\Map\Expander</summary>
+<details><summary>Pyz\Zed\ProductSearch\Business\Map\Expander</summary>
 
 ```php
 <?php
@@ -352,7 +352,7 @@ class ProductSearchBusinessFactory extends SprykerProductSearchBusinessFactory
 
 It is also needed to configure prices for catalog search in `\Pyz\Client\Catalog\Plugin\Config\CatalogSearchConfigBuilder`:
 
-<details><summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
+<details><summary>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
 <?php

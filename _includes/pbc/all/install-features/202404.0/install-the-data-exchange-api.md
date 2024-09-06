@@ -163,7 +163,7 @@ Tables that aren't allowed for configuration are defined in `Spryker\Zed\Dynamic
 
 1. Optional: To set the default configuration data, create a configuration file following the example:
 
-<details open><summary markdown='span'>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
+<details><summary>src/Pyz/Zed/DynamicEntity/data/installer/configuration.json</summary>
 
 ##### Example:
 
@@ -597,8 +597,8 @@ Enable the following behaviors by registering the plugins:
 | DynamicEntityRouteProviderPlugin | Adds routes for the provided dynamic entity to the RouteCollection. | Spryker\Glue\DynamicEntityBackendApi\Plugin |
 | DynamicEntityProtectedPathCollectionExpanderPlugin | Expands the list of protected endpoints with dynamic entity endpoints. | Spryker\Glue\DynamicEntityBackendApi\Plugin\GlueBackendApiApplicationAuthorizationConnector |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/Console/ConsoleDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -628,8 +628,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -678,8 +678,8 @@ If the documentation cache isn't invalidated, the documentation will not be upda
 
 {% endinfo_block %}
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/DocumentationGeneratorOpenApi/DocumentationGeneratorOpenApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -704,8 +704,8 @@ class DocumentationGeneratorOpenApiDependencyProvider extends SprykerDocumentati
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

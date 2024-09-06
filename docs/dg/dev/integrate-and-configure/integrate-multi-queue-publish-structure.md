@@ -76,7 +76,7 @@ class PublisherConfig extends SprykerPublisherConfig
 
 2. Set `\Pyz\Client\RabbitMqRabbitMqConfig::getPublishQueueConfiguration()` to use the `publish` queue.
 
-<details><summary markdown='span'>Pyz\Client\RabbitMq</summary>
+<details><summary>Pyz\Client\RabbitMq</summary>
 
 ```php
 <?php
@@ -238,7 +238,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` to use the `publish.translation` queue.
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details><summary>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php
@@ -319,7 +319,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 You can set up an individual publish queue for a publisher plugin or a set of publisher plugins as follows:
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details><summary>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php

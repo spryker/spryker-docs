@@ -65,7 +65,7 @@ To retrieve information about a company, send the request:
 #### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about the companies of the currently authenticated company user</summary>
+<summary>Response sample: retrieve information about the companies of the currently authenticated company user</summary>
 
 ```json
 {

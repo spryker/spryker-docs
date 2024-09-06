@@ -230,7 +230,7 @@ Use the code generators to generate the module in Zed console `code:generate:mod
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>Code samples</summary>
+<details><summary>Code samples</summary>
 
 ```php
 namespace Pyz\Zed\StringReverser\Business;

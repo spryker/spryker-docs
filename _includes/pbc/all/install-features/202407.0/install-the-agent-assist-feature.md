@@ -76,7 +76,7 @@ Enable the following behaviors by registering the plugins:
 | UserAgentTableConfigExpanderPlugin                                            | In the Back Office, adds the **AGENT** column to the **USERS LIST** table.                                                     |                                                      | Spryker\Zed\AgentGui\Communication\Plugin               |
 | UserAgentTableDataExpanderPlugin                                              | In the Back Office, in the **USERS LIST** table, fills the **AGENT** column.                                                    | Expects the **THIS USER IN AS AN AGENT** checkbox on the **Create new User** and **Edit User** pages of the Back Office. | Spryker\Zed\AgentGui\Communication\Plugin               |
 
-<details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php

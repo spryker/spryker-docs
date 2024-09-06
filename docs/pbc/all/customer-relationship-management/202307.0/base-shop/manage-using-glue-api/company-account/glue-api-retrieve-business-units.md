@@ -70,7 +70,7 @@ To retrieve a business unit, send the request:
 #### Response
 
 
-<details><summary markdown='span'>Response sample: retrieve business units of a company user</summary>
+<details><summary>Response sample: retrieve business units of a company user</summary>
 
 ```json
 {
@@ -96,7 +96,7 @@ To retrieve a business unit, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve the business unit with the unique identifier</summary>
+<summary>Response sample: retrieve the business unit with the unique identifier</summary>
 
 ```json
 {
@@ -126,7 +126,7 @@ To retrieve a business unit, send the request:
 </details>
 
 
-<details><summary markdown='span'>Response sample: retrieve the business unit with the unique identifier and related companies included</summary>
+<details><summary>Response sample: retrieve the business unit with the unique identifier and related companies included</summary>
 
 ```json
 {
@@ -165,7 +165,7 @@ To retrieve a business unit, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve the business unit with the unique identifier and related business unit addresses included</summary>
+<summary>Response sample: retrieve the business unit with the unique identifier and related business unit addresses included</summary>
 
 ```json
 {

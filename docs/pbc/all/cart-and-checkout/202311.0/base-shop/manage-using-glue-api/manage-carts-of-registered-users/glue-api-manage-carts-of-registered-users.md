@@ -83,7 +83,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts`
 
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 "data":
@@ -164,7 +164,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no carts</summary>
+<summary>Response sample: no carts</summary>
 
 ```json
 {
@@ -177,7 +177,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample: multiple carts</summary>
+<summary>Response sample: multiple carts</summary>
 
 ```json
 {
@@ -246,7 +246,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with items</summary>
+<summary>Response sample with items</summary>
 
 ```json
 {
@@ -543,7 +543,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with cart permission groups</summary>
+<summary>Response sample with cart permission groups</summary>
 
 ```json
 {
@@ -683,7 +683,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with shared carts</summary>
+<summary>Response sample with shared carts</summary>
 
 ```json
 {
@@ -822,7 +822,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
+<summary>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -929,7 +929,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -1063,7 +1063,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -1135,7 +1135,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -1202,7 +1202,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with gift cards applied</summary>
+<summary>Response sample with gift cards applied</summary>
 
 ```json
 {
@@ -1273,7 +1273,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, concrete products, and product options</summary>
+<summary>Response sample with items, concrete products, and product options</summary>
 
 ```json
 {
@@ -1527,7 +1527,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary>Response sample with product labels</summary>
 
 ```json
 {
@@ -1763,7 +1763,7 @@ To retrieve a particular cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {
@@ -1801,7 +1801,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with items</summary>
+<summary>Response sample with items</summary>
 
 ```json
 {
@@ -1930,7 +1930,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with cart permission groups</summary>
+<summary>Response sample with cart permission groups</summary>
 
 ```json
 {
@@ -1993,7 +1993,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Sample response with details on shared carts</summary>
+<summary>Sample response with details on shared carts</summary>
 
 ```json
 {
@@ -2054,7 +2054,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with shared carts and company users they are shared with</summary>
+<summary>Response sample with shared carts and company users they are shared with</summary>
 
 ```json
 {
@@ -2131,7 +2131,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary>Response sample with cart rules</summary>
 
 ```json
 {
@@ -2200,7 +2200,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with a promotional item</summary>
+<summary>Response sample with a promotional item</summary>
 
 ```json
 {
@@ -2262,7 +2262,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with details on gift cards</summary>
+<summary>Response sample with details on gift cards</summary>
 
 ```json
 {
@@ -2327,7 +2327,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items, respective concrete products, and their product options</summary>
+<summary>Response sample with items, respective concrete products, and their product options</summary>
 
 ```json
 {
@@ -2576,7 +2576,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with vouchers</summary>
+<summary>Response sample with vouchers</summary>
 
 ```json
 {
@@ -2647,7 +2647,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary>Response sample with product labels</summary>
 
 ```json
 {
@@ -2802,7 +2802,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
+<summary>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
 
 ```json
 {
@@ -2850,7 +2850,7 @@ To retrieve a particular cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
+<summary>Response sample with the unfulfilled hard maximum threshold</summary>
 
 ```json
 {

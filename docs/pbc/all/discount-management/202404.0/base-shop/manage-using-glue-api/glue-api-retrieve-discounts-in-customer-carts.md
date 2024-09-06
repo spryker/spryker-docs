@@ -55,7 +55,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the cart rules included</summary>
+<details><summary>Response sample: retrieve customer's carts with the cart rules included</summary>
 
 ```json
 {
@@ -185,7 +185,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts with the information on vouchers included</summary>
+<details><summary>Response sample: retrieve customer's carts with the information on vouchers included</summary>
 
 ```json
 {
@@ -254,7 +254,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve customer's carts withe the information on promotional items included</summary>
+<details><summary>Response sample: retrieve customer's carts withe the information on promotional items included</summary>
 
 ```json
 {

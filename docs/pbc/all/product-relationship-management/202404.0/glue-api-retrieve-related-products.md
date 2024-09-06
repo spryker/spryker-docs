@@ -56,7 +56,7 @@ To get related items of an abstract product, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve related items of an abstract product</summary>
+<summary>Response sample: retrieve related items of an abstract product</summary>
 
 ```json
     {
@@ -293,7 +293,7 @@ To get related items of an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve related items of an abstract product with the details on the product labels</summary>
+<summary>Response sample: retrieve related items of an abstract product with the details on the product labels</summary>
 
 ```json
  {
@@ -614,7 +614,7 @@ To get upselling items for all products in a cart of a registered customer, send
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve upselling products of a registered user's cart</summary>
+<summary>Response sample: retrieve upselling products of a registered user's cart</summary>
 
 ```json
 {
@@ -864,7 +864,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve upselling products of a registered user's cart with product labels</summary>
+<summary>Response sample: retrieve upselling products of a registered user's cart with product labels</summary>
 
 ```json
 {
@@ -992,7 +992,7 @@ To retrieve upselling products of a guest cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve upselling products of a guest cart</summary>
+<summary>Response sample: retrieve upselling products of a guest cart</summary>
 
 ```json
 {
@@ -1193,7 +1193,7 @@ To retrieve upselling products of a guest cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve upselling products of a guest cart with the details on product labels</summary>
+<summary>Response sample: retrieve upselling products of a guest cart with the details on product labels</summary>
 
 ```json
 {

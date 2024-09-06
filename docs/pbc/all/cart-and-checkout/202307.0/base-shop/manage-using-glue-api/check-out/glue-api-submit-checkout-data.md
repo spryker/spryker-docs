@@ -70,7 +70,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with one shipment</summary>
+<summary>Request sample: submit checkout data with one shipment</summary>
 
 ```json
 {
@@ -130,7 +130,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with a split shipment</summary>
+<summary>Request sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -211,7 +211,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with a split shipment and addresses passed as IDs</summary>
+<summary>Request sample: submit checkout data with a split shipment and addresses passed as IDs</summary>
 
 ```json
 {
@@ -260,7 +260,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with the logged-in customer's cart data.</summary>
+<summary>Request sample: submit checkout data with the logged-in customer's cart data.</summary>
 
 ```json
 {"data":
@@ -278,7 +278,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 <details>
-<summary markdown='span'>Request sample: submit checkout data with the guest customer's cart data.</summary>
+<summary>Request sample: submit checkout data with the guest customer's cart data.</summary>
 
 ```json
 {"data":
@@ -303,7 +303,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with one shipment</summary>
+<summary>Response sample: submit checkout data with one shipment</summary>
 
 ```json
 {
@@ -335,7 +335,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with a split shipment</summary>
+<summary>Response sample: submit checkout data with a split shipment</summary>
 
 ```json
 {
@@ -463,7 +463,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with a split shipment, shipments, and shipment methods</summary>
+<summary>Response sample: submit checkout data with a split shipment, shipments, and shipment methods</summary>
 
 ```json
 {
@@ -713,7 +713,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with customer addresses</summary>
+<summary>Response sample: submit checkout data with customer addresses</summary>
 
 ```json
 {
@@ -835,7 +835,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with company business unit addresses</summary>
+<summary>Response sample: submit checkout data with company business unit addresses</summary>
 
 ```json
 {
@@ -907,7 +907,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with payment methods</summary>
+<summary>Response sample: submit checkout data with payment methods</summary>
 
 ```json
 {
@@ -994,7 +994,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with the logged-in customer's cart data.</summary>
+<summary>Response sample: submit checkout data with the logged-in customer's cart data.</summary>
 
 ```json
 {
@@ -1065,7 +1065,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 <details>
-<summary markdown='span'>Response sample: submit checkout data with the guest customer's cart data.</summary>
+<summary>Response sample: submit checkout data with the guest customer's cart data.</summary>
 
 ```json
 {

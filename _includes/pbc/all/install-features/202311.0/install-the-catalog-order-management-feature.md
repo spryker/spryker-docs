@@ -66,7 +66,7 @@ Register the following plugins:
 | PopularitySortConfigTransferBuilderPlugin | Builds a popularity sort configuration transfer for a catalog page. |               | Spryker\Client\SalesProductConnector\Plugin\PopularitySortConfigTransferBuilderPlugin |
 
 
-<details open><summary markdown='span'>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>/src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php

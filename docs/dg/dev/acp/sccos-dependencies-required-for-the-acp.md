@@ -34,7 +34,7 @@ SCCOS product release 202211.0 includes a basic ACP setup. All ACP modules (apps
 
 {% info_block infoBox "Product version earlier than 202311.0" %}
 
-If you were onboarded with a version older than product release 202211.0, our team may need to examine your project and provide more support during the upgrade process. Do [contact us](https://support.spryker.com/). 
+If you were onboarded with a version older than product release 202211.0, our team may need to examine your project and provide more support during the upgrade process. Do [contact us](https://support.spryker.com/).
 
 {% endinfo_block %}
 

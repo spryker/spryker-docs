@@ -81,7 +81,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
     Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
- <details><summary markdown='span'>Sample response</summary>
+ <details><summary>Sample response</summary>
 
   ```json
   {
@@ -134,7 +134,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
   * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
 
-<details><summary markdown='span'>Sample response</summary>
+<details><summary>Sample response</summary>
 
     ```json
     {

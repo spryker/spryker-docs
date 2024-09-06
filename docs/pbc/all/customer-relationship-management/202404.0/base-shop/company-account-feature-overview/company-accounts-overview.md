@@ -55,7 +55,7 @@ The company user contains all the information about the customer and has a one-t
 Company users can perform the following actions on the Storefront:
 
 <details>
-<summary markdown='span'>Create a company</summary>
+<summary>Create a company</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -68,7 +68,7 @@ Company users can perform the following actions on the Storefront:
 
 
 <details>
-<summary markdown='span'>Create a business unit</summary>
+<summary>Create a business unit</summary>
 
 
 <figure class="video_container">
@@ -80,7 +80,7 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Edit a business unit</summary>
+<summary>Edit a business unit</summary>
 
 
 <figure class="video_container">
@@ -93,7 +93,7 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Delete a business unit</summary>
+<summary>Delete a business unit</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -105,7 +105,7 @@ Company users can perform the following actions on the Storefront:
 
 
 <details>
-<summary markdown='span'>Create a user</summary>
+<summary>Create a user</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -117,7 +117,7 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Edit, enable, and disable a user</summary>
+<summary>Edit, enable, and disable a user</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -128,7 +128,7 @@ Company users can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Delete a user</summary>
+<summary>Delete a user</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

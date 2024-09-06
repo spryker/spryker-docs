@@ -878,7 +878,7 @@ To verify that the navigation for Store GUI is successfully generated, make sure
 1. Update the RabbitMQ configuration:
 
 <details>
-<summary markdown='span'>Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
+<summary>Pyz/Client/RabbitMq/RabbitMqConfig.php</summary>
 
 ```php
 <?php

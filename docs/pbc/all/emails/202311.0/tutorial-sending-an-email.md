@@ -121,7 +121,7 @@ protected function sendRegistrationToken()
 
 Create `MailTypeBuilderPlugin` implementing the `MailTypeBuilderPluginInterface`. For more information about creating a `MailTypeBuilderPlugin`, see [HowTo: Create and register a MailTypeBuilderPlugin](/docs/pbc/all/emails/{{page.version}}/howto-create-and-register-a-mailtypeplugin.html):
 
-<details><summary markdown='span'>Code sample:</summary>
+<details><summary>Code sample:</summary>
 
 ```php
 <?php

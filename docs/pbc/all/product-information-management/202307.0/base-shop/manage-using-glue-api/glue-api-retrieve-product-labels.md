@@ -43,7 +43,7 @@ Request sample: retrieve a product label
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a product label</summary>
+<summary>Response sample: retrieve a product label</summary>
 
 ```json
 {

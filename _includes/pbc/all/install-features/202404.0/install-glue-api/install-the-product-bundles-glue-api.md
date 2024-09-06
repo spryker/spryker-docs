@@ -69,8 +69,8 @@ Activate the following plugins:
 |ConcreteProductsBundledProductsResourceRoutePlugin| Provides the `bundled-products` resource route with `concrete-products` as a parent resource. |None |Spryker\Glue\ProductBundlesRestApi\Plugin\GlueApplication|
 | BundleItemRestOrderDetailsAttributesMapperPlugin |Maps the additional information from`OrderTransfer` to `RestOrderDetailsAttributesTransfer`. |None |Spryker\Glue\ProductBundlesRestApi\Plugin\OrdersRestApi|
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

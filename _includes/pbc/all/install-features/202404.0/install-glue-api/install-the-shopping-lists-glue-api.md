@@ -120,8 +120,8 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 | ShoppingListItemByShoppingListResourceRelationshipPlugin | Adds the shopping-list-items resource as a relationship to shopping-lists. | None | Spryker\Glue\ShoppingListsRestApi\Plugin\GlueApplication |
 | ConcreteProductBySkuResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `shopping-list-items` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -179,8 +179,8 @@ To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `
 * https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products
 
 Check the response:
-<details open>
-<summary markdown='span'>GET https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
+<details>
+<summary>GET https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
 
 ```json
 {

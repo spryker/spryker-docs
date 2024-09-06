@@ -750,7 +750,7 @@ Make sure that, when merchant entities are created or updated through ORM, they'
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Example of the expected data fragment</summary>
+<summary>Example of the expected data fragment</summary>
 
  ```json
 

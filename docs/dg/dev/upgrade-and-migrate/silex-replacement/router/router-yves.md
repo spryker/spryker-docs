@@ -147,8 +147,8 @@ interface PostAddRouteManipulatorPluginInterface
 
 Use this class when you need to manipulate all routes at once without refactoring each part of the code, where routes are created. Every route, which is added to `RouteCollection`, will be manipulated with all the attached `\Spryker\Yves\RouterExtension\Dependency\Plugin\PostAddRouteManipulatorPluginInterface's`. Imagine you need all your URLs to have a prefix or suffix (e.g. `/{store}/url-to-something/{locale}`) instead of adding `{store}` and `{locale}` to all routes manually. In this case, you just add a manipulator that does that for you.
 
-<details open>
-<summary markdown='span'>\Spryker\Yves\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface</summary>
+<details>
+<summary>\Spryker\Yves\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface</summary>
 
 ```php
 <?php

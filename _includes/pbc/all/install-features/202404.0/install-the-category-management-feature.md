@@ -492,7 +492,7 @@ Configure tables to be published to `spy_category_image_storage`, `spy_category_
 | CategoryTemplateWritePublisherPlugin           | Publishes category node page search data by the`SpyCategoryTemplate` entity events.                                                                                      |               | Spryker\Zed\CategoryPageSearch\Communication\Plugin\Publisher\CategoryTemplate  |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -762,7 +762,7 @@ Make sure that, when a category is created or edited through ORM, it is exported
 }
 ```
 
-<details><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
+<details><summary>EXAMPLE EXPECTED DATA FRAGMENT: category_node:de:de_de:5</summary>
 
 ```yaml
 {
@@ -1069,7 +1069,7 @@ Add the following plugins:
 | ImageSetCategoryFormTabExpanderPlugin | Extends create and edit category tabs with a category image set.                                                                      |               | Spryker\Zed\CategoryImageGui\Communication\Plugin\CategoryGui |
 | UrlStorageCategoryNodeMapperPlugin    | If `UrlStorageTransfer.fkResourceCategorynode` is provided, maps the category node storage data to `UrlStorageResourceMapTransfer`. |               | Spryker\Client\CategoryStorage\Plugin                         |
 
-<details open ><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+<details open ><summary>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -92,7 +92,7 @@ The main components of the solution are
 - custom RabbitMQ client to expose `queue_declare` (https://www.rabbitmq.com/amqp-0-9-1-reference.html#queue.declare) method to the Business layer code, this method returns queue statistics for existing queue and does not change anything in a queue.
 - slightly modified `\Spryker\Zed\Queue\Business\Process\ProcessManager` - to store information about a queue in a context of store
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/Worker/NewWorker.php</summary>
 
 ```php
@@ -251,7 +251,7 @@ Because of this, this buffer must be set with such limitations in mind.
 - to accomodate a new process it is going to launch
 - to leave space for any sporadic memory consumption change of already running processes
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/SystemResources/SystemResourcesManager.php</summary>
 
 ```php
@@ -328,7 +328,7 @@ class SystemResourcesManager implements SystemResourcesManagerInterface
 This component is responsible for reading information about queues, mainly - amount of messages.
 Key feature here - is cooldown period of default 5 seconds, it means that if all queues are empty, it won't re-scan those right await but will wait (non blocking) until cooldown timeout passes. Obviously it'll add up to 5s delay when new messages appear, but it won't be noticable, and as soon as there are always some messages present - the cooldown timeout is not applied.
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/QueueScanner.php</summary>
 
 ```php
@@ -398,7 +398,7 @@ class QueueScanner implements QueueScannerInterface
 
 The idea here is simple - just to add store code as a prefix to a queue name, and without additional code modifications - it'll work with all queues/stores combinations correctly within one Worker.
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/Process/ProcessManager.php</summary>
 
 ```php
@@ -428,7 +428,7 @@ And really simple, yet useful - a simple ordered strategy to define any logic to
 
 To discover alternative use cases for a Strategy component, feel free to investigate the previously mentioned `\Pyz\Zed\Queue\Business\Strategy\BiggestFirstStrategy` which you can find in the attached patch.
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/Strategy/OrderedQueuesStrategy.php</summary>
 
 ```php

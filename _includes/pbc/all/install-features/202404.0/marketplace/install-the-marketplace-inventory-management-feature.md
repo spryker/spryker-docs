@@ -644,7 +644,7 @@ MER000006,Sony Experts MER000006 Warehouse 1
 **data/import/common/common/marketplace/product_offer_stock.csv**
 
 <details>
-<summary markdown='span'>Prepare your data according to your requirements using the demo data:</summary>
+<summary>Prepare your data according to your requirements using the demo data:</summary>
 
 ```
 product_offer_reference,stock_name,quantity,is_never_out_of_stock

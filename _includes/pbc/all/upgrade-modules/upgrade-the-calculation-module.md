@@ -38,7 +38,7 @@ The `Calculator` module also returns `back sales.fk_customer, sales.fk_shipment_
 
 After this you should see the new values calculated + the legacy ones.
 
-<details open><summary markdown='span'>Code sample:</summary>
+<details><summary>Code sample:</summary>
 
 ```php
 <?php

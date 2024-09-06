@@ -344,8 +344,8 @@ Make sure that the following changes have been applied in the transfer objects:
 | CurrentCustomerDataRequestProcessorPlugin                      | Adds customer email and reference from the current request to the log data.                                                                                                                         |           | Spryker\Yves\Customer\Plugin\Log                                    |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php

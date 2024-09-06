@@ -49,7 +49,7 @@ Request sample: retrieve tax sets
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve tax sets</summary>
+<summary>Response sample: retrieve tax sets</summary>
 
 ```json
 {

@@ -25,7 +25,7 @@ SPRYKER_KEY_VALUE_STORE_HOST={VALUE_FROM_THE_CONNECTION_CONFIGURATION} SPRYKER_K
     ```
 
 <details>
-<summary markdown='span'>Output example</summary>
+<summary>Output example</summary>
 
 ```bash
 # Server

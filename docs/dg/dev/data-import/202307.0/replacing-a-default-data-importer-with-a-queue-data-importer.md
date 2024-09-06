@@ -106,7 +106,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 Go to `Pyz\Zed\DataImport\Business\DataImportBusinessFactory` and add a new method for creating the queue data importer that uses the queue reader and imports data to the database.
 Also, add a call to this method to `DataImportBusinessFactory::getDataImporterByType()`.
 
-<details><summary markdown='span'>Pyz\Zed\DataImport\Business\DataImportBusinessFactory.php</summary>
+<details><summary>Pyz\Zed\DataImport\Business\DataImportBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -165,7 +165,7 @@ First, use `Spryker\Zed\DataImport\Business\DataImporter\Queue\DataSetWriterPers
 
 You need this for proper acknowledgment of the corresponding messages in the import queue.
 
-<details><summary markdown='span'>Pyz\Zed\DataImport\Business\Model\ProductAbstract\Writer\ProductAbstractBulkPdoDataSetWriter.php</summary>
+<details><summary>Pyz\Zed\DataImport\Business\Model\ProductAbstract\Writer\ProductAbstractBulkPdoDataSetWriter.php</summary>
 
 ```php
 <?php

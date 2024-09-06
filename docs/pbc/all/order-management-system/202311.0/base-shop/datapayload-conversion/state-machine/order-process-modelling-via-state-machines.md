@@ -174,7 +174,7 @@ In the default implementation for Master Suite, the timeout processor in [OmsTim
 
 <details>
 
-<summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
+<summary>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
 ```php
 <?php
@@ -246,7 +246,7 @@ With this implementation of the plugin, if the timeout is set to 1 hour, the eve
 
 If you need to start the timeout, say, on November 15, 2021, the plugin should be modified as follows:
 
-<details><summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
+<details><summary>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
 ```php
 <?php

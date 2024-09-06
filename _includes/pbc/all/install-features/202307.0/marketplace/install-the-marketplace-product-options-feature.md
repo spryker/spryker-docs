@@ -250,7 +250,7 @@ Enable the following behaviors by registering the plugins:
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/ProductOption/ProductOptionDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -322,7 +322,7 @@ class ProductOptionStorageDependencyProvider extends SprykerProductOptionStorage
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php

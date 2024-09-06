@@ -182,7 +182,7 @@ Make sure that the following changes have been applied in transfer objects:
 | AvalaraReadCheckoutDataValidatorPlugin | Validates the shipping address data. | None |SprykerEco\Zed\AvalaraTax\Communication\Plugin\CheckoutRestApi |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Calculation/CalculationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -233,7 +233,7 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -286,7 +286,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Product/ProductDependencyProvider.php</summary>
 
 ```php
 <?php

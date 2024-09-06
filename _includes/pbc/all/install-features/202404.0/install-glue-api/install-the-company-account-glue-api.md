@@ -541,7 +541,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -694,7 +694,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -975,7 +975,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/CompanyUser/CompanyUserDependencyProvider.php</summary>
 
 
 ```php

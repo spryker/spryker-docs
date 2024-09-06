@@ -33,7 +33,7 @@ To [publish or republish](/docs/dg/dev/backend-development/data-manipulation/dat
 
 Follow these steps to implement and register a new event trigger publisher plugin.
 
-<details><summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
+<details><summary>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
 
 ```php
 <?php

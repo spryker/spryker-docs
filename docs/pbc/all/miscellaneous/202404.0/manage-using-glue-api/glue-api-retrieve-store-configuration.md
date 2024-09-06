@@ -37,7 +37,7 @@ Request sample: retrieve stores
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve stores</summary>
+<summary>Response sample: retrieve stores</summary>
 
 ```json
 {

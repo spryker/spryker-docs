@@ -57,7 +57,7 @@ Add the following configuration:
 | MerchantOmsConfig  | Introduce OMS processes configuration. | src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
+<summary>src/Pyz/Zed/MerchantOms/MerchantOmsConfig.php</summary>
 
 ```php
 <?php
@@ -110,7 +110,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </details>
 
 <details>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
+<summary>config/Zed/StateMachine/Merchant/MainMerchantStateMachine.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -207,7 +207,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </details>
 
 <details>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
+<summary>config/Zed/StateMachine/Merchant/MerchantDefaultStateMachine.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -289,7 +289,7 @@ class MerchantOmsConfig extends SprykerMerchantOmsConfig
 </details>
 
 <details>
-<summary markdown='span'>config/Zed/oms/MarketplacePayment01.xml</summary>
+<summary>config/Zed/oms/MarketplacePayment01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -618,7 +618,7 @@ Export data as follows:
 1. Create and prepare your `data/export/config/merchant_order_export_config.yml` file  according to your requirements using our demo config template:
 
 <details>
-<summary markdown='span'>data/export/config/merchant_order_export_config.yml</summary>
+<summary>data/export/config/merchant_order_export_config.yml</summary>
 
 ```yaml
 version: 1
@@ -776,7 +776,7 @@ class MerchantOmsCommunicationFactory extends SprykerMerchantOmsCommunicationFac
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -856,7 +856,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/MerchantSalesOrder/MerchantSalesOrderDependencyProvider.php</summary>
 
 ```php
 <?php

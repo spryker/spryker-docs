@@ -43,7 +43,7 @@ Request sample: retrieve a category node
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a category node</summary>
+<summary>Response sample: retrieve a category node</summary>
 
 ```json
 {

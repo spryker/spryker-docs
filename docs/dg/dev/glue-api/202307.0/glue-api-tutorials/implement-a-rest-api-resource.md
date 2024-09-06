@@ -184,7 +184,7 @@ Requests are passed to the controller as the instances of `RestRequestInterface`
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>Sample controller implementation: WishlistsResourceController.php</summary>
+<details><summary>Sample controller implementation: WishlistsResourceController.php</summary>
 
 ```php
 <?php
@@ -410,7 +410,7 @@ Specify a fully qualified class name of the transfer object created in step 5. I
 
 The plugin is complete. It must look as follows:
 
-<details><summary markdown='span'>WishlistsResourceRoutePlugin.php</summary>
+<details><summary>WishlistsResourceRoutePlugin.php</summary>
 
 ```php
 <?php

@@ -259,7 +259,7 @@ If we add relationships to the `wishlist-items` and `concrete-products` resource
 `GET http://glue.mysprykershop.com/wishlists/cbf84323-e54d-5774-8c02-4c90e107afe6?include=wishlist-items,concrete-products`
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary>Response sample</summary>
 
 ```json
 {

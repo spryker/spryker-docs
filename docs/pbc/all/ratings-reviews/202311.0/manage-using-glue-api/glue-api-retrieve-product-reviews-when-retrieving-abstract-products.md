@@ -49,7 +49,7 @@ To retrieve general information about an abstract product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
 
 ```json
 {

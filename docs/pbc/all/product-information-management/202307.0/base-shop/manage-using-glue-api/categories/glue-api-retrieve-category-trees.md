@@ -39,7 +39,7 @@ Request sample: retrieve a category tree
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a category tree</summary>
+<summary>Response sample: retrieve a category tree</summary>
 
 ```json
 {

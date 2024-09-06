@@ -129,8 +129,8 @@ Add the following configuration:
 </statemachine>
 ```
 
-<details open>
-<summary markdown='span'>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
+<details>
+<summary>config/Zed/StateMachine/Merchant/Subprocess/MerchantReturn.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -256,8 +256,8 @@ Add the following configuration:
 </statemachine>
 ```
 
-<details open>
-<summary markdown='span'>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
+<details>
+<summary>config/Zed/oms/MarketplaceSubprocess/MarketplaceReturn01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -438,8 +438,8 @@ class SalesReturnDependencyProvider extends SprykerSalesReturnDependencyProvider
 }
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/AbstractTriggerOmsEventCommandPlugin.php</summary>
 
 ```php
 <?php
@@ -589,8 +589,8 @@ class RefundMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEventCom
 
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ReturnMerchantOrderItemCommandPlugin.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/Communication/Plugin/Oms/ReturnMerchantOrderItemCommandPlugin.php</summary>
 
 ```php
 <?php
@@ -685,8 +685,8 @@ class ShipReturnMarketplaceOrderItemCommandPlugin extends AbstractTriggerOmsEven
 
 ```
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/MerchantOms/MerchantOmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -747,8 +747,8 @@ class MerchantOmsDependencyProvider extends SprykerMerchantOmsDependencyProvider
 ```
 </details>
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php

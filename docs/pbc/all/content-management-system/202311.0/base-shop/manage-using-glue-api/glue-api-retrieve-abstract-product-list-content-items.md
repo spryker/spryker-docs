@@ -54,7 +54,7 @@ To retrieve information about an abstract product list content item, send the re
 .
 
 <details>
-<summary markdown='span'>Response sample: retrieve Abstract Product List content item</summary>
+<summary>Response sample: retrieve Abstract Product List content item</summary>
 
 ```json
 {
@@ -70,7 +70,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve Abstract Product List content item with the details on its abstract products</summary>
+<summary>Response sample: retrieve Abstract Product List content item with the details on its abstract products</summary>
 
 ```json
 {
@@ -236,7 +236,7 @@ Request sample: retrieve Abstract Product List with its abstract products
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve Abstract Product List content item with the details on its abstract products</summary>
+<summary>Response sample: retrieve Abstract Product List content item with the details on its abstract products</summary>
 
 ```json
 {

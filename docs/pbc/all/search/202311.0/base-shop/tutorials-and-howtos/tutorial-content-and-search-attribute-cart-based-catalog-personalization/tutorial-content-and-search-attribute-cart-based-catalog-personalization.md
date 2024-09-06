@@ -61,7 +61,7 @@ To create the plugin:
 
 2. Inside the `QueryExpander` directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements  `QueryExpanderPluginInterface`.
 
-<details><summary markdown='span'>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
+<details><summary>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
 
 ```php
 namespace Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander;
@@ -201,7 +201,7 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
 
 1. `CartClient` does not exist as a dependency for `CatalogClient`. Add this dependency, so your query plugin works. For this, in `src/Pyz/Client/Catalog`, open `CatalogDependencyProvider` and add `CartClient` as a dependency:
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary>Pyz\Client\Catalog</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -274,7 +274,7 @@ class CatalogFactory extends SprykerCatalogFactory
 
 Like `CartClient`, `ProductStorageClient` needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary>Pyz\Client\Catalog</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -317,7 +317,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary>Pyz\Client\Catalog</summary>
 
 ```php
 namespace Pyz\Client\Catalog;

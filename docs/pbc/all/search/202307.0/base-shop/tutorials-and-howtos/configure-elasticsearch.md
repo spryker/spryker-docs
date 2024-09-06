@@ -99,7 +99,7 @@ Index name components are delimited with an underscore—for example, `spryker_d
 
 The following example shows how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing the special character *&* (ampersand) by switching from a [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and token filter of the [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
 
-<details><summary markdown='span'>src/Pyz/Shared/Search/Schema/page.json</summary>
+<details><summary>src/Pyz/Shared/Search/Schema/page.json</summary>
 
 ```json
 {

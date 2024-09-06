@@ -231,7 +231,7 @@ Register the following plugins:
 | InitDefaultQuoteCustomerQuoteDeleteAfterPlugin | Activates any customer quote, if an active customer quote has been removed.                                        |                                                                                 | Spryker\Zed\MultiCart\Communication\Plugin |
 | NameQuoteTransferExpanderPlugin                | Sets default quote name if quote does not have a name. Default guest quote name is used for guest customer quotes. |                                                                                 | Spryker\Client\MultiCart\Plugin            |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -495,7 +495,7 @@ Make sure that the following modules have been installed:
 
 1. Append glossary according to your configuration:
 
-<details><summary markdown='span'>src/data/import/glossary.csv</summary>
+<details><summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US

@@ -137,6 +137,11 @@ Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new pro
 
 ## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and Metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
 
+> [!IMPORTANT]
+> We are currently working on a significant refactor of the recently announced Dynatrace integration for Log Forwarding and Metrics Streaming. This upcoming enhancement will introduce improved capabilities and greater flexibility, aligning with our commitment to continuously upgrade our monitoring solutions.
+> As a result of these ongoing changes, we are temporarily discouraging customers from requesting or integrating this feature in its current form. We recommend waiting for the refactored version, which will provide a more robust and future-proof solution.
+> Stay tuned for further updates, and thank you for your understanding as we work to deliver a superior experience.
+
 We are delighted to announce our newest integration - Dynatrace with Log Forwarding and Metrics Streaming from Spryker PaaS+! This integration is a key step in our journey to support more monitoring platforms compatible with Open Telemetry.
 
 This integration significantly enhances our current monitoring capabilities by extending the coverage of metrics and logs across crucial services such as Amazon ECS, RDS, OpenSearch Service, ElastiCache (Redis), PHP Exceptions, and RabbitMQ. Previously, the scope of these services was more limited, but with this enhancement, a broader and more precise range of metrics for tracking, debugging, and optimization is achieved. These monitoring improvements will also be available in New Relic and CloudWatch at no additional cost.

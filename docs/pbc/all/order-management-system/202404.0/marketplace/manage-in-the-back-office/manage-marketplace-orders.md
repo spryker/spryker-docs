@@ -25,7 +25,11 @@ Each section contains reference information. Make sure to review it before you s
 To view a marketplace order, in the **List of orders** table, next to the order you want to check, click **View**.
 You are taken to the **View Order: _[Order ID]_** page.
 
-![view-marketplace-orders](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Back+Office+user+guides/Marketplace/Orders/Managing+marketplace+orders/view-marketplace-orders.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/order-management-system/marketplace/manage-in-the-back-office/manage-marketplace-orders.md/view-marketplace-orders.mp4" type="video/mp4">
+  </video>
+</figure>
 
 Every marketplace order contains information about the merchant orders it is split into.
 

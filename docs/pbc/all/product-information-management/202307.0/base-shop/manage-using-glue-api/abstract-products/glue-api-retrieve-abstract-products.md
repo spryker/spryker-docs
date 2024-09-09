@@ -91,7 +91,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product by SKU</summary>
+<summary>Response sample: retrieve information about an abstract product by SKU</summary>
 
 ```json
 {
@@ -153,7 +153,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about image sets</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about image sets</summary>
 
 ```json
 {
@@ -248,7 +248,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with  the details about product availability</summary>
+<summary>Response sample: retrieve information about an abstract product with  the details about product availability</summary>
 
 ```json
 {
@@ -332,7 +332,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
 
 ```json
 {
@@ -437,7 +437,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
 
 ```json
 {
@@ -552,7 +552,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the category nodes</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about the category nodes</summary>
 
 ```json
 {
@@ -733,7 +733,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
 
 ```json
 {
@@ -895,7 +895,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product labels included</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about product labels included</summary>
 
 ```json
 {
@@ -953,7 +953,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about concrete products included</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about concrete products included</summary>
 
 ```json
 {
@@ -1066,7 +1066,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product options included</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about product options included</summary>
 
 ```json
 {
@@ -1174,7 +1174,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about product reviews</summary>
 
 ```json
 {
@@ -1297,7 +1297,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details on items of the product bundle, concrete products</summary>
+<summary>Response sample: retrieve information about an abstract product with the details on items of the product bundle, concrete products</summary>
 
 ```json
 {

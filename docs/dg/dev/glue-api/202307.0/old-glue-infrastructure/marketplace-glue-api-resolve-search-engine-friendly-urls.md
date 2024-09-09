@@ -60,7 +60,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: resolve a product URL</summary>
+<summary>Response sample: resolve a product URL</summary>
 
 ```json
 {
@@ -85,7 +85,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a URL of a category node</summary>
+<summary>Response sample: resolve a URL of a category node</summary>
 
 ```json
 {
@@ -110,7 +110,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a URL of a CMS page</summary>
+<summary>Response sample: resolve a URL of a CMS page</summary>
 
 ```json
 {
@@ -135,7 +135,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a merchant page URL</summary>
+<summary>Response sample: resolve a merchant page URL</summary>
 
 ```json
 {

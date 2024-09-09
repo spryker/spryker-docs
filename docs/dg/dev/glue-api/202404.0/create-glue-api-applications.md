@@ -141,7 +141,7 @@ class CustomApiGlueApplicationBootstrapPlugin extends AbstractPlugin implements 
 In the factory, the constructor looks like this:
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php</summary>
+<summary>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php</summary>
 
 ```php
 <?php
@@ -188,7 +188,7 @@ class CustomApiApplicationFactory extends AbstractFactory
 
 The dependency provider looks like this:
 
-<details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -242,7 +242,7 @@ class CustomApiApplicationDependencyProvider extends AbstractBundleDependencyPro
 
 The following example is what the `Application` can look like:
 
-<details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php</summary>
+<details><summary>src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php</summary>
 
 ```php
 <?php

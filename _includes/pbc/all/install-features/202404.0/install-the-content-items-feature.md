@@ -325,7 +325,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 
 {% endinfo_block %}
 
-<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
+<details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:br1</summary>
 
 ```json
 {
@@ -341,7 +341,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 ```
 </details>
 
-<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
+<details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:apl2</summary>
 
 ```json
 {
@@ -356,7 +356,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 ```
 </details>
 
-<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
+<details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:ps-1</summary>
 
 ```json
 {
@@ -368,7 +368,7 @@ Make sure that, when content banners are exported or created, updated, deleted i
 ```
 </details>
 
-<details open><summary markdown='span'>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
+<details><summary>EXAMPLE EXPECTED DATA FRAGMENT: content:en_us:0d9f4722-d076-5acc-9d8e-e9daff7cd61</summary>
 
 ```json
 {
@@ -565,7 +565,7 @@ Enable the following behaviors by registering the plugins:
 | TwigExpressionsToHtmlCmsGlossaryAfterFindPlugin       | Replaces Twig expressions of CMS page content with styled UI elements in the WYSIWYG editor. Replaces all the Twig functions registered by the plugins suffixed with `ContentGuiEditorPlugin`. |               | Spryker\Zed\ContentGui\Communication\Plugin\CmsGui           |
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ContentGui/ContentGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -638,7 +638,7 @@ Make sure that, when editing CMS pages and blocks in the WYSIWYG editor, in the 
 {% endinfo_block %}
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -675,7 +675,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 </details>
 
 
-<details open><summary markdown='span'>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php</summary>
 
 ```php
 <?php

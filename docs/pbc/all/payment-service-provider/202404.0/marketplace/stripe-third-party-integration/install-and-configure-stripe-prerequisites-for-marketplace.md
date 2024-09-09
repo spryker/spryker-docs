@@ -5,9 +5,7 @@ last_updated: Jul 1, 2024
 template: howto-guide-template
 ---
 
-To install and configure the prerequisites for
-the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html),
-take the following steps.
+To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/stripe.html), take the following steps.
 
 ## Prerequisites
 
@@ -59,10 +57,7 @@ $config[KernelAppConstants::TENANT_IDENTIFIER] = getenv('SPRYKER_TENANT_IDENTIFI
 
 ## Add AsynchronousAPI message configuration
 
-Let's extend the message configuration to include the new messages and receiver channels with mapping to their
-transports:
-
-**config/Shared/config_default.php**
+Update `config_default.php` as follows:
 
 ```php
 
@@ -295,8 +290,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ### Enable merchant commissions for marketplace payments
 
-To enable merchant
-commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
+To enable merchant commissions, [install the Marketplace Merchant Commission feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-feature.html).
 
 ## Next step
 

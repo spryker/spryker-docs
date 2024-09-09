@@ -39,7 +39,7 @@ To retrieve general information about an abstract product, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about abstract product prices</summary>
 
 ```json
 {
@@ -144,7 +144,7 @@ To retrieve general information about an abstract product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
+<details><summary>Response sample: retrieve information about an abstract product with the details about the default and volume prices included</summary>
 
 ```json
 {

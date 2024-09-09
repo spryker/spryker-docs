@@ -45,7 +45,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 
 <details>
-<summary markdown='span'>Response sample with gift cards applied</summary>
+<summary>Response sample with gift cards applied</summary>
 
 ```json
 {
@@ -154,7 +154,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with details on gift cards</summary>
+<summary>Response sample with details on gift cards</summary>
 
 ```json
 {

@@ -322,7 +322,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 | PriceProductOffer | `kv:product_concrete_product_offer_price:de:6` |
 
 <details>
-<summary markdown='span'>An example of the expected data fragment</summary>
+<summary>An example of the expected data fragment</summary>
 
 ```json
 [
@@ -408,7 +408,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 Prepare your data according to your requirements using the demo data:
 
-<details><summary markdown='span'>data/import/common/common/marketplace/price_product_offer.csv</summary>
+<details><summary>data/import/common/common/marketplace/price_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,price_type,store,currency,value_net,value_gross,price_data.volume_prices
@@ -859,7 +859,7 @@ Enable the following behaviors by registering the plugins:
 | PriceProductVolumeValidatorPlugin | Validates volume prices. |   | Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProduct |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -908,7 +908,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
 </details>
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1068,7 +1068,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/PriceProductOffer/PriceProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php

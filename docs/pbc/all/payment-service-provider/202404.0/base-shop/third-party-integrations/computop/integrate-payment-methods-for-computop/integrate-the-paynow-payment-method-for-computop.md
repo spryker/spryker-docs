@@ -96,7 +96,7 @@ protected function provideClients(Container $container)
 
 Computop PayNow payment method also provides a new Checkout Step for filling the Credit Card data and sending it to the Computop paygate. You have to create `Yves/Checkout/Process/Steps/PayNowStep.php` class with the following content:
 <details>
-<summary markdown='span'>Click here to expand the code sample</summary>
+<summary>Click here to expand the code sample</summary>
 
  ```php
  <?php
@@ -248,7 +248,7 @@ protected function defineControllers(Application $app)
 The final step is to create a template for rendering `PayNow` step in `Yves/Checkout/Theme/default/checkout/paynow.twig`
 
 <details>
-<summary markdown='span'>Click here to expand the code sample</summary>
+<summary>Click here to expand the code sample</summary>
 
  ```xml
 {% raw %}{%{% endraw %} extends "@checkout/layout.twig" {% raw %}%}{% endraw %}

@@ -69,7 +69,7 @@ $config[ApiConstants::ENABLE_API_DEBUG] = (bool)getenv('SPRYKER_DEBUG_ENABLED');
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Api/ApiConfig.php</summary>
+<summary>src/Pyz/Zed/Api/ApiConfig.php</summary>
 
 ```php
 <?php

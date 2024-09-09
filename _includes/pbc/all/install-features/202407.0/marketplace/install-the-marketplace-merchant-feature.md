@@ -360,7 +360,7 @@ Make sure the following applies:
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/MerchantGui/MerchantGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -455,7 +455,7 @@ Make sure that the `merchantName` global Twig variable is available.
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/KernelApp/KernelAppDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -479,7 +479,7 @@ class KernelAppDependencyProvider extends SprykerKernelAppDependencyProvider
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -506,7 +506,7 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -718,7 +718,7 @@ To import data follow the steps in the following sections.
 1. Prepare merchant profile data according to your requirements using the demo data:
 
 <details>
-<summary markdown='span'>/data/import/common/common/marketplace/merchant_profile.csv</summary>
+<summary>/data/import/common/common/marketplace/merchant_profile.csv</summary>
 
 ```csv
 merchant_reference,contact_person_role,contact_person_title,contact_person_first_name,contact_person_last_name,contact_person_phone,banner_url,logo_url,public_email,public_phone,description_glossary_key.en_US,description_glossary_key.de_DE,banner_url_glossary_key.en_US,banner_url_glossary_key.de_DE,delivery_time_glossary_key.en_US,delivery_time_glossary_key.de_DE,terms_conditions_glossary_key.en_US,terms_conditions_glossary_key.de_DE,cancellation_policy_glossary_key.en_US,cancellation_policy_glossary_key.de_DE,imprint_glossary_key.en_US,imprint_glossary_key.de_DE,data_privacy_glossary_key.en_US,data_privacy_glossary_key.de_DE,is_active,fax_number
@@ -849,7 +849,7 @@ MER000006,michele@sony-experts.com
 2. Create the Step model for writing merchant user data:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
+<summary>src/Pyz/Zed/DataImport/Business/Model/MerchantUser/MerchantUserWriterStep.php</summary>
 
 ```php
 <?php
@@ -988,7 +988,7 @@ class DataImportConfig extends SprykerDataImportConfig
 4. Enable the merchant user data import command:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php</summary>
 
 ```php
 <?php

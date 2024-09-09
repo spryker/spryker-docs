@@ -52,7 +52,7 @@ To add items to a guest cart, send the following request:
 
 
 <details>
-<summary markdown='span'>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
+<summary>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -79,7 +79,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample: add items with vouchers to a guest cart</summary>
+<summary>Request sample: add items with vouchers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -110,7 +110,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
+<summary>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -153,7 +153,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add a promotional item with the cart-rules relationship</summary>
+<summary>Response sample: add a promotional item with the cart-rules relationship</summary>
 
 ```json
 {
@@ -433,7 +433,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Response sample: add items with cart rules to a guest cart</summary>
+<summary>Response sample: add items with cart rules to a guest cart</summary>
 
 ```json
 {
@@ -535,7 +535,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items with vouchers to a guest cart</summary>
+<summary>Response sample: add items with vouchers to a guest cart</summary>
 
 ```json
 {

@@ -355,7 +355,7 @@ entries:
           url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/spryker-os-module-customisation.html
           nested:
           - title: Extend a core module that is used by another
-            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+            url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html
           - title: Extend the core
             url: /docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-the-core.html
           - title: Extend the Spryker Core functionality
@@ -1148,6 +1148,10 @@ entries:
       url: /docs/dg/dev/data-import/data-import-optimization-guidelines.html
     - title: Implementing data installers
       url: /docs/dg/dev/data-import/implementing-data-installers.html
+    - title: Implement incremental installers
+      url: /docs/dg/dev/data-import/implement-incremental-installers.html
+      include_versions:
+      - "202404.0"
 
   - title: Guidelines
     url: /docs/dg/dev/guidelines/guidelines.html
@@ -1378,7 +1382,7 @@ entries:
       - title: Not optimized Composer on the production environment
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/not-optimised-composer-on-the-production-environment.html
       - title: Redis session lock
-        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
+        url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock-excpetions.html
       - title: Slow Publish and Synchronization
         url: /docs/dg/dev/troubleshooting/troubleshooting-performance-issues/slow-publish-and-synchronization.html
       - title: Technology restrictions

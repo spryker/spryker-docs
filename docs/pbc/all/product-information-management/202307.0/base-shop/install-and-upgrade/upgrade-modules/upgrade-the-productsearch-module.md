@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productsearch.html
   - /docs/scos/dev/module-migration-guides/migration-guide-productsearch.html
 related:
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Upgrade the ProductSetGUI module
     link: docs/scos/dev/module-migration-guides/migration-guide-productsetgui.html

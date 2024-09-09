@@ -120,9 +120,11 @@ Add the plugins to the methods:
 | \Spryker\Zed\MerchantApp\Communication\Plugin\KernelApp\MerchantAppRequestExpanderPlugin                                                   | \Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins()                                |
 | \Spryker\Zed\OauthClient\Communication\Plugin\KernelApp\OAuthRequestExpanderPlugin                                                         | \Pyz\Zed\KernelApp\KernelAppDependencyProvider::getRequestExpanderPlugins()                                |
 | \Spryker\Zed\MerchantApp\Communication\Plugin\MessageBroker\MerchantAppOnboardingMessageHandlerPlugin                                      | \Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()                         |
-| \Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin`                                                   | \Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()                         |
+| \Spryker\Zed\KernelApp\Communication\Plugin\MessageBroker\AppConfigMessageHandlerPlugin                                                    | \Pyz\Zed\MessageBroker\MessageBrokerDependencyProvider::getMessageHandlerPlugins()                         |
 | \Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppMerchantPortalGuiMerchantAclRuleExpanderPlugin | \Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getMerchantAclRuleExpanderPlugins()        |
 | \Spryker\Zed\MerchantAppMerchantPortalGui\Communication\Plugin\AclMerchantPortal\MerchantAppAclEntityConfigurationExpanderPlugin           | \Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins() |
+| \Spryker\Zed\Payment\Communication\Plugin\AclMerchantPortal\PaymentAclEntityConfigurationExpanderPlugin                                    | \Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins() |
+| \Spryker\Zed\SalesPaymentMerchant\Communication\Plugin\AclMerchantPortal\SalesPaymentMerchantAclEntityConfigurationExpanderPlugin          | \Pyz\Zed\AclMerchantPortal\AclMerchantPortalDependencyProvider::getAclEntityConfigurationExpanderPlugins() |
 
 ## Configure OMS
 
@@ -275,18 +277,22 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
     public function getDefaultWorkerChannels(): array
     {
         return [
+            //...
             'app-events',
             'merchant-commands',
             'merchant-app-events',
+            //...
         ];
     }
 }
 
 ```
 
-3. To configure state machine, copy
-   `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project
-   and adjust to your needs.
+3. To configure state machine, copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust to your needs. 
+4. For more information about ACP payment methods integration with your project OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
+5. To enable merchants to be redirected to the Merchant Portal from third-party websites, add `redirect.php` to the public folder of your Merchant Portal: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
+
+
 
 ### Enable merchant commissions for marketplace payments
 

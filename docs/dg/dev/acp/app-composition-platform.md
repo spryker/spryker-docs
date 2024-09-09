@@ -41,13 +41,15 @@ ACP consists of the following components:
 
 The ACP Catalog in the Back Office is available since version **202212.0**.
 
-If you're running an older version and want to access the ACP Catalog, install the `spryker/app-catalog-gui` module version `1.4.1` or higher.
+To run ACP Catalog with an earlier version, install the `spryker/app-catalog-gui` module version `1.4.1` or higher.
 
 
-## Becoming registered for ACP
+## Register for ACP
 
-To use ACP apps on your Spryker project, your project needs to be registered. The registration process helps to prepare your project for seamless communication with the third-party apps provided via the ACP. The registration process includes 2 steps:
+To use ACP apps, you need to register your project with ACP. The registration process prepares your project for seamless communication with the third-party apps provided via the ACP. To register your project, follow the steps:
+
 1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
+
 2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Once step 1 is completed, contact us via the [support portal](https://support.spryker.com/s/).
 
 {% info_block infoBox "" %}

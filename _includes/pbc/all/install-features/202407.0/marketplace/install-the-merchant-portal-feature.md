@@ -2,7 +2,7 @@
 
 {% info_block infoBox "" %}
 
-See [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html).
+See [Install the Marketplace Merchant Portal Core feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-portal-core-feature.html) to install the Marketplace Merchant Portal Core feature.
 
 {% endinfo_block %}
 
@@ -32,7 +32,7 @@ For production:
 $ npm run mp:build:production
 ```
 
-## Install backend
+## Install feature backend
 
 Install the needed packages for the Merchant Portal with dependencies. For available list, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 
@@ -75,6 +75,8 @@ class UserConfig extends SprykerUserConfig
 
 2. Connect users and merchants using using the Back Office or the following data import:
 
+Prepare merchant data:
+
 **data/import/common/common/marketplace/merchant.csv**
 
 ```csv
@@ -83,6 +85,8 @@ sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com
 ```
 
 2. To integrate merchant user data import, follow [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+
+Prepare merchant user data:
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
@@ -330,7 +334,7 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 {% endinfo_block %}
 
-### 5) Separate login feature setup (security firewalls).
+### 5) Separate login feature setup (configuring security firewalls to have a separate login for Merchant Portal user).
 
 It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project. For details, see [Symfony 5 integration](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html).
 
@@ -355,7 +359,7 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 | User         | vendor/spryker/user          |
 | ZedUi        | vendor/spryker/zed-ui        |
 
-3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files.
+3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to setup a separate login for Merchant Portal user.
 
 
 {% info_block warningBox "Verification" %}

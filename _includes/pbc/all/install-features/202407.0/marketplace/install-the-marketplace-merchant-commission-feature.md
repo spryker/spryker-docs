@@ -1561,13 +1561,14 @@ To import data follow the steps in the following sections.
 
 ### Import merchant commission data
 
-{% info_block warningBox "Important note:" %}
+{% info_block warningBox "" %}
 
-Some of the commission rule expressions provided in the examples below are based on optional feature extensions, without enabling these extensions the rules will not work as expected and could lead to errors.
+Some of the commission rule expressions provided in the following examples are based on optional feature extensions. For commissions to work properly, these extensions need to be enabled:
 
-Check the `Install related features` section for more information at the bottom of this page:
-`item-price` - the condition for the order item from the `Install the Marketplace Merchant Commission + Prices feature` extension.
-`category` - the condition for the order item from the `Install the Marketplace Merchant Commission + Category Management feature` extension.
+* `item-price`: the condition for the order item from the `Install the Marketplace Merchant Commission + Prices feature` extension.
+* `category`: the condition for the order item from the `Install the Marketplace Merchant Commission + Category Management feature` extension.
+
+The related extensions are listed in [Install related features](#install-related-features).
 
 {% endinfo_block %}
 

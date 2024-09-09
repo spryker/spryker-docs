@@ -98,7 +98,12 @@ If a product in a wishlist is out of stock, an [alternative product](/docs/pbc/a
 
 When a customer adds a product to a shopping list, the product is added with the merchant relation selected in the **Sold by** section.
 
-![gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shopping+List/add-marketplace-product-and-offer-to-shopping-list.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/spryker-marketplace/marketplace-storefront.md/add-marketplace-product-and-offer-to-shopping-list.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 ## Merchant profiles
 

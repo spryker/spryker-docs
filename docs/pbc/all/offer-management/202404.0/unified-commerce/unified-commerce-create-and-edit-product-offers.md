@@ -46,8 +46,11 @@ This document describes how to create and edit product offers in the Merchant Po
 
     This reloads the page with a success message displayed. The created offer is displayed in the list.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/creating-product-offers.gif)
-
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.md/creating-product-offers.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Edit a product offer
 
@@ -56,7 +59,11 @@ This document describes how to create and edit product offers in the Merchant Po
 3. Click **Save**.
     This closes the drawer with a success message displayed.
 
-![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Merchant+Portal+user+guides/Offers/edit-offers.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/offer-management/unified-commerce/unified-commerce-create-and-edit-product-offers.md/edit-offers.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ## Reference information: Create and edit product offers

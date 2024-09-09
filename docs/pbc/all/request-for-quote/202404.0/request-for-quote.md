@@ -6,16 +6,6 @@ template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-feature-overview
 originalArticleId: 2fc8c00f-628b-485d-b00b-61bbb0b32973
 redirect_from:
-  - /2021080/docs/quotation-process-feature-overview
-  - /2021080/docs/en/quotation-process-feature-overview
-  - /docs/quotation-process-feature-overview
-  - /docs/en/quotation-process-feature-overview
-  - /2021080/docs/quotation-process
-  - /2021080/docs/en/quotation-process
-  - /docs/quotation-process
-  - /docs/en/quotation-process
-  - /2021080/docs/rfq-reference-information-shop-guide
-  - /2021080/docs/en/rfq-reference-information-shop-guide
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
@@ -154,44 +144,73 @@ Example: In the project, the cart needs approval when the cart total exceeds €
 Company users can perform the following actions using the CommentsQuotation process & RFQ feature on the Storefront:
 
 <details>
-<summary markdown='span'>Create an RFQ</summary>
+<summary>Create an RFQ</summary>
 
-![create-rfq](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/create-rfq.gif)
-
-</details>
-
-<details>
-<summary markdown='span'>Add an address and shipping method to the RFQ</summary>
-
-![add-rfq-address-and-shipping-method](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/add-rfq-address-and-shipping-method.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/create-rfq.mp4" type="video/mp4">
+  </video>
+</figure>
 
 </details>
 
 <details>
-<summary markdown='span'>Edit RFQ items</summary>
+<summary>Add an address and shipping method to the RFQ</summary>
 
-![edit-rfq-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/edit-rfq-items.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/add-rfq-address-and-shipping-method.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+</details>
+
+<details>
+<summary>Edit RFQ items</summary>
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/edit-rfq-items.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 
 </details>
 
-<details><summary markdown='span'>Cancel an RFQ or send an RFQ to an agent </summary>
+<details><summary>Cancel an RFQ or send an RFQ to an agent </summary>
 
-![cancel-and-sent-rfq-to-agent](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/cancel-and-sent-rfq-to-agent.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/cancel-and-sent-rfq-to-agent.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
-<details><summary markdown='span'>Convert an RFQ to the cart</summary>
+<details><summary>Convert an RFQ to the cart</summary>
 
-![convert-rfq-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/convert-rfq-to-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/convert-rfq-to-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 
 Agents can perform the same actions (on company users' behalf) as company users. However, besides the actions mentioned above, agents can also do the following:
 
-<details><summary markdown='span'>Revise an RFQ and send it back to the buyer</summary>
+<details><summary>Revise an RFQ and send it back to the buyer</summary>
 
-![revise-rfq-and-send-to-customer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+%26+Process+Management/Quotation+process+and+RFQ/Quotation+Process+%26+RFQ+Feature+Overview/revise-rfq-and-send-to-customer.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/request-for-quote/request-for-quote.md/revise-rfq-and-send-to-customer.mp4" type="video/mp4">
+  </video>
+</figure>
+
 
 </details>
 

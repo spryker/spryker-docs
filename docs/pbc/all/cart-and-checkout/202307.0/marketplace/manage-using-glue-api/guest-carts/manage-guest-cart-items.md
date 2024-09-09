@@ -16,7 +16,7 @@ This endpoint lets you manage guest cart items.
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Install the Cart feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-cart-feature.html)
-* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 * [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Glue API: Marketplace Product Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
@@ -65,7 +65,7 @@ To add items to a guest cart, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add items to a guest cart</summary>
+<summary>Request sample: add items to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -83,7 +83,7 @@ To add items to a guest cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
+<summary>Request sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 {% info_block infoBox "Cart rules" %}
 
@@ -108,7 +108,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a gift card to a guest cart</summary>
+<summary>Request sample: add a gift card to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items`
 
@@ -126,7 +126,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add items with product measurement units and sales units to a guest cart</summary>
+<summary>Request sample: add items with product measurement units and sales units to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=sales-units`
 
@@ -148,7 +148,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add items with cart rules to a guest cart </summary>
+<summary>Request sample: add items with cart rules to a guest cart </summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -166,7 +166,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add items with vouchers to a guest cart</summary>
+<summary>Request sample: add items with vouchers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=cart-rules`
 
@@ -185,7 +185,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample: add items with product options to a guest cart</summary>
+<summary>Request sample: add items with product options to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=guest-cart-items,concrete-products,product-options`
 
@@ -212,7 +212,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 <details>
-<summary markdown='span'>Request sample: add product offers to a guest cart</summary>
+<summary>Request sample: add product offers to a guest cart</summary>
 
 `POST https://glue.mysprykershop.com/guest-cart-items?include=items`
 
@@ -231,7 +231,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a marketplace product to a guest cart</summary>
+<summary>Request sample: add a marketplace product to a guest cart</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items`
 
@@ -250,7 +250,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add items to a guest cart with information on merchants included</summary>
+<summary>Request sample: add items to a guest cart with information on merchants included</summary>
 
 `POST https://glue.mysprykershop,com/guest-cart-items?include=guest-cart-items,merchants`
 
@@ -296,7 +296,7 @@ It is the responsibility of the API Client to track whether the selected items a
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add items to a guest cart</summary>
+<summary>Response sample: add items to a guest cart</summary>
 
 ```json
 {
@@ -372,7 +372,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add a promotional item without the cart-rules relationship to a guest cart</summary>
+<summary>Response sample: add a promotional item without the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -417,7 +417,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
+<summary>Response sample: add a promotional item with the cart-rules relationship to a guest cart</summary>
 
 ```json
 {
@@ -695,7 +695,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: add a gift card to a guest cart</summary>
+<summary>Response sample: add a gift card to a guest cart</summary>
 
 ```json
 {
@@ -814,7 +814,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: add items with product options to a guest cart</summary>
+<summary>Response sample: add items with product options to a guest cart</summary>
 
 ```json
 {
@@ -1065,7 +1065,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items with product measurement units and sales units to a guest cart</summary>
+<summary>Response sample: add items with product measurement units and sales units to a guest cart</summary>
 
 ```json
 {
@@ -1183,7 +1183,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items with cart rules to a guest cart</summary>
+<summary>Response sample: add items with cart rules to a guest cart</summary>
 
 ```json
 {
@@ -1284,7 +1284,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items with vouchers to a guest cart</summary>
+<summary>Response sample: add items with vouchers to a guest cart</summary>
 
 ```json
 {
@@ -1426,7 +1426,7 @@ It is the responsibility of the API Client to track whether the selected items a
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add product offers to a guest cart</summary>
+<summary>Response sample: add product offers to a guest cart</summary>
 
 ```json
 {
@@ -1513,7 +1513,7 @@ It is the responsibility of the API Client to track whether the selected items a
 
 
 <details>
-<summary markdown='span'>Response sample: add a marketplace product to a guest cart</summary>
+<summary>Response sample: add a marketplace product to a guest cart</summary>
 
 ```json
 {
@@ -1543,7 +1543,7 @@ It is the responsibility of the API Client to track whether the selected items a
 }
 
 <details>
-<summary markdown='span'>Response sample: add items to a guest cart with information on merchants included</summary>
+<summary>Response sample: add items to a guest cart with information on merchants included</summary>
 
 ```json
 {
@@ -1782,7 +1782,7 @@ To change item quantity, send the request:
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Request sample: change item quantity in a guest cart</summary>
+<summary>Request sample: change item quantity in a guest cart</summary>
 
 `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`    
 

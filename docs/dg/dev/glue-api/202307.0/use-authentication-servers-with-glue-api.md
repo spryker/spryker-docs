@@ -20,7 +20,7 @@ That conception allows wiring plugins implemented an authentication server and e
 
 `OauthAuthenticationServerPlugin` implements `AuthenticationServerPluginInterface` and builds the request to the `Oauth` server out of the box.
 
-<details><summary markdown='span'>AuthenticationServerPluginInterface</summary>
+<details><summary>AuthenticationServerPluginInterface</summary>
 
 ```php
 <?php

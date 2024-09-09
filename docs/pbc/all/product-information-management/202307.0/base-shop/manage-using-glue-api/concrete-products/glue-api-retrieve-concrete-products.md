@@ -30,7 +30,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
-* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
 * [Install the Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/base-shop/install-and-upgrade/install-the-product-price-glue-api.html)
 * [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/{{site.version}}/base-shop/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 * [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/{{page.version}}/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
@@ -82,7 +82,7 @@ To retrieve general information about a concrete product, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product by SKU</summary>
+<summary>Response sample: retrieve information about a concrete product by SKU</summary>
 
 ```json
 {
@@ -129,7 +129,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the sales units and product measurement units</summary>
 
 ```json
 {
@@ -221,7 +221,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product labels</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product labels</summary>
 
 ```json
 {
@@ -268,7 +268,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the product image sets</summary>
 
 ```json
 {
@@ -347,7 +347,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product availability</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product availability</summary>
 
 ```json
 {
@@ -417,7 +417,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default product prices</summary>
 
 ```json
 {
@@ -507,7 +507,7 @@ To retrieve general information about a concrete product, send the request:
 ```
 </details>
 
-<details><summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
+<details><summary>Response sample: retrieve information about a concrete product with the details on the default and volume prices</summary>
 
 ```json
 {
@@ -607,7 +607,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the product options</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the product options</summary>
 
 ```json
 {
@@ -698,7 +698,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on product reviews</summary>
 
 ```json
 {
@@ -804,7 +804,7 @@ To retrieve general information about a concrete product, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
+<summary>Response sample: retrieve information about a concrete product with the details on the bundled products included</summary>
 
 ```json
 {
@@ -1016,7 +1016,7 @@ To retrieve general information about a concrete product, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
+<summary>Response sample: retrieve information about a concrete product with the detais on bundled products, concrete products, and abstract products</summary>
 
 ```json
 {

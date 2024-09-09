@@ -22,7 +22,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantShipmentCheckoutPageStepEnginePreRenderPlugin | Copies all item merchant references to their attached shipment merchant reference before rendering checkout steps. |  |   Spryker\Yves\MerchantShipment\Plugin\CheckoutPage |
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php

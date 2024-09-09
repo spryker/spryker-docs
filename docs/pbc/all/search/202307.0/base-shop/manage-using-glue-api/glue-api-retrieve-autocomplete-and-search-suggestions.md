@@ -19,7 +19,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Retrieve a search suggestion
 
@@ -48,7 +48,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for a query</summary>
+<summary>Response sample: retrieve suggestions for a query</summary>
 
 ```json
 {

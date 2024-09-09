@@ -200,7 +200,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 `POST https://glue-backend.mysprykershop.com/checkout-data?include=shipments,shipment-methods,shipment-types`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
   ```json
   {
       "data": {
@@ -250,7 +250,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
   ```json
   {
       "data": {
@@ -400,7 +400,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
   ```json
   {
       "data": {
@@ -459,7 +459,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 </details>
 
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
   ```json
   {
       "data": {
@@ -550,7 +550,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 Deactivate one of the shipment types and send a request with the corresponding shipment method:
 `POST https://glue-backend.mysprykershop.com/checkout-data`
 <details>
-  <summary markdown='span'>Request body example</summary>
+  <summary>Request body example</summary>
   ```json
     {
         "data": {
@@ -600,7 +600,7 @@ Deactivate one of the shipment types and send a request with the corresponding s
 </details>
 
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
     ```json
     {
         "errors": [
@@ -870,7 +870,7 @@ class ShipmentTypeStorageConfig extends SprykerShipmentTypeStorageConfig
 | ShipmentMethodStoreShipmentTypeWriterPublisherPlugin   | Publishes shipment type data by `SpyShipmentMethodStore` entity events.                         |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher\ShipmentMethodStore |
 | ShipmentTypePublisherTriggerPlugin                     | Enables populating the shipment type storage table with data and triggering the export to Redis. |               | Spryker\Zed\ShipmentTypeStorage\Communication\Plugin\Publisher                     |
 
-<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1690,7 +1690,7 @@ class GlueBackendApiApplicationGlueJsonApiConventionConnectorDependencyProvider 
 
 `GET https://glue-backend.mysprykershop.com/picking-lists/{% raw %}{{{% endraw %}picking-list-uuid{% raw %}}{{% endraw %}?include=picking-list-items,sales-shipments`
 <details>
-  <summary markdown='span'>Response body example</summary>
+  <summary>Response body example</summary>
 ```json
 {
     "data": {

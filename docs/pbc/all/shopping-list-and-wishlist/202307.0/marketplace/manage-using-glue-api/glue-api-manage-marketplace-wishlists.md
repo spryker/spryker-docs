@@ -110,7 +110,7 @@ To retrieve all wishlists of a customer, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no wishlists found</summary>
+<summary>Response sample: no wishlists found</summary>
 
 ```json
 {
@@ -123,7 +123,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all the wishlists</summary>
+<summary>Response sample: retrieve all the wishlists</summary>
 
 
 ```json
@@ -151,7 +151,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items</summary>
+<summary>Response sample: retrieve all the wishlists with wishlist items</summary>
 
 ```json
 {
@@ -200,7 +200,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items and respective concrete products</summary>
+<summary>Response sample: retrieve all the wishlists with wishlist items and respective concrete products</summary>
 
 ```json
 {
@@ -299,7 +299,7 @@ To retrieve all wishlists of a customer, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all the wishlists with wishlist items, respective concrete products, and their product labels</summary>
+<summary>Response sample: retrieve all the wishlists with wishlist items, respective concrete products, and their product labels</summary>
 
 ```json
 {
@@ -471,7 +471,7 @@ To retrieve a specific wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist</summary>
+<summary>Response sample: retrieve a wishlist</summary>
 
 ```json
 {
@@ -493,7 +493,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items included</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items included</summary>
 
 ```json
 {
@@ -537,7 +537,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and respective concrete products included</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items and respective concrete products included</summary>
 
 ```json
 {
@@ -629,7 +629,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, respective concrete products, and product labels included</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, respective concrete products, and product labels included</summary>
 
 ```json
 {
@@ -744,7 +744,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their availabilities</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, concrete products and their availabilities</summary>
 
 ```json
 {
@@ -869,7 +869,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products and their prices</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, concrete products and their prices</summary>
 
 ```json
 {
@@ -1005,7 +1005,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, and product offers</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, concrete products, and product offers</summary>
 
 ```json
 {
@@ -1343,7 +1343,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer availabilities</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer availabilities</summary>
 
 ```json
 {
@@ -1705,7 +1705,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer prices</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items, concrete products, product offers, and product offer prices</summary>
 
 ```json
 {
@@ -2089,7 +2089,7 @@ To retrieve a specific wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a wishlist with wishlist items and merchant information included</summary>
+<summary>Response sample: retrieve a wishlist with wishlist items and merchant information included</summary>
 
 ```json
 {

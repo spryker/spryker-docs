@@ -48,7 +48,7 @@ To add items to a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier.</summary>
+<summary>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier.</summary>
 
 `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
@@ -66,7 +66,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list in the response.</summary>
+<summary>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list in the response.</summary>
 
 `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
 
@@ -84,7 +84,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a configurable product to a shopping list.</summary>
+<summary>Request sample: add a configurable product to a shopping list.</summary>
 
 `POST https://glue.myspryker.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items`
 
@@ -157,7 +157,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add items to a shopping list.</summary>
+<summary>Response sample: add items to a shopping list.</summary>
 
 ```json
   {
@@ -177,7 +177,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items to a shopping list with the details on concrete products.</summary>
+<summary>Response sample: add items to a shopping list with the details on concrete products.</summary>
 
 ```json
     {
@@ -248,7 +248,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add a configurable product to a shopping list.</summary>
+<summary>Response sample: add a configurable product to a shopping list.</summary>
 
 ```json
 {
@@ -352,7 +352,7 @@ To change item quantity in a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>Request sample: in the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.</summary>
+<summary>Request sample: in the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.</summary>
 
  `PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
@@ -372,7 +372,7 @@ To change item quantity in a shopping list, send the request:
 
 
 <details>
-<summary markdown='span'>In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product in the response.</summary>
+<summary>In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product in the response.</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
 
@@ -391,7 +391,7 @@ To change item quantity in a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product item with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
+<summary>Request sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product item with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
 
 `PATCH https://glue.mysprykershop.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items/0323bd43-f9ff-5964-afe3-44a2085ce0c6`
 
@@ -461,7 +461,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: change item quantity in a shopping list.</summary>
+<summary>Response sample: change item quantity in a shopping list.</summary>
 
 ```json
     {
@@ -481,7 +481,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 </details>     
 
 <details>
-<summary markdown='span'>Response sample: change item quantity in a shopping list with the details on concrete products.</summary>
+<summary>Response sample: change item quantity in a shopping list with the details on concrete products.</summary>
 
 ```json
 {
@@ -548,7 +548,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 </details>
 
 <details>
-<summary markdown='span'>Response sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
+<summary>Response sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
 
 ```json
 {

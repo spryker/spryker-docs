@@ -122,8 +122,6 @@ entries:
         url: /docs/ca/dev/set-up-notifications-for-5xx-errors.html
       - title: Performance testing in staging environments
         url: /docs/ca/dev/performance-testing-in-staging-enivronments.html
-      - title: Managing parameters in the Parameter Store
-        url: /docs/ca/dev/managing-parameters-in-the-parameter-store.html
       - title: Environment scaling
         url: /docs/ca/dev/environment-scaling.html
       - title: Monitoring issues and informing about alerts

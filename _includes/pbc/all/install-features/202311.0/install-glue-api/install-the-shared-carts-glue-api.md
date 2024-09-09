@@ -195,7 +195,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 </details>
 
-<details open>
+<details>
   <summary>src/Pyz/Zed/CartsRestApi/CartsRestApiDependencyProvider.php</summary>
 
 ```php

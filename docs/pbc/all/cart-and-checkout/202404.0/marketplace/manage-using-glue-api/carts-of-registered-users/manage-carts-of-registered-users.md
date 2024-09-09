@@ -23,11 +23,11 @@ Unlike guest carts, carts of registered users have an unlimited lifetime. Also, 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 * [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-labels-glue-api.html)
-* [Glue API: Measurement Units feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
+* [Install the Measurement Units Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 * [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
-* [Glue API: Merchant Offers feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+* [Install the Merchant Offers Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 * [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 * [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-volume-prices-glue-api.html)
 
@@ -188,7 +188,7 @@ To retrieve all carts, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no carts are retrieved</summary>
+<summary>Response sample: no carts are retrieved</summary>
 
 ```json
 {
@@ -201,7 +201,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts</summary>
+<summary>Response sample: retrieve all carts</summary>
 
 ```json
 {
@@ -266,7 +266,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with the items included</summary>
+<summary>Response sample: retrieve all carts with the items included</summary>
 
 ```json
 {
@@ -560,7 +560,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with cart permission groups included</summary>
+<summary>Response sample: retrieve all carts with cart permission groups included</summary>
 
 ```json
 {
@@ -697,7 +697,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with shared carts included</summary>
+<summary>Response sample: retrieve all carts with shared carts included</summary>
 
 ```json
 {
@@ -833,7 +833,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with included information about shared carts, and the company users they are shared with</summary>
+<summary>Response sample: retrieve all carts with included information about shared carts, and the company users they are shared with</summary>
 
 ```json
 {
@@ -937,7 +937,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with cart rules included</summary>
+<summary>Response sample: retrieve all carts with cart rules included</summary>
 
 ```json
 {
@@ -1068,7 +1068,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with the applied vouchers included</summary>
+<summary>Response sample: retrieve all carts with the applied vouchers included</summary>
 
 ```json
 {
@@ -1138,7 +1138,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with promotional items included</summary>
+<summary>Response sample: retrieve all carts with promotional items included</summary>
 
 ```json
 {
@@ -1204,7 +1204,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with the applied gift cards</summary>
+<summary>Response sample: retrieve all carts with the applied gift cards</summary>
 
 ```json
 {
@@ -1274,7 +1274,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with items, respective concrete products, and their product options included</summary>
+<summary>Response sample: retrieve all carts with items, respective concrete products, and their product options included</summary>
 
 ```json
 {
@@ -1527,7 +1527,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with their concrete products and the product labels assigned to the products in the carts</summary>
+<summary>Response sample: retrieve all carts with their concrete products and the product labels assigned to the products in the carts</summary>
 
 ```json
 {
@@ -1686,7 +1686,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with product offers included</summary>
+<summary>Response sample: retrieve all carts with product offers included</summary>
 
 ```json
 {
@@ -1854,7 +1854,7 @@ To retrieve all carts, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with product offers and product offer availabilities included</summary>
+<summary>Response sample: retrieve all carts with product offers and product offer availabilities included</summary>
 
 ```json
 {
@@ -2043,7 +2043,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with product offers and product offer prices included</summary>
+<summary>Response sample: retrieve all carts with product offers and product offer prices included</summary>
 
 ```json
 {
@@ -2257,7 +2257,7 @@ To retrieve all carts, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve all carts with merchants included</summary>
+<summary>Response sample: retrieve all carts with merchants included</summary>
 
 ```json
 {
@@ -2517,7 +2517,7 @@ To retrieve a registered user's cart, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart</summary>
+<summary>Response sample: retrieve a cart</summary>
 
 ```json
 {
@@ -2554,7 +2554,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with its items included</summary>
+<summary>Response sample: retrieve a cart with its items included</summary>
 
 ```json
 {
@@ -2682,7 +2682,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with its cart permissions included</summary>
+<summary>Response sample: retrieve a cart with its cart permissions included</summary>
 
 ```json
 {
@@ -2744,7 +2744,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the details on the shared carts</summary>
+<summary>Response sample: retrieve a cart with the details on the shared carts</summary>
 
 ```json
 {
@@ -2804,7 +2804,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the information about the shared carts and the company users they are shared with</summary>
+<summary>Response sample: retrieve a cart with the information about the shared carts and the company users they are shared with</summary>
 
 ```json
 {
@@ -2880,7 +2880,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the cart rules included</summary>
+<summary>Response sample: retrieve a cart with the cart rules included</summary>
 
 ```json
 {
@@ -2948,7 +2948,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with its promotional items</summary>
+<summary>Response sample: retrieve a cart with its promotional items</summary>
 
 ```json
 {
@@ -3009,7 +3009,7 @@ To retrieve a registered user's cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the detailed information on its gift cards</summary>
+<summary>Response sample: retrieve a cart with the detailed information on its gift cards</summary>
 
 ```json
 {
@@ -3074,7 +3074,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with items, concrete products, and their product options</summary>
+<summary>Response sample: retrieve a cart with items, concrete products, and their product options</summary>
 
 ```json
 {
@@ -3322,7 +3322,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with the detailed information on its vouchers</summary>
+<summary>Response sample: retrieve a cart with the detailed information on its vouchers</summary>
 
 ```json
 {
@@ -3392,7 +3392,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with information about the product labels assigned to the products in the cart</summary>
+<summary>Response sample: retrieve a cart with information about the product labels assigned to the products in the cart</summary>
 
 ```json
 {
@@ -3546,7 +3546,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with details on product offers</summary>
+<summary>Response sample: retrieve a cart with details on product offers</summary>
 
 ```json
 {
@@ -3720,7 +3720,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with details on product offers and product offer availabilities</summary>
+<summary>Response sample: retrieve a cart with details on product offers and product offer availabilities</summary>
 
 ```json
 {
@@ -3938,7 +3938,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with details on product offers and product offer prices</summary>
+<summary>Response sample: retrieve a cart with details on product offers and product offer prices</summary>
 
 ```json
 {
@@ -4212,7 +4212,7 @@ To retrieve a registered user's cart, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a cart with detailed information on merchants</summary>
+<summary>Response sample: retrieve a cart with detailed information on merchants</summary>
 
 ```json
 {

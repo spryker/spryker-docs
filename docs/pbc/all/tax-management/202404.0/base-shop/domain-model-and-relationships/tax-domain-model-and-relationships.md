@@ -15,7 +15,7 @@ redirect_from:
 
 The following schemas illustrates relations between modules when Avalara is integrated into different entities:
 
-<details><summary markdown='span'>Product and Cart entities</summary>
+<details><summary>Product and Cart entities</summary>
 
 <div class="width-100">
 
@@ -25,7 +25,7 @@ The following schemas illustrates relations between modules when Avalara is inte
 
 </details>
 
-<details><summary markdown='span'>Calculation entity</summary>
+<details><summary>Calculation entity</summary>
 
 <div class="width-100">
 
@@ -35,7 +35,7 @@ The following schemas illustrates relations between modules when Avalara is inte
 
 </details>
 
-<details><summary markdown='span'>Checkout entity</summary>
+<details><summary>Checkout entity</summary>
 
 <div class="width-100">
 
@@ -45,7 +45,7 @@ The following schemas illustrates relations between modules when Avalara is inte
 
 </details>
 
-<details><summary markdown='span'>Sales order entity</summary>
+<details><summary>Sales order entity</summary>
 
 <div class="width-100">
 
@@ -55,7 +55,7 @@ The following schemas illustrates relations between modules when Avalara is inte
 
 </details>
 
-<details><summary markdown='span'>Stock entity</summary>
+<details><summary>Stock entity</summary>
 
 <div class="width-100">
 

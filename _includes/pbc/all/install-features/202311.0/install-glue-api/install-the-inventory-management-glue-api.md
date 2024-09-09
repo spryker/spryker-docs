@@ -62,8 +62,8 @@ Activate the following plugins:
 | ConcreteProductAvailabilitiesByResourceIdResourceRelationshipPlugin | Adds the concrete product availability resource as a relationship to the concrete product resource. | None |Spryker\Glue\ProductAvailabilitiesRestApi\Plugin\GlueApplication |
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

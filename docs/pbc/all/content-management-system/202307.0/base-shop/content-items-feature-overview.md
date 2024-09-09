@@ -48,8 +48,8 @@ You can insert a content item widget into a CMS block or a CMS page by selecting
 
 In the WYSIWYG editor, the inserted content item widget will not be displayed as a code piece. Instead, you will see a block with the content item widget setting.
 
-<details open>
-    <summary markdown='span'>Content item widget representation—the Back Office</summary>
+<details>
+    <summary>Content item widget representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-widget-the-back-office.png)
 
@@ -57,8 +57,8 @@ In the WYSIWYG editor, the inserted content item widget will not be displayed as
 
 After inserting the CMS block with the content item widget into a published page, the content item widget will render the content item on Storefront:
 
-<details open>
-    <summary markdown='span'>Content item representation—Storefront</summary>
+<details>
+    <summary>Content item representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-storefront.png)
 
@@ -78,13 +78,13 @@ The content item design on Storefront depends on the template you select for the
 You can select a template when inserting a content item widget into a CMS block. Below, you can see the difference between the default templates for the Abstract product list content item:
 * *Product Slider for store/landing pages*:
 
-<details open><summary markdown='span'>Content item widget template—the Back Office</summary>
+<details><summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png )
 
 </details>
 
-<details open><summary markdown='span'>Content item widget template—Storefront</summary>
+<details><summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png )
 
@@ -92,15 +92,15 @@ You can select a template when inserting a content item widget into a CMS block.
 
 * *Top Title*:
 
-<details open>
-    <summary markdown='span'>Content item widget template—the Back Office</summary>
+<details>
+    <summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-the-back-office.png )
 
 </details>
 
-<details open>
-    <summary markdown='span'>Content item widget template—Storefront</summary>
+<details>
+    <summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-storefront.png )
 
@@ -144,6 +144,6 @@ Structure:
 | INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
 | [Install the Content Items feature](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-content-items-feature.html) |  [ContentBanner migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html) | [Retrieve abstract product list content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-abstract-product-list-content-items.html) | [File details: content_banner.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-banner.csv.html) | [HowTo: Create a custom content item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/tutorials-and-howtos/create-a-custom-content-item.html) | [Content item types: module relations](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/domain-model-and-relationships/content-item-types-module-relations.html)  |  |
-| [Glue API: Content items API feature integration](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html) | [Content migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) | [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html) | [File details: content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) |  |  |
+| [Install the Content Items Glue API](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html) | [Content migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html) | [Retrieve banner content items](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-using-glue-api/glue-api-retrieve-banner-content-items.html) | [File details: content_navigation.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-navigation.csv.html) |  |  |
 |  | [ContentBannerGui migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html) |  | [File details: content_product_abstract_list.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-abstract-list.csv.html) |  |  |
 |  | [ContentStorage migration guide](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html) |  | [File details: content_product_set.csv](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/import-and-export-data/import-file-details-content-product-set.csv.html) |  |  |

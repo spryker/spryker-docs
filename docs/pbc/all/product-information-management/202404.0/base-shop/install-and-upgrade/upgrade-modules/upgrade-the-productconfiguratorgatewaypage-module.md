@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ProductConfiguratorGatewayPage
+title: Upgrade the ProductConfiguratorGatewayPage module
 description: Learn how to upgrade the ProductConfiguratorGatewayPage module to a newer version.
 template: module-migration-guide-template
 last_updated: Nov 21, 2023

@@ -30,7 +30,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Install the Order Management Glue API](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-order-management-glue-api.html)
 * [Glue API: Measurement Units Feature Integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-measurement-units-glue-api.html)
 * [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
-* [Glue API: Product Bundles feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
+* [Install the Product Bundles Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-bundles-glue-api.html)
 * [Install the Configurable Bundle Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-configurable-bundle-feature.html)
 * [Install the Configurable Bundle + Cart Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-cart-glue-api.html)
 * [Install the Configurable Bundle + Product Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-configurable-bundle-product-glue-api.html)
@@ -65,7 +65,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a single order</summary>
+<summary>Response sample: retrieve a single order</summary>
 
 ```json
 {
@@ -132,7 +132,7 @@ To retrieve detailed information on an order, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve an order</summary>
+<summary>Response sample: retrieve an order</summary>
 
 ```json
 {
@@ -350,7 +350,7 @@ To retrieve detailed information on an order, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an order with order shipments included</summary>
+<summary>Response sample: retrieve an order with order shipments included</summary>
 
 ```json
 {
@@ -645,7 +645,7 @@ To retrieve detailed information on an order, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve an order with the details on a configurable bundle</summary>
+<summary>Response sample: retrieve an order with the details on a configurable bundle</summary>
 
 ```json
 {

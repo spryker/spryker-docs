@@ -14,22 +14,34 @@ This document describes how to connect and configure the Stripe app in the Back 
 
 ## Prerequisites
 
-[Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html)
+* [Install and configure Stripe prerequisites](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/third-party-integrations/stripe/install-and-configure-stripe-prerequisites.html).
+* Obtain Stripe account ID in [Stripe Dashboard](https://dashboard.stripe.com). For more details, see [Stripe account ID](https://stripe.com/docs/payments/account).
 
 ## Connect and configure the Stripe app
 
-1. In your store's Back Office, go to **Apps**.
-2. Click **Stripe**.
-   This takes you to the Stripe app details page.
-3. In the top right corner of the Stripe app details page, click **Connect app**.
-   This displays a message about the successful connection of the app to your SCCOS. The Stripe app's status changes to *Connection pending*.
-4. Go to [Stripe Dashboard](https://dashboard.stripe.com) and copy your account ID. Learn more about the Stripe [account id](https://stripe.com/docs/payments/account).
-5. Go back to your store's Back Office, to the Stripe app details page.
-6. In the top right corner of the Stripe app details page, click **Configure**.
-7. In the *Configure* pane, fill in the *ACCOUNT ID* field with value from step 4.
-8. In *Environment*, select if you want to use the app in test or live mode. For details on the Stripe test mode, see [Test mode](https://stripe.com/docs/test-mode).
-9. Optionally: In *Payment page title*, enter your shop name. This name will be displayed on the *Payment* page as a merchant label for the payee.
-![stripe-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/stripe/configure-stripe/stripe-configuration.png)
-10. Click **Save**.
-If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**.
-11. Activate Stripe in your store's Back office, in **Administration** -> **Payment methods**. For details, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).
+1. In the Back Office, go to **Apps**.
+2. Click on **Stripe**.
+   This opens the Stripe app details page.
+3. Click **Connect app**.
+   This displays a success message with the app's status as **Connection pending**.
+4. Click **Configure**.
+  This opens the **Configure** pane.
+5. For **Business Model**, select **B2B/B2C**.
+
+{% info_block infobox %}
+
+If you're configuring Stripe for Marketplace, see [Connect and configure Stripe for Marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html).
+
+{% endinfo_block %}  
+
+6. For **STRIPE ACCOUNT ID**, enter the account ID you've obtained in the [prerequisites](#prerequisites).
+7. For **Environment**, select if you want to use the app in test or live mode. For details on the Stripe test mode, see [Test mode](https://stripe.com/docs/test-mode).
+8. Optional: For **PAYMENT PAGE TITLE**, enter your shop name. This name will be displayed on the **Payment** page as a merchant label for the payee.
+9. Optional: For **BRAND FAVICON**, enter a link to an image to be used as a favicon on the **Payment** page.
+10. Optional: For **PAY BUTTON COLOR**, enter a HEX code to customize the **PAY** button color.
+11. Click **Save**.
+  This displays a success message with the app's status as **Connected**.
+
+## Next steps
+
+Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).

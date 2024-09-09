@@ -22,7 +22,7 @@ For detailed information about the modules that provide the API functionality an
 * [Install the Promotions & Discounts feature Glue API](/docs/pbc/all/discount-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-promotions-and-discounts-glue-api.html)
 * [Install the Product Options Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-options-glue-api.html)
 * [Install the Product Labels Glue API](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-glue-api/install-the-product-image-sets-glue-api.html)
-* [GLUE API: Marketplace Poruduct Offer feature integration](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
+* [Install the Marketplace Poruduct Offer Glue API](/docs/pbc/all/offer-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-glue-api.html)
 * [Install the Marketplace Product Offer Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 * [Install the Marketplace Product Offer Volume Prices Glue API](/docs/pbc/all/price-management/{{page.version}}/marketplace/install-and-upgrade/install-glue-api/install-the-marketplace-product-offer-prices-glue-api.html)
 
@@ -98,7 +98,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart</summary>
+<summary>Response sample: retrieve a guest cart</summary>
 
 ```json
 {
@@ -142,7 +142,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about a guest cart with its items included</summary>
+<summary>Response sample: retrieve information about a guest cart with its items included</summary>
 
 ```json
 {
@@ -237,7 +237,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about the cart rules</summary>
+<summary>Response sample: retrieve a guest cart with information about the cart rules</summary>
 
 ```json
 {
@@ -311,7 +311,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about the gift cards applied</summary>
+<summary>Response sample: retrieve a guest cart with information about the gift cards applied</summary>
 
 ```json
 {
@@ -381,7 +381,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, respective concrete products, and product options included</summary>
+<summary>Response sample: retrieve a guest cart with information about its items, respective concrete products, and product options included</summary>
 
 ```json
 {
@@ -638,7 +638,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, sales units, and product measurement units</summary>
+<summary>Response sample: retrieve a guest cart with information about its items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -767,7 +767,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about vouchers</summary>
+<summary>Response sample: retrieve a guest cart with information about vouchers</summary>
 
 ```json
 {
@@ -836,7 +836,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about concrete products and the product labels assigned</summary>
+<summary>Response sample: retrieve a guest cart with information about concrete products and the product labels assigned</summary>
 
 ```json
 {
@@ -983,7 +983,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve detailed information on the promotional items for the guest cart</summary>
+<summary>Response sample: retrieve detailed information on the promotional items for the guest cart</summary>
 
 ```json
 {
@@ -1127,7 +1127,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with information about product offers included</summary>
+<summary>Response sample: retrieve a guest cart with information about product offers included</summary>
 
 ```json
 {
@@ -1291,7 +1291,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: Retrieve a guest cart with product offer availabilities information included</summary>
+<summary>Response sample: Retrieve a guest cart with product offer availabilities information included</summary>
 
 ```json
 {
@@ -1499,7 +1499,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with product offer prices information included</summary>
+<summary>Response sample: retrieve a guest cart with product offer prices information included</summary>
 
 ```json
 {
@@ -1761,7 +1761,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a guest cart with items and information about merchants included</summary>
+<summary>Response sample: retrieve a guest cart with items and information about merchants included</summary>
 
 ```json
 {

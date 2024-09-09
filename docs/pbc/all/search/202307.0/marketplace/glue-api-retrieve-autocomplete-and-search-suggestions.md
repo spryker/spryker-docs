@@ -17,7 +17,7 @@ In your development, this resource can help you to enhance the customer experien
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Catalog Glue API](/docs/pbc/all/search/{{page.version}}/base-shop/install-and-upgrade/install-features-and-glue-api/install-the-catalog-glue-api.html).
 
 ## Retrieve a search suggestion
 
@@ -56,7 +56,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for an empty search string</summary>
+<summary>Response sample: retrieve suggestions for an empty search string</summary>
 
 ```json
 {
@@ -86,7 +86,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product</summary>
+<summary>Response sample: retrieve search suggestions for an abstract product</summary>
 
 ```json
 {
@@ -132,7 +132,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for an abstract product with abstract product details included</summary>
+<summary>Response sample: retrieve suggestions for an abstract product with abstract product details included</summary>
 
 ```json
 {
@@ -255,7 +255,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product name</summary>
+<summary>Response sample: retrieve search suggestions for an abstract product name</summary>
 
 ```json
 {
@@ -408,7 +408,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for two letters</summary>
+<summary>Response sample: retrieve search suggestions for two letters</summary>
 
 ```json
 {
@@ -612,7 +612,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for 11 symbols</summary>
+<summary>Response sample: retrieve search suggestions for 11 symbols</summary>
 
 ```json
 {
@@ -765,7 +765,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for a concrete product SKU</summary>
+<summary>Response sample: retrieve search suggestions for a concrete product SKU</summary>
 
 ```json
 {
@@ -810,7 +810,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for multiple product attributes</summary>
+<summary>Response sample: retrieve suggestions for multiple product attributes</summary>
 
 ```json
 {
@@ -961,7 +961,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions with a currency set</summary>
+<summary>Response sample: retrieve search suggestions with a currency set</summary>
 
 ```json
 {
@@ -1123,7 +1123,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions with a currency and a price mode set</summary>
+<summary>Response sample: retrieve search suggestions with a currency and a price mode set</summary>
 
 ```json
 {
@@ -1285,7 +1285,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for a category name</summary>
+<summary>Response sample: retrieve search suggestions for a category name</summary>
 
 ```json
 {
@@ -1446,7 +1446,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for a part of a category name</summary>
+<summary>Response sample: retrieve search suggestions for a part of a category name</summary>
 
 ```json
 {
@@ -1630,7 +1630,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve search suggestions for a merchant name</summary>
+<summary>Response sample: retrieve search suggestions for a merchant name</summary>
 
 ```json
 {

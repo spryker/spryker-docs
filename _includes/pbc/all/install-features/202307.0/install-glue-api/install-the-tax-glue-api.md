@@ -76,8 +76,8 @@ Activate the following plugin:
 | `ProductTaxSetsResourceRoutePlugin` | Registers the `product-tax` resource. | None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |
 | `ProductTaxSetByProductAbstractSkuResourceRelationshipPlugin` | Adds the `product-tax-sets` resource as a relationship to the `abstract-product` resource. |  None | `Spryker\Glue\ProductTaxSetsRestApi\Plugin\GlueApplication` |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

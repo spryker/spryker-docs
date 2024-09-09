@@ -40,7 +40,7 @@ console transfer:generate
 * `CategoryPageDataLoaderPlugin`
 * `ProductCategoryMapExpanderPlugin`
 
-<details open><summary markdown='span'>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
+<details><summary>Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider</summary>
 
 ```php        
 <?php
@@ -95,7 +95,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 
 8. Add the new plugins:
 
-<details open><summary markdown='span'>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
+<details><summary>Pyz\Zed\Publisher\PublisherDependencyProvider</summary>
 
 ```php    
 <?php

@@ -327,7 +327,7 @@ Set up the following behaviors:
 1.Add the Unzer plugin for `CartDepenencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -365,7 +365,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 2. Add checkout Unzer plugins for integrating into the checkout flow:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -431,7 +431,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 3. In `OmsDependencyProvider`, add the OMS command and condition plugins:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -503,7 +503,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 4. Add Unzer payment filter plugins:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -539,7 +539,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 5. To use Unzer expense refund strategies, disable the default refund flow by overriding `RefundBusinessFactory`:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Refund/Business/RefundBusinessFactory.php</summary>
+<summary>src/Pyz/Zed/Refund/Business/RefundBusinessFactory.php</summary>
 
 ```php
 <?php
@@ -578,7 +578,7 @@ class RefundBusinessFactory extends SprykerRefundBusinessFactory
 6. To use Unzer Gui, override `UnzerGuiDependencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/UnzerGui/UnzerGuiDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/UnzerGui/UnzerGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -612,7 +612,7 @@ class UnzerGuiDependencyProvider extends SprykerUnzerGuiDependencyProvider
 7. Add `StepHandler` plugins to `CheckoutPageDependencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+<summary>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -698,7 +698,7 @@ Set up the following behaviors:
 | UnzerRouteProviderPlugin | Adds Unzer module routes to RouteCollection. | None          | SprykerEco\Yves\Unzer\Plugin\Router |
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
+<summary>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -735,7 +735,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ### 2) Set up template
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} define data = {

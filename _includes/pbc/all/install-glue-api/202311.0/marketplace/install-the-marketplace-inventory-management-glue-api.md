@@ -58,7 +58,7 @@ Activate the following plugins:
 | ProductOfferAvailabilitiesResourceRoutePlugin | Registers the `product-offer-availabilities` resource. |  | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
 | ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds the product-offer-availabilities resource as a relationship of the product-offers resource. |  | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
 
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

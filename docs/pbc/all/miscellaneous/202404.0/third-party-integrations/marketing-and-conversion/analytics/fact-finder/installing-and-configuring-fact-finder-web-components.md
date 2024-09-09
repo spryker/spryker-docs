@@ -49,7 +49,7 @@ $config[FactFinderWebComponentsConstants::COMMUNICATION_COMPONENT_CONFIG] = [
 To set up the components configuration, use the following config code as an example:
 
 <details>
-<summary markdown='span'>config/Shared/config_default.php</summary>
+<summary>config/Shared/config_default.php</summary>
 
 ```php
 ...

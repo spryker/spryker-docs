@@ -1,19 +1,11 @@
 ---
-title: "HowTo: Display product groups by color on the Storefront"
+title: "Display product groups by color on the Storefront"
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-product-groups-by-color-on-the-storefront
 originalArticleId: e963b2f2-a4bf-4c04-8ffc-ecb3610032e0
 redirect_from:
-  - /2021080/docs/howto-display-product-groups-by-color-on-the-storefront
-  - /2021080/docs/en/howto-display-product-groups-by-color-on-the-storefront
-  - /docs/howto-display-product-groups-by-color-on-the-storefront
-  - /docs/en/howto-display-product-groups-by-color-on-the-storefront
-  - /v5/docs/howto-display-product-groups-by-color-on-the-storefront
-  - /v5/docs/en/howto-display-product-groups-by-color-on-the-storefront
-  - /v6/docs/howto-display-product-groups-by-color-on-the-storefront
-  - /v6/docs/en/howto-display-product-groups-by-color-on-the-storefront
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-product-groups-by-color-on-the-storefront.html
   - /docs/pbc/all/product-information-management/202204.0/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
 ---

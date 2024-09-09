@@ -118,7 +118,12 @@ Displays products where each of them contains an image, a product name, a Produc
 See how the **Product category info** template looks like on Yves:
 
 * **B2C Shop**
-![APL product category info](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/apl-product-category-info-b2c.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/content-management-system/base-shop/manage-in-the-back-office/pages/apl-product-category-info-b2c.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ### Abstract product list content item widget template: Product category info and button

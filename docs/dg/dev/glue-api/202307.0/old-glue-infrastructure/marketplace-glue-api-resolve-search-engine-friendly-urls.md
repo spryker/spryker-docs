@@ -29,7 +29,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Сore feature integration](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Install the Spryker Сore Glue API](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-glue-api/install-the-spryker-core-glue-api.html).
 
 ## Resolve a SEF URL into a Glue API URL
 
@@ -60,7 +60,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: resolve a product URL</summary>
+<summary>Response sample: resolve a product URL</summary>
 
 ```json
 {
@@ -85,7 +85,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a URL of a category node</summary>
+<summary>Response sample: resolve a URL of a category node</summary>
 
 ```json
 {
@@ -110,7 +110,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a URL of a CMS page</summary>
+<summary>Response sample: resolve a URL of a CMS page</summary>
 
 ```json
 {
@@ -135,7 +135,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: resolve a merchant page URL</summary>
+<summary>Response sample: resolve a merchant page URL</summary>
 
 ```json
 {

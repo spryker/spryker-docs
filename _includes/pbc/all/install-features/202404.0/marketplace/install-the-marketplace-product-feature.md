@@ -127,7 +127,7 @@ Install the following plugins:
 | MerchantProductWritePublisherPlugin                          | Publishes the product by merchant product abstract IDs to Redis. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher\MerchantProduct |
 | MerchantProductPublisherTriggerPlugin                          | Allows publishing or republishing merchant product storage data manually. |           | Spryker\Zed\MerchantProductStorage\Communication\Plugin\Publisher |
 
-<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -224,7 +224,7 @@ Make sure that you can create a new product in the Merchant Portal and observe i
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -291,7 +291,7 @@ Make sure that you can see the merchant name at `https://zed.de.demo-spryker.com
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -392,7 +392,7 @@ Make sure that data contains `merchant_references` for merchant products in `spy
 1. Prepare your data according to your requirements using the demo data:
 
 <details>
-<summary markdown='span'>data/import/common/common/marketplace/merchant_product.csv</summary>
+<summary>data/import/common/common/marketplace/merchant_product.csv</summary>
 
 ```yaml
 sku,merchant_reference,is_shared

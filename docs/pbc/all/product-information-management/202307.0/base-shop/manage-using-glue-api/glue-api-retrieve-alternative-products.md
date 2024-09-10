@@ -73,7 +73,7 @@ To retrieve abstract alternative products, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product</summary>
+<summary>Response sample: retrieve abstract product alternatives of the product</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ To retrieve abstract alternative products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product with the details on the product labels</summary>
+<summary>Response sample: retrieve abstract product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {
@@ -253,7 +253,7 @@ To retrieve concrete alternative products, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product</summary>
+<summary>Response sample: retrieve concrete product alternatives of the product</summary>
 
 ```json
 {
@@ -296,7 +296,7 @@ To retrieve concrete alternative products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product with the details on the product labels</summary>
+<summary>Response sample: retrieve concrete product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {

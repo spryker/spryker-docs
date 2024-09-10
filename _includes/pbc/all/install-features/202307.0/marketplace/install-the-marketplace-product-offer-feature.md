@@ -159,7 +159,7 @@ To configure export to Redis and Elasticsearch, take the following steps:
 | ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update, and delete product offer store events.                                                                                                                        |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
 | MerchantProductOfferProductConcreteExpanderPlugin       | Expands product concrete collection with offers.                                                                                                                                                            |               | \Spryker\Zed\MerchantProductOffer\Communication\Plugin\Product                                     |
 
-<details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -491,7 +491,7 @@ Make sure that when the following entities get updated through the ORM, the corr
 
 1. Prepare your data according to your requirements using the demo data:
 
-<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
+<details><summary>data/import/common/common/marketplace/merchant_product_offer.csv</summary>
 
 ```csv
 product_offer_reference,concrete_sku,merchant_reference,merchant_sku,is_active,approval_status
@@ -641,7 +641,7 @@ offer418,112_312526172,MER000002,,1,approved
 | is_active               |          | boolean   | 1             | Product offer status, defaults to 1.                                                                                                                                                                                                                                                                                                                                  |
 | approval_status         |          | string    | approved      | (*Waiting for Approval*&nbsp;> *Approved*&nbsp;> *Denied*). *Denied* and *Waiting for Approval* statuses mean that the offer is not visible on PDP regardless of Product Offer → Active = true. This can be configured (along with the transition between statuses in `ProductOfferConfig`). If not supplied, `ProductOfferConfig`&nbsp;> `getDefaultStatus` is applied. |
 
-<details><summary markdown='span'>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
+<details><summary>data/import/common/common/marketplace/merchant_product_offer_store.csv</summary>
 
 ```csv
 product_offer_reference,store_name
@@ -1279,7 +1279,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductOfferGui/ProductOfferGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1328,7 +1328,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1440,7 +1440,7 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-<details><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -63,7 +63,7 @@ For details, see the following:
 A customer can perform the following actions on the Storefront:
 
 <details>
-<summary markdown='span'>View the account activity</summary>
+<summary>View the account activity</summary>
 
 
 <figure class="video_container">
@@ -75,7 +75,7 @@ A customer can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Create, edit, and delete a customer address</summary>
+<summary>Create, edit, and delete a customer address</summary>
 
 
 
@@ -88,7 +88,7 @@ A customer can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Filter order history</summary>
+<summary>Filter order history</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -99,7 +99,7 @@ A customer can perform the following actions on the Storefront:
 </details>
 
 <details>
-<summary markdown='span'>Reorder selected items</summary>
+<summary>Reorder selected items</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

@@ -255,7 +255,7 @@ Add the Twig template that's rendered when the invoice payment method is selecte
 2. Adjust the path according to the theme you are currently using.
 
 <details>
-<summary markdown='span'>Code sample</summary>
+<summary>Code sample</summary>
 
 ```twig
 <div class="payment-subform paymentmethods-invoice-form">

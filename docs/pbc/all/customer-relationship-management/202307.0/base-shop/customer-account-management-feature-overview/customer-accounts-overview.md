@@ -72,28 +72,28 @@ For details, see the following:
 A customer can perform the following actions on the Storefront:
 
 <details>
-<summary markdown='span'>View the account activity</summary>
+<summary>View the account activity</summary>
 
 ![view-account-activity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/view-account-activity.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Create, edit, and delete a customer address</summary>
+<summary>Create, edit, and delete a customer address</summary>
 
 ![create-edit-delete-a-customer-address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/create-edit-delete-a-customer-address.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Filter order history</summary>
+<summary>Filter order history</summary>
 
 ![filter-order-history](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/filter-order-history.gif)
 
 </details>
 
 <details>
-<summary markdown='span'>Reorder selected items</summary>
+<summary>Reorder selected items</summary>
 
 ![reorder-selected-items](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Customer+Relationship+Management/Customer+Account/Customer+Account+Feature+Overview/reorder-selected-items.gif)
 

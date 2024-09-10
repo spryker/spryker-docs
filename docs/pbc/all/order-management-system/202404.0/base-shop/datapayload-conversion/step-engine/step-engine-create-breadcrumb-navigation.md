@@ -38,7 +38,7 @@ To set up breadcrumb navigation for a step collection, follow these steps:
 
 The following example shows how to enable `MyStep` in the breadcrumb. The comments in each method describe their responsibilities.
 
-<details><summary markdown='span'>Code sample</summary>
+<details><summary>Code sample</summary>
 
 ```php
 <?php

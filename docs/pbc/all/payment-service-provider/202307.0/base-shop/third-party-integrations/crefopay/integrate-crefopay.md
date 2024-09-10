@@ -43,7 +43,7 @@ To integrate CrefoPay, do the following:
 1. Add shipment step plugin, payment subform plugins, and payment method handlers:
 
 <details>
-<summary markdown='span'>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
+<summary>\Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider</summary>
 
 ```php
 <?php
@@ -349,7 +349,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 **Demo Shop template extension (a B2C theme example)**
 
 <details>
-<summary markdown='span'>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+<summary>Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
@@ -563,7 +563,7 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 10. Override layout of the `crefopay-payment-form` molecule:
 
 <details>
-<summary markdown='span'>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
+<summary>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
@@ -661,7 +661,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 12. Add checkout plugins:
 
 <details>
-<summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider.php</summary>
+<summary>\Pyz\Zed\Checkout\CheckoutDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -710,7 +710,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 13. Add OMS commands and conditions:
 
 <details>
-<summary markdown='span'>\Pyz\Zed\Oms\OmsDependencyProvider.php</summary>
+<summary>\Pyz\Zed\Oms\OmsDependencyProvider.php</summary>
 
 ```php
 <?php

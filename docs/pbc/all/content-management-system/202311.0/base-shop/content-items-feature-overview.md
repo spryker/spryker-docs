@@ -49,8 +49,8 @@ You can insert a content item widget into a CMS block or a CMS page by selecting
 
 In the WYSIWYG editor, the inserted content item widget will not be displayed as a code piece. Instead, you will see a block with the content item widget setting.
 
-<details open>
-    <summary markdown='span'>Content item widget representation—the Back Office</summary>
+<details>
+    <summary>Content item widget representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-widget-the-back-office.png)
 
@@ -58,8 +58,8 @@ In the WYSIWYG editor, the inserted content item widget will not be displayed as
 
 After inserting the CMS block with the content item widget into a published page, the content item widget will render the content item on Storefront:
 
-<details open>
-    <summary markdown='span'>Content item representation—Storefront</summary>
+<details>
+    <summary>Content item representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/content-item-storefront.png)
 
@@ -79,13 +79,13 @@ The content item design on Storefront depends on the template you select for the
 You can select a template when inserting a content item widget into a CMS block. Below, you can see the difference between the default templates for the Abstract product list content item:
 * *Product Slider for store/landing pages*:
 
-<details open><summary markdown='span'>Content item widget template—the Back Office</summary>
+<details><summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-the-back-office.png )
 
 </details>
 
-<details open><summary markdown='span'>Content item widget template—Storefront</summary>
+<details><summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/product-slider-content-item-widget-template-storefront.png )
 
@@ -93,15 +93,15 @@ You can select a template when inserting a content item widget into a CMS block.
 
 * *Top Title*:
 
-<details open>
-    <summary markdown='span'>Content item widget template—the Back Office</summary>
+<details>
+    <summary>Content item widget template—the Back Office</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-the-back-office.png )
 
 </details>
 
-<details open>
-    <summary markdown='span'>Content item widget template—Storefront</summary>
+<details>
+    <summary>Content item widget template—Storefront</summary>
 
 ![image]( https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Content+Items/Content+Items+Feature+Overview/top-title-content-item-widget-template-storefront.png )
 

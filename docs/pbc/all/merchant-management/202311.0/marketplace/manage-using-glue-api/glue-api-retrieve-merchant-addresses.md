@@ -41,7 +41,7 @@ Request sample: retrieve merchant addresses
 
 ### Response
 
-<details><summary markdown='span'>Response sample: retrieve merchant addresses</summary>
+<details><summary>Response sample: retrieve merchant addresses</summary>
 
 ```json
 {

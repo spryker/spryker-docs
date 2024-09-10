@@ -79,7 +79,7 @@ console transfer:generate
 
 You can find the affected modules of the float stock update in the following list.
 
-<details open><summary markdown='span'>Affected modules</summary>
+<details><summary>Affected modules</summary>
 
 
 | OPERATOR | OPERATOR FOR PLAIN QUERY | MIGRATION GUIDE |

@@ -585,7 +585,7 @@ Ensure that the locale of the Back Office matches the locale of a logged-in user
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/User/UserDependencyProvider.php</summary>
 
 ```php
 <?php

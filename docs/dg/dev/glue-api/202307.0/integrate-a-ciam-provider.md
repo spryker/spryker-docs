@@ -65,8 +65,8 @@ Create a separate CIAM provider Client layer with the following structure:
   ...
 ```
 
-<details open>
-<summary markdown='span'>The following code example shows what the CIAM token decoding logic looks like:</summary>
+<details>
+<summary>The following code example shows what the CIAM token decoding logic looks like:</summary>
 
 ```php
 class CiamTokenDecoder implements CiamTokenDecoderInterface
@@ -153,7 +153,7 @@ interface CiamProviderServiceInterface
 ```
 
 <details>
-<summary markdown='span'>The following is an example of standard CIAM token parsing logic:</summary>
+<summary>The following is an example of standard CIAM token parsing logic:</summary>
 
 ```php
 class CiamTokenParser implements CiamtokenParserInterface

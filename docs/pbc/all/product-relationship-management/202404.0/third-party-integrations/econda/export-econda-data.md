@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
 ---
 
-To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html) and [plugins](/docs/dg/dev/backend-development/plugins/plugins.html).
+To implement Econda plugin you should be familiar with the concept of [extending Spryker](/docs/dg/dev/backend-development/extend-spryker/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another-module.html) and [plugins](/docs/dg/dev/backend-development/plugins/plugins.html).
 
 ## Zed Output Folder
 

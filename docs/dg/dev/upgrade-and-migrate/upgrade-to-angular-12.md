@@ -169,7 +169,7 @@ module.exports = { ...nxPreset };
 5. Compare and update the following files:  
 
 <details>
-<summary markdown='span'>angular.json</summary>
+<summary>angular.json</summary>
 
 ```json
 {

@@ -43,8 +43,8 @@ console transfer:generate
 
 4. In `\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider`, on the project level, register the new strategy plugins:
 
-<details open>
-<summary markdown='span'>\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider</summary>
+<details>
+<summary>\Pyz\Yves\ProductConfiguratorGatewayPage\ProductConfiguratorGatewayPageDependencyProvider</summary>
 
 ```php
 <?php

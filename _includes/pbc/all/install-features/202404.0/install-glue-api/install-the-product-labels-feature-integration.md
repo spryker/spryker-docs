@@ -61,8 +61,8 @@ Activate the following plugin:
 | ProductLabelsRelationshipByResourceIdPlugin | Adds the product labels resource as a relationship to the abstract product resource. | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin |
 | ProductLabelsResourceRoutePlugin |Registers the product labels resource.  | None | Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

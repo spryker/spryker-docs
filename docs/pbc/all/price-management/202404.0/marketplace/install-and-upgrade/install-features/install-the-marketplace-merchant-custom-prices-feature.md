@@ -89,7 +89,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantRelationshipPriceProductMapperPlugin                             | Maps merchant relationship data.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -158,7 +158,7 @@ Make sure that you can filter and sort the price table by Customer column.
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary>src/Pyz/Service/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -194,7 +194,7 @@ Make sure that there is no validation error.
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php</summary>
 
 ```php
 <?php

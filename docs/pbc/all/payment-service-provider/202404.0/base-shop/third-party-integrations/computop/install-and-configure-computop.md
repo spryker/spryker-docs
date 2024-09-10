@@ -52,7 +52,7 @@ You can check all the necessary configurations in `vendor/spryker-eco/computop/c
 
 The following example shows the Computop module configuration:
 
-<details open>
+<details>
 <summary>config/Shared/config_default.php</summary>
 
 ```PHP

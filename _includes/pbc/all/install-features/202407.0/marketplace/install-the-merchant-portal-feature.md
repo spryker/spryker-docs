@@ -75,8 +75,6 @@ class UserConfig extends SprykerUserConfig
 
 2. Connect users and merchants using using the Back Office or the following data import:
 
-Prepare merchant data:
-
 **data/import/common/common/marketplace/merchant.csv**
 
 ```csv
@@ -84,9 +82,9 @@ merchant_key,merchant_reference,merchant_name,registration_number,status,email,i
 sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
 
-2. To integrate merchant user data import, follow [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
+3. To integrate merchant user data import, follow [Install the Marketplace Merchant feature](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-feature.html).
 
-Prepare merchant user data:
+4. Import merchant user data using the following example:
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
@@ -95,7 +93,7 @@ merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
 
-3. Import data:
+5. Import data:
 
 ```bash
 console data:import merchant
@@ -334,21 +332,23 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 
 {% endinfo_block %}
 
-### 5) Separate login feature setup (configuring security firewalls to have a separate login for Merchant Portal user).
+### 5) Configure firewalls for a dedicated Merchant Portal login
 
-It requires upgrading `spryker/smyfony:3.5.0` and applying some changes on the project. For details, see [Symfony 5 integration](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html).
+1. [Upgrade to Symfony 5](/docs/dg/dev/upgrade-and-migrate/upgrade-to-symfony-5.html).
 
-1. Install the required modules using Composer:
+2. Install the required modules using Composer:
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension spryker/authentication-merchant-portal-gui
 ```
 
+3. Install the required modules using Composer:
+
 ```bash
 composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-gui:"^1.0.0" spryker/security-system-user:"^1.0.0" spryker/user-password-reset:"^1.0.0" spryker/user-password-reset-extension:"^1.0.0" spryker/user-password-reset-mail:"^1.0.0" --update-with-dependencies
 ```
 
-2. Update the following modules to the latest minor versions:
+4. Update the following modules to the latest minor versions:
 
 | MODULE       | DIRECTORY                    |
 |--------------|------------------------------|
@@ -359,7 +359,7 @@ composer require spryker/security-gui:"^1.0.0" spryker/security-merchant-portal-
 | User         | vendor/spryker/user          |
 | ZedUi        | vendor/spryker/zed-ui        |
 
-3. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to setup a separate login for Merchant Portal user.
+5. Apply changes from https://github.com/spryker-shop/suite/pull/681/files to setup a separate login for Merchant Portal user.
 
 
 {% info_block warningBox "Verification" %}

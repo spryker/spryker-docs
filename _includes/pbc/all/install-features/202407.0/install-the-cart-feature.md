@@ -100,10 +100,10 @@ Set up the following configuration:
 
 | CONFIGURATION                                                  | SPECIFICATION                                                        | NAMESPACE                    |
 |----------------------------------------------------------------|----------------------------------------------------------------------|------------------------------|
-| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables the loading of cart items via AJAX.                          | SprykerShop\Yves\CartPage    |
-| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables the loading of upselling products via AJAX.                  | SprykerShop\Yves\CartPage    |
-| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables the performing of cart actions via AJAX.                     | SprykerShop\Yves\CartPage    |
-| CatalogPageConfig::IS_MINI_CART_ASYNC_MODE_ENABLED             | Enables async rendering of mini cart during AJAX add to cart action. | SprykerShop\Yves\CatalogPage |
+| CartPageConfig::IS_CART_CART_ITEMS_VIA_AJAX_LOAD_ENABLED       | Enables cart items to be loaded via AJAX.                          | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_LOADING_UPSELLING_PRODUCTS_VIA_AJAX_ENABLED | Enables upselling products to be loaded via AJAX.                  | SprykerShop\Yves\CartPage    |
+| CartPageConfig::IS_CART_ACTIONS_ASYNC_MODE_ENABLED             | Enables cart actions to be performed via AJAX.                     | SprykerShop\Yves\CartPage    |
+| CatalogPageConfig::IS_MINI_CART_ASYNC_MODE_ENABLED             | Enables mini cart to be rendered async during the AJAX add to cart action. | SprykerShop\Yves\CatalogPage |
 
 **src/Pyz/Yves/CartPage/CartPageConfig.php**
 
@@ -135,7 +135,7 @@ class CartPageConfig extends SprykerCartPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following applies (in Cart page):
+Make sure the following applies on the **Cart** page:
 - Cart items are loaded via AJAX.
 - Upselling products are loaded via AJAX.
 - Cart actions, like changing item quantity or removing an item, are performed via AJAX.
@@ -162,8 +162,7 @@ class CatalogPageConfig extends SprykerCatalogPageConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following applies (in Catalog page):
-- Cart actions, like changing item quantity or removing an item, are performed via AJAX.
+Make sure that, on the **Catalog** page, cart actions, like changing item quantity or removing an item, are performed via AJAX.
 
 {% endinfo_block %}
 
@@ -230,7 +229,7 @@ Activate the following plugins:
 
 | PLUGIN                               | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                 |
 |--------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------|
-| CartBlockMiniCartViewExpanderPlugin  | Expands the provided `MiniCartView.content` with mini cart view. | None          | SprykerShop\Yves\CartPage\Plugin\CartPage |
+| CartBlockMiniCartViewExpanderPlugin  | Expands the provided `MiniCartView.content` with a mini cart view. |           | SprykerShop\Yves\CartPage\Plugin\CartPage |
 
 **src/Pyz/Yves/Router/RouterDependencyProvider.php**
 

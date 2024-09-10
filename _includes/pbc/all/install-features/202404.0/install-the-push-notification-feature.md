@@ -159,7 +159,7 @@ $config[PushNotificationWebPushPhpConstants::VAPID_PRIVATE_KEY] = getenv('SPRYKE
 $config[PushNotificationWebPushPhpConstants::VAPID_SUJECT] = getenv('SPRYKER_PUSH_NOTIFICATION_WEB_PUSH_PHP_VAPID_SUBJECT');
 ```
 
-3. Add the VAPID keys to the needed local deploy file and to variables in the Parameter Store:
+3. Add the VAPID keys to the needed local deploy file:
 
 ```yml
 

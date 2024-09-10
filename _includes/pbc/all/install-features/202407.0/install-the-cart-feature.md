@@ -225,7 +225,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ### 4) Set up behavior
 
-Activate the following plugins:
+1. Activate the following plugins:
 
 | PLUGIN                               | SPECIFICATION                                                    | PREREQUISITES | NAMESPACE                                 |
 |--------------------------------------|------------------------------------------------------------------|---------------|-------------------------------------------|
@@ -255,10 +255,8 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
 
-It's an optional step. Only B2C Demo Shop uses this plugin due to custom mini cart implementation.
-For the B2C setup you should also specify the following configuration:
+2. B2C Shop: Add the following configuration:
 
 **src/Pyz/Yves/CartPage/CartPageConfig.php**
 
@@ -278,8 +276,9 @@ class CartPageConfig extends SprykerCartPageConfig
 }
 ```
 
-Make sure the following applies (in Cart page):
-- Cart actions, like changing item quantity or removing an item, are reflected in the mini cart.
+{% info_block warningBox "Verification" %}
+
+Make sure that, on the **Cart** page, cart actions, like changing item quantity or removing an item, are reflected in the mini cart.
 
 {% endinfo_block %}
 

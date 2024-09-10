@@ -188,6 +188,8 @@ web-push generate-vapid-keys --json
 
 {% endinfo_block %}
 
+4. Add the variables you've added in step 3 to Parameter Store. For instructions, see [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html)
+
 ### 4) Add translations
 
 1. Append glossary according to your configuration:

@@ -13,13 +13,13 @@ To install and configure the prerequisites for the [Stripe App](/docs/pbc/all/pa
 
 ## Install and update modules
 
-Update the following modules using Composer:
+1. Update modules using Composer:
 
 ```bash
 composer update spryker-feature/order-management spryker-feature/spryker-core spryker-feature/payments spryker-feature/marketplace-merchant spryker/oauth-client --with-dependencies
 ```
 
-Install the required modules using Composer:
+2. Install the required modules using Composer:
 
 ```bash
 composer require spryker/merchant-app spryker/merchant-app-merchant-portal-gui
@@ -27,8 +27,13 @@ composer require spryker/merchant-app spryker/merchant-app-merchant-portal-gui
 
 ## Add request headers configuration
 
-Add the following configuration settings for the Oauth client:
-We use the Auth0 as the Oauth provider.
+1. Add the following configuration settings for the Oauth client:
+
+{% info_block infoBox "" %}
+
+In this example, Auth0 is used as an Oauth provider.
+
+{% endinfo_block %}
 
 **config/Shared/config_default.php**
 
@@ -43,8 +48,7 @@ $config[OauthClientConstants::OAUTH_GRANT_TYPE_FOR_ACP] = OauthAuth0Config::GRAN
 $config[OauthClientConstants::OAUTH_OPTION_AUDIENCE_FOR_ACP] = 'aop-app'
 ```
 
-Let's add the tenant identifier to the configuration:
-The tenant identifier should be available in the environment variable `SPRYKER_TENANT_IDENTIFIER`.
+2. Add the tenant identifier to the configuration. The tenant identifier should be available in the `SPRYKER_TENANT_IDENTIFIER` environment variable.
 
 **config/Shared/config_default.php**
 
@@ -152,15 +156,15 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     protected function extendCommandPlugins(Container $container): Container
     {
         $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-        
+
             $commandCollection->add(new MerchantPayoutCommandByOrderPlugin(), 'SalesPaymentMerchant/Payout');
             $commandCollection->add(new MerchantPayoutReverseCommandByOrderPlugin(), 'SalesPaymentMerchant/ReversePayout');
-            
+
           return $commandCollection;
         });
-        
+
         return $container;
-    } 
+    }
 ```
 
 2. Add the following conditions to `\Pyz\Zed\Oms\OmsDependencyProvider::extendConditionPlugins()`:
@@ -187,7 +191,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     protected function extendConditionPlugins(Container $container): Container
     {
         $container->extend(self::CONDITION_PLUGINS, function (ConditionCollectionInterface $conditionCollection) {
-        
+
             $conditionCollection->add(new IsMerchantPaidOutConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPaidOut');
             $conditionCollection->add(new IsMerchantPayoutReversedConditionPlugin(), 'SalesPaymentMerchant/IsMerchantPayoutReversed');
 
@@ -202,8 +206,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 ### Add project configuration
 
-1. Configure ACL, add the following configuration `'merchant-app-merchant-portal-gui'` to
-   `\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()`:
+1. To Configure ACL, add the `'merchant-app-merchant-portal-gui'` configuration:
+
+<details>
+  <summary>\Pyz\Zed\Acl\AclConfig::addMerchantPortalInstallerRules()</summary>
 
 ```php
 <?php
@@ -259,7 +265,9 @@ class AclConfig extends SprykerAclConfig
 }
 ```
 
-2. Configure the message broker, add `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` events:
+</details>
+
+2. To configure the message broker, add `'merchant-commands'`, `'merchant-app-events'`, and `'app-events'` events:
 
 ```php
 <?php
@@ -288,9 +296,9 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ```
 
-3. To configure state machine, copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust to your needs. 
-4. For more information about ACP payment methods integration with your project OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
-5. To enable merchants to be redirected to the Merchant Portal from third-party websites, add `redirect.php` to the public folder of your Merchant Portal: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
+3. To configure state machine, copy `vendor/spryker/sales-payment/config/Zed/Oms/StateMachine/ForeignPaymentProviderStateMachine01.xml` to the project and adjust it to your needs. For more information about ACP payment methods integration with your project OMS configuration, see [Integrate ACP payment apps with Spryker OMS configuration](/docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html).
+
+4. To enable merchants to be redirected to the Merchant Portal from third-party websites, add `redirect.php` to the public folder of your Merchant Portal: [/public/MerchantPortal/redirect.php](https://github.com/spryker-shop/b2c-demo-marketplace/blob/master/public/MerchantPortal/redirect.php).
 
 
 

@@ -218,7 +218,7 @@ class MessageBrokerConfig extends SprykerMessageBrokerConfig
 
 ```
 
-5. Enable the order expenses for the merchant payout:
+5. Enable order expenses for the merchant payout:
 
 **src/Pyz/Zed/SalesPaymentMerchant/SalesPaymentMerchantConfig.php**
 
@@ -236,7 +236,7 @@ class SalesPaymentMerchantConfig extends SprykerSalesPaymentMerchantConfig
      * @var bool
      */
     protected const ORDER_EXPENSE_INCLUDED_IN_PAYMENT_PROCESS = true;
-    
+
     /**
      * @var array<string, list<string>>
      */
@@ -252,18 +252,14 @@ Verify that the order expenses are included in the merchant payout process:
 
 1. Place an order with products from different merchants.
 2. Pass the merchant payout stage for the order.
-3. In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order.
-4. The order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
-4. Refund for the order.
-5. In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order.
-6. The refunded order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table in case there are no merchant order items left for the refund.
+  In the `spy_sales_payment_merchant_payout` database table, make sure the merchant payout amounts have been applied to each merchant product in your order. The order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+3. Refund the order.
+  In the `spy_sales_payment_merchant_payout_reversal` database table, make sure the refunded merchant payout amounts have been applied to each merchant product in your order. If there're no merchant order items left for the refund, the refunded order expenses should be included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
 
-Verify that the order expenses with specific type are not included in the merchant payout process:
-
-1. Repeat the steps above for the store with the excluded expense types.
-2. Make sure the order expenses with the excluded expense types are not included in the merchant payout process.
-3. Make sure the order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
-4. Make sure the refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
+4. Repeat steps 1-3 for a store with excluded expense types and make sure the following applies:
+* The order expenses with the excluded expense types are not included in the merchant payout process.
+* The order expenses are not included in the merchant payout process as a separate entry in the `spy_sales_payment_merchant_payout` database table.
+* The refunded order expenses are not included in the merchant reverse payout process as a separate entry in the `spy_sales_payment_merchant_payout_reversal` database table.
 
 {% endinfo_block %}
 

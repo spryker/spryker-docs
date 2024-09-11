@@ -1565,10 +1565,10 @@ To import data follow the steps in the following sections.
 
 Some of the commission rule expressions provided in the following examples are based on optional feature extensions. For commissions to work properly, these extensions need to be enabled:
 
-* `item-price`: the condition for the order item from the `Install the Marketplace Merchant Commission + Prices feature` extension.
-* `category`: the condition for the order item from the `Install the Marketplace Merchant Commission + Category Management feature` extension.
+* `item-price`: the condition for the order item from the [Install the Marketplace Merchant Commission + Prices feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-prices-feature.html).
+* `category`: the condition for the order item from the [Install the Marketplace Merchant Commission + Category Management feature](/docs/pbc/all/merchant-management/202407.0/marketplace/install-and-upgrade/install-features/install-the-marketplace-merchant-commission-category-management-feature.html).
 
-The related extensions are listed in [Install related features](#install-related-features).
+All related extensions are listed in [Install related features](#install-related-features).
 
 {% endinfo_block %}
 

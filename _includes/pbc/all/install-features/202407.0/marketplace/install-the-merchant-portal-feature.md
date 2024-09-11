@@ -106,7 +106,7 @@ By default, all newly created merchants and merchant users automatically have a 
 
 1. Adjust `AclConfig` to configure access to Merchant Portal's `*-merchant-portal-gui` pages:
   * Give access to merchant users
-  * Optionally deny access for admin roles
+  * Optional: Deny access for admin roles
 
 To check the available list of packages for the Merchant Portal, in the Srpyker Git Hub repository, search for [`merchant-portal-gui`](https://github.com/spryker/?q=merchant-portal-gui).
 

@@ -54,7 +54,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_about_all-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -82,7 +82,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_cloud-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -110,7 +110,7 @@ jobs:
           path: tmp/.htmlproofer
           key: $-check_pbc-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -138,7 +138,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_sdk-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz

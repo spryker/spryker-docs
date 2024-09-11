@@ -1588,7 +1588,7 @@ entries:
       - title: ACP security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
       - title: SCCOS dependencies required for the ACP
-        url: /docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html
+        url: /docs/dg/dev/acp/install-prerequisites-and-enable-acp.html
       - title: Receive ACP messages in SCCOS
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration

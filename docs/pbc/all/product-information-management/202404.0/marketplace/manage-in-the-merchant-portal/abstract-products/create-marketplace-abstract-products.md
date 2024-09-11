@@ -32,7 +32,11 @@ To create a new abstract product:
       2. Enter a **Concrete Product Name**.
       3. To finish the product creation, click **Create**.
 
-      ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-one-variant-mp.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.md/create-abstract-product-with-multiple-variants-mp.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
       {% info_block warningBox "Warning" %}
@@ -45,7 +49,7 @@ To create a new abstract product:
         1. Select a super attribute that defines the variation of your concrete products.
         2. In the field next to the super attribute you've selected, select one or more values for each super attribute. Upon adding the super attribute values, the preview of the concrete products is displayed.
 
-        {% info_block infoBox "Info" %}
+        {% info_block infoBox "" %}
 
         Removing a super attribute or its value removes the related concrete products or concrete product values from the preview.
 
@@ -53,9 +57,16 @@ To create a new abstract product:
 
         3. Optional: Add more super attributes by clicking the **Add** button. Repeat this step until you select at least one value for each selected super attribute.
 
-          ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/merchant+portal+user+guides/Products/create-abstract-product-with-multiple-variants-mp.gif)
 
-        {% info_block infoBox "Info" %}
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/manage-in-the-merchant-portal/abstract-products/create-marketplace-abstract-products.md/create-abstract-product-with-one-variant-mp.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
+        {% info_block infoBox "" %}
 
         You can remove a concrete product from the preview list by clicking the **Remove** icon.
 

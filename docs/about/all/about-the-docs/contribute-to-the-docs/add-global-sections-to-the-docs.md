@@ -207,7 +207,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_acp_dev-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -235,7 +235,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_acp_user-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz

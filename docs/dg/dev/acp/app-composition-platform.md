@@ -48,7 +48,7 @@ To run ACP Catalog with an earlier version, install the `spryker/app-catalog-gui
 
 To use ACP apps, you need to register your project with ACP. The registration process prepares your project for seamless communication with the third-party apps provided via the ACP. To register your project, follow the steps:
 
-1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
+1. [Project update to include SCCOS dependencies](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html).
 
 2. Infrastructure configuration: This step is handled by Spryker once the SCCOS dependencies are in place on the project. Once step 1 is completed, contact us via the [support portal](https://support.spryker.com/s/).
 

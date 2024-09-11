@@ -1,5 +1,5 @@
 ---
-title: SCCOS dependencies required for the App Composition Platform
+title: Install prerequisites and enable ACP
 description: Learn about the technical prerequisites required for the App Composition Platform registration.
 template: concept-topic-template
 last_updated: Jan 09, 2024
@@ -7,7 +7,7 @@ redirect_from:
     - /docs/aop/user/intro-to-acp/acp-installation.html
     - /docs/acp/user/app-composition-platform-installation.html
     - /docs/dg/dev/acp/app-composition-platform-installation.html
-
+    - docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html
 ---
 
 This document describes how to make your project ready and enabled for ACP.

@@ -1583,13 +1583,13 @@ entries:
   - title: App Composition Platform
     url: /docs/dg/dev/acp/app-composition-platform.html
     nested:
-      - title: ACP security assessment
+      - title: Security assessment
         url: /docs/dg/dev/acp/aop-security-assessment.html
-      - title: ACP security tips
+      - title: Security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
-      - title: SCCOS dependencies required for the ACP
+      - title: Install prerequisites and enable ACP
         url: /docs/dg/dev/acp/install-prerequisites-and-enable-acp.html
-      - title: Receive ACP messages in SCCOS
+      - title: Receive ACP messages
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html

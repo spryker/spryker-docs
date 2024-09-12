@@ -13,7 +13,7 @@ This document describes how to integrate Payone using the Payone app.
 
 ## Prerequisites
 
-- Fulfill [App Composition Platform prerequisites](/docs/dg/dev/acp/sccos-dependencies-required-for-the-acp.html).
+- Fulfill [App Composition Platform prerequisites](/docs/dg/dev/acp/install-prerequisites-and-enable-acp.html).
 - Install the modules for Payone. To check the list of required modules and their versions, in the Back Office, go to **Apps**>**Payone**. The list of modules is displayed in **Requirements** > **Spryker module list** section.
 
 

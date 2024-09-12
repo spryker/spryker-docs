@@ -52,7 +52,11 @@ The marketplace product is also displayed with the **Sold By** field defining th
 
 On the **Quick Order** page, customers can add products to cart by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products of those merchants are available for selection when they enter **SKU or Name** of the product. Buyers who select the **All Merchants** option can add products from all merchants. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick Add to Cart feature, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/{{page.version}}/base-shop/feature-overviews/quick-add-to-cart-feature-overview.html)
 
-![quick-order-from-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-order-from-quick-order-page.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.md/quick-order-from-quick-order-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Marketplace product on the cart page
 
@@ -64,7 +68,12 @@ Note that the drop-down with merchants is not visible until the product is selec
 
 {% endinfo_block %}
 
-![quick-add-to-cart-from-cart-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-add-to-cart-from-cart-page.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.md/quick-add-to-cart-from-cart-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ### Marketplace product on the shopping list page
 
@@ -76,15 +85,23 @@ Note that the drop-down with merchants is not visible until the product is selec
 
 {% endinfo_block %}
 
-![quick-add-to-cart-from-shopping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Product+Offer/quick-add-to-cart-from-shopping-list-page.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.md/quick-add-to-cart-from-shopping-list-page.mp4" type="video/mp4">
+  </video>
+</figure>
 
 
 ### Searching and filtering marketplace products
 
 When the merchant name is entered in the catalog search, not only the offers but also the products belonging to this merchant are displayed. By selecting a merchant name in the filter, products from this merchant are also displayed.
 
-![Search for marketplace products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/search-for-products-by-name-and-sku.gif)
-
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.md/search-for-products-by-name-and-sku.mp4" type="video/mp4">
+  </video>
+</figure>
 
 ## Marketplace products in the Back Office
 
@@ -92,7 +109,11 @@ Before new marketplace products become visible on the Storefront, they must be [
 
 A Marketplace administrator can filter the products belonging to certain merchants in the Back Office.
 
-![merchants-switcher-on-products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/filter-merchant-productsby-merchant-back-office.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/marketplace/marketplace-product-feature-overview.md/filter-merchant-productsby-merchant-back-office.mp4" type="video/mp4">
+  </video>
+</figure>
 
 Also, Marketplace administrators can edit products, if needed, and create products when acting as the [main merchant](/docs/pbc/all/merchant-management/{{page.version}}/marketplace/marketplace-merchant-feature-overview/main-merchant.html).
 

@@ -66,7 +66,7 @@ Event subscribers are another way to listen to events in the system. The advanta
 
 To implement a subscriber, follow these steps:
 
-1. Create an event subscriber class — for example:
+1. Create an event subscriber class. Example:
 
 ```php
 <?php

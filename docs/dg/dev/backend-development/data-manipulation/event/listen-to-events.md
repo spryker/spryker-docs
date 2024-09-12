@@ -55,7 +55,10 @@ class ProductRelationAbstractProductChangeListener extends AbstractPlugin implem
 
 Add this listener to `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`
 
-Example: `$eventCollection->addListener(ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE, new ProductRelationAbstractProductChangeListener())`
+Example:
+```php
+$eventCollection->addListener(ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE, new ProductRelationAbstractProductChangeListener())`
+```
 
 ## Listen to events with a subscriber
 
@@ -63,7 +66,7 @@ Event subscribers are another way to listen to events in the system. The advanta
 
 To implement a subscriber, follow these steps:
 
-1. Create an event subscriber class—for example:
+1. Create an event subscriber class — for example:
 
 ```php
 <?php

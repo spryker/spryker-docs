@@ -53,11 +53,10 @@ docker/sdk bootstrap && docker/sdk up
 Paas | Cloud:
  The AWS CLI is required for Paas | Cloud Commands
  The AWS Session Manager plugin for the AWS CLI is required for Paas | Cloud Commands. See https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html
- AWS Session Tokens and AWS Region are required for Paas | Cloud Commands. See https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+ AWS Access credentials are required for Paas | Cloud Commands. See https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
 
 Commands:
- docker/sdk paas | cloud get-region                                                                    List AWS Region set in your shell
- docker/sdk paas | cloud environments                                                                  List Paas Environments
+ docker/sdk paas | cloud environments                                                                  Search the AWS Account for Paas Environments, and list them
  docker/sdk paas | cloud service-details --environment=ENVIRONMENT_NAME service [database storage ..]  List Paas Environment Service Details. See output from environments command. Services: database database-ro-replica storage search scheduler broker
  docker/sdk paas | cloud create-tunnel --environment=ENVIRONMENT_NAME service [database storage ..]    Create AWS SSM Tunnels to one or more Paas Environment Services. See output from environments command. Services: database database-ro-replica storage search scheduler broker
  docker/sdk paas | cloud close-tunnel service [database storage ..]                                    Close ALL Active AWS SSM Tunnels for Service. Services: database database-ro-replica storage search scheduler broker
@@ -70,17 +69,9 @@ export AWS_ACCESS_KEY_ID="AWS_ACCESS_KEY_ID"
 export AWS_SECRET_ACCESS_KEY="AWS_SECRET_ACCESS_KEY"
 ```
 
-4.1 Set the AWS Region of the PaaS environment you want to connect to
-```shell
-aws configure set region AWS_REGION
-
-# example
-aws configure set region eu-central-1
-```
-4.2 Verify your region with the `docker/sdk paas get-region` command
-
 ## Search for PaaS environments in your AWS Account (All AWS Regions)
-If you are unsure which environments exist within your AWS Account, and in which AWS Regions these environments exist, issue the `docker/sdk paas environments` command. This command, will search your entire AWS Account, all AWS Regions, and return all PaaS environments found, together with their AWS Regions
+If you are unsure which environments exist within your AWS Account, and in which AWS Regions these environments exist, issue the `docker/sdk paas environments` command. This command, will search your entire AWS Account, all AWS Regions, and return all PaaS environments found, together with their AWS Regions  
+
 ```shell
 docker/sdk paas environments
 
@@ -92,20 +83,89 @@ docker/sdk paas environments
 
 
 You are authenticated with AWS Account ******
-This operation is currently searching the AWS Account for Paas environments (All AWS Regions).
+This operation is currently searching the AWS account for Paas environments (All AWS regions)
 
-Interact with the environment by setting your AWS Region to the same region of the environment.
-Set your AWS Region with aws configure set region AWS_REGION Example: aws configure set region eu-central-1
-Then, specify the environment name with the parameter --environment=ENVIRONMENT_NAME
 
+Creating environments cache file
 Found Environment spryker-b2bmarketplace in AWS Region eu-central-1
 Found Environment spryker-b2cmarketplace in AWS Region eu-central-1
+
+Environments cache file /tmp/******_spryker_paas_environments.tmp
 ```
 
+## Retrieve service credentials
+Issue the `docker/sdk paas service-details` command, with `service1 service2 --environment={environment_name}`  
+Service options are: `database database-ro-replica storage search scheduler broker`
+
+```shell
+docker/sdk paas service-details database database-ro-replica storage search scheduler broker --environment=spryker-b2bmarketplace
+
+┌────╮       ┌─┐           ╭────┬────╮─┬─┐
+│  ╮ │───┬───┤ ├─┬───┬─┬─┐ │ ───┤  ╮ │ ┌─┘
+│  ╯ │ ┼ │ ├─┤───┤ ┼─┤ ┌─╯ ├─── │  ╯ │ └─┐
+└────┴───┴───┴─┴─┴───┴─┘   └────┴────┴─┴─┘
+
+
+
+You are authenticated with AWS Account ******
+
+Target environment spryker-b2bmarketplace AWS region eu-central-1
+
+Fetching database details
+SPRYKER_DB_PASSWORD=******
+SPRYKER_DB_DATABASE=******
+SPRYKER_DB_HOST=******
+SPRYKER_DB_PORT=******
+SPRYKER_DB_ROOT_PASSWORD=******
+SPRYKER_DB_IDENTIFIER=******
+SPRYKER_DB_ROOT_USERNAME=******
+SPRYKER_DB_ENGINE=******
+SPRYKER_DB_COLLATE=******
+SPRYKER_DB_CHARACTER_SET=******
+SPRYKER_DB_USERNAME=******
+
+Fetching database-ro-replica details. Only for PRODUCTION environments. Use the credentials for the database to connect
+READ-REPLICA not found.
+
+Fetching storage details
+SPRYKER_KEY_VALUE_STORE_ENGINE=******
+SPRYKER_KEY_VALUE_STORE_HOST=******
+SPRYKER_KEY_VALUE_STORE_CONNECTION_OPTIONS=******
+SPRYKER_KEY_VALUE_STORE_PORT=******
+SPRYKER_SESSION_FE_PORT=******
+SPRYKER_SESSION_FE_HOST=******
+SPRYKER_SESSION_BE_ENGINE=******
+SPRYKER_SESSION_BE_PORT=******
+SPRYKER_SESSION_BE_HOST=******
+
+Fetching search details
+SPRYKER_SEARCH_INDEX_PREFIX=******
+SPRYKER_SEARCH_HOST=******
+SPRYKER_SEARCH_PORT=******
+SPRYKER_SEARCH_ENGINE=******
+
+Fetching scheduler details
+SPRYKER_SCHEDULER_HOST=******
+SPRYKER_SCHEDULER_PORT=******
+
+Fetching broker details
+SPRYKER_BROKER_API_PASSWORD=******
+SPRYKER_BROKER_PROTOCOL=******
+SPRYKER_BROKER_CONNECTIONS=******
+SPRYKER_BROKER_ENGINE=******
+SPRYKER_BROKER_USERNAME=******
+SPRYKER_BROKER_API_PORT=******
+SPRYKER_BROKER_API_USERNAME=******
+SPRYKER_BROKER_PORT=******
+SPRYKER_BROKER_API_HOST=******
+SPRYKER_BROKER_HOST=******
+SPRYKER_BROKER_PASSWORD=******
+```
 
 ## Connect to a service
 
-1. Issue the `docker/sdk paas create-tunnel` command, with `service1 service2 --environment={environment_name}`
+1. Issue the `docker/sdk paas create-tunnel` command, with `service1 service2 --environment={environment_name}`  
+Service options are: `database database-ro-replica storage search scheduler broker`
 ```shell
 docker/sdk paas create-tunnel database database-ro-replica storage search scheduler broker --environment=spryker-b2bmarketplace
 
@@ -117,12 +177,11 @@ docker/sdk paas create-tunnel database database-ro-replica storage search schedu
 
 
 You are authenticated with AWS Account ******
-Your current AWS Region is eu-central-1. Change your region with aws configure set region AWS_REGION. Example aws configure set region eu-central-1
 
-Environment spryker-b2bmarketplace
-Fetching Service Connection Parameters
-Selecting Random EC2 Instance Jump Host Within Environment spryker-b2bmarketplace
-Selected EC2 Instance i-0f74ce96a0bfd5f2d
+Target environment spryker-b2bmarketplace AWS region eu-central-1
+Fetching service connection parameters
+Selecting random EC2 instance jump host within the environment spryker-b2bmarketplace
+Selected EC2 instance i-0c951b987b22e0ed9
 
 Establishing tunnel to database service
 Port 5000 is Free
@@ -154,7 +213,7 @@ Port 5050 is Free
 Waiting for connections...
 Remote Endpoint: rabbitmq.b2b-marketplace.demo-spryker.com Remote Port: 15672 Local Endpoint: localhost Local Port: 5050
 ```
-2. Once the tunnels to each service has been established, use your favourite tools and connect to `{Local Endpoint}:{Local Port}` for example 
+2. Once the tunnels to each service has been established, use your favourite tools and connect to `{Local Endpoint}:{Local Port}` 
 ```shell
 mysql --host=127.0.0.1 --port=5000 --user=$SPRYKER_DB_USERNAME --password=$SPRYKER_DB_PASSWORD
 ```
@@ -168,12 +227,14 @@ By default, sessions time out after 20 minutes of inactivity.
 ## Frequently Asked Questions
 
 ### Do I still need VPN Access?
-No. The docker/sdk VPN alternative solution can replace your VPN access, and when you use the docker/sdk VPN alternative solution you no longer need the Spryker VPN
+No. The docker/sdk VPN alternative solution can replace your VPN access, and when you use the docker/sdk VPN alternative solution you no longer need the Spryker VPN.
+
+The docker/sdk VPN alternative solution is not a replacement for a Site-to-Site VPN solution. The solution is intended for users. 
 
 ### Where do I find my AWS Access Keys
 You can use the AWS Management Console to manage the access keys of an IAM user. See [Managing access keys (console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html#Using_CreateAccessKey)
 
-When you create an access key pair, save the access key ID and secret access key in a secure location. The secret access key is available only at the time you create it. If you lose your secret access key, you must delete the access key and create a new one. For more instructions, see [Update access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_RotateAccessKey.html).
+When you create an access key pair, save the access key ID and secret access key in a secure location. The secret access key is available only at the time you create it. If you lose your secret access key, you must delete the access key and create a new one. For more instructions, see [Update access keys](https://docs.aws.amazon.com/IAM/latest/UserGuide/Using_RotateAccessKey.html)
 
 ### Where do I find the Credentials and Service details for my PaaS Services?
 The `docker/sdk paas service-details` command will retrieve and display PaaS Services details. Alternatively see [Locate service credentials](/docs/ca/dev/access/locate-service-credentials.html)
@@ -186,8 +247,11 @@ docker/sdk paas service-details database database-ro-replica storage search sche
 
 Verify that you [installed the Session Manager plugin for the AWS CLI](https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html)
 
+Verify that your local firewall software, or your organisation firewall is not blocking your tunnel requests.
+
 ### Can I connect to multiple environments at the same time?
-Yes. You can connect to multiple environments at the same time. Set the the correct AWS Access Keys, and AWS Region of the environment. Then specify the correct `--environment={environment_name}` within the `docker/sdk paas create-tunnel` command
+Yes. You can connect to multiple environments at the same time.  
+Set the the correct AWS Access Keys for the AWS Accoun. Then specify the correct `--environment={environment_name}` within the `docker/sdk paas create-tunnel` command
 
 Each tunnel to a PaaS service will claim a different port. The solution allows for 10 tunnel connections for each PaaS service at the same time.
 
@@ -211,7 +275,7 @@ No. You will not be able to use this method to connect to any EC2 instances.
 ### I am unable to connect to my services using the docker/sdk VPN alternative
 Please [contact support](https://support.spryker.com) via **Create Case** - **Get Help**.
 
-Be sure to add the example commands that you tried, and the errors that you received
+Be sure to add the example commands that you tried, and the errors that you received.
 
 
 

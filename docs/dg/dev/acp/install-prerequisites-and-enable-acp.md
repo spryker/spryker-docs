@@ -22,16 +22,15 @@ Your project is running in Spryker Cloud.
 
 If your project is of version [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, proceed to [Register your project with ACP](#register-your-project-with-acp).
 
+
 ## Install prerequisites for projects version 202211.0
 
+To install the prerequisites, update modules and set up the configuration as described in the following sections.
 
-### Dependency 1: Module updates for ACP
 
-To get your project ACP-ready, make sure that your project modules are updated to the required versions.
+### Update modules
 
-#### ACP modules
-
-ACP catalog is shipped by default with Spryker since version [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html). If you're running an earlier version, update the following modules to specified or later versions:
+Update the following modules to specified or later versions:
 
 * `spryker/app-catalog-gui: ^1.4.1`
 * `spryker/message-broker: ^1.11.0`
@@ -39,32 +38,22 @@ ACP catalog is shipped by default with Spryker since version [202311.0](/docs/sc
 * `spryker/session: ^4.15.1`
 * `spryker/oauth-client: ^1.4.0`
 
-#### ACP app modules
 
-{% info_block warningBox "Apps- and PBC-specific modules" %}
+{% info_block infoBox "ACP app modules" %}
 
-Depending on the specific ACP apps you intend to use through ACP, you need to add or update the modules for each respective app as explained in the corresponding app guide.
+When installing an ACP app, make sure to follow the provided guide to install and update the modules required by the app.
 
-{% endinfo_block %}
-
-We're  continuously updating ACP apps. Even though you don't need to install app updates, you may need to update modules that are related to an app to take full advantage of it.
-
-For each app you want to use, make sure you have all the related modules installed. The list of modules is provided in the installation guide for each app.
-
-### Dependency 2: Code changes in SCCOS
-
-{% info_block infoBox "This step can be omitted for Product version later than 202311.0" %}
-
-If your version is based on product release [202311.0](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202311.0/release-notes-202311.0.html) or later, you can skip this section.
+When a new version of app is released, you don't need to update it. However, you may need to update modules that are related to an app to take full advantage of it.
 
 {% endinfo_block %}
 
-To activate ACP catalog in the Back Office, do the following:
+
+### Add plugins and configuration
 
 1. Define the configuration and add plugins:
 
 <details>
-<summary>config/Shared/config_default.php</summary>
+  <summary>config/Shared/config_default.php</summary>
 
 ```php
 use Spryker\Shared\AppCatalogGui\AppCatalogGuiConstants;
@@ -131,6 +120,7 @@ $config[AppCatalogGuiConstants::OAUTH_PROVIDER_NAME] = OauthAuth0Config::PROVIDE
 $config[AppCatalogGuiConstants::OAUTH_GRANT_TYPE] = OauthAuth0Config::GRANT_TYPE_CLIENT_CREDENTIALS;
 $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 ```
+
 </details>
 
 2. In the `navigation.xml` file, add the navigation item:
@@ -150,14 +140,14 @@ $config[AppCatalogGuiConstants::OAUTH_OPTION_AUDIENCE] = 'aop-atrs';
 
 3. In the `MessageBrokerDependencyProvider.php` file, enable the following module plugins:
 
-{% info_block infoBox "Deprecated plugins" %}
+{% info_block infoBox "Disable deprecated plugins" %}
 
 Make sure that no deprecated plugins are enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
 
 {% endinfo_block %}
 
 <details>
-<summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
+  <summary>src/Pyz/Zed/MessageBroker/MessageBrokerDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -227,12 +217,13 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
     }
 }
 ```
+
 </details>
 
 4. In `MessageBrokerAwsDependencyProvider.php`, enable the following module plugins:
 
 <details>
-<summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
+  <summary>src/Pyz/Zed/MessageBrokerAws/MessageBrokerAwsDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -262,18 +253,19 @@ class MessageBrokerAwsDependencyProvider extends SprykerMessageBrokerAwsDependen
     }
 }
 ```
+
 </details>
 
 5. In `OauthClientDependencyProvider.php`, enable the following module plugins:
 
-{% info_block infoBox "Deprecated plugins" %}
+{% info_block infoBox "Disable deprecated plugins" %}
 
 Make sure that no deprecated plugins are enabled. Ideally, the content of each of the methods listed below should exactly match the provided example.
 
 {% endinfo_block %}
 
 <details>
-<summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
+  <summary>src/Pyz/Zed/OauthClient/OauthClientDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -314,6 +306,7 @@ class OauthClientDependencyProvider extends SprykerOauthClientDependencyProvider
     }
 }
 ```
+
 </details>
 
 
@@ -326,16 +319,53 @@ We'll need to analyze your project and provide you with specific instructions, [
 
 Once redeployed with the added changes, your environment is ACP-ready.
 
-Now, you need to make your project ACP-enabled. In this step, we enable your project to communicate with ACP by connect your environment with ACP App-Tenant-Registry-Service and Event Platform.
+To get your project ACP-enabled, [contact support](https://spryker.com/support/). In this step, we enable your project to communicate with ACP by connect your environment with ACP App-Tenant-Registry-Service and Event Platform.
 
-To get your project ACP-enabled, [contact support](https://spryker.com/support/).
-
-Once all the steps of the ACP-enablement process are completed, the ACP catalog appears in the Back Office:
+Once all the steps of the ACP-enablement process are completed, the ACP catalog is displayed in the Back Office:
 
 ![acp-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
 
 
-{% info_block infoBox "Using ACP Apps" %}
+## Next steps
+
+Once you're ready to install ACP apps, make sure to check the installation guides and the requirements on the page of each app.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 After getting your project enabled and registered for ACP, there may be specific requirements needed for different ACP apps. Check the App page more for information.
 

@@ -55,6 +55,14 @@ Regularly scan your APM for Session Lock exceptions, as well as your application
 
 ### Increase php worker pool size
 Ensure you have a sufficient pool of PHP-FPM workers defined. You can configure the php-fpm max_children count for each application part in your [deploy.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications) file.
+You can easily check whether your environment runs out of workers, but checking the application parts (f.e. glue, backgw, etc) in AWS Log Insights using the following query:
+
+```bash
+fields @timestamp, @message, @logStream, @log
+| filter @message like /max_children/
+| sort @timestamp desc
+| limit 2000
+```
 
 ### Optimize external calls
 Evaluate if you can combine Redis operations—for example, by using MGET. In general, try to reduce Redis calls in sessions as much as possible. Work with asynchronous calls to external systems where possible and handle failures to reach them gracefully.

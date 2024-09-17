@@ -24,9 +24,6 @@ search: exclude
     <loc>{{site.url}}{{ page.url}}</loc>
   </url>
   {% endif %}
-  <url>
-    <loc>{{site.url}}{{ page.url}}</loc>
-  </url>
   {% endunless %}
   {% endfor %}
 </urlset>

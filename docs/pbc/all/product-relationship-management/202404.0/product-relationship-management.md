@@ -35,11 +35,21 @@ A product relation type defines how a product relation is displayed on Storefron
 
 With Related products, [related products](#product-types-in-product-relations) are displayed on the product details page of the [product owning the relation](#product-types-in-product-relations).
 
-![Related products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/related-products.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-relationship-management/product-relationship-management.md/related-products.mp4" type="video/mp4">
+  </video>
+</figure>
 
 With Upselling, when the product owing the relation is added to the cart, related products are displayed on the **Cart** page.
 
-![Upselling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Relations/Product+Relations+Feature+Overview/202006.0/Upselling.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-relationship-management/product-relationship-management.md/Upselling.mp4" type="video/mp4">
+  </video>
+</figure>
 
 A product catalog manager can select a product relation type when [creating](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/view-product-relations.html) or [editing](/docs/pbc/all/product-relationship-management/{{page.version}}/manage-in-the-back-office/edit-product-relations.html) a product relation in the Back Office.
 
@@ -94,7 +104,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a pr
 
 When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules from the previous screenshot.
 
-<details><summary markdown='span'>Product evaluation diagram</summary>
+<details><summary>Product evaluation diagram</summary>
 
 ![product-relation-rule-hierarchy](https://confluence-connect.gliffy.net/embed/image/04eed8c7-8608-472f-8c74-9510d2449487.png?utm_medium=live&utm_source=custom)
 

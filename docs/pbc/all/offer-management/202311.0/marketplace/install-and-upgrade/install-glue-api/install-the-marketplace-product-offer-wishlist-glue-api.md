@@ -70,7 +70,7 @@ Activate the following plugins:
 | ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin      | Checks if the requested wishlist item exists in the wishlist item collection.                                                             |               | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin   |
 | MerchantByMerchantReferenceResourceRelationshipPlugin            | Adds `merchants` resources as a relationship by the  merchant references in the attributes.                                                      |               | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication                   |
 
-<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -103,7 +103,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -139,7 +139,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Glue/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -164,7 +164,7 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 ```
 </details>
 
-<details><summary markdown='span'>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/WishlistsRestApi/WishlistsRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

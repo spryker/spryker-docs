@@ -78,7 +78,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve all active CMS pages</summary>
+<summary>Response sample: retrieve all active CMS pages</summary>
 
 ```json
 {
@@ -176,7 +176,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve CMS pages with pagination included</summary>
+<summary>Response sample: retrieve CMS pages with pagination included</summary>
 
 ```json
 {
@@ -227,7 +227,7 @@ When paging is enabled, the links section of the response contains links for the
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Response sample: retrieve CMS pages with the details on the Abstract Product List and Banner content items</summary>
+<summary>Response sample: retrieve CMS pages with the details on the Abstract Product List and Banner content items</summary>
 
 ```json
 {
@@ -343,7 +343,7 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve CMS pages with the details on the Abstract Product List content items and their abstract products</summary>
+<summary>Response sample: retrieve CMS pages with the details on the Abstract Product List content items and their abstract products</summary>
 
 ```json
 {
@@ -623,7 +623,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/content-items/create-banner-content-items.html#reference-information-banner-content-item-widget) content item for the CMS page. |
 
 <details>
-<summary markdown='span'>Response sample: retrieve a specific CMS page</summary>
+<summary>Response sample: retrieve a specific CMS page</summary>
 
 ```json
 {
@@ -646,7 +646,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a CMS page with the details on the Abstract Product List and Banner content items</summary>
+<summary>Response sample: retrieve a CMS page with the details on the Abstract Product List and Banner content items</summary>
 
 ```json
 {
@@ -710,7 +710,7 @@ To retrieve abstract products for the `content-product-abstract-lists` relations
 </details>
 
 <details>
-<summary markdown='span'>Response sample: retrieve a CMS page with the details on the Abstract Product List content items and abstract products</summary>
+<summary>Response sample: retrieve a CMS page with the details on the Abstract Product List content items and abstract products</summary>
 
 ```json
 {

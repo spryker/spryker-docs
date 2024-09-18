@@ -135,7 +135,7 @@ Activate the following plugins:
 
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -397,7 +397,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php</summary>
 
 ```php
 <?php

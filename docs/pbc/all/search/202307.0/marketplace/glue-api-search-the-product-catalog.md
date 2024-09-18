@@ -83,7 +83,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for all available products</summary>
+<summary>Response sample: search for all available products</summary>
 
 ```json
 {
@@ -444,7 +444,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an abstract product by SKU</summary>
+<summary>Response sample: search for an abstract product by SKU</summary>
 
 ```json
 {
@@ -722,7 +722,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for an abstract product by SKU with the included abstract product details</summary>
+<summary>Response sample: search for an abstract product by SKU with the included abstract product details</summary>
 
 ```json
 {
@@ -1127,7 +1127,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for a concrete product by SKU</summary>
+<summary>Response sample: search for a concrete product by SKU</summary>
 
 ```json
 {
@@ -1404,7 +1404,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by multiple attributes</summary>
+<summary>Response sample: search for products by multiple attributes</summary>
 
 ```json
 {
@@ -1821,7 +1821,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products within a minimum and maximum price range</summary>
+<summary>Response sample: search for products within a minimum and maximum price range</summary>
 
 ```json
 {
@@ -2192,7 +2192,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by brand</summary>
+<summary>Response sample: search for products by brand</summary>
 
 ```json
 {
@@ -2511,7 +2511,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by labels</summary>
+<summary>Response sample: search for products by labels</summary>
 
 ```json
 {
@@ -2798,7 +2798,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by weight</summary>
+<summary>Response sample: search for products by weight</summary>
 
 ```json
 {
@@ -3115,7 +3115,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by color</summary>
+<summary>Response sample: search for products by color</summary>
 
 ```json
 {
@@ -3469,7 +3469,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response: search for products by storage capacity</summary>
+<summary>Response: search for products by storage capacity</summary>
 
 ```json
 {
@@ -3740,7 +3740,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by rating</summary>
+<summary>Response sample: search for products by rating</summary>
 
 ```json
 {
@@ -3982,7 +3982,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: search for products by the category node ID</summary>
+<summary>Response sample: search for products by the category node ID</summary>
 
 ```json
 {
@@ -4194,7 +4194,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: define the currency for the search result products</summary>
+<summary>Response sample: define the currency for the search result products</summary>
 
 ```json
 {
@@ -4421,7 +4421,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set sorting order ascending in the search results</summary>
+<summary>Response sample: set sorting order ascending in the search results</summary>
 
 ```json
 {
@@ -4841,7 +4841,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set sorting order descending in the search results</summary>
+<summary>Response sample: set sorting order descending in the search results</summary>
 
 ```json
 {
@@ -5157,7 +5157,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: sort the found products by rating</summary>
+<summary>Response sample: sort the found products by rating</summary>
 
 ```json
 {
@@ -5454,7 +5454,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: sort the found products by price ascending</summary>
+<summary>Response sample: sort the found products by price ascending</summary>
 
 ```json
 {
@@ -5768,7 +5768,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set a page to retrieve the search results from</summary>
+<summary>Response sample: set a page to retrieve the search results from</summary>
 
 ```json
 {
@@ -6026,7 +6026,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: set a number of products per page</summary>
+<summary>Response sample: set a number of products per page</summary>
 
 ```json
 {
@@ -6332,7 +6332,7 @@ To search by products, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: filter the results by the merchant name</summary>
+<summary>Response sample: filter the results by the merchant name</summary>
 
 ```json
 {
@@ -6746,7 +6746,7 @@ To search by products, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: search for a product by SKU including its concrete products and product offers</summary>
+<summary>Response sample: search for a product by SKU including its concrete products and product offers</summary>
 
 ```json
 {

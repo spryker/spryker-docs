@@ -82,7 +82,7 @@ Request sample: create a return
 
 ### Response
 
-<details><summary markdown='span'>Response sample: create a return</summary>
+<details><summary>Response sample: create a return</summary>
 
 ```json
 {
@@ -266,7 +266,7 @@ Request sample: retrieve returns
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve returns</summary>
+<summary>Response sample: retrieve returns</summary>
 
 ```json
 {
@@ -366,7 +366,7 @@ Request sample: retrieve a return
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve a return</summary>
+<summary>Response sample: retrieve a return</summary>
 
 ```json
 {

@@ -148,7 +148,7 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 <a name="multiple-and-shared-shopping-lists-on-the-storefront"></a> Company users can perform the following actions using the Multiple and Shared Shopping Lists feature on the Storefront:
 
 <details>
-<summary markdown='span'>Create, delete, and add a shopping list to the cart</summary>
+<summary>Create, delete, and add a shopping list to the cart</summary>
 
 ![create-delete-and-add-shopping-lists-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/create-delete-add-to-cart-shopping-lists.gif)
 
@@ -156,7 +156,7 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 <details>
 
-<summary markdown='span'>Edit shopping lists</summary>
+<summary>Edit shopping lists</summary>
 
 ![edit-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/manage-shopping-lists.gif)
 
@@ -164,7 +164,7 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 <details>
 
-<summary markdown='span'>Add products from the product details page to a shopping list</summary>
+<summary>Add products from the product details page to a shopping list</summary>
 
 ![add-products-from-the-product-detail-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/add-products-from-the-product-detail-page.gif)
 
@@ -173,7 +173,7 @@ Starting from v. 201907.0, every shopping list has a subtotal for all the items 
 
 <details>
 
-<summary markdown='span'>Dissmiss a shared shopping list, share and print a shopping list</summary>
+<summary>Dissmiss a shared shopping list, share and print a shopping list</summary>
 
 ![dismiss-share-and-print-a-shopping-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview/dismiss-share-and-print-a-shopping-list.gif)
 

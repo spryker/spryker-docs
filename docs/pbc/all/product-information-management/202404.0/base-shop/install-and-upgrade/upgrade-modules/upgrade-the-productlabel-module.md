@@ -18,7 +18,7 @@ redirect_from:
 related:
   - title: Upgrade the ProductLabelGUI module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productlabelgui-module.html
-  - title: Migration guide - Product
+  - title: Upgrade the Product module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-product-module.html
   - title: Upgrade the ProductBundle module
     link: docs/pbc/all/product-information-management/page.version/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-productbundle-module.html

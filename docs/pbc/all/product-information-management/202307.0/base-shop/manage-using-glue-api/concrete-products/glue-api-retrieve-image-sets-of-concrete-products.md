@@ -51,7 +51,7 @@ Request sample: retrieve image sets of a concrete product
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve image sets of a concrete product</summary>
+<summary>Response sample: retrieve image sets of a concrete product</summary>
 
 ```json
 {

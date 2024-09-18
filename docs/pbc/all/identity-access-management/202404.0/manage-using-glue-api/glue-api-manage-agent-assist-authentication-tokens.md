@@ -59,7 +59,7 @@ Request sample: refresh an agent assist authentication token
 
 ### Response
 
-<details><summary markdown='span'>Response sample: refresh an agent assist authentication token</summary>
+<details><summary>Response sample: refresh an agent assist authentication token</summary>
 
 ```json
 {

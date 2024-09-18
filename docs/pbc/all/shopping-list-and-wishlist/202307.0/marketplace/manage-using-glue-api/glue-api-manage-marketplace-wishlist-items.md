@@ -35,7 +35,7 @@ To add an item to a wishlist, send the request:
 ### Request
 
 <details>
-<summary markdown='span'>Request sample: add an item to a wishlist</summary>
+<summary>Request sample: add an item to a wishlist</summary>
 
 `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
@@ -52,7 +52,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a product offer to a wishlist</summary>
+<summary>Request sample: add a product offer to a wishlist</summary>
 
 `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
@@ -70,7 +70,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Request sample: add a marketplace product to a wishlist</summary>
+<summary>Request sample: add a marketplace product to a wishlist</summary>
 
 `POST https://glue.mysprykershop.com/wishlists/57c96d55-8a37-5998-927f-7bb663b69094/wishlist-items`
 
@@ -94,7 +94,7 @@ To add an item to a wishlist, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add an item to a wishlist</summary>
+<summary>Response sample: add an item to a wishlist</summary>
 
 ```json
 {
@@ -113,7 +113,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add a product offer to a wishlist</summary>
+<summary>Response sample: add a product offer to a wishlist</summary>
 
 ```json
 {
@@ -172,7 +172,7 @@ To add an item to a wishlist, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add a marketplace product to a wishlist</summary>
+<summary>Response sample: add a marketplace product to a wishlist</summary>
 
 ```json
 {

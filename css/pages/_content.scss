@@ -16,7 +16,12 @@
     h1, h2, h3, h4, h5, h6 {
         color: $grey-dark;
         font-weight: 800;
-        margin: 0 0 16px;
+        margin: 0 0 2px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 40px;
+        margin-bottom: -4px;
     }
 
     h1 {
@@ -34,7 +39,7 @@
         @include media("<tablet") {
             font-size: 20px;
             line-height: 1.4;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -43,7 +48,7 @@
 
         @include media("<tablet") {
             font-size: 16px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 
@@ -52,7 +57,7 @@
 
         @include media("<tablet") {
             font-size: 15px;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
         }
     }
 

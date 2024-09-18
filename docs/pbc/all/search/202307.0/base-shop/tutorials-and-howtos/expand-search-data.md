@@ -40,7 +40,7 @@ To expand search data with a `foo` entity, do the following:
 
     1. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
 
-    <details><summary markdown='span'>ProductPageDataLoaderPluginInterface implementation example</summary>
+    <details><summary>ProductPageDataLoaderPluginInterface implementation example</summary>
 
     ```php
     class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
@@ -94,7 +94,7 @@ To expand search data with a `foo` entity, do the following:
 
     2. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
 
-    <details><summary markdown='span'>ProductPageDataExpanderPluginInterface implementation example</summary>
+    <details><summary>ProductPageDataExpanderPluginInterface implementation example</summary>
 
     ```php
     class ProductFooDataExpanderPlugin implements ProductPageDataExpanderPluginInterface
@@ -139,7 +139,7 @@ In the example with `foo`, we use `->addIntegerSort()`, but you can use more opt
 
 {% endinfo_block %}
 
-<details><summary markdown='span'>ProductAbstractMapExpanderPluginInterface implementation example</summary>
+<details><summary>ProductAbstractMapExpanderPluginInterface implementation example</summary>
 
 
 ```php
@@ -195,7 +195,7 @@ class ProductFooMapExpanderPlugin implements ProductAbstractMapExpanderPluginInt
 
 1. To allow customers to sort products by `foo`, implement `SortConfigTransferBuilderPluginInterface` by building a `SortConfigTransfer` with a `foo` parameter:
 
-<details><summary markdown='span'>SortConfigTransferBuilderPluginInterface implementation example</summary>
+<details><summary>SortConfigTransferBuilderPluginInterface implementation example</summary>
 
 ```php
 <?php

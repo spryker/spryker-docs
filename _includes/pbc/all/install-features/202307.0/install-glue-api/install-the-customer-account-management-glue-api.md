@@ -331,8 +331,8 @@ Enable resources and relationships as follows:
 | CustomerAddressCheckoutDataValidatorPlugin      | Collects shipping address UUIDs from `checkoutDataTransfer.shipments`. If the authenticated customer does not own the provided customer address,  returns `CheckoutResponseTransfer` with an error. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\CheckoutRestApi |
 | CustomerAddressProviderStrategyPlugin           | Finds a customer address based on the UUID provided in `RestAddressTransfer.id`. If the address was found, returns it. | None                                               | Spryker\Zed\CustomersRestApi\Communication\Plugin\ShipmentsRestApi |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -443,8 +443,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php

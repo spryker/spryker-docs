@@ -75,7 +75,7 @@ Make sure that the following changes have been applied by checking your database
 | AvalaraProductOptionCreateTransactionRequestAfterPlugin | Calculates taxes for `ProductOptions` based on `AvalaraCreateTransactionResponseTransfer`. |  | SprykerEco\Zed\AvalaraTaxProductOption\Communication\Plugin\AvalaraTax |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/AvalaraTax/AvalaraTaxDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/AvalaraTax/AvalaraTaxDependencyProvider.php</summary>
 
 ```php
 <?php

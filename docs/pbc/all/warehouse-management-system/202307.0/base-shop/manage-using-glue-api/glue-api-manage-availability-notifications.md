@@ -35,7 +35,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 
 ### Request
 
-<details><summary markdown='span'>Request sample: subscribe to availability notifications
+<details><summary>Request sample: subscribe to availability notifications
 </summary>
 
 `POST https://glue.mysprykershop.com/availability-notifications`
@@ -60,7 +60,7 @@ To subscribe to availability notifications for an out-of-stock product, send the
 
 ### Response
 
-<details><summary markdown='span'>Response sample: subscribe to availability notifications
+<details><summary>Response sample: subscribe to availability notifications
 </summary>
 
 ```json

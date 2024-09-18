@@ -1562,7 +1562,7 @@ entries:
                       - title: "Import file details: merchant_commission_merchant.csv"
                         url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_merchant.csv.html
                       - title: "Import file details: merchant_commission_store.csv"
-                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html                                                                                                                    
+                        url: /docs/pbc/all/merchant-management/marketplace/import-and-export-data/merchant-commissions/import-file-details-merchant_commission_store.csv.html
 
               - title: Manage in the Back Office
                 url: /docs/pbc/all/merchant-management/marketplace/manage-in-the-back-office/manage-merchants-and-merchant-users-in-the-back-office.html
@@ -2425,15 +2425,15 @@ entries:
                   - title: Payone
                     url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/payone.html
                     nested:
-                      - title: Integration in the Back Office
-                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/payone-integration-in-the-back-office.html
+                      - title: ACP integration
+                        url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/payone-acp-app.html
                         nested:
                           - title: Integrate Payone
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/integrate-payone.html
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/integrate-payone.html
                           - title: Configure Payone
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/configure-payone.html
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/configure-payone.html
                           - title: Disconnect Payone
-                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/integration-in-the-back-office/disconnect-payone.html
+                            url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/app-composition-platform-integration/disconnect-payone.html
 
                       - title: Manual integration
                         url: /docs/pbc/all/payment-service-provider/base-shop/third-party-integrations/payone/manual-integration/payone-manual-integration.html
@@ -2651,6 +2651,8 @@ entries:
                 include_versions:
                 - "202404.0"
                 nested:
+                  - title: Overview
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-for-marketplace-overview.html
                   - title: Install and configure prerequisites
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html
                   - title: Configure merchant transfers
@@ -2659,6 +2661,8 @@ entries:
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/connect-and-configure-stripe-for-marketplace.html
                   - title: Onboard to Stripe in the Merchant Portal
                     url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/onboard-to-stripe-in-the-merchant-portal.html
+                  - title: OMS configuration
+                    url: /docs/pbc/all/payment-service-provider/marketplace/stripe-third-party-integration/stripe-oms-configuration-in-marketplaces.html                    
 
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
@@ -3155,6 +3159,8 @@ entries:
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-list-to-concrete-product.csv.html
                   - title: product_measurement_unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-measurement-unit.csv.html
+                  - title: product_packaging-unit-type.csv
+                    url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/import-file-details-product-packaging-unit-type.csv.html
                   - title: product_packaging-unit.csv
                     url: /docs/pbc/all/product-information-management/base-shop/import-and-export-data/file-details-product-packaging-unit.csv.html
                   - title: product_list.csv
@@ -3301,12 +3307,10 @@ entries:
                 nested:
                   - title: Display product groups by color on the Storefront
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html
-                  - title: Import packaging units
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-import-packaging-units.html
                   - title: Integrate and use precise decimal numbers
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-integrate-and-use-precise-decimal-numbers.html
                   - title: Make a product searchable and shown on the Storefront
-                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+                    url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/make-products-searchable-and-shown-on-the-storefront.html
                   - title: Manage a big number of categories
                     url: /docs/pbc/all/product-information-management/base-shop/tutorials-and-howtos/howto-manage-a-big-number-of-categories.html
                   - title: Render configurable bundle templates on the Storefront

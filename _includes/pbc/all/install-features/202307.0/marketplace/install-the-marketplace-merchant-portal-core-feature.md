@@ -449,7 +449,7 @@ class SecurityMerchantPortalGuiDependencyProvider extends SprykerSecurityMerchan
 | ZedUiApplicationPlugin                | Adds `SERVICE_ZED_UI_FACTORY` service.                                                                                                      |               | Spryker\Zed\ZedUi\Communication\Plugin\Application           |
 | AclEntityApplicationPlugin            | Enables ACL for the whole `Application`.                                                                                                      |               | Spryker\Zed\AclEntity\Communication\Plugin\Application       |
 
-<details open><summary markdown='span'>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/MerchantPortalApplication/MerchantPortalApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -1205,7 +1205,7 @@ Each feature/module with a persistent relation to the merchant must expand the A
 | UrlAclEntityConfigurationExpanderPlugin                              | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.    | None          | Spryker\Zed\Url\Communication\Plugin\AclMerchantPortal                                               |
 | UserPasswordResetAclEntityConfigurationExpanderPlugin                | Expands the provided `AclEntityMetadataConfig` transfer object with composite data.    | None          | Spryker\Zed\UserPasswordReset\Communication\Plugin\AclMerchantPortal                                 |
 
-<details><summary markdown='span'>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/AclMerchantPortal/AclMerchantPortalDependencyProvider.php</summary>
 
 ```php
 <?php

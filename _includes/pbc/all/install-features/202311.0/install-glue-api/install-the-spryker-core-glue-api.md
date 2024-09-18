@@ -304,7 +304,7 @@ Make sure you can access `https://glue.mysprykershop.com` and get the following 
 {% endinfo_block %}
 
 
-<details><summary markdown='span'>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
+<details><summary>\Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

@@ -452,7 +452,7 @@ Make sure the entities have been imported to the following database tables:
 1. Append the glossary according to your configuration:
 
 <details>
-  <summary markdown='span'>Glossary</summary>
+  <summary>Glossary</summary>
 ```csv
 service_point.validation.service_point_key_exists,A service point with the same key already exists.,en_US
 service_point.validation.service_point_key_exists,Es existiert bereits eine Servicestelle mit dem gleichen Schlüssel.,de_DE

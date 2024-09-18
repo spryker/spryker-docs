@@ -60,7 +60,7 @@ Specifically, the customer can do the following:
 
 Buyers can do the following actions using the Wishlists feature:
 <details>
-<summary markdown='span'>Create, rename, and edit a wishlist </summary>
+<summary>Create, rename, and edit a wishlist </summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -72,7 +72,7 @@ Buyers can do the following actions using the Wishlists feature:
 </details>
 
 <details>
-<summary markdown='span'>Add a product from the product details page to a wishlist</summary>
+<summary>Add a product from the product details page to a wishlist</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -83,7 +83,7 @@ Buyers can do the following actions using the Wishlists feature:
 </details>
 
 <details>
-<summary markdown='span'>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
+<summary>View a wishlist's details, remove products from the wishlist, and add all products from the wishlist to the cart</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>
@@ -94,7 +94,7 @@ Buyers can do the following actions using the Wishlists feature:
 </details>
 
 <details>
-<summary markdown='span'>Add selected products from the wishlist to the cart</summary>
+<summary>Add selected products from the wishlist to the cart</summary>
 
 <figure class="video_container">
     <video width="100%" height="auto" controls>

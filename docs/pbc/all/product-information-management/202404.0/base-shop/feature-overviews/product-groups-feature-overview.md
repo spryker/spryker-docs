@@ -38,7 +38,7 @@ Product abstract card:
 2. Holding the pointer over or clicking a color circle changes the abstract product image, title, rating, label, and the price.
 3. Having held the pointer over the needed color, a shop user clicks on the product abstract card to be redirected to the **Product Details** page of the corresponding product.
 
-![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-abstract-card.gif)
+![Product group - product abstract card](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/product-group-product-abstract-card.mp4)
 
 
 **Product Details** page:
@@ -48,7 +48,7 @@ Product abstract card:
 * Clicking on a color circle redirects the shop user to the page of the corresponding abstract product.
 
 
-![Product group - product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Groups/Product+Groups+Feature+Overview/product-group-product-details-page.gif)
+![Product group - product details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/product-information-management/base-shop/feature-overviews/product-groups-feature-overview.md/product-group-product-details-page.mp4)
 
 ## Product Groups in the Back Office
 
@@ -79,4 +79,4 @@ Check out this video tutorial on product groups:
 
 |INSTALLATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|
-| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html)  | [HowTo: Display product groups by color on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |
+| [Product Groups feature integration](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-product-groups-feature.html) | [File details: product_group.csv](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/import-and-export-data/import-file-details-product-group.csv.html)  | [Display product groups by color on the Storefront](/docs/pbc/all/product-information-management/{{page.version}}/base-shop/tutorials-and-howtos/howto-display-product-groups-by-color-on-the-storefront.html)  |

@@ -387,7 +387,7 @@ Verify the plugins are set up correctly:
 | WarehouseUserRequestValidationPreCheckerPlugin            | Checks if `GlueRequestTransfer` has `GlueRequestWarehouseTransfer`. If true, sets `GlueRequestValidationTransfer` as valid.                                                                                 |               | Spryker\Glue\WarehouseOauthBackendApi\Plugin\OauthBackendApi                                 |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -538,7 +538,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Oauth/OauthDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -640,8 +640,8 @@ Content-Length: 165
 |-----------------------------------------------|-------------------------------------------------------|---------------|------------------------------------------------------------------------|
 | WarehouseUserAssignmentsBackendResourcePlugin | Registers the `warehouse-user-assignments` resource.  |               | Spryker\Glue\WarehouseUsersBackendApi\Plugin\GlueBackendApiApplication |
 
-<details open>
-<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

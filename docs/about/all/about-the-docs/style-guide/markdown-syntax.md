@@ -47,7 +47,7 @@ Make sure to use the templates from the [_templates](https://github.com/spryker/
 To create drop-downs, use this syntax:
 
 ```md
-<details open>
+<details>
 <summary>{drop-down toggle button}</summary>
 
 {text}
@@ -58,7 +58,7 @@ To create drop-downs, use this syntax:
 Example:
 
 ```md
-<details open>
+<details>
 <summary>How to create and manage the articles</summary>
 
 You need to do the following to update an article:
@@ -358,7 +358,7 @@ Published table:
 | `define` | This function is used for: creating a default object that can be changed from an incoming context and defining tags used to pass properties and contract for a specific component. | | See **Usage Example: define** below. |
 | `qa` | Returns a string in the following format: `{% raw %}data-qa="qa values here"{% endraw %}` | `{% raw %}function qa($qaValues: string[] = []): string{% endraw %}` | `{% raw %}{{ qa('submit-button') }}{% endraw %}` |
 
-<details open>
+<details>
 <summary>Usage Example: define</summary>
 
 ```twig

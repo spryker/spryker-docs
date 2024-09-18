@@ -55,7 +55,8 @@ Regularly scan your APM for Session Lock exceptions, as well as your application
 
 ### Increase php worker pool size
 Ensure you have a sufficient pool of PHP-FPM workers defined. You can configure the php-fpm max_children count for each application part in your [deploy.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications) file.
-You can easily check whether your environment runs out of workers, but checking the application parts (f.e. glue, backgw, etc) in AWS Log Insights using the following query:
+
+To check if an environment runs out of workers, in CloudWatch Logs Insights, run the following query per application:
 
 ```bash
 fields @timestamp, @message, @logStream, @log

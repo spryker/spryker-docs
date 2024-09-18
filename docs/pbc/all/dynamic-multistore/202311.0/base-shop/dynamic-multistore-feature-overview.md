@@ -130,4 +130,8 @@ There is a list of changes that are applied to the project when DMS is enabled:
 ## Performance
 
 Amount of stores affects data import speed: the more stores you have the slower data import is.
-Take to account data import request body limit when you import data for many stores.
+
+Take to account data import request body limit when you import data for many stores.  
+
+
+ 

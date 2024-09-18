@@ -129,8 +129,5 @@ There is a list of changes that are applied to the project when DMS is enabled:
 
 ## Performance
 
-Amount of stores affects data import speed. 
-
-For example import of 10000 products for 1 store and 27 locales takes 1 hour.
-
-Import of the same amount of products for 40 stores and 2 locales takes about 8 hours.
+Amount of stores affects data import speed: the more stores you have the slower data import is.
+Take to account data import request body limit when you import data for many stores.

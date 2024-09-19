@@ -338,7 +338,7 @@ Add the following plugins to your project:
 | CategoryImageFormPlugin | Extends create/edit category forms with category image set related fields. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
 | CategoryImageFormTabExpanderPlugin | Extends the create and edit category tabs with the category image set related item. | None | \Spryker\Zed\CategoryImageGui\Communication\Plugin |
 
-<details><summary markdown='span'>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Category/CategoryDependencyProvider.php</summary>
 
 ```php
 <?php

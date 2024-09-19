@@ -39,7 +39,7 @@ For detailed information on the modules that provide the API functionality and r
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
+<summary>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
 
 ```json
 {

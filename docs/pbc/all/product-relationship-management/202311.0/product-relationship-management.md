@@ -94,7 +94,7 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a pr
 
 When a product is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a product is evaluated against the rules from the previous screenshot.
 
-<details><summary markdown='span'>Product evaluation diagram</summary>
+<details><summary>Product evaluation diagram</summary>
 
 ![product-relation-rule-hierarchy](https://confluence-connect.gliffy.net/embed/image/04eed8c7-8608-472f-8c74-9510d2449487.png?utm_medium=live&utm_source=custom)
 

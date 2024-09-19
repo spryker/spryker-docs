@@ -112,7 +112,7 @@ To show the procedure, the following steps walk you through the creation of the 
 
 1. Implement the following plugin for the Back Office using `\Spryker\Zed\CmsSlotBlockGuiExtension\Communication\Plugin\CmsSlotBlockGuiConditionFormPluginInterface`:
 
-<details><summary markdown='span'>CustomerSlotBlockConditionFormPlugin</summary>
+<details><summary>CustomerSlotBlockConditionFormPlugin</summary>
 
 ```php
 namespace Pyz\Zed\CmsSlotBlockCustomerGui\Communication\Plugin\CmsSlotBlockGui;
@@ -236,7 +236,7 @@ In this case, the created form has five elements:
 
 1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`:
 
-<details><summary markdown='span'>CustomerSlotBlockConditionResolverPlugin</summary>
+<details><summary>CustomerSlotBlockConditionResolverPlugin</summary>
 
 ```php
 

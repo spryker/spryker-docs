@@ -60,7 +60,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample: add items with gift cards to a guest cart</summary>
+<summary>Response sample: add items with gift cards to a guest cart</summary>
 
 ```json
 {

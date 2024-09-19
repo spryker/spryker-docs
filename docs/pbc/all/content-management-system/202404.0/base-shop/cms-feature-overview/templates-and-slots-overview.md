@@ -41,7 +41,7 @@ The following Storefront page breakdown shows the arrangement of the entities.
 ## Template
 Template is a [Twig](https://twig.symfony.com/) file that, when applied to a page, defines its design and layout. Template with slots is a template that defines the layout of slots across a page and has at least one slot assigned.
 
-<details open><summary markdown='span'>Template representation—Storefront</summary>
+<details><summary>Template representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png)
 
@@ -54,7 +54,7 @@ The following templates with slots are shipped with the CMS feature:
 * CMS page template
 
 A content manager can [manage templates with slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
-<details open><summary markdown='span'>Template representation—the Back Office</summary>
+<details><summary>Template representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png)
 
@@ -68,7 +68,7 @@ To learn about the creation of CMS templates, see [HowTo: Create CMS templates](
 ## Slot
 *Slot* is a configurable space for content in a template. Unlike a template that is an actual file, a slot exists only as an entry in the database. To embed content into a slot, a slot widget is inserted into the template file to which the slot is assigned. The slot widget position in regard to the rest of the code in the template defines the position of the slot in the page.
 
-<details open><summary markdown='span'>Slot representation—Storefront</summary>
+<details><summary>Slot representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-slot.png)
 
@@ -84,7 +84,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 
 A content manager can [manage slots](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
-<details open><summary markdown='span'>Slot representation—the Back Office</summary>
+<details><summary>Slot representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-slot.png)
 
@@ -95,7 +95,7 @@ A content manager can [manage slots](/docs/pbc/all/content-management-system/{{p
 
 [CMS block](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
-<details open><summary markdown='span'> CMS block representation—Storefront</summary>
+<details><summary> CMS block representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-cms-block.png)
 
@@ -105,7 +105,7 @@ A content manager can [manage slots](/docs/pbc/all/content-management-system/{{p
 A content manager can [manage CMS blocks](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/manage-in-the-back-office/manage-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 
-<details open><summary markdown='span'> CMS block representation—the Back Office</summary>
+<details><summary> CMS block representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-cms-block.png)
 
@@ -120,7 +120,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. To l
 
 [Content Item](/docs/pbc/all/content-management-system/{{page.version}}/base-shop/navigation-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
-<details open><summary markdown='span'>Content item representation—Storefront</summary>
+<details><summary>Content item representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png)
 

@@ -227,7 +227,7 @@ Register the following plugins:
 | NameQuoteTransferExpanderPlugin                | Sets the default quote name if a quote doesn't have a name. Default guest quote name is used for guest customer quotes.     |                                                                                | Spryker\Client\MultiCart\Plugin            |
 | TotalItemCountDefaultCartQuoteExpanderPlugin   | Calculates the number of items in the provided `QuoteTransfer` and sets the result to `QuoteTransfer.totalItemCount`. |                                                                                | Spryker\Client\Cart\Plugin\MultiCart       |
 
-<details open><summary markdown='span'>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
+<details><summary>src/Pyz/Zed/Quote/QuoteDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -544,7 +544,7 @@ Make sure that the following modules have been installed:
 
 1. Append the glossary according to your configuration:
 
-<details><summary markdown='span'>src/data/import/glossary.csv</summary>
+<details><summary>src/data/import/glossary.csv</summary>
 
 ```yaml
 page.multi_cart.shopping_cart.list.title,Shopping cart,en_US

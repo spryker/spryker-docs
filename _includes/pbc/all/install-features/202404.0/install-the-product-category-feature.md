@@ -162,7 +162,7 @@ Configure tables to be published to the `spy_product_abstract_category_storage` 
 | ProductCategoryWritePublisherPlugin                    | Publishes product category data by the`SpyProductCategory` entity events.                     |               | Spryker\Zed\ProductCategoryStorage\Communication\Plugin\Publisher\ProductCategory   |
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
+<summary>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -376,8 +376,8 @@ When a category product assignment is changed through ORM, make sure it is expor
 }
 ```
 
-<details open>
-<summary markdown='span'>An expected data fragment example: `product_category_filter:8`</summary>
+<details>
+<summary>An expected data fragment example: `product_category_filter:8`</summary>
 
 ```json
 {
@@ -457,8 +457,8 @@ Add the following plugins to your project:
 | ProductUpdateEventTriggerCategoryRelationUpdatePlugin                   | Triggers product update events for products that are assigned to the given category and its child categories. |               | Spryker\Zed\ProductCategory\Communication\Plugin\Category                              |
 | ParentCategoryIdsProductAbstractCategoryStorageCollectionExpanderPlugin | Expands product categories with their parent category IDs.                                                    |               | Spryker\Client\CategoryStorage\Plugin\ProductCategoryStorage                           |
 
-<details open>
-<summary markdown='span'>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
+<details>
+<summary>src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php</summary>
 
 ```php
 <?php

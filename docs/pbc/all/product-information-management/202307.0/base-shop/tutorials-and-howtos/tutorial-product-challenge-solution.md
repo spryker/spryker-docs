@@ -139,7 +139,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 Implement the logic to save a new product, within the `ProductCountryManager`.
 
 <details>
-<summary markdown='span'>The code sample:</summary>
+<summary>The code sample:</summary>
 
 ```php
 <?php

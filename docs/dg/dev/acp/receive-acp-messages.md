@@ -1,5 +1,5 @@
 ---
-title: Receive ACP Messages 
+title: Receive ACP Messages
 description: Find out how you can receive ACP messages in SCCOS.
 template: howto-guide-template
 last_updated: Jan 09, 2024
@@ -7,20 +7,23 @@ redirect_from:
 - /docs/acp/user/receive-acp-messages.html
 ---
 
-This document describes how to receive ACP messages in SCCOS.
+Your Spryker project can receive ACP messages using the following commands:
 
-To receive messages from all the channels, run the following command:
+Receive messages from all the channels:
 ```bash
 console message-broker:consume
 ```
 
-To receive messages from a specific channel, run the following command:
+Receive messages from a specific channel:
 
 ```bash
 console message-broker:consume {channel-name} # {channel-name} is the name of the channel, like `asset-commands`.
 ```
 
-This command must be executed periodically. To set up this periodic execution, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
+
+## Receiving messages automatically
+
+The preceding command must be executed periodically. To set up a periodic execution, configure Jenkins in `config/Zed/cronjobs/jenkins.php`:
 
 ```php
 $jobs[] = [

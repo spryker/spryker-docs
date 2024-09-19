@@ -281,7 +281,7 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 | MerchantOpeningHours | kv:merchant_opening_hours:1 |
 
 <details>
-<summary markdown='span'>Example expected data fragment</summary>
+<summary>Example expected data fragment</summary>
 
 ```json
 {
@@ -352,7 +352,7 @@ class MerchantOpeningHoursStorageConfig extends SprykerMerchantOpeningHoursStora
 Prepare your data according to your requirements using the demo data:
 
 <details>
-<summary markdown='span'>data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv</summary>
+<summary>data/import/common/common/marketplace/merchant_open_hours_date_schedule.csv</summary>
 
 ```
 merchant_reference,date,time_from,time_to,note_glossary_key

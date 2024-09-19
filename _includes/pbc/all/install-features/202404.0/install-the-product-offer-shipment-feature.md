@@ -475,7 +475,7 @@ Enable the following plugins:
 | ShipmentTypeProductOfferViewSectionPlugin                 | Expands the product offer view section with shipment types.                     |           | Spryker\Zed\ProductOfferShipmentTypeGui\Communication\Plugin\ProductOfferGui         |
 
 <details open
-><summary markdown='span'>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
+><summary>src/Pyz/Zed/ProductOffer/ProductOfferDependencyProvider.php</summary>
 
 ```php
 <?php

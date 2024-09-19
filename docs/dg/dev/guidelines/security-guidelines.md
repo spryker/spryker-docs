@@ -126,11 +126,11 @@ Content-Security-Policy: frame-ancestors 'self'
 ####  Cache-Control header
 
 You can enable custom Cache-Control header for the Storefront, Back Office, and Glue using plugins:
-* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher::getEventDispatcherPlugins()`
+* `Spryker\Zed\Http\Communication\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Zed `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
 and configure using: `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::ZED_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher::getEventDispatcherPlugins()`
+* `Spryker\Yves\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Yves `\Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
   and configure using: `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::YVES_HTTP_CACHE_CONTROL_CONFIG`.
-* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher::getEventDispatcherPlugins()`
+* `Spryker\Glue\Http\Plugin\EventDispatcher\CacheControlHeaderEventDispatcherPlugin` plugin can be added into application specific method for Glue `\Pyz\Glue\EventDispatcher\EventDispatcherDependencyProvider::getEventDispatcherPlugins()`
   and configure using: `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_ENABLED`, `Spryker\Shared\Http\HttpConstants::GLUE_HTTP_CACHE_CONTROL_CONFIG`.
 
 
@@ -234,6 +234,33 @@ $config[OauthConstants::OAUTH_CLIENT_CONFIGURATION] = json_decode(getenv('SPRYKE
 Set up the ACL configuration according to your requirements and restrict access to sensitive data. For more information, see [ACL configuration](/docs/pbc/all/merchant-management/{{site.version}}/marketplace/marketplace-merchant-portal-core-feature-overview/persistence-acl-configuration.html).
 
 
+## Backend GATEWAY protection
+
+Gateway is used for communication between the frontend and the backend. In most cases, it doesn't expect any communication from the internet. To protect this endpoint, you need to extend `deploy.{project}-{env}.yml` as follows:
+1. Add backend auths:
+```yaml
+x-backend-auth: &backend-auth
+  <<: *real-ip
+  auth:
+    engine: whitelist
+    include:
+      -  128.01.01.01/32 #YVES/GLUE storefront IP, need to be requested from support
+
+```
+
+2. Add this auth to gateway endpoints:
+```yaml
+backgw:
+    application: backend-gateway
+    endpoints:
+        {some-domain}.com:
+            store: DE
+            <<: *backend-auth # add this row to your gateway config
+            primal: true
+```
+
+To verify the configuration, redeploy the environment and make sure that accessing the domain returns a 403 error, but ZED requests are going through.
+
 ## Summary
 
 To sum up, the main points to keep the data secure are the following:
@@ -244,6 +271,7 @@ To sum up, the main points to keep the data secure are the following:
 * Configure TLS.
 * Secure the Back Office.
 * Check the Spryker configuration and change default authentication parameters like users and passwords.
+* Protect your Backend GATEWAY from direct access.
 * Keep systems and applications up to date.
 * Make sure that exceptions are not shown and debug mode is disabled on production.
 * Make sure that the keys data is taken from secure environment variables and is not embedded into the configuration files.

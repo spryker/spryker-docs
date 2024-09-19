@@ -76,6 +76,7 @@ After pointing the domain name to your Spryker project, some of your customers m
 - Perform compliance and legal checks. To ensure the platform complies with relevant legal and regulatory requirements, especially for international operations, consult your legal team. Make sure to check [Guidelines for GDPR compliance](/docs/about/all/support/gdpr-compliance-guidelines.html).
 - Make sure that the Back Office Access Control List (ACL) setup is configured correctly to manage user permissions and access rights within the system's administrative interface. For instructions on how to configure ACL, see [Users and rights overview](/docs/pbc/all/user-management/{{site.version}}/base-shop/user-and-rights-overview.html).
 - If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
+- If possible, check if you can implement payment options in a redundant way so that, if one payment provider has an outage, customers can still pay using another one.
 
 ### Testing
 
@@ -101,7 +102,7 @@ Make sure you've addressed all the items from the following checklists.
 
 ### Cloud
 
-- We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application. You can request NewRelic APM from Spryker (subject to additional fees).
+- We highly recommend you to set up an Application Performance Monitoring (APM). The APM tools help you identify performance bottlenecks in your application.
 - To watch the system's performance and configure alerting mechanisms, establish a robust post-launch monitoring plan. To ensure effective investigation in case of security incidents, we recommend configuring logs to gather in a centralized SIEM system.
 - Verify that your deploy file is set up correctly and aligns with your project needs. Verify that your project works and operates the production endpoints. You can set both testing and production endpoints in your deploy file. Your developers need to mock a "live" operation of the project with its production endpoints by adjusting their local host entries.
 - Deploy the production environment regularly. This lets you detect potential issues early enough to fix them before going live. For instructions, see [Deploying in a production environment](/docs/ca/dev/deploy-in-a-production-environment.html). Make sure to test all [recipes](/docs/dg/dev/sdks/the-docker-sdk/installation-recipes-of-deployment-pipelines.html#staging-and-production-environment-recipes).

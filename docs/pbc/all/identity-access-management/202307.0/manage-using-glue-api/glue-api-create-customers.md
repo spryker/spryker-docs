@@ -77,7 +77,7 @@ Request sample: create a customer
 
 ### Response
 
-<details><summary markdown='span'>Response sample: create a customer</summary>
+<details><summary>Response sample: create a customer</summary>
 
 ```json
 {

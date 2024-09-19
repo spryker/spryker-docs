@@ -65,7 +65,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes |  |  Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication     |
 
 <details>
-<summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
+<summary>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php

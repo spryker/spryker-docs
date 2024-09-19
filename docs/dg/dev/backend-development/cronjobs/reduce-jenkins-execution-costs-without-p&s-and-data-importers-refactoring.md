@@ -412,7 +412,7 @@ class QueueScanner implements QueueScannerInterface
 
 ProcessManager adds store code as a prefix to a queue name. It works correctly with all combinations of queues and stores within one Worker and doesn't require additional code modifications.
 
-<details open>
+<details>
 <summary>src/Pyz/Zed/Queue/Business/Process/ProcessManager.php</summary>
 
 ```php

@@ -28,7 +28,7 @@ jobs:
       - name: Pack artifacts
         run: tar -czf result.tar.gz _site
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: build-result
           path: result.tar.gz
@@ -54,12 +54,12 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_about_all-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_about          
+      - run: bundle exec rake check_about
 
   link_validation_check_ca:
     name: Links validation (check_ca)
@@ -82,7 +82,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_cloud-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -110,7 +110,7 @@ jobs:
           path: tmp/.htmlproofer
           key: $-check_pbc-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
@@ -138,7 +138,7 @@ jobs:
           path: tmp/.htmlproofer
           key: ${{ runner.os }}-check_sdk-htmlproofer
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz

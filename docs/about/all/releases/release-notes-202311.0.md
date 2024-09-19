@@ -135,7 +135,14 @@ Reduce time-to-market with a flexible integration to Akeneo PIM, keeping new pro
 - To use your Akeneo PIM Integration App, you need to have the Spryker Middleware powered by Alumio.
 - The Akeneo PIM Integration App works with B2C or B2B business models of Spryker Cloud Commerce. Currently, it doesn't cover the Marketplace business models.
 
-## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and Metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+## <span class="inline-img">![cloud](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/icon_Spryker+Cloud_128.png)</span> Log forwarding and metric streaming to Dynatrace <span class="inline-img">![feature](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/releases/release-notes/feature.png)</span>
+
+
+{% info_block warningBox "Improved version of Dynatrace" %}
+
+We're going to release a refactored version of the Dynatrace integration. This version will be more robust and future-proof. For most projects, we recommend waiting for the new version.
+
+{% endinfo_block %}
 
 We are delighted to announce our newest integration - Dynatrace with Log Forwarding and Metrics Streaming from Spryker PaaS+! This integration is a key step in our journey to support more monitoring platforms compatible with Open Telemetry.
 

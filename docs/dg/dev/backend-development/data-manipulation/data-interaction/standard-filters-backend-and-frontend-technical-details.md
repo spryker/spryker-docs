@@ -33,7 +33,7 @@ The core of each page is `page-layout-catalog.twig`, which extends another globa
 The general look of the `page-layout-catalog.twig` template is as follows:
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig</summary>
+<summary>src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
@@ -317,7 +317,7 @@ Related code is located in the `filterBar` section, as shown in the following ex
 When you look closer at the `filter-section.twig` template, you may notice that this template is responsible for rendering both Filters and Categories (another feature):
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
+<summary>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
@@ -421,7 +421,7 @@ When you look closer at the `filter-section.twig` template, you may notice that 
 As you may see from the following code snippet, this part is responsible for rendering a single filter (extra code removed):
 
 <details>
-<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
+<summary>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}

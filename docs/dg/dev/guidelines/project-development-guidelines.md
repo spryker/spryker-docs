@@ -30,18 +30,20 @@ It is essential to ensure that [Spryker is updated](/docs/dg/dev/updating-spryke
 
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
 
-Additionally, we recommend keeping modules up to date in general.
+Additionally, we recommend keeping all modules up to date in general. [Evaluator tool](docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) can be helpfull in this case.
 
 In order to keep track of the Spryker's modules updates, you can use the [Release App history page](https://api.release.spryker.com/release-history). Release groups are created for each Spryker's feature/fix release. Each release group contains a list of modules that have been updated. You can use this information to check if any of the modules you are using have been updated and also use provided command to update them manually.
 
 Also, you need to update you infrastructure and use latest provided docker images. E.g. each year we update PHP version and provide new docker images for it. Also all code updates from Spryker side will require new PHP version, so you need to update it as well.
+You can check supported PHP versions in the [Docker Hub](https://hub.docker.com/r/spryker/php) or you can check version of Docker SDK in the [Spryker Docker SDK repo](https://github.com/spryker/docker-sdk).
 
 ## Apply coding guidelines
 Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html). 
 Pay attention to an [architecture convention](/docs/dg/dev/architecture/architectural-convention.html) page as in addition it provides a set of rules and recommendations that applicable specifically for project development.
 
 ## Use custom namespaces
-As a recommendation, instead of using the `Pyz` namespace, you can use your own namespace for project development. For example, use the project name as a namespace. But be advised that most of existing examples and documentation use the `Pyz` namespace.
+Instead of using the `Pyz` namespace, it's possible to use your own namespace for project development. For example, use the project name as a namespace.
+Please note that most of existing examples and documentation use the `Pyz` namespace, and you will have to adjust the code every time you want to use it.
 
 ## Use custom names
 Use custom names for everything that is added on the project level, like the following:
@@ -57,10 +59,10 @@ For example, customize the names by adding the project name. This will help to a
 ## Avoid using, extending, and overriding Private API
 Instead of using, extending, and overriding [Private API](/docs/dg/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html) (everything that is not a Public API), send a request about the missing endpoints to your Spryker account manager. Spryker offers extension points that allow you to extend via the Public API and helps you to customize the application. We recommend to use the extension points instead of overriding Private API.
 
-Extending Private API is still possible, but core development teams are not considering changing those classes as any BC break as long as a Public API is not affected. So you can get a critical error with your next minor update.
-As a recommendation to avoid such issues, we recommend to not extend classes, but implement new one based on the same interface. In this case you still can get a minor update where this Private API was changed, but it much easier to fix it. This approach is not valid if you want to extend e.g. Facade, because you will be forced to re-implement all the original methods.
+Extending Private API is still possible, but Spryker development team can change them without a notice in the minor change, since Spryker BC break policy is only considering a Public API.
+We recommend to not extend Private API classes, but implement new one based on the same interface. In this case changes in core classes will not affect your code.
 
-If there is an error, or you want to submit a fix or a new functionality by yourself, you can create a pull request to the required repository. It will be reviewed by the Spryker team and, if it is accepted, it will be merged into the core via our release process. Be advised that such PRs will be checked as a core contribution and should be prepared accordingly.
+If you believe that you found a bug in Spryker module, or you want to submit a fix, new functionality by yourself, you can create a pull request to the corresponding module repository. It will be reviewed by the Spryker team and, if it is accepted, it will be merged into the core via our release process. Be advised that such PRs will be checked as a Core contribution and should be prepared accordingly.
 
 ## Development and tests
 Starting from the first day of development, write tests for all the customizations you implement. We provide infrastructure for unit, functional, and acceptance tests.
@@ -71,7 +73,7 @@ Starting from the first day of development, we recommend establishing an increme
 ## Establish coding standards
 Before you start developing, establish coding standards. Implement code checks based on the standards into your CI/CD. The default code checks shipped with Spryker are located in `/config/install/sniffs.yml`. You might want to add more checks that are based on your project's requirements.
 
-Make sure that code can't be merged until it corresponds to your coding standards. But [Don't be slowed down by Spryker's core rules](#dont-be-slowed-down-by-sprykers-core-rules).
+Make sure that the code is merged only when it corresponds to your coding standards. But [Don't be slowed down by Spryker's core rules](#dont-be-slowed-down-by-sprykers-core-rules).
 
 ## Code maintainability
 Code maintainability is important because it ensures that your code remains understandable, adaptable, and modifiable throughout its lifecycle. It helps development teams to manage and enhance code efficiently, reducing the likelihood of bugs and costly errors over time.
@@ -114,9 +116,9 @@ Do not leave credentials in the code.
 
 Define Transfer objects on the project level even if it's defined in the core. It will help you avoid unnecessary dependencies and will make your code more flexible.
 
-Use minor lock on the project for modules that you updated and extended private API. It will help you to avoid critical errors with the next minor update.
+Use minor lock on the project for modules that you updated and extended private API. It will help you to avoid critical errors with the next minor update. Installing [Composer Constrainer)[https://github.com/spryker-sdk/composer-constrainer] and including `code:constraint:modules` helps automating this process.
 
-DO NOT use a deprecated code from Spryker. It will be eventually removed and you will need to update your code. It's better to update it now. If you think that deprecation was a mistake, you can create a pull request to the Spryker core.
+We recommend stopping usage of the deprecated code from Spryker. It will be eventually removed and you will need to update your code, thus minimizing amount of used deprecation helps project in a long run.
 
 Add tests for everything you do. It will help you to catch errors before they will go to the production and update core code easily.
 

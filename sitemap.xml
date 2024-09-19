@@ -17,11 +17,9 @@ search: exclude
 
   {% for page in site.pages %}
   {% unless page.search == "exclude" %}
-  {% if site.url and page.url %}
   <url>
     <loc>{{site.url}}{{ page.url| escape}}</loc>
   </url>
-  {% endif %}
   {% endunless %}
   {% endfor %}
 </urlset>

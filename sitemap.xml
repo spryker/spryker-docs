@@ -7,11 +7,9 @@ search: exclude
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for post in site.posts %}
   {% unless post.search == "exclude" %}
-  {% if site.url and post.url %}
   <url>
-    <loc>{{site.url}}{{post.url}}</loc>
+    <loc>{{site.url}}{{post.url | escape}}</loc>
   </url>
-  {% endif %}
 
   {% endunless %}
   {% endfor %}
@@ -21,7 +19,7 @@ search: exclude
   {% unless page.search == "exclude" %}
   {% if site.url and page.url %}
   <url>
-    <loc>{{site.url}}{{ page.url}}</loc>
+    <loc>{{site.url}}{{ page.url| escape}}</loc>
   </url>
   {% endif %}
   {% endunless %}

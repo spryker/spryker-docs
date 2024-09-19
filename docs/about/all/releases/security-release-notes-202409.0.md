@@ -5,7 +5,7 @@ last_updated: Sep 20, 2024
 template: concept-topic-template
 ---
 
-The following information describes the security-related issues that have been recently resolved.
+This document describes the security-related issues that have been recently resolved.
 
 For additional support with this content, [contact our support](https://support.spryker.com/). If you found a new security vulnerability, contact us at [security@spryker.com](mailto:security@spryker.com).
 
@@ -13,9 +13,9 @@ For additional support with this content, [contact our support](https://support.
 
 Because of an access controls vulnerability in the "role assignment" function, it was possible for attackers with access to the vulnerable functionality to assign users to roles created by other customers.
 
-By fixing this vulnerability and updating the `spryker-shop/company-page` module to its latest version, the below two vulnerabilities are also resolved:
-* Administrators can assign additional or hidden roles: Due to an access controls vulnerability in the "permission management" function, it was possible for attackers with an admin role to assign permissions that don't exist in the UI to user roles.
-* B2B Marketplace: Customers from one company can change customer details related to another company.
+Also, this fix resolves the following vulnerabilities:
+* Administrators can assign additional or hidden roles. Because of an access controls vulnerability in the "permission management" function, it was possible for attackers with an admin role to assign users with permissions that don't exist in the UI.
+* B2B Marketplace: Customers can change customer details related to a company they don't belong to.
 
 ### Affected modules
 
@@ -23,7 +23,7 @@ By fixing this vulnerability and updating the `spryker-shop/company-page` module
 
 ### Fix the vulnerability
 
-Upgrade the `spryker-shop/company-page` module to version 2.28.0 or higher:
+Update the `spryker-shop/company-page` module to version 2.28.0 or higher:
 
 ```bash
 composer update spryker-shop/company-page
@@ -72,7 +72,7 @@ composer show spryker/kernel # Verify the version
 
 ## “Remember Me” Functionality
 
-The "remember me" functionality is considered to be against security best practices. With this fix we provide our customers with the ability to disable this functionality.
+The "remember me" functionality is considered to be against security best practices. This fix lets you disable this functionality.
 
 ### Affected modules
 
@@ -80,14 +80,14 @@ The "remember me" functionality is considered to be against security best practi
 
 ### Fix the vulnerability
 
-Upgrade the `spryker-shop/customer-page` module to version 2.54.0 or higher:
+1. Update the `spryker-shop/customer-page` module to version 2.54.0 or higher:
 
 ```bash
 composer update spryker-shop/customer-page
 composer show spryker-shop/customer-page # Verify the version
 ```
 
-In order to disable the ‘remember me’ functionality, update the `src/Pyz/Zed/Product/ProductConfig.php` configuation file by adding the following method:
+2. In `src/Pyz/Zed/Product/ProductConfig.php`, add the following method:
 
 ```bash
 /**

@@ -1,23 +1,16 @@
 ---
-title: Upgrade to PHP 8.1
-description: End of November 2022, Spryker will release a new version of its Demo Shops requiring PHP 8.1 as the minimum version.
-last_updated: November 22, 2022
+title: Upgrade to PHP 8.2
+description: End of September 2024, Spryker will release a new version of its Demo Shops requiring PHP 8.2 as the minimum version.
+last_updated: September 22, 2024
 template: concept-topic-template
 redirect_from:
 - /docs/scos/user/intro-to-spryker/whats-new/php8-as-a-minimum-version-for-all-spryker-projects.html
 
 ---
 
-{% info_block warningBox "Warning" %}
+PHP 8.2 is the minimum supported version for Demo Shops.
 
-As of September 2024, we no longer provide support for PHP 8.1 modules. To ensure continued compatibility, security, and access to new features, 
-it is highly recommended to [Upgrade to PHP 8.2](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-82.html). 
-
-{% endinfo_block %}
-
-PHP 8.1 is the minimum supported version for Demo Shops.
-
-To upgrade PHP to 8.1, follow the steps:
+To upgrade PHP to 8.2, follow the steps:
 
 1. Update your modules manually in `composer.json`.
 Use the major lock `^` or the minor lock `~` if you have changes on the project level for respective module constraints.
@@ -36,7 +29,7 @@ spryker-sdk/spryk-gui => 0.2.2
 
 2. Change the PHP version in `composer.json`:
 
-`config.platform.php => 8.1.0`
+`config.platform.php => 8.2.0`
 
 3. Make sure there are no project-specific changes in the following repositories, and remove them from your `composer.json`:
 

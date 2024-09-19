@@ -66,3 +66,7 @@ The rollback scripts must not break the behavior of the current system:
 * Glue GET requests with subsequent Zed requests should be under 180ms on average.
 * Glue GET requests without subsequent Zed requests should be under 140ms on average.
 * Glue POST, PATCH, and PUT requests with subsequent Zed requests should be under 290ms on average.
+
+## Scaleability guidelines
+
+* The publish and synchronize processes must scale linearly with the number of entities they are processing. Specifically, memory and CPU consumption must grow proportionally to the number of entities. For example, if the process handles 100 entities, the resource consumption should be X. When the process handles 200 entities, the maximum resource consumption must not exceed 2X.

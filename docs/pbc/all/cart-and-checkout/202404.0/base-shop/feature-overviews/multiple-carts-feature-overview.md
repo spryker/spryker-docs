@@ -99,18 +99,40 @@ On the storefront, company users can perform the following actions by using the 
 <details>
 <summary>Create a cart</summary>
 
-![Create a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/create-a-cart.gif)
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/create-a-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
 </details>
 
 <details>
 <summary>Edit and delete a cart</summary>
 
-![Edit and delete a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/manage-a-shopping-cart.gif)
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/manage-a-shopping-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 </details>
+
+
 <details>
 <summary>Dismiss and duplicate a cart</summary>
 
-![Dismiss and duplicate a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Multiple+Carts+per+User+Feature+Overview/dismiss-and-duplicate-a-shopping-cart.gif)
+
+
+<figure class="video_container">
+    <video width="100%" height="auto" controls>
+    <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/cart-and-checkout/base-shop/feature-overviews/multiple-carts-feature-overview.md/dismiss-and-duplicate-a-shopping-cart.mp4" type="video/mp4">
+  </video>
+</figure>
+
+
 </details>
 
 * To share a cart with external and internal users by a link, see [Unique URL per Cart for Easy Sharing feature overview](/docs/pbc/all/cart-and-checkout/{{site.version}}/base-shop/feature-overviews/persistent-cart-sharing-feature-overview.html).

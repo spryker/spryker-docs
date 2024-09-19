@@ -104,22 +104,25 @@ This approach should be used when your project is a headless project without an 
 #### PreOrder payment flow in a Nutshell
 
 - The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
-- When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePayment` API endpoint is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
-- When you only use Stripe in your project then the `InitializePayment` API endpoint is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
-- Glue makes an RPC call to Zed which makes an API call to the Stripe App.
-- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
+- When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments?action=initialize-pre-order-payment) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
+- When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments?action=initialize-pre-order-payment) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
+  - The required quote data must be provided by your application.
+- Zed now makes the API call to the Stripe App including required authorization.
+- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
 - You will get back a JSON response with the ClientSecret and the PublishableKey.
+- !!! This part requires an update after HEADLESS and Yves frontend is prepared
 - Use the example JavaScript to render the Stripe Elements on the summary page of your application.
+- !!!
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
-- The customer will then be redirected to the provided `return_url` which must make another Glue checkout request to persist the order in the backoffice.
-- After this the customer should see the success page of your application.
+- The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
+- After this the customer should be redirected to the success page of your application.
 - Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
 - When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.
 - When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.
 
 
-### Yves integration into Payment Selection Page
+### Yves integration into Summary Page
 
 The same as in the headless approach, this integration is using the PreOrder payment flow as described above with some slight differences.
 
@@ -128,11 +131,13 @@ While GLue does not have access to a session Yves does. Because of this, the pro
 Depending on your Yves implementation the flow may be slightly different than explained below.
 
 - On the Payment selection page you will see Stripe as selectable payment option.
-- When the customer selects Stripe as payment option the `InitializePayment` API endpoint is called through the `\SprykerShop\Yves\PaymentPage\Controller\PreOrderPaymentController`.
-- The required data will be collected in the background, and you don't need to take care about.
-- Glue makes an RPC call to Zed which makes an API call to the Stripe App.
-- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
+- When the customer selects Stripe as payment option and enters the summary page the `InitializePreOrderPayment` RPC call to Zed is made through the `\SprykerShop\Yves\PaymentPage\Controller\PreOrderPaymentController`.
+- The required data will be collected from the Yves session, and you don't need to take care about this.
+- Zed now makes the API call to the Stripe App including required authorization.
+- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
+- !!! This part requires an update after HEADLESS and Yves frontend is prepared
 - The provided example JavaScript uses the returned data and renders the Stripe Elements on the summary page of your application.
+- !!!
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
 - The customer will then be redirected to the provided `return_url` which must make another placeOrder request to persist the order in the backoffice.
 - After this the customer should see the success page of the application.

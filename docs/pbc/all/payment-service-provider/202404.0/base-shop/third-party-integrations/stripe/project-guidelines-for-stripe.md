@@ -109,10 +109,10 @@ This approach should be used when your project is a headless project without an 
 - Glue makes an RPC call to Zed which makes an API call to the Stripe App.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
 - You will get back a JSON response with the ClientSecret and the PublishableKey.
-- Use the example JavaScript to render the Stripe Elements.
+- Use the example JavaScript to render the Stripe Elements on the summary page of your application.
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
-- The customer will then be redirected to the provided `return_url` which usually should be the summary page.
-- When the customer submits the order then the order gets persisted.
+- The customer will then be redirected to the provided `return_url` which must make another Glue checkout request to persist the order in the backoffice.
+- After this the customer should see the success page of your application.
 - Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
 - When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.
@@ -132,10 +132,10 @@ Depending on your Yves implementation the flow may be slightly different than ex
 - The required data will be collected in the background, and you don't need to take care about.
 - Glue makes an RPC call to Zed which makes an API call to the Stripe App.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
-- The provided example JavaScript uses the returned data and renders the Stripe Elements.
+- The provided example JavaScript uses the returned data and renders the Stripe Elements on the summary page of your application.
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
-- The customer will then be redirected to the summary page.
-- When the customer submits the order then the order gets persisted.
+- The customer will then be redirected to the provided `return_url` which must make another placeOrder request to persist the order in the backoffice.
+- After this the customer should see the success page of the application.
 - Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
 - When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.

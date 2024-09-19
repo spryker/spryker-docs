@@ -87,6 +87,62 @@ For more information about ACP payment methods integration with your project OMS
 
 ## Checkout payment step
 
+Implementing the Payment Provider Stripe into your project can be done in many different ways.
+
+- You can add it in your own headless frontend application using Glue.
+- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements right in this form.
+- You can add it as a hosted Payment page which uses a redirect after your customer submits the order.
+
+### Headless implementation
+
+This approach should be used when your project is a headless project without an Yves application. Make sure you have the following modules installed in the specified or newer versions:
+
+- `spryker/kernel-app:1.2.0`
+- `spryker/payment:5.24.0`
+- `spryker/payments-rest-api:1.3.0`
+
+#### PreOrder payment flow in a Nutshell
+
+- The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
+- When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePayment` API endpoint is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
+- When you only use Stripe in your project then the `InitializePayment` API endpoint is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
+- Glue makes an RPC call to Zed which makes an API call to the Stripe App.
+- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
+- You will get back a JSON response with the ClientSecret and the PublishableKey.
+- Use the example JavaScript to render the Stripe Elements.
+- Then the customer can select the Payment Method in the Stripe Elements and submits the data.
+- The customer will then be redirected to the provided `return_url` which usually should be the summary page.
+- When the customer submits the order then the order gets persisted.
+- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
+- When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
+- When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.
+- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+
+
+### Yves integration into Payment Selection Page
+
+The same as in the headless approach, this integration is using the PreOrder payment flow as described above with some slight differences.
+
+While GLue does not have access to a session Yves does. Because of this, the process flow is slightly different.
+
+Depending on your Yves implementation the flow may be slightly different than explained below.
+
+- On the Payment selection page you will see Stripe as selectable payment option.
+- When the customer selects Stripe as payment option the `InitializePayment` API endpoint is called through the `\SprykerShop\Yves\PaymentPage\Controller\PreOrderPaymentController`.
+- The required data will be collected in the background, and you don't need to take care about.
+- Glue makes an RPC call to Zed which makes an API call to the Stripe App.
+- On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret.
+- The provided example JavaScript uses the returned data and renders the Stripe Elements.
+- Then the customer can select the Payment Method in the Stripe Elements and submits the data.
+- The customer will then be redirected to the summary page.
+- When the customer submits the order then the order gets persisted.
+- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
+- When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
+- When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.
+- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+
+### Hosted Payment Page
+
 If you have rewritten `@CheckoutPage/views/payment/payment.twig` on the project level, do the following:
 
 1. Make sure that a form molecule uses the following code for the payment selection choices:

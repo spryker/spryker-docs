@@ -1241,6 +1241,9 @@ entries:
               - title: Delete stores
                 url: /docs/pbc/all/dynamic-multistore/base-shop/delete-stores.html
 
+              - title: Import stores
+                url: /docs/pbc/all/dynamic-multistore/base-shop/import-stores.html
+
           - title: Marketplace
             nested:
               - title: Install Dynamic Multistore + the Marketplace MerchantPortal Core feature

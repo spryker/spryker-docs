@@ -1,7 +1,7 @@
 ---
 title: Dynamic Multistore
 description: Dynamic Multistore lets you create and manage multiple online stores from the Back Office.
-last_updated: July 31, 2023
+last_updated: Sep 25, 2024
 template: concept-topic-template
 ---
 
@@ -97,7 +97,7 @@ AT
 |------------| --- | --- | --- | --- |
 |name        |mandatory |string | DE | Define store name. |
 
-Configure a new store as described here: [Import data for store](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
+Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
 
 
 Adding a new store via the Back Office is easier and faster, but in this case, you should add this store across all environments.
@@ -107,28 +107,57 @@ Note that when you add a new store you should also assign all store-related enti
 - Products
 - Categories
 - CMS entities
-- Prices. See [Install Dynamic Multistore + the Prices feature](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore-prices-feature.html#install-feature-core)
+- Prices
 - etc.
 
-To avoid manual assignment of entities to the store you can use the data import for store-related entities as well.
+To avoid manual assignment of entities in Back Office to the store you can use the data import for store-related entities as well.
+
+See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/202404.0/base-shop/import-stores.html)
+
 
 ## What is changed when DMS is enabled?
 
-There is a list of changes that are applied to the project when DMS is enabled:
+DMS enables the following changes to the project:
+
+In represented examples below there are two regions: EU and US.
+
+EU region has two stores: DE and AT. US region has one store: US.
+
 - Urls for Yves, Back Office, Merchant Portal and Glue contain region instead of store name.
-    - Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com 
+  
+  Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com 
+  ![local-dashboard-non-dms]()
+  ![local-dashboard-dms]() 
+
 - RabbitMQ virtual hosts contain region instead of store.
-    - For example eu-docker instead of de-docker.
+  
+  For example eu-docker instead of de-docker.
+  ![rabbitmq-virtual-hosts-non-dms]()
+  ![rabbitmq-virtual-hosts-dms]()
+
 - Jenkins job names contain region instead of store. 
-    - For example EU_queue-worker-start instead of DE_queue-worker-start.
+
+  For example EU_queue-worker-start instead of DE_queue-worker-start.
+  ![jenkins-jobs-non-dms]()
+  ![jenkins-jobs-dms](
+
 - Elasticsearch indexes contain store as a part of the index name for DMS enabled and disabled modes.
+  ![elasticsearch-indexes-non-dms]()
+  ![elasticsearch-indexes-dms]()
+
 - Redis keys contain store as a part of the key name for DMS enabled and disabled modes.
+  ![redis-keys-non-dms]()
+  ![redis-keys-dms]()
+
 - When DMS is enabled customer can switch between available stores for a region.
-    - When customer changes a store it's set to a query param `_store`.
-    - Store is read from query param `_store` and set to session under the key `current_store`. It's used for fetching store-related data.
+
+  When customer changes a store it's set to a query param `_store`.
+
+  Store is read from query param `_store` and set to session under the key `current_store`. It's used for fetching store-related data.
+  ![yves-store-switcher]()
 
 ## Performance
 
-Amount of stores affects data import speed: the more stores you have the slower data import is.
+The number of stores affects data import speed: the more stores you have the slower data import is.
 
-Take to account data import request body limit when you import data for many stores.
+Take into account data import request body limit when you import data for many stores.

@@ -78,6 +78,12 @@ After pointing the domain name to your Spryker project, some of your customers m
 - If your application is writing logs into your database, develop a strategy on how these logs can be regularly rotated or truncated to avoid large table sizes that can affect the application's performance. By default, the `spy_oms_transition_log` is used to log state machine transitions and can get very large if not [truncated](/docs/dg/dev/troubleshooting/troubleshooting-general-technical-issues/the-spy-oms-transition-log-table-takes-up-too-much-space.html) regularly.
 - If possible, check if you can implement payment options in a redundant way so that, if one payment provider has an outage, customers can still pay using another one.
 
+{% info_block warningBox "Secrets rotation" %}
+
+As mentioned in our security guidelines, rotation of secrets, such as API tokes, should be done in regular intervals. It makes sense to outline and test rotation strategies before go live to make sure that secret rotation can be done without issues during live operation.
+
+{% endinfo_block %}
+
 ### Testing
 
 - Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html).

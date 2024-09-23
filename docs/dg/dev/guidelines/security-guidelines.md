@@ -24,7 +24,7 @@ The most important about password security is to not save it in plain text. Ther
 
 ## Secrets
 
-Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) for more information about secrets and parameters.
+Store a secret in a secrets management system. See [Add variables in the Parameter Store](/docs/ca/dev/add-variables-in-the-parameter-store.html) for more information about secrets and parameters. We recommend to establish a regular cadence of rotating secrets. If you do not already have a secrets rotation policy, please check out [Operational Best Practices for CIS AWS Foundations Benchmark v1.4 Level 1 1.14](https://docs.aws.amazon.com/config/latest/developerguide/operational-best-practices-for-cis_aws_benchmark_level_1.html) for recommendations.
 
 ## Encrypted communication
 

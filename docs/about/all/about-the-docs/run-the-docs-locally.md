@@ -1,7 +1,7 @@
 ---
 title: Run the docs locally
-description: Find out how you can build the Spryker documentation site
-last_updated: Jul 18, 2022
+description: Learn how to build Spryker docs
+last_updated: Sep 18, 2024
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
@@ -20,130 +20,135 @@ related:
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
 
-We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. To build it locally, you need to:
+We use [Jekyll](https://jekyllrb.com/) to build Spryker docs. You can run Spryker docs on your own machine. This is usually useful when you want to edit some docs and see the changes before submitting a PR.
 
-1. Install Jekyll
-2. Set up the documentation site locally
-3. Run the documentation site locally
+This document describes how to run Spryker docs on a MacBook with an M-series processor. For instructions for intel-based MacBooks, see []().
 
 
-## Install Jekyll
+## Prerequisites
 
-Depending on your operating system, follow the Jekyll installation guides below.
 
-### Install Jekyll on MacOS
+* To enable Rosetta for Terminal, follow the steps:
 
-The installation process is different depending whether you are using a Mac with an Intel processor or with a Silicon M1 chip. To find out whether you have an Intel or a Silicon M1 Mac, click the **Apple** menu and choose **About This Mac**.
+  1. In Finder, go to **Applications**>**Utilities**.
+  2. Right-click **Terminal** and select **Get Info**.
+    This opens the **Terminal Info** window.
+  3. Select **Open using Rosetta**.
 
-* Silicon Macs with the M1 processor show an item labeled _Chip_ followed by the name of the Apple chip.
+* Check the shell you're using:
+```bash
+echo $SHELL
+```
 
-* Intel-based Macs show an item labeled _Processor_ followed by the name and/or model number of the Intel processor.
+This should be either `zsh` or `bash`; you will need this information later.
 
-{% info_block warningBox "MacOS on M1 processor – Open Terminal using Rosetta" %}
 
-On a MacBook with the M1 processor, make sure your Terminal is opened with Rosetta 2, by following the instructions here. Rosetta is a translation layer that enables non-native Intel x86 apps, including Homebrew, to run on Apple Silicon Macs.
-To open your terminal using Rosetta, follow these steps:
-1.	Open a _Finder_ window.
-2.	In _Applications_, locate _Terminal_.
-3.	Right click on **Terminal** and select **Get Info**.
-4.	Make sure _Open using Rosetta_ is checked.
 
-{% endinfo_block %}
+## 1. Install Homebrew
 
-On either an M1 or an Intel Mac, follow the steps below to install Jekyll. M1-specific instructions appear as notes wherever necessary.  
 
-#### 1. Install Homebrew
+1. Install Homebrew:
 
-Homebrew is a package manager for macOS because by default Mac doesn’t have a package manager. You use Homebrew to install Ruby in the next step. Additionally, when you install Homebrew, Xcode command line tools and GCC are also installed automatically.
-
-To install Homebrew, follow these steps:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-{% info_block infoBox "MacOS on M1 processor" %}
+This installs Homebrew and gives you the instructions to use in the next step.
 
-On an M1 Mac, Homebrew files are installed into the `/opt/homebrew` folder. Because this folder is not part of the default $PATH, you need to follow the next steps that Homebrew includes at the end of the installation output to add Homebrew to your PATH. In the example below, we've replaced your actual username with:  `/Users/_username_/.zprofile`.
 
-```bash
-==> Next steps:
-- Run these three commands in your terminal to add Homebrew to your PATH:
-    echo '# Set PATH, MANPATH, etc., for Homebrew.' >> /Users/_username_/.zprofile
-    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/_username_/.zprofile
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-```
+2. To add Homebrew to your path, follow the instructions provided in the output of the previous command. Here's an example of the commands, which you need to run one by one.
 
-Alternately, or if you have problems using these commands to update your PATH, you can add Homebrew to your .zprofile file. First, run the following command:
+![homebrew-next-steps](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/all/about-the-docs/run-the-docs-locally.md/homebrew-next-steps.png)
+
+Running these commands should give no output.
+
+Alternately, manually add Homebrew to your path using the instructions in the following sections.
+
+### Manually add Homebrew to PATH
+
+1. Open `.zprofile` in the editor:
 ```bash
 nano ~/.zprofile
 ```
 
-If the profile file has not yet been created on your system, this command creates a new one. If the file already exists, this command opens it.
-
-To add Homebrew, paste this text into the .zprofile file open in your terminal:
+2. Add the following:
 ```bash
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-To save the updated .zprofile file, click **control o**. Then, to exit the .zprofile file, click **control x**.
 
-{% endinfo_block %}
+3. To save changes, press **control + o**.
+4. To confirm, press **return**.
+5. To close the editor, click **control x**.
 
-#### 2. Install Make
+
+## 2. Install Make
 
 ```bash
 brew install make
 ```
 
-#### 3. Install Ruby
-Check your current Ruby version:
+## 3. Set up the Spryker docs repository
 
-```bash
-ruby -v
-```
-{% info_block infoBox "Don't use system Ruby" %}
+{% info_block warningBox "Duplicate repositories" %}
 
-You should not use the Ruby version that came pre-installed with your Mac. Apple includes an older, non-updatable version of Ruby on macOS for compatibility with legacy software.
+If you previusly edited Spryker docs on your machine, instead of cloning it, just go to its folder. If you cloned it using GitHub Desktop, the repository should be in `Documents/GitHub/spryker-docs`. To go there, run `cd Documents/GitHub/spryker-docs`.
 
 {% endinfo_block %}
 
-If you have not yet installed a recent Ruby version, install Ruby:
+Clone the Spryker docs repository and go to the newly created directory:
+```bash
+git clone git@github.com:spryker/spryker-docs.git ./spryker-docs
+cd spryker-docs
+```
+
+## 3. Install Ruby
+
+1. Import RVM keys:
+```bash
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+```
 
 ```bash
-brew install ruby
+curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
 ```
-Add the brew Ruby and gems path to your shell configuration:
-1. Check what shell you are using:
-    ```
-    echo $SHELL
-    ```
-2. Depending which shell you are using, add the path using one of the following commands:
-   * Zsh:
-        ```bash
-        echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.zshrc
-        ```
-   * Bash:
-        ```bash
-        echo 'export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"' >> ~/.bash_profile
-        ```
 
-#### 3. Install Jekyll and Bundler
+2. Instal RVM:
+
+```bash
+curl -sSL https://get.rvm.io | bash -s stable
+```
+
+3. Install Ruby 3.2.2:
+```bash
+rvm install 3.2.2
+```
+
+4. Depending on your shell type, add Ruby 3.2.2 to your environment in one of the following ways:
+  * Zsh:
+  ```bash
+  echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.zshrc
+  ```
+  * Bash:
+  ```bash
+  echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bash_profile
+  ```
+
+
+
+### 4. Install Jekyll and Bundler
+
 1. Install Jekyll and Bundler gems:
 ```bash
 gem install --user-install bundler jekyll
 ```
-2. Check the installed Ruby version:
+
+2. Install dependencies:
+
 ```bash
-ruby -v
-```  
-3. Append your path file with the following, replacing `X.X` with the first two digits of the Ruby version you've checked in the previous step:
-    * Zsh:
-    ```bash
-    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
-    ```
-    * Bash:
-    ```bash
-    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-    ```
+arch -arch x86_64 bundle install
+```
+
+
 
 ### Install Jekyll on Windows, Ubuntu, or other Linux systems
 
@@ -168,28 +173,8 @@ To install Jekyll on Ubuntu, follow the [official Jekyll on Ubuntu documentation
 
 To install Jekyll on other Linux systems, follow the [official Jekyll on Linux documentation](https://jekyllrb.com/docs/installation/other-linux/).
 
-## Set up the Spryker documentation site locally
 
-To set up the Spryker documentation site locally:
 
-1. Clone the Spryker documentation repository and go to the newly created directory:
-```bash
-git clone git@github.com:spryker/spryker-docs.git ./spryker-docs
-cd spryker-docs
-```
-2. Install all the necessary dependencies with Bundler:
-```bash
-bundle install
-```
-{% info_block infoBox "MacOS on M1 processor" %}
-
-On a MacBook with the M1 processor, run the following command instead:
-
-```bash
-arch -arch x86_64 bundle install
-```
-
-{% endinfo_block %}
 
 ## Run the documentation site locally
 

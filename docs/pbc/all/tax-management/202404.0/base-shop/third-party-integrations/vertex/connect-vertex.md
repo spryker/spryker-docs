@@ -30,6 +30,10 @@ This document describes how to connect a Spryker project to Vertex.
 
 ![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
 
+{% info_block warningBox "Disconnect Vertex before running destructive deployment" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Vertex configurations.
+{% endinfo_block %}
+
 ## Verify Vertex connection
 
 {% info_block warningBox "Test the configuration" %}

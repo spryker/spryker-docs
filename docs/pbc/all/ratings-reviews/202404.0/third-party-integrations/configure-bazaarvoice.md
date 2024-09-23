@@ -78,3 +78,7 @@ This adds the Bazaarvoice app to your store. It usually takes Bazaarvoice a few 
 You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
 
 {% endinfo_block %}
+
+{% info_block warningBox "Disconnect Bazaarovice before running destructive deployment" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Bazaarvoice configurations.
+{% endinfo_block %}

@@ -112,3 +112,7 @@ To use Usercentrics with the Google Tag Manager, do the following:
 ![usercentrics-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/usercentrics/usercentrics/configure-usercentrics/usercentrics-configuration.png)
 
 The drawer closes with a success message displayed. On the **App Composition Platform Catalog** page, the app's status changes to **Connected**. The cookie consent dialog should be displayed on every Storefront page.
+
+{% info_block warningBox "Disconnect Usercentrics before running destructive deployment" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Usercentrics configurations.
+{% endinfo_block %}

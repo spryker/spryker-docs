@@ -64,6 +64,10 @@ Verify that your index is populated with data from your store:
 
 {% endinfo_block %}
 
+{% info_block warningBox "Disconnect Algolia before running destructive deployment" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Algolia configurations.
+{% endinfo_block %}
+
 ![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
 
 For details about the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html#indexes).

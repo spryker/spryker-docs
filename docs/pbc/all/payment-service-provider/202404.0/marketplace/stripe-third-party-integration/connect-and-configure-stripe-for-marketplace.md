@@ -35,6 +35,9 @@ This document describes how to connect and configure the Stripe app in the Back 
 13. Click **Save**.
   This displays a success message with the app's status as **Connected**.
 
+{% info_block warningBox "Disconnect Stripe before running destructive deployment" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Stripe configurations.
+{% endinfo_block %}
 
 ## Next steps
 

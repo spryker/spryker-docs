@@ -21,7 +21,7 @@ However, when you use ACP and destructive deployment together, you need to consi
 To avoid data loss or other issues, you need to follow the best practices when using ACP and destructive deployment together:
 
 {% info_block warningBox "Disconnect every connected App before running destructive deployment" %}
-Before running destructive deployment, disconnect every connected App in your project.
+Before running destructive deployment, disconnect every connected App from the App Catalog.
 This ensures that the App can recreate the resources from scratch.
 If additional steps are required to disconnect an App, you will receive a warning message.
 {% endinfo_block %}

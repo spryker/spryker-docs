@@ -125,9 +125,7 @@ EU region has two stores: DE and AT. US region has one store: US.
 
 - Urls for Yves, Back Office, Merchant Portal and Glue contain region instead of store name.
   
-  Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com 
-  ![local-dashboard-non-dms]()
-  ![local-dashboard-dms]() 
+  Example for local environment: https://backoffice.eu.mysprykershop.com instead of https://backoffice.de.mysprykershop.com
 
 - RabbitMQ virtual hosts contain region instead of store.
   
@@ -139,15 +137,11 @@ EU region has two stores: DE and AT. US region has one store: US.
 
   For example EU_queue-worker-start instead of DE_queue-worker-start.
   ![jenkins-jobs-non-dms]()
-  ![jenkins-jobs-dms](
+  ![jenkins-jobs-dms]()
 
 - Elasticsearch indexes contain store as a part of the index name for DMS enabled and disabled modes.
-  ![elasticsearch-indexes-non-dms]()
-  ![elasticsearch-indexes-dms]()
 
 - Redis keys contain store as a part of the key name for DMS enabled and disabled modes.
-  ![redis-keys-non-dms]()
-  ![redis-keys-dms]()
 
 - When DMS is enabled customer can switch between available stores for a region.
 

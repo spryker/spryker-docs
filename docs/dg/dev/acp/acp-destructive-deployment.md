@@ -15,7 +15,7 @@ The App Composition Platform (ACP) enables you to connect, configure, and use th
 When you use ACP in your Spryker project, you can also use destructive deployment. Destructive deployment is a deployment strategy that involves deleting the existing resources and creating new ones. This strategy is useful when you need to recreate the resources from scratch, for example, when you need to implement BC breaking changes to your database.
 
 However, when you use ACP and destructive deployment together, you need to consider the following:
-* Every connected App might have already created resources in your project.
+* Every connected app might have already created resources for your project.
 * Wiping out the resources of an App might lead to data loss or other issues, like inconsistent data.
 
 To avoid data loss or other issues, you need to follow the best practices when using ACP and destructive deployment together:

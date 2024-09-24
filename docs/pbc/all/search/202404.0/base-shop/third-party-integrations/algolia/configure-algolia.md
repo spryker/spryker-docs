@@ -206,7 +206,7 @@ Algolia's **Ranking and sorting** configuration determines which products can be
 ## Retain Algolia configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of the Algolia payment method.
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Algolia.
 
 To run a destructive deployment, follow the steps:
 1. Disconnect Algolia.

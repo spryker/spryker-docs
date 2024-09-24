@@ -21,5 +21,5 @@ To avoid these issues, you need to follow the best practices when using ACP and 
 {% info_block warningBox "Disconnect every connected App before running destructive deployment" %}
 Before running destructive deployment, disconnect every connected App from the App Catalog.
 This ensures that the App can recreate the resources from scratch.
-If additional steps are required to disconnect an App, you will receive a warning message.
+If additional steps are required to disconnect an App (e.g. putting orders to a closed state or similar), you will receive a warning message explaining what is missing/what needs to be done to properly disconnect the App.
 {% endinfo_block %}

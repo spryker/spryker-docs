@@ -91,11 +91,11 @@ Payouts with Spryker's commissions engine work as follows:
 4. Set up a trigger for transfers using a timeout or [set up cronjobs that trigger transfers on a schedule](/docs/pbc/all/payment-service-provider/{{page.version}}/marketplace/stripe-third-party-integration/configure-merchant-transfers-for-stripe.html).
 5. Test that the commissions are applied to the transfer amount.
 
-## Important Notes for Projects
-1. Actions performed on a payment such as cancellation, capture, must be triggered from Spryker either using the Backoffice or OMS. Stripe should not be used for payment capture & cancellation as the integration uses Spryker as the source of truth
-2. The Marketplace business model does not support multi-capture. This means that the marketplace owner must capture the payment before transfers can be made to merchants. You can find more about [Stripe's multi-capture support here](https://docs.stripe.com/payments/multicapture#availability)
+## Important notes about Stripe
+
+* Actions performed on a payment, such as cancellation or capture, must be triggered from Spryker either using the Back Office or OMS. Because OMS information is stored in Spryker, triggering such actions from Stripe Dashboard will result in failures.
+* The Marketplace business model doesn't support multi-capture. Before transfers can be made to merchants, the marketplace owner must capture a payment. For more information on multi-capture, see [Capture a payment multiple times](https://docs.stripe.com/payments/multicapture).
 
 
 ## Next step
-[Install the SCOS Prerequisites & Set up your project](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)
-
+[Install and configure Stripe prerequisites for marketplace](/docs/pbc/all/payment-service-provider/202404.0/marketplace/stripe-third-party-integration/install-and-configure-stripe-prerequisites-for-marketplace.html)

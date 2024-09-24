@@ -10,8 +10,8 @@ redirect_from:
 
 {% info_block warningBox "Warning" %}
 
-As of September 2024, we no longer provide support for PHP 8.1 modules. To ensure continued compatibility, security, and access to new features, 
-it is highly recommended to [Upgrade to PHP 8.2](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-82.html). 
+As of September 2024, we no longer provide support for PHP 8.1 modules. To ensure continued compatibility, security, and access to new features,
+we highly recommend [upgrading to PHP 8.2](/docs/dg/dev/upgrade-and-migrate/upgrade-to-php-82.html). 
 
 {% endinfo_block %}
 

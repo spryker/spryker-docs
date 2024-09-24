@@ -1584,7 +1584,7 @@ entries:
     url: /docs/dg/dev/acp/app-composition-platform.html
     nested:
       - title: Security assessment
-        url: /docs/dg/dev/acp/aop-security-assessment.html
+        url: /docs/dg/dev/acp/acp-security-assessment.html
       - title: Security tips
         url: /docs/dg/dev/acp/acp-security-tips.html
       - title: Install prerequisites and enable ACP
@@ -1593,8 +1593,8 @@ entries:
         url: /docs/dg/dev/acp/receive-acp-messages.html
       - title: Integrate ACP payment apps with Spryker OMS configuration
         url: /docs/dg/dev/acp/integrate-acp-payment-apps-with-spryker-oms-configuration.html
-      - title: Destructive deployments with ACP usage
-        url: /docs/dg/dev/acp/acp-destructive-deployment.html
+      - title: Retaining ACP apps when running destructive deployments
+        url: /docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html
 #      - title: Develop an app
 #        url: /docs/dg/dev/acp/develop-an-app/develop-an-app.html
 #        nested:

@@ -58,7 +58,7 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 ## Retain Vertex configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Vertex.
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Vertex.
 
 To run a destructive deployment, follow the steps:
 1. Disconnect Vertex.

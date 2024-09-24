@@ -82,7 +82,7 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 ## Retain Bazaarvoice configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Bazaarvoice.
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Bazaarvoice.
 
 To run a destructive deployment, follow the steps:
 1. Disconnect Bazaarvoice.

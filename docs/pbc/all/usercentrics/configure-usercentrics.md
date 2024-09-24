@@ -116,7 +116,7 @@ The drawer closes with a success message displayed. On the **App Composition Pla
 ## Retain Usercentrics configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Usercentrics.
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Usercentrics.
 
 To run a destructive deployment, follow the steps:
 1. Disconnect Usercentrics.

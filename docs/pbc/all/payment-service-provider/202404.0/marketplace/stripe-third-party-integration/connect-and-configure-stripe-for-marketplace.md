@@ -39,7 +39,7 @@ This document describes how to connect and configure the Stripe app in the Back 
 ## Retain Stripe configuration after a destructive deployment
 
 {% info_block errorBox "" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of the Stripe payment method.
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of the Stripe payment method.
 
 To run a destructive deployment, follow the steps:
 1. Disconnect Stripe.

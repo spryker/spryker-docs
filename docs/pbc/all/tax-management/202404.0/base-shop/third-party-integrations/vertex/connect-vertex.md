@@ -30,10 +30,6 @@ This document describes how to connect a Spryker project to Vertex.
 
 ![vertex-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-configuration.png)
 
-{% info_block warningBox "Disconnect Vertex before running destructive deployment" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Vertex configurations.
-{% endinfo_block %}
-
 ## Verify Vertex connection
 
 {% info_block warningBox "Test the configuration" %}
@@ -58,6 +54,18 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 ![vertex-report-output](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/vertex-report-output.png)
 4. On the invoice page, you can verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
+
+## Retain Vertex configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Vertex.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Vertex.
+2. Run a destructive deployment.
+3. Reconnect Vertex.
+
+{% endinfo_block %}
 
 ## Next steps
 

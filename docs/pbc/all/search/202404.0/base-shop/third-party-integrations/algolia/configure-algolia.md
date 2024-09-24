@@ -62,12 +62,6 @@ Verify that your index is populated with data from your store:
 2. In the side pane, go to **Search&nbsp;<span aria-label="and then">></span> Index**.
 3. Make sure that the index is populated with data from your store.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Disconnect Algolia before running destructive deployment" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Algolia configurations.
-{% endinfo_block %}
-
 ![algolia-index-data](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/algolia/integrate-algolia/algolia-index-data.png)
 
 For details about the created index data, see [Indexes](/docs/pbc/all/search/{{page.version}}/base-shop/third-party-integrations/algolia/algolia.html#indexes).
@@ -208,3 +202,15 @@ When used with Algolia PBC, Spryker facets configuration is ignored and Algolia 
 ![algolia-ranking](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/search/third-party-integrations/configure-algolia/algolia-ranking.png)
 
 Algolia's **Ranking and sorting** configuration determines which products can be shown before others when customers search your catalog. Learn more about Custom Ranking and Sorting in the [Algolia documentation](https://www.algolia.com/doc/guides/managing-results/must-do/custom-ranking/).
+
+## Retain Algolia configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of the Algolia payment method.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Algolia.
+2. Run a destructive deployment.
+3. Reconnect Algolia.
+
+{% endinfo_block %}

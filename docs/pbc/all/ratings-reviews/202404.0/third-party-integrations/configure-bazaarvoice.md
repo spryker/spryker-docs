@@ -1,7 +1,7 @@
 ---
 title: Configure Bazaarvoice
 description: Find out how you can configure Bazaarvoice in your Spryker shop
-template: howto-guide-template 
+template: howto-guide-template
 last_updated: Nov 21, 2023
 redirect_from:
   - /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
@@ -64,7 +64,7 @@ If you are unsure of your credentials or the region, reach out to the internal B
 
 9. In **Settings&nbsp;<span aria-label="and then">></span> Select Services**, select the services that you need:
    - RATINGS & REVIEWS: These are the accumulated star ratings along with reviews that are displayed on the product details page.
-   <!---- QUESTIONS & ANSWERS:--> 
+   <!---- QUESTIONS & ANSWERS:-->
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
 
 10. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings&nbsp;<span aria-label="and then">></span> Store**, select the stores.
@@ -79,6 +79,14 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 
 {% endinfo_block %}
 
-{% info_block warningBox "Disconnect Bazaarovice before running destructive deployment" %}
-[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes all the existing Bazaarvoice configurations.
+## Retain Bazaarvoice configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/acp-destructive-deployment.html) permanently deletes the configuration of Bazaarvoice.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Bazaarvoice.
+2. Run a destructive deployment.
+3. Reconnect Bazaarvoice.
+
 {% endinfo_block %}

@@ -14,7 +14,25 @@ Install the required features:
 | Order Management       | {{page.version}} | [Install the Order Management feature](/docs/pbc/all/order-management-system/{{page.version}}/base-shop/install-and-upgrade/install-features/install-the-order-management-feature.html)           |
 | Spryker Core           | {{page.version}} | [Install the Spryker Core feature](/docs/pbc/all/miscellaneous/{{page.version}}/install-and-upgrade/install-features/install-the-spryker-core-feature.html)                                       |
 
-### 1) Set up behavior
+## 1) Install the required modules
+
+Install the required modules using Composer:
+
+```bash
+composer require spryker/sales-discount-connector:"^1.0.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the following modules have been installed:
+
+| MODULE                                   | EXPECTED DIRECTORY                      |
+|------------------------------------------|-----------------------------------------|
+| SalesDiscountConnector                   | vendor/spryker/sales-discount-connector |
+
+{% endinfo_block %}
+
+### 2) Set up behavior
 
 Set up the following behaviors:
 

@@ -71,13 +71,13 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
+Make sure that you can create a new product in the Merchant Portal and, after creating, see it in the product data table.
 
 {% endinfo_block %}
 
 ### 4) Configure navigation
 
-Add marketplace section to `navigation-main-merchant-portal.xml`:
+1. Add a marketplace section to `navigation-main-merchant-portal.xml`:
 
 **config/Zed/navigation-main-merchant-portal.xml**
 
@@ -103,7 +103,7 @@ Add marketplace section to `navigation-main-merchant-portal.xml`:
 </config>
 ```
 
-Execute the following command:
+2. Update the navigation cache:
 
 ```bash
 console navigation:build-cache
@@ -111,6 +111,6 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can see the **Products** and **Variants** buttons in the navigation menu of the Merchant Portal.
+Make sure that, in the Merchant Portal navigation, **Products** and **Variants** menu items are displayed.
 
 {% endinfo_block %}

@@ -55,6 +55,18 @@ If you configured invoices to be saved in Vertex, you can view the taxes process
 4. On the invoice page, you can verify the invoice number that corresponds to the Spryker order number and the applicable country tax calculated by Vertex.
 ![invoice-in-vertex](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/vertex/configure-vertex/invoice-in-vertex.png)
 
+## Retain Vertex configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of Vertex.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Vertex.
+2. Run a destructive deployment.
+3. Reconnect Vertex.
+
+{% endinfo_block %}
+
 ## Next steps
 
 * [Vertex FAQ](/docs/pbc/all/tax-management/{{page.version}}/base-shop/third-party-integrations/vertex/vertex-faq.html)

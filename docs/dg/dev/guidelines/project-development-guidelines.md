@@ -23,14 +23,14 @@ There are different strategies developers can use to develop projects. Before st
 - Plug and play
 - Project modules
 
-Or you can [develop your own standalone module](docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html) and use it in your project.
+Or you can [develop your own standalone module](/docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html) and use it in your project.
 
 ## Updating Spryker
 It is essential to ensure that [all Spryker modules are updated](/docs/dg/dev/updating-spryker/updating-spryker.html) to the latest stable version.
 
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
 
-Additionally, we recommend keeping all modules up to date in general. [Evaluator tool](docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) can be helpfull in this case.
+Additionally, we recommend keeping all modules up to date in general. [Evaluator tool](/docs/dg/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) can be helpfull in this case.
 
 In order to keep track of the Spryker's modules updates, you can use the [Release App history page](https://api.release.spryker.com/release-history). Release groups are created for each Spryker's feature/fix release. Each release group contains a list of modules that have been updated. You can use this information to check if any of the modules you are using have been updated and also use provided command to update them manually.
 
@@ -38,7 +38,7 @@ Also, you need to update you infrastructure and use latest provided docker image
 You can check supported PHP versions in the [Docker Hub](https://hub.docker.com/r/spryker/php) or you can check version of Docker SDK in the [Spryker Docker SDK repo](https://github.com/spryker/docker-sdk).
 
 ## Apply coding guidelines
-Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html). 
+Starting from the first day of development, apply the [coding guidelines](/docs/dg/dev/guidelines/coding-guidelines/coding-guidelines.html).
 Pay attention to an [architecture convention](/docs/dg/dev/architecture/architectural-convention.html) page as in addition it provides a set of rules and recommendations that applicable specifically for project development.
 
 ## Use custom namespaces

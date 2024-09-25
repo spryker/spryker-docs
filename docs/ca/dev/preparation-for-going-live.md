@@ -75,8 +75,6 @@ After pointing the domain name to your Spryker project, some of your customers m
 - If possible, check if you can implement payment options in a redundant way so that, if one payment provider has an outage, customers can still pay using another one.
 - Secrets, like API tokens, should be rotated regularly. Outline and test rotation strategies to make sure they're not going to cause issues during live operation.
 
-{% endinfo_block %}
-
 ### Testing
 
 - Perform deployment tests. To understand how your application will perform and work when deployed, [test your deployments locally](/docs/dg/dev/miscellaneous-guides/simulating-deployments-locally.html).

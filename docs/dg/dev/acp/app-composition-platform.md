@@ -12,7 +12,7 @@ related:
     - title: SCCOS Dependencies required for ACP
       link: docs/dg/dev/acp/app-composition-platform-installation.html
     - title: ACP security assessment
-      link: docs/dg/dev/acp/aop-security-assessment.html
+      link: docs/dg/dev/acp/acp-security-assessment.html
     - title: ACP security tips
       link: docs/dg/dev/acp/acp-security-tips.html
 ---

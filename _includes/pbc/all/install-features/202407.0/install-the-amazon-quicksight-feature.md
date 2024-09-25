@@ -8,7 +8,7 @@ This document describes how to install the Amazon Quicksight feature.
 
 ## Install feature core 
 
-Follow the steps below to install the {Feature Name} feature core.
+Follow the steps below to install the Amazon Quicksight feature core.
 
 ### Prerequisites
 Install the required features:
@@ -21,7 +21,7 @@ Install the required features:
 
 ### 1) Install the required modules
 
-Run the following command to install the required module:
+Run the following command to install the required module:
 
 ```bash
 composer require spryker-eco/amazon-quicksight: "^1.0.0" --update-with-dependencies
@@ -39,18 +39,58 @@ Make sure the following modules have been installed:
 
 ### 2) Set up the configuration
 
+Add your Quicksight asset bundle to to one of the directories, for example `src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip`.
+
 Add the following configuration:
 
-| CONFIGURATION                                          | SPECIFICATION                                                            | NAMESPACE                          |
-|--------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------|
-| AmazonQuicksightConstants::AWS_ACCOUNT_ID              | The ID for the AWS account that contains your Amazon QuickSight account. | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_REGION                  | The AWS region that you use for the Amazon QuickSight account.           | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE    | The name of Quicksight namespace.                                        | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_CREDENTIALS_KEY         | AWS access key ID.                                                       | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_CREDENTIALS_SECRET      | AWS access key secret.                                                   | SprykerEco\Shared\AmazonQuicksight |
-| AmazonQuicksightConstants::AWS_CREDENTIALS_TOKEN       | AWS security token.                                                      | SprykerEco\Shared\AmazonQuicksight |
+**src/Pyz/Zed/AmazonQuicksight/AmazonQuicksightConfig.php**
 
-TODO: add configs from V1
+```php
+<?php
+
+namespace Pyz\Zed\AmazonQuicksight;
+
+use SprykerEco\Zed\AmazonQuicksight\AmazonQuicksightConfig as SprykerEcoAmazonQuicksightConfig;
+
+class AmazonQuicksightConfig extends SprykerEcoAmazonQuicksightConfig
+{
+    /**
+     * @var string
+     */
+    protected const ASSET_BUNDLE_IMPORT_FILE_PATH = '%s/src/Pyz/Zed/AmazonQuicksight/data/asset-bundle.zip';
+
+    /**
+     * @return string
+     */
+    public function getAssetBundleImportFilePath(): string
+    {
+        return sprintf(static::ASSET_BUNDLE_IMPORT_FILE_PATH, APPLICATION_ROOT_DIR);
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+After finishing the integration try to enable the Analytics from Backoffice UI. If the integration is successful, the asset bundle import will be started.
+
+{% endinfo_block %}
+
+Add environment configuration:
+
+| CONFIGURATION                                                     | SPECIFICATION                                                            | NAMESPACE                          |
+|-------------------------------------------------------------------|--------------------------------------------------------------------------|------------------------------------|
+| AmazonQuicksightConstants::AWS_ACCOUNT_ID                         | The ID for the AWS account that contains your Amazon QuickSight account. | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_REGION                             | The AWS region that you use for the Amazon QuickSight account.           | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE               | The name of Quicksight namespace.                                        | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_CREDENTIALS_KEY                    | AWS access key ID.                                                       | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_CREDENTIALS_SECRET                 | AWS access key secret.                                                   | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::AWS_CREDENTIALS_TOKEN                  | AWS security token.                                                      | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME           | The default data source username.                                        | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD           | The default data source password.                                        | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME      | The default data source database name.                                   | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_HOST      | The default data source database host.                                   | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_PORT      | The default data source database port.                                   | SprykerEco\Shared\AmazonQuicksight |
+| AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_VPC_CONNECTION_ARN | The default data source VPC connection ARN.                              | SprykerEco\Shared\AmazonQuicksight |
 
 **config/Shared/config_default.php**
 
@@ -60,12 +100,18 @@ TODO: add configs from V1
 use SprykerEco\Shared\AmazonQuicksight\AmazonQuicksightConstants;
 
 // -------------------------------- AWS QUICKSIGHT -------------------------------
-$config[AmazonQuicksightConstants::AWS_ACCOUNT_ID] = getenv('AWS_ACCOUNT_ID') ?: '';
-$config[AmazonQuicksightConstants::AWS_REGION] = getenv('AWS_REGION') ?: '';
-$config[AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE] = getenv('AWS_QUICKSIGHT_NAMESPACE') ?: '';
-$config[AmazonQuicksightConstants::AWS_CREDENTIALS_KEY] = getenv('AWS_ACCESS_KEY_ID') ?: '';
-$config[AmazonQuicksightConstants::AWS_CREDENTIALS_SECRET] = getenv('AWS_SECRET_ACCESS_KEY') ?: '';
-$config[AmazonQuicksightConstants::AWS_CREDENTIALS_TOKEN] = getenv('AWS_SESSION_TOKEN') ?: '';
+$config[AmazonQuicksightConstants::AWS_ACCOUNT_ID] = getenv('AWS_ACCOUNT_ID');
+$config[AmazonQuicksightConstants::AWS_REGION] = getenv('AWS_REGION');
+$config[AmazonQuicksightConstants::AWS_QUICKSIGHT_NAMESPACE] = getenv('AWS_QUICKSIGHT_NAMESPACE');
+$config[AmazonQuicksightConstants::AWS_CREDENTIALS_KEY] = getenv('AWS_ACCESS_KEY_ID');
+$config[AmazonQuicksightConstants::AWS_CREDENTIALS_SECRET] = getenv('AWS_SECRET_ACCESS_KEY');
+$config[AmazonQuicksightConstants::AWS_CREDENTIALS_TOKEN] = getenv('AWS_SESSION_TOKEN');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_USERNAME] = getenv('QUICKSIGHT_DB_USERNAME');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_PASSWORD] = getenv('QUICKSIGHT_DB_PASSWORD');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_NAME] = getenv('QUICKSIGHT_DB_NAME');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_HOST] = getenv('QUICKSIGHT_DB_HOST');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_DATABASE_PORT] = getenv('QUICKSIGHT_DB_PORT');
+$config[AmazonQuicksightConstants::DEFAULT_DATA_SOURCE_VPC_CONNECTION_ARN] = getenv('QUICKSIGHT_VPC_CONNECTION_ARN');
 ```
 
 ### 3) Set up database schema and transfer objects
@@ -88,49 +134,52 @@ Make sure the following changes have been applied by checking your database:
 
 Make sure the following changes have been triggered in transfer objects:
 
-| TRANSFER                                             | TYPE   | EVENT   | PATH                                                                                       |
-|------------------------------------------------------|--------|---------|--------------------------------------------------------------------------------------------|
-| QuicksightUser                                       | class  | created | src/Generated/Shared/Transfer/QuicksightUserTransfer                                       |
-| QuicksightUserCriteria                               | class  | created | src/Generated/Shared/Transfer/QuicksightUserCriteriaTransfer                               |
-| QuicksightUserConditions                             | class  | created | src/Generated/Shared/Transfer/QuicksightUserConditionsTransfer                             |
-| QuicksightUserCollection                             | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionTransfer                             |
-| QuicksightUserCollectionResponse                     | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionResponseTransfer                     |
-| QuicksightUserRegisterResponse                       | class  | created | src/Generated/Shared/Transfer/QuicksightUserRegisterResponseTransfer                       |
-| QuicksightDeleteUserResponse                         | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserResponseTransfer                         |
-| QuicksightUserRegisterRequest                        | class  | created | src/Generated/Shared/Transfer/QuicksightUserRegisterRequestTransfer                        |
-| QuicksightDeleteUserRequest                          | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserRequestTransfer                          |
-| QuicksightListUsersRequest                           | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersRequestTransfer                           |
-| QuicksightListUsersResponse                          | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersResponseTransfer                          |
-| QuicksightGenerateEmbedUrlRequest                    | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlRequestTransfer                    |
-| QuicksightExperienceConfiguration                    | class  | created | src/Generated/Shared/Transfer/QuicksightExperienceConfigurationTransfer                    |
-| QuicksightConsole                                    | class  | created | src/Generated/Shared/Transfer/QuicksightConsoleTransfer                                    |
-| QuicksightGenerateEmbedUrlResponse                   | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlResponseTransfer                   |
-| QuicksightEmbedUrl                                   | class  | created | src/Generated/Shared/Transfer/QuicksightEmbedUrlTransfer                                   |
-| QuicksightAssetBundleImportJob                       | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobTransfer                       |
-| QuicksightAssetBundleImportJobCollection             | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCollectionTransfer             |
-| QuicksightAssetBundleImportJobCriteria               | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCriteriaTransfer               |
-| QuicksightAssetBundleImportJobConditions             | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobConditionsTransfer             |
-| QuicksightStartAssetBundleImportJobRequest           | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobRequestTransfer           |
-| QuicksightAssetBundleImportSource                    | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportSourceTransfer                    |
-| QuicksightOverrideParameters                         | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersTransfer                         |
-| QuicksightOverrideParametersDataSource               | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceTransfer               |
-| QuicksightOverrideParametersDataSourceCredentials    | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialsTransfer    |
-| QuicksightOverrideParametersDataSourceCredentialPair | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
-| QuicksightOverridePermissions                        | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsTransfer                        |
-| QuicksightOverridePermissionsAnalysis                | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsAnalysisTransfer                |
-| QuicksightOverridePermissionsDashboard               | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDashboardTransfer               |
-| QuicksightOverridePermissionsDataSet                 | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSetTransfer                 |
-| QuicksightOverridePermissionsDataSource              | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSourceTransfer              |
-| QuicksightPermissions                                | class  | created | src/Generated/Shared/Transfer/QuicksightPermissionsTransfer                                |
-| QuicksightStartAssetBundleImportJobResponse          | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobResponseTransfer          |
-| QuicksightDescribeAssetBundleImportJobRequest        | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobRequestTransfer        |
-| QuicksightDescribeAssetBundleImportJobResponse       | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobResponseTransfer       |
-| EnableQuicksightAnalyticsRequest                     | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsRequestTransfer                     |
-| EnableQuicksightAnalyticsResponse                    | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsResponseTransfer                    |
-| ResetQuicksightAnalyticsRequest                      | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsRequestTransfer                      |
-| ResetQuicksightAnalyticsResponse                     | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsResponseTransfer                     |
-| QuicksightUpdateUserResponse                         | class  | created | src/Generated/Shared/Transfer/QuicksightUpdateUserResponseTransfer                         |
-| QuicksightUpdateUserRequest                          | class  | created | src/Generated/Shared/Transfer/QuicksightUpdateUserRequestTransfer                          |
+| TRANSFER                                                      | TYPE   | EVENT   | PATH                                                                                       |
+|---------------------------------------------------------------|--------|---------|--------------------------------------------------------------------------------------------|
+| QuicksightUser                                                | class  | created | src/Generated/Shared/Transfer/QuicksightUserTransfer                                       |
+| QuicksightUserCriteria                                        | class  | created | src/Generated/Shared/Transfer/QuicksightUserCriteriaTransfer                               |
+| QuicksightUserConditions                                      | class  | created | src/Generated/Shared/Transfer/QuicksightUserConditionsTransfer                             |
+| QuicksightUserCollection                                      | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionTransfer                             |
+| QuicksightUserCollectionResponse                              | class  | created | src/Generated/Shared/Transfer/QuicksightUserCollectionResponseTransfer                     |
+| QuicksightUserRegisterResponse                                | class  | created | src/Generated/Shared/Transfer/QuicksightUserRegisterResponseTransfer                       |
+| QuicksightDeleteUserResponse                                  | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserResponseTransfer                         |
+| QuicksightUserRegisterRequest                                 | class  | created | src/Generated/Shared/Transfer/QuicksightUserRegisterRequestTransfer                        |
+| QuicksightDeleteUserRequest                                   | class  | created | src/Generated/Shared/Transfer/QuicksightDeleteUserRequestTransfer                          |
+| QuicksightListUsersRequest                                    | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersRequestTransfer                           |
+| QuicksightListUsersResponse                                   | class  | created | src/Generated/Shared/Transfer/QuicksightListUsersResponseTransfer                          |
+| QuicksightGenerateEmbedUrlRequest                             | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlRequestTransfer                    |
+| QuicksightExperienceConfiguration                             | class  | created | src/Generated/Shared/Transfer/QuicksightExperienceConfigurationTransfer                    |
+| QuicksightConsole                                             | class  | created | src/Generated/Shared/Transfer/QuicksightConsoleTransfer                                    |
+| QuicksightGenerateEmbedUrlResponse                            | class  | created | src/Generated/Shared/Transfer/QuicksightGenerateEmbedUrlResponseTransfer                   |
+| QuicksightEmbedUrl                                            | class  | created | src/Generated/Shared/Transfer/QuicksightEmbedUrlTransfer                                   |
+| QuicksightAssetBundleImportJob                                | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobTransfer                       |
+| QuicksightAssetBundleImportJobCollection                      | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCollectionTransfer             |
+| QuicksightAssetBundleImportJobCriteria                        | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobCriteriaTransfer               |
+| QuicksightAssetBundleImportJobConditions                      | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportJobConditionsTransfer             |
+| QuicksightStartAssetBundleImportJobRequest                    | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobRequestTransfer           |
+| QuicksightAssetBundleImportSource                             | class  | created | src/Generated/Shared/Transfer/QuicksightAssetBundleImportSourceTransfer                    |
+| QuicksightOverrideParameters                                  | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersTransfer                         |
+| QuicksightOverrideParametersDataSource                        | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceTransfer               |
+| QuicksightOverrideParametersDataSourceCredentials             | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialsTransfer    |
+| QuicksightOverrideParametersDataSourceCredentialPair          | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceParameters              | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceMariaDbParameters       | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverrideParametersDataSourceVpcConnectionProperties | class  | created | src/Generated/Shared/Transfer/QuicksightOverrideParametersDataSourceCredentialPairTransfer |
+| QuicksightOverridePermissions                                 | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsTransfer                        |
+| QuicksightOverridePermissionsAnalysis                         | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsAnalysisTransfer                |
+| QuicksightOverridePermissionsDashboard                        | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDashboardTransfer               |
+| QuicksightOverridePermissionsDataSet                          | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSetTransfer                 |
+| QuicksightOverridePermissionsDataSource                       | class  | created | src/Generated/Shared/Transfer/QuicksightOverridePermissionsDataSourceTransfer              |
+| QuicksightPermissions                                         | class  | created | src/Generated/Shared/Transfer/QuicksightPermissionsTransfer                                |
+| QuicksightStartAssetBundleImportJobResponse                   | class  | created | src/Generated/Shared/Transfer/QuicksightStartAssetBundleImportJobResponseTransfer          |
+| QuicksightDescribeAssetBundleImportJobRequest                 | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobRequestTransfer        |
+| QuicksightDescribeAssetBundleImportJobResponse                | class  | created | src/Generated/Shared/Transfer/QuicksightDescribeAssetBundleImportJobResponseTransfer       |
+| EnableQuicksightAnalyticsRequest                              | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsRequestTransfer                     |
+| EnableQuicksightAnalyticsResponse                             | class  | created | src/Generated/Shared/Transfer/EnableQuicksightAnalyticsResponseTransfer                    |
+| ResetQuicksightAnalyticsRequest                               | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsRequestTransfer                      |
+| ResetQuicksightAnalyticsResponse                              | class  | created | src/Generated/Shared/Transfer/ResetQuicksightAnalyticsResponseTransfer                     |
+| QuicksightUpdateUserResponse                                  | class  | created | src/Generated/Shared/Transfer/QuicksightUpdateUserResponseTransfer                         |
+| QuicksightUpdateUserRequest                                   | class  | created | src/Generated/Shared/Transfer/QuicksightUpdateUserRequestTransfer                          |
 
 {% endinfo_block %}
 

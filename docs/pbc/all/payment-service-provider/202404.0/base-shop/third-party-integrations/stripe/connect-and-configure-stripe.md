@@ -42,6 +42,19 @@ If you're configuring Stripe for Marketplace, see [Connect and configure Stripe 
 11. Click **Save**.
   This displays a success message with the app's status as **Connected**.
 
+
+## Retain Stripe configuration after a destructive deployment
+
+{% info_block errorBox "" %}
+[Destructive deployment](https://spryker.com/docs/dg/dev/acp/retaining-acp-apps-when-running-destructive-deployments.html) permanently deletes the configuration of the Stripe payment method.
+
+To run a destructive deployment, follow the steps:
+1. Disconnect Stripe.
+2. Run a destructive deployment.
+3. Reconnect Stripe.
+
+{% endinfo_block %}
+
 ## Next steps
 
 Activate the Stripe payment method. For instructions, see [Edit payment methods](/docs/pbc/all/payment-service-provider/{{page.version}}/base-shop/manage-in-the-back-office/edit-payment-methods.html).

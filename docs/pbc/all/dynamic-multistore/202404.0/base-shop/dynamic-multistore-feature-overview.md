@@ -97,7 +97,7 @@ AT
 |------------| --- | --- | --- | --- |
 |name        |mandatory |string | DE | Define store name. |
 
-Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/202311.0/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
+Configure a new store as described here: [Import configuration for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html#import-data)
 
 
 Adding a new store via the Back Office is easier and faster, but in this case, you should add this store across all environments.
@@ -112,7 +112,7 @@ Note that when you add a new store you should also assign all store-related enti
 
 To avoid manual assignment of entities in Back Office to the store you can use the data import for store-related entities as well.
 
-See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/202404.0/base-shop/import-stores.html)
+See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
 
 
 ## What is changed when DMS is enabled?
@@ -155,3 +155,13 @@ EU region has two stores: DE and AT. US region has one store: US.
 The number of stores affects data import speed: the more stores you have the slower data import is.
 
 Take into account data import request body limit when you import data for many stores.
+
+## Related documents
+
+- [Install Dynamic Multistore](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-features/install-dynamic-multistore.html)
+
+- [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html) 
+
+- [Install the Dynamic Multistore Glue API](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/install-and-upgrade/install-the-dynamic-multistore-glue-api.html) 
+
+- [Install Dynamic Multistore + the Marketplace MerchantPortal Core feature](/docs/pbc/all/dynamic-multistore/{{page.version}}/marketplace/install-dynamic-multistore-the-marketplace-merchant-portal-core.html)

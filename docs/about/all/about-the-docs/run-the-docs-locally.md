@@ -22,26 +22,17 @@ related:
 
 We use [Jekyll](https://jekyllrb.com/) to build Spryker docs. You can run Spryker docs on your own machine. This is usually useful when you want to edit some docs and see the changes before submitting a PR.
 
-This document describes how to run Spryker docs on a MacBook with an M-series processor. For instructions for intel-based MacBooks, see []().
+This document describes how to run Spryker docs on Macs with an M-series processor. For instructions for intel-based Macs, see [Run the docs locally on Intel Macs](/docs/about/all/about-the-docs/run-the-docs-locally-on-intel-macs-linux-and-widnows.html).
 
 
 ## Prerequisites
 
+To enable Rosetta for Terminal, follow the steps:
 
-* To enable Rosetta for Terminal, follow the steps:
-
-  1. In Finder, go to **Applications**>**Utilities**.
-  2. Right-click **Terminal** and select **Get Info**.
-    This opens the **Terminal Info** window.
-  3. Select **Open using Rosetta**.
-
-* Check the shell you're using:
-```bash
-echo $SHELL
-```
-
-This should be either `zsh` or `bash`; you will need this information later.
-
+1. In Finder, go to **Applications**>**Utilities**.
+2. Right-click **Terminal** and select **Get Info**.
+  This opens the **Terminal Info** window.
+3. Select **Open using Rosetta**.
 
 
 ## 1. Install Homebrew
@@ -61,7 +52,7 @@ This installs Homebrew and gives you the instructions to use in the next step.
 
 Running these commands should give no output.
 
-Alternately, manually add Homebrew to your path using the instructions in the following sections.
+Alternately, manually add Homebrew to your path using the instructions in the following section.
 
 ### Manually add Homebrew to PATH
 
@@ -101,7 +92,7 @@ git clone git@github.com:spryker/spryker-docs.git ./spryker-docs
 cd spryker-docs
 ```
 
-## 3. Install Ruby
+## 3. Install RVM and Ruby
 
 1. Import RVM keys:
 ```bash
@@ -123,7 +114,15 @@ curl -sSL https://get.rvm.io | bash -s stable
 rvm install 3.2.2
 ```
 
-4. Depending on your shell type, add Ruby 3.2.2 to your environment in one of the following ways:
+
+4. Check the shell you're using:
+```bash
+echo $SHELL
+```
+
+This should be either `zsh` or `bash`.
+
+5. Depending on your shell type, add Ruby 3.2.2 to your environment in one of the following ways:
   * Zsh:
   ```bash
   echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.zshrc

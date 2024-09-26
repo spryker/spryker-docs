@@ -1,5 +1,5 @@
 ---
-title: Run the docs locally on Intel Macs, Linux, and Windows
+title: Run the docs locally on Intel Macs
 description: Find out how you can build the Spryker documentation site
 last_updated: Jul 18, 2022
 template: howto-guide-template
@@ -20,31 +20,25 @@ related:
     link: docs/about/all/about-the-docs/style-guide/markdown-syntax.html
 ---
 
-We use [Jekyll](https://jekyllrb.com/) to build the Spryker documentation site. To build it locally, you need to:
+We use [Jekyll](https://jekyllrb.com/) to build Spryker docs. You can run Spryker docs on your own machine. This is usually useful when you want to edit some docs and see the changes before submitting a PR.
 
-1. Install Jekyll
-2. Set up the documentation site locally
-3. Run the documentation site locally
+This document describes how to run Spryker docs on Intel-based Macs. For instructions for M-series Macs, see [Run the docs locally](/docs/about/all/about-the-docs/run-the-docs-locally-on-intel-macs-linux-and-widnows.html).
 
 
-## Install Jekyll
+## 1. Install Homebrew and Make
 
-Depending on your operating system, follow the Jekyll installation guides below.
-
-
-#### 1. Install Homebrew
-
+1. Install Homebrew:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-#### 2. Install Make
+2. Install Make:
 
 ```bash
 brew install make
 ```
 
-## 3. Set up the Spryker docs repository
+## 2. Set up the Spryker docs repository
 
 {% info_block warningBox "Duplicate repositories" %}
 
@@ -59,7 +53,7 @@ cd spryker-docs
 ```
 
 
-#### 4. Install Ruby
+## 3. Install RVM and Ruby
 
 1. Import RVM keys:
 ```bash
@@ -91,24 +85,48 @@ rvm install 3.2.2
   echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bash_profile
   ```
 
-#### 3. Install Jekyll and Bundler
+## 4. Install Jekyll and Bundler
+
 1. Install Jekyll and Bundler gems:
 ```bash
 gem install --user-install bundler jekyll
 ```
-2. Check the installed Ruby version:
+
+2. Install dependencies:
+
 ```bash
-ruby -v
-```  
-3. Append your path file with the following, replacing `X.X` with the first two digits of the Ruby version you've checked in the previous step:
-    * Zsh:
-    ```bash
-    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.zshrc
-    ```
-    * Bash:
-    ```bash
-    echo 'export PATH="$HOME/.gem/ruby/X.X.0/bin:$PATH"' >> ~/.bash_profile
-    ```
+bundle install
+```
+
+
+## Build the docs
+
+Build the website:
+```bash
+bundle exec jekyll serve
+```
+
+Now, you can access the local instance in a browser at `http://localhost:4000`.
+
+
+## Tips and tricks
+
+* To regenerate only those pages that were added or updated since the last build, build the site with the following command:
+```bash
+bundle exec jekyll serve --incremental
+```
+* To automatically refresh the page with each change you make to the source files, build the site with the following command:
+```bash
+bundle exec jekyll serve --incremental --livereload
+```
+
+
+
+
+
+
+
+<!---
 
 ### Install Jekyll on Windows, Ubuntu, or other Linux systems
 
@@ -133,29 +151,4 @@ To install Jekyll on Ubuntu, follow the [official Jekyll on Ubuntu documentation
 
 To install Jekyll on other Linux systems, follow the [official Jekyll on Linux documentation](https://jekyllrb.com/docs/installation/other-linux/).
 
-
-## Run the documentation site locally
-
-To run Spryker documentation site locally:
-
-1. Go to the local documentation site directory:
-```bash
-cd spryker-docs
-```
-2. Build the site:
-```bash
-bundle exec jekyll serve
-```
-Now, you can access the local copy of the Spryker documentation site at `http://localhost:4000`.
-
-
-## Tips and tricks
-
-* To regenerate only those pages that were added or updated since the last build, build the site with the following command:
-```bash
-bundle exec jekyll serve --incremental
-```
-* To automatically refresh the page with each change you make to the source files, build the site with the following command:
-```bash
-bundle exec jekyll serve --incremental --livereload
-```
+--->

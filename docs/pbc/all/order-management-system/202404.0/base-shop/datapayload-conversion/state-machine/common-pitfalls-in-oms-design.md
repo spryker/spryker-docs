@@ -180,3 +180,14 @@ OMS processing functions, like triggerEvent*, checkConditions and checkTimeouts,
 Running this code inside a DB transaction make the lock entries inaccessible. This may lead to an undetermined resulting state of the item or even to a DB deadlock in rare cases.
 
 **Solution:** Avoid OMS processing function calls inside DB transactions.
+
+## OMS configuration changes not applied
+
+**Issue:** You updated OMS configuration in an XML file, but the changes are not applied.
+
+**Solution:** OMS processes are cached by default. If `OmsConstants::ENABLE_PROCESS_CACHE` is not set to false in configuration files, you need to regenerate the cache every time you update OMS configuration.
+
+To regenerate the cache, run the following command:
+```bash
+vendor/bin/console oms:process-cache:warm-up
+```

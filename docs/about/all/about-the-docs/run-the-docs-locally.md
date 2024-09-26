@@ -149,64 +149,25 @@ arch -arch x86_64 bundle install
 ```
 
 
+## Build the docs
 
-### Install Jekyll on Windows, Ubuntu, or other Linux systems
-
-#### Prerequisites
-
-To use Jekyll on Windows, Ubuntu, or other Linux systems, you also need to install the following:
-
-* [Ruby](https://www.ruby-lang.org/en/downloads/) version 2.4.0 or higher, including all development headers. To check your version, run `ruby -v`.
-* [RubyGems](https://rubygems.org/pages/download), the latest version. To check your RubyGems version, run `gem -v`.
-* [GCC](https://gcc.gnu.org/install/) and [Make](https://www.gnu.org/software/make/). To check your GCC version, run `gcc -v,g++ -v`, for Make version run `make -v`.
-
-
-#### Install Jekyll on Windows
-
-To install Jekyll on Windows, follow the [official Jekyll on Windows documentation](https://jekyllrb.com/docs/installation/windows/).
-
-#### Install Jekyll on Ubuntu
-
-To install Jekyll on Ubuntu, follow the [official Jekyll on Ubuntu documentation](https://jekyllrb.com/docs/installation/ubuntu/).
-
-#### Other Linux systems
-
-To install Jekyll on other Linux systems, follow the [official Jekyll on Linux documentation](https://jekyllrb.com/docs/installation/other-linux/).
-
-
-
-
-## Run the documentation site locally
-
-To run Spryker documentation site locally:
-
-1. Go to the local documentation site directory:
-```bash
-cd spryker-docs
-```
-2. Build the site:
-```bash
-bundle exec jekyll serve
-```
-Now, you can access the local copy of the Spryker documentation site at `http://localhost:4000`.
-
-{% info_block infoBox "MacOS on M1 processor" %}
-
-On a MacBook with the M1 processor, run the following command instead:
-
+Build the website:
 ```bash
 arch -arch x86_64 bundle exec jekyll serve
 ```
 
-{% endinfo_block %}
+Now, you can access docs at `http://localhost:4000`.
+
+
 
 ## Tips and tricks
 
 * To regenerate only those pages that were added or updated since the last build, build the site with the following command:
 ```bash
-bundle exec jekyll serve --incremental
+arch -arch x86_64 bundle exec jekyll serve --incremental
 ```
+
 * To automatically refresh the page with each change you make to the source files, build the site with the following command:
 ```bash
-bundle exec jekyll serve --incremental --livereload
+arch -arch x86_64 bundle exec jekyll serve --incremental --livereload
 ```

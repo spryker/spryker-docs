@@ -1,5 +1,5 @@
 ---
-title: Run the docs locally
+title: Run the docs locally on Intel Macs, Windows and Linux
 description: Find out how you can build the Spryker documentation site
 last_updated: Jul 18, 2022
 template: howto-guide-template

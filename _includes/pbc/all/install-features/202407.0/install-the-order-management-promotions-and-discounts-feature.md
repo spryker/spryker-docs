@@ -38,7 +38,7 @@ Set up the following behaviors:
 
 | PLUGIN                               | SPECIFICATION                                    | PREREQUISITES | NAMESPACE                                                        |
 |--------------------------------------|--------------------------------------------------|---------------|------------------------------------------------------------------|
-| CustomerOrderCountDecisionRulePlugin | Checks if customer's order count matches clause. |               | Spryker\Zed\SalesDiscountConnector\Communication\Plugin\Discount |
+| CustomerOrderCountDecisionRulePlugin | Checks if the customer's order count matches the discount's condition. |               | Spryker\Zed\SalesDiscountConnector\Communication\Plugin\Discount |
 
 **src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
 

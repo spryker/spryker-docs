@@ -72,6 +72,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
     //...
     AddPaymentMethodTransfer::class => 'payment-method-commands',
+    UpdatePaymentMethodTransfer::class => 'payment-method-commands'
     DeletePaymentMethodTransfer::class => 'payment-method-commands',
     CancelPaymentTransfer::class => 'payment-commands',
     CapturePaymentTransfer::class => 'payment-commands',
@@ -87,6 +88,7 @@ $config[MessageBrokerConstants::MESSAGE_TO_CHANNEL_MAP] = [
 
     # [Optional] This message can be received from your project when you want to use details of the Stripe App used payment.
     PaymentCreatedTransfer::class => 'payment-events',
+    PaymentUpdatedTransfer::class => 'payment-events'
 ];
 
 $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
@@ -128,8 +130,8 @@ class MessageBrokerDependencyProvider extends SprykerMessageBrokerDependencyProv
             new PaymentOperationsMessageHandlerPlugin(),
             new PaymentMethodMessageHandlerPlugin(),
 
-            # [Optional] This plugin is handling the `PaymentCreated` messages sent from Stripe App.
-            new PaymentCreatedMessageHandlerPlugin(),
+            # [Optional] This plugin is handling the `PaymentCreated` and `PaymentUpdated` messages sent from Stripe App.
+            new SalesPaymentDetailMessageHandlerPlugin(),
         ];
     }
 }
@@ -193,24 +195,28 @@ use Spryker\Zed\SalesPayment\Communication\Plugin\Oms\SendCancelPaymentMessageCo
 
 ```
 
-6. In `src/Pyz/Zed/Payment/PaymentDependencyProvider.php`, add or update the following plugins:
+6. In `src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php`, add or update the following plugins:
 
 
 ```php
 // ...
 
-use Spryker\Zed\OauthClient\Communication\Plugin\Payment\AccessTokenPaymentAuthorizeRequestExpanderPlugin;
+use Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentAuthorizationCheckoutPostSavePlugin;
+use Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin;
 
     // ...
 
     /**
-     * @return array<int, \Spryker\Zed\PaymentExtension\Dependency\Plugin\PaymentAuthorizeRequestExpanderPluginInterface>
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPostSaveInterface>
      */
-    protected function getPaymentAuthorizeRequestExpanderPlugins(): array
+    protected function getCheckoutPostHooks(Container $container): array
     {
         return [
             //...
-            new AccessTokenPaymentAuthorizeRequestExpanderPlugin(),
+            new PaymentAuthorizationCheckoutPostSavePlugin(),
+            new PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin(),
         ];
     }
 
@@ -262,6 +268,29 @@ use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollect
 
 ```
 
+## Configure Glue for the headless API
+
+1. In `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`, add or update the following plugins:
+
+```php
+use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentCancellationsResourceRoutePlugin;
+use Spryker\Glue\PaymentsRestApi\Plugin\GlueApplication\PaymentsResourceRoutePlugin;
+
+    // ...
+
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     */
+    protected function getResourceRoutePlugins(): array
+    {
+        return [
+            //...
+            new PaymentsResourceRoutePlugin(),
+            new PaymentCancellationsResourceRoutePlugin(),
+        ];
+    } 
+
+```
 
 
 ## Next step

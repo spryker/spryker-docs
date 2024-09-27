@@ -92,21 +92,27 @@ git clone git@github.com:spryker/spryker-docs.git ./spryker-docs
 cd spryker-docs
 ```
 
-## 3. Install RVM and Ruby
+## 3. Install GnuPG, RVM, and Ruby
 
-1. Import RVM keys:
+
+1. Install GnuPG:
 ```bash
-curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+brew install gnupg
+```
+
+2. Import RVM keys in one of the following ways:
+```bash
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
 ```bash
-curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+gpg --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 ```
 
 2. Instal RVM:
 
 ```bash
-curl -sSL https://get.rvm.io | bash -s stable
+curl -sSL https://get.rvm.io | bash
 ```
 
 3. Install Ruby 3.2.2:
@@ -132,16 +138,27 @@ This should be either `zsh` or `bash`.
   echo 'export PATH="$HOME/.gem/ruby/3.2.2/bin:$PATH"' >> ~/.bash_profile
   ```
 
+6. Quit the Terminal.
+
+## 4. Install Jekyll and Bundler
+
+1. In Terminal, go to the docs' folder using one of the following commands:
+
+```bash
+cd spryker-docs
+```
+
+```bash
+cd Documents/GitHub/spryker-docs
+```
 
 
-### 4. Install Jekyll and Bundler
-
-1. Install Jekyll and Bundler gems:
+2. Install Jekyll and Bundler gems:
 ```bash
 gem install --user-install bundler jekyll
 ```
 
-2. Install dependencies:
+3. Install dependencies:
 
 ```bash
 arch -arch x86_64 bundle install

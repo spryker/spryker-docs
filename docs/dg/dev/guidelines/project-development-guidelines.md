@@ -26,7 +26,7 @@ There are different strategies developers can use to develop projects. Before st
 Or you can [develop your own standalone module](/docs/dg/dev/developing-standalone-modules/developing-standalone-modules.html) and use it in your project.
 
 ## Updating Spryker
-It is essential to ensure that [Spryker is updated](/docs/dg/dev/updating-spryker/updating-spryker.html) to the latest stable version.
+It is essential to ensure that [all Spryker modules are updated](/docs/dg/dev/updating-spryker/updating-spryker.html) to the latest stable version.
 
 During development and after going live, we recommend checking for security updates of external and Spryker dependencies on a regular basis.
 
@@ -116,12 +116,12 @@ Do not leave credentials in the code.
 
 Define Transfer objects on the project level even if it's defined in the core. It will help you avoid unnecessary dependencies and will make your code more flexible.
 
-Use minor lock on the project for modules that you updated and extended private API. It will help you to avoid critical errors with the next minor update. Installing [Composer Constrainer)[https://github.com/spryker-sdk/composer-constrainer] and including `code:constraint:modules` helps automating this process.
+Use minor lock on the project for modules that you updated and extended private API. It will help you to avoid critical errors with the next minor update. Installing [Composer Constrainer](https://github.com/spryker-sdk/composer-constrainer) and including `code:constraint:modules` helps automating this process.
 
-We recommend stopping usage of the deprecated code from Spryker. It will be eventually removed and you will need to update your code, thus minimizing amount of used deprecation helps project in a long run.
+Avoid using deprecated code from Spryker. It will be eventually removed and you will need to update your code. So, minimizing the amount of deprecated code reduces the maintenance effort.
 
-Add tests for everything you do. It will help you to catch errors before they will go to the production and update core code easily.
+Add tests for everything you implement on the project, including the customizations of the core code. Tests ensure modules can be upgraded smoothly and that no errors go to production.
 
-Try to return updated object instead of just update it by reference. It will help make your code more predictable and understandable.
+To make code more predictable and understandable, return updated object instead of just updating it by reference.
 
-Use a common sense. If you think that something is wrong, it probably is. Check it and fix it.
+Use common sense. If you think that something is wrong, it probably is. Check and fix it.

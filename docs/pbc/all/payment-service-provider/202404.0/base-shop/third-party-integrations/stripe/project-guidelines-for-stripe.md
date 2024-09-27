@@ -90,7 +90,8 @@ For more information about ACP payment methods integration with your project OMS
 Implementing the Payment Provider Stripe into your project can be done in many different ways.
 
 - You can add it in your own headless frontend application using Glue.
-- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.
+
+[//]: # (- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.)
 - You can add it as a hosted Payment page which uses a redirect after your customer submits the order.
 
 ### Headless implementation
@@ -107,22 +108,239 @@ This approach should be used when your project is a headless project without an 
 
 - The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
 - When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments?action=initialize-pre-order-payment) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
-- When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments?action=initialize-pre-order-payment) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
+- When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe) and the Payment Method name (Stripe). See example below.
   - The required quote data must be provided by your application.
 - Zed now makes the API call to the Stripe App including required authorization.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
 - You will get back a JSON response with the ClientSecret and the PublishableKey.
-- !!! This part requires an update after HEADLESS and Yves frontend is prepared
 - Use the example JavaScript to render the Stripe Elements on the summary page of your application.
-- !!!
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
 - The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
 - After this the customer should be redirected to the success page of your application.
-- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side.
+- Through the `\Spryker\Zed\Payment\Communication\Plugin\Checkout\PaymentConfirmPreOrderPaymentCheckoutPostSavePlugin` plugin the PreOrder payment will be confirmed on the Stripe App side. This means that the now know `order_reference` is passed to the StripeApp and will be connected with the `transaction_id`.
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
-- When the Payment is successful you will get a `PaymentConfirmed` AsyncAPI message which will move the order inside the OMS to the next state.
-- When the Payment has failed you will get a `PaymentFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+- When the Payment is successful you will get a `PaymentAuthorized` AsyncAPI message which will move the order inside the OMS to the next state.
+- When the Payment has failed you will get a `PaymentAuthorizationFailed` AsyncAPI message which will move the order inside the OMS to the next state.
 
+From here on the normal order processing through the OMS will take place.
+
+We prepared an example application you can download and use to see how the integration works. You can find the example application [here](https://github.com/spryker-projects/spa-checkout-glue-with-stripe).
+
+Before you send your customer to the summary page you collect all required data as usual. This includes: customer data, addresses, and selecting a shipment method. When the customer goes to the summary page, you have to call the `InitializePreOrderPayment` Glue API endpoint to get the required data to render the Stripe Elements.
+
+#### Example
+
+```JAVASCRIPT
+
+async initializePreOrderPayment() {
+    const requestData = {
+      data: {
+        type: 'payments',
+        attributes: {
+          quote: QUOTE_DATA,
+          payment: {
+            amount: GRAND_TOTAL, // You will get it through the `/checkout-data?include=carts` endpoint
+            paymentMethodName: 'stripe',
+            paymentProviderName: 'stripe',
+          },
+          preOrderPaymentData: {
+            "transactionId": this.transactionId, // This is empty in the first request but has to be used in further requests 
+          },
+        },
+      },
+    };
+
+    const responseData = await this.fetchHandler(`GLUE_APPLICATION_URL/payments`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ACCESS_TOKEN`,
+      },
+      body: JSON.stringify(requestData),
+    });
+
+    const paymentProviderData =
+      responseData.data.attributes.preOrderPaymentData;
+
+    this.transactionId = paymentProviderData.transactionId;
+    this.accountId = paymentProviderData.accountId; // only be used on the Direct business model. When using a Marketplace business model this will not be present.
+
+    await this.setupStripe();
+  }
+
+```
+
+This creates a Payment on the Stripe App side after the PaymentIntent was created via the Stripe API. The response will look like this:
+
+```JSON
+{
+  "data": {
+    "type": "payments",
+    "attributes": {
+      "isSuccessful": true,
+      "error": null,
+      "preOrderPaymentData": {
+        "transactionId": "pi_3Q3............",
+        "clientSecret": "pi_3Q3............_secret_R3WC2........",
+        "publishableKey": "pk_test_51OzEfB..............."
+      }
+    }
+  }
+}
+```
+
+The preOrderPaymentData will be used to render the Stripe Elements on the summary page of your application. Here is the example for this:
+    
+```JAVASCRIPT
+async setupStripe() {
+    const paymentElementOptions = {
+      layout: 'accordion', // Change this to your needs
+    };
+
+    let stripeAccountDetails = {};
+
+    if (this.accountId) { // Only in Direct business model not in the Marketplace business model
+      stripeAccountDetails = { stripeAccount: this.accountId }
+    }
+
+    const stripe = Stripe(this.publishableKey, stripeAccountDetails);
+
+    const elements = stripe.elements({
+      clientSecret: this.clientSecret,
+    });
+
+    const paymentElement = elements.create('payment', paymentElementOptions);
+    paymentElement.mount('#payment-element'); // Change this to the id of the HTML element you want to render the Stripe Elements to
+
+    SUBMIT_BUTTON.addEventListener('click', async () => {
+      const { error } = await stripe.confirmPayment({
+        elements,
+        confirmParams: {
+          return_url: `APPLICATION_URL/return-url?id=${idCart}`, // You need to pass the id of the cart to this request
+        },
+      });
+      if (error) {
+        // Add your error handling to this block.
+      }
+    });
+  }
+```
+
+This sets up the Stripe Elements on the summary page of your application. The customer can now select the Payment Method in the Stripe Elements and submit the data. The customer will then be redirected to the provided `return_url` which must make another Glue request to persist the order in the backoffice. After this the customer should see the success page of your application.
+
+When the customer submits the order now, the payment relevant data is sent to Stripe directly. Stripe may redirect to another page e.g. for PayPal or redirect the customer to your specified `return_url`.
+
+!!! Important
+
+At this point you must make another API call to Glue to persist the order in the backoffice. This is important because the order is not persisted in the backoffice until you make this request. This is because the order is persisted in the backoffice after the payment was successful. An example for this request is:
+
+
+```JAVASCRIPT
+app.get('/return-url', async (req, res) => {
+  const paymentIntentId = req.query.payment_intent;
+  const clientSecret = req.query.payment_intent_client_secret;
+  const idCart = req.query.id;
+
+  if (paymentIntentId) {
+    try {
+      const data = await fetchHandler(`GLUE_APPLICATION_URL/checkout`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ACCESS_TOKEN`
+        },
+        body: JSON.stringify({
+          data: {
+            type: 'checkout',
+            attributes: {
+              customer: CUSTOMER_DATA,
+              idCart: idCart,
+              billingAddress: BILLING_ADDRESS,
+              shippingAddress: SHIPPING_ADDRESS,
+              payments: [
+                {
+                  paymentMethodName: 'Stripe',
+                  paymentProviderName: 'Stripe',
+                },
+              ],
+              shipment: SHIPMENT_DATA,
+              preOrderPaymentData: {
+                transactionId: paymentIntentId,
+                clientSecret: clientSecret,
+              },
+            },
+          },
+        }),
+      });
+
+      if (data) {
+        res.send('<h2>Order Successful!</h2>');
+      } else {
+        res.send('<h2>Order Failed!</h2>');
+      }
+    } catch (error) {
+      console.error(error);
+      res.send('<h2>Order Failed!</h2>');
+    }
+  } else {
+    res.send('<h2>Invalid Payment Intent!</h2>');
+  }
+});
+```
+
+After this the customer should see the success page of your application.
+
+Some remarks:
+- When the customer reloads the summary page which renders the PaymentElements you can either prevent the second request to initiate the preOrder Payment on your end already by e.g. checking if relevant data has changed.
+  - When you are not prevent this, you will make unnecessary API calls. In any case, the Stripe App can handle this properly.
+- When the customer leaves the summary page after the Payment was created on Stripe App side and on Stripe side you will have stale payment without an order in the backoffice.
+- In cases where you want to give the customer the ability to abort the payment process you can cancel the Payment via the Glue API.
+
+### Cancel a Payment via Glue API
+
+```JAVASCRIPT
+async cancelPreOrderPayment() {
+    const requestData = {
+      data: {
+        type: 'payment-cancellations',
+        attributes: {
+          payment: {
+            paymentMethodName: 'stripe',
+            paymentProviderName: 'stripe',
+          },
+          preOrderPaymentData: {
+            transactionId: this.transactionId,
+          },
+        },
+      },
+    };
+
+    const url = `GLUE_APPLICATION_URL/payment-cancellations`;
+
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ACCESS_TOKEN`,
+      },
+      body: JSON.stringify(requestData),
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const responseData = await response.json();
+
+    if (responseData.data.attributes.isSuccessful === true) {
+      // Add your logic here when the payment cancellation was successful
+    } else {
+        // Add your logic here when the payment cancellation has failed
+    }
+  }
+```
+
+This will cancel the PaymentIntent on the Stripe side and you will a `canceled` PaymentIntent in th Stripe UI.
 
 [//]: # (### Yves integration into Summary Page)
 

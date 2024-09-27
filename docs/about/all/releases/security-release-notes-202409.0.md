@@ -1,7 +1,7 @@
 ---
 title: Security release notes 202409.0
 description: Security updates released for version 202409.0
-last_updated: Sep 20, 2024
+last_updated: Sep 27, 2024
 template: concept-topic-template
 ---
 
@@ -97,4 +97,28 @@ public function isRememberMeEnabled(): bool
 {
     return false;
 }
+```
+
+## Vulnerability in Twig third-party dependency
+
+Twig third-party dependency was vulnerable to Protection Mechanism Failure due to the incomplete enforcement of sandbox security measures. An attacker could potentially execute arbitrary code or access unauthorized data by crafting malicious templates that exploit this oversight.
+
+### Affected modules
+
+`spryker/twig`: 1.0.0 - 3.23.0
+
+### Fix the vulnerability
+
+Adjust the `twig/twig` module in root `composer.json` file to version 3.14.0 or higher:
+
+```bash
+"twig/twig": "^2.15.3 || ^3.14.0"
+```
+
+Upgrade the `spryker/twig` module to version 3.24.0 or higher and the `twig/twig` module:
+
+```bash
+composer update spryker/twig twig/twig
+composer show spryker/twig # Verify the version
+composer show twig/twig # Verify the version
 ```

@@ -196,7 +196,6 @@ This section contains additional information for defining decision rules.
 |total-quantity|Number| The total cart quantity. |
 |attribute.*|String, number| Any value. |
 |customer-group|String| Any value, use a customer group name for an exact match. |
-| customer-order-count | Number | Any value. Checked against the number of placed orders in a customer account. |
 
 
 |RELATION OPERATOR|IN PLAIN QUERY|VALUE TYPE|DESCRIPTION|

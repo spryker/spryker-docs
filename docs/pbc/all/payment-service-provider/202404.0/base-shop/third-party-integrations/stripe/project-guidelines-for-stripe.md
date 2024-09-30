@@ -113,7 +113,7 @@ This approach should be used when your project is a headless project without an 
 - Zed now makes the API call to the Stripe App including required authorization.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
 - You will get back a JSON response with the ClientSecret and the PublishableKey.
-- Use the example JavaScript to render the Stripe Elements on the summary page of your application.
+- Use the example JavaScript to render the Stripe Elements on the order summary page of your application.
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
 - The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
 - After this the customer should be redirected to the success page of your application.

@@ -239,7 +239,7 @@ Make sure the configured data has been added to the following database tables:
 
 {% endinfo_block %}
 
-5. Synchronize the ACL entities for the merchants and their users by running the following command:
+5. Synchronize the ACL entities for the merchants and their users:
 
 ```bash
 console acl:entity:synchronize
@@ -247,7 +247,7 @@ console acl:entity:synchronize
 
 {% info_block warningBox "Verification" %}
 
-Make sure that synchronized data has been added to the following database tables:
+Make sure the synchronized data has been added to the following database tables:
 * `spy_acl_entity_rule`
 * `spy_acl_entity_segment`
 * `spy_acl_entity_segment_merchant`
@@ -257,8 +257,8 @@ Make sure that synchronized data has been added to the following database tables
 * `spy_acl_role`
 * `spy_acl_rule`
 
-In case you have a multi-merchant environment, ensure that the ACL entities are synchronized for each merchant.
-If the ACL entities have already been synchronized, the synchronization process will not create duplicate entries.
+With a multi-merchant environment, make sure the ACL entities are synchronized for each merchant.
+If the ACL entities have already been synchronized, the synchronization process doesn't create duplicate entries.
 
 {% endinfo_block %}
 

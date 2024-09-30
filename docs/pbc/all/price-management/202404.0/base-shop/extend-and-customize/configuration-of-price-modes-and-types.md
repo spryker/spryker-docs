@@ -82,10 +82,9 @@ $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
+The switch works only when cart contains at least one item.
 
-The switch can happen only if quote have to items.
-
-This is available after the product currency release so you must first follow the steps in [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+Make sure that you have Price module version 5 or higher. If below, please [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 
 ## Switching to net prices

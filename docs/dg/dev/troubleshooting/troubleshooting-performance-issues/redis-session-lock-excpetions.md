@@ -21,13 +21,13 @@ If a process can't lock the session, it tries to acquire it by using a *spinlock
 It waits for 0.01 seconds by default and then retries acquiring a lock to the session. The retry timeout can be configured:
 ```php
 // config/Shared/config_default.php
-$config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 0;
+$config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 50000; // only values greater than zero will be applied
 ```
 
-These attempts continue until the timeout, which is 0.8 from `max_execution_time` by default. The timeout also can be configured:
+These attempts continue until the timeout, which is 10 seconds by default or 80% of `max_execution_time` if it is set. The timeout also can be configured:
 ```php
 // config/Shared/config_default.php
-$config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 0;
+$config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 10000; // only values greater than zero will be applied
 ```
 
 ## Probable causes
@@ -85,6 +85,28 @@ If your application heavily relies on information in Redis sessions, your PHP-FP
 ## Solution
 Regularly scan your APM for Session Lock exceptions, as well as your application logs for warnings related to PHP max children count. The former provides definitive evidence that action is needed, while the latter shows that the PHP-FPM worker pool might not be keeping up with incoming requests and their average processing time. If your APM supports it, consider configuring alerts for these events.
 
+### Make sure the latest updates are applied
+
+Update `spryker/session` package to `^4.17.0` and apply:
+
+```php
+namespace Pyz\Yves\EventDispatcher;
+
+use Spryker\Yves\Session\Plugin\EventDispatcher\SaveSessionEventDispatcherPlugin;
+
+class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependencyProvider
+{
+    protected function getEventDispatcherPlugins(): array
+    {
+        $plugins = [
+            // ...
+            new SaveSessionEventDispatcherPlugin(),
+        ];
+
+        return $plugins;
+    }
+```
+
 ### Increase php worker pool size
 Ensure you have a sufficient pool of PHP-FPM workers defined. You can configure the php-fpm max_children count for each application part in your [deploy.yml](/docs/dg/dev/sdks/the-docker-sdk/deploy-file/deploy-file-reference.html#groups-applications) file.
 
@@ -118,26 +140,17 @@ For optimal performance, data integrity, and customer experience, we strongly re
 
 ### Lock Time-to-Live Configuration
 
-By default, the lock time-to-live (TTL) is set to `0` in the configuration, which means it will default to the PHP configuration value for `max_execution_time`, if it is set.
+By default, the lock time-to-live (TTL) is set 20000 (20 seconds) by default or equal to `max_execution_time`, if it is set. 
+This means if `max_execution_time` is set to 120 seconds, it will be applied to lock TTL as well. It can be configured with:
 ```php
 // config/Shared/config_default.php
-$config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 0;
+$config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 10000; // only values greater than zero will be applied
 ```
-This configuration is based on the assumption that all PHP processes will terminate correctly, ensuring the lock is released as part of the process termination.
+{% info_block warningBox "Disabling session locking" %}
 
-If there is a risk of PHP processes hanging or terminating unexpectedly, it is recommended to set the lock TTL in Redis to a value significantly lower than the maximum PHP execution time.
+Reducing the lock TTL too much can result in side effects similar to having no lock at all and should only be done after thoroughly assessing the risks.
 
-**Recommended Approach:**
-
-Gradually decrease the lock TTL while monitoring the application's behavior:
-```php
-$config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 20000; // 20000 → 10000 → 5000 → 3000 → 2000 → 1000
-```
-Reducing the lock TTL too much can result in side effects similar to having no lock at all. According to findings, issues with locks are more likely when dealing with asynchronous requests, especially those dependent on third-party services. The more such operations, and the slower they are, the higher the probability of lock contention.
-
-For example, setting the lock TTL to 10 seconds might be sufficient to safely release the lock while maintaining data consistency. However, not all long-running blocking processes require such strict consistency, and not all can tolerate short lock durations. Therefore, the optimal lock TTL value should be determined based on the specific requirements of your application.
-
-**In case of an increase of `max_execution_time`, it is highly recommended to also review this value.**
+{% endinfo_block %}
 
 ### Traffic control
 To mitigate issues with session locks caused by high traffic or automated bot activity, you can use [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).

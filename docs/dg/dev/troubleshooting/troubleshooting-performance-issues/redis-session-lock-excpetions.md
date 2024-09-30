@@ -7,23 +7,34 @@ redirect_from:
 last_updated: Sep 28, 2024
 ---
 
-A session lock is needed to prevent multiple processes from accessing or modifying session data simultaneously, ensuring data integrity and consistency. 
+A session lock is necessary to prevent multiple processes belonging to a single user's session from accessing or modifying session data at the same time, ensuring data integrity and consistency. 
 It helps avoid race conditions and data corruption in high-concurrency environments.
-While a session is being accessed by a process, other processes can't access it; the session is *locked*. 
-If a process can't lock the session, it tries to acquire it by using a *spinlock* strategy. 
-It waits for 0.01 seconds by default and then retries acquiring a lock to the session. 
-These attempts continue until the timeout, which is 0.8 from `max_execution_time`. 
+While a user's session is being accessed by a process, other processes of the same user's session can't access it; the session is *locked*.
 
 The handler is configured with:
+
 ```php
 // config/Shared/config_default.php
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
+```
+If a process can't lock the session, it tries to acquire it by using a *spinlock* strategy. 
+It waits for 0.01 seconds by default and then retries acquiring a lock to the session. The retry timeout can be configured:
+```php
+// config/Shared/config_default.php
+$config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 0;
+```
+
+These attempts continue until the timeout, which is 0.8 from `max_execution_time` by default. The timeout also can be configured:
+```php
+// config/Shared/config_default.php
+$config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 0;
 ```
 
 ## Probable causes
 Use cases:
 - Users clicking fast, especially in the app that allows activating multiple parallel requests;
 - Requests being interrupted (but lock stays) because of aborting the connection (network or manual intentional and unintentional act, aka clicking “Esc“ when page is loading);
+- Long-running (or slow performing) concurrent requests that have to deal with the session;
 - Bots, running many parallel requests;
 - Intentional (D)Dos attacks;
 
@@ -89,7 +100,7 @@ Explore [architecture performance guidelines](/docs/dg/dev/guidelines/performanc
 ### Leverage APIs
 Headless scenarios aren't usually impacted by Session Locking challenges. Evaluate if you can adjust calls that would normally target Yves to target APIs instead.
 
-### Do not use locks
+### Not using locks
 
 ```php
 // config/Shared/config_default.php
@@ -97,6 +108,13 @@ $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSI
 ```
 This approach optimistically assumes that there will be no concurrent requests from the client, which could otherwise cause session data inconsistencies. 
 For instance, this could occur if products are added to the cart simultaneously from multiple browser tabs.
+
+{% info_block warningBox "Disabling session locking" %}
+
+Disabling session locking is possible but should only be done after thoroughly assessing the risks and implementing necessary safeguards.
+For optimal performance, data integrity, and customer experience, we strongly recommend keeping session locks enabled and focusing on optimizing lock management and application performance.
+
+{% endinfo_block %}
 
 ### Lock Time-to-Live Configuration
 

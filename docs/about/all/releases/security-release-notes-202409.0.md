@@ -101,7 +101,7 @@ public function isRememberMeEnabled(): bool
 
 ## Vulnerability in Twig third-party dependency
 
-Twig third-party dependency was vulnerable to Protection Mechanism Failure due to the incomplete enforcement of sandbox security measures. An attacker could potentially execute arbitrary code or access unauthorized data by crafting malicious templates that exploit this oversight.
+Twig third-party dependency was vulnerable to Protection Mechanism Failure because the incomplete enforcement of sandbox security measures. An attacker could potentially execute arbitrary code or access unauthorized data by crafting malicious templates that exploit this oversight.
 
 ### Affected modules
 
@@ -109,7 +109,7 @@ Twig third-party dependency was vulnerable to Protection Mechanism Failure due t
 
 ### Fix the vulnerability
 
-Adjust the `twig/twig` module in root `composer.json` file to version 3.14.0 or higher:
+In the root `composer.json`, adjust the `twig/twig` module file to version 3.14.0 or higher:
 
 ```bash
 "twig/twig": "^2.15.3 || ^3.14.0"

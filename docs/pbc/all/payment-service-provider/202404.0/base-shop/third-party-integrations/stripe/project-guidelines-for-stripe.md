@@ -109,7 +109,6 @@ This approach should be used when your project is a headless project without an 
 - The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
 - When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), payment amount, and the Quote data. See example below.
 - When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe) and the Payment Method name (Stripe). See example below.
-  - The required quote data must be provided by your application.
 - Zed now makes the API call to the Stripe App including required authorization.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
 - You will get back a JSON response with the ClientSecret and the PublishableKey.

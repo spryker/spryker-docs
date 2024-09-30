@@ -57,7 +57,7 @@ Make sure all the module dependencies are listed in the `require` section.
         }
     ],
     "require": {
-        "php": ">=8.1"
+        "php": ">=8.2"
     },
     "autoload": {
         "psr-4": {

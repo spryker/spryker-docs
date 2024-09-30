@@ -115,9 +115,9 @@ To avoid manual assignment of entities in Back Office to the store you can use t
 See: [Import minimum set of data for store](/docs/pbc/all/dynamic-multistore/{{page.version}}/base-shop/import-stores.html)
 
 
-## What is changed when DMS is enabled?
+## What is changed when Dynamic Multistore is enabled?
 
-DMS enables the following changes to the project:
+Dynamic Multistore enables the following changes to the project:
 
 In represented examples below there are two regions: EU and US.
 
@@ -130,25 +130,25 @@ EU region has two stores: DE and AT. US region has one store: US.
 - RabbitMQ virtual hosts contain region instead of store.
   
   For example eu-docker instead of de-docker.
-  ![rabbitmq-virtual-hosts-non-dms]()
-  ![rabbitmq-virtual-hosts-dms]()
+  ![rabbitmq-virtual-hosts-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-non-dms.png)
+  ![rabbitmq-virtual-hosts-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/rabbitmq-virtual-hosts-dms.png)
 
 - Jenkins job names contain region instead of store. 
 
   For example EU_queue-worker-start instead of DE_queue-worker-start.
-  ![jenkins-jobs-non-dms]()
-  ![jenkins-jobs-dms]()
+  ![jenkins-jobs-non-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-non-dms.png)
+  ![jenkins-jobs-dms](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/jenkins-jobs-dms.png)
 
-- Elasticsearch indexes contain store as a part of the index name for DMS enabled and disabled modes.
+- Elasticsearch indexes contain store as a part of the index name for Dynamic Multistore enabled and disabled modes.
 
-- Redis keys contain store as a part of the key name for DMS enabled and disabled modes.
+- Redis keys contain store as a part of the key name for Dynamic Multistore enabled and disabled modes.
 
-- When DMS is enabled customer can switch between available stores for a region.
+- When Dynamic Multistore is enabled customer can switch between available stores for a region.
 
   When customer changes a store it's set to a query param `_store`.
 
   Store is read from query param `_store` and set to session under the key `current_store`. It's used for fetching store-related data.
-  ![yves-store-switcher]()
+  ![yves-store-switcher](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/dynamic-multistore/dynamic-multistore.md/yves-store-switcher.png)
 
 ## Performance
 

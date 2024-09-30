@@ -3,7 +3,7 @@ title: Add stores by importing data
 description: This document shows how to import a store and related entities.
 past_updated: Sep 25, 2024
 template: howto-guide-template
-last_updated: Nov 17, 2023
+last_updated: Oct 1, 2024
 ---
 
 This document describes how to import a store with related entities.
@@ -26,7 +26,6 @@ To add a new store DE for region {REGION} perform data import for the following 
 name
 DE
 AT
-DE
 ```
 - country-store
   
@@ -178,3 +177,43 @@ dummyPaymentCreditCard,DE
 dummyMarketplacePaymentInvoice,DE
 ```
 
+
+Add entities to the following import action files:
+- `data/import/common/commerce_setup_import_config_{REGION\STORE}.yml`
+- `data/import/local/full\_{REGION\STORE}.yml`
+- `data/import/production/full\_{SPRYKER\STORE}.yml`
+
+```yaml
+data_import:
+    - data_entity: store
+      source: data/import/common/DE/store.csv
+    - data_entity: country-store
+      source: data/import/common/DE/country_store.csv
+    - data_entity: locale-store
+      source: data/import/common/DE/locale_store.csv
+    - data_entity: default-locale-store
+      source: data/import/common/DE/default_locale_store.csv
+    - data_entity: currency-store
+      source: data/import/common/DE/currency_store.csv
+    - data_entity: cms-block-store
+      source: data/import/common/DE/cms_block_store.csv
+    - data_entity: cms-page-store
+      source: data/import/common/DE/cms_page_store.csv
+    - data_entity: category-store
+      source: data/import/common/DE/category_store.csv
+    - data_entity: product-abstract-store
+      source: data/import/common/DE/product_abstract_store.csv
+    - data_entity: merchant-product-offer-store
+      source: data/import/common/DE/merchant_product_offer_store.csv
+    - data_entity: merchant-store
+      source: data/import/common/DE/merchant_store.csv
+    - data_entity: product-price
+      source: data/import/common/DE/product_price.csv
+    - data_entity: shipment-type-store
+      source: data/import/common/DE/shipment_type_store.csv
+    - data_entity: shipment-method-store
+      source: data/import/common/DE/shipment_method_store.csv
+    - data_entity: shipment-price
+      source: data/import/common/DE/shipment_price.csv
+    - data_entity: payment-method-store
+      source: data/import/common/DE/payment_method_store.csv

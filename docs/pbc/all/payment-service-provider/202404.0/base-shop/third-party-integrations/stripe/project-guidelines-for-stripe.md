@@ -139,8 +139,8 @@ async initializePreOrderPayment() {
           quote: QUOTE_DATA,
           payment: {
             amount: GRAND_TOTAL, // You will get it through the `/checkout-data?include=carts` endpoint
-            paymentMethodName: 'stripe',
-            paymentProviderName: 'stripe',
+            paymentMethodName: 'stripe', // taken from /checkout-data?include=payment-methods
+            paymentProviderName: 'stripe',  // taken from /checkout-data?include=payment-methods
           },
           preOrderPaymentData: {
             "transactionId": this.transactionId, // This is empty in the first request but has to be used in further requests 

@@ -55,7 +55,7 @@ Due to this change of the Price module responsibility, all related modules have 
     use Spryker\Zed\PriceProduct\Communication\Plugin\ProductConcrete\PriceProductConcreteReadPlugin;
 ```
 
-3. Update `StorageProductMapper` with the new price resolving logic
+3. Update `StorageProductMapper` with the new price resolving logic:
 
 ```php
 namespace Pyz\Yves\Product\Mapper;

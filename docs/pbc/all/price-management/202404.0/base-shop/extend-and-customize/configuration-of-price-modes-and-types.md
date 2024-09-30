@@ -24,51 +24,51 @@ related:
     link: docs/pbc/all/price-management/page.version/base-shop/extend-and-customize/multiple-currencies-per-store-configuration.html
 ---
 
-We use the following price modes to identify pricing type:
+The following price modes are used to identify pricing type:
 
-- **GROSS_MODE**- prices after tax.
-- **NET_MODE** - prices before tax.
+- GROSS_MODE: prices after tax.
+- NET_MODE: prices before tax.
 
-When customer changes the price mode, they will see different prices, taxes, as well as the discounts, as they are also applied based on the price mode. Price mode is stored in Quote, which means that you cannot have both modes at the same time. The price is selected in `\Spryker\Zed\PriceCartConnector\Communication\Plugin\CartItemPricePlugin` based on the current currency, type, and price mode.
+When a customer changes the price mode, they see different prices, taxes, as well as the discounts. Price mode is stored in Quote, which means that both modes can't be used at the same time. The price is selected in `\Spryker\Zed\PriceCartConnector\Communication\Plugin\CartItemPricePlugin` based on the current currency, type, and price mode.
 
 Price type entity also has price mode to indicate which prices this type is applicable to:
 
-- If it has `BOTH` value, then this price type will be used for gross and net prices.
-- If you, for example, have selected price `GROSS_MODE` for all your price types - the price input form will render only gross part of prices.
-- If you use `NET_MODE` - the net price inputs will be displayed respectively.
+- If it has the `BOTH` value, this price type is used for gross and net prices.
+- If `GROSS_MODE` is selected for all price types, the price input form renders only gross part of prices.
+- If `NET_MODE` is selected, the net price inputs are displayed respectively.
 
-Each store can have a default price mode and a price type selected. Those values will be used when customer has not selected currency or changed the price mode.
+Each store can have a default price mode and a price type selected. These values are used when customer has not selected currency or changed the price mode.
 
 You can use these keys in environment configuration:
 
 - For default price type:
 
-  ```php
-  $config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
-  ```
+```php
+$config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
+```
 
 
 - For default price mode:
 
-   ```php
-  $config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
-  ```
+```php
+$config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
+```
 
-  ```php
-  $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
-  ```
+```php
+$config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
+```
 
 
 ## Set up a price mode switcher
 
-1. Add  `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
-
-   This will render a drop-down list with the price mode selection.
+1. Add `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
+   This renders a drop-down list with the price mode selection.
 
 2. Add `\SprykerShop\Yves\PriceWidget\Plugin\Router\PriceWidgetRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method.
 
-3. Create template for the component:
+3. Create a template for the component:
 
+**Pyz/Yves/Price/Theme/default/partial/price_mode_switcher.twig**
 ```html
    {% raw %}{%{% endraw %} if price_modes|length > 1 {% raw %}%}{% endraw %}
    	<form method="GET" action="{% raw %}{{{% endraw %} path('price-mode-switch') {% raw %}}}{% endraw %}" data-component="price-mode-switch">
@@ -82,17 +82,17 @@ You can use these keys in environment configuration:
    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-5. Place the template you just created to `Pyz/Yves/Price/Theme/default/partial/price_mode_switcher.twig`
 
-   The switch can happen only if quote have to items.
+The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+This is available after the product currency release so you must first follow the steps in [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 
- {% info_block infoBox "Switching shop to Net prices:" %}
+## Switching to net prices
 
-If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in the class \Spryker\Shared\Price\PriceConfig:
-In order to change the mode for all stores:
+To show only NET prices in the catalog, but use gross prices in cart and checkout, override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in the `\Spryker\Shared\Price\PriceConfig` class.
+
+Example of changing the mode for all stores:
 ```php
 <?php
 
@@ -112,7 +112,7 @@ class PriceConfig extends DefaultPriceConfig
 }
 ```
 
-Or for a specific one, for exmaple, DE:
+Example of changing the mode for DE store:
 
 ```php
 <?php
@@ -132,5 +132,3 @@ class PriceConfig extends DefaultPriceConfig
     }
 }
 ```
-
-{% endinfo_block %}

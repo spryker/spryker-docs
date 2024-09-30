@@ -1,7 +1,7 @@
 ---
 title: Configuration of price modes and types
 description: The article describes the net and gross prices management
-last_updated: Jun 16, 2021
+last_updated: Sep 30, 2024
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/net-gross-prices-management
 originalArticleId: 9240561a-379b-4a9e-a6c4-05bdf2dfa264
@@ -43,18 +43,18 @@ You can use these keys in environment configuration:
 
 - For default price type:
 
-  ```yaml
+  ```php
   $config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
   ```
 
 
 - For default price mode:
 
-   ```yaml
+   ```php
   $config[PriceProductConstants::DEFAULT_PRICE_TYPE] = 'DEFAULT';
   ```
 
-  ```yaml
+  ```php
   $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
   ```
 
@@ -69,7 +69,7 @@ You can use these keys in environment configuration:
 
 3. Create template for the component:
 
-   ```xml
+```html
    {% raw %}{%{% endraw %} if price_modes|length > 1 {% raw %}%}{% endraw %}
    	<form method="GET" action="{% raw %}{{{% endraw %} path('price-mode-switch') {% raw %}}}{% endraw %}" data-component="price-mode-switch">
    		<select name="price-mode" onchange="this.form.submit()">
@@ -80,7 +80,7 @@ You can use these keys in environment configuration:
    		<input type="hidden" name="referrer-url" value="{% raw %}{{{% endraw %} app.request.requestUri {% raw %}}}{% endraw %}" />
    	</form>
    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-   ```
+```
 
 5. Place the template you just created to `Pyz/Yves/Price/Theme/default/partial/price_mode_switcher.twig`
 
@@ -91,8 +91,46 @@ You can use these keys in environment configuration:
 
  {% info_block infoBox "Switching shop to Net prices:" %}
 
-If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in this class:
+If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in the class \Spryker\Shared\Price\PriceConfig:
+In order to change the mode for all stores:
+```php
+<?php
 
-`return PriceConfig::PRICE_MODE_GROSS;`
+namespace Pyz\Shared\Price;
+
+use Spryker\Shared\Price\PriceConfig as DefaultPriceConfig;
+
+class PriceConfig extends DefaultPriceConfig
+{
+    /**
+     * @return string
+     */
+    public function getDefaultPriceMode(): string
+    {
+        return static::PRICE_MODE_NET;
+    }
+}
+```
+
+Or for a specific one, for exmaple, DE:
+
+```php
+<?php
+
+namespace Pyz\Shared\PriceDE;
+
+use Spryker\Shared\Price\PriceConfig as DefaultPriceConfig;
+
+class PriceConfig extends DefaultPriceConfig
+{
+    /**
+     * @return string
+     */
+    public function getDefaultPriceMode(): string
+    {
+        return static::PRICE_MODE_NET;
+    }
+}
+```
 
 {% endinfo_block %}

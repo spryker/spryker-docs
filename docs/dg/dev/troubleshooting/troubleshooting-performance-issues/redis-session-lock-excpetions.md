@@ -34,7 +34,7 @@ $config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 10000; // only va
 Use cases:
 - Users clicking fast, especially in the app that allows activating multiple parallel requests;
 - Requests being interrupted (but lock stays) because of aborting the connection (network or manual intentional and unintentional act, aka clicking “Esc“ when page is loading);
-- Long-running (or slow performing) concurrent requests that have to deal with the session;
+- Long-running (or slow-performing) concurrent requests that have to deal with the session;
 - Bots, running many parallel requests;
 - Intentional (D)Dos attacks;
 
@@ -139,6 +139,12 @@ For optimal performance, data integrity, and customer experience, we strongly re
 {% endinfo_block %}
 
 ### Lock Time-to-Live Configuration
+
+TTL (Time-To-Live) parameter is rather a safe-guard, to instruct Redis (or other storage) to remove the lock if an application wasn't able to do so.
+- Application locks a session at the beginning of a request
+- Application unlocks a session at the end of a request in TERMINATE (after sending content, all versions) or RESPONSE (before sending content, newer versions) events
+- In case a request fails with a fatal error or any other exception that leads to those events are not triggered - Redis will remove a lock based on this TTL parameter
+- In case of a long-running request and TTL to be lower than execution time - Redis will unlock it before the app, if the TTL is higher than execution time - app will unlock it on event.
 
 By default, the lock time-to-live (TTL) is set 20000 (20 seconds) by default or equal to `max_execution_time`, if it is set. 
 This means if `max_execution_time` is set to 120 seconds, it will be applied to lock TTL as well. It can be configured with:

@@ -75,7 +75,7 @@ When configuring a service, you need to define its version. The Docker SDK suppo
 
 | SERVICE | ENGINE  | VERSIONS      | ARM SUPPORT | NOTE |
 |----|----|---------------|----|---|
-| datab | postgres | 16            | &check;     |    |
+| datab | postgres | 17            | &check;     |    |
 |       |          | 10            | &check;     |    |
 |       |          | 11            | &check;     |    |
 |       |          | 12            | &check;     |    |
@@ -203,7 +203,7 @@ To switch the database engine to PostgreSQL, follow these steps:
 services:
     database:
         engine: postgres
-        version: 16
+        version: 17
         ...
         endpoints:
             localhost:5432:

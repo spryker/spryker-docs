@@ -107,11 +107,10 @@ This approach should be used when your project is a headless project without an 
 #### PreOrder payment flow in a Nutshell
 
 - The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
-- When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), payment amount, and the Quote data. See example below.
-- When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe) and the Payment Method name (Stripe). See example below.
+- When Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), payment amount, and the Quote data. See example below.
 - Zed now makes the API call to the Stripe App including required authorization.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
-- You will get back a JSON response with the ClientSecret and the PublishableKey.
+- You will get back a JSON response with the TransactionId, ClientSecret, and the PublishableKey. In a marketplace context you will also get the AccountId.
 - Use the example JavaScript to render the Stripe Elements on the order summary page of your application.
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
 - The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
@@ -120,6 +119,8 @@ This approach should be used when your project is a headless project without an 
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
 - When the Payment is successful you will get a `PaymentAuthorized` AsyncAPI message which will move the order inside the OMS to the next state.
 - When the Payment has failed you will get a `PaymentAuthorizationFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+
+All Payment related messages will be handled by the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` which is registered in the `MessageBrokerDependencyProvider`.
 
 From here on the normal order processing through the OMS will take place.
 
@@ -168,6 +169,8 @@ async initializePreOrderPayment() {
   }
 
 ```
+
+Note: Instead of using the `Authorization` also the `X-Anonymous-Customer-Unique-Id` header can be used to identify the customer.
 
 This creates a Payment on the Stripe App side after the PaymentIntent was created via the Stripe API. The response will look like this:
 

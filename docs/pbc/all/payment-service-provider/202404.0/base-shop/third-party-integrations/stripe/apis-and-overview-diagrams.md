@@ -48,6 +48,6 @@ All Payment Service Provider (PSP) integrations are based on the synchronous API
 + `/initialize-payment`: Used from the SCOS back-end after an order was created and before the hosted payment page is shown to the customer. This will initialize the payment in the PSP App and the PSP App will return the URL to the hosted payment page.
 + `/confirm-pre-order-payment`: Used from the Back office after an order was created in a headless approach where the payment gets created before the order is persisted. This will connect a previously created (preOrder) Payment on App side with the order on Zed side.
 + `/cancel-pre-order-payment`: Used from the Glue application in a headless approach where a customer clicks cancel or in cases where the headless implementation sees the need for canceling. This will cancel the Payment on the PSP side.
-+ `/payments/transfers`: Used from the Back office with the App being used in a Marketplace business model. This initiates the transfer of money from the Marketplace to the Merchant.
++ `/payments/transfers`: Used from the Back office/OMS with the App being used in a Marketplace business model. This initiates the transfer of money from the Marketplace to the Merchant.
 + `/webhooks`: Used from external applications to send requests to an App.
 + `/webhooks/test`: Used from external applications in test mode to send requests to an App.

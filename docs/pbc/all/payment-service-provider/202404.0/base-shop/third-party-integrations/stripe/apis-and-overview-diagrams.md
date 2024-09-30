@@ -15,6 +15,19 @@ redirect_from:
 
 This document provides an overview of the APIs. All Payment Service Provider (PSP) use a synchronous API together with an asynchronous API.
 
+The following diagram explains the Hosted Payment Page Flow. 
+
+PLACE OVERVIEW IMAGE FOR HOSTED PAYMENT PAGE HERE
+
+You can find information about endpoints and messages down below.
+
+The following diagram explains the Headless Payment Page Flow using Glue.
+
+PLACE OVERVIEW IMAGE FOR HEADLESS PAYMENT PAGE HERE
+
+You can find information about endpoints and messages down below.
+
+
 ## Asynchronous API
 
 All Payment Service Provider (PSP) integrations are based on the asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:

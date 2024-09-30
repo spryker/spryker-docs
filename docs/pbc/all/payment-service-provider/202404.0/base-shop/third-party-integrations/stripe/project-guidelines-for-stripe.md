@@ -89,7 +89,7 @@ For more information about ACP payment methods integration with your project OMS
 
 Implementing the Payment Provider Stripe into your project can be done in many different ways.
 
-- You can add it in your own headless frontend application using Glue.
+- You can add it in your headless frontend application using the Glue application.
 
 [//]: # (- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.)
 - You can add it as a hosted Payment page which uses a redirect after your customer submits the order.

@@ -92,7 +92,7 @@ Implementing the Payment Provider Stripe into your project can be done in many d
 - You can add it in your headless frontend application using the Glue application.
 
 [//]: # (- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.)
-- You can add it as a hosted Payment page which uses a redirect after your customer submits the order.
+- You can add it as a hosted payment page which uses a redirect after your customer submits the order.
 
 ### Headless implementation
 

@@ -15,42 +15,55 @@ redirect_from:
 
 This document provides an overview of the APIs. All Payment Service Provider (PSP) use a synchronous API together with an asynchronous API.
 
+The following diagram explains the configuration and disconnect flow for a Payment App.
+
+PLACE OVERVIEW IMAGE FOR CONFIGURATION/DISCONNECTION FLOW HERE
+
+The optional elements here are the `AddPaymentMethod`, `UpdatePaymentMethod`, `DeletePaymentMethod`, and the `ReadyForMerchantAppOnboarding` messages. The Payment Method related messages are used to manage payment methods in the SCOS. Those messages are only sent when a Payment method configuration changes or when the available payment methods are changed. The `ReadyForMerchantAppOnboarding` message is used to inform SCOS that the App is ready to onboard merchants, this message is send when the App is used in the Marketplace business model.
+
+The following diagram explains the flow of an Order in the OMS together with an App.
+
+PLACE OVERVIEW IMAGE FOR OMS FLOW HERE
+
+The optional elements here are the request to do transfers `/payments/transfers` which is only used in a Marketplace business model, the `CancelPayment` message which is only used when a payment needs to be canceled, and the `RefundPayment` message which is only used when the refund process is triggered for one or more order items.
+
 The following diagram explains the Hosted Payment Page Flow. 
 
 PLACE OVERVIEW IMAGE FOR HOSTED PAYMENT PAGE HERE
-
-You can find information about endpoints and messages down below.
 
 The following diagram explains the Headless Payment Page Flow using Glue.
 
 PLACE OVERVIEW IMAGE FOR HEADLESS PAYMENT PAGE HERE
 
+The optional element here is the `CancelPreOrderPayment` which can be used to cancel a payment that was created before the order was persisted. This can be used in cases where the customer clicks cancel or in cases where the headless implementation sees the need for canceling. 
+
 You can find information about endpoints and messages down below.
 
+[//]: # (Original diagrams can be found here https://miro.com/app/board/uXjVLZYKfE4=/)
 
 ## Asynchronous API
 
 All Payment Service Provider (PSP) integrations are based on the asynchronous API. The asynchronous API is used to process payments and refunds. The following asynchronous messages are used:
 
-* `AddPaymentMethod`: Send from the App when a new payment method is added.
-* `UpdatePaymentMethod`: Send from the App to SCOS when a payment method is updated.
-* `DeletePaymentMethod`: Send from the App when a payment method is deleted.
-* `CancelPayment`: Send from SCOS to initiate the payment cancellation.
-* `CapturePayment`: Send from SCOS to initiate the payment capture.
-* `RefundPayment`: Send from SCOS to initiate the payment refund.
-* `PaymentAuthorized`: Send from the App when the payment is authorized.
-* `PaymentAuthorizationFailed`: Send from the App when the payment authorization fails.
-* `PaymentCaptured`: Send from the App when the payment is captured.
-* `PaymentCaptureFailed`: Send from the App when the payment capture fails.
-* `PaymentRefunded`: Send from the App when the payment is refunded.
-* `PaymentRefundFailed`: Send from the App when the payment refund fails.
-* `PaymentCanceled`: Send from the App when the payment is canceled.
-* `PaymentCancellationFailed`: Send from the App when the payment cancellation fails.
-* `PaymentCreated`: Send from the App when the payment is created.
-* `PaymentUpdated`: Send from the App when the payment is updated.
-* `ReadyForMerchantAppOnboarding`: Send from the App when the App is ready to onboard merchants.
-* `MerchantAppOnboardingStatusChanged`: Send from the App when the merchant app onboarding status changes.
-* `AppConfigUpdated`: Send from the App when the App configuration is updated.
+* `AddPaymentMethod`: Sent from the App when a new payment method is added.
+* `UpdatePaymentMethod`: Sent from the App to SCOS when a payment method is updated.
+* `DeletePaymentMethod`: Sent from the App when a payment method is deleted.
+* `CancelPayment`: Sent from SCOS to initiate the payment cancellation.
+* `CapturePayment`: Sent from SCOS to initiate the payment capture.
+* `RefundPayment`: Sent from SCOS to initiate the payment refund.
+* `PaymentAuthorized`: Sent from the App when the payment is authorized.
+* `PaymentAuthorizationFailed`: Sent from the App when the payment authorization fails.
+* `PaymentCaptured`: Sent from the App when the payment is captured.
+* `PaymentCaptureFailed`: Sent from the App when the payment capture fails.
+* `PaymentRefunded`: Sent from the App when the payment is refunded.
+* `PaymentRefundFailed`: Sent from the App when the payment refund fails.
+* `PaymentCanceled`: Sent from the App when the payment is canceled.
+* `PaymentCancellationFailed`: Sent from the App when the payment cancellation fails.
+* `PaymentCreated`: Sent from the App when the payment is created.
+* `PaymentUpdated`: Sent from the App when the payment is updated.
+* `ReadyForMerchantAppOnboarding`: Sent from the App when the App is ready to onboard merchants.
+* `MerchantAppOnboardingStatusChanged`: Sent from the App when the merchant app onboarding status changes.
+* `AppConfigUpdated`: Sent from the App when the App configuration is updated.
 
 ## Synchronous API
 

@@ -2,8 +2,6 @@
 title: Redis session lock
 description: Handling sessions locks
 template: troubleshooting-guide-template
-redirect_from:
-- /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
 last_updated: Sep 28, 2024
 ---
 
@@ -29,13 +27,13 @@ These attempts continue until the timeout, which is 10 seconds by default or 80%
 $config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 10000; // only values greater than zero will be applied
 ```
 
-## Situations that cause session lock issues
-Use cases:
-- Users clicking fast, especially in the app that allows activating multiple parallel requests;
-- Requests being interrupted (but lock stays) because of aborting the connection (network or manual intentional and unintentional act, aka clicking “Esc“ when page is loading);
-- Long-running (or slow-performing) concurrent requests that have to deal with the session;
-- Bots running many parallel requests;
-- Intentional DDoS or DoS attacks;
+## Situations that can cause session lock issues
+
+- Users clicking fast, especially in the app that allows activating multiple parallel requests.
+- Interrupted requests without respective lock released; caused by connection being aborted manually or because of network issues.
+- Long-running or slow-performing concurrent requests that have to deal with the session.
+- Bots running many parallel requests.
+- DDoS or DoS attacks.
 
 ## Symptoms
 
@@ -84,9 +82,11 @@ If your application heavily relies on information in Redis sessions, your PHP-FP
 ## Solution
 Regularly scan your APM for Session Lock exceptions, as well as your application logs for warnings related to PHP max children count. The former provides definitive evidence that action is needed, while the latter shows that the PHP-FPM worker pool might not be keeping up with incoming requests and their average processing time. If your APM supports it, consider configuring alerts for these events.
 
-### Make sure the latest updates are applied
+### Upgrade to the latest version
 
-Update the `spryker/session` package to version `^4.17.0` and modify your `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider` as following:
+1. Upgrade `spryker/session` to version `^4.17.0`.
+
+2. Update `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider` as follows:
 
 ```php
 namespace Pyz\Yves\EventDispatcher;

@@ -1,30 +1,29 @@
 ---
 title: Redis session lock
-description: Redis Session Lock
+description: Handling sessions locks
 template: troubleshooting-guide-template
 redirect_from:
 - /docs/scos/dev/troubleshooting/troubleshooting-performance-issues/redis-session-lock.html
 last_updated: Sep 28, 2024
 ---
 
-A session lock is necessary to prevent multiple processes belonging to a single user's session from accessing or modifying session data at the same time, ensuring data integrity and consistency. 
-It helps avoid race conditions and data corruption in high-concurrency environments.
+A session lock is used to prevent multiple processes belonging to a single user's session from accessing or modifying session data at the same time. This ensures data integrity and consistency, helps avoid race conditions and data corruption in high-concurrency environments.
+
 While a user's session is being accessed by a process, other processes of the same user's session can't access it; the session is *locked*.
 
-The handler is configured with:
-
+The handler is configured as follows:
 ```php
 // config/Shared/config_default.php
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
 ```
-If a process can't lock the session, it tries to acquire it by using a *spinlock* strategy. 
-It waits for 0.01 seconds by default and then retries acquiring a lock to the session. The retry timeout can be configured:
+
+If a process can't lock the session, it tries to acquire it by using a *spinlock* strategy. It waits for 0.01 seconds by default and then retries acquiring a lock to the session. The retry timeout is configured as follows:
 ```php
 // config/Shared/config_default.php
 $config[SessionRedisConstants::LOCKING_RETRY_DELAY_MICROSECONDS] = 50000; // only values greater than zero will be applied
 ```
 
-These attempts continue until the timeout, which is 10 seconds by default or 80% of `max_execution_time` if it is set. The timeout also can be configured:
+These attempts continue until the timeout, which is 10 seconds by default or 80% of `max_execution_time` if it's set. The timeout is configured as follows:
 ```php
 // config/Shared/config_default.php
 $config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 10000; // only values greater than zero will be applied
@@ -35,13 +34,13 @@ Use cases:
 - Users clicking fast, especially in the app that allows activating multiple parallel requests;
 - Requests being interrupted (but lock stays) because of aborting the connection (network or manual intentional and unintentional act, aka clicking “Esc“ when page is loading);
 - Long-running (or slow-performing) concurrent requests that have to deal with the session;
-- Bots, running many parallel requests;
-- Intentional (D)Dos attacks;
+- Bots running many parallel requests;
+- Intentional DDoS or DoS attacks;
 
 ## Symptoms
 
-Some actions, parts of the website, or the entire website is slow. You may encounter 5XX errors, gateway timeouts, and customer-facing errors. 
-Depending on the extent of the issue, the application might be partially or fully inaccessible to your customers.
+Some actions, parts of the website, or the entire website is slow. You may encounter 5XX errors, gateway timeouts, and customer-facing errors.
+Depending on the extent of the issue, the application's frontend might be partially or fully inaccessible.
 
 Logs contain the following exceptions:
 `Spryker\Shared\SessionRedis\Handler\Exception\LockCouldNotBeAcquiredException`
@@ -55,7 +54,7 @@ fields @timestamp, @message, @logStream, @log
 | limit 10000
 ```
 
-Using NewRelic query:
+Search for the exception using a NewRelic query:
 
 ```sql
 SELECT duration, errorMessage FROM Transaction SINCE 7 days ago ORDER BY duration DESC LIMIT MAX;
@@ -122,42 +121,40 @@ Explore [architecture performance guidelines](/docs/dg/dev/guidelines/performanc
 ### Leverage APIs
 Headless scenarios aren't usually impacted by Session Locking challenges. Evaluate if you can adjust calls that would normally target Yves to target APIs instead.
 
-### Not using locks
+### Disabling session locking
 
+You can disable session locking but only after thoroughly assessing the risks and implementing necessary safeguards. For optimal performance, data integrity, and customer experience, we strongly recommend keeping session locks enabled and focusing on optimizing lock management and application performance.
+
+This approach optimistically assumes that there will be no concurrent requests from the client, which could otherwise cause session data inconsistencies. For example, this might occur if products are simultaneously added to cart from multiple browser tabs.
+
+Session locking is disabled as follows:
 ```php
 // config/Shared/config_default.php
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
-This approach optimistically assumes that there will be no concurrent requests from the client, which could otherwise cause session data inconsistencies. 
-For instance, this could occur if products are added to the cart simultaneously from multiple browser tabs.
 
-{% info_block warningBox "Disabling session locking" %}
 
-Disabling session locking is possible but should only be done after thoroughly assessing the risks and implementing necessary safeguards.
-For optimal performance, data integrity, and customer experience, we strongly recommend keeping session locks enabled and focusing on optimizing lock management and application performance.
+### Lock TTL configuration
 
-{% endinfo_block %}
+Time-To-Live (TTL) parameter is a safeguard used to instruct Redis or other storage to remove the lock if an application wasn't able to do it.
+- Application locks a session at the beginning of a request.
+- Application unlocks a session at the end of a request as follows:
+  - In a TERMINATE event after sending content, all versions.
+  - In a RESPONSE event before sending content, newer versions.
+- If a request fails with a fatal error or any other exception that results in those events not being triggered, Redis removes the lock based on the TTL parameter.
+- If TTL is smaller than the execution time of a long-running request, Redis unlocks it before the app. If the TTL is bigger than the execution time, the app unlock it on event.
 
-### Lock Time-to-Live Configuration
-
-TTL (Time-To-Live) parameter is rather a safe-guard, to instruct Redis (or other storage) to remove the lock if an application wasn't able to do so.
-- Application locks a session at the beginning of a request
-- Application unlocks a session at the end of a request in TERMINATE (after sending content, all versions) or RESPONSE (before sending content, newer versions) events
-- In case a request fails with a fatal error or any other exception that leads to those events are not triggered - Redis will remove a lock based on this TTL parameter
-- In case of a long-running request and TTL to be lower than execution time - Redis will unlock it before the app, if the TTL is higher than execution time - app will unlock it on event.
-
-By default, the lock time-to-live (TTL) is set 20000 (20 seconds) by default or equal to `max_execution_time`, if it is set. 
-This means if `max_execution_time` is set to 120 seconds, it will be applied to lock TTL as well. It can be configured with:
+By default, TTL is 20000 (20 seconds) or equal to `max_execution_time` if it's set. If `max_execution_time` is set to 120 seconds, TTL is 120 seconds as well. TTL is configured as follows:
 ```php
 // config/Shared/config_default.php
 $config[SessionRedisConstants::LOCKING_LOCK_TTL_MILLISECONDS] = 10000; // only values greater than zero will be applied
 ```
-{% info_block warningBox "Disabling session locking" %}
+{% info_block warningBox "" %}
 
 Reducing the lock TTL too much can result in side effects similar to having no lock at all and should only be done after thoroughly assessing the risks.
 
 {% endinfo_block %}
 
 ### Traffic control
-To mitigate issues with session locks caused by high traffic or automated bot activity, you can use [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).
 
+To mitigate issues with session locks caused by high traffic or automated bot activity, you can use [AWS WAF Bot Control](https://docs.aws.amazon.com/waf/latest/developerguide/waf-bot-control.html).

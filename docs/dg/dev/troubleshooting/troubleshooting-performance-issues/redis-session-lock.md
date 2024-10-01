@@ -133,6 +133,19 @@ Session locking is disabled as follows:
 $config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = SessionRedisConfig::SESSION_HANDLER_REDIS;
 ```
 
+### Dynamically choosing Session Lock Handler
+Alternatively, we can let the application decide when to use a locking handler and when to use a non-locking one. It is easy to do in a project's `config_*.php` file:
+```php
+$config[SessionConstants::YVES_SESSION_SAVE_HANDLER] = CONDITION ?
+    SessionRedisConfig::SESSION_HANDLER_REDIS :
+    SessionRedisConfig::SESSION_HANDLER_REDIS_LOCKING;
+```
+
+In this example, `CONDITION` can be any operation with a boolean result, but it is impostant to keep it quickly executed, not to make a bottleneck from configuration declartion.
+Here's one of the possible examples of a condition: 
+- `str_contains($_SERVER['HTTP_USER_AGENT'] ?? '', 'Googlebot')` or
+- `str_contains($_SERVER['REQUEST_URI'] ?? '', '/some-url')` or
+- any other pattern known as not requiring exclusive session data access and modification.
 
 ### Lock TTL configuration
 

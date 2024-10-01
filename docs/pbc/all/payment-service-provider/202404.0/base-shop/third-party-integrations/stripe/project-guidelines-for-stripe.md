@@ -89,10 +89,10 @@ For more information about ACP payment methods integration with your project OMS
 
 Implementing the Payment Provider Stripe into your project can be done in many different ways.
 
-- You can add it in your own headless frontend application using Glue.
+- You can add it in your headless frontend application using the Glue application.
 
 [//]: # (- You can use the default implementation in the Payment selection page using Yves which shows the Payment Elements then later on the summary page.)
-- You can add it as a hosted Payment page which uses a redirect after your customer submits the order.
+- You can add it as a hosted payment page which uses a redirect after your customer submits the order.
 
 ### Headless implementation
 
@@ -107,13 +107,11 @@ This approach should be used when your project is a headless project without an 
 #### PreOrder payment flow in a Nutshell
 
 - The customer either selects Stripe as the payment method or he gets only Stripe Elements presented.
-- When you have more than one Payment Provider in your project and Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments?action=initialize-pre-order-payment) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), CSS-ID of the element to render Stripe Elements to, CSS-ID of the element to render messages to, the Payment Element Options including the `return_url`, and the Quote data. See example below.
-- When you only use Stripe in your project then the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe) and the Payment Method name (Stripe). See example below.
-  - The required quote data must be provided by your application.
+- When Stripe gets selected the `InitializePreOrderPayment` Glue API endpoint (glue.your-website.com/payments) is called with the Payment Provider name (Stripe), the Payment Method name (Stripe), payment amount, and the Quote data. See example below.
 - Zed now makes the API call to the Stripe App including required authorization.
 - On the Stripe App side the Payment with the given data is persisted and an API call to Stripe is made to get the ClientSecret and the PublishableKey.
-- You will get back a JSON response with the ClientSecret and the PublishableKey.
-- Use the example JavaScript to render the Stripe Elements on the summary page of your application.
+- You will get back a JSON response with the TransactionId, ClientSecret, and the PublishableKey. In a marketplace context you will also get the AccountId.
+- Use the example JavaScript to render the Stripe Elements on the order summary page of your application.
 - Then the customer can select the Payment Method in the Stripe Elements and submits the data.
 - The customer will then be redirected to the provided `return_url` which must make another Glue request (glue.your-website.com/checkout) to persist the order in the backoffice.
 - After this the customer should be redirected to the success page of your application.
@@ -121,6 +119,8 @@ This approach should be used when your project is a headless project without an 
 - When the payment was processed on the Stripe App side a `PaymentUpdated` message will be sent to your SCOS application which will contain additional data you can see in the Backoffice.
 - When the Payment is successful you will get a `PaymentAuthorized` AsyncAPI message which will move the order inside the OMS to the next state.
 - When the Payment has failed you will get a `PaymentAuthorizationFailed` AsyncAPI message which will move the order inside the OMS to the next state.
+
+All Payment related messages will be handled by the `\Spryker\Zed\Payment\Communication\Plugin\MessageBroker\PaymentOperationsMessageHandlerPlugin` which is registered in the `MessageBrokerDependencyProvider`.
 
 From here on the normal order processing through the OMS will take place.
 
@@ -140,8 +140,8 @@ async initializePreOrderPayment() {
           quote: QUOTE_DATA,
           payment: {
             amount: GRAND_TOTAL, // You will get it through the `/checkout-data?include=carts` endpoint
-            paymentMethodName: 'stripe',
-            paymentProviderName: 'stripe',
+            paymentMethodName: 'stripe', // taken from /checkout-data?include=payment-methods
+            paymentProviderName: 'stripe',  // taken from /checkout-data?include=payment-methods
           },
           preOrderPaymentData: {
             "transactionId": this.transactionId, // This is empty in the first request but has to be used in further requests 
@@ -169,6 +169,8 @@ async initializePreOrderPayment() {
   }
 
 ```
+
+Note: Instead of using the `Authorization` also the `X-Anonymous-Customer-Unique-Id` header can be used to identify the customer.
 
 This creates a Payment on the Stripe App side after the PaymentIntent was created via the Stripe API. The response will look like this:
 

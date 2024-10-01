@@ -268,7 +268,7 @@ use SprykerShop\Yves\PaymentPage\Plugin\PaymentPage\PaymentForeignPaymentCollect
 
 ```
 
-## Configure Glue for the headless API
+## Configure Glue Application to add new API endpoints
 
 1. In `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php`, add or update the following plugins:
 

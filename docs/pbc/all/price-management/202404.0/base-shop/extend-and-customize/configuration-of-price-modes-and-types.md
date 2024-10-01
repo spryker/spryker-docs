@@ -61,12 +61,14 @@ $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
 
 ## Set up a price mode switcher
 
-1. Add `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
+1. Upgrade the Price module to version 5 or higher. For instructions, see [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+
+2. Add `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
    This renders a drop-down list with the price mode selection.
 
-2. Add `\SprykerShop\Yves\PriceWidget\Plugin\Router\PriceWidgetRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method.
+3. Add `\SprykerShop\Yves\PriceWidget\Plugin\Router\PriceWidgetRouteProviderPlugin` to the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method.
 
-3. Create a template for the component:
+4. Create a template for the component:
 
 **Pyz/Yves/Price/Theme/default/partial/price_mode_switcher.twig**
 ```html
@@ -83,8 +85,6 @@ $config[PriceConstants::DEFAULT_PRICE_MODE] = PriceConfig::PRICE_MODE_GROSS;
 ```
 
 The switch works only when cart contains at least one item.
-
-Make sure that you have Price module version 5 or higher. If below, please [Upgrade the Price module](/docs/pbc/all/price-management/{{site.version}}/base-shop/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 
 ## Switching to net prices

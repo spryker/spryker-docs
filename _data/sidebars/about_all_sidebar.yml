@@ -7,6 +7,8 @@ entries:
     - title: Releases
       url: /docs/about/all/releases/product-and-code-releases.html
       nested:
+      - title: Security release notes 202409.0
+        url: /docs/about/all/releases/security-release-notes-202409.0.html        
       - title: Release notes 202404.0
         url: /docs/about/all/releases/release-notes-202404.0.html
       - title: Security release notes 202403.0
@@ -111,7 +113,7 @@ entries:
           - title: Add and edit diagrams
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-and-edit-diagrams-in-the-docs.html
           - title: Add images and other media
-            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html            
+            url: /docs/about/all/about-the-docs/contribute-to-the-docs/add-images-and-other-media-to-the-docs.html
           - title: Report issues
             url: /docs/about/all/about-the-docs/contribute-to-the-docs/report-docs-issues.html
           - title: Review pull requests

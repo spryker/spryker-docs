@@ -199,6 +199,7 @@ use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
 use Spryker\Zed\DataImport\Communication\Console\DataImportConsole;
 use Spryker\Zed\AclDataImport\AclDataImportConfig;
+use Spryker\Zed\AclMerchantPortal\Communication\Console\AclEntitySynchronizeConsole;
 
 class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
@@ -213,6 +214,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_ROLE),
             new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . AclDataImportConfig::IMPORT_TYPE_ACL_GROUP_ROLE),
+            new AclEntitySynchronizeConsole(),
         ];
 
         return $commands;
@@ -237,6 +239,28 @@ Make sure the configured data has been added to the following database tables:
 
 {% endinfo_block %}
 
+5. Synchronize the ACL entities for the merchants and their users:
+
+```bash
+console acl:entity:synchronize
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure the synchronized data has been added to the following database tables:
+* `spy_acl_entity_rule`
+* `spy_acl_entity_segment`
+* `spy_acl_entity_segment_merchant`
+* `spy_acl_entity_segment_merchant_user`
+* `spy_acl_group`
+* `spy_acl_groups_has_roles`
+* `spy_acl_role`
+* `spy_acl_rule`
+
+With a multi-merchant environment, make sure the ACL entities are synchronized for each merchant.
+If the ACL entities have already been synchronized, the synchronization process doesn't create duplicate entries.
+
+{% endinfo_block %}
 
 ## 5) Set up behavior
 

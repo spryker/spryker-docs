@@ -29,7 +29,7 @@ These attempts continue until the timeout, which is 10 seconds by default or 80%
 $config[SessionRedisConstants::LOCKING_TIMEOUT_MILLISECONDS] = 10000; // only values greater than zero will be applied
 ```
 
-## Probable causes
+## Situations that cause session lock issues
 Use cases:
 - Users clicking fast, especially in the app that allows activating multiple parallel requests;
 - Requests being interrupted (but lock stays) because of aborting the connection (network or manual intentional and unintentional act, aka clicking “Esc“ when page is loading);
@@ -86,7 +86,7 @@ Regularly scan your APM for Session Lock exceptions, as well as your application
 
 ### Make sure the latest updates are applied
 
-Update `spryker/session` package to `^4.17.0` and apply:
+Update the `spryker/session` package to version `^4.17.0` and modify your `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider` as following:
 
 ```php
 namespace Pyz\Yves\EventDispatcher;

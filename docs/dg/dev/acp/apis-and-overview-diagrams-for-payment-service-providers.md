@@ -1,5 +1,5 @@
 ---
-title: APIs and Overview Diagrams
+title: APIs and overview diagrams for payment service providers
 description: See all APIs and overview diagrams for the Stripe payment service provider integration.
 last_updated: Sep 27, 2024
 template: howto-guide-template
@@ -27,7 +27,7 @@ PLACE OVERVIEW IMAGE FOR OMS FLOW HERE
 
 The optional elements here are the request to do transfers `/payments/transfers` which is only used in a Marketplace business model, the `CancelPayment` message which is only used when a payment needs to be canceled, and the `RefundPayment` message which is only used when the refund process is triggered for one or more order items.
 
-The following diagram explains the Hosted Payment Page Flow. 
+The following diagram explains the Hosted Payment Page Flow.
 
 PLACE OVERVIEW IMAGE FOR HOSTED PAYMENT PAGE HERE
 
@@ -35,7 +35,7 @@ The following diagram explains the Headless Payment Page Flow using Glue.
 
 PLACE OVERVIEW IMAGE FOR HEADLESS PAYMENT PAGE HERE
 
-The optional element here is the `CancelPreOrderPayment` which can be used to cancel a payment that was created before the order was persisted. This can be used in cases where the customer clicks cancel or in cases where the headless implementation sees the need for canceling. 
+The optional element here is the `CancelPreOrderPayment` which can be used to cancel a payment that was created before the order was persisted. This can be used in cases where the customer clicks cancel or in cases where the headless implementation sees the need for canceling.
 
 You can find information about endpoints and messages down below.
 

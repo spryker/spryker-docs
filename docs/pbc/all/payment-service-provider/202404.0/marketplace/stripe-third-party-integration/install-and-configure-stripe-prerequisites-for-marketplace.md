@@ -55,6 +55,22 @@ $config[MessageBrokerConstants::CHANNEL_TO_RECEIVER_TRANSPORT_MAP] = [
 ];
 ```
 
+## Add Oms configuration
+
+Update `config_default.php` as follows:
+
+```php
+$config[OmsConstants::PROCESS_LOCATION] = [
+    //...
+    OmsConfig::DEFAULT_PROCESS_LOCATION,
+    APPLICATION_ROOT_DIR . '/vendor/spryker/sales-payment/config/Zed/Oms', # this line must be added if your use unmodified ForeignPaymentStateMachine01.xml
+];
+$config[OmsConstants::ACTIVE_PROCESSES] = [
+    //...
+    'ForeignPaymentStateMachine01', # this line must be added or add your modified version of this OMS
+];
+```
+
 ## Update navigation
 
 Update `config/Zed/navigation.xml` as follows:
